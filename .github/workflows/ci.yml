@@ -308,6 +308,15 @@ jobs:
       - run: composer install --no-interaction --no-progress --prefer-dist
       - run: npm ci && npx vite build
 
+      # package-release.sh's documentation gate reads EXTERNAL evidence
+      # (EvidencePath): the release documents are generated from measured gate
+      # results, and the evidence deliberately lives outside the tree — the
+      # in-tree copy recorded the tree's own manifest hash, a self-referential
+      # identity that could never converge. Collect it here by actually
+      # running the gates, exactly as an operator does before packaging.
+      - name: Collect release evidence
+        run: php scripts/collect-release-evidence.php
+
       # Built twice from the same HEAD. Identical checksums or the build is not
       # reproducible and the manifest in the release notes means nothing.
       - name: Build archives twice and compare
