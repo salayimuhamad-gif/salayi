@@ -1,0 +1,156 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Modules\Identity\Providers;
+
+use App\Modules\Core\Support\ModuleServiceProvider;
+use App\Modules\Identity\Support\PermissionRegistry;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Validation\Rules\Password;
+
+final class IdentityServiceProvider extends ModuleServiceProvider
+{
+    protected function moduleName(): string
+    {
+        return 'Identity';
+    }
+
+    protected function bootModule(): void
+    {
+        /*
+         * Every catalogue permission becomes a Gate ability, so both
+         * `@can('projects.publish')` in a template and `$this->authorize(...)`
+         * in a controller resolve through the same registry.
+         */
+        foreach (PermissionRegistry::all() as $permission) {
+            Gate::define($permission, static fn ($user): bool => $user->hasPermission($permission));
+        }
+
+        // Super Admin bypasses every gate — including future ones added by a
+        // module that forgets to register its own.
+        Gate::before(static fn ($user): ?bool => $user->isSuperAdmin() ? true : null);
+
+        Password::defaults(fn (): Password => Password::min((int) config('mulkihawler.security.password_min_length', 12))
+            ->letters()
+            ->mixedCase()
+            ->numbers()
+            ->symbols()
+            ->uncompromised());
+
+        $this->registerRateLimits();
+    }
+
+    /**
+     * Spec 30.1: rate limiting and login throttling.
+     *
+     * Keyed on email AND ip together. Email-only lets one attacker lock out a
+     * known administrator by failing their login on purpose; ip-only lets a
+     * botnet spread attempts across addresses. Both keys are registered so
+     * either alone trips the limit.
+     */
+    private function registerRateLimits(): void
+    {
+        $attempts = (int) config('mulkihawler.security.login_throttle.attempts', 5);
+        $decay = (int) config('mulkihawler.security.login_throttle.decay_minutes', 15);
+
+        RateLimiter::for('login', static fn (Request $request): array => [
+            Limit::perMinutes($decay, $attempts)->by('login:email:'.mb_strtolower((string) $request->input('email'))),
+            Limit::perMinutes($decay, $attempts * 4)->by('login:ip:'.$request->ip()),
+        ]);
+
+        /*
+         * An UNAUTHENTICATED request is precisely what these limiters exist
+         * for, so falling back to the IP is the real path, not a defensive
+         * afterthought. The analyser infers the configured guard's model as
+         * always present; `Auth::id()` is nullable by contract and says what
+         * actually happens.
+         */
+        RateLimiter::for('mfa', static fn (Request $request): Limit => Limit::perMinute(5)
+            ->by('mfa:'.(Auth::id() ?? $request->ip())));
+
+        RateLimiter::for('password-reset', static fn (Request $request): Limit => Limit::perMinutes(60, 5)
+            ->by('pwreset:'.mb_strtolower((string) $request->input('email'))));
+
+        /*
+         * The poll runs every second or two while somebody switches to
+         * Telegram, so the limit is generous — but per session, not global,
+         * so one impatient browser cannot exhaust the allowance for everyone.
+         */
+        /*
+         * Form submissions mint bearer tokens and write encrypted rows, so
+         * they are budgeted tighter than polls: five per ten minutes per IP is
+         * a person retrying a typo, not a script farming intents.
+         */
+        // The link poll heartbeats every couple of seconds for up to ten
+        // minutes; sixty per minute per user is generous headroom for one
+        // tab and still a ceiling for a runaway loop.
+        RateLimiter::for('telegram-link-poll', static fn (Request $request): Limit => Limit::perMinute(60)
+            ->by('link-poll:'.($request->user()->id ?? $request->ip())));
+
+        RateLimiter::for('registration', static fn (Request $request): Limit => Limit::perMinutes(10, 5)
+            ->by('registration|'.$request->ip()));
+
+        // Image processing is the priciest request the account surface
+        // serves; ten per minute is a person retrying, not a flood.
+        RateLimiter::for('profile-photo', static function (Request $request): Limit {
+            // The photo routes sit behind `auth`, and Laravel's middleware
+            // priority runs authentication before throttling — so by the time
+            // this closure executes there IS a user. The ip() fallback exists
+            // for the impossible case anyway; the nullsafe read of user was
+            // the part stan correctly called dead.
+            $user = $request->user();
+
+            return Limit::perMinute(10)
+                ->by('profile-photo|'.($user !== null ? $user->id : $request->ip()));
+        });
+
+        /*
+         * A valuation is a few hundred rows and arithmetic — cheap, but not
+         * free on shared hosting, and nobody honest needs it forty times a
+         * minute. Six per minute per account bounds the worst case.
+         */
+        RateLimiter::for('portfolio-valuation', static function (Request $request): Limit {
+            $user = $request->user();
+
+            return Limit::perMinute(6)
+                ->by('portfolio-valuation|'.($user !== null ? $user->id : $request->ip()));
+        });
+
+        /*
+         * §7's rate-limit sweep: the media upload re-encodes images through
+         * GD exactly like the profile photo does, so it gets the same class
+         * of ceiling — generous for a person organising a property, hostile
+         * to a loop. Same shape as its siblings: per-user, ip fallback for
+         * the unauthenticated-impossible case.
+         */
+        RateLimiter::for('portfolio-media', static function (Request $request): Limit {
+            $user = $request->user();
+
+            return Limit::perMinute(15)
+                ->by('portfolio-media|'.($user !== null ? $user->id : $request->ip()));
+        });
+
+        RateLimiter::for('telegram-poll', static fn (Request $request): Limit => Limit::perMinute(60)
+            ->by($request->session()->getId()));
+
+        /*
+         * Telegram batches and retries, so this is high. It exists to bound a
+         * flood from something pretending to be Telegram — those requests fail
+         * the secret check anyway, but they should not be free.
+         */
+        RateLimiter::for('telegram-webhook', static fn (Request $request): Limit => Limit::perMinute(120)
+            ->by($request->ip() ?? 'unknown'));
+
+        RateLimiter::for('api', static fn (Request $request): Limit => Limit::perMinute(60)
+            ->by((string) (Auth::id() ?? $request->ip())));
+
+        // The installer is unauthenticated by necessity. A tight limit is the
+        // only control available before the first admin exists.
+        RateLimiter::for('install', static fn (Request $request): Limit => Limit::perMinute(20)->by($request->ip()));
+    }
+}

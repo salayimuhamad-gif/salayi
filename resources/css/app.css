@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /*
+     * Sorani and Arabic set at a slightly larger size and looser leading than
+     * the Latin default. Arabic-script glyphs carry more detail per character
+     * and their ascenders/descenders collide at Latin line-heights, so the
+     * usual 1.5 is genuinely too tight to read comfortably at body size.
+     */
+    :root {
+        --mh-leading-arabic: 1.85;
+        --mh-leading-latin: 1.55;
+    }
+
+    html {
+        line-height: var(--mh-leading-latin);
+        -webkit-text-size-adjust: 100%;
+    }
+
+    html[dir='rtl'] {
+        line-height: var(--mh-leading-arabic);
+        font-size: 1.0625rem;
+    }
+
+    body {
+        text-rendering: optimizeLegibility;
+    }
+
+    /*
+     * Numerals stay Latin and stay LTR even inside RTL text. A price or an area
+     * figure embedded in a Sorani sentence must not have its digits reordered
+     * by the bidi algorithm — "240,000" reading as "000,240" is the classic
+     * failure in Arabic-script real estate listings.
+     */
+    .numeral,
+    [data-numeral] {
+        font-feature-settings: 'tnum' 1, 'lnum' 1;
+        font-variant-numeric: tabular-nums lining-nums;
+        direction: ltr;
+        unicode-bidi: isolate;
+    }
+
+    :focus-visible {
+        outline: 2px solid rgb(var(--mh-accent));
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer components {
+    .mh-card {
+        @apply rounded-card border border-line bg-surface-raised shadow-card;
+    }
+
+    /*
+     * Logical properties throughout so a single rule works in both directions.
+     * postcss-rtlcss is the safety net for anything that slips through, not
+     * the primary mechanism.
+     */
+    .mh-panel {
+        @apply rounded-panel border border-line bg-surface-raised;
+        padding-block: 1.5rem;
+        padding-inline: 1.5rem;
+    }
+
+    .mh-label {
+        @apply text-xs font-medium uppercase tracking-wide text-ink-faint;
+    }
+
+    /*
+     * Provenance chip. Spec 5: every public figure carries source and
+     * freshness. Making it a first-class component rather than an afterthought
+     * is what keeps that promise visible in the interface.
+     */
+    .mh-provenance {
+        @apply inline-flex items-center gap-1.5 rounded-full bg-surface-sunken px-2 py-0.5 text-xs text-ink-muted;
+    }
+
+    .mh-ai-notice {
+        @apply flex items-start gap-2 rounded-card border border-caution/30 bg-caution/5 p-3 text-sm text-ink-muted;
+    }
+}
+
+/* ==========================================================================
+ * Luxury public theme — SCOPED.
+ *
+ * Everything below is gated behind `.mh-luxury-public`, which is applied by
+ * PublicLayout.vue and nowhere else. Admin, Auth, Portal and Install render
+ * outside that element and are therefore byte-for-byte unaffected: no shared
+ * component was edited to achieve the dark treatment, only the custom
+ * properties those components already read.
+ *
+ * WHICH TOKENS ARE OVERRIDDEN, AND WHY THAT LINE IS DRAWN WHERE IT IS
+ *
+ *   Overridden — the neutral scale (surface / ink / line) and the semantic
+ *   trio (positive / negative / caution). The neutrals ARE the theme: a deep
+ *   navy public surface is not reachable while the admin's light neutrals
+ *   remain in force, so this is a deliberate, documented trade — the public
+ *   interface no longer follows `branding.color_surface` /
+ *   `branding.color_ink`. The semantic trio has to move with it: the root
+ *   values (#15803D, #B91C1C, #B4780A) are chosen for a near-white page and
+ *   fall to roughly 2:1 on navy, which is an accessibility failure rather
+ *   than a taste question.
+ *
+ *   NOT overridden — the identity tokens `--mh-brand`, `--mh-brand-soft`,
+ *   `--mh-brand-strong` and `--mh-accent`. Those are the ones an operator
+ *   actually configures under Branding, and they keep working here. The gold
+ *   in this design IS `--mh-accent` (201 162 39 by default), so an admin who
+ *   changes the accent changes the gold.
+ *
+ *   Retargeted — `bg-brand` alone, to the admin's own `--mh-brand-soft`. A
+ *   solid #0F3E59 fill sits at 1.9:1 against a #0A1D2F panel, so the button
+ *   edge disappears even though its white label stays perfectly readable.
+ *   Pointing the utility at the soft brand lifts that to 3.5:1 and clears
+ *   WCAG 1.4.11 without editing AppButton or any other shared file, and
+ *   without hard-coding a colour the operator cannot change.
+ *
+ * Reverting the whole redesign is removing one class from PublicLayout.
+ * ========================================================================== */
+
+@layer components {
+    .mh-luxury-public {
+        /* Structure. Deep navy, never pure black — §6.1. */
+        --mh-surface: 5 15 27;
+        --mh-surface-raised: 10 29 47;
+        --mh-surface-sunken: 7 21 35;
+
+        /* 14.6:1, 7.6:1 and 4.9:1 on the raised panel — every tier clears AA
+           for normal text, including the faint one used for periods and
+           counts, which on the light theme was decorative but here carries
+           sample sizes. */
+        --mh-ink: 240 244 248;
+        --mh-ink-muted: 160 176 194;
+        --mh-ink-faint: 122 140 160;
+
+        --mh-line: 42 66 90;
+
+        --mh-positive: 95 190 115;
+        --mh-negative: 235 105 105;
+        --mh-caution: 224 178 90;
+
+        /* Foreground for anything filled with the accent. Kept as a token so
+           the pairing is stated once; 8.0:1 against the default gold. */
+        --mh-lux-on-accent: 5 15 27;
+
+        /* Sidebar width, referenced by the grid template and the drawer so the
+           two cannot drift. */
+        --mh-lux-rail: 16rem;
+
+        background-color: rgb(var(--mh-surface));
+        color: rgb(var(--mh-ink));
+        min-height: 100dvh;
+    }
+
+    /* Overscroll and the area behind a short page would otherwise show the
+       light `bg-surface` painted on <body> by app.blade.php, which is outside
+       this task's file scope. Scoped by :has(), so it applies on public pages
+       only and is inert everywhere else. */
+    html:has(.mh-luxury-public) {
+        background-color: rgb(5 15 27);
+    }
+
+    .mh-luxury-public .bg-brand {
+        background-color: rgb(var(--mh-brand-soft));
+    }
+
+    /* --- Surfaces ------------------------------------------------------- */
+
+    .mh-lux-panel {
+        @apply rounded-panel border border-line bg-surface-raised;
+    }
+
+    /* Hover lift is a border and a shadow, never a transform: a card that
+       moves under the pointer drags the market figure inside it with it. */
+    .mh-lux-card {
+        @apply rounded-panel border border-line bg-surface-raised;
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-card-interactive:hover {
+        border-color: rgb(var(--mh-accent) / 0.45);
+        box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.9);
+    }
+
+    /* One hairline of gold along the block-start edge. The only place the
+       accent is used as a large area anywhere in the design. */
+    .mh-lux-gilded {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mh-lux-gilded::before {
+        content: '';
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline: 0;
+        block-size: 1px;
+        background: linear-gradient(
+            to right,
+            rgb(var(--mh-accent) / 0),
+            rgb(var(--mh-accent) / 0.7),
+            rgb(var(--mh-accent) / 0)
+        );
+    }
+
+    /* --- Type ----------------------------------------------------------- */
+
+    .mh-lux-eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.18em] text-ink-faint;
+    }
+
+    .mh-lux-gold {
+        color: rgb(var(--mh-accent));
+    }
+
+    /* --- Navigation ----------------------------------------------------- */
+
+    /*
+     * Logical properties throughout. The active marker sits on the INLINE
+     * start edge, so it lands on the right in Sorani and Arabic and on the
+     * left in English with no direction-specific rule and no dependence on
+     * postcss-rtlcss having caught it.
+     */
+    .mh-lux-nav-link {
+        @apply flex items-center gap-3 rounded-card px-3 py-2.5 text-sm text-ink-muted;
+        min-block-size: 2.75rem;
+        position: relative;
+        transition:
+            background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-nav-link:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-nav-link[aria-current='page'] {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-nav-link[aria-current='page']::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block: 0.5rem;
+        inline-size: 3px;
+        border-radius: 999px;
+        background-color: rgb(var(--mh-accent));
+    }
+
+    /* --- Buttons -------------------------------------------------------- */
+
+    /*
+     * 44px minimum block size on every button in the public surface.
+     *
+     * The visible control may look smaller — the summary panel's Edit is still
+     * 12px text — but the TARGET is 44px, which is the number that matters on a
+     * 360px phone held one-handed. Set here rather than per call site so a new
+     * button cannot be added below the floor, and expressed as min-block-size
+     * so a caller's `!py-*` override shrinks the padding without shrinking the
+     * target.
+     */
+    .mh-lux-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-card px-4 py-2.5 text-sm font-medium;
+        min-block-size: 2.75rem;
+        transition:
+            background-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-btn-primary {
+        background-color: rgb(var(--mh-accent));
+        color: rgb(var(--mh-lux-on-accent));
+    }
+
+    .mh-lux-btn-primary:hover {
+        background-color: rgb(var(--mh-accent) / 0.88);
+    }
+
+    .mh-lux-btn-secondary {
+        @apply border border-line text-ink;
+    }
+
+    .mh-lux-btn-secondary:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        border-color: rgb(var(--mh-accent) / 0.45);
+    }
+
+    .mh-lux-btn-ghost {
+        @apply text-ink-muted;
+    }
+
+    .mh-lux-btn-ghost:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-btn:disabled {
+        @apply cursor-not-allowed opacity-50;
+    }
+
+    /* --- Chips ---------------------------------------------------------- */
+
+    .mh-lux-chip {
+        @apply inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-xs text-ink-muted;
+    }
+
+    /*
+     * The homepage's example questions. A chip that goes somewhere — to the
+     * real advisor, never to a prewritten answer. Sized above the chip default
+     * because these are tap targets on a phone, not labels.
+     */
+    .mh-lux-example {
+        @apply inline-flex min-h-11 items-center rounded-full border border-line px-3.5 py-1.5 text-xs text-ink-muted;
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-example:hover {
+        border-color: rgb(var(--mh-accent) / 0.5);
+        color: rgb(var(--mh-ink));
+    }
+
+    /* --- Decorative field ------------------------------------------------
+     * Used behind the advisor hero and on project cards in place of the
+     * photography the server does not supply. Deliberately abstract: a
+     * gradient cannot be mistaken for a photograph of a building, which a
+     * stock skyline could be.
+     * -------------------------------------------------------------------- */
+
+    .mh-lux-field {
+        background-image:
+            radial-gradient(120% 140% at 100% 0%, rgb(var(--mh-accent) / 0.1), transparent 55%),
+            radial-gradient(110% 130% at 0% 100%, rgb(var(--mh-brand-soft) / 0.22), transparent 60%);
+    }
+
+    .mh-lux-grid-field {
+        background-image:
+            linear-gradient(rgb(var(--mh-line) / 0.55) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(var(--mh-line) / 0.55) 1px, transparent 1px);
+        background-size: 28px 28px;
+    }
+}

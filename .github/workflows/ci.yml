@@ -1,0 +1,288 @@
+name: CI
+
+# Every gate §5 of the repair instructions requires, in an environment where
+# they can actually run. The sandbox this release was assembled in had no PHP,
+# no database, and Packagist blocked at HTTP 403 — so Pint, PHPStan and PHPUnit
+# have never executed once. This workflow is where that stops being true.
+#
+# The job names are deliberately the names used in TEST_REPORT.md, so a report
+# claiming a gate passed can be checked against a run that proves it.
+
+on:
+  push:
+    branches: [main, 'release/**', 'dev/**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  APP_ENV: testing
+  APP_KEY: base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+jobs:
+  # ------------------------------------------------------------------ PHP
+  php:
+    name: PHP ${{ matrix.php }} · ${{ matrix.db }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        # composer.json declares php ^8.3. Both supported minors are tested,
+        # because "it works on 8.3" is not a claim about 8.4 and Hostinger
+        # moves PHP minors without asking.
+        php: ['8.3', '8.4']
+        db: [sqlite, mysql]
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: mulkihawler_test
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: bcmath, fileinfo, intl, json, mbstring, openssl, pdo, pdo_mysql, pdo_sqlite, zip
+          coverage: none
+          tools: composer:v2
+
+      - name: Syntax check
+        run: find app bootstrap config database routes scripts tests -name '*.php' -print0
+             | xargs -0 -n1 -P4 php -l
+
+      - name: Validate composer.json and composer.lock
+        # --strict fails on a warning; the lock file must exist and be in sync
+        # with composer.json, which is the check that would have caught a
+        # release shipped without one.
+        run: composer validate --strict
+
+      - name: Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache
+          key: composer-${{ matrix.php }}-${{ hashFiles('composer.lock') }}
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Package discovery
+        run: php artisan package:discover --ansi
+
+      - name: Pint (code style)
+        run: vendor/bin/pint --test
+
+      - name: PHPStan / Larastan
+        run: vendor/bin/phpstan analyse --no-progress --error-format=github
+
+      - name: Configure database
+        run: |
+          if [ "${{ matrix.db }}" = "mysql" ]; then
+            {
+              echo "DB_CONNECTION=mysql"
+              echo "DB_HOST=127.0.0.1"
+              echo "DB_PORT=3306"
+              echo "DB_DATABASE=mulkihawler_test"
+              echo "DB_USERNAME=root"
+              echo "DB_PASSWORD=root"
+            } >> "$GITHUB_ENV"
+          else
+            echo "DB_CONNECTION=sqlite" >> "$GITHUB_ENV"
+            echo "DB_DATABASE=:memory:" >> "$GITHUB_ENV"
+          fi
+
+      - name: Migrate
+        run: php artisan migrate --force
+
+      # §4.4: rollback is executed, not asserted. A migration that cannot be
+      # reversed is discovered here rather than during an incident.
+      - name: Rollback and re-migrate
+        run: |
+          php artisan migrate:rollback --step=21 --force
+          php artisan migrate --force
+
+      - name: PHPUnit
+        run: vendor/bin/phpunit --colors=always
+
+      - name: Standalone gates
+        run: |
+          php scripts/lang-parity.php --strict
+          php scripts/lang-usage.php
+          php scripts/secret-scan.php
+          php scripts/migration-guard.php
+          php scripts/security-audit.php
+
+      - name: Dependency audit
+        run: composer audit --no-interaction
+
+  # ------------------------------------------------------------- frontend
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: TypeScript
+        run: npx vue-tsc --noEmit
+
+      - name: ESLint
+        # --max-warnings 0 once the 10 known vue/* warnings are cleared; left
+        # non-blocking today so the gate reports honestly rather than being
+        # switched off.
+        run: npx eslint resources/js --ext .ts,.vue
+
+      - name: Build
+        run: npx vite build
+
+      - name: Frontend guard
+        # Requires PHP only as a script host; no framework, no database.
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq php8.3-cli
+          php scripts/frontend-guard.php
+
+      - name: npm audit
+        run: npm audit --audit-level=high
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: public/build
+          retention-days: 7
+
+  # ------------------------------------------------- navigation smoke test
+  # §2.4. The seven top-level destinations must return a successful response
+  # when their feature flag is enabled, in all three locales. This is the gate
+  # that would have caught /areas and /news being rendered in the public nav
+  # with no route behind them.
+  navigation:
+    name: Navigation destinations
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+      - name: Assert every navigation destination resolves
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ':memory:'
+        run: vendor/bin/phpunit --testsuite Feature --filter NavigationDestinations
+
+  # ------------------------------------------------------------------ e2e
+  e2e:
+    name: E2E · ckb/ar/en
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: npm ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Serve and run E2E
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/e2e.sqlite
+        run: |
+          touch database/e2e.sqlite
+          php artisan migrate --force
+          php artisan serve --host=127.0.0.1 --port=8000 &
+          npx wait-on http://127.0.0.1:8000 --timeout 60000
+          npx playwright test
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 7
+
+  # ------------------------------------------------------------ packaging
+  package:
+    name: Reproducible packaging
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: npm ci && npx vite build
+
+      # Built twice from the same HEAD. Identical checksums or the build is not
+      # reproducible and the manifest in the release notes means nothing.
+      - name: Build archives twice and compare
+        run: |
+          bash scripts/package-release.sh dist-a
+          bash scripts/package-release.sh dist-b
+          diff <(cut -d' ' -f1 dist-a/SHA256SUMS.txt) \
+               <(cut -d' ' -f1 dist-b/SHA256SUMS.txt)
+          echo "archives are reproducible"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: dist-a
+          retention-days: 14

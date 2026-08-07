@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+/storage/framework/testing.sqlite
+/storage/app/cleanup-journal*
+/storage/logs/*.log
+/.env
+/dist
+/.phpunit.cache
+/storage/browser-acceptance
+/tests/Browser/support/fixtures.json

@@ -1,0 +1,26 @@
+# DELETE_FILES.txt — files the v7 patch REMOVES from an existing installation.
+#
+# A ZIP overlay can only add and overwrite. Anything this release deletes from
+# the repository would otherwise survive on a server that was deployed from the
+# v6 baseline, because copying new files over an old tree never removes
+# anything. This manifest is what makes a deletion actually take effect in
+# production.
+#
+# Format: one project-relative POSIX path per line, relative to the application
+# directory. Comments start with '#'. Absolute paths and '..' are rejected by
+# the applying script, which also refuses any path not listed here.
+app/Modules/Operations/Http/Controllers/Admin/OperationsController.php.backup-20260802-014031
+
+# Removed when release evidence moved outside the source identity.
+# An overlay cannot delete, so this must be applied explicitly or the stale
+# evidence file survives the upgrade and misreports the tree it describes.
+docs/release-evidence.json
+
+# Run-derived reports moved outside the authenticated source. They carry the
+# gate table and tree identity, so keeping them in the tree made evidence
+# collection modify the very tree it was describing. Generated into
+# <evidence-dir>/reports now.
+docs/VERIFICATION.md
+docs/ROADMAP_STATUS.md
+docs/RELEASE_DECISION.md
+docs/FINAL_RELEASE_VERIFICATION.md

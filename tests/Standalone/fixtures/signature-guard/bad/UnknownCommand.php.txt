@@ -1,0 +1,24 @@
+<?php
+
+/*
+ * A FIXTURE, not application code: it exists to be parsed by SignatureGuard.
+ * Wrapped in a class so it is valid PHP in its own right — `$this` outside a
+ * class is not something the analyser should have to tolerate, and the guard
+ * reads the artisan call either way.
+ */
+final class FixtureUnknownCommand
+{
+    /** @param  array<string, mixed>  $parameters */
+    public function artisan(string $command, array $parameters = []): self
+    {
+        return $this;
+    }
+
+    /** @return list<mixed> every call's result, so none is discarded */
+    public function run(): array
+    {
+        $r0 = $this->artisan('mulkihawler:no-such-command');
+
+        return [$r0];
+    }
+}

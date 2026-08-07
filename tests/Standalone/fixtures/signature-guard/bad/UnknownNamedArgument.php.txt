@@ -1,0 +1,11 @@
+<?php
+
+/*
+ * A FIXTURE, not application code: it exists to be PARSED by SignatureGuard,
+ * which reads the call's arguments. The results are returned rather than
+ * dropped so the file is honest PHP in its own right — a statement whose
+ * value goes nowhere is a defect anywhere else, and a fixture should not
+ * need an exception carved out for it.
+ */
+$service = app(\Fixtures\SignatureGuard\Subject::class);
+return $service->onlyTwo(a: 1, nope: 2);
