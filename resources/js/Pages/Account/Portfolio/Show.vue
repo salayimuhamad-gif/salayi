@@ -207,8 +207,9 @@ const factRows = (): Array<[string, string | null]> => [
             </template>
 
             <!-- The honest refusal (spec §11): the reason, not a blank. -->
-            <AppAlert data-testid="valuation-result"
+            <AppAlert
                 v-else-if="property.valuation && property.valuation.no_valuation_reason"
+                data-testid="valuation-result"
                 variant="info"
             >
                 {{ t(`portfolio.valuation_actions.reason_${property.valuation.no_valuation_reason}`) }}
@@ -221,7 +222,8 @@ const factRows = (): Array<[string, string | null]> => [
                     {{ t('portfolio.valuation_actions.consent_required') }}
                 </p>
                 <template v-else>
-                    <AppButton data-testid="request-valuation"
+                    <AppButton
+                        data-testid="request-valuation"
                         type="button"
                         size="sm"
                         :loading="valuing"

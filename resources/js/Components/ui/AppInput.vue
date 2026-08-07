@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<{
     autocomplete?: string;
     required?: boolean;
     dir?: 'auto' | 'ltr' | 'rtl';
-}>(), { type: 'text', error: null, hint: null, required: false, dir: 'auto' });
+}>(), { type: 'text', error: null, hint: null, autocomplete: undefined, required: false, dir: 'auto' });
 
 defineEmits<{ 'update:modelValue': [string] }>();
 

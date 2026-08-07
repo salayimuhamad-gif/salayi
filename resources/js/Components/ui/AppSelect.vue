@@ -8,7 +8,7 @@ withDefaults(defineProps<{
     error?: string | null;
     placeholder?: string;
     required?: boolean;
-}>(), { error: null, required: false });
+}>(), { error: null, placeholder: undefined, required: false });
 
 defineEmits<{ 'update:modelValue': [string] }>();
 
