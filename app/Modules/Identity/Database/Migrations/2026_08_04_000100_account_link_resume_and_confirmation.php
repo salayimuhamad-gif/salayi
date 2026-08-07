@@ -49,6 +49,29 @@ return new class extends Migration
 
     public function down(): void
     {
+        /*
+         * MariaDB/MySQL only: give the user_id FOREIGN KEY an index to fall
+         * back on BEFORE dropping the composite.
+         *
+         * At table creation InnoDB auto-generated
+         * `telegram_login_intents_user_id_foreign` for the constraint. When
+         * up() added `telegram_intents_user_purpose_idx` (user_id leftmost),
+         * InnoDB silently dropped that auto index as redundant and re-based
+         * the constraint onto the composite — so dropping the composite alone
+         * fails with errno 1553 ("Cannot drop index ...: needed in a foreign
+         * key constraint"), which is exactly how the first real rollback run
+         * failed. Recreating the index under the original auto-generated name
+         * restores the pre-up shape. SQLite backs foreign keys with no index
+         * at all, so adding one there would invent schema the original never
+         * had.
+         */
+        if (Schema::getConnection()->getDriverName() === 'mysql'
+            && ! Schema::hasIndex('telegram_login_intents', 'telegram_login_intents_user_id_foreign')) {
+            Schema::table('telegram_login_intents', function (Blueprint $table): void {
+                $table->index('user_id', 'telegram_login_intents_user_id_foreign');
+            });
+        }
+
         Schema::table('telegram_login_intents', function (Blueprint $table): void {
             $table->dropIndex('telegram_intents_user_purpose_idx');
         });

@@ -291,6 +291,21 @@ return new class extends Migration
             });
         }
 
+        /*
+         * The PLAIN index goes first, explicitly — up() created it with
+         * `->index()` when the column was added. MariaDB would drop it with
+         * the column; SQLite refuses to drop a column an index still covers
+         * ("error in index orphaned_files_incident_uuid_index after drop
+         * column"), which is exactly how the first real rollback run failed.
+         */
+        if (SchemaContract::indexContractHolds('orphaned_files', 'orphaned_files_incident_uuid_index', ['incident_uuid'], false)) {
+            Schema::table('orphaned_files', function (Blueprint $table): void {
+                // MIGRATION-GUARD: intentional-drop — reversing this
+                // migration's own index.
+                $table->dropIndex('orphaned_files_incident_uuid_index');
+            });
+        }
+
         Schema::table('orphaned_files', function (Blueprint $table): void {
             foreach (['active_key', 'incident_uuid'] as $column) {
                 if (Schema::hasColumn('orphaned_files', $column)) {
