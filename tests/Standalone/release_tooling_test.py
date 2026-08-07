@@ -932,6 +932,122 @@ check('the sealed artifacts are bound by the external attestation instead',
       '--evidence-zip' in attestation and 'sealed_artifacts' in attestation)
 
 # ===========================================================================
+# Sealed-baseline legacy artifact: a waiver pinned to ONE archive's bytes.
+#
+# The verified v6 baseline (sealed commit 9c0188f8…) carries a stale editor
+# backup that the v6-era auditor's `.backup`-exact pattern did not catch. v7
+# hardened that pattern, so the immutable historical input now fails an audit it
+# legitimately passed. The archive must not be rebuilt, and the pattern must not
+# be relaxed — so exactly one member of exactly one archive is excused, and
+# everything else stays strict.
+# ===========================================================================
+import importlib.util  # noqa: E402
+
+_spec = importlib.util.spec_from_file_location(
+    'audit_archive_under_test', RELEASE / 'audit_archive.py')
+aa = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(aa)
+
+BASELINE_SHA = '48bfca9ef14b71a9c3605c249cf9cfe366830eb04303f58ddb3ba6befe7eb4d7'
+LEGACY = ('app/Modules/Operations/Http/Controllers/Admin/'
+          'OperationsController.php.backup-20260802-014031')
+
+# ---- the production waiver is pinned exactly, and does not creep -----------
+check('the waiver names exactly one archive hash',
+      list(aa.BASELINE_LEGACY_ARTIFACTS) == [BASELINE_SHA],
+      f'table keys: {list(aa.BASELINE_LEGACY_ARTIFACTS)}')
+check('the waiver names exactly one member path',
+      aa.BASELINE_LEGACY_ARTIFACTS[BASELINE_SHA] == frozenset({LEGACY}))
+check('the hardened suffix pattern still matches the legacy artifact itself',
+      aa.UNSAFE_NAME.search(LEGACY.rsplit('/', 1)[-1]) is not None,
+      'the waiver must excuse a real finding, not paper over a weakened pattern')
+check('DELETE_FILES.txt removes that exact legacy path on upgrade',
+      LEGACY in (ROOT / 'DELETE_FILES.txt').read_text().split())
+
+
+def _zip(path, members, *, root='mulkihawler'):
+    """Build a fixture archive; members is {relative name: bytes|str}."""
+    with zipfile.ZipFile(path, 'w') as zf:
+        for rel, body in members.items():
+            zf.writestr(f'{root}/{rel}' if root else rel, body)
+    return path
+
+
+def _register(path):
+    """Pin the fixture's real digest, as the production table pins the baseline."""
+    digest = aa.sha256_file(str(path))
+    aa.BASELINE_LEGACY_ARTIFACTS[digest] = frozenset({LEGACY})
+    return digest
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+
+    # ---- 1. the verified baseline shape is accepted ------------------------
+    ok = _zip(base / 'baseline-ok.zip', {'artisan': '#!/usr/bin/env php\n',
+                                         LEGACY: 'stale backup\n'})
+    _register(ok)
+    problems = aa.audit(str(ok))
+    check('a pinned baseline carrying only the named legacy artifact is accepted',
+          problems == [], str(problems))
+
+    # ---- 2. the SAME path in a differently-hashed baseline is rejected -----
+    other = _zip(base / 'baseline-other.zip', {'artisan': '#!/usr/bin/env php\n',
+                                               LEGACY: 'different bytes entirely\n'})
+    problems = aa.audit(str(other))
+    check('the same legacy path in a differently-hashed archive is rejected',
+          any('unsafe artifact' in p and LEGACY in p for p in problems),
+          'the waiver must be pinned to bytes, never to a path')
+
+    # ---- 3. another .backup file is rejected even in the pinned archive ----
+    extra = LEGACY.replace('OperationsController.php', 'SomethingElse.php')
+    two = _zip(base / 'baseline-two.zip', {'artisan': '#!/usr/bin/env php\n',
+                                           LEGACY: 'stale\n', extra: 'also stale\n'})
+    _register(two)
+    problems = aa.audit(str(two))
+    check('an ADDITIONAL unsafe artifact in the pinned archive still fails',
+          any(extra in p for p in problems)
+          and not any(f'unsafe artifact: mulkihawler/{LEGACY}' == p for p in problems),
+          str(problems))
+
+    # ---- 4. the source archive stays strictly audited ----------------------
+    src = _zip(base / 'source.zip', {'artisan': '#!/usr/bin/env php\n',
+                                     'app/Thing.php.backup-20260101-000000': 'x\n'})
+    problems = aa.audit(str(src))
+    check('an unpinned (source) archive is audited strictly, with no waiver',
+          any('unsafe artifact' in p for p in problems), str(problems))
+
+    # ---- 5. structural attacks remain rejected in the PINNED archive ------
+    hostile = base / 'baseline-hostile.zip'
+    with zipfile.ZipFile(hostile, 'w') as zf:
+        zf.writestr('mulkihawler/artisan', '#!/usr/bin/env php\n')
+        zf.writestr(f'mulkihawler/{LEGACY}', 'stale\n')
+        zf.writestr('mulkihawler/../escape.txt', 'x')
+        zf.writestr('/absolute.txt', 'x')
+        zf.writestr('mulkihawler\\windows.txt', 'x')
+        zf.writestr('mulkihawler/dup.txt', 'a')
+        zf.writestr('mulkihawler/dup.txt', 'b')
+        link = zipfile.ZipInfo('mulkihawler/link')
+        link.external_attr = 0xA1FF << 16
+        zf.writestr(link, 'target')
+    _register(hostile)
+    problems = aa.audit(str(hostile))
+    joined = ' | '.join(problems)
+    for label, needle in (('path traversal', 'unsafe path'),
+                          ('absolute path', 'unsafe path: /absolute.txt'),
+                          ('backslash path', 'windows or backslash'),
+                          ('duplicate entry', 'duplicate entry'),
+                          ('symlink', 'symlink')):
+        check(f'{label} is still rejected inside the pinned baseline',
+              needle in joined, joined[:200])
+    # Fail closed: a structurally anomalous archive gets NO waiver at all. The
+    # root cannot be established (one entry carries no '/'), so the named
+    # artifact is reported too rather than excused on a malformed layout.
+    check('a structurally hostile archive forfeits the waiver entirely',
+          any(f'unsafe artifact: mulkihawler/{LEGACY}' == p for p in problems),
+          'a waiver must never survive a layout it cannot verify')
+
+# ===========================================================================
 # Adversarial-review round: signal deaths, argv secret hygiene, spec-inventory
 # closure, ERR-trap-safe captures, and report-label drift.
 # ===========================================================================

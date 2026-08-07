@@ -15,6 +15,7 @@ can tell a real audit from a gate that silently did nothing.
 """
 from __future__ import annotations
 
+import hashlib
 import os
 import re
 import sys
@@ -25,6 +26,70 @@ UNSAFE_NAME = re.compile(
 )
 WINDOWS_ABSOLUTE = re.compile(r'^[A-Za-z]:[\\/]')
 
+# ------------------------------------------------- sealed historical baseline
+#
+# ONE archive, identified by its exact bytes, may carry ONE named legacy
+# artifact. Nothing else is exempt, anywhere, ever.
+#
+# WHY THIS EXISTS. The verified v6 final baseline (sealed commit
+# 9c0188f81843cfe4786b7f72ecdc2a3fae89cd82) ships a stale editor backup. The
+# v6-era auditor did not recognise it: its pattern matched `.backup` exactly, so
+# a dated suffix slipped through. v7 hardened UNSAFE_NAME to catch
+# `.backup-<date>` precisely because that file escaped — which means the sealed
+# historical archive now fails an audit it legitimately passed when it was made.
+#
+# The file is NOT tolerated in v7. `DELETE_FILES.txt` removes it during upgrade,
+# and `build_source_patch.py` verifies that removal in both directions, so the
+# artifact is provably gone from the delivered tree. What cannot happen is
+# rebuilding an immutable historical input to satisfy a rule written after it
+# was sealed — that would destroy the baseline's identity, which the whole
+# source-patch and rehearsal chain depends on.
+#
+# WHY IT IS SAFE. The waiver is pinned to the archive's SHA-256, so it cannot
+# generalise: a re-zipped, tampered, or merely different baseline gets the
+# strict policy with no exceptions. It suppresses exactly one finding class
+# (`unsafe artifact`) for exactly one member path. Every other check — traversal,
+# absolute paths, backslash/Windows paths, symlinks, encryption, duplicates,
+# case collisions, CRC — still applies to that member and to every other entry.
+# Any additional unsafe artifact in the same archive is still a hard failure.
+#
+# Waivers are printed, never silent, so a recorded gate log shows exactly what
+# was excused and under which archive hash.
+BASELINE_LEGACY_ARTIFACTS: dict[str, frozenset[str]] = {
+    '48bfca9ef14b71a9c3605c249cf9cfe366830eb04303f58ddb3ba6befe7eb4d7': frozenset({
+        'app/Modules/Operations/Http/Controllers/Admin/'
+        'OperationsController.php.backup-20260802-014031',
+    }),
+}
+
+
+def sha256_file(path: str) -> str:
+    """Streamed digest: the archive is the identity the waiver is pinned to."""
+    digest = hashlib.sha256()
+
+    with open(path, 'rb') as handle:
+        for chunk in iter(lambda: handle.read(1 << 20), b''):
+            digest.update(chunk)
+
+    return digest.hexdigest()
+
+
+def single_root(names: list[str]) -> str | None:
+    """
+    The archive's one top-level directory, or None when there is not exactly one.
+
+    Release archives are published with a single `mulkihawler/` root, so a waiver
+    is written against the repository-relative path and matched through this.
+    Returning None when the shape is anything else keeps the match exact rather
+    than guessing at a prefix.
+    """
+    if any('/' not in name for name in names):
+        return None
+
+    roots = {name.split('/', 1)[0] for name in names}
+
+    return roots.pop() if len(roots) == 1 else None
+
 
 def audit(path: str) -> list[str]:
     problems: list[str] = []
@@ -34,9 +99,15 @@ def audit(path: str) -> list[str]:
     except (zipfile.BadZipFile, OSError) as exc:
         return [f'{path}: not a readable ZIP ({exc})']
 
+    # Pinned to the exact bytes, so the waiver cannot follow a path into any
+    # other archive. An unknown hash yields an empty set: strict policy.
+    waivable = BASELINE_LEGACY_ARTIFACTS.get(sha256_file(path), frozenset())
+    waived: list[str] = []
+
     with archive as zf:
         seen: set[str] = set()
         lowered: dict[str, str] = {}
+        root = single_root([i.filename for i in zf.infolist()]) if waivable else None
 
         for info in zf.infolist():
             name = info.filename
@@ -63,7 +134,15 @@ def audit(path: str) -> list[str]:
                 problems.append(f'symlink: {name}')
 
             if UNSAFE_NAME.search(name.rsplit('/', 1)[-1]):
-                problems.append(f'unsafe artifact: {name}')
+                # Only this one finding class is waivable, and only for a member
+                # named in the pinned set. Every check above still applied.
+                relative = (name[len(root) + 1:]
+                            if root and name.startswith(f'{root}/') else name)
+
+                if relative in waivable:
+                    waived.append(name)
+                else:
+                    problems.append(f'unsafe artifact: {name}')
 
         corrupt = zf.testzip()
         if corrupt:
@@ -71,7 +150,14 @@ def audit(path: str) -> list[str]:
 
         entries = len(seen)
 
-    print(f'{path}: entries={entries} problems={len(problems)}')
+    print(f'{path}: entries={entries} problems={len(problems)}'
+          + (f' waived={len(waived)}' if waived else ''))
+
+    # Loud, and in the recorded gate log: an excused artifact must never be
+    # indistinguishable from one that was never there.
+    for name in waived:
+        print(f'  WAIVED  sealed v6 baseline legacy artifact, removed by '
+              f'DELETE_FILES.txt during upgrade: {name}')
 
     return problems
 
