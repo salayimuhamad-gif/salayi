@@ -34,17 +34,23 @@ jobs:
         # because "it works on 8.3" is not a claim about 8.4 and Hostinger
         # moves PHP minors without asking.
         php: ['8.3', '8.4']
-        db: [sqlite, mysql]
+        db: [sqlite, mariadb]
 
+    # MariaDB, not MySQL. The geography migrations declare SRIDs with
+    # MariaDB's `REF_SYSTEM_ID=4326` syntax — deliberately, because Hostinger
+    # runs MariaDB and the final-release workflow already refuses mysql:8.0
+    # as a substitute. The first real run of this workflow proved the point:
+    # against mysql:8.0, 2026_02_01_000100_create_geography_tables failed
+    # with SQLSTATE[42000] 1064 at `REF_SYSTEM_ID=4326`.
     services:
-      mysql:
-        image: mysql:8.0
+      mariadb:
+        image: mariadb:10.11
         env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: mulkihawler_test
+          MARIADB_ROOT_PASSWORD: root
+          MARIADB_DATABASE: mulkihawler_test
         ports: ['3306:3306']
         options: >-
-          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
           --health-interval=5s --health-timeout=5s --health-retries=20
 
     steps:
@@ -87,8 +93,14 @@ jobs:
         run: vendor/bin/phpstan analyse --no-progress --error-format=github
 
       - name: Configure database
+        # The sqlite lane uses a FILE, not :memory:. An in-memory SQLite
+        # database lives and dies with one process, so the separate rollback
+        # step saw a fresh empty database and failed with "no such table:
+        # migrations". A file on the workspace persists across steps — the
+        # same pattern the E2E job already uses. DB_CONNECTION stays `mysql`
+        # for MariaDB: that is Laravel's driver name for both servers.
         run: |
-          if [ "${{ matrix.db }}" = "mysql" ]; then
+          if [ "${{ matrix.db }}" = "mariadb" ]; then
             {
               echo "DB_CONNECTION=mysql"
               echo "DB_HOST=127.0.0.1"
@@ -98,8 +110,9 @@ jobs:
               echo "DB_PASSWORD=root"
             } >> "$GITHUB_ENV"
           else
+            touch "${{ github.workspace }}/database/ci.sqlite"
             echo "DB_CONNECTION=sqlite" >> "$GITHUB_ENV"
-            echo "DB_DATABASE=:memory:" >> "$GITHUB_ENV"
+            echo "DB_DATABASE=${{ github.workspace }}/database/ci.sqlite" >> "$GITHUB_ENV"
           fi
 
       - name: Migrate
