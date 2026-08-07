@@ -31,6 +31,19 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT="${1:-$ROOT/dist}"
+
+# ABSOLUTE, always. `zip_reproducibly` builds each archive from inside the
+# staging tree (`cd "$base"`), so a RELATIVE output path resolves against that
+# temporary directory rather than the caller's — `zip` then fails with
+# "Could not create output file" two minutes into a run that had already passed
+# every gate. The default is absolute, which is why the defect only appeared
+# the first time CI passed the documented relative form (`dist-a`). A relative
+# path now means what it says: relative to the directory the script was invoked
+# from, resolved once, here.
+case "$OUT" in
+    /*) ;;
+    *)  OUT="$(pwd)/$OUT" ;;
+esac
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
 

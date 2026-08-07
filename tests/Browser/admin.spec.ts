@@ -122,7 +122,22 @@ test('logout ends the session through the visible control', async ({ page, diagn
      * make one.)
      */
     await page.goBack().catch(() => undefined);
-    await page.reload();
+
+    /*
+     * SETTLE THE BACK NAVIGATION BEFORE FORCING THE ROUND-TRIP.
+     *
+     * `goBack()` can resolve while the restored document is still committing —
+     * a bfcache restore in particular. A `reload()` issued into that window is
+     * aborted by the navigation already in flight, which surfaced in CI as
+     * `page.reload: net::ERR_ABORTED; maybe frame was detached?` on a run
+     * where every other assertion in this file passed.
+     *
+     * Waiting for the restore to settle removes the race without touching the
+     * assertion below: the reload still forces the server to decide, and the
+     * server must still answer /login.
+     */
+    await page.waitForLoadState('domcontentloaded').catch(() => undefined);
+    await page.reload({ waitUntil: 'domcontentloaded' });
 
     expect(new URL(page.url()).pathname, 'revisit after logout').toBe('/login');
 
