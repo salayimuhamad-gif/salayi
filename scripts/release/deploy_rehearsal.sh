@@ -202,6 +202,47 @@ rm -rf "$SITE/public_html/build"
 cp -a "$STAGE/patch/public_html/build" "$SITE/public_html/"
 check "runtime files applied" $?
 
+# The build directory is REPLACED, never merged, and that replacement is what
+# retires the previous build's content-hashed chunks — the source patch does not
+# list them individually in DELETE_FILES.txt because this step removes all of
+# them at once. So this step has to be PROVEN, not assumed.
+#
+# Two properties, and the manifest check in §6 implies neither: the deployed
+# directory must equal the runtime build exactly, and no file from the previous
+# build may survive unless the new build also ships it. A merged directory
+# passes a manifest check happily, because a manifest only names files that ARE
+# there — never the hundred stale chunks sitting beside them.
+DEPLOYED_LIST=$(cd "$SITE/public_html/build" && find . -type f | sort)
+STAGED_LIST=$(cd "$STAGE/patch/public_html/build" && find . -type f | sort)
+PREVIOUS_LIST=$(cd "$BACKUP/build" && find . -type f | sort)
+
+[ "$DEPLOYED_LIST" = "$STAGED_LIST" ]
+check "the deployed build directory matches the runtime build exactly" $?
+
+stale_kept=0
+retired=0
+
+while IFS= read -r rel; do
+    [ -n "$rel" ] || continue
+
+    # Shipped by the new build too: not a stale chunk, it is a current one.
+    if printf '%s\n' "$STAGED_LIST" | grep -qxF "$rel"; then
+        continue
+    fi
+
+    retired=$((retired + 1))
+
+    if [ -e "$SITE/public_html/build/$rel" ]; then
+        echo "    stale chunk survived the replacement: $rel"
+        stale_kept=$((stale_kept + 1))
+    fi
+done <<PREVIOUS_BUILD
+$PREVIOUS_LIST
+PREVIOUS_BUILD
+
+[ "$stale_kept" = "0" ] && [ "$retired" -gt "0" ]
+check "every retired build chunk is gone ($retired retired, $stale_kept survived)" $?
+
 echo "== 5b. apply the deletion manifest =="
 # A ZIP overlay cannot delete. Without this step a file removed by the release
 # survives on the server, and the deployment "succeeds" with it still there.

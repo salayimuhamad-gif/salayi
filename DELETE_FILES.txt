@@ -24,3 +24,11 @@ docs/VERIFICATION.md
 docs/ROADMAP_STATUS.md
 docs/RELEASE_DECISION.md
 docs/FINAL_RELEASE_VERIFICATION.md
+
+# The browser fixture file is GENERATED and gitignored in v7. The v6 baseline
+# committed it, so a v6 installation carries a file holding a generated test
+# password and two TOTP secrets for seeded @browser-test.invalid accounts. They
+# are disposable and not production credentials, but an upgrade should not leave
+# a stale credential file behind — seed-browser-fixtures.php writes a fresh one
+# outside the tree identity now.
+tests/Browser/support/fixtures.json

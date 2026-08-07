@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -1194,6 +1195,278 @@ reports_source = (RELEASE / 'generate_release_reports.py').read_text()
 check('SECURITY_REVIEW names the component archive audit by its real label',
       "'component-archive-audit'" in reports_source
       and "'archive-audit')" not in reports_source)
+
+# ---- generated build output is retired by replacement, not by 100 entries ---
+#
+# Vite renames every chunk on every build, so an upgrade "removes" ~100 files
+# nobody wrote. DEPLOYMENT_NOTES.md, deploy_rehearsal.sh and
+# rollback_rehearsal_v7.sh all replace the build directory whole, which retires
+# those chunks more completely than a hand-maintained list could. These tests
+# hold the exemption to exactly that: the replacement root and nothing else, and
+# only while the current tree really carries a complete build.
+BUILDER = str(RELEASE / 'build_source_patch.py')
+APP_FILE = 'app/Modules/Identity/Http/Controllers/RegistrationController.php'
+OLD_CHUNKS = {f'public/build/assets/Page{i}-OLDHASH{i:03d}.js': f'old chunk {i}\n'
+              for i in range(120)}
+NEW_CHUNKS = {f'public/build/assets/Page{i}-NEWHASH{i:03d}.js': f'new chunk {i}\n'
+              for i in range(118)}
+# Byte-identical in both trees: neither added nor modified, and still required
+# for the site to render after the directory is replaced.
+UNCHANGED_CHUNK = {'public/build/assets/vendor-STABLE.js': 'unchanged vendor\n'}
+MANIFEST = ('public/build/manifest.json',
+            '{"resources/js/app.js": {"file": "assets/vendor-STABLE.js", '
+            '"css": ["assets/app-STABLE.css"]}}')
+STYLESHEET = {'assets/app-STABLE.css': ':root{}\n'}
+
+
+def build_tree(root: Path, files: dict[str, str]) -> Path:
+    root.mkdir(parents=True, exist_ok=True)
+    for rel, body in files.items():
+        target = root / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(body)
+    return root
+
+
+def source_patch(base: Path, tag: str, old: dict, new: dict,
+                 deletions: list[str]) -> tuple:
+    """Run the REAL builder over fixture trees; returns (proc, patch, inventory)."""
+    work = base / tag
+    baseline = work / 'baseline.zip'
+    work.mkdir(parents=True)
+
+    with zipfile.ZipFile(baseline, 'w') as zf:
+        for rel, body in old.items():
+            zf.writestr(f'mulkihawler/{rel}', body)
+
+    current = build_tree(work / 'current', new)
+    declared = work / 'DELETE_FILES.txt'
+    declared.write_text('# fixture manifest\n' + ''.join(f'{d}\n' for d in deletions))
+    patch, inventory = work / 'patch.zip', work / 'inventory.json'
+
+    proc = run(BUILDER, '--baseline', str(baseline), '--current', str(current),
+               '--deletions', str(declared), '--output', str(patch),
+               '--inventory', str(inventory))
+
+    return proc, patch, inventory
+
+
+def base_files(chunks: dict) -> dict:
+    files = {'artisan': '#!/usr/bin/env php\n',
+             APP_FILE: 'class RegistrationController {}\n',
+             MANIFEST[0]: MANIFEST[1]}
+    files.update(chunks)
+    files.update(UNCHANGED_CHUNK)
+    files.update({f'public/build/{rel}': body for rel, body in STYLESHEET.items()})
+    return files
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+
+    OLD_TREE = base_files(OLD_CHUNKS) | {'docs/stale-report.md': 'retired\n'}
+    NEW_TREE = base_files(NEW_CHUNKS) | {APP_FILE: 'class RegistrationController { }\n'}
+
+    # ---- 1. a hundred retired chunks need no deletion entries --------------
+    proc, patch, inventory = source_patch(
+        base, 'replaced', OLD_TREE, NEW_TREE, ['docs/stale-report.md'])
+    check('120 retired Vite chunks do not require 120 deletion entries',
+          proc.returncode == 0,
+          proc.stderr.strip()[-400:] or proc.stdout.strip()[-200:])
+
+    inv = json.loads(inventory.read_text()) if inventory.is_file() else {}
+    check('the retired chunks are counted and attributed to the replacement root',
+          len(inv.get('removed_generated', [])) == len(OLD_CHUNKS)
+          and inv.get('replaced_roots') == ['public/build'],
+          f'removed_generated={len(inv.get("removed_generated", []))}, '
+          f'roots={inv.get("replaced_roots")}')
+    check('the retired chunks are still reported, never silently dropped',
+          len(inv.get('removed', [])) == len(OLD_CHUNKS) + 1
+          and 'REPLACED  120 previous-build file(s)' in proc.stdout,
+          proc.stdout.strip()[-200:])
+    check('the run reports zero undeclared removals outside the root',
+          'undeclared removals outside the replacement roots: 0' in proc.stdout)
+
+    # ---- 2. the patch carries the COMPLETE current build ------------------
+    with zipfile.ZipFile(patch) as zf:
+        carried = {i.filename for i in zf.infolist() if not i.is_dir()}
+
+    expected_build = {rel for rel in NEW_TREE if rel.startswith('public/build/')}
+    check('the patch carries the complete current build, not only its changes',
+          expected_build <= carried,
+          f'missing: {sorted(expected_build - carried)[:3]}')
+    check('an unchanged chunk is carried too, because the directory is replaced',
+          'public/build/assets/vendor-STABLE.js' in carried,
+          'replacing a directory with a changed-files-only copy loses every '
+          'chunk that happened not to change')
+    check('the patch ships the replacement instruction beside the files',
+          'REPLACE_DIRS.txt' in carried
+          and b'public/build' in zipfile.ZipFile(patch).read('REPLACE_DIRS.txt'))
+
+    # ---- 3. nothing outside the replacement root is exempt ----------------
+    dropped_app = {k: v for k, v in NEW_TREE.items() if k != APP_FILE}
+    dropped_app['app/Modules/Identity/Support/Keeper.php'] = 'class Keeper {}\n'
+    with_extra = OLD_TREE | {'app/Modules/Identity/Support/Keeper.php': 'class Keeper {}\n'}
+    proc = source_patch(base, 'undeclared', with_extra, dropped_app,
+                        ['docs/stale-report.md'])[0]
+    check('an undeclared removal OUTSIDE public/build is still a hard failure',
+          proc.returncode != 0
+          and f'removed from the tree but absent from DELETE_FILES.txt: {APP_FILE}'
+          in proc.stderr,
+          proc.stderr.strip()[-300:])
+
+    # ---- 4. DELETE_FILES.txt stays authoritative for real deletions -------
+    proc = source_patch(base, 'undeclared-doc', OLD_TREE, NEW_TREE, [])[0]
+    check('a real application deletion still has to be declared',
+          proc.returncode != 0 and 'docs/stale-report.md' in proc.stderr)
+
+    proc = source_patch(base, 'not-removed', OLD_TREE, NEW_TREE,
+                        ['docs/stale-report.md', APP_FILE])[0]
+    check('declaring a file that is still present is still a failure',
+          proc.returncode != 0
+          and f'still present in the tree: {APP_FILE}' in proc.stderr,
+          proc.stderr.strip()[-300:])
+
+    proc = source_patch(base, 'never-existed', OLD_TREE, NEW_TREE,
+                        ['docs/stale-report.md', 'app/Never/Existed.php'])[0]
+    check('declaring a file the baseline never had is a failure',
+          proc.returncode != 0
+          and 'absent from the baseline: app/Never/Existed.php' in proc.stderr,
+          proc.stderr.strip()[-300:])
+
+    # An entry the patch comparison deliberately drops — the sealed baseline's
+    # editor backup — must still verify, against the trees rather than the sets.
+    legacy = f'{APP_FILE}.backup-20260802-014031'
+    proc = source_patch(base, 'legacy-entry', OLD_TREE | {legacy: 'stale\n'},
+                        NEW_TREE, ['docs/stale-report.md', legacy])[0]
+    check('a declared path the eligibility policy filters out still verifies',
+          proc.returncode == 0,
+          'set arithmetic called this "declared but not actually removed"; '
+          'presence on disk is the real question — ' + proc.stderr.strip()[-200:])
+
+    # ---- 5. the exemption is FAIL-CLOSED ----------------------------------
+    no_build = {k: v for k, v in NEW_TREE.items() if not k.startswith('public/build/')}
+    proc = source_patch(base, 'no-build', OLD_TREE, no_build, ['docs/stale-report.md'])[0]
+    check('a tree with no build directory forfeits the exemption entirely',
+          proc.returncode != 0
+          and 'generated replacement root is missing from the tree: public/build'
+          in proc.stderr
+          and 'public/build/assets/Page0-OLDHASH000.js' in proc.stderr,
+          'the retired chunks must become ordinary undeclared removals — '
+          + proc.stderr.strip()[-300:])
+
+    truncated = {k: v for k, v in NEW_TREE.items()
+                 if k != 'public/build/assets/vendor-STABLE.js'}
+    proc = source_patch(base, 'truncated', OLD_TREE, truncated, ['docs/stale-report.md'])[0]
+    check('a build whose manifest does not resolve forfeits the exemption',
+          proc.returncode != 0
+          and 'manifest entry does not resolve under public/build: '
+              'assets/vendor-STABLE.js' in proc.stderr,
+          'a patch that would deploy an incomplete build must never pass — '
+          + proc.stderr.strip()[-300:])
+
+    no_manifest = {k: v for k, v in NEW_TREE.items() if k != MANIFEST[0]}
+    proc = source_patch(base, 'no-manifest', OLD_TREE, no_manifest,
+                        ['docs/stale-report.md'])[0]
+    check('a build with no manifest forfeits the exemption',
+          proc.returncode != 0 and 'has no manifest.json' in proc.stderr)
+
+    # ---- 6. the replacement really does retire the old chunks -------------
+    #
+    # The rehearsal itself needs MariaDB and a server, so what runs here is the
+    # documented sequence applied to fixture directories. The assertions that
+    # the SHIPPED rehearsal performs this sequence, and checks it, are below.
+    site = build_tree(base / 'site/public_html/build',
+                      {rel.split('public/build/', 1)[1]: body
+                       for rel, body in OLD_TREE.items() if rel.startswith('public/build/')})
+    runtime = build_tree(base / 'runtime/public_html/build',
+                         {rel.split('public/build/', 1)[1]: body
+                          for rel, body in NEW_TREE.items() if rel.startswith('public/build/')})
+    backup = base / 'backup/build'
+    backup.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(site, backup)
+
+    shutil.rmtree(site)
+    shutil.copytree(runtime, site)
+
+    deployed = {str(p.relative_to(site)) for p in site.rglob('*') if p.is_file()}
+    shipped = {str(p.relative_to(runtime)) for p in runtime.rglob('*') if p.is_file()}
+    kept = {str(p.relative_to(backup)) for p in backup.rglob('*') if p.is_file()}
+
+    check('replacing the directory leaves exactly the new runtime build',
+          deployed == shipped, f'difference: {sorted(deployed ^ shipped)[:3]}')
+    check('every retired chunk is gone after the replacement',
+          not [rel for rel in kept - shipped if (site / rel).exists()],
+          f'{len(kept - shipped)} chunks were retired; none may survive')
+    check('the replacement retires the chunks the patch did not declare',
+          len(kept - shipped) == len(OLD_CHUNKS),
+          f'{len(kept - shipped)} retired, expected {len(OLD_CHUNKS)}')
+
+    deployed_manifest = json.loads((site / 'manifest.json').read_text())
+    unresolved = [entry['file'] for entry in deployed_manifest.values()
+                  if 'file' in entry and not (site / entry['file']).is_file()]
+    check('every manifest entry resolves in the deployed build',
+          not unresolved, f'unresolved: {unresolved}')
+
+    # ---- 7. rollback puts the backed-up directory back, whole -------------
+    shutil.rmtree(site)
+    shutil.copytree(backup, site)
+    restored = {str(p.relative_to(site)) for p in site.rglob('*') if p.is_file()}
+    check('rollback restores the backed-up build directory exactly',
+          restored == kept, f'difference: {sorted(restored ^ kept)[:3]}')
+    check('rollback leaves no chunk from the failed release behind',
+          not [rel for rel in shipped - kept if (site / rel).exists()])
+
+# The shipped rehearsals must perform that sequence, and prove it.
+deploy_sh = (RELEASE / 'deploy_rehearsal.sh').read_text()
+rollback_sh = (RELEASE / 'rollback_rehearsal_v7.sh').read_text()
+
+check('the deployment rehearsal replaces the build directory, never merges it',
+      'rm -rf "$SITE/public_html/build"\ncp -a "$STAGE/patch/public_html/build" '
+      '"$SITE/public_html/"' in deploy_sh)
+check('the deployment rehearsal asserts the deployed build equals the runtime build',
+      'the deployed build directory matches the runtime build exactly' in deploy_sh)
+check('the deployment rehearsal asserts no stale chunk survived',
+      'stale chunk survived the replacement' in deploy_sh
+      and 'every retired build chunk is gone' in deploy_sh)
+check('the deployment rehearsal still proves every manifest entry resolves',
+      'every manifest entry resolves to a shipped file' in deploy_sh)
+check('the rollback rehearsal restores the backed-up build directory whole',
+      'rm -rf "$SITE/public_html/build"\ncp -a "$BACKUP/build" '
+      '"$SITE/public_html/build"' in rollback_sh
+      and 'the restored build directory matches the backup exactly' in rollback_sh)
+
+# Runtime asset parity is what proves the delivered runtime build IS the
+# authenticated tree's build. The replacement policy leans on it, so it must
+# stay mandatory and stay exclusion-free.
+check('runtime asset parity remains a required release gate',
+      'runtime-asset-parity' in RELEASE_EVIDENCE_LABELS)
+check('build reproducibility remains a required release gate',
+      'build-reproducibility' in RELEASE_EVIDENCE_LABELS)
+check('the runner still checks asset parity against the delivered runtime',
+      '--mode assets --source "$SOURCE/public/build" '
+      '--runtime "$RUNTIME_DIR/public_html/build"' in runner)
+
+with tempfile.TemporaryDirectory() as tmp:
+    left = build_tree(Path(tmp) / 'source', {'assets/a.js': 'x\n'})
+    right = build_tree(Path(tmp) / 'runtime', {'assets/a.js': 'x\n'})
+    parity = run(str(RELEASE / 'check_parity.py'), '--mode', 'assets',
+                 '--source', str(left), '--runtime', str(right))
+    check('asset parity passes on identical build directories',
+          parity.returncode == 0, parity.stderr.strip()[-200:])
+
+    (right / 'assets' / 'stale.js').write_text('left over\n')
+    parity = run(str(RELEASE / 'check_parity.py'), '--mode', 'assets',
+                 '--source', str(left), '--runtime', str(right))
+    check('asset parity fails on one extra file in the runtime build',
+          parity.returncode != 0 and 'stale.js' in parity.stderr,
+          'assets mode must carry no exclusions — ' + parity.stderr.strip()[-200:])
+
+check('DELETE_FILES.txt declares the v6 browser fixture credential file',
+      'tests/Browser/support/fixtures.json'
+      in (ROOT / 'DELETE_FILES.txt').read_text().split())
+check('no Vite chunk was ever added to DELETE_FILES.txt',
+      'public/build/' not in (ROOT / 'DELETE_FILES.txt').read_text())
 
 print()
 

@@ -178,6 +178,18 @@ rm -rf "$SITE/public_html/build"
 cp -a "$BACKUP/build" "$SITE/public_html/build"
 check "pre-deployment public build restored" $?
 
+# The mirror of the deployment's replacement, and the reason the source patch
+# can retire old chunks by directory rather than by deletion entry: whichever
+# direction the build directory moves, it moves WHOLE. The restored tree must
+# therefore equal the backup file-for-file — a merged restore leaves the failed
+# release's chunks beside the restored manifest, and the two checks below cannot
+# see them, because both only follow manifest entries.
+RESTORED_LIST=$(cd "$SITE/public_html/build" && find . -type f | sort)
+BACKUP_LIST=$(cd "$BACKUP/build" && find . -type f | sort)
+
+[ "$RESTORED_LIST" = "$BACKUP_LIST" ]
+check "the restored build directory matches the backup exactly" $?
+
 RESTORED_MANIFEST=$(sha256sum "$SITE/public_html/build/manifest.json" | cut -d' ' -f1)
 echo "  RESTORED_MANIFEST=$RESTORED_MANIFEST"
 [ "$RESTORED_MANIFEST" = "$BASELINE_MANIFEST" ]
