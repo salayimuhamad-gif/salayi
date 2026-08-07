@@ -242,13 +242,37 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
+      # The environment mirrors the release runner's write_test_env contract:
+      # the app must believe it is installed (or every request redirects into
+      # the installer), account-first registration calls User::blindIndex()
+      # immediately (which throws on an empty key), the browser spec sends a
+      # real webhook (refused when the configured secret is empty), and the
+      # admin/MFA/advisor scenarios need the seeded disposable accounts —
+      # fixtures() throws a directive to run the seeder when fixtures.json is
+      # missing. APP_URL and PLAYWRIGHT_BASE_URL are ONE origin, and the
+      # server gets PHP_CLI_SERVER_WORKERS so a page and its assets can load
+      # together instead of starving mid-flight.
       - name: Serve and run E2E
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/e2e.sqlite
+          APP_URL: http://127.0.0.1:8000
+          PLAYWRIGHT_BASE_URL: http://127.0.0.1:8000
+          MULKIHAWLER_INSTALLED: 'true'
+          MULKIHAWLER_FORCE_HTTPS: 'false'
+          SESSION_SECURE_COOKIE: 'false'
+          SESSION_DRIVER: database
+          QUEUE_CONNECTION: database
+          CACHE_STORE: database
+          TELEGRAM_BOT_USERNAME: myhawler_browser_bot
+          TELEGRAM_WEBHOOK_SECRET: browser-webhook-secret
+          PHP_CLI_SERVER_WORKERS: '10'
         run: |
+          export MULKIHAWLER_BLIND_INDEX_KEY=$(openssl rand -hex 32)
+          export MULKIHAWLER_PII_KEY=$(openssl rand -hex 32)
           touch database/e2e.sqlite
           php artisan migrate --force
+          php tests/Browser/support/seed-browser-fixtures.php --confirm-disposable-database
           php artisan serve --host=127.0.0.1 --port=8000 &
           npx wait-on http://127.0.0.1:8000 --timeout 60000
           npx playwright test

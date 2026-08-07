@@ -17,8 +17,22 @@ define('LARAVEL_START', microtime(true));
  * standard single-root install and the Hostinger split, without editing code.
  * It is resolved before the autoloader so a wrong path fails loudly here
  * rather than as an opaque class-not-found later.
+ *
+ * The default is LAYOUT-AWARE, not fixed. This file serves two shapes:
+ *
+ *   split:       <base>/application + <base>/public_html   (Hostinger)
+ *   single-root: <root>/public inside the application root (repo checkout,
+ *                `php artisan serve`, the CI E2E server)
+ *
+ * A fixed `/application` default answered every request from a repo checkout
+ * with a 500 — the first time the HTTP path really ran, in CI, no page ever
+ * loaded. When the operator has not spoken, prefer the split directory if it
+ * exists and fall back to the directory this `public/` actually lives in.
  */
-$base = getenv('MULKIHAWLER_APP_BASE') ?: dirname(__DIR__).'/application';
+$default = is_dir(dirname(__DIR__).'/application')
+    ? dirname(__DIR__).'/application'
+    : dirname(__DIR__);
+$base = getenv('MULKIHAWLER_APP_BASE') ?: $default;
 $base = rtrim($base, '/');
 
 /*
