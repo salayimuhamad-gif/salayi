@@ -544,8 +544,27 @@ printf '    deployment: autoload, split front controller, vite manifest, no dev 
 # containing the two archives and silently omitting SHA256SUMS.txt, so a
 # recipient had nothing to verify the pair against.
 step "delivery bundle"
-cp "$ROOT/docs/FINAL_RELEASE_VERIFICATION.md" "$OUT/FINAL_RELEASE_REPORT.md"
-cp "$ROOT/docs/RELEASE_DECISION.md" "$OUT/RELEASE_DECISION.md"
+
+# The two run-derived reports come from the EXTERNAL evidence directory, not
+# from docs/. generate-release-docs.php writes them to
+# <evidence-dir>/reports/ deliberately: they carry the gate table and the tree
+# identity, so writing them inside the source made the source change whenever
+# evidence was collected. This script was still reading the pre-externalisation
+# in-tree paths and failed with a bare `cp: cannot stat`. The directory is
+# resolved through EvidencePath itself — the same single source of truth every
+# other consumer uses — so --evidence-dir/MYHAWLER_EVIDENCE_DIR keep working.
+REPORTS="$(php -r '
+    require $argv[1]."/scripts/support/EvidencePath.php";
+    echo Mulkihawler\Tooling\EvidencePath::directory($argv[1]);
+' "$ROOT")/reports"
+
+for report in FINAL_RELEASE_VERIFICATION.md RELEASE_DECISION.md; do
+    [ -f "$REPORTS/$report" ] \
+        || die "$report is missing from $REPORTS. Run: php scripts/collect-release-evidence.php"
+done
+
+cp "$REPORTS/FINAL_RELEASE_VERIFICATION.md" "$OUT/FINAL_RELEASE_REPORT.md"
+cp "$REPORTS/RELEASE_DECISION.md" "$OUT/RELEASE_DECISION.md"
 
 BUNDLE="$OUT/Mulkihawler_${VERSION}_Release_Bundle.zip"
 rm -f "$BUNDLE"
