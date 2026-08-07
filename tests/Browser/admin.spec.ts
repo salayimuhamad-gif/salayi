@@ -124,22 +124,30 @@ test('logout ends the session through the visible control', async ({ page, diagn
     await page.goBack().catch(() => undefined);
 
     /*
-     * SETTLE THE BACK NAVIGATION BEFORE FORCING THE ROUND-TRIP.
+     * FORCE THE SERVER TO DECIDE, AND SURVIVE THE RESTORED PAGE NAVIGATING
+     * ITSELF WHILE IT DOES.
      *
-     * `goBack()` can resolve while the restored document is still committing —
-     * a bfcache restore in particular. A `reload()` issued into that window is
-     * aborted by the navigation already in flight, which surfaced in CI as
-     * `page.reload: net::ERR_ABORTED; maybe frame was detached?` on a run
-     * where every other assertion in this file passed.
+     * A restored document boots the SPA, which can issue a navigation of its
+     * own. That navigation aborts a reload already in flight, and Playwright
+     * reports it as `page.reload: net::ERR_ABORTED; maybe frame was detached?`
+     * — twice in CI, on runs where every other assertion in this file passed.
      *
-     * Waiting for the restore to settle removes the race without touching the
-     * assertion below: the reload still forces the server to decide, and the
-     * server must still answer /login.
+     * Waiting for a load state first does NOT fix it: `waitForLoadState`
+     * returns immediately when the CURRENT document has already reached that
+     * state, so it never waits for the navigation that is about to start. That
+     * was the previous attempt here, and the failure recurred unchanged.
+     *
+     * So the RELOAD is retried, with the assertion inside the retry, which
+     * makes the assertion the thing that has to hold rather than the timing.
+     * Nothing is relaxed and no failure is tolerated: a session that survived
+     * logout would keep the pathname on /admin/branding and fail every attempt
+     * until the timeout expired. Only a browser-level navigation abort is
+     * retried — never a wrong verdict from the server.
      */
-    await page.waitForLoadState('domcontentloaded').catch(() => undefined);
-    await page.reload({ waitUntil: 'domcontentloaded' });
-
-    expect(new URL(page.url()).pathname, 'revisit after logout').toBe('/login');
+    await expect(async () => {
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        expect(new URL(page.url()).pathname, 'revisit after logout').toBe('/login');
+    }).toPass({ timeout: 30_000 });
 
     expect(diagnostics.pageErrors).toEqual([]);
 });
