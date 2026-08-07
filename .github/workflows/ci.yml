@@ -171,9 +171,18 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq php8.3-cli
           php scripts/frontend-guard.php
 
+      # A REAL gate, like `composer audit` in the PHP job. It carried
+      # `continue-on-error: true`, and underneath it the step had been exiting 1
+      # on four advisories (brace-expansion, fast-uri and js-yaml high, postcss
+      # moderate) while the job reported success — a failure presented as a
+      # warning. Those advisories are now fixed in package-lock.json and the
+      # command was observed to exit 0 on a runner, so the suppression is gone
+      # rather than the finding being tolerated.
+      #
+      # `--audit-level=high` keeps the threshold where it was: moderate and
+      # below still report without failing the build.
       - name: npm audit
         run: npm audit --audit-level=high
-        continue-on-error: true
 
       - uses: actions/upload-artifact@v4
         with:
