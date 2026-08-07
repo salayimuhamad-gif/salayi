@@ -1509,6 +1509,451 @@ with tempfile.TemporaryDirectory() as tmp:
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
 
+# ---- the documentation gates are given evidence to check ------------------
+#
+# The first real final-release run failed here: both checkers resolve
+# `release-evidence.json` through EvidencePath — it left the tree when evidence
+# moved outside the source identity — and the runner invoked them with no
+# `--evidence-dir=`, before anything in the run had collected a document or the
+# reports beside it. The gate reported "docs/release-evidence.json is missing"
+# and the release stopped.
+#
+# Collecting that document means MEASURING gates, and one of them writes
+# public/build. That cannot happen in the frozen source, so these assertions
+# pin where it happens and what binds it.
+runner_lines = executable_runner.splitlines()
+collect_at = next(i for i, l in enumerate(runner_lines)
+                  if 'collect-release-evidence.php' in l)
+collect_call = ' '.join(runner_lines[collect_at - 1:collect_at + 6])
+
+check('the runner collects evidence before the documentation gates',
+      collect_at < next(i for i, l in enumerate(runner_lines)
+                        if 'record_tool doc-consistency' in l),
+      'a checker that runs before its evidence exists can only fail')
+check('collection runs in the disposable workspace, never in the frozen source',
+      'cd "$NPM_WORKSPACE"' in collect_call and 'cd "$SOURCE"' not in collect_call,
+      'the collector measures `npm run build`, which writes public/build — '
+      'inside $SOURCE that either fails on the read-only tree or mutates the '
+      'identity the release is binding')
+check('the workspace is given the dependencies the measured gates need',
+      'cp -a "$SOURCE/vendor" "$NPM_WORKSPACE/vendor"' in executable_runner,
+      'the staged tree carries no vendor, so phpunit, phpstan and pint would '
+      'fail; vendor is an EXCLUDED_DIRS entry and cannot move the manifest')
+check('the copied vendor is made writable, as the other workspaces do',
+      'chmod -R u+w "$NPM_WORKSPACE/vendor"' in executable_runner,
+      '$SOURCE is read-only and cp -a preserves that')
+
+# Laravel's runtime directories are EXCLUDED_DIRS entries, so stage_tree.php
+# omits them and the workspace inherits none — but phpunit.xml opens its
+# database inside one of them.
+RUNTIME_DIRS = ('bootstrap/cache', 'storage/framework/views',
+                'storage/framework/cache/data', 'storage/framework/sessions',
+                'storage/logs', '.phpunit.cache')
+prepare_at = executable_runner.index('"$NPM_WORKSPACE/bootstrap/cache"')
+
+for runtime_dir in RUNTIME_DIRS:
+    check(f'the collector workspace is given {runtime_dir}',
+          f'"$NPM_WORKSPACE/{runtime_dir}"' in executable_runner)
+
+check('the runtime directories are prepared BEFORE collection runs',
+      prepare_at < executable_runner.index('collect-release-evidence.php'))
+check('the same set the runner already prepares for its own test run',
+      all(f'"$SOURCE/{d}"' in executable_runner for d in RUNTIME_DIRS),
+      'diverging from the established set would be a second, untested recipe')
+
+phpunit_xml = (ROOT / 'phpunit.xml').read_text()
+check('phpunit.xml really opens its database under storage/framework',
+      'value="storage/framework/testing.sqlite"' in phpunit_xml,
+      'if this moves, the prepared directory set has to move with it')
+check('phpunit.xml really caches into .phpunit.cache',
+      'cacheDirectory=".phpunit.cache"' in phpunit_xml)
+check('collection is bound to the externally frozen identity',
+      '"--trusted-manifest-sha256=$FROZEN"' in collect_call,
+      'the workspace has no .git, so SourceIdentity falls to fromManifest and '
+      'refuses a manifest that authenticates itself')
+check('collection runs in the frozen, observe-only mode',
+      '--frozen' in collect_call,
+      'the post-run manifest re-derivation is what proves collection moved nothing')
+check('a failed collection stops the run',
+      'release evidence collection failed' in executable_runner)
+check('collection happens after the workspace holds a proved-identical build',
+      next(i for i, l in enumerate(runner_lines)
+           if 'record_tool build-reproducibility' in l) < collect_at)
+
+# ---- namespaces: collection must not squat on authoritative filenames -----
+#
+# The collector writes `release-evidence.json` and `reports/*.md`. At the top of
+# $EVIDENCE both names belong to something else: the schema-v3 document
+# write_release_evidence.py writes from the COMPLETED ledger, and the reports
+# the copy loop lifts into $DELIVERY after generate_release_reports.py has
+# written the completed-ledger versions there. Collecting into $EVIDENCE would
+# have the first silently overwritten and the second overwrite the delivery.
+check('collection writes into its own evidence directory',
+      '"--evidence-dir=$DOC_EVIDENCE"' in collect_call
+      and '"--evidence-dir=$EVIDENCE"' not in collect_call,
+      'the collector must not write $EVIDENCE/release-evidence.json or '
+      '$EVIDENCE/reports')
+check('that directory is outside the authoritative evidence namespace',
+      'DOC_EVIDENCE="$WORK/documentation-evidence"' in executable_runner)
+check('the authoritative document is still written from the completed ledger',
+      '--evidence "$EVIDENCE"' in executable_runner
+      and 'write_release_evidence.py' in executable_runner)
+
+for gate in ('doc-consistency', 'doc-portability'):
+    at = next(i for i, l in enumerate(runner_lines) if f'record_tool {gate} ' in l)
+    # The invocation is one backslash continuation wide.
+    invocation = ' '.join(runner_lines[at:at + 2])
+    check(f'the {gate} gate reads the documentation evidence',
+          '"--evidence-dir=$DOC_EVIDENCE"' in invocation,
+          'EvidencePath reads the flag from the checker\'s own argv; without it '
+          'the checker resolves a default directory no run writes to')
+
+retain_at = executable_runner.index('documentation-validation')
+check('the documentation evidence is retained only after the gates judged it',
+      retain_at > executable_runner.index('record_tool doc-portability'),
+      'a gate verdict whose input was discarded cannot be re-checked')
+check('the retained document is renamed away from the authoritative name',
+      'documentation-validation/documentation-evidence.json' in executable_runner
+      and 'documentation-validation/release-evidence.json' not in executable_runner,
+      'verify_final_delivery.py selects the sealed document with '
+      "endswith('release-evidence.json') over sorted members, so a namespaced "
+      'file of the same name would be picked instead and fail the delivery')
+check('the runner proves no shadowing rather than trusting the naming',
+      "find \"$EVIDENCE\" -mindepth 2 -name 'release-evidence.json'"
+      in executable_runner
+      and 'shadows release-evidence.json' in executable_runner)
+
+# Neither checker may need the trusted hash, because both run against the
+# git-less $SOURCE where SourceIdentity would refuse.
+for script in ('doc-consistency.php', 'doc-portability.php', 'generate-release-docs.php'):
+    check(f'{script} does not resolve SourceIdentity',
+          'SourceIdentity' not in (ROOT / 'scripts' / script).read_text(),
+          'a checker that resolved identity in the git-less frozen source would '
+          'need the trusted hash too')
+
+# The mechanisms the fix rests on, exercised against a real git-less copy of
+# the shipped tree rather than assumed.
+with tempfile.TemporaryDirectory() as tmp:
+    workspace = Path(tmp) / 'npm-gate'
+
+    staged = subprocess.run(
+        ['php', str(RELEASE / 'stage_tree.php'),
+         f'--project-root={ROOT}', f'--stage-dir={workspace}'],
+        capture_output=True, text=True)
+    frozen = (workspace / 'TREE_MANIFEST.sha256').read_text().split()[0] \
+        if (workspace / 'TREE_MANIFEST.sha256').is_file() else ''
+
+    # The runner derives $FROZEN from exactly this file, so the detached hash
+    # and the manifest it names have to agree before anything is bound to it.
+    # (Not compared against the committed manifest: that only matches on a
+    # clean tree, and this assertion is about the staging mechanism.)
+    check('staging a workspace copy emits a manifest and its detached hash',
+          staged.returncode == 0 and len(frozen) == 64
+          and frozen == hashlib.sha256(
+              (workspace / 'TREE_MANIFEST.txt').read_bytes()).hexdigest(),
+          staged.stderr.strip()[-200:])
+
+    def resolve(*args: str) -> subprocess.CompletedProcess:
+        return subprocess.run(
+            ['php', '-r',
+             'require $argv[1]."/scripts/support/SourceIdentity.php";'
+             '$a = array_slice($argv, 2);'
+             'try { Mulkihawler\\Tooling\\SourceIdentity::resolve($argv[1], $a);'
+             ' echo "RESOLVED"; }'
+             'catch (RuntimeException $e) { echo "REFUSED: ".strtok($e->getMessage(), "\\n"); }',
+             str(workspace), *args],
+            capture_output=True, text=True)
+
+    check('a git-less workspace refuses to self-authenticate',
+          'no trusted manifest hash was supplied' in resolve().stdout,
+          'this is what the collector would have hit inside the extracted source')
+
+    check('a staged workspace carries none of the runtime directories',
+          not any((workspace / d).exists() for d in RUNTIME_DIRS),
+          'they are EXCLUDED_DIRS entries, which is exactly why phpunit cannot '
+          'start in a freshly staged workspace')
+
+    # Exactly what the runner now does before collection.
+    for runtime_dir in RUNTIME_DIRS:
+        (workspace / runtime_dir).mkdir(parents=True, exist_ok=True)
+
+    sqlite_probe = subprocess.run(
+        ['php', '-r',
+         '$db = $argv[1]."/storage/framework/testing.sqlite";'
+         '$pdo = new PDO("sqlite:".$db);'
+         '$pdo->exec("CREATE TABLE probe (id INTEGER PRIMARY KEY)");'
+         '$pdo->exec("INSERT INTO probe (id) VALUES (1)");'
+         'echo is_file($db) && $pdo->query("SELECT COUNT(*) FROM probe")'
+         '->fetchColumn() === 1 ? "OPENED" : "NO";',
+         str(workspace)],
+        capture_output=True, text=True)
+
+    check('phpunit\'s sqlite database can be created in the prepared workspace',
+          sqlite_probe.stdout.strip() == 'OPENED',
+          sqlite_probe.stderr.strip()[-200:])
+
+    # Everything the runner adds to the workspace lives in EXCLUDED_DIRS.
+    for extra in ('vendor/autoload.php', 'node_modules/pkg/index.js',
+                  '.phpunit.cache/test-results', 'storage/framework/views/v.php',
+                  'storage/logs/laravel.log', 'bootstrap/cache/packages.php'):
+        target = workspace / extra
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text('generated\n')
+
+    manifest_after = subprocess.run(
+        ['php', '-r',
+         'require $argv[1]."/scripts/support/SourceIdentity.php";'
+         'echo hash("sha256", Mulkihawler\\Tooling\\SourceIdentity'
+         '::buildManifest($argv[1])["manifest"]);',
+         str(workspace)],
+        capture_output=True, text=True)
+
+    check('the runtime directories and the sqlite file leave the identity intact',
+          manifest_after.stdout.strip() == frozen,
+          f'{manifest_after.stdout.strip()[:12]} vs frozen {frozen[:12]} — '
+          'collection would move the tree it is bound to')
+    check('binding to the frozen hash resolves the prepared git-less workspace',
+          'RESOLVED' in resolve(f'--trusted-manifest-sha256={frozen}').stdout,
+          resolve(f'--trusted-manifest-sha256={frozen}').stdout[-200:])
+    check('vendor, node_modules and caches cannot move the workspace identity',
+          'RESOLVED' in resolve(f'--trusted-manifest-sha256={frozen}').stdout,
+          'fromManifest compares the tree against the manifest in both '
+          'directions, so an unlisted eligible file would be caught')
+
+    (workspace / 'scripts' / 'doc-consistency.php').write_text(
+        (workspace / 'scripts' / 'doc-consistency.php').read_text() + '// tamper\n')
+    check('one changed byte in the workspace forfeits the binding',
+          'does not describe this tree' in resolve(
+              f'--trusted-manifest-sha256={frozen}').stdout,
+          'the binding must be a proof, not a label')
+
+# ---- the sealed namespace, exercised through the real finalizer -----------
+#
+# Both halves of the collision are asserted on artifacts, not on the script
+# text: the finalizer really seals the nested namespace, the delivery verifier's
+# selector really resolves to the authoritative document, and the copy loop
+# really cannot reach the documentation reports.
+REPORTS = ('VERIFICATION.md', 'ROADMAP_STATUS.md',
+           'RELEASE_DECISION.md', 'FINAL_RELEASE_VERIFICATION.md')
+
+
+def seal(base: Path, retained_name: str) -> zipfile.ZipFile:
+    """Seal an evidence directory holding a retained documentation document."""
+    evidence = base / 'evidence'
+    namespace = evidence / 'documentation-validation'
+    (namespace / 'reports').mkdir(parents=True)
+
+    (evidence / 'command-ledger.json').write_text('{"entries": []}\n')
+    (evidence / 'release-evidence.json').write_text(json.dumps({
+        'schema_version': 3, 'final_tree_manifest_sha256': TREE, 'gates': {}}))
+    (namespace / retained_name).write_text(json.dumps({
+        'schema_version': 2, 'phpunit': {'tests': 1, 'assertions': 1}, 'gates': {}}))
+
+    for report in REPORTS:
+        (namespace / 'reports' / report).write_text('collector-derived\n')
+
+    sealed = base / 'evidence.zip'
+    finalize = run(str(RELEASE / 'finalize_evidence.py'),
+                   '--evidence', str(evidence), '--output', str(sealed),
+                   '--tree-manifest-sha256', TREE)
+    check(f'the finalizer seals a retained namespace ({retained_name})',
+          finalize.returncode == 0 and 'problems: 0' in finalize.stdout,
+          finalize.stderr.strip()[-200:])
+
+    return zipfile.ZipFile(sealed)
+
+
+def selected(archive: zipfile.ZipFile) -> str | None:
+    """Exactly what verify_final_delivery.py does to find the sealed document."""
+    return next((n for n in archive.namelist()
+                 if n.endswith('release-evidence.json')), None)
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp) / 'renamed'
+    base.mkdir()
+    archive = seal(base, 'documentation-evidence.json')
+    matches = [n for n in archive.namelist() if n.endswith('release-evidence.json')]
+
+    check('exactly one sealed member answers to the authoritative name',
+          matches == ['release-evidence.json'], str(matches))
+    check('the delivery verifier resolves the authoritative document',
+          json.loads(archive.read(selected(archive)))
+          .get('final_tree_manifest_sha256') == TREE,
+          'the retained document carries no final tree hash, so selecting it '
+          'would fail the delivery')
+    check('the retained documentation evidence is sealed alongside it',
+          'documentation-validation/documentation-evidence.json' in archive.namelist()
+          and all(f'documentation-validation/reports/{r}' in archive.namelist()
+                  for r in REPORTS))
+
+    # The counterfactual the rename exists to prevent.
+    counter = Path(tmp) / 'same-name'
+    counter.mkdir()
+    shadowed = seal(counter, 'release-evidence.json')
+
+    check('keeping the authoritative name WOULD misdirect the verifier',
+          selected(shadowed) == 'documentation-validation/release-evidence.json'
+          and json.loads(shadowed.read(selected(shadowed)))
+          .get('final_tree_manifest_sha256') is None,
+          'sorted members put the namespace first, so the rename is load-bearing '
+          'rather than cosmetic')
+
+    # The copy loop reads $EVIDENCE/reports exactly, never recursively.
+    delivery = Path(tmp) / 'delivery'
+    delivery.mkdir()
+    for report in REPORTS:
+        (delivery / report).write_text('COMPLETED-LEDGER\n')
+
+    loop = subprocess.run(
+        ['bash', '-c',
+         'for report in ' + ' '.join(REPORTS) + '; do '
+         '[ -f "$EVIDENCE/reports/$report" ] && cp "$EVIDENCE/reports/$report" '
+         '"$DELIVERY/"; done; exit 0'],
+        env={**os.environ, 'EVIDENCE': str(base / 'evidence'),
+             'DELIVERY': str(delivery)},
+        capture_output=True, text=True)
+
+    check('the report-copy loop cannot overwrite completed-ledger reports',
+          loop.returncode == 0 and all(
+              (delivery / r).read_text() == 'COMPLETED-LEDGER\n' for r in REPORTS),
+          'documentation-validation/reports is not $EVIDENCE/reports')
+
+# ---- evidence and its reports must leave collection as a fixpoint ---------
+#
+# The reports of a pass are generated from the evidence written at the START of
+# that pass; the documentation gates measured afterwards land in the evidence
+# written at the END. One pass therefore always finishes with a document
+# carrying three gate rows the reports beside it were generated without — and
+# the reports embed the gate table, so that difference is on disk. The outer
+# doc-portability gate regenerates from the final evidence and compares bytes,
+# so a stale pair fails the release.
+collector = (ROOT / 'scripts' / 'collect-release-evidence.php').read_text()
+
+check('frozen collection is no longer capped at a single pass',
+      '$frozen ? 1 : 3' not in collector and 'for ($pass = 1; $pass <= 3; $pass++)' in collector,
+      'one pass cannot converge: the reports never see the documentation rows '
+      'the final write adds')
+check('convergence compares whole gate rows, not just statuses',
+      "$documentation === $previousDocumentation" in collector
+      and "$verdicts === $previousVerdicts" not in collector,
+      'the reports embed name, status, result and exit, so equal statuses with '
+      'different result strings still leave them stale')
+check('collection proves the fixpoint instead of inferring it',
+      "shellRun('php scripts/generate-release-docs.php --check')" in collector
+      and 'the evidence and its reports are not a fixpoint' in collector)
+check('the fixpoint proof runs after the final evidence write',
+      collector.index('// One final write')
+      < collector.index("shellRun('php scripts/generate-release-docs.php --check')"))
+check('report generation still writes outside the authenticated tree',
+      "EvidencePath::directory($root, $argv).'/reports'"
+      in (ROOT / 'scripts' / 'generate-release-docs.php').read_text(),
+      'iterating is only safe because generation cannot move the frozen source')
+check('the frozen run still re-derives the tree hash after every pass',
+      'the source tree changed during collection' in collector
+      and collector.index('// One final write')
+      < collector.index('the source tree changed during collection'))
+
+# Behavioural: the staleness is real, and iteration removes it. The generator is
+# driven directly, so this runs without the collector's toolchain.
+GENERATOR = str(ROOT / 'scripts' / 'generate-release-docs.php')
+MEASURED = ('syntax', 'composer_validate', 'lint', 'stan', 'phpunit', 'standalone',
+            'migration_parity', 'installer', 'typecheck', 'eslint', 'build',
+            'security', 'secrets', 'lang_parity', 'lang_usage',
+            'packaging', 'content_audit', 'smoke')
+DOC_ROWS = (
+    ('doc_generation', 'Release documentation regenerated from this evidence'),
+    ('doc_consistency', 'Documentation semantic consistency'),
+    ('doc_portability', 'Documentation reproducible from a packaged tree'),
+)
+
+
+def evidence_document() -> dict:
+    """A schema-valid collector document carrying only the measured gates."""
+    return {
+        'schema_version': 2,
+        'generated_at': '2026-08-07T00:00:00+00:00',
+        'generated_at_date': '2026-08-07',
+        'version': '4.0.0-step30',
+        'baseline_commit': '9c0188f81843cfe4786b7f72ecdc2a3fae89cd82',
+        'final_tree_manifest_sha256': 'a' * 64,
+        'source_identity': {'mode': 'manifest', 'files': 1, 'manifest_sha256': 'a' * 64},
+        'phpunit': {'tests': 1, 'assertions': 1, 'failures': 0, 'errors': 0,
+                    'skipped': 0, 'incomplete': 0, 'risky': 0, 'result': 'OK', 'exit': 0},
+        'phpstan': {'level': 8, 'direct_findings': 0, 'measured_findings': 0,
+                    'analyser_errors': 0},
+        'toolchain': {'php': '8.3.0', 'composer': '2', 'node': 'v22', 'npm': '10'},
+        'artifact_class': 'PHASE A VALIDATION CANDIDATES',
+        'gates': {key: {'name': key, 'status': 'PASS', 'result': 'fixture',
+                        'command': 'fixture', 'exit': 0} for key in MEASURED},
+    }
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    evidence_dir = Path(tmp) / 'documentation-evidence'
+    evidence_dir.mkdir()
+    document = evidence_dir / 'release-evidence.json'
+    generator_env = {**os.environ, 'MYHAWLER_EVIDENCE_DIR': str(evidence_dir)}
+
+    def generate(*flags: str) -> subprocess.CompletedProcess:
+        return subprocess.run(['php', GENERATOR, *flags], cwd=str(ROOT),
+                              env=generator_env, capture_output=True, text=True)
+
+    # ---- what ONE pass leaves behind -------------------------------------
+    document.write_text(json.dumps(evidence_document(), indent=2))
+    first = generate()
+    check('the fixture generates its reports from evidence without doc rows',
+          first.returncode == 0
+          and (evidence_dir / 'reports' / 'VERIFICATION.md').is_file(),
+          first.stderr.strip()[-300:])
+
+    # The collector's final write: the rows measured this pass go in.
+    settled = evidence_document()
+    settled['gates'].update({key: {'name': name, 'status': 'PASS', 'result': 'ok',
+                                   'command': 'fixture', 'exit': 0}
+                             for key, name in DOC_ROWS})
+    document.write_text(json.dumps(settled, indent=2))
+
+    stale = generate('--check')
+    check('a one-pass evidence/report pair is detectably STALE',
+          stale.returncode != 0 and 'Release documentation is stale' in stale.stderr,
+          'if this ever passes, the reports stopped embedding the gate table and '
+          'the whole fixpoint argument needs revisiting')
+
+    # ---- iterating to the fixpoint, as the collector now does -------------
+    document.write_text(json.dumps(evidence_document(), indent=2))
+    previous, passes = None, 0
+
+    for passes in range(1, 4):
+        current = json.loads(document.read_text())
+        document.write_text(json.dumps(current, indent=2))
+        generate()
+
+        rows = [{'name': name, 'status': 'PASS', 'result': 'ok',
+                 'command': 'fixture', 'exit': 0} for _, name in DOC_ROWS]
+        current['gates'].update(dict(zip((k for k, _ in DOC_ROWS), rows)))
+        document.write_text(json.dumps(current, indent=2))
+
+        if rows == previous:
+            break
+        previous = rows
+
+    final = generate('--check')
+    check('iterating leaves the evidence and its reports a fixpoint',
+          final.returncode == 0,
+          'generate-release-docs.php --check must succeed against the FINAL '
+          'evidence — ' + final.stderr.strip()[-300:])
+    check('the fixpoint is reached within the pass budget',
+          passes <= 3, f'converged only after {passes} passes')
+
+# The checker really does honour --evidence-dir= on its own argv.
+doc_fixtures = subprocess.run(
+    ['php', str(ROOT / 'tests' / 'Standalone' / 'DocConsistencyFixturesTest.php')],
+    capture_output=True, text=True)
+check('the documentation checker honours --evidence-dir on its own argv',
+      doc_fixtures.returncode == 0,
+      doc_fixtures.stdout.strip()[-300:] + doc_fixtures.stderr.strip()[-200:])
+
 check('DELETE_FILES.txt declares the v6 browser fixture credential file',
       'tests/Browser/support/fixtures.json'
       in (ROOT / 'DELETE_FILES.txt').read_text().split())

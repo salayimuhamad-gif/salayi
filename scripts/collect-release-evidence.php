@@ -638,16 +638,34 @@ $documentationGates = [
  * tree AFTER recording its hash. That is why evidence kept binding to a tree
  * that no longer existed.
  *
- * --frozen makes this run read-only with respect to the source: no document is
- * regenerated, and the tree is re-hashed at the end and required to be
- * byte-identical to the hash recorded at the start. Documents are settled by a
- * normal (pre-freeze) run; the frozen run only observes.
+ * --frozen makes this run read-only with respect to the SOURCE: the tree is
+ * re-hashed at the end and required to be byte-identical to the hash recorded
+ * at the start.
+ *
+ * It used to also mean "one pass", on the reasoning that a frozen run must not
+ * regenerate documents at all. That reasoning expired when the four
+ * run-derived reports moved out of the tree and into <evidence-dir>/reports:
+ * generation is external now, it cannot move the source, and the hash
+ * assertion below proves that rather than assuming it. What the one-pass cap
+ * did instead was guarantee a STALE PAIR. The reports of a pass are generated
+ * from the evidence written at the START of that pass, and the documentation
+ * gates measured afterwards are added to the evidence written at the END — so
+ * a single pass always ends with an evidence document carrying three gate rows
+ * that the reports beside it were generated without. Running
+ * `generate-release-docs.php --check` against that pair fails, and so does any
+ * later doc-portability gate that regenerates from it.
+ *
+ * The fix is to let the frozen run iterate exactly as a normal one does, until
+ * the documentation rows stop changing. Once they do, the evidence written at
+ * the end of a pass equals the evidence its reports were generated from, and
+ * the pair is a genuine fixpoint — which the assertion after the loop then
+ * proves outright instead of inferring.
  */
 $frozen = in_array('--frozen', $argv, true);
 
-$previousVerdicts = null;
+$previousDocumentation = null;
 
-for ($pass = 1; $pass <= ($frozen ? 1 : 3); $pass++) {
+for ($pass = 1; $pass <= 3; $pass++) {
     $writeEvidence();
 
     /*
@@ -680,21 +698,51 @@ for ($pass = 1; $pass <= ($frozen ? 1 : 3); $pass++) {
         ];
     }
 
-    $verdicts = [
-        $gates['doc_generation']['status'],
-        $gates['doc_consistency']['status'],
-        $gates['doc_portability']['status'],
+    /*
+     * The WHOLE rows, not just their statuses. What the reports embed is the
+     * gate table — name, status, result and exit — so two passes agreeing on
+     * PASS/PASS/PASS while their result strings differ still leaves the final
+     * evidence describing something the reports do not, which is precisely the
+     * staleness this loop exists to remove.
+     */
+    $documentation = [
+        $gates['doc_generation'],
+        $gates['doc_consistency'],
+        $gates['doc_portability'],
     ];
 
-    if ($verdicts === $previousVerdicts) {
+    if ($documentation === $previousDocumentation) {
         break;   // converged
     }
 
-    $previousVerdicts = $verdicts;
+    $previousDocumentation = $documentation;
 }
 
 // One final write, so the recorded evidence is the converged state.
 $writeEvidence();
+
+/*
+ * PROVE the fixpoint, do not infer it.
+ *
+ * Everything above argues that the reports on disk were generated from an
+ * evidence document identical to the one just written. This asserts it: the
+ * generator's own staleness check regenerates all four reports from the FINAL
+ * evidence and compares them byte-for-byte against what is there, writing
+ * nothing. If the loop ran out of passes while the documentation rows were
+ * still moving, the pair is stale and collection fails here — loudly, and
+ * before any consumer can seal a document that disagrees with its own reports.
+ */
+$settled = shellRun('php scripts/generate-release-docs.php --check');
+
+if ($settled['code'] !== 0) {
+    fwrite(STDERR, "EVIDENCE INVALID: the evidence and its reports are not a fixpoint.\n"
+        .'The final release-evidence.json describes documentation gate results that '
+        ."the reports beside it were not generated from.\n"
+        .trim((string) $settled['output'])."\n");
+    exit(1);
+}
+
+printf("documentation fixpoint confirmed after %d pass(es)\n", $pass);
 
 $failed = array_keys(array_filter($gates, static fn (array $g): bool => $g['status'] === 'FAIL'));
 $notRun = array_keys(array_filter($gates, static fn (array $g): bool => $g['status'] === 'NOT RUN'));

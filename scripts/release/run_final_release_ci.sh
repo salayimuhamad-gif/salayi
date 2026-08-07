@@ -104,6 +104,11 @@ fi
 SOURCE="$WORK/source"
 STAGE="$WORK/staged"
 EVIDENCE="$WORK/evidence"
+# The documentation gates need a COLLECTED evidence document and the reports
+# generated from it. Both share filenames with the authoritative release
+# evidence, so they are collected into their own directory OUTSIDE $EVIDENCE —
+# see the collection step for what would collide otherwise.
+DOC_EVIDENCE="$WORK/documentation-evidence"
 DELIVERY="$WORK/delivery"
 CLEANROOM="$WORK/cleanroom"
 REHEARSAL="$WORK/rehearsal"
@@ -434,8 +439,150 @@ record_tool secret-scan "$PHP_BIN" scripts/secret-scan.php
 record_tool language-parity "$PHP_BIN" scripts/lang-parity.php
 record_tool language-usage "$PHP_BIN" scripts/lang-usage.php
 record_tool migration-guard "$PHP_BIN" scripts/migration-guard.php
-record_tool doc-consistency "$PHP_BIN" scripts/doc-consistency.php
-record_tool doc-portability "$PHP_BIN" scripts/doc-portability.php
+
+# The two documentation gates below read a COLLECTED evidence document and the
+# four run-derived reports beside it. Nothing in this run had produced either.
+#
+# `docs/release-evidence.json` is deliberately gone from the tree — it recorded
+# the manifest hash of the tree it lived in, which no amount of re-freezing
+# could converge, so EvidencePath moved it outside. The checkers followed it
+# out; the runner did not. It called them with no `--evidence-dir=`, so they
+# resolved EvidencePath's default (a sibling of the source that this run never
+# creates), found nothing, and stopped the release. Passing the flag alone
+# would not have helped: the runner's own release-evidence.json is written from
+# the COMPLETED ledger hundreds of lines below, and carries a different shape —
+# ledger exit codes, not the phpunit totals and gate table these checkers
+# compare documents against.
+#
+# WHERE COLLECTION RUNS, AND WHY NOT IN $SOURCE.
+#
+# The collector measures gates by running them, and one of them is
+# `npm run build`, which writes public/build — part of the frozen authenticated
+# tree. Inside $SOURCE that is either a hard failure against the read-only
+# permissions set above or, if those were relaxed, a mutation of the very tree
+# whose identity the release is binding. Neither is acceptable, so collection
+# runs in $NPM_WORKSPACE: a disposable copy of the staged tree that already
+# exists for the frontend gates, already carries node_modules and a completed
+# production build, and has just been proved byte-identical to the frozen
+# assets by build-reproducibility. $SOURCE is neither read from for writes nor
+# written to at any point below.
+#
+# vendor is copied in because the collector runs phpunit, phpstan and pint, and
+# the staged tree carries no dependencies. It is an EXCLUDED_DIRS entry, so it
+# cannot move the workspace's manifest.
+#
+# HOW THE IDENTITY STAYS BOUND.
+#
+# The workspace has no .git, so SourceIdentity would fall to fromManifest and
+# refuse outright — a manifest that authenticates itself proves nothing. It is
+# therefore bound explicitly to the externally frozen hash: fromManifest
+# verifies TREE_MANIFEST.txt against $FROZEN and then verifies the tree against
+# the manifest in both directions, so collection can only proceed if the
+# workspace IS the frozen tree. `--frozen` then re-derives that manifest after
+# every gate has run and refuses if anything moved it — so the whole collection,
+# npm build included, is proved not to have changed the frozen content rather
+# than assumed not to have.
+#
+# WHICH EVIDENCE DIRECTORY, AND WHY NOT $EVIDENCE.
+#
+# The collector writes `release-evidence.json` and `reports/*.md`. Both names
+# are already spoken for at the top of $EVIDENCE, by documents with different
+# schemas, different producers and different authority:
+#
+#   $EVIDENCE/release-evidence.json   written LATER by write_release_evidence.py
+#                                     from the COMPLETED ledger; the schema-v3
+#                                     document the finalizer seals.
+#   $EVIDENCE/reports/<four>.md       copied into $DELIVERY after
+#                                     generate_release_reports.py has written
+#                                     the completed-ledger versions there.
+#
+# Collecting into $EVIDENCE would therefore have the later authoritative
+# document silently overwrite the collector's, and — worse, because it survives
+# into the delivery — have the collector's earlier reports overwrite the
+# completed-ledger reports through that copy loop. So collection gets its own
+# directory and touches neither name.
+#
+# Not a recorded gate: it produces evidence for gates rather than judging the
+# release, the same standing as generate_release_reports.py later. Its own
+# verdict still stops the run.
+#
+# Real mode only, like the other steps that need the installed toolchain. In
+# stub mode record_tool replaces the two gates below with a stub, and the
+# workspace this needs is never populated.
+if [ "$OFFLINE_STUB" = "0" ]; then
+    cp -a "$SOURCE/vendor" "$NPM_WORKSPACE/vendor"
+    # $SOURCE is read-only and `cp -a` preserves that, so the copy is made
+    # writable exactly as the runtime and browser workspaces do after theirs.
+    chmod -R u+w "$NPM_WORKSPACE/vendor"
+
+    # Laravel's runtime directories are EXCLUDED_DIRS entries, so stage_tree.php
+    # omits them and the workspace inherited none. The collector runs the full
+    # suite under phpunit.xml, which points DB_DATABASE at
+    # storage/framework/testing.sqlite and caches into .phpunit.cache — without
+    # these the suite cannot open its database and the gate fails for a reason
+    # that has nothing to do with the release. This is the same set the runner
+    # already creates for $SOURCE before its own tests, and for the runtime and
+    # browser workspaces before theirs.
+    #
+    # Being excluded is precisely why creating them is safe: none is eligible
+    # for the manifest, so neither the directories nor the sqlite file written
+    # into them can move the identity this collection is bound to. `--frozen`
+    # re-derives that manifest afterwards and would refuse if they had.
+    mkdir -p "$NPM_WORKSPACE/bootstrap/cache" \
+             "$NPM_WORKSPACE/storage/framework/views" \
+             "$NPM_WORKSPACE/storage/framework/cache/data" \
+             "$NPM_WORKSPACE/storage/framework/sessions" \
+             "$NPM_WORKSPACE/storage/logs" "$NPM_WORKSPACE/.phpunit.cache"
+
+    ( cd "$NPM_WORKSPACE" && "$PHP_BIN" scripts/collect-release-evidence.php \
+        --frozen \
+        "--trusted-manifest-sha256=$FROZEN" \
+        "--baseline-commit=$BASELINE_COMMIT" \
+        "--evidence-dir=$DOC_EVIDENCE" ) \
+        || fail "release evidence collection failed; the documentation gates have nothing to check"
+fi
+
+# Run against $SOURCE, because what these gates judge is the delivered tree's
+# documentation. Neither writes into it: doc-consistency.php only reads, and
+# doc-portability.php regenerates into a temporary directory with its own
+# scratch evidence directory beside it. Neither resolves SourceIdentity, so
+# neither needs the trusted hash.
+#
+# EvidencePath reads `--evidence-dir=` from a script's OWN argv, so each checker
+# is told explicitly rather than left to a default that disagrees with the
+# directory the collection above just wrote.
+record_tool doc-consistency "$PHP_BIN" scripts/doc-consistency.php \
+    "--evidence-dir=$DOC_EVIDENCE"
+record_tool doc-portability "$PHP_BIN" scripts/doc-portability.php \
+    "--evidence-dir=$DOC_EVIDENCE"
+
+# RETAINED, AFTER the gates have judged it, under a namespace of its own — a
+# gate verdict whose input was thrown away cannot be re-checked by anyone.
+#
+# The document is RENAMED on the way in. verify_final_delivery.py finds the
+# authoritative evidence inside the sealed archive with
+# `endswith('release-evidence.json')`, and the finalizer writes members in
+# sorted order, so a member at `documentation-validation/release-evidence.json`
+# would sort first, be selected instead, and fail the delivery against a
+# document that never carried a final tree hash. Under a distinct filename the
+# ambiguity cannot arise at all, and no verifier has to be loosened to cope
+# with it. The reports keep their names: nothing matches those by suffix, and
+# the copy loop that fills $DELIVERY reads $EVIDENCE/reports exactly.
+if [ "$OFFLINE_STUB" = "0" ]; then
+    mkdir -p "$EVIDENCE/documentation-validation"
+    cp "$DOC_EVIDENCE/release-evidence.json" \
+       "$EVIDENCE/documentation-validation/documentation-evidence.json"
+
+    if [ -d "$DOC_EVIDENCE/reports" ]; then
+        cp -a "$DOC_EVIDENCE/reports" "$EVIDENCE/documentation-validation/reports"
+    fi
+
+    # Proved here rather than trusted to the naming: nothing anywhere under
+    # $EVIDENCE but the authoritative document may answer to its name.
+    SHADOWS=$(find "$EVIDENCE" -mindepth 2 -name 'release-evidence.json' | wc -l)
+    [ "$SHADOWS" = "0" ] \
+        || fail "documentation evidence shadows release-evidence.json ($SHADOWS)"
+fi
 record_tool frontend-manifest-audit "$PHP_BIN" scripts/frontend-guard.php
 
 # BLOCKERS 2 and 3: these commands need a real database and an application that
