@@ -552,7 +552,10 @@ step "delivery bundle"
 # evidence was collected. This script was still reading the pre-externalisation
 # in-tree paths and failed with a bare `cp: cannot stat`. The directory is
 # resolved through EvidencePath itself — the same single source of truth every
-# other consumer uses — so --evidence-dir/MYHAWLER_EVIDENCE_DIR keep working.
+# other consumer uses — so MYHAWLER_EVIDENCE_DIR relocates the reports here
+# exactly as it does for the generator. (EvidencePath's other channel,
+# `--evidence-dir=`, is read from a script's own argv; this script takes only
+# an output directory, so the environment variable is the override it honours.)
 REPORTS="$(php -r '
     require $argv[1]."/scripts/support/EvidencePath.php";
     echo Mulkihawler\Tooling\EvidencePath::directory($argv[1]);
