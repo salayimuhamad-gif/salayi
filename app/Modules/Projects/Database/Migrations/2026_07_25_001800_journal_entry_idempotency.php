@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Modules\Core\Support\MigrationIndexes;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -41,6 +42,17 @@ return new class extends Migration
         if (! Schema::hasTable('orphaned_files')) {
             return;
         }
+
+        /*
+         * The index goes FIRST, in its own statement — up() created it with
+         * the chained `->index()`. MariaDB would drop it with the column;
+         * SQLite refuses to drop a column an index still covers ("error in
+         * index orphaned_files_journal_entry_id_index after drop column"),
+         * which is exactly how the first real rollback run failed here.
+         * MigrationIndexes reads the real index list, so an interrupted
+         * rollback converges on a rerun.
+         */
+        MigrationIndexes::dropIndexesOn('orphaned_files', ['journal_entry_id']);
 
         Schema::table('orphaned_files', function (Blueprint $table): void {
             if (Schema::hasColumn('orphaned_files', 'journal_entry_id')) {
