@@ -123,6 +123,24 @@ nonzero exits       {len(failed)}
     # ----------------------------------------------------------- CHANGED_FILES
     added, modified, removed = (inventory['added'], inventory['modified'],
                                 inventory['removed'])
+    # Two kinds of removal, and a report that showed one number invited the
+    # obvious question: why does DELETE_FILES.txt hold seven entries when a
+    # hundred files went away? Because generated build output is retired by
+    # replacing its directory, which is what the roots below name.
+    replaced_roots = inventory.get('replaced_roots') or []
+    replaced = set(inventory.get('removed_generated') or [])
+    declared_removals = [p for p in removed if p not in replaced]
+
+    # Built outside the f-string: an apostrophe would otherwise be a backslash
+    # inside an expression, which Python 3.11 refuses.
+    replacement_note = (
+        "These are the previous build's content-hashed files under "
+        + ', '.join(f'`{root}`' for root in replaced_roots)
+        + '. The deployment deletes that directory and copies the new one in '
+          'whole, so they are retired without an entry each. `REPLACE_DIRS.txt` '
+          'ships with the patch; both rehearsals assert that no retired file '
+          'survives.'
+    ) if replaced else '_None: every removal in this release is a declared entry._'
 
     changed = f"""# CHANGED_FILES
 
@@ -134,7 +152,7 @@ in `release-index.json` come from the same source, so they cannot disagree.
 ```text
 added     {len(added)}
 modified  {len(modified)}
-removed   {len(removed)}
+removed   {len(removed)}  ({len(declared_removals)} declared, {len(replaced)} retired by directory replacement)
 total     {inventory['total']}
 ```
 
@@ -148,10 +166,21 @@ total     {inventory['total']}
 
 ## Removed
 
-Removals cannot be expressed by an overlay and must be applied from
-`DELETE_FILES.txt`.
+Removals cannot be expressed by an overlay. Each one below is applied by one of
+two mechanisms, and the builder verifies which.
 
-{chr(10).join(f'- `{p}`' for p in removed) or '_none_'}
+### Declared in `DELETE_FILES.txt`
+
+Every entry is verified to exist in the baseline and to be absent from this
+release; every removal outside a replacement root is verified to appear here.
+
+{chr(10).join(f'- `{p}`' for p in declared_removals) or '_none_'}
+
+### Retired by replacing a generated directory
+
+{replacement_note}
+
+{chr(10).join(f'- `{p}`' for p in removed if p in replaced) or ''}
 """
     (out / 'CHANGED_FILES.md').write_text(changed)
 

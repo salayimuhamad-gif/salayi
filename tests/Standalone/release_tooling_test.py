@@ -1462,6 +1462,53 @@ with tempfile.TemporaryDirectory() as tmp:
           parity.returncode != 0 and 'stale.js' in parity.stderr,
           'assets mode must carry no exclusions — ' + parity.stderr.strip()[-200:])
 
+# CHANGED_FILES.md has to explain the arithmetic it prints, or a reader sees a
+# hundred removals beside a seven-line DELETE_FILES.txt and cannot tell whether
+# ninety-three were forgotten.
+with tempfile.TemporaryDirectory() as tmp:
+    fixture = Path(tmp)
+    from release_gates import log_path  # noqa: E402
+
+    (fixture / 'ledger.json').write_text(json.dumps({'entries': [
+        {'label': label, 'exit_code': 0, 'final_tree_manifest_sha256': TREE,
+         'raw_output_file': log_path(label), 'raw_output_sha256': '0' * 64,
+         'server_configuration': 'fixture', 'started_at': '2026-08-07T00:00:00Z',
+         'finished_at': '2026-08-07T00:00:01Z', 'duration_seconds': 1}
+        for label in RELEASE_EVIDENCE_LABELS]}))
+
+    def render(inventory: dict, out: str) -> str:
+        (fixture / f'{out}.json').write_text(json.dumps(inventory))
+        proc = run(str(RELEASE / 'generate_release_reports.py'),
+                   '--ledger', str(fixture / 'ledger.json'),
+                   '--inventory', str(fixture / f'{out}.json'),
+                   '--tree-manifest-sha256', TREE,
+                   '--baseline-commit', '9c0188f81843cfe4786b7f72ecdc2a3fae89cd82',
+                   '--output-dir', str(fixture / out))
+        if proc.returncode != 0:
+            return f'GENERATOR FAILED: {proc.stderr.strip()[-300:]}'
+        return (fixture / out / 'CHANGED_FILES.md').read_text()
+
+    split = render({'added': ['a.php'], 'modified': ['b.php'],
+                    'removed': ['docs/old.md', 'public/build/assets/x-OLD.js'],
+                    'removed_generated': ['public/build/assets/x-OLD.js'],
+                    'replaced_roots': ['public/build'], 'total': 2}, 'split')
+
+    check('the changed-files report separates declared removals from replaced ones',
+          '### Declared in `DELETE_FILES.txt`' in split
+          and '### Retired by replacing a generated directory' in split
+          and 'removed   2  (1 declared, 1 retired by directory replacement)' in split,
+          split[-400:])
+    check('the report still lists every replaced file by name',
+          '- `public/build/assets/x-OLD.js`' in split,
+          'the exemption is from an entry in DELETE_FILES.txt, not from the record')
+
+    legacy = render({'added': ['a.php'], 'modified': ['b.php'],
+                     'removed': ['docs/old.md'], 'total': 2}, 'legacy')
+    check('an inventory with no replacement roots still renders',
+          'GENERATOR FAILED' not in legacy
+          and '_None: every removal in this release is a declared entry._' in legacy,
+          legacy[-300:])
+
 check('DELETE_FILES.txt declares the v6 browser fixture credential file',
       'tests/Browser/support/fixtures.json'
       in (ROOT / 'DELETE_FILES.txt').read_text().split())
