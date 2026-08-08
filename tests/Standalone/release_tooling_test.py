@@ -11,6 +11,7 @@ Usage: python3 tests/Standalone/release_tooling_test.py
 """
 from __future__ import annotations
 
+import ast
 import hashlib
 import json
 import os
@@ -1508,6 +1509,159 @@ with tempfile.TemporaryDirectory() as tmp:
           'GENERATOR FAILED' not in legacy
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
+
+# ---- shipped documentation must not trigger the scanner on itself ---------
+#
+# The delivery verifier scans Markdown along with everything else, and takes the
+# remainder of a matching line as the candidate value. REMAINING_LIMITATIONS.md
+# documented the scanner by spelling its markers out as inline-code examples, so
+# each example read as a literal credential whose value was the closing backtick
+# and following punctuation. Four examples across three packaged copies —
+# SOURCE-PATCH, corrected-runtime, FULL-SOURCE — produced twelve findings and
+# failed the clean-directory verifier on documentation that leaked nothing.
+#
+# The scanner is NOT relaxed and no path is exempted: the documentation stops
+# reproducing the trigger sequences instead.
+VERIFIER_SOURCE = (RELEASE / 'verify_final_delivery.py').read_text()
+SECRET_MARKERS = ast.literal_eval(
+    re.search(r'SECRET_MARKERS = (\(.*?\))', VERIFIER_SOURCE, re.S).group(1))
+SCANNED_SUFFIXES = ('.php', '.ts', '.vue', '.json', '.md', '.sh', '.xml', '.log')
+
+check('the scanner still defines its marker set', len(SECRET_MARKERS) >= 4)
+
+
+def scanner_findings(text: str) -> list[tuple[str, str]]:
+    """The verifier's own marker/placeholder logic, applied to one document."""
+    found = []
+
+    for marker in SECRET_MARKERS:
+        for line in text.split('\n'):
+            if marker in line and not line.strip().startswith(('#', '//', '*')):
+                value = line.split(marker, 1)[1].strip()
+                placeholder = (
+                    value == ''
+                    or value.startswith(('<', '"<', '$', '{', '__', "'", '"$'))
+                    or value.rstrip('"\'').endswith('__')
+                    or value.startswith(('rehearsal', '123456:', 'browser-')))
+                if not placeholder:
+                    found.append((marker, value[:30]))
+
+    return found
+
+
+tracked = subprocess.run(['git', 'ls-files'], cwd=str(ROOT),
+                         capture_output=True, text=True).stdout.split()
+self_triggering = {
+    rel: scanner_findings((ROOT / rel).read_text(errors='ignore'))
+    for rel in tracked
+    if rel.endswith(SCANNED_SUFFIXES) and (ROOT / rel).is_file()
+}
+self_triggering = {rel: hits for rel, hits in self_triggering.items() if hits}
+
+check('no tracked release-delivery document self-triggers the scanner',
+      not [r for r in self_triggering if r.startswith('release-delivery/')],
+      f'{ {r: h for r, h in self_triggering.items() if r.startswith("release-delivery/")} }')
+check('no tracked scannable file self-triggers the scanner at all',
+      self_triggering == {},
+      f'these would be findings once packaged: {self_triggering}')
+check('the limitations document still explains the scanning policy',
+      all(phrase in (ROOT / 'release-delivery' / 'REMAINING_LIMITATIONS.md').read_text()
+          for phrase in ('SECRET_MARKERS', 'Telegram bot token',
+                         'database password', 'fails closed')),
+      'removing the trigger sequences must not remove the explanation')
+
+
+def seal_delivery(members: dict, base: Path, label: str) -> list:
+    """FINAL-DELIVERY.zip -> component .zip -> document, scanned for real."""
+    inner_paths = []
+
+    for component, entries in members.items():
+        inner = base / f'{label}-{component}'
+        with zipfile.ZipFile(inner, 'w') as zf:
+            for name, body in entries.items():
+                zf.writestr(name, body)
+        inner_paths.append((component, inner))
+
+    delivery = base / f'FINAL-DELIVERY-{label}.zip'
+    with zipfile.ZipFile(delivery, 'w') as zf:
+        for component, inner in inner_paths:
+            zf.write(inner, component)
+
+    probe = subprocess.run(
+        [sys.executable, '-c',
+         'import sys, json\n'
+         f'sys.argv = ["verify_final_delivery.py", {str(base)!r}]\n'
+         f'source = open({str(RELEASE / "verify_final_delivery.py")!r}).read()\n'
+         'ns = {}\n'
+         'exec(source.split("master = ")[0], ns)\n'
+         f'print("FINDINGS:" + json.dumps(ns["inspect"]("FINAL-DELIVERY.zip", '
+         f'open({str(delivery)!r}, "rb").read())))'],
+        capture_output=True, text=True)
+
+    line = next((l for l in probe.stdout.splitlines()
+                 if l.startswith('FINDINGS:')), None)
+    if line is None:
+        raise AssertionError(f'verifier probe produced nothing: '
+                             f'{probe.stdout[-300:]}{probe.stderr[-300:]}')
+
+    return json.loads(line[len('FINDINGS:'):])
+
+
+LIMITATIONS = (ROOT / 'release-delivery' / 'REMAINING_LIMITATIONS.md').read_text()
+
+# Exactly the three packaged placements the run reported.
+PACKAGED = {
+    'myhawler-account-first-registration-SOURCE-PATCH.zip': {
+        'REMAINING_LIMITATIONS.md': LIMITATIONS},
+    'myhawler-account-first-registration-corrected-runtime.zip': {
+        'release-delivery/REMAINING_LIMITATIONS.md': LIMITATIONS},
+    'myhawler-account-first-registration-FULL-SOURCE.zip': {
+        'release-delivery/REMAINING_LIMITATIONS.md': LIMITATIONS},
+}
+
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+
+    check('the shipped document produces zero findings in all three archives',
+          seal_delivery(PACKAGED, base, 'shipped') == [],
+          'SOURCE-PATCH, corrected-runtime and FULL-SOURCE each carry a copy')
+
+    # The pre-fix text must still be caught, or the proof above is empty.
+    previous = LIMITATIONS.replace(
+        'The canonical list lives in `SECRET_MARKERS` in',
+        'The package scan checks known markers (`' + SECRET_MARKERS[0]
+        + '`, `' + SECRET_MARKERS[1] + '`) in')
+    was_found = seal_delivery(
+        {name: {path: previous for path in entries}
+         for name, entries in PACKAGED.items()}, base, 'previous')
+
+    check('documentation that spells the markers out is still caught',
+          len(was_found) >= 3,
+          'one finding per packaged copy is what run #6 reported — '
+          f'{was_found}')
+
+    # And a genuine credential in shipped documentation must still fail.
+    leaked = LIMITATIONS + f'\n\nExample: {SECRET_MARKERS[3]}notaplaceholdervalue\n'
+    check('a literal credential in shipped Markdown is still rejected',
+          any('possible secret' in f for f in seal_delivery(
+              {'myhawler-account-first-registration-FULL-SOURCE.zip':
+               {'release-delivery/REMAINING_LIMITATIONS.md': leaked}},
+              base, 'leak')),
+          'the fix removes self-triggering prose, never detection')
+
+    for kind, name, body in (
+            ('log', 'ledger/full-mariadb.log',
+             f'connecting {SECRET_MARKERS[3]}realsecretvalue123'),
+            ('json', 'browser/desktop.json',
+             json.dumps({'stdout': [{'text': f'{SECRET_MARKERS[0]}notarealkeyfixture'}]})),
+            ('shell', 'scripts/deploy.sh',
+             f'export {SECRET_MARKERS[3]}realsecretvalue123')):
+        check(f'a literal credential in a packaged {kind} is still rejected',
+              any('possible secret' in f for f in seal_delivery(
+                  {'myhawler-account-first-registration-evidence.zip': {name: body}},
+                  base, f'leak-{kind}')),
+              'detection must hold across every scanned entry type')
+
 
 # ---- commit prose is not release evidence ---------------------------------
 #

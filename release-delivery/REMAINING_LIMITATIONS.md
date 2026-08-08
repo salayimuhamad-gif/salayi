@@ -47,10 +47,23 @@ the offline tooling and proves it offline; it does NOT constitute a release.
    second, value-marker-based net and now has no name-keyed blind spot.
 8. **Raw gate logs are not redacted.** If a third-party tool prints a secret
    into its own stdout/stderr, that lands in the raw log inside the evidence
-   ZIP. The package scan checks known markers (`APP_KEY=base64:`,
-   `TELEGRAM_BOT_TOKEN=`, `TELEGRAM_WEBHOOK_SECRET=`, `DB_PASSWORD=`) on all
-   text entries including logs, and fails closed on a literal value; it
-   cannot catch a secret with no marker.
+   ZIP. The package scan matches assignment markers for four sensitive key
+   families — the application key, the Telegram bot token, the Telegram
+   webhook secret, and the database password — across every text entry
+   including logs, and fails closed on a literal value; it cannot catch a
+   secret carrying no marker. The canonical list lives in `SECRET_MARKERS` in
+   `scripts/release/verify_final_delivery.py`.
+
+   The exact marker strings are deliberately not reproduced in this file. This
+   document is packaged into the SOURCE-PATCH, the corrected runtime and the
+   FULL-SOURCE archives, and the delivery verifier scans Markdown along with
+   everything else. It takes the remainder of a matching line as the candidate
+   value, so an inline-code example followed by ordinary punctuation reads as a
+   literal credential: writing the markers out here produced twelve findings —
+   four examples across three packaged copies — and failed the clean-directory
+   verifier on documentation that leaked nothing. Describing the key families
+   instead keeps the policy legible without the document triggering the scanner
+   against itself.
 9. **The spec-closure gate is stubbed offline.** `browser-spec-closure` runs
    for real only on the CI host (the offline E2E fixture deliberately carries
    a single spec). Its logic is behaviourally tested against fixtures for
