@@ -1509,6 +1509,92 @@ with tempfile.TemporaryDirectory() as tmp:
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
 
+# ---- administrative DB credentials cannot be clobbered by the app's -------
+#
+# Final release run #3 died in the browser database preparation with
+# `ERROR 1045 (28000): Access denied for user 'root'@'172.18.0.1'`. The
+# administrative password lived in DB_PASSWORD, and the runtime section's
+# global `export ... DB_PASSWORD="$TEST_DB_PASSWORD"` — DB_PASSWORD being the
+# name Laravel requires — overwrote it for the rest of the run. The next
+# administrative command authenticated as root with the test user's password.
+# Everything before the export had worked, which is what made it look like a
+# MariaDB problem.
+# Classified by what each invocation DOES, not by it being a mariadb call: the
+# runner also connects as the test user on purpose, to prove those credentials
+# work before the gates rely on them. That one must NOT use the admin account.
+MYSQL_CALL = re.compile(
+    r'"\$MYSQL_BIN"[^\n]*-u "\$([A-Z_]+)" -p"\$([A-Z_]+)"(.*?)(?=\n\n|\n {0,4}[a-z#])',
+    re.S)
+privileged = ('CREATE DATABASE', 'CREATE USER', 'GRANT ', 'DROP DATABASE')
+
+admin_calls, probe_calls = [], []
+for user, password, body in MYSQL_CALL.findall(executable_runner):
+    (admin_calls if any(op in body for op in privileged) else probe_calls
+     ).append((user, password))
+
+check('the administrative MariaDB commands exist to be checked',
+      len(admin_calls) >= 3, f'found {len(admin_calls)}')
+check('every privileged MariaDB command uses the admin credentials',
+      all(pair == ('ADMIN_DB_USER', 'ADMIN_DB_PASSWORD') for pair in admin_calls),
+      f'offending: {[p for p in admin_calls if p != ("ADMIN_DB_USER", "ADMIN_DB_PASSWORD")]}')
+check('the test-user connectivity probe still authenticates as the test user',
+      probe_calls == [('TEST_DB_USER', 'TEST_DB_PASSWORD')],
+      f'probe calls: {probe_calls} — proving the app credentials work is the '
+      'whole point of that command, so it must not borrow the admin account')
+check('no administrative command authenticates with the Laravel password name',
+      '-p"$DB_PASSWORD"' not in executable_runner
+      and '-u "$DB_USER"' not in executable_runner,
+      'DB_PASSWORD is the name the runtime export claims, so it can never hold '
+      'the administrative credential')
+check('the admin credentials are marked readonly',
+      'readonly ADMIN_DB_USER ADMIN_DB_PASSWORD' in executable_runner,
+      'readonly is what turns "must not be clobbered" into "cannot be"')
+check('the admin credentials are declared before the first admin command',
+      executable_runner.index('readonly ADMIN_DB_USER ADMIN_DB_PASSWORD')
+      < executable_runner.index('-u "$ADMIN_DB_USER"'))
+check('the admin credentials are never exported to gate subprocesses',
+      'export ADMIN_DB_PASSWORD' not in executable_runner
+      and 'export ADMIN_DB_USER' not in executable_runner,
+      'administrative credentials have no business in every gate\'s environment')
+check('the runtime export still gives Laravel the TEST credentials',
+      'DB_USERNAME="$TEST_DB_USER"' in executable_runner
+      and 'DB_PASSWORD="$TEST_DB_PASSWORD"' in executable_runner,
+      'the app must still connect as the unprivileged test user')
+check('the test user is still created and granted by the admin account',
+      "CREATE USER IF NOT EXISTS '$TEST_DB_USER'@'%'" in executable_runner
+      and 'GRANT ALL PRIVILEGES' in executable_runner,
+      'no gate may be weakened to dodge the credential split')
+
+# The bug was ordering-dependent: only administrative commands AFTER the
+# runtime export broke. That ordering must stay covered.
+runtime_export_at = executable_runner.index('DB_PASSWORD="$TEST_DB_PASSWORD"')
+admin_after_export = [m.start() for m in
+                      re.finditer(r'-u "\$ADMIN_DB_USER"', executable_runner)
+                      if m.start() > runtime_export_at]
+
+check('an administrative command really does run after the runtime export',
+      admin_after_export != [],
+      'if none did, this regression would be vacuous — the browser database '
+      'preparation is that command')
+
+# Behavioural: the real shell semantics, not a reading of them.
+clobber_probe = subprocess.run(
+    ['bash', '-c',
+     'ADMIN_DB_USER=root; ADMIN_DB_PASSWORD=rootsecret\n'
+     'readonly ADMIN_DB_USER ADMIN_DB_PASSWORD\n'
+     'TEST_DB_USER=myh; TEST_DB_PASSWORD=ci\n'
+     'export DB_CONNECTION=mysql DB_USERNAME="$TEST_DB_USER" '
+     'DB_PASSWORD="$TEST_DB_PASSWORD"\n'
+     'echo "admin=$ADMIN_DB_PASSWORD laravel=$DB_PASSWORD"\n'
+     '( export ADMIN_DB_PASSWORD=ci ) 2>/dev/null && echo CLOBBERED || echo REFUSED'],
+    capture_output=True, text=True)
+
+check('the runtime export leaves the admin password untouched',
+      'admin=rootsecret laravel=ci' in clobber_probe.stdout,
+      clobber_probe.stdout.strip())
+check('reassigning an admin credential is refused by the shell',
+      'REFUSED' in clobber_probe.stdout, clobber_probe.stdout.strip())
+
 # ---- external input paths survive a change of working directory -----------
 #
 # Final release run #2 died at the recorded source-archive-audit with

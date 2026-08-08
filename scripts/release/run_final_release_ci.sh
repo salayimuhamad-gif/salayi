@@ -98,17 +98,44 @@ BASELINE_ARCHIVE=$(absolute "$BASELINE_ARCHIVE")
 [ -f "$SOURCE_SHA256_FILE" ] || fail "detached checksum not found: $SOURCE_SHA256_FILE"
 [ -f "$BASELINE_ARCHIVE" ]   || fail "baseline archive not found: $BASELINE_ARCHIVE"
 
+# TWO SETS OF DATABASE CREDENTIALS, AND THEY MUST NOT SHARE NAMES.
+#
+# The administrative account creates databases, creates the test user and
+# grants it privileges. The test/application account is what Laravel connects
+# as. They are different identities with different passwords, and the runner
+# needs both alive at the same time.
+#
+# They used to collide. The administrative password lived in DB_PASSWORD, and
+# the runtime section later ran a GLOBAL `export ... DB_PASSWORD=...` to give
+# the recorded gates their Laravel environment — DB_PASSWORD being the name
+# Laravel requires. That silently overwrote the administrative password with
+# the test user's for the rest of the run, so the next administrative command
+# (the browser database preparation) connected as root with the test password:
+#
+#   ERROR 1045 (28000): Access denied for user 'root'@'172.18.0.1'
+#
+# Everything before the export worked, which is what made it look like a
+# MariaDB or networking problem rather than a shell-variable one.
+#
+# The administrative credentials therefore live under names Laravel will never
+# claim, and are marked readonly: a future `export DB_PASSWORD=` cannot touch
+# them, and any attempt to reassign these aborts the run instead of quietly
+# changing which account the next GRANT authenticates as. They are deliberately
+# NOT exported — administrative credentials have no business in the environment
+# of every recorded gate.
 if [ "$OFFLINE_STUB" = "0" ]; then
-    DB_PASSWORD="${MYHAWLER_DB_PASSWORD:?set MYHAWLER_DB_PASSWORD}"
+    ADMIN_DB_PASSWORD="${MYHAWLER_DB_PASSWORD:?set MYHAWLER_DB_PASSWORD}"
     APP_KEY_VALUE="${MYHAWLER_APP_KEY:?set MYHAWLER_APP_KEY}"
 else
-    DB_PASSWORD="${MYHAWLER_DB_PASSWORD:-stub}"
+    ADMIN_DB_PASSWORD="${MYHAWLER_DB_PASSWORD:-stub}"
     APP_KEY_VALUE="${MYHAWLER_APP_KEY:-base64:stub}"
 fi
 
+ADMIN_DB_USER="${MYHAWLER_DB_USER:-myhawler}"
+readonly ADMIN_DB_USER ADMIN_DB_PASSWORD
+
 DB_HOST="${MYHAWLER_DB_HOST:-127.0.0.1}"
 DB_PORT="${MYHAWLER_DB_PORT:-3306}"
-DB_USER="${MYHAWLER_DB_USER:-myhawler}"
 DB_TEST="${MYHAWLER_DB_TEST:-myh_test}"
 DB_REHEARSE="${MYHAWLER_DB_REHEARSE:-myh_rehearse}"
 
@@ -404,7 +431,7 @@ PII_KEY="${MYHAWLER_PII_KEY:-$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \
 TEST_DB_PASSWORD="${MYHAWLER_TEST_DB_PASSWORD:-ci}"
 
 if [ "$OFFLINE_STUB" = "0" ]; then
-    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" -e "
+    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$ADMIN_DB_USER" -p"$ADMIN_DB_PASSWORD" -e "
         CREATE DATABASE IF NOT EXISTS \`$DB_TEST\`
             CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
         CREATE DATABASE IF NOT EXISTS \`$DB_REHEARSE\`
@@ -636,7 +663,7 @@ if [ "$OFFLINE_STUB" = "0" ]; then
              "$RUNTIME_WORKSPACE/storage/framework/sessions" \
              "$RUNTIME_WORKSPACE/storage/logs" "$RUNTIME_WORKSPACE/bootstrap/cache"
 
-    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" -e "
+    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$ADMIN_DB_USER" -p"$ADMIN_DB_PASSWORD" -e "
         CREATE DATABASE IF NOT EXISTS \`$DB_RUNTIME\`
             CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
         GRANT ALL PRIVILEGES ON \`$DB_RUNTIME\`.* TO '$TEST_DB_USER'@'%';
@@ -694,7 +721,7 @@ if [ "$OFFLINE_STUB" = "0" ]; then
              "$BROWSER_WORKSPACE/storage/framework/sessions" \
              "$BROWSER_WORKSPACE/storage/logs" "$BROWSER_WORKSPACE/bootstrap/cache"
 
-    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" -e "
+    "$MYSQL_BIN" -h "$DB_HOST" -P "$DB_PORT" -u "$ADMIN_DB_USER" -p"$ADMIN_DB_PASSWORD" -e "
         DROP DATABASE IF EXISTS \`$DB_BROWSER\`;
         CREATE DATABASE \`$DB_BROWSER\`
             CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
