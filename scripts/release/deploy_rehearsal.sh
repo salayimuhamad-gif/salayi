@@ -97,11 +97,18 @@ fi
 [ -f "$SITE/application/vendor/autoload.php" ]
 check "dependencies present" $?
 
+# Generate the disposable rehearsal key without booting Laravel. `artisan
+# key:generate` is the wrong primitive here because this exact rehearsal is
+# supposed to prove that a fresh staged application can boot from an otherwise
+# empty environment. Final release run #9 showed the circular failure mode:
+# key:generate left APP_KEY empty, the baseline migration never established its
+# schema, and every HTTP smoke request then died with MissingAppKeyException.
+# A raw PHP random_bytes() call has no application bootstrap dependency.
+REHEARSAL_APP_KEY=$("$PHP_BIN" -r 'echo "base64:".base64_encode(random_bytes(32));')
+
 cat > "$SITE/application/.env" <<'ENVEOF'
 APP_NAME=MyHawler
-# key:generate REPLACES this line; with no APP_KEY line at all it writes
-# nothing and the first request dies inside the encrypter.
-APP_KEY=
+APP_KEY=__APP_KEY__
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=http://127.0.0.1:8123
@@ -128,8 +135,7 @@ TELEGRAM_BOT_TOKEN=123456:rehearsal-token
 TELEGRAM_BOT_USERNAME=myhawler_test_bot
 TELEGRAM_WEBHOOK_SECRET=rehearsal-secret
 ENVEOF
-sed -i "s|__DB_USER__|$REHEARSAL_DB_USER|; s|__DB_PASS__|$REHEARSAL_DB_PASSWORD|; s|__DB_NAME__|$REHEARSAL_DB_NAME|; s|__DB_HOST__|$REHEARSAL_DB_HOST|; s|__DB_PORT__|$REHEARSAL_DB_PORT|" "$SITE/application/.env"
-( cd "$SITE/application" && "$PHP_BIN" artisan key:generate --force >/dev/null 2>&1 )
+sed -i "s|__APP_KEY__|$REHEARSAL_APP_KEY|; s|__DB_USER__|$REHEARSAL_DB_USER|; s|__DB_PASS__|$REHEARSAL_DB_PASSWORD|; s|__DB_NAME__|$REHEARSAL_DB_NAME|; s|__DB_HOST__|$REHEARSAL_DB_HOST|; s|__DB_PORT__|$REHEARSAL_DB_PORT|" "$SITE/application/.env"
 awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/application/.env"
 check "environment prepared with a generated key" $?
 
