@@ -1509,6 +1509,148 @@ with tempfile.TemporaryDirectory() as tmp:
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
 
+# ---- both rehearsals run in a fresh environment, not the workflow's -------
+#
+# Final release run #4 ended with exactly two failures:
+#
+#   FAIL  environment prepared with a generated key
+#   FAIL  exactly one migration applied (55 -> 55)
+#
+# The deployment rehearsal went through ordinary record_tool, so it inherited
+# this run's `export APP_KEY=` and the browser gate's
+# `export DB_DATABASE="$DB_BROWSER"` — and `deployment-rehearsal` is in the
+# recorder's DATABASE_GATES, so DB_* was kept rather than stripped. Laravel
+# derives the line key:generate replaces from the CONFIGURED app.key, so the
+# disposable .env stayed keyless; and an inherited DB_DATABASE outranks .env, so
+# artisan measured myh_browser — migrated earlier from the current source —
+# instead of the clean myh_rehearse baseline. The rollback rehearsal already ran
+# isolated; only the deployment one did not, and the difference was invisible at
+# the call site.
+REHEARSAL_GATES = ('deployment-rehearsal', 'rollback-rehearsal')
+RECORDER_SOURCE = (RELEASE / 'record_command.py').read_text()
+
+check('isolated recording exists as one shared helper',
+      'record_isolated() {' in executable_runner,
+      'the two rehearsals diverged precisely because their invocations were '
+      'written separately')
+check('the helper is the only thing that applies --clean-env',
+      executable_runner.count('--clean-env') == 1,
+      'a second hand-written clean-env invocation is how the contract drifts')
+
+for gate in REHEARSAL_GATES:
+    check(f'{gate} is recorded through the isolated helper',
+          f'record_isolated {gate} ' in executable_runner)
+    check(f'{gate} no longer goes through the inheriting recorders',
+          f'record_tool {gate} ' not in executable_runner
+          and f'record {gate} --server' not in executable_runner.replace(
+              f'record "$label" --server', ''),
+          'record_tool and record both start the child from os.environ')
+
+helper_at = executable_runner.index('record_isolated() {')
+check('the helper keeps the gate recorded, labelled and traced',
+      all(token in executable_runner[helper_at:helper_at + 1200] for token in (
+          'record_command.py', '--label "$label"', '--server-configuration',
+          '>> "$TRACE"', '--tree-manifest-sha256 "$FROZEN"')),
+      'isolation must not cost the gate its evidence')
+check('the helper passes no secret as argv',
+      'REHEARSAL_DB_PASSWORD' not in executable_runner[helper_at:helper_at + 1200],
+      'an earlier revision spelled REHEARSAL_* into an `env -i` argv, which '
+      'wrote the password into the shipped ledger')
+check('both rehearsals remain database gates in the recorder',
+      all(g in RECORDER_SOURCE for g in REHEARSAL_GATES))
+
+# The allow-list itself, read from the recorder rather than assumed.
+check('the clean-env allow-list is PATH/HOME/LANG/TERM plus REHEARSAL_',
+      "keep = {'PATH', 'HOME', 'LANG', 'TERM'}" in RECORDER_SOURCE
+      and "prefixes = ('REHEARSAL_',)" in RECORDER_SOURCE)
+check('clean-env is applied AFTER the database-gate retention',
+      RECORDER_SOURCE.index('database_env_passed')
+      < RECORDER_SOURCE.index('if args.clean_env:'),
+      'otherwise a DATABASE_GATES membership would re-admit DB_* after the strip')
+
+
+def isolated_child_env(*, clean: bool) -> dict:
+    """Run the REAL recorder with run #4's contaminated environment."""
+    with tempfile.TemporaryDirectory() as tmp:
+        base = Path(tmp)
+        probe = base / 'probe.sh'
+        probe.write_text(
+            'for v in APP_KEY DB_CONNECTION DB_DATABASE DB_USERNAME DB_PASSWORD '
+            'DB_HOST DB_PORT REHEARSAL_DB_NAME REHEARSAL_DB_USER '
+            'REHEARSAL_DB_PASSWORD; do\n'
+            '  [ -n "${!v+set}" ] && echo "$v=${!v}"\n'
+            'done\nexit 0\n')
+
+        contaminated = {
+            **os.environ,
+            'APP_KEY': 'base64:CONTAMINANT',
+            'DB_CONNECTION': 'mysql', 'DB_DATABASE': 'myh_browser',
+            'DB_USERNAME': 'myh', 'DB_PASSWORD': 'ci',
+            'DB_HOST': '127.0.0.1', 'DB_PORT': '3306',
+            'REHEARSAL_DB_NAME': 'myh_rehearse', 'REHEARSAL_DB_USER': 'myh',
+            'REHEARSAL_DB_PASSWORD': 'ci',
+        }
+        argv = [sys.executable, str(RELEASE / 'record_command.py'),
+                '--ledger', str(base / 'ledger.json'),
+                '--evidence-dir', str(base), '--tree-manifest-sha256', TREE,
+                '--label', 'deployment-rehearsal',
+                '--server-configuration', 'disposable staged site']
+        if clean:
+            argv.append('--clean-env')
+        argv += ['--database', '--cwd', str(ROOT), '--', 'bash', str(probe)]
+
+        subprocess.run(argv, capture_output=True, text=True, env=contaminated)
+
+        entry = json.loads((base / 'ledger.json').read_text())
+        entry = (entry['entries'] if isinstance(entry, dict) else entry)[0]
+        log = (base / entry['raw_output_file']).read_text()
+        seen = dict(line.split('=', 1) for line in log.splitlines() if '=' in line)
+
+        # The negative assertions below would pass on an empty result for the
+        # wrong reason, so the probe must be proved to have reported something.
+        if not seen:
+            raise AssertionError('the environment probe produced no output; '
+                                 'the absence checks would be vacuous')
+
+        return {'seen': seen, 'entry': entry}
+
+
+isolated = isolated_child_env(clean=True)
+
+for leaked in ('APP_KEY', 'DB_CONNECTION', 'DB_DATABASE', 'DB_USERNAME',
+               'DB_PASSWORD', 'DB_HOST', 'DB_PORT'):
+    check(f'an inherited {leaked} cannot reach the deployment rehearsal',
+          leaked not in isolated['seen'],
+          f'child saw {leaked}={isolated["seen"].get(leaked)!r}')
+
+check('the rehearsal database name survives isolation',
+      isolated['seen'].get('REHEARSAL_DB_NAME') == 'myh_rehearse',
+      'the gate must still operate on myh_rehearse, never myh_browser')
+check('the rehearsal credentials survive isolation',
+      isolated['seen'].get('REHEARSAL_DB_USER') == 'myh'
+      and isolated['seen'].get('REHEARSAL_DB_PASSWORD') == 'ci')
+check('the isolated gate records clean_env and its allow-list',
+      isolated['entry']['clean_env'] is True
+      and isolated['entry']['clean_env_allow_list'] == {
+          'keys': ['HOME', 'LANG', 'PATH', 'TERM'], 'prefixes': ['REHEARSAL_']})
+check('the isolated gate keeps a truthful exit code and raw log',
+      isolated['entry']['exit_code'] == 0
+      and isolated['entry']['raw_output_bytes'] > 0
+      and isolated['entry']['raw_output_sha256'])
+check('no secret reaches the ledger argv or the recorded environment',
+      not [t for t in isolated['entry']['argv'] if t in ('ci', 'base64:CONTAMINANT')]
+      and not [k for k in (isolated['entry'].get('child_environment') or {})
+               if k.startswith('DB_') or k == 'APP_KEY'])
+
+# The counterfactual: the pre-fix invocation really did let both through.
+contaminated = isolated_child_env(clean=False)
+
+check('WITHOUT isolation the run #4 contaminants do reach the child',
+      contaminated['seen'].get('APP_KEY') == 'base64:CONTAMINANT'
+      and contaminated['seen'].get('DB_DATABASE') == 'myh_browser',
+      'if this ever stops being true the regression above proves nothing — '
+      f'saw {contaminated["seen"]}')
+
 # ---- administrative DB credentials cannot be clobbered by the app's -------
 #
 # Final release run #3 died in the browser database preparation with

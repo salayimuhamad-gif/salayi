@@ -284,6 +284,44 @@ MULKIHAWLER_PII_KEY=$PII_KEY
 ENVEOF
 }
 
+# A gate that must run in a FRESH environment, not the workflow's.
+#
+# Both rehearsals model an operator on a real host: one deploying a patch, one
+# recovering a broken site. Neither has this run's environment, and inheriting
+# it proves the procedure works only where it is never needed.
+#
+# --clean-env IS that guarantee: the recorder strips the child to
+# PATH/HOME/LANG/TERM plus REHEARSAL_*, exactly as `env -i` would, and records
+# the allow-list it applied in the ledger. Secrets reach the child only through
+# the environment, never as argv — an earlier revision spelled the REHEARSAL_*
+# assignments out as an `env -i` argv, which wrote REHEARSAL_DB_PASSWORD's
+# literal value into the shipped ledger once the recorder began storing exact
+# argv.
+#
+# This exists as a helper because the deployment rehearsal did NOT have it.
+# Only the rollback did, and the difference was invisible at the call site: one
+# read `record_tool deployment-rehearsal ...`, the other a raw record_command.py
+# invocation twenty lines below. Final release run #4 failed on exactly that
+# gap. Routing both through one function makes the isolation contract a
+# property of the helper rather than of whoever last edited the call.
+record_isolated() {
+    local label="$1"; shift
+    local server="$1"; shift
+
+    if [ "$OFFLINE_STUB" = "1" ]; then
+        record "$label" --server "$server" bash -c "echo 'offline-stub: $label'"
+        return
+    fi
+
+    echo "$label" >> "$TRACE"
+
+    python3 "$SOURCE/scripts/release/record_command.py" \
+        --ledger "$LEDGER" --evidence-dir "$EVIDENCE" \
+        --tree-manifest-sha256 "$FROZEN" --label "$label" \
+        --server-configuration "$server" \
+        --clean-env --database --cwd "$SOURCE" -- "$@"
+}
+
 record_tool() {
     local label="$1"; shift
     local server=""
@@ -848,31 +886,36 @@ for required in REHEARSAL_BASELINE REHEARSAL_DB_PASSWORD REHEARSAL_DB_USER \
     [ -n "${!required:-}" ] || fail "the rehearsal environment is incomplete: $required"
 done
 
-record_tool deployment-rehearsal --server "disposable staged site" \
+# BLOCKER 5 (rollback) and final release run #4 (deployment): exporting
+# REHEARSAL_* is necessary but not sufficient. Both rehearsals run isolated.
+#
+# What run #4 proved. The deployment rehearsal went through ordinary
+# record_tool, so it inherited this run's environment — including
+# `export APP_KEY=...` and the browser gate's `export DB_DATABASE="$DB_BROWSER"`
+# — and `deployment-rehearsal` is in the recorder's DATABASE_GATES, so the DB_*
+# values were kept rather than stripped. Two assertions failed as a result:
+#
+#   FAIL  environment prepared with a generated key
+#         deploy_rehearsal.sh writes a blank `APP_KEY=` and runs
+#         `key:generate --force`. Laravel derives the line it replaces from the
+#         CONFIGURED app.key, so an inherited APP_KEY meant the blank line was
+#         never the value it expected to replace and the disposable .env stayed
+#         keyless.
+#
+#   FAIL  exactly one migration applied (55 -> 55)
+#         an inherited DB_DATABASE outranks the .env, so artisan operated on
+#         myh_browser — already migrated from the CURRENT source earlier in the
+#         run — instead of the clean myh_rehearse baseline. The count could not
+#         move, and telegram_return_handoffs already showed as Ran, which is why
+#         the following assertion still passed and masked the cause.
+#
+# Neither assertion was wrong. The rehearsal was measuring the wrong database
+# with the wrong key.
+record_isolated deployment-rehearsal "disposable staged site" \
     bash "$SOURCE/scripts/release/deploy_rehearsal.sh" "$REHEARSAL/stage" "$RUNTIME_BASE"
-# BLOCKER 5: exporting REHEARSAL_* is necessary but not sufficient — running
-# through the inherited workflow environment proves the rollback works only
-# where it is never needed. --clean-env keeps PATH, HOME and the REHEARSAL_*
-# values and drops everything else, and the ledger records that invocation.
-if [ "$OFFLINE_STUB" = "1" ]; then
-    record rollback-rehearsal --server "fresh session (env -i)" \
-        bash -c "echo 'offline-stub: rollback-rehearsal'"
-else
-    echo rollback-rehearsal >> "$TRACE"
-    # --clean-env IS the fresh-session guarantee: the recorder strips the
-    # child environment to PATH/HOME/LANG/TERM plus REHEARSAL_*, exactly as
-    # `env -i` would, and records that allow-list in the ledger. An earlier
-    # revision ALSO spelled the REHEARSAL_* assignments out as an `env -i`
-    # argv — which wrote REHEARSAL_DB_PASSWORD's literal value into the
-    # shipped ledger the moment the recorder started storing exact argv.
-    # Secrets reach this child only through the environment, never as argv.
-    python3 "$SOURCE/scripts/release/record_command.py" \
-        --ledger "$LEDGER" --evidence-dir "$EVIDENCE" \
-        --tree-manifest-sha256 "$FROZEN" --label rollback-rehearsal \
-        --server-configuration "fresh session (env -i)" \
-        --clean-env --database --cwd "$SOURCE" \
-        -- bash "$SOURCE/scripts/release/rollback_rehearsal_v7.sh" "$REHEARSAL/stage"
-fi
+
+record_isolated rollback-rehearsal "fresh session (env -i)" \
+    bash "$SOURCE/scripts/release/rollback_rehearsal_v7.sh" "$REHEARSAL/stage"
 
 record deletion-apply-restore python3 "$SOURCE/scripts/release/deletion_check.py" \
     --tree "$STAGE" --manifest "$SOURCE/DELETE_FILES.txt" --work "$WORK/deletion-test"
