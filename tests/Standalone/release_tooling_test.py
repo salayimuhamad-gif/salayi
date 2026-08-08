@@ -1509,6 +1509,59 @@ with tempfile.TemporaryDirectory() as tmp:
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
 
+# ---- external input paths survive a change of working directory -----------
+#
+# Final release run #2 died at the recorded source-archive-audit with
+# "not a readable ZIP ... No such file or directory". The workflow passes
+# `--source-archive release-input/myhawler-current-working-tree.zip`, and
+# record() runs every gate through record_command.py with `--cwd "$SOURCE"`, so
+# the relative path resolved against the extracted source. The gate was real
+# and correct; its argument had stopped pointing at anything.
+check('the runner canonicalises input paths through one helper',
+      'absolute() {' in executable_runner
+      and 'os.path.abspath' in executable_runner)
+
+for variable in ('SOURCE_ARCHIVE', 'SOURCE_SHA256_FILE', 'BASELINE_ARCHIVE', 'WORK'):
+    check(f'{variable} is made absolute at startup',
+          f'{variable}=$(absolute "${variable}")' in executable_runner,
+          'a relative external input means one thing at parse time and another '
+          'inside a gate')
+
+# Resolution has to precede every consumer, not merely exist somewhere.
+resolve_at = executable_runner.index('SOURCE_ARCHIVE=$(absolute "$SOURCE_ARCHIVE")')
+
+for consumer in ('record source-archive-audit', 'record baseline-archive-audit',
+                 'export REHEARSAL_BASELINE=', '--baseline "$BASELINE_ARCHIVE"',
+                 'unzip -q "$SOURCE_ARCHIVE"'):
+    check(f'resolution precedes: {consumer}',
+          resolve_at < executable_runner.index(consumer))
+
+check('existence is checked against the resolved path',
+      resolve_at < executable_runner.index('[ -f "$SOURCE_ARCHIVE" ]'),
+      'an error naming a relative fragment cannot be acted on')
+check('the detached checksum is no longer assumed to sit beside the archive',
+      'sha256sum -c "$SOURCE_SHA256_FILE"' in executable_runner
+      and 'basename "$SOURCE_SHA256_FILE"' not in executable_runner)
+check('the source-archive audit still audits the supplied archive itself',
+      'record source-archive-audit python3 "$SOURCE/scripts/release/audit_archive.py" '
+      '"$SOURCE_ARCHIVE"' in executable_runner,
+      'the gate must inspect the authenticated archive, never a copy or a stub')
+
+# Behavioural: the helper's own contract.
+absolute_probe = subprocess.run(
+    ['bash', '-c',
+     'absolute() { python3 -c '
+     "'import os,sys; print(os.path.abspath(os.path.expanduser(sys.argv[1])))' "
+     '"$1"; }\n'
+     'cd /tmp && absolute rel/file.zip && absolute ./x.zip && absolute /abs/keep.zip'],
+    capture_output=True, text=True)
+resolved = absolute_probe.stdout.split()
+
+check('relative inputs resolve against the invocation directory',
+      resolved[:2] == ['/tmp/rel/file.zip', '/tmp/x.zip'], str(resolved))
+check('already-absolute inputs are left alone',
+      resolved[2:] == ['/abs/keep.zip'], str(resolved))
+
 # ---- the documentation gates are given evidence to check ------------------
 #
 # The first real final-release run failed here: both checkers resolve

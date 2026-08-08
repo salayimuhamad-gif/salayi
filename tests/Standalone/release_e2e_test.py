@@ -141,7 +141,8 @@ def main() -> int:
 
         environment = dict(os.environ)
         environment.update({
-            'MYHAWLER_BASELINE_ARCHIVE': str(baseline_zip),
+            # RELATIVE, deliberately. See below.
+            'MYHAWLER_BASELINE_ARCHIVE': '../baseline.zip',
             'MYHAWLER_BASELINE_SHA256': baseline_hash,
             'PHP_BIN': shutil.which('php') or 'php',
         })
@@ -149,15 +150,30 @@ def main() -> int:
         runner = source_tree / 'scripts' / 'release' / 'run_final_release_ci.sh'
         run_work = work / 'run'
 
-        print('  running run_final_release_ci.sh --offline-stub ...')
+        # Every input path is supplied RELATIVE to a working directory the
+        # runner does not stay in.
+        #
+        # Final release run #2 died here in production. The workflow passes
+        # `--source-archive release-input/myhawler-current-working-tree.zip`,
+        # and record() executes every gate through record_command.py with
+        # `--cwd "$SOURCE"` — so the recorded source-archive-audit resolved that
+        # relative path against the extracted source and reported "not a
+        # readable ZIP ... No such file or directory". The gate was real and
+        # working; the path it was handed was not.
+        #
+        # This harness had always passed absolute paths, which is exactly why it
+        # never caught it. Absolute paths are the case that cannot fail;
+        # relative ones are the case that did.
+        print('  running run_final_release_ci.sh --offline-stub '
+              '(relative input paths, launched from the inputs directory) ...')
         result = subprocess.run(
             ['bash', str(runner),
-             '--source-archive', str(source_zip),
-             '--source-sha256', str(inputs / f'{source_zip.name}.sha256'),
+             '--source-archive', source_zip.name,
+             '--source-sha256', f'{source_zip.name}.sha256',
              '--work', str(run_work),
              '--offline-stub',
              '--min-files', str(MIN_FILES)],
-            capture_output=True, text=True, env=environment,
+            capture_output=True, text=True, env=environment, cwd=str(inputs),
         )
 
         check('the E2E test executes run_final_release_ci.sh itself', True)
@@ -191,6 +207,29 @@ def main() -> int:
         check('every ledger entry exited 0',
               all(e['exit_code'] == 0 for e in entries),
               str(sorted(e['label'] for e in entries if e['exit_code'] != 0)))
+        # The gate that failed run #2, checked on its own terms: it must have
+        # run for real (record(), never stubbed), exited 0, and its raw log must
+        # show a genuine audit of a readable archive rather than the
+        # "not a readable ZIP" that a mis-resolved relative path produces.
+        audit_entry = next((e for e in entries
+                            if e['label'] == 'source-archive-audit'), None)
+        check('the source-archive audit reached the ledger', audit_entry is not None)
+
+        if audit_entry:
+            audit_log = (run_work / 'evidence' / audit_entry['raw_output_file'])
+            audit_text = audit_log.read_text() if audit_log.is_file() else ''
+            check('the source-archive audit exited 0 with a relative input path',
+                  audit_entry['exit_code'] == 0, audit_text.strip()[-200:])
+            check('the source-archive audit really opened the archive',
+                  'archive audit problems: 0' in audit_text
+                  and 'entries=' in audit_text
+                  and 'not a readable ZIP' not in audit_text,
+                  audit_text.strip()[-200:])
+            check('the audited path is the supplied source archive',
+                  any('myhawler-current-working-tree.zip' in str(token)
+                      for token in audit_entry['argv']),
+                  str(audit_entry.get('argv')))
+
         check('every ledger entry binds to one tree hash',
               {e['final_tree_manifest_sha256'] for e in entries} == {frozen})
         check('durations and timestamps are real, not zeroed',

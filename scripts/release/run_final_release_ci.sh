@@ -40,6 +40,28 @@ STEP=0
 step() { STEP=$((STEP + 1)); echo ""; echo "=== ${STEP}. $* ==="; }
 fail() { echo "FAIL: $*" >&2; exit 1; }
 
+# Canonicalise a path against the CURRENT working directory.
+#
+# Every external input is put through this once, at startup, because almost
+# nothing in this script runs where the script was invoked. record() executes
+# each gate through record_command.py with `--cwd "$SOURCE"`, other steps run
+# inside disposable workspaces, and the rehearsals run inside a staged site. A
+# relative input therefore means one thing at parse time and something else
+# entirely by the time a gate receives it.
+#
+# Final release run #2 failed on exactly that. The workflow passes
+# `--source-archive release-input/myhawler-current-working-tree.zip`; the
+# recorded source-archive-audit resolved it against the extracted source and
+# reported "not a readable ZIP ... No such file or directory". The gate was
+# real and doing its job — it was handed a path that no longer pointed at
+# anything. Resolving once, here, is what makes every later use correct by
+# construction rather than by luck about which directory a step happens to run
+# in. `abspath` rather than `realpath`: symlinked inputs stay the path the
+# caller named, they just stop being relative.
+absolute() {
+    python3 -c 'import os,sys; print(os.path.abspath(os.path.expanduser(sys.argv[1])))' "$1"
+}
+
 SOURCE_ARCHIVE=""
 SOURCE_SHA256_FILE=""
 WORK="${WORK:-$(pwd)/final-release-run}"
@@ -61,11 +83,20 @@ done
 
 [ -n "$SOURCE_ARCHIVE" ]     || fail "--source-archive is required"
 [ -n "$SOURCE_SHA256_FILE" ] || fail "--source-sha256 is required"
-[ -f "$SOURCE_ARCHIVE" ]     || fail "source archive not found: $SOURCE_ARCHIVE"
-[ -f "$SOURCE_SHA256_FILE" ] || fail "detached checksum not found: $SOURCE_SHA256_FILE"
 
 BASELINE_ARCHIVE="${MYHAWLER_BASELINE_ARCHIVE:?set MYHAWLER_BASELINE_ARCHIVE}"
 BASELINE_SHA256="${MYHAWLER_BASELINE_SHA256:?set MYHAWLER_BASELINE_SHA256}"
+
+# Resolved BEFORE the existence checks below, so both the checks and every
+# later use see the same absolute path — and so a failure names the path that
+# was actually looked for rather than a relative fragment.
+SOURCE_ARCHIVE=$(absolute "$SOURCE_ARCHIVE")
+SOURCE_SHA256_FILE=$(absolute "$SOURCE_SHA256_FILE")
+BASELINE_ARCHIVE=$(absolute "$BASELINE_ARCHIVE")
+
+[ -f "$SOURCE_ARCHIVE" ]     || fail "source archive not found: $SOURCE_ARCHIVE"
+[ -f "$SOURCE_SHA256_FILE" ] || fail "detached checksum not found: $SOURCE_SHA256_FILE"
+[ -f "$BASELINE_ARCHIVE" ]   || fail "baseline archive not found: $BASELINE_ARCHIVE"
 
 if [ "$OFFLINE_STUB" = "0" ]; then
     DB_PASSWORD="${MYHAWLER_DB_PASSWORD:?set MYHAWLER_DB_PASSWORD}"
@@ -84,7 +115,7 @@ DB_REHEARSE="${MYHAWLER_DB_REHEARSE:-myh_rehearse}"
 PHP_BIN="${PHP_BIN:-php}"
 MYSQL_BIN="${MYSQL_BIN:-mariadb}"
 
-WORK=$(python3 -c 'import os,sys; print(os.path.abspath(os.path.expanduser(sys.argv[1])))' "$WORK")
+WORK=$(absolute "$WORK")
 
 case "$WORK" in
     /|/root|/home|/usr|/etc|/var|/tmp|/bin|/sbin|/lib|/opt|/boot|/dev|/proc|/sys)
@@ -248,10 +279,13 @@ record_tool() {
 
 step "Verify the source and baseline archives"
 
-( cd "$ARCHIVE_PARENT" && sha256sum -c "$(basename "$SOURCE_SHA256_FILE")" ) \
+# Read from its absolute path, but CHECKED from the archive's directory: the
+# detached file names the archive by bare filename, so that is where the name
+# inside it has to resolve. Taking the checksum file by absolute path rather
+# than by basename means it no longer has to sit beside the archive.
+( cd "$ARCHIVE_PARENT" && sha256sum -c "$SOURCE_SHA256_FILE" ) \
     || fail "the supplied source archive does not match its detached checksum"
 
-[ -f "$BASELINE_ARCHIVE" ] || fail "baseline archive not found: $BASELINE_ARCHIVE"
 ACTUAL_BASELINE=$(sha256sum "$BASELINE_ARCHIVE" | cut -d' ' -f1)
 [ "$ACTUAL_BASELINE" = "$BASELINE_SHA256" ] \
     || fail "baseline archive hash mismatch: expected $BASELINE_SHA256, got $ACTUAL_BASELINE"
