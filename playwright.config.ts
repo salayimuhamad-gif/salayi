@@ -68,6 +68,33 @@ const viewports = [
  * limiter itself is still exercised in production.
  */
 export default defineConfig({
+    /*
+     * NO VCS METADATA IN THE REPORTS.
+     *
+     * Playwright captures git information on CI by default and writes it into
+     * `config.metadata.gitCommit`, INCLUDING the full commit message body. The
+     * release runner points Playwright's JSON output straight at the evidence
+     * directory, so that message became sealed release evidence.
+     *
+     * Final release #5 failed there: a commit message that explained a
+     * regression quoted an environment assignment as prose, the reporter copied
+     * the whole message into all five project reports, and the clean-directory
+     * secret scanner correctly refused the delivery. The scanner was right —
+     * the evidence really did contain secret-shaped text.
+     *
+     * Git discovery finds a repository even though the verified source archive
+     * is gitless: the disposable browser workspace lives under $WORK, which the
+     * workflow places inside the GitHub checkout, so the walk upward reaches
+     * that checkout's .git.
+     *
+     * The release contract identifies the source by TREE_MANIFEST.sha256, never
+     * by commit prose, so none of this metadata is evidence of anything. It is
+     * switched off at the source here, and normalize_browser_report.py strips
+     * it from the written reports as well — the reports must be safe whatever a
+     * future Playwright version decides to capture by default.
+     */
+    captureGitInfo: { commit: false, diff: false },
+
     globalSetup: './tests/Browser/support/global-setup.ts',
     testDir: './tests/Browser',
     timeout: 90_000,

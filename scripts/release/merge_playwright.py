@@ -32,6 +32,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from normalize_browser_report import vcs_keys_in  # noqa: E402
 from release_gates import (  # noqa: E402
     PLAYWRIGHT_ACCOUNT_FIRST_SPEC, PLAYWRIGHT_PROJECTS,
     PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS, PLAYWRIGHT_REMAINING_SPECS,
@@ -142,7 +143,20 @@ def main() -> int:
         report_paths.append(path)
         name = Path(path).stem
         with open(path) as fh:
-            stats = json.load(fh).get('stats', {})
+            report = json.load(fh)
+        stats = report.get('stats', {})
+
+        # VCS metadata must already be gone. normalize_browser_report.py strips
+        # it and Playwright is configured not to capture it, but this is the
+        # gate that is RECORDED — so if either of those is skipped or silently
+        # stops working, the release stops here instead of sealing a commit
+        # message into the evidence. Final release #5 shipped one all the way to
+        # the clean-directory scanner.
+        leftover = vcs_keys_in(report)
+        if leftover:
+            problems.append(f'{name}: VCS metadata in the report '
+                            f'({", ".join(leftover)}); it is not release '
+                            f'evidence and must be normalized away first')
         merged['projects'][name] = stats
         for key in merged['totals']:
             merged['totals'][key] += stats.get(key, 0)

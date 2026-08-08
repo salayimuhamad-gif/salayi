@@ -1509,6 +1509,245 @@ with tempfile.TemporaryDirectory() as tmp:
           and '_None: every removal in this release is a declared entry._' in legacy,
           legacy[-300:])
 
+# ---- commit prose is not release evidence ---------------------------------
+#
+# Final release #5 reached the clean-directory verifier and was refused:
+#
+#   FAIL: the clean-directory final verifier did not exit 0
+#   possible secret in browser/<project>.json
+#
+# Playwright captures git information on CI by default and stores the FULL
+# commit message in config.metadata.gitCommit. The runner points its JSON output
+# straight at $EVIDENCE/browser, so a commit message that quoted an environment
+# assignment as prose became sealed evidence in all five project reports. Git
+# was discoverable because the browser workspace lives under $WORK, inside the
+# GitHub checkout, even though the verified source archive is gitless.
+#
+# The scanner was right. The defect was that arbitrary prose reached the
+# evidence at all. The release identifies its source by TREE_MANIFEST.sha256;
+# commit text is not part of that contract.
+from release_gates import PLAYWRIGHT_TESTS_TOTAL  # noqa: E402
+
+NORMALIZER = str(RELEASE / 'normalize_browser_report.py')
+SENTINEL_KEY, SENTINEL_VALUE = 'APP_KEY=base64:', 'NOTAREALKEYFIXTURE'
+COMMIT_PROSE = (f'Explain a regression\n\nthe counterfactual sets '
+                f'{SENTINEL_KEY}{SENTINEL_VALUE} and DB_DATABASE=myh_browser\n')
+
+playwright_config = (ROOT / 'playwright.config.ts').read_text()
+
+check('Playwright is configured not to capture VCS metadata',
+      'captureGitInfo: { commit: false, diff: false }' in playwright_config,
+      'the official switch is the primary fix; normalization is the backstop')
+check('the runner normalizes browser evidence before it is merged or sealed',
+      'normalize_browser_report.py' in executable_runner
+      and executable_runner.index('normalize_browser_report.py')
+      < executable_runner.index('merge_playwright.py'),
+      'the JSON is written straight into $EVIDENCE, so there is no later copy '
+      'to clean')
+check('a failed normalization stops the run',
+      'browser evidence still carries version-control metadata' in executable_runner)
+
+
+def browser_report(project: str, expected: int = 20, *, vcs: bool = True,
+                   errors: list | None = None) -> dict:
+    """A Playwright JSON report in the shape the release contract consumes."""
+    metadata: dict = {'actualWorkers': 1}
+
+    if vcs:
+        metadata['gitCommit'] = {'shortHash': 'abc1234', 'message': COMMIT_PROSE,
+                                 'author': {'name': 'someone'}, 'timestamp': 1}
+        metadata['gitDiff'] = f'diff --git a/x b/x\n+{SENTINEL_KEY}{SENTINEL_VALUE}\n'
+
+    return {
+        'config': {'rootDir': '/x', 'metadata': metadata},
+        'suites': [{'title': 'account-first-registration.spec.ts',
+                    'file': 'account-first-registration.spec.ts',
+                    'specs': [{'title': 'registers', 'ok': True,
+                               'tests': [{'projectName': project,
+                                          'results': [{'status': 'passed',
+                                                       'duration': 12}]}]}]}],
+        'stats': {'expected': expected, 'unexpected': 0, 'skipped': 0, 'flaky': 0},
+        'errors': errors or [],
+    }
+
+
+def seal_nested(browser: Path, base: Path, label: str) -> list:
+    """Build FINAL-DELIVERY.zip -> evidence.zip -> browser/*.json and scan it.
+
+    Runs the DELIVERED verifier's own inspect(), so this is the real nested
+    path rather than a standalone JSON check.
+    """
+    evidence_zip = base / f'evidence-{label}.zip'
+    with zipfile.ZipFile(evidence_zip, 'w') as zf:
+        for report in sorted(browser.rglob('*.json')):
+            zf.write(report, f'browser/{report.relative_to(browser)}')
+        zf.writestr('command-ledger.json', '{"entries": []}')
+
+    delivery = base / f'FINAL-DELIVERY-{label}.zip'
+    with zipfile.ZipFile(delivery, 'w') as zf:
+        zf.write(evidence_zip, 'myhawler-account-first-registration-evidence.zip')
+
+    probe = subprocess.run(
+        [sys.executable, '-c',
+         'import sys, json\n'
+         f'sys.argv = ["verify_final_delivery.py", {str(base)!r}]\n'
+         f'source = open({str(RELEASE / "verify_final_delivery.py")!r}).read()\n'
+         'ns = {}\n'
+         'exec(source.split("master = ")[0], ns)\n'
+         f'found = ns["inspect"]("FINAL-DELIVERY.zip", open({str(delivery)!r}, "rb").read())\n'
+         'print("FINDINGS:" + json.dumps(found))'],
+        capture_output=True, text=True)
+
+    line = next((l for l in probe.stdout.splitlines() if l.startswith('FINDINGS:')), None)
+    if line is None:
+        raise AssertionError(f'the verifier probe produced nothing: '
+                             f'{probe.stdout[-300:]}{probe.stderr[-300:]}')
+
+    return json.loads(line[len('FINDINGS:'):])
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+    browser = base / 'browser'
+    (browser / 'remaining').mkdir(parents=True)
+
+    for project in PLAYWRIGHT_PROJECTS:
+        (browser / f'{project}.json').write_text(json.dumps(browser_report(project)))
+    (browser / 'remaining' / 'remaining.json').write_text(
+        json.dumps(remaining_report(full_rows) | {
+            'config': {'metadata': {'gitCommit': {'message': COMMIT_PROSE}}}}))
+
+    # ---- the contaminated shape really is what run #5 shipped -------------
+    before = seal_nested(browser, base, 'before')
+    check('VCS metadata in the reports is caught in the nested FINAL-DELIVERY',
+          any('possible secret' in f for f in before),
+          'if this passes, the fixture no longer reproduces run #5 and the '
+          f'proof below is empty — findings: {before}')
+
+    # ---- normalization, over every browser report path --------------------
+    normalized = run(NORMALIZER, '--browser-dir', str(browser))
+    check('normalization succeeds over the whole browser tree',
+          normalized.returncode == 0, normalized.stderr.strip()[-200:])
+    check('normalization covers all five projects and the remaining suite',
+          all(f'{p}.json' in normalized.stdout for p in PLAYWRIGHT_PROJECTS)
+          and 'remaining.json' in normalized.stdout,
+          normalized.stdout)
+
+    surviving = [p.name for p in browser.rglob('*.json')
+                 if SENTINEL_VALUE in p.read_text()
+                 or '"gitCommit"' in p.read_text() or '"gitDiff"' in p.read_text()]
+    check('no gitCommit, gitDiff or commit prose survives in any report',
+          surviving == [], f'still contaminated: {surviving}')
+
+    check('a second normalization is a no-op',
+          run(NORMALIZER, '--browser-dir', str(browser), '--check').returncode == 0)
+
+    # ---- the sealed nested delivery is clean ------------------------------
+    after = seal_nested(browser, base, 'after')
+    check('the nested FINAL-DELIVERY verifier passes after normalization',
+          after == [], f'findings: {after}')
+
+    # ---- the evidence contract survives -----------------------------------
+    account = run(str(RELEASE / 'merge_playwright.py'),
+                  '--browser-dir', str(browser),
+                  '--tree-manifest-sha256', TREE, '--mode', 'account-first')
+    check('the five account-first reports still merge after normalization',
+          account.returncode == 0, account.stderr.strip()[-300:])
+    check('the exact account-first counts are unchanged',
+          f'"expected": {PLAYWRIGHT_TESTS_TOTAL}' in account.stdout,
+          account.stdout.strip()[-200:])
+
+    remaining = run(str(RELEASE / 'merge_playwright.py'),
+                    '--browser-dir', str(browser / 'remaining'),
+                    '--tree-manifest-sha256', TREE, '--mode', 'remaining')
+    check('the remaining suite still merges after normalization',
+          remaining.returncode == 0, remaining.stderr.strip()[-300:])
+
+    kept = json.loads((browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').read_text())
+    check('project identity, inventory, results and timing are untouched',
+          kept['stats'] == {'expected': 20, 'unexpected': 0, 'skipped': 0, 'flaky': 0}
+          and kept['suites'][0]['file'] == 'account-first-registration.spec.ts'
+          and kept['suites'][0]['specs'][0]['tests'][0]['projectName']
+          == PLAYWRIGHT_PROJECTS[0]
+          and kept['suites'][0]['specs'][0]['tests'][0]['results'][0]['duration'] == 12,
+          str(kept)[:300])
+    check('non-VCS config metadata is preserved',
+          kept['config']['metadata'] == {'actualWorkers': 1},
+          str(kept['config']['metadata']))
+
+    # ---- the RECORDED gate refuses contamination on its own ---------------
+    reinfected = json.loads((browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').read_text())
+    reinfected['config']['metadata']['gitCommit'] = {'message': COMMIT_PROSE}
+    (browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').write_text(json.dumps(reinfected))
+
+    refused = run(str(RELEASE / 'merge_playwright.py'),
+                  '--browser-dir', str(browser),
+                  '--tree-manifest-sha256', TREE, '--mode', 'account-first')
+    check('the recorded merge gate refuses a report carrying VCS metadata',
+          refused.returncode != 0 and 'VCS metadata in the report' in refused.stderr,
+          'normalization could be skipped; the merge gate is the one that is '
+          f'recorded — {refused.stderr.strip()[-200:]}')
+    check('--check reports contamination without rewriting it away',
+          run(NORMALIZER, '--browser-dir', str(browser), '--check').returncode != 0)
+
+
+# ---- and detection itself must NOT be weakened ----------------------------
+#
+# The fix removes irrelevant VCS metadata. A real secret in a field the contract
+# genuinely keeps must still stop the release.
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+    browser = base / 'browser'
+    browser.mkdir(parents=True)
+
+    for project in PLAYWRIGHT_PROJECTS:
+        (browser / f'{project}.json').write_text(json.dumps(
+            browser_report(project, vcs=False)))
+
+    clean = seal_nested(browser, base, 'contract-clean')
+    check('a clean contract-only report set passes the nested verifier',
+          clean == [], f'findings: {clean}')
+
+    # Values chosen to be LITERAL, not placeholder-shaped: the scanner
+    # deliberately exempts empty assignments, shell expansions, substitution
+    # markers and the documented `123456:` dummy bot token, and a fixture that
+    # tripped one of those exemptions would prove nothing about detection.
+    for field, payload in (
+            ('errors', [{'message': 'connect failed using DB_PASSWORD=hunter2hunter2'}]),
+            ('stdout', [{'text': 'TELEGRAM_BOT_TOKEN=7788991122:AAHnotarealtokenvalue'}])):
+        leaked = json.loads((browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').read_text())
+        leaked[field] = payload
+        (browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').write_text(json.dumps(leaked))
+
+        found = seal_nested(browser, base, f'leak-{field}')
+        check(f'a real secret in the {field} evidence field is still detected',
+              any('possible secret' in f for f in found),
+              'the normalizer must not have become a way to launder secrets — '
+              f'findings: {found}')
+
+        # Normalizing must NOT remove it: it is contract evidence, not VCS noise.
+        run(NORMALIZER, '--browser-dir', str(browser))
+        still = seal_nested(browser, base, f'leak-{field}-after')
+        check(f'normalization does not strip a secret out of {field}',
+              any('possible secret' in f for f in still),
+              'stripping it would hide a genuine leak instead of failing the '
+              f'release — findings: {still}')
+
+        leaked.pop(field, None)
+        (browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').write_text(json.dumps(leaked))
+
+    # The documented placeholder exemptions must survive the change too: a
+    # dummy value is not a leak, and reporting one would train people to ignore
+    # the scanner.
+    placeholdered = json.loads((browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').read_text())
+    placeholdered['stdout'] = [{'text': 'TELEGRAM_BOT_TOKEN=123456:AAdocumenteddummy'}]
+    (browser / f'{PLAYWRIGHT_PROJECTS[0]}.json').write_text(json.dumps(placeholdered))
+
+    check('a documented placeholder value is still not reported as a leak',
+          seal_nested(browser, base, 'placeholder') == [],
+          'the exemption is by VALUE shape and predates this change')
+
+
 # ---- both rehearsals run in a fresh environment, not the workflow's -------
 #
 # Final release run #4 ended with exactly two failures:

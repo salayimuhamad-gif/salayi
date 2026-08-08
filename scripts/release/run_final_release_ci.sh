@@ -833,6 +833,27 @@ record_in_db "$BROWSER_WORKSPACE" playwright-remaining-suite \
 
 unset PLAYWRIGHT_JSON_OUTPUT_NAME PLAYWRIGHT_JUNIT_OUTPUT_NAME
 
+# STRIP VCS METADATA BEFORE ANY OF THIS BECOMES EVIDENCE.
+#
+# Playwright writes its JSON straight into $EVIDENCE/browser, so these files are
+# authoritative the moment they land — there is no later copy to clean. On CI it
+# captures git information by default and stores the FULL commit message in
+# config.metadata.gitCommit; the browser workspace sits under $WORK, inside the
+# GitHub checkout, so git discovery reaches that checkout's .git even though the
+# verified source is gitless.
+#
+# Final release #5 sealed a commit message into all five project reports that
+# way and was correctly refused by the clean-directory secret scanner. The
+# release identifies its source by TREE_MANIFEST.sha256; commit prose is not
+# part of that contract and does not belong in the evidence.
+#
+# Runs over the whole tree, so the five account-first reports and the remaining
+# suite are all covered. The recorded merge gates below independently refuse any
+# report that still carries VCS metadata, so skipping this cannot pass unnoticed.
+python3 "$SOURCE/scripts/release/normalize_browser_report.py" \
+    --browser-dir "$EVIDENCE/browser" \
+    || fail "browser evidence still carries version-control metadata"
+
 if [ "$OFFLINE_STUB" = "1" ]; then
     record playwright-merge-junit python3 "$SOURCE/scripts/release/merge_playwright.py" \
         --browser-dir "$EVIDENCE/browser" --tree-manifest-sha256 "$FROZEN" \
