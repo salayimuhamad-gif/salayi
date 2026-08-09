@@ -44,6 +44,10 @@ return [
         'new_password' => 'New password',
         'confirm_password' => 'Confirm password',
         'password_requirements' => 'At least 12 characters, with upper and lower case, a number and a symbol',
+        // The sign-in field accepts either identifier: customers register with
+        // a phone number and no email, administrators the other way round.
+        'login_identifier' => 'Phone number or email',
+        'login_identifier_hint' => 'The phone number you registered with, or your email address.',
         'password_reset' => 'Your password has been changed',
         'throttled' => 'Too many attempts. Please try again in :seconds seconds',
     ],
@@ -90,10 +94,13 @@ return [
         'history_kept' => 'Past decisions are kept as a record of what you agreed to and when. They are never used to contact you.',
     ],
     'link' => [
-        'title' => 'Link your Telegram',
-        'lead' => 'Your account needs a linked Telegram to use personalized features. Press the button, tap Start in the bot, and this page will notice on its own.',
-        'open_button' => 'Open Telegram and press Start',
-        'waiting' => 'Waiting for Telegram… tap Start in the bot, then come back here.',
+        'title' => 'One final step',
+        'lead' => 'Verify your account through Telegram.',
+        'open_button' => 'Open Telegram',
+        'press_start' => 'Inside Telegram, simply press START. That is the whole step — there is nothing to type and nothing to confirm afterwards.',
+        'later' => 'You can do this later. Your verification link stays available and never expires.',
+        'check_now' => 'Check verification',
+        'waiting' => 'Waiting for Telegram… press START in the bot. This page will notice on its own.',
         'success' => 'Linked! Taking you to your profile…',
         'expired' => 'This link request expired before it was used.',
         'conflict' => 'That Telegram account could not be linked to this account.',
@@ -128,6 +135,11 @@ return [
         'bot_verified' => 'Your number is verified. Return to the site',
         'bot_failed' => 'This request has expired. Please try again',
         'bot_registered' => 'Your account is ready. Return to the site to continue',
+        // The one message the simplified flow sends. Short on purpose: if this
+        // needed a follow-up instruction, the flow would have failed at its
+        // one job.
+        'bot_verified_account' => "✅ Your MyHawler account has been verified successfully.\n\nYou can now return to MyHawler.",
+        'bot_already_connected' => 'This Telegram account is already connected to a MyHawler account. If that was not you, please contact support — accounts are never merged automatically.',
         'title' => 'Sign in with Telegram',
         'open' => 'Open Telegram',
         'code' => 'Your code',
@@ -147,6 +159,14 @@ return [
         'name' => 'Full name',
         'phone' => 'Phone number',
         'phone_hint' => 'Iraqi number, e.g. 0750 123 4567',
+        // :count is the CONFIGURED minimum, passed in from the server, so the
+        // hint cannot drift away from the rule that is actually enforced.
+        'password_hint' => 'At least :count characters, with upper and lower case, a number and a symbol',
+        // Shown beside the deliberately vague refusal above. The message does
+        // not say an account exists — that would let anyone test numbers — but
+        // it no longer leaves a real owner with nowhere to go.
+        'conflict_next_steps' => 'What you can do:',
+        'conflict_continue' => 'Sign in, or continue a verification you already started',
         'locale' => 'Preferred language',
         'accept_terms' => 'I accept the Terms of Service and Privacy Policy',
         'consent_contact' => 'MyHawler staff may contact me about property requests I submit',
@@ -187,6 +207,26 @@ return [
         'status_contact_yes' => 'Contact permission: granted',
         'status_contact_no' => 'Contact permission: not granted',
         'already_done' => 'Onboarding already completed — you can update these anytime.',
+        // Screen 3: everything below is genuinely optional and nothing reads
+        // it to decide what the account may do.
+        'optional_title' => 'Optional details',
+        'optional_hint' => 'All of this can be left blank, and changed later from your profile.',
+        'city' => 'City',
+        'city_none' => 'Not selected',
+        'area' => 'Area or neighbourhood',
+        'area_none' => 'Anywhere in this city',
+        // Shown when an administrator has not published any city yet. Better
+        // an honest empty state than a dropdown of invented places.
+        'location_unavailable' => 'No cities have been published yet. You can add this later.',
+        'email' => 'Email address',
+        'email_hint' => 'Optional. Useful for account recovery and notices.',
+        'gender' => 'Gender',
+        'gender_unset' => 'Prefer not to say',
+        'gender_female' => 'Female',
+        'gender_male' => 'Male',
+        'gender_undisclosed' => 'Prefer not to say',
+        'date_of_birth' => 'Date of birth',
+        'date_of_birth_hint' => 'Optional.',
         'go_advisor' => 'Start with the AI Advisor',
         'go_portfolio' => 'Add my properties',
         'go_home' => 'Just take me to the site',

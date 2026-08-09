@@ -25,13 +25,22 @@ import { test } from './support/harness';
 
 const WEBHOOK_SECRET = process.env.TELEGRAM_WEBHOOK_SECRET ?? 'browser-webhook-secret';
 
+/*
+ * Meets the platform's configured password policy (12+, mixed case, a number,
+ * a symbol). Every account this spec registers uses it, so the sign-in
+ * scenarios can prove the thing that matters most about the new flow: coming
+ * back does not involve Telegram.
+ *
+ * Not a secret. It authenticates nothing outside a disposable browser-test
+ * database that is rebuilt on every run.
+ */
+const PASSWORD = 'Br0wser!Test#2026';
+
 interface LocaleCase {
     locale: 'ckb' | 'ar' | 'en';
     prefix: string;
     accountCreated: string;
     returnLabel: string;
-    /** A distinctive phrase from the guest-safe pre-confirmation page. */
-    returnToTabPhrase: string;
     dir: 'rtl' | 'ltr';
 }
 
@@ -41,7 +50,6 @@ const LOCALES: LocaleCase[] = [
         prefix: '',
         accountCreated: 'هەژمارەکەت بە سەرکەوتوویی دروست کرا',
         returnLabel: 'گەڕانەوە بۆ MyHawler',
-        returnToTabPhrase: 'بگەڕێوە بۆ ئەو تابەی وێبگەڕ',
         dir: 'rtl',
     },
     {
@@ -49,7 +57,6 @@ const LOCALES: LocaleCase[] = [
         prefix: '/ar',
         accountCreated: 'تم إنشاء حسابك بنجاح',
         returnLabel: 'العودة إلى MyHawler',
-        returnToTabPhrase: 'ارجع إلى تبويب المتصفح',
         dir: 'rtl',
     },
     {
@@ -57,7 +64,6 @@ const LOCALES: LocaleCase[] = [
         prefix: '/en',
         accountCreated: 'Your account was created successfully',
         returnLabel: 'Return to MyHawler',
-        returnToTabPhrase: 'Go back to the browser tab',
         dir: 'ltr',
     },
 ];
@@ -128,6 +134,19 @@ async function register(page: import('@playwright/test').Page, testCase: LocaleC
     await page.locator('input[autocomplete="name"]').first().fill('Browser Person');
     await page.locator('input[type="tel"]').first().fill(phone);
 
+    /*
+     * The password, and its confirmation. Both are addressed by
+     * `autocomplete="new-password"` — the same attribute-based approach the
+     * fields above use, because a label selector would change with the
+     * language and this spec runs in three.
+     *
+     * This is what makes every later visit an ordinary sign-in, so the
+     * scenarios below can log in with it instead of pressing Start again.
+     */
+    const passwords = page.locator('input[autocomplete="new-password"]');
+    await passwords.nth(0).fill(PASSWORD);
+    await passwords.nth(1).fill(PASSWORD);
+
     // The language is a form FIELD, not a URL prefix: registration itself is
     // not locale-prefixed, only the authenticated surface it lands on.
     /*
@@ -170,9 +189,11 @@ async function pressStart(
 /**
  * The deep link the page is holding, and the token inside it.
  *
- * "Open Telegram" is a BUTTON that opens the bot, not an anchor, so the link
- * is read from the Inertia page props the server actually sent — which is
- * also the honest place to read it: that prop is what the button will use.
+ * Read from the Inertia page props the server actually sent, rather than from
+ * the anchor's href. Both carry the same value — the control is a real `<a>`
+ * now, so a mobile popup blocker cannot eat the tap — but the prop is the
+ * server's own answer, and reading it means this helper is not silently
+ * re-testing the template's interpolation.
  */
 async function tokenFromPage(page: import('@playwright/test').Page): Promise<string> {
     await expect(page.getByTestId('open-telegram')).toBeVisible();
@@ -235,78 +256,87 @@ for (const testCase of LOCALES) {
 
             await pressStart(request, token, telegramId);
 
-            // The tab polls on its own — nothing is clicked to make this happen.
-            await expect(page.getByTestId('confirm-title')).toBeVisible({ timeout: 30_000 });
-
-            await page.getByTestId('confirm-candidate').first().click();
-
             /*
-             * The EXACT destination. Accepting `profile|onboarding` here used
-             * to hide a real disagreement between the poll, the confirm
-             * response and the button in the chat — a test that accepts both
-             * answers cannot fail when the product picks the wrong one.
-             * A newly registered account has not completed onboarding, so
-             * onboarding is the only correct answer.
+             * ONE press, and the tab moves on by itself.
+             *
+             * Nothing is clicked between the Start and the destination. This
+             * assertion is the whole product change: there used to be a
+             * "confirm this Telegram account" screen here that the person had
+             * to come back to the browser and press, and the test drove it.
+             *
+             * The EXACT destination, not `profile|onboarding`. Accepting both
+             * used to hide a real disagreement between the poll, the confirm
+             * response and the button in the chat — a test that accepts either
+             * answer cannot fail when the product picks the wrong one. A newly
+             * registered account has not completed onboarding, so onboarding is
+             * the only correct answer.
              */
             await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/onboarding$`), {
                 timeout: 30_000,
             });
 
+            // And no second step was left anywhere for anybody to press.
+            await expect(page.getByTestId('confirm-title')).toHaveCount(0);
+
             expect(diagnostics.consoleErrors).toEqual([]);
             expect(diagnostics.failedRequests).toEqual([]);
         });
 
-        test('the Telegram return button authenticates a cold browser and lands on localized onboarding', async ({
+        test('verifying after the tab is closed works, and the password gets back in', async ({
             page,
             request,
+            context,
             browser,
         }) => {
-            await register(page, testCase, nextPhone());
-            const token = await tokenFromPage(page);
-            await pressStart(request, token, 720_000 + Math.floor(Math.random() * 70_000));
+            /*
+             * Scenario B, end to end: register, walk away, verify from
+             * Telegram much later, then come back and sign in normally.
+             *
+             * This replaces a test that drove the one-time authenticating
+             * handoff button. That button is not part of this journey any
+             * more — the simplified flow deliberately does NOT mint a
+             * credential to save somebody a sign-in, because the account now
+             * has a password. What the person actually does instead is what is
+             * asserted here.
+             */
+            const phone = nextPhone();
 
-            await expect(page.getByTestId('confirm-title')).toBeVisible({ timeout: 30_000 });
-            await page.getByTestId('confirm-candidate').first().click();
-            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/onboarding$`), { timeout: 30_000 });
+            await register(page, testCase, phone);
+            const token = await tokenFromPage(page);
 
             /*
-             * Telegram's inline button opens Telegram's in-app browser, which
-             * carries NONE of this site's cookies. Testing it from the page
-             * above would prove only that an already-authenticated browser can
-             * open onboarding — which is not the journey anybody takes.
-             *
-             * So: a brand-new context with zero MyHawler cookies, exactly like
-             * the WebView.
+             * The browser is gone as far as the site is concerned: no session
+             * cookie, and the tab navigated away. The page fixture itself is
+             * left open rather than closed, so the harness's diagnostics
+             * teardown still has something to read.
              */
-            const handoffUrl = await page.evaluate(async () => {
-                const res = await fetch('/__testing__/last-return-handoff');
-                return res.ok ? (await res.json()).url : null;
-            });
+            await context.clearCookies();
+            await page.goto('/');
 
-            if (handoffUrl === null) {
-                test.skip(true, 'no handoff introspection hook in this environment');
-            }
+            // Verification still succeeds, driven only from Telegram.
+            await pressStart(request, token, 720_000 + Math.floor(Math.random() * 70_000));
 
-            const cold = await browser.newContext();
-            const coldPage = await cold.newPage();
+            const returning = await browser.newContext();
+            const returningPage = await returning.newPage();
 
-            expect((await cold.cookies()).length, 'the cold context started with cookies').toBe(0);
+            expect((await returning.cookies()).length, 'the returning context started with cookies').toBe(0);
 
-            await coldPage.goto(handoffUrl as string);
+            await returningPage.goto('/login');
+            await returningPage.locator('input[autocomplete="username"]').first().fill(phone);
+            await returningPage.locator('input[autocomplete="current-password"]').first().fill(PASSWORD);
+            await returningPage.locator('button[type="submit"]').first().click();
 
-            await expect(coldPage).toHaveURL(new RegExp(`${testCase.prefix}/account/onboarding$`));
-            await expect(coldPage.locator('html')).toHaveAttribute('dir', testCase.dir);
+            /*
+             * Straight to the account. Landing back on the verification page
+             * here would mean the Start never took effect; landing on /login
+             * would mean the password never did.
+             */
+            await expect(returningPage).toHaveURL(
+                new RegExp(`${testCase.prefix}/account/(onboarding|profile)`),
+                { timeout: 30_000 },
+            );
 
-            // Replay from a second cold context must be refused, not silently
-            // land on login while a report claims success.
-            const replayContext = await browser.newContext();
-            const replayPage = await replayContext.newPage();
-            await replayPage.goto(handoffUrl as string);
-            await expect(replayPage).toHaveURL(/return-expired/);
-            await expect(replayPage.getByTestId('return-expired-title')).toBeVisible();
-
-            await cold.close();
-            await replayContext.close();
+            await returning.close();
         });
 
         test('surviving a refresh and a second tab without losing the token', async ({ page, context }) => {
@@ -325,109 +355,85 @@ for (const testCase of LOCALES) {
 }
 
 for (const testCase of LOCALES) {
-    test.describe(`Telegram buttons in a cold browser (${testCase.locale})`, () => {
-        test('the FIRST button opens a guest-safe page, the SECOND authenticates once', async ({
+    test.describe(`returning without Telegram (${testCase.locale})`, () => {
+        test('a verified account signs in with its password and is never sent to Telegram again', async ({
             page,
             request,
+            context,
             browser,
         }) => {
-            await register(page, testCase, nextPhone());
+            /*
+             * Scenario C, and the requirement the whole change exists to
+             * satisfy: Telegram is needed ONCE. Every later visit is a
+             * password sign-in.
+             *
+             * This replaces a test of the two-message Telegram button dance
+             * (a guest-safe page first, a one-time authenticating handoff
+             * after confirmation). The simplified flow sends one message and
+             * one plain link, so what is asserted instead is that the link the
+             * bot now sends authenticates NOBODY — the security property that
+             * test was really protecting — and that the password is what gets
+             * the person back in.
+             */
+            const phone = nextPhone();
+
+            await register(page, testCase, phone);
             await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/telegram/link$`));
 
             const token = await tokenFromPage(page);
             const telegramId = 810_000 + Math.floor(Math.random() * 80_000);
 
             await pressStart(request, token, telegramId);
+            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/onboarding$`), {
+                timeout: 30_000,
+            });
 
             /*
-             * ---- the FIRST message, sent before any confirmation ----
-             *
-             * At this moment no handoff exists and none should: authenticating
-             * a cold browser before the original tab has confirmed the
-             * candidate would hand the anti-hijack gate to whoever holds the
-             * link. So this button must lead somewhere that signs nobody in.
+             * The bot's return button, opened in a browser with no cookies —
+             * exactly what Telegram's in-app WebView is. It must land
+             * somewhere real and sign nobody in: a link sitting in a chat is
+             * readable by anyone who can reach that chat.
              */
-            const first = await page.evaluate(async () => {
-                const res = await fetch('/__testing__/last-telegram-button/return_to_tab');
+            const button = await page.evaluate(async () => {
+                const res = await fetch('/__testing__/last-telegram-button/home');
 
                 return res.ok ? await res.json() : null;
             });
 
-            expect(first, 'no pre-confirmation button was recorded').not.toBeNull();
-            expect(first.text).toBe(testCase.returnLabel);
-            expect(first.url).toContain(`${testCase.prefix}/account/return-to-tab`);
+            expect(button, 'no return button was recorded').not.toBeNull();
+            expect(button.text).toBe(testCase.returnLabel);
+            expect(button.url, 'the return button must carry no token').not.toContain('/account/return/');
 
             const cold = await browser.newContext();
             const coldPage = await cold.newPage();
 
             expect((await cold.cookies()).length, 'the cold context started with cookies').toBe(0);
 
-            await coldPage.goto(first.url as string);
+            await coldPage.goto(button.url as string);
 
-            // It renders — it does not bounce to login...
-            await expect(coldPage).toHaveURL(new RegExp(`${testCase.prefix}/account/return-to-tab$`));
-
-            // ...it authenticates nobody: a gated page still refuses this context.
+            // A gated page still refuses this context: nobody was signed in.
             await coldPage.goto(`${testCase.prefix}/account/onboarding`);
             await expect(coldPage).toHaveURL(/\/login/);
-
-            await coldPage.goto(first.url as string);
-
-            // ...it tells the person what to do, in their language...
-            await expect(coldPage.locator('body')).toContainText(testCase.returnToTabPhrase);
-
-            // ...it reveals nothing about an account or the linking state...
-            const body = (await coldPage.locator('body').innerText()).toLowerCase();
-            expect(body).not.toContain('linked');
-            expect(body).not.toContain(String(telegramId));
-
-            // ...and it is laid out in the right direction.
-            await expect(coldPage.locator('html')).toHaveAttribute('dir', testCase.dir);
 
             await cold.close();
 
             /*
-             * ---- confirm in the ORIGINAL browser ----
+             * Now the real return journey: sign out, come back, sign in with
+             * the password. No Start, no bot, no deep link.
              */
-            await expect(page.getByTestId('confirm-title')).toBeVisible({ timeout: 30_000 });
-            await page.getByTestId('confirm-candidate').first().click();
+            await context.clearCookies();
+            await page.goto('/login');
+            await page.locator('input[autocomplete="username"]').first().fill(phone);
+            await page.locator('input[autocomplete="current-password"]').first().fill(PASSWORD);
+            await page.locator('button[type="submit"]').first().click();
+
             await expect(page).toHaveURL(
                 new RegExp(`${testCase.prefix}/account/(onboarding|profile)`),
                 { timeout: 30_000 },
             );
 
-            /*
-             * ---- the SECOND message: the secure one-time handoff ----
-             */
-            const second = await page.evaluate(async () => {
-                const res = await fetch('/__testing__/last-return-handoff');
-
-                return res.ok ? (await res.json()).url : null;
-            });
-
-            expect(second, 'no post-confirmation handoff was minted').not.toBeNull();
-            expect(second).toContain('/account/return/');
-
-            const warm = await browser.newContext();
-            const warmPage = await warm.newPage();
-
-            expect((await warm.cookies()).length).toBe(0);
-
-            await warmPage.goto(second as string);
-
-            // Authenticates, exactly once, and lands on the canonical localized
-            // destination for a brand-new account: onboarding.
-            await expect(warmPage).toHaveURL(new RegExp(`${testCase.prefix}/account/onboarding$`));
-            await expect(warmPage.locator('html')).toHaveAttribute('dir', testCase.dir);
-
-            await warm.close();
-
-            // A second use of the same token is refused, neutrally.
-            const replay = await browser.newContext();
-            const replayPage = await replay.newPage();
-            await replayPage.goto(second as string);
-            await expect(replayPage).toHaveURL(/return-expired/);
-            await replay.close();
+            // Emphatically NOT the verification page.
+            await expect(page).not.toHaveURL(/\/account\/telegram\/link/);
         });
     });
 }
@@ -479,19 +485,58 @@ test.describe('account-first edge cases', () => {
         await expect(page).toHaveURL(/\/register$/);
         await expect(page.locator('body')).toContainText(/could not complete registration/i);
 
+        /*
+         * Scenario D. The refusal must not dead-end.
+         *
+         * The message stays deliberately vague — an anonymous visitor may be
+         * typing somebody else's number, and confirming it is registered would
+         * make this form a lookup service. What it must NOT do is leave a real
+         * owner with nowhere to go, so a way forward is offered alongside it.
+         */
+        await expect(page.getByTestId('register-recovery')).toBeVisible();
+        await expect(page.getByTestId('register-recovery-signin')).toHaveAttribute('href', /\/login/);
+
         // Refused, and nobody was signed in as the existing account.
         await page.goto('/account/onboarding');
         await expect(page).toHaveURL(/\/login|\/register/);
     });
 
-    test('losing the session before linking leaves the account unreachable rather than open', async ({ page }) => {
-        await register(page, LOCALES[0], nextPhone());
+    test('losing the session before verifying is recoverable with the password, and the same link is waiting', async ({
+        page,
+    }) => {
+        /*
+         * This test used to assert the opposite — that losing the tab left the
+         * account "unreachable rather than open" — because an unlinked account
+         * had no email and no password, so the session really was the only way
+         * back. That was a documented dead end, not a security property, and
+         * it is the reason abandoned registrations had to be reclaimed after
+         * 72 hours.
+         *
+         * The account has a password now, so the correct assertion is that the
+         * person gets back in AND finds the SAME verification link they left —
+         * not a replacement, which would have quietly killed the one already
+         * open in their Telegram chat.
+         */
+        const phone = nextPhone();
+
+        await register(page, LOCALES[0], phone);
         await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+
+        const before = await tokenFromPage(page);
 
         await page.context().clearCookies();
 
+        // Still refused while signed out. The link is not a login.
         await page.goto('/account/telegram/link');
         await expect(page).toHaveURL(/\/login/);
+
+        await page.locator('input[autocomplete="username"]').first().fill(phone);
+        await page.locator('input[autocomplete="current-password"]').first().fill(PASSWORD);
+        await page.locator('button[type="submit"]').first().click();
+
+        // Signing in resumes the registration exactly where it stopped.
+        await expect(page).toHaveURL(/\/account\/telegram\/link$/, { timeout: 30_000 });
+        expect(await tokenFromPage(page), 'signing in again replaced the verification link').toBe(before);
     });
 
     test('restarting retires the old token and issues a new one', async ({ page }) => {

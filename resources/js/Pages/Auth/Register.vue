@@ -25,11 +25,24 @@ const props = defineProps<{
     bot_configured: boolean;
     pending: { deep_link: string | null; expires_in_seconds: number; name: string | null } | null;
     locales: string[];
+    password_min_length: number;
 }>();
 
+/*
+ * Screen 1 of three, and deliberately short: name, phone, password. Everything
+ * else — city, area, email, photo, and the rest — is asked once the account
+ * exists, on the profile-completion screen. A registration form that collects
+ * a whole profile is a registration form people abandon.
+ *
+ * The password is what makes Telegram a one-time step. Without one, the only
+ * way back into the account is another Start, which is the behaviour this
+ * change exists to remove.
+ */
 const form = useForm({
     name: '',
     phone: '',
+    password: '',
+    password_confirmation: '',
     locale: (document.documentElement.lang || 'ckb') as string,
     accept_terms: false,
     consent_contact: false,
@@ -264,6 +277,25 @@ const localeNames: Record<string, string> = {
                 :error="form.errors.phone"
             />
 
+            <AppInput
+                v-model="form.password"
+                type="password"
+                :label="t('identity.auth.password')"
+                autocomplete="new-password"
+                required
+                :hint="t('identity.register.password_hint', { count: password_min_length })"
+                :error="form.errors.password"
+            />
+
+            <AppInput
+                v-model="form.password_confirmation"
+                type="password"
+                :label="t('identity.auth.confirm_password')"
+                autocomplete="new-password"
+                required
+                :error="form.errors.password_confirmation"
+            />
+
             <div>
                 <label for="register-locale" class="mb-1.5 block text-sm font-medium text-ink">
                     {{ t('identity.register.locale') }}
@@ -303,6 +335,34 @@ const localeNames: Record<string, string> = {
             <AppButton type="submit" block class="min-h-11" :loading="form.processing" :disabled="!bot_configured">
                 {{ t('identity.register.continue_telegram') }}
             </AppButton>
+
+            <!--
+                The refusal, with somewhere to go.
+
+                The message itself stays deliberately vague about WHY — saying
+                "this number is already registered" to an anonymous visitor
+                would let anyone test numbers against the database. What was
+                actually broken is that it dead-ended: a person who genuinely
+                owns the number had no next step at all.
+
+                These two links are that next step. Signing in reaches an
+                account whether or not its verification was ever finished — an
+                unverified one lands straight back on the verification page with
+                its permanent link waiting. Neither link claims an account
+                exists; they are what any visitor is offered.
+            -->
+            <div v-if="form.errors.phone" class="space-y-2 rounded-card border border-line p-4" data-testid="register-recovery">
+                <p class="text-sm font-medium text-ink">{{ t('identity.register.conflict_next_steps') }}</p>
+                <a
+                    href="/login"
+                    data-testid="register-recovery-signin"
+                    class="flex min-h-11 w-full items-center justify-center rounded-card border border-brand px-4
+                           text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-white
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                    {{ t('identity.register.conflict_continue') }}
+                </a>
+            </div>
 
             <p class="text-center text-sm text-ink-muted">
                 {{ t('identity.register.have_account') }}

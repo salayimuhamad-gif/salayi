@@ -9,6 +9,7 @@ use App\Modules\Identity\Services\AbandonedAccountPolicy;
 use App\Modules\Identity\Services\TelegramBotResponder;
 use App\Modules\Identity\Services\TelegramRegistrar;
 use App\Modules\Identity\Services\TelegramReturnHandoff;
+use App\Modules\Identity\Services\TelegramVerificationService;
 use App\Modules\Identity\Support\PostLinkDestination;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -66,6 +67,7 @@ final class AccountTelegramLinkController extends Controller
         private readonly AbandonedAccountPolicy $policy,
         private readonly TelegramBotResponder $bot,
         private readonly TelegramReturnHandoff $handoff,
+        private readonly TelegramVerificationService $verification,
     ) {}
 
     public function show(Request $request): Response|RedirectResponse
@@ -86,22 +88,43 @@ final class AccountTelegramLinkController extends Controller
             return redirect()->to(PostLinkDestination::for($user->fresh()));
         }
 
-        $intent = $this->registrar->resumeOrBeginAccountLink(
-            $user,
-            $request->session()->getId(),
-            $this->hash($request->ip()),
-            $this->hash($request->userAgent()),
-        );
+        /*
+         * The permanent verification token, resumed rather than replaced.
+         *
+         * `issueFor()` returns the token this account already holds when there
+         * is one, so a refresh, a restored mobile tab, a second window or a
+         * sign-in three weeks later all render the SAME deep link — the one
+         * that may already be sitting open in the person's Telegram chat.
+         *
+         * The 10-minute, session-bound `account_link` intent is no longer
+         * minted here. It is not removed: `poll()`, `confirm()` and `reject()`
+         * below still serve one, so a token that was already in flight when
+         * this shipped can still be completed by the browser that started it.
+         * Nothing new enters that path.
+         */
+        $rawToken = $this->verification->issueFor($user);
 
-        return Inertia::render('Account/TelegramLink', $this->payload($intent));
+        /*
+         * A candidate parked by one of those in-flight intents, if this
+         * session has one. Null for every account registered since — the new
+         * flow has no confirmation step to park anything for.
+         */
+        $pending = $this->currentIntent($request);
+
+        return Inertia::render('Account/TelegramLink', $this->payload($rawToken, $pending));
     }
 
     /**
-     * The person asks for a NEW token, on purpose.
+     * The person asks for a NEW link, on purpose.
      *
-     * BLOCKER 1's whole point is that this is the only browser-initiated
-     * path that invalidates a live intent. It is a POST because it destroys
-     * something.
+     * This is the only browser-initiated path that destroys a live token, and
+     * that is why it is a POST and why rendering the page does not do it. With
+     * a permanent token the stakes are higher than they were: the link being
+     * replaced may be one the person opened in Telegram weeks ago, and once it
+     * is revoked, pressing it there will fail.
+     *
+     * It stays available because it is the honest answer to "somebody else has
+     * my link" — the revocation half of "permanent until used OR revoked".
      */
     public function restart(Request $request): RedirectResponse
     {
@@ -119,13 +142,8 @@ final class AccountTelegramLinkController extends Controller
             return redirect()->to(PostLinkDestination::for($user->fresh()));
         }
 
-        $this->registrar->resumeOrBeginAccountLink(
-            $user,
-            $request->session()->getId(),
-            $this->hash($request->ip()),
-            $this->hash($request->userAgent()),
-            restart: true,
-        );
+        // Retires every live token for this account and issues one fresh one.
+        $this->verification->mint($user);
 
         return redirect()->to(localized_route('account.telegram.link'));
     }
@@ -143,18 +161,35 @@ final class AccountTelegramLinkController extends Controller
 
         if ($intent === null) {
             /*
-             * No intent this session may speak for. If the account is in
-             * fact linked — completed in another tab, or by an earlier
-             * intent — say so rather than leaving this tab pending forever.
+             * The ordinary path now: no intent, because the permanent
+             * verification token does not use one. The question this branch
+             * answers is simply "is the account verified yet", which is also
+             * the right answer for a tab whose intent completed elsewhere.
+             *
+             * This is what makes §15's automatic detection work — and what
+             * makes it survive the person closing the page, since the answer
+             * comes from the account row rather than from anything held in
+             * this session.
              */
-            $linked = $user->fresh()->telegram_verified_at !== null;
+            $fresh = $user->fresh();
+            $linked = $fresh->telegram_verified_at !== null;
+
+            if ($linked) {
+                /*
+                 * Rotate before telling the browser, exactly as the intent
+                 * branch below does. This session id has been sitting in a
+                 * poll loop since before the account was verified; the
+                 * verified session gets a fresh one.
+                 */
+                $request->session()->regenerate();
+            }
 
             return response()->json([
                 'state' => $linked ? 'completed' : 'pending',
                 // One resolver, everywhere: a second tab or an
                 // already-completed poll must not disagree with the button in
                 // the chat about where this person belongs.
-                'redirect' => $linked ? PostLinkDestination::for($user->fresh()) : null,
+                'redirect' => $linked ? PostLinkDestination::for($fresh) : null,
             ]);
         }
 
@@ -332,6 +367,17 @@ final class AccountTelegramLinkController extends Controller
         $user = $request->user();
         $assessment = $this->policy->assessSelfAbandon($user);
 
+        /*
+         * Revoke first, and unconditionally.
+         *
+         * The token outlives the browser session by design, so walking away
+         * without this would leave a working verification link pointing at an
+         * account the person has just disowned. Done even when the release is
+         * refused: whatever happens to the row, "I am finished with this
+         * registration" must at minimum stop the link that was issued for it.
+         */
+        $this->verification->revokeAllFor($user, 'self_abandon');
+
         if ($assessment['eligible']) {
             $this->policy->release($user, 'self_abandon');
         }
@@ -389,19 +435,34 @@ final class AccountTelegramLinkController extends Controller
     }
 
     /**
+     * What the verification page is given.
+     *
+     * A deep link and nothing else, for the ordinary case. There is no expiry
+     * to count down, no code to display and no token to read out — §14's rule
+     * is that the person sees a button and an instruction, never anything
+     * technical. The raw token appears exactly once, inside the URL, and is
+     * not rendered as text anywhere on the page.
+     *
      * @return array<string, mixed>
      */
-    private function payload(TelegramLoginIntent $intent): array
+    private function payload(string $rawToken, ?TelegramLoginIntent $pending): array
     {
         $username = (string) config('services.telegram.bot_username', '');
 
         return [
-            'deep_link' => $username === '' ? null : 'https://t.me/'.$username.'?start='.$intent->token,
-            'expires_in_seconds' => max(0, (int) now()->diffInSeconds($intent->expires_at, false)),
+            'deep_link' => $username === '' ? null : 'https://t.me/'.$username.'?start='.$rawToken,
             'bot_configured' => $username !== '',
-            'requires_confirmation' => TelegramRegistrar::confirmationRequired(),
-            'candidate' => $intent->candidatePayload(),
-            'candidate_handle' => $intent->candidate_telegram_id === null ? null : $intent->candidateHandle(),
+            /*
+             * Legacy, and null for everybody registered since this shipped:
+             * the parked-candidate confirmation that an in-flight `account_link`
+             * intent may still be waiting on. The page renders the
+             * confirmation UI only when it is non-null, so the new flow never
+             * shows a second step.
+             */
+            'candidate' => $pending?->candidatePayload(),
+            'candidate_handle' => $pending === null || $pending->candidate_telegram_id === null
+                ? null
+                : $pending->candidateHandle(),
         ];
     }
 

@@ -49,7 +49,7 @@ const strings = computed(() =>
                 {{ t(strings.title) }}
             </h1>
 
-            <AppAlert tone="warning" class="mt-4">
+            <AppAlert variant="warning" class="mt-4">
                 {{ t(strings.body) }}
             </AppAlert>
 

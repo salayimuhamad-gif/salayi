@@ -44,6 +44,10 @@ return [
         'new_password' => 'كلمة مرور جديدة',
         'confirm_password' => 'تأكيد كلمة المرور',
         'password_requirements' => '١٢ حرفاً على الأقل، مع أحرف كبيرة وصغيرة وأرقام ورموز',
+        // The sign-in field accepts either identifier: customers register with
+        // a phone number and no email, administrators the other way round.
+        'login_identifier' => 'رقم الهاتف أو البريد الإلكتروني',
+        'login_identifier_hint' => 'رقم الهاتف الذي سجّلت به، أو عنوان بريدك الإلكتروني.',
         'password_reset' => 'تم تغيير كلمة المرور',
         'throttled' => 'محاولات كثيرة جدًا. يرجى المحاولة بعد :seconds ثانية',
     ],
@@ -90,10 +94,13 @@ return [
         'history_kept' => 'يتم الاحتفاظ بالقرارات السابقة كسجل لما وافقت عليه ومتى. ولا تُستخدم أبدًا للتواصل معك.',
     ],
     'link' => [
-        'title' => 'اربط حساب تيليجرام',
-        'lead' => 'يحتاج حسابك إلى ربط تيليجرام لاستخدام الميزات الشخصية. اضغط الزر، ثم اضغط Start في البوت، وستلاحظ هذه الصفحة ذلك تلقائيًا.',
-        'open_button' => 'افتح تيليجرام واضغط Start',
-        'waiting' => 'بانتظار تيليجرام… اضغط Start في البوت ثم عد إلى هنا.',
+        'title' => 'خطوة أخيرة واحدة',
+        'lead' => 'وثّق حسابك عبر تيليجرام.',
+        'open_button' => 'افتح تيليجرام',
+        'press_start' => 'داخل تيليجرام، اضغط START فقط. هذه هي الخطوة كاملة — لا شيء تكتبه ولا تأكيد بعدها.',
+        'later' => 'يمكنك فعل ذلك لاحقًا. يبقى رابط التوثيق متاحًا ولا تنتهي صلاحيته أبدًا.',
+        'check_now' => 'تحقّق من التوثيق',
+        'waiting' => 'بانتظار تيليجرام… اضغط START في البوت. ستلاحظ هذه الصفحة ذلك تلقائيًا.',
         'success' => 'تم الربط! جارٍ نقلك إلى ملفك الشخصي…',
         'expired' => 'انتهت صلاحية طلب الربط قبل استخدامه.',
         'conflict' => 'تعذّر ربط حساب تيليجرام هذا بحسابك.',
@@ -128,6 +135,11 @@ return [
         'bot_verified' => 'تم التحقق من رقمك. عد إلى الموقع',
         'bot_failed' => 'انتهت صلاحية هذا الطلب. حاول مرة أخرى',
         'bot_registered' => 'حسابك جاهز. ارجع إلى الموقع للمتابعة',
+        // The one message the simplified flow sends. Short on purpose: if this
+        // needed a follow-up instruction, the flow would have failed at its
+        // one job.
+        'bot_verified_account' => "✅ تم توثيق حسابك في MyHawler بنجاح.\n\nيمكنك الآن العودة إلى MyHawler.",
+        'bot_already_connected' => 'حساب تيليجرام هذا مرتبط بالفعل بحساب في MyHawler. إذا لم تكن أنت، يُرجى التواصل مع الدعم — لا تُدمج الحسابات تلقائيًا أبدًا.',
         'title' => 'تسجيل الدخول عبر تليجرام',
         'open' => 'فتح تليجرام',
         'code' => 'رمزك',
@@ -147,6 +159,14 @@ return [
         'name' => 'الاسم الكامل',
         'phone' => 'رقم الهاتف',
         'phone_hint' => 'رقم عراقي، مثال: 0750 123 4567',
+        // :count is the CONFIGURED minimum, passed in from the server, so the
+        // hint cannot drift away from the rule that is actually enforced.
+        'password_hint' => ':count حرفًا على الأقل، مع أحرف كبيرة وصغيرة وأرقام ورموز',
+        // Shown beside the deliberately vague refusal above. The message does
+        // not say an account exists — that would let anyone test numbers — but
+        // it no longer leaves a real owner with nowhere to go.
+        'conflict_next_steps' => 'ما يمكنك فعله:',
+        'conflict_continue' => 'سجّل الدخول، أو أكمل توثيقًا بدأته من قبل',
         'locale' => 'اللغة المفضلة',
         'accept_terms' => 'أوافق على شروط الخدمة وسياسة الخصوصية',
         'consent_contact' => 'يمكن لفريق MyHawler التواصل معي بخصوص طلبات العقارات التي أرسلها',
@@ -187,6 +207,26 @@ return [
         'status_contact_yes' => 'إذن التواصل: ممنوح',
         'status_contact_no' => 'إذن التواصل: غير ممنوح',
         'already_done' => 'اكتمل الإعداد سابقًا — يمكنك تعديل هذه البيانات في أي وقت.',
+        // Screen 3: everything below is genuinely optional and nothing reads
+        // it to decide what the account may do.
+        'optional_title' => 'بيانات اختيارية',
+        'optional_hint' => 'يمكن ترك كل ذلك فارغًا، وتغييره لاحقًا من ملفك الشخصي.',
+        'city' => 'المدينة',
+        'city_none' => 'لم تُحدَّد',
+        'area' => 'المنطقة أو الحي',
+        'area_none' => 'أي مكان في هذه المدينة',
+        // Shown when an administrator has not published any city yet. Better
+        // an honest empty state than a dropdown of invented places.
+        'location_unavailable' => 'لم تُنشر أي مدينة بعد. يمكنك إضافة ذلك لاحقًا.',
+        'email' => 'البريد الإلكتروني',
+        'email_hint' => 'اختياري. مفيد لاستعادة الحساب والإشعارات.',
+        'gender' => 'الجنس',
+        'gender_unset' => 'أفضّل عدم الإفصاح',
+        'gender_female' => 'أنثى',
+        'gender_male' => 'ذكر',
+        'gender_undisclosed' => 'أفضّل عدم الإفصاح',
+        'date_of_birth' => 'تاريخ الميلاد',
+        'date_of_birth_hint' => 'اختياري.',
         'go_advisor' => 'ابدأ مع المستشار الذكي',
         'go_portfolio' => 'أضف عقاراتي',
         'go_home' => 'خذني إلى الموقع فقط',

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Identity\Services;
 
+use App\Modules\Identity\Models\TelegramVerificationToken;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Support\UserReferenceContract;
 use App\Modules\Operations\Services\AuditLogger;
@@ -78,6 +79,36 @@ final class AbandonedAccountPolicy
 
         if ($user->trashed()) {
             return ['eligible' => false, 'reason' => 'already_reclaimed'];
+        }
+
+        /*
+         * A REACHABLE ACCOUNT IS NOT AN ABANDONED ONE.
+         *
+         * This sweep was written when an unlinked account had no email and no
+         * password, so the browser session that created it was genuinely the
+         * only way back in. Once that session ended, the row was unreachable
+         * by anybody, and reclaiming it after three days freed a phone number
+         * that nobody could otherwise use.
+         *
+         * Neither half of that is true now. The account has a password, so its
+         * owner can sign in and resume whenever they like; and its verification
+         * link has no expiry, so pressing Start next month is a supported
+         * journey rather than a lost cause. Deleting the account underneath
+         * that link would make the no-expiry promise a lie — the token would
+         * still be valid, and its account would be gone.
+         *
+         * So the sweep now reclaims only what is genuinely unreachable: an
+         * unlinked account with no password AND no live verification token.
+         * That is exactly the pre-existing population it was built for, plus
+         * anyone who explicitly revoked their own link. The retention window
+         * still applies to them, unchanged.
+         */
+        if ($user->password !== null && $user->password !== '') {
+            return ['eligible' => false, 'reason' => 'reachable_by_password'];
+        }
+
+        if (TelegramVerificationToken::query()->where('user_id', $user->getKey())->usable()->exists()) {
+            return ['eligible' => false, 'reason' => 'verification_pending'];
         }
 
         $hours = $retentionHours === null ? self::retentionHours() : max(1, $retentionHours);
