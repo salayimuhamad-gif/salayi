@@ -158,6 +158,25 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         return $user;
     }
 
+    /**
+     * The first validation message currently in the session for a field.
+     *
+     * Read from the session store rather than from the TestResponse: the
+     * response object has no session accessor, and the store is where a
+     * redirect-with-errors actually puts them.
+     */
+    private function sessionError(string $field): string
+    {
+        $errors = session()->get('errors');
+
+        return $errors === null ? '' : (string) $errors->first($field);
+    }
+
+    private function loginError(): string
+    {
+        return $this->sessionError('login');
+    }
+
     /** The raw token behind this account's live verification link. */
     private function liveToken(User $user): string
     {
@@ -678,15 +697,23 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         $this->flushSession();
         Auth::logout();
 
-        $unknown = $this->post('/login', ['login' => '07500000000', 'password' => self::PASSWORD]);
-        $wrong = $this->post('/login', ['login' => '07507770000', 'password' => 'wrong-password-here']);
+        /*
+         * Each message is read immediately after its own request. The two
+         * posts share one session store, so reading both at the end would
+         * compare the second answer with itself and pass no matter what the
+         * server said.
+         */
+        $this->post('/login', ['login' => '07500000000', 'password' => self::PASSWORD])
+            ->assertSessionHasErrors('login');
+        $unknownMessage = $this->loginError();
 
-        $this->assertSame(
-            session()->get('errors')?->get('login'),
-            $wrong->getSession()->get('errors')?->get('login'),
-        );
-        $unknown->assertSessionHasErrors('login');
-        $wrong->assertSessionHasErrors('login');
+        $this->post('/login', ['login' => '07507770000', 'password' => 'wrong-password-here'])
+            ->assertSessionHasErrors('login');
+        $wrongMessage = $this->loginError();
+
+        $this->assertNotSame('', $unknownMessage);
+        $this->assertSame($unknownMessage, $wrongMessage,
+            'an unknown identifier must not be distinguishable from a wrong password');
         $this->assertGuest();
     }
 
@@ -747,7 +774,9 @@ final class SimplifiedTelegramVerificationTest extends TestCase
             'accept_terms' => true,
         ]);
 
-        $message = (string) $response->getSession()->get('errors')?->first('phone');
+        $response->assertSessionHasErrors('phone');
+
+        $message = $this->sessionError('phone');
 
         /*
          * The message must offer a way forward WITHOUT asserting the number is

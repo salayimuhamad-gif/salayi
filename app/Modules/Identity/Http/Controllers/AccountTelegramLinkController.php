@@ -465,9 +465,4 @@ final class AccountTelegramLinkController extends Controller
                 : $pending->candidateHandle(),
         ];
     }
-
-    private function hash(?string $value): ?string
-    {
-        return $value === null ? null : hash('sha256', $value);
-    }
 }

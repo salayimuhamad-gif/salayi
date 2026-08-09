@@ -121,7 +121,7 @@ $ok('the verification token migration exists', $migration !== '');
  * isn't one, and a naive substring search would fail on its own explanation.
  */
 preg_match_all('/\$table->\w+\(\s*\'(\w+)\'/', $migration, $columns);
-$declared = $columns[1] ?? [];
+$declared = $columns[1];
 
 $ok(
     'the migration declares no expiry column',
@@ -278,7 +278,7 @@ $ok(
 preg_match_all('/audit->(?:record|security)\((.*?)\);/s', $service, $auditCalls);
 
 $leaky = array_values(array_filter(
-    $auditCalls[1] ?? [],
+    $auditCalls[1],
     static fn (string $args): bool => str_contains($args, 'token_hash')
         || str_contains($args, '$raw')
         || str_contains($args, 'rawToken')
