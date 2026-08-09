@@ -27,6 +27,11 @@ return [
     'example_budget' => 'Which area matches my budget?',
     'example_compare' => 'Compare the available project types',
     'example_organise' => 'Help me organise my requirements',
+    'invest_map' => [
+        'title' => 'Discover investment projects across Hawler',
+        'sub' => 'An interactive map of approved residential and investment projects — locations, boundaries, prices and their movement.',
+        'cta' => 'Open Map',
+    ],
     'quick_actions' => 'Quick actions',
     'map_cta' => 'Open the map',
     'offers_cta' => 'Browse offers',

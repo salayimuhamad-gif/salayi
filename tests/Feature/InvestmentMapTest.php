@@ -147,6 +147,19 @@ final class InvestmentMapTest extends TestCase
         $this->assertSame($published->id, $rows[0]['id']);
     }
 
+    /**
+     * The homepage preview is an invitation gated by the same flag: present
+     * when the surface exists, absent — not broken — when it does not.
+     */
+    public function test_the_homepage_advertises_the_map_only_when_it_exists(): void
+    {
+        $this->get('/')->assertInertia(fn ($page) => $page->where('cta.invest', true));
+
+        $this->setFeatures(['map.investment' => false]);
+
+        $this->get('/')->assertInertia(fn ($page) => $page->where('cta.invest', false));
+    }
+
     /* ---------------------------------------------------- price + trend */
 
     public function test_projects_carry_price_and_trend_from_their_history(): void
