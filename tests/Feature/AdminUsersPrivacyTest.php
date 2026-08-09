@@ -98,7 +98,7 @@ final class AdminUsersPrivacyTest extends TestCase
             'id', 'name', 'display_name', 'thumb', 'photo', 'initials',
             'preferred_locale', 'is_suspended', 'telegram_linked',
             'telegram_linked_at', 'phone_present', 'phone_status',
-            'registered_at', 'last_login_at',
+            'registered_at', 'last_login_at', 'last_seen_at', 'online',
             'advisor_request_count', 'portfolio_count',
         ], array_keys($row));
     }

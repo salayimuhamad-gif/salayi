@@ -63,10 +63,11 @@ use Throwable;
  * @property string|null $profile_photo_disk
  * @property int|null $profile_area_id
  * @property string|null $profile_bio
- * @property string|null $gender
- * @property Carbon|null $date_of_birth
  * @property string|null $contact_preference
  * @property string|null $primary_purpose
+ * @property string|null $gender
+ * @property Carbon|null $date_of_birth
+ * @property Carbon|null $last_seen_at
  *
  * ---- end generated model properties
  */
@@ -119,6 +120,7 @@ final class User extends Authenticatable
              */
             'date_of_birth' => 'date',
             'last_login_at' => 'datetime',
+            'last_seen_at' => 'datetime',
             'suspended_at' => 'datetime',
             'password' => 'hashed',
             'is_active' => 'boolean',

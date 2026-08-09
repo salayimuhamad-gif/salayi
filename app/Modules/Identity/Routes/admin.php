@@ -33,3 +33,15 @@ Route::middleware('permission:identity.users.contact')->group(function (): void 
     Route::post('/users/{user}/phone', [UsersController::class, 'revealPhone'])
         ->whereNumber('user')->name('users.phone.reveal');
 });
+
+// Session revocation has its own permission — ending somebody's live
+// sessions is a different power from suspending their account.
+Route::middleware('permission:identity.sessions.revoke')->group(function (): void {
+    Route::post('/users/{user}/logout', [UsersController::class, 'forceLogout'])
+        ->whereNumber('user')->name('users.logout');
+});
+
+Route::middleware('permission:identity.users.update')->group(function (): void {
+    Route::post('/users/{user}/recovery', [UsersController::class, 'sendRecovery'])
+        ->whereNumber('user')->name('users.recovery');
+});

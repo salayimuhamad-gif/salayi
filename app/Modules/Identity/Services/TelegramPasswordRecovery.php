@@ -78,6 +78,32 @@ final class TelegramPasswordRecovery
             return;
         }
 
+        $this->deliverChallenge($user, $locale);
+    }
+
+    /**
+     * Mint and deliver a challenge for a KNOWN account — the admin "send a
+     * reset link" action. The caller has already authorised and identified
+     * the account; eligibility is still re-checked here because an admin
+     * screen can be stale. Returns false when the account cannot receive
+     * one (unlinked or unavailable), so the admin gets an honest answer —
+     * this path has no enumeration concern, the admin already sees the row.
+     */
+    public function requestForUser(User $user, string $locale): bool
+    {
+        if (! $user->mayAuthenticate()
+            || $user->telegram_verified_at === null
+            || $user->telegram_id === null) {
+            return false;
+        }
+
+        $this->deliverChallenge($user, $locale);
+
+        return true;
+    }
+
+    private function deliverChallenge(User $user, string $locale): void
+    {
         $raw = PasswordRecoveryChallenge::generateRaw();
 
         DB::transaction(function () use ($user, $raw, $locale): void {

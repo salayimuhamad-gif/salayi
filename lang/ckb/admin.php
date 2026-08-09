@@ -3,6 +3,18 @@
 declare(strict_types=1);
 
 return [
+    'activity' => [
+        'title' => 'چالاکی ئەندامان',
+        'online_now' => 'ئێستا سەرهێڵ',
+        'active_today' => 'چالاکی ئەمڕۆ',
+        'active_week' => 'چالاکی ئەم هەفتەیە',
+        'active_month' => 'چالاکی ئەم مانگە',
+        'new_today' => 'نوێی ئەمڕۆ',
+        'new_week' => 'نوێی ئەم هەفتەیە',
+        'new_month' => 'نوێی ئەم مانگە',
+        'telegram_linked' => 'پشتڕاستکراوی تێلێگرام',
+        'total' => 'هەموو ئەندامان',
+    ],
     'scheduler' => [
         'title' => 'خشتەی کارەکان',
         'last_success' => 'دوایین جاری سەرکەوتوو',
