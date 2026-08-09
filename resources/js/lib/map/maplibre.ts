@@ -24,6 +24,7 @@ export class MapLibreAdapter implements MapAdapter {
 
     private map: import('maplibre-gl').Map | null = null;
     private loaded = false;
+    private failedBeforeLoad = false;
     private pending: { points: PointFeature[]; boundaries: BoundaryCollection | null } = {
         points: [],
         boundaries: null,
@@ -64,7 +65,17 @@ export class MapLibreAdapter implements MapAdapter {
         map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibre.ScaleControl({ unit: 'metric' }), 'bottom-left');
 
-        map.on('error', () => this.options.events.onError());
+        map.on('error', () => {
+            // An error before 'load' means the style itself failed — the map
+            // will never become ready and ready() must say so (see below).
+            // Errors after load (a missing sprite, a dropped tile) are the
+            // recoverable kind and change nothing here.
+            if (!this.loaded) {
+                this.failedBeforeLoad = true;
+            }
+
+            this.options.events.onError();
+        });
         map.on('moveend', () => this.options.events.onMoveEnd());
         map.on('click', (event) =>
             this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng }),
@@ -180,13 +191,34 @@ export class MapLibreAdapter implements MapAdapter {
         this.map = map;
     }
 
+    /**
+     * Resolves when the map can draw; REJECTS when it never will.
+     *
+     * The old version waited for 'load' alone. With an unreachable style URL
+     * — precisely the network condition this product plans for — MapLibre
+     * emits 'error' and 'load' never fires, so ready() hung forever and every
+     * caller sequenced behind it hung with it. The pages await ready() before
+     * their first data fetch, which turned a missing TILE SERVER into a
+     * permanently empty LIST — the exact coupling the always-rendered list
+     * exists to prevent. A rejection lands in the pages' existing catch,
+     * which states the provider failure and loads the data anyway.
+     */
     ready(): Promise<void> {
         if (this.loaded) {
             return Promise.resolve();
         }
 
-        return new Promise((resolve) => {
+        if (this.failedBeforeLoad) {
+            return Promise.reject(new Error('maplibre-style-failed'));
+        }
+
+        return new Promise((resolve, reject) => {
             this.map?.once('load', () => resolve());
+            this.map?.once('error', () => {
+                if (!this.loaded) {
+                    reject(new Error('maplibre-style-failed'));
+                }
+            });
         });
     }
 
