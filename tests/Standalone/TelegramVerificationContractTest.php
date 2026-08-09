@@ -343,7 +343,7 @@ $ok(
 
 $ok(
     'a phone identifier is matched through the blind index',
-    str_contains($login, "User::blindIndex(PhoneNumber::toE164(\$identifier))"),
+    str_contains($login, 'User::blindIndex(PhoneNumber::toE164($identifier))'),
 );
 
 $ok(
@@ -636,7 +636,7 @@ $ok(
 
 $ok(
     'redemption repairs an account holding an id with no timestamp',
-    str_contains($service, "if (\$user->telegram_verified_at === null) {")
+    str_contains($service, 'if ($user->telegram_verified_at === null) {')
         && str_contains($service, "'via' => 'repaired_missing_timestamp'"),
 );
 

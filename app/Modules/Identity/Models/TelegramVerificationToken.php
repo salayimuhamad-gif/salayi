@@ -54,10 +54,9 @@ final class TelegramVerificationToken extends Model
 {
     /**
      * Everything is written through explicit assignment or `forceFill()` in
-     * {@see \App\Modules\Identity\Services\TelegramVerificationService}. Mass
-     * assignment is left closed rather than listing columns: `used_at` and
-     * `revoked_at` are the entire state machine, and no request payload has
-     * any business reaching them.
+     * TelegramVerificationService. Mass assignment is left closed rather than
+     * listing columns: `used_at` and `revoked_at` are the entire state machine,
+     * and no request payload has any business reaching them.
      */
     protected $guarded = ['*'];
 

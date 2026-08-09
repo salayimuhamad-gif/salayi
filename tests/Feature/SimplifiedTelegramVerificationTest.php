@@ -14,8 +14,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Schema;
 use Tests\TestCase;
 
 /**
@@ -243,7 +245,7 @@ final class SimplifiedTelegramVerificationTest extends TestCase
          * time.
          */
         $this->assertFalse(
-            \Illuminate\Support\Facades\Schema::hasColumn('telegram_verification_tokens', 'expires_at'),
+            Schema::hasColumn('telegram_verification_tokens', 'expires_at'),
             'the verification token must have no expiry column',
         );
     }
@@ -254,7 +256,7 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         $user = User::query()->firstOrFail();
         $raw = $this->liveToken($user);
 
-        $row = \Illuminate\Support\Facades\DB::table('telegram_verification_tokens')
+        $row = DB::table('telegram_verification_tokens')
             ->where('user_id', $user->id)
             ->first();
 
@@ -576,7 +578,7 @@ final class SimplifiedTelegramVerificationTest extends TestCase
 
         $this->sendStart($raw, 800800800);
 
-        $audit = \Illuminate\Support\Facades\DB::table('audit_logs')->get();
+        $audit = DB::table('audit_logs')->get();
 
         foreach ($audit as $row) {
             $serialised = json_encode($row, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
