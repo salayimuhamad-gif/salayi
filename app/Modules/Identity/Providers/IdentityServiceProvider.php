@@ -84,6 +84,24 @@ final class IdentityServiceProvider extends ModuleServiceProvider
             ->by('pwreset:'.mb_strtolower((string) $request->input('email'))));
 
         /*
+         * Telegram recovery requests: each one can put a message in somebody's
+         * chat, so the budget is tighter than the email broker's — three an
+         * hour per phone digest stops a harasser spamming one person's chat,
+         * and the IP ceiling stops one machine sweeping many numbers. Keyed by
+         * digest, not the raw number, like every other identifier throttle.
+         */
+        RateLimiter::for('password-recovery', static fn (Request $request): array => [
+            Limit::perHour(3)
+                ->by('pwrecover:phone:'.hash('sha256', preg_replace('/\D+/', '', (string) $request->input('phone')) ?? '')),
+            Limit::perHour(10)->by('pwrecover:ip:'.$request->ip()),
+        ]);
+
+        // Redemption attempts per IP. The per-TOKEN budget (five tries, then
+        // the token stops answering) lives in TelegramPasswordRecovery.
+        RateLimiter::for('password-recovery-redeem', static fn (Request $request): Limit => Limit::perMinute(10)
+            ->by('pwrecover-redeem:'.$request->ip()));
+
+        /*
          * The poll runs every second or two while somebody switches to
          * Telegram, so the limit is generous — but per session, not global,
          * so one impatient browser cannot exhaust the allowance for everyone.

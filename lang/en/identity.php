@@ -124,6 +124,16 @@ return [
         'candidate_unknown' => 'Telegram account',
         'restart_hint' => 'Starting again replaces your current link — the old one stops working.',
     ],
+    'recovery' => [
+        'telegram_title' => 'Recover with Telegram',
+        'telegram_intro' => 'If your account is verified with Telegram, we can send a reset link to your Telegram chat.',
+        'phone_label' => 'Phone number',
+        'request_button' => 'Send the link to my Telegram',
+        'sent_notice' => 'If this account can be recovered with Telegram, a message has been sent to its chat.',
+        'invalid' => 'That recovery link is no longer valid. You can request a new one below.',
+        'reset_title' => 'Choose a new password',
+        'reset_intro' => 'This link works once. After saving, sign in with your new password.',
+    ],
     'telegram' => [
         'unavailable' => 'Registration by Telegram is not configured yet. Please try again later or contact us.',
         // The exact approved label; it must match the destination's language.
@@ -134,6 +144,8 @@ return [
         'bot_share_button' => 'Share phone number',
         'bot_verified' => 'Your number is verified. Return to the site',
         'bot_failed' => 'This request has expired. Please try again',
+        'bot_recovery' => 'A password reset was requested for your MyHawler account. If this was you, press the button below — the link works once and expires in 15 minutes. If you did not ask for this, ignore this message; your password is unchanged.',
+        'bot_recovery_button' => 'Reset my password',
         'bot_registered' => 'Your account is ready. Return to the site to continue',
         // The one message the simplified flow sends. Short on purpose: if this
         // needed a follow-up instruction, the flow would have failed at its

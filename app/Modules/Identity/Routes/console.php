@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Modules\Identity\Console\PruneRecoveryChallenges;
 use App\Modules\Identity\Console\PruneTelegramIntents;
 use App\Modules\Identity\Console\PruneTelegramReturnHandoffs;
 use App\Modules\Identity\Console\PruneUnlinkedAccounts;
@@ -36,5 +37,14 @@ Schedule::command(PruneUnlinkedAccounts::class)
  */
 Schedule::command(PruneTelegramReturnHandoffs::class)
     ->dailyAt('03:50')
+    ->withoutOverlapping(30)
+    ->onOneServer();
+
+/*
+ * Expired password-recovery challenges. Fifteen-minute credentials must not
+ * accumulate as rows; five past four keeps it clear of the other sweeps.
+ */
+Schedule::command(PruneRecoveryChallenges::class)
+    ->dailyAt('04:05')
     ->withoutOverlapping(30)
     ->onOneServer();

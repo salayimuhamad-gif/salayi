@@ -98,6 +98,7 @@ final class UserReferenceContract
         ['release_records', 'applied_by', 'release/audit history, retained deliberately'],
         ['sessions', 'user_id', 'session material, not content; expires on its own'],
         ['site_settings', 'updated_by', 'settings/flag audit metadata, retained deliberately'],
+        ['password_recovery_challenges', 'user_id', 'fifteen-minute recovery credentials, never content; cascade-deleted'],
         ['telegram_login_intents', 'user_id', 'spent or expiring login material, never content'],
         ['telegram_return_handoffs', 'user_id', 'short-lived return links; worthless within minutes'],
         /*
