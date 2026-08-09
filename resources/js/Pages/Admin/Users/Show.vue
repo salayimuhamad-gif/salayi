@@ -58,7 +58,9 @@ const suspendForm = useForm({ reason: '' });
  * arms the button and renames it, the second fires. Cheaper than a dialog
  * and impossible to trigger by a single stray click.
  */
-const actionForm = useForm({});
+// Typed for its one server-set error key: the form itself posts no fields,
+// but sendRecovery() can come back with errors.recovery.
+const actionForm = useForm<{ recovery?: string }>({});
 const confirmingLogout = ref(false);
 const confirmingRecovery = ref(false);
 
