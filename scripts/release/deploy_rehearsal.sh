@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Rehearse the v7 patch deployment against a disposable copy laid out exactly
-# like the Hostinger target: ~/domains/<site>/application beside public_html.
+# Rehearse the release patch deployment against a disposable copy laid out
+# exactly like the Hostinger target: ~/domains/<site>/application beside
+# public_html.
 #
 # Nothing here touches the working tree or any live system. The staged copy is
 # built from the v6 baseline commit, the patch is applied the way
@@ -140,9 +141,11 @@ awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/applicati
 check "environment prepared with a generated key" $?
 
 # The baseline is INSTALLED before the patch is applied: this rehearsal is an
-# upgrade of a running site. This release adds exactly ONE migration
-# (2026_08_06_000100_telegram_return_handoffs), and "exactly one" can only be
-# demonstrated against a database that is already migrated to the baseline.
+# upgrade of a running site. This release adds exactly FIVE migrations above
+# the v6 baseline (return handoffs, permanent verification tokens, password
+# recovery challenges, optional profile columns, the presence column), and
+# "exactly five" can only be demonstrated against a database that is already
+# migrated to the baseline.
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 check "baseline schema migrated before the patch is applied" $?
 
@@ -151,18 +154,21 @@ echo "== 1. checksum verification =="
 check "runtime archive checksum verifies before anything is touched" $?
 
 echo "== 2. mandatory backups =="
-# DEPLOYMENT_NOTES.md §2 requires SIX backups. The rehearsal used to take four,
-# so the two the rollback actually depends on — Operations and
-# config/mulkihawler.php — were never proven to exist before they were needed.
+# DEPLOYMENT_NOTES.md §2 requires SEVEN backups. This release touches several
+# modules (Identity, Geography, Core, Projects) plus the route files, the HTTP
+# bootstrap and two config files, so the backup is the WHOLE application-code
+# directory rather than a per-module selection — a cherry-picked list tuned to
+# one release is exactly how the rollback ends up missing the file it needs.
 TS=$(date +%Y%m%d-%H%M%S)
 BACKUP="$STAGE/backup-$TS"
 mkdir -p "$BACKUP"
 
-cp -a "$SITE/application/app/Modules/Identity"   "$BACKUP/Identity"
-cp -a "$SITE/application/app/Modules/Operations" "$BACKUP/Operations"
-cp -a "$SITE/application/lang"                   "$BACKUP/lang"
-cp -a "$SITE/application/config/mulkihawler.php" "$BACKUP/mulkihawler.php"
-cp -a "$SITE/public_html/build"                  "$BACKUP/build"
+cp -a "$SITE/application/app"               "$BACKUP/app"
+cp -a "$SITE/application/lang"              "$BACKUP/lang"
+cp -a "$SITE/application/config"            "$BACKUP/config"
+cp -a "$SITE/application/routes"            "$BACKUP/routes"
+cp -a "$SITE/application/bootstrap/app.php" "$BACKUP/bootstrap-app.php"
+cp -a "$SITE/public_html/build"             "$BACKUP/build"
 "$MYSQLDUMP_BIN" -h "$REHEARSAL_DB_HOST" -P "$REHEARSAL_DB_PORT" \
     -u "$REHEARSAL_DB_USER" -p"$REHEARSAL_DB_PASSWORD" "$REHEARSAL_DB_NAME" \
     > "$BACKUP/database.sql" 2>/dev/null
@@ -171,7 +177,7 @@ cp -a "$SITE/public_html/build"                  "$BACKUP/build"
 # exists AND is readable AND is not empty.
 backup_failures=0
 
-for item in Identity Operations lang mulkihawler.php build database.sql; do
+for item in app lang config routes bootstrap-app.php build database.sql; do
     if [ ! -e "$BACKUP/$item" ] || [ ! -r "$BACKUP/$item" ]; then
         echo "  FAIL  backup item missing or unreadable: $item"
         backup_failures=$((backup_failures + 1))
@@ -185,7 +191,7 @@ for item in Identity Operations lang mulkihawler.php build database.sql; do
 done
 
 [ "$backup_failures" = "0" ]
-check "all six documented backups taken, readable and non-empty" $?
+check "all seven documented backups taken, readable and non-empty" $?
 
 printf '%s\n' "$BACKUP" > "$STAGE/LAST_BACKUP_PATH"
 
@@ -201,9 +207,15 @@ echo "== 4. maintenance mode =="
 check "site placed in maintenance mode before files move" $?
 
 echo "== 5. apply =="
+# routes/ and bootstrap/app.php are part of this release's delta: the Telegram
+# password-recovery routes live in routes/auth.php and the presence middleware
+# is registered in bootstrap/app.php. Copying app/ alone would deploy
+# controllers whose routes never arrive.
 cp -a "$STAGE/patch/application/app/." "$SITE/application/app/"
 cp -a "$STAGE/patch/application/lang/." "$SITE/application/lang/"
 cp -a "$STAGE/patch/application/config/." "$SITE/application/config/" 2>/dev/null || true
+cp -a "$STAGE/patch/application/routes/." "$SITE/application/routes/"
+cp -a "$STAGE/patch/application/bootstrap/app.php" "$SITE/application/bootstrap/app.php"
 rm -rf "$SITE/public_html/build"
 cp -a "$STAGE/patch/public_html/build" "$SITE/public_html/"
 check "runtime files applied" $?
@@ -303,31 +315,51 @@ echo "== 7. caches rebuilt =="
     && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
 check "configuration, route and view caches rebuilt" $?
 
-echo "== 8. migrations (this patch adds exactly one) =="
+echo "== 8. migrations (this patch adds exactly five) =="
 BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 DELTA=$(( AFTER - BEFORE ))
 
-# The v7 return handoff needs a durable, lockable table, so this patch ships
-# ONE forward-only migration. Asserting the exact number matters in both
-# directions: a zero would mean the handoff table never arrived, and a larger
-# number would mean something unintended came with it.
-[ "$DELTA" = "1" ]
-check "exactly one migration applied ($BEFORE -> $AFTER)" $?
+# This release ships FIVE forward-only migrations above the v6 baseline.
+# Asserting the exact number matters in both directions: a smaller delta means
+# a table or column never arrived (and if it is the verification-token table,
+# nobody can finish a registration), while a larger one would mean something
+# unintended came with it.
+[ "$DELTA" = "5" ]
+check "exactly five migrations applied ($BEFORE -> $AFTER)" $?
 
-( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -q "telegram_return_handoffs" )
-check "the return-handoff table migration is the one that ran" $?
+# Then prove each named migration is the one that ran — a count alone cannot
+# tell five expected arrivals apart from four expected and one stranger.
+for migration in \
+    2026_08_06_000100_telegram_return_handoffs \
+    2026_08_09_000100_telegram_verification_tokens \
+    2026_08_09_000200_password_recovery_challenges \
+    2026_08_09_000200_profile_optional_details \
+    2026_08_09_000300_add_last_seen_to_users; do
+    ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
+        | grep "$migration" | grep -q "Ran" )
+    check "migration ran: $migration" $?
+done
 
 echo "== 9. runtime checks =="
 ( cd "$SITE/application" && "$PHP_BIN" artisan route:list >/dev/null 2>&1 )
 check "route table resolves" $?
 
 ( cd "$SITE/application" && "$PHP_BIN" artisan route:list 2>/dev/null | grep -q "account/registration/abandon" )
-check "the new recovery route is present" $?
+check "the registration-abandon route is present" $?
+
+( cd "$SITE/application" && "$PHP_BIN" artisan route:list 2>/dev/null | grep -q "forgot-password/telegram" )
+check "the Telegram password-recovery routes are present" $?
+
+( cd "$SITE/application" && "$PHP_BIN" artisan route:list 2>/dev/null | grep -q "invest/features" )
+check "the investment-map routes arrived (feature-flag gated at request time)" $?
 
 ( cd "$SITE/application" && "$PHP_BIN" artisan schedule:list 2>/dev/null | grep -q "prune-unlinked" )
 check "the reclaim command is scheduled" $?
+
+( cd "$SITE/application" && "$PHP_BIN" artisan schedule:list 2>/dev/null | grep -q "recovery:prune" )
+check "the recovery-challenge pruner is scheduled" $?
 
 ( cd "$SITE/application" && "$PHP_BIN" artisan queue:work --stop-when-empty --max-time=10 >/dev/null 2>&1 )
 check "queue worker runs" $?
@@ -361,8 +393,16 @@ CJ=$(mktemp)
 TOKEN=$(curl -sS -c "$CJ" "http://127.0.0.1:$PORT/register" | grep -oE 'csrf-token" content="[^"]+' | head -1 | cut -d'"' -f3)
 # Two steps, because curl -L re-POSTs to the redirect target and the app
 # answers 405. The browser does a GET here; so does this.
+#
+# Registration REQUIRES a password under account-first: the form posts one and
+# confirms it, so the rehearsal does too. The value only has to satisfy the
+# platform rule (minimum length, mixed case, numbers, symbols) — it belongs to
+# a throwaway account inside a disposable database.
+REHEARSAL_PASSWORD='Rehearse-MyHawler-2026!x7Kq'
 LOC=$(curl -sS -b "$CJ" -c "$CJ" -o /dev/null -w '%{redirect_url}' -X POST "http://127.0.0.1:$PORT/register" \
-    -d "name=Rehearsal Person" -d "phone=07519876543" -d "locale=ar" -d "accept_terms=1" -d "_token=$TOKEN")
+    -d "name=Rehearsal Person" -d "phone=07519876543" \
+    -d "password=$REHEARSAL_PASSWORD" -d "password_confirmation=$REHEARSAL_PASSWORD" \
+    -d "locale=ar" -d "accept_terms=1" -d "_token=$TOKEN")
 
 printf '%s' "$LOC" | grep -q "/ar/account/telegram/link"; 
 check "registration creates an account and redirects to the Arabic linking page" $?

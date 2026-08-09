@@ -93,8 +93,18 @@ REQUIRED = (
     '.env.example',
     'app/Modules/Identity/Services/AbandonedAccountPolicy.php',
     'app/Modules/Identity/Services/TelegramReturnHandoff.php',
+    'app/Modules/Identity/Services/TelegramPasswordRecovery.php',
+    'app/Modules/Identity/Http/Middleware/TouchLastSeen.php',
     'app/Modules/Identity/Database/Migrations/'
     '2026_08_06_000100_telegram_return_handoffs.php',
+    'app/Modules/Identity/Database/Migrations/'
+    '2026_08_09_000100_telegram_verification_tokens.php',
+    'app/Modules/Identity/Database/Migrations/'
+    '2026_08_09_000200_password_recovery_challenges.php',
+    'app/Modules/Identity/Database/Migrations/'
+    '2026_08_09_000200_profile_optional_details.php',
+    'app/Modules/Identity/Database/Migrations/'
+    '2026_08_09_000300_add_last_seen_to_users.php',
     'tests/Feature/RegistrationTelegramFlowTest.php',
     'tests/Browser/account-first-registration.spec.ts',
     'scripts/support/SourceIdentity.php',
@@ -340,9 +350,9 @@ storage caches, logs, sessions, uploads, databases
 ```bash
 composer install
 npm ci
-php artisan migrate      # includes 2026_08_06_000100_telegram_return_handoffs
-vendor/bin/phpunit                                   # 533 tests
-vendor/bin/phpunit -c phpunit.mariadb.xml            # 533 tests, real MariaDB
+php artisan migrate      # includes the five Identity migrations new since the baseline
+vendor/bin/phpunit
+vendor/bin/phpunit -c phpunit.mariadb.xml            # the same suite, real MariaDB
 vendor/bin/phpstan analyse --memory-limit=1G
 vendor/bin/pint --test
 npm run typecheck && npm run lint && npm run build
@@ -351,12 +361,14 @@ npx playwright test
 
 Run the gates with no `.env` on disk — `scripts/secret-scan.php` treats one as a
 committed secret. Supply `APP_KEY` and any `DB_*` values through the
-environment instead.
+environment instead. Test totals are volatile numbers and live in the external
+evidence package, not here.
 
-This release adds ONE forward-only migration,
-`2026_08_06_000100_telegram_return_handoffs`, which backs the single-use
-Telegram return handoff. It is required: without the table the return button
-fails.
+This release adds FIVE forward-only migrations above the baseline: the
+single-use Telegram return handoff, the permanent verification tokens, the
+fifteen-minute password-recovery challenges, two optional profile columns and
+the presence column. All are required; DEPLOYMENT_NOTES.md names each file and
+what breaks without it.
 
 The rehearsal harness and release tooling are in `scripts/release/`. Release
 reports are delivered externally with the evidence package, not inside this

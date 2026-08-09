@@ -1,22 +1,23 @@
-# DEPLOYMENT_NOTES.md — MyHawler v7 account-first registration
+# DEPLOYMENT_NOTES.md — MyHawler v7 release
 
-The exact reversible procedure for this release.
+The exact reversible procedure for this release: account-first registration
+with passwords, Telegram password recovery, admin presence and activity, and
+the investment map surface.
 
-> **Rehearsal status — read before relying on this.**
-> The rehearsal harness (`scripts/release/deploy_rehearsal.sh`) was CORRECTED in
-> this round and has **not yet been executed** against a staged site. Any
-> earlier "28/28 checks passed" result belonged to the previous, now-rejected
-> procedure — it did not run these steps, took four of the six required backups,
-> and reversed migrations with `--step=1`. Treat those historical counts as
-> **invalid for this document**. This section will be regenerated from the new
-> raw rehearsal output once the corrected harness runs.
+> **Rehearsal status.** `scripts/release/deploy_rehearsal.sh` executes this
+> exact procedure on every final-release CI run, against a staged
+> Hostinger-layout copy built from the sealed v6 baseline archive. The raw
+> rehearsal output and its check counts ship in the external evidence package,
+> which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships three forward-only migrations:
+**This patch DOES change the schema.** It ships five forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php
 ```
 
 1. `telegram_return_handoffs` backs the secure Telegram return handoff.
@@ -24,8 +25,14 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_deta
    verification link** (see `docs/simplified-telegram-verification.md`). Without
    it, `/account/telegram/link` errors on the first render and nobody can
    finish a registration.
-3. `users.gender` and `users.date_of_birth` are two nullable optional profile
+3. `password_recovery_challenges` backs Telegram password recovery: a
+   fifteen-minute, single-use, identity-bound challenge that can only ever
+   change a password — it never verifies, links, or signs anybody in.
+4. `users.gender` and `users.date_of_birth` are two nullable optional profile
    columns. Both are additive and neither gates anything.
+5. `users.last_seen_at` is the nullable presence column behind the admin
+   activity view; it is written at most once per interval by throttled
+   middleware.
 
 Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
@@ -35,6 +42,11 @@ not optional.
 or an email**. No existing account is altered by this and no existing
 credential stops working; see §7 of
 `docs/simplified-telegram-verification.md` for the existing-user matrix.
+Password recovery over Telegram is a separate mechanism from every
+verification, link and handoff token. The investment map (`/invest`) ships
+behind the `map.investment` feature flag, which is **off** in the shipped
+configuration — the routes deploy now and the surface is enabled by
+configuration when the operator decides.
 
 **This patch also DELETES a file.** A ZIP overlay cannot remove anything, so the
 deletion is applied from `DELETE_FILES.txt` in step 6.
@@ -70,17 +82,24 @@ TS=$(date +%Y%m%d-%H%M%S)
 cd ~/domains/myhawler.com
 mkdir -p ~/patch-backup-$TS
 
-cp -a application/app/Modules/Identity   ~/patch-backup-$TS/Identity
-cp -a application/app/Modules/Operations ~/patch-backup-$TS/Operations
-cp -a application/lang                   ~/patch-backup-$TS/lang
-cp -a application/config/mulkihawler.php ~/patch-backup-$TS/mulkihawler.php
-cp -a public_html/build                  ~/patch-backup-$TS/build
+cp -a application/app               ~/patch-backup-$TS/app
+cp -a application/lang              ~/patch-backup-$TS/lang
+cp -a application/config            ~/patch-backup-$TS/config
+cp -a application/routes            ~/patch-backup-$TS/routes
+cp -a application/bootstrap/app.php ~/patch-backup-$TS/bootstrap-app.php
+cp -a public_html/build             ~/patch-backup-$TS/build
 
 mysqldump -u <db_user> -p <db_name> > ~/patch-backup-$TS/database.sql
 ```
 
-All six are mandatory. `Operations` is included because step 6 deletes a file
-from it. The database dump is mandatory because this release migrates.
+All seven are mandatory. The WHOLE application-code directory is backed up —
+this release touches several modules (Identity, Geography, Core, Projects) and
+deletes a file, and a per-module selection tuned to one release is exactly how
+a rollback ends up missing the directory it needs. `routes` and
+`bootstrap/app.php` are included because the patch changes both, and the
+rollback must be able to restore them: reverted code with the patched routes
+still in place points at controllers that no longer exist. The database dump
+is mandatory because this release migrates.
 
 ## 3. Record the migration count BEFORE anything changes
 
@@ -90,13 +109,14 @@ cd ~/domains/myhawler.com/application
 ```
 
 Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-one.
+five.
 
 ```bash
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep telegram_return_handoffs
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
 ```
 
-Expect **nothing**, or a line reading `Pending`. If it already says `Ran`, this
+Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
 patch is already partly applied; stop and investigate rather than continuing.
 
 ## 4. Stage the runtime in a NEW directory
@@ -145,6 +165,13 @@ cp -a ~/patch-v7/application/app/.    application/app/
 cp -a ~/patch-v7/application/lang/.   application/lang/
 cp -a ~/patch-v7/application/config/. application/config/
 
+# This release's delta reaches outside app/: the Telegram password-recovery
+# routes live in routes/auth.php and the presence middleware is registered in
+# bootstrap/app.php. Copying app/ alone deploys controllers whose routes never
+# arrive.
+cp -a ~/patch-v7/application/routes/. application/routes/
+cp -a ~/patch-v7/application/bootstrap/app.php application/bootstrap/app.php
+
 # REPLACED, never merged: Vite content-hashes filenames, so a merged directory
 # leaves old chunks beside a new manifest and the browser requests assets the
 # manifest never names.
@@ -163,33 +190,40 @@ Then prove exactly what you expect:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
 ```
 
-Expect **three** lines, each reading **`Ran`** — all were `Pending` or absent in
+Expect **five** lines, each reading **`Ran`** — all were `Pending` or absent in
 step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 3`. Both directions matter: a smaller increase means
-one of the three never arrived — and if it is `telegram_verification_tokens`,
+Expect exactly `BEFORE + 5`. Both directions matter: a smaller increase means
+one of the five never arrived — and if it is `telegram_verification_tokens`,
 nobody can complete a registration — while a larger one means something
 unintended came along and you should stop and look at it.
 
 Then prove the verification table is really there and really has no expiry
-column, because the whole "your link never expires" promise rests on it:
+column, because the whole "your link never expires" promise rests on it — and
+that the recovery table and the presence column arrived with it:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan tinker --execute="
   echo Schema::hasTable('telegram_verification_tokens') ? 'table OK' : 'TABLE MISSING', PHP_EOL;
   echo Schema::hasColumn('telegram_verification_tokens', 'expires_at') ? 'UNEXPECTED expires_at' : 'no expiry column OK', PHP_EOL;
+  echo Schema::hasTable('password_recovery_challenges') ? 'recovery table OK' : 'RECOVERY TABLE MISSING', PHP_EOL;
   echo Schema::hasColumn('users', 'date_of_birth') ? 'profile columns OK' : 'PROFILE COLUMNS MISSING', PHP_EOL;
+  echo Schema::hasColumn('users', 'last_seen_at') ? 'presence column OK' : 'PRESENCE COLUMN MISSING', PHP_EOL;
 "
 ```
 
-Expect `table OK`, `no expiry column OK`, `profile columns OK`.
+Expect `table OK`, `no expiry column OK`, `recovery table OK`,
+`profile columns OK`, `presence column OK`. The recovery table intentionally
+DOES carry an expiry — its challenges die in fifteen minutes — which is the
+designed asymmetry between the permanent verification link and the short-lived
+recovery credential.
 
 ## 9. Verify the manifest resolves
 
@@ -227,12 +261,17 @@ behaviour.
 ```bash
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/registration/abandon
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/return
+/opt/alt/php83/usr/bin/php artisan route:list | grep forgot-password/telegram
+/opt/alt/php83/usr/bin/php artisan route:list | grep invest/features
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-unlinked
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-return-handoffs
+/opt/alt/php83/usr/bin/php artisan schedule:list | grep recovery:prune
 /opt/alt/php83/usr/bin/php artisan queue:work --stop-when-empty --max-time=50
 ```
 
-Expect the abandon route, both return routes, and **both** scheduled cleanups.
+Expect the abandon route, both return routes, the Telegram recovery route, the
+investment-map route (present even while its feature flag is off — the flag
+gates requests, not registration), and **all three** scheduled cleanups.
 Middleware aliases are proven behaviourally in §12: an unresolvable alias
 returns 500, so a working gated redirect proves they resolved.
 
@@ -257,17 +296,18 @@ Everything above (§6–§11) runs behind maintenance mode and must all pass bef
 the site is exposed to anyone. Confirm each, in order:
 
 ```text
-runtime checksum verified                    §1
-all six backups taken and readable           §2
-deletions applied and verified absent        §6
-all three migrations moved Pending -> Ran    §8
-migration count increased by exactly three   §8
-verification table present, NO expires_at    §8
-public/build manifest resolves               §9
-caches rebuilt without error                 §10
-abandon + both return routes present         §11
-both cleanups scheduled; dry runs report zero §11
-queue drains                                 §11
+runtime checksum verified                     §1
+all seven backups taken and readable          §2
+deletions applied and verified absent         §6
+all five migrations moved Pending -> Ran      §8
+migration count increased by exactly five     §8
+verification table present, NO expires_at     §8
+recovery table + presence column present      §8
+public/build manifest resolves                §9
+caches rebuilt without error                  §10
+abandon, return, recovery, invest routes      §11
+all three cleanups scheduled; dry runs zero   §11
+queue drains                                  §11
 ```
 
 Do not continue while any of these is unresolved. A failure here costs nothing:
@@ -306,7 +346,7 @@ Expect 200, 200, 200. The third one matters: a manifest that resolves on disk
 Then the full journey by hand, with a spare number:
 
 ```text
-1. open /register, choose العربية, submit
+1. open /register, choose العربية, fill the form INCLUDING a password, submit
 2. you land on /ar/account/telegram/link
 3. the page is right-to-left and shows: تم إنشاء حسابك بنجاح
 4. press Open Telegram, then /start in the bot
@@ -341,12 +381,12 @@ for a few minutes.
 nothing is user-visible:
 
 ```text
-checksum mismatch at §1              -> do not proceed; the artifact is wrong
-migration count up by fewer than three -> a table or column is missing; roll back
-migration count up by more than three  -> stop and investigate before continuing
-expires_at present on the token table  -> wrong migration ran; roll back
-manifest reports MISSING             -> incomplete copy; roll back
-routes or schedules absent           -> incomplete copy; roll back
+checksum mismatch at §1               -> do not proceed; the artifact is wrong
+migration count up by fewer than five -> a table or column is missing; roll back
+migration count up by more than five  -> stop and investigate before continuing
+expires_at present on the token table -> wrong migration ran; roll back
+manifest reports MISSING              -> incomplete copy; roll back
+routes or schedules absent            -> incomplete copy; roll back
 ```
 
 **Failure during the ONLINE phase (§13–§14)** — the site is live and broken.

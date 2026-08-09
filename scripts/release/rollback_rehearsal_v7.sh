@@ -68,8 +68,9 @@ fi
 [ -n "$BACKUP" ] && [ -d "$BACKUP" ]
 check "found the pre-deployment backup by listing, not by remembering a variable" $?
 
-[ -d "$BACKUP/Identity" ] && [ -d "$BACKUP/lang" ] && [ -d "$BACKUP/build" ]
-check "backup contains the application, language and public-build copies" $?
+[ -d "$BACKUP/app" ] && [ -d "$BACKUP/lang" ] && [ -d "$BACKUP/config" ] \
+    && [ -d "$BACKUP/routes" ] && [ -f "$BACKUP/bootstrap-app.php" ] && [ -d "$BACKUP/build" ]
+check "backup contains the application, config, routes, bootstrap and public-build copies" $?
 
 [ -s "$BACKUP/database.sql" ]
 check "backup contains the mandatory database dump" $?
@@ -89,53 +90,71 @@ echo "== 2. maintenance mode first =="
 [ -f "$SITE/application/storage/framework/down" ] || [ -f "$SITE/application/storage/framework/maintenance.php" ]
 check "site placed in maintenance mode before anything is moved" $?
 
-echo "== 2b. reverse the patch's migration WHILE its file is still present =="
+echo "== 2b. reverse the patch's migrations WHILE their files are still present =="
 # Order matters and this is the whole reason for doing it here. Restoring the
 # pre-deployment dump does NOT drop a table created after that dump was taken —
-# mysqldump only recreates what it contains — so the handoff table would
+# mysqldump only recreates what it contains — so the patch's tables would
 # survive a "full database restore" and leave reverted code running against a
-# schema it does not know. `migrate:rollback` needs the migration FILE, which
+# schema it does not know. `migrate:rollback` needs the migration FILES, which
 # section 3 is about to remove, so it runs first.
-# BLOCKER 2: `--step=1` reverses whatever the last batch happens to contain. If
-# anything ran after this patch it reverses that instead, and the mistake is
+# BLOCKER 2: `--step=N` reverses whatever the last batches happen to contain.
+# If anything ran after this patch it reverses that instead, and the mistake is
 # only visible after the destructive command has executed. The rehearsal must
-# run the SAME path-targeted command ROLLBACK_NOTES.md documents.
-HANDOFF_MIGRATION=app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
+# run the SAME path-targeted commands ROLLBACK_NOTES.md documents, newest
+# first.
+PATCH_MIGRATIONS="
+app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
+app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
+"
+PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
 
 RAN_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
-( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
-    | grep telegram_return_handoffs | grep -q ' Ran' )
-check "the handoff migration is Ran before the rollback" $?
+PATCH_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
+    | grep -E "$PATCH_NAMES_RE" | grep -c ' Ran' )
+[ "$PATCH_RAN" = "5" ]
+check "all five patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
 
 STATUS_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
-    | grep -v telegram_return_handoffs | sha256sum | cut -d' ' -f1 )
+    | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
 
-( cd "$SITE/application" && "$PHP" artisan migrate:rollback \
-    --path="$HANDOFF_MIGRATION" --force >/dev/null 2>&1 )
-check "the handoff migration was reversed by exact path, before its code was removed" $?
+for migration in $PATCH_MIGRATIONS; do
+    ( cd "$SITE/application" && "$PHP" artisan migrate:rollback \
+        --path="$migration" --force >/dev/null 2>&1 )
+    check "reversed by exact path: $(basename "$migration" .php)" $?
+done
 
 RAN_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
-[ "$RAN_AFTER" = "$((RAN_BEFORE - 1))" ]
-check "exactly one migration was reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
+[ "$RAN_AFTER" = "$((RAN_BEFORE - 5))" ]
+check "exactly the patch's five migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
 
 STATUS_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
-    | grep -v telegram_return_handoffs | sha256sum | cut -d' ' -f1 )
+    | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
 [ "$STATUS_BEFORE" = "$STATUS_AFTER" ]
 check "no unrelated migration changed status" $?
 
-( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
-    | grep telegram_return_handoffs | grep -q ' Ran' )
-[ $? -ne 0 ]
-check "the handoff migration is no longer Ran" $?
+PATCH_STILL_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
+    | grep -E "$PATCH_NAMES_RE" | grep -c ' Ran' )
+[ "$PATCH_STILL_RAN" = "0" ]
+check "none of the patch migrations is still Ran (found $PATCH_STILL_RAN)" $?
 
-EARLY_TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='telegram_return_handoffs';" 2>/dev/null)
+EARLY_TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');" 2>/dev/null)
 [ "$EARLY_TABLE" = "0" ]
-check "telegram_return_handoffs is absent immediately after the exact rollback (found ${EARLY_TABLE:-?})" $?
+check "all three patch tables are absent immediately after the exact rollback (found ${EARLY_TABLE:-?})" $?
 
-# A second exact rollback must be a safe no-op, not a further unwind.
-( cd "$SITE/application" && "$PHP" artisan migrate:rollback \
-    --path="$HANDOFF_MIGRATION" --force >/dev/null 2>&1 )
-SECOND_EXIT=$?
+EARLY_COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
+[ "$EARLY_COLS" = "0" ]
+check "all three patch columns are gone from users (found ${EARLY_COLS:-?})" $?
+
+# A second exact rollback of every file must be a safe no-op, not a further
+# unwind.
+SECOND_EXIT=0
+for migration in $PATCH_MIGRATIONS; do
+    ( cd "$SITE/application" && "$PHP" artisan migrate:rollback \
+        --path="$migration" --force >/dev/null 2>&1 ) || SECOND_EXIT=$?
+done
 RAN_REPEAT=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
 [ "$SECOND_EXIT" = "0" ] && [ "$RAN_REPEAT" = "$RAN_AFTER" ]
 check "a repeated exact rollback is a safe no-op (still $RAN_REPEAT Ran)" $?
@@ -143,35 +162,39 @@ check "a repeated exact rollback is a safe no-op (still $RAN_REPEAT Ran)" $?
 echo "== 3. restore the application =="
 FAILED_DIR="$STAGE/failed-$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$FAILED_DIR"
-cp -a "$SITE/application/app/Modules/Identity" "$FAILED_DIR/Identity"
+cp -a "$SITE/application/app" "$FAILED_DIR/app"
 check "the failed release is kept for diagnosis" $?
 
-rm -rf "$SITE/application/app/Modules/Identity"
-cp -a "$BACKUP/Identity" "$SITE/application/app/Modules/Identity"
+# BLOCKER 4: everything is restored from THE BACKUP THE PROCEDURE TOOK, not
+# from a git repository. Production has no repository; if the rehearsal
+# restores from one, it is rehearsing something the operator cannot do, and
+# the backup that production actually depends on is never exercised.
+#
+# The WHOLE application-code directory moves, mirroring the backup: this
+# release touches several modules and deletes files, and a whole-directory
+# restore is the only shape that undoes both without a per-release list.
+rm -rf "$SITE/application/app"
+cp -a "$BACKUP/app" "$SITE/application/app"
 check "pre-deployment application code restored" $?
 
 rm -rf "$SITE/application/lang"
 cp -a "$BACKUP/lang" "$SITE/application/lang"
 check "pre-deployment language files restored" $?
 
-# BLOCKER 4: configuration is restored from THE BACKUP THE PROCEDURE TOOK, not
-# from a git repository. Production has no repository; if the rehearsal restores
-# from one, it is rehearsing something the operator cannot do, and the backup
-# that production actually depends on is never exercised.
-[ -f "$BACKUP/mulkihawler.php" ]
-check "configuration backup exists to restore from" $?
-
-cp -a "$BACKUP/mulkihawler.php" "$SITE/application/config/mulkihawler.php"
+rm -rf "$SITE/application/config"
+cp -a "$BACKUP/config" "$SITE/application/config"
 check "pre-deployment configuration restored from the backup" $?
 
-# Operations was backed up because the release DELETES a file from it. Restoring
-# it is the only way the deletion is genuinely undone.
-[ -d "$BACKUP/Operations" ]
-check "Operations backup exists to restore from" $?
+# routes/ and bootstrap/app.php were part of the patch, and the restored
+# baseline code no longer defines the classes the patched routes point at —
+# leaving either behind is the half-rollback where route:cache crashes on a
+# controller that does not exist.
+rm -rf "$SITE/application/routes"
+cp -a "$BACKUP/routes" "$SITE/application/routes"
+check "pre-deployment routes restored from the backup" $?
 
-rm -rf "$SITE/application/app/Modules/Operations"
-cp -a "$BACKUP/Operations" "$SITE/application/app/Modules/Operations"
-check "pre-deployment Operations module restored from the backup" $?
+cp -a "$BACKUP/bootstrap-app.php" "$SITE/application/bootstrap/app.php"
+check "pre-deployment HTTP bootstrap restored from the backup" $?
 
 echo "== 4. restore the public build (replaced, never merged) =="
 rm -rf "$SITE/public_html/build"
@@ -211,14 +234,18 @@ echo "== 5. database restore decision =="
 db "$REHEARSAL_DB_NAME" < "$BACKUP/database.sql" 2>/dev/null
 check "database backup restores cleanly when the decision requires it" $?
 
-echo "== 5b. the patch's migration is reversed =="
-# v7 ships one forward-only migration (the return-handoff table). Restoring the
-# pre-deployment dump removes it along with everything else; this asserts the
-# table is genuinely gone, because reverted code that still sees the table
-# would be a half-rollback.
-TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='telegram_return_handoffs';" 2>/dev/null)
+echo "== 5b. the patch's migrations are reversed =="
+# This release ships five forward-only migrations. Restoring the
+# pre-deployment dump removes their tables and columns along with everything
+# else; this asserts they are genuinely gone, because reverted code that still
+# sees them would be a half-rollback.
+TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');" 2>/dev/null)
 [ "$TABLE" = "0" ]
-check "the return-handoff table is gone after the database restore (found ${TABLE:-?})" $?
+check "the patch's three tables are gone after the database restore (found ${TABLE:-?})" $?
+
+COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
+[ "$COLS" = "0" ]
+check "the patch's three users columns are gone after the database restore (found ${COLS:-?})" $?
 
 echo "== 6. rebuild caches =="
 ( cd "$SITE/application" && "$PHP" artisan config:clear >/dev/null 2>&1 && "$PHP" artisan route:clear >/dev/null 2>&1 \
@@ -233,9 +260,23 @@ check "route table resolves ($ROUTES lines)" $?
 
 ( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/registration/abandon" )
 if [ $? -eq 0 ]; then
-    check "the patched recovery route is GONE after rollback" 1
+    check "the patched abandon route is GONE after rollback" 1
 else
-    check "the patched recovery route is gone after rollback" 0
+    check "the patched abandon route is gone after rollback" 0
+fi
+
+( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "forgot-password/telegram" )
+if [ $? -eq 0 ]; then
+    check "the patched Telegram recovery routes are GONE after rollback" 1
+else
+    check "the patched Telegram recovery routes are gone after rollback" 0
+fi
+
+( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "invest/features" )
+if [ $? -eq 0 ]; then
+    check "the patched investment-map routes are GONE after rollback" 1
+else
+    check "the patched investment-map routes are gone after rollback" 0
 fi
 
 ( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/telegram/link" )
@@ -250,6 +291,13 @@ if [ $? -eq 0 ]; then
     check "the patched cleanup command is no longer scheduled" 1
 else
     check "the patched cleanup command is no longer scheduled" 0
+fi
+
+( cd "$SITE/application" && "$PHP" artisan schedule:list 2>/dev/null | grep -q "recovery:prune" )
+if [ $? -eq 0 ]; then
+    check "the patched recovery pruner is no longer scheduled" 1
+else
+    check "the patched recovery pruner is no longer scheduled" 0
 fi
 
 ( cd "$SITE/application" && "$PHP" artisan queue:work --stop-when-empty --max-time=10 >/dev/null 2>&1 )

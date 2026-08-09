@@ -1,4 +1,4 @@
-# ROLLBACK_NOTES.md — MyHawler v7 account-first registration
+# ROLLBACK_NOTES.md — MyHawler v7 release
 
 This procedure is designed to be run under `env -i` — no inherited environment,
 no warmed cache, nothing left from the deployment — because that is the
@@ -6,27 +6,24 @@ situation a rollback happens in: somebody opens a new SSH session on a site that
 is misbehaving. A procedure that only works with the deployer's shell still open
 is not a procedure.
 
-> **Rehearsal status — read before relying on this.**
-> `scripts/release/rollback_rehearsal_v7.sh` was CORRECTED in this round (exact
-> path-targeted rollback, configurable PHP and database inputs, restore from the
-> documented backup rather than a private git repository) and has **not yet been
-> executed**. Any earlier "29 checks passed, 0 failed" belonged to the previous,
-> now-rejected harness, which used `migrate:rollback --step=1`. Treat that count
-> as **historical and invalid for this document**. It will be regenerated from
-> the new raw output once the corrected harness runs.
+> **Rehearsal status.** `scripts/release/rollback_rehearsal_v7.sh` executes
+> this exact procedure on every final-release CI run, reversing the real
+> deployed tree the deployment rehearsal produced. Its raw output and check
+> counts ship in the external evidence package, which is the authoritative
+> record for this document.
 
-**This patch migrates.** It added two tables — `telegram_return_handoffs` and
-`telegram_verification_tokens` — plus two nullable columns on `users`
-(`gender`, `date_of_birth`). That matters for the ORDER below, and it is the one
-thing people get wrong: restoring a `mysqldump` does **not** drop a table
-created after that dump was taken. Restoring the dump alone leaves the tables
-behind and reverted code running against a schema it does not know. Each
-migration must be rolled back deliberately, and its file must still be on disk
-when you do it.
+**This patch migrates.** It added three tables — `telegram_return_handoffs`,
+`telegram_verification_tokens` and `password_recovery_challenges` — plus three
+nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`). That
+matters for the ORDER below, and it is the one thing people get wrong:
+restoring a `mysqldump` does **not** drop a table created after that dump was
+taken. Restoring the dump alone leaves the tables behind and reverted code
+running against a schema it does not know. Each migration must be rolled back
+deliberately, and its file must still be on disk when you do it.
 
 **Reversal order is newest first**, which is also the order they are listed in
-§5. `telegram_verification_tokens` has a foreign key to `users`; nothing depends
-on it, so it drops cleanly.
+§5. The tables have foreign keys to `users`; nothing depends on them, so each
+drops cleanly.
 
 > **What rolling back costs the customer.** Reverting removes the permanent
 > verification links. Anyone who registered during the patched period and has
@@ -35,7 +32,11 @@ on it, so it drops cleanly.
 > flow. Those accounts keep their password rows harmlessly (the column is
 > pre-existing and nullable), but the old `/login` only accepts an email, so a
 > customer who registered with a phone and no email cannot sign in on the
-> reverted build. §12 covers how to find them.
+> reverted build. §12 covers how to find them. Any in-flight Telegram
+> password-recovery challenge dies with its table — the person simply requests
+> a reset again under whatever flow the reverted build offers — and the
+> presence timestamps the patched period collected are dropped with their
+> column.
 
 Written to be followed by someone who was not present for the deployment.
 
@@ -50,7 +51,7 @@ Pick the newest backup that predates the deployment, then set it once:
 
 ```bash
 BACKUP=~/patch-backup-YYYYmmdd-HHMMSS
-ls "$BACKUP"    # expect: Identity Operations lang mulkihawler.php build database.sql
+ls "$BACKUP"    # expect: app lang config routes bootstrap-app.php build database.sql
 sha256sum "$BACKUP/build/manifest.json"
 ```
 
@@ -81,10 +82,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
 ```
 
-Expect **three** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **five** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -103,12 +104,20 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'   # expect three x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'   # expect five x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
 # Newest first. Each is path-targeted and independently verifiable.
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php \
   --force
 
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
@@ -131,11 +140,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'   # expect three x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly three fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'   # expect five x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly five fewer
 ```
 
-The count must have dropped by **exactly three**. If it dropped by more, an
+The count must have dropped by **exactly five**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
@@ -148,11 +157,11 @@ count stays where it is.
 mysql -u <db_user> -p -N -B <db_name> -e "
   SELECT COUNT(*) FROM information_schema.tables
     WHERE table_schema = DATABASE()
-      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens');
+      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');
   SELECT COUNT(*) FROM information_schema.columns
     WHERE table_schema = DATABASE()
       AND table_name = 'users'
-      AND column_name IN ('gender','date_of_birth');
+      AND column_name IN ('gender','date_of_birth','last_seen_at');
 "
 ```
 
@@ -164,24 +173,32 @@ the ordering above was corrected, which is why it is a separate, explicit step.
 ```bash
 TS=$(date +%Y%m%d-%H%M%S)
 mkdir -p ~/failed-$TS
-cp -a ~/domains/myhawler.com/application/app/Modules/Identity ~/failed-$TS/Identity
+cp -a ~/domains/myhawler.com/application/app ~/failed-$TS/app
 
 cd ~/domains/myhawler.com
-rm -rf application/app/Modules/Identity
-cp -a "$BACKUP/Identity" application/app/Modules/Identity
-
-rm -rf application/app/Modules/Operations
-cp -a "$BACKUP/Operations" application/app/Modules/Operations
+rm -rf application/app
+cp -a "$BACKUP/app" application/app
 
 rm -rf application/lang
 cp -a "$BACKUP/lang" application/lang
 
-cp -a "$BACKUP/mulkihawler.php" application/config/mulkihawler.php
+rm -rf application/config
+cp -a "$BACKUP/config" application/config
+
+rm -rf application/routes
+cp -a "$BACKUP/routes" application/routes
+
+cp -a "$BACKUP/bootstrap-app.php" application/bootstrap/app.php
 ```
 
-`Operations` is restored because the deployment deleted a file from it; this puts
-the pre-deployment tree back exactly as it was. Configuration is restored because
-the patch added a `registration` block that reverted code never defined.
+The WHOLE application-code directory moves, mirroring the backup: this release
+touches several modules and deletes a file, and a whole-directory restore is
+the only shape that undoes both without a per-release list. `routes` and
+`bootstrap/app.php` must come back with it — the patched routes point at
+controllers the restored code no longer defines, so leaving either behind is
+the half-rollback where `route:cache` crashes on a class that does not exist.
+Configuration is restored because the patch changed two config files that
+reverted code never defined.
 
 Keep the failed release. It costs nothing and it is the only evidence of what
 went wrong.
@@ -242,9 +259,12 @@ Maintenance mode is still ON for all of this. These are CLI checks only.
 /opt/alt/php83/usr/bin/php artisan route:list | wc -l
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/registration/abandon   # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/return                 # expect NOTHING
+/opt/alt/php83/usr/bin/php artisan route:list | grep forgot-password/telegram       # expect NOTHING
+/opt/alt/php83/usr/bin/php artisan route:list | grep invest/features                # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/telegram/link          # expect the route
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-unlinked              # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-return-handoffs       # expect NOTHING
+/opt/alt/php83/usr/bin/php artisan schedule:list | grep recovery:prune              # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan queue:work --stop-when-empty --max-time=50
 ```
 
@@ -337,18 +357,18 @@ preserved in §7.
 ### Rollback success criteria
 
 ```text
-all three migrations reversed; both tables and both columns absent
+all five migrations reversed; all three tables and all three columns absent
 restored manifest hash equals the §1 hash; every entry resolves
-route:list shows NO abandon route and NO return routes
-schedule:list shows NEITHER cleanup
+route:list shows NO abandon, return, recovery or invest routes
+schedule:list shows NONE of the three cleanups
 queue worker runs
 home 200 and a referenced asset 200
 /register shows the Telegram pending screen and creates no account
 the §2 count has been acted on per §12
 ```
 
-These are the conditions the corrected rehearsal asserts. They have **not yet
-been demonstrated by an execution of the corrected harness** — see the rehearsal
-status note at the top of this document. No current raw evidence exists for
-them; `rollback-rehearsal.log` and `rollback-rehearsal.json` from the previous
-round describe the rejected procedure and must not be cited for this one.
+These are the conditions the rehearsal asserts on every final-release CI run —
+see the rehearsal status note at the top of this document. The raw
+`rollback-rehearsal.log` and `rollback-rehearsal.json` for the release you are
+rolling back travel in that release's external evidence package; cite those,
+not output from any earlier round.
