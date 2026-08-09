@@ -227,6 +227,23 @@ export class GoogleMapsAdapter implements MapAdapter {
         const map = new api.maps.Map(this.options.container, {
             center: { lat: this.options.centre.lat, lng: this.options.centre.lng },
             zoom: this.options.zoom,
+            // The same optional camera fences MapLibre honours; Google takes
+            // them natively at construction.
+            ...(this.options.minZoom !== undefined ? { minZoom: this.options.minZoom } : {}),
+            ...(this.options.maxZoom !== undefined ? { maxZoom: this.options.maxZoom } : {}),
+            ...(this.options.maxBounds
+                ? {
+                    restriction: {
+                        latLngBounds: {
+                            north: this.options.maxBounds.north,
+                            south: this.options.maxBounds.south,
+                            east: this.options.maxBounds.east,
+                            west: this.options.maxBounds.west,
+                        },
+                        strictBounds: false,
+                    },
+                }
+                : {}),
             mapTypeControl: false,
             streetViewControl: false,
             fullscreenControl: false,

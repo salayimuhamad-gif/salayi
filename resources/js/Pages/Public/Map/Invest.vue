@@ -4,7 +4,7 @@ import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
-import { t } from '@/lib/i18n';
+import { formatNumber, t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 import { createMapAdapter, type BoundaryCollection, type MapAdapter } from '@/lib/map';
 
@@ -32,6 +32,22 @@ interface ProjectFeature {
     lat: number;
     lng: number;
     type: string | null;
+    price_from?: string | null;
+    price_to?: string | null;
+    currency?: string | null;
+    price_type?: string | null;
+    price_at?: string | null;
+    trend?: 'up' | 'down' | 'flat' | null;
+    trend_percent?: string | null;
+}
+
+interface SearchResult {
+    id: number;
+    slug: string;
+    name: string | null;
+    area: string | null;
+    lat: number;
+    lng: number;
 }
 
 const props = defineProps<{
@@ -41,6 +57,7 @@ const props = defineProps<{
     provider_fallback_reason: string | null;
     google_key: string | null;
     layers: Array<{ key: string; flag: string | null }>;
+    types: string[];
     distance: { unit: string; method: string; travel_time_available: boolean };
     limits: { max_per_layer: number; max_radius_km: number };
 }>();
@@ -59,6 +76,77 @@ const boundaries = ref<BoundaryCollection>(emptyBoundaries);
 const projects = ref<ProjectFeature[]>([]);
 const selected = ref<ProjectFeature | null>(null);
 const showBoundaries = ref(false);
+
+/** Project outlines, zoom-gated server-side; merged with area boundaries. */
+const projectBoundaries = ref<BoundaryCollection>({ type: 'FeatureCollection', features: [] });
+
+/* Type filter chips — the existing project-type system, nothing parallel. */
+const activeTypes = ref<string[]>([]);
+
+function toggleType(type: string): void {
+    activeTypes.value = activeTypes.value.includes(type)
+        ? activeTypes.value.filter((value) => value !== type)
+        : [...activeTypes.value, type];
+    void load();
+}
+
+/* Debounced search over approved investment content. */
+const searchQuery = ref('');
+const searchResults = ref<SearchResult[]>([]);
+const searchOpen = ref(false);
+const searching = ref(false);
+let searchDebounce: ReturnType<typeof setTimeout> | undefined;
+
+function scheduleSearch(): void {
+    if (searchDebounce !== undefined) {
+        clearTimeout(searchDebounce);
+    }
+
+    const term = searchQuery.value.trim();
+
+    if (term.length < 2) {
+        searchResults.value = [];
+        searchOpen.value = false;
+        return;
+    }
+
+    searchDebounce = setTimeout(() => void runSearch(term), 250);
+}
+
+async function runSearch(term: string): Promise<void> {
+    searching.value = true;
+
+    try {
+        const response = await fetch(
+            localized(`/invest/search?q=${encodeURIComponent(term)}`),
+            { headers: { Accept: 'application/json' } },
+        );
+
+        if (!response.ok) {
+            throw new Error(String(response.status));
+        }
+
+        const data = await response.json();
+        searchResults.value = data.results ?? [];
+        searchOpen.value = true;
+    } catch {
+        // A failed search keeps the previous dropdown state; the field is
+        // still usable and the next keystroke retries.
+    } finally {
+        searching.value = false;
+    }
+}
+
+function chooseResult(result: SearchResult): void {
+    searchOpen.value = false;
+    searchQuery.value = result.name ?? '';
+    select({ ...result, type: null });
+}
+
+/** Direction as a glyph. Never the only signal — text and sign ride along. */
+function trendArrow(trend: 'up' | 'down' | 'flat'): string {
+    return trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→';
+}
 
 const mapFailed = ref(false);
 const mapReady = ref(false);
@@ -98,6 +186,7 @@ async function load(): Promise<void> {
     if (showBoundaries.value && boundariesAvailable.value) {
         params.append('layers[]', 'areas');
     }
+    activeTypes.value.forEach((type) => params.append('types[]', type));
 
     const zoom = adapter.value?.getZoom();
     if (zoom !== null && zoom !== undefined) {
@@ -120,7 +209,17 @@ async function load(): Promise<void> {
 
         projects.value = data.projects ?? [];
         boundaries.value = showBoundaries.value ? (data.boundaries ?? emptyBoundaries) : emptyBoundaries;
+        projectBoundaries.value = data.project_boundaries ?? { type: 'FeatureCollection', features: [] };
         truncated.value = Boolean(data.truncated);
+
+        // A selected project keeps its card fresh across refreshes — the
+        // richer viewport row (price, trend) replaces a bare search result.
+        if (selected.value) {
+            const updated = projects.value.find((p) => p.id === selected.value?.id);
+            if (updated) {
+                selected.value = updated;
+            }
+        }
     } catch {
         // Kept deliberately: blanking the list on a failed refresh punishes
         // the visitor for a dropped request by taking away data they had.
@@ -150,7 +249,12 @@ function syncSource(): void {
         })),
     );
 
-    adapter.value?.setBoundaries(boundaries.value);
+    // One boundaries source: area context (when toggled) plus the projects'
+    // own outlines. The adapter renders both with the gold accent.
+    adapter.value?.setBoundaries({
+        type: 'FeatureCollection',
+        features: [...boundaries.value.features, ...projectBoundaries.value.features],
+    });
 }
 
 function select(project: ProjectFeature): void {
@@ -200,6 +304,12 @@ function adapterOptions() {
         googleKey: props.google_key,
         centre: { lat: 36.19, lng: 44.009 },
         zoom: 12,
+        // Pinned to Erbil and its suburbs: the surface is about one city,
+        // and nobody should have to find it from a world view.
+        minZoom: 10,
+        maxZoom: 18,
+        maxBounds: { west: 43.7, south: 35.95, east: 44.32, north: 36.42 },
+        accentColour: '#c9a227',
         events: {
             onMoveEnd: () => scheduleLoad(),
             onClick: () => {
@@ -300,6 +410,68 @@ watch(showBoundaries, () => void load());
         />
         <AppAlert v-if="truncated" class="mb-3" variant="warning" :message="t('map.zoom_in_notice')" />
 
+        <!-- -------------------------------------------- search + filters -->
+        <div class="mb-4 space-y-3">
+            <div class="relative max-w-md">
+                <label class="mh-label mb-1.5 block" for="invest-search">
+                    {{ t('map.invest.search_label') }}
+                </label>
+                <input
+                    id="invest-search"
+                    v-model="searchQuery"
+                    type="search"
+                    class="mh-invest-search w-full rounded-card px-3.5 py-2.5 text-sm text-ink"
+                    :placeholder="t('map.invest.search_placeholder')"
+                    autocomplete="off"
+                    :aria-expanded="searchOpen"
+                    aria-controls="invest-search-results"
+                    @input="scheduleSearch"
+                    @keydown.escape="searchOpen = false"
+                >
+
+                <div
+                    v-if="searchOpen"
+                    id="invest-search-results"
+                    class="mh-invest-glass absolute inset-x-0 top-full z-20 mt-1 overflow-hidden rounded-card"
+                >
+                    <p v-if="searching" class="px-3.5 py-2.5 text-sm text-ink-muted">
+                        {{ t('map.states.loading') }}
+                    </p>
+                    <p v-else-if="searchResults.length === 0" class="px-3.5 py-2.5 text-sm text-ink-muted">
+                        {{ t('map.invest.search_empty') }}
+                    </p>
+                    <ul v-else>
+                        <li v-for="result in searchResults" :key="result.id">
+                            <button
+                                type="button"
+                                class="block w-full px-3.5 py-2.5 text-start text-sm text-ink transition-colors hover:bg-surface-sunken focus-visible:bg-surface-sunken focus-visible:outline-none"
+                                @click="chooseResult(result)"
+                            >
+                                {{ result.name }}
+                                <span v-if="result.area" class="text-xs text-ink-muted"> — {{ result.area }}</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p class="mh-label mb-1.5">{{ t('map.invest.filters_label') }}</p>
+                <div class="flex flex-wrap gap-2">
+                    <button
+                        v-for="type in types"
+                        :key="type"
+                        type="button"
+                        class="mh-invest-chip"
+                        :aria-pressed="activeTypes.includes(type)"
+                        @click="toggleType(type)"
+                    >
+                        {{ t(`projects.types.${type}`) }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Mobile: one surface at a time, selected explicitly. -->
         <div class="mb-3 flex gap-2 lg:hidden" role="tablist">
             <button
@@ -357,6 +529,27 @@ watch(showBoundaries, () => void load());
                     <p class="mh-lux-eyebrow mb-1">{{ t('map.invest.selected') }}</p>
                     <p class="font-semibold text-ink">{{ selected.name }}</p>
                     <p v-if="selected.area" class="mt-0.5 text-sm text-ink-muted">{{ selected.area }}</p>
+                    <p v-if="selected.type" class="mt-0.5 text-xs text-ink-faint">
+                        {{ t(`projects.types.${selected.type}`) }}
+                    </p>
+                    <p v-if="selected.price_from" class="numeral mt-2 text-sm text-ink">
+                        {{ t('map.invest.price_from_label') }}
+                        {{ formatNumber(Number(selected.price_from)) }}
+                        <span class="text-xs text-ink-muted">{{ selected.currency }}</span>
+                        <span
+                            v-if="selected.trend"
+                            class="ms-2 text-xs font-semibold"
+                            :class="{
+                                'text-positive': selected.trend === 'up',
+                                'text-negative': selected.trend === 'down',
+                                'text-caution': selected.trend === 'flat',
+                            }"
+                        >
+                            <span aria-hidden="true">{{ trendArrow(selected.trend) }}</span>
+                            {{ selected.trend_percent }}%
+                            <span class="sr-only">{{ t(`map.invest.trend.${selected.trend}`) }}</span>
+                        </span>
+                    </p>
                     <div class="mt-3 flex items-center gap-3">
                         <Link
                             :href="localized(`/projects/${selected.slug}`)"
@@ -408,6 +601,23 @@ watch(showBoundaries, () => void load());
                                 <p class="text-sm font-semibold text-ink">{{ project.name }}</p>
                                 <p v-if="project.area" class="mt-0.5 text-xs text-ink-muted">
                                     {{ project.area }}
+                                </p>
+                                <p v-if="project.price_from" class="numeral mt-1 text-xs text-ink">
+                                    {{ formatNumber(Number(project.price_from)) }}
+                                    <span class="text-ink-muted">{{ project.currency }}</span>
+                                    <span
+                                        v-if="project.trend"
+                                        class="ms-1.5 font-semibold"
+                                        :class="{
+                                            'text-positive': project.trend === 'up',
+                                            'text-negative': project.trend === 'down',
+                                            'text-caution': project.trend === 'flat',
+                                        }"
+                                    >
+                                        <span aria-hidden="true">{{ trendArrow(project.trend) }}</span>
+                                        {{ project.trend_percent }}%
+                                        <span class="sr-only">{{ t(`map.invest.trend.${project.trend}`) }}</span>
+                                    </span>
                                 </p>
                             </button>
                             <Link

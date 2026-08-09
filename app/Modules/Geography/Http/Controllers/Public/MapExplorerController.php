@@ -16,7 +16,9 @@ use App\Modules\Geography\ValueObjects\Coordinates;
 use App\Modules\Market\Models\MarketIndex;
 use App\Modules\Market\Models\MarketIndexValue;
 use App\Modules\Marketplace\Models\Offer;
+use App\Modules\Projects\Enums\ProjectType;
 use App\Modules\Projects\Models\Project;
+use App\Modules\Projects\Models\ProjectPrice;
 use Closure;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
@@ -150,6 +152,9 @@ final class MapExplorerController extends Controller
         return Inertia::render('Public/Map/Invest', [
             ...$this->providerPageProps(),
             'layers' => $allowed,
+            // The existing category system, not a parallel one: filter chips
+            // are project types, localized client-side via projects.types.*.
+            'types' => array_map(static fn (ProjectType $t): string => $t->value, ProjectType::cases()),
         ]);
     }
 
@@ -214,17 +219,62 @@ final class MapExplorerController extends Controller
 
     /**
      * The Investment Map's data endpoint: the same pipeline with the layer
-     * allowlist applied where the client cannot reach it.
+     * allowlist applied where the client cannot reach it, plus the
+     * investment-only enrichments (price trends, project outlines).
      */
     public function investFeatures(Request $request): JsonResponse
     {
-        return $this->featureCollection($request, self::INVESTMENT_LAYERS);
+        return $this->featureCollection($request, self::INVESTMENT_LAYERS, investment: true);
+    }
+
+    /**
+     * Name search over approved investment content, for the map's search box.
+     *
+     * Deliberately tiny: published projects with real coordinates, matched on
+     * any of the three name columns, capped hard. Returns just enough to fly
+     * the camera and select the marker — the features endpoint remains the
+     * source of everything else.
+     */
+    public function investSearch(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'q' => ['required', 'string', 'min:2', 'max:80'],
+        ]);
+
+        $term = '%'.str_replace(['%', '_'], ['\%', '\_'], trim((string) $validated['q'])).'%';
+
+        $rows = Project::query()
+            ->published()
+            ->whereNotNull('latitude')
+            ->whereNotNull('longitude')
+            ->where(function ($query) use ($term): void {
+                $query->where('name_ckb', 'like', $term)
+                    ->orWhere('name_ar', 'like', $term)
+                    ->orWhere('name_en', 'like', $term);
+            })
+            ->with(['area:id,name_ckb,name_ar,name_en'])
+            ->orderBy('name_ckb')
+            ->limit(8)
+            ->get()
+            ->map(static fn (Project $p): array => [
+                'id' => $p->id,
+                'slug' => $p->slug,
+                'name' => $p->name(),
+                'area' => $p->area?->name(),
+                'lat' => (float) $p->latitude,
+                'lng' => (float) $p->longitude,
+            ])
+            ->values()
+            ->all();
+
+        return response()->json(['results' => $rows]);
     }
 
     /**
      * @param  list<string>|null  $restrictTo  server-side layer allowlist; null = every available layer
+     * @param  bool  $investment  adds the investment-only enrichments
      */
-    private function featureCollection(Request $request, ?array $restrictTo): JsonResponse
+    private function featureCollection(Request $request, ?array $restrictTo, bool $investment = false): JsonResponse
     {
         $validated = $request->validate([
             'north' => ['required', 'numeric', 'between:-90,90'],
@@ -235,6 +285,11 @@ final class MapExplorerController extends Controller
             'layers.*' => ['string', 'max:32'],
             'categories' => ['nullable', 'array'],
             'categories.*' => ['string', 'max:64'],
+
+            // Project-type filter (investment map). Unknown values are
+            // dropped rather than erroring, same policy as unknown layers.
+            'types' => ['nullable', 'array'],
+            'types.*' => ['string', 'max:32'],
 
             // Boundaries are zoom-gated: see boundaries().
             'zoom' => ['nullable', 'numeric', 'between:0,24'],
@@ -281,7 +336,9 @@ final class MapExplorerController extends Controller
         $ring = $this->ringFor($validated);
 
         $features = [
-            'projects' => in_array('projects', $layers, true) ? $this->projects($bounds) : [],
+            'projects' => in_array('projects', $layers, true)
+                ? $this->projects($bounds, $validated['types'] ?? [])
+                : [],
             'places' => in_array('places', $layers, true)
                 ? $this->places($bounds, $validated['categories'] ?? [])
                 : [],
@@ -297,8 +354,20 @@ final class MapExplorerController extends Controller
 
         $zoom = isset($validated['zoom']) ? (float) $validated['zoom'] : null;
 
+        if ($investment) {
+            $features['projects'] = $this->withPriceTrends($features['projects']);
+        }
+
         return response()->json([
             ...$features,
+            // Investment-only: the projects' own outlines, zoom-gated and
+            // simplified like area boundaries. Always present on the invest
+            // endpoint so the client never guesses at the key.
+            ...($investment ? [
+                'project_boundaries' => in_array('projects', $layers, true)
+                    ? $this->projectBoundaries($bounds, $zoom)
+                    : ['type' => 'FeatureCollection', 'features' => []],
+            ] : []),
             // A separate source from the area POINTS above. Both are needed:
             // polygons draw the border, points carry the label and the list row.
             'boundaries' => in_array('areas', $layers, true)
@@ -530,8 +599,20 @@ final class MapExplorerController extends Controller
      * @param  array<string, float>  $bounds
      * @return list<array<string, mixed>>
      */
-    private function projects(array $bounds): array
+    /**
+     * @param  array<string, float>  $bounds
+     * @param  list<string>  $types  project-type filter; empty = all types
+     * @return list<array<string, mixed>>
+     */
+    private function projects(array $bounds, array $types = []): array
     {
+        // Unknown type values are dropped silently, mirroring the layer
+        // policy: a stale filter chip must not 422 the whole map.
+        $validTypes = array_values(array_intersect(
+            $types,
+            array_map(static fn (ProjectType $t): string => $t->value, ProjectType::cases()),
+        ));
+
         $rows = Project::query()
             ->published()
             // A project with no coordinate is absent, never placed at a
@@ -541,6 +622,7 @@ final class MapExplorerController extends Controller
             ->whereNotNull('longitude')
             ->whereBetween('latitude', [$bounds['south'], $bounds['north']])
             ->whereBetween('longitude', [$bounds['west'], $bounds['east']])
+            ->when($validTypes !== [], static fn ($query) => $query->whereIn('project_type', $validTypes))
             ->with(['area:id,name_ckb,name_ar,name_en'])
             ->limit(self::MAX_PER_LAYER + 1)
             ->get();
@@ -879,6 +961,157 @@ final class MapExplorerController extends Controller
             'lng' => (float) $a->longitude,
             'has_boundary' => filled($a->boundary_wkt),
         ]);
+    }
+
+    /** Below this zoom a project outline is a smudge; markers carry the story. */
+    private const PROJECT_BOUNDARY_MIN_ZOOM = 13.0;
+
+    /**
+     * Investment enrichment: latest price and its movement, per project row.
+     *
+     * Sourced from the EXISTING price-history table — the latest dated row is
+     * the current figure, and the next older row OF THE SAME PRICE TYPE is
+     * what it moved from. Comparing a sale figure to a rent figure would
+     * produce a number that looks like a trend and means nothing.
+     *
+     * One query for the whole viewport, grouped in PHP. Rows come back newest
+     * first per project; the scan stops caring about a project once its two
+     * relevant rows are found. Projects without history keep null price
+     * fields — no figure is ever fabricated (§22 discipline).
+     *
+     * @param  list<array<string, mixed>>  $rows
+     * @return list<array<string, mixed>>
+     */
+    private function withPriceTrends(array $rows): array
+    {
+        if ($rows === []) {
+            return $rows;
+        }
+
+        $ids = array_column($rows, 'id');
+
+        $prices = ProjectPrice::query()
+            ->whereIn('project_id', $ids)
+            ->orderBy('project_id')
+            ->orderByDesc('effective_date')
+            ->orderByDesc('id')
+            ->get(['project_id', 'price_from', 'price_to', 'currency', 'price_type', 'effective_date']);
+
+        /** @var array<int, array<string, mixed>> $latest */
+        $latest = [];
+        /** @var array<int, string|null> $previousFrom */
+        $previousFrom = [];
+
+        foreach ($prices as $price) {
+            $projectId = (int) $price->project_id;
+
+            if (! isset($latest[$projectId])) {
+                $latest[$projectId] = [
+                    'price_from' => $price->price_from,
+                    'price_to' => $price->price_to,
+                    'currency' => $price->currency,
+                    'price_type' => $price->price_type->value,
+                    'price_at' => $price->effective_date?->toDateString(),
+                ];
+
+                continue;
+            }
+
+            if (array_key_exists($projectId, $previousFrom)) {
+                continue; // both rows found; ignore older history
+            }
+
+            if ($price->price_type->value === $latest[$projectId]['price_type']) {
+                $previousFrom[$projectId] = $price->price_from;
+            }
+        }
+
+        return array_map(static function (array $row) use ($latest, $previousFrom): array {
+            $current = $latest[$row['id']] ?? null;
+
+            $trend = null;
+            $percent = null;
+
+            if ($current !== null && isset($previousFrom[$row['id']])) {
+                $now = (float) $current['price_from'];
+                $was = (float) $previousFrom[$row['id']];
+
+                if ($was > 0.0) {
+                    $change = ($now - $was) / $was * 100.0;
+                    $percent = number_format($change, 1);
+                    // Below a twentieth of a percent the honest word is
+                    // "stable", not a microscopic arrow.
+                    $trend = abs($change) < 0.05 ? 'flat' : ($change > 0 ? 'up' : 'down');
+                }
+            }
+
+            return $row + [
+                'price_from' => $current['price_from'] ?? null,
+                'price_to' => $current['price_to'] ?? null,
+                'currency' => $current['currency'] ?? null,
+                'price_type' => $current['price_type'] ?? null,
+                'price_at' => $current['price_at'] ?? null,
+                'trend' => $trend,
+                'trend_percent' => $percent,
+            ];
+        }, $rows);
+    }
+
+    /**
+     * The projects' own outlines for the investment map, zoom-gated and
+     * simplified exactly like area boundaries. Selection uses the marker
+     * prefilter (projects have no cached bbox columns); a project whose pin
+     * is outside the viewport but whose plot overlaps it appears once the
+     * visitor pans a screenful — the degraded case, not a missing one.
+     *
+     * @param  array<string, float>  $bounds
+     * @return array<string, mixed>
+     */
+    private function projectBoundaries(array $bounds, ?float $zoom): array
+    {
+        $empty = ['type' => 'FeatureCollection', 'features' => []];
+
+        if ($zoom === null || $zoom < self::PROJECT_BOUNDARY_MIN_ZOOM) {
+            return $empty;
+        }
+
+        $projects = Project::query()
+            ->published()
+            ->whereNotNull('boundary_wkt')
+            ->whereNotNull('latitude')
+            ->whereNotNull('longitude')
+            ->whereBetween('latitude', [$bounds['south'], $bounds['north']])
+            ->whereBetween('longitude', [$bounds['west'], $bounds['east']])
+            ->limit(self::MAX_BOUNDARIES + 1)
+            ->get(['id', 'slug', 'boundary_wkt', 'name_ckb', 'name_ar', 'name_en']);
+
+        if ($projects->count() > self::MAX_BOUNDARIES) {
+            $this->wasTruncated = true;
+            $projects = $projects->take(self::MAX_BOUNDARIES);
+        }
+
+        $tolerance = $this->boundaryTolerance($zoom);
+        $features = [];
+
+        foreach ($projects as $project) {
+            $geometry = $this->geometryFor((string) $project->boundary_wkt, $tolerance);
+
+            if ($geometry === null) {
+                continue;
+            }
+
+            $features[] = [
+                'type' => 'Feature',
+                'geometry' => $geometry,
+                'properties' => [
+                    'slug' => $project->slug,
+                    'name' => $project->name(),
+                    'kind' => 'project',
+                ],
+            ];
+        }
+
+        return ['type' => 'FeatureCollection', 'features' => $features];
     }
 
     /**

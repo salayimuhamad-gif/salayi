@@ -52,6 +52,9 @@ Route::middleware('feature:map.investment')->group(function (): void {
     Route::get('/invest/features', [MapExplorerController::class, 'investFeatures'])
         ->middleware('throttle:60,1')
         ->name('map.invest.features');
+    Route::get('/invest/search', [MapExplorerController::class, 'investSearch'])
+        ->middleware('throttle:30,1')
+        ->name('map.invest.search');
 });
 
 /*
