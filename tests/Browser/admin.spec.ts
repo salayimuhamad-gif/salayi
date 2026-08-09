@@ -25,7 +25,9 @@ test.beforeEach(async ({}, testInfo) => {
 test('the login page renders a usable form', async ({ page }) => {
     await page.goto('/login', { waitUntil: 'networkidle' });
 
-    await expect(page.locator('input[type="email"], input[name="email"]').first()).toBeVisible();
+    // The identifier field accepts an email or a phone number, so it is a text
+    // input addressed by its autocomplete role rather than by type.
+    await expect(page.locator('input[autocomplete="username"]').first()).toBeVisible();
     await expect(page.locator('input[type="password"]').first()).toBeVisible();
     await expect(page.locator('button[type="submit"]').first()).toBeVisible();
 });

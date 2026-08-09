@@ -167,9 +167,28 @@ final class AuthenticatedSessionController extends Controller
             return route('admin.dashboard');
         }
 
+        /*
+         * THE ACCOUNT'S OWN LANGUAGE, passed explicitly.
+         *
+         * `/login` is not locale-prefixed, and a person arriving with no
+         * session has nothing for SetLocale to read — so the request resolves
+         * to the site default, and building the destination from the active
+         * request sent somebody who registered in Arabic to the Sorani
+         * onboarding page. The browser suite caught it: the ar cases failed on
+         * every viewport while ckb and en passed.
+         *
+         * The preference is stored on the account, so it is used. This is the
+         * same rule the rest of the journey already follows — the language
+         * chosen on the form wins over whatever the current request happens to
+         * be rendering in.
+         */
+        $locale = in_array($user->preferred_locale, ['ckb', 'ar', 'en'], true)
+            ? $user->preferred_locale
+            : null;
+
         return $user->telegram_verified_at === null
-            ? localized_route('account.telegram.link')
-            : PostLinkDestination::for($user);
+            ? localized_route('account.telegram.link', locale: $locale)
+            : PostLinkDestination::for($user, $locale);
     }
 
     public function destroy(Request $request): RedirectResponse
