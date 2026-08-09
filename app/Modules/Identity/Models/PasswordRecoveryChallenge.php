@@ -13,6 +13,9 @@ use Illuminate\Support\Str;
  * One Telegram password-recovery challenge (see the migration for why this is
  * its own table and what a row may authorise).
  *
+ * @property-read User $user
+ *
+ * ---- generated model properties (scripts/generate-model-annotations.php)
  * @property int $id
  * @property int $user_id
  * @property string $token_hash
@@ -23,7 +26,8 @@ use Illuminate\Support\Str;
  * @property Carbon|null $revoked_at
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property-read User $user
+ *
+ * ---- end generated model properties
  */
 final class PasswordRecoveryChallenge extends Model
 {
