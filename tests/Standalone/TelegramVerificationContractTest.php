@@ -352,10 +352,22 @@ $ok(
         && ! str_contains($login, "'login:email:'.mb_strtolower("),
 );
 
+/*
+ * Matched on the ROUTE and the resolver, not on an exact argument list. The
+ * first version pinned `localized_route('account.telegram.link')` with no
+ * arguments, so adding the account's own locale — a fix the browser suite
+ * demanded — broke the assertion while improving the behaviour it describes.
+ */
 $ok(
     'an unverified account is sent to verification rather than the admin dashboard',
-    str_contains($login, "localized_route('account.telegram.link')")
-        && str_contains($login, 'PostLinkDestination::for($user)'),
+    preg_match("/localized_route\('account\.telegram\.link'/", $login) === 1
+        && preg_match('/PostLinkDestination::for\(\$user/', $login) === 1,
+);
+
+$ok(
+    'the destination speaks the language the account registered in',
+    str_contains($login, '$user->preferred_locale')
+        && preg_match('/localized_route\(.*locale: \$locale\)/', $login) === 1,
 );
 
 $provider = $read('app/Modules/Identity/Providers/IdentityServiceProvider.php');
