@@ -94,6 +94,19 @@ final class MapExplorerController extends Controller
     private const MAX_BOUNDARIES = 40;
 
     /**
+     * The Investment Map's layer allowlist, enforced SERVER-SIDE.
+     *
+     * The investment surface shows approved MyHawler project content and the
+     * area context it sits in — never generic places (schools, hospitals,
+     * cafés), offers, branches or price dots. The restriction lives here
+     * rather than in the page's request, because a page cannot promise what
+     * an endpoint does not enforce: /invest/features drops every other layer
+     * no matter what the client asks for. The full explorer keeps every
+     * layer; nothing is removed from it.
+     */
+    private const INVESTMENT_LAYERS = ['projects', 'areas'];
+
+    /**
      * Simplification tolerance per zoom band, in metres.
      *
      * Roughly one screen pixel of ground distance at each zoom: detail finer
@@ -114,9 +127,42 @@ final class MapExplorerController extends Controller
 
     public function index(): Response
     {
+        return Inertia::render('Public/Map/Explorer', [
+            ...$this->providerPageProps(),
+            'layers' => $this->availableLayers(),
+            'categories' => $this->categories(),
+        ]);
+    }
+
+    /**
+     * The public Investment Map: the same map core, configured down to
+     * approved investment content. A mode of the explorer rather than a
+     * parallel system — same adapter, same provider resolution, same
+     * feature pipeline, restricted layer set.
+     */
+    public function invest(): Response
+    {
+        $allowed = array_values(array_filter(
+            $this->availableLayers(),
+            static fn (array $layer): bool => in_array($layer['key'], self::INVESTMENT_LAYERS, true),
+        ));
+
+        return Inertia::render('Public/Map/Invest', [
+            ...$this->providerPageProps(),
+            'layers' => $allowed,
+        ]);
+    }
+
+    /**
+     * The props both map pages share.
+     *
+     * @return array<string, mixed>
+     */
+    private function providerPageProps(): array
+    {
         $provider = $this->resolveProvider();
 
-        return Inertia::render('Public/Map/Explorer', [
+        return [
             'style_url' => config('services.maps.maplibre_style_url'),
             'provider' => $provider['provider'],
             // Stated rather than inferred by the client. A map that silently
@@ -136,8 +182,6 @@ final class MapExplorerController extends Controller
             'google_key' => $provider['provider'] === 'google'
                 ? (string) config('services.maps.google_key')
                 : null,
-            'layers' => $this->availableLayers(),
-            'categories' => $this->categories(),
             /*
              * §10.5, declared to the client so the interface can omit the
              * travel-time control entirely rather than render a disabled one
@@ -152,7 +196,7 @@ final class MapExplorerController extends Controller
                 'max_per_layer' => self::MAX_PER_LAYER,
                 'max_radius_km' => self::MAX_RADIUS_KM,
             ],
-        ]);
+        ];
     }
 
     /**
@@ -164,6 +208,23 @@ final class MapExplorerController extends Controller
      * unbounded table is the query that takes a shared host down.
      */
     public function features(Request $request): JsonResponse
+    {
+        return $this->featureCollection($request, null);
+    }
+
+    /**
+     * The Investment Map's data endpoint: the same pipeline with the layer
+     * allowlist applied where the client cannot reach it.
+     */
+    public function investFeatures(Request $request): JsonResponse
+    {
+        return $this->featureCollection($request, self::INVESTMENT_LAYERS);
+    }
+
+    /**
+     * @param  list<string>|null  $restrictTo  server-side layer allowlist; null = every available layer
+     */
+    private function featureCollection(Request $request, ?array $restrictTo): JsonResponse
     {
         $validated = $request->validate([
             'north' => ['required', 'numeric', 'between:-90,90'],
@@ -204,6 +265,10 @@ final class MapExplorerController extends Controller
 
         $requested = $validated['layers'] ?? ['projects'];
         $available = array_column($this->availableLayers(), 'key');
+
+        if ($restrictTo !== null) {
+            $available = array_values(array_intersect($available, $restrictTo));
+        }
 
         // A layer that is off is dropped silently rather than erroring: the
         // client may hold a stale legend, and a 422 would break the whole map

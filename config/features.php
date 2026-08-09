@@ -18,6 +18,13 @@ return [
         'market.indices' => false,
         'map.explorer' => false,
 
+        /*
+         * The public Investment Map (/invest): the map core restricted to
+         * approved investment/project content. Independent of map.explorer
+         * so an operator can expose the curated surface without the full
+         * explorer, or the reverse.
+         */
+        'map.investment' => false,
         'places.database' => false,
 
         /*

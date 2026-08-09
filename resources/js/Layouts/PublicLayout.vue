@@ -54,6 +54,7 @@ const siteName = computed(() => page.props.branding['branding.site_name'] ?? pag
 const definition: Array<{ key: string; href: string; flag: string | null; icon: IconName }> = [
     { key: 'market', href: '/market', flag: 'market.intelligence', icon: 'market' },
     { key: 'map', href: '/map', flag: 'map.explorer', icon: 'map' },
+    { key: 'invest', href: '/invest', flag: 'map.investment', icon: 'invest' },
     { key: 'projects', href: '/projects', flag: null, icon: 'projects' },
     { key: 'areas', href: '/areas', flag: 'geography.areas', icon: 'areas' },
     { key: 'advisor', href: '/advisor', flag: 'advisor.residential', icon: 'advisor' },

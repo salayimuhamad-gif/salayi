@@ -59,6 +59,16 @@ return [
         'disabled_hint' => 'An administrator has disabled this section',
         'no_layers' => 'No layers are available',
     ],
+    'invest' => [
+        'title' => 'Investment Map',
+        'intro' => 'Approved investment projects across Hawler, on the map.',
+        'projects_label' => 'Investment projects',
+        'boundaries_label' => 'Area boundaries',
+        'view_project' => 'View project',
+        'selected' => 'Selected project',
+        'empty' => 'No investment projects in this view',
+        'empty_hint' => 'Move the map or zoom out to see more',
+    ],
     'use_my_location' => 'My location',
     'zoom_in_notice' => 'Not all results are shown. Zoom in.',
 ];

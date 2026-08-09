@@ -20,6 +20,7 @@ export type IconName =
     | 'check'
     | 'chevron'
     | 'close'
+    | 'invest'
     | 'map'
     | 'market'
     | 'menu'
@@ -42,6 +43,9 @@ export const iconPaths: Record<IconName, string> = {
     check: 'm5 12.6 4.5 4.4L19 6.8',
     chevron: 'm9.5 5.5 6.4 6.5-6.4 6.5',
     close: 'M6 6l12 12M18 6 6 18',
+    // Towers stepping upward: built investment, growing. Same 24-grid,
+    // single-path, 1.75-stroke discipline as the rest of the set.
+    invest: 'M3.8 20.2h16.4M6.2 20.2v-6.6h3.4v6.6m1.2 0V9.4h3.4v10.8m1.2 0V5.2h3.4v15M6.2 13.6l3.4-3.2m1.2-1 3.4-3.2',
     map: 'M9.2 4.4 3.6 6.9v12.7l5.6-2.5m0-12.7 5.6 2.5m-5.6-2.5v12.7m5.6-10.2 5.6-2.5v12.7l-5.6 2.5m0-12.7v12.7m0 0-5.6-2.5',
     market: 'M3.6 19.4h16.8M6.4 19.4v-5.6m4.2 5.6V8.2m4.2 11.2v-7.7m4.2 7.7V5.4',
     menu: 'M3.8 6.6h16.4M3.8 12h16.4M3.8 17.4h16.4',
