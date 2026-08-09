@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
+import AiAvatar from '@/Components/Public/AiAvatar.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import { formatNumber, t } from '@/lib/i18n';
@@ -518,6 +519,24 @@ watch(showBoundaries, () => void load());
                     >
                         {{ t('map.invest.boundaries_label') }}
                     </button>
+                </div>
+
+                <!-- The companion (§18 of the map brief): the product's own
+                     AI face, as a quiet guide in the map's corner. Desktop
+                     only — on a phone every pixel over the map is expensive
+                     and §19 forbids exactly this kind of overlay there. It is
+                     DECORATION: aria-hidden face, no live region (the
+                     selected card's role=status already announces), no
+                     timers, no cursor tracking; its only motion is the eye
+                     pulse the global reduced-motion rule stops. -->
+                <div
+                    class="mh-invest-glass absolute bottom-3 end-3 hidden items-center gap-2.5 rounded-card p-2.5 pe-4 lg:flex"
+                    aria-hidden="true"
+                >
+                    <AiAvatar class="h-10 w-10 shrink-0" :glow="false" />
+                    <p class="max-w-44 text-xs leading-snug text-ink-muted">
+                        {{ selected ? selected.name : t('map.invest.companion_hint') }}
+                    </p>
                 </div>
 
                 <!-- Selected project, glass card floating over the map. -->

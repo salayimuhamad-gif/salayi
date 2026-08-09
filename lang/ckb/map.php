@@ -66,6 +66,7 @@ return [
         'boundaries_label' => 'سنوورەکانی ناوچە',
         'view_project' => 'بینینی پرۆژە',
         'selected' => 'پرۆژەی هەڵبژێردراو',
+        'companion_hint' => 'پرۆژەیەک هەڵبژێرە بۆ بینینی نرخ و شوێنەکەی',
         'search_label' => 'گەڕان بۆ پرۆژەکان',
         'search_placeholder' => 'ناوی پرۆژە…',
         'search_empty' => 'هیچ پرۆژەیەک لەگەڵ ئەم گەڕانە ناگونجێت',

@@ -66,6 +66,7 @@ return [
         'boundaries_label' => 'حدود المناطق',
         'view_project' => 'عرض المشروع',
         'selected' => 'المشروع المحدد',
+        'companion_hint' => 'اختر مشروعًا لرؤية سعره وموقعه',
         'search_label' => 'البحث عن المشاريع',
         'search_placeholder' => 'اسم المشروع…',
         'search_empty' => 'لا توجد مشاريع مطابقة لهذا البحث',

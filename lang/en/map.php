@@ -66,6 +66,7 @@ return [
         'boundaries_label' => 'Area boundaries',
         'view_project' => 'View project',
         'selected' => 'Selected project',
+        'companion_hint' => 'Pick a project to see its price and place',
         'search_label' => 'Search projects',
         'search_placeholder' => 'Project name…',
         'search_empty' => 'No projects match this search',
