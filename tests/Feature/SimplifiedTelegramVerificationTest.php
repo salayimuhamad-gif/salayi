@@ -62,7 +62,12 @@ final class SimplifiedTelegramVerificationTest extends TestCase
             ]);
         }
 
-        config(['services.telegram.bot_username' => 'MyHawlerBot']);
+        config([
+            'services.telegram.bot_username' => 'MyHawlerBot',
+            // Without a bot token the responder returns before sending, so no
+            // outbound call is recorded and the reply assertions cannot pass.
+            'services.telegram.bot_token' => 'test-bot-token',
+        ]);
 
         // The bot responder posts to api.telegram.org. Faking it keeps these
         // tests offline and lets them assert what the bot was asked to say.
@@ -297,7 +302,13 @@ final class SimplifiedTelegramVerificationTest extends TestCase
 
         $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $raw, 'opaque hex only');
 
-        foreach ([(string) $user->id, '7501234567', '9647501234567', 'Rezan', 'Ahmed'] as $secret) {
+        /*
+         * Long identifiers only. A single-digit user id would be "found" in
+         * any 64-character hex string by chance, so asserting its absence
+         * tested nothing and failed at random; the phone number and the name
+         * are what would actually constitute a leak.
+         */
+        foreach (['7501234567', '9647501234567', 'rezan', 'ahmed'] as $secret) {
             $this->assertStringNotContainsString(
                 strtolower($secret),
                 strtolower($raw),
@@ -648,7 +659,7 @@ final class SimplifiedTelegramVerificationTest extends TestCase
             $this->post('/login', ['login' => $written, 'password' => self::PASSWORD])
                 ->assertRedirect();
 
-            $this->assertAuthenticatedAs($user->fresh(), "sign-in must accept {$written}");
+            $this->assertAuthenticatedAs($user->fresh());
         }
     }
 
@@ -754,7 +765,7 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         ])->assertSessionHasErrors('phone');
 
         $this->assertSame(1, User::query()->count(), 'a duplicate number must never mint a second account');
-        $this->assertGuest('and must never sign anybody in');
+        $this->assertGuest();
     }
 
     public function test_the_duplicate_refusal_does_not_confirm_that_the_number_is_registered(): void
