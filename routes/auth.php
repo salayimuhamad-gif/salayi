@@ -7,6 +7,7 @@ use App\Modules\Identity\Http\Controllers\Auth\MfaController;
 use App\Modules\Identity\Http\Controllers\Auth\PasswordResetController;
 use App\Modules\Identity\Http\Controllers\Auth\RegistrationController;
 use App\Modules\Identity\Http\Controllers\Auth\TelegramAuthController;
+use App\Modules\Identity\Http\Controllers\Auth\TelegramRecoveryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,20 @@ Route::middleware('guest')->group(function (): void {
         ->middleware('throttle:password-reset')->name('password.email');
     Route::get('/reset-password/{token}', [PasswordResetController::class, 'edit'])->name('password.reset');
     Route::post('/reset-password', [PasswordResetController::class, 'update'])->name('password.store');
+
+    /*
+     * Telegram password recovery — a SEPARATE mechanism from both the email
+     * broker above and every Telegram verification/link/handoff token. The
+     * challenge lives in its own table (password_recovery_challenges), dies
+     * in fifteen minutes or on first use, and can only ever change a
+     * password: it never verifies, links, or signs anybody in.
+     */
+    Route::post('/forgot-password/telegram', [TelegramRecoveryController::class, 'send'])
+        ->middleware('throttle:password-recovery')->name('password.recover.request');
+    Route::get('/recover/{token}', [TelegramRecoveryController::class, 'show'])
+        ->middleware('throttle:password-recovery-redeem')->name('password.recover.show');
+    Route::post('/recover', [TelegramRecoveryController::class, 'store'])
+        ->middleware('throttle:password-recovery-redeem')->name('password.recover.store');
 });
 
 Route::middleware('auth')->group(function (): void {

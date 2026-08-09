@@ -31,10 +31,13 @@ declare(strict_types=1);
  *
  * WHAT IT DOES NOT CREATE
  *
- *   No projects, no areas, no prices, no offers, no AI conversations. The
+ *   No areas, no offers, no AI conversations, no market indices. The
  *   acceptance suite asserts against empty states and real flags; inventing
  *   market data to make a screenshot look fuller would defeat the one property
- *   this product's UI is built around.
+ *   this product's UI is built around. The two investment-map projects (one
+ *   with a real price history) are the deliberate exception: the map suite
+ *   must prove markers, prices and trends render from PERSISTED rows, and an
+ *   empty map cannot prove that.
  */
 
 use App\Modules\Identity\Enums\RoleKey;
@@ -172,6 +175,64 @@ DB::table('feature_flags')->updateOrInsert(
     ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
 );
 
+/*
+ * The Investment Map, switched on the same way — through the flag table the
+ * operator would use — plus two published projects so the surface has real
+ * rows: one with a price history (the trend badge must render from data,
+ * not fixtures injected client-side) and one bare.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'map.investment'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+DB::table('projects')->updateOrInsert(
+    ['slug' => 'browser-invest-tower'],
+    [
+        'name_ckb' => 'بورجی وەبەرهێنانی تاقیکردنەوە',
+        'project_type' => 'tower',
+        'construction_status' => 'under_construction',
+        'delivery_status' => 'not_started',
+        'publication_status' => 'published',
+        'latitude' => 36.1950000,
+        'longitude' => 44.0150000,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+$tower = DB::table('projects')->where('slug', 'browser-invest-tower')->first();
+
+DB::table('projects')->updateOrInsert(
+    ['slug' => 'browser-invest-villa'],
+    [
+        'name_ckb' => 'ڤیلاکانی تاقیکردنەوە',
+        'project_type' => 'villa',
+        'construction_status' => 'under_construction',
+        'delivery_status' => 'not_started',
+        'publication_status' => 'published',
+        'latitude' => 36.2050000,
+        'longitude' => 44.0250000,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
+foreach ([['100000.00', '2026-06-01'], ['104800.00', '2026-07-01']] as [$price, $date]) {
+    DB::table('project_prices')->updateOrInsert(
+        ['project_id' => $tower->id, 'effective_date' => $date],
+        [
+            'price_from' => $price,
+            'currency' => 'USD',
+            'price_type' => 'sale_asking',
+            'period' => substr($date, 0, 7),
+            'source' => 'browser-fixture',
+            'confidence' => 'medium',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+    );
+}
+
 cache()->flush();
 
 file_put_contents(
@@ -181,10 +242,11 @@ file_put_contents(
         'admin' => ['email' => $admin->email, 'secret' => $adminSecret],
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
-        'flags' => ['advisor.residential' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
 echo "wrote tests/Browser/support/fixtures.json\n";
 echo "  admin: {$admin->email}\n  plain: {$plain->email}\n  mfa:   {$mfa->email}\n";
 echo "  advisor.residential = ON\n";
+echo "  map.investment = ON (+2 published projects, 1 with price history)\n";

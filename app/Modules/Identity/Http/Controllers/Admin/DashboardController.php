@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Modules\Identity\Http\Controllers\Admin;
 
+use App\Modules\Identity\Http\Middleware\TouchLastSeen;
+use App\Modules\Identity\Models\User;
 use App\Modules\Operations\Models\SchedulerHeartbeat;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -38,6 +40,36 @@ final class DashboardController extends Controller
             'roadmap' => [
                 'note' => 'admin_shell_slice',
             ],
+            /*
+             * Member-activity metrics, gated on the users permission: the
+             * dashboard route itself is open to any admin-surface account,
+             * but usage numbers describe the member base and belong to
+             * whoever may see the member list. Aggregate counts over two
+             * indexed columns — no event log, no per-request writes beyond
+             * TouchLastSeen's throttled timestamp (§32's own constraint).
+             */
+            'activity' => $request->user()?->hasPermission('identity.users.view')
+                ? $this->activity()
+                : null,
         ]);
+    }
+
+    /** @return array<string, int> */
+    private function activity(): array
+    {
+        $members = fn () => User::query()->whereDoesntHave('roles');
+
+        return [
+            'online_now' => (clone $members())
+                ->where('last_seen_at', '>=', now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS))->count(),
+            'active_today' => (clone $members())->where('last_seen_at', '>=', now()->startOfDay())->count(),
+            'active_week' => (clone $members())->where('last_seen_at', '>=', now()->subDays(7))->count(),
+            'active_month' => (clone $members())->where('last_seen_at', '>=', now()->subDays(30))->count(),
+            'new_today' => (clone $members())->where('created_at', '>=', now()->startOfDay())->count(),
+            'new_week' => (clone $members())->where('created_at', '>=', now()->subDays(7))->count(),
+            'new_month' => (clone $members())->where('created_at', '>=', now()->subDays(30))->count(),
+            'telegram_linked' => (clone $members())->whereNotNull('telegram_verified_at')->count(),
+            'total' => $members()->count(),
+        ];
     }
 }

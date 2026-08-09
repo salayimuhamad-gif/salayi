@@ -4,6 +4,7 @@ import { Head } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
 import AiAdvisorHero from '@/Components/Public/AiAdvisorHero.vue';
+import InvestMapTeaser from '@/Components/Public/InvestMapTeaser.vue';
 import PublicQuickActions from '@/Components/Public/PublicQuickActions.vue';
 import MarketMetricCard from '@/Components/Public/MarketMetricCard.vue';
 import ProjectSummaryCard from '@/Components/Public/ProjectSummaryCard.vue';
@@ -72,7 +73,7 @@ const props = defineProps<{
     };
     projects: { has_data: boolean; items: Array<{ slug: string; name: string; area: string | null; project_type: string | null; construction_status: string | null }> };
     areas: { has_data: boolean; linkable: boolean; items: Array<{ slug: string; name: string; type: string | null; project_count: number }> };
-    cta: { advisor: boolean; lifestyle: boolean; portfolio: boolean; map: boolean; offers: boolean };
+    cta: { advisor: boolean; lifestyle: boolean; portfolio: boolean; map: boolean; invest: boolean; offers: boolean };
 }>();
 
 /*
@@ -90,6 +91,7 @@ const actionHrefs = computed(() => ({
     lifestyle: localized('/lifestyle'),
     portfolio: '/account/portfolio',
     map: localized('/map'),
+    invest: localized('/invest'),
     offers: localized('/offers'),
 }));
 
@@ -117,6 +119,11 @@ const areaHrefs = computed(() =>
 
                 <PublicQuickActions :cta="cta" :hrefs="actionHrefs" />
             </section>
+
+            <!-- The Investment Map preview: a flag-gated invitation, not a
+                 second map. The real experience (and its heavy chunk) lives
+                 behind the click. -->
+            <InvestMapTeaser v-if="cta.invest" :href="actionHrefs.invest" />
 
             <!-- Market indices -->
             <section>

@@ -41,6 +41,23 @@ Route::middleware('feature:map.explorer')->group(function (): void {
 });
 
 /*
+ * The public Investment Map: the explorer's core configured down to approved
+ * investment/project content, on its own flag so an operator can run either
+ * surface — or both — independently. `/invest` rather than `/map/invest`
+ * because the navigation marks sections active by path prefix, and a child
+ * of /map would light two rail items at once.
+ */
+Route::middleware('feature:map.investment')->group(function (): void {
+    Route::get('/invest', [MapExplorerController::class, 'invest'])->name('map.invest');
+    Route::get('/invest/features', [MapExplorerController::class, 'investFeatures'])
+        ->middleware('throttle:60,1')
+        ->name('map.invest.features');
+    Route::get('/invest/search', [MapExplorerController::class, 'investSearch'])
+        ->middleware('throttle:30,1')
+        ->name('map.invest.search');
+});
+
+/*
  * Public Place profiles (spec 10.3, 12.2).
  *
  * Gated on `places.database` — the flag that already governs whether the

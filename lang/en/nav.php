@@ -44,6 +44,7 @@ return [
     'public' => [
         'market' => 'Market',
         'map' => 'Map',
+        'invest' => 'Investment Map',
         'projects' => 'Projects',
         'areas' => 'Areas',
         'advisor' => 'Advisor',

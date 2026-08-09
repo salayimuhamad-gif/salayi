@@ -89,6 +89,9 @@ final class Place extends Model
         'operational_status', 'is_public', 'tags',
         'source', 'source_url', 'verified_at', 'confidence',
         'publication_status', 'duplicate_group', 'is_duplicate_primary',
+        // Same authorship attribution as Area: PlaceController::store sets it,
+        // so it must be assignable — the admin create door threw without it.
+        'created_by',
     ];
 
     /** A place phone is frequently a personal mobile (spec 32.2). */

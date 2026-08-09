@@ -32,6 +32,8 @@ const props = defineProps<{
         phone_status: string;
         registered_at: string | null;
         last_login_at: string | null;
+        last_seen_at: string | null;
+        online: boolean;
         advisor_request_count: number;
         portfolio_count: number;
         profile_bio: string | null;
@@ -44,10 +46,33 @@ const props = defineProps<{
     requests: Array<{ id: number; stage: string; objective: string | null; property_type: string | null; updated_at: string | null }>;
     can_manage: boolean;
     can_reveal: boolean;
+    can_revoke_sessions: boolean;
+    can_trigger_recovery: boolean;
     reveal_reasons: Array<{ value: string; requires_note: boolean }>;
 }>();
 
 const suspendForm = useForm({ reason: '' });
+
+/*
+ * Two-tap confirmation for the sensitive one-shot actions: the first press
+ * arms the button and renames it, the second fires. Cheaper than a dialog
+ * and impossible to trigger by a single stray click.
+ */
+// Typed for its one server-set error key: the form itself posts no fields,
+// but sendRecovery() can come back with errors.recovery.
+const actionForm = useForm<{ recovery?: string }>({});
+const confirmingLogout = ref(false);
+const confirmingRecovery = ref(false);
+
+function forceLogout(): void {
+    confirmingLogout.value = false;
+    actionForm.post(`/admin/users/${props.account.id}/logout`, { preserveScroll: true });
+}
+
+function sendRecovery(): void {
+    confirmingRecovery.value = false;
+    actionForm.post(`/admin/users/${props.account.id}/recovery`, { preserveScroll: true });
+}
 
 const revealReason = ref('');
 const revealNote = ref('');
@@ -144,6 +169,10 @@ async function revealPhone(): Promise<void> {
                             : t('leads.detail.consent_missing') }}
                     </p>
                     <p v-if="account.profile_bio" class="pt-1 text-ink-muted">{{ account.profile_bio }}</p>
+                    <p v-if="account.last_seen_at" class="text-xs text-ink-faint">
+                        {{ t('identity.users.last_seen') }}: {{ account.last_seen_at }}
+                        <span v-if="account.online" class="text-positive"> · {{ t('identity.users.online') }}</span>
+                    </p>
                     <p class="flex flex-wrap gap-x-4 pt-1 text-xs text-ink-faint">
                         <span class="uppercase">{{ account.preferred_locale }}</span>
                         <span v-if="account.primary_purpose">
@@ -292,6 +321,39 @@ async function revealPhone(): Promise<void> {
             >
                 {{ t('identity.users.reactivate') }}
             </AppButton>
+
+            <!-- Session + recovery actions: each behind its own server-side
+                 permission; the buttons only render when the server said so. -->
+            <div class="mt-5 flex flex-wrap items-start gap-3 border-t border-line pt-5">
+                <div v-if="can_revoke_sessions">
+                    <AppButton
+                        type="button"
+                        variant="secondary"
+                        :loading="actionForm.processing"
+                        @click="confirmingLogout ? forceLogout() : (confirmingLogout = true)"
+                    >
+                        {{ confirmingLogout
+                            ? t('identity.users.force_logout_confirm')
+                            : t('identity.users.force_logout') }}
+                    </AppButton>
+                </div>
+
+                <div v-if="can_trigger_recovery && account.telegram_linked">
+                    <AppButton
+                        type="button"
+                        variant="secondary"
+                        :loading="actionForm.processing"
+                        @click="confirmingRecovery ? sendRecovery() : (confirmingRecovery = true)"
+                    >
+                        {{ confirmingRecovery
+                            ? t('identity.users.send_recovery_confirm')
+                            : t('identity.users.send_recovery') }}
+                    </AppButton>
+                    <p v-if="actionForm.errors.recovery" class="mt-1 text-sm text-negative">
+                        {{ actionForm.errors.recovery }}
+                    </p>
+                </div>
+            </div>
         </AppCard>
     </AdminLayout>
 </template>

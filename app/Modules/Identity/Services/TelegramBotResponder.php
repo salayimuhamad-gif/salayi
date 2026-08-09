@@ -96,6 +96,32 @@ final class TelegramBotResponder
         ]);
     }
 
+    /**
+     * Deliver a password-recovery link to the account's own chat.
+     *
+     * The URL is minted by {@see TelegramPasswordRecovery} from the configured
+     * origin only — this method never builds or amends it. An inline URL
+     * button rather than a Web App button, same reasoning as the return
+     * button; the message also SAYS what pressing it will do and to ignore it
+     * if the reader did not ask, because this chat is the recovery channel's
+     * whole security boundary and an unexplained button invites blind taps.
+     */
+    public function sendPasswordRecovery(int|string $chatId, string $url, string $locale = 'ckb'): bool
+    {
+        return $this->send('sendMessage', [
+            'chat_id' => $chatId,
+            'text' => __('identity.telegram.bot_recovery', [], $locale),
+            'reply_markup' => json_encode([
+                'inline_keyboard' => [[
+                    [
+                        'text' => __('identity.telegram.bot_recovery_button', [], $locale),
+                        'url' => $url,
+                    ],
+                ]],
+            ], JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE),
+        ]);
+    }
+
     public function reportFailure(int|string $chatId, string $locale = 'ckb'): bool
     {
         return $this->send('sendMessage', [

@@ -3,6 +3,18 @@
 declare(strict_types=1);
 
 return [
+    'activity' => [
+        'title' => 'نشاط الأعضاء',
+        'online_now' => 'متصلون الآن',
+        'active_today' => 'نشطون اليوم',
+        'active_week' => 'نشطون هذا الأسبوع',
+        'active_month' => 'نشطون هذا الشهر',
+        'new_today' => 'جدد اليوم',
+        'new_week' => 'جدد هذا الأسبوع',
+        'new_month' => 'جدد هذا الشهر',
+        'telegram_linked' => 'موثقون عبر تيليغرام',
+        'total' => 'جميع الأعضاء',
+    ],
     'scheduler' => [
         'title' => 'جدولة المهام',
         'last_success' => 'آخر تشغيل ناجح',

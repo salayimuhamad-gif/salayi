@@ -359,4 +359,99 @@
             linear-gradient(90deg, rgb(var(--mh-line) / 0.55) 1px, transparent 1px);
         background-size: 28px 28px;
     }
+
+    /* --- Investment map ---------------------------------------------------
+     * The Kimi-referenced treatment for the /invest surface, expressed in
+     * the existing token system so operator branding still applies. Three
+     * pieces only: an edge vignette over the tiles, a glass overlay card,
+     * and a glass chip. Everything else on the page is the lux kit above.
+     * -------------------------------------------------------------------- */
+
+    /* Radial edge darkening plus a block-start fade, so the dark chrome and
+       the tiles read as one surface. Pointer-events pass through: it is
+       varnish, never a control. */
+    .mh-invest-vignette {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(to bottom, rgb(var(--mh-surface) / 0.55), transparent 18%),
+            radial-gradient(130% 130% at 50% 45%, transparent 55%, rgb(var(--mh-surface) / 0.5));
+    }
+
+    /* Glass over the map: blur earns its cost here because live tiles move
+       beneath it. Kept off the rest of the site, where it would be blur for
+       blur's sake over a flat background. */
+    .mh-invest-glass {
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        box-shadow:
+            0 12px 32px -18px rgb(0 0 0 / 0.85),
+            inset 0 1px 0 rgb(255 255 255 / 0.06);
+    }
+
+    .mh-invest-chip {
+        @apply inline-flex items-center gap-2 rounded-full px-3.5 text-sm text-ink-muted;
+        min-block-size: 2.25rem;
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-invest-chip[aria-pressed='true'] {
+        border-color: rgb(var(--mh-accent) / 0.55);
+        color: rgb(var(--mh-accent));
+    }
+
+    .mh-invest-chip:hover {
+        border-color: rgb(var(--mh-accent) / 0.45);
+        color: rgb(var(--mh-ink));
+    }
+
+    /* The search field: glass like the chips, with the reference design's
+       ice-blue as its focus voice — the one place the secondary accent
+       appears, so it reads as "search" rather than competing with gold. */
+    .mh-invest-search {
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-invest-search:focus {
+        outline: none;
+        border-color: rgb(127 168 201 / 0.7);
+        box-shadow: 0 0 0 1px rgb(127 168 201 / 0.35);
+    }
+
+    /* Decorative markers on the homepage teaser: gold dots with a soft ring
+       pulse. Static under prefers-reduced-motion — the global neutralizer
+       already clamps the animation, and the dot alone still reads. */
+    .mh-invest-teaser-dot {
+        position: absolute;
+        inline-size: 10px;
+        block-size: 10px;
+        border-radius: 999px;
+        background-color: rgb(var(--mh-accent));
+        box-shadow: 0 0 12px rgb(var(--mh-accent) / 0.55);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .mh-invest-teaser-dot::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 999px;
+            border: 1px solid rgb(var(--mh-accent) / 0.5);
+            animation: mh-invest-pulse 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        }
+    }
+
+    @keyframes mh-invest-pulse {
+        0% { transform: scale(0.6); opacity: 0.9; }
+        100% { transform: scale(1.8); opacity: 0; }
+    }
 }

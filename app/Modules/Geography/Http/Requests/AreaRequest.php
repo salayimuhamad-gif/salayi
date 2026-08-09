@@ -8,6 +8,7 @@ use App\Modules\Geography\Enums\AreaType;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Support\Wkt;
 use App\Modules\Geography\ValueObjects\Coordinates;
+use App\Modules\Projects\Rules\ValidWkt;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Validator;
 
@@ -49,7 +50,14 @@ final class AreaRequest extends FormRequest
             'description_en' => ['nullable', 'string', 'max:20000'],
             'latitude' => ['nullable', 'numeric', 'between:-90,90'],
             'longitude' => ['nullable', 'numeric', 'between:-180,180'],
-            'boundary_wkt' => ['nullable', 'string', 'max:500000'],
+            /*
+             * The SAME strict validator projects use. This door accepted
+             * self-intersecting rings and overlapping MultiPolygon components
+             * that ProjectRequest and the Wizard reject; the boundary columns
+             * feed the same map layer, and two doors into one rendering path
+             * must not enforce different rules.
+             */
+            'boundary_wkt' => ['nullable', 'string', 'max:500000', new ValidWkt],
             'source' => ['nullable', 'string', 'max:191'],
             'confidence' => ['nullable', 'string', 'in:low,medium,high'],
         ];

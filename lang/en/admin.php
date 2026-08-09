@@ -3,6 +3,18 @@
 declare(strict_types=1);
 
 return [
+    'activity' => [
+        'title' => 'Member activity',
+        'online_now' => 'Online now',
+        'active_today' => 'Active today',
+        'active_week' => 'Active this week',
+        'active_month' => 'Active this month',
+        'new_today' => 'New today',
+        'new_week' => 'New this week',
+        'new_month' => 'New this month',
+        'telegram_linked' => 'Telegram verified',
+        'total' => 'All members',
+    ],
     'scheduler' => [
         'title' => 'Scheduler',
         'last_success' => 'Last successful run',

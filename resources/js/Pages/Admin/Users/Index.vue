@@ -29,13 +29,23 @@ interface Row {
     phone_status: string;
     registered_at: string | null;
     last_login_at: string | null;
+    last_seen_at: string | null;
+    online: boolean;
     advisor_request_count: number;
     portfolio_count: number;
 }
 
 const props = defineProps<{
     users: { data: Row[]; links: Array<{ url: string | null; label: string; active: boolean }> };
-    filters: { q?: string | null; status?: string | null; locale?: string | null };
+    filters: {
+        q?: string | null;
+        status?: string | null;
+        locale?: string | null;
+        active?: string | null;
+        sort?: string | null;
+        registered_from?: string | null;
+        registered_to?: string | null;
+    };
 }>();
 
 function applyFilter(patch: Record<string, string | null>): void {
@@ -99,6 +109,70 @@ function applyFilter(patch: Record<string, string | null>): void {
                     <option value="en">English</option>
                 </select>
             </div>
+
+            <div>
+                <label for="users-active" class="mb-1 block text-xs text-ink-muted">
+                    {{ t('identity.users.activity') }}
+                </label>
+                <select
+                    id="users-active"
+                    :value="filters.active ?? ''"
+                    class="block min-h-11 rounded-card border border-line bg-surface px-3 text-sm text-ink
+                           focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                    @change="applyFilter({ active: ($event.target as HTMLSelectElement).value || null })"
+                >
+                    <option value="">—</option>
+                    <option value="online">{{ t('identity.users.activity_online') }}</option>
+                    <option value="today">{{ t('identity.users.activity_today') }}</option>
+                    <option value="week">{{ t('identity.users.activity_week') }}</option>
+                    <option value="month">{{ t('identity.users.activity_month') }}</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="users-sort" class="mb-1 block text-xs text-ink-muted">
+                    {{ t('identity.users.sort') }}
+                </label>
+                <select
+                    id="users-sort"
+                    :value="filters.sort ?? 'newest'"
+                    class="block min-h-11 rounded-card border border-line bg-surface px-3 text-sm text-ink
+                           focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                    @change="applyFilter({ sort: ($event.target as HTMLSelectElement).value || null })"
+                >
+                    <option value="newest">{{ t('identity.users.sort_newest') }}</option>
+                    <option value="oldest">{{ t('identity.users.sort_oldest') }}</option>
+                    <option value="recent_activity">{{ t('identity.users.sort_recent_activity') }}</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="users-from" class="mb-1 block text-xs text-ink-muted">
+                    {{ t('identity.users.registered_from') }}
+                </label>
+                <input
+                    id="users-from"
+                    :value="filters.registered_from ?? ''"
+                    type="date"
+                    class="block min-h-11 rounded-card border border-line bg-surface px-3 text-sm text-ink
+                           focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                    @change="applyFilter({ registered_from: ($event.target as HTMLInputElement).value || null })"
+                >
+            </div>
+
+            <div>
+                <label for="users-to" class="mb-1 block text-xs text-ink-muted">
+                    {{ t('identity.users.registered_to') }}
+                </label>
+                <input
+                    id="users-to"
+                    :value="filters.registered_to ?? ''"
+                    type="date"
+                    class="block min-h-11 rounded-card border border-line bg-surface px-3 text-sm text-ink
+                           focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                    @change="applyFilter({ registered_to: ($event.target as HTMLInputElement).value || null })"
+                >
+            </div>
         </div>
 
         <AppEmptyState
@@ -135,6 +209,9 @@ function applyFilter(patch: Record<string, string | null>): void {
                         <span v-if="user.is_suspended" class="mh-lux-chip text-xs text-negative">
                             {{ t('identity.users.status_suspended') }}
                         </span>
+                        <span v-if="user.online" class="mh-lux-chip text-xs text-positive">
+                            {{ t('identity.users.online') }}
+                        </span>
                     </div>
 
                     <p class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs">
@@ -153,6 +230,7 @@ function applyFilter(patch: Record<string, string | null>): void {
                     <p class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-muted">
                         <span>{{ t('identity.users.registered') }}: {{ user.registered_at }}</span>
                         <span v-if="user.last_login_at">{{ t('identity.users.last_login') }}: {{ user.last_login_at }}</span>
+                        <span v-if="user.last_seen_at">{{ t('identity.users.last_seen') }}: {{ user.last_seen_at }}</span>
                         <span class="numeral" dir="ltr">
                             {{ t('identity.users.requests') }}: {{ formatNumber(user.advisor_request_count) }}
                         </span>

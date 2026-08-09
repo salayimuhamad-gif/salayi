@@ -87,6 +87,10 @@ final class Area extends Model
         'latitude', 'longitude', 'boundary_wkt',
         'lifestyle_classification', 'publication_status',
         'source', 'confidence', 'verified_at',
+        // AreaController::store attributes the row to its author. Absent from
+        // this list, every admin area creation threw MassAssignmentException —
+        // nothing exercised the door until GeometryWorkflowTest did.
+        'created_by',
     ];
 
     protected function casts(): array

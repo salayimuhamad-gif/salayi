@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Modules\Identity\Http\Controllers\Admin;
 
+use App\Modules\Identity\Http\Middleware\TouchLastSeen;
 use App\Modules\Identity\Models\Consent;
 use App\Modules\Identity\Models\User;
+use App\Modules\Identity\Services\TelegramPasswordRecovery;
 use App\Modules\Leads\Enums\RevealReason;
 use App\Modules\Leads\Services\PhoneRevealService;
 use App\Modules\Operations\Services\AuditLogger;
@@ -13,6 +15,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -45,6 +49,12 @@ final class UsersController extends Controller
             'q' => ['nullable', 'string', 'max:80'],
             'status' => ['nullable', Rule::in(['active', 'suspended', 'unlinked'])],
             'locale' => ['nullable', Rule::in(['ckb', 'ar', 'en'])],
+            'registered_from' => ['nullable', 'date'],
+            'registered_to' => ['nullable', 'date'],
+            // Presence windows, defined by last_seen_at (see TouchLastSeen):
+            // "online" is the throttle interval, the rest are calendar-ish.
+            'active' => ['nullable', Rule::in(['online', 'today', 'week', 'month'])],
+            'sort' => ['nullable', Rule::in(['newest', 'oldest', 'recent_activity'])],
         ]);
 
         $users = User::query()
@@ -68,7 +78,23 @@ final class UsersController extends Controller
             ->when(($validated['status'] ?? null) === 'suspended', fn ($q) => $q->whereNotNull('suspended_at'))
             ->when(($validated['status'] ?? null) === 'unlinked', fn ($q) => $q->whereNull('telegram_verified_at'))
             ->when($validated['locale'] ?? null, fn ($q, $locale) => $q->where('preferred_locale', $locale))
-            ->latest('id')
+            ->when($validated['registered_from'] ?? null, fn ($q, $from) => $q->whereDate('created_at', '>=', $from))
+            ->when($validated['registered_to'] ?? null, fn ($q, $to) => $q->whereDate('created_at', '<=', $to))
+            ->when($validated['active'] ?? null, fn ($q, $window) => $q->where(
+                'last_seen_at',
+                '>=',
+                match ($window) {
+                    'online' => now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS),
+                    'today' => now()->startOfDay(),
+                    'week' => now()->subDays(7),
+                    default => now()->subDays(30),
+                },
+            ))
+            ->when(
+                ($validated['sort'] ?? 'newest') === 'recent_activity',
+                fn ($q) => $q->orderByDesc('last_seen_at'),
+                fn ($q) => ($validated['sort'] ?? 'newest') === 'oldest' ? $q->oldest('id') : $q->latest('id'),
+            )
             ->paginate(25)
             ->withQueryString()
             ->through(fn (User $user): array => $this->row($user));
@@ -135,6 +161,8 @@ final class UsersController extends Controller
                 ->all(),
             'can_manage' => $request->user()->hasPermission('identity.users.suspend'),
             'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
+            'can_revoke_sessions' => $request->user()->hasPermission('identity.sessions.revoke'),
+            'can_trigger_recovery' => $request->user()->hasPermission('identity.users.update'),
             'reveal_reasons' => array_map(
                 static fn (RevealReason $reason): array => [
                     'value' => $reason->value,
@@ -196,6 +224,49 @@ final class UsersController extends Controller
      * The reveal, from the accounts surface: the same audited ceremony as the
      * sales workspace, behind this surface's own capability.
      */
+    /**
+     * End every session the account holds, now.
+     *
+     * The remember token is rotated in the same breath: a forced logout that
+     * leaves remember-me cookies alive is a logout in name only. Behind its
+     * own permission — `identity.sessions.revoke` sat in the registry with no
+     * route enforcing it until this action gave it one.
+     */
+    public function forceLogout(Request $request, User $user): RedirectResponse
+    {
+        abort_if($user->roles()->exists(), 404);
+
+        DB::table('sessions')->where('user_id', $user->getKey())->delete();
+        $user->forceFill(['remember_token' => Str::random(60)])->save();
+
+        $this->audit->record('identity.user_sessions_revoked', $user, [], [], severity: 'warning');
+
+        return back()->with('success', __('identity.users.sessions_revoked'));
+    }
+
+    /**
+     * Send the account a password-recovery link — to ITS OWN Telegram chat.
+     *
+     * The admin triggers the process and never sees the credential: the
+     * challenge goes to the chat the account verified with, carries the same
+     * TTL, single use and identity binding as a self-service request, and
+     * ends in a password only the account holder chooses.
+     */
+    public function sendRecovery(Request $request, User $user, TelegramPasswordRecovery $recovery): RedirectResponse
+    {
+        abort_if($user->roles()->exists(), 404);
+
+        $sent = $recovery->requestForUser($user, $user->preferred_locale ?? 'ckb');
+
+        if (! $sent) {
+            return back()->withErrors(['recovery' => __('identity.users.recovery_unavailable')]);
+        }
+
+        $this->audit->record('identity.password_recovery_triggered_by_admin', $user, [], [], severity: 'warning');
+
+        return back()->with('success', __('identity.users.recovery_sent'));
+    }
+
     public function revealPhone(Request $request, User $user): JsonResponse
     {
         abort_if($user->roles()->exists(), 404);
@@ -243,6 +314,9 @@ final class UsersController extends Controller
             'phone_status' => 'user_provided',
             'registered_at' => $user->created_at?->toDateString(),
             'last_login_at' => $user->last_login_at?->toDateString(),
+            'last_seen_at' => $user->last_seen_at?->diffForHumans(),
+            'online' => $user->last_seen_at !== null
+                && $user->last_seen_at->gte(now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS)),
             'advisor_request_count' => (int) ($user->advisor_request_count ?? 0),
             'portfolio_count' => (int) ($user->portfolio_count ?? 0),
         ];

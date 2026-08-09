@@ -46,6 +46,7 @@ final class HomeController extends Controller
                 'lifestyle' => (bool) feature('lifestyle.matching'),
                 'portfolio' => (bool) feature('portfolio'),
                 'map' => (bool) feature('map.explorer'),
+                'invest' => (bool) feature('map.investment'),
                 'offers' => (bool) feature('marketplace.offers'),
             ],
         ]);

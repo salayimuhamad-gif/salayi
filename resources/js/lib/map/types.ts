@@ -88,5 +88,11 @@ export interface AdapterOptions {
     googleKey: string | null;
     centre: LatLng;
     zoom: number;
+    /** Optional camera fences. Honoured by both adapters where the provider supports them. */
+    minZoom?: number;
+    maxZoom?: number;
+    maxBounds?: MapBounds;
+    /** Accent for clusters and boundary polygons. Defaults to the explorer blue. */
+    accentColour?: string;
     events: AdapterEvents;
 }

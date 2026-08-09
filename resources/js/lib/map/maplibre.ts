@@ -24,6 +24,7 @@ export class MapLibreAdapter implements MapAdapter {
 
     private map: import('maplibre-gl').Map | null = null;
     private loaded = false;
+    private failedBeforeLoad = false;
     private pending: { points: PointFeature[]; boundaries: BoundaryCollection | null } = {
         points: [],
         boundaries: null,
@@ -45,13 +46,36 @@ export class MapLibreAdapter implements MapAdapter {
             style: this.options.styleUrl ?? 'https://demotiles.maplibre.org/style.json',
             center: [this.options.centre.lng, this.options.centre.lat],
             zoom: this.options.zoom,
+            // Optional camera fences (the investment map pins itself to
+            // Erbil). Soft bounds, so a fling at the edge eases back instead
+            // of hitting a wall.
+            ...(this.options.minZoom !== undefined ? { minZoom: this.options.minZoom } : {}),
+            ...(this.options.maxZoom !== undefined ? { maxZoom: this.options.maxZoom } : {}),
+            ...(this.options.maxBounds
+                ? {
+                    maxBounds: [
+                        [this.options.maxBounds.west, this.options.maxBounds.south],
+                        [this.options.maxBounds.east, this.options.maxBounds.north],
+                    ] as [[number, number], [number, number]],
+                }
+                : {}),
             attributionControl: { compact: true },
         });
 
         map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibre.ScaleControl({ unit: 'metric' }), 'bottom-left');
 
-        map.on('error', () => this.options.events.onError());
+        map.on('error', () => {
+            // An error before 'load' means the style itself failed — the map
+            // will never become ready and ready() must say so (see below).
+            // Errors after load (a missing sprite, a dropped tile) are the
+            // recoverable kind and change nothing here.
+            if (!this.loaded) {
+                this.failedBeforeLoad = true;
+            }
+
+            this.options.events.onError();
+        });
         map.on('moveend', () => this.options.events.onMoveEnd());
         map.on('click', (event) =>
             this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng }),
@@ -74,18 +98,23 @@ export class MapLibreAdapter implements MapAdapter {
                 data: this.pending.boundaries ?? { type: 'FeatureCollection', features: [] },
             });
 
+            // One accent drives polygons and clusters, so a page can restyle
+            // the map (the investment surface uses the brand gold) without a
+            // second adapter. The default is the explorer's existing blue.
+            const accent = this.options.accentColour ?? '#1f6feb';
+
             map.addLayer({
                 id: 'boundary-fill',
                 type: 'fill',
                 source: 'boundaries',
-                paint: { 'fill-color': '#1f6feb', 'fill-opacity': 0.08 },
+                paint: { 'fill-color': accent, 'fill-opacity': 0.08 },
             });
 
             map.addLayer({
                 id: 'boundary-line',
                 type: 'line',
                 source: 'boundaries',
-                paint: { 'line-color': '#1f6feb', 'line-width': 1.5, 'line-opacity': 0.6 },
+                paint: { 'line-color': accent, 'line-width': 1.5, 'line-opacity': 0.6 },
             });
 
             map.addLayer({
@@ -94,7 +123,7 @@ export class MapLibreAdapter implements MapAdapter {
                 source: 'features',
                 filter: ['has', 'point_count'],
                 paint: {
-                    'circle-color': '#1f6feb',
+                    'circle-color': accent,
                     'circle-opacity': 0.85,
                     'circle-radius': ['step', ['get', 'point_count'], 16, 25, 22, 100, 28],
                 },
@@ -122,19 +151,74 @@ export class MapLibreAdapter implements MapAdapter {
                 },
             });
 
+            /*
+             * Clusters expand on click. Without this, a tap on "12 projects"
+             * did nothing and the only way in was manual pinching — the one
+             * map affordance every visitor already expects. The expansion
+             * zoom comes from the clusterer itself, so one step always
+             * separates at least two children.
+             */
+            map.on('click', 'clusters', (event) => {
+                const feature = map.queryRenderedFeatures(event.point, { layers: ['clusters'] })[0];
+                const clusterId = feature?.properties?.cluster_id as number | undefined;
+                const source = map.getSource('features') as import('maplibre-gl').GeoJSONSource;
+
+                if (clusterId === undefined || !source.getClusterExpansionZoom) {
+                    return;
+                }
+
+                void source.getClusterExpansionZoom(clusterId).then((zoom) => {
+                    const geometry = feature.geometry;
+                    if (geometry.type === 'Point') {
+                        map.easeTo({
+                            center: geometry.coordinates as [number, number],
+                            zoom,
+                        });
+                    }
+                });
+            });
+
+            map.on('mouseenter', 'clusters', () => {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'clusters', () => {
+                map.getCanvas().style.cursor = '';
+            });
+
             this.loaded = true;
         });
 
         this.map = map;
     }
 
+    /**
+     * Resolves when the map can draw; REJECTS when it never will.
+     *
+     * The old version waited for 'load' alone. With an unreachable style URL
+     * — precisely the network condition this product plans for — MapLibre
+     * emits 'error' and 'load' never fires, so ready() hung forever and every
+     * caller sequenced behind it hung with it. The pages await ready() before
+     * their first data fetch, which turned a missing TILE SERVER into a
+     * permanently empty LIST — the exact coupling the always-rendered list
+     * exists to prevent. A rejection lands in the pages' existing catch,
+     * which states the provider failure and loads the data anyway.
+     */
     ready(): Promise<void> {
         if (this.loaded) {
             return Promise.resolve();
         }
 
-        return new Promise((resolve) => {
+        if (this.failedBeforeLoad) {
+            return Promise.reject(new Error('maplibre-style-failed'));
+        }
+
+        return new Promise((resolve, reject) => {
             this.map?.once('load', () => resolve());
+            this.map?.once('error', () => {
+                if (!this.loaded) {
+                    reject(new Error('maplibre-style-failed'));
+                }
+            });
         });
     }
 

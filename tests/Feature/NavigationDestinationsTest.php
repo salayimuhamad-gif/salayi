@@ -38,6 +38,7 @@ final class NavigationDestinationsTest extends TestCase
     private const NAVIGATION = [
         'market' => ['path' => '/market', 'flag' => 'market.intelligence', 'built' => true],
         'map' => ['path' => '/map', 'flag' => 'map.explorer', 'built' => true],
+        'invest' => ['path' => '/invest', 'flag' => 'map.investment', 'built' => true],
         'projects' => ['path' => '/projects', 'flag' => null, 'built' => true],
         'areas' => ['path' => '/areas', 'flag' => 'geography.areas', 'built' => true],
         /*

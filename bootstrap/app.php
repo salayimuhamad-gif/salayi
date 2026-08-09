@@ -13,6 +13,7 @@ use App\Modules\Identity\Http\Middleware\EnsureMfaConfirmed;
 use App\Modules\Identity\Http\Middleware\EnsurePermission;
 use App\Modules\Identity\Http\Middleware\EnsureTelegramLinked;
 use App\Modules\Identity\Http\Middleware\EnsureVerifiedAccount;
+use App\Modules\Identity\Http\Middleware\TouchLastSeen;
 use App\Modules\Operations\Http\Middleware\RecordAuditContext;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -60,6 +61,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append: [
             SetLocale::class,
             RecordAuditContext::class,
+            // Presence, one throttled write per interval; a no-op for guests.
+            TouchLastSeen::class,
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
