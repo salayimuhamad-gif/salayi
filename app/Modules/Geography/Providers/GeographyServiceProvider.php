@@ -16,11 +16,12 @@ use App\Modules\Projects\Models\Project;
  * Geography domain — roadmap Step 2 (spec 10, 11).
  *
  * Implemented in this build: areas with a materialised-path hierarchy, place
- * categories, places, coordinate and boundary handling, and the nearby-place
- * ranking engine.
+ * categories, places, coordinate and boundary handling, the nearby-place
+ * ranking engine, and the public map explorer UI (MapExplorerController +
+ * Pages/Public/Map/Explorer.vue, behind the map.explorer flag).
  *
- * NOT implemented: the map explorer UI, external geocoding, routing-provider
- * travel times (spec 10.5 step 3), and the AI import assistant (spec 11.3).
+ * NOT implemented: external geocoding, routing-provider travel times
+ * (spec 10.5 step 3), and the AI import assistant (spec 11.3).
  * See docs/ROADMAP_STATUS.md.
  */
 final class GeographyServiceProvider extends ModuleServiceProvider

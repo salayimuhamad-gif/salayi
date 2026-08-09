@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'failed' => 'تعذر تحميل الخريطة — استخدم القائمة أدناه',
     'truncated' => 'نتائج كثيرة — قرّب لرؤية الكل',
-    'results' => 'النتائج',
+    'results' => 'النتائج (:count)',
     'layers_title' => 'الطبقات',
     'layers' => [
         'projects' => 'المشاريع',

@@ -17,16 +17,15 @@ return [
         'market.intelligence' => false,
         'market.indices' => false,
         'map.explorer' => false,
+
         'places.database' => false,
 
         /*
-         * Public Area and News surfaces. Both are UNBUILT — there is no
-         * public route for /areas or /news, only the admin CRUD behind
-         * /admin/areas and /admin/content. These flags exist so the
-         * navigation has something to gate on rather than rendering a
-         * permanent 404; do not enable either until the public controller,
-         * route and Inertia page exist and have been requested successfully
-         * in all three locales.
+         * The public Area profiles surface (/areas and /areas/{slug}) IS
+         * built — Geography/Routes/web.php registers it per locale and
+         * PublicAreaProfileTest exercises it. It stays off by default like
+         * every public-surface flag: enabling is an operator decision, not
+         * a deploy side effect.
          */
         'geography.areas' => false,
 
@@ -36,6 +35,15 @@ return [
          * removes the wizard without removing project creation.
          */
         'projects.wizard' => true,
+
+        /*
+         * The public News surface is UNBUILT — no public route or page
+         * exists for /news, only the admin CRUD behind /admin/content. The
+         * flag exists so navigation has something to gate on rather than
+         * rendering a permanent 404; do not enable it until the public
+         * controller, route and Inertia page exist and have been requested
+         * successfully in all three locales.
+         */
         'content.news' => false,
 
         // Step 4

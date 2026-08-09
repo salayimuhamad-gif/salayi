@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'failed' => 'The map could not load — use the list below',
     'truncated' => 'Too many results — zoom in to see all',
-    'results' => 'Results',
+    'results' => 'Results (:count)',
     'layers_title' => 'Layers',
     'layers' => [
         'projects' => 'Projects',

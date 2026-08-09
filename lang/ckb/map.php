@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'failed' => 'نەخشە بار نەبوو — لیستەکەی خوارەوە بەکاربهێنە',
     'truncated' => 'ئەنجامی زۆر — زووم بکە بۆ بینینی هەموو',
-    'results' => 'ئەنجامەکان',
+    'results' => 'ئەنجامەکان (:count)',
     'layers_title' => 'چینەکان',
     'layers' => [
         'projects' => 'پڕۆژەکان',

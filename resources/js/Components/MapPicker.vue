@@ -29,9 +29,9 @@ const ring = ref<LngLat[]>([]);
 const failed = ref<string | null>(null);
 
 /*
- * Erbil, from the configured operating-area centre rather than a hardcoded
- * pair. If someone re-points this deployment at another city the map follows
- * config instead of needing a code change.
+ * Erbil. A fixed fallback for records that carry no coordinates yet — the
+ * operating-area centre is not delivered to this component, so re-pointing a
+ * deployment at another city means changing this pair.
  */
 const FALLBACK_CENTRE: [number, number] = [44.05, 36.2];
 
@@ -213,6 +213,40 @@ watch(() => props.boundaryWkt, (value) => {
     const parsed = parsePolygonRing(value);
     ring.value = parsed ?? [];
     renderRing();
+});
+
+/*
+ * Coordinates typed into the sibling form fields must move the pin. Without
+ * this watcher the binding was one-way (map → fields): the form value changed
+ * but the already-placed marker stayed put until a full page reload. The
+ * echo guard stops the marker's own emissions (click, drag) from re-placing
+ * it: after an emit the incoming props equal the marker position to the same
+ * 7-decimal rounding, so the move is a no-op and is skipped.
+ */
+watch(() => [props.latitude, props.longitude] as const, ([lat, lng]) => {
+    if (!map.value) return;
+
+    if (lat === null || lng === null) {
+        marker.value?.remove();
+        marker.value = null;
+        return;
+    }
+
+    const current = marker.value?.getLngLat();
+    if (current
+        && Number(current.lat.toFixed(7)) === lat
+        && Number(current.lng.toFixed(7)) === lng) {
+        return;
+    }
+
+    void placeMarker({ lng, lat });
+
+    // Recentre only when the typed point left the viewport — easing the
+    // camera on every keystroke of a coordinate field is unusable.
+    const bounds = map.value.getBounds();
+    if (!bounds.contains([lng, lat])) {
+        map.value.easeTo({ center: [lng, lat] });
+    }
 });
 
 onMounted(() => { void build(); });
