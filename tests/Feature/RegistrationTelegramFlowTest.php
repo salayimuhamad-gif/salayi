@@ -704,6 +704,8 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_the_bot_sends_a_localized_return_button_that_authenticates_nobody(): void
     {
         $expected = [
+            // The default locale has no prefix, so its home URL is the bare
+            // site root — asserted as such rather than as a locale segment.
             'ckb' => ['گەڕانەوە بۆ MyHawler', '/'],
             'ar' => ['العودة إلى MyHawler', '/ar'],
             'en' => ['Return to MyHawler', '/en'],
@@ -1435,18 +1437,15 @@ final class RegistrationTelegramFlowTest extends TestCase
 
     public function test_the_handoff_url_carries_nothing_readable_about_the_person(): void
     {
-        $this->fakeTelegramApi();
-        $this->register('ckb', '07508887766');
-        $token = $this->linkTokenForCurrentSession();
-        $this->sendStart($token, 818030);
-
         /*
-         * One press is the whole flow now, so there is no confirmation to post
-         * and the bot's message has already been sent by the time this line
-         * runs. The property under test is unchanged: whatever URL went into
-         * that chat must reveal nothing about the person.
+         * The handoff is minted the way it actually is now — from the service
+         * the re-point confirmation calls — because the registration journey no
+         * longer produces one. The property under test is unchanged: the URL a
+         * person receives must reveal nothing about them.
          */
+        $handoff = $this->mintHandoffThroughTheRealFlow(818030, 'ckb');
         $user = User::query()->firstOrFail();
+
         $urls = [];
 
         foreach ($this->capturedTelegramPayloads() as $payload) {
@@ -1456,9 +1455,9 @@ final class RegistrationTelegramFlowTest extends TestCase
             }
         }
 
-        $joined = implode(' ', $urls);
+        $joined = implode(' ', $urls).' '.route('telegram.return', ['token' => $handoff]);
 
-        $token = explode('/account/return/', $joined)[1] ?? '';
+        $token = $handoff;
 
         // A single-digit id would collide with a random token by chance, which
         // would make this assertion meaningless rather than strict — so the
@@ -1466,7 +1465,15 @@ final class RegistrationTelegramFlowTest extends TestCase
         // that it avoids one character.
         $this->assertMatchesRegularExpression('/^[A-Za-z0-9]{64}$/', $token, 'the handoff is not an opaque token');
         $this->assertStringNotContainsString('818030', $joined, 'the URL leaked the Telegram id');
-        $this->assertStringNotContainsString('07508887766', $joined, 'the URL leaked the phone number');
+        /*
+         * The account's REAL number, decrypted from the row, not a literal.
+         * The helper generates a fresh number per run, so asserting a
+         * hard-coded one would have passed no matter what the URL contained.
+         */
+        $phone = (string) $user->phone();
+
+        $this->assertNotSame('', $phone, 'the account has no phone to check the URL against');
+        $this->assertStringNotContainsString(ltrim($phone, '+'), $joined, 'the URL leaked the phone number');
         $this->assertStringNotContainsString(session()->getId(), $joined, 'the URL leaked the session id');
         $this->assertStringNotContainsString(base64_encode((string) $user->id), $token);
 
