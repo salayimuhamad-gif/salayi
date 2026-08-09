@@ -15,12 +15,27 @@ is not a procedure.
 > as **historical and invalid for this document**. It will be regenerated from
 > the new raw output once the corrected harness runs.
 
-**This patch migrates.** It added one table, `telegram_return_handoffs`. That
-matters for the ORDER below, and it is the one thing people get wrong: restoring
-a `mysqldump` does **not** drop a table created after that dump was taken.
-Restoring the dump alone leaves the table behind and reverted code running
-against a schema it does not know. The migration must be rolled back
-deliberately, and its file must still be on disk when you do it.
+**This patch migrates.** It added two tables — `telegram_return_handoffs` and
+`telegram_verification_tokens` — plus two nullable columns on `users`
+(`gender`, `date_of_birth`). That matters for the ORDER below, and it is the one
+thing people get wrong: restoring a `mysqldump` does **not** drop a table
+created after that dump was taken. Restoring the dump alone leaves the tables
+behind and reverted code running against a schema it does not know. Each
+migration must be rolled back deliberately, and its file must still be on disk
+when you do it.
+
+**Reversal order is newest first**, which is also the order they are listed in
+§5. `telegram_verification_tokens` has a foreign key to `users`; nothing depends
+on it, so it drops cleanly.
+
+> **What rolling back costs the customer.** Reverting removes the permanent
+> verification links. Anyone who registered during the patched period and has
+> not yet pressed START loses their link — the reverted code has no table to
+> read it from — and their account reverts to the old ten-minute, session-bound
+> flow. Those accounts keep their password rows harmlessly (the column is
+> pre-existing and nullable), but the old `/login` only accepts an email, so a
+> customer who registered with a phone and no email cannot sign in on the
+> reverted build. §12 covers how to find them.
 
 Written to be followed by someone who was not present for the deployment.
 
@@ -62,14 +77,15 @@ them any more.
 
 Before any schema or file change. Everything below assumes the site is down.
 
-## 4. Verify the handoff migration is currently Ran
+## 4. Verify this patch's migrations are currently Ran
 
 ```bash
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep telegram_return_handoffs
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'
 ```
 
-Expect `Ran`. If it says `Pending` or is absent, the migration never applied and
-you skip §5 and §6 — but check why the deployment reported success.
+Expect **three** lines, each `Ran`. Any that says `Pending` or is absent never
+applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
 
@@ -86,8 +102,18 @@ Naming the file removes the guess:
 cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep telegram_return_handoffs   # expect Ran
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                     # record this number
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'   # expect three x Ran
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
+
+# Newest first. Each is path-targeted and independently verifiable.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php \
+  --force
 
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php \
@@ -104,26 +130,34 @@ files under `--path`, and it does not reverse the ones it cannot resolve.
 Prove the state AFTER:
 
 ```bash
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep telegram_return_handoffs   # expect Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                     # exactly one fewer
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'   # expect three x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly three fewer
 ```
 
-The count must have dropped by **exactly one**. If it dropped by more, an
+The count must have dropped by **exactly three**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
 Running the same command a second time is a safe no-op — it exits 0 and the
 count stays where it is.
 
-## 6. Prove the table is gone
+## 6. Prove the tables and columns are gone
 
 ```bash
-mysql -u <db_user> -p -N -B <db_name> \
-  -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_name='telegram_return_handoffs';"
+mysql -u <db_user> -p -N -B <db_name> -e "
+  SELECT COUNT(*) FROM information_schema.tables
+    WHERE table_schema = DATABASE()
+      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens');
+  SELECT COUNT(*) FROM information_schema.columns
+    WHERE table_schema = DATABASE()
+      AND table_name = 'users'
+      AND column_name IN ('gender','date_of_birth');
+"
 ```
 
-Expect `0`. The rehearsal failed on exactly this check until the ordering above
-was corrected, which is why it is a separate, explicit step.
+Expect `0` and `0`. The rehearsal failed on exactly this class of check until
+the ordering above was corrected, which is why it is a separate, explicit step.
 
 ## 7. Restore the application, keeping the failed release
 
@@ -224,10 +258,27 @@ public checks move to §14, after maintenance is lifted.
 ## 12. Unlinked accounts from the patched period
 
 If you did **not** restore the database, the accounts counted in §2 still exist:
-unlinked, reachable only from a session that no longer exists, each holding its
-phone number under a unique index. Under the reverted code they cannot finish
-registration through the form, and there is no scheduled cleanup any more — it
-went with the patch.
+unlinked, each holding its phone number under a unique index. Under the reverted
+code they cannot finish registration through the form, and there is no scheduled
+cleanup any more — it went with the patch.
+
+Two groups, and the second is new to this patch:
+
+- accounts from **before** the patch: no password, reachable only from a browser
+  session that no longer exists;
+- accounts registered **during** the patched period: they have a password, but
+  their permanent verification link died with the table in §5, and the reverted
+  `/login` only accepts an **email** — which these accounts do not have. So they
+  are unreachable too, for a different reason.
+
+Count both, and count the second group separately, because they are the people
+most likely to contact support:
+
+```bash
+/opt/alt/php83/usr/bin/php artisan tinker --execute='
+  echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")
+        ->whereNotNull("password")->whereNull("email")->count(), PHP_EOL;'
+```
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("deleted_at")->count();'
@@ -286,7 +337,7 @@ preserved in §7.
 ### Rollback success criteria
 
 ```text
-handoff migration reversed and telegram_return_handoffs absent
+all three migrations reversed; both tables and both columns absent
 restored manifest hash equals the §1 hash; every entry resolves
 route:list shows NO abandon route and NO return routes
 schedule:list shows NEITHER cleanup

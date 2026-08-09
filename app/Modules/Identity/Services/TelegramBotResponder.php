@@ -106,6 +106,50 @@ final class TelegramBotResponder
     }
 
     /**
+     * Registration verification succeeded on ONE press of Start.
+     *
+     * Deliberately the shortest message the bot sends: the account is verified,
+     * and there is nothing further to do here. No code to copy, no second
+     * confirmation to press, no instruction to go and approve something in a
+     * browser — if this message needed a follow-up step, the flow it belongs to
+     * would have failed at its one job.
+     *
+     * The button is a PLAIN link to the site, carrying no token of any kind.
+     * That is a deliberate refusal to reuse the one-time authenticating handoff
+     * here: the browser tab that started this is polling and will notice on its
+     * own, and a person whose tab is long gone should arrive at an ordinary
+     * page and sign in with the password they now have. Minting a credential
+     * that authenticates a cold browser, purely to save that sign-in, would
+     * hand a session to whoever else could reach the chat.
+     */
+    public function confirmVerified(int|string $chatId, string $locale = 'ckb'): bool
+    {
+        return $this->send('sendMessage', $this->withReturnButton([
+            'chat_id' => $chatId,
+            'text' => __('identity.telegram.bot_verified_account', [], $locale),
+        ], $locale, 'home'));
+    }
+
+    /**
+     * This Telegram account is already connected to a MyHawler account.
+     *
+     * Named rather than generic, and that is not an enumeration leak: the only
+     * person who can read this message is whoever controls the Telegram account
+     * it describes. Telling them a fact about themselves costs nothing and
+     * replaces the alternative — a bare "this request has expired" for a link
+     * that never will — which sends people to support with no idea what
+     * happened.
+     */
+    public function reportAlreadyConnected(int|string $chatId, string $locale = 'ckb'): bool
+    {
+        return $this->send('sendMessage', [
+            'chat_id' => $chatId,
+            'text' => __('identity.telegram.bot_already_connected', [], $locale),
+            'reply_markup' => json_encode(['remove_keyboard' => true], JSON_THROW_ON_ERROR),
+        ]);
+    }
+
+    /**
      * @param  array<string, mixed>  $payload
      */
     /**

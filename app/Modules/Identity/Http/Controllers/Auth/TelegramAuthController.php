@@ -9,6 +9,7 @@ use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\TelegramAuthenticator;
 use App\Modules\Identity\Services\TelegramBotResponder;
 use App\Modules\Identity\Services\TelegramRegistrar;
+use App\Modules\Identity\Services\TelegramVerificationService;
 use App\Modules\Identity\Services\TelegramWebhookInbox;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -42,6 +43,7 @@ final class TelegramAuthController extends Controller
         private readonly TelegramRegistrar $registrar,
         private readonly TelegramBotResponder $bot,
         private readonly TelegramWebhookInbox $inbox,
+        private readonly TelegramVerificationService $verification,
     ) {}
 
     /**
@@ -253,6 +255,50 @@ final class TelegramAuthController extends Controller
                     return response()->json(['ok' => $result['ok']]);
                 }
 
+                /*
+                 * The simplified registration verification (§7).
+                 *
+                 * Checked only when no intent owns this token, so every
+                 * existing flow above keeps its exact behaviour and this one
+                 * can never intercept a login, a registration or an
+                 * account-link Start. The two token spaces are 32 random bytes
+                 * each and live in different tables, so "no intent" really does
+                 * mean "not one of those".
+                 *
+                 * This is the ONE press. It links, verifies, consumes the token
+                 * and answers — there is no browser confirmation on this path
+                 * and no second message. See TelegramVerificationService for
+                 * why that is safe for an account that has no Telegram identity
+                 * yet, and why the account-link flow above still requires one.
+                 */
+                if ($intent === null) {
+                    $verification = $this->verification->redeem($token, $from);
+                    $replyLocale = $this->verificationLocale($verification, $locale);
+
+                    if ($verification['ok']) {
+                        $this->bot->confirmVerified($chatId, $replyLocale);
+
+                        return response()->json(['ok' => true]);
+                    }
+
+                    /*
+                     * `unknown_token` is the ONLY reason that falls through. It
+                     * means this token belongs to neither table, so the legacy
+                     * Share-Contact prompt below is still the right answer —
+                     * exactly what an unrecognised Start has always received.
+                     * Every other reason is a real refusal about a real token,
+                     * and answering it here stops a person who genuinely has a
+                     * problem from being handed an unrelated contact button.
+                     */
+                    if (($verification['reason'] ?? '') !== 'unknown_token') {
+                        ($verification['reason'] ?? '') === 'conflict'
+                            ? $this->bot->reportAlreadyConnected($chatId, $replyLocale)
+                            : $this->bot->reportFailure($chatId, $replyLocale);
+
+                        return response()->json(['ok' => false]);
+                    }
+                }
+
                 if ($intent !== null && $senderId !== '') {
                     $returning = $this->registrar->redeemReturningLogin($intent, $senderId);
 
@@ -321,6 +367,20 @@ final class TelegramAuthController extends Controller
         }
 
         return null;
+    }
+
+    /**
+     * The language the verification token remembers, falling back to the
+     * Telegram client's only when the redemption could not name one — an
+     * unknown token has no account and therefore no recorded choice.
+     *
+     * @param  array{locale?: string}  $verification
+     */
+    private function verificationLocale(array $verification, string $fallback): string
+    {
+        $locale = (string) ($verification['locale'] ?? '');
+
+        return in_array($locale, ['ckb', 'ar', 'en'], true) ? $locale : $fallback;
     }
 
     /**

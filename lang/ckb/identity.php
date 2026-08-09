@@ -44,6 +44,10 @@ return [
         'new_password' => 'وشەی نهێنیی نوێ',
         'confirm_password' => 'دووبارەکردنەوەی وشەی نهێنی',
         'password_requirements' => 'لانیکەم ١٢ پیت، بە پیتی گەورە و بچووک، ژمارە و هێما',
+        // The sign-in field accepts either identifier: customers register with
+        // a phone number and no email, administrators the other way round.
+        'login_identifier' => 'ژمارەی مۆبایل یان ئیمەیل',
+        'login_identifier_hint' => 'ئەو ژمارە مۆبایلەی پێی تۆمار بوویت، یان ناونیشانی ئیمەیلەکەت.',
         'password_reset' => 'وشەی نهێنی گۆڕدرا',
         'throttled' => 'هەوڵی زۆر زۆر. تکایە دوای :seconds چرکە هەوڵبدەرەوە',
     ],
@@ -90,10 +94,13 @@ return [
         'history_kept' => 'بڕیارە پێشووەکان وەک تۆمارێک بۆ ئەوەی چیت پەسەند کردووە و کەی، دەپارێزرێن. هەرگیز بۆ پەیوەندیکردن پێت بەکارنایەن.',
     ],
     'link' => [
-        'title' => 'تێلێگرامەکەت ببەستەوە',
-        'lead' => 'هەژمارەکەت پێویستی بە تێلێگرامی بەستراوە هەیە بۆ بەکارهێنانی تایبەتمەندییە کەسییەکان. دوگمەکە دابگرە، لە بۆتەکە Start دابگرە، ئەم پەڕەیە خۆی دەیزانێت.',
-        'open_button' => 'تێلێگرام بکەرەوە و Start دابگرە',
-        'waiting' => 'چاوەڕوانی تێلێگرامین… لە بۆتەکە Start دابگرە و بگەڕێوە بۆ ئێرە.',
+        'title' => 'یەک هەنگاوی کۆتایی',
+        'lead' => 'هەژمارەکەت بە تێلێگرام پشتڕاست بکەرەوە.',
+        'open_button' => 'تێلێگرام بکەرەوە',
+        'press_start' => 'لە تێلێگرامدا تەنها START دابگرە. هەموو هەنگاوەکە هەر ئەوەیە — هیچ شتێک بۆ نووسین نییە و دوای ئەوە هیچ پشتڕاستکردنەوەیەکی تر نییە.',
+        'later' => 'دەتوانیت دواتر ئەمە بکەیت. بەستەری پشتڕاستکردنەوەکەت بەردەوام بەردەستە و هەرگیز بەسەرناچێت.',
+        'check_now' => 'پشتڕاستکردنەوە بپشکنە',
+        'waiting' => 'چاوەڕوانی تێلێگرامین… لە بۆتەکە START دابگرە. ئەم پەڕەیە خۆی دەیزانێت.',
         'success' => 'بەسترایەوە! دەتبەین بۆ پرۆفایلەکەت…',
         'expired' => 'داواکاری بەستنەوەکە بەسەرچوو پێش بەکارهێنانی.',
         'conflict' => 'ئەم هەژماری تێلێگرامە نەتوانرا ببەسترێتەوە بەم هەژمارە.',
@@ -128,6 +135,11 @@ return [
         'bot_verified' => 'ژمارەکەت پشتڕاستکرایەوە. بگەڕێوە بۆ ماڵپەڕەکە',
         'bot_failed' => 'ئەم داواکارییە بەسەرچووە. تکایە دووبارە هەوڵبدەرەوە',
         'bot_registered' => 'هەژمارەکەت ئامادەیە. بگەڕێوە بۆ ماڵپەڕەکە بۆ بەردەوامبوون',
+        // The one message the simplified flow sends. Short on purpose: if this
+        // needed a follow-up instruction, the flow would have failed at its
+        // one job.
+        'bot_verified_account' => "✅ هەژماری MyHawler ـەکەت بە سەرکەوتوویی پشتڕاست کرایەوە.\n\nئێستا دەتوانیت بگەڕێیتەوە بۆ MyHawler.",
+        'bot_already_connected' => 'ئەم هەژمارەی تێلێگرام پێشتر بە هەژمارێکی MyHawler بەستراوەتەوە. ئەگەر ئەوە تۆ نەبوویت، پەیوەندی بە پشتگیری بکە — هەرگیز هەژمارەکان بە خۆکارانە یەک ناخرێن.',
         'title' => 'چوونەژوورەوە بە تێلێگرام',
         'open' => 'کردنەوەی تێلێگرام',
         'code' => 'کۆدی تۆ',
@@ -147,6 +159,14 @@ return [
         'name' => 'ناوی تەواو',
         'phone' => 'ژمارەی مۆبایل',
         'phone_hint' => 'ژمارەی عێراقی، بۆ نموونە: 0750 123 4567',
+        // :count is the CONFIGURED minimum, passed in from the server, so the
+        // hint cannot drift away from the rule that is actually enforced.
+        'password_hint' => 'لانیکەم :count پیت، بە پیتی گەورە و بچووک، ژمارە و هێما',
+        // Shown beside the deliberately vague refusal above. The message does
+        // not say an account exists — that would let anyone test numbers — but
+        // it no longer leaves a real owner with nowhere to go.
+        'conflict_next_steps' => 'ئەمانە دەتوانیت بکەیت:',
+        'conflict_continue' => 'بچۆرە ژوورەوە، یان ئەو پشتڕاستکردنەوەیە تەواو بکە کە پێشتر دەستت پێکردووە',
         'locale' => 'زمانی دڵخواز',
         'accept_terms' => 'ڕازیم بە مەرجەکانی خزمەتگوزاری و سیاسەتی تایبەتێتی',
         'consent_contact' => 'تیمی MyHawler دەتوانێت پەیوەندیم پێوە بکات دەربارەی داواکارییە خانووبەرەییەکانم',
@@ -187,6 +207,26 @@ return [
         'status_contact_yes' => 'مۆڵەتی پەیوەندی: دراوە',
         'status_contact_no' => 'مۆڵەتی پەیوەندی: نەدراوە',
         'already_done' => 'ئامادەکاری پێشتر تەواو بووە — هەر کاتێک دەتوانیت ئەمانە نوێ بکەیتەوە.',
+        // Screen 3: everything below is genuinely optional and nothing reads
+        // it to decide what the account may do.
+        'optional_title' => 'زانیاری ئیختیاری',
+        'optional_hint' => 'هەموو ئەمانە دەتوانرێت بەتاڵ بهێڵدرێن، و دواتر لە پرۆفایلەکەتەوە بگۆڕدرێن.',
+        'city' => 'شار',
+        'city_none' => 'هەڵنەبژێردراوە',
+        'area' => 'ناوچە یان گەڕەک',
+        'area_none' => 'هەر شوێنێک لەم شارەدا',
+        // Shown when an administrator has not published any city yet. Better
+        // an honest empty state than a dropdown of invented places.
+        'location_unavailable' => 'تا ئێستا هیچ شارێک بڵاو نەکراوەتەوە. دەتوانیت دواتر ئەمە زیاد بکەیت.',
+        'email' => 'ناونیشانی ئیمەیل',
+        'email_hint' => 'ئیختیاری. سوودبەخشە بۆ گەڕاندنەوەی هەژمار و ئاگادارکردنەوەکان.',
+        'gender' => 'ڕەگەز',
+        'gender_unset' => 'پێم خۆشە نەیڵێم',
+        'gender_female' => 'مێ',
+        'gender_male' => 'نێر',
+        'gender_undisclosed' => 'پێم خۆشە نەیڵێم',
+        'date_of_birth' => 'بەرواری لەدایکبوون',
+        'date_of_birth_hint' => 'ئیختیاری.',
         'go_advisor' => 'دەستپێبکە لەگەڵ ڕاوێژکاری AI',
         'go_portfolio' => 'موڵکەکانم زیاد بکە',
         'go_home' => 'تەنها بمبە بۆ ماڵپەڕەکە',

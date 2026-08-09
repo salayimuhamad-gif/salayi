@@ -7,9 +7,11 @@ namespace Tests\Feature;
 use App\Modules\Identity\Console\PruneTelegramReturnHandoffs;
 use App\Modules\Identity\Console\PruneUnlinkedAccounts;
 use App\Modules\Identity\Models\TelegramLoginIntent;
+use App\Modules\Identity\Models\TelegramVerificationToken;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\AbandonedAccountPolicy;
 use App\Modules\Identity\Services\TelegramReturnHandoff;
+use App\Modules\Identity\Services\TelegramVerificationService;
 use App\Modules\Identity\Support\PostLinkDestination;
 use App\Modules\Identity\Support\TelegramReturnUrl;
 use App\Modules\Identity\Support\UserReferenceContract;
@@ -38,6 +40,9 @@ use Tests\TestCase;
 final class RegistrationTelegramFlowTest extends TestCase
 {
     use RefreshDatabase;
+
+    /** Meets the platform's configured password policy. */
+    private const PASSWORD = 'Str0ng!Passw0rd#2026';
 
     protected function setUp(): void
     {
@@ -126,6 +131,10 @@ final class RegistrationTelegramFlowTest extends TestCase
         $response = $this->post('/register', [
             'name' => $name,
             'phone' => $phone,
+            // The password is required now: it is what makes every later visit
+            // an ordinary sign-in instead of another trip through Telegram.
+            'password' => self::PASSWORD,
+            'password_confirmation' => self::PASSWORD,
             'locale' => $locale,
             'accept_terms' => true,
             'consent_contact' => false,
@@ -167,8 +176,47 @@ final class RegistrationTelegramFlowTest extends TestCase
     }
 
     /**
-     * The account-link token minted for the signed-in user by visiting the
-     * linking page — the same route the browser uses.
+     * Reduce every account in the database to the shape the reclamation sweep
+     * actually exists for: unreachable by anybody.
+     *
+     * WHY THIS IS NEEDED NOW. The sweep was written when an unlinked account
+     * had no email, no password, and a link that died in ten minutes — so once
+     * the browser session ended nobody could ever reach the row again, and
+     * reclaiming it after 72 hours freed a phone number that was otherwise
+     * locked away from its real owner forever.
+     *
+     * Neither half of that is true of a registration made today. The account
+     * has a password, and its verification link has no expiry, so "come back
+     * next month and finish" is a supported journey rather than a lost cause.
+     * The policy therefore refuses to reclaim an account reachable by either
+     * route, and a test that registers through the form no longer produces a
+     * reclaimable account at all.
+     *
+     * The tests that call this are about the sweep's MECHANICS — that
+     * `--hours` reaches the policy, that the boundary is respected exactly,
+     * that a dry run changes nothing, that release is independently
+     * fail-closed. Those properties are unchanged and still worth holding, so
+     * the account is put into the legacy shape deliberately and visibly rather
+     * than the tests being deleted or the policy loosened to keep them green.
+     *
+     * The new rule itself is asserted directly in
+     * SimplifiedTelegramVerificationTest.
+     */
+    private function makeUnreachable(): void
+    {
+        User::query()->update(['password' => null]);
+
+        TelegramVerificationToken::query()->update(['revoked_at' => now()]);
+    }
+
+    /**
+     * The verification link the signed-in account is shown — obtained by
+     * visiting the page, exactly as the browser does.
+     *
+     * This used to return an `account_link` INTENT token: ten minutes long,
+     * bound to the browser session, and minted fresh on every render. The page
+     * now issues the permanent verification token instead, so the helper reads
+     * that. Every test below still drives the same route.
      */
     private function linkTokenForCurrentSession(string $prefix = ''): string
     {
@@ -176,39 +224,30 @@ final class RegistrationTelegramFlowTest extends TestCase
 
         $this->get($prefix.'/account/telegram/link')->assertOk();
 
-        return (string) TelegramLoginIntent::query()
-            ->where('purpose', TelegramLoginIntent::PURPOSE_ACCOUNT_LINK)
-            ->whereNull('consumed_at')
+        return (string) TelegramVerificationToken::query()
+            ->where('user_id', Auth::id())
+            ->usable()
             ->latest('id')
             ->firstOrFail()
-            ->token;
+            ->raw();
     }
 
     /**
-     * Complete a link the way the browser does: Start parks a candidate, the
-     * poll shows it, and the person confirms the identity ON SCREEN. The
-     * confirmation gate (v4 §5) is not bypassed anywhere in this file — a Start
-     * alone must never be enough, and tests that skipped it would be asserting
-     * a weaker system than the one that ships.
+     * Complete verification the way a person does: one press of Start.
      *
-     * @return string the poll state after confirming
+     * The browser-confirmation round trip this helper used to perform is gone
+     * from THIS path — that is the product change. It has not been weakened
+     * away: the account-link flow that re-points an already-linked identity
+     * still requires it, and the refusals that the confirmation used to be the
+     * only defence against are asserted directly instead (a spent token cannot
+     * be claimed by a second Telegram account; an identity in use elsewhere is
+     * never reassigned; a linked account is never silently re-pointed).
+     *
+     * @return string the poll state after the Start
      */
     private function completeLink(string $token, int $telegramId, ?int $updateId = null): string
     {
         $this->sendStart($token, $telegramId, $updateId);
-
-        $poll = $this->getJson('/account/telegram/link/poll');
-        $poll->assertOk();
-
-        if ($poll->json('state') !== 'awaiting_confirmation') {
-            return (string) $poll->json('state');
-        }
-
-        $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $poll->json('candidate_handle'),
-        ]);
-
-        $state = (string) $this->getJson('/account/telegram/link/poll')->json('state');
 
         /*
          * `actingAs()` holds one model instance for the whole test, and the
@@ -216,6 +255,10 @@ final class RegistrationTelegramFlowTest extends TestCase
          * a fresh instance is what a browser gets for free on its next
          * request; without it the gate reads a stale `telegram_verified_at`.
          */
+        $this->continueInBrowser();
+
+        $state = (string) $this->getJson('/account/telegram/link/poll')->json('state');
+
         $this->continueInBrowser();
 
         return $state;
@@ -344,16 +387,15 @@ final class RegistrationTelegramFlowTest extends TestCase
 
         $this->sendStart($token, 424244);
 
-        // The open tab sees the parked candidate without being told anything
-        // it could not verify on screen.
-        $observed = $this->getJson('/account/telegram/link/poll');
-        $observed->assertOk();
-        $this->assertSame('awaiting_confirmation', $observed->json('state'));
-        $this->assertNotEmpty($observed->json('candidate_handle'));
-
-        $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $observed->json('candidate_handle'),
-        ])->assertOk();
+        /*
+         * The tab advances on the Start alone. It used to see
+         * `awaiting_confirmation` here and have to post a candidate handle
+         * back; that step is the one the simplified flow removes, so the poll
+         * goes straight from pending to completed and nothing is clicked in
+         * between. Asserting the exact state is what stops the two-step flow
+         * reappearing unnoticed.
+         */
+        $this->continueInBrowser();
 
         $done = $this->getJson('/account/telegram/link/poll');
         $this->assertSame('completed', $done->json('state'));
@@ -417,6 +459,8 @@ final class RegistrationTelegramFlowTest extends TestCase
         $response = $this->post('/register', [
             'name' => 'Someone Else',
             'phone' => '07501234567',
+            'password' => self::PASSWORD,
+            'password_confirmation' => self::PASSWORD,
             'locale' => 'ckb',
             'accept_terms' => true,
             'consent_contact' => false,
@@ -458,14 +502,27 @@ final class RegistrationTelegramFlowTest extends TestCase
         $this->assertSame('424246', (string) User::query()->firstOrFail()->telegram_id);
     }
 
-    public function test_an_expired_token_cannot_link(): void
+    /**
+     * The successor to test_an_expired_token_cannot_link.
+     *
+     * That test forced the account-link intent's `expires_at` into the past and
+     * asserted the Start was refused. The verification token has no expiry at
+     * all — deliberately, so that registering tonight and pressing Start next
+     * month works — so there is no clock left to wind forward and the old
+     * premise cannot be recreated.
+     *
+     * REVOCATION is what replaced it: the other half of "permanent until used
+     * OR revoked", and now the only way a live link becomes a dead one. The
+     * property the old test protected — a link the system has invalidated must
+     * not verify anybody — is asserted here against that mechanism.
+     */
+    public function test_a_revoked_token_cannot_link(): void
     {
         $this->register('ckb');
         $token = $this->linkTokenForCurrentSession();
+        $user = $this->continueInBrowser();
 
-        TelegramLoginIntent::query()
-            ->where('purpose', TelegramLoginIntent::PURPOSE_ACCOUNT_LINK)
-            ->update(['expires_at' => now()->subHour()]);
+        app(TelegramVerificationService::class)->revokeAllFor($user, 'regression_test');
 
         $this->sendStart($token, 424247);
 
@@ -490,14 +547,22 @@ final class RegistrationTelegramFlowTest extends TestCase
         $this->assertSame('555111222', (string) User::query()->findOrFail($existing->id)->telegram_id);
     }
 
-    public function test_a_start_from_another_device_parks_a_candidate_and_waits_for_the_owner(): void
+    public function test_a_start_from_another_device_completes_without_the_browser(): void
     {
         /*
-         * Opening Telegram on a phone while the tab is on a laptop is normal,
-         * and the webhook is a server-to-server call that carries no browser
-         * session at all. What must NOT happen is the link completing on the
-         * strength of the Start alone: the token could have been forwarded or
-         * shoulder-surfed, so the account's own session has the last word.
+         * Opening Telegram on a phone while the tab sits on a laptop is the
+         * NORMAL case, not an edge one, and this is the behaviour the
+         * simplification is for: the webhook carries no browser session, and
+         * it does not need one. One press finishes the job from any device.
+         *
+         * This test previously asserted the opposite — that a Start alone
+         * parked a candidate and waited for the owner's browser to approve it.
+         * That gate was the only thing standing between a leaked token and a
+         * link, so removing it is only defensible because of what the token can
+         * do: attach a Telegram identity to an account that has NONE, granting
+         * the presser no session, no password and no data. The three tests
+         * below this one hold the line that actually matters, and each of them
+         * would have passed under the old flow too.
          */
         $this->register('ckb');
         $userId = (int) Auth::id();
@@ -508,32 +573,70 @@ final class RegistrationTelegramFlowTest extends TestCase
 
         $this->sendStart($token, 424248);
 
+        $verified = User::query()->findOrFail($userId);
+
+        $this->assertNotNull($verified->telegram_verified_at,
+            'one press of Start must verify the account, from any device');
+        $this->assertSame('424248', (string) $verified->telegram_id);
+
+        // No second step was left hanging anywhere for anybody to press.
+        $this->actingAs($verified);
+        $this->assertSame('completed', $this->getJson('/account/telegram/link/poll')->json('state'));
+    }
+
+    public function test_a_spent_verification_link_cannot_be_claimed_by_a_second_telegram_account(): void
+    {
+        /*
+         * The takeover the removed confirmation step used to prevent, refused
+         * directly instead. Somebody who obtains a link AFTER its owner has
+         * used it gets nothing.
+         */
+        $this->register('ckb');
+        $userId = (int) Auth::id();
+        $token = $this->linkTokenForCurrentSession();
+
+        $this->sendStart($token, 111222333, updateId: 991001);
+        $this->assertSame('111222333', (string) User::query()->findOrFail($userId)->telegram_id);
+
+        $this->sendStart($token, 444555666, updateId: 991002);
+
+        $this->assertSame('111222333', (string) User::query()->findOrFail($userId)->telegram_id,
+            'a spent link must never re-point an account at another Telegram identity');
+    }
+
+    public function test_a_verification_link_cannot_take_a_telegram_identity_from_another_account(): void
+    {
+        $owner = User::factory()->create([
+            'telegram_id' => '888888888',
+            'telegram_verified_at' => now(),
+        ]);
+
+        $this->register('ckb', phone: '07504443333');
+        $userId = (int) Auth::id();
+        $token = $this->linkTokenForCurrentSession();
+
+        $this->sendStart($token, 888888888);
+
         $this->assertNull(User::query()->findOrFail($userId)->telegram_verified_at,
-            'a Start alone linked the account with no confirmation from its owner');
-
-        $intent = TelegramLoginIntent::query()->latest('id')->firstOrFail();
-        $this->assertSame('424248', (string) $intent->candidate_telegram_id,
-            'the candidate was not parked for the owner to confirm');
-
-        // Back on the original device: the owner signs in, sees the candidate
-        // and confirms. The link completes then, and only then.
-        $this->actingAs(User::query()->findOrFail($userId));
-
-        $poll = $this->getJson('/account/telegram/link/poll');
-        $this->assertSame('awaiting_confirmation', $poll->json('state'));
-
-        $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $poll->json('candidate_handle'),
-        ])->assertOk();
-
-        $this->assertNotNull(User::query()->findOrFail($userId)->fresh()->telegram_verified_at);
+            'an identity already in use must not verify a second account');
+        $this->assertSame('888888888', (string) $owner->fresh()->telegram_id,
+            'and its owner must keep it');
     }
 
     public function test_abandoned_unlinked_accounts_are_reclaimed_but_linked_ones_are_not(): void
     {
+        /*
+         * `password => null` on the unlinked pair, because that is the
+         * population this sweep is for: accounts from before the simplified
+         * flow, with no email, no password and no live verification link, which
+         * genuinely nobody can reach. An account WITH a password is reachable
+         * by its owner and is refused by the policy — asserted separately in
+         * SimplifiedTelegramVerificationTest.
+         */
         $abandoned = User::factory()->create([
             'telegram_id' => null,
             'telegram_verified_at' => null,
+            'password' => null,
             'created_at' => now()->subDays(30),
         ]);
 
@@ -546,6 +649,7 @@ final class RegistrationTelegramFlowTest extends TestCase
         $recent = User::factory()->create([
             'telegram_id' => null,
             'telegram_verified_at' => null,
+            'password' => null,
             'created_at' => now()->subHour(),
         ]);
 
@@ -580,12 +684,31 @@ final class RegistrationTelegramFlowTest extends TestCase
         Http::fake(['api.telegram.org/*' => Http::response(['ok' => true], 200)]);
     }
 
-    public function test_the_bot_sends_a_localized_return_button_to_the_right_locale_route(): void
+    /**
+     * The bot's success button: localized, on our own origin, and carrying
+     * NOTHING that authenticates anybody.
+     *
+     * The previous edition asserted the opposite of that last clause — it
+     * required the button to carry a one-time handoff token and proved the
+     * destination by redeeming it from a cold session. That was right for the
+     * old flow, where the person had just confirmed in a browser and the
+     * handoff saved them a sign-in they could not otherwise perform.
+     *
+     * It is wrong now, and deliberately so. The account has a password, so
+     * anyone whose tab is gone can simply sign in; minting a credential that
+     * establishes a session in a cold browser, purely to save that step, would
+     * put a working session in a chat message. So the button is a plain link,
+     * and this test holds that: right label, right locale, our origin, no
+     * token, and a gated page still refuses whoever opens it.
+     */
+    public function test_the_bot_sends_a_localized_return_button_that_authenticates_nobody(): void
     {
         $expected = [
-            'ckb' => ['گەڕانەوە بۆ MyHawler', '/account/onboarding'],
-            'ar' => ['العودة إلى MyHawler', '/ar/account/onboarding'],
-            'en' => ['Return to MyHawler', '/en/account/onboarding'],
+            // The default locale has no prefix, so its home URL is the bare
+            // site root — asserted as such rather than as a locale segment.
+            'ckb' => ['گەڕانەوە بۆ MyHawler', '/'],
+            'ar' => ['العودة إلى MyHawler', '/ar'],
+            'en' => ['Return to MyHawler', '/en'],
         ];
 
         foreach ($expected as $locale => [$label, $path]) {
@@ -615,26 +738,23 @@ final class RegistrationTelegramFlowTest extends TestCase
             $this->assertNotEmpty($markups, "no inline return button was sent for {$locale}");
 
             $button = end($markups);
+            $url = (string) $button['url'];
+
             $this->assertSame($label, $button['text'], "wrong button label for {$locale}");
-            $this->assertStringStartsWith((string) config('app.url'), (string) $button['url'],
+            $this->assertStringStartsWith((string) config('app.url'), $url,
                 "the return URL left our own origin for {$locale}");
+            $this->assertStringEndsWith($path, $url,
+                "the return button did not point at the {$locale} side of the site");
 
-            /*
-             * The success button now carries a one-time handoff rather than a
-             * bare page URL, because it opens in a browser with no cookies.
-             * The destination is proven by REDEEMING it from a cold session.
-             */
-            $this->assertStringContainsString('/account/return/', (string) $button['url'],
-                "the success button carried no return handoff for {$locale}");
-
-            $handoff = (string) preg_replace('#^.*/account/return/#', '', (string) $button['url']);
+            // The whole point: no credential of any kind travels in the chat.
+            $this->assertStringNotContainsString('/account/return/', $url,
+                "the success button carried an authenticating handoff for {$locale}");
 
             Auth::logout();
             $this->flushSession();
 
-            $landed = $this->get('/account/return/'.$handoff);
-            $this->assertStringEndsWith($path, (string) $landed->headers->get('Location'),
-                "the handoff did not land on the {$locale} onboarding page");
+            // And opening it signs nobody in: a gated page still refuses.
+            $this->get('/account/onboarding')->assertRedirect();
         }
     }
 
@@ -689,7 +809,8 @@ final class RegistrationTelegramFlowTest extends TestCase
 
         $this->assertNotEmpty($buttons, 'the bot sent no return button');
         $this->assertSame('العودة إلى MyHawler', end($buttons)['text']);
-        $this->assertStringContainsString('/ar/', (string) end($buttons)['url']);
+        $this->assertMatchesRegularExpression('#/ar(/|$)#', (string) end($buttons)['url'],
+            'the return button did not point at the Arabic side of the site');
     }
 
     // --------------------------------- corrections: current-request locale
@@ -731,6 +852,8 @@ final class RegistrationTelegramFlowTest extends TestCase
         $response = $this->post('/register', [
             'name' => 'Someone Else',
             'phone' => '07501230000',
+            'password' => self::PASSWORD,
+            'password_confirmation' => self::PASSWORD,
             'locale' => 'en',
             'accept_terms' => true,
             'consent_contact' => false,
@@ -828,6 +951,8 @@ final class RegistrationTelegramFlowTest extends TestCase
         $response = $this->post('/register', [
             'name' => 'Test Person',
             'phone' => '07505553333',
+            'password' => self::PASSWORD,
+            'password_confirmation' => self::PASSWORD,
             'locale' => 'ckb',
             'accept_terms' => true,
             'consent_contact' => false,
@@ -907,6 +1032,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_release_rechecks_the_complete_blocking_set_inside_the_transaction(): void
     {
         $this->register('ckb', '07507770001');
+        $this->makeUnreachable();
         $user = $this->continueInBrowser();
 
         $policy = app(AbandonedAccountPolicy::class);
@@ -1040,6 +1166,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_reclaiming_anonymizes_the_row_and_keeps_only_the_tombstone(): void
     {
         $this->register('ckb', '07505554444');
+        $this->makeUnreachable();
         $user = User::query()->firstOrFail();
         $created = $user->created_at;
 
@@ -1062,6 +1189,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_reclaiming_is_idempotent(): void
     {
         $this->register('ckb', '07505555555');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subDays(30)]);
 
         $this->artisan(PruneUnlinkedAccounts::class)->assertSuccessful();
@@ -1074,6 +1202,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_dry_run_changes_nothing(): void
     {
         $this->register('ckb', '07505556666');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subDays(30)]);
 
         $this->artisan(PruneUnlinkedAccounts::class, ['--dry-run' => true])->assertSuccessful();
@@ -1091,19 +1220,25 @@ final class RegistrationTelegramFlowTest extends TestCase
         $token = $this->linkTokenForCurrentSession();
         $this->sendStart($token, 818001);
 
+        /*
+         * The Start finishes the job, so the poll IS the answer — there is no
+         * confirm response to compare against any more. What the test is
+         * really holding is that every surface agrees on one destination, so
+         * the poll's answer is checked against the canonical resolver and
+         * against a second poll, which is what a reopened tab would get.
+         */
+        $this->continueInBrowser();
+
         $poll = $this->getJson('/account/telegram/link/poll');
-        $confirm = $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $poll->json('candidate_handle'),
-        ]);
 
         // The EXACT destination, not "either of two routes".
-        $this->assertStringEndsWith('/account/onboarding', (string) $confirm->json('redirect'),
-            'confirm sent a new account somewhere other than onboarding');
+        $this->assertStringEndsWith('/account/onboarding', (string) $poll->json('redirect'),
+            'the poll sent a new account somewhere other than onboarding');
 
         $this->continueInBrowser();
         $again = $this->getJson('/account/telegram/link/poll');
         $this->assertStringEndsWith('/account/onboarding', (string) $again->json('redirect'),
-            'the already-completed poll disagreed with confirm');
+            'a second tab disagreed about where this account belongs');
     }
 
     public function test_an_account_that_finished_onboarding_returns_to_profile(): void
@@ -1139,32 +1274,42 @@ final class RegistrationTelegramFlowTest extends TestCase
 
     // ============ BLOCKER 2: the return handoff for a cold browser ===========
 
+    /**
+     * Mint a return handoff and return its raw token.
+     *
+     * WHAT CHANGED, AND WHY THIS STILL EXERCISES THE REAL THING. This used to
+     * walk register → Start → poll → confirm and pull the handoff out of the
+     * bot message, because the browser confirmation was what minted one.
+     * Registration no longer has a confirmation step, so that walk now ends
+     * with the account verified and no handoff anywhere — every test below it
+     * failed on a 422 from a confirm call with nothing to confirm.
+     *
+     * The handoff itself is NOT retired: AccountTelegramLinkController::confirm()
+     * still mints one when an account that already has a Telegram identity is
+     * re-pointed, and every property the tests below assert — single use,
+     * expiry, refusal after unlinking, refusal on identity change, refusal for
+     * a suspended account, locale preservation, no readable PII in the URL —
+     * belongs to TelegramReturnHandoff and not to whatever triggered it.
+     *
+     * So the account is brought to a verified state through the REAL new flow,
+     * and the handoff is then minted through the same service the confirmation
+     * calls, with the same arguments. Nothing is stubbed and no property under
+     * test is bypassed.
+     */
     private function mintHandoffThroughTheRealFlow(int $telegramId, string $locale = 'ckb'): string
     {
         $this->fakeTelegramApi();
         $this->register($locale, '0750'.random_int(1000000, 9999999));
+
         $token = $this->linkTokenForCurrentSession($locale === 'ckb' ? '' : '/'.$locale);
         $this->sendStart($token, $telegramId);
 
-        $poll = $this->getJson('/account/telegram/link/poll');
-        $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $poll->json('candidate_handle'),
-        ])->assertOk();
+        $user = $this->continueInBrowser()->fresh();
 
-        foreach ($this->capturedTelegramPayloads() as $payload) {
-            if (! isset($payload['reply_markup'])) {
-                continue;
-            }
+        $this->assertNotNull($user->telegram_verified_at,
+            'the account was not verified, so there is nothing to hand back to');
 
-            $decoded = json_decode((string) $payload['reply_markup'], true);
-            $url = $decoded['inline_keyboard'][0][0]['url'] ?? '';
-
-            if (str_contains($url, '/account/return/')) {
-                return (string) preg_replace('#^.*/account/return/#', '', $url);
-            }
-        }
-
-        $this->fail('the success message carried no return handoff');
+        return app(TelegramReturnHandoff::class)->mint($user, (string) $telegramId, $locale);
     }
 
     public function test_a_cold_browser_with_no_cookies_is_authenticated_by_the_handoff(): void
@@ -1292,16 +1437,15 @@ final class RegistrationTelegramFlowTest extends TestCase
 
     public function test_the_handoff_url_carries_nothing_readable_about_the_person(): void
     {
-        $this->fakeTelegramApi();
-        $this->register('ckb', '07508887766');
-        $token = $this->linkTokenForCurrentSession();
-        $this->sendStart($token, 818030);
-        $poll = $this->getJson('/account/telegram/link/poll');
-        $this->postJson('/account/telegram/link/confirm', [
-            'candidate_handle' => (string) $poll->json('candidate_handle'),
-        ])->assertOk();
-
+        /*
+         * The handoff is minted the way it actually is now — from the service
+         * the re-point confirmation calls — because the registration journey no
+         * longer produces one. The property under test is unchanged: the URL a
+         * person receives must reveal nothing about them.
+         */
+        $handoff = $this->mintHandoffThroughTheRealFlow(818030, 'ckb');
         $user = User::query()->firstOrFail();
+
         $urls = [];
 
         foreach ($this->capturedTelegramPayloads() as $payload) {
@@ -1311,9 +1455,9 @@ final class RegistrationTelegramFlowTest extends TestCase
             }
         }
 
-        $joined = implode(' ', $urls);
+        $joined = implode(' ', $urls).' '.route('telegram.return', ['token' => $handoff]);
 
-        $token = explode('/account/return/', $joined)[1] ?? '';
+        $token = $handoff;
 
         // A single-digit id would collide with a random token by chance, which
         // would make this assertion meaningless rather than strict — so the
@@ -1321,7 +1465,15 @@ final class RegistrationTelegramFlowTest extends TestCase
         // that it avoids one character.
         $this->assertMatchesRegularExpression('/^[A-Za-z0-9]{64}$/', $token, 'the handoff is not an opaque token');
         $this->assertStringNotContainsString('818030', $joined, 'the URL leaked the Telegram id');
-        $this->assertStringNotContainsString('07508887766', $joined, 'the URL leaked the phone number');
+        /*
+         * The account's REAL number, decrypted from the row, not a literal.
+         * The helper generates a fresh number per run, so asserting a
+         * hard-coded one would have passed no matter what the URL contained.
+         */
+        $phone = (string) $user->phone();
+
+        $this->assertNotSame('', $phone, 'the account has no phone to check the URL against');
+        $this->assertStringNotContainsString(ltrim($phone, '+'), $joined, 'the URL leaked the phone number');
         $this->assertStringNotContainsString(session()->getId(), $joined, 'the URL leaked the session id');
         $this->assertStringNotContainsString(base64_encode((string) $user->id), $token);
 
@@ -1357,6 +1509,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_release_refuses_content_attached_after_assessment(): void
     {
         $this->register('ckb', '07507770001');
+        $this->makeUnreachable();
         $user = $this->continueInBrowser();
         User::query()->update(['created_at' => now()->subDays(30)]);
         $user = $user->fresh();
@@ -1385,6 +1538,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_release_called_directly_on_an_account_with_content_never_deletes_it(): void
     {
         $this->register('ckb', '07507770002');
+        $this->makeUnreachable();
         $user = $this->continueInBrowser();
 
         DB::table('saved_searches')->insert([
@@ -1406,6 +1560,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     {
         config(['mulkihawler.registration.unlinked_retention_hours' => 72]);
         $this->register('ckb', '07507770010');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subHours(80)]);
 
         $this->artisan(PruneUnlinkedAccounts::class)->assertSuccessful();
@@ -1416,6 +1571,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     {
         config(['mulkihawler.registration.unlinked_retention_hours' => 72]);
         $this->register('ckb', '07507770011');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subHours(3)]);
 
         // The configured window keeps it...
@@ -1431,6 +1587,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     {
         config(['mulkihawler.registration.unlinked_retention_hours' => 72]);
         $this->register('ckb', '07507770012');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subHours(100)]);
 
         $this->artisan(PruneUnlinkedAccounts::class, ['--hours' => 168])->assertSuccessful();
@@ -1440,6 +1597,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_the_retention_boundary_is_respected_exactly(): void
     {
         $this->register('ckb', '07507770013');
+        $this->makeUnreachable();
 
         // Just inside the window: kept.
         User::query()->update(['created_at' => now()->subHours(24)->addMinutes(5)]);
@@ -1455,6 +1613,7 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_dry_run_uses_the_same_override_and_changes_nothing(): void
     {
         $this->register('ckb', '07507770014');
+        $this->makeUnreachable();
         User::query()->update(['created_at' => now()->subHours(3)]);
 
         $this->artisan(PruneUnlinkedAccounts::class, ['--hours' => 1, '--dry-run' => true])
@@ -1484,6 +1643,7 @@ final class RegistrationTelegramFlowTest extends TestCase
         ]);
 
         $this->register('ckb', '07507770015');
+        $this->makeUnreachable();
         $owner = $this->continueInBrowser();
         User::query()->where('id', $owner->id)->update(['created_at' => now()->subYear()]);
         DB::table('saved_searches')->insert([
@@ -1500,6 +1660,12 @@ final class RegistrationTelegramFlowTest extends TestCase
     public function test_a_reclaimed_phone_number_can_register_again(): void
     {
         $this->register('ckb', '07501112233');
+
+        // The FIRST registration is the one the sweep must be able to reclaim,
+        // so it is the one reduced to the legacy unreachable shape. The second
+        // registration below is a live account and is deliberately left alone.
+        $this->makeUnreachable();
+
         User::query()->update(['created_at' => now()->subDays(30)]);
 
         Auth::logout();

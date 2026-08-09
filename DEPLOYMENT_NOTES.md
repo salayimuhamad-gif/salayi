@@ -11,17 +11,30 @@ The exact reversible procedure for this release.
 > **invalid for this document**. This section will be regenerated from the new
 > raw rehearsal output once the corrected harness runs.
 
-**This patch DOES change the schema.** It ships exactly one forward-only
-migration:
+**This patch DOES change the schema.** It ships three forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
+app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php
 ```
 
-That table backs the secure Telegram return handoff. Copying the code without
-running the migration leaves the application querying a table that does not
-exist, and the first person who presses the Telegram return button gets an
-error. The migration step below is mandatory, not optional.
+1. `telegram_return_handoffs` backs the secure Telegram return handoff.
+2. `telegram_verification_tokens` backs the **permanent registration
+   verification link** (see `docs/simplified-telegram-verification.md`). Without
+   it, `/account/telegram/link` errors on the first render and nobody can
+   finish a registration.
+3. `users.gender` and `users.date_of_birth` are two nullable optional profile
+   columns. Both are additive and neither gates anything.
+
+Copying the code without running the migrations leaves the application querying
+tables and columns that do not exist. The migration step below is mandatory,
+not optional.
+
+**Registration now requires a password**, and `/login` accepts a **phone number
+or an email**. No existing account is altered by this and no existing
+credential stops working; see §7 of
+`docs/simplified-telegram-verification.md` for the existing-user matrix.
 
 **This patch also DELETES a file.** A ZIP overlay cannot remove anything, so the
 deletion is applied from `DELETE_FILES.txt` in step 6.
@@ -149,18 +162,34 @@ cd ~/domains/myhawler.com/application
 Then prove exactly what you expect:
 
 ```bash
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep telegram_return_handoffs
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|profile_optional_details'
 ```
 
-Expect the line to read **`Ran`** — it was `Pending` or absent in step 3.
+Expect **three** lines, each reading **`Ran`** — all were `Pending` or absent in
+step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 1`. Both directions matter: no increase means the
-handoff table never arrived and the return button will fail; more than one means
-something unintended came along and you should stop and look at it.
+Expect exactly `BEFORE + 3`. Both directions matter: a smaller increase means
+one of the three never arrived — and if it is `telegram_verification_tokens`,
+nobody can complete a registration — while a larger one means something
+unintended came along and you should stop and look at it.
+
+Then prove the verification table is really there and really has no expiry
+column, because the whole "your link never expires" promise rests on it:
+
+```bash
+/opt/alt/php83/usr/bin/php artisan tinker --execute="
+  echo Schema::hasTable('telegram_verification_tokens') ? 'table OK' : 'TABLE MISSING', PHP_EOL;
+  echo Schema::hasColumn('telegram_verification_tokens', 'expires_at') ? 'UNEXPECTED expires_at' : 'no expiry column OK', PHP_EOL;
+  echo Schema::hasColumn('users', 'date_of_birth') ? 'profile columns OK' : 'PROFILE COLUMNS MISSING', PHP_EOL;
+"
+```
+
+Expect `table OK`, `no expiry column OK`, `profile columns OK`.
 
 ## 9. Verify the manifest resolves
 
@@ -231,8 +260,9 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                    §1
 all six backups taken and readable           §2
 deletions applied and verified absent        §6
-telegram_return_handoffs moved Pending -> Ran §8
-migration count increased by exactly one     §8
+all three migrations moved Pending -> Ran    §8
+migration count increased by exactly three   §8
+verification table present, NO expires_at    §8
 public/build manifest resolves               §9
 caches rebuilt without error                 §10
 abandon + both return routes present         §11
@@ -312,8 +342,9 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1              -> do not proceed; the artifact is wrong
-migration count unchanged            -> the table is missing; roll back
-migration count up by more than one   -> stop and investigate before continuing
+migration count up by fewer than three -> a table or column is missing; roll back
+migration count up by more than three  -> stop and investigate before continuing
+expires_at present on the token table  -> wrong migration ran; roll back
 manifest reports MISSING             -> incomplete copy; roll back
 routes or schedules absent           -> incomplete copy; roll back
 ```

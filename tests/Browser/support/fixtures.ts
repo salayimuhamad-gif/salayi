@@ -153,7 +153,20 @@ export async function signIn(
      * success condition, and it is bounded.
      */
     await page.goto('/login', { waitUntil: 'domcontentloaded' });
-    await page.locator('input[type="email"]').first().fill(email);
+
+    /*
+     * Addressed by `autocomplete`, not by `type`.
+     *
+     * The sign-in field takes an email OR a phone number now, so it is
+     * `type="text"` — `type="email"` would make the browser reject a perfectly
+     * good phone number before the request was sent. A selector keyed on the
+     * type therefore matched nothing, and every spec that signs in (advisor,
+     * mfa, admin) failed on a 90-second timeout that read as "login is broken".
+     *
+     * `autocomplete="username"` is the correct and stable handle for an
+     * identifier field, and it does not change with the field's type.
+     */
+    await page.locator('input[autocomplete="username"]').first().fill(email);
     await page.locator('input[type="password"]').first().fill(password);
     await page.locator('form button[type="submit"]').first().click();
 

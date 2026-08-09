@@ -18,7 +18,7 @@ declare(strict_types=1);
 $root = dirname(__DIR__, 2);
 $failures = 0;
 
-foreach (['SimplifierTest.php', 'GeometryTest.php', 'StructureTest.php', 'SignatureGuardTest.php', 'RelationGenericsTest.php', 'PhpstanMeasureTest.php', 'PackagingHygieneTest.php', 'ArtifactEvidenceTest.php', 'SourceProvenanceTest.php', 'DocConsistencyFixturesTest.php', 'WktValidationTest.php'] as $file) {
+foreach (['SimplifierTest.php', 'GeometryTest.php', 'StructureTest.php', 'SignatureGuardTest.php', 'RelationGenericsTest.php', 'PhpstanMeasureTest.php', 'PackagingHygieneTest.php', 'ArtifactEvidenceTest.php', 'SourceProvenanceTest.php', 'DocConsistencyFixturesTest.php', 'WktValidationTest.php', 'TelegramVerificationContractTest.php'] as $file) {
     echo "\n=== {$file} ===\n";
 
     $command = escapeshellarg(PHP_BINARY).' '.escapeshellarg(__DIR__.'/'.$file);

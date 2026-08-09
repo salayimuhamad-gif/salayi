@@ -8,12 +8,15 @@ use App\Http\Middleware\SetLocale;
 use App\Modules\Identity\Models\TelegramLoginIntent;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\TelegramRegistrar;
+use App\Modules\Identity\Services\TelegramVerificationService;
+use App\Modules\Identity\Support\PhoneNumber;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Password as PasswordRule;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -35,7 +38,10 @@ use Inertia\Response;
  */
 final class RegistrationController extends Controller
 {
-    public function __construct(private readonly TelegramRegistrar $registrar) {}
+    public function __construct(
+        private readonly TelegramRegistrar $registrar,
+        private readonly TelegramVerificationService $verification,
+    ) {}
 
     /**
      * The registration form.
@@ -57,6 +63,13 @@ final class RegistrationController extends Controller
             'bot_configured' => (string) config('services.telegram.bot_username', '') !== '',
             'pending' => $pending === null ? null : $this->pendingPayload($pending),
             'locales' => ['ckb', 'ar', 'en'],
+            /*
+             * The form states the actual configured requirement rather than a
+             * number written into a translation string, which would drift the
+             * first time an operator changes the policy and leave the hint
+             * quietly lying about what will be accepted.
+             */
+            'password_min_length' => (int) config('mulkihawler.security.password_min_length', 12),
         ]);
     }
 
@@ -85,6 +98,16 @@ final class RegistrationController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'min:2', 'max:120'],
             'phone' => ['required', 'string', 'regex:/^(\+?964|0)?7[0-9]{9}$/'],
+            /*
+             * The platform's own policy, not a softer one invented for
+             * customers. `PasswordRule::defaults()` is what the administrator
+             * password reset already enforces, and running two different
+             * strengths would mean a customer who later sets an email and uses
+             * the reset flow is held to a rule their original password never
+             * had to meet. The strength itself is operator-tunable through
+             * `mulkihawler.security.password_min_length`.
+             */
+            'password' => ['required', 'confirmed', PasswordRule::defaults()],
             'locale' => ['required', 'in:ckb,ar,en'],
             'accept_terms' => ['accepted'],
             'consent_contact' => ['sometimes', 'boolean'],
@@ -119,6 +142,7 @@ final class RegistrationController extends Controller
             [
                 'name' => trim($validated['name']),
                 'phone' => $this->toE164($validated['phone']),
+                'password' => $validated['password'],
                 'locale' => $validated['locale'],
                 'consent_contact' => (bool) ($validated['consent_contact'] ?? false),
             ],
@@ -128,17 +152,36 @@ final class RegistrationController extends Controller
 
         if (! $result['ok']) {
             /*
-             * One message for every refusal. It does not say the number is
-             * already registered, because that would turn this form into a
-             * phone-number oracle; it offers the returning-Telegram door,
-             * which is the recovery for the only case a real owner hits.
+             * One message for every refusal, and it still does not say the
+             * number is already registered — that would turn this form into a
+             * phone-number oracle, and an anonymous visitor may be typing
+             * somebody else's number.
+             *
+             * What changed is the part that was genuinely broken: the message
+             * now comes with real doors. The page renders "sign in" and
+             * "continue verification" links beneath it, so a person who really
+             * does own the number is one tap from their account instead of
+             * staring at a refusal with nowhere to go. Neither link asserts
+             * that an account exists; they are the same two links a first-time
+             * visitor would be offered.
              */
             return back()
-                ->withInput($request->except('phone'))
+                ->withInput($request->except(['phone', 'password', 'password_confirmation']))
                 ->withErrors(['phone' => __('identity.register.conflict')]);
         }
 
         $user = $result['user'];
+
+        /*
+         * The permanent verification token, minted at the moment the account
+         * exists to own it and BEFORE the redirect — so the page the person
+         * lands on has a live link to render, and so the link exists even if
+         * they never reach that page at all.
+         *
+         * It carries no clock. Somebody who registers now and presses Start
+         * next month verifies successfully; see TelegramVerificationToken.
+         */
+        $this->verification->mint($user, $validated['locale']);
 
         /*
          * Session rotation BEFORE authentication, so any session id captured
@@ -318,19 +361,15 @@ final class RegistrationController extends Controller
 
     /**
      * `+9647XXXXXXXXX`, from any of the ways an Iraqi number is written.
-     * Must agree with the authenticator's normalisation or the same person
-     * gets two blind indexes.
+     *
+     * The rule moved to {@see PhoneNumber} verbatim, because signing in by
+     * phone needs the SAME rule and a second copy of it is a second chance to
+     * disagree — which, on a blind index, means the same person silently
+     * getting two accounts.
      */
     private function toE164(string $phone): string
     {
-        $digits = preg_replace('/[^0-9]/', '', $phone) ?? '';
-        $digits = ltrim($digits, '0');
-
-        if (! str_starts_with($digits, '964')) {
-            $digits = '964'.$digits;
-        }
-
-        return '+'.$digits;
+        return PhoneNumber::toE164($phone);
     }
 
     private function hash(?string $value): ?string

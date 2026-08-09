@@ -48,10 +48,16 @@ final class IdentityServiceProvider extends ModuleServiceProvider
     /**
      * Spec 30.1: rate limiting and login throttling.
      *
-     * Keyed on email AND ip together. Email-only lets one attacker lock out a
-     * known administrator by failing their login on purpose; ip-only lets a
-     * botnet spread attempts across addresses. Both keys are registered so
-     * either alone trips the limit.
+     * Keyed on the identifier AND ip together. Identifier-only lets one
+     * attacker lock out a known administrator by failing their login on
+     * purpose; ip-only lets a botnet spread attempts across addresses. Both
+     * keys are registered so either alone trips the limit.
+     *
+     * The field is `login` — an email OR a phone number — since customers
+     * registered with a phone and no email. It is HASHED into the key rather
+     * than embedded: the limiter's keys end up in the cache store, and a phone
+     * number is personal data that has no business being one. A digest buckets
+     * identically and reveals nothing.
      */
     private function registerRateLimits(): void
     {
@@ -59,7 +65,8 @@ final class IdentityServiceProvider extends ModuleServiceProvider
         $decay = (int) config('mulkihawler.security.login_throttle.decay_minutes', 15);
 
         RateLimiter::for('login', static fn (Request $request): array => [
-            Limit::perMinutes($decay, $attempts)->by('login:email:'.mb_strtolower((string) $request->input('email'))),
+            Limit::perMinutes($decay, $attempts)
+                ->by('login:id:'.hash('sha256', mb_strtolower((string) $request->input('login')))),
             Limit::perMinutes($decay, $attempts * 4)->by('login:ip:'.$request->ip()),
         ]);
 

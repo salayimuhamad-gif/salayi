@@ -5,9 +5,21 @@ import AppButton from '@/Components/ui/AppButton.vue';
 import AppInput from '@/Components/ui/AppInput.vue';
 import { t } from '@/lib/i18n';
 
+/*
+ * One identifier field, because this form now serves two populations.
+ *
+ * Customers register with a phone number and no email address; administrators
+ * were seeded with an email and no phone. A field labelled "Email" therefore
+ * had no correct value for most of the people looking at it, and their only
+ * remaining way in was to open Telegram and press Start again — on every visit.
+ *
+ * `type="text"`, not `type="email"`: the browser's built-in email validation
+ * would reject a perfectly good phone number before the request was ever sent.
+ * `autocomplete="username"` is correct for both kinds of value.
+ */
 defineProps<{ canResetPassword: boolean }>();
 
-const form = useForm({ email: '', password: '', remember: false });
+const form = useForm({ login: '', password: '', remember: false });
 
 const submit = (): void => form.post('/login', { onFinish: () => form.reset('password') });
 </script>
@@ -18,10 +30,11 @@ const submit = (): void => form.post('/login', { onFinish: () => form.reset('pas
     <AuthLayout :title="t('identity.auth.login')" :subtitle="t('identity.auth.login_subtitle')">
         <form class="space-y-5" @submit.prevent="submit">
             <AppInput
-                v-model="form.email"
-                type="email"
-                :label="t('identity.auth.email')"
-                :error="form.errors.email"
+                v-model="form.login"
+                type="text"
+                :label="t('identity.auth.login_identifier')"
+                :hint="t('identity.auth.login_identifier_hint')"
+                :error="form.errors.login"
                 autocomplete="username"
                 required
             />

@@ -53,7 +53,15 @@ final class TelegramRegistrar
      * coarse for the same non-enumeration reason the Start conflict is coarse:
      * the audit log knows which identifier collided, the browser does not.
      *
-     * @param  array{name: string, phone: string, locale: string, consent_contact: bool}  $data
+     * THE ACCOUNT NOW HAS A PASSWORD, and that is what makes Telegram a
+     * one-time step rather than a permanent login mechanism. Before this, an
+     * account created here had no email and no password, so the only way back
+     * into it was another Telegram Start — which is precisely the "Telegram on
+     * every login" behaviour the simplified flow exists to remove. The password
+     * is hashed by the model's `hashed` cast; the plaintext exists for the
+     * duration of one request and is never logged, audited or echoed.
+     *
+     * @param  array{name: string, phone: string, password: string, locale: string, consent_contact: bool}  $data
      * @return array{ok: bool, user?: User, reason?: string}
      */
     public function createUnlinkedAccount(array $data, ?string $ipHash, ?string $agentHash): array
@@ -79,10 +87,15 @@ final class TelegramRegistrar
                 $user = new User;
                 $user->fill([
                     'name' => $data['name'],
-                    // No email and no password: the way into this account is
-                    // still Telegram. Until the link completes there is no way
-                    // in at all except the session created right now.
+                    /*
+                     * No email — it stays genuinely optional and is offered
+                     * later, during profile completion, where somebody can
+                     * decide whether they want a recovery address at all.
+                     * A password, however, is set NOW: it is the credential
+                     * that makes every later visit an ordinary sign-in.
+                     */
                     'email' => null,
+                    'password' => $data['password'],
                     'preferred_locale' => $data['locale'],
                     'is_active' => true,
                 ]);

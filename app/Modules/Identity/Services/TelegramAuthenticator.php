@@ -233,6 +233,25 @@ final class TelegramAuthenticator
      * that is unlinked or linked to this same sender; the telegram-matched
      * account updating its own number; or a brand-new account.
      *
+     * ALL THREE now stamp `telegram_verified_at`, which they did not before,
+     * and its absence was a live defect rather than a nicety. That column — not
+     * `telegram_id` — is what `EnsureTelegramLinked` reads. An account created
+     * or linked here therefore held a Telegram identity while the gate still
+     * considered it unlinked, so every personal surface bounced it to the
+     * verification page, where pressing Start found the identity already
+     * present, reported success, and changed nothing the gate looks at. That is
+     * a redirect loop with no exit.
+     *
+     * Setting it is recording a fact, not granting anything: a shared contact
+     * proves strictly MORE than a Start does, because it demonstrates control
+     * of the phone number as well as the Telegram account. The 2026_08_02
+     * migration backfilled exactly this column on exactly this reasoning for
+     * the accounts that already existed; these are the ones created since.
+     *
+     * `?? now()` rather than a plain assignment so an account that was already
+     * verified keeps its ORIGINAL timestamp. When the link was first proven is
+     * a fact about the past, and re-sharing a contact today does not change it.
+     *
      * @param  array<string, mixed>  $from
      */
     private function applyVerifiedContact(?User $target, string $phone, string $telegramId, array $from): User
@@ -242,6 +261,7 @@ final class TelegramAuthenticator
                 'telegram_id' => $telegramId,
                 'telegram_username' => $from['username'] ?? null,
                 'phone_verified' => true,
+                'telegram_verified_at' => $target->telegram_verified_at ?? now(),
             ])->save();
 
             return $target;
@@ -252,7 +272,10 @@ final class TelegramAuthenticator
             // than stranding the person with an account they can no longer
             // reach.
             $target->setPhone($this->normalise($phone));
-            $target->forceFill(['phone_verified' => true])->save();
+            $target->forceFill([
+                'phone_verified' => true,
+                'telegram_verified_at' => $target->telegram_verified_at ?? now(),
+            ])->save();
 
             return $target;
         }
@@ -271,6 +294,7 @@ final class TelegramAuthenticator
             'telegram_id' => $telegramId,
             'telegram_username' => $from['username'] ?? null,
             'phone_verified' => true,
+            'telegram_verified_at' => now(),
         ])->save();
 
         return $user;

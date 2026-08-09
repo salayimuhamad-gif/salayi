@@ -100,6 +100,19 @@ final class UserReferenceContract
         ['site_settings', 'updated_by', 'settings/flag audit metadata, retained deliberately'],
         ['telegram_login_intents', 'user_id', 'spent or expiring login material, never content'],
         ['telegram_return_handoffs', 'user_id', 'short-lived return links; worthless within minutes'],
+        /*
+         * Verification material, not content — so it belongs here and not in
+         * BLOCK_RECLAMATION, on the same reasoning as its two neighbours: an
+         * unpressed link is not something the account has DONE.
+         *
+         * It does still stop the sweep, but through a different and narrower
+         * rule. AbandonedAccountPolicy::assess() refuses any account holding a
+         * LIVE token, because deleting one would break the no-expiry promise
+         * the token makes. A used or revoked token stops nothing, which is
+         * right: it is spent material, and the row is deleted with the account
+         * by the FK cascade.
+         */
+        ['telegram_verification_tokens', 'user_id', 'verification material, not content; a LIVE one blocks the sweep through the retention rule instead'],
         ['translations', 'reviewed_by', 'moderation metadata about someone ELSE\'s content; the reviewer owns nothing here'],
     ];
 

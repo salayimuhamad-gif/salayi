@@ -109,7 +109,25 @@ final class TelegramReturnUrl
 
         $path = (string) parse_url($generated, PHP_URL_PATH);
 
-        if ($path === '' || ! str_starts_with($path, '/') || str_starts_with($path, '//')) {
+        /*
+         * An ABSENT path is the site root, not a fault.
+         *
+         * `parse_url('https://myhawler.com', PHP_URL_PATH)` returns null, and
+         * the default locale's home route generates exactly that URL. So the
+         * empty-path refusal below silently dropped the button from every
+         * message pointing at the site root in the default language — the
+         * message went out with no way back at all, and the only sign was a
+         * `telegram.return_url_bad_path` line in the security log.
+         *
+         * Normalising to '/' keeps every check that follows intact: the value
+         * still has to start with a single slash, and the assembled URL is
+         * still re-verified against our own origin.
+         */
+        if ($path === '') {
+            $path = '/';
+        }
+
+        if (! str_starts_with($path, '/') || str_starts_with($path, '//')) {
             Log::channel('security')->warning('telegram.return_url_bad_path');
 
             return null;

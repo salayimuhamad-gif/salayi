@@ -63,6 +63,8 @@ use Throwable;
  * @property string|null $profile_photo_disk
  * @property int|null $profile_area_id
  * @property string|null $profile_bio
+ * @property string|null $gender
+ * @property Carbon|null $date_of_birth
  * @property string|null $contact_preference
  * @property string|null $primary_purpose
  *
@@ -110,6 +112,12 @@ final class User extends Authenticatable
             'mfa_confirmed_at' => 'datetime',
             'telegram_verified_at' => 'datetime',
             'onboarding_completed_at' => 'datetime',
+            /*
+             * A DATE, not a datetime: a birthday has no time of day, and
+             * casting it as one would drag it across a day boundary the first
+             * time a timezone was applied to it.
+             */
+            'date_of_birth' => 'date',
             'last_login_at' => 'datetime',
             'suspended_at' => 'datetime',
             'password' => 'hashed',

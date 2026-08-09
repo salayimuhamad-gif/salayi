@@ -3,6 +3,60 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Simplified registration and Telegram verification
+
+**Status: NOT DEPLOYED.** Product change; needs the CI host for PHPUnit and
+Playwright. See `docs/simplified-telegram-verification.md` for the full model.
+
+The customer-visible journey is now
+`REGISTER → OPEN TELEGRAM → PRESS START → VERIFIED`, and every later visit is
+`LOGIN → ACCOUNT`. Telegram is required once, for verification, not repeatedly
+for sign-in.
+
+### Added
+- `telegram_verification_tokens`: a registration verification token that is
+  **permanent until used or revoked**. No `expires_at` column and no clock in
+  the usability rule — registering tonight and pressing START next month
+  verifies successfully. Stored as a SHA-256 digest for lookup beside an
+  encrypted copy, so the owner's own link can be re-rendered weeks later
+  instead of being silently replaced.
+- `TelegramVerificationService` — mint, resume, revoke and redeem, with the
+  three refusals that matter enforced under row locks and again by the UNIQUE
+  index on `users.telegram_id`: a spent token cannot be claimed by a second
+  Telegram account, an identity in use elsewhere is never reassigned, and a
+  linked account is never silently re-pointed.
+- Password on registration, and sign-in by **phone number or email**. The
+  throttle key is now a digest of the identifier rather than the identifier.
+- Optional profile details on onboarding: city, area, email, gender, date of
+  birth. City and area come from the admin-managed `areas` table (published
+  only); nothing is hard-coded, and the city is derived from the hierarchy
+  rather than stored in a second column.
+- `PhoneNumber::toE164()` — one definition of "the same phone number", replacing
+  three private copies that did not agree.
+
+### Changed
+- A Telegram START now completes registration verification on its own. The
+  browser-confirmation step is retained, unchanged, for the separate operation
+  that re-points an account which already HAS a Telegram identity.
+- The verification screen shows a button, an instruction and "you can do this
+  later" — no token, no code, no countdown. The Telegram control is a real
+  anchor so a mobile popup blocker cannot swallow the tap.
+- `PruneUnlinkedAccounts` no longer reclaims an account that is reachable by
+  password or holds a live verification link. The pre-existing unreachable
+  population is still reclaimed on the same schedule. Consequence: a mistyped
+  number is no longer auto-released after 72 hours; the self-service "cancel my
+  registration" button releases it immediately.
+
+### Fixed
+- `TelegramAuthenticator::applyVerifiedContact()` set `telegram_id` without
+  `telegram_verified_at`. The gate reads the timestamp, so a Share-Contact
+  sign-in produced an account every personal surface refused and bounced to a
+  verification page that could not help it — a redirect loop with no exit. All
+  three branches now stamp it, an already-verified account keeps its original
+  timestamp, and redemption repairs an affected row on the next START.
+- `AppAlert` was being given a `tone` prop it does not declare, so every success,
+  warning and danger alert on the Telegram pages rendered as neutral info.
+
 ## [4.0.0-step31] — Post-seal trust-chain repair (authoritative)
 
 **Status: NOT READY FOR PRODUCTION** — offline tooling verified; the real

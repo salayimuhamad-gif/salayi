@@ -8,32 +8,40 @@ import { t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 
 /*
- * Linking Telegram to an EXISTING signed-in account (correction C1,
- * corrected again in v4 for BLOCKER 1 and §5).
+ * The verification screen: one button, one instruction, one outcome.
  *
- * The person here already has an account — email/password, from before the
- * Telegram era — and the mandatory-link gate sent them to this page. One
- * button opens the bot with a Start token bound to THEIR account and THIS
- * browser session; the page then polls its own session until the link
- * lands, and shows a real state for every way the flow can end.
+ * The entire step, from the person's side:
  *
- * v4 BLOCKER 1 — reloading this page no longer destroys the token. The
- * server resumes the live intent, so `deep_link` is the SAME link across a
- * refresh, a restored mobile tab, or a second tab. The consequence for
- * this component is that "Start again" can no longer be a page visit: a
- * visit now resumes. It POSTs to the restart route, which is the only
- * browser action that retires a live token.
+ *     Open Telegram  →  press START  →  this page moves on by itself
  *
- * v4 §5 — a Start no longer finishes the job. The poll can return
- * `awaiting_confirmation` with a safe display identity, and the person has
- * to look at it and press confirm. The component echoes back the opaque
- * `candidate_handle` it was shown, never a Telegram id, so confirming
- * approves the identity ON SCREEN rather than whatever happens to be
- * parked at the moment the click lands.
+ * There is nothing to type, nothing to copy, and nothing to come back and
+ * confirm. That last part is the change: this page used to show a "is this
+ * your Telegram account?" card after the Start, which the person had to
+ * return from Telegram to press. The permanent verification token removes
+ * the need for it — see TelegramVerificationService for why that is safe
+ * for an account with no Telegram identity yet, and why the separate
+ * change-my-Telegram flow still requires it.
  *
- * The poll is the same deliberately dumb one the sign-in pages use: it
- * asks "how is MY session's link going", never "how is intent N doing" —
- * a client that could name an intent could watch somebody else's.
+ * NOTHING TECHNICAL IS RENDERED. No token, no code, no expiry countdown, no
+ * chat id. The token exists only inside the button's href.
+ *
+ * THE LINK DOES NOT EXPIRE, and the page says so. Closing this tab costs
+ * nothing: the server resumes the same link on the next visit, so a refresh,
+ * a restored mobile tab, a second window or a sign-in three weeks later all
+ * show the link that may already be open in the person's Telegram chat.
+ * "Start again" is therefore a deliberate POST, not a page visit — it is the
+ * only browser action that retires a live link.
+ *
+ * The poll is the same deliberately dumb one the sign-in pages use: it asks
+ * "is MY account verified yet", never "how is token N doing" — a client that
+ * could name a token could watch somebody else's. Because the answer comes
+ * from the account row rather than from anything held in this session, it is
+ * also correct for a tab that was verified from another device entirely.
+ *
+ * The candidate-confirmation UI below is retained for one reason: an
+ * `account_link` intent that was already in flight when this shipped can
+ * still be finished by the browser that started it. `candidate` is null for
+ * every account registered since, and that branch never renders.
  */
 type Candidate = {
     name: string | null;
@@ -44,9 +52,13 @@ type Candidate = {
 
 const props = defineProps<{
     deep_link: string | null;
-    expires_in_seconds: number;
     bot_configured: boolean;
-    requires_confirmation: boolean;
+    /*
+     * Legacy, and null for every account registered since the simplified flow
+     * shipped: a candidate parked by an `account_link` intent that was already
+     * in flight at deploy time. The confirmation UI below renders only when it
+     * is non-null, so the ordinary journey never sees a second step.
+     */
     candidate: Candidate | null;
     candidate_handle: string | null;
 }>();
@@ -148,13 +160,13 @@ async function poll(): Promise<void> {
     }
 }
 
-function openBot(): void {
-    if (props.deep_link === null) {
-        return;
-    }
-
+/**
+ * The link itself navigates; this only updates what the page says while the
+ * person is away. Deliberately does not preventDefault, does not open a window,
+ * and does nothing that could stop the tap from reaching Telegram.
+ */
+function markWaiting(): void {
     state.value = 'waiting';
-    window.open(props.deep_link, '_blank', 'noopener');
 }
 
 function xsrfToken(): string {
@@ -175,32 +187,22 @@ function jsonHeaders(): Record<string, string> {
 /*
  * v7 account-first: give up on this registration entirely.
  *
- * Distinct from `cancel`, which only retires the current Telegram token and
- * leaves the account in place. An account created by the form holds its phone
- * number under a unique index, so somebody who mistyped it — or who simply
- * cannot finish — needs a way to release it and start again rather than being
- * told the number is taken by an account they cannot reach. The server
- * refuses once the account is linked or owns anything.
+ * An account created by the form holds its phone number under a unique index,
+ * so somebody who mistyped it — or who simply cannot finish — needs a way to
+ * release it and start again rather than being told the number is taken by an
+ * account they cannot reach. The server revokes the verification link, then
+ * refuses the release itself if the account is linked or owns anything.
+ *
+ * "Cancel linking" used to sit beside this and is gone. It retired the current
+ * ten-minute token and left the account in place, which was a meaningful thing
+ * to do when the token was about to expire anyway. With a link that never
+ * expires there is nothing to cancel: leaving is free, and coming back is the
+ * default. The two remaining actions are the ones that still mean something —
+ * replace the link, or give up the registration. (The endpoint itself is
+ * untouched, so an older tab still posting to it is answered as before.)
  */
 function abandonRegistration(): void {
     router.post(localized('/account/registration/abandon'), {}, { preserveScroll: false });
-}
-
-function cancel(): void {
-    stopPolling();
-
-    /*
-     * The cancel endpoint answers JSON — the same contract the poll uses —
-     * so it is called the same way the poll is. Routing it through Inertia
-     * raised the "plain JSON response" modal; the browser matrix caught it.
-     */
-    void fetch(localized('/account/telegram/link/cancel'), {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: jsonHeaders(),
-    }).finally(() => {
-        state.value = 'cancelled';
-    });
 }
 
 /**
@@ -287,15 +289,30 @@ function stopPolling(): void {
     }
 }
 
+/*
+ * §15: automatic detection is the primary behaviour, and the manual button
+ * below is only a fallback for somebody who does not want to wait for the next
+ * tick.
+ *
+ * There is no expiry timer any more. The old page set one from
+ * `expires_in_seconds` so it could stop polling a corpse when the ten minutes
+ * ran out; the verification token has no clock, so there is no corpse and
+ * nothing to count down. Leaving the tab open simply keeps asking.
+ */
+const checking = ref(false);
+
+async function checkNow(): Promise<void> {
+    checking.value = true;
+
+    try {
+        await poll();
+    } finally {
+        checking.value = false;
+    }
+}
+
 onMounted(() => {
     timer = setInterval(() => void poll(), 2500);
-    // The intent has a clock; when it runs out with nothing redeemed, say
-    // so instead of polling a corpse.
-    setTimeout(() => {
-        if (state.value === 'idle' || state.value === 'waiting') {
-            void poll();
-        }
-    }, Math.max(1, props.expires_in_seconds) * 1000);
 });
 
 onBeforeUnmount(stopPolling);
@@ -306,14 +323,14 @@ onBeforeUnmount(stopPolling);
 
     <div class="mx-auto max-w-lg px-4 py-10">
         <AppCard>
-            <AppAlert v-if="accountCreated !== null" tone="success" class="mb-4" data-testid="account-created">
+            <AppAlert v-if="accountCreated !== null" variant="success" class="mb-4" data-testid="account-created">
                 {{ accountCreated }}
             </AppAlert>
 
             <h1 class="text-xl font-semibold">{{ t('identity.link.title') }}</h1>
 
             <template v-if="state === 'completed'">
-                <AppAlert tone="success" class="mt-4">
+                <AppAlert variant="success" class="mt-4">
                     {{ t('identity.link.success') }}
                 </AppAlert>
             </template>
@@ -323,7 +340,7 @@ onBeforeUnmount(stopPolling);
                     {{ t('identity.link.confirm_title') }}
                 </h2>
 
-                <AppAlert v-if="state === 'candidate_changed'" tone="warning" class="mt-3">
+                <AppAlert v-if="state === 'candidate_changed'" variant="warning" class="mt-3">
                     {{ t('identity.link.candidate_changed') }}
                 </AppAlert>
 
@@ -363,7 +380,7 @@ onBeforeUnmount(stopPolling);
             </template>
 
             <template v-else-if="state === 'expired'">
-                <AppAlert tone="warning" class="mt-4">
+                <AppAlert variant="warning" class="mt-4">
                     {{ t('identity.link.expired') }}
                 </AppAlert>
                 <AppButton class="mt-4" data-testid="restart-link" @click="restart">
@@ -372,7 +389,7 @@ onBeforeUnmount(stopPolling);
             </template>
 
             <template v-else-if="state === 'conflict'">
-                <AppAlert tone="danger" class="mt-4">
+                <AppAlert variant="danger" class="mt-4">
                     {{ t('identity.link.conflict') }}
                 </AppAlert>
                 <p class="mt-2 text-sm opacity-80">{{ t('identity.link.conflict_help') }}</p>
@@ -382,7 +399,7 @@ onBeforeUnmount(stopPolling);
             </template>
 
             <template v-else-if="state === 'cancelled'">
-                <AppAlert tone="info" class="mt-4">
+                <AppAlert variant="info" class="mt-4">
                     {{ t('identity.link.cancelled') }}
                 </AppAlert>
                 <AppButton class="mt-4" data-testid="restart-link" @click="restart">
@@ -390,34 +407,83 @@ onBeforeUnmount(stopPolling);
                 </AppButton>
             </template>
 
+            <!--
+                §14: the whole verification screen. One instruction, one
+                button, one sentence saying it can wait.
+
+                Nothing technical appears here — no token, no code, no chat id,
+                no countdown. The token exists only inside the href of the
+                button, and there is nothing for anybody to copy or type.
+            -->
             <template v-else>
                 <p class="mt-3 text-sm leading-relaxed opacity-90">
                     {{ t('identity.link.lead') }}
                 </p>
 
-                <AppAlert v-if="!bot_configured" tone="warning" class="mt-4">
+                <AppAlert v-if="!bot_configured" variant="warning" class="mt-4">
                     {{ t('identity.telegram.unavailable') }}
                 </AppAlert>
 
                 <template v-else>
-                    <AppButton class="mt-5 w-full" data-testid="open-telegram" @click="openBot">
-                        {{ t('identity.link.open_button') }}
-                    </AppButton>
+                    <!--
+                        A real anchor, not a scripted window.open().
 
-                    <p v-if="state === 'waiting'" class="mt-4 text-sm opacity-80" aria-live="polite">
+                        This is the one control the entire flow depends on, and
+                        it is pressed on a phone. Mobile browsers routinely
+                        block a popup opened from script and open an href
+                        without complaint, so the tap that leaves for Telegram
+                        must be an ordinary link. The click handler only flips
+                        the local "waiting" copy; if scripting were disabled
+                        entirely the link would still work.
+                    -->
+                    <a
+                        v-if="deep_link"
+                        :href="deep_link"
+                        target="_blank"
+                        rel="noopener"
+                        data-testid="open-telegram"
+                        class="mt-5 flex min-h-11 w-full items-center justify-center rounded-card bg-brand px-4
+                               text-sm font-medium text-white transition-colors hover:opacity-90
+                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        @click="markWaiting"
+                    >
+                        {{ t('identity.link.open_button') }}
+                    </a>
+
+                    <p class="mt-4 text-sm leading-relaxed opacity-90" data-testid="press-start-hint">
+                        {{ t('identity.link.press_start') }}
+                    </p>
+
+                    <p v-if="state === 'waiting'" class="mt-3 text-sm opacity-80" aria-live="polite">
                         {{ t('identity.link.waiting') }}
                     </p>
 
-                    <div class="mt-6 flex flex-wrap items-center gap-4">
-                        <button
-                            type="button"
-                            class="text-sm underline opacity-70 hover:opacity-100"
-                            data-testid="cancel-link"
-                            @click="cancel"
-                        >
-                            {{ t('identity.link.cancel') }}
-                        </button>
+                    <!--
+                        The promise the permanent token makes, said out loud.
+                        Somebody who cannot finish now needs to know that
+                        closing this page costs them nothing.
+                    -->
+                    <AppAlert variant="info" class="mt-5" data-testid="link-never-expires">
+                        {{ t('identity.link.later') }}
+                    </AppAlert>
 
+                    <!--
+                        §15's fallback. Automatic detection is the primary
+                        behaviour — the poll above runs every 2.5s — and this
+                        exists for the person who came back from Telegram and
+                        would rather not wait for the next tick.
+                    -->
+                    <button
+                        type="button"
+                        class="mt-4 w-full text-sm underline opacity-70 hover:opacity-100"
+                        data-testid="check-verification"
+                        :disabled="checking"
+                        @click="checkNow"
+                    >
+                        {{ t('identity.link.check_now') }}
+                    </button>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-4">
                         <button
                             type="button"
                             class="text-sm underline opacity-70 hover:opacity-100"
