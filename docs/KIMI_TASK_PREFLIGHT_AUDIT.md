@@ -267,12 +267,34 @@ enumerated candidate defects warrant reproduction.
   suite), `php scripts/collect-release-evidence.php` (closest single-command
   mirror of the package job), and the gate list in `WORKING_TREE_README.md`.
 
-## 9. Decision
+## 9. Decision — and execution record
 
 Architecture audit complete; preconditions verified; reference package present
 and inventoried; amendments recorded and validated against the codebase.
-Feature implementation is intentionally **not started**: the master task prompt
-(the numbered document the amendments modify) has not been delivered to this
-environment, and rule 11 forbids proceeding on an inferred scope. The next
-session should supply that document; the matrix in §6 then maps directly onto
-its sections.
+
+The audit initially stopped here pending the master prompt. The user then
+directed implementation to proceed from this document's matrix, and the four
+slices were executed on this branch in the §6 sequence, each within the scope
+the overrides themselves define:
+
+- **R4** — reproduce-first map repairs. Reproduction confirmed the old
+  MapPicker is live on four admin forms (not orphaned) and surfaced a defect
+  beyond the audit's list: Area and Place creation through the admin forms
+  threw a mass-assignment exception on `created_by`. Root causes fixed; the
+  Create→Save→Reload→Edit→Update→Reload proof now runs over HTTP for
+  projects, areas and places, with boundary-door parity pinned.
+- **R2+R5** — the Investment Map at `/invest` behind `map.investment`, a
+  configuration of the existing explorer core with the projects/areas layer
+  allowlist enforced server-side, styled per the Kimi reference inside the
+  existing token system.
+- **R1** — Telegram password recovery as a dedicated mechanism
+  (`password_recovery_challenges`): hashed short-TTL single-use challenges,
+  account- and Telegram-identity-bound, throttled and attempt-budgeted,
+  audited, with full session invalidation on reset. Separation is proven in
+  both directions against the real endpoints.
+- **R3** — the Admin Users privacy contract pinned under test exactly as the
+  amended Section 29 states it; no behavioral change was needed.
+
+The master prompt is STILL missing. When it arrives, reconcile its sections
+against this record: anything it adds beyond the above is new scope for a
+follow-up slice; nothing already merged should be rebuilt.
