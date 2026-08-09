@@ -158,6 +158,9 @@ PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/admin.spec.ts',
     'tests/Browser/advisor.spec.ts',
     'tests/Browser/auth.spec.ts',
+    # The Investment Map suite: every locale, every viewport, against the
+    # persisted fixture rows — including the degraded no-tiles contract.
+    'tests/Browser/invest.spec.ts',
     'tests/Browser/locales.spec.ts',
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
