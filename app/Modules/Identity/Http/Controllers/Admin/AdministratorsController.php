@@ -142,7 +142,7 @@ final class AdministratorsController extends Controller
             $desired,
         );
         $retained = $user->roles()->get()
-            ->filter(static fn (Role $role): bool => RoleKey::tryFrom($role->key)?->isAdministrative() !== true)
+            ->filter(static fn (Role $role): bool => ! $role->isAdministrative())
             ->pluck('id')->all();
 
         $user->roles()->sync(array_merge($roleIds, $retained));
