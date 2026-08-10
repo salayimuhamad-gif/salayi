@@ -162,6 +162,12 @@ jobs:
         # switched off.
         run: npx eslint resources/js --ext .ts,.vue
 
+      - name: Frontend unit suite
+        # The pure TypeScript tests (geojson, wizard geometry, trend marker
+        # semantics). They previously ran only by hand; the trend contract
+        # is now load-bearing for the investment map, so the suite gates.
+        run: node tests/js/run.mjs
+
       - name: Build
         run: npx vite build
 

@@ -34,10 +34,13 @@ declare(strict_types=1);
  *   No areas, no offers, no AI conversations, no market indices. The
  *   acceptance suite asserts against empty states and real flags; inventing
  *   market data to make a screenshot look fuller would defeat the one property
- *   this product's UI is built around. The two investment-map projects (one
- *   with a real price history) are the deliberate exception: the map suite
- *   must prove markers, prices and trends render from PERSISTED rows, and an
- *   empty map cannot prove that.
+ *   this product's UI is built around. The four investment-map projects are
+ *   the deliberate exception: the map suite must prove markers, prices and
+ *   trends render from PERSISTED rows, and an empty map cannot prove that.
+ *   Between them the four cover every trend the product may claim — up, down
+ *   and flat each from two real comparable observations, and unknown from a
+ *   single observation, because insufficient history must render as a
+ *   neutral marker and the only way to test that is to seed the absence.
  */
 
 use App\Modules\Identity\Enums\RoleKey;
@@ -186,51 +189,72 @@ DB::table('feature_flags')->updateOrInsert(
     ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
 );
 
-DB::table('projects')->updateOrInsert(
-    ['slug' => 'browser-invest-tower'],
-    [
-        'name_ckb' => 'بورجی وەبەرهێنانی تاقیکردنەوە',
-        'project_type' => 'tower',
-        'construction_status' => 'under_construction',
-        'delivery_status' => 'not_started',
-        'publication_status' => 'published',
-        'latitude' => 36.1950000,
-        'longitude' => 44.0150000,
-        'created_at' => now(),
-        'updated_at' => now(),
-    ],
-);
-$tower = DB::table('projects')->where('slug', 'browser-invest-tower')->first();
-
-DB::table('projects')->updateOrInsert(
-    ['slug' => 'browser-invest-villa'],
-    [
-        'name_ckb' => 'ڤیلاکانی تاقیکردنەوە',
-        'project_type' => 'villa',
-        'construction_status' => 'under_construction',
-        'delivery_status' => 'not_started',
-        'publication_status' => 'published',
-        'latitude' => 36.2050000,
-        'longitude' => 44.0250000,
-        'created_at' => now(),
-        'updated_at' => now(),
-    ],
+/*
+ * The public map explorer as well: the map-production suite must prove /map
+ * leaves its loading state on a real (deterministic) style, and a flag left
+ * off would make that spec measure the flag, not the map.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'map.explorer'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
 );
 
-foreach ([['100000.00', '2026-06-01'], ['104800.00', '2026-07-01']] as [$price, $date]) {
-    DB::table('project_prices')->updateOrInsert(
-        ['project_id' => $tower->id, 'effective_date' => $date],
+/*
+ * One published project per trend the markers may claim. Every coordinate is
+ * inside Erbil's bounding box, every history is two comparable observations
+ * (same currency, same price type) or deliberately none — these rows exercise
+ * the derivation, they never bypass it.
+ */
+$projects = [
+    // +4.8% across two USD sale_asking rows → up.
+    ['slug' => 'browser-invest-tower', 'name' => 'بورجی وەبەرهێنانی تاقیکردنەوە', 'type' => 'tower',
+        'lat' => 36.1950000, 'lng' => 44.0150000, 'history' => [['100000.00', '2026-06-01'], ['104800.00', '2026-07-01']]],
+    // ONE observation → unknown: a current price exists, but a single point
+    // is not a direction. This row is the "never dress missing history up
+    // as flat" case, live in a browser.
+    ['slug' => 'browser-invest-villa', 'name' => 'ڤیلاکانی تاقیکردنەوە', 'type' => 'villa',
+        'lat' => 36.2050000, 'lng' => 44.0250000, 'history' => [['95000.00', '2026-07-01']]],
+    // −10% → down.
+    ['slug' => 'browser-invest-bazaar', 'name' => 'بازاڕی وەبەرهێنانی تاقیکردنەوە', 'type' => 'commercial',
+        'lat' => 36.1850000, 'lng' => 44.0000000, 'history' => [['100000.00', '2026-06-01'], ['90000.00', '2026-07-01']]],
+    // Unchanged across two real observations → genuinely flat, never a
+    // stand-in for "no data".
+    ['slug' => 'browser-invest-court', 'name' => 'کۆمەڵگەی نیشتەجێبوونی تاقیکردنەوە', 'type' => 'residential',
+        'lat' => 36.1750000, 'lng' => 44.0350000, 'history' => [['100000.00', '2026-06-01'], ['100000.00', '2026-07-01']]],
+];
+
+foreach ($projects as $fixture) {
+    DB::table('projects')->updateOrInsert(
+        ['slug' => $fixture['slug']],
         [
-            'price_from' => $price,
-            'currency' => 'USD',
-            'price_type' => 'sale_asking',
-            'period' => substr($date, 0, 7),
-            'source' => 'browser-fixture',
-            'confidence' => 'medium',
+            'name_ckb' => $fixture['name'],
+            'project_type' => $fixture['type'],
+            'construction_status' => 'under_construction',
+            'delivery_status' => 'not_started',
+            'publication_status' => 'published',
+            'latitude' => $fixture['lat'],
+            'longitude' => $fixture['lng'],
             'created_at' => now(),
             'updated_at' => now(),
         ],
     );
+    $row = DB::table('projects')->where('slug', $fixture['slug'])->first();
+
+    foreach ($fixture['history'] as [$price, $date]) {
+        DB::table('project_prices')->updateOrInsert(
+            ['project_id' => $row->id, 'effective_date' => $date],
+            [
+                'price_from' => $price,
+                'currency' => 'USD',
+                'price_type' => 'sale_asking',
+                'period' => substr($date, 0, 7),
+                'source' => 'browser-fixture',
+                'confidence' => 'medium',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        );
+    }
 }
 
 cache()->flush();
@@ -242,11 +266,12 @@ file_put_contents(
         'admin' => ['email' => $admin->email, 'secret' => $adminSecret],
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
-        'flags' => ['advisor.residential' => true, 'map.investment' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
 echo "wrote tests/Browser/support/fixtures.json\n";
 echo "  admin: {$admin->email}\n  plain: {$plain->email}\n  mfa:   {$mfa->email}\n";
 echo "  advisor.residential = ON\n";
-echo "  map.investment = ON (+2 published projects, 1 with price history)\n";
+echo "  map.investment = ON, map.explorer = ON\n";
+echo "  4 published projects: trends up / down / flat / unknown\n";

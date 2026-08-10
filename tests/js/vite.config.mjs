@@ -24,6 +24,7 @@ export default defineConfig({
             input: {
                 geojson: resolve(import.meta.dirname, 'geojson.test.ts'),
                 wizard: resolve(import.meta.dirname, 'wizard.test.ts'),
+                trend: resolve(import.meta.dirname, 'trend.test.ts'),
             },
             output: { entryFileNames: '[name].mjs', format: 'es' },
         },
