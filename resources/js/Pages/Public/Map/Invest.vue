@@ -8,6 +8,7 @@ import AppIcon from '@/Components/Icons/AppIcon.vue';
 import { formatNumber, t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 import { createMapAdapter, type BoundaryCollection, type MapAdapter } from '@/lib/map';
+import { normaliseTrend, trendArrowGlyph } from '@/lib/map/trend';
 
 /*
  * The public Investment Map (/invest).
@@ -38,7 +39,12 @@ interface ProjectFeature {
     currency?: string | null;
     price_type?: string | null;
     price_at?: string | null;
-    trend?: 'up' | 'down' | 'flat' | null;
+    /*
+     * Server-decided, four-valued: `unknown` means insufficient comparable
+     * history and renders as a NEUTRAL marker with no percentage — never as
+     * flat, and never as nothing-at-all on the marker layer.
+     */
+    trend?: 'up' | 'down' | 'flat' | 'unknown' | null;
     trend_percent?: string | null;
 }
 
@@ -145,9 +151,7 @@ function chooseResult(result: SearchResult): void {
 }
 
 /** Direction as a glyph. Never the only signal — text and sign ride along. */
-function trendArrow(trend: 'up' | 'down' | 'flat'): string {
-    return trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→';
-}
+const trendArrow = trendArrowGlyph;
 
 const mapFailed = ref(false);
 const mapReady = ref(false);
@@ -245,8 +249,17 @@ function syncSource(): void {
             title: project.name ?? '',
             // The brand accent's default value — the gold the reference
             // design uses — while still reading as "the accent" beside the
-            // rest of the page.
+            // rest of the page. Used only when no trend icon applies.
             colour: '#c9a227',
+            id: project.id,
+            /*
+             * THE trend, on the marker itself: the adapter renders a
+             * direction-shaped icon (chevron up/down, bar, neutral dot) so
+             * price movement is readable on the map, not only in the card.
+             * A null from an older payload degrades to `unknown` — a
+             * missing claim, never a fabricated one.
+             */
+            trend: normaliseTrend(project.trend),
         })),
     );
 
@@ -317,6 +330,15 @@ function adapterOptions() {
                 selected.value = null;
             },
             onError: () => void handleRuntimeFailure(),
+            // Selecting FROM THE MAP: a click on a project marker opens its
+            // card, exactly like choosing it in the list.
+            onMarkerClick: (id: number) => {
+                const project = projects.value.find((candidate) => candidate.id === id);
+
+                if (project) {
+                    select(project);
+                }
+            },
         },
     };
 }
@@ -569,7 +591,7 @@ watch(showBoundaries, () => void load());
                         {{ formatNumber(Number(selected.price_from)) }}
                         <span class="text-xs text-ink-muted">{{ selected.currency }}</span>
                         <span
-                            v-if="selected.trend"
+                            v-if="selected.trend && selected.trend !== 'unknown'"
                             class="ms-2 text-xs font-semibold"
                             :class="{
                                 'text-positive': selected.trend === 'up',
@@ -580,6 +602,11 @@ watch(showBoundaries, () => void load());
                             <span aria-hidden="true">{{ trendArrow(selected.trend) }}</span>
                             {{ selected.trend_percent }}%
                             <span class="sr-only">{{ t(`map.invest.trend.${selected.trend}`) }}</span>
+                        </span>
+                        <!-- Unknown is a stated absence, not a hidden one:
+                             screen readers hear that no trend is claimed. -->
+                        <span v-else-if="selected.trend === 'unknown'" class="sr-only">
+                            {{ t('map.invest.trend.unknown') }}
                         </span>
                     </p>
                     <div class="mt-3 flex items-center gap-3">
@@ -638,7 +665,7 @@ watch(showBoundaries, () => void load());
                                     {{ formatNumber(Number(project.price_from)) }}
                                     <span class="text-ink-muted">{{ project.currency }}</span>
                                     <span
-                                        v-if="project.trend"
+                                        v-if="project.trend && project.trend !== 'unknown'"
                                         class="ms-1.5 font-semibold"
                                         :class="{
                                             'text-positive': project.trend === 'up',
