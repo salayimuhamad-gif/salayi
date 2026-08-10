@@ -24,10 +24,20 @@ interface AiProvider
 {
     public function key(): string;
 
+    /** The model this adapter will use when the request names none. */
+    public function model(): string;
+
     /**
+     * `json: true` asks the provider for a JSON-object response where its API
+     * supports declaring that (OpenAI response_format, Gemini responseMimeType).
+     * Adapters for endpoints without a reliable JSON switch ignore the flag —
+     * the caller must always validate the text as JSON itself, because even a
+     * declared JSON mode does not make parsing optional.
+     *
      * @param  array{
      *     system?: string, messages: list<array{role: string, content: string}>,
-     *     model?: string, temperature?: float, max_tokens?: int, timeout?: int
+     *     model?: string, temperature?: float, max_tokens?: int, timeout?: int,
+     *     json?: bool
      * }  $request
      * @return array{
      *     text: string, model: string, prompt_tokens: int, completion_tokens: int,

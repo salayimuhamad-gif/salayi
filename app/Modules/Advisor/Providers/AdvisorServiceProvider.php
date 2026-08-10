@@ -10,6 +10,7 @@ use App\Modules\Advisor\Services\AdvisorLanguage;
 use App\Modules\Advisor\Services\AdvisorProjectMatcher;
 use App\Modules\Advisor\Services\AdvisorTurnComposer;
 use App\Modules\Advisor\Services\AiGateway;
+use App\Modules\Advisor\Services\AiProviderFactory;
 use App\Modules\Advisor\Services\LifestyleCandidateBuilder;
 use App\Modules\Advisor\Services\LifestyleMatcher;
 use App\Modules\Advisor\Support\NumericGuard;
@@ -60,30 +61,18 @@ final class AdvisorServiceProvider extends ModuleServiceProvider
         $this->app->singleton(LifestyleCandidateBuilder::class);
         $this->app->singleton(AdvisorProjectMatcher::class);
 
+        $this->app->singleton(AiProviderFactory::class);
+
         /*
-         * Providers are ordered primary-first. Today there is one adapter and
-         * the fallback chain has a single link — which is still worth building
-         * as a chain, because adding a second provider must not require
-         * touching any call site.
+         * Providers are ordered primary-first, and the ORDER IS CONFIGURATION:
+         * AI_PROVIDER names the primary and AI_FALLBACK_PROVIDER the optional
+         * second link. The factory owns that resolution — the audit's finding
+         * G was precisely that this closure used to ignore AI_PROVIDER and
+         * activate on credential presence alone.
          */
         $this->app->singleton(AiGateway::class, function (): AiGateway {
-            $providers = [];
-
-            $baseUrl = (string) config('services.ai.base_url', '');
-            $key = config('services.ai.key');
-
-            if ($baseUrl !== '' && is_string($key) && $key !== '') {
-                $providers[] = new OpenAiCompatibleProvider(
-                    baseUrl: $baseUrl,
-                    apiKey: $key,
-                    defaultModel: (string) config('services.ai.model', ''),
-                    timeout: (int) config('services.ai.timeout', 30),
-                    rates: (array) config('services.ai.rates', ['prompt' => 0.0, 'completion' => 0.0]),
-                );
-            }
-
             return new AiGateway(
-                providers: $providers,
+                providers: $this->app->make(AiProviderFactory::class)->chain(),
                 monthlyLimitUsd: (float) config('services.ai.monthly_cost_limit_usd', 0),
             );
         });
