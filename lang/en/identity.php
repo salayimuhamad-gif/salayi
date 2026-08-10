@@ -43,7 +43,7 @@ return [
         'reset_password' => 'Reset password',
         'new_password' => 'New password',
         'confirm_password' => 'Confirm password',
-        'password_requirements' => 'At least 12 characters, with upper and lower case, a number and a symbol',
+        'password_requirements' => 'At least 8 characters',
         // The sign-in field accepts either identifier: customers register with
         // a phone number and no email, administrators the other way round.
         'login_identifier' => 'Phone number or email',
@@ -173,7 +173,7 @@ return [
         'phone_hint' => 'Iraqi number, e.g. 0750 123 4567',
         // :count is the CONFIGURED minimum, passed in from the server, so the
         // hint cannot drift away from the rule that is actually enforced.
-        'password_hint' => 'At least :count characters, with upper and lower case, a number and a symbol',
+        'password_hint' => 'At least :count characters',
         // Shown beside the deliberately vague refusal above. The message does
         // not say an account exists — that would let anyone test numbers — but
         // it no longer leaves a real owner with nowhere to go.

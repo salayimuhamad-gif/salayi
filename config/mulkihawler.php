@@ -64,7 +64,7 @@ return [
         // invalidating every session and signed URL (spec 30.1).
         'pii_key' => env('MULKIHAWLER_PII_KEY'),
         'blind_index_key' => env('MULKIHAWLER_BLIND_INDEX_KEY'),
-        'password_min_length' => 12,
+        'password_min_length' => 8,
         'admin_session_idle_minutes' => 60,
         'login_throttle' => ['attempts' => 5, 'decay_minutes' => 15],
     ],

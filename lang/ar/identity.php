@@ -43,7 +43,7 @@ return [
         'reset_password' => 'إعادة تعيين كلمة المرور',
         'new_password' => 'كلمة مرور جديدة',
         'confirm_password' => 'تأكيد كلمة المرور',
-        'password_requirements' => '١٢ حرفاً على الأقل، مع أحرف كبيرة وصغيرة وأرقام ورموز',
+        'password_requirements' => '٨ أحرف على الأقل',
         // The sign-in field accepts either identifier: customers register with
         // a phone number and no email, administrators the other way round.
         'login_identifier' => 'رقم الهاتف أو البريد الإلكتروني',
@@ -173,7 +173,7 @@ return [
         'phone_hint' => 'رقم عراقي، مثال: 0750 123 4567',
         // :count is the CONFIGURED minimum, passed in from the server, so the
         // hint cannot drift away from the rule that is actually enforced.
-        'password_hint' => ':count حرفًا على الأقل، مع أحرف كبيرة وصغيرة وأرقام ورموز',
+        'password_hint' => ':count أحرف على الأقل',
         // Shown beside the deliberately vague refusal above. The message does
         // not say an account exists — that would let anyone test numbers — but
         // it no longer leaves a real owner with nowhere to go.

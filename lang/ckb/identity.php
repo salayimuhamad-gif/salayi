@@ -43,7 +43,7 @@ return [
         'reset_password' => 'ڕێکخستنەوەی وشەی نهێنی',
         'new_password' => 'وشەی نهێنیی نوێ',
         'confirm_password' => 'دووبارەکردنەوەی وشەی نهێنی',
-        'password_requirements' => 'لانیکەم ١٢ پیت، بە پیتی گەورە و بچووک، ژمارە و هێما',
+        'password_requirements' => 'لانیکەم ٨ پیت',
         // The sign-in field accepts either identifier: customers register with
         // a phone number and no email, administrators the other way round.
         'login_identifier' => 'ژمارەی مۆبایل یان ئیمەیل',
@@ -173,7 +173,7 @@ return [
         'phone_hint' => 'ژمارەی عێراقی، بۆ نموونە: 0750 123 4567',
         // :count is the CONFIGURED minimum, passed in from the server, so the
         // hint cannot drift away from the rule that is actually enforced.
-        'password_hint' => 'لانیکەم :count پیت، بە پیتی گەورە و بچووک، ژمارە و هێما',
+        'password_hint' => 'لانیکەم :count پیت',
         // Shown beside the deliberately vague refusal above. The message does
         // not say an account exists — that would let anyone test numbers — but
         // it no longer leaves a real owner with nowhere to go.

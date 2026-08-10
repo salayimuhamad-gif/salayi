@@ -35,12 +35,7 @@ final class IdentityServiceProvider extends ModuleServiceProvider
         // module that forgets to register its own.
         Gate::before(static fn ($user): ?bool => $user->isSuperAdmin() ? true : null);
 
-        Password::defaults(fn (): Password => Password::min((int) config('mulkihawler.security.password_min_length', 12))
-            ->letters()
-            ->mixedCase()
-            ->numbers()
-            ->symbols()
-            ->uncompromised());
+        Password::defaults(fn (): Password => Password::min((int) config('mulkihawler.security.password_min_length', 8)));
 
         $this->registerRateLimits();
     }
