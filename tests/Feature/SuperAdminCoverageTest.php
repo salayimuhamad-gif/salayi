@@ -360,12 +360,18 @@ final class SuperAdminCoverageTest extends TestCase
                 ->component('Admin/SystemSettings')
                 ->has('integrations.mail.password_configured')
                 ->has('integrations.telegram.bot_token_configured')
-                ->has('integrations.ai.api_key_configured')
+                // The multi-provider AI panel: one configured-flag per
+                // provider credential, never the credential.
+                ->has('integrations.ai.openai.key_configured')
+                ->has('integrations.ai.gemini.key_configured')
+                ->has('integrations.ai.openai_compatible.key_configured')
                 ->missing('integrations.mail.password')
                 ->missing('integrations.telegram.bot_token')
                 ->missing('integrations.telegram.webhook_secret')
                 ->missing('integrations.maps.google_maps_api_key')
-                ->missing('integrations.ai.api_key'));
+                ->missing('integrations.ai.openai.key')
+                ->missing('integrations.ai.gemini.key')
+                ->missing('integrations.ai.openai_compatible.key'));
     }
 
     private function attachRole(User $user, RoleKey $key): void
