@@ -67,16 +67,33 @@ final class EnsureFeatureEnabled
 
             $user = $request->user();
 
-            // Commercially sensitive flags remain previewable by a Super Admin
-            // while off, so they can be set up before launch. Audited every time.
-            if ($this->resolver->requiresSuperAdmin($feature) && $user?->isSuperAdmin() === true) {
-                $this->audit->security('feature.preview_while_disabled', [
-                    'feature' => $feature,
-                    'path' => $request->path(),
-                    'actor_id' => $user->id,
-                ], result: 'allowed');
+            /*
+             * Super Admin previews a disabled feature in two places, each an
+             * audited security event:
+             *
+             *   - the ADMIN surface of ANY flag, so content can be curated
+             *     and settings prepared before a launch — a Super Admin must
+             *     see every implemented administrative section, and a flag
+             *     is a launch switch, not an authorisation;
+             *   - anywhere for the requires_super_admin flags, whose whole
+             *     point is a super-admin-only preview of the public surface.
+             *
+             * Everyone else — every ordinary administrator, every visitor,
+             * every API caller — is refused exactly as before: the flag
+             * keeps the public product dark until it is explicitly enabled.
+             */
+            if ($user?->isSuperAdmin() === true) {
+                $isAdminSurface = $request->is('admin/*') || $request->is('*/admin/*');
 
-                continue;
+                if ($isAdminSurface || $this->resolver->requiresSuperAdmin($feature)) {
+                    $this->audit->security('feature.preview_while_disabled', [
+                        'feature' => $feature,
+                        'path' => $request->path(),
+                        'actor_id' => $user->id,
+                    ], result: 'allowed');
+
+                    continue;
+                }
             }
 
             $this->deny($request, $feature, 'feature disabled');

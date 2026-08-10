@@ -49,6 +49,12 @@ final class Role extends Model
         return RoleKey::tryFrom($this->key);
     }
 
+    /** Whether this row names an administrative role rather than a public account type. */
+    public function isAdministrative(): bool
+    {
+        return $this->enum()?->isAdministrative() === true;
+    }
+
     /** @return list<string> */
     public function permissions(): array
     {

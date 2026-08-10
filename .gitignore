@@ -8,3 +8,4 @@
 /.phpunit.cache
 /storage/browser-acceptance
 /tests/Browser/support/fixtures.json
+/storage/app/private

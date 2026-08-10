@@ -104,6 +104,15 @@ final class HandleInertiaRequests extends Middleware
                     'name' => $request->user()->name,
                     'locale' => $request->user()->preferred_locale,
                     'is_admin' => $request->user()->isAdministrative(),
+                    /*
+                     * A real signal, not a heuristic. FeatureFlags.vue used to
+                     * infer "super admin" from permissions.length > 0 — true
+                     * for EVERY administrative user — and mislabelled the
+                     * super-admin-only toggles as usable for a System Admin.
+                     * A boolean carries no secret; the roles themselves stay
+                     * server-side.
+                     */
+                    'is_super_admin' => $request->user()->isSuperAdmin(),
                 ],
                 'permissions' => fn (): array => $request->user()?->allPermissions() ?? [],
             ],

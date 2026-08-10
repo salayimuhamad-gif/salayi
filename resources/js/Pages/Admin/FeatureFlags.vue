@@ -20,7 +20,13 @@ interface Flag {
 const props = defineProps<{ flags: Flag[] }>();
 const page = usePage<SharedPageProps>();
 
-const isSuperAdmin = computed(() => page.props.auth.permissions.length > 0 && page.props.auth.user?.is_admin === true);
+/*
+ * The real signal from the server, not a heuristic. The previous derivation
+ * (permissions.length > 0 && is_admin) was true for EVERY administrative
+ * user, so a System Admin saw the super-admin-only toggles as usable and got
+ * a server-side refusal on click.
+ */
+const isSuperAdmin = computed(() => page.props.auth.user?.is_super_admin === true);
 
 const grouped = computed(() => {
     const groups: Record<string, Flag[]> = {};

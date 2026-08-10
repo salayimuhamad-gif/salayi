@@ -163,6 +163,12 @@ final class UsersController extends Controller
             'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
             'can_revoke_sessions' => $request->user()->hasPermission('identity.sessions.revoke'),
             'can_trigger_recovery' => $request->user()->hasPermission('identity.users.update'),
+            // Promotion to operator is a RANK, not a permission: granting
+            // roles widens effective permissions, so only a real Super Admin
+            // is offered the door. The server enforces the same rule with a
+            // 403 and a security audit record.
+            'can_assign_roles' => $request->user()->isSuperAdmin(),
+            'assignable_roles' => AdministratorsController::assignableRoleKeys(),
             'reveal_reasons' => array_map(
                 static fn (RevealReason $reason): array => [
                     'value' => $reason->value,
