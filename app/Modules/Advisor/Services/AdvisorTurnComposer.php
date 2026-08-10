@@ -90,7 +90,16 @@ final class AdvisorTurnComposer
             'provider' => $completion['provider'] ?? null,
             'content_class' => 'scenario',
             'evidence_ids' => [],
-            'prompt_version' => 'advisor-live-turn-v6-selected-locale',
+            /*
+             * ≤ 32 characters, because advisor_messages.prompt_version is
+             * VARCHAR(32) and MariaDB's strict mode rejects the whole insert
+             * on overflow. The v6 token here was 36 characters — which meant
+             * every MODEL-generated turn silently failed to persist on
+             * MariaDB and shipped as an ephemeral payload instead. The
+             * multi-provider CI matrix caught it the first time a test
+             * asserted the persisted row.
+             */
+            'prompt_version' => 'advisor-live-turn-v7',
             'cost_usd' => $completion['cost_usd'] ?? '0.000000',
             'latency_ms' => $completion['latency_ms'] ?? 0,
             'prompt_tokens' => $completion['prompt_tokens'] ?? 0,
@@ -121,7 +130,7 @@ final class AdvisorTurnComposer
             'provider' => null,
             'content_class' => 'scenario',
             'evidence_ids' => [],
-            'prompt_version' => 'advisor-live-turn-v6-fallback',
+            'prompt_version' => 'advisor-live-turn-v7-fallback',
             'cost_usd' => '0.000000',
             'latency_ms' => 0,
             'prompt_tokens' => 0,
@@ -159,7 +168,9 @@ final class AdvisorTurnComposer
             'provider' => null,
             'content_class' => 'analysis',
             'evidence_ids' => $ids,
-            'prompt_version' => 'advisor-project-results-v6-grounded',
+            // ≤ 32 characters — see compose(): the 35-character v6 token
+            // meant the recommendation turn never persisted on MariaDB.
+            'prompt_version' => 'advisor-project-results-v7',
             'cost_usd' => '0.000000',
             'latency_ms' => 0,
             'prompt_tokens' => 0,

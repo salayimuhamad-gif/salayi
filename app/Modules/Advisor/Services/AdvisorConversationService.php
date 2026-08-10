@@ -663,9 +663,17 @@ final class AdvisorConversationService
                 'locale' => $turn['locale'],
                 'content_class' => $turn['content_class'] ?? 'scenario',
                 'evidence_ids' => $turn['evidence_ids'] ?? [],
-                'prompt_version' => $turn['prompt_version'],
-                'model' => $turn['model'],
-                'provider' => $turn['provider'],
+                /*
+                 * Bounded to the columns, because MariaDB strict mode rejects
+                 * the WHOLE insert on overflow and the catch below would turn
+                 * that into a silently unpersisted turn. prompt_version is
+                 * ours (short by convention), but `model` echoes whatever the
+                 * provider reports and an operator-configured name can be
+                 * arbitrarily long.
+                 */
+                'prompt_version' => $turn['prompt_version'] === null ? null : mb_substr((string) $turn['prompt_version'], 0, 32),
+                'model' => $turn['model'] === null ? null : mb_substr((string) $turn['model'], 0, 64),
+                'provider' => $turn['provider'] === null ? null : mb_substr((string) $turn['provider'], 0, 32),
                 'responded_at' => now(),
                 'validation_result' => $turn['validation_result'],
                 'validation_detail' => $turn['validation_detail'],

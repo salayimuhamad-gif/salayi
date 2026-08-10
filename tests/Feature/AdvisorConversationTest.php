@@ -205,6 +205,14 @@ final class AdvisorConversationTest extends TestCase
         $member = $this->member();
         $this->completeIntake($member);
 
+        // The recommendation turn is a PERSISTED row, not an ephemeral
+        // payload — this exact assertion is what exposed the v6
+        // prompt_version overflowing the VARCHAR(32) column on MariaDB.
+        $this->assertTrue(
+            AdvisorMessage::query()->where('prompt_version', 'advisor-project-results-v7')->exists(),
+            'the completion turn must land in advisor_messages',
+        );
+
         // The old contract answered 409 "already complete" here. The repaired
         // one answers the follow-up.
         $response = $this->actingAs($member)->send('سوپاس، بەڵام هەرزانتر دەوێت')->assertOk();

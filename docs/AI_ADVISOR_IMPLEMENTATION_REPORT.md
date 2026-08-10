@@ -285,6 +285,19 @@ bcmath-requiring guard test that runs in CI, where bcmath is installed),
 4,271 assertions. Standalone suite: PASSED. Release tooling: all 408
 checks. CI: see the checks on the PR for this branch.
 
+The CI MariaDB matrix additionally exposed a PRE-EXISTING production bug
+the moment a test asserted a persisted model turn:
+`advisor_messages.prompt_version` is `VARCHAR(32)` and the v6 version
+tokens were 35–36 characters, so under MariaDB strict mode every
+model-generated turn (and the recommendation turn) failed its insert and
+shipped as an ephemeral payload — silently unpersisted, exactly the
+failure mode the persist-or-payload catch was designed to survive but not
+to hide forever. Fixed by shortening the version tokens to fit the column
+and bounding `prompt_version`/`model`/`provider` to their column widths at
+the persist boundary (an operator-configured model name can be arbitrarily
+long); the persistence of the recommendation turn is now asserted
+directly.
+
 ## 16. Build result
 
 `composer validate`: valid. PHPStan: no errors. Pint: clean. Vite build:
