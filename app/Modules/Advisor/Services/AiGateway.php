@@ -31,6 +31,11 @@ use Illuminate\Support\Facades\Log;
  * means the request that breaches the limit is the one you have already paid
  * for, and on a runaway loop that is the difference between a small overrun and
  * an invoice nobody authorised.
+ *
+ * Telemetry: the last success and the last categorised failure are kept in the
+ * cache (provider, category, timestamp — never a request, never a body, never
+ * a credential) so the Super Admin diagnostics surface can answer "why is the
+ * AI off" without anyone reading server logs over SSH.
  */
 final class AiGateway
 {
@@ -39,6 +44,9 @@ final class AiGateway
 
     /** How long a tripped breaker stays open. */
     private const BREAKER_SECONDS = 300;
+
+    /** How long the last-success / last-failure telemetry survives. */
+    private const TELEMETRY_SECONDS = 604800;
 
     /**
      * @param  list<AiProvider>  $providers  primary first, fallbacks after
@@ -95,7 +103,7 @@ final class AiGateway
             try {
                 $result = $provider->complete($request);
 
-                $this->recordSuccess($provider);
+                $this->recordSuccess($provider, $result);
                 // Every AiProvider result declares cost_usd.
                 $this->recordSpend($result['cost_usd']);
 
@@ -106,18 +114,71 @@ final class AiGateway
             } catch (AiProviderException $e) {
                 $lastFailure = $e;
                 $attempted[] = $provider->key();
-                $this->recordFailure($provider);
+                $this->recordFailure($provider, $e);
 
                 // The message is safe — AiProviderException never carries a
                 // response body — but the request is not, so it is never logged.
                 Log::warning('ai.provider_failed', [
                     'provider' => $provider->key(),
+                    'category' => $e->category(),
                     'reason' => $e->getMessage(),
                 ]);
             }
         }
 
         throw $lastFailure ?? AiProviderException::notConfigured('none');
+    }
+
+    /**
+     * The diagnostics readout for the Super Admin surface (audit Q20).
+     *
+     * Everything here is either this application's own configuration state or
+     * a category token this application minted — no provider bodies, no
+     * credentials, no request content.
+     *
+     * @return array{
+     *     available: bool,
+     *     providers: list<array{key: string, model: string, configured: bool, breaker_open: bool, is_fallback: bool}>,
+     *     monthly_spent_usd: string,
+     *     monthly_limit_usd: string,
+     *     budget_exhausted: bool,
+     *     cost_rates_configured: bool,
+     *     last_success: array<string, mixed>|null,
+     *     last_failure: array<string, mixed>|null
+     * }
+     */
+    public function status(): array
+    {
+        $providers = [];
+
+        foreach ($this->providers as $index => $provider) {
+            $providers[] = [
+                'key' => $provider->key(),
+                'model' => $provider->model(),
+                'configured' => $provider->isConfigured(),
+                'breaker_open' => $this->isOpen($provider),
+                'is_fallback' => $index > 0,
+            ];
+        }
+
+        $spent = $this->monthlySpent();
+
+        return [
+            'available' => $this->isAvailable(),
+            'providers' => $providers,
+            'monthly_spent_usd' => number_format($spent, 6, '.', ''),
+            'monthly_limit_usd' => number_format($this->monthlyLimitUsd, 2, '.', ''),
+            'budget_exhausted' => $this->monthlyLimitUsd > 0.0 && $spent >= $this->monthlyLimitUsd,
+            'cost_rates_configured' => (float) config('services.ai.rates.prompt', 0) > 0.0
+                || (float) config('services.ai.rates.completion', 0) > 0.0,
+            'last_success' => Cache::get('ai:last_success'),
+            'last_failure' => Cache::get('ai:last_failure'),
+        ];
+    }
+
+    public function monthlySpent(): float
+    {
+        return (float) Cache::get($this->spendKey(), 0.0);
     }
 
     /**
@@ -131,9 +192,7 @@ final class AiGateway
             return;
         }
 
-        $spent = (float) Cache::get($this->spendKey(), 0.0);
-
-        if ($spent >= $this->monthlyLimitUsd) {
+        if ($this->monthlySpent() >= $this->monthlyLimitUsd) {
             throw AiProviderException::costLimitReached(number_format($this->monthlyLimitUsd, 2, '.', ''));
         }
     }
@@ -167,12 +226,18 @@ final class AiGateway
         return (int) Cache::get($this->breakerKey($provider), 0) >= self::FAILURE_THRESHOLD;
     }
 
-    private function recordFailure(AiProvider $provider): void
+    private function recordFailure(AiProvider $provider, AiProviderException $e): void
     {
         $key = $this->breakerKey($provider);
         $failures = (int) Cache::get($key, 0) + 1;
 
         Cache::put($key, $failures, now()->addSeconds(self::BREAKER_SECONDS));
+
+        Cache::put('ai:last_failure', [
+            'provider' => $provider->key(),
+            'category' => $e->category(),
+            'at' => now()->toIso8601String(),
+        ], now()->addSeconds(self::TELEMETRY_SECONDS));
     }
 
     /**
@@ -181,9 +246,18 @@ final class AiGateway
      * Decrementing instead would leave a recovered provider one failure away
      * from being skipped again, which on an intermittent network turns a brief
      * blip into a five-minute outage.
+     *
+     * @param  array<string, mixed>  $result
      */
-    private function recordSuccess(AiProvider $provider): void
+    private function recordSuccess(AiProvider $provider, array $result): void
     {
         Cache::forget($this->breakerKey($provider));
+
+        Cache::put('ai:last_success', [
+            'provider' => $provider->key(),
+            'model' => (string) ($result['model'] ?? $provider->model()),
+            'latency_ms' => (int) ($result['latency_ms'] ?? 0),
+            'at' => now()->toIso8601String(),
+        ], now()->addSeconds(self::TELEMETRY_SECONDS));
     }
 }

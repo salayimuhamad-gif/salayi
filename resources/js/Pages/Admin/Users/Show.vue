@@ -11,10 +11,12 @@ import { t, formatNumber } from '@/lib/i18n';
  * One member account (spec §8).
  *
  * The claims render at their true strengths — Telegram verified with its
- * date, phone user-provided with the full honest label — and the number
- * itself arrives only through the reveal ceremony, into component state,
- * under no-store headers. Suspension asks for words: a suspended person
- * deserves a recorded reason, and the audit stream gets the same one.
+ * date, phone user-provided. The phone renders DIRECTLY for administrators
+ * holding identity.users.contact (deliberate product policy for the
+ * account-management surface; the server sends null to everyone else),
+ * dir="ltr" so digits stay readable in RTL, under no-store headers.
+ * Suspension asks for words: a suspended person deserves a recorded
+ * reason, and the audit stream gets the same one.
  */
 const props = defineProps<{
     account: {
@@ -30,6 +32,7 @@ const props = defineProps<{
         telegram_linked_at: string | null;
         phone_present: boolean;
         phone_status: string;
+        phone: string | null;
         registered_at: string | null;
         last_login_at: string | null;
         last_seen_at: string | null;
@@ -45,12 +48,11 @@ const props = defineProps<{
     timeline: Array<{ event: string; at: string }>;
     requests: Array<{ id: number; stage: string; objective: string | null; property_type: string | null; updated_at: string | null }>;
     can_manage: boolean;
-    can_reveal: boolean;
+    can_view_phone: boolean;
     can_revoke_sessions: boolean;
     can_trigger_recovery: boolean;
     can_assign_roles: boolean;
     assignable_roles: string[];
-    reveal_reasons: Array<{ value: string; requires_note: boolean }>;
 }>();
 
 const suspendForm = useForm({ reason: '' });
@@ -84,45 +86,6 @@ function sendRecovery(): void {
     actionForm.post(`/admin/users/${props.account.id}/recovery`, { preserveScroll: true });
 }
 
-const revealReason = ref('');
-const revealNote = ref('');
-const revealBusy = ref(false);
-const revealedPhone = ref<string | null>(null);
-const revealError = ref<string | null>(null);
-
-const revealNeedsNote = (): boolean =>
-    props.reveal_reasons.find((r) => r.value === revealReason.value)?.requires_note ?? false;
-
-async function revealPhone(): Promise<void> {
-    if (revealReason.value === '' || revealBusy.value) return;
-
-    revealBusy.value = true;
-    revealError.value = null;
-
-    try {
-        const response = await fetch(`/admin/users/${props.account.id}/phone`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-XSRF-TOKEN': decodeURIComponent(document.cookie.match(/XSRF-TOKEN=([^;]+)/)?.[1] ?? ''),
-            },
-            body: JSON.stringify({ reason: revealReason.value, note: revealNote.value || null }),
-        });
-        const body = (await response.json()) as { ok?: boolean; phone?: string; reason?: string };
-
-        if (response.ok && body.ok === true && body.phone) {
-            revealedPhone.value = body.phone;
-        } else {
-            revealError.value = t('leads.detail.reveal_refused', { reason: body.reason ?? 'denied' });
-        }
-    } catch {
-        revealError.value = t('leads.detail.reveal_refused', { reason: 'network' });
-    } finally {
-        revealBusy.value = false;
-    }
-}
 </script>
 
 <template>
@@ -168,10 +131,17 @@ async function revealPhone(): Promise<void> {
                             ? `${t('leads.detail.telegram_verified')} · ${account.telegram_linked_at ?? ''}`
                             : t('leads.detail.telegram_missing') }}
                     </p>
-                    <p class="text-ink-muted">
+                    <!-- Direct phone display for identity.users.contact
+                         holders — no ceremony on this administrative
+                         account-management surface. dir="ltr" keeps the
+                         digits readable inside RTL layouts. -->
+                    <p v-if="account.phone" class="text-ink">
+                        <span class="numeral font-semibold" dir="ltr">{{ account.phone }}</span>
+                    </p>
+                    <p v-else class="text-ink-muted">
                         {{ account.phone_present
                             ? t('leads.detail.phone_user_provided')
-                            : t('leads.detail.phone_absent') }}
+                            : t('identity.users.phone_absent') }}
                     </p>
                     <p :class="contact_consent.granted ? 'text-positive' : 'text-ink-faint'">
                         {{ contact_consent.granted
@@ -195,58 +165,6 @@ async function revealPhone(): Promise<void> {
                 </div>
             </div>
 
-            <!-- The reveal ceremony, verbatim from the leads surface. -->
-            <div v-if="can_reveal && account.phone_present" class="mt-4 border-t border-line pt-4">
-                <p v-if="revealedPhone" class="text-sm">
-                    <span class="block text-xs text-ink-faint">{{ t('leads.detail.reveal_label') }}</span>
-                    <span class="numeral mt-1 block text-lg font-semibold text-ink" dir="ltr">{{ revealedPhone }}</span>
-                </p>
-
-                <template v-else>
-                    <p class="text-sm font-medium text-ink">{{ t('leads.detail.reveal') }}</p>
-                    <div class="mt-2 flex flex-wrap items-end gap-3">
-                        <div>
-                            <label for="user-reveal-reason" class="mb-1 block text-xs text-ink-muted">
-                                {{ t('leads.detail.reveal_reason') }}
-                            </label>
-                            <select
-                                id="user-reveal-reason"
-                                v-model="revealReason"
-                                class="block min-h-11 rounded-card border border-line bg-surface px-3 text-sm text-ink
-                                       focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            >
-                                <option value="" disabled>—</option>
-                                <option v-for="reason in reveal_reasons" :key="reason.value" :value="reason.value">
-                                    {{ t(`leads.reveal_reasons.${reason.value}`) }}
-                                </option>
-                            </select>
-                        </div>
-                        <div v-if="revealNeedsNote()" class="min-w-48 flex-1">
-                            <label for="user-reveal-note" class="mb-1 block text-xs text-ink-muted">
-                                {{ t('leads.detail.reveal_note') }}
-                            </label>
-                            <input
-                                id="user-reveal-note"
-                                v-model="revealNote"
-                                type="text"
-                                maxlength="500"
-                                class="block min-h-11 w-full rounded-card border border-line bg-surface px-3 text-sm
-                                       text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            >
-                        </div>
-                        <AppButton
-                            type="button"
-                            size="sm"
-                            :loading="revealBusy"
-                            :disabled="revealReason === '' || (revealNeedsNote() && revealNote.trim() === '')"
-                            @click="revealPhone"
-                        >
-                            {{ t('leads.detail.reveal_confirm') }}
-                        </AppButton>
-                    </div>
-                    <p v-if="revealError" class="mt-2 text-sm text-negative" role="alert">{{ revealError }}</p>
-                </template>
-            </div>
         </AppCard>
 
         <!-- ============================ activity ============================ -->

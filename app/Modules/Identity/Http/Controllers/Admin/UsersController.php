@@ -8,12 +8,9 @@ use App\Modules\Identity\Http\Middleware\TouchLastSeen;
 use App\Modules\Identity\Models\Consent;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\TelegramPasswordRecovery;
-use App\Modules\Leads\Enums\RevealReason;
 use App\Modules\Leads\Models\DemandProfile;
-use App\Modules\Leads\Services\PhoneRevealService;
 use App\Modules\Operations\Services\AuditLogger;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -21,7 +18,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
-use Inertia\Response;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
@@ -30,10 +27,19 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
  * The honesty rule from §0 is structural in every payload this controller
  * builds: a phone is PRESENT or ABSENT, and when present its status is the
  * string `user_provided` — there is no field and no code path that could
- * render "verified phone", so no template can claim one. The number itself
- * never appears in a list, a detail page, or an Inertia prop; the ONLY way
- * out is the audited reveal, which demands its own capability, a reason,
- * consent, and a rate.
+ * render "verified phone", so no template can claim one.
+ *
+ * PHONE VISIBILITY ON THIS SURFACE is a deliberate product-policy decision:
+ * an administrator holding `identity.users.contact` sees the plaintext
+ * number directly in the list and on the detail page — no reveal button, no
+ * reason, no consent gate. Serialization is ACTOR-AWARE: the number is
+ * decrypted only after the permission check has passed, only for this
+ * surface's payloads, and never enters logs, audit metadata, URLs, or the
+ * CSV export (which stays availability-only, so a page-view capability can
+ * never become a bulk-extraction one). Access is audited per page render,
+ * not per row. The Sales/Leads workspace is UNCHANGED: its
+ * PhoneRevealService ceremony — permission, consent, reason, rate, ledger —
+ * remains the single door to a lead's number.
  *
  * Ordinary members only. Accounts holding platform roles are administered
  * through the roles machinery, and mixing them into this list would put
@@ -42,7 +48,6 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 final class UsersController extends Controller
 {
     public function __construct(
-        private readonly PhoneRevealService $reveals,
         private readonly AuditLogger $audit,
     ) {}
 
@@ -145,30 +150,60 @@ final class UsersController extends Controller
     public function index(Request $request): Response
     {
         $validated = $this->validateFilters($request);
+        $canViewPhone = $request->user()->hasPermission('identity.users.contact');
 
         $users = $this->workspaceQuery($validated)
             ->paginate(25)
             ->withQueryString()
-            ->through(fn (User $user): array => $this->row($user));
+            ->through(fn (User $user): array => $this->row($user, $canViewPhone));
 
-        return Inertia::render('Admin/Users/Index', [
+        $this->auditSensitiveView($request, $canViewPhone, 'index', count($users->items()));
+
+        $page = Inertia::render('Admin/Users/Index', [
             'users' => $users,
             'filters' => $validated,
             'stages' => DemandProfile::STAGES,
             // The actor's own doors, so the page offers only what the server
-            // will honour. The reveal stays target-scoped: the button renders
-            // per row only where consent exists, and the endpoint re-checks
-            // everything regardless.
-            'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
+            // will honour: with identity.users.contact the rows CARRY the
+            // number; without it they carry null and the client shows nothing.
+            'can_view_phone' => $canViewPhone,
             'can_export' => $request->user()->hasPermission('identity.users.export'),
-            'reveal_reasons' => array_map(
-                static fn (RevealReason $reason): array => [
-                    'value' => $reason->value,
-                    'requires_note' => $reason->requiresNote(),
-                ],
-                RevealReason::cases(),
-            ),
+        ])->toResponse($request);
+
+        return $this->withoutStore($page, $canViewPhone);
+    }
+
+    /**
+     * The page-access audit for direct phone visibility: one record per real
+     * page render, counting rows — never per row (twenty-five records per
+     * screen is noise that buries signal), never on Inertia partial reloads
+     * (prefetch and lazy-prop refreshes would double-book the same view),
+     * and never carrying a number, an encrypted value or a blind index.
+     */
+    private function auditSensitiveView(Request $request, bool $canViewPhone, string $page, int $rows): void
+    {
+        if (! $canViewPhone || $rows === 0 || $request->headers->has('X-Inertia-Partial-Component')) {
+            return;
+        }
+
+        $this->audit->record('identity.users.sensitive_data_viewed', null, [], [
+            'actor_id' => $request->user()->id,
+            'page' => $page,
+            'rows' => $rows,
         ]);
+    }
+
+    /**
+     * Pages that now carry plaintext PII must never rest in a shared cache;
+     * Inertia's own headers are preserved, only the cache policy tightens.
+     */
+    private function withoutStore(Response $response, bool $sensitive): Response
+    {
+        if ($sensitive) {
+            $response->headers->set('Cache-Control', 'no-store, private');
+        }
+
+        return $response;
     }
 
     /**
@@ -280,6 +315,8 @@ final class UsersController extends Controller
     {
         abort_if($user->roles()->exists(), 404);
 
+        $canViewPhone = $request->user()->hasPermission('identity.users.contact');
+
         $user->loadCount([
             'demandProfiles as advisor_request_count' => fn ($q) => $q->where('source', 'advisor'),
             'portfolioProperties as portfolio_count',
@@ -293,8 +330,10 @@ final class UsersController extends Controller
             ->latest('granted_at')
             ->first();
 
-        return Inertia::render('Admin/Users/Show', [
-            'account' => $this->row($user) + [
+        $this->auditSensitiveView($request, $canViewPhone, 'show', 1);
+
+        $page = Inertia::render('Admin/Users/Show', [
+            'account' => $this->row($user, $canViewPhone) + [
                 'profile_bio' => $user->profile_bio,
                 'contact_preference' => $user->contact_preference,
                 'primary_purpose' => $user->primary_purpose,
@@ -331,7 +370,7 @@ final class UsersController extends Controller
                 ])
                 ->all(),
             'can_manage' => $request->user()->hasPermission('identity.users.suspend'),
-            'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
+            'can_view_phone' => $canViewPhone,
             'can_revoke_sessions' => $request->user()->hasPermission('identity.sessions.revoke'),
             'can_trigger_recovery' => $request->user()->hasPermission('identity.users.update'),
             // Promotion to operator is a RANK, not a permission: granting
@@ -340,14 +379,9 @@ final class UsersController extends Controller
             // 403 and a security audit record.
             'can_assign_roles' => $request->user()->isSuperAdmin(),
             'assignable_roles' => AdministratorsController::assignableRoleKeys(),
-            'reveal_reasons' => array_map(
-                static fn (RevealReason $reason): array => [
-                    'value' => $reason->value,
-                    'requires_note' => $reason->requiresNote(),
-                ],
-                RevealReason::cases(),
-            ),
-        ]);
+        ])->toResponse($request);
+
+        return $this->withoutStore($page, $canViewPhone);
     }
 
     public function suspend(Request $request, User $user): RedirectResponse
@@ -398,10 +432,6 @@ final class UsersController extends Controller
     }
 
     /**
-     * The reveal, from the accounts surface: the same audited ceremony as the
-     * sales workspace, behind this surface's own capability.
-     */
-    /**
      * End every session the account holds, now.
      *
      * The remember token is rotated in the same breath: a forced logout that
@@ -444,37 +474,18 @@ final class UsersController extends Controller
         return back()->with('success', __('identity.users.recovery_sent'));
     }
 
-    public function revealPhone(Request $request, User $user): JsonResponse
-    {
-        abort_if($user->roles()->exists(), 404);
-
-        $validated = $request->validate([
-            'reason' => ['required', Rule::in(array_map(static fn (RevealReason $r): string => $r->value, RevealReason::cases()))],
-            'note' => ['nullable', 'string', 'max:500'],
-        ]);
-
-        $result = $this->reveals->reveal(
-            $request->user(),
-            $user,
-            RevealReason::from($validated['reason']),
-            $validated['note'] ?? null,
-            null,
-            $request->ip() === null ? null : hash('sha256', $request->ip()),
-            permission: 'identity.users.contact',
-        );
-
-        return response()->json($result, $result['ok'] ? 200 : 422, [
-            'Cache-Control' => 'no-store, no-cache, must-revalidate',
-            'Pragma' => 'no-cache',
-        ]);
-    }
-
     /**
-     * One account, at the honesty level the spec demands.
+     * One account, at the honesty level the spec demands — ACTOR-AWARE.
+     *
+     * The plaintext number appears only when the caller proved the actor
+     * holds `identity.users.contact`; decryption happens inside that branch
+     * and nowhere earlier, so an unauthorized request never even performs
+     * it. This serializer is private to the admin Users surface — it must
+     * never be reused by a public or non-admin payload.
      *
      * @return array<string, mixed>
      */
-    private function row(User $user): array
+    private function row(User $user, bool $canViewPhone = false): array
     {
         return [
             'id' => $user->id,
@@ -489,6 +500,10 @@ final class UsersController extends Controller
             'telegram_linked_at' => $user->telegram_verified_at?->toDateString(),
             'phone_present' => $user->phone_index !== null,
             'phone_status' => 'user_provided',
+            // Deliberate product policy (see the class docblock): direct
+            // display for identity.users.contact holders, null for everyone
+            // else — decrypted only after authorization, on this surface only.
+            'phone' => $canViewPhone ? $user->phone() : null,
             'registered_at' => $user->created_at?->toDateString(),
             'last_login_at' => $user->last_login_at?->toDateString(),
             'last_seen_at' => $user->last_seen_at?->diffForHumans(),

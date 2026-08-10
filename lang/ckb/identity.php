@@ -293,8 +293,7 @@ return [
 
     'users' => [
         'export_sheet' => 'هەناردەی خشتە',
-        'phone_reveal_not_permitted' => 'ژمارە هەیە — ئاشکراکردن ڕێگەپێدراو نییە',
-        'reveal_phone' => 'ئاشکراکردنی ژمارە',
+        'phone_present' => 'ژمارەی مۆبایل تۆمارکراوە',
         'request_filter' => 'داواکاری',
         'request_any' => 'داواکاری هەیە',
         'request_none_filter' => 'بێ داواکاری',
@@ -348,7 +347,7 @@ return [
         'empty' => 'هیچ هەژمارێک نییە',
         'empty_body' => 'هیچ هەژماری ئەندامێک لەگەڵ ئەم فلتەرانە ناگونجێت.',
         'phone_user_provided' => 'مۆبایل: بەکارهێنەر نووسیویەتی',
-        'phone_absent' => 'مۆبایل: نییە',
+        'phone_absent' => 'هیچ ژمارەیەکی مۆبایل نییە',
         'registered' => 'بەرواری تۆمارکردن',
         'last_login' => 'دوایین چوونەژوورەوە',
         'requests' => 'داواکارییەکان',

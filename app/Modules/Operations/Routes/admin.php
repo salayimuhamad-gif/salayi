@@ -21,4 +21,7 @@ Route::middleware('permission:system.settings.update')->group(function (): void 
 
 Route::middleware('permission:system.integrations.update')->group(function (): void {
     Route::put('/settings/integrations', [SystemSettingsController::class, 'updateIntegrations'])->name('system.settings.integrations.update');
+    // Super-Admin-only inside the controller, like updateIntegrations: the
+    // permission gate narrows, the rank check decides.
+    Route::post('/settings/integrations/ai-test', [SystemSettingsController::class, 'testAiConnection'])->name('system.settings.integrations.ai_test');
 });

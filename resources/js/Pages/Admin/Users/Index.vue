@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import AdminLayout from '@/Layouts/AdminLayout.vue';
-import AppButton from '@/Components/ui/AppButton.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
 import AppPagination from '@/Components/ui/AppPagination.vue';
 import { t, formatNumber } from '@/lib/i18n';
@@ -10,14 +8,15 @@ import { t, formatNumber } from '@/lib/i18n';
 /*
  * The Admin Users Workspace (spec §8): member accounts as a follow-up
  * surface — who is active, who linked Telegram, what each person is looking
- * for right now, and the audited door to a phone number where consent allows
- * one.
+ * for right now.
  *
- * Every claim renders at its true strength. The phone is PRESENT or ABSENT
- * and always user-provided; the number itself is never in this payload — the
- * per-row reveal is the same ceremony as the detail page, hitting the same
- * audited endpoint, and the digits live only in transient component state
- * after a successful reveal.
+ * PHONE DISPLAY IS DIRECT on this surface, by deliberate product policy: an
+ * administrator holding identity.users.contact receives the number in the
+ * row payload and it renders in place — no reveal button, no reason, no
+ * modal. The server decides: without the permission the `phone` field is
+ * null and this page has nothing to show. The number renders dir="ltr" so
+ * digits stay readable inside the RTL layouts. The Sales/Leads workspace
+ * keeps its reveal ceremony untouched.
  */
 interface LatestRequest {
     objective: string | null;
@@ -38,6 +37,7 @@ interface Row {
     telegram_linked_at: string | null;
     phone_present: boolean;
     phone_status: string;
+    phone: string | null;
     registered_at: string | null;
     last_login_at: string | null;
     last_seen_at: string | null;
@@ -64,9 +64,8 @@ const props = defineProps<{
         stage?: string | null;
     };
     stages: string[];
-    can_reveal: boolean;
+    can_view_phone: boolean;
     can_export: boolean;
-    reveal_reasons: Array<{ value: string; requires_note: boolean }>;
 }>();
 
 function applyFilter(patch: Record<string, string | null>): void {
@@ -89,60 +88,6 @@ const requestSummary = (request: LatestRequest): string => {
     if (request.property_type) parts.push(t(`identity.users.type_${request.property_type}`));
     return parts.join(' · ');
 };
-
-/*
- * The per-row reveal ceremony: same reason/note contract, same endpoint,
- * same audit as the detail page. One row at a time; the revealed number
- * lives only here, in memory, until navigation discards it.
- */
-const revealFor = ref<number | null>(null);
-const revealReason = ref('');
-const revealNote = ref('');
-const revealBusy = ref(false);
-const revealError = ref<string | null>(null);
-const revealed = ref<Record<number, string>>({});
-
-const revealNeedsNote = (): boolean =>
-    props.reveal_reasons.find((r) => r.value === revealReason.value)?.requires_note ?? false;
-
-function openReveal(row: Row): void {
-    revealError.value = null;
-    revealReason.value = '';
-    revealNote.value = '';
-    revealFor.value = revealFor.value === row.id ? null : row.id;
-}
-
-async function revealPhone(row: Row): Promise<void> {
-    if (revealReason.value === '' || revealBusy.value) return;
-
-    revealBusy.value = true;
-    revealError.value = null;
-
-    try {
-        const response = await fetch(`/admin/users/${row.id}/phone`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-XSRF-TOKEN': decodeURIComponent(document.cookie.match(/XSRF-TOKEN=([^;]+)/)?.[1] ?? ''),
-            },
-            body: JSON.stringify({ reason: revealReason.value, note: revealNote.value || null }),
-        });
-        const body = (await response.json()) as { ok?: boolean; phone?: string; reason?: string };
-
-        if (response.ok && body.ok === true && body.phone) {
-            revealed.value = { ...revealed.value, [row.id]: body.phone };
-            revealFor.value = null;
-        } else {
-            revealError.value = t('leads.detail.reveal_refused', { reason: body.reason ?? 'denied' });
-        }
-    } catch {
-        revealError.value = t('leads.detail.reveal_refused', { reason: 'network' });
-    } finally {
-        revealBusy.value = false;
-    }
-}
 </script>
 
 <template>
@@ -417,22 +362,14 @@ async function revealPhone(row: Row): Promise<void> {
                                         ? `${t('leads.detail.telegram_verified')} · ${user.telegram_linked_at ?? ''}`
                                         : t('leads.detail.telegram_missing') }}
                                 </p>
+                                <!-- Direct display, no ceremony: the server
+                                     sent the number only if the actor holds
+                                     identity.users.contact. dir="ltr" keeps
+                                     the digits readable in RTL layouts. -->
                                 <p class="mt-1 text-xs text-ink-muted">
-                                    <template v-if="!user.phone_present">{{ t('identity.users.phone_absent') }}</template>
-                                    <template v-else-if="revealed[user.id]">
-                                        <span class="numeral font-medium text-ink" dir="ltr">{{ revealed[user.id] }}</span>
-                                    </template>
-                                    <template v-else-if="user.contact_consent && can_reveal">
-                                        <button
-                                            type="button"
-                                            class="text-accent underline-offset-2 hover:underline focus-visible:outline-none
-                                                   focus-visible:ring-2 focus-visible:ring-accent"
-                                            @click="openReveal(user)"
-                                        >
-                                            {{ t('identity.users.reveal_phone') }}
-                                        </button>
-                                    </template>
-                                    <template v-else>{{ t('identity.users.phone_reveal_not_permitted') }}</template>
+                                    <span v-if="user.phone" class="numeral font-medium text-ink" dir="ltr">{{ user.phone }}</span>
+                                    <template v-else-if="!user.phone_present">{{ t('identity.users.phone_absent') }}</template>
+                                    <template v-else>{{ t('identity.users.phone_present') }}</template>
                                 </p>
                             </td>
 
@@ -459,50 +396,6 @@ async function revealPhone(row: Row): Promise<void> {
 
                             <td class="numeral px-4 py-3 text-end" dir="ltr">{{ formatNumber(user.advisor_request_count) }}</td>
                             <td class="numeral px-4 py-3 text-end" dir="ltr">{{ formatNumber(user.portfolio_count) }}</td>
-                        </tr>
-
-                        <tr v-if="revealFor === user.id" class="border-b border-line bg-surface-sunken/40 last:border-b-0">
-                            <td colspan="7" class="px-4 py-3">
-                                <form class="flex flex-wrap items-end gap-3" @submit.prevent="revealPhone(user)">
-                                    <div>
-                                        <label :for="`reveal-reason-${user.id}`" class="mb-1 block text-xs text-ink-muted">
-                                            {{ t('leads.detail.reveal_reason') }}
-                                        </label>
-                                        <select
-                                            :id="`reveal-reason-${user.id}`"
-                                            v-model="revealReason"
-                                            required
-                                            class="block min-h-10 rounded-card border border-line bg-surface px-3 text-sm text-ink
-                                                   focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                                        >
-                                            <option value="" disabled>—</option>
-                                            <option v-for="reason in reveal_reasons" :key="reason.value" :value="reason.value">
-                                                {{ t(`leads.reveal_reasons.${reason.value}`) }}
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div v-if="revealNeedsNote()" class="min-w-56 flex-1">
-                                        <label :for="`reveal-note-${user.id}`" class="mb-1 block text-xs text-ink-muted">
-                                            {{ t('leads.detail.reveal_note') }}
-                                        </label>
-                                        <input
-                                            :id="`reveal-note-${user.id}`"
-                                            v-model="revealNote"
-                                            type="text"
-                                            maxlength="500"
-                                            class="block min-h-10 w-full rounded-card border border-line bg-surface px-3 text-sm
-                                                   text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                                        >
-                                    </div>
-                                    <AppButton type="submit" size="sm" :loading="revealBusy" :disabled="revealReason === ''">
-                                        {{ t('leads.detail.reveal_confirm') }}
-                                    </AppButton>
-                                    <AppButton type="button" size="sm" variant="secondary" @click="revealFor = null">
-                                        {{ t('app.actions.cancel') }}
-                                    </AppButton>
-                                    <p v-if="revealError" class="text-xs text-negative">{{ revealError }}</p>
-                                </form>
-                            </td>
                         </tr>
                     </template>
                 </tbody>
@@ -551,20 +444,9 @@ async function revealPhone(row: Row): Promise<void> {
                                     : t('leads.detail.telegram_missing') }}
                             </span>
                             <span class="text-ink-faint">
-                                <template v-if="!user.phone_present">{{ t('identity.users.phone_absent') }}</template>
-                                <template v-else-if="revealed[user.id]">
-                                    <span class="numeral font-medium text-ink" dir="ltr">{{ revealed[user.id] }}</span>
-                                </template>
-                                <template v-else-if="user.contact_consent && can_reveal">
-                                    <button
-                                        type="button"
-                                        class="text-accent underline-offset-2 hover:underline"
-                                        @click="openReveal(user)"
-                                    >
-                                        {{ t('identity.users.reveal_phone') }}
-                                    </button>
-                                </template>
-                                <template v-else>{{ t('identity.users.phone_reveal_not_permitted') }}</template>
+                                <span v-if="user.phone" class="numeral font-medium text-ink" dir="ltr">{{ user.phone }}</span>
+                                <template v-else-if="!user.phone_present">{{ t('identity.users.phone_absent') }}</template>
+                                <template v-else>{{ t('identity.users.phone_present') }}</template>
                             </span>
                         </p>
 
@@ -591,42 +473,6 @@ async function revealPhone(row: Row): Promise<void> {
                             </span>
                         </p>
 
-                        <form
-                            v-if="revealFor === user.id"
-                            class="mt-3 space-y-2 border-t border-line pt-3"
-                            @submit.prevent="revealPhone(user)"
-                        >
-                            <select
-                                v-model="revealReason"
-                                required
-                                :aria-label="t('leads.detail.reveal_reason')"
-                                class="block min-h-10 w-full rounded-card border border-line bg-surface px-3 text-sm text-ink
-                                       focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            >
-                                <option value="" disabled>{{ t('leads.detail.reveal_reason') }}</option>
-                                <option v-for="reason in reveal_reasons" :key="reason.value" :value="reason.value">
-                                    {{ t(`leads.reveal_reasons.${reason.value}`) }}
-                                </option>
-                            </select>
-                            <input
-                                v-if="revealNeedsNote()"
-                                v-model="revealNote"
-                                type="text"
-                                maxlength="500"
-                                :aria-label="t('leads.detail.reveal_note')"
-                                class="block min-h-10 w-full rounded-card border border-line bg-surface px-3 text-sm text-ink
-                                       focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            >
-                            <div class="flex gap-2">
-                                <AppButton type="submit" size="sm" :loading="revealBusy" :disabled="revealReason === ''">
-                                    {{ t('leads.detail.reveal_confirm') }}
-                                </AppButton>
-                                <AppButton type="button" size="sm" variant="secondary" @click="revealFor = null">
-                                    {{ t('app.actions.cancel') }}
-                                </AppButton>
-                            </div>
-                            <p v-if="revealError" class="text-xs text-negative">{{ revealError }}</p>
-                        </form>
                     </div>
                 </div>
             </div>

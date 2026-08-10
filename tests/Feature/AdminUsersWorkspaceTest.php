@@ -120,7 +120,7 @@ final class AdminUsersWorkspaceTest extends TestCase
                 ->where('users.data.0.latest_request.property_type', 'villa')
                 ->where('users.data.0.latest_request.stage', 'qualified')
                 ->where('users.data.0.contact_consent', true)
-                ->where('can_reveal', true)
+                ->where('can_view_phone', true)
                 ->where('can_export', true));
     }
 

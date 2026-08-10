@@ -6,6 +6,7 @@ namespace App\Modules\Advisor\Providers;
 
 use App\Modules\Advisor\Contracts\AiProvider;
 use App\Modules\Advisor\Exceptions\AiProviderException;
+use App\Modules\Advisor\Support\AiCost;
 use Illuminate\Support\Facades\Http;
 use Throwable;
 
@@ -34,14 +35,18 @@ final class OpenAiCompatibleProvider implements AiProvider
         private readonly ?string $apiKey,
         private readonly string $defaultModel,
         private readonly int $timeout = 30,
-        /** USD per 1M tokens, [prompt, completion]. */
-        /** @var array{prompt: float, completion: float} per-1k-token cost */
+        /** @var array{prompt: float, completion: float} USD per 1M tokens */
         private readonly array $rates = ['prompt' => 0.0, 'completion' => 0.0],
     ) {}
 
     public function key(): string
     {
         return 'openai_compatible';
+    }
+
+    public function model(): string
+    {
+        return $this->defaultModel;
     }
 
     public function isConfigured(): bool
@@ -137,28 +142,9 @@ final class OpenAiCompatibleProvider implements AiProvider
             'model' => (string) ($body['model'] ?? $model),
             'prompt_tokens' => $promptTokens,
             'completion_tokens' => $completionTokens,
-            'cost_usd' => $this->cost($promptTokens, $completionTokens),
+            'cost_usd' => AiCost::of($promptTokens, $completionTokens, $this->rates),
             'latency_ms' => $latencyMs,
             'finish_reason' => (string) ($body['choices'][0]['finish_reason'] ?? 'unknown'),
         ];
-    }
-
-    /**
-     * Cost in USD as a decimal string.
-     *
-     * A string, not a float: this figure accumulates into a monthly budget that
-     * gates whether the feature runs at all, and float addition over thousands
-     * of small values drifts. The rest of this codebase uses Decimal for money
-     * for the same reason.
-     */
-    private function cost(int $promptTokens, int $completionTokens): string
-    {
-        // The constructor's declared shape always carries both rates.
-        $promptRate = $this->rates['prompt'];
-        $completionRate = $this->rates['completion'];
-
-        $total = ($promptTokens * $promptRate + $completionTokens * $completionRate) / 1_000_000;
-
-        return number_format($total, 6, '.', '');
     }
 }

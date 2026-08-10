@@ -73,6 +73,7 @@ const props = defineProps<{
     conversation_id: string;
     next_slot: string | null;
     complete: boolean;
+    stage?: string;
     progress: number;
     summary: SummaryRow[];
     messages: Message[];
@@ -232,10 +233,14 @@ function reset(): void {
                     />
                 </ul>
 
-                <!-- One question. Never two. -->
-                <section v-if="question !== null" class="mh-lux-panel p-5">
+                <!-- One question during intake, and an OPEN composer after it:
+                     a complete checklist starts the follow-up conversation,
+                     it does not end the chat. The section renders in both
+                     stages — hiding it on `complete` was the frontend half of
+                     the "9 questions then silence" defect. -->
+                <section class="mh-lux-panel p-5">
                     <label :for="`advisor-answer-${conversation_id}`" class="mb-3 block text-sm font-medium text-ink">
-                        {{ question }}
+                        {{ question ?? t('advisor.chat.followup_hint') }}
                     </label>
 
                     <textarea
@@ -268,12 +273,12 @@ function reset(): void {
                 </section>
 
                 <!--
-                    Interview finished. The recommendation ACTION, and nothing
-                    resembling its result: §9.1 forbids a preview before the
-                    recommend route has actually run, and a mocked-up card here
-                    would be a prediction of the platform's own output.
+                    Interview finished. The recommendation ACTION and the
+                    send-to-team block — ALONGSIDE the composer above, not
+                    instead of it. Nothing resembling a result preview: §9.1
+                    forbids a preview before the recommend route has run.
                 -->
-                <section v-else class="mh-lux-panel p-5">
+                <section v-if="question === null" class="mh-lux-panel p-5">
                     <p class="text-sm text-ink-muted">{{ t('advisor.chat.complete_hint') }}</p>
 
                     <button

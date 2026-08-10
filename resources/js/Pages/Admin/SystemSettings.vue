@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue';
 import { useForm } from '@inertiajs/vue3';
 import AdminLayout from '@/Layouts/AdminLayout.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
@@ -47,8 +48,22 @@ const props = defineProps<{
         maps: { provider: string; maplibre_style_url: string; google_key_configured: boolean };
         telegram: { bot_username: string; bot_token_configured: boolean; webhook_secret_configured: boolean };
         ai: {
-            provider: string; base_url: string; model: string; fallback_model: string;
-            timeout: number; monthly_cost_limit_usd: number; api_key_configured: boolean;
+            provider: string; fallback_provider: string;
+            timeout: number; monthly_cost_limit_usd: number;
+            prompt_cost_per_mtok: number; completion_cost_per_mtok: number;
+            openai: { model: string; key_configured: boolean };
+            gemini: { model: string; key_configured: boolean };
+            openai_compatible: { base_url: string; model: string; key_configured: boolean };
+            health: {
+                available: boolean;
+                providers: { key: string; model: string; configured: boolean; breaker_open: boolean; is_fallback: boolean }[];
+                monthly_spent_usd: string; monthly_limit_usd: string;
+                budget_exhausted: boolean; cost_rates_configured: boolean;
+                primary: string | null; fallback: string | null;
+                last_success: { provider?: string; model?: string; latency_ms?: number; at?: string } | null;
+                last_failure: { provider?: string; category?: string; at?: string } | null;
+                last_test: { status?: string; provider?: string; model?: string | null; latency_ms?: number | null; at?: string } | null;
+            };
         };
     } | null;
 }>();
@@ -84,14 +99,77 @@ const integrations = useForm({
     clear_telegram_webhook_secret: false,
 
     ai_provider: props.integrations?.ai.provider || 'null',
-    ai_base_url: props.integrations?.ai.base_url ?? '',
-    ai_api_key: '',
-    clear_ai_api_key: false,
-    ai_model: props.integrations?.ai.model ?? '',
-    ai_fallback_model: props.integrations?.ai.fallback_model ?? '',
+    ai_fallback_provider: props.integrations?.ai.fallback_provider ?? '',
+    openai_model: props.integrations?.ai.openai.model ?? '',
+    openai_api_key: '',
+    clear_openai_api_key: false,
+    gemini_model: props.integrations?.ai.gemini.model ?? '',
+    gemini_api_key: '',
+    clear_gemini_api_key: false,
+    openai_compatible_base_url: props.integrations?.ai.openai_compatible.base_url ?? '',
+    openai_compatible_model: props.integrations?.ai.openai_compatible.model ?? '',
+    openai_compatible_api_key: '',
+    clear_openai_compatible_api_key: false,
     ai_timeout: props.integrations?.ai.timeout ?? 30,
     ai_monthly_cost_limit_usd: props.integrations?.ai.monthly_cost_limit_usd ?? 0,
+    ai_prompt_cost_per_mtok: props.integrations?.ai.prompt_cost_per_mtok ?? 0,
+    ai_completion_cost_per_mtok: props.integrations?.ai.completion_cost_per_mtok ?? 0,
 });
+
+/*
+ * The safe Test Connection action (repair phase 10): server-side, audited,
+ * rate-limited, and reported back only as a category token this application
+ * minted — the secret and the provider body never travel.
+ */
+const testingProvider = ref<string | null>(null);
+const testResult = ref<{ provider: string; status: string; model: string | null; latency_ms: number | null } | null>(null);
+
+async function testConnection(provider: string): Promise<void> {
+    if (testingProvider.value !== null) return;
+
+    testingProvider.value = provider;
+    testResult.value = null;
+
+    try {
+        const response = await fetch('/admin/system/settings/integrations/ai-test', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-XSRF-TOKEN': decodeURIComponent(document.cookie.match(/XSRF-TOKEN=([^;]+)/)?.[1] ?? ''),
+            },
+            body: JSON.stringify({ provider }),
+        });
+        const body = await response.json();
+
+        testResult.value = {
+            provider,
+            status: String(body.status ?? 'unknown'),
+            model: body.model ?? null,
+            latency_ms: body.latency_ms ?? null,
+        };
+    } catch {
+        testResult.value = { provider, status: 'request_failed', model: null, latency_ms: null };
+    } finally {
+        testingProvider.value = null;
+    }
+}
+
+function testStatusLabel(status: string): string {
+    const key = `system.ai.test_status.${status}`;
+    const label = t(key);
+
+    return label === key ? status : label;
+}
+
+/** Which provider blocks are relevant to the current selection. */
+const selectedAiProviders = computed<string[]>(() =>
+    [integrations.ai_provider, integrations.ai_fallback_provider].filter(
+        (name) => name !== '' && name !== 'null',
+    ),
+);
 
 function toggleLocale(code: string): void {
     general.enabled_locales = general.enabled_locales.includes(code)
@@ -111,6 +189,14 @@ const mapProviderOptions = [
 ];
 const aiProviderOptions = [
     { value: 'null', label: '—' },
+    { value: 'openai', label: 'OpenAI' },
+    { value: 'gemini', label: 'Google Gemini' },
+    { value: 'openai_compatible', label: 'OpenAI-compatible' },
+];
+const aiFallbackOptions = [
+    { value: '', label: '—' },
+    { value: 'openai', label: 'OpenAI' },
+    { value: 'gemini', label: 'Google Gemini' },
     { value: 'openai_compatible', label: 'OpenAI-compatible' },
 ];
 
@@ -315,28 +401,121 @@ const integrationsDisabled = !props.environment_writable || !props.can_manage_in
                             <h3 class="text-sm font-semibold text-ink">{{ t('system.ai.title') }}</h3>
                             <p class="mt-0.5 text-xs text-ink-muted">{{ t('system.ai.description') }}</p>
                         </div>
-                        <AppSelect v-model="integrations.ai_provider" :label="t('system.ai.provider')" :options="aiProviderOptions" required :error="integrations.errors.ai_provider" />
-                        <AppInput v-model="integrations.ai_base_url" type="url" dir="ltr" :label="t('system.ai.base_url')" :error="integrations.errors.ai_base_url" />
-                        <div class="grid gap-4 sm:grid-cols-2">
-                            <AppInput v-model="integrations.ai_model" dir="ltr" :label="t('system.ai.model')" :error="integrations.errors.ai_model" />
-                            <AppInput v-model="integrations.ai_fallback_model" dir="ltr" :label="t('system.ai.fallback_model')" :error="integrations.errors.ai_fallback_model" />
-                            <AppInput v-model="integrations.ai_timeout" type="number" dir="ltr" :label="t('system.ai.timeout')" required :error="integrations.errors.ai_timeout" />
-                            <AppInput v-model="integrations.ai_monthly_cost_limit_usd" type="number" dir="ltr" :label="t('system.ai.monthly_limit')" required :error="integrations.errors.ai_monthly_cost_limit_usd" />
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-xs text-ink-muted">
-                                {{ t('system.ai.api_key') }}:
-                                <span :class="props.integrations!.ai.api_key_configured ? 'text-positive' : 'text-ink-faint'">
-                                    {{ props.integrations!.ai.api_key_configured
-                                        ? t('system.integrations.configured')
-                                        : t('system.integrations.not_configured') }}
+
+                        <!-- Health: the diagnostics readout that makes "AI is
+                             not working" answerable without SSH. Tokens and
+                             counters only — never a secret, never a body. -->
+                        <div v-if="props.integrations?.ai.health" class="rounded-card border border-line bg-surface-sunken p-3 text-xs text-ink-muted">
+                            <p class="font-medium text-ink">
+                                {{ t('system.ai.health.title') }}:
+                                <span :class="props.integrations.ai.health.available ? 'text-positive' : 'text-caution'">
+                                    {{ props.integrations.ai.health.available ? t('system.ai.health.available') : t('system.ai.health.unavailable') }}
                                 </span>
                             </p>
-                            <AppInput v-model="integrations.ai_api_key" type="password" dir="ltr" autocomplete="off" :label="t('system.integrations.new_secret')" :error="integrations.errors.ai_api_key" />
+                            <p class="mt-1">
+                                {{ t('system.ai.health.active_chain') }}:
+                                <span dir="ltr">{{ props.integrations.ai.health.primary ?? '—' }}</span>
+                                <template v-if="props.integrations.ai.health.fallback">
+                                    → <span dir="ltr">{{ props.integrations.ai.health.fallback }}</span>
+                                </template>
+                            </p>
+                            <p class="mt-1">
+                                {{ t('system.ai.health.monthly_spend') }}:
+                                <span dir="ltr">{{ props.integrations.ai.health.monthly_spent_usd }} / {{ props.integrations.ai.health.monthly_limit_usd }} USD</span>
+                                <span v-if="props.integrations.ai.health.budget_exhausted" class="text-negative"> — {{ t('system.ai.health.budget_exhausted') }}</span>
+                            </p>
+                            <p v-if="!props.integrations.ai.health.cost_rates_configured && props.integrations.ai.monthly_cost_limit_usd > 0" class="mt-1 text-caution">
+                                {{ t('system.ai.health.rates_unset') }}
+                            </p>
+                            <p v-for="entry in props.integrations.ai.health.providers" :key="entry.key" class="mt-1">
+                                <span dir="ltr">{{ entry.key }}</span> — {{ entry.configured ? t('system.integrations.configured') : t('system.integrations.not_configured') }}<span v-if="entry.breaker_open" class="text-negative">؛ {{ t('system.ai.health.breaker_open') }}</span>
+                            </p>
+                            <p v-if="props.integrations.ai.health.last_failure" class="mt-1">
+                                {{ t('system.ai.health.last_failure') }}:
+                                <span dir="ltr">{{ props.integrations.ai.health.last_failure.provider }} · {{ testStatusLabel(String(props.integrations.ai.health.last_failure.category ?? '')) }} · {{ props.integrations.ai.health.last_failure.at }}</span>
+                            </p>
+                            <p v-if="props.integrations.ai.health.last_test" class="mt-1">
+                                {{ t('system.ai.health.last_test') }}:
+                                <span dir="ltr">{{ props.integrations.ai.health.last_test.provider }} · {{ testStatusLabel(String(props.integrations.ai.health.last_test.status ?? '')) }} · {{ props.integrations.ai.health.last_test.at }}</span>
+                            </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <AppSelect v-model="integrations.ai_provider" :label="t('system.ai.provider')" :options="aiProviderOptions" required :error="integrations.errors.ai_provider" />
+                            <AppSelect v-model="integrations.ai_fallback_provider" :label="t('system.ai.fallback_provider')" :options="aiFallbackOptions" :error="integrations.errors.ai_fallback_provider" />
+                        </div>
+
+                        <!-- openai -->
+                        <div v-if="selectedAiProviders.includes('openai')" class="space-y-2 rounded-card border border-line p-3">
+                            <p class="text-xs font-semibold text-ink" dir="ltr">OpenAI</p>
+                            <AppInput v-model="integrations.openai_model" dir="ltr" :label="t('system.ai.model')" :error="integrations.errors.openai_model" />
+                            <p class="text-xs text-ink-muted">
+                                {{ t('system.ai.api_key') }}:
+                                <span :class="props.integrations!.ai.openai.key_configured ? 'text-positive' : 'text-ink-faint'">
+                                    {{ props.integrations!.ai.openai.key_configured ? t('system.integrations.configured') : t('system.integrations.not_configured') }}
+                                </span>
+                            </p>
+                            <AppInput v-model="integrations.openai_api_key" type="password" dir="ltr" autocomplete="off" :label="t('system.integrations.new_secret')" :error="integrations.errors.openai_api_key" />
                             <label class="flex min-h-11 cursor-pointer items-center gap-2 text-sm text-ink-muted">
-                                <input v-model="integrations.clear_ai_api_key" type="checkbox" class="h-4 w-4 rounded border-line text-brand focus:ring-accent">
+                                <input v-model="integrations.clear_openai_api_key" type="checkbox" class="h-4 w-4 rounded border-line text-brand focus:ring-accent">
                                 {{ t('system.integrations.clear_secret') }}
                             </label>
+                            <AppButton type="button" variant="secondary" :disabled="testingProvider !== null" @click="testConnection('openai')">
+                                {{ t('system.ai.test_connection') }}
+                            </AppButton>
+                        </div>
+
+                        <!-- gemini -->
+                        <div v-if="selectedAiProviders.includes('gemini')" class="space-y-2 rounded-card border border-line p-3">
+                            <p class="text-xs font-semibold text-ink" dir="ltr">Google Gemini</p>
+                            <AppInput v-model="integrations.gemini_model" dir="ltr" :label="t('system.ai.model')" :error="integrations.errors.gemini_model" />
+                            <p class="text-xs text-ink-muted">
+                                {{ t('system.ai.api_key') }}:
+                                <span :class="props.integrations!.ai.gemini.key_configured ? 'text-positive' : 'text-ink-faint'">
+                                    {{ props.integrations!.ai.gemini.key_configured ? t('system.integrations.configured') : t('system.integrations.not_configured') }}
+                                </span>
+                            </p>
+                            <AppInput v-model="integrations.gemini_api_key" type="password" dir="ltr" autocomplete="off" :label="t('system.integrations.new_secret')" :error="integrations.errors.gemini_api_key" />
+                            <label class="flex min-h-11 cursor-pointer items-center gap-2 text-sm text-ink-muted">
+                                <input v-model="integrations.clear_gemini_api_key" type="checkbox" class="h-4 w-4 rounded border-line text-brand focus:ring-accent">
+                                {{ t('system.integrations.clear_secret') }}
+                            </label>
+                            <AppButton type="button" variant="secondary" :disabled="testingProvider !== null" @click="testConnection('gemini')">
+                                {{ t('system.ai.test_connection') }}
+                            </AppButton>
+                        </div>
+
+                        <!-- openai-compatible -->
+                        <div v-if="selectedAiProviders.includes('openai_compatible')" class="space-y-2 rounded-card border border-line p-3">
+                            <p class="text-xs font-semibold text-ink" dir="ltr">OpenAI-compatible</p>
+                            <AppInput v-model="integrations.openai_compatible_base_url" type="url" dir="ltr" :label="t('system.ai.base_url')" :error="integrations.errors.openai_compatible_base_url" />
+                            <AppInput v-model="integrations.openai_compatible_model" dir="ltr" :label="t('system.ai.model')" :error="integrations.errors.openai_compatible_model" />
+                            <p class="text-xs text-ink-muted">
+                                {{ t('system.ai.api_key') }}:
+                                <span :class="props.integrations!.ai.openai_compatible.key_configured ? 'text-positive' : 'text-ink-faint'">
+                                    {{ props.integrations!.ai.openai_compatible.key_configured ? t('system.integrations.configured') : t('system.integrations.not_configured') }}
+                                </span>
+                            </p>
+                            <AppInput v-model="integrations.openai_compatible_api_key" type="password" dir="ltr" autocomplete="off" :label="t('system.integrations.new_secret')" :error="integrations.errors.openai_compatible_api_key" />
+                            <label class="flex min-h-11 cursor-pointer items-center gap-2 text-sm text-ink-muted">
+                                <input v-model="integrations.clear_openai_compatible_api_key" type="checkbox" class="h-4 w-4 rounded border-line text-brand focus:ring-accent">
+                                {{ t('system.integrations.clear_secret') }}
+                            </label>
+                            <AppButton type="button" variant="secondary" :disabled="testingProvider !== null" @click="testConnection('openai_compatible')">
+                                {{ t('system.ai.test_connection') }}
+                            </AppButton>
+                        </div>
+
+                        <p v-if="testResult" class="text-xs" :class="testResult.status === 'connected' ? 'text-positive' : 'text-caution'" role="status">
+                            <span dir="ltr">{{ testResult.provider }}</span> — {{ testStatusLabel(testResult.status) }}
+                            <span v-if="testResult.latency_ms !== null" dir="ltr">({{ testResult.latency_ms }}ms)</span>
+                        </p>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <AppInput v-model="integrations.ai_timeout" type="number" dir="ltr" :label="t('system.ai.timeout')" required :error="integrations.errors.ai_timeout" />
+                            <AppInput v-model="integrations.ai_monthly_cost_limit_usd" type="number" dir="ltr" :label="t('system.ai.monthly_limit')" required :error="integrations.errors.ai_monthly_cost_limit_usd" />
+                            <AppInput v-model="integrations.ai_prompt_cost_per_mtok" type="number" dir="ltr" :label="t('system.ai.prompt_rate')" required :error="integrations.errors.ai_prompt_cost_per_mtok" />
+                            <AppInput v-model="integrations.ai_completion_cost_per_mtok" type="number" dir="ltr" :label="t('system.ai.completion_rate')" required :error="integrations.errors.ai_completion_cost_per_mtok" />
                         </div>
                     </section>
 

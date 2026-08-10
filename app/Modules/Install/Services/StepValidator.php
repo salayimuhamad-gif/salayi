@@ -108,11 +108,15 @@ final class StepValidator
             ],
 
             'ai_provider' => [
-                'ai_provider' => ['required', 'string', 'in:null,openai_compatible'],
-                'ai_base_url' => ['nullable', 'string', 'max:255', 'url', 'required_if:ai_provider,openai_compatible'],
-                'ai_api_key' => ['nullable', 'string', 'max:255', 'required_if:ai_provider,openai_compatible'],
-                'ai_model' => ['nullable', 'string', 'max:120', 'required_if:ai_provider,openai_compatible'],
-                'ai_fallback_model' => ['nullable', 'string', 'max:120'],
+                'ai_provider' => ['required', 'string', 'in:null,openai,gemini,openai_compatible'],
+                'ai_fallback_provider' => ['nullable', 'string', 'in:openai,gemini,openai_compatible'],
+                'openai_api_key' => ['nullable', 'string', 'max:255', 'required_if:ai_provider,openai'],
+                'openai_model' => ['nullable', 'string', 'max:120', 'required_if:ai_provider,openai'],
+                'gemini_api_key' => ['nullable', 'string', 'max:255', 'required_if:ai_provider,gemini'],
+                'gemini_model' => ['nullable', 'string', 'max:120', 'required_if:ai_provider,gemini'],
+                'openai_compatible_base_url' => ['nullable', 'string', 'max:255', 'url', 'required_if:ai_provider,openai_compatible'],
+                'openai_compatible_api_key' => ['nullable', 'string', 'max:255', 'required_if:ai_provider,openai_compatible'],
+                'openai_compatible_model' => ['nullable', 'string', 'max:120', 'required_if:ai_provider,openai_compatible'],
             ],
 
             'default_language' => [
@@ -238,10 +242,14 @@ final class StepValidator
 
             'ai_provider' => [
                 'AI_PROVIDER' => (string) $get('ai_provider', 'null'),
-                'AI_BASE_URL' => (string) $get('ai_base_url', ''),
-                'AI_API_KEY' => (string) $get('ai_api_key', ''),
-                'AI_MODEL' => (string) $get('ai_model', ''),
-                'AI_FALLBACK_MODEL' => (string) $get('ai_fallback_model', ''),
+                'AI_FALLBACK_PROVIDER' => (string) $get('ai_fallback_provider', ''),
+                'OPENAI_API_KEY' => (string) $get('openai_api_key', ''),
+                'OPENAI_MODEL' => (string) $get('openai_model', ''),
+                'GEMINI_API_KEY' => (string) $get('gemini_api_key', ''),
+                'GEMINI_MODEL' => (string) $get('gemini_model', ''),
+                'OPENAI_COMPATIBLE_BASE_URL' => (string) $get('openai_compatible_base_url', ''),
+                'OPENAI_COMPATIBLE_API_KEY' => (string) $get('openai_compatible_api_key', ''),
+                'OPENAI_COMPATIBLE_MODEL' => (string) $get('openai_compatible_model', ''),
             ],
 
             'default_language' => [

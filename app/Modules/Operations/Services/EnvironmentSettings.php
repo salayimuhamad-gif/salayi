@@ -27,14 +27,28 @@ final class EnvironmentSettings
         'MAIL_SCHEME', 'MAIL_FROM_ADDRESS', 'MAIL_FROM_NAME',
         'MAP_PROVIDER', 'MAPLIBRE_STYLE_URL', 'GOOGLE_MAPS_API_KEY',
         'TELEGRAM_BOT_TOKEN', 'TELEGRAM_BOT_USERNAME', 'TELEGRAM_WEBHOOK_SECRET',
-        'AI_PROVIDER', 'AI_BASE_URL', 'AI_API_KEY', 'AI_MODEL', 'AI_FALLBACK_MODEL',
+        /*
+         * The multi-provider AI schema. AI_PROVIDER / AI_FALLBACK_PROVIDER
+         * select; each provider carries its own credential and model. The
+         * legacy single-provider keys (AI_BASE_URL, AI_API_KEY, AI_MODEL)
+         * remain READABLE as openai_compatible defaults in config/services.php
+         * but are no longer written from the admin panel — and the retired
+         * AI_FALLBACK_MODEL (stored, displayed, executed by nothing) is
+         * deliberately absent from this list.
+         */
+        'AI_PROVIDER', 'AI_FALLBACK_PROVIDER',
+        'OPENAI_API_KEY', 'OPENAI_MODEL',
+        'GEMINI_API_KEY', 'GEMINI_MODEL',
+        'OPENAI_COMPATIBLE_API_KEY', 'OPENAI_COMPATIBLE_BASE_URL', 'OPENAI_COMPATIBLE_MODEL',
         'AI_TIMEOUT', 'AI_MONTHLY_COST_LIMIT_USD',
+        'AI_PROMPT_COST_PER_MTOK', 'AI_COMPLETION_COST_PER_MTOK',
     ];
 
     /** @var list<string> */
     private const SECRET_KEYS = [
         'MAIL_PASSWORD', 'GOOGLE_MAPS_API_KEY', 'TELEGRAM_BOT_TOKEN',
-        'TELEGRAM_WEBHOOK_SECRET', 'AI_API_KEY',
+        'TELEGRAM_WEBHOOK_SECRET', 'OPENAI_API_KEY', 'GEMINI_API_KEY',
+        'OPENAI_COMPATIBLE_API_KEY',
     ];
 
     /**

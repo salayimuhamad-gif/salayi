@@ -130,6 +130,7 @@ return [
         'summary' => 'Your answers',
         'required' => 'Required',
         'complete_hint' => 'Your results are shown in the conversation.',
+        'followup_hint' => 'Your results are above — keep going: ask questions, compare, or change your request.',
         'typing' => 'The advisor is typing…',
         'send_failed' => 'Something went wrong and the reply did not arrive. Please try again.',
         'enter_hint' => 'Press Enter to send, or Shift + Enter for a new line.',

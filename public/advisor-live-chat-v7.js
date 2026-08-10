@@ -39,6 +39,7 @@
             'advisor.chat.send_failed': 'کێشەیەکی کاتی ڕوویدا و وەڵامەکە نەگەیشت. دووبارە هەوڵ بدە.',
             'advisor.chat.not_answered': 'وەڵام نەدراوەتەوە',
             'advisor.chat.complete_hint': 'ئەنجامەکان لە ناو گفتوگۆکەدا پیشان دراون.',
+            'advisor.chat.followup_hint': 'ئەنجامەکان لە سەرەوە دیارن — دەتوانیت بەردەوام بیت: پرسیار بکە، بەراورد بکە، یان داواکارییەکەت بگۆڕە.',
             'advisor.chat.start_over': 'گفتوگۆی نوێ',
             'advisor.chat.enter_hint': 'بۆ ناردن Enter دابگرە، بۆ هێڵێکی نوێ Shift + Enter.',
             'advisor.chat.quick_title': 'هەڵبژاردە خێراکان',
@@ -51,6 +52,7 @@
             'advisor.chat.send_failed': 'صار خلل مؤقت وما وصل الرد. جرّب مرة ثانية.',
             'advisor.chat.not_answered': 'لم تتم الإجابة',
             'advisor.chat.complete_hint': 'النتائج موجودة داخل المحادثة.',
+            'advisor.chat.followup_hint': 'النتائج ظاهرة فوق — تكدر تكمل: اسأل، قارن، أو غيّر طلبك.',
             'advisor.chat.start_over': 'محادثة جديدة',
             'advisor.chat.enter_hint': 'اضغط Enter للإرسال، وShift + Enter لسطر جديد.',
             'advisor.chat.quick_title': 'خيارات سريعة',
@@ -63,6 +65,7 @@
             'advisor.chat.send_failed': 'Something went wrong and the reply did not arrive. Please try again.',
             'advisor.chat.not_answered': 'Not answered',
             'advisor.chat.complete_hint': 'Your results are shown in the conversation.',
+            'advisor.chat.followup_hint': 'Your results are above — keep going: ask questions, compare, or change your request.',
             'advisor.chat.start_over': 'New conversation',
             'advisor.chat.enter_hint': 'Press Enter to send, or Shift + Enter for a new line.',
             'advisor.chat.quick_title': 'Quick choices',
@@ -640,24 +643,26 @@
         return items[index % items.length] || 'sparkles';
     }
 
-    function showComplete(section, locale) {
-        const textarea = section.querySelector('textarea');
-        const sendButton = section.querySelector('button:not([data-advisor-quick-reply])');
-        if (textarea) textarea.hidden = true;
-        if (sendButton) sendButton.hidden = true;
-        section.querySelector('label')?.remove();
+    /*
+     * The advisory panel replaces v7's showComplete(). The old function HID
+     * the textarea and send button the moment `complete` was true — the
+     * frontend half of the "9 questions then silence" defect. Intake
+     * completeness now opens the follow-up stage instead: the composer stays
+     * fully interactive, and this panel adds the send-to-team block and the
+     * start-over control alongside it, once.
+     */
+    function showAdvisoryPanel(section, locale) {
         section.querySelector('[data-advisor-live-error]')?.remove();
-        section.querySelector('[data-advisor-enter-hint]')?.remove();
-        clearQuickReplies(section);
 
         if (section.querySelector('[data-advisor-complete]')) return;
 
         const wrapper = document.createElement('div');
         wrapper.dataset.advisorComplete = 'true';
+        wrapper.className = 'mt-4 border-t border-line pt-4';
 
         const hint = document.createElement('p');
         hint.className = 'text-sm text-ink-muted';
-        hint.textContent = translation('advisor.chat.complete_hint', locale);
+        hint.textContent = translation('advisor.chat.followup_hint', locale);
         wrapper.appendChild(hint);
 
         const form = document.createElement('form');
@@ -907,8 +912,10 @@
             event?.stopPropagation();
             event?.stopImmediatePropagation?.();
 
+            // `state.complete` deliberately does NOT block a send: a complete
+            // intake is the beginning of the advisory conversation.
             const text = String(selectedText ?? textarea.value).trim();
-            if (!text || state.busy || state.complete) return;
+            if (!text || state.busy) return;
 
             state.busy = true;
             button.disabled = true;
@@ -976,10 +983,9 @@
 
                 const hint = section.querySelector('[data-advisor-enter-hint]');
                 if (hint) hint.textContent = translation('advisor.chat.enter_hint', state.locale);
+                renderQuickReplies(section, payload.quick_replies, send, state.locale, state.slot);
                 if (state.complete) {
-                    showComplete(section, state.locale);
-                } else {
-                    renderQuickReplies(section, payload.quick_replies, send, state.locale, state.slot);
+                    showAdvisoryPanel(section, state.locale);
                 }
             } catch (error) {
                 typing.stop();
@@ -993,10 +999,10 @@
             } finally {
                 window.clearTimeout(timeout);
                 state.busy = false;
-                button.disabled = state.complete;
-                textarea.disabled = state.complete;
-                setQuickRepliesDisabled(section, state.busy || state.complete);
-                if (!state.complete) textarea.focus();
+                button.disabled = false;
+                textarea.disabled = false;
+                setQuickRepliesDisabled(section, state.busy);
+                textarea.focus();
             }
         }
 
@@ -1020,10 +1026,9 @@
         form?.addEventListener('submit', (event) => { void send(event); }, true);
 
 
+        renderQuickReplies(section, latestProps?.quick_replies, send, state.locale, state.slot);
         if (state.complete) {
-            showComplete(section, state.locale);
-        } else {
-            renderQuickReplies(section, latestProps?.quick_replies, send, state.locale, state.slot);
+            showAdvisoryPanel(section, state.locale);
         }
     }
 
