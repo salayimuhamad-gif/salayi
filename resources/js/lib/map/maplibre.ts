@@ -6,6 +6,7 @@ import type {
     MapBounds,
     PointFeature,
 } from './types';
+import { trendColour, trendIconName } from './trend';
 
 /**
  * MapLibre adapter — the default, and the only one that needs no key (§10.1).
@@ -25,6 +26,10 @@ export class MapLibreAdapter implements MapAdapter {
     private map: import('maplibre-gl').Map | null = null;
     private loaded = false;
     private failedBeforeLoad = false;
+    /** Category token for diagnostics: style / webgl / container / timeout. */
+    private failureCategory: string | null = null;
+    private observer: ResizeObserver | null = null;
+    private pin: import('maplibre-gl').Marker | null = null;
     private pending: { points: PointFeature[]; boundaries: BoundaryCollection | null } = {
         points: [],
         boundaries: null,
@@ -41,9 +46,48 @@ export class MapLibreAdapter implements MapAdapter {
     private async initialise(): Promise<void> {
         const maplibre = await import('maplibre-gl');
 
+        /*
+         * A zero-sized container is a distinct failure class (a map built
+         * inside a hidden v-show tab): the map constructs fine and draws
+         * nothing. It is legal here — the ResizeObserver below heals it the
+         * moment the box gains real dimensions — but in development it is
+         * named out loud, because it is otherwise the least debuggable of
+         * the blank-map causes.
+         */
+        if (
+            import.meta.env.DEV
+            && (this.options.container.clientWidth === 0 || this.options.container.clientHeight === 0)
+        ) {
+            console.warn('[map] container has zero size at construction; expecting a resize when it becomes visible');
+        }
+
+        /*
+         * Style resolution: the configured URL wins; with none set, the
+         * 'plain' fallback is a zero-network inline background (the admin
+         * picker's contract — usable with nothing configured), and 'demo'
+         * keeps the historical public default. The demo host is
+         * documentation-grade infrastructure and unsuitable for production
+         * — the completion doc names real options — but silently swapping
+         * providers is not this adapter's call.
+         */
+        const style: string | import('maplibre-gl').StyleSpecification = this.options.styleUrl
+            && this.options.styleUrl.trim() !== ''
+            ? this.options.styleUrl
+            : this.options.fallbackStyle === 'plain'
+                ? {
+                    version: 8 as const,
+                    sources: {},
+                    layers: [{
+                        id: 'background',
+                        type: 'background' as const,
+                        paint: { 'background-color': '#e8e6e1' },
+                    }],
+                }
+                : 'https://demotiles.maplibre.org/style.json';
+
         const map = new maplibre.Map({
             container: this.options.container,
-            style: this.options.styleUrl ?? 'https://demotiles.maplibre.org/style.json',
+            style,
             center: [this.options.centre.lng, this.options.centre.lat],
             zoom: this.options.zoom,
             // Optional camera fences (the investment map pins itself to
@@ -65,21 +109,58 @@ export class MapLibreAdapter implements MapAdapter {
         map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibre.ScaleControl({ unit: 'metric' }), 'bottom-left');
 
-        map.on('error', () => {
-            // An error before 'load' means the style itself failed — the map
-            // will never become ready and ready() must say so (see below).
-            // Errors after load (a missing sprite, a dropped tile) are the
-            // recoverable kind and change nothing here.
+        map.on('error', (event) => {
+            /*
+             * An error before 'load' means the style itself failed — the map
+             * will never become ready and ready() must say so (see below).
+             * Errors AFTER load (a missing sprite image, one dropped tile)
+             * are the recoverable kind: the map keeps working, so they no
+             * longer flip the page into its failed state — that used to
+             * mark a perfectly usable map as broken. They are still named
+             * in development so tile-vs-style-vs-layout failures can be
+             * told apart in a browser console.
+             */
             if (!this.loaded) {
                 this.failedBeforeLoad = true;
+                this.failureCategory = this.failureCategory ?? 'style';
+                this.options.events.onError();
+                return;
             }
 
-            this.options.events.onError();
+            if (import.meta.env.DEV) {
+                console.warn('[map] recoverable resource error after load', event?.error?.message ?? event);
+            }
         });
         map.on('moveend', () => this.options.events.onMoveEnd());
-        map.on('click', (event) =>
-            this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng }),
-        );
+        map.on('click', (event) => {
+            /*
+             * A click that hit a marker belongs to the marker. Without this
+             * guard the surface handler (which pages use to CLEAR selection)
+             * fired on the same click that selected, and markers could never
+             * be selected from the map at all.
+             */
+            const hit = map
+                .queryRenderedFeatures(event.point, { layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'clusters']) })
+                .length > 0;
+
+            if (!hit) {
+                this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng });
+            }
+        });
+
+        /*
+         * Self-healing size: a map created while its parent was hidden
+         * (display:none measures 0×0) recovers the moment the box becomes
+         * visible, and layout shifts after Inertia navigation are absorbed
+         * without every page having to know. Guarded for environments
+         * without ResizeObserver (jsdom).
+         */
+        if (typeof ResizeObserver !== 'undefined') {
+            this.observer = new ResizeObserver(() => {
+                this.map?.resize();
+            });
+            this.observer.observe(this.options.container);
+        }
 
         map.on('load', () => {
             map.addSource('features', {
@@ -142,7 +223,7 @@ export class MapLibreAdapter implements MapAdapter {
                 id: 'unclustered',
                 type: 'circle',
                 source: 'features',
-                filter: ['!', ['has', 'point_count']],
+                filter: ['all', ['!', ['has', 'point_count']], ['!', ['has', 'trendIcon']]],
                 paint: {
                     'circle-color': ['get', 'colour'],
                     'circle-radius': 7,
@@ -150,6 +231,53 @@ export class MapLibreAdapter implements MapAdapter {
                     'circle-stroke-color': '#ffffff',
                 },
             });
+
+            /*
+             * Trend-shaped markers: colour AND direction, never colour
+             * alone. The icons are drawn onto a canvas at registration time
+             * — no sprite, no glyphs, no font stack — so they render under
+             * ANY style, including the deterministic background-only style
+             * the browser tests serve. Points without a trend keep the
+             * plain circle above; `unknown` gets the neutral pin, because a
+             * trend that is not known must not look like one that is.
+             */
+            for (const [name, icon] of Object.entries(trendMarkerImages())) {
+                if (!map.hasImage(name)) {
+                    map.addImage(name, icon, { pixelRatio: 2 });
+                }
+            }
+
+            map.addLayer({
+                id: 'trend-markers',
+                type: 'symbol',
+                source: 'features',
+                filter: ['all', ['!', ['has', 'point_count']], ['has', 'trendIcon']],
+                layout: {
+                    'icon-image': ['get', 'trendIcon'],
+                    'icon-size': 1,
+                    'icon-allow-overlap': true,
+                },
+            });
+
+            const emitMarkerClick = (event: import('maplibre-gl').MapLayerMouseEvent): void => {
+                const id = event.features?.[0]?.properties?.id as number | undefined;
+
+                if (id !== undefined && this.options.events.onMarkerClick) {
+                    this.options.events.onMarkerClick(Number(id));
+                }
+            };
+
+            map.on('click', 'unclustered', emitMarkerClick);
+            map.on('click', 'trend-markers', emitMarkerClick);
+
+            for (const layer of ['unclustered', 'trend-markers']) {
+                map.on('mouseenter', layer, () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', layer, () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            }
 
             /*
              * Clusters expand on click. Without this, a tap on "12 projects"
@@ -212,10 +340,31 @@ export class MapLibreAdapter implements MapAdapter {
             return Promise.reject(new Error('maplibre-style-failed'));
         }
 
+        /*
+         * Bounded, three ways out: load resolves, a pre-load error rejects,
+         * and a DEADLINE rejects when the provider simply stalls — a style
+         * whose tile or glyph requests hang without ever erroring used to
+         * leave the page on its spinner indefinitely. The category token in
+         * the message feeds the dev diagnostics.
+         */
         return new Promise((resolve, reject) => {
-            this.map?.once('load', () => resolve());
+            const deadline = window.setTimeout(() => {
+                this.failureCategory = this.failureCategory ?? 'timeout';
+
+                if (import.meta.env.DEV) {
+                    console.warn('[map] ready() deadline elapsed; category:', this.failureCategory);
+                }
+
+                reject(new Error('maplibre-ready-timeout'));
+            }, this.options.readyTimeoutMs ?? 20000);
+
+            this.map?.once('load', () => {
+                window.clearTimeout(deadline);
+                resolve();
+            });
             this.map?.once('error', () => {
                 if (!this.loaded) {
+                    window.clearTimeout(deadline);
                     reject(new Error('maplibre-style-failed'));
                 }
             });
@@ -278,9 +427,61 @@ export class MapLibreAdapter implements MapAdapter {
         this.map?.flyTo({ center: [point.lng, point.lat], zoom: zoom ?? this.map.getZoom() });
     }
 
+    /**
+     * The picker's single editable point: a real draggable marker, distinct
+     * from the clustered data points. null removes it.
+     */
+    setPin(point: LatLng | null, onDragEnd?: (point: LatLng) => void): void {
+        if (point === null) {
+            this.pin?.remove();
+            this.pin = null;
+            return;
+        }
+
+        if (this.pin) {
+            this.pin.setLngLat([point.lng, point.lat]);
+            return;
+        }
+
+        if (!this.map) {
+            return;
+        }
+
+        void import('maplibre-gl').then((maplibre) => {
+            if (!this.map || this.pin) {
+                return;
+            }
+
+            this.pin = new maplibre.Marker({ color: '#0f3e59', draggable: true })
+                .setLngLat([point.lng, point.lat])
+                .addTo(this.map);
+
+            this.pin.on('dragend', () => {
+                const position = this.pin?.getLngLat();
+
+                if (position && onDragEnd) {
+                    onDragEnd({ lat: position.lat, lng: position.lng });
+                }
+            });
+        });
+    }
+
+    resize(): void {
+        this.map?.resize();
+    }
+
     destroy(): void {
+        this.observer?.disconnect();
+        this.observer = null;
+        this.pin?.remove();
+        this.pin = null;
         this.map?.remove();
         this.map = null;
+    }
+
+    /** Layers that exist right now — query only what has been added. */
+    private presentLayers(map: import('maplibre-gl').Map, candidates: string[]): string[] {
+        return candidates.filter((layer) => map.getLayer(layer) !== undefined);
     }
 
     private pointCollection(points: PointFeature[]) {
@@ -292,8 +493,102 @@ export class MapLibreAdapter implements MapAdapter {
                     type: 'Point' as const,
                     coordinates: [point.lng, point.lat] as [number, number],
                 },
-                properties: { title: point.title, colour: point.colour },
+                properties: {
+                    title: point.title,
+                    colour: point.colour,
+                    ...(point.id !== undefined ? { id: point.id } : {}),
+                    ...(point.trend !== undefined ? { trendIcon: trendIconName(point.trend) } : {}),
+                },
             })),
         };
     }
+}
+
+/**
+ * The four trend marker faces, drawn in code so they need no sprite, no
+ * glyph server and no remote asset — they render under any style, including
+ * the deterministic one the browser tests serve.
+ *
+ * Direction is carried by SHAPE as well as colour (chevron up / chevron
+ * down / horizontal bar / plain dot), so the semantics survive colour
+ * blindness and monochrome rendering:
+ *
+ *   trend-up      green  #15803d, upward chevron   — price increased
+ *   trend-down    red    #b91c1c, downward chevron — price decreased
+ *   trend-flat    amber  #b45309, horizontal bar   — no material change
+ *   trend-unknown navy   #0f3e59, plain dot        — insufficient history,
+ *                                                    NO claim implied
+ */
+export function trendMarkerImages(): Record<string, ImageData> {
+    const draw = (paint: (ctx: CanvasRenderingContext2D) => void): ImageData => {
+        const size = 44; // 22px at pixelRatio 2
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+
+        if (!ctx) {
+            return new ImageData(size, size);
+        }
+
+        paint(ctx);
+
+        return ctx.getImageData(0, 0, size, size);
+    };
+
+    const base = (ctx: CanvasRenderingContext2D, fill: string): void => {
+        ctx.beginPath();
+        ctx.arc(22, 22, 19, 0, Math.PI * 2);
+        ctx.fillStyle = fill;
+        ctx.fill();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+    };
+
+    const chevron = (ctx: CanvasRenderingContext2D, up: boolean): void => {
+        ctx.beginPath();
+        if (up) {
+            ctx.moveTo(12, 27);
+            ctx.lineTo(22, 15);
+            ctx.lineTo(32, 27);
+        } else {
+            ctx.moveTo(12, 17);
+            ctx.lineTo(22, 29);
+            ctx.lineTo(32, 17);
+        }
+        ctx.lineWidth = 5;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+    };
+
+    return {
+        'trend-up': draw((ctx) => {
+            base(ctx, trendColour('up'));
+            chevron(ctx, true);
+        }),
+        'trend-down': draw((ctx) => {
+            base(ctx, trendColour('down'));
+            chevron(ctx, false);
+        }),
+        'trend-flat': draw((ctx) => {
+            base(ctx, trendColour('flat'));
+            ctx.beginPath();
+            ctx.moveTo(12, 22);
+            ctx.lineTo(32, 22);
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#ffffff';
+            ctx.stroke();
+        }),
+        'trend-unknown': draw((ctx) => {
+            base(ctx, trendColour('unknown'));
+            ctx.beginPath();
+            ctx.arc(22, 22, 5, 0, Math.PI * 2);
+            ctx.fillStyle = '#ffffff';
+            ctx.fill();
+        }),
+    };
 }

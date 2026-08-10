@@ -2,7 +2,7 @@ import { GoogleMapsAdapter } from './google';
 import { MapLibreAdapter } from './maplibre';
 import type { AdapterOptions, MapAdapter } from './types';
 
-export type { MapAdapter, MapBounds, PointFeature, BoundaryCollection, LatLng } from './types';
+export type { MapAdapter, MapBounds, PointFeature, PriceTrend, BoundaryCollection, LatLng } from './types';
 
 export interface AdapterResult {
     adapter: MapAdapter;
