@@ -3,8 +3,27 @@ import { onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
 import AppButton from '@/Components/ui/AppButton.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import { t } from '@/lib/i18n';
+import { createMapAdapter, type MapAdapter } from '@/lib/map';
 import { parsePolygonRing, polygonToWkt, ringBounds, ringCentroid, type LngLat } from '@/lib/geometry';
 
+/*
+ * The admin location picker, ON THE SHARED ADAPTER.
+ *
+ * This component previously constructed MapLibre directly — the second map
+ * stack the audit's RC4 names — so it received none of the adapter's
+ * production behaviour: no bounded readiness, no resize self-healing (it is
+ * routinely built inside a hidden v-show tab, where the canvas measures
+ * 0×0), and its own private error path. It now builds through
+ * createMapAdapter like every public map, and the adapter's ResizeObserver
+ * recovers the canvas the moment the Location tab becomes visible — no
+ * rebuild, exactly one map instance.
+ *
+ * The contract is unchanged: click to place the point, drag the pin, draw a
+ * simple boundary ring, keep the sibling latitude/longitude fields
+ * synchronized both ways, and NEVER take the form down with a failed map —
+ * manual coordinate editing always works, and a provider failure renders a
+ * human-readable message with a retry, not a stack trace and not silence.
+ */
 const props = withDefaults(defineProps<{
     latitude: number | null;
     longitude: number | null;
@@ -21,127 +40,106 @@ const emit = defineEmits<{
 }>();
 
 const container = ref<HTMLDivElement | null>(null);
-const map = shallowRef<import('maplibre-gl').Map | null>(null);
-const marker = shallowRef<import('maplibre-gl').Marker | null>(null);
+const adapter = shallowRef<MapAdapter | null>(null);
 
 const drawing = ref(false);
 const ring = ref<LngLat[]>([]);
-const failed = ref<string | null>(null);
+const failed = ref(false);
+const building = ref(false);
 
 /*
  * Erbil. A fixed fallback for records that carry no coordinates yet — the
  * operating-area centre is not delivered to this component, so re-pointing a
  * deployment at another city means changing this pair.
  */
-const FALLBACK_CENTRE: [number, number] = [44.05, 36.2];
-
-/**
- * The style URL comes from configuration (spec 10.1: MapLibre + OSM as the
- * preferred open provider). With none set the component renders a plain
- * background and still functions — clicking, drawing and emitting all work
- * without tiles. Spec 10.1 again: "the application must remain usable when one
- * provider fails."
- */
-const resolvedStyle = (): string | import('maplibre-gl').StyleSpecification =>
-    props.styleUrl && props.styleUrl.trim() !== ''
-        ? props.styleUrl
-        : {
-            version: 8,
-            sources: {},
-            layers: [{
-                id: 'background',
-                type: 'background',
-                paint: { 'background-color': '#e8e6e1' },
-            }],
-        };
+const FALLBACK_CENTRE = { lat: 36.2, lng: 44.05 };
 
 async function build(): Promise<void> {
-    if (!container.value) return;
+    if (!container.value || building.value) return;
+
+    building.value = true;
+    failed.value = false;
 
     try {
-        const maplibre = await import('maplibre-gl');
-
-        const instance = new maplibre.Map({
+        const result = await createMapAdapter('maplibre', {
             container: container.value,
-            style: resolvedStyle(),
-            center: props.longitude !== null && props.latitude !== null
-                ? [props.longitude, props.latitude]
+            styleUrl: props.styleUrl,
+            googleKey: null,
+            centre: props.latitude !== null && props.longitude !== null
+                ? { lat: props.latitude, lng: props.longitude }
                 : FALLBACK_CENTRE,
             zoom: 12,
-            attributionControl: { compact: true },
+            // With no configured style the picker still works on a plain
+            // background — clicking, drawing and emitting need no tiles.
+            fallbackStyle: 'plain',
+            events: {
+                onMoveEnd: () => {},
+                onClick: (point) => {
+                    if (drawing.value) {
+                        ring.value = [...ring.value, { lng: point.lng, lat: point.lat }];
+                        renderRing();
+                        return;
+                    }
+
+                    if (props.mode !== 'polygon') setPoint({ lng: point.lng, lat: point.lat });
+                },
+                onError: () => {
+                    // A provider failure after construction: state it; the
+                    // form and the coordinate fields keep working.
+                    failed.value = true;
+                },
+            },
         });
 
-        instance.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
+        adapter.value = result.adapter;
 
-        instance.on('load', () => {
-            instance.addSource('boundary', {
-                type: 'geojson',
-                data: { type: 'FeatureCollection', features: [] },
-            });
-            instance.addLayer({
-                id: 'boundary-fill',
-                type: 'fill',
-                source: 'boundary',
-                paint: { 'fill-color': '#0f3e59', 'fill-opacity': 0.15 },
-            });
-            instance.addLayer({
-                id: 'boundary-line',
-                type: 'line',
-                source: 'boundary',
-                paint: { 'line-color': '#c9a227', 'line-width': 2 },
-            });
+        await result.adapter.ready();
 
-            const existing = parsePolygonRing(props.boundaryWkt);
-            if (existing) {
-                ring.value = existing;
-                renderRing();
-                const bounds = ringBounds(existing);
-                if (bounds) instance.fitBounds(bounds, { padding: 48, duration: 0 });
-            }
-        });
-
-        instance.on('click', (event) => {
-            const point: LngLat = { lng: event.lngLat.lng, lat: event.lngLat.lat };
-
-            if (drawing.value) {
-                ring.value = [...ring.value, point];
-                renderRing();
-                return;
-            }
-
-            if (props.mode !== 'polygon') setPoint(point);
-        });
-
-        map.value = instance;
-
+        // Existing geometry, restored on edit: pin first, then the ring —
+        // and the camera fits the polygon when one exists.
         if (props.latitude !== null && props.longitude !== null) {
-            placeMarker({ lng: props.longitude, lat: props.latitude });
+            placePin({ lng: props.longitude, lat: props.latitude });
         }
-    } catch (error) {
-        // A map that fails to initialise must not take the form down with it.
-        // The WKT and coordinate fields remain editable by hand.
-        failed.value = error instanceof Error ? error.message : String(error);
+
+        const existing = parsePolygonRing(props.boundaryWkt);
+        if (existing) {
+            ring.value = existing;
+            renderRing();
+            const bounds = ringBounds(existing);
+            if (bounds) {
+                const [[west, south], [east, north]] = bounds;
+                adapter.value.flyTo(
+                    { lng: (west + east) / 2, lat: (south + north) / 2 },
+                    13,
+                );
+            }
+        }
+    } catch {
+        // Bounded readiness rejected (style failed or stalled): a clear
+        // message with a retry — never an indefinite blank surface.
+        adapter.value?.destroy();
+        adapter.value = null;
+        failed.value = true;
+    } finally {
+        building.value = false;
     }
 }
 
-async function placeMarker(point: LngLat): Promise<void> {
-    if (!map.value) return;
+function retry(): void {
+    adapter.value?.destroy();
+    adapter.value = null;
+    void build();
+}
 
-    const maplibre = await import('maplibre-gl');
-
-    marker.value?.remove();
-    marker.value = new maplibre.Marker({ color: '#0f3e59', draggable: true })
-        .setLngLat([point.lng, point.lat])
-        .addTo(map.value);
-
-    marker.value.on('dragend', () => {
-        const position = marker.value?.getLngLat();
-        if (position) emitPoint({ lng: position.lng, lat: position.lat });
-    });
+function placePin(point: LngLat): void {
+    adapter.value?.setPin?.(
+        { lat: point.lat, lng: point.lng },
+        (dragged) => emitPoint({ lng: dragged.lng, lat: dragged.lat }),
+    );
 }
 
 function setPoint(point: LngLat): void {
-    void placeMarker(point);
+    placePin(point);
     emitPoint(point);
 }
 
@@ -151,20 +149,19 @@ function emitPoint(point: LngLat): void {
 }
 
 function renderRing(): void {
-    const source = map.value?.getSource('boundary') as
-        | { setData: (data: unknown) => void }
-        | undefined;
-
-    if (!source) return;
-
-    source.setData(ring.value.length >= 3
+    adapter.value?.setBoundaries(ring.value.length >= 3
         ? {
-            type: 'Feature',
-            geometry: {
-                type: 'Polygon',
-                coordinates: [[...ring.value, ring.value[0]].map((p) => [p.lng, p.lat])],
-            },
-            properties: {},
+            type: 'FeatureCollection',
+            features: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[...ring.value, ring.value[0]].map((p) => [p.lng, p.lat])],
+                },
+                // The boundary contract carries label metadata for the public
+                // layers; a draft ring has none and renders fill/line only.
+                properties: { slug: 'boundary-draft', name: '', type: null },
+            }],
         }
         : { type: 'FeatureCollection', features: [] });
 }
@@ -216,51 +213,38 @@ watch(() => props.boundaryWkt, (value) => {
 });
 
 /*
- * Coordinates typed into the sibling form fields must move the pin. Without
- * this watcher the binding was one-way (map → fields): the form value changed
- * but the already-placed marker stayed put until a full page reload. The
- * echo guard stops the marker's own emissions (click, drag) from re-placing
- * it: after an emit the incoming props equal the marker position to the same
- * 7-decimal rounding, so the move is a no-op and is skipped.
+ * Coordinates typed into the sibling form fields must move the pin — the
+ * binding is two-way, and a cleared pair removes the pin rather than
+ * leaving a stale one claiming a location the form no longer states. The
+ * echo guard: after this component's own emit the incoming props equal the
+ * pin position at the same 7-decimal rounding, so setPin() is a no-op move.
  */
 watch(() => [props.latitude, props.longitude] as const, ([lat, lng]) => {
-    if (!map.value) return;
+    if (!adapter.value) return;
 
     if (lat === null || lng === null) {
-        marker.value?.remove();
-        marker.value = null;
+        adapter.value.setPin?.(null);
         return;
     }
 
-    const current = marker.value?.getLngLat();
-    if (current
-        && Number(current.lat.toFixed(7)) === lat
-        && Number(current.lng.toFixed(7)) === lng) {
-        return;
-    }
-
-    void placeMarker({ lng, lat });
-
-    // Recentre only when the typed point left the viewport — easing the
-    // camera on every keystroke of a coordinate field is unusable.
-    const bounds = map.value.getBounds();
-    if (!bounds.contains([lng, lat])) {
-        map.value.easeTo({ center: [lng, lat] });
-    }
+    placePin({ lng, lat });
 });
 
 onMounted(() => { void build(); });
-onBeforeUnmount(() => { marker.value?.remove(); map.value?.remove(); });
+onBeforeUnmount(() => { adapter.value?.destroy(); adapter.value = null; });
 </script>
 
 <template>
     <div class="space-y-3">
         <AppAlert v-if="failed" variant="warning">
             {{ t('geography.map.unavailable') }}
+            <AppButton variant="secondary" size="sm" class="ms-3" :disabled="building" @click="retry">
+                {{ t('app.actions.retry') }}
+            </AppButton>
         </AppAlert>
 
         <div
-            v-else
+            v-show="!failed"
             ref="container"
             class="w-full overflow-hidden rounded-card border border-line"
             :style="{ height }"
