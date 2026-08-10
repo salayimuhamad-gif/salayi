@@ -144,7 +144,15 @@ final class AdminNavigation
         $visible = [];
 
         foreach ($items as $item) {
-            if ($item['flag'] !== null && ! $featureEnabled($item['flag'])) {
+            /*
+             * Flags hide sections from ordinary administrators, never from a
+             * Super Admin: the admin routes behind them admit a Super Admin
+             * while disabled (audited preview — see EnsureFeatureEnabled), so
+             * hiding the entry here would recreate the "why is half my panel
+             * missing" defect this navigation was repaired for. The flag
+             * still darkens the PUBLIC surface for everyone.
+             */
+            if ($item['flag'] !== null && ! $featureEnabled($item['flag']) && ! $user->isSuperAdmin()) {
                 continue;
             }
 

@@ -41,6 +41,7 @@ const props = defineProps<{
         assign_roles: boolean;
         suspend: boolean;
         revoke_sessions: boolean;
+        act_on_super_admin: boolean;
         grant_super_admin: boolean;
     };
 }>();
@@ -78,12 +79,16 @@ function saveRoles(row: Row): void {
 }
 
 /*
- * Whether THIS actor may edit THIS row at all. The server enforces the same
- * rule with a 403; the page simply does not offer what the server will
- * refuse.
+ * Whether THIS actor may edit or act on THIS row at all. The server enforces
+ * the same rules with a 403; the page simply does not offer what the server
+ * will refuse. Rows holding super_admin accept NO action — roles, suspension,
+ * reactivation or forced logout — from a lesser administrator.
  */
 const mayEdit = (row: Row): boolean =>
     props.can.assign_roles && (props.can.grant_super_admin || !row.is_super_admin);
+
+const mayAct = (row: Row): boolean =>
+    !row.is_super_admin || props.can.act_on_super_admin;
 
 const suspending = ref<number | null>(null);
 const suspendReason = ref('');
@@ -191,7 +196,7 @@ const errors = (): Record<string, string> => (page.props.errors ?? {}) as Record
                             {{ t('identity.administrators.edit_roles') }}
                         </AppButton>
 
-                        <template v-if="can.suspend && row.id !== selfId">
+                        <template v-if="can.suspend && row.id !== selfId && mayAct(row)">
                             <AppButton
                                 v-if="!row.is_suspended"
                                 size="sm"
@@ -211,7 +216,7 @@ const errors = (): Record<string, string> => (page.props.errors ?? {}) as Record
                         </template>
 
                         <AppButton
-                            v-if="can.revoke_sessions"
+                            v-if="can.revoke_sessions && mayAct(row)"
                             size="sm"
                             variant="secondary"
                             @click="forceLogout(row)"

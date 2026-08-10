@@ -812,7 +812,10 @@ final class ProjectWizardTest extends TestCase
         $this->setFeatures(['projects.wizard' => false,
         ]);
 
-        $user = $this->admin();
+        // An ORDINARY administrator: a Super Admin now previews disabled
+        // admin surfaces (audited), so proving the flag closes the surface
+        // requires an actor without that rank.
+        $user = $this->editor();
         $draft = $this->draftFor($user);
 
         // The entry point explains WHY it is unavailable...
@@ -3349,7 +3352,9 @@ final class ProjectWizardTest extends TestCase
 
     public function test_operational_wizard_routes_stay_blocked_when_disabled(): void
     {
-        $user = $this->admin();
+        // An ORDINARY administrator — see
+        // test_every_wizard_route_is_gated_by_the_feature_flag for why.
+        $user = $this->editor();
         $draft = $this->draftFor($user);
 
         $this->setFeatures(['projects.wizard' => false,

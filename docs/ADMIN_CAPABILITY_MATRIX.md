@@ -42,14 +42,18 @@ category 1 fails the build, it does not fail silently.
    from operators who hold identity or audit permissions without the settings
    one. **Fixed**: parent has no own permission; it renders exactly when a
    child does.
-6. **Feature flags default off and gate admin surfaces for everyone,
-   including Super Admin** (`EnsureFeatureEnabled` previews disabled flags
-   for Super Admin only for the `requires_super_admin` set). This is the
-   intended launch-control design and is deliberately unchanged: flags are
-   product rollout switches, not authorisation, and the Features page —
-   always visible to Super Admin — turns every surface on. What *looked* like
-   missing permissions was, for Market/Marketplace/Companies/Places, a
-   default-off configuration.
+6. **Feature flags default off and used to gate admin surfaces for everyone,
+   including Super Admin** — with defaults, the Market, Marketplace,
+   Companies and Places sections vanished from a Super Admin's panel
+   entirely. **Fixed, with the flag's real meaning preserved**: a flag is a
+   LAUNCH switch for the public product, not an authorisation. A Super Admin
+   now sees every implemented admin section regardless of flag state, and
+   the admin routes behind a disabled flag admit a Super Admin as an audited
+   preview (`feature.preview_while_disabled` security event on every use).
+   Ordinary administrators remain flag-gated exactly as before, and the
+   PUBLIC and API surfaces of a disabled feature stay dark for everyone —
+   including Super Admin — until the flag is explicitly enabled on the
+   Features page.
 7. **A frontend super-admin heuristic.** `FeatureFlags.vue` derived "is super
    admin" from `permissions.length > 0 && is_admin` — true for every
    administrative user — so super-admin-only toggles rendered usable for a
@@ -159,10 +163,17 @@ stable vocabulary before the feature ships. Nothing routes them; the
 - MFA, `account.active`, CSRF and session semantics untouched — asserted by
   the coverage tests (an unenrolled Super Admin still lands in MFA setup, a
   suspended one is logged out at the door).
-- Only a Super Admin may grant or remove `super_admin`, edit an account
-  holding it, or suspend one — a System Admin with `identity.roles.assign` /
-  `identity.users.suspend` cannot escalate or decapitate. Refusals are
-  security-audited.
+- **Administrative role mutation is a rank, not a permission**: only a real
+  Super Admin may grant or remove ANY administrative role. A System Admin
+  legitimately holds `identity.roles.assign` and may view the role map, but
+  cannot assign roles to anyone — including themselves — because
+  accumulating Product Owner or Market Data Manager grants widens effective
+  permissions one role at a time. Refusals are security-audited.
+- **Every mutating action against a Super Admin target is rank-guarded**:
+  role edits, suspension, reactivation and forced logout all refuse a
+  non-Super-Admin actor (audited `identity.administrators.escalation_denied`),
+  and the UI never offers those controls on a super-admin row to a lesser
+  administrator.
 - The last active, unsuspended Super Admin cannot lose the role or be
   suspended: the lockout answer is a validation error naming the remedy.
 - The administrators payload is phone-free and pinned by test; the settings

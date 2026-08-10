@@ -57,17 +57,20 @@ final class AdministratorsController extends Controller
             'assignable_roles' => self::assignableRoleKeys(),
             'active_super_admins' => self::activeSuperAdminCount(),
             'can' => [
-                // The actor's own capabilities, derived from hasPermission()
-                // so Super Admin needs no special case anywhere below.
-                'assign_roles' => $request->user()->hasPermission('identity.roles.assign'),
+                /*
+                 * Role MUTATION is a rank, not a permission: a System Admin
+                 * holds identity.roles.assign and must still never be offered
+                 * the editor, because granting roles — to a colleague or to
+                 * themselves — widens effective permissions one grant at a
+                 * time. The server enforces the same rule with a 403.
+                 */
+                'assign_roles' => $request->user()->isSuperAdmin(),
                 'suspend' => $request->user()->hasPermission('identity.users.suspend'),
                 'revoke_sessions' => $request->user()->hasPermission('identity.sessions.revoke'),
-                /*
-                 * Whether the super_admin role itself may be granted or
-                 * revoked BY THIS ACTOR. Holding identity.roles.assign is not
-                 * enough: a System Admin holds it, and a System Admin who can
-                 * hand out super_admin has silently become one.
-                 */
+                // Whether rows holding super_admin may be acted on AT ALL:
+                // suspend, reactivate and force-logout are rank-guarded on
+                // super-admin targets exactly like the roles editor.
+                'act_on_super_admin' => $request->user()->isSuperAdmin(),
                 'grant_super_admin' => $request->user()->isSuperAdmin(),
             ],
         ]);
@@ -95,18 +98,17 @@ final class AdministratorsController extends Controller
             ->sort()->values()->all();
 
         $actor = $request->user();
-        $touchesSuperAdmin = $user->isSuperAdmin()
-            || in_array(RoleKey::SuperAdmin->value, $desired, true);
 
         /*
-         * Escalation boundary. Only a Super Admin may grant super_admin, and
-         * only a Super Admin may modify an account that holds it. Without
-         * this, any System Admin (who legitimately holds
-         * identity.roles.assign) could mint themselves a Super Admin or strip
-         * the real one — the exact privilege escalation the fine-grained
-         * catalogue exists to prevent.
+         * Escalation boundary: administrative role MUTATION requires a real
+         * Super Admin, full stop. `identity.roles.assign` alone is not
+         * enough — a System Admin holds it, and a System Admin who can hand
+         * out Product Owner or Market Data Manager roles (to a colleague or
+         * to THEMSELVES) can widen their own effective permissions one grant
+         * at a time. Reading the role map stays a permission; changing it is
+         * a rank.
          */
-        if ($touchesSuperAdmin && ! $actor->isSuperAdmin()) {
+        if (! $actor->isSuperAdmin()) {
             $this->audit->security('identity.roles.escalation_denied', [
                 'actor_id' => $actor->id,
                 'target_id' => $user->id,
@@ -174,20 +176,7 @@ final class AdministratorsController extends Controller
         abort_unless($user->roles()->exists(), 404);
         abort_if($user->id === $request->user()->id, 422);
 
-        /*
-         * Rank order. Suspension of a Super Admin by a lesser role is the
-         * takeover the role hierarchy exists to prevent — the same boundary
-         * the roles editor enforces, at this second door.
-         */
-        if ($user->isSuperAdmin() && ! $request->user()->isSuperAdmin()) {
-            $this->audit->security('identity.administrators.escalation_denied', [
-                'actor_id' => $request->user()->id,
-                'target_id' => $user->id,
-                'action' => 'suspend',
-            ]);
-
-            abort(403);
-        }
+        $this->guardRank($request, $user, 'suspend');
 
         /*
          * Suspending the last active Super Admin is the same lockout as
@@ -217,6 +206,8 @@ final class AdministratorsController extends Controller
     {
         abort_unless($user->roles()->exists(), 404);
 
+        $this->guardRank($request, $user, 'reactivate');
+
         $user->forceFill([
             'suspended_at' => null,
             'suspended_reason' => null,
@@ -232,6 +223,8 @@ final class AdministratorsController extends Controller
     public function forceLogout(Request $request, User $user): RedirectResponse
     {
         abort_unless($user->roles()->exists(), 404);
+
+        $this->guardRank($request, $user, 'force_logout');
 
         DB::table('sessions')->where('user_id', $user->getKey())->delete();
         $user->forceFill(['remember_token' => Str::random(60)])->save();
@@ -271,6 +264,26 @@ final class AdministratorsController extends Controller
             'online' => $user->last_seen_at !== null
                 && $user->last_seen_at->gte(now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS)),
         ];
+    }
+
+    /**
+     * Rank order, applied at every mutating door. Acting on an account that
+     * holds super_admin — suspending it, reactivating it, ending its
+     * sessions — is reserved to another Super Admin; a lesser administrator
+     * whose permission reaches the route is refused here and the refusal is
+     * a security event.
+     */
+    private function guardRank(Request $request, User $user, string $action): void
+    {
+        if ($user->isSuperAdmin() && ! $request->user()->isSuperAdmin()) {
+            $this->audit->security('identity.administrators.escalation_denied', [
+                'actor_id' => $request->user()->id,
+                'target_id' => $user->id,
+                'action' => $action,
+            ]);
+
+            abort(403);
+        }
     }
 
     /** @return list<string> the administrative role keys this surface manages */

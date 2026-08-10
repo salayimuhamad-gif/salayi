@@ -9,6 +9,7 @@ use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Support\PermissionRegistry;
+use App\Modules\Operations\Models\AuditLog;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
@@ -36,10 +37,15 @@ final class SuperAdminCoverageTest extends TestCase
     /** Every feature flag on, so flag gating never masks a missing capability. */
     private function enableEveryFlag(): void
     {
+        $this->setEveryFlag(true);
+    }
+
+    private function setEveryFlag(bool $enabled): void
+    {
         $flags = [];
 
         foreach (array_keys((array) config('features.defaults')) as $flag) {
-            $flags[$flag] = true;
+            $flags[$flag] = $enabled;
         }
 
         $this->setFeatures($flags);
@@ -206,6 +212,79 @@ final class SuperAdminCoverageTest extends TestCase
         };
 
         $walk(AdminNavigation::for($admin, static fn (): bool => true));
+    }
+
+    /**
+     * The requirement, verbatim: a Super Admin sees every implemented
+     * section — including while its launch flag is OFF. The flag darkens the
+     * public product, not the administration of it.
+     */
+    public function test_navigation_shows_super_admin_every_section_even_with_flags_off(): void
+    {
+        $admin = User::factory()->superAdmin()->create();
+
+        $this->assertSame(
+            array_column(AdminNavigation::for($admin, static fn (): bool => true), 'key'),
+            array_column(AdminNavigation::for($admin, static fn (): bool => false), 'key'),
+        );
+    }
+
+    /**
+     * The matrix again, with every flag OFF: the same admin surfaces answer
+     * the same Super Admin, each pass through a disabled flag an audited
+     * security event rather than a silent hole.
+     */
+    public function test_super_admin_reaches_every_admin_surface_while_flags_are_off(): void
+    {
+        $this->setEveryFlag(false);
+
+        $admin = User::factory()->superAdmin()->create();
+
+        foreach (Route::getRoutes()->getRoutes() as $route) {
+            $name = (string) $route->getName();
+
+            if (! str_starts_with($name, 'admin.')
+                || ! in_array('GET', $route->methods(), true)
+                || str_contains($route->uri(), '{')) {
+                continue;
+            }
+
+            $response = $this->actingAs($admin)->get('/'.ltrim($route->uri(), '/'));
+
+            $this->assertLessThan(400, $response->getStatusCode(), sprintf(
+                'GET %s (%s) answered %d to a Super Admin with flags off',
+                $route->uri(), $name, $response->getStatusCode(),
+            ));
+        }
+
+        $this->assertTrue(
+            AuditLog::query()->where('action', 'feature.preview_while_disabled')->exists(),
+            'previewing a disabled feature must leave a security audit record',
+        );
+    }
+
+    public function test_ordinary_administrators_remain_flag_gated(): void
+    {
+        $this->setEveryFlag(false);
+
+        // Product Owner holds market.prices.view and marketplace.offers.view,
+        // so the refusal below is the FLAG's, not a permission miss.
+        $admin = User::factory()->productOwner()->create();
+
+        $this->actingAs($admin)->get('/admin/market/prices')->assertForbidden();
+        $this->actingAs($admin)->get('/admin/offers')->assertForbidden();
+    }
+
+    public function test_public_surfaces_stay_dark_while_disabled_even_for_super_admin(): void
+    {
+        $this->setEveryFlag(false);
+
+        $admin = User::factory()->superAdmin()->create();
+
+        // The PUBLIC market and offers pages: a disabled launch flag keeps
+        // them dark for everyone — the admin preview never leaks forward.
+        $this->actingAs($admin)->get('/market')->assertNotFound();
+        $this->actingAs($admin)->get('/offers')->assertNotFound();
     }
 
     /**

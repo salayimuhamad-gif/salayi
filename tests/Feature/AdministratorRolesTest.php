@@ -100,8 +100,11 @@ final class AdministratorRolesTest extends TestCase
         );
     }
 
-    public function test_a_system_admin_may_grant_ordinary_roles(): void
+    public function test_role_mutation_is_a_rank_not_a_permission(): void
     {
+        // A System Admin legitimately holds identity.roles.assign — and is
+        // still refused: granting roles, to a colleague or to themselves,
+        // widens effective permissions one grant at a time.
         $actor = $this->operator(RoleKey::SystemAdmin);
         $target = $this->operator(RoleKey::ContentEditor);
 
@@ -109,10 +112,51 @@ final class AdministratorRolesTest extends TestCase
             ->put("/admin/administrators/{$target->id}/roles", [
                 'roles' => [RoleKey::ContentEditor->value, RoleKey::TranslationReviewer->value],
             ])
+            ->assertForbidden();
+
+        $this->assertSame([RoleKey::ContentEditor->value], $target->fresh()->roles()->pluck('key')->all());
+        $this->assertTrue(
+            AuditLog::query()->where('action', 'identity.roles.escalation_denied')->exists(),
+        );
+    }
+
+    public function test_a_system_admin_cannot_widen_their_own_roles(): void
+    {
+        $actor = $this->operator(RoleKey::SystemAdmin);
+
+        $this->actingAs($actor)
+            ->put("/admin/administrators/{$actor->id}/roles", [
+                'roles' => [RoleKey::SystemAdmin->value, RoleKey::ProductOwner->value, RoleKey::MarketDataManager->value],
+            ])
+            ->assertForbidden();
+
+        $this->assertSame([RoleKey::SystemAdmin->value], $actor->fresh()->roles()->pluck('key')->all());
+    }
+
+    public function test_a_super_admin_can_assign_and_remove_administrative_roles(): void
+    {
+        $admin = User::factory()->superAdmin()->create();
+        $target = $this->operator(RoleKey::ContentEditor);
+
+        $this->actingAs($admin)
+            ->put("/admin/administrators/{$target->id}/roles", [
+                'roles' => [RoleKey::ProductOwner->value, RoleKey::MarketDataManager->value],
+            ])
             ->assertRedirect(route('admin.administrators.index'));
 
         $this->assertEqualsCanonicalizing(
-            [RoleKey::ContentEditor->value, RoleKey::TranslationReviewer->value],
+            [RoleKey::ProductOwner->value, RoleKey::MarketDataManager->value],
+            $target->fresh()->roles()->pluck('key')->all(),
+        );
+
+        $this->actingAs($admin)
+            ->put("/admin/administrators/{$target->id}/roles", [
+                'roles' => [RoleKey::MarketDataManager->value],
+            ])
+            ->assertRedirect(route('admin.administrators.index'));
+
+        $this->assertSame(
+            [RoleKey::MarketDataManager->value],
             $target->fresh()->roles()->pluck('key')->all(),
         );
     }
@@ -264,6 +308,47 @@ final class AdministratorRolesTest extends TestCase
         $this->assertNotNull($second->fresh()->suspended_at);
     }
 
+    public function test_only_a_super_admin_may_reactivate_a_super_admin(): void
+    {
+        $suspended = User::factory()->superAdmin()->create([
+            'suspended_at' => now(),
+            'suspended_reason' => 'audit',
+        ]);
+        $actor = $this->operator(RoleKey::SystemAdmin);
+
+        $this->actingAs($actor)
+            ->post("/admin/administrators/{$suspended->id}/reactivate")
+            ->assertForbidden();
+
+        $this->assertNotNull($suspended->fresh()->suspended_at);
+
+        $this->actingAs(User::factory()->superAdmin()->create())
+            ->post("/admin/administrators/{$suspended->id}/reactivate")
+            ->assertRedirect();
+
+        $this->assertNull($suspended->fresh()->suspended_at);
+    }
+
+    public function test_only_a_super_admin_may_force_logout_a_super_admin(): void
+    {
+        $target = User::factory()->superAdmin()->create();
+        $before = $target->remember_token;
+
+        // Security Auditor holds identity.sessions.revoke and reaches the
+        // route — and is still refused on a super-admin target.
+        $this->actingAs($this->operator(RoleKey::SecurityAuditor))
+            ->post("/admin/administrators/{$target->id}/logout")
+            ->assertForbidden();
+
+        $this->assertSame($before, $target->fresh()->remember_token);
+
+        $this->actingAs(User::factory()->superAdmin()->create())
+            ->post("/admin/administrators/{$target->id}/logout")
+            ->assertRedirect();
+
+        $this->assertNotSame($before, $target->fresh()->remember_token);
+    }
+
     public function test_operators_cannot_suspend_themselves(): void
     {
         $actor = $this->operator(RoleKey::SystemAdmin);
@@ -329,15 +414,33 @@ final class AdministratorRolesTest extends TestCase
             ->assertInertia(fn ($page) => $page->where('can_assign_roles', false));
     }
 
-    public function test_the_promotion_list_offers_super_admin_only_to_a_super_admin(): void
+    public function test_the_promotion_door_is_closed_to_every_non_super_admin(): void
     {
+        // Even a System Admin — who holds identity.roles.assign — is not
+        // offered promotion: role mutation is a rank.
         $member = User::factory()->create();
         $actor = $this->operator(RoleKey::SystemAdmin);
 
         $this->actingAs($actor)
             ->get("/admin/users/{$member->id}")
+            ->assertInertia(fn ($page) => $page->where('can_assign_roles', false));
+    }
+
+    public function test_the_index_offers_role_editing_and_super_admin_actions_only_to_a_super_admin(): void
+    {
+        $this->operator(RoleKey::ContentEditor);
+
+        $this->actingAs($this->operator(RoleKey::SystemAdmin))
+            ->get('/admin/administrators')
             ->assertInertia(fn ($page) => $page
-                ->where('can_assign_roles', true)
-                ->where('assignable_roles', fn (Collection $roles): bool => ! $roles->contains(RoleKey::SuperAdmin->value)));
+                ->where('can.assign_roles', false)
+                ->where('can.act_on_super_admin', false)
+                ->where('can.suspend', true));
+
+        $this->actingAs(User::factory()->superAdmin()->create())
+            ->get('/admin/administrators')
+            ->assertInertia(fn ($page) => $page
+                ->where('can.assign_roles', true)
+                ->where('can.act_on_super_admin', true));
     }
 }
