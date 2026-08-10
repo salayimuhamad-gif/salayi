@@ -44,6 +44,16 @@ final class PermissionRegistry
                 // leads.contact is: "can see the account" must never quietly
                 // become "can read the number".
                 'identity.users.contact',
+                /*
+                 * Bulk export of the accounts workspace. Its own permission
+                 * because a sheet of every member is a privacy event the way
+                 * leads.export is (spec 23.3) — viewing a paginated list and
+                 * walking away with the whole population are different powers.
+                 * The export NEVER contains a phone number, only availability
+                 * status; the reveal ceremony remains the single door to a
+                 * number, one account at a time.
+                 */
+                'identity.users.export',
                 'identity.roles.view', 'identity.roles.assign',
                 'identity.consents.view', 'identity.sessions.revoke',
             ],

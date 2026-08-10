@@ -9,8 +9,10 @@ use App\Modules\Identity\Models\Consent;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\TelegramPasswordRecovery;
 use App\Modules\Leads\Enums\RevealReason;
+use App\Modules\Leads\Models\DemandProfile;
 use App\Modules\Leads\Services\PhoneRevealService;
 use App\Modules\Operations\Services\AuditLogger;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,6 +22,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
  * Administrator user accounts (spec §8).
@@ -43,9 +46,16 @@ final class UsersController extends Controller
         private readonly AuditLogger $audit,
     ) {}
 
-    public function index(Request $request): Response
+    /**
+     * The one filter vocabulary, shared verbatim by the list and the export
+     * so "Export Sheet" can never mean anything other than "what I am
+     * looking at".
+     *
+     * @return array<string, mixed>
+     */
+    private function validateFilters(Request $request): array
     {
-        $validated = $request->validate([
+        return $request->validate([
             'q' => ['nullable', 'string', 'max:80'],
             'status' => ['nullable', Rule::in(['active', 'suspended', 'unlinked'])],
             'locale' => ['nullable', Rule::in(['ckb', 'ar', 'en'])],
@@ -55,14 +65,39 @@ final class UsersController extends Controller
             // "online" is the throttle interval, the rest are calendar-ish.
             'active' => ['nullable', Rule::in(['online', 'today', 'week', 'month'])],
             'sort' => ['nullable', Rule::in(['newest', 'oldest', 'recent_activity'])],
+            /*
+             * The request-side filters. Objective, property type and stage
+             * match against the LATEST advisor request — the one the row
+             * displays — so a filtered screen never shows a value the filter
+             * did not select.
+             */
+            'has_request' => ['nullable', Rule::in(['1', '0'])],
+            'objective' => ['nullable', Rule::in(['investment', 'residence'])],
+            'property_type' => ['nullable', Rule::in(['apartment', 'villa', 'house'])],
+            'stage' => ['nullable', Rule::in(DemandProfile::STAGES)],
         ]);
+    }
 
-        $users = User::query()
+    /**
+     * @param  array<string, mixed>  $validated
+     * @return Builder<User>
+     */
+    private function workspaceQuery(array $validated)
+    {
+        return User::query()
             ->whereDoesntHave('roles')
             ->withCount([
                 'demandProfiles as advisor_request_count' => fn ($q) => $q->where('source', 'advisor'),
                 'portfolioProperties as portfolio_count',
             ])
+            // The newest advisor request and the consent bit, both as single
+            // set-based loads — a page of users costs a constant number of
+            // queries however long it gets.
+            ->with('latestAdvisorRequest')
+            ->withExists(['consents as contact_consent' => fn ($q) => $q
+                ->where('type', 'company_contact')
+                ->where('granted', true)
+                ->whereNull('withdrawn_at')])
             /*
              * Search matches names only. The phone is deliberately not
              * searchable: a number box on this screen would be a lookup tool
@@ -90,11 +125,28 @@ final class UsersController extends Controller
                     default => now()->subDays(30),
                 },
             ))
+            ->when(($validated['has_request'] ?? null) === '1', fn ($q) => $q
+                ->whereHas('demandProfiles', fn ($r) => $r->where('source', 'advisor')))
+            ->when(($validated['has_request'] ?? null) === '0', fn ($q) => $q
+                ->whereDoesntHave('demandProfiles', fn ($r) => $r->where('source', 'advisor')))
+            ->when($validated['objective'] ?? null, fn ($q, $objective) => $q
+                ->whereHas('latestAdvisorRequest', fn ($r) => $r->where('objective', $objective)))
+            ->when($validated['property_type'] ?? null, fn ($q, $type) => $q
+                ->whereHas('latestAdvisorRequest', fn ($r) => $r->where('property_type', $type)))
+            ->when($validated['stage'] ?? null, fn ($q, $stage) => $q
+                ->whereHas('latestAdvisorRequest', fn ($r) => $r->where('stage', $stage)))
             ->when(
                 ($validated['sort'] ?? 'newest') === 'recent_activity',
                 fn ($q) => $q->orderByDesc('last_seen_at'),
                 fn ($q) => ($validated['sort'] ?? 'newest') === 'oldest' ? $q->oldest('id') : $q->latest('id'),
-            )
+            );
+    }
+
+    public function index(Request $request): Response
+    {
+        $validated = $this->validateFilters($request);
+
+        $users = $this->workspaceQuery($validated)
             ->paginate(25)
             ->withQueryString()
             ->through(fn (User $user): array => $this->row($user));
@@ -102,7 +154,126 @@ final class UsersController extends Controller
         return Inertia::render('Admin/Users/Index', [
             'users' => $users,
             'filters' => $validated,
+            'stages' => DemandProfile::STAGES,
+            // The actor's own doors, so the page offers only what the server
+            // will honour. The reveal stays target-scoped: the button renders
+            // per row only where consent exists, and the endpoint re-checks
+            // everything regardless.
+            'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
+            'can_export' => $request->user()->hasPermission('identity.users.export'),
+            'reveal_reasons' => array_map(
+                static fn (RevealReason $reason): array => [
+                    'value' => $reason->value,
+                    'requires_note' => $reason->requiresNote(),
+                ],
+                RevealReason::cases(),
+            ),
         ]);
+    }
+
+    /**
+     * Export Sheet: the CURRENT filtered result set, as CSV.
+     *
+     * Behind its own permission — walking away with the whole population is
+     * a different power from paging through it — and audited with the exact
+     * filters used. The sheet carries NO phone numbers and no security
+     * fields: the phone column is availability status only, because bulk
+     * export would turn the per-target, consent-bound, reasoned, rate-limited
+     * reveal ceremony into a loophole. Excel-friendly: UTF-8 BOM so Kurdish
+     * and Arabic render, CRLF rows, and every cell defused against formula
+     * injection.
+     */
+    public function export(Request $request): StreamedResponse
+    {
+        $validated = $this->validateFilters($request);
+        $query = $this->workspaceQuery($validated);
+
+        $this->audit->record('identity.users.exported', null, [], [
+            'actor_id' => $request->user()->id,
+            'filters' => array_filter($validated, static fn ($v): bool => $v !== null && $v !== ''),
+            'rows' => (clone $query)->reorder()->count(),
+        ], severity: 'warning');
+
+        $filename = 'myhawler-users-'.now()->format('Ymd-His').'.csv';
+
+        return response()->streamDownload(function () use ($query): void {
+            $out = fopen('php://output', 'w');
+
+            // The BOM is what makes Excel read the sheet as UTF-8 instead of
+            // mojibake-ing every Kurdish and Arabic name.
+            fwrite($out, "\xEF\xBB\xBF");
+
+            $this->csvRow($out, [
+                'name', 'preferred_language', 'account_status', 'registered_at',
+                'last_login_at', 'last_seen_at', 'online', 'telegram_linked',
+                'telegram_linked_at', 'phone_status', 'request_count',
+                'latest_request_objective', 'latest_request_property_type',
+                'latest_request_stage', 'latest_request_updated_at',
+                'portfolio_count',
+            ]);
+
+            // chunkById for constant memory; it orders by id, so the sheet is
+            // the filtered SET — Excel re-sorts columns better than we do.
+            (clone $query)->reorder()->chunkById(500, function ($users) use ($out): void {
+                foreach ($users as $user) {
+                    $latest = $user->latestAdvisorRequest;
+
+                    $this->csvRow($out, [
+                        $user->display_name ?? $user->name,
+                        $user->preferred_locale,
+                        $user->suspended_at !== null ? 'suspended' : 'active',
+                        $user->created_at?->toDateString(),
+                        $user->last_login_at?->toDateTimeString(),
+                        $user->last_seen_at?->toDateTimeString(),
+                        $user->last_seen_at !== null
+                            && $user->last_seen_at->gte(now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS))
+                            ? 'online' : 'offline',
+                        $user->telegram_verified_at !== null ? 'linked' : 'not_linked',
+                        $user->telegram_verified_at?->toDateString(),
+                        // Availability, never a number. The reveal ceremony is
+                        // the single door and it opens one account at a time.
+                        $user->phone_index === null
+                            ? 'none'
+                            : ($user->contact_consent ? 'available_reveal_permitted' : 'available_reveal_not_permitted'),
+                        (int) $user->advisor_request_count,
+                        $latest?->objective,
+                        $latest?->property_type,
+                        $latest?->stage,
+                        $latest?->updated_at?->toDateTimeString(),
+                        (int) $user->portfolio_count,
+                    ]);
+                }
+            });
+
+            fclose($out);
+        }, $filename, [
+            'Content-Type' => 'text/csv; charset=UTF-8',
+            'Cache-Control' => 'no-store, no-cache, must-revalidate',
+        ]);
+    }
+
+    /**
+     * One CSV row, CRLF-terminated, every cell defused.
+     *
+     * A cell beginning with = + - @ or a control character is executed as a
+     * formula by Excel and LibreOffice; a user whose display name is
+     * `=HYPERLINK(...)` must land in a spreadsheet as text. The apostrophe
+     * prefix is the standard neutralisation both suites honour.
+     *
+     * @param  resource  $out
+     * @param  list<string|int|float|null>  $cells
+     */
+    private function csvRow($out, array $cells): void
+    {
+        fputcsv($out, array_map(static function ($cell): string {
+            $value = (string) ($cell ?? '');
+
+            if ($value !== '' && (str_contains('=+-@', $value[0]) || $value[0] === "\t" || $value[0] === "\r")) {
+                $value = "'".$value;
+            }
+
+            return $value;
+        }, $cells), eol: "\r\n");
     }
 
     public function show(Request $request, User $user): Response
@@ -112,7 +283,7 @@ final class UsersController extends Controller
         $user->loadCount([
             'demandProfiles as advisor_request_count' => fn ($q) => $q->where('source', 'advisor'),
             'portfolioProperties as portfolio_count',
-        ]);
+        ])->load('latestAdvisorRequest');
 
         $consent = Consent::query()
             ->where('user_id', $user->id)
@@ -325,6 +496,19 @@ final class UsersController extends Controller
                 && $user->last_seen_at->gte(now()->subSeconds(TouchLastSeen::INTERVAL_SECONDS)),
             'advisor_request_count' => (int) ($user->advisor_request_count ?? 0),
             'portfolio_count' => (int) ($user->portfolio_count ?? 0),
+            /*
+             * The consent BIT, never the consent record: with the actor's
+             * identity.users.contact permission it decides whether the row
+             * offers the reveal ceremony. The server re-checks permission,
+             * consent, reason and rate on every reveal regardless.
+             */
+            'contact_consent' => (bool) ($user->contact_consent ?? false),
+            'latest_request' => $user->latestAdvisorRequest === null ? null : [
+                'objective' => $user->latestAdvisorRequest->objective,
+                'property_type' => $user->latestAdvisorRequest->property_type,
+                'stage' => $user->latestAdvisorRequest->stage,
+                'updated_at' => $user->latestAdvisorRequest->updated_at?->toDateString(),
+            ],
         ];
     }
 }

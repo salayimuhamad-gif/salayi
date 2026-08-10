@@ -28,6 +28,21 @@ for (const locale of LOCALES) {
             await expect(page.locator('h1')).toHaveCount(1);
         });
 
+        /*
+         * The blank-map defect class, pinned in a real browser: whatever the
+         * network does, the map surface itself must occupy real space. A
+         * zero-height container is how "the map does not load" ships while
+         * every API test stays green — the div exists, the adapter boots,
+         * and nothing is visible.
+         */
+        test('the map container occupies real space before any tile arrives', async ({ page }) => {
+            const box = await page.locator('[role="application"]').first().boundingBox();
+
+            expect(box).not.toBeNull();
+            expect(box!.width).toBeGreaterThan(200);
+            expect(box!.height).toBeGreaterThanOrEqual(300);
+        });
+
         test('the list carries the seeded projects with price and trend', async ({ page }, testInfo) => {
             const width = testInfo.project.use.viewport?.width ?? 0;
 

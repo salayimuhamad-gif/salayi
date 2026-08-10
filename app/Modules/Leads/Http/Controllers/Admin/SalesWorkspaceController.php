@@ -47,10 +47,8 @@ use Inertia\Response;
  */
 final class SalesWorkspaceController extends Controller
 {
-    /** The pipeline, in order. Filters and the board both read this. */
-    private const STAGES = [
-        'new', 'contacted', 'qualified', 'viewing', 'negotiating', 'won', 'lost',
-    ];
+    /** The pipeline, in order — canonical list on the model that owns the column. */
+    private const STAGES = DemandProfile::STAGES;
 
     public function __construct(private readonly AuditLogger $audit) {}
 

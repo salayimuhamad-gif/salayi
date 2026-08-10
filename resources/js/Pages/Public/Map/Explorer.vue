@@ -664,6 +664,22 @@ watch(flat, () => syncSource());
                         {{ t('map.states.loading') }}
                     </div>
 
+                    <!-- Zero features is a STATE, not a failure: the basemap
+                         stays live and pannable, with a floating notice
+                         rather than a blank surface. -->
+                    <div
+                        v-if="mapReady && !loading && !hasResults"
+                        class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        aria-live="polite"
+                    >
+                        <p
+                            class="rounded-full border border-line bg-surface-raised/90 px-4 py-2 text-center text-xs
+                                   text-ink shadow-sm backdrop-blur"
+                        >
+                            {{ t('map.states.map_empty_overlay') }}
+                        </p>
+                    </div>
+
                     <div
                         v-if="mapFailed"
                         class="absolute inset-0 grid place-items-center bg-surface-sunken p-6 text-center text-sm text-ink-muted"

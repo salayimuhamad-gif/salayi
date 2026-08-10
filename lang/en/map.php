@@ -40,6 +40,7 @@ return [
     'list_view' => 'List',
     'map_view' => 'Map',
     'states' => [
+        'map_empty_overlay' => 'Nothing to show in this view yet — the map itself stays open.',
         'loading' => 'Loading the map…',
         'loading_features' => 'Loading data…',
         'empty' => 'Nothing in this view',
@@ -60,6 +61,7 @@ return [
         'no_layers' => 'No layers are available',
     ],
     'invest' => [
+        'map_empty_overlay' => 'No investment projects are currently available in this area — the map stays open, pan and zoom freely.',
         'title' => 'Investment Map',
         'intro' => 'Approved investment projects across Hawler, on the map.',
         'projects_label' => 'Investment projects',

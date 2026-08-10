@@ -51,6 +51,16 @@ Route::middleware('permission:identity.users.view')->group(function (): void {
         ->whereNumber('user')->name('users.show');
 });
 
+/*
+ * Export Sheet, behind its OWN permission: paging through the workspace and
+ * walking away with the whole filtered population are different powers, the
+ * same way leads.view and leads.export are. Registered before the numeric
+ * wildcard cannot collide with it — {user} is whereNumber.
+ */
+Route::middleware('permission:identity.users.export')->group(function (): void {
+    Route::get('/users/export', [UsersController::class, 'export'])->name('users.export');
+});
+
 Route::middleware('permission:identity.users.suspend')->group(function (): void {
     Route::post('/users/{user}/suspend', [UsersController::class, 'suspend'])
         ->whereNumber('user')->name('users.suspend');

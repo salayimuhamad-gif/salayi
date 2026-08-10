@@ -162,6 +162,17 @@ final class DemandProfile extends Model
     }
 
     /**
+     * The pipeline, in order. The sales workspace's filters and board, and
+     * the users workspace's request filters, all read this one list — the
+     * stage vocabulary lives with the model that carries the column.
+     *
+     * @var list<string>
+     */
+    public const STAGES = [
+        'new', 'contacted', 'qualified', 'viewing', 'negotiating', 'won', 'lost',
+    ];
+
+    /**
      * @param  Builder<DemandProfile>  $query
      * @return Builder<DemandProfile>
      */
