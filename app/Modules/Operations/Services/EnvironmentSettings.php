@@ -37,9 +37,20 @@ final class EnvironmentSettings
         'TELEGRAM_WEBHOOK_SECRET', 'AI_API_KEY',
     ];
 
+    /**
+     * @param  string|null  $environmentFile  absolute path override for the
+     *                                        environment file this writer edits. Null — the production default —
+     *                                        resolves to the real base_path('.env') at call time. The override
+     *                                        exists for TESTS: the final-release pipeline freezes the verified
+     *                                        source read-only before running the suite, so a test exercising this
+     *                                        writer must aim it at a disposable file under storage, never at the
+     *                                        frozen source root.
+     */
+    public function __construct(private readonly ?string $environmentFile = null) {}
+
     public function path(): string
     {
-        return base_path('.env');
+        return $this->environmentFile ?? base_path('.env');
     }
 
     public function isWritable(): bool

@@ -2634,6 +2634,29 @@ check('DELETE_FILES.txt declares the v6 browser fixture credential file',
 check('no Vite chunk was ever added to DELETE_FILES.txt',
       'public/build/' not in (ROOT / 'DELETE_FILES.txt').read_text())
 
+# ---- the PHPUnit suite never writes inside the frozen source root ---------
+#
+# The final release freezes the verified source read-only BEFORE the full
+# PHPUnit gate — deliberately, so nothing can mutate the tree its identity was
+# computed from. A feature test then wrote a disposable .env at
+# base_path('.env'), which is inside that frozen root, and the whole release
+# failed at the suite gate with "Permission denied". The freeze was right; the
+# test's target was not. The rule made durable here: no test may aim a
+# filesystem write at base_path() — disposable files belong under storage,
+# which the runner keeps writable on purpose.
+_write_calls = re.compile(
+    r'(?:file_put_contents|fopen|mkdir|touch|copy|rename|unlink)\s*\(\s*base_path\(')
+_offenders = sorted(
+    str(p.relative_to(ROOT))
+    for p in (ROOT / 'tests').rglob('*.php')
+    if _write_calls.search(p.read_text())
+)
+check('no PHP test writes into the frozen source root via base_path()',
+      _offenders == [], ', '.join(_offenders))
+check('the settings test aims the environment writer at storage instead',
+      "storage_path('framework/testing/system-settings/.env')"
+      in (ROOT / 'tests' / 'Feature' / 'SystemSettingsTest.php').read_text())
+
 print()
 
 if FAILED == 0:

@@ -8,6 +8,7 @@ use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Operations\Models\AuditLog;
+use App\Modules\Operations\Services\EnvironmentSettings;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -62,6 +63,20 @@ final class SystemSettingsTest extends TestCase
     {
         $admin = User::factory()->superAdmin()->create();
 
+        /*
+         * The REAL writer, aimed at a disposable environment file under the
+         * writable storage tree. The final-release pipeline freezes the
+         * verified source read-only before running this suite, so a test
+         * that wrote base_path('.env') failed the whole release — and the
+         * frozen-tree invariant is correct, the test's target was not. The
+         * injected path changes WHERE the file lives and nothing else: the
+         * same validation, locking, backup, atomic-replace and audit path
+         * runs against it.
+         */
+        $path = storage_path('framework/testing/system-settings/.env');
+        @mkdir(dirname($path), 0o700, true);
+        $this->app->instance(EnvironmentSettings::class, new EnvironmentSettings($path));
+
         // An unknown timezone and a default locale outside the enabled set
         // are both refused before anything touches the environment.
         $this->actingAs($admin)
@@ -86,14 +101,6 @@ final class SystemSettingsTest extends TestCase
             ])
             ->assertSessionHasErrors('enabled_locales');
 
-        /*
-         * Persistence writes the real environment file, so the test provides
-         * a disposable one at the real path and removes it whatever happens —
-         * a leftover .env fails the secret-scan gate by design.
-         */
-        $path = base_path('.env');
-        $this->assertFileDoesNotExist($path, 'refusing to overwrite a real .env');
-
         try {
             file_put_contents($path, "APP_NAME=Old\n");
 
@@ -117,19 +124,40 @@ final class SystemSettingsTest extends TestCase
             $this->assertStringNotContainsString('APP_URL=https://myhawler.test/', $written);
             $this->assertStringContainsString('APP_ENABLED_LOCALES=ckb,ar,en', $written);
 
+            // The write took a backup snapshot first — prove the guarded
+            // path ran, then dispose of it with everything else.
+            $this->assertNotEmpty(glob(storage_path('app/private/system-settings/env-backups/.env-*.bak')) ?: []);
+
             $this->assertTrue(
                 AuditLog::query()->where('action', 'system.settings.updated')->exists(),
             );
         } finally {
-            @unlink($path);
-            @unlink($path.'.system-settings.lock');
+            // The disposable file, the writer's lock, any interrupted
+            // atomic-replace temp, and the backup snapshots of a throwaway
+            // .env are all as disposable as the file itself. scandir, not
+            // glob: every one of these names starts with a dot.
+            $sweep = static function (string $directory): void {
+                foreach (array_diff(scandir($directory) ?: [], ['.', '..']) as $stray) {
+                    @unlink($directory.'/'.$stray);
+                }
+            };
 
-            // The service snapshots the file it edits; the snapshots of a
-            // disposable test .env are as disposable as the file itself.
-            foreach (glob(storage_path('app/private/system-settings/env-backups/*')) ?: [] as $backup) {
-                @unlink($backup);
+            $sweep(dirname($path));
+            @rmdir(dirname($path));
+
+            if (is_dir($backups = storage_path('app/private/system-settings/env-backups'))) {
+                $sweep($backups);
             }
         }
+    }
+
+    public function test_the_default_environment_path_is_the_real_env_file(): void
+    {
+        // The injectable path is a TESTING affordance; production resolution
+        // — the container's and a bare construction alike — must keep aiming
+        // at the real environment file beside the application.
+        $this->assertSame(base_path('.env'), app(EnvironmentSettings::class)->path());
+        $this->assertSame(base_path('.env'), (new EnvironmentSettings)->path());
     }
 
     public function test_updating_general_settings_requires_the_update_permission(): void
