@@ -43,6 +43,7 @@ export interface SharedPageProps {
             name: string;
             locale: LocaleCode;
             is_admin: boolean;
+            is_super_admin: boolean;
         } | null;
         permissions: string[];
     };

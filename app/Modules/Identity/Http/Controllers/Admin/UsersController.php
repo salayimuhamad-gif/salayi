@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Identity\Http\Controllers\Admin;
 
+use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Http\Middleware\TouchLastSeen;
 use App\Modules\Identity\Models\Consent;
 use App\Modules\Identity\Models\User;
@@ -163,6 +164,16 @@ final class UsersController extends Controller
             'can_reveal' => $request->user()->hasPermission('identity.users.contact'),
             'can_revoke_sessions' => $request->user()->hasPermission('identity.sessions.revoke'),
             'can_trigger_recovery' => $request->user()->hasPermission('identity.users.update'),
+            // Promotion to operator (identity.roles.assign). The offered list
+            // never contains super_admin unless the ACTOR is one — the server
+            // enforces the same rule with a 403, this just refuses to render
+            // an offer that refusal would answer.
+            'can_assign_roles' => $request->user()->hasPermission('identity.roles.assign'),
+            'assignable_roles' => array_values(array_filter(
+                AdministratorsController::assignableRoleKeys(),
+                fn (string $key): bool => $key !== RoleKey::SuperAdmin->value
+                    || $request->user()->isSuperAdmin(),
+            )),
             'reveal_reasons' => array_map(
                 static fn (RevealReason $reason): array => [
                     'value' => $reason->value,

@@ -271,6 +271,26 @@ return [
         'saved' => 'Profile saved.',
     ],
 
+    'administrators' => [
+        'title' => 'Roles and administrators',
+        'none' => 'No administrators',
+        'none_hint' => 'No account holds an administrative role yet.',
+        'suspended' => 'Suspended',
+        'mfa' => 'Two-factor',
+        'mfa_enabled' => 'enabled',
+        'mfa_missing' => 'not enrolled',
+        'edit_roles' => 'Edit roles',
+        'save_roles' => 'Save roles',
+        'roles_hint' => 'The account receives exactly the checked administrative roles. Company and member roles are not managed here.',
+        'super_admin_restricted' => 'Only a Super Admin can grant or remove the Super Admin role.',
+        'roles_saved' => 'Roles updated.',
+        'last_super_admin' => 'This is the last active Super Admin. Grant the role to another account first — removing it now would lock administration.',
+        'single_super_admin_hint' => 'Exactly one active Super Admin exists. Consider granting the role to a second trusted account so no single suspension can lock administration.',
+        'suspend_reason' => 'Suspension reason (recorded and audited)',
+        'promote' => 'Grant administrative role…',
+        'promote_hint' => 'The member becomes an operator with the checked roles and moves to the administrators page.',
+    ],
+
     'users' => [
         'activity' => 'Activity',
         'activity_online' => 'Online now',

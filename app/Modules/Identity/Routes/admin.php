@@ -2,12 +2,41 @@
 
 declare(strict_types=1);
 
+use App\Modules\Identity\Http\Controllers\Admin\AdministratorsController;
 use App\Modules\Identity\Http\Controllers\Admin\DashboardController;
 use App\Modules\Identity\Http\Controllers\Admin\UsersController;
 use Illuminate\Support\Facades\Route;
 
 // Mounted by ModuleServiceProvider with web + auth + mfa already applied.
 Route::get('/', DashboardController::class)->name('dashboard');
+
+/*
+ * The operators surface — the "roles machinery" the accounts surface defers
+ * to. Listing and assignment are separate capabilities, exactly as the
+ * registry declares them: a Security Auditor reads the role map without being
+ * able to change it.
+ */
+Route::middleware('permission:identity.roles.view')->group(function (): void {
+    Route::get('/administrators', [AdministratorsController::class, 'index'])
+        ->name('administrators.index');
+});
+
+Route::middleware('permission:identity.roles.assign')->group(function (): void {
+    Route::put('/administrators/{user}/roles', [AdministratorsController::class, 'updateRoles'])
+        ->whereNumber('user')->name('administrators.roles.update');
+});
+
+Route::middleware('permission:identity.users.suspend')->group(function (): void {
+    Route::post('/administrators/{user}/suspend', [AdministratorsController::class, 'suspend'])
+        ->whereNumber('user')->name('administrators.suspend');
+    Route::post('/administrators/{user}/reactivate', [AdministratorsController::class, 'reactivate'])
+        ->whereNumber('user')->name('administrators.reactivate');
+});
+
+Route::middleware('permission:identity.sessions.revoke')->group(function (): void {
+    Route::post('/administrators/{user}/logout', [AdministratorsController::class, 'forceLogout'])
+        ->whereNumber('user')->name('administrators.logout');
+});
 
 /*
  * Member accounts (spec §8). Reading, managing and revealing are three

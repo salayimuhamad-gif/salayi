@@ -48,10 +48,20 @@ const props = defineProps<{
     can_reveal: boolean;
     can_revoke_sessions: boolean;
     can_trigger_recovery: boolean;
+    can_assign_roles: boolean;
+    assignable_roles: string[];
     reveal_reasons: Array<{ value: string; requires_note: boolean }>;
 }>();
 
 const suspendForm = useForm({ reason: '' });
+
+/*
+ * Promotion: granting a member their first administrative role. The server
+ * redirects to the operators surface on success, because this page 404s a
+ * role-holder by the surface contract the moment the grant lands.
+ */
+const promoteForm = useForm<{ roles: string[] }>({ roles: [] });
+const promoting = ref(false);
 
 /*
  * Two-tap confirmation for the sensitive one-shot actions: the first press
@@ -321,6 +331,51 @@ async function revealPhone(): Promise<void> {
             >
                 {{ t('identity.users.reactivate') }}
             </AppButton>
+
+            <!-- Promotion to operator: identity.roles.assign only. Renders a
+                 deliberate two-step (arm, choose, save) — granting a role is
+                 not a casual click. -->
+            <div v-if="can_assign_roles" class="mt-5 border-t border-line pt-5">
+                <AppButton
+                    v-if="!promoting"
+                    type="button"
+                    variant="secondary"
+                    @click="promoting = true"
+                >
+                    {{ t('identity.administrators.promote') }}
+                </AppButton>
+
+                <form v-else class="space-y-3" @submit.prevent="promoteForm.put(`/admin/administrators/${account.id}/roles`)">
+                    <p class="text-sm text-ink-muted">{{ t('identity.administrators.promote_hint') }}</p>
+
+                    <div class="grid gap-2 sm:grid-cols-2">
+                        <label
+                            v-for="key in assignable_roles"
+                            :key="key"
+                            class="flex cursor-pointer items-center gap-2 rounded-card border border-line px-3 py-2 text-sm hover:bg-surface-sunken"
+                        >
+                            <input
+                                v-model="promoteForm.roles"
+                                type="checkbox"
+                                :value="key"
+                                class="h-4 w-4 rounded border-line text-accent focus:ring-accent"
+                            >
+                            <span class="text-ink">{{ t(`identity.roles.${key}`) }}</span>
+                        </label>
+                    </div>
+
+                    <p v-if="promoteForm.errors.roles" class="text-sm text-negative">{{ promoteForm.errors.roles }}</p>
+
+                    <div class="flex gap-2">
+                        <AppButton type="submit" :disabled="promoteForm.roles.length === 0" :loading="promoteForm.processing">
+                            {{ t('identity.administrators.save_roles') }}
+                        </AppButton>
+                        <AppButton type="button" variant="secondary" @click="promoting = false">
+                            {{ t('app.actions.cancel') }}
+                        </AppButton>
+                    </div>
+                </form>
+            </div>
 
             <!-- Session + recovery actions: each behind its own server-side
                  permission; the buttons only render when the server said so. -->

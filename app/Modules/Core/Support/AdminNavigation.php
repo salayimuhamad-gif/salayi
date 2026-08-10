@@ -36,15 +36,26 @@ final class AdminNavigation
             // controller scopes every query to the authenticated id instead.
             self::item('notifications', 'admin.notifications.index', 'bell', null),
 
+            /*
+             * No ratings entry: admin.projects.ratings.index is a PER-PROJECT
+             * route (admin/projects/{project}/ratings), so a sidebar link can
+             * never generate a URL for it — the old entry threw on render for
+             * everyone who held the permission. Ratings are reached from the
+             * project they belong to, which is the only place they mean
+             * anything.
+             */
             self::item('projects', 'admin.projects.index', 'building-2', 'projects.view', children: [
                 self::item('projects.all', 'admin.projects.index', 'list', 'projects.view'),
                 self::item('projects.developers', 'admin.developers.index', 'hard-hat', 'projects.view'),
-                self::item('projects.ratings', 'admin.projects.ratings.index', 'star', 'projects.ratings.update'),
             ]),
 
             self::item('geography', 'admin.areas.index', 'map', 'geography.areas.view', children: [
                 self::item('geography.areas', 'admin.areas.index', 'shapes', 'geography.areas.view'),
                 self::item('geography.places', 'admin.places.index', 'map-pin', 'geography.places.view', flag: 'places.database'),
+                // Implemented and routed since the places module shipped, but
+                // never linked — reachable only by typing the URL, which is
+                // not a workflow.
+                self::item('geography.place_categories', 'admin.places.categories.index', 'folder', 'geography.places.view', flag: 'places.database'),
             ]),
 
             self::item('market', 'admin.dashboard', 'trending-up', 'market.prices.view', flag: 'market.intelligence', children: [
@@ -53,8 +64,19 @@ final class AdminNavigation
                 // an index, and the route is gated by market.indices, so the entry
                 // must be too or it links to a 403.
                 self::item('market.indices', 'admin.market.indices.index', 'line-chart', 'market.indices.view', flag: 'market.indices'),
-                self::item('market.imports', 'admin.imports.prices.index', 'upload', 'imports.view'),
             ]),
+
+            /*
+             * Top-level, NOT a child of Market. The import routes carry no
+             * feature flag and no market permission, so parking the entry
+             * under a parent gated by BOTH made a reachable, implemented page
+             * invisible to exactly the people it exists for: a GIS/Places
+             * Manager holds imports.view and no market permission, and a
+             * Super Admin loses the entry whenever market.intelligence is
+             * off — while the route answers either way. The entry now
+             * mirrors the route: permission imports.view, no flag.
+             */
+            self::item('imports', 'admin.imports.prices.index', 'upload', 'imports.view'),
 
             self::item('marketplace', 'admin.offers.index', 'store', 'marketplace.offers.view', flag: 'marketplace.offers', children: [
                 self::item('marketplace.offers', 'admin.offers.index', 'tag', 'marketplace.offers.view'),
@@ -81,9 +103,17 @@ final class AdminNavigation
             self::item('branding', 'admin.branding.edit', 'palette', 'branding.settings.view'),
             self::item('features', 'admin.features.index', 'toggle-right', 'system.features.view'),
 
-            self::item('system', 'admin.dashboard', 'settings', 'system.settings.view', children: [
+            /*
+             * The parent's own permission is the LOOSEST of its children, not
+             * system.settings.view: a System Admin or Security Auditor who
+             * holds identity or audit permissions without the settings one
+             * must still find the section their permissions open.
+             */
+            self::item('system', 'admin.dashboard', 'settings', null, children: [
                 self::item('system.settings', 'admin.system.settings', 'sliders', 'system.settings.view'),
                 self::item('system.users', 'admin.users.index', 'user-cog', 'identity.users.view'),
+                // The operators surface: who holds which role (spec 3.2).
+                self::item('system.roles', 'admin.administrators.index', 'shield', 'identity.roles.view'),
                 self::item('system.audit', 'admin.operations.audit', 'scroll-text', 'audit.logs.view'),
                 self::item('system.health', 'admin.operations.health', 'activity', 'system.settings.view'),
             ]),
