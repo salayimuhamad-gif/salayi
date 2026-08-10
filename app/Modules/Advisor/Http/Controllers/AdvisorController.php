@@ -8,6 +8,7 @@ use App\Modules\Advisor\Models\AdvisorConversation;
 use App\Modules\Advisor\Services\AdvisorConversationFlow;
 use App\Modules\Advisor\Services\AdvisorConversationService;
 use App\Modules\Advisor\Services\AdvisorLanguage;
+use App\Modules\Advisor\Services\AdvisorTurnUnderstanding;
 use App\Modules\Advisor\Services\AiGateway;
 use App\Modules\Identity\Models\Consent;
 use App\Modules\Leads\Models\DemandProfile;
@@ -31,10 +32,14 @@ final class AdvisorController extends Controller
 
     private const LANGUAGE_KEY = 'advisor.language';
 
+    /** The last recommendation payload — the advisory stage's card context. */
+    private const RECOMMENDATIONS_KEY = 'advisor.recommendations';
+
     public function __construct(
         private readonly AdvisorConversationService $conversations,
         private readonly AdvisorConversationFlow $flow,
         private readonly AdvisorLanguage $language,
+        private readonly AdvisorTurnUnderstanding $understanding,
         private readonly AiGateway $gateway,
         private readonly AuditLogger $audit,
     ) {}
@@ -111,6 +116,9 @@ final class AdvisorController extends Controller
         if ($nextSlot === null) {
             try {
                 $recommendations = $this->conversations->recommendations($criteria, $locale);
+                // The advisory stage's card context: follow-up questions are
+                // answered against exactly what is on screen.
+                $request->session()->put(self::RECOMMENDATIONS_KEY, $recommendations);
             } catch (Throwable $exception) {
                 Log::warning('advisor.recommendations_unavailable', [
                     'conversation_id' => $conversation->id,
@@ -130,6 +138,7 @@ final class AdvisorController extends Controller
             'conversation_locale' => $locale,
             'next_slot' => $nextSlot,
             'complete' => $nextSlot === null,
+            'stage' => $nextSlot === null ? 'advisory' : 'intake',
             'progress' => $this->flow->progress($criteria),
             'summary' => $this->conversations->summary($criteria, $locale),
             'messages' => $messages,
@@ -160,14 +169,14 @@ final class AdvisorController extends Controller
 
         $criteria = (array) $request->session()->get(self::CRITERIA_KEY, []);
         $slot = $request->session()->get(self::SLOT_KEY);
-
-        if (! is_string($slot)) {
-            if ($request->expectsJson()) {
-                return response()->json(['message' => __('advisor.chat.live.already_complete')], 409);
-            }
-
-            return redirect(localized_route('advisor.show'));
-        }
+        $slot = is_string($slot) ? $slot : null;
+        /*
+         * The repair's central state change: a null slot no longer answers
+         * 409 "already complete". Intake completeness and conversation life
+         * are different facts — a complete checklist opens the ADVISORY
+         * stage, it does not close the chat.
+         */
+        $wasAdvisory = $slot === null && $this->flow->isComplete($criteria);
 
         $locale = $this->language->normalize(
             $validated['locale'] ?? app()->getLocale(),
@@ -192,20 +201,64 @@ final class AdvisorController extends Controller
                 $validated['message'],
                 $locale,
             );
+
+            /*
+             * Structured understanding, AFTER the message is safely stored:
+             * the model may propose validated criteria updates and an intent,
+             * and a model outage yields null — the deterministic extractors
+             * that already ran are then the whole story.
+             */
+            $recommendationContext = $this->recommendationContext($request);
+            $understood = $this->understanding->understand(
+                $validated['message'],
+                $state['criteria'],
+                $state['locale'],
+                $this->cardIndex($recommendationContext),
+                $this->recentMessages($conversation),
+            );
+            $integrated = $this->conversations->integrateUnderstanding(
+                $state['criteria'],
+                $understood,
+                $validated['message'],
+                $wasAdvisory,
+            );
+            $state['criteria'] = $integrated['criteria'];
+            $state['next_slot'] = $this->flow->nextSlot($integrated['criteria']);
+
             $request->session()->put(self::CRITERIA_KEY, $state['criteria']);
             $request->session()->put(self::SLOT_KEY, $state['next_slot']);
             $request->session()->put(self::LANGUAGE_KEY, $state['locale']);
             $request->session()->save();
 
-            $assistant = $this->conversations->answerAccepted(
-                $conversation,
-                $validated['message'],
-                $state['next_slot'],
-                $state['locale'],
-                $state['criteria'],
-                $this->firstName($request),
-            );
+            if ($wasAdvisory && $state['next_slot'] === null) {
+                $advisory = $this->conversations->advisoryAnswer(
+                    $conversation,
+                    $validated['message'],
+                    $state['criteria'],
+                    $state['locale'],
+                    $integrated['intent'],
+                    $integrated['positions'],
+                    $this->conversations->criteriaChanged($criteria, $state['criteria']),
+                    $recommendationContext,
+                );
+                $assistant = $advisory['payload'];
+                $assistant['recommendations'] = $advisory['recommendations'] ?? $recommendationContext;
+            } else {
+                $assistant = $this->conversations->answerAccepted(
+                    $conversation,
+                    $validated['message'],
+                    $state['next_slot'],
+                    $state['locale'],
+                    $state['criteria'],
+                    $this->firstName($request),
+                );
+            }
+
             $result = $this->conversations->result($state, $assistant);
+
+            if (is_array($result['recommendations'] ?? null)) {
+                $request->session()->put(self::RECOMMENDATIONS_KEY, $result['recommendations']);
+            }
         } catch (Throwable $exception) {
             Log::error('advisor.reply_failed', [
                 'conversation_id' => $conversation->id,
@@ -228,6 +281,7 @@ final class AdvisorController extends Controller
                 'assistant_message' => $result['assistant_message'],
                 'next_slot' => $result['next_slot'],
                 'complete' => $result['complete'],
+                'stage' => $result['stage'],
                 'progress' => $result['progress'],
                 'summary' => $result['summary'],
                 'conversation_locale' => $result['locale'],
@@ -242,6 +296,54 @@ final class AdvisorController extends Controller
         }
 
         return redirect(localized_route('advisor.show'));
+    }
+
+    /** @return array<string, mixed>|null */
+    private function recommendationContext(Request $request): ?array
+    {
+        $stored = $request->session()->get(self::RECOMMENDATIONS_KEY);
+
+        return is_array($stored) ? $stored : null;
+    }
+
+    /**
+     * The card index shown to turn understanding: positions and names only.
+     *
+     * @param  array<string, mixed>|null  $recommendations
+     * @return list<array{position: int, name: string}>
+     */
+    private function cardIndex(?array $recommendations): array
+    {
+        $index = [];
+
+        foreach ((array) ($recommendations['items'] ?? []) as $i => $item) {
+            if (is_array($item)) {
+                $index[] = ['position' => $i + 1, 'name' => (string) ($item['name'] ?? '')];
+            }
+        }
+
+        return $index;
+    }
+
+    /**
+     * Bounded conversation memory for turn understanding: the last few turns,
+     * truncated — never the whole transcript, never another conversation.
+     *
+     * @return list<array{role: string, content: string}>
+     */
+    private function recentMessages(AdvisorConversation $conversation): array
+    {
+        return $conversation->messages()
+            ->latest('id')
+            ->limit(6)
+            ->get()
+            ->reverse()
+            ->map(static fn ($message): array => [
+                'role' => (string) $message->role,
+                'content' => mb_substr((string) $message->content, 0, 300),
+            ])
+            ->values()
+            ->all();
     }
 
     public function amend(Request $request): RedirectResponse
@@ -262,6 +364,9 @@ final class AdvisorController extends Controller
 
         $request->session()->put(self::CRITERIA_KEY, $criteria);
         $request->session()->put(self::SLOT_KEY, $this->flow->nextSlot($criteria));
+        // An edited criterion invalidates the standing cards; the next render
+        // or advisory turn recomputes them from the amended request.
+        $request->session()->forget(self::RECOMMENDATIONS_KEY);
 
         return redirect(localized_route('advisor.show'));
     }
@@ -366,7 +471,9 @@ final class AdvisorController extends Controller
             'last_message_at' => now(),
         ]);
 
-        $request->session()->forget([self::CRITERIA_KEY, self::SLOT_KEY, self::LANGUAGE_KEY]);
+        $request->session()->forget([
+            self::CRITERIA_KEY, self::SLOT_KEY, self::LANGUAGE_KEY, self::RECOMMENDATIONS_KEY,
+        ]);
 
         return redirect(localized_route('advisor.show'));
     }

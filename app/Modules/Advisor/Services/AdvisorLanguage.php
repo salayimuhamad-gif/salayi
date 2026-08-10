@@ -226,8 +226,12 @@ final class AdvisorLanguage
      */
     public function quickReplies(?string $slot, string $locale, bool $canFinish = false, array $criteria = []): array
     {
+        // No pending question means the ADVISORY stage, not the end: the
+        // chips become optional accelerators for the follow-up conversation.
+        // Each label round-trips through the same intent recognition the
+        // typed path uses, so a chip keeps working when the model is off.
         if ($slot === null) {
-            return [];
+            return $this->advisoryReplies($this->normalize($locale));
         }
 
         $locale = $this->normalize($locale);
@@ -373,6 +377,37 @@ final class AdvisorLanguage
                 'icon' => $item[1],
             ],
             $items,
+        );
+    }
+
+    /** @return list<array{label: string, value: string, icon: string}> */
+    private function advisoryReplies(string $locale): array
+    {
+        $labels = match ($locale) {
+            'ar' => [
+                ['قارن الأول والثاني', 'balance'],
+                ['أريد أرخص', 'wallet'],
+                ['ليش الأول؟', 'sparkles'],
+            ],
+            'en' => [
+                ['Compare the first two', 'balance'],
+                ['Show cheaper options', 'wallet'],
+                ['Why the first one?', 'sparkles'],
+            ],
+            default => [
+                ['بەراوردی یەکەم و دووەم بکە', 'balance'],
+                ['هەرزانتر دەوێت', 'wallet'],
+                ['بۆچی یەکەمیان؟', 'sparkles'],
+            ],
+        };
+
+        return array_map(
+            static fn (array $item): array => [
+                'label' => $item[0],
+                'value' => $item[0],
+                'icon' => $item[1],
+            ],
+            $labels,
         );
     }
 

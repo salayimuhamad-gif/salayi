@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace App\Modules\Advisor\Providers;
 
+use App\Modules\Advisor\Services\AdvisorAdvisoryComposer;
 use App\Modules\Advisor\Services\AdvisorAnswerComposer;
 use App\Modules\Advisor\Services\AdvisorConversationFlow;
 use App\Modules\Advisor\Services\AdvisorLanguage;
 use App\Modules\Advisor\Services\AdvisorProjectMatcher;
 use App\Modules\Advisor\Services\AdvisorTurnComposer;
+use App\Modules\Advisor\Services\AdvisorTurnUnderstanding;
 use App\Modules\Advisor\Services\AiGateway;
 use App\Modules\Advisor\Services\AiProviderFactory;
 use App\Modules\Advisor\Services\LifestyleCandidateBuilder;
@@ -79,5 +81,7 @@ final class AdvisorServiceProvider extends ModuleServiceProvider
 
         $this->app->singleton(AdvisorAnswerComposer::class);
         $this->app->singleton(AdvisorTurnComposer::class);
+        $this->app->singleton(AdvisorTurnUnderstanding::class);
+        $this->app->singleton(AdvisorAdvisoryComposer::class);
     }
 }

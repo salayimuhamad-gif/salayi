@@ -45,6 +45,7 @@ final class AdvisorConversationService
         private readonly AdvisorLanguage $language,
         private readonly AdvisorTurnComposer $turns,
         private readonly AdvisorProjectMatcher $projectMatcher,
+        private readonly AdvisorAdvisoryComposer $advisory,
     ) {}
 
     public function open(?int $userId, string $sessionKey, string $agent, string $locale): AdvisorConversation
@@ -81,13 +82,18 @@ final class AdvisorConversationService
     /**
      * Persist and interpret the visitor message without calling the AI provider.
      *
+     * A null $answeringSlot means no question is pending — the advisory stage
+     * — and only the opportunistic extractors run. The message is persisted
+     * either way, BEFORE any model is consulted, so a provider failure can
+     * never lose what the person typed.
+     *
      * @param  array<string, mixed>  $criteria
      * @return array<string, mixed>
      */
     public function acceptReply(
         AdvisorConversation $conversation,
         array $criteria,
-        string $answeringSlot,
+        ?string $answeringSlot,
         string $text,
         ?string $preferredLocale = null,
     ): array {
@@ -194,6 +200,239 @@ final class AdvisorConversationService
         );
 
         return $this->result($state, $assistant);
+    }
+
+    /**
+     * Fold a validated turn-understanding structure into the criteria.
+     *
+     * The model PROPOSES; the flow's own merge rules DISPOSE. A slot that is
+     * already answered is only overwritten when the person is explicitly
+     * correcting or changing something — stated intent, or the advisory stage,
+     * where every criteria remark is by nature a revision. The budget never
+     * arrives through the model at all (see AdvisorTurnUnderstanding): in the
+     * advisory stage it is re-parsed deterministically from the person's own
+     * words, under the same BLOCKER 6 unit rules as the interview.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @param  array{intent: string, criteria_updates: array<string, mixed>, referenced_positions: list<int>, needs_clarification: bool}|null  $understanding
+     * @return array{criteria: array<string, mixed>, intent: string, positions: list<int>}
+     */
+    public function integrateUnderstanding(
+        array $criteria,
+        ?array $understanding,
+        string $text,
+        bool $advisory,
+    ): array {
+        $intent = $understanding['intent'] ?? $this->fallbackIntent($text);
+        $positions = ($understanding['referenced_positions'] ?? []) !== []
+            ? $understanding['referenced_positions']
+            : $this->fallbackPositions($text);
+
+        $overwriteAllowed = $advisory
+            || in_array($intent, ['correct_info', 'change_criteria', 'ask_cheaper'], true);
+
+        foreach (($understanding['criteria_updates'] ?? []) as $slot => $value) {
+            $answered = ($criteria[$slot] ?? null) !== null && $criteria[$slot] !== '';
+
+            if (! $answered || $overwriteAllowed) {
+                $criteria = $this->flow->merge($criteria, (string) $slot, $value);
+            }
+        }
+
+        if ($advisory) {
+            $criteria = $this->applyAdvisoryBudget($criteria, $text);
+        }
+
+        return [
+            'criteria' => $criteria,
+            'intent' => $intent,
+            'positions' => $positions,
+        ];
+    }
+
+    /**
+     * Whether a turn actually changed the recommendation inputs.
+     *
+     * Underscored keys are interview state, not criteria; a parked
+     * clarification appearing or clearing must not force a re-rank.
+     *
+     * @param  array<string, mixed>  $before
+     * @param  array<string, mixed>  $after
+     */
+    public function criteriaChanged(array $before, array $after): bool
+    {
+        $strip = static fn (array $criteria): array => array_filter(
+            $criteria,
+            static fn ($value, string $key): bool => ! str_starts_with($key, '_'),
+            ARRAY_FILTER_USE_BOTH,
+        );
+
+        return $strip($before) !== $strip($after);
+    }
+
+    /**
+     * Produce and persist the advisory-stage assistant turn.
+     *
+     * Two shapes: a turn that CHANGED the inputs (or arrives with no stored
+     * card context, e.g. after a session refresh) re-runs the deterministic
+     * matcher and returns fresh recommendations with an update message; a
+     * question about the standing cards is answered from those cards alone.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @param  list<int>  $positions
+     * @param  array<string, mixed>|null  $recommendationContext  the last recommendation payload
+     * @return array{payload: array<string, mixed>, recommendations: array<string, mixed>|null}
+     */
+    public function advisoryAnswer(
+        AdvisorConversation $conversation,
+        string $userText,
+        array $criteria,
+        string $locale,
+        string $intent,
+        array $positions,
+        bool $criteriaChanged,
+        ?array $recommendationContext,
+    ): array {
+        $recommendations = null;
+
+        try {
+            if ($criteriaChanged || $recommendationContext === null) {
+                $recommendations = $this->projectMatcher->recommend($criteria, $locale);
+                $turn = $this->advisory->compose(
+                    $intent,
+                    $userText,
+                    $recommendations,
+                    $positions,
+                    $locale,
+                    criteriaChanged: true,
+                );
+            } else {
+                $turn = $this->advisory->compose(
+                    $intent,
+                    $userText,
+                    $recommendationContext,
+                    $positions,
+                    $locale,
+                    criteriaChanged: false,
+                );
+            }
+        } catch (Throwable $exception) {
+            Log::warning('advisor.advisory_turn_failed', [
+                'conversation_id' => $conversation->id,
+                'exception' => $exception::class,
+            ]);
+            $turn = $this->turns->fallbackTurn(null, $locale, 'unexpected_failure', $criteria);
+        }
+
+        return [
+            'payload' => $this->persistTurnOrPayload($conversation, $turn),
+            'recommendations' => $recommendations,
+        ];
+    }
+
+    /**
+     * The advisory-stage budget revision, deterministic by design.
+     *
+     * "What if my budget is 180 million IQD?" must update the number — but
+     * only under the interview's own unit rules: an explicit scale word, a
+     * literal marker, or digits ≥ 1000 with a known currency. A bare "180"
+     * changes nothing; the advisory composer's ask_cheaper reply asks for the
+     * unit instead of guessing one.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @return array<string, mixed>
+     */
+    private function applyAdvisoryBudget(array $criteria, string $text): array
+    {
+        $stated = AdvisorCurrency::detect($text)['currency'];
+
+        if ($stated !== null) {
+            $criteria['currency'] = $stated;
+        }
+
+        $amount = $this->parseAmount($text);
+
+        if ($amount === null) {
+            return $criteria;
+        }
+
+        $currencyKnown = AdvisorCurrency::storable(
+            is_string($criteria['currency'] ?? null) ? $criteria['currency'] : null
+        ) !== null;
+
+        if ($amount['has_unit']
+            || $amount['literal']
+            || ((float) $amount['value'] >= 1000 && $currencyKnown)) {
+            unset($criteria[self::BUDGET_CLARIFY]);
+            $criteria['budget'] = $amount['value'];
+        }
+
+        return $criteria;
+    }
+
+    /**
+     * Intent when no model is available — keyword recognition over the three
+     * languages, deliberately covering the advisory quick-reply labels so the
+     * chips keep working with the AI off.
+     */
+    public function fallbackIntent(string $text): string
+    {
+        $normalised = mb_strtolower(trim($text));
+
+        $sets = [
+            'finish' => ['thank', 'شكرا', 'سوپاس', 'خلص', 'تەواو بوو'],
+            'compare' => ['compare', 'بەراورد', 'قارن', 'مقارن'],
+            'ask_cheaper' => ['cheaper', 'أرخص', 'ارخص', 'هەرزانتر', 'هەرزان'],
+            'explain' => ['why', 'بۆچی', 'ليش', 'لماذا'],
+            'project_question' => ['instalment', 'installment', 'أقساط', 'اقساط', 'قیست', 'قسط'],
+        ];
+
+        foreach ($sets as $intent => $needles) {
+            foreach ($needles as $needle) {
+                if (str_contains($normalised, $needle)) {
+                    return $intent;
+                }
+            }
+        }
+
+        return 'other';
+    }
+
+    /**
+     * Referenced card positions when no model is available: ordinals in the
+     * three languages, then bare digits 1–4.
+     *
+     * @return list<int>
+     */
+    public function fallbackPositions(string $text): array
+    {
+        $normalised = mb_strtolower($text);
+        $positions = [];
+
+        $ordinals = [
+            1 => ['first', 'یەکەم', 'الأول', 'الاول'],
+            2 => ['second', 'دووەم', 'الثاني', 'الثانى'],
+            3 => ['third', 'سێیەم', 'الثالث'],
+            4 => ['fourth', 'چوارەم', 'الرابع'],
+        ];
+
+        foreach ($ordinals as $position => $needles) {
+            foreach ($needles as $needle) {
+                if (str_contains($normalised, $needle)) {
+                    $positions[] = $position;
+
+                    break;
+                }
+            }
+        }
+
+        if ($positions === [] && preg_match_all('/(?<!\d)([1-4])(?!\d)/', $normalised, $matches) > 0) {
+            foreach ($matches[1] as $digit) {
+                $positions[] = (int) $digit;
+            }
+        }
+
+        return array_values(array_unique($positions));
     }
 
     /**
@@ -339,6 +578,11 @@ final class AdvisorConversationService
             'criteria' => $state['criteria'],
             'next_slot' => $state['next_slot'],
             'complete' => $state['next_slot'] === null,
+            // Intake completeness and conversation life are DIFFERENT states
+            // (the audit's root cause conflated them): `complete` says the
+            // checklist is satisfied; `stage` says which kind of turn comes
+            // next. Nothing here ever closes the conversation.
+            'stage' => $state['next_slot'] === null ? 'advisory' : 'intake',
             'progress' => $this->flow->progress($state['criteria']),
             'summary' => $this->language->localizeSummary(
                 $this->flow->summary($state['criteria']),
@@ -459,7 +703,7 @@ final class AdvisorConversationService
      * @param  array<string, mixed>  $criteria
      * @return array<string, mixed>
      */
-    private function mergeReply(array $criteria, string $answeringSlot, string $text): array
+    private function mergeReply(array $criteria, ?string $answeringSlot, string $text): array
     {
         /*
          * Correction v5, BLOCKER 6: the budget slot no longer accepts a
@@ -467,10 +711,14 @@ final class AdvisorConversationService
          * which expands explicit unit words, accepts literal amounts on
          * request, and parks anything ambiguous for a clarification turn
          * instead of merging a number whose meaning nobody stated.
+         *
+         * With no pending slot (advisory stage) there is nothing to merge
+         * directly; the opportunistic pickups below still run, so stated
+         * facts are never dropped.
          */
         if ($answeringSlot === 'budget') {
             $criteria = $this->applyBudgetReply($criteria, $text);
-        } else {
+        } elseif ($answeringSlot !== null && $answeringSlot !== '') {
             $criteria = $this->flow->merge($criteria, $answeringSlot, $this->extract($answeringSlot, $text));
         }
 

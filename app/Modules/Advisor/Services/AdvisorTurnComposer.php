@@ -41,13 +41,16 @@ final class AdvisorTurnComposer
 
         $fallback = $this->fallbackTurn($nextSlot, $locale, 'provider_unavailable', $criteria, $userName);
 
-        // Sorani is kept deterministic until a native-reviewed generation
-        // prompt and evaluation set are available. This avoids fluent-looking
-        // but unnatural or incorrect Kurdish while preserving Arabic/English AI.
-        if ($locale === 'ckb') {
-            return $fallback;
-        }
-
+        /*
+         * Sorani goes through the model like Arabic and English now — the
+         * hard bypass was the audit's finding C, and it made ckb, the
+         * product's PRIMARY language, the one language with no AI at all.
+         * The safety that bypass bought is kept by validation instead:
+         * `isSafeTurn()` runs the language detector over the generated text,
+         * so a model that cannot actually produce Sorani fails the check and
+         * the person gets the deterministic turn — truthfully recorded as
+         * source=deterministic. Per-turn evidence, not a standing exclusion.
+         */
         if (! $this->gateway->isAvailable()) {
             return $fallback;
         }
