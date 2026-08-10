@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use App\Modules\Identity\Enums\RoleKey;
+use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Leads\Models\PhoneReveal;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -13,16 +15,15 @@ use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 
 /**
- * The Admin Users surface's privacy contract, pinned.
+ * The Admin Users surface's privacy contract, pinned — as AMENDED by the
+ * direct-visibility product decision.
  *
- * These behaviours all existed and none were tested — which is the state in
- * which a mockup asking for "masked phone digits in the list" gets
- * implemented without anyone noticing what was lost. The contract, stated:
+ * The contract, restated:
  *
- *   - the LIST carries phone presence as a boolean, never digits in any
- *     form, full or masked;
- *   - contact access goes through the audited, consent-gated reveal
- *     ceremony, one number at a time, with a reason;
+ *   - the LIST carries the plaintext number in exactly ONE field, `phone`,
+ *     and only for actors holding identity.users.contact; for everyone
+ *     else that field is null and no digit appears anywhere in the payload
+ *     (AdminUsersPhoneVisibilityTest owns the positive side);
  *   - operator/role accounts are not part of this surface and answer 404
  *     everywhere on it — indistinguishable from ids that do not exist;
  *   - every path is permission-checked on the server.
@@ -97,26 +98,39 @@ final class AdminUsersPrivacyTest extends TestCase
         $this->assertSame([
             'id', 'name', 'display_name', 'thumb', 'photo', 'initials',
             'preferred_locale', 'is_suspended', 'telegram_linked',
-            'telegram_linked_at', 'phone_present', 'phone_status',
+            /*
+             * `phone` is the DELIBERATE product-policy addition: plaintext
+             * for identity.users.contact holders, null for everyone else,
+             * decrypted only after that check. It is the single field
+             * allowed to carry a digit, which the conditional digit-scan
+             * below pins from the unauthorized side.
+             */
+            'telegram_linked_at', 'phone_present', 'phone_status', 'phone',
             'registered_at', 'last_login_at', 'last_seen_at', 'online',
             'advisor_request_count', 'portfolio_count',
             /*
              * The workspace additions, stated deliberately: the consent BIT
-             * (whether the reveal ceremony may even be offered — never the
-             * consent record), and the latest advisor request's four
-             * follow-up fields. Neither carries a digit of phone material,
-             * which the digit-scan test below verifies against the whole
-             * serialized payload.
+             * (kept for the workspace's follow-up context) and the latest
+             * advisor request's four follow-up fields.
              */
             'contact_consent', 'latest_request',
         ], array_keys($row));
     }
 
-    public function test_no_phone_digits_appear_anywhere_in_the_list_response(): void
+    public function test_no_phone_digits_reach_an_actor_without_the_contact_permission(): void
     {
         $this->member(consentContact: true);
 
-        $response = $this->actingAs($this->admin())->get('/admin/users')->assertOk();
+        // Support staff hold identity.users.view and deliberately NOT
+        // identity.users.contact — the exact actor the amended policy still
+        // owes zero digits to, in any form, full or masked.
+        $support = User::factory()->create();
+        $support->roles()->attach(Role::query()->firstOrCreate(
+            ['key' => RoleKey::SupportAgent->value],
+            ['name' => 'support_agent', 'is_system' => true],
+        ));
+
+        $response = $this->actingAs($support)->get('/admin/users')->assertOk();
 
         // The users prop specifically: the rest of the page props carry
         // hashes and version strings where any 7-digit run could occur by
@@ -127,7 +141,7 @@ final class AdminUsersPrivacyTest extends TestCase
             $this->assertStringNotContainsString(
                 $form,
                 $serialized,
-                'The users list must not carry phone digits in any form — full or masked.',
+                'Without identity.users.contact the list must not carry phone digits in any form.',
             );
         }
     }
@@ -159,63 +173,23 @@ final class AdminUsersPrivacyTest extends TestCase
             ->post("/admin/users/{$operator->id}/suspend", ['reason' => 'because'])
             ->assertNotFound();
         $this->actingAs($admin)
-            ->post("/admin/users/{$operator->id}/phone", ['reason' => 'callback_requested'])
+            ->post("/admin/users/{$operator->id}/logout")
             ->assertNotFound();
     }
 
-    /* ------------------------------------------------------- the reveal */
+    /* ------------------------------------------------- no reveal endpoint */
 
-    public function test_the_reveal_requires_a_reason(): void
+    public function test_the_users_reveal_endpoint_is_gone_the_leads_ceremony_is_not(): void
     {
+        // The accounts surface shows the number directly now; its old reveal
+        // endpoint must not linger as a second, ceremonial door.
         $member = $this->member(consentContact: true);
 
         $this->actingAs($this->admin())
-            ->postJson("/admin/users/{$member->id}/phone", [])
-            ->assertStatus(422);
+            ->postJson("/admin/users/{$member->id}/phone", ['reason' => 'callback_requested'])
+            ->assertNotFound();
 
         $this->assertSame(0, PhoneReveal::query()->count());
-    }
-
-    public function test_the_reveal_is_refused_without_contact_consent(): void
-    {
-        $member = $this->member(consentContact: false);
-
-        $response = $this->actingAs($this->admin())
-            ->postJson("/admin/users/{$member->id}/phone", ['reason' => 'callback_requested'])
-            ->assertStatus(422)
-            ->json();
-
-        $this->assertFalse($response['ok']);
-        $this->assertArrayNotHasKey('phone', $response);
-        $this->assertSame(0, PhoneReveal::query()->count());
-    }
-
-    public function test_a_consented_reveal_returns_the_number_with_ledger_audit_and_no_store(): void
-    {
-        $member = $this->member(consentContact: true);
-        $admin = $this->admin();
-
-        $response = $this->actingAs($admin)
-            ->postJson("/admin/users/{$member->id}/phone", ['reason' => 'callback_requested'])
-            ->assertOk()
-            // Symfony normalizes the directives and appends `private`; what
-            // matters is that no-store survives into the wire header.
-            ->assertHeader('Cache-Control', 'must-revalidate, no-cache, no-store, private');
-
-        $json = $response->json();
-        $this->assertTrue($json['ok']);
-        $this->assertStringContainsString('7501234567', (string) $json['phone']);
-
-        // The ledger row names the actor and the subject; the number itself
-        // is never stored.
-        $reveal = PhoneReveal::query()->firstOrFail();
-        $this->assertSame($admin->id, $reveal->user_id);
-        $this->assertSame($member->id, (int) $reveal->subject_id);
-
-        $this->assertTrue(
-            DB::table('audit_logs')->where('action', 'leads.phone_revealed')->exists(),
-            'A reveal must leave an audit record.',
-        );
     }
 
     /* ---------------------------------------------- suspend / reactivate */

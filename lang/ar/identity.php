@@ -293,8 +293,7 @@ return [
 
     'users' => [
         'export_sheet' => 'تصدير جدول',
-        'phone_reveal_not_permitted' => 'الهاتف متوفر — الكشف غير مسموح',
-        'reveal_phone' => 'كشف الهاتف',
+        'phone_present' => 'يوجد رقم هاتف مسجّل',
         'request_filter' => 'الطلب',
         'request_any' => 'لديه طلب',
         'request_none_filter' => 'بدون طلب',
@@ -348,7 +347,7 @@ return [
         'empty' => 'لا توجد حسابات',
         'empty_body' => 'لا توجد حسابات أعضاء مطابقة لهذه الفلاتر.',
         'phone_user_provided' => 'الهاتف: أدخله المستخدم',
-        'phone_absent' => 'الهاتف: لا يوجد',
+        'phone_absent' => 'لا يوجد رقم هاتف',
         'registered' => 'تاريخ التسجيل',
         'last_login' => 'آخر دخول',
         'requests' => 'الطلبات',

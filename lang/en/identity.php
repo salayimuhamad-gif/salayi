@@ -293,8 +293,7 @@ return [
 
     'users' => [
         'export_sheet' => 'Export Sheet',
-        'phone_reveal_not_permitted' => 'Phone available — reveal not permitted',
-        'reveal_phone' => 'Reveal phone',
+        'phone_present' => 'Phone on file',
         'request_filter' => 'Request',
         'request_any' => 'Has a request',
         'request_none_filter' => 'No request',
@@ -348,7 +347,7 @@ return [
         'empty' => 'No accounts',
         'empty_body' => 'No member accounts match these filters.',
         'phone_user_provided' => 'Phone: user-provided',
-        'phone_absent' => 'Phone: none',
+        'phone_absent' => 'No phone number',
         'registered' => 'Registered',
         'last_login' => 'Last login',
         'requests' => 'Requests',

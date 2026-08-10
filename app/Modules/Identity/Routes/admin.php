@@ -68,10 +68,13 @@ Route::middleware('permission:identity.users.suspend')->group(function (): void 
         ->whereNumber('user')->name('users.reactivate');
 });
 
-Route::middleware('permission:identity.users.contact')->group(function (): void {
-    Route::post('/users/{user}/phone', [UsersController::class, 'revealPhone'])
-        ->whereNumber('user')->name('users.phone.reveal');
-});
+/*
+ * There is deliberately no reveal endpoint on this surface any more: the
+ * accounts workspace shows the number DIRECTLY to identity.users.contact
+ * holders (actor-aware serialization in UsersController::row, page-access
+ * audited). The Sales/Leads reveal ceremony is untouched at
+ * POST /admin/leads/{lead}/phone.
+ */
 
 // Session revocation has its own permission — ending somebody's live
 // sessions is a different power from suspending their account.
