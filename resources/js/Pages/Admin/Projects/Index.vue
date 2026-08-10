@@ -15,26 +15,28 @@ interface Row {
     type: string | null;
     area: string | null;
     has_geometry: boolean;
+    map_ready: boolean;
     missing_translations: string[];
     updated_at: string | null;
 }
 
 const props = defineProps<{
     projects: { data: Row[]; links: Array<{ url: string | null; label: string; active: boolean }> };
-    filters: { q: string; status: string };
+    filters: { q: string; status: string; map_ready: string };
     statuses: string[];
     can: { create_scoped: boolean; create_unscoped: boolean; use_wizard: boolean };
 }>();
 
 const search = ref(props.filters.q);
 const status = ref(props.filters.status);
+const mapReady = ref(props.filters.map_ready);
 
 let timer: ReturnType<typeof setTimeout> | undefined;
 
-watch([search, status], () => {
+watch([search, status, mapReady], () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-        router.get('/admin/projects', { q: search.value, status: status.value }, {
+        router.get('/admin/projects', { q: search.value, status: status.value, map_ready: mapReady.value }, {
             preserveState: true, replace: true,
         });
     }, 300);
@@ -80,6 +82,24 @@ const tone = (s: string): string => ({
                     <option v-for="s in statuses" :key="s" :value="s">
                         {{ t(`projects.publication_statuses.${s}`) }}
                     </option>
+                </select>
+            </div>
+
+            <!-- Map readiness: the operational answer to "why is my
+                 published project not on the map" — a project appears only
+                 with a real coordinate pair, and this filter finds the ones
+                 that lack it. -->
+            <div>
+                <label for="map-ready" class="mh-label mb-1 block">{{ t('projects.map_readiness.label') }}</label>
+                <select
+                    id="map-ready"
+                    v-model="mapReady"
+                    class="rounded-card border border-line bg-surface-raised px-3 py-2 text-ink
+                           focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                >
+                    <option value="">{{ t('app.actions.filter') }}</option>
+                    <option value="1">{{ t('projects.map_readiness.ready') }}</option>
+                    <option value="0">{{ t('projects.map_readiness.not_ready') }}</option>
                 </select>
             </div>
 
@@ -139,6 +159,14 @@ const tone = (s: string): string => ({
                                 class="rounded-full bg-caution/10 px-2 py-0.5 text-xs text-caution"
                                 :title="t('projects.blockers.geometry_missing')"
                             >{{ t('projects.badge.no_location') }}</span>
+
+                            <!-- A boundary without a point still places no
+                                 marker; say so where the operator looks. -->
+                            <span
+                                v-else-if="!project.map_ready"
+                                class="rounded-full bg-caution/10 px-2 py-0.5 text-xs text-caution"
+                                :title="t('projects.map_readiness.not_ready_hint')"
+                            >{{ t('projects.map_readiness.not_ready') }}</span>
 
                             <span
                                 v-if="project.missing_translations.length > 0"

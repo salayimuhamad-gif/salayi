@@ -190,7 +190,10 @@ final class InvestmentMapTest extends TestCase
         ]))->assertSuccessful()->json('projects.0');
 
         $this->assertNull($row['price_from']);
-        $this->assertNull($row['trend']);
+        // The amended four-valued contract: insufficient history is the
+        // EXPLICIT `unknown`, which claims nothing and carries no percent —
+        // and is deliberately distinct from a fabricated null-or-flat.
+        $this->assertSame('unknown', $row['trend']);
         $this->assertNull($row['trend_percent']);
     }
 
@@ -205,7 +208,8 @@ final class InvestmentMapTest extends TestCase
         ]))->assertSuccessful()->json('projects.0');
 
         $this->assertSame('90000.00', $row['price_from']);
-        $this->assertNull($row['trend']);
+        $this->assertSame('unknown', $row['trend']);
+        $this->assertNull($row['trend_percent']);
     }
 
     public function test_trends_never_compare_across_price_types(): void
@@ -223,7 +227,8 @@ final class InvestmentMapTest extends TestCase
         ]))->assertSuccessful()->json('projects.0');
 
         $this->assertSame('100000.00', $row['price_from']);
-        $this->assertNull($row['trend']);
+        $this->assertSame('unknown', $row['trend']);
+        $this->assertNull($row['trend_percent']);
     }
 
     /* ------------------------------------------------------ type filter */
