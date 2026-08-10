@@ -506,6 +506,19 @@ watch(showBoundaries, () => void load());
                 />
                 <div class="mh-invest-vignette" aria-hidden="true" />
 
+                <!-- Zero projects is a STATE, not a failure: the basemap
+                     stays live and pannable, and this floating notice says
+                     so instead of the page going blank. -->
+                <div
+                    v-if="mapReady && !loading && !hasResults"
+                    class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                    aria-live="polite"
+                >
+                    <p class="mh-invest-chip !cursor-default text-center">
+                        {{ t('map.invest.map_empty_overlay') }}
+                    </p>
+                </div>
+
                 <!-- Floating chrome: the boundary toggle, glass over tiles. -->
                 <div
                     v-if="boundariesAvailable && mapReady"

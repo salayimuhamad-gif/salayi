@@ -76,4 +76,118 @@ return [
         'ai_model_required' => 'An AI model is required when the AI provider is enabled.',
         'ai_key_required' => 'An AI API key is required when the AI provider is enabled.',
     ],
+    'flags' => [
+        'market.intelligence' => [
+            'label' => 'Market intelligence',
+            'description' => 'Public market prices and statistics pages',
+        ],
+        'market.indices' => [
+            'label' => 'Market indices',
+            'description' => 'Published price indices on the public market pages',
+        ],
+        'map.explorer' => [
+            'label' => 'Map Explorer',
+            'description' => 'The public map at /map: projects, areas and places',
+        ],
+        'map.investment' => [
+            'label' => 'Investment Map',
+            'description' => 'The public investment map at /invest: approved projects with prices and trends',
+        ],
+        'places.database' => [
+            'label' => 'Places database',
+            'description' => 'Places and place categories, on the public map and in the admin panel',
+        ],
+        'geography.areas' => [
+            'label' => 'Area profiles',
+            'description' => 'Public area profile pages at /areas',
+        ],
+        'projects.wizard' => [
+            'label' => 'Project wizard',
+            'description' => 'The step-by-step project creation wizard in the admin panel',
+        ],
+        'content.news' => [
+            'label' => 'News',
+            'description' => 'The public news section at /news',
+        ],
+        'advisor.residential' => [
+            'label' => 'Advisor — residential',
+            'description' => 'The public AI advisor for residential searches',
+        ],
+        'advisor.investment' => [
+            'label' => 'Advisor — investment',
+            'description' => 'Investment guidance in the AI advisor',
+        ],
+        'advisor.market' => [
+            'label' => 'Advisor — market',
+            'description' => 'Market questions in the AI advisor',
+        ],
+        'advisor.voice' => [
+            'label' => 'Advisor — voice',
+            'description' => 'Voice input for the AI advisor',
+        ],
+        'lifestyle.matching' => [
+            'label' => 'Lifestyle matching',
+            'description' => 'Lifestyle-based project matching in the advisor',
+        ],
+        'companies.portal' => [
+            'label' => 'Company portal',
+            'description' => 'Company accounts, company pages and the admin companies section',
+        ],
+        'companies.branches' => [
+            'label' => 'Company branches',
+            'description' => 'Branch management inside the company portal',
+        ],
+        'marketplace.offers' => [
+            'label' => 'Marketplace',
+            'description' => 'Public offers at /offers and marketplace administration',
+        ],
+        'marketplace.owner_listings' => [
+            'label' => 'Owner listings',
+            'description' => 'Listings created by property owners themselves',
+        ],
+        'advertising' => [
+            'label' => 'Advertising',
+            'description' => 'Advertising campaigns and placements',
+        ],
+        'portfolio' => [
+            'label' => 'Portfolio',
+            'description' => 'Members\' personal property portfolios',
+        ],
+        'alerts.telegram' => [
+            'label' => 'Telegram alerts',
+            'description' => 'Outbound alert notifications over Telegram',
+        ],
+        'alerts.email' => [
+            'label' => 'Email alerts',
+            'description' => 'Outbound alert notifications over email',
+        ],
+        'alerts.push' => [
+            'label' => 'Push alerts',
+            'description' => 'Outbound web push notifications',
+        ],
+        'pwa' => [
+            'label' => 'PWA',
+            'description' => 'Installable app behaviour and offline support',
+        ],
+        'analytics.product' => [
+            'label' => 'Product analytics',
+            'description' => 'Anonymous product usage analytics',
+        ],
+        'imports.ai_assist' => [
+            'label' => 'Import AI assist',
+            'description' => 'AI assistance during price imports',
+        ],
+        'translations.ai_suggest' => [
+            'label' => 'Translation AI suggestions',
+            'description' => 'AI-suggested translations for reviewers',
+        ],
+        'public.reviews' => [
+            'label' => 'Public reviews',
+            'description' => 'Public ratings and reviews on projects',
+        ],
+        'partner.api' => [
+            'label' => 'Partner API',
+            'description' => 'The external partner API surface',
+        ],
+    ],
 ];

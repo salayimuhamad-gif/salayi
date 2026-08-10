@@ -12,6 +12,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -30,6 +31,9 @@ use Throwable;
  * @property string|null $mfa_secret
  * @property Carbon|null $mfa_confirmed_at
  * @property bool $is_active
+ * @property-read int|null $advisor_request_count withCount alias, users workspace
+ * @property-read int|null $portfolio_count withCount alias, users workspace
+ * @property-read bool|int|null $contact_consent withExists alias, users workspace
  *
  * ---- generated model properties (scripts/generate-model-annotations.php)
  * @property int $id
@@ -138,6 +142,21 @@ final class User extends Authenticatable
     public function roles(): BelongsToMany
     {
         return $this->belongsToMany(Role::class, 'role_user')->withTimestamps();
+    }
+
+    /**
+     * The newest advisor request, for the users workspace: one row's worth of
+     * "what is this person currently looking for", resolved as a one-of-many
+     * so a page of users costs one extra query rather than one per row.
+     *
+     * @return HasOne<DemandProfile, $this>
+     */
+    public function latestAdvisorRequest(): HasOne
+    {
+        return $this->hasOne(DemandProfile::class)->ofMany(
+            ['updated_at' => 'max', 'id' => 'max'],
+            static fn ($query) => $query->where('source', 'advisor'),
+        );
     }
 
     /**

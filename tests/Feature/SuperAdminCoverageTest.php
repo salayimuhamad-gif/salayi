@@ -62,7 +62,7 @@ final class SuperAdminCoverageTest extends TestCase
         sort($effective);
 
         $this->assertSame($all, $effective);
-        $this->assertCount(107, $effective);
+        $this->assertCount(108, $effective);
 
         foreach ($all as $permission) {
             $this->assertTrue($admin->hasPermission($permission), $permission);

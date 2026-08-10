@@ -36,6 +36,32 @@ const grouped = computed(() => {
     return groups;
 });
 
+/*
+ * Human names for the switches. "map.investment" tells an operator nothing
+ * about what turning it on will do to the public site; the label and the
+ * one-line description do, in the operator's own language. Unknown flags
+ * (a row in the store the config no longer declares) fall back to the raw
+ * key rather than hiding behind a missing translation.
+ */
+const flagLabel = (flag: Flag): string => {
+    const key = `system.flags.${flag.flag}.label`;
+    const value = t(key);
+    return value === key ? flag.flag : value;
+};
+
+const flagDescription = (flag: Flag): string => {
+    const parts: string[] = [flag.flag];
+
+    const key = `system.flags.${flag.flag}.description`;
+    const value = t(key);
+    if (value !== key) parts.push(value);
+
+    if (flag.requires_super_admin) parts.push(t('admin.features.super_admin_only'));
+    if (!flag.known) parts.push(t('admin.features.unknown_flag'));
+
+    return parts.join(' · ');
+};
+
 function toggle(flag: Flag, value: boolean): void {
     router.put('/admin/features', { flag: flag.flag, enabled: value }, { preserveScroll: true });
 }
@@ -63,10 +89,8 @@ function toggle(flag: Flag, value: boolean): void {
                     <li v-for="flag in items" :key="flag.flag">
                         <AppToggle
                             :model-value="flag.enabled"
-                            :label="flag.flag"
-                            :description="flag.requires_super_admin
-                                ? t('admin.features.super_admin_only')
-                                : (flag.known ? undefined : t('admin.features.unknown_flag'))"
+                            :label="flagLabel(flag)"
+                            :description="flagDescription(flag)"
                             :disabled="flag.requires_super_admin && !isSuperAdmin"
                             @update:model-value="(value: boolean) => toggle(flag, value)"
                         />

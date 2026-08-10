@@ -100,6 +100,15 @@ final class AdminUsersPrivacyTest extends TestCase
             'telegram_linked_at', 'phone_present', 'phone_status',
             'registered_at', 'last_login_at', 'last_seen_at', 'online',
             'advisor_request_count', 'portfolio_count',
+            /*
+             * The workspace additions, stated deliberately: the consent BIT
+             * (whether the reveal ceremony may even be offered — never the
+             * consent record), and the latest advisor request's four
+             * follow-up fields. Neither carries a digit of phone material,
+             * which the digit-scan test below verifies against the whole
+             * serialized payload.
+             */
+            'contact_consent', 'latest_request',
         ], array_keys($row));
     }
 
