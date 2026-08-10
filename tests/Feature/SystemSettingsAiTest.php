@@ -77,7 +77,12 @@ final class SystemSettingsAiTest extends TestCase
         }
     }
 
-    /** A full valid integrations payload the AI fields can be varied on. */
+    /**
+     * A full valid integrations payload the AI fields can be varied on.
+     *
+     * @param  array<string, mixed>  $overrides
+     * @return array<string, mixed>
+     */
     private function payload(array $overrides = []): array
     {
         return array_merge([

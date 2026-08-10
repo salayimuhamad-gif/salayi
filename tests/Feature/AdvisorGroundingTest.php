@@ -129,7 +129,7 @@ final class AdvisorGroundingTest extends TestCase
             ->postJson('/advisor/reply', ['message' => 'بەسە', 'locale' => 'ckb'])
             ->assertOk();
 
-        $slugs = collect($response->json('recommendations.items'))->pluck('slug');
+        $slugs = collect((array) $response->json('recommendations.items'))->pluck('slug');
 
         $this->assertTrue($slugs->contains('published-home'));
         $this->assertFalse($slugs->contains('draft-home'), 'a draft must never surface as a recommendation');

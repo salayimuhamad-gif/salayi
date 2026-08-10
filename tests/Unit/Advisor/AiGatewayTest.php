@@ -83,6 +83,7 @@ final class AiGatewayTest extends TestCase
         Cache::flush();
     }
 
+    /** @return array<string, mixed> */
     private function request(): array
     {
         return ['messages' => [['role' => 'user', 'content' => 'hi']]];

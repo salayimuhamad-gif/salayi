@@ -12,6 +12,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Testing\TestResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Tests\TestCase;
 
 /**
@@ -113,6 +114,7 @@ final class AdvisorConversationTest extends TestCase
         });
     }
 
+    /** @return TestResponse<Response> */
     private function send(string $message, string $locale = 'ckb'): TestResponse
     {
         return $this->postJson('/advisor/reply', ['message' => $message, 'locale' => $locale]);
@@ -169,7 +171,7 @@ final class AdvisorConversationTest extends TestCase
             ->send('شوقە دەمەوێت بۆ خێزانەکەم لە نزیک عەنکاوە، بودجەم نزیکەی ١٨٠ ملیۆن دینارە و قیست باشترە')
             ->assertOk();
 
-        $answered = collect($response->json('summary'))
+        $answered = collect((array) $response->json('summary'))
             ->where('answered', true)
             ->pluck('key')
             ->all();
@@ -292,7 +294,7 @@ final class AdvisorConversationTest extends TestCase
 
         $response = $this->actingAs($member)->send('بڕیارم گۆڕی، ڤێلام دەوێت')->assertOk();
 
-        $typeRow = collect($response->json('summary'))->firstWhere('key', 'property_type');
+        $typeRow = collect((array) $response->json('summary'))->firstWhere('key', 'property_type');
         $this->assertSame('villa', $typeRow['value'] === null ? null : $this->rawCriteria($member)['property_type']);
         $this->assertIsArray($response->json('recommendations'));
     }
