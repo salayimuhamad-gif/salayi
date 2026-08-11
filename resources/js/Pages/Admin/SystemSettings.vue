@@ -131,7 +131,7 @@ async function testConnection(provider: string): Promise<void> {
     testResult.value = null;
 
     try {
-        const response = await fetch('/admin/system/settings/integrations/ai-test', {
+        const response = await fetch('/admin/settings/integrations/ai-test', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
@@ -218,7 +218,7 @@ const integrationsDisabled = !props.environment_writable || !props.can_manage_in
 
             <!-- =========================== general =========================== -->
             <AppCard>
-                <form class="space-y-5 p-5" @submit.prevent="general.put('/admin/system/settings/general')">
+                <form class="space-y-5 p-5" @submit.prevent="general.put('/admin/settings/general')">
                     <div>
                         <h2 class="text-base font-semibold text-ink">{{ t('system.general.title') }}</h2>
                         <p class="mt-1 text-sm text-ink-muted">{{ t('system.general.description') }}</p>
@@ -293,7 +293,7 @@ const integrationsDisabled = !props.environment_writable || !props.can_manage_in
 
             <!-- ======================== integrations ========================= -->
             <AppCard v-if="integrations">
-                <form class="space-y-8 p-5" @submit.prevent="integrations.put('/admin/system/settings/integrations')">
+                <form class="space-y-8 p-5" @submit.prevent="integrations.put('/admin/settings/integrations')">
                     <div>
                         <h2 class="text-base font-semibold text-ink">{{ t('system.integrations.title') }}</h2>
                         <p class="mt-1 text-sm text-ink-muted">{{ t('system.integrations.description') }}</p>
