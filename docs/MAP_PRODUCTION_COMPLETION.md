@@ -21,12 +21,13 @@ branch `feature/map-production-completion`.
   `onMarkerClick`, `PriceTrend` on point features, bounded
   `readyTimeoutMs`, and an explicit `fallbackStyle: 'demo' | 'plain'`.
 - `resources/js/lib/map/maplibre.ts` — **RC3/RC6/RC7/RC8 fixes**: the
-  MapLibre worker becomes a real emitted asset (`?url` import +
-  `setWorkerUrl()` before the first construction) — v6 resolves it at
-  runtime relative to the emitted chunk, Vite never copied it, and every
-  environment 404'd `/build/assets/maplibre-gl-worker.mjs`, leaving every
-  GeoJSON/vector source permanently empty behind a map that still fired
-  `load`. Also: a
+  MapLibre worker becomes a real emitted asset (`?worker&url` import —
+  bundled self-contained, because the dist worker statically imports
+  `./maplibre-gl-shared.mjs` — plus `setWorkerUrl()` before the first
+  construction). v6 resolves the worker at runtime relative to the emitted
+  chunk, Vite never copied it, and every environment 404'd
+  `/build/assets/maplibre-gl-worker.mjs`, leaving every GeoJSON/vector
+  source permanently empty behind a map that still fired `load`. Also: a
   ResizeObserver on the container self-heals maps built inside hidden
   `v-show` boxes (no rebuild); `ready()` has three bounded exits (load /
   pre-load style failure / deadline) so no page can wait forever; post-load

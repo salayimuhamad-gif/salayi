@@ -20,10 +20,14 @@ import { trendColour, trendIconName } from './trend';
  * looked "ready" while every GeoJSON/vector source, which is processed IN
  * the worker, stayed empty forever. No workers, no markers, no tiles.
  *
- * The `?url` import makes the worker a real, hashed, emitted asset and
- * setWorkerUrl() points MapLibre at it before any map is constructed.
+ * `?worker&url` — not plain `?url` — because the dist worker is itself one
+ * half of a split build: it statically imports `./maplibre-gl-shared.mjs`,
+ * so a verbatim copy still dies on its own 404 one request later. The
+ * worker query makes Vite BUNDLE the file self-contained and emit it as a
+ * real hashed asset; setWorkerUrl() points MapLibre at it before any map
+ * is constructed.
  */
-import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
 /**
  * MapLibre adapter — the default, and the only one that needs no key (§10.1).

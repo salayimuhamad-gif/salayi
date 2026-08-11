@@ -199,10 +199,13 @@ The map still fires `load` — which is why this hid behind RC1/RC2: the
 surface looks "ready" while every GeoJSON and vector source, whose data is
 parsed IN the worker, stays empty forever. No worker, no markers, no vector
 tiles — a first-class contributor to the blank-map symptom even after the
-CSS and style are fixed. Repair: import the worker via Vite's `?url` (a
-real, hashed, emitted asset) and call `maplibre.setWorkerUrl()` before the
-first map constructs; the E2E asset sweep now fails if the worker request
-fails again.
+CSS and style are fixed. And copying the file verbatim is not enough: the
+dist worker is half of a split build that statically imports
+`./maplibre-gl-shared.mjs`, so a `?url` copy dies on its own 404 one
+request later. Repair: import the worker via Vite's `?worker&url` (bundled
+self-contained, emitted as a real hashed asset) and call
+`maplibre.setWorkerUrl()` before the first map constructs; the E2E asset
+sweep now fails if any of it regresses.
 
 ### RC9 — one shared guest throttle bucket starved map search (confirmed)
 
