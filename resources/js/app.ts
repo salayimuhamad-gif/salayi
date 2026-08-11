@@ -3,6 +3,17 @@ import { createInertiaApp, router } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createPinia } from 'pinia';
 
+/*
+ * MapLibre's stylesheet, in the ONE entry every page shares. The library's
+ * JS is lazy-loaded by the map adapter, but its CSS cannot be: it carries
+ * the container/canvas positioning, controls, markers and popups, and its
+ * absence was the root cause of every MapLibre surface rendering as an
+ * unstyled grey rectangle in production (docs/MAP_PRODUCTION_AUDIT.md,
+ * RC1). It lives here, exactly once, so no page can forget it — and the
+ * frontend guard asserts it survives the build.
+ */
+import 'maplibre-gl/dist/maplibre-gl.css';
+
 const appName = import.meta.env.VITE_APP_NAME ?? 'Mulkihawler';
 
 /**

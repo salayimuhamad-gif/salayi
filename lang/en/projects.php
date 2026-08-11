@@ -3,6 +3,12 @@
 declare(strict_types=1);
 
 return [
+    'map_readiness' => [
+        'label' => 'On the map',
+        'ready' => 'Map-ready',
+        'not_ready' => 'Not on map',
+        'not_ready_hint' => 'No coordinates — published projects appear on the public maps only with a real point.',
+    ],
     'index_title' => 'Projects',
     'types' => [
         'residential' => 'Residential',

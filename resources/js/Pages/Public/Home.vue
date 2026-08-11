@@ -4,7 +4,7 @@ import { Head } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
 import AiAdvisorHero from '@/Components/Public/AiAdvisorHero.vue';
-import InvestMapTeaser from '@/Components/Public/InvestMapTeaser.vue';
+import HomeProjectMap from '@/Components/Public/HomeProjectMap.vue';
 import PublicQuickActions from '@/Components/Public/PublicQuickActions.vue';
 import MarketMetricCard from '@/Components/Public/MarketMetricCard.vue';
 import ProjectSummaryCard from '@/Components/Public/ProjectSummaryCard.vue';
@@ -120,10 +120,19 @@ const areaHrefs = computed(() =>
                 <PublicQuickActions :cta="cta" :hrefs="actionHrefs" />
             </section>
 
-            <!-- The Investment Map preview: a flag-gated invitation, not a
-                 second map. The real experience (and its heavy chunk) lives
-                 behind the click. -->
-            <InvestMapTeaser v-if="cta.invest" :href="actionHrefs.invest" />
+            <!-- The LIVE homepage project map: a real, bounded instance of
+                 the shared map infrastructure, backed by whichever public
+                 map surface is enabled — invest first (its rows carry the
+                 price trend), the explorer otherwise. Construction is
+                 deferred until the section scrolls into view, and the heavy
+                 MapLibre chunk stays lazy. With both flags off the old
+                 teaser card remains: the flags stay authoritative and the
+                 homepage never links into a 404. -->
+            <HomeProjectMap
+                v-if="cta.invest || cta.map"
+                :source="cta.invest ? 'invest' : 'map'"
+                :href="cta.invest ? actionHrefs.invest : actionHrefs.map"
+            />
 
             <!-- Market indices -->
             <section>

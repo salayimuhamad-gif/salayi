@@ -146,6 +146,41 @@ if (! is_dir($buildDir)) {
     }
 }
 
+// ------------------------------------------------- 2b. MAPLIBRE STYLESHEET
+
+/*
+ * MapLibre's CSS must survive into the built stylesheet. Its absence was
+ * invisible to every existing gate — the JS built, the tests passed, and
+ * production rendered unstyled grey rectangles where maps belonged
+ * (docs/MAP_PRODUCTION_AUDIT.md, RC1). Two assertions: the source entry
+ * imports it, and (when a build exists) at least one built CSS asset
+ * actually contains the maplibregl rules.
+ */
+$appEntry = (string) @file_get_contents($root.'/resources/js/app.ts');
+
+if (! str_contains($appEntry, 'maplibre-gl/dist/maplibre-gl.css')) {
+    $failures[] = ['MAPLIBRE-CSS', "resources/js/app.ts no longer imports 'maplibre-gl/dist/maplibre-gl.css' — every map surface will render unstyled"];
+} else {
+    $notes[] = 'maplibre-gl stylesheet import present in the Vite entry';
+}
+
+if (is_dir($buildDir.'/assets')) {
+    $cssHasMapLibre = false;
+
+    foreach (glob($buildDir.'/assets/*.css') ?: [] as $cssFile) {
+        if (str_contains((string) file_get_contents($cssFile), 'maplibregl-map')) {
+            $cssHasMapLibre = true;
+            break;
+        }
+    }
+
+    if ($cssHasMapLibre) {
+        $notes[] = 'built CSS carries the maplibregl rules';
+    } else {
+        $failures[] = ['MAPLIBRE-CSS', 'no built CSS asset contains the maplibregl rules — the import did not reach the bundle'];
+    }
+}
+
 // ------------------------------------------------------------ 3. FRESHNESS
 
 if (! $skipFreshness && is_dir($buildDir)) {

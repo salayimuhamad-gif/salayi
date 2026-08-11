@@ -51,6 +51,17 @@ final class ProjectController extends Controller
                 $query->where('search_key', 'like', '%'.$key.'%');
             })
             ->when($request->string('status')->toString() !== '', fn ($q) => $q->where('publication_status', $request->string('status')->toString()))
+            /*
+             * The map-readiness filter: the public maps place ONLY projects
+             * with a real point (whereNotNull latitude AND longitude — a
+             * boundary alone draws no marker), so this is the operational
+             * answer to "why is my published project not on the map".
+             * Nothing here invents a coordinate; it shows who lacks one.
+             */
+            ->when($request->string('map_ready')->toString() === '1', fn ($q) => $q
+                ->whereNotNull('latitude')->whereNotNull('longitude'))
+            ->when($request->string('map_ready')->toString() === '0', fn ($q) => $q
+                ->where(fn ($inner) => $inner->whereNull('latitude')->orWhereNull('longitude')))
             ->with('area:id,name_ckb,name_ar,name_en')
             ->orderByDesc('updated_at')
             ->paginate(20)
@@ -64,6 +75,8 @@ final class ProjectController extends Controller
                 'construction_status' => $project->construction_status->value,
                 'area' => $project->area?->name(),
                 'has_geometry' => $project->hasRequiredGeometry(),
+                // Marker-eligibility, exactly as the public map queries it.
+                'map_ready' => $project->latitude !== null && $project->longitude !== null,
                 'missing_translations' => $project->missingTranslations('name'),
                 'updated_at' => $project->updated_at?->toIso8601String(),
             ]);
@@ -73,6 +86,7 @@ final class ProjectController extends Controller
             'filters' => [
                 'q' => $request->string('q')->toString(),
                 'status' => $request->string('status')->toString(),
+                'map_ready' => $request->string('map_ready')->toString(),
             ],
             'statuses' => array_map(static fn (PublicationStatus $s): string => $s->value, PublicationStatus::cases()),
             'can' => [

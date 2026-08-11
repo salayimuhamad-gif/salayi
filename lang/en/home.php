@@ -27,6 +27,11 @@ return [
     'example_budget' => 'Which area matches my budget?',
     'example_compare' => 'Compare the available project types',
     'example_organise' => 'Help me organise my requirements',
+    'live_map' => [
+        'title' => 'Projects on the map, live',
+        'open_full' => 'Open the full map',
+        'empty' => 'No mapped projects yet — published projects appear here once they carry coordinates.',
+    ],
     'invest_map' => [
         'title' => 'Discover investment projects across Hawler',
         'sub' => 'An interactive map of approved residential and investment projects — locations, boundaries, prices and their movement.',

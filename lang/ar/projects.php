@@ -3,6 +3,12 @@
 declare(strict_types=1);
 
 return [
+    'map_readiness' => [
+        'label' => 'على الخريطة',
+        'ready' => 'جاهز للخريطة',
+        'not_ready' => 'ليس على الخريطة',
+        'not_ready_hint' => 'لا توجد إحداثيات — تظهر المشاريع المنشورة على الخرائط العامة فقط عند تسجيل نقطة حقيقية.',
+    ],
     'index_title' => 'المشاريع',
     'types' => [
         'residential' => 'سكني',

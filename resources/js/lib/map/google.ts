@@ -616,6 +616,15 @@ export class GoogleMapsAdapter implements MapAdapter {
         }
     }
 
+    /**
+     * Contract method. The Google Maps JS API observes its own container
+     * and re-lays itself out on size changes, so there is nothing to
+     * forward — this exists so callers can treat both adapters alike.
+     */
+    resize(): void {
+        // Intentionally empty — see docblock.
+    }
+
     destroy(): void {
         // Idempotent: create() calls this on a failed attempt, and the
         // explorer calls it again on unmount. A second pass must not restore

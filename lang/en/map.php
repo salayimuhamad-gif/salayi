@@ -78,6 +78,7 @@ return [
             'up' => 'price increased',
             'down' => 'price decreased',
             'flat' => 'price stable',
+            'unknown' => 'price trend not available',
         ],
         'empty' => 'No investment projects in this view',
         'empty_hint' => 'Move the map or zoom out to see more',

@@ -61,8 +61,8 @@ try {
 let status = 0;
 
 try {
-    // Both suites, each failing the run on its own exit code.
-    for (const suite of ['geojson.mjs', 'wizard.mjs']) {
+    // Every suite, each failing the run on its own exit code.
+    for (const suite of ['geojson.mjs', 'wizard.mjs', 'trend.mjs']) {
         execFileSync('node', [resolve(out, suite)], { cwd: root, stdio: 'inherit' });
     }
 } catch {

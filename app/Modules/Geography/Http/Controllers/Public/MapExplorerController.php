@@ -1021,7 +1021,20 @@ final class MapExplorerController extends Controller
                 continue; // both rows found; ignore older history
             }
 
-            if ($price->price_type->value === $latest[$projectId]['price_type']) {
+            /*
+             * COMPARABILITY IS THE WHOLE RULE. The previous observation must
+             * match the latest on price type AND currency, and both figures
+             * must actually exist. The old test matched type alone — a
+             * latest USD row against an older IQD row of the same type
+             * compared raw magnitudes and could emit a fabricated
+             * thousand-percent "trend"; and a null price cast to 0.0 read
+             * as a 100% collapse. Rows that fail comparability are simply
+             * not a previous observation, and the trend stays `unknown`.
+             */
+            if ($price->price_type->value === $latest[$projectId]['price_type']
+                && $price->currency === $latest[$projectId]['currency']
+                && $price->price_from !== null
+                && $latest[$projectId]['price_from'] !== null) {
                 $previousFrom[$projectId] = $price->price_from;
             }
         }
@@ -1029,7 +1042,20 @@ final class MapExplorerController extends Controller
         return array_map(static function (array $row) use ($latest, $previousFrom): array {
             $current = $latest[$row['id']] ?? null;
 
-            $trend = null;
+            /*
+             * Deterministic four-valued semantics, from stored observations
+             * only:
+             *
+             *   up / down  — two comparable observations (same price type,
+             *                same currency, both non-null, previous > 0)
+             *                whose change is at least 0.05%;
+             *   flat       — two comparable observations within ±0.05%:
+             *                genuinely stable, never a default;
+             *   unknown    — anything less: no history, one observation,
+             *                mixed currencies, missing figures. No claim is
+             *                made and no percentage travels.
+             */
+            $trend = 'unknown';
             $percent = null;
 
             if ($current !== null && isset($previousFrom[$row['id']])) {
@@ -1052,7 +1078,7 @@ final class MapExplorerController extends Controller
                 'price_type' => $current['price_type'] ?? null,
                 'price_at' => $current['price_at'] ?? null,
                 'trend' => $trend,
-                'trend_percent' => $percent,
+                'trend_percent' => $trend === 'unknown' ? null : $percent,
             ];
         }, $rows);
     }

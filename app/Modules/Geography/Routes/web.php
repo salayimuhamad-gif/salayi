@@ -36,7 +36,7 @@ Route::middleware('feature:geography.areas')->group(function (): void {
 Route::middleware('feature:map.explorer')->group(function (): void {
     Route::get('/map', [MapExplorerController::class, 'index'])->name('map.index');
     Route::get('/map/features', [MapExplorerController::class, 'features'])
-        ->middleware('throttle:60,1')
+        ->middleware('throttle:map-features')
         ->name('map.features');
 });
 
@@ -50,10 +50,10 @@ Route::middleware('feature:map.explorer')->group(function (): void {
 Route::middleware('feature:map.investment')->group(function (): void {
     Route::get('/invest', [MapExplorerController::class, 'invest'])->name('map.invest');
     Route::get('/invest/features', [MapExplorerController::class, 'investFeatures'])
-        ->middleware('throttle:60,1')
+        ->middleware('throttle:map-features')
         ->name('map.invest.features');
     Route::get('/invest/search', [MapExplorerController::class, 'investSearch'])
-        ->middleware('throttle:30,1')
+        ->middleware('throttle:map-search')
         ->name('map.invest.search');
 });
 

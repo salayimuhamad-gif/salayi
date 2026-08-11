@@ -162,6 +162,11 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # persisted fixture rows — including the degraded no-tiles contract.
     'tests/Browser/invest.spec.ts',
     'tests/Browser/locales.spec.ts',
+    # The working-map suite: a deterministic style served from inside the
+    # tests (never demotiles), map readiness on the homepage//map//invest,
+    # all four trend semantics from persisted rows, marker-click selection,
+    # and the admin picker's hidden-tab recovery.
+    'tests/Browser/map-production.spec.ts',
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
     'tests/Browser/production-assets.spec.ts',
@@ -181,6 +186,9 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'advisor flow is desktop-only and feature-flag dependent',
     'tests/Browser/mfa.spec.ts':
         'MFA flow runs once, on desktop-1440x900 only',
+    'tests/Browser/map-production.spec.ts':
+        'marker interaction and the admin picker are desktop scenarios; '
+        'the map/list switch exists only below md',
     'tests/Browser/navigation.spec.ts':
         'rail and drawer are each intentionally absent on one side of lg',
 }
