@@ -11,6 +11,9 @@ use App\Modules\Geography\Observers\ProjectGeometryObserver;
 use App\Modules\Geography\Services\NearbyPlaceCalculator;
 use App\Modules\Geography\Services\NearbyPlaceRanker;
 use App\Modules\Projects\Models\Project;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 
 /**
  * Geography domain — roadmap Step 2 (spec 10, 11).
@@ -45,6 +48,24 @@ final class GeographyServiceProvider extends ModuleServiceProvider
          */
         Place::observe(PlaceObserver::class);
         Project::observe(ProjectGeometryObserver::class);
+
+        /*
+         * NAMED limiters with their own buckets, not inline `throttle:N,1`.
+         *
+         * Inline numeric throttles key every guest by sha1(domain|ip) — ONE
+         * shared counter across every route that uses them. The map surfaces
+         * proved why that is wrong: panning fires a features request per
+         * moveend (correctly allowed 60/min), and each one also advanced the
+         * search endpoint's counter, so after a minute of browsing the map
+         * the SEARCH box answered 429 while features kept flowing. One
+         * person's panning must never spend their searching budget; the
+         * budgets below are unchanged, only separated.
+         */
+        RateLimiter::for('map-features', static fn (Request $request): Limit => Limit::perMinute(60)
+            ->by('map-features|'.$request->ip()));
+
+        RateLimiter::for('map-search', static fn (Request $request): Limit => Limit::perMinute(30)
+            ->by('map-search|'.$request->ip()));
     }
 
     protected function registerModule(): void

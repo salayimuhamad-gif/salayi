@@ -192,7 +192,8 @@ onBeforeUnmount(() => {
                 <p class="mh-lux-eyebrow mb-1">{{ t('nav.public.invest') }}</p>
                 <h2 class="font-display text-xl font-semibold text-ink">{{ t('home.live_map.title') }}</h2>
             </div>
-            <Link :href="href" class="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-accent">
+            <!-- min-h-11: a real 44px touch target, not a 21px text sliver. -->
+            <Link :href="href" class="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-medium text-accent">
                 {{ t('home.live_map.open_full') }}
                 <AppIcon name="arrow-end" class="h-4 w-4 rtl:-scale-x-100" />
             </Link>
@@ -253,13 +254,13 @@ onBeforeUnmount(() => {
                     <div class="mt-2.5 flex items-center gap-2.5">
                         <Link
                             :href="localized(`/projects/${selected.slug}`)"
-                            class="mh-lux-btn mh-lux-btn-primary !py-1 text-xs"
+                            class="mh-lux-btn mh-lux-btn-primary !py-1.5 text-xs"
                         >
                             {{ t('map.invest.view_project') }}
                         </Link>
                         <button
                             type="button"
-                            class="mh-lux-btn mh-lux-btn-ghost !py-1 text-xs"
+                            class="mh-lux-btn mh-lux-btn-ghost !py-1.5 text-xs"
                             @click="selected = null"
                         >
                             {{ t('app.actions.close') }}

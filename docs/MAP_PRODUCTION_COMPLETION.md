@@ -1,7 +1,10 @@
 # Map System — Production Completion (after repair)
 
 Companion to `docs/MAP_PRODUCTION_AUDIT.md`, which was written before the
-first edit and names seven root causes (RC1–RC7). This document records what
+first edit and names seven root causes (RC1–RC7); its §6 addendum records
+two more (RC8 missing MapLibre worker, RC9 shared throttle bucket) that
+only became visible once the deterministic browser suite drove a WORKING
+style in CI. This document records what
 changed, the architecture that now exists, what production must configure,
 the exact trend semantics the markers claim, and what was verified at each
 test layer. Base: `4f7e1f779d177275ca2dbe0324068092ed511c0d` (origin/main),
@@ -17,7 +20,13 @@ branch `feature/map-production-completion`.
   defects traced to: required `resize()`, optional draggable `setPin()`,
   `onMarkerClick`, `PriceTrend` on point features, bounded
   `readyTimeoutMs`, and an explicit `fallbackStyle: 'demo' | 'plain'`.
-- `resources/js/lib/map/maplibre.ts` — **RC3/RC6/RC7 fixes**: a
+- `resources/js/lib/map/maplibre.ts` — **RC3/RC6/RC7/RC8 fixes**: the
+  MapLibre worker becomes a real emitted asset (`?url` import +
+  `setWorkerUrl()` before the first construction) — v6 resolves it at
+  runtime relative to the emitted chunk, Vite never copied it, and every
+  environment 404'd `/build/assets/maplibre-gl-worker.mjs`, leaving every
+  GeoJSON/vector source permanently empty behind a map that still fired
+  `load`. Also: a
   ResizeObserver on the container self-heals maps built inside hidden
   `v-show` boxes (no rebuild); `ready()` has three bounded exits (load /
   pre-load style failure / deadline) so no page can wait forever; post-load
@@ -60,6 +69,13 @@ branch `feature/map-production-completion`.
   provider to be usable. Serves Admin Projects (Form), Areas, Places, Offers.
 
 ### Backend
+- `app/Modules/Geography/Providers/GeographyServiceProvider.php` +
+  `app/Modules/Geography/Routes/web.php` — **RC9 fix**: the map endpoints
+  move from inline `throttle:60,1`/`throttle:30,1` (which key every guest
+  by `sha1(domain|ip)` — one bucket shared across routes, so a minute of
+  panning starved the search box into 429s) to named limiters with their
+  own keys: `map-features` 60/min, `map-search` 30/min. Budgets unchanged,
+  buckets separated.
 - `app/Modules/Geography/Http/Controllers/Public/MapExplorerController.php` —
   trend derivation hardened (see §5): previous observation must match price
   type AND currency with both figures present; `unknown` is the explicit

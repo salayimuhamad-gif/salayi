@@ -180,3 +180,39 @@ the admin list satisfies this without schema.
    state.
 7. Deterministic Playwright setup serving a local style/tiles — no
    demotiles dependency in CI.
+
+## 6. Addendum — found during verification, not during the initial audit
+
+Dated honestly: the two findings below surfaced only when the deterministic
+browser suite (repair step 7) ran against a WORKING style in CI — the
+initial audit could not see them because at audit time no map on any
+environment got far enough to need a worker or to sustain map traffic.
+
+### RC8 — MapLibre's worker never shipped in the Vite build (confirmed, production-affecting)
+
+maplibre-gl v6 resolves its worker as
+`new URL('./maplibre-gl-worker.mjs', import.meta.url)` at runtime, relative
+to whatever chunk the bundler emitted. Vite cannot statically analyse that
+expression, so the worker file was never copied into `public/build` and
+every environment requested `/build/assets/maplibre-gl-worker.mjs` → 404.
+The map still fires `load` — which is why this hid behind RC1/RC2: the
+surface looks "ready" while every GeoJSON and vector source, whose data is
+parsed IN the worker, stays empty forever. No worker, no markers, no vector
+tiles — a first-class contributor to the blank-map symptom even after the
+CSS and style are fixed. Repair: import the worker via Vite's `?url` (a
+real, hashed, emitted asset) and call `maplibre.setWorkerUrl()` before the
+first map constructs; the E2E asset sweep now fails if the worker request
+fails again.
+
+### RC9 — one shared guest throttle bucket starved map search (confirmed)
+
+`/map/features`, `/invest/features` (both `throttle:60,1`) and
+`/invest/search` (`throttle:30,1`) used inline numeric throttles, which key
+every guest request by `sha1(domain|ip)` — ONE counter shared across all
+three routes. Panning the map fires a features request per moveend
+(correctly allowed), and each one also advanced the search counter: after a
+minute of ordinary browsing the search box answered 429 while features kept
+flowing. The browser suite caught it as a deterministic failure (search dead
+in exactly the locale block that ran after enough map traffic). Repair:
+named limiters (`map-features` 60/min, `map-search` 30/min) with their own
+`by()` keys — budgets unchanged, buckets separated.

@@ -8,6 +8,23 @@ import type {
 } from './types';
 import { trendColour, trendIconName } from './trend';
 
+/*
+ * THE WORKER, resolved by the bundler instead of guessed at runtime.
+ *
+ * maplibre-gl v6 computes its worker location as
+ * `new URL('./maplibre-gl-worker.mjs', import.meta.url)` — relative to
+ * whatever chunk the bundler emitted. Vite cannot see through that dynamic
+ * expression, so the worker file was never copied into the build and every
+ * deployment requested `/build/assets/maplibre-gl-worker.mjs` and got a 404.
+ * The map still fired `load` — which is exactly why this survived: pages
+ * looked "ready" while every GeoJSON/vector source, which is processed IN
+ * the worker, stayed empty forever. No workers, no markers, no tiles.
+ *
+ * The `?url` import makes the worker a real, hashed, emitted asset and
+ * setWorkerUrl() points MapLibre at it before any map is constructed.
+ */
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
+
 /**
  * MapLibre adapter — the default, and the only one that needs no key (§10.1).
  *
@@ -45,6 +62,10 @@ export class MapLibreAdapter implements MapAdapter {
 
     private async initialise(): Promise<void> {
         const maplibre = await import('maplibre-gl');
+
+        // Idempotent; must precede the first Map construction, because the
+        // worker pool is created eagerly in the constructor.
+        maplibre.setWorkerUrl(maplibreWorkerUrl);
 
         /*
          * A zero-sized container is a distinct failure class (a map built
