@@ -78,7 +78,7 @@ class MapRtlTextPluginTest extends TestCase
         // the failure reads as a contract, not a mystery.
         $vite = (string) file_get_contents(base_path('vite.config.ts'));
         $this->assertStringContainsString(
-            "'@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js'",
+            "'node_modules/@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js'",
             $vite,
             'vite.config.ts must alias the dist path past the package exports map.',
         );
