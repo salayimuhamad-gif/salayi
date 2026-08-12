@@ -46,6 +46,13 @@ export interface PointFeature {
      * readable on the MAP itself and never through colour alone.
      */
     trend?: PriceTrend;
+    /**
+     * Optional short text rendered ON the map beside the marker (the pricing
+     * map's recorded-price label). Pre-formatted by the caller — the adapter
+     * never formats or invents figures. Points without a label render exactly
+     * as before; the label layers exist only for points that carry one.
+     */
+    label?: string;
 }
 
 /*
