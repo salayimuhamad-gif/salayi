@@ -68,9 +68,9 @@ class MapRtlTextPluginTest extends TestCase
         // Bundled through Vite from the pinned package — the only way the
         // asset ends up served from this origin.
         $this->assertStringContainsString(
-            "from '@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js?url'",
+            "from '@mapbox/mapbox-gl-rtl-text?url'",
             $source,
-            'The adapter must import the plugin dist through Vite (?url), not reference a URL string.',
+            'The adapter must import the plugin through Vite (?url), not reference a URL string.',
         );
 
         // Guarded by MapLibre's own status API so repeated adapter

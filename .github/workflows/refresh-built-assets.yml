@@ -84,6 +84,8 @@ jobs:
           grep -F "\"$NAME\"" package.json
           echo "== files shipped by the package =="
           find "node_modules/$NAME" -maxdepth 2 -type f | sort
+          echo "== the package's own manifest (main/exports drive import paths) =="
+          cat "node_modules/$NAME/package.json"
 
       # Semver-compatible security updates only: no --force, so a fix that
       # would require a major bump is reported rather than silently applied.
