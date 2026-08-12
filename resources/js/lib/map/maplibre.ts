@@ -165,7 +165,9 @@ export class MapLibreAdapter implements MapAdapter {
              * be selected from the map at all.
              */
             const hit = map
-                .queryRenderedFeatures(event.point, { layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'clusters']) })
+                .queryRenderedFeatures(event.point, {
+                    layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'point-labels', 'clusters']),
+                })
                 .length > 0;
 
             if (!hit) {
@@ -284,6 +286,56 @@ export class MapLibreAdapter implements MapAdapter {
                 },
             });
 
+            /*
+             * Price labels (redesign §5.4): pre-formatted text the CALLER
+             * supplies — the adapter renders, never derives. Rendered via
+             * text-field, which maplibre v6 draws with local TinySDF glyphs
+             * when the style names no glyph server, so the labels work under
+             * every style including the deterministic test style. Points
+             * without a `label` property are untouched by both layers.
+             */
+            map.addLayer({
+                id: 'point-labels',
+                type: 'symbol',
+                source: 'features',
+                filter: ['all', ['!', ['has', 'point_count']], ['has', 'label']],
+                layout: {
+                    'text-field': ['get', 'label'],
+                    'text-size': 11,
+                    'text-anchor': 'top',
+                    'text-offset': [0, 1.1],
+                    'text-allow-overlap': false,
+                    'text-optional': true,
+                },
+                paint: {
+                    'text-color': '#17181a',
+                    'text-halo-color': '#ffffff',
+                    'text-halo-width': 1.4,
+                },
+            });
+
+            // Project names join at street zoom (>= 13), decluttered below it.
+            map.addLayer({
+                id: 'point-names',
+                type: 'symbol',
+                source: 'features',
+                minzoom: 13,
+                filter: ['all', ['!', ['has', 'point_count']], ['has', 'label']],
+                layout: {
+                    'text-field': ['get', 'title'],
+                    'text-size': 11,
+                    'text-anchor': 'bottom',
+                    'text-offset': [0, -1.2],
+                    'text-allow-overlap': false,
+                    'text-optional': true,
+                },
+                paint: {
+                    'text-color': '#0f3e59',
+                    'text-halo-color': '#ffffff',
+                    'text-halo-width': 1.4,
+                },
+            });
+
             const emitMarkerClick = (event: import('maplibre-gl').MapLayerMouseEvent): void => {
                 const id = event.features?.[0]?.properties?.id as number | undefined;
 
@@ -294,8 +346,9 @@ export class MapLibreAdapter implements MapAdapter {
 
             map.on('click', 'unclustered', emitMarkerClick);
             map.on('click', 'trend-markers', emitMarkerClick);
+            map.on('click', 'point-labels', emitMarkerClick);
 
-            for (const layer of ['unclustered', 'trend-markers']) {
+            for (const layer of ['unclustered', 'trend-markers', 'point-labels']) {
                 map.on('mouseenter', layer, () => {
                     map.getCanvas().style.cursor = 'pointer';
                 });
@@ -523,6 +576,7 @@ export class MapLibreAdapter implements MapAdapter {
                     colour: point.colour,
                     ...(point.id !== undefined ? { id: point.id } : {}),
                     ...(point.trend !== undefined ? { trendIcon: trendIconName(point.trend) } : {}),
+                    ...(point.label !== undefined ? { label: point.label } : {}),
                 },
             })),
         };

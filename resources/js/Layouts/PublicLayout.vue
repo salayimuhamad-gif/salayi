@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
-import { usePage } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
 import { t } from '@/lib/i18n';
 import InstallPrompt from '@/Components/InstallPrompt.vue';
+import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
+import MobileBottomNav from '@/Components/Public/MobileBottomNav.vue';
 import PublicSidebar from '@/Components/Public/PublicSidebar.vue';
 import PublicTopbar from '@/Components/Public/PublicTopbar.vue';
 import PublicMobileNav from '@/Components/Public/PublicMobileNav.vue';
+import SkylineErbil from '@/Components/Public/SkylineErbil.vue';
 import type { PublicNavItem } from '@/Components/Public/navigation';
 import type { IconName } from '@/Components/Icons/icons';
 import type { SharedPageProps } from '@/Types/inertia';
@@ -128,7 +131,7 @@ watch(currentPath, () => {
             href="#public-main"
             class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-card
                    focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium
-                   focus:text-[rgb(var(--mh-lux-on-accent))]"
+                   focus:text-ink"
         >
             {{ t('nav.skip_to_content') }}
         </a>
@@ -150,13 +153,13 @@ watch(currentPath, () => {
                 second.
             -->
             <aside
-                class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-[var(--mh-lux-rail)] shrink-0
+                class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-64 shrink-0
                        overflow-y-auto border-e border-line bg-surface-raised lg:block"
             >
                 <PublicSidebar :items="navigation" />
             </aside>
 
-            <main id="public-main" class="min-w-0 flex-1 px-4 py-8 lg:px-8 lg:py-10">
+            <main id="public-main" class="min-w-0 flex-1 px-4 py-8 pb-24 lg:px-8 lg:py-10">
                 <div class="mx-auto w-full max-w-6xl">
                     <slot />
                 </div>
@@ -164,9 +167,51 @@ watch(currentPath, () => {
         </div>
 
         <PublicMobileNav :open="mobileOpen" :items="navigation" @close="mobileOpen = false" />
+        <MobileBottomNav />
 
-        <footer class="border-t border-line px-4 py-6 text-center text-xs text-ink-faint">
-            {{ siteName }} · v{{ page.props.app.version }}
+        <footer class="pb-14 lg:pb-0">
+            <!-- Skyline echo, inverted above the charcoal band. Decorative,
+                 inline SVG (the acceptance suite forbids main img; footer sits
+                 outside main, but one mechanism serves both). -->
+            <div class="h-10 overflow-hidden text-ink opacity-[.08] md:h-14" aria-hidden="true">
+                <SkylineErbil flip class="h-full w-full" />
+            </div>
+
+            <div class="mh-dark-band">
+                <div class="mx-auto w-full max-w-6xl px-4 py-10 lg:px-8 lg:py-14">
+                    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+                        <div class="max-w-sm">
+                            <p class="font-display text-lg font-bold text-ink">{{ siteName }}</p>
+                            <p class="mt-2 text-sm text-ink-muted">{{ t('home.hero_sub') }}</p>
+                        </div>
+
+                        <nav v-if="navigation.length > 0" :aria-label="t('nav.primary_navigation')">
+                            <ul class="grid grid-cols-2 gap-x-10 gap-y-2 sm:grid-cols-3">
+                                <li v-for="item in navigation" :key="item.key">
+                                    <Link
+                                        :href="item.href"
+                                        class="inline-flex min-h-11 items-center text-sm text-ink-muted
+                                               transition-colors duration-200 ease-calm hover:text-ink"
+                                    >
+                                        {{ t(`nav.public.${item.key}`) }}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <LocaleSwitcher />
+                    </div>
+
+                    <div class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
+                                md:flex-row md:items-center md:justify-between">
+                        <!-- Data honesty, stated where the page closes: distances
+                             are straight-line; market figures carry their own
+                             methodology qualifiers. Existing strings, verbatim. -->
+                        <p class="max-w-xl">{{ t('map.distance.straight_line_notice') }}</p>
+                        <p class="numeral shrink-0">{{ siteName }} · v{{ page.props.app.version }}</p>
+                    </div>
+                </div>
+            </div>
         </footer>
 
         <!-- §12.4: rate-limited, never on a first visit. -->

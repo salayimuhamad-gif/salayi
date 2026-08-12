@@ -1,3 +1,5 @@
+@import './public.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,86 +97,30 @@
 }
 
 /* ==========================================================================
- * Luxury public theme — SCOPED.
+ * Public presentation kit — LIGHT-FIRST.
  *
- * Everything below is gated behind `.mh-luxury-public`, which is applied by
- * PublicLayout.vue and nowhere else. Admin, Auth, Portal and Install render
- * outside that element and are therefore byte-for-byte unaffected: no shared
- * component was edited to achieve the dark treatment, only the custom
- * properties those components already read.
+ * The former `.mh-luxury-public` block here hard-coded a dark-navy palette
+ * that overrode the admin-editable branding tokens on every public page.
+ * That override is GONE: the public site now renders on the one token system
+ * the whole application shares (warm ivory surfaces, charcoal ink, champagne
+ * accent, teal AI voice), with darkness surviving only as opt-in
+ * `.mh-dark-band` compositional sections (see public.css). Operator branding
+ * (`branding.color_*`) therefore applies to the public site again.
  *
- * WHICH TOKENS ARE OVERRIDDEN, AND WHY THAT LINE IS DRAWN WHERE IT IS
- *
- *   Overridden — the neutral scale (surface / ink / line) and the semantic
- *   trio (positive / negative / caution). The neutrals ARE the theme: a deep
- *   navy public surface is not reachable while the admin's light neutrals
- *   remain in force, so this is a deliberate, documented trade — the public
- *   interface no longer follows `branding.color_surface` /
- *   `branding.color_ink`. The semantic trio has to move with it: the root
- *   values (#15803D, #B91C1C, #B4780A) are chosen for a near-white page and
- *   fall to roughly 2:1 on navy, which is an accessibility failure rather
- *   than a taste question.
- *
- *   NOT overridden — the identity tokens `--mh-brand`, `--mh-brand-soft`,
- *   `--mh-brand-strong` and `--mh-accent`. Those are the ones an operator
- *   actually configures under Branding, and they keep working here. The gold
- *   in this design IS `--mh-accent` (201 162 39 by default), so an admin who
- *   changes the accent changes the gold.
- *
- *   Retargeted — `bg-brand` alone, to the admin's own `--mh-brand-soft`. A
- *   solid #0F3E59 fill sits at 1.9:1 against a #0A1D2F panel, so the button
- *   edge disappears even though its white label stays perfectly readable.
- *   Pointing the utility at the soft brand lifts that to 3.5:1 and clears
- *   WCAG 1.4.11 without editing AppButton or any other shared file, and
- *   without hard-coding a colour the operator cannot change.
- *
- * Reverting the whole redesign is removing one class from PublicLayout.
+ * `.mh-luxury-public` itself remains ON the PublicLayout root as an inert
+ * structural marker: the browser acceptance suite uses it as its
+ * shell/hydration probe, and keeping the name costs nothing now that no
+ * palette hangs off it. The `.mh-lux-*` component classes below are kept
+ * (they are referenced across the public templates and pinned by tests) but
+ * every one of them now reads the shared light tokens — no literal colours,
+ * no second palette, no `html:has` background patch.
  * ========================================================================== */
 
 @layer components {
     .mh-luxury-public {
-        /* Structure. Deep navy, never pure black — §6.1. */
-        --mh-surface: 5 15 27;
-        --mh-surface-raised: 10 29 47;
-        --mh-surface-sunken: 7 21 35;
-
-        /* 14.6:1, 7.6:1 and 4.9:1 on the raised panel — every tier clears AA
-           for normal text, including the faint one used for periods and
-           counts, which on the light theme was decorative but here carries
-           sample sizes. */
-        --mh-ink: 240 244 248;
-        --mh-ink-muted: 160 176 194;
-        --mh-ink-faint: 122 140 160;
-
-        --mh-line: 42 66 90;
-
-        --mh-positive: 95 190 115;
-        --mh-negative: 235 105 105;
-        --mh-caution: 224 178 90;
-
-        /* Foreground for anything filled with the accent. Kept as a token so
-           the pairing is stated once; 8.0:1 against the default gold. */
-        --mh-lux-on-accent: 5 15 27;
-
-        /* Sidebar width, referenced by the grid template and the drawer so the
-           two cannot drift. */
-        --mh-lux-rail: 16rem;
-
         background-color: rgb(var(--mh-surface));
         color: rgb(var(--mh-ink));
         min-height: 100dvh;
-    }
-
-    /* Overscroll and the area behind a short page would otherwise show the
-       light `bg-surface` painted on <body> by app.blade.php, which is outside
-       this task's file scope. Scoped by :has(), so it applies on public pages
-       only and is inert everywhere else. */
-    html:has(.mh-luxury-public) {
-        background-color: rgb(5 15 27);
-    }
-
-    .mh-luxury-public .bg-brand {
-        background-color: rgb(var(--mh-brand-soft));
     }
 
     /* --- Surfaces ------------------------------------------------------- */
@@ -194,7 +140,7 @@
 
     .mh-lux-card-interactive:hover {
         border-color: rgb(var(--mh-accent) / 0.45);
-        box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.9);
+        box-shadow: 0 18px 40px -24px rgb(var(--mh-ink) / 0.18);
     }
 
     /* One hairline of gold along the block-start edge. The only place the
@@ -220,12 +166,13 @@
 
     /* --- Type ----------------------------------------------------------- */
 
-    .mh-lux-eyebrow {
-        @apply text-xs font-semibold uppercase tracking-[0.18em] text-ink-faint;
-    }
+    /* .mh-lux-eyebrow lives in public.css (dir-conditional: uppercase and
+       tracking are Latin-only treatments; Arabic keeps normal case). */
 
     .mh-lux-gold {
-        color: rgb(var(--mh-accent));
+        /* accent-strong, not plain accent: gold marks/icons must clear the
+           3:1 non-text floor on ivory (plain champagne is 2.9:1). */
+        color: rgb(var(--mh-accent-strong));
     }
 
     /* --- Navigation ----------------------------------------------------- */
@@ -288,7 +235,8 @@
 
     .mh-lux-btn-primary {
         background-color: rgb(var(--mh-accent));
-        color: rgb(var(--mh-lux-on-accent));
+        /* Deep ink on champagne: 5.9:1. White here would be 3.0:1 — never. */
+        color: rgb(var(--mh-ink));
     }
 
     .mh-lux-btn-primary:hover {
@@ -387,8 +335,8 @@
         backdrop-filter: blur(16px) saturate(140%);
         border: 1px solid rgb(var(--mh-line) / 0.9);
         box-shadow:
-            0 12px 32px -18px rgb(0 0 0 / 0.85),
-            inset 0 1px 0 rgb(255 255 255 / 0.06);
+            0 12px 32px -18px rgb(var(--mh-ink) / 0.35),
+            inset 0 1px 0 rgb(var(--mh-surface-raised) / 0.6);
     }
 
     .mh-invest-chip {
@@ -404,7 +352,8 @@
 
     .mh-invest-chip[aria-pressed='true'] {
         border-color: rgb(var(--mh-accent) / 0.55);
-        color: rgb(var(--mh-accent));
+        background-color: rgb(var(--mh-accent-soft) / 0.55);
+        color: rgb(var(--mh-accent-strong));
     }
 
     .mh-invest-chip:hover {
@@ -412,9 +361,9 @@
         color: rgb(var(--mh-ink));
     }
 
-    /* The search field: glass like the chips, with the reference design's
-       ice-blue as its focus voice — the one place the secondary accent
-       appears, so it reads as "search" rather than competing with gold. */
+    /* The search field: glass like the chips; its focus voice is the shared
+       champagne focus system (the former ice-blue literals were the last
+       non-token colours in the public CSS). */
     .mh-invest-search {
         background-color: rgb(var(--mh-surface-raised) / 0.78);
         border: 1px solid rgb(var(--mh-line) / 0.9);
@@ -423,8 +372,8 @@
 
     .mh-invest-search:focus {
         outline: none;
-        border-color: rgb(127 168 201 / 0.7);
-        box-shadow: 0 0 0 1px rgb(127 168 201 / 0.35);
+        border-color: rgb(var(--mh-accent) / 0.7);
+        box-shadow: 0 0 0 1px rgb(var(--mh-accent) / 0.35);
     }
 
     /* Decorative markers on the homepage teaser: gold dots with a soft ring

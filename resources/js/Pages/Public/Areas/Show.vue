@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ErbilMapPreview from '@/Components/Public/ErbilMapPreview.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
@@ -115,6 +116,18 @@ defineProps<{
                 {{ t('geography.public.no_coordinates') }}
             </p>
         </header>
+
+        <!-- The area on the map, from its EXISTING coordinates only
+             (redesign §12.1); absent coordinates keep the honest notice
+             above, and a provider failure collapses silently. -->
+        <ErbilMapPreview
+            v-if="area.coordinates"
+            :lat="area.coordinates.latitude"
+            :lng="area.coordinates.longitude"
+            :label="area.name"
+            :zoom="13"
+            class="mt-6"
+        />
 
         <!-- ------------------------------------------------------ projects -->
         <section class="mt-10">

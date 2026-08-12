@@ -10,10 +10,12 @@ import { computed, useId } from 'vue';
  * inline SVG is the only form of it that cannot quietly become a remote asset.
  *
  * It is DECORATION. It represents no data, so it carries aria-hidden and the
- * elements around it own the accessible names. The only motion is a slow pulse
- * on the eye lights, which `prefers-reduced-motion` already stops through the
- * global rule in app.css — §11 forbids a looping movement that competes with
- * reading, and a blink at this amplitude does not.
+ * elements around it own the accessible names. The only motion is a slow
+ * scanning-line sweep across the visor (the redesign's replacement for the
+ * eye blink — a data-instrument gesture, not a face gesture), which
+ * `prefers-reduced-motion` already stops through the global rule in app.css —
+ * §11 forbids a looping movement that competes with reading, and a 4s sweep
+ * at this amplitude does not.
  *
  * Colours come from the scoped tokens rather than literals, so the face follows
  * the operator's accent instead of pinning a second palette into the page.
@@ -41,6 +43,7 @@ const uid = useId();
 const shellId = computed(() => `${uid}-shell`);
 const visorId = computed(() => `${uid}-visor`);
 const haloId = computed(() => `${uid}-halo`);
+const visorClipId = computed(() => `${uid}-visor-clip`);
 </script>
 
 <template>
@@ -55,7 +58,7 @@ const haloId = computed(() => `${uid}-halo`);
                 <stop offset="100%" stop-color="#050F1B" />
             </linearGradient>
             <radialGradient :id="haloId" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="rgb(var(--mh-accent))" stop-opacity="0.28" />
+                <stop offset="0%" stop-color="rgb(var(--mh-accent))" stop-opacity="0.18" />
                 <stop offset="100%" stop-color="rgb(var(--mh-accent))" stop-opacity="0" />
             </radialGradient>
         </defs>
@@ -83,10 +86,20 @@ const haloId = computed(() => `${uid}-halo`);
         <!-- Visor -->
         <rect x="35" y="40" width="50" height="34" rx="15" :fill="`url(#${visorId})`" />
 
-        <!-- Eye lights -->
+        <!-- Eye lights (static — the motion voice is the scanning line) -->
         <g fill="#7FC4F5">
-            <ellipse cx="50" cy="57" rx="5.4" ry="6" class="mh-ai-eye" />
-            <ellipse cx="70" cy="57" rx="5.4" ry="6" class="mh-ai-eye" />
+            <ellipse cx="50" cy="57" rx="5.4" ry="6" />
+            <ellipse cx="70" cy="57" rx="5.4" ry="6" />
+        </g>
+
+        <!-- Scanning line: a thin teal band sweeping the visor. Clipped to
+             the visor so it reads as the instrument working, not as decor
+             floating over the face. -->
+        <clipPath :id="visorClipId">
+            <rect x="35" y="40" width="50" height="34" rx="15" />
+        </clipPath>
+        <g :clip-path="`url(#${visorClipId})`">
+            <rect x="33" y="40" width="7" height="34" fill="rgb(var(--mh-ai))" fill-opacity="0.4" class="mh-ai-scanline" />
         </g>
 
         <!-- Mouth line: a single restrained stroke rather than a face -->
@@ -95,18 +108,28 @@ const haloId = computed(() => `${uid}-halo`);
 </template>
 
 <style scoped>
-.mh-ai-eye {
-    animation: mh-ai-blink 5.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+/*
+ * Transform-only sweep (54 units carries the band across the 50-unit visor
+ * with a clean exit both sides). The global reduced-motion rule clamps it.
+ */
+.mh-ai-scanline {
+    animation: mh-ai-scan-sweep 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-@keyframes mh-ai-blink {
-    0%,
-    88%,
-    100% {
+@keyframes mh-ai-scan-sweep {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    12% {
         opacity: 1;
     }
-    93% {
-        opacity: 0.45;
+    88% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(54px);
+        opacity: 0;
     }
 }
 </style>

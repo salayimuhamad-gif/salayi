@@ -41,4 +41,46 @@ return [
     'map_cta' => 'کردنەوەی نەخشە',
     'offers_cta' => 'بینینی پێشکەشکراوەکان',
     'area_projects' => 'پڕۆژە',
+
+    /*
+     * Redesign additions (master prompt §12.1 + declared home.* deviation):
+     * hero keys, bottom-nav labels, and the Pricing Intelligence Map copy.
+     * Present in all three locales — lang-parity --strict enforces it.
+     */
+    'eyebrow' => 'زانیاریی خانووبەرەی هەولێر',
+    'search_label' => 'گەڕان بۆ پڕۆژەکان',
+    'search_placeholder' => 'بە ناو بگەڕێ بۆ پڕۆژەکان…',
+    'search_action' => 'گەڕان',
+    'insight_title' => 'ڕاوێژکاری زیرەکی بازاڕ',
+    'insight_body' => 'وەڵامی پاڵپشتیکراو لە داتای پشتڕاستکراوی بازاڕی هەولێرەوە — بەڵگەکانیش دەردەکەون.',
+    'nav' => [
+        'home' => 'سەرەتا',
+        'account' => 'هەژمار',
+    ],
+    'pricing_map' => [
+        'title' => 'نەخشەی نرخەکان بە زیندوویی',
+        'lead' => 'هەر پڕۆژەیەکی نیشانکراو دوایین نرخی تۆمارکراو و جوڵەکەی پیشان دەدات.',
+        'pricing_unavailable' => 'توێژی نرخەکان لە ئێستادا بەردەست نییە — پڕۆژەکان بێ نرخ پیشان دەدرێن.',
+        'derived_note' => 'لە نرخە تۆمارکراوەکانەوە دەرهێنراوە',
+        'last_update' => 'دوایین نوێکردنەوە',
+        'latest_price' => 'دوایین نرخی تۆمارکراو',
+        'previous_price' => 'نرخی پێشوو (دەرهێنراو)',
+        'price_history' => 'مێژووی تەواوی نرخ',
+        'movement' => 'جوڵەی نرخ',
+        'movement_up' => 'بەرزبوونەوە',
+        'movement_down' => 'دابەزین',
+        'movement_flat' => 'جێگیر',
+        'movement_unknown' => 'داتای بەراوردکردن نییە',
+        'updated_within' => 'نوێکراوەتەوە لە ماوەی',
+        'updated_any' => 'هەر کاتێک',
+        'days_7' => '7 ڕۆژ',
+        'days_30' => '30 ڕۆژ',
+        'days_90' => '90 ڕۆژ',
+        'price_range' => 'مەودای نرخ',
+        'all_areas' => 'هەموو ناوچەکان',
+        'all_types' => 'هەموو جۆرەکان',
+        'area_label' => 'ناوچە',
+        'type_label' => 'جۆر',
+        'reset' => 'سڕینەوەی فلتەرەکان',
+    ],
 ];
