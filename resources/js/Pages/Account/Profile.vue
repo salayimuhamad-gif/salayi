@@ -98,6 +98,15 @@ const localeNames: Record<string, string> = {
 
     <AuthLayout :title="t('identity.profile.title')" :subtitle="t('identity.profile.subtitle')">
         <div class="space-y-8">
+            <div>
+                <a
+                    :href="localized('/')"
+                    class="inline-flex min-h-11 items-center rounded-card border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-surface-sunken focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    data-testid="profile-return-site"
+                >
+                    {{ t('identity.telegram.return_button') }}
+                </a>
+            </div>
             <!-- ============================ photo ============================ -->
             <section class="flex items-center gap-5">
                 <UserAvatar :photo="avatar.photo" :initials="avatar.initials" :name="profile.name" size="lg" />
