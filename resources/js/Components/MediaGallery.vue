@@ -38,9 +38,12 @@ function onKey(event: KeyboardEvent): void {
                 :width="media[active].width ?? undefined"
                 :height="media[active].height ?? undefined"
                 class="h-auto w-full object-cover"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
             >
+            <!-- §10.1: the hero image of a detail page is the LCP candidate —
+                 it alone loads eagerly; every thumbnail below stays lazy. -->
             <figcaption v-if="media[active].credit" class="px-3 py-2 text-xs text-ink-faint">
                 {{ media[active].credit }}
             </figcaption>
@@ -51,12 +54,12 @@ function onKey(event: KeyboardEvent): void {
           reader announcing "IMG_20260714.jpg" is worse than silence, because it
           interrupts without informing.
         -->
-        <div v-if="media.length > 1" class="flex gap-2 overflow-x-auto pb-1">
+        <div v-if="media.length > 1" class="flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1">
             <button
                 v-for="(image, index) in media"
                 :key="image.url"
                 type="button"
-                class="h-16 w-20 shrink-0 overflow-hidden rounded border-2 transition-colors
+                class="h-16 w-20 shrink-0 snap-start overflow-hidden rounded border-2 transition-colors
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 :class="index === active ? 'border-brand' : 'border-transparent opacity-70 hover:opacity-100'"
                 :aria-label="`${t('media.image')} ${index + 1}`"
