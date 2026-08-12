@@ -2,7 +2,6 @@
 import { nextTick, onBeforeUnmount, ref, watch } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
-import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
 import { t } from '@/lib/i18n';
 import type { PublicNavItem } from '@/Components/Public/navigation';
 
@@ -168,11 +167,6 @@ onBeforeUnmount(unlock);
                     <AppIcon v-if="item.emphasised" name="spark" class="h-3.5 w-3.5 shrink-0 mh-lux-gold" />
                 </Link>
             </nav>
-
-            <!-- Language stays reachable without covering the list, per §7.1. -->
-            <div class="shrink-0 border-t border-line p-3">
-                <LocaleSwitcher block />
-            </div>
         </div>
     </div>
 </template>

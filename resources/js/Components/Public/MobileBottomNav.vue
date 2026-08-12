@@ -11,10 +11,10 @@ import type { SharedPageProps } from '@/Types/inertia';
  * The persistent five-tab bottom bar (<lg) — redesign §6.1.
  *
  * It COMPLEMENTS the existing drawer rather than replacing it: the drawer
- * (PublicMobileNav) keeps the full flag-gated navigation and the locale
- * switcher behind the topbar hamburger — a contract the acceptance suite
- * pins — while this bar carries the five primary destinations one thumb
- * reaches without opening anything.
+ * (PublicMobileNav) keeps the full flag-gated navigation behind the topbar
+ * hamburger — a contract the acceptance suite pins — while this bar carries
+ * the five primary destinations one thumb reaches without opening anything.
+ * (The locale switcher lives ONLY in the header now — re-architecture §5.)
  *
  * Flag-off tabs are OMITTED, never disabled: the server 404s a disabled
  * surface, so a rendered tab would be a dead promise. Everything derives
