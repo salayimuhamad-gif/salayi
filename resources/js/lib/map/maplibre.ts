@@ -29,6 +29,25 @@ import { trendColour, trendIconName } from './trend';
  */
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
+/*
+ * RTL TEXT SHAPING, bundled with the build instead of fetched from a CDN.
+ *
+ * MapLibre core ships no Arabic/Hebrew bidi or shaping engine: without the
+ * official RTL text plugin, every Arabic-script label — the basemap's own
+ * names (أربيل) and the Kurdish Sorani project names this adapter draws
+ * (هەولێر) — renders with isolated letter forms in left-to-right order.
+ * The plugin is a self-contained script MapLibre loads by URL; plain `?url`
+ * (no worker bundling — MapLibre performs the load itself) makes Vite emit
+ * the package's dist file as a real hashed asset served from this origin,
+ * so production Arabic rendering never depends on unpkg/jsdelivr or any
+ * other third-party CDN being up. The deep dist path resolves through the
+ * filesystem alias in vite.config.ts: the package's exports map exposes
+ * only its root, and the root is a raw ESM wrapper importing ./icu.wasm —
+ * MapLibre needs the SELF-CONTAINED worker script, which is exactly what
+ * dist/mapbox-gl-rtl-text.js is.
+ */
+import rtlTextPluginUrl from '@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js?url';
+
 /**
  * MapLibre adapter — the default, and the only one that needs no key (§10.1).
  *
@@ -70,6 +89,26 @@ export class MapLibreAdapter implements MapAdapter {
         // Idempotent; must precede the first Map construction, because the
         // worker pool is created eagerly in the constructor.
         maplibre.setWorkerUrl(maplibreWorkerUrl);
+
+        /*
+         * RTL plugin registration — also before the first Map, and exactly
+         * once per page lifetime. The status is module state inside
+         * maplibre-gl, so it outlives this adapter instance: repeated
+         * Inertia navigations and simultaneous maps re-enter here with the
+         * status already 'deferred', 'loading' or 'loaded' and must not
+         * (and do not) register again — only the pristine 'unavailable'
+         * state installs the plugin. lazy=true defers the actual download
+         * until the first Arabic-script glyph run reaches symbol layout, so
+         * a session that never meets RTL text never pays for it. A plugin
+         * failure degrades shaping only; it must never take the map down.
+         */
+        if (maplibre.getRTLTextPluginStatus() === 'unavailable') {
+            try {
+                await maplibre.setRTLTextPlugin(rtlTextPluginUrl, true);
+            } catch {
+                // Shaping degrades; the map itself stays up.
+            }
+        }
 
         /*
          * A zero-sized container is a distinct failure class (a map built

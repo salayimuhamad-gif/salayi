@@ -40,9 +40,30 @@ export default defineConfig({
         }),
     ],
     resolve: {
-        alias: {
-            '@': path.resolve(__dirname, 'resources/js'),
-        },
+        // Array form: the second entry needs a REGEX find. A string key
+        // matches only the bare id or id + '/', and the adapter imports the
+        // file with `?url`, so a string alias never fires and resolution
+        // falls through to the package exports map — which rejects the
+        // path (the build error this replaces). The regex matches the
+        // module id with or without a query and keeps the query intact.
+        alias: [
+            { find: '@', replacement: path.resolve(__dirname, 'resources/js') },
+            // The RTL text plugin's exports map exposes only its package
+            // root, and that root is a raw ESM wrapper importing ./icu.wasm
+            // — useless as a setRTLTextPlugin() target, which must be the
+            // SELF-CONTAINED worker script at dist/mapbox-gl-rtl-text.js.
+            // A filesystem alias resolves the dist file directly, bypassing
+            // the exports restriction without forking or patching the
+            // package; the adapter imports it with ?url so the file ships
+            // as a hashed asset of this origin (never a runtime CDN).
+            {
+                find: /^@mapbox\/mapbox-gl-rtl-text\/dist\/mapbox-gl-rtl-text\.js/,
+                replacement: path.resolve(
+                    __dirname,
+                    'node_modules/@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js',
+                ),
+            },
+        ],
     },
     build: {
         // Hostinger shared hosting: assets are shipped pre-built inside the
