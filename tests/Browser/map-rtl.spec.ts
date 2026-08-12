@@ -90,9 +90,17 @@ test('the RTL plugin ships as a same-origin production asset', async ({ page }) 
 test('the shipped pipeline lazily loads the plugin for أربيل and هەولێر', async ({ page, diagnostics }) => {
     const files = await buildFiles(page);
     const chunk = files.find((file) => file.includes('maplibre-gl-') && !file.includes('worker'));
-    const worker = files.find((file) => file.includes('maplibre-gl-worker'));
     const rtl = files.find((file) => file.includes('mapbox-gl-rtl-text'));
-    expect(chunk && worker && rtl, 'chunk, worker and plugin must all be in the manifest').toBeTruthy();
+
+    // The worker is a `?worker&url` asset, which Vite emits WITHOUT a
+    // manifest entry — but the PWA precache manifest inside sw.js names
+    // every built asset, worker included.
+    const sw = await page.request.get('/build/sw.js');
+    expect(sw.status(), 'the service worker bundle must be served').toBe(200);
+    const worker = (await sw.text()).match(/assets\/maplibre-gl-worker-[\w-]+\.js/)?.[0];
+
+    expect(chunk && rtl, 'chunk and plugin must be in the build manifest').toBeTruthy();
+    expect(worker, 'the MapLibre worker asset must be precached by sw.js').toBeTruthy();
 
     const rtlResponses: Array<{ url: string; status: number }> = [];
     page.on('response', (response) => {
