@@ -9,6 +9,34 @@
  * declared here — nothing needs its own reduced-motion rule.
  * ========================================================================== */
 
+/* --- Locale-primary typefaces -----------------------------------------------
+ * Kurdish Sorani reads through K24 wherever the face is available (device or
+ * a later self-hosted webfont — K24 is not on any keyless CDN, so the file
+ * itself is a provisioning/licensing follow-up recorded in the delivery
+ * report); Noto Kufi Arabic remains the LOADED fallback so ckb never renders
+ * broken. Arabic uses Noto Sans Arabic as its UI face with Kufi as fallback.
+ * Latin keeps Noto Sans (body) and Noto Serif Display (display headings).
+ * Body carries Tailwind's font-sans, so the override targets body + the
+ * font utilities under each html[lang].
+ * ------------------------------------------------------------------------ */
+html[lang='ckb'] body,
+html[lang='ckb'] .font-sans {
+    font-family: 'K24', 'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang='ckb'] .font-display {
+    font-family: 'K24', 'Noto Kufi Arabic', ui-serif, serif;
+}
+
+html[lang='ar'] body,
+html[lang='ar'] .font-sans {
+    font-family: 'Noto Sans Arabic', 'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang='ar'] .font-display {
+    font-family: 'Noto Sans Arabic', 'Noto Kufi Arabic', ui-serif, serif;
+}
+
 /* --- Dark compositional bands ---------------------------------------------
  * Charcoal sections (footer band, market-intelligence band) remap the token
  * MEANINGS locally, so existing token-based components render correctly
