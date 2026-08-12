@@ -65,9 +65,9 @@ void createInertiaApp({
     },
 
     progress: {
-        // Brass, matching the accent token. Visible against both the light
-        // and dark surface without a second colour.
-        color: 'rgb(201 162 39)',
+        // Champagne, matching the accent token's shipped default. Visible on
+        // the ivory surface and inside dark bands without a second colour.
+        color: 'rgb(185 142 47)',
         showSpinner: false,
     },
 });

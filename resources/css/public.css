@@ -1,0 +1,200 @@
+/* ==========================================================================
+ * Public-site presentation partial — light-first design system pieces.
+ *
+ * Imported by app.css (Vite inlines it into the one compiled stylesheet).
+ * Everything here is presentation only: dark compositional bands, the
+ * dir-conditional eyebrow, scroll-reveal, the AI shimmer, skeleton sweep,
+ * status-dot pulse, the contour-motif utility and the chart draw-on class.
+ * The global prefers-reduced-motion guard in app.css clamps every keyframe
+ * declared here — nothing needs its own reduced-motion rule.
+ * ========================================================================== */
+
+/* --- Dark compositional bands ---------------------------------------------
+ * Charcoal sections (footer band, market-intelligence band) remap the token
+ * MEANINGS locally, so existing token-based components render correctly
+ * inside with zero dark: variants. Scoped to a class — html.dark stays
+ * admin-only and untouched. Brand/accent/ai/positive/negative/caution are
+ * shared across light and dark deliberately.
+ * ------------------------------------------------------------------------ */
+.mh-dark-band {
+    --mh-surface: var(--mh-dark-surface);
+    --mh-surface-raised: var(--mh-dark-raised);
+    --mh-surface-sunken: var(--mh-dark-surface);
+    --mh-ink: var(--mh-dark-ink);
+    --mh-ink-muted: var(--mh-dark-muted);
+    --mh-ink-faint: var(--mh-dark-muted);
+    --mh-line: var(--mh-dark-line);
+    --mh-line-strong: var(--mh-dark-line);
+    background-color: rgb(var(--mh-dark-surface));
+    color: rgb(var(--mh-dark-ink));
+}
+
+/* --- Eyebrow ---------------------------------------------------------------
+ * Dir-conditional: uppercase + tracking are LATIN treatments. Arabic script
+ * has no case and letter-spacing harms joining perception, so under RTL the
+ * identity is carried by the champagne hairline rule the component renders
+ * (<span class="inline-block h-px w-6 bg-accent me-3">). Colour is
+ * accent-strong — the AA-safe champagne for small text (5.0:1 on ivory);
+ * plain accent never appears as small text. `.mh-lux-eyebrow` is aliased so
+ * every existing call site inherits the corrected treatment.
+ * ------------------------------------------------------------------------ */
+.mh-eyebrow,
+.mh-lux-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(var(--mh-accent-strong));
+}
+
+@media (min-width: 768px) {
+    .mh-eyebrow,
+    .mh-lux-eyebrow {
+        font-size: 0.8125rem;
+    }
+}
+
+[dir='ltr'] .mh-eyebrow,
+[dir='ltr'] .mh-lux-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+[dir='rtl'] .mh-eyebrow,
+[dir='rtl'] .mh-lux-eyebrow {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Eyebrows inside dark bands use plain accent (5.7:1 on charcoal — AA). */
+.mh-dark-band .mh-eyebrow,
+.mh-dark-band .mh-lux-eyebrow {
+    color: rgb(var(--mh-accent));
+}
+
+/* --- Scroll reveal ---------------------------------------------------------
+ * The hidden initial state exists ONLY on elements the composable has armed
+ * (`.mh-reveal-ready`, added after a JS matchMedia check confirmed motion is
+ * allowed). Reduced-motion users and no-JS clients never receive the arming
+ * class, so content is never invisible for them. Vertical-only — RTL-safe.
+ * ------------------------------------------------------------------------ */
+.mh-reveal-ready {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--stagger, 0ms);
+}
+
+.mh-reveal-ready.is-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- AI scanning shimmer ---------------------------------------------------
+ * Transform-only gradient sweep. Applied ONLY over genuinely-loading AI
+ * content (status === 'analyzing'); never decorative on static data.
+ * ------------------------------------------------------------------------ */
+@keyframes mh-ai-scan {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.mh-ai-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.mh-ai-shimmer::after {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    background: linear-gradient(
+        100deg,
+        transparent 20%,
+        rgb(var(--mh-ai) / 0.14) 50%,
+        transparent 80%
+    );
+    transform: translateX(-100%);
+    animation: mh-ai-scan 2.4s linear infinite;
+    pointer-events: none;
+}
+
+/* --- Skeleton shimmer ------------------------------------------------------ */
+@keyframes mh-skeleton-sweep {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.mh-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: rgb(var(--mh-surface-sunken));
+    border-radius: 0.625rem;
+}
+
+.mh-skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        transparent 30%,
+        rgb(var(--mh-surface-raised) / 0.55) 50%,
+        transparent 70%
+    );
+    animation: mh-skeleton-sweep 1.6s linear infinite;
+}
+
+/* --- Status dot pulse ------------------------------------------------------
+ * The tokenized successor of mh-invest-pulse for live AI status dots.
+ * ------------------------------------------------------------------------ */
+@keyframes mh-dot-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgb(var(--mh-ai) / 0.35);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgb(var(--mh-ai) / 0);
+    }
+}
+
+.mh-status-dot--live {
+    animation: mh-dot-pulse 2.6s ease-in-out infinite;
+}
+
+/* --- Erbil contour motif ---------------------------------------------------
+ * Thin-line map-contour texture behind heroes/section corners. The image is
+ * provided per-composition via --mh-contour-url (an inline data-URI from the
+ * SVG asset). background-position is PHYSICAL on purpose: corner art is
+ * direction-neutral decoration, not content (documented §8.11 exception).
+ * ------------------------------------------------------------------------ */
+.mh-contour-bg {
+    background-image: var(--mh-contour-url);
+    background-repeat: no-repeat;
+    background-position: 100% 0; /* physical corner art — direction-neutral */
+    background-size: min(48rem, 90%);
+}
+
+/* --- Chart draw-on ---------------------------------------------------------
+ * Applied ONLY to a chart's main polyline (limited-segment overlays carry
+ * their own inline dasharray and must never receive this class): dasharray
+ * equals the measured length, offset animates to zero on first intersection.
+ * ------------------------------------------------------------------------ */
+.mh-chart-draw {
+    stroke-dasharray: var(--len);
+    stroke-dashoffset: var(--len);
+}
+
+.mh-chart-draw.is-drawn {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}

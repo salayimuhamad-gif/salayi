@@ -34,7 +34,7 @@ const { current, available, switchTo } = useLocale();
                    lg:min-h-9 lg:min-w-0"
             :class="[
                 locale.code === current
-                    ? 'bg-accent text-[rgb(var(--mh-lux-on-accent))]'
+                    ? 'bg-accent text-ink'
                     : 'text-ink-muted hover:bg-surface-sunken hover:text-ink',
                 block ? 'flex-1' : '',
             ]"

@@ -34,28 +34,58 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     {{-- Noto Kufi Arabic is the PRIMARY face, not a fallback: it is the one
-         that shapes ک / ی / ە the way a Kurdish reader expects. --}}
+         that shapes ک / ی / ە the way a Kurdish reader expects. Serif Display
+         and JetBrains Mono are Latin-only usage (display headings under LTR,
+         large numerals, data/coordinates), so Sorani rendering never waits on
+         them — Bunny serves display=swap by default. --}}
     <link
-        href="https://fonts.bunny.net/css?family=noto-kufi-arabic:400,500,600,700|noto-sans:400,500,600"
+        href="https://fonts.bunny.net/css?family=noto-kufi-arabic:400,500,600,700|noto-sans:400,500,600|noto-serif-display:500,600|jetbrains-mono:400,600"
         rel="stylesheet"
     >
 
     <style>
         :root {
+            {{-- Admin-editable (DB branding) — bare RGB triples, same keys,
+                 same settings() mechanism, same validation. Only the shipped
+                 DEFAULTS moved to the light-first palette; operator-set values
+                 still win. --}}
             --mh-brand: {{ settings('branding.color_brand', '15 62 89') }};
             --mh-brand-soft: {{ settings('branding.color_brand_soft', '38 92 124') }};
             --mh-brand-strong: {{ settings('branding.color_brand_strong', '9 39 58') }};
-            --mh-accent: {{ settings('branding.color_accent', '201 162 39') }};
-            --mh-surface: {{ settings('branding.color_surface', '250 250 249') }};
+            --mh-accent: {{ settings('branding.color_accent', '185 142 47') }};
+            --mh-surface: {{ settings('branding.color_surface', '250 249 246') }};
+            --mh-ink: {{ settings('branding.color_ink', '23 24 26') }};
+            {{-- Derived (hardcoded). The two new voices — champagne tints and
+                 the AI teal — are default-only CSS custom properties, NOT
+                 DB-backed; exposing them in Admin/Branding is out-of-scope
+                 backend work. accent-strong exists because plain accent is
+                 2.9:1 on ivory — graphics/hairlines only; small accent TEXT
+                 always uses accent-strong (5.0:1). --}}
+            --mh-accent-soft: 232 216 178;
+            --mh-accent-strong: 138 101 30;
+            --mh-ai: 15 118 110;
+            --mh-ai-soft: 204 235 231;
+            --mh-ai-ink: 11 79 74;
             --mh-surface-raised: 255 255 255;
-            --mh-surface-sunken: 243 243 241;
-            --mh-ink: {{ settings('branding.color_ink', '23 23 23') }};
-            --mh-ink-muted: 90 90 88;
-            --mh-ink-faint: 140 140 137;
-            --mh-line: 224 223 219;
+            --mh-surface-sunken: 244 242 236;
+            --mh-ink-muted: 92 94 97;
+            --mh-ink-faint: 107 109 112;
+            --mh-line: 226 223 214;
+            --mh-line-strong: 205 201 190;
             --mh-positive: 21 128 61;
             --mh-negative: 185 28 28;
-            --mh-caution: 180 120 10;
+            {{-- caution darkened for AA text (5.7:1); caution-bright is the
+                 old value, kept for LARGE GRAPHICS ONLY (chart dashes, status
+                 dots, icon fills) — never body text. --}}
+            --mh-caution: 143 91 5;
+            --mh-caution-bright: 180 120 10;
+            {{-- Dark compositional bands (footer, market-intelligence) —
+                 consumed by .mh-dark-band, never by html.dark. --}}
+            --mh-dark-surface: 24 27 30;
+            --mh-dark-raised: 33 37 41;
+            --mh-dark-ink: 243 243 241;
+            --mh-dark-muted: 168 172 176;
+            --mh-dark-line: 54 59 64;
         }
 
         html.dark {
@@ -66,6 +96,7 @@
             --mh-ink-muted: 168 168 164;
             --mh-ink-faint: 118 118 115;
             --mh-line: 44 49 54;
+            --mh-line-strong: 64 70 76;
         }
     </style>
 

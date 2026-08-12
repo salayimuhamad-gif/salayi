@@ -128,7 +128,7 @@ watch(currentPath, () => {
             href="#public-main"
             class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-card
                    focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium
-                   focus:text-[rgb(var(--mh-lux-on-accent))]"
+                   focus:text-ink"
         >
             {{ t('nav.skip_to_content') }}
         </a>
@@ -150,7 +150,7 @@ watch(currentPath, () => {
                 second.
             -->
             <aside
-                class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-[var(--mh-lux-rail)] shrink-0
+                class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-64 shrink-0
                        overflow-y-auto border-e border-line bg-surface-raised lg:block"
             >
                 <PublicSidebar :items="navigation" />
