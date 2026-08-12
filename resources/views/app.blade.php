@@ -39,7 +39,7 @@
          large numerals, data/coordinates), so Sorani rendering never waits on
          them — Bunny serves display=swap by default. --}}
     <link
-        href="https://fonts.bunny.net/css?family=noto-kufi-arabic:400,500,600,700|noto-sans:400,500,600|noto-serif-display:500,600|jetbrains-mono:400,600"
+        href="https://fonts.bunny.net/css?family=noto-kufi-arabic:400,500,600,700|noto-sans:400,500,600|noto-sans-arabic:400,500,600,700|noto-serif-display:500,600|jetbrains-mono:400,600"
         rel="stylesheet"
     >
 
