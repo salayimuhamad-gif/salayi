@@ -8,6 +8,7 @@ import ProvenanceChip from '@/Components/ProvenanceChip.vue';
 import PriceHistory from '@/Components/PriceHistory.vue';
 import RatingPanel from '@/Components/RatingPanel.vue';
 import MediaGallery from '@/Components/MediaGallery.vue';
+import ErbilMapPreview from '@/Components/Public/ErbilMapPreview.vue';
 import KnowledgeTimeline from '@/Components/KnowledgeTimeline.vue';
 import { t, formatNumber } from '@/lib/i18n';
 
@@ -292,6 +293,21 @@ const missingSections = computed(() =>
 
             <AppCard v-if="prices.series.length > 0" :title="t('market.history.title')">
                 <PriceHistory :prices="prices" />
+            </AppCard>
+
+            <!-- The project located on its EXISTING coordinates (redesign
+                 §12.1): renders only when the server sent both, degrades
+                 silently on provider failure. No coordinate is ever invented. -->
+            <AppCard
+                v-if="project.geometry.latitude !== null && project.geometry.longitude !== null"
+                :title="t('nav.public.map')"
+                :padded="false"
+            >
+                <ErbilMapPreview
+                    :lat="project.geometry.latitude"
+                    :lng="project.geometry.longitude"
+                    :label="project.name ?? ''"
+                />
             </AppCard>
 
             <AppCard v-if="nearby.length > 0" :title="t('geography.nearby.title')">

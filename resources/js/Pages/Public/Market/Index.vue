@@ -5,6 +5,7 @@ import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppCard from '@/Components/ui/AppCard.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
+import MarketTrendChart from '@/Components/Public/MarketTrendChart.vue';
 import IndexExplanation from '@/Components/IndexExplanation.vue';
 import { t, formatNumber } from '@/lib/i18n';
 
@@ -59,16 +60,6 @@ const ordered = computed(() =>
     }),
 );
 
-function sparkPath(series: Index_['series']): string {
-    if (series.length < 2) return '';
-    const values = series.map((s) => Number(s.value));
-    const min = Math.min(...values);
-    const max = Math.max(...values);
-    const span = max - min || 1;
-    return values
-        .map((v, i) => `${(i / (values.length - 1)) * 100},${28 - ((v - min) / span) * 24}`)
-        .join(' ');
-}
 </script>
 
 <template>
@@ -110,25 +101,17 @@ function sparkPath(series: Index_['series']): string {
                     </p>
                 </div>
 
-                <!-- A sparkline, not a chart library. Twenty-four points need
-                     no dependency, and a public page should not pull one. -->
-                <svg
+                <!-- A sparkline, not a chart library (still). The upgraded
+                     chart draws on once in view and re-draws limited-sample
+                     runs as dashed caution overlays at the true coordinates —
+                     honesty in the visualization itself. Never mirrored. -->
+                <MarketTrendChart
                     v-if="index.series.length > 1"
-                    class="mt-4 h-8 w-full"
-                    viewBox="0 0 100 28"
-                    preserveAspectRatio="none"
-                    role="img"
+                    :series="index.series"
+                    :height="32"
+                    class="mt-4"
                     :aria-label="t('market.public.trend')"
-                >
-                    <polyline
-                        :points="sparkPath(index.series)"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        class="text-brand"
-                        vector-effect="non-scaling-stroke"
-                    />
-                </svg>
+                />
 
                 <div class="mt-4 border-t border-line pt-4">
                     <IndexExplanation

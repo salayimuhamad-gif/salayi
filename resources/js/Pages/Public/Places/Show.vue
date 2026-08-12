@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ErbilMapPreview from '@/Components/Public/ErbilMapPreview.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
@@ -105,6 +106,17 @@ defineProps<{
             </p>
             <p v-else class="mt-3 text-xs text-ink-faint">{{ t('geography.public.area_withheld') }}</p>
         </header>
+
+        <!-- The place on the map, from its EXISTING coordinates only
+             (redesign §12.1); silent degradation on provider failure. -->
+        <ErbilMapPreview
+            v-if="place.coordinates"
+            :lat="place.coordinates.latitude"
+            :lng="place.coordinates.longitude"
+            :label="place.name"
+            :zoom="15"
+            class="mt-6"
+        />
 
         <!-- --------------------------------------------------------- detail -->
         <dl class="mt-8 grid gap-4 sm:grid-cols-2">
