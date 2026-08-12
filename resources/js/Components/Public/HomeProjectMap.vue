@@ -3,7 +3,6 @@ import { computed, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vu
 import { Link, usePage } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
-import SectionHeading from '@/Components/Public/SectionHeading.vue';
 import { formatNumber, t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 import { createMapAdapter, type MapAdapter, type PriceTrend } from '@/lib/map';
@@ -36,9 +35,12 @@ import { normaliseTrend, trendArrowGlyph, trendHasClaim } from '@/lib/map/trend'
  * spinner; zero mapped projects states itself over a live basemap.
  *
  * FILTERS are strictly client-side over the fetched payload (§5.4): area,
- * project type, movement, last-update window — zero new endpoints. On <lg
- * they live in a bottom sheet behind one compact button; the pin card also
- * moves into a sheet there.
+ * project type, movement, last-update window — zero new endpoints. Per the
+ * re-architecture the filter row sits DIRECTLY ABOVE the map at every
+ * breakpoint — a horizontal scroll row below lg, wrapping above it — and
+ * every control is a 44px touch target (the accessibility suite measures
+ * '/'). The pin card stays a glass popover on desktop and a bottom sheet
+ * below lg.
  */
 const props = defineProps<{
     /** Which enabled surface backs the homepage map, decided by the parent. */
@@ -100,7 +102,6 @@ const movement = ref<Movement>('all');
 const updatedWithin = ref<Window_>('all');
 const areaFilter = ref('');
 const typeFilter = ref('');
-const filterSheetOpen = ref(false);
 
 const areasPresent = computed(() =>
     [...new Set(projects.value.map((p) => p.area).filter((a): a is string => a !== null && a !== ''))].sort());
@@ -312,22 +313,26 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
 
 <template>
     <section ref="wrapper" :aria-label="t('home.pricing_map.title')" data-testid="home-project-map">
-        <SectionHeading
-            :eyebrow="t('nav.public.invest')"
-            :title="t('home.pricing_map.title')"
-            :lead="pricing ? t('home.pricing_map.lead') : undefined"
-        >
-            <template #actions>
-                <Link
-                    :href="href"
-                    class="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-accent-strong
-                           transition-colors duration-200 ease-calm hover:text-ink"
-                >
-                    {{ t('home.live_map.open_full') }}
-                    <AppIcon name="arrow-end" class="h-4 w-4" mirror />
-                </Link>
-            </template>
-        </SectionHeading>
+        <!-- Compact heading row: the map itself is the section's statement,
+             so the heading is one line with the way into the full surface. -->
+        <div class="mb-3 flex flex-wrap items-end justify-between gap-x-6 gap-y-1">
+            <div class="min-w-0">
+                <h2 class="font-display text-xl font-semibold text-ink sm:text-2xl">
+                    {{ t('home.pricing_map.title') }}
+                </h2>
+                <p v-if="pricing" class="mt-1 max-w-prose text-sm text-ink-muted">
+                    {{ t('home.pricing_map.lead') }}
+                </p>
+            </div>
+            <Link
+                :href="href"
+                class="hidden min-h-11 items-center gap-1.5 text-sm font-medium text-accent-strong
+                       transition-colors duration-200 ease-calm hover:text-ink lg:inline-flex"
+            >
+                {{ t('home.live_map.open_full') }}
+                <AppIcon name="arrow-end" class="h-4 w-4" mirror />
+            </Link>
+        </div>
 
         <!-- Honest notice: the explorer feed carries no pricing enrichment. -->
         <p
@@ -338,14 +343,19 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
             {{ t('home.pricing_map.pricing_unavailable') }}
         </p>
 
-        <!-- Client-side filters over the fetched payload — desktop row. -->
-        <div v-if="pricing && loaded && projects.length > 0" class="mb-3 hidden flex-wrap items-center gap-2 lg:flex">
-            <span class="mh-label">{{ t('home.pricing_map.movement') }}</span>
+        <!-- Client-side filters DIRECTLY ABOVE the map, all breakpoints
+             (re-architecture §5/§6): a horizontal scroll row below lg,
+             wrapping above it. Every control is a 44px touch target. -->
+        <div
+            v-if="pricing && loaded && projects.length > 0"
+            class="mb-3 flex items-center gap-2 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0"
+        >
+            <span class="mh-label shrink-0 whitespace-nowrap">{{ t('home.pricing_map.movement') }}</span>
             <button
                 v-for="option in (['up', 'down', 'flat', 'unknown'] as const)"
                 :key="option"
                 type="button"
-                class="mh-invest-chip"
+                class="mh-invest-chip min-h-11 shrink-0 whitespace-nowrap"
                 :aria-pressed="movement === option"
                 @click="movement = movement === option ? 'all' : option"
             >
@@ -355,11 +365,13 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
                 {{ t(`home.pricing_map.movement_${option}`) }}
             </button>
 
-            <label class="mh-label ms-3" for="pm-window">{{ t('home.pricing_map.updated_within') }}</label>
+            <label class="mh-label ms-3 shrink-0 whitespace-nowrap" for="pm-window">
+                {{ t('home.pricing_map.updated_within') }}
+            </label>
             <select
                 id="pm-window"
                 v-model="updatedWithin"
-                class="min-h-9 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
             >
                 <option value="all">{{ t('home.pricing_map.updated_any') }}</option>
                 <option value="7">{{ t('home.pricing_map.days_7') }}</option>
@@ -371,7 +383,7 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
             <select
                 id="pm-area"
                 v-model="areaFilter"
-                class="min-h-9 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
             >
                 <option value="">{{ t('home.pricing_map.all_areas') }}</option>
                 <option v-for="area in areasPresent" :key="area" :value="area">{{ area }}</option>
@@ -381,7 +393,7 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
             <select
                 id="pm-type"
                 v-model="typeFilter"
-                class="min-h-9 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
             >
                 <option value="">{{ t('home.pricing_map.all_types') }}</option>
                 <option v-for="value in typesPresent" :key="value" :value="value">
@@ -392,7 +404,7 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
             <button
                 v-if="filtersActive"
                 type="button"
-                class="mh-lux-btn mh-lux-btn-ghost !py-1 text-xs"
+                class="mh-lux-btn mh-lux-btn-ghost min-h-11 shrink-0 whitespace-nowrap !py-1 text-xs"
                 @click="resetFilters()"
             >
                 {{ t('home.pricing_map.reset') }}
@@ -409,24 +421,24 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
             </div>
 
             <template v-else>
+                <!-- The dominant surface (re-architecture §5): first-viewport
+                     height on desktop, a large share of the screen on mobile. -->
                 <div
                     ref="container"
-                    class="h-[60vh] max-h-[640px] min-h-[320px] w-full lg:h-[clamp(420px,60vh,640px)]"
+                    class="h-[56vh] max-h-[700px] min-h-[360px] w-full lg:h-[clamp(480px,62vh,700px)]"
                     role="application"
                     :aria-label="t('home.pricing_map.title')"
                 />
 
-                <!-- Mobile: one compact affordance opens the filter sheet. -->
-                <button
-                    v-if="pricing && loaded && projects.length > 0"
-                    type="button"
-                    class="mh-invest-chip absolute start-3 top-3 z-10 min-h-11 lg:hidden"
-                    :aria-pressed="filtersActive"
-                    @click="filterSheetOpen = true"
+                <!-- Floating way into the full surface, ON the map — the
+                     glass chip stays visible at every breakpoint. -->
+                <Link
+                    :href="href"
+                    class="mh-invest-chip absolute end-3 top-3 z-10 min-h-11 whitespace-nowrap"
                 >
-                    <AppIcon name="filter" class="h-4 w-4" aria-hidden="true" />
-                    {{ t('map.invest.filters_label') }}
-                </button>
+                    {{ t('home.live_map.open_full') }}
+                    <AppIcon name="external" class="h-4 w-4" aria-hidden="true" />
+                </Link>
 
                 <!-- Truthful empty state, over a live basemap. -->
                 <div
@@ -543,84 +555,6 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
                     {{ pricing ? t('home.pricing_map.price_history') : t('map.invest.view_project') }}
                 </Link>
             </template>
-        </MobileBottomSheet>
-
-        <!-- Mobile filter sheet: the same client-side controls. -->
-        <MobileBottomSheet
-            :open="filterSheetOpen"
-            :title="t('map.invest.filters_label')"
-            :detents="['half', 'full']"
-            @close="filterSheetOpen = false"
-        >
-            <div class="space-y-5">
-                <fieldset>
-                    <legend class="mh-label mb-2">{{ t('home.pricing_map.movement') }}</legend>
-                    <div class="flex flex-wrap gap-2">
-                        <button
-                            v-for="option in (['up', 'down', 'flat', 'unknown'] as const)"
-                            :key="option"
-                            type="button"
-                            class="mh-invest-chip min-h-11"
-                            :aria-pressed="movement === option"
-                            @click="movement = movement === option ? 'all' : option"
-                        >
-                            <span v-if="option !== 'unknown'" aria-hidden="true" :class="movementTone[option]">
-                                {{ trendArrow(option) }}
-                            </span>
-                            {{ t(`home.pricing_map.movement_${option}`) }}
-                        </button>
-                    </div>
-                </fieldset>
-
-                <div>
-                    <label class="mh-label mb-2 block" for="pm-window-m">{{ t('home.pricing_map.updated_within') }}</label>
-                    <select
-                        id="pm-window-m"
-                        v-model="updatedWithin"
-                        class="min-h-11 w-full rounded-field border border-line-strong bg-surface-raised px-3 text-base text-ink"
-                    >
-                        <option value="all">{{ t('home.pricing_map.updated_any') }}</option>
-                        <option value="7">{{ t('home.pricing_map.days_7') }}</option>
-                        <option value="30">{{ t('home.pricing_map.days_30') }}</option>
-                        <option value="90">{{ t('home.pricing_map.days_90') }}</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="mh-label mb-2 block" for="pm-area-m">{{ t('home.pricing_map.area_label') }}</label>
-                    <select
-                        id="pm-area-m"
-                        v-model="areaFilter"
-                        class="min-h-11 w-full rounded-field border border-line-strong bg-surface-raised px-3 text-base text-ink"
-                    >
-                        <option value="">{{ t('home.pricing_map.all_areas') }}</option>
-                        <option v-for="area in areasPresent" :key="area" :value="area">{{ area }}</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="mh-label mb-2 block" for="pm-type-m">{{ t('home.pricing_map.type_label') }}</label>
-                    <select
-                        id="pm-type-m"
-                        v-model="typeFilter"
-                        class="min-h-11 w-full rounded-field border border-line-strong bg-surface-raised px-3 text-base text-ink"
-                    >
-                        <option value="">{{ t('home.pricing_map.all_types') }}</option>
-                        <option v-for="value in typesPresent" :key="value" :value="value">
-                            {{ t(`projects.types.${value}`) }}
-                        </option>
-                    </select>
-                </div>
-
-                <button
-                    v-if="filtersActive"
-                    type="button"
-                    class="mh-lux-btn mh-lux-btn-secondary w-full"
-                    @click="resetFilters()"
-                >
-                    {{ t('home.pricing_map.reset') }}
-                </button>
-            </div>
         </MobileBottomSheet>
     </section>
 </template>

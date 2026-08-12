@@ -16,25 +16,29 @@ import { useLocale } from '@/Composables/useLocale';
 import { useScrollReveal } from '@/Composables/useScrollReveal';
 
 /*
- * The Erbil market homepage (File one §4).
+ * The Erbil market homepage (File one §4), re-architected.
  *
  * §4 ends: "Do not display invented or demo market data." That is why every
  * section below is either real published data or an explicit empty state, and
  * why a fresh installation's homepage looks bare rather than plausible.
  *
- * The bare version is the correct one. A homepage showing invented Erbil prices
- * is indistinguishable to a visitor from one showing real prices, and the first
- * time somebody acts on a fabricated figure the platform's claim to be market
- * intelligence is finished.
+ * THE RE-ARCHITECTURE CHANGED THE STRUCTURE AND NOT ONE PROP. Same four
+ * props, same shapes, same server. The page now runs on the layout's 'home'
+ * chrome — no left rail (the horizontal topbar nav is the desktop
+ * navigation), no inherited max-w-6xl box — and owns its own containers:
  *
- * THE LIGHT-FIRST REDESIGN (master prompt §5) CHANGED THE PRESENTATION AND NOT
- * ONE PROP. Same four props, same shapes, same server. The section order now
- * follows §5.1 — hero, Pricing Intelligence Map, market pulse, projects,
- * areas, pathways, the charcoal market-intelligence band — and the mobile
- * layout turns the metric and project grids into snap carousels. What did NOT
+ *   1. compact hero (h1 + sub + ONE advisor CTA + the AI orb);
+ *   2. the Pricing Intelligence Map, filters directly above it, sized to the
+ *      first desktop viewport — the page's dominant element;
+ *   3. up to four market metric cards directly under the map;
+ *   4. projects, areas, pathways;
+ *   5. the charcoal market-intelligence band.
+ *
+ * The wide sections (hero, map, metrics) share one max-w-screen-2xl
+ * container; the editorial sections below keep max-w-7xl. What did NOT
  * move: the empty states, the confidence and sample figures, the absence of
- * project prices and photography on cards, and the rule that a call to action
- * exists only where its feature does.
+ * project prices and photography on cards, and the rule that a call to
+ * action exists only where its feature does.
  */
 const { localized } = useLocale();
 
@@ -92,14 +96,21 @@ const areaHrefs = computed(() =>
 );
 
 /*
- * The charcoal market-intelligence band (§5.8) repeats up to three of the
- * SAME indices the pulse strip renders — reuse, never new data — and links
- * to /market only when the feature is actually on (`reason` tells us when it
- * is off, and the backend 404s the route then). The /market pending-list is
- * NOT mirrored here: the homepage receives no `unavailable{}` prop, and
- * declaring specific absences from a hardcoded list could contradict the
- * server the day it ships one of them. The band states the methodology and
- * points at /market for the full declaration.
+ * The metric strip under the map shows AT MOST FOUR indices (§5's "3–4
+ * market metric cards") — the same server rows, sliced, never padded: two
+ * real indices render two cards, and the full list lives on /market.
+ */
+const metricIndices = computed(() => props.market.indices.slice(0, 4));
+
+/*
+ * The charcoal market-intelligence band repeats up to three of the SAME
+ * indices — reuse, never new data — and links to /market only when the
+ * feature is actually on (`reason` tells us when it is off, and the backend
+ * 404s the route then). The /market pending-list is NOT mirrored here: the
+ * homepage receives no `unavailable{}` prop, and declaring specific absences
+ * from a hardcoded list could contradict the server the day it ships one of
+ * them. The band states the methodology and points at /market for the full
+ * declaration.
  */
 const bandIndices = computed(() => props.market.indices.slice(0, 3));
 const marketLinkable = computed(() => props.market.reason !== 'feature_disabled');
@@ -109,41 +120,56 @@ const pageRoot = ref<HTMLElement | null>(null);
 useScrollReveal(pageRoot);
 
 /*
+ * Shared containers: the wide band for the map-led top of the page, the
+ * editorial measure below it.
+ */
+const wideBox = 'mx-auto w-full max-w-screen-2xl px-4 lg:px-8';
+const proseBox = 'mx-auto w-full max-w-7xl px-4 lg:px-8';
+
+/*
  * Mobile snap-carousel classes for card rails (§6.2): a scroll row below sm,
  * the grid above it. CSS-only — no carousel library, edge behavior from
  * scroll-snap alone.
  */
 const railClass = 'max-sm:flex max-sm:snap-x max-sm:snap-mandatory max-sm:gap-3 max-sm:overflow-x-auto '
     + 'max-sm:pb-2 grid gap-4 sm:grid-cols-2 lg:grid-cols-3';
+const metricRailClass = 'max-sm:flex max-sm:snap-x max-sm:snap-mandatory max-sm:gap-3 max-sm:overflow-x-auto '
+    + 'max-sm:pb-2 grid gap-4 sm:grid-cols-2 lg:grid-cols-4';
 const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
 </script>
 
 <template>
     <Head :title="t('home.hero_title')" />
 
-    <PublicLayout>
-        <div ref="pageRoot" class="space-y-14 md:space-y-18">
-            <!-- 1 · Hero. The primary section, and the only h1 on the page. -->
-            <AiAdvisorHero :enabled="cta.advisor" :href="actionHrefs.advisor" />
+    <PublicLayout chrome="home">
+        <div ref="pageRoot" class="space-y-12 md:space-y-16">
+            <!-- 1 · Compact hero: the only h1, one CTA, the orb. Its own
+                 vertical padding keeps the map inside the first viewport. -->
+            <div :class="wideBox">
+                <AiAdvisorHero :enabled="cta.advisor" :href="actionHrefs.advisor" />
 
-            <!-- 2 · The Pricing Intelligence Map — the major feature (§5.4).
-                 Backed by whichever public map surface is enabled — invest
-                 first (its rows carry the real prices and trends), the
-                 explorer otherwise, honestly unpriced. Both flags off: the
-                 section is absent, never a dead link. -->
-            <HomeProjectMap
-                v-if="cta.invest || cta.map"
-                :source="cta.invest ? 'invest' : 'map'"
-                :href="cta.invest ? actionHrefs.invest : actionHrefs.map"
-            />
-
-            <!-- 3 · Market pulse strip. -->
-            <section class="mh-reveal">
-                <SectionHeading
-                    :eyebrow="t('market.public.trend')"
-                    :title="t('home.indices')"
-                    :lead="market.has_data && market.latest_period ? `${t('market.period')}: ${market.latest_period}` : undefined"
+                <!-- 2 · The Pricing Intelligence Map — the page's dominant
+                     element, directly under the compact hero (§5). Backed by
+                     whichever public map surface is enabled — invest first
+                     (its rows carry the real prices and trends), the explorer
+                     otherwise, honestly unpriced. Both flags off: the section
+                     is absent, never a dead link. -->
+                <HomeProjectMap
+                    v-if="cta.invest || cta.map"
+                    :source="cta.invest ? 'invest' : 'map'"
+                    :href="cta.invest ? actionHrefs.invest : actionHrefs.map"
                 />
+            </div>
+
+            <!-- 3 · Market metric cards, directly under the map (§5): at most
+                 four, same real indices, explicit empty state otherwise. -->
+            <section class="mh-reveal" :class="wideBox">
+                <div class="mb-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                    <h2 class="font-display text-xl font-semibold text-ink sm:text-2xl">{{ t('home.indices') }}</h2>
+                    <p v-if="market.has_data && market.latest_period" class="text-sm text-ink-muted">
+                        {{ t('market.period') }}: <span class="numeral">{{ market.latest_period }}</span>
+                    </p>
+                </div>
 
                 <div v-if="!market.has_data" class="mh-lux-panel">
                     <AppEmptyState
@@ -154,9 +180,9 @@ const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
                     />
                 </div>
 
-                <div v-else :class="railClass">
+                <div v-else :class="metricRailClass">
                     <MarketMetricCard
-                        v-for="index in market.indices"
+                        v-for="index in metricIndices"
                         :key="index.key"
                         :index="index"
                         animated
@@ -168,7 +194,7 @@ const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
             <!-- 4 · Projects. Deliberately no price: a card price would be an
                  unqualified number, which is what the indices above take care
                  to avoid being. No photography either. -->
-            <section class="mh-reveal">
+            <section class="mh-reveal" :class="proseBox">
                 <SectionHeading :eyebrow="t('nav.public.projects')" :title="t('home.projects')" />
 
                 <div v-if="!projects.has_data" class="mh-lux-panel">
@@ -188,7 +214,7 @@ const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
 
             <!-- 5 · Areas that actually have something to show. Links only
                  when the public Area profile is switched on. -->
-            <section class="mh-reveal">
+            <section class="mh-reveal" :class="proseBox">
                 <SectionHeading :eyebrow="t('nav.public.areas')" :title="t('home.areas')" />
 
                 <div v-if="!areas.has_data" class="mh-lux-panel">
@@ -207,18 +233,20 @@ const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
             <section
                 v-if="cta.advisor || cta.lifestyle || cta.portfolio || cta.map || cta.offers"
                 class="mh-reveal"
+                :class="proseBox"
             >
                 <SectionHeading :title="t('home.quick_actions')" />
 
                 <PublicQuickActions :cta="cta" :hrefs="actionHrefs" />
             </section>
 
-            <!-- 7 · Market-intelligence band: the first dark composition.
-                 Same indices as section 3 (reuse, no new data), the
-                 methodology statement, and the way into /market — link only
-                 when the feature is on. Degrades to the statement alone. -->
-            <section class="mh-dark-band mh-reveal -mx-4 px-4 py-12 lg:-mx-8 lg:px-8 lg:py-16">
-                <div class="mx-auto max-w-6xl">
+            <!-- 7 · Market-intelligence band: the page's one dark composition
+                 (the footer is light now). Same indices as section 3 — reuse,
+                 no new data — the methodology statement, and the way into
+                 /market, link only when the feature is on. Full-bleed under
+                 the home chrome, so no negative-margin escapes. -->
+            <section class="mh-dark-band mh-reveal px-4 py-12 lg:px-8 lg:py-16">
+                <div class="mx-auto max-w-7xl">
                     <p class="mh-eyebrow flex items-center">
                         <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true"></span>
                         {{ t('market.public.title') }}
