@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
@@ -36,10 +37,37 @@ defineProps<{
 defineEmits<{ toggle: [] }>();
 
 const page = usePage<SharedPageProps>();
+
+/*
+ * Scroll elevation (redesign §13.1, adapted): the raised shadow appears once
+ * the page has moved. The 64->56px HEIGHT compression the spec sketches is
+ * deliberately not implemented — a sticky header changing height shifts the
+ * whole page by 8px (a real CLS hit §10.4 forbids) and would break the
+ * desktop rail's top-16/100dvh-4rem geometry. Elevation alone carries the
+ * scrolled state. Tiny passive listener, progressive enhancement.
+ */
+const scrolled = ref(false);
+
+function onScroll(): void {
+    scrolled.value = window.scrollY > 8;
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', onScroll);
+});
 </script>
 
 <template>
-    <header class="sticky top-0 z-40 border-b border-line bg-surface-raised">
+    <header
+        class="sticky top-0 z-40 border-b border-line bg-surface-raised/95 backdrop-blur
+               transition-shadow duration-200 ease-calm"
+        :class="scrolled ? 'shadow-raised' : 'shadow-hairline'"
+    >
         <div class="flex h-16 items-center gap-3 px-4 lg:px-6">
             <!-- §7.1 mobile: a labelled control, not an icon a reader has to
                  guess at. `nav.toggle_navigation` already existed; the previous

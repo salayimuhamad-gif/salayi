@@ -17,23 +17,38 @@ export type IconName =
     | 'advisor'
     | 'areas'
     | 'arrow-end'
+    | 'bell'
+    | 'building'
+    | 'chart-line'
     | 'check'
     | 'chevron'
+    | 'chevron-down'
     | 'close'
+    | 'compass'
+    | 'external'
+    | 'filter'
+    | 'globe'
+    | 'home'
     | 'invest'
+    | 'layers'
+    | 'locate'
     | 'map'
+    | 'map-pin'
     | 'market'
     | 'menu'
     | 'news'
     | 'offers'
     | 'portfolio'
     | 'projects'
+    | 'search'
     | 'send'
+    | 'shield-check'
     | 'spark'
     | 'trend-down'
     | 'trend-flat'
     | 'trend-up'
-    | 'user';
+    | 'user'
+    | 'x-circle';
 
 export const iconPaths: Record<IconName, string> = {
     advisor:
@@ -60,4 +75,24 @@ export const iconPaths: Record<IconName, string> = {
     'trend-flat': 'M4.6 12h14.8m0 0-3.2-3.2M19.4 12l-3.2 3.2',
     'trend-up': 'M4.6 15.6 12 8.2l3.1 3.1 4.3-4.3m0 0v4.4m0-4.4H15',
     user: 'M12 12.2a3.7 3.7 0 1 0 0-7.4 3.7 3.7 0 0 0 0 7.4Zm0 0c-3.6 0-6.5 2.3-6.5 5.2v1.8h13v-1.8c0-2.9-2.9-5.2-6.5-5.2Z',
+    /*
+     * Redesign additions — same 24-grid, same stroke discipline, paths only.
+     * Directional glyphs (external, locate crosshair ticks are symmetric;
+     * chevron-down is vertical) note their mirror rules at the call site.
+     */
+    bell: 'M12 4.2a5.2 5.2 0 0 1 5.2 5.2c0 3.4.9 5 1.8 6.1H5c.9-1.1 1.8-2.7 1.8-6.1A5.2 5.2 0 0 1 12 4.2Zm-2 13.6a2 2 0 0 0 4 0',
+    building: 'M5.2 20.2V5.4a1.2 1.2 0 0 1 1.2-1.2h7a1.2 1.2 0 0 1 1.2 1.2v14.8m0-9h3a1.2 1.2 0 0 1 1.2 1.2v7.8M3.6 20.2h16.8M8.2 7.6h1.2m2.4 0H13M8.2 10.8h1.2m2.4 0H13M8.2 14h1.2m2.4 0H13m-1.6 6.2v-3h-3v3',
+    'chart-line': 'M4 4.6v14.8h16M7.4 15.2l3.4-4 3 2.4 4.6-5.8',
+    'chevron-down': 'm5.5 9.5 6.5 6.4 6.5-6.4',
+    compass: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3.4-12.4-1.9 5.4-5.4 1.9 1.9-5.4Z',
+    external: 'M10 5.4H6.2A1.8 1.8 0 0 0 4.4 7.2v10.6a1.8 1.8 0 0 0 1.8 1.8h10.6a1.8 1.8 0 0 0 1.8-1.8V14m-6.2-9.6h6.2m0 0v6.2m0-6.2L10.4 12.6',
+    filter: 'M4.2 6h15.6l-6 7v5.4l-3.6 1.8V13Z',
+    globe: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-18c-2.4 2.2-3.8 5.4-3.8 9s1.4 6.8 3.8 9c2.4-2.2 3.8-5.4 3.8-9s-1.4-6.8-3.8-9ZM3.6 9.4h16.8M3.6 14.6h16.8',
+    home: 'm4.2 11.2 7.8-7 7.8 7M6.2 9.6v9.4a1.2 1.2 0 0 0 1.2 1.2h2.8v-5.4h3.6v5.4h2.8a1.2 1.2 0 0 0 1.2-1.2V9.6',
+    layers: 'm12 3.8 8.4 4.4L12 12.6 3.6 8.2Zm-8.4 8.6L12 16.8l8.4-4.4M3.6 16.4 12 20.8l8.4-4.4',
+    locate: 'M12 19.4a7.4 7.4 0 1 0 0-14.8 7.4 7.4 0 0 0 0 14.8Zm0-4.6a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6ZM12 2.2v2.4m0 14.8v2.4M2.2 12h2.4m14.8 0h2.4',
+    'map-pin': 'M12 21.2s6.8-6 6.8-11a6.8 6.8 0 1 0-13.6 0c0 5 6.8 11 6.8 11Zm0-8.4a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2Z',
+    search: 'M10.8 17.2a6.4 6.4 0 1 0 0-12.8 6.4 6.4 0 0 0 0 12.8Zm4.8-1.6 4.6 4.6',
+    'shield-check': 'M12 3.4 5 6v5.2c0 4.6 3 8 7 9.4 4-1.4 7-4.8 7-9.4V6Zm-3.2 8.8 2.3 2.3 4.1-4.6',
+    'x-circle': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.2 9.2l5.6 5.6m0-5.6-5.6 5.6',
 };
