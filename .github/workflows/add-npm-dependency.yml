@@ -1,0 +1,94 @@
+name: Add npm dependency
+
+# The release-engineering sandbox has no route to the npm registry, so a NEW
+# dependency cannot be added from there: npm must resolve the version and
+# write the real integrity hashes into package-lock.json itself (hand-editing
+# integrity data would be fabricating evidence, and `npm ci` would reject it —
+# the same reasoning refresh-built-assets.yml documents for security updates).
+#
+# This manually-dispatched maintenance job does the one thing the sandbox
+# cannot: run `npm install --save-exact` for an explicitly named package spec
+# on a runner with registry access, verify the updated lock still installs
+# cleanly, and push package.json + package-lock.json back to the branch it ran
+# on. Nothing is built here and nothing else is committed — the sanctioned
+# refresh-built-assets workflow remains the only place public/build is
+# regenerated.
+#
+# A push made with the workflow's own token does not trigger CI (GitHub's
+# recursion guard); dispatch the CI workflow against the branch afterwards.
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: 'npm package spec WITH a version or tag, e.g. @mapbox/mapbox-gl-rtl-text@0.2.3 or foo@latest'
+        required: true
+        type: string
+      dev:
+        description: 'Install as a devDependency'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: add-npm-dependency-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  add:
+    name: npm install --save-exact on a registry-connected runner
+    runs-on: ubuntu-24.04
+    env:
+      SPEC: ${{ inputs.spec }}
+      SAVE_FLAG: ${{ inputs.dev && '--save-dev' || '--save-prod' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      # From the committed lock first, so the starting point is exactly what
+      # CI installs today.
+      - run: npm ci
+
+      - name: Add the dependency, exact-pinned
+        run: npm install --save-exact "$SAVE_FLAG" "$SPEC"
+
+      # The spec is required to carry a version or tag, so stripping the text
+      # after the LAST @ always yields the bare package name (scopes keep
+      # their leading @). Printed so the dispatching engineer can read the
+      # resolved version and the package's real file layout from the log
+      # before writing any import path against it.
+      - name: Report the resolved version and package layout
+        run: |
+          NAME="${SPEC%@*}"
+          echo "== resolved entry in package.json =="
+          grep -F "\"$NAME\"" package.json
+          echo "== files shipped by the package =="
+          find "node_modules/$NAME" -maxdepth 2 -type f | sort
+          echo "== the package's own manifest =="
+          cat "node_modules/$NAME/package.json"
+
+      # The lock must still install cleanly and deterministically from
+      # scratch before it is committed.
+      - name: Reinstall from the updated lock
+        run: rm -rf node_modules && npm ci
+
+      - name: Commit and push the manifest and lock only
+        run: |
+          git add package.json package-lock.json
+          if git diff --cached --quiet; then
+            echo "dependency already present at the requested version; nothing to push"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit \
+            -m "build: add ${SPEC} as an exact-pinned dependency" \
+            -m "Installed by npm on a registry-connected runner via the add-npm-dependency maintenance workflow: npm resolved the version and wrote the real integrity hashes into package-lock.json (the sandbox has no registry route and integrity data is never hand-edited), and the updated lock was verified with a clean npm ci before committing. Only package.json and package-lock.json change here; public/build is regenerated separately by refresh-built-assets."
+          git push
