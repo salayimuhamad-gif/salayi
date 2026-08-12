@@ -4,15 +4,25 @@ import { Link, usePage } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
 import { t } from '@/lib/i18n';
 import InstallPrompt from '@/Components/InstallPrompt.vue';
-import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
 import MobileBottomNav from '@/Components/Public/MobileBottomNav.vue';
 import PublicSidebar from '@/Components/Public/PublicSidebar.vue';
 import PublicTopbar from '@/Components/Public/PublicTopbar.vue';
 import PublicMobileNav from '@/Components/Public/PublicMobileNav.vue';
-import SkylineErbil from '@/Components/Public/SkylineErbil.vue';
 import type { PublicNavItem } from '@/Components/Public/navigation';
 import type { IconName } from '@/Components/Icons/icons';
 import type { SharedPageProps } from '@/Types/inertia';
+
+/*
+ * Chrome variants (homepage re-architecture §5/§11). Additive and
+ * backward-compatible: every existing page renders 'default' — rail, boxed
+ * main — untouched. 'home' is the homepage's shell: NO left rail (the
+ * horizontal topbar nav is the primary desktop navigation there), and the
+ * main region carries no padding or max-width so the page composes its own
+ * full-bleed and contained sections. The <lg experience is identical in both
+ * chromes: hamburger + drawer + bottom tab bar, a contract the acceptance
+ * suite pins on '/'.
+ */
+const props = withDefaults(defineProps<{ chrome?: 'default' | 'home' }>(), { chrome: 'default' });
 
 const page = usePage<SharedPageProps>();
 const { localized } = useLocale();
@@ -141,6 +151,7 @@ watch(currentPath, () => {
             :home-href="localized('/')"
             :page-title="pageTitle"
             :mobile-open="mobileOpen"
+            :nav-items="props.chrome === 'home' ? navigation : null"
             @toggle="mobileOpen = !mobileOpen"
         />
 
@@ -150,17 +161,24 @@ watch(currentPath, () => {
                 a long page never strands the navigation above the fold. Hidden
                 rather than collapsed under lg: a 4rem icon-only rail forces
                 either a tooltip or an unlabelled control, and §13 rules out the
-                second.
+                second. Absent entirely in the home chrome — the homepage's
+                desktop navigation is the horizontal topbar nav, and a permanent
+                sidebar is exactly the structure the re-architecture removes.
             -->
             <aside
+                v-if="props.chrome === 'default'"
                 class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-64 shrink-0
                        overflow-y-auto border-e border-line bg-surface-raised lg:block"
             >
                 <PublicSidebar :items="navigation" />
             </aside>
 
-            <main id="public-main" class="min-w-0 flex-1 px-4 py-8 pb-24 lg:px-8 lg:py-10">
-                <div class="mx-auto w-full max-w-6xl">
+            <main
+                id="public-main"
+                class="min-w-0 flex-1"
+                :class="props.chrome === 'home' ? 'pb-24' : 'px-4 py-8 pb-24 lg:px-8 lg:py-10'"
+            >
+                <div :class="props.chrome === 'home' ? undefined : 'mx-auto w-full max-w-6xl'">
                     <slot />
                 </div>
             </main>
@@ -169,47 +187,39 @@ watch(currentPath, () => {
         <PublicMobileNav :open="mobileOpen" :items="navigation" @close="mobileOpen = false" />
         <MobileBottomNav />
 
-        <footer class="pb-14 lg:pb-0">
-            <!-- Skyline echo, inverted above the charcoal band. Decorative,
-                 inline SVG (the acceptance suite forbids main img; footer sits
-                 outside main, but one mechanism serves both). -->
-            <div class="h-10 overflow-hidden text-ink opacity-[.08] md:h-14" aria-hidden="true">
-                <SkylineErbil flip class="h-full w-full" />
-            </div>
-
-            <div class="mh-dark-band">
-                <div class="mx-auto w-full max-w-6xl px-4 py-10 lg:px-8 lg:py-14">
-                    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-                        <div class="max-w-sm">
-                            <p class="font-display text-lg font-bold text-ink">{{ siteName }}</p>
-                            <p class="mt-2 text-sm text-ink-muted">{{ t('home.hero_sub') }}</p>
-                        </div>
-
-                        <nav v-if="navigation.length > 0" :aria-label="t('nav.primary_navigation')">
-                            <ul class="grid grid-cols-2 gap-x-10 gap-y-2 sm:grid-cols-3">
-                                <li v-for="item in navigation" :key="item.key">
-                                    <Link
-                                        :href="item.href"
-                                        class="inline-flex min-h-11 items-center text-sm text-ink-muted
-                                               transition-colors duration-200 ease-calm hover:text-ink"
-                                    >
-                                        {{ t(`nav.public.${item.key}`) }}
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <LocaleSwitcher />
+        <!-- Lighter footer (re-architecture §12): a quiet sunken band instead
+             of the charcoal composition, and NO locale switcher — the language
+             control exists exactly once, in the header. -->
+        <footer class="border-t border-line bg-surface-sunken pb-14 lg:pb-0">
+            <div class="mx-auto w-full max-w-screen-2xl px-4 py-10 lg:px-8">
+                <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+                    <div class="max-w-sm">
+                        <p class="font-display text-lg font-bold text-ink">{{ siteName }}</p>
+                        <p class="mt-2 text-sm text-ink-muted">{{ t('home.hero_sub') }}</p>
                     </div>
 
-                    <div class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
-                                md:flex-row md:items-center md:justify-between">
-                        <!-- Data honesty, stated where the page closes: distances
-                             are straight-line; market figures carry their own
-                             methodology qualifiers. Existing strings, verbatim. -->
-                        <p class="max-w-xl">{{ t('map.distance.straight_line_notice') }}</p>
-                        <p class="numeral shrink-0">{{ siteName }} · v{{ page.props.app.version }}</p>
-                    </div>
+                    <nav v-if="navigation.length > 0" :aria-label="t('nav.primary_navigation')">
+                        <ul class="grid grid-cols-2 gap-x-10 gap-y-2 sm:grid-cols-3">
+                            <li v-for="item in navigation" :key="item.key">
+                                <Link
+                                    :href="item.href"
+                                    class="inline-flex min-h-11 items-center text-sm text-ink-muted
+                                           transition-colors duration-200 ease-calm hover:text-ink"
+                                >
+                                    {{ t(`nav.public.${item.key}`) }}
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
+                            md:flex-row md:items-center md:justify-between">
+                    <!-- Data honesty, stated where the page closes: distances
+                         are straight-line; market figures carry their own
+                         methodology qualifiers. Existing strings, verbatim. -->
+                    <p class="max-w-xl">{{ t('map.distance.straight_line_notice') }}</p>
+                    <p class="numeral shrink-0">{{ siteName }} · v{{ page.props.app.version }}</p>
                 </div>
             </div>
         </footer>

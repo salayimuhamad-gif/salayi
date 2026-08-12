@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
 import { t } from '@/lib/i18n';
+import type { PublicNavItem } from '@/Components/Public/navigation';
 import type { SharedPageProps } from '@/Types/inertia';
 
 /*
@@ -26,17 +27,30 @@ import type { SharedPageProps } from '@/Types/inertia';
  * only account surface with a public route, and it already has its own call to
  * action on the homepage.
  */
-defineProps<{
+const props = defineProps<{
     siteName: string;
     homeHref: string;
     /** Already translated by the layout, or null on a page with no nav match. */
     pageTitle: string | null;
     mobileOpen: boolean;
+    /**
+     * Horizontal desktop navigation (homepage re-architecture §5): when the
+     * layout passes the resolved nav items — same flag-gated, localized
+     * entries the rail and drawer consume — this bar renders them inline and
+     * becomes the page's PRIMARY desktop navigation. Additive and optional:
+     * absent (every non-home page today) the header renders exactly as
+     * before. The brand link stays the FIRST anchor in the header either way
+     * (the locales suite pins that), and the <lg hamburger/drawer contract
+     * is untouched — the horizontal nav simply does not exist below lg.
+     */
+    navItems?: PublicNavItem[] | null;
 }>();
 
 defineEmits<{ toggle: [] }>();
 
 const page = usePage<SharedPageProps>();
+
+const hasNav = computed(() => (props.navItems?.length ?? 0) > 0);
 
 /*
  * Scroll elevation (redesign §13.1, adapted): the raised shadow appears once
@@ -100,10 +114,43 @@ onBeforeUnmount(() => {
                 <span class="truncate font-display text-base font-bold text-ink">{{ siteName }}</span>
             </Link>
 
+            <!-- Horizontal primary navigation (home chrome only). Flag-gated
+                 items, already localized by the layout; flex-1 + min-w-0 keeps
+                 a crowded lg viewport scrollable instead of broken. -->
+            <nav
+                v-if="hasNav"
+                :aria-label="t('nav.primary_navigation')"
+                class="ms-4 hidden min-w-0 flex-1 items-center gap-0.5 overflow-x-auto lg:flex xl:gap-1"
+            >
+                <Link
+                    v-for="item in navItems"
+                    :key="item.key"
+                    :href="item.href"
+                    :aria-current="item.active ? 'page' : undefined"
+                    class="relative flex min-h-11 shrink-0 items-center gap-1.5 rounded-card px-3 text-sm
+                           font-medium transition-colors duration-200 ease-calm
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    :class="item.active
+                        ? 'text-ink'
+                        : item.emphasised
+                            ? 'text-ai-ink hover:bg-ai-soft/60'
+                            : 'text-ink-muted hover:bg-surface-sunken hover:text-ink'"
+                >
+                    <AppIcon v-if="item.emphasised" name="spark" class="h-4 w-4" aria-hidden="true" />
+                    {{ t(`nav.public.${item.key}`) }}
+                    <span
+                        v-if="item.active"
+                        aria-hidden="true"
+                        class="absolute inset-x-3 bottom-0.5 h-0.5 rounded-pill bg-accent"
+                    ></span>
+                </Link>
+            </nav>
+
             <!-- Page context. Derived from the active navigation entry, so it is
                  a real translated route label and never a string this component
-                 invented. -->
-            <template v-if="pageTitle !== null">
+                 invented. Suppressed under the horizontal nav, which already
+                 marks the current surface itself. -->
+            <template v-if="pageTitle !== null && !hasNav">
                 <span class="hidden text-ink-faint md:inline" aria-hidden="true">/</span>
                 <span class="hidden truncate text-sm text-ink-muted md:inline">{{ pageTitle }}</span>
             </template>
