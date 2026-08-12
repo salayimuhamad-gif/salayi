@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
+import AnimatedCounter from '@/Components/ui/AnimatedCounter.vue';
 import { t, formatNumber } from '@/lib/i18n';
 
 /*
@@ -39,7 +40,25 @@ interface Index {
     is_limited: boolean;
 }
 
-const props = defineProps<{ index: Index }>();
+const props = withDefaults(defineProps<{ index: Index; animated?: boolean }>(), { animated: false });
+
+/*
+ * The value arrives as a string. When it parses to a finite number it is
+ * rendered through the product's own formatNumber (same value, thousand
+ * separators, Latin digits) and may count up on first intersection; when it
+ * does not parse, the raw server string renders untouched. Formatting never
+ * changes the figure — only its presentation.
+ */
+const numericValue = computed<number | null>(() => {
+    const parsed = Number(props.index.value);
+
+    return Number.isFinite(parsed) ? parsed : null;
+});
+
+const fractionDigits = computed(() =>
+    numericValue.value !== null && !Number.isInteger(numericValue.value) ? 2 : 0);
+
+const formatValue = (n: number): string => formatNumber(n, fractionDigits.value);
 
 const change = computed<number | null>(() => {
     if (props.index.change_percent === null) return null;
@@ -85,8 +104,13 @@ const confidenceTone = computed(
         </header>
 
         <div class="mt-3 flex items-end gap-3">
-            <span class="numeral font-display text-3xl font-semibold leading-none text-ink">
-                {{ index.value }}
+            <span class="numeral font-display text-3xl font-semibold leading-none text-ink md:text-4xl">
+                <AnimatedCounter
+                    v-if="animated && numericValue !== null"
+                    :value="numericValue"
+                    :format="formatValue"
+                />
+                <template v-else>{{ numericValue !== null ? formatValue(numericValue) : index.value }}</template>
             </span>
 
             <span v-if="change !== null" class="flex items-center gap-1" :class="trendTone">

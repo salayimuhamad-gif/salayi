@@ -45,9 +45,15 @@ for (const locale of LOCALES) {
 
         test('presents no photographic or charted data', async ({ page }) => {
             // The server sends no image field and one period per index, so an
-            // <img> or a chart primitive here would be invented.
+            // <img> or a chart primitive here would be invented. The ONE
+            // sanctioned canvas is the Pricing Intelligence Map's own
+            // MapLibre surface (redesign §5.4 — now homepage section 2, so
+            // its lazy mount can fire without scrolling on tall viewports);
+            // every identity motif ships as inline SVG paths or CSS
+            // backgrounds precisely so this gate keeps meaning what it says.
             await expect(page.locator('main img')).toHaveCount(0);
-            await expect(page.locator('main polyline, main canvas')).toHaveCount(0);
+            await expect(page.locator('main polyline')).toHaveCount(0);
+            await expect(page.locator('main canvas:not(.maplibregl-canvas)')).toHaveCount(0);
         });
     });
 }
