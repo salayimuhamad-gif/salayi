@@ -40,11 +40,13 @@ import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&ur
  * (no worker bundling — MapLibre performs the load itself) makes Vite emit
  * the package's dist file as a real hashed asset served from this origin,
  * so production Arabic rendering never depends on unpkg/jsdelivr or any
- * other third-party CDN being up. The bare package id is used — not the
- * deep dist path — because the package's exports map only exposes its
- * root, which resolves to dist/mapbox-gl-rtl-text.js.
+ * other third-party CDN being up. The deep dist path resolves through the
+ * filesystem alias in vite.config.ts: the package's exports map exposes
+ * only its root, and the root is a raw ESM wrapper importing ./icu.wasm —
+ * MapLibre needs the SELF-CONTAINED worker script, which is exactly what
+ * dist/mapbox-gl-rtl-text.js is.
  */
-import rtlTextPluginUrl from '@mapbox/mapbox-gl-rtl-text?url';
+import rtlTextPluginUrl from '@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js?url';
 
 /**
  * MapLibre adapter — the default, and the only one that needs no key (§10.1).

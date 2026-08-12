@@ -42,6 +42,18 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'resources/js'),
+            // The RTL text plugin's exports map exposes only its package
+            // root, and that root is a raw ESM wrapper importing ./icu.wasm
+            // — useless as a setRTLTextPlugin() target, which must be the
+            // SELF-CONTAINED worker script at dist/mapbox-gl-rtl-text.js.
+            // A filesystem alias resolves the dist file directly, bypassing
+            // the exports restriction without forking or patching the
+            // package; the adapter imports it with ?url so the file ships
+            // as a hashed asset of this origin (never a runtime CDN).
+            '@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js': path.resolve(
+                __dirname,
+                'node_modules/@mapbox/mapbox-gl-rtl-text/dist/mapbox-gl-rtl-text.js',
+            ),
         },
     },
     build: {
