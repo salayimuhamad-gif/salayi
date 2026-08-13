@@ -47,9 +47,9 @@ class ReleaseBrowserSpecClosureTest extends TestCase
             0,
             $process->getExitCode(),
             "The release browser-spec registry and tests/Browser disagree — classify the spec in\n"
-            . "scripts/release/release_gates.py (PLAYWRIGHT_REMAINING_SPECS, plus\n"
-            . "PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS only if its skips are reviewed):\n"
-            . $process->getOutput() . $process->getErrorOutput(),
+            ."scripts/release/release_gates.py (PLAYWRIGHT_REMAINING_SPECS, plus\n"
+            ."PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS only if its skips are reviewed):\n"
+            .$process->getOutput().$process->getErrorOutput(),
         );
     }
 
@@ -67,7 +67,7 @@ class ReleaseBrowserSpecClosureTest extends TestCase
             'tests/Browser/map-rtl.spec.ts',
             $process->getOutput(),
             'The Arabic-script RTL plugin spec must be in the canonical remaining suite, '
-            . 'so every final release actually executes it.',
+            .'so every final release actually executes it.',
         );
     }
 }
