@@ -68,10 +68,17 @@ final class AreaController extends Controller
 
     public function store(AreaRequest $request): RedirectResponse
     {
-        $area = Area::query()->create($request->validated() + [
-            'publication_status' => PublicationStatus::Draft,
-            'created_by' => $request->user()?->id,
-        ]);
+        try {
+            $area = Area::query()->create($request->validated() + [
+                'publication_status' => PublicationStatus::Draft,
+                'created_by' => $request->user()?->id,
+            ]);
+        } catch (RuntimeException $e) {
+            // The model guards the hierarchy independently of the request —
+            // the parent can change between validation and this save. Same
+            // contract as update(): a field error, never a 500.
+            return back()->withErrors(['parent_id' => $e->getMessage()]);
+        }
 
         $this->audit->record('area.created', $area, $request->validated());
 

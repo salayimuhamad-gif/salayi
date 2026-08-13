@@ -24,6 +24,8 @@ export interface BrowserFixtures {
     admin: { email: string; secret: string };
     plain: { email: string };
     mfa: { email: string; secret: string };
+    /** An admin-owned wizard draft whose Location step is directly reachable. */
+    wizard_draft_id: number;
     flags: Record<string, boolean>;
 }
 

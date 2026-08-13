@@ -257,6 +257,35 @@ foreach ($projects as $fixture) {
     }
 }
 
+/*
+ * The project wizard, for the map suite's provider-failure test: the flag
+ * switched on the operator's way, plus ONE unscoped draft owned by the admin
+ * with the identity step already completed — so the Location step (the
+ * wizard MapPicker) is directly reachable in a browser without walking the
+ * earlier steps, which are not what that test measures.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'projects.wizard'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+DB::table('project_drafts')->updateOrInsert(
+    ['user_id' => $admin->id, 'current_step' => 'location'],
+    [
+        'company_id' => null,
+        'project_id' => null,
+        'payload' => json_encode(['identity' => ['name_ckb' => 'ڕەشنووسی تاقیکردنەوەی نەخشە']]),
+        'completed_steps' => json_encode(['identity']),
+        'last_touched_at' => now(),
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+$wizardDraftId = (int) DB::table('project_drafts')
+    ->where('user_id', $admin->id)
+    ->where('current_step', 'location')
+    ->value('id');
+
 cache()->flush();
 
 file_put_contents(
@@ -266,7 +295,8 @@ file_put_contents(
         'admin' => ['email' => $admin->email, 'secret' => $adminSecret],
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
-        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true],
+        'wizard_draft_id' => $wizardDraftId,
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
