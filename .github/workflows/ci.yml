@@ -351,6 +351,41 @@ jobs:
                <(cut -d' ' -f1 "$RUNNER_TEMP/dist-b/SHA256SUMS.txt")
           echo "archives are reproducible"
 
+      # The FINAL-RELEASE delivery packaging, not just the normal archive:
+      # two full offline release cycles (freeze, builders, indexes, sealing
+      # and the clean-room verifier are real; toolchains are stubbed) from
+      # one frozen input, byte-compared under a closed classification —
+      # every product artifact must be identical, only the named operational
+      # evidence (ledger, sealed evidence, indexes, master) may differ.
+      # The final-delivery builders once stamped wall-clock times and swept
+      # interpreter caches, which no amount of npm/Vite reproducibility can
+      # see; this exercises the exact packaging path a final release runs.
+      #
+      # The baseline must be the REAL sealed v6 archive (a synthetic one is
+      # impossible by design: the deletion contract requires a member the
+      # auditor waives only under the sealed SHA-256). It is fetched from
+      # the current release-input branch and verified against the pinned
+      # waiver constant in audit_archive.py — the single source of truth
+      # for the sealed identity — before anything consumes it.
+      - name: Final-delivery packaging determinism
+        run: |
+          git fetch --depth 1 origin final-inputs/112f93f
+          git show FETCH_HEAD:release-input/baseline.zip > "$RUNNER_TEMP/baseline.zip"
+          SEALED=$(python3 - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('a', 'scripts/release/audit_archive.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          for key in module.BASELINE_LEGACY_ARTIFACTS:
+              print(key)
+          PY
+          )
+          echo "$SEALED  $RUNNER_TEMP/baseline.zip" | sha256sum -c - \
+            || { echo "fetched baseline does not match the sealed identity"; exit 1; }
+          export MYHAWLER_BASELINE_ARCHIVE="$RUNNER_TEMP/baseline.zip"
+          export MYHAWLER_BASELINE_SHA256="$SEALED"
+          bash scripts/release/verify_delivery_determinism.sh --work "$RUNNER_TEMP/determinism"
+
       - uses: actions/upload-artifact@v4
         with:
           name: release
