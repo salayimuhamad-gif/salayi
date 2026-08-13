@@ -13,14 +13,74 @@ the archive audit forbids shipping it.
 from __future__ import annotations
 
 import argparse
+import datetime
 import hashlib
+import os
 import shutil
+import stat
 import subprocess
 import sys
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from release_gates import runtime_excluded as excluded  # noqa: E402
+
+
+def zip_date_time(path: Path | None = None):
+    """
+    SOURCE_DATE_EPOCH when the environment provides it (the release cycle
+    derives it from the verified input archive), else the file's own mtime.
+    The previous `zip -qrX` subprocess stamped each entry with its on-disk
+    mtime — and every runtime file is copied fresh during the run, so two
+    runs from identical inputs produced 890 metadata-differing entries.
+    """
+    epoch = os.environ.get('SOURCE_DATE_EPOCH')
+    if epoch and epoch.isdigit():
+        moment = datetime.datetime.fromtimestamp(int(epoch), datetime.timezone.utc)
+    elif path is not None:
+        moment = datetime.datetime.fromtimestamp(path.stat().st_mtime, datetime.timezone.utc)
+    else:
+        moment = datetime.datetime(1980, 1, 1, tzinfo=datetime.timezone.utc)
+    if moment.year < 1980:
+        moment = datetime.datetime(1980, 1, 1, tzinfo=datetime.timezone.utc)
+    return (moment.year, moment.month, moment.day,
+            moment.hour, moment.minute, moment.second)
+
+
+def zip_tree(archive: Path, root: Path, members: list[str]) -> None:
+    """
+    Deterministic replacement for `zip -qrX <archive> <members...>`:
+    sorted traversal (readdir order is filesystem accident), directory
+    entries kept (the historical archives carried them), pinned timestamps,
+    permissions from disk, no extra fields (zipfile writes none — the -X
+    the subprocess needed).
+    """
+    entries: list[tuple[str, Path, bool]] = []
+    for member in members:
+        path = root / member
+        if path.is_file():
+            entries.append((member, path, False))
+            continue
+        if not path.is_dir():
+            raise SystemExit(f'FAIL: archive member missing: {member}')
+        entries.append((member + '/', path, True))
+        for sub in sorted(path.rglob('*')):
+            rel = sub.relative_to(root).as_posix()
+            entries.append((rel + '/', sub, True) if sub.is_dir() else (rel, sub, False))
+    entries.sort(key=lambda e: e[0])
+
+    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as zf:
+        for arcname, path, is_dir in entries:
+            info = zipfile.ZipInfo(arcname, date_time=zip_date_time(path))
+            mode = stat.S_IMODE(path.stat().st_mode)
+            if is_dir:
+                info.external_attr = ((mode | stat.S_IFDIR) << 16) | 0x10
+                zf.writestr(info, b'')
+            else:
+                info.external_attr = (mode | stat.S_IFREG) << 16
+                info.compress_type = zipfile.ZIP_DEFLATED
+                zf.writestr(info, path.read_bytes())
 
 
 def digest(path: Path) -> str:
@@ -86,9 +146,8 @@ def main() -> int:
     output = Path(args.output)
     archive = output.with_suffix('.zip')
     archive.unlink(missing_ok=True)
-    subprocess.run(['zip', '-qrX', str(archive), 'application', 'public_html',
-                    'DELETE_FILES.txt', 'RUNTIME_MANIFEST.txt'],
-                   cwd=str(runtime), check=True)
+    zip_tree(archive, runtime,
+             ['application', 'public_html', 'DELETE_FILES.txt', 'RUNTIME_MANIFEST.txt'])
 
     # Written from the containing directory so the file contains hash AND name.
     subprocess.run(f'sha256sum {archive.name} > {archive.name}.sha256',

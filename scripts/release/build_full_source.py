@@ -34,15 +34,54 @@ Usage:
                          [--manifest FILE] [--min-files N] [--self-test]
 """
 import argparse
+import datetime
 import hashlib
 import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
 import zipfile
 from pathlib import Path
+
+
+def zip_date_time(path: Path | None = None):
+    """
+    The entry timestamp: SOURCE_DATE_EPOCH when the environment provides it
+    (the release cycle derives it from the verified input archive, so two
+    runs from the same input stamp identical times), otherwise the input
+    file's own mtime — the historical behavior for standalone invocations.
+    zipfile refuses years before 1980, so an epoch below that clamps up.
+    """
+    epoch = os.environ.get('SOURCE_DATE_EPOCH')
+    if epoch and epoch.isdigit():
+        moment = datetime.datetime.fromtimestamp(int(epoch), datetime.timezone.utc)
+    elif path is not None:
+        moment = datetime.datetime.fromtimestamp(path.stat().st_mtime, datetime.timezone.utc)
+    else:
+        moment = datetime.datetime(1980, 1, 1, tzinfo=datetime.timezone.utc)
+    if moment.year < 1980:
+        moment = datetime.datetime(1980, 1, 1, tzinfo=datetime.timezone.utc)
+    return (moment.year, moment.month, moment.day,
+            moment.hour, moment.minute, moment.second)
+
+
+def zip_add_file(zf: zipfile.ZipFile, path: Path, arcname: str) -> None:
+    """zf.write with a pinned timestamp; permissions still come from disk."""
+    info = zipfile.ZipInfo(arcname, date_time=zip_date_time(path))
+    info.external_attr = (stat.S_IMODE(path.stat().st_mode) | stat.S_IFREG) << 16
+    info.compress_type = zipfile.ZIP_DEFLATED
+    zf.writestr(info, path.read_bytes())
+
+
+def zip_add_text(zf: zipfile.ZipFile, arcname: str, text: str) -> None:
+    """writestr with a pinned timestamp instead of the wall clock."""
+    info = zipfile.ZipInfo(arcname, date_time=zip_date_time())
+    info.external_attr = (0o644 | stat.S_IFREG) << 16
+    info.compress_type = zipfile.ZIP_DEFLATED
+    zf.writestr(info, text)
 
 NAME = 'myhawler-account-first-registration-FULL-SOURCE'
 DEFAULT_MIN_FILES = 800
@@ -61,6 +100,15 @@ EXCLUDE_PREFIXES = (
     '.phpunit.cache/', 'dist/',
     'docs/release/',            # generated: the reports are injected below
 )
+
+# Interpreter droppings, not source. The release cycle itself imports
+# release_gates.py and friends FROM the frozen tree (the spec-closure gate,
+# the Playwright merges), and CPython writes __pycache__/*.pyc beside them —
+# bytecode that embeds the absolute build path, so two runs from identical
+# inputs swept different bytes into the archive, its SHA256SUMS.txt and
+# FULL_SOURCE_MANIFEST. The staging exclusion policy already keeps pycache
+# out of the tree identity; the sweep here must apply the same rule.
+EXCLUDE_DIR_NAMES = ('__pycache__',)
 
 # SHA256SUMS.txt is REGENERATED below from the tree actually being shipped.
 # A tracked stale copy wrote a second archive entry with the same name and
@@ -133,6 +181,10 @@ def excluded(rel: str) -> bool:
     if any(pat.search(name) for pat in EXCLUDE_PATTERNS):
         return True
     if name.startswith('.env') and name != '.env.example':
+        return True
+    if name.endswith('.pyc') or any(
+        part in EXCLUDE_DIR_NAMES for part in rel.rstrip('/').split('/')
+    ):
         return True
     return rel.startswith(EXCLUDE_PREFIXES)
 
@@ -286,19 +338,23 @@ def build(args) -> int:
     helper_dir = app / 'scripts' / 'release'
     shipped_helpers = []
 
+    # Every entry goes in with a pinned timestamp (zip_date_time), because the
+    # ZIP header stores mtimes and writestr would stamp the wall clock: two
+    # otherwise-identical builds differed only in header metadata. Ordering
+    # was already deterministic (the sorted walk).
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
         for f in files:
-            zf.write(app / f, f'mulkihawler/{f}')
+            zip_add_file(zf, app / f, f'mulkihawler/{f}')
 
-        zf.writestr('mulkihawler/SHA256SUMS.txt', sums_text)
+        zip_add_text(zf, 'mulkihawler/SHA256SUMS.txt', sums_text)
 
         deletions = out / 'DELETE_FILES.txt'
         if deletions.is_file():
-            zf.write(deletions, 'mulkihawler/DELETE_FILES.txt')
+            zip_add_file(zf, deletions, 'mulkihawler/DELETE_FILES.txt')
 
         for doc in RELEASE_DOCS:
             if (out / doc).is_file():
-                zf.write(out / doc, f'mulkihawler/docs/release/{doc}')
+                zip_add_file(zf, out / doc, f'mulkihawler/docs/release/{doc}')
 
         # Helpers come from the project, never from a developer's home
         # directory. Anything already collected by the walk is skipped so the
@@ -310,10 +366,10 @@ def build(args) -> int:
                 continue
             candidate = helper_dir / helper
             if candidate.is_file():
-                zf.write(candidate, f'mulkihawler/{rel}')
+                zip_add_file(zf, candidate, f'mulkihawler/{rel}')
                 shipped_helpers.append(helper)
 
-        zf.writestr('mulkihawler/RELEASE_README.md', f"""# MyHawler v7 — complete source tree
+        zip_add_text(zf, 'mulkihawler/RELEASE_README.md', f"""# MyHawler v7 — complete source tree
 
 This archive is the COMPLETE final project source, standalone. It is not an
 overlay: everything needed to develop, test and rebuild is here.

@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -68,13 +69,30 @@ def main() -> int:
     # requiring it here would make reports impossible to generate by design.
     missing = [label for label in RELEASE_EVIDENCE_LABELS if label not in by_label]
     failed = sorted(e['label'] for e in entries if e['exit_code'] != 0)
-    stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    # The header identifies WHAT is being reported on, so every value in it
+    # must be a function of the release identity, not of the wall clock: a
+    # `generated <now>` line made CHANGED_FILES.md, FIX_REPORT.md and
+    # SECURITY_REVIEW.md differ between two runs from identical inputs even
+    # though every fact in them was the same. The snapshot instant comes from
+    # SOURCE_DATE_EPOCH (derived by the release cycle from the verified input
+    # archive); the moment this generator actually RAN is not lost — it is
+    # recorded, with real start and finish times, in this very command's
+    # entry in command-ledger.json. Standalone invocations without the
+    # variable keep an honest wall-clock stamp.
+    epoch = os.environ.get('SOURCE_DATE_EPOCH')
+    if epoch and epoch.isdigit():
+        stamp_label = 'source_snapshot'
+        stamp = datetime.datetime.fromtimestamp(
+            int(epoch), datetime.timezone.utc).isoformat()
+    else:
+        stamp_label = 'generated'
+        stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
     header = (
         f'```text\n'
         f'final_tree_manifest_sha256  {tree}\n'
         f'baseline_commit             {args.baseline_commit}  (ancestor only)\n'
-        f'generated                   {stamp}\n'
+        f'{stamp_label:<27} {stamp}\n'
         f'```\n'
     )
 
