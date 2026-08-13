@@ -9,3 +9,8 @@
 /storage/browser-acceptance
 /tests/Browser/support/fixtures.json
 /storage/app/private
+
+# CPython bytecode — the release cycle imports helpers from the tree it
+# packages, and interpreter caches must never enter an archive or a diff.
+__pycache__/
+*.pyc
