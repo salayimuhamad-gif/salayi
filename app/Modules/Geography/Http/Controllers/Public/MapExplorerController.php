@@ -990,10 +990,26 @@ final class MapExplorerController extends Controller
 
         $ids = array_column($rows, 'id');
 
+        /*
+         * Recency must be null-safe. `effective_date` is legitimately
+         * nullable (the wizard accepts an undated price), and a bare
+         * ORDER BY effective_date DESC sorts NULL last on both MySQL and
+         * SQLite — pushing a genuinely newer, undated observation behind
+         * every dated one, so a stale figure was served as "current" and
+         * the trend it fed could point the wrong way. (Wording note: this
+         * file is Tailwind-content-scanned, so comments must avoid bare
+         * utility-class words.) An undated observation ranks by
+         * the day it was recorded instead. DATE() wraps BOTH operands
+         * because SQLite stores the date cast with a time component while
+         * MySQL's DATE column has none — without the normalisation the two
+         * engines disagree on same-day ties. Remaining ties (same day, or
+         * a raw insert with neither date) fall through to id, newest
+         * insert first, identically on both engines.
+         */
         $prices = ProjectPrice::query()
             ->whereIn('project_id', $ids)
             ->orderBy('project_id')
-            ->orderByDesc('effective_date')
+            ->orderByRaw('COALESCE(DATE(effective_date), DATE(created_at)) DESC')
             ->orderByDesc('id')
             ->get(['project_id', 'price_from', 'price_to', 'currency', 'price_type', 'effective_date']);
 
@@ -1064,7 +1080,9 @@ final class MapExplorerController extends Controller
 
                 if ($was > 0.0) {
                     $change = ($now - $was) / $was * 100.0;
-                    $percent = number_format($change, 1);
+                    // No thousands separator: "1,900.0" inside a percent
+                    // badge is not a number the client should re-parse.
+                    $percent = number_format($change, 1, '.', '');
                     // Below a twentieth of a percent the honest word is
                     // "stable", not a microscopic arrow.
                     $trend = abs($change) < 0.05 ? 'flat' : ($change > 0 ? 'up' : 'down');
