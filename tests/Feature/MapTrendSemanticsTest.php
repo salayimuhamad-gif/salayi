@@ -52,18 +52,20 @@ final class MapTrendSemanticsTest extends TestCase
     private function price(
         Project $project,
         string $from,
-        string $date,
+        ?string $date,
         string $currency = 'USD',
         string $type = 'sale_asking',
         ?string $rawFrom = null,
     ): void {
+        // A null $date is a real shape, not a fixture shortcut: the wizard
+        // accepts an undated price ('price_effective_date' is nullable).
         $row = ProjectPrice::query()->create([
             'project_id' => $project->id,
             'price_from' => $from,
             'price_to' => null,
             'currency' => $currency,
             'price_type' => $type,
-            'period' => substr($date, 0, 7),
+            'period' => $date === null ? null : substr($date, 0, 7),
             'effective_date' => $date,
             'source' => 'fixture',
             'confidence' => 'medium',
@@ -175,6 +177,100 @@ final class MapTrendSemanticsTest extends TestCase
 
         $this->assertSame('unknown', $row['trend']);
         $this->assertNull($row['trend_percent']);
+    }
+
+    /* --------------------------------------- recency is null-safe (C1) */
+
+    /*
+     * `effective_date` is legitimately nullable, and a bare
+     * ORDER BY effective_date DESC sorts NULL last — so a genuinely newer,
+     * undated observation used to rank behind every dated one: the map
+     * served the stale figure as "current" and the trend it fed could
+     * invert (a real +50% rise read as "down -33.3%"). Recency now falls
+     * back to the day the row was recorded, with id as the final
+     * tiebreaker on both database engines.
+     */
+
+    public function test_a_newer_undated_observation_is_the_current_price(): void
+    {
+        $project = $this->project('undated-newest');
+        $this->price($project, '100000', '2026-06-01');
+        $this->price($project, '150000', null);
+
+        $row = $this->row($this->features(), 'undated-newest');
+
+        $this->assertSame('150000.00', $row['price_from'], 'the stale dated figure must not be served as current');
+        $this->assertSame('up', $row['trend']);
+        $this->assertSame('50.0', $row['trend_percent']);
+        // Honest absence: ordering may use the recorded day internally, but
+        // price_at reports the stored effective_date contract — nothing else.
+        $this->assertNull($row['price_at']);
+    }
+
+    public function test_a_newer_undated_observation_in_another_currency_is_current_but_claims_nothing(): void
+    {
+        $project = $this->project('undated-currency-switch');
+        $this->price($project, '100000', '2026-06-01', currency: 'USD');
+        $this->price($project, '195000000', null, currency: 'IQD');
+
+        $row = $this->row($this->features(), 'undated-currency-switch');
+
+        $this->assertSame('195000000.00', $row['price_from']);
+        $this->assertSame('IQD', $row['currency']);
+        $this->assertSame('unknown', $row['trend']);
+        $this->assertNull($row['trend_percent']);
+    }
+
+    public function test_a_newer_undated_null_figure_stays_null_and_claims_nothing(): void
+    {
+        $project = $this->project('undated-null-figure');
+        $this->price($project, '100000', '2026-06-01');
+        $this->price($project, '90000', null, rawFrom: 'null-out');
+
+        $row = $this->row($this->features(), 'undated-null-figure');
+
+        $this->assertNull($row['price_from'], 'a null figure must never be coerced to zero or backfilled');
+        $this->assertSame('unknown', $row['trend']);
+        $this->assertNull($row['trend_percent']);
+    }
+
+    public function test_two_undated_observations_order_by_newest_insert(): void
+    {
+        $project = $this->project('undated-pair');
+        $this->price($project, '100000', null);
+        $this->price($project, '130000', null);
+
+        $row = $this->row($this->features(), 'undated-pair');
+
+        $this->assertSame('130000.00', $row['price_from']);
+        $this->assertSame('up', $row['trend']);
+        $this->assertSame('30.0', $row['trend_percent']);
+    }
+
+    public function test_equal_effective_dates_resolve_by_newest_insert(): void
+    {
+        $project = $this->project('same-day-pair');
+        $this->price($project, '100000', '2026-06-01');
+        $this->price($project, '120000', '2026-06-01');
+
+        $row = $this->row($this->features(), 'same-day-pair');
+
+        $this->assertSame('120000.00', $row['price_from']);
+        $this->assertSame('up', $row['trend']);
+        $this->assertSame('20.0', $row['trend_percent']);
+    }
+
+    public function test_a_large_percentage_carries_no_thousands_separator(): void
+    {
+        // number_format's default "," produced "2,000.0" inside the badge.
+        $project = $this->project('large-swing');
+        $this->price($project, '100', '2026-06-01');
+        $this->price($project, '2100', '2026-07-01');
+
+        $row = $this->row($this->features(), 'large-swing');
+
+        $this->assertSame('up', $row['trend']);
+        $this->assertSame('2000.0', $row['trend_percent']);
     }
 
     /* ------------------------------------------ selection gates unchanged */
