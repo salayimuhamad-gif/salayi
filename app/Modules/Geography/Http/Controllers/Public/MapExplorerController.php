@@ -996,7 +996,9 @@ final class MapExplorerController extends Controller
          * ORDER BY effective_date DESC sorts NULL last on both MySQL and
          * SQLite — pushing a genuinely newer, undated observation behind
          * every dated one, so a stale figure was served as "current" and
-         * the trend it fed could invert. An undated observation ranks by
+         * the trend it fed could point the wrong way. (Wording note: this
+         * file is Tailwind-content-scanned, so comments must avoid bare
+         * utility-class words.) An undated observation ranks by
          * the day it was recorded instead. DATE() wraps BOTH operands
          * because SQLite stores the date cast with a time component while
          * MySQL's DATE column has none — without the normalisation the two
