@@ -66,10 +66,21 @@ export class MapLibreAdapter implements MapAdapter {
     private map: import('maplibre-gl').Map | null = null;
     private loaded = false;
     private failedBeforeLoad = false;
+    private destroyed = false;
     /** Category token for diagnostics: style / webgl / container / timeout. */
     private failureCategory: string | null = null;
     private observer: ResizeObserver | null = null;
     private pin: import('maplibre-gl').Marker | null = null;
+    /*
+     * The pending readiness operation is ADAPTER state, not a local of
+     * ready(): destroy() must be able to cancel the deadline timer and settle
+     * the promise immediately. When the timer lived inside ready()'s closure,
+     * destroying a still-constructing map left it ticking, and the rejection
+     * arrived up to twenty seconds after the component was gone.
+     */
+    private readyPromise: Promise<void> | null = null;
+    private readyDeadline: number | null = null;
+    private settleReady: { resolve: () => void; reject: (error: Error) => void } | null = null;
     private pending: { points: PointFeature[]; boundaries: BoundaryCollection | null } = {
         points: [],
         boundaries: null,
@@ -453,39 +464,79 @@ export class MapLibreAdapter implements MapAdapter {
             return Promise.resolve();
         }
 
+        if (this.destroyed) {
+            return Promise.reject(new Error('maplibre-destroyed'));
+        }
+
         if (this.failedBeforeLoad) {
             return Promise.reject(new Error('maplibre-style-failed'));
         }
 
+        // One readiness operation per adapter: repeat callers share the same
+        // pending promise instead of stacking timers and listener sets.
+        if (this.readyPromise !== null) {
+            return this.readyPromise;
+        }
+
         /*
-         * Bounded, three ways out: load resolves, a pre-load error rejects,
-         * and a DEADLINE rejects when the provider simply stalls — a style
+         * Bounded, four ways out: load resolves, a pre-load error rejects,
+         * a DEADLINE rejects when the provider simply stalls — a style
          * whose tile or glyph requests hang without ever erroring used to
-         * leave the page on its spinner indefinitely. The category token in
-         * the message feeds the dev diagnostics.
+         * leave the page on its spinner indefinitely — and destroy()
+         * settles immediately. Every exit funnels through settle(), which
+         * clears the timer and fires exactly once.
          */
-        return new Promise((resolve, reject) => {
-            const deadline = window.setTimeout(() => {
+        this.readyPromise = new Promise((resolve, reject) => {
+            this.settleReady = { resolve, reject };
+
+            this.readyDeadline = window.setTimeout(() => {
                 this.failureCategory = this.failureCategory ?? 'timeout';
 
                 if (import.meta.env.DEV) {
                     console.warn('[map] ready() deadline elapsed; category:', this.failureCategory);
                 }
 
-                reject(new Error('maplibre-ready-timeout'));
+                this.settle(new Error('maplibre-ready-timeout'));
             }, this.options.readyTimeoutMs ?? 20000);
 
             this.map?.once('load', () => {
-                window.clearTimeout(deadline);
-                resolve();
+                this.settle(null);
             });
             this.map?.once('error', () => {
                 if (!this.loaded) {
-                    window.clearTimeout(deadline);
-                    reject(new Error('maplibre-style-failed'));
+                    this.settle(new Error('maplibre-style-failed'));
                 }
             });
         });
+
+        return this.readyPromise;
+    }
+
+    /**
+     * Settle the pending ready() exactly once and stop its deadline.
+     *
+     * Load, pre-load error, timeout and destroy() all land here; whichever
+     * arrives first wins and the rest become no-ops, so no sequence can
+     * reject twice, resolve after rejecting, or leave the timer alive.
+     */
+    private settle(error: Error | null): void {
+        if (this.readyDeadline !== null) {
+            window.clearTimeout(this.readyDeadline);
+            this.readyDeadline = null;
+        }
+
+        const pending = this.settleReady;
+        this.settleReady = null;
+
+        if (pending === null) {
+            return;
+        }
+
+        if (error === null) {
+            pending.resolve();
+        } else {
+            pending.reject(error);
+        }
     }
 
     getBounds(): MapBounds | null {
@@ -588,6 +639,14 @@ export class MapLibreAdapter implements MapAdapter {
     }
 
     destroy(): void {
+        this.destroyed = true;
+        /*
+         * A pending ready() settles NOW, not at the deadline: after
+         * map.remove() below, 'load' can never fire, so without this the
+         * timer was the only exit — a rejection nobody expects arriving up
+         * to twenty seconds after the component is gone.
+         */
+        this.settle(new Error('maplibre-destroyed'));
         this.observer?.disconnect();
         this.observer = null;
         this.pin?.remove();

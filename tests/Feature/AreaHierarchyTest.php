@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Tests\Feature;
 
 use App\Modules\Geography\Enums\AreaType;
+use App\Modules\Geography\Http\Controllers\Admin\AreaController;
+use App\Modules\Geography\Http\Requests\AreaRequest;
 use App\Modules\Geography\Models\Area;
+use App\Modules\Identity\Models\User;
 use App\Modules\Projects\Enums\PublicationStatus;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
@@ -267,6 +270,72 @@ final class AreaHierarchyTest extends TestCase
             ->all();
 
         $this->assertSame($before, $after, 'A refused move altered the tree.');
+    }
+
+    /* ----------------------------------------- admin store error parity */
+
+    /**
+     * The model guard firing on CREATE must be a field error, not a 500.
+     *
+     * Request validation and the model's `saving` hook each read the parent
+     * row independently, so the parent can be reclassified between them —
+     * validation sees the old, compatible type and passes; the hook sees the
+     * new, incompatible one and throws. update() already converted that
+     * RuntimeException into a parent_id error; store() let it escape as a
+     * 500. The race is reproduced literally: the request is validated first,
+     * the parent is changed, then store() runs.
+     */
+    public function test_a_parent_reclassified_after_validation_is_a_field_error_not_a_500(): void
+    {
+        $admin = User::factory()->superAdmin()->create();
+        $parent = $this->area('parent-city', AreaType::City);
+
+        $request = AreaRequest::create('/admin/areas', 'POST', [
+            'name_ckb' => 'گەڕەکی تاقیکردنەوە',
+            'slug' => 'toctou-child',
+            'type' => AreaType::Neighborhood->value,
+            'parent_id' => $parent->id,
+        ]);
+        $request->setUserResolver(fn (): User => $admin);
+        $request->setContainer(app())->setRedirector(app('redirect'));
+        $this->withSession([]);
+        $request->validateResolved(); // passes: a city may contain a neighborhood
+
+        // The race: the parent becomes finer than the child before the save.
+        $parent->type = AreaType::Mahalla;
+        $parent->save();
+
+        $response = app(AreaController::class)->store($request);
+
+        $this->assertSame(302, $response->getStatusCode());
+        $this->assertArrayHasKey(
+            'parent_id',
+            session('errors')?->getBag('default')->toArray() ?? [],
+            'The hierarchy rejection must surface as a parent_id field error.',
+        );
+        $this->assertSame(
+            0,
+            Area::query()->where('slug', 'toctou-child')->count(),
+            'A refused create must not persist the area.',
+        );
+    }
+
+    /** The guard wrap must not disturb an ordinary successful create. */
+    public function test_a_valid_create_through_the_admin_door_still_succeeds(): void
+    {
+        $admin = User::factory()->superAdmin()->create();
+        $parent = $this->area('parent-district', AreaType::District);
+
+        $response = $this->actingAs($admin)->post('/admin/areas', [
+            'name_ckb' => 'گەڕەکی نوێ',
+            'slug' => 'store-parity-child',
+            'type' => AreaType::Neighborhood->value,
+            'parent_id' => $parent->id,
+        ]);
+
+        $area = Area::query()->where('slug', 'store-parity-child')->firstOrFail();
+        $response->assertRedirect("/admin/areas/{$area->id}/edit");
+        $this->assertSame((int) $parent->id, (int) $area->parent_id);
     }
 
     /**

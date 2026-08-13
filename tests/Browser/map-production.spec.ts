@@ -1,5 +1,5 @@
 import { test, expect, LOCALES } from './support/harness';
-import { signInAdmin } from './support/fixtures';
+import { fixtures, signInAdmin } from './support/fixtures';
 
 /*
  * The map surfaces with a WORKING style — the other half of the contract.
@@ -326,6 +326,60 @@ test.describe('admin project location picker', () => {
         await expect(page.getByLabel('پانی', { exact: true })).toHaveValue(/^36\.195/);
         await expect(page.getByLabel('درێژی', { exact: true })).toHaveValue(/^44\.015/);
         await expect(page.locator('.maplibregl-marker')).toHaveCount(1);
+    });
+});
+
+/* --------------------------------------- wizard picker provider failure */
+
+test.describe('wizard location picker provider failure', () => {
+    test.beforeEach(async ({ page }, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'admin flow runs once, on desktop-1440x900 only',
+        );
+        await signInAdmin(page);
+    });
+
+    test('a failed provider states failure with Retry, and Retry rebuilds a working map without losing typed coordinates', async ({ page }) => {
+        /*
+         * Deterministic failure through the SAME seam the rest of this suite
+         * uses — the style request, aborted. The adapter fails before load
+         * and ready() rejects. Under the pre-fix picker that rejection was
+         * unhandled and the UI sat on "loading" forever; the diagnostics
+         * fixture fails this test on the console error alone, so the fix is
+         * pinned even without the assertions below.
+         */
+        await page.route(STYLE_HOST, (route) => route.abort());
+
+        await page.goto(
+            `/admin/projects/wizard/${fixtures().wizard_draft_id}/location`,
+            { waitUntil: 'domcontentloaded' },
+        );
+
+        // The failed state is STATED, with a retry — not an eternal spinner.
+        const retry = page.getByRole('button', { name: 'دووبارە هەوڵدانەوە' });
+        await expect(retry).toBeVisible({ timeout: 15_000 });
+        await expect(page.getByText('نەخشە باردەکرێت…')).toBeHidden();
+
+        // The coordinate inputs work without a map, and what is typed there
+        // must survive the retry: a rebuild replaces the MAP, not the state.
+        const latitude = page.getByLabel('پانی', { exact: true });
+        const longitude = page.getByLabel('درێژی', { exact: true });
+        await latitude.fill('36.21');
+        await longitude.fill('44.02');
+
+        // The provider recovers; Retry must produce a live canvas.
+        await page.unroute(STYLE_HOST);
+        await serveDeterministicStyle(page);
+        await retry.click();
+
+        const canvas = page.locator('.maplibregl-canvas');
+        await expect(canvas).toBeVisible({ timeout: 20_000 });
+        // Exactly one map: a retry may never stack a second instance.
+        await expect(canvas).toHaveCount(1);
+
+        await expect(latitude).toHaveValue('36.21');
+        await expect(longitude).toHaveValue('44.02');
     });
 });
 

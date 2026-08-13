@@ -519,48 +519,116 @@ function editComponent(index: number): void {
 
 /* ---------------------------------------------------------------- setup */
 
-onMounted(async () => {
-    // Structural parse: holes stay holes rather than becoming separate shapes.
-    components.value = fromWkt(props.boundary ?? null);
-    activeComponent.value = Math.max(0, components.value.length - 1);
+/*
+ * Map construction is a RETRYABLE attempt, not a one-shot mount step.
+ *
+ * The previous version awaited createMapAdapter() and ready() bare inside
+ * onMounted: a construction throw or a readiness rejection (the adapter's
+ * bounded deadline) was an unhandled rejection, status stayed 'loading'
+ * forever, and the failed-state alert below was unreachable for exactly the
+ * failures it exists for. Every other map consumer already wrapped this
+ * sequence; now this one does too, with a retry.
+ *
+ * The generation token makes attempts strictly ordered: an obsolete attempt
+ * — superseded by a retry, or outliving the component — may not install its
+ * adapter, flip status, or touch state. `building` keeps retry clicks from
+ * ever constructing two maps at once.
+ */
+const building = ref(false);
+let attempt = 0;
+let disposed = false;
 
-    if (container.value === null) {
+async function buildMap(): Promise<void> {
+    if (container.value === null || building.value || disposed) {
         return;
     }
 
-    // Provider comes from shared config; MapLibre is the default and the
-    // fallback, so a missing Google key degrades rather than breaks.
-    const result = await createMapAdapter(props.provider, {
-        container: container.value,
-        styleUrl: props.styleUrl,
-        googleKey: props.googleKey,
-        centre: point.value ?? props.centre,
-        zoom: point.value === null ? 11 : 15,
-        events: {
-            onMoveEnd: () => {},
-            onClick: handleMapClick,
-            // A provider can fail minutes after construction — a revoked key,
-            // a tile 403. Saying so beats a map that quietly stops working.
-            onError: () => {
-                status.value = 'failed';
+    building.value = true;
+    status.value = 'loading';
+    const token = ++attempt;
+
+    // A retry replaces the failed instance. The old adapter goes first so two
+    // maps never share the container.
+    adapter.value?.destroy();
+    adapter.value = null;
+
+    try {
+        // Provider comes from shared config; MapLibre is the default and the
+        // fallback, so a missing Google key degrades rather than breaks.
+        const result = await createMapAdapter(props.provider, {
+            container: container.value,
+            styleUrl: props.styleUrl,
+            googleKey: props.googleKey,
+            centre: point.value ?? props.centre,
+            zoom: point.value === null ? 11 : 15,
+            events: {
+                onMoveEnd: () => {},
+                onClick: handleMapClick,
+                // A provider can fail minutes after construction — a revoked
+                // key, a tile 403. Saying so beats a map that quietly stops
+                // working. Gated by token so a superseded adapter's late
+                // error cannot mark a newer, healthy attempt as failed.
+                onError: () => {
+                    if (token === attempt) {
+                        status.value = 'failed';
+                    }
+                },
             },
-        },
-    });
+        });
 
-    adapter.value = result.adapter;
+        if (disposed || token !== attempt) {
+            result.adapter.destroy();
 
-    /*
-     * A fallback is not a failure — MapLibre standing in for Google still
-     * renders a usable map — but it IS a fact worth showing, because the
-     * imagery differs from what the person may expect.
-     */
-    failure.value = result.fallbackReason;
-    await result.adapter.ready();
-    status.value = 'ready';
-    render();
+            return;
+        }
+
+        adapter.value = result.adapter;
+
+        /*
+         * A fallback is not a failure — MapLibre standing in for Google still
+         * renders a usable map — but it IS a fact worth showing, because the
+         * imagery differs from what the person may expect.
+         */
+        failure.value = result.fallbackReason;
+        await result.adapter.ready();
+
+        if (disposed || token !== attempt) {
+            return;
+        }
+
+        status.value = 'ready';
+        // Render the CURRENT in-memory geometry — components, holes and the
+        // point survive a provider failure; only the map is rebuilt.
+        render();
+    } catch {
+        if (!disposed && token === attempt) {
+            status.value = 'failed';
+        }
+    } finally {
+        if (token === attempt) {
+            building.value = false;
+        }
+    }
+}
+
+function retryMap(): void {
+    void buildMap();
+}
+
+onMounted(() => {
+    // Structural parse: holes stay holes rather than becoming separate
+    // shapes. Parsed ONCE at mount — a retry rebuilds only the map and must
+    // not reparse props.boundary over unsaved edits.
+    components.value = fromWkt(props.boundary ?? null);
+    activeComponent.value = Math.max(0, components.value.length - 1);
+
+    void buildMap();
 });
 
 onBeforeUnmount(() => {
+    disposed = true;
+    // Invalidate any in-flight attempt so it cannot resurrect an adapter.
+    attempt++;
     adapter.value?.destroy();
     adapter.value = null;
 });
@@ -702,11 +770,15 @@ watch(() => props.boundary, (incoming) => {
             {{ t('projects.wizard.creation.map_loading') }}
         </p>
 
-        <AppAlert
-            v-if="status === 'failed'"
-            variant="warning"
-            :message="t('projects.wizard.creation.map_failed')"
-        />
+        <AppAlert v-if="status === 'failed'" variant="warning">
+            {{ t('projects.wizard.creation.map_failed') }}
+            <AppButton
+                variant="secondary" size="sm" class="ms-3"
+                :disabled="building" @click="retryMap"
+            >
+                {{ t('app.actions.retry') }}
+            </AppButton>
+        </AppAlert>
 
         <!-- A fallback is not a failure, but it IS a fact: the imagery differs
              from what the person may expect. -->
