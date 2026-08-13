@@ -15,10 +15,13 @@ is exempt, and the exemption is earned per run, not assumed.
 from __future__ import annotations
 
 import argparse
+import datetime
 import hashlib
 import json
+import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -314,7 +317,38 @@ def main() -> int:
 
         output = Path(args.output)
         output.unlink(missing_ok=True)
-        subprocess.run(['zip', '-qrX', str(output), '.'], cwd=str(patch), check=True)
+        # Deterministic replacement for `zip -qrX <output> .`: the external
+        # zip recursed in readdir order and stamped each entry with its
+        # on-disk mtime — and the whole patch tree is copied/written fresh
+        # under a mkdtemp every run, so two runs from identical inputs
+        # produced metadata-differing bytes. Sorted traversal, pinned
+        # timestamps (SOURCE_DATE_EPOCH from the release cycle, else the
+        # file's own mtime), permissions from disk, no extra fields.
+        epoch = os.environ.get('SOURCE_DATE_EPOCH')
+
+        def entry_time(p: Path):
+            if epoch and epoch.isdigit():
+                moment = datetime.datetime.fromtimestamp(int(epoch), datetime.timezone.utc)
+            else:
+                moment = datetime.datetime.fromtimestamp(p.stat().st_mtime, datetime.timezone.utc)
+            if moment.year < 1980:
+                moment = datetime.datetime(1980, 1, 1, tzinfo=datetime.timezone.utc)
+            return (moment.year, moment.month, moment.day,
+                    moment.hour, moment.minute, moment.second)
+
+        with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:
+            for sub in sorted(patch.rglob('*'), key=lambda p: p.relative_to(patch).as_posix()):
+                rel = sub.relative_to(patch).as_posix()
+                info_mode = stat.S_IMODE(sub.stat().st_mode)
+                if sub.is_dir():
+                    info = zipfile.ZipInfo(rel + '/', date_time=entry_time(sub))
+                    info.external_attr = ((info_mode | stat.S_IFDIR) << 16) | 0x10
+                    zf.writestr(info, b'')
+                else:
+                    info = zipfile.ZipInfo(rel, date_time=entry_time(sub))
+                    info.external_attr = (info_mode | stat.S_IFREG) << 16
+                    info.compress_type = zipfile.ZIP_DEFLATED
+                    zf.writestr(info, sub.read_bytes())
 
         print(f'source patch: added={len(added)} modified={len(modified)} '
               f'removed={len(removed)} deletion-contract=OK')

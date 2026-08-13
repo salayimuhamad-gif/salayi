@@ -131,11 +131,11 @@ REQUIRED_INDEX_KEYS = tuple(gate.index_key for gate in GATES if gate.required)
 # The five viewport projects.
 #
 # The exact 20-per-project / 100-total contract belongs to the ACCOUNT-FIRST
-# spec alone. The complete browser directory registers 83 tests per project and
-# deliberately skips by viewport — admin and MFA outside desktop, touch-only
-# accessibility checks, desktop/mobile navigation alternatives — so
-# "20 expected, 0 skipped" could never describe a whole-suite run. A correct
-# product would have failed that gate.
+# spec alone. The complete browser directory registers far more tests per
+# project than that and deliberately skips by viewport — admin and MFA outside
+# desktop, touch-only accessibility checks, desktop/mobile navigation
+# alternatives — so "20 expected, 0 skipped" could never describe a
+# whole-suite run. A correct product would have failed that gate.
 #
 # The remaining suite therefore runs as its own recorded gate with its own
 # policy, rather than being forced into a contract written for one spec.
@@ -167,6 +167,12 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # all four trend semantics from persisted rows, marker-click selection,
     # and the admin picker's hidden-tab recovery.
     'tests/Browser/map-production.spec.ts',
+    # The Arabic-script RTL text plugin suite (PR #14): single registration
+    # across an SPA navigation, the plugin served as a same-origin production
+    # asset, and the lazy load driven to 'loaded' by أربيل/هەولێر labels.
+    # Runs on every viewport with NO skips, so it is deliberately absent
+    # from PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
+    'tests/Browser/map-rtl.spec.ts',
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
     'tests/Browser/production-assets.spec.ts',

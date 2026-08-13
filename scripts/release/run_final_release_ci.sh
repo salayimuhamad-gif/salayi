@@ -357,6 +357,27 @@ ACTUAL_BASELINE=$(sha256sum "$BASELINE_ARCHIVE" | cut -d' ' -f1)
 echo "$ACTUAL_BASELINE" > "$EVIDENCE/BASELINE_ARCHIVE_SHA256"
 sha256sum "$SOURCE_ARCHIVE" | cut -d' ' -f1 > "$EVIDENCE/SOURCE_ARCHIVE_SHA256"
 
+# SOURCE_DATE_EPOCH — the deterministic timestamp for everything this run
+# packages, derived from the VERIFIED INPUT rather than the wall clock: the
+# newest member timestamp inside the source archive. Two runs from the same
+# frozen input therefore stamp identical times into every product archive
+# and generated document, which is what makes the delivery byte-for-byte
+# reproducible. Same variable, same semantics as scripts/package-release.sh
+# (there it comes from the commit date; a verified release input has no git,
+# so its own newest member is the honest equivalent). Operational evidence —
+# the command ledger, gate logs, environment capture — deliberately keeps
+# REAL wall-clock times: those record what happened during THIS run, and
+# invariant 2 above forbids reconstructing them.
+SOURCE_DATE_EPOCH=$(python3 - "$SOURCE_ARCHIVE" <<'PY'
+import sys, zipfile, datetime
+newest = max(i.date_time for i in zipfile.ZipFile(sys.argv[1]).infolist())
+print(int(datetime.datetime(*newest, tzinfo=datetime.timezone.utc).timestamp()))
+PY
+)
+export SOURCE_DATE_EPOCH
+echo "SOURCE_DATE_EPOCH: $SOURCE_DATE_EPOCH ($(date -u -d "@$SOURCE_DATE_EPOCH" +'%Y-%m-%dT%H:%M:%SZ'))"
+echo "$SOURCE_DATE_EPOCH" > "$EVIDENCE/SOURCE_DATE_EPOCH"
+
 step "Audit both archives before extraction, then extract"
 
 BOOTSTRAP_AUDIT="$WORK/audit_archive.bootstrap.py"
