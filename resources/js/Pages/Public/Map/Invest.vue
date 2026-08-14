@@ -5,7 +5,9 @@ import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AiAvatar from '@/Components/Public/AiAvatar.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
+import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
 import { formatNumber, t } from '@/lib/i18n';
+import { useIsDesktop } from '@/Composables/useIsDesktop';
 import { useLocale } from '@/Composables/useLocale';
 import { createMapAdapter, type BoundaryCollection, type MapAdapter } from '@/lib/map';
 import { normaliseTrend, trendArrowGlyph } from '@/lib/map/trend';
@@ -153,6 +155,16 @@ function chooseResult(result: SearchResult): void {
 /** Direction as a glyph. Never the only signal — text and sign ride along. */
 const trendArrow = trendArrowGlyph;
 
+/*
+ * Selection presentation splits on lg, reactively: the floating glass card
+ * is desktop chrome; below 1024px the same content rides in MobileBottomSheet
+ * (§F — never a floating popover on a phone). The gate must sit on the
+ * sheet's `open` prop, not only on CSS, because the sheet scroll-locks the
+ * body from a watcher on `open` — logically open on desktop would lock the
+ * page with no visible dialog.
+ */
+const isDesktop = useIsDesktop();
+
 const mapFailed = ref(false);
 const mapReady = ref(false);
 const loading = ref(false);
@@ -271,10 +283,15 @@ function syncSource(): void {
     });
 }
 
+/*
+ * Selecting no longer forces the map tab: the bottom sheet teleports over
+ * whichever tab is active, so a visitor choosing from the list stays on the
+ * list — same pattern as the homepage map. The camera still moves, and the
+ * hidden map absorbs it safely (the adapter resizes on reveal).
+ */
 function select(project: ProjectFeature): void {
     selected.value = project;
     adapter.value?.flyTo({ lat: project.lat, lng: project.lng }, 15);
-    mobileView.value = 'map';
 }
 
 /** Recover a live Google failure by rebuilding MapLibre, once. */
@@ -616,10 +633,13 @@ watch(showBoundaries, () => void load());
                     </p>
                 </div>
 
-                <!-- Selected project, glass card floating over the map. -->
+                <!-- Selected project on DESKTOP: glass card floating over the
+                     map. Below lg the same content rides in the bottom sheet
+                     after the grid — never a floating popover on a phone.
+                     z-10 keeps the card above the map's own corner chrome. -->
                 <div
-                    v-if="selected"
-                    class="mh-invest-glass absolute bottom-3 start-3 max-w-[calc(100%-1.5rem)] rounded-card p-4 sm:max-w-sm"
+                    v-if="selected && isDesktop"
+                    class="mh-invest-glass absolute bottom-3 start-3 z-10 max-w-[calc(100%-1.5rem)] rounded-card p-4 sm:max-w-sm"
                     role="status"
                 >
                     <p class="mh-lux-eyebrow mb-1">{{ t('map.invest.selected') }}</p>
@@ -733,5 +753,52 @@ watch(showBoundaries, () => void load());
                 </ul>
             </section>
         </div>
+
+        <!-- Selected project below lg: the same card content as a bottom
+             sheet (teleported, so it overlays either mobile tab). Content
+             mirrors the desktop card exactly — same strings, same numeral
+             bidi isolation, same stated-absence rule for an unknown trend. -->
+        <MobileBottomSheet
+            :open="selected !== null && !isDesktop"
+            :title="selected?.name ?? undefined"
+            :detents="['peek', 'half']"
+            @close="selected = null"
+        >
+            <template v-if="selected">
+                <p class="mh-lux-eyebrow mb-1">{{ t('map.invest.selected') }}</p>
+                <p v-if="selected.area" class="text-sm text-ink-muted">{{ selected.area }}</p>
+                <p v-if="selected.type" class="mt-0.5 text-xs text-ink-faint">
+                    {{ t(`projects.types.${selected.type}`) }}
+                </p>
+                <p v-if="selected.price_from" class="numeral mt-3 text-base text-ink">
+                    {{ t('map.invest.price_from_label') }}
+                    {{ formatNumber(Number(selected.price_from)) }}
+                    <span class="text-sm text-ink-muted">{{ selected.currency }}</span>
+                    <span
+                        v-if="selected.trend && selected.trend !== 'unknown'"
+                        class="ms-2 text-sm font-semibold"
+                        :class="{
+                            'text-positive': selected.trend === 'up',
+                            'text-negative': selected.trend === 'down',
+                            'text-caution': selected.trend === 'flat',
+                        }"
+                    >
+                        <span aria-hidden="true">{{ trendArrow(selected.trend) }}</span>
+                        {{ selected.trend_percent }}%
+                        <span class="sr-only">{{ t(`map.invest.trend.${selected.trend}`) }}</span>
+                    </span>
+                    <!-- Unknown is a stated absence, not a hidden one. -->
+                    <span v-else-if="selected.trend === 'unknown'" class="sr-only">
+                        {{ t('map.invest.trend.unknown') }}
+                    </span>
+                </p>
+                <Link
+                    :href="localized(`/projects/${selected.slug}`)"
+                    class="mh-lux-btn mh-lux-btn-primary mt-4 w-full"
+                >
+                    {{ t('map.invest.view_project') }}
+                </Link>
+            </template>
+        </MobileBottomSheet>
     </PublicLayout>
 </template>
