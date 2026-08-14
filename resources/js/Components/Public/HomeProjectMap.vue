@@ -88,6 +88,14 @@ const ERBIL_BOX = { north: 36.42, south: 35.95, east: 44.32, west: 43.7 };
 const HOME_LIMIT = 60;
 
 let started = false;
+/*
+ * Construction can outlive the component: the visitor can scroll the map
+ * into view and navigate away before the adapter chunk resolves. Unmount
+ * then destroys a still-null ref, so the adapter that materialises later
+ * must be destroyed HERE — and neither the fetch nor sync() may run against
+ * an unmounted component.
+ */
+let disposed = false;
 let observer: IntersectionObserver | null = null;
 
 const trendArrow = trendArrowGlyph;
@@ -214,12 +222,29 @@ async function start(): Promise<void> {
             },
         });
 
+        if (disposed) {
+            result.adapter.destroy();
+
+            return;
+        }
+
         adapter.value = result.adapter;
 
         await result.adapter.ready();
+
+        if (disposed) {
+            return;
+        }
+
         mapReady.value = true;
     } catch {
-        mapFailed.value = true;
+        if (!disposed) {
+            mapFailed.value = true;
+        }
+    }
+
+    if (disposed) {
+        return;
     }
 
     // The list of mapped projects is useful even when tiles failed.
@@ -303,6 +328,7 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+    disposed = true;
     observer?.disconnect();
     adapter.value?.destroy();
     adapter.value = null;

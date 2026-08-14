@@ -293,23 +293,46 @@ async function handleRuntimeFailure(): Promise<void> {
     try {
         const result = await createMapAdapter('maplibre', adapterOptions());
 
+        if (disposed) {
+            result.adapter.destroy();
+
+            return;
+        }
+
         adapter.value = result.adapter;
         renderedProvider.value = result.adapter.provider;
         clientFallbackReason.value = 'google-maps-runtime-failure';
 
         await result.adapter.ready();
 
+        if (disposed) {
+            return;
+        }
+
         mapReady.value = true;
         mapFailed.value = false;
         void load();
     } catch {
-        mapFailed.value = true;
+        if (!disposed) {
+            mapFailed.value = true;
+        }
     } finally {
+        // Deliberately unguarded: a plain local with no template binding,
+        // and leaving it stuck true would lock the fallback path forever.
         fallingBack = false;
     }
 }
 
 let fallingBack = false;
+
+/*
+ * Construction can outlive the page: an Inertia navigation away while the
+ * adapter chunk is still importing unmounts against a null adapter ref, so
+ * whichever adapter resolves afterwards — initial OR runtime-fallback —
+ * must be destroyed here before installation, and no page state (or
+ * pointless load()) may run after disposal.
+ */
+let disposed = false;
 
 function adapterOptions() {
     return {
@@ -353,15 +376,33 @@ async function initialiseMap(): Promise<void> {
     try {
         const result = await createMapAdapter(props.provider, adapterOptions());
 
+        // One check covers every provider outcome — Google, Google→MapLibre
+        // fallback, plain MapLibre — they all resolve through this call.
+        if (disposed) {
+            result.adapter.destroy();
+
+            return;
+        }
+
         adapter.value = result.adapter;
         renderedProvider.value = result.adapter.provider;
         clientFallbackReason.value = result.fallbackReason ?? null;
 
         await result.adapter.ready();
 
+        if (disposed) {
+            return;
+        }
+
         mapReady.value = true;
     } catch {
-        mapFailed.value = true;
+        if (!disposed) {
+            mapFailed.value = true;
+        }
+    }
+
+    if (disposed) {
+        return;
     }
 
     void load();
@@ -385,6 +426,7 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+    disposed = true;
     window.removeEventListener('online', goOnline);
     window.removeEventListener('offline', goOffline);
     if (debounce !== undefined) clearTimeout(debounce);

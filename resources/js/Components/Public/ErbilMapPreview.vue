@@ -32,6 +32,14 @@ const adapter = shallowRef<MapAdapter | null>(null);
 const failed = ref(false);
 
 let started = false;
+/*
+ * Construction can outlive the component: the adapter chunk import is slow
+ * on a weak connection, and a visitor can navigate away before it resolves.
+ * At that point onBeforeUnmount has already run against a null adapter ref,
+ * so the adapter that materialises later must be destroyed HERE — otherwise
+ * its ResizeObserver, worker and WebGL context leak for the page lifetime.
+ */
+let disposed = false;
 let observer: IntersectionObserver | null = null;
 
 async function start(): Promise<void> {
@@ -56,8 +64,18 @@ async function start(): Promise<void> {
             },
         });
 
+        if (disposed) {
+            result.adapter.destroy();
+
+            return;
+        }
+
         adapter.value = result.adapter;
         await result.adapter.ready();
+
+        if (disposed) {
+            return;
+        }
 
         adapter.value.setPoints([{
             lat: props.lat,
@@ -66,7 +84,9 @@ async function start(): Promise<void> {
             colour: '#0f3e59',
         }]);
     } catch {
-        failed.value = true;
+        if (!disposed) {
+            failed.value = true;
+        }
     }
 }
 
@@ -88,6 +108,7 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+    disposed = true;
     observer?.disconnect();
     adapter.value?.destroy();
     adapter.value = null;
