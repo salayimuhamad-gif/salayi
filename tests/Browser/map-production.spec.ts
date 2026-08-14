@@ -868,11 +868,14 @@ test.describe('map refetch feedback on the mobile map tab', () => {
             // response, then a dead one, then recovery. Registered after the
             // initial load so that load stays untouched.
             let mode: 'slow' | 'fail' | 'ok' = 'slow';
+            let featureRequests = 0;
             let releaseSlow!: () => void;
             const slowGate = new Promise<void>((resolve) => {
                 releaseSlow = resolve;
             });
             await page.route(`**${surface.features}*`, async (route) => {
+                featureRequests += 1;
+
                 if (mode === 'slow') {
                     await slowGate;
                     await route.continue();
@@ -906,12 +909,53 @@ test.describe('map refetch feedback on the mobile map tab', () => {
             await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeVisible();
             await page.getByRole('tab').nth(0).click();
 
+            /*
+             * Returning to the map tab resizes the revealed map, MapLibre's
+             * resize fires moveend, and moveend schedules the debounced
+             * background refetch — exactly as a real pan would. The endpoint
+             * is still dead, so that refetch fails and the chip stays. It
+             * MUST still be dead here: reviving it first lets the background
+             * refetch succeed and withdraw the chip while the click below is
+             * still lining up, and the click then waits forever for a
+             * control the product correctly removed (the post-merge CI
+             * failure). Wait for the features endpoint to go quiet — any
+             * armed debounce fires within 250ms, so a 400ms silent window
+             * proves there is nothing left in flight.
+             */
+            await expect
+                .poll(
+                    async () => {
+                        const before = featureRequests;
+                        await new Promise((resolve) => setTimeout(resolve, 400));
+                        return featureRequests === before;
+                    },
+                    { timeout: 15_000 },
+                )
+                .toBe(true);
+
+            // Background refetches kept failing, so the failure stayed
+            // stated and the stale data stayed kept.
+            await expect(failedChip).toBeVisible();
+
+            /*
+             * A visitor taps what they can see. At phone heights the map's
+             * bottom edge can rest at the viewport's bottom, where the fixed
+             * bottom navigation (z-40) paints over anything left there, so
+             * scroll the chip to the viewport's centre first — the scroll a
+             * real reader performs — and then deliver a REAL, unforced
+             * pointer click. Playwright's own pre-click scroll cannot do
+             * this: the chip already counts as "in view", so no scroll
+             * happens and the click lands on the navigation instead.
+             */
+            const retry = page.getByTestId('data-retry-overlay');
+            await retry.evaluate((element) => element.scrollIntoView({ block: 'center' }));
+
             // Data retry refreshes the data without rebuilding the map.
             mode = 'ok';
             const recovered = page.waitForResponse(
                 (response) => response.url().includes(surface.features) && response.ok(),
             );
-            await page.getByTestId('data-retry-overlay').click();
+            await retry.click();
             expect((await recovered).ok()).toBe(true);
             await expect(failedChip).toBeHidden({ timeout: 10_000 });
             await expect(page.locator('.maplibregl-canvas')).toHaveCount(1);
