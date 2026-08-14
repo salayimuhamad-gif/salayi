@@ -193,7 +193,17 @@ function scheduleLoad(): void {
     debounce = setTimeout(() => void load(), 250);
 }
 
+/*
+ * Data-fetch generation token. Overlapping load() calls are legal — moveend,
+ * a filter change, the Data retry — but only the NEWEST call may write
+ * state. Without this, two in-flight fetches resolve in network order and a
+ * slow stale response can overwrite fresher data, which is exactly the
+ * failure the stale-data rule exists to prevent.
+ */
+let loadAttempt = 0;
+
 async function load(): Promise<void> {
+    const attempt = ++loadAttempt;
     const bounds = adapter.value?.getBounds() ?? null;
 
     // With no map the list still populates from Erbil's box — the map
@@ -230,6 +240,10 @@ async function load(): Promise<void> {
 
         const data = await response.json();
 
+        if (attempt !== loadAttempt) {
+            return;
+        }
+
         projects.value = data.projects ?? [];
         boundaries.value = showBoundaries.value ? (data.boundaries ?? emptyBoundaries) : emptyBoundaries;
         projectBoundaries.value = data.project_boundaries ?? { type: 'FeatureCollection', features: [] };
@@ -246,10 +260,14 @@ async function load(): Promise<void> {
     } catch {
         // Kept deliberately: blanking the list on a failed refresh punishes
         // the visitor for a dropped request by taking away data they had.
-        loadError.value = true;
+        if (attempt === loadAttempt) {
+            loadError.value = true;
+        }
     } finally {
-        loading.value = false;
-        syncSource();
+        if (attempt === loadAttempt) {
+            loading.value = false;
+            syncSource();
+        }
     }
 }
 
@@ -319,10 +337,22 @@ async function handleRuntimeFailure(): Promise<void> {
     adapter.value?.destroy();
     adapter.value = null;
 
+    /*
+     * The fallback build claims a generation and the building flag exactly
+     * like initialiseMap(). Without this, a compound failure (Google dies,
+     * then the MapLibre fallback style dies too) re-enters this handler,
+     * flips mapFailed while the first call is still unwinding, and a Retry
+     * pressed in that window races the stale catch below — which would then
+     * destroy the retry's healthy adapter. Token-gated, the stale call can
+     * touch nothing that is no longer its own.
+     */
+    const attempt = ++mapAttempt;
+    mapBuilding.value = true;
+
     try {
         const result = await createMapAdapter('maplibre', adapterOptions());
 
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             result.adapter.destroy();
 
             return;
@@ -334,7 +364,7 @@ async function handleRuntimeFailure(): Promise<void> {
 
         await result.adapter.ready();
 
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             return;
         }
 
@@ -345,12 +375,16 @@ async function handleRuntimeFailure(): Promise<void> {
         // The fallback build itself failed: destroy whatever was installed
         // before readiness rejected. After disposal the unmount hook already
         // owns the teardown.
-        if (!disposed) {
+        if (!disposed && attempt === mapAttempt) {
             adapter.value?.destroy();
             adapter.value = null;
             mapFailed.value = true;
         }
     } finally {
+        if (!disposed && attempt === mapAttempt) {
+            mapBuilding.value = false;
+        }
+
         // Deliberately unguarded: a plain local with no template binding,
         // and leaving it stuck true would lock the fallback path forever.
         fallingBack = false;
@@ -702,11 +736,13 @@ watch(showBoundaries, () => void load());
                      the stale data stays (the hint says so) and Retry re-runs
                      the DATA fetch only — the live map is never rebuilt for a
                      failed refresh. -->
+                <!-- No role="status" here: the loadError AppAlert above is
+                     already a live region carrying the same words, and two
+                     simultaneous regions announce the failure twice. -->
                 <div
                     v-if="mapReady && loadError && !loading"
                     data-testid="map-refetch-failed"
                     class="absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
-                    role="status"
                 >
                     <div
                         class="mh-invest-glass flex flex-wrap items-center justify-center gap-2 rounded-card
@@ -718,7 +754,8 @@ watch(showBoundaries, () => void load());
                         <button
                             type="button"
                             data-testid="data-retry-overlay"
-                            class="mh-invest-chip"
+                            class="mh-invest-chip disabled:cursor-not-allowed disabled:opacity-50"
+                            :disabled="loading"
                             @click="load"
                         >
                             {{ t('map.states.retry') }}
