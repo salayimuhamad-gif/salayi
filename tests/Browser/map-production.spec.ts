@@ -1,5 +1,25 @@
+import { execFileSync } from 'node:child_process';
 import { test, expect, LOCALES } from './support/harness';
 import { fixtures, signInAdmin } from './support/fixtures';
+
+/*
+ * The map endpoints sit behind real per-IP rate limiters (map-features
+ * 60/min, map-search 30/min) that a serial browser run legitimately consumes:
+ * by the time this request-heavy file runs, the invest suite has already
+ * spent part of the same rolling window, and on a fast machine the selection
+ * tests' silent enrichment fetches start answering 429 — the card keeps its
+ * stale (trendless) search row and the assertion reads as a product failure.
+ * global-setup already clears the cache once per RUN for exactly this reason
+ * (the login limiter); this file resets the window once per project pass.
+ * Same silent no-op when the target app is remote and artisan is not here.
+ */
+test.beforeAll(() => {
+    try {
+        execFileSync('php', ['artisan', 'cache:clear'], { stdio: 'ignore' });
+    } catch {
+        // Remote target or no artisan on this runner: nothing to clear.
+    }
+});
 
 /*
  * The map surfaces with a WORKING style — the other half of the contract.
