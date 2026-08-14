@@ -803,22 +803,56 @@ test.describe('map refetch feedback on the mobile map tab', () => {
         );
     });
 
-    /** Drag the map ~80px so moveend schedules a debounced refetch. */
+    /**
+     * Drag the map ~80px so moveend schedules a debounced refetch.
+     *
+     * The grip point is the UPPER third of the map box, not its centre: raw
+     * mouse coordinates neither scroll nor hit-test, and at phone heights a
+     * map's lower half can sit under the fixed bottom navigation — a centre
+     * grip presses a nav link and the map never moves.
+     */
     async function panMap(page: import('@playwright/test').Page): Promise<void> {
         const map = page.locator('[role="application"]').first();
+        await map.scrollIntoViewIfNeeded();
         const box = await map.boundingBox();
         expect(box).not.toBeNull();
-        const centreX = box!.x + box!.width / 2;
-        const centreY = box!.y + box!.height / 2;
-        await page.mouse.move(centreX, centreY);
+        const gripX = box!.x + box!.width / 2;
+        const gripY = box!.y + box!.height * 0.3;
+        await page.mouse.move(gripX, gripY);
         await page.mouse.down();
-        await page.mouse.move(centreX - 80, centreY - 50, { steps: 6 });
+        await page.mouse.move(gripX - 80, gripY + 50, { steps: 6 });
         await page.mouse.up();
     }
 
     for (const surface of [
-        { path: '/map', features: '/map/features' },
-        { path: '/invest', features: '/invest/features' },
+        {
+            path: '/map',
+            features: '/map/features',
+            // The explorer's refetch rides on moveend: a genuine pan drives it.
+            trigger: panMap,
+        },
+        {
+            path: '/invest',
+            features: '/invest/features',
+            /*
+             * The invest surface is driven through its boundaries toggle,
+             * which runs the IDENTICAL load() path (watch(showBoundaries)).
+             * A drag is deliberately not used here: raw-coordinate drags are
+             * unreliable on this page — at phone heights the map's lower
+             * half sits under the fixed bottom navigation, and a synthetic
+             * MOUSE drag at 360×800 does not pan MapLibre even when it hits
+             * the canvas. Both effects reproduce on main (6d19710) exactly
+             * as on the Phase 5 build, and TOUCH input pans fine — a
+             * harness/input artifact, not a product defect. The toggle is
+             * deterministic (a locator click scrolls and hit-tests) and
+             * proves the same contract: updating feedback, stale retention
+             * on failure, Data retry through load(), recovery, no adapter
+             * rebuild.
+             */
+            trigger: async (page: import('@playwright/test').Page): Promise<void> => {
+                await page.getByRole('button', { name: 'سنوورەکانی ناوچە' }).click();
+            },
+        },
     ]) {
         test(`${surface.path}: a refetch shows the pill; a failed refetch keeps data, states it, and Data retry recovers`, async ({ page }) => {
             await serveDeterministicStyle(page);
@@ -855,7 +889,7 @@ test.describe('map refetch feedback on the mobile map tab', () => {
 
             // Pan → debounce → refetch: the pill must be visible ON THE MAP
             // TAB while the request is in flight. Pre-fix, nothing appears.
-            await panMap(page);
+            await surface.trigger(page);
             const pill = page.getByTestId('map-updating');
             await expect(pill).toBeVisible({ timeout: 10_000 });
             releaseSlow();
@@ -863,7 +897,7 @@ test.describe('map refetch feedback on the mobile map tab', () => {
 
             // A dropped refetch: the failure is stated on the map tab…
             mode = 'fail';
-            await panMap(page);
+            await surface.trigger(page);
             const failedChip = page.getByTestId('map-refetch-failed');
             await expect(failedChip).toBeVisible({ timeout: 10_000 });
 
