@@ -84,7 +84,12 @@ async function start(): Promise<void> {
             colour: '#0f3e59',
         }]);
     } catch {
+        // Silent degradation stays silent — but not leaky: the adapter
+        // installed just above is destroyed rather than idling behind the
+        // collapsed box. After disposal the unmount hook already did.
         if (!disposed) {
+            adapter.value?.destroy();
+            adapter.value = null;
             failed.value = true;
         }
     }
