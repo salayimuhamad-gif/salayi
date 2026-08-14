@@ -239,7 +239,12 @@ async function start(): Promise<void> {
 
         mapReady.value = true;
     } catch {
+        // The adapter installed just above must not idle behind the failure
+        // state: destroy it now — after disposal the unmount hook already
+        // did, and no state may change.
         if (!disposed) {
+            adapter.value?.destroy();
+            adapter.value = null;
             mapFailed.value = true;
         }
     }

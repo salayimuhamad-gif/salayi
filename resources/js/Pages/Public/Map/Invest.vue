@@ -297,6 +297,12 @@ function select(project: ProjectFeature): void {
 /** Recover a live Google failure by rebuilding MapLibre, once. */
 async function handleRuntimeFailure(): Promise<void> {
     if (renderedProvider.value !== 'google' || fallingBack) {
+        // Nowhere left to fall back to: tear the dead adapter down instead
+        // of leaving its context, worker and observer idling behind the
+        // failure message for the rest of the visit.
+        adapter.value?.destroy();
+        adapter.value = null;
+        mapReady.value = false;
         mapFailed.value = true;
         return;
     }
@@ -330,7 +336,12 @@ async function handleRuntimeFailure(): Promise<void> {
         mapFailed.value = false;
         void load();
     } catch {
+        // The fallback build itself failed: destroy whatever was installed
+        // before readiness rejected. After disposal the unmount hook already
+        // owns the teardown.
         if (!disposed) {
+            adapter.value?.destroy();
+            adapter.value = null;
             mapFailed.value = true;
         }
     } finally {
@@ -413,7 +424,12 @@ async function initialiseMap(): Promise<void> {
 
         mapReady.value = true;
     } catch {
+        // The adapter installed just above must not idle behind the failure
+        // message: destroy it now — after disposal the unmount hook already
+        // did, and no state may change.
         if (!disposed) {
+            adapter.value?.destroy();
+            adapter.value = null;
             mapFailed.value = true;
         }
     }
