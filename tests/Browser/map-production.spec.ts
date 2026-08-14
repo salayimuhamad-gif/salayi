@@ -245,6 +245,52 @@ test.describe('invest markers on a live map', () => {
             ).toBeVisible({ timeout: 2_000 });
         }).toPass({ timeout: 20_000 });
     });
+
+    test('clicking the project NAME at street zoom selects it and never clears a selection', async ({ page }) => {
+        await serveDeterministicStyle(page);
+        await page.goto('/invest', { waitUntil: 'domcontentloaded' });
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+        /*
+         * L2: the point-names layer joins at zoom >= 13; selecting through
+         * search flies the camera to the project at zoom 15, so the NAME
+         * renders above the dot — text-anchor bottom with a -1.2em offset at
+         * text-size 11 puts the glyph band roughly 13-24px above the point,
+         * clear of the 22px trend icon. Close the card and click the NAME,
+         * not the dot. Pre-fix, the name was absent from every interaction
+         * registration: this click fell through to the surface handler and
+         * CLEARED selection, so the card never appears and this times out.
+         */
+        const card = await selectProject(page, 'بورجی', 'بورجی وەبەرهێنانی تاقیکردنەوە');
+        await page.waitForTimeout(3_000); // let flyTo land
+        await card.getByRole('button', { name: 'داخستن' }).click();
+        await expect(card).toHaveCount(0);
+
+        const map = page.locator('[role="application"]').first();
+        const box = await map.boundingBox();
+        expect(box).not.toBeNull();
+        const name = { x: box!.width / 2, y: box!.height / 2 - 18 };
+
+        await expect(async () => {
+            await map.click({ position: name });
+            await expect(
+                page.locator('[role="status"]').filter({ hasText: 'بورجی وەبەرهێنانی تاقیکردنەوە' }),
+            ).toBeVisible({ timeout: 2_000 });
+        }).toPass({ timeout: 20_000 });
+
+        // A name click is a marker click: with the card already open it may
+        // re-select, but it must never fall through and CLEAR the selection.
+        await map.click({ position: name });
+        await expect(
+            page.locator('[role="status"]').filter({ hasText: 'بورجی وەبەرهێنانی تاقیکردنەوە' }),
+        ).toBeVisible();
+
+        // And the cursor states the affordance over the name.
+        await map.hover({ position: name });
+        expect(
+            await page.locator('.maplibregl-canvas').first().evaluate((el) => getComputedStyle(el).cursor),
+        ).toBe('pointer');
+    });
 });
 
 /* ------------------------------------------------------ admin map picker */
@@ -526,6 +572,112 @@ test.describe('wizard location picker provider failure', () => {
 
         await expect(latitude).toHaveValue('36.21');
         await expect(longitude).toHaveValue('44.02');
+    });
+});
+
+/* ------------------------------------------- reactive breakpoint crossing */
+
+test.describe('the lg breakpoint is reactive on the invest selection', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'the crossing test drives the viewport itself; one project is enough',
+        );
+    });
+
+    test('crossing 1024px with a selection open swaps card and sheet and releases the scroll-lock', async ({ page }) => {
+        await serveDeterministicStyle(page);
+        await page.goto('/invest', { waitUntil: 'domcontentloaded' });
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+        await page.locator('#invest-search').fill('بورجی');
+        const results = page.locator('#invest-search-results');
+        await expect(results).toBeVisible();
+        await results.getByRole('button').first().click();
+
+        const card = page.locator('[role="status"]').filter({ hasText: 'بورجی وەبەرهێنانی تاقیکردنەوە' });
+        const sheet = page.getByRole('dialog', { name: 'بورجی وەبەرهێنانی تاقیکردنەوە' });
+
+        await expect(card).toBeVisible();
+        await expect(sheet).toHaveCount(0);
+
+        /*
+         * M3: the split reacts to the media query itself, not to whatever
+         * width the page mounted at. Pre-fix, isDesktop was a render-time
+         * matchMedia call — after this resize the card stayed mounted and
+         * no sheet (or its scroll-lock) ever appeared.
+         */
+        await page.setViewportSize({ width: 390, height: 844 });
+        await expect(sheet).toBeVisible();
+        await expect(card).toHaveCount(0);
+        expect(await page.evaluate(() => document.body.style.overflow)).toBe('hidden');
+
+        // Wide again: the sheet yields back to the card and the lock lifts.
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await expect(card).toBeVisible();
+        await expect(sheet).toHaveCount(0);
+        expect(await page.evaluate(() => document.body.style.overflow)).toBe('');
+    });
+});
+
+/* --------------------------------------- still-mounted provider failure */
+
+/*
+ * REV-P3: Phase 3 (M1) destroyed adapters whose construction outlived the
+ * COMPONENT; these pin the complementary case — construction fails while the
+ * page stays up. The failed, half-built adapter must be destroyed (its WebGL
+ * context lost) instead of idling behind the failure message until the
+ * visitor eventually navigates away. Pre-fix, the adapter stayed installed:
+ * the accounting times out with created=1, lost=0.
+ */
+test.describe('still-mounted provider failure', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'the resource accounting runs once, on desktop-1440x900 only',
+        );
+    });
+
+    test('/map readiness failure destroys the failed adapter; no veil, list alive', async ({ page }) => {
+        await instrumentWebglAccounting(page);
+        await page.route(STYLE_HOST, (route) => route.abort());
+
+        await page.goto('/map', { waitUntil: 'domcontentloaded' });
+
+        // The failure is stated and the veil is settled, not eternal.
+        await expect(page.getByText('نەخشە بار نەبوو').first()).toBeVisible({ timeout: 30_000 });
+        await expect(page.getByText('بارکردنی نەخشە…')).toHaveCount(0);
+
+        await page.waitForFunction(() => {
+            const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+            return counters.__webglCreated > 0 && counters.__webglCreated === counters.__webglLost;
+        }, undefined, { timeout: 15_000 });
+
+        // The list is a peer, not a casualty.
+        await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeVisible();
+    });
+
+    test('/invest readiness failure destroys the failed adapter, and leaving afterwards is clean', async ({ page }) => {
+        await instrumentWebglAccounting(page);
+        await page.route(STYLE_HOST, (route) => route.abort());
+
+        await page.goto('/invest', { waitUntil: 'domcontentloaded' });
+
+        await expect(page.getByText('نەخشە بار نەبوو').first()).toBeVisible({ timeout: 30_000 });
+
+        await page.waitForFunction(() => {
+            const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+            return counters.__webglCreated > 0 && counters.__webglCreated === counters.__webglLost;
+        }, undefined, { timeout: 15_000 });
+
+        /*
+         * The unmount hook then runs against the already-nulled ref. A
+         * double destroy would throw, and the diagnostics fixture fails the
+         * test on any console or page error — this navigation IS the
+         * double-destroy regression check.
+         */
+        await page.locator('a[href$="/projects"]').first().click();
+        await expect(page.locator('.maplibregl-canvas')).toHaveCount(0);
     });
 });
 

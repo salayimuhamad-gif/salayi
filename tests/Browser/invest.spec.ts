@@ -60,18 +60,56 @@ for (const locale of LOCALES) {
             await expect(page.getByText('4.8%').first()).toBeVisible();
         });
 
-        test('search finds a project and selecting it opens its card', async ({ page }) => {
+        test('search finds a project and selecting it opens its card', async ({ page }, testInfo) => {
+            const width = testInfo.project.use.viewport?.width ?? 0;
+
             await page.locator('#invest-search').fill('بورجی');
 
             const results = page.locator('#invest-search-results');
             await expect(results).toBeVisible();
             await results.getByRole('button').first().click();
 
-            // Selection surfaces the floating card over the map, price line
-            // included, with a real link to the project page.
             const card = page.locator('[role="status"]').filter({ hasText: 'بورجی وەبەرهێنانی تاقیکردنەوە' });
-            await expect(card).toBeVisible();
-            await expect(card.getByRole('link')).toHaveAttribute('href', /\/projects\/browser-invest-tower$/);
+
+            if (width >= 1024) {
+                // Desktop selection surfaces the floating card over the map,
+                // price line included, with a real link to the project page.
+                await expect(card).toBeVisible();
+                await expect(card.getByRole('link')).toHaveAttribute('href', /\/projects\/browser-invest-tower$/);
+            } else {
+                /*
+                 * Below lg the same selection rides in the bottom sheet — the
+                 * floating popover must NOT render there. Both halves are
+                 * asserted so the popover cannot silently return on phones.
+                 */
+                const sheet = page.getByRole('dialog', { name: 'بورجی وەبەرهێنانی تاقیکردنەوە' });
+                await expect(sheet).toBeVisible();
+                await expect(sheet.getByRole('link')).toHaveAttribute('href', /\/projects\/browser-invest-tower$/);
+                await expect(card).toHaveCount(0);
+            }
+        });
+
+        test('selecting from the list keeps the list tab and opens the bottom sheet', async ({ page }, testInfo) => {
+            const width = testInfo.project.use.viewport?.width ?? 0;
+            testInfo.skip(width >= 1024, 'the tabs and the sheet exist only below lg');
+
+            const listTab = page.getByRole('tab').nth(1);
+            await listTab.click();
+            await expect(listTab).toHaveAttribute('aria-selected', 'true');
+
+            await page.getByRole('button', { name: /بورجی وەبەرهێنانی تاقیکردنەوە/ }).first().click();
+
+            // The sheet opens OVER the list — selection no longer yanks the
+            // visitor to the map tab — and it scroll-locks the page behind it.
+            const sheet = page.getByRole('dialog', { name: 'بورجی وەبەرهێنانی تاقیکردنەوە' });
+            await expect(sheet).toBeVisible();
+            await expect(listTab).toHaveAttribute('aria-selected', 'true');
+            expect(await page.evaluate(() => document.body.style.overflow)).toBe('hidden');
+
+            // Escape dismisses, and the scroll-lock is released with it.
+            await page.keyboard.press('Escape');
+            await expect(sheet).toHaveCount(0);
+            expect(await page.evaluate(() => document.body.style.overflow)).toBe('');
         });
 
         test('a type filter narrows the list', async ({ page }, testInfo) => {
