@@ -4,6 +4,7 @@ import { Link, usePage } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
 import { formatNumber, t } from '@/lib/i18n';
+import { useIsDesktop } from '@/Composables/useIsDesktop';
 import { useLocale } from '@/Composables/useLocale';
 import { createMapAdapter, type MapAdapter, type PriceTrend } from '@/lib/map';
 import { normaliseTrend, trendArrowGlyph, trendHasClaim } from '@/lib/map/trend';
@@ -334,7 +335,12 @@ onBeforeUnmount(() => {
     adapter.value = null;
 });
 
-const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches;
+/*
+ * Reactive: crossing 1024px with a pin selected swaps the popover and the
+ * bottom sheet immediately, and the sheet's body scroll-lock is released the
+ * moment its `open` prop turns false.
+ */
+const isDesktop = useIsDesktop();
 </script>
 
 <template>
@@ -477,7 +483,7 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
 
                 <!-- Desktop selection: the pin card as a glass popover. -->
                 <div
-                    v-if="selected && isDesktop()"
+                    v-if="selected && isDesktop"
                     class="mh-invest-glass absolute bottom-3 start-3 z-10 max-w-[calc(100%-1.5rem)] rounded-card p-4 lg:max-w-sm"
                     role="status"
                 >
@@ -534,7 +540,7 @@ const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min
 
         <!-- Mobile pin card: same content, as a bottom sheet. -->
         <MobileBottomSheet
-            :open="selected !== null && !isDesktop()"
+            :open="selected !== null && !isDesktop"
             :title="selected?.name ?? undefined"
             :detents="['peek', 'half']"
             @close="selected = null"
