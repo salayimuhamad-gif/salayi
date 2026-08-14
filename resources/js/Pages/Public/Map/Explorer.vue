@@ -838,9 +838,17 @@ watch(flat, () => syncSource());
                          stays live and pannable, with a floating notice
                          rather than a blank surface. Yields its spot to the
                          refetch pill and the refresh-failed chip below. -->
+                    <!-- All three status overlays sit at bottom-24 below lg:
+                         the fixed bottom navigation (z-40, ~60px) paints
+                         over the map's bottom edge whenever that edge meets
+                         the viewport bottom, so an overlay at bottom-4 is
+                         exactly where the nav hides it and swallows its
+                         taps. Measured at 360×800 with the map fully in
+                         view: a bottom-4 chip overlaps the nav band and
+                         elementFromPoint at its centre returns the nav. -->
                     <div
                         v-if="mapReady && !loading && !loadError && !hasResults"
-                        class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
                         <p
@@ -859,7 +867,7 @@ watch(flat, () => syncSource());
                     <div
                         v-if="mapReady && loading"
                         data-testid="map-updating"
-                        class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
                         <p
@@ -880,7 +888,7 @@ watch(flat, () => syncSource());
                     <div
                         v-if="mapReady && loadError && !loading"
                         data-testid="map-refetch-failed"
-                        class="absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        class="absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                     >
                         <div
                             class="flex flex-wrap items-center justify-center gap-2 rounded-card border border-line

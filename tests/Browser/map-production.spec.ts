@@ -938,6 +938,33 @@ test.describe('map refetch feedback on the mobile map tab', () => {
             await expect(failedChip).toBeVisible();
 
             /*
+             * The positioning contract, asserted in the pose a visitor
+             * actually reads the map in: with the map panel's bottom edge at
+             * the viewport's bottom, the retry control must sit clear of the
+             * fixed bottom navigation band — the nav (z-40) paints over the
+             * map's overlays (z-10), so any overlap leaves the control
+             * hidden under the bar with its taps landing on the navigation.
+             * This is what keeps the mobile bottom-24 anchor honest: the
+             * centring scroll below would let a bottom-4 regression pass
+             * unnoticed, because a centred chip is always clear of the nav.
+             */
+            await page
+                .locator('[role="application"]')
+                .first()
+                .evaluate((element) => {
+                    (element.closest('section') ?? element).scrollIntoView({ block: 'end' });
+                });
+            const retry = page.getByTestId('data-retry-overlay');
+            const retryBox = await retry.boundingBox();
+            const navBox = await page.locator('nav.fixed.bottom-0').boundingBox();
+            expect(retryBox, 'retry chip must render').not.toBeNull();
+            expect(navBox, 'the fixed bottom navigation must render').not.toBeNull();
+            expect(
+                retryBox!.y + retryBox!.height,
+                'the retry control must sit clear of the fixed bottom navigation',
+            ).toBeLessThanOrEqual(navBox!.y);
+
+            /*
              * A visitor taps what they can see. At phone heights the map's
              * bottom edge can rest at the viewport's bottom, where the fixed
              * bottom navigation (z-40) paints over anything left there, so
@@ -947,7 +974,6 @@ test.describe('map refetch feedback on the mobile map tab', () => {
              * this: the chip already counts as "in view", so no scroll
              * happens and the click lands on the navigation instead.
              */
-            const retry = page.getByTestId('data-retry-overlay');
             await retry.evaluate((element) => element.scrollIntoView({ block: 'center' }));
 
             // Data retry refreshes the data without rebuilding the map.
