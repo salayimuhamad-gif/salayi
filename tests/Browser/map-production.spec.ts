@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { test, expect, LOCALES } from './support/harness';
+import { test, expect, LOCALES, expectTouchTargets } from './support/harness';
 import { fixtures, signInAdmin } from './support/fixtures';
 
 /*
@@ -699,6 +699,274 @@ test.describe('still-mounted provider failure', () => {
         await page.locator('a[href$="/projects"]').first().click();
         await expect(page.locator('.maplibregl-canvas')).toHaveCount(0);
     });
+});
+
+/* ---------------------------------------- Phase 5: in-place provider retry */
+
+/*
+ * REV-P3-RETRY: Phase 4 destroys a failed adapter so it cannot idle behind
+ * the failure message; these pin the missing half — the visitor can rebuild
+ * the map IN PLACE, without a full page reload. The wizard picker has had
+ * exactly this contract since Phase 2 (see above); /map and /invest now
+ * carry it too. Pre-fix, the retry control does not exist and the only
+ * recovery is a browser reload.
+ */
+test.describe('public map in-place provider retry', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'the retry lifecycle accounting runs once, on desktop-1440x900 only',
+        );
+    });
+
+    for (const surface of [
+        { path: '/map', features: '/map/features' },
+        { path: '/invest', features: '/invest/features' },
+    ]) {
+        test(`${surface.path} provider failure offers Retry, and Retry rebuilds exactly one live map`, async ({ page }) => {
+            await instrumentWebglAccounting(page);
+            await page.route(STYLE_HOST, (route) => route.abort());
+
+            await page.goto(surface.path, { waitUntil: 'domcontentloaded' });
+
+            // The failed state is stated, with an in-canvas Retry beside it.
+            await expect(page.getByText('نەخشە بار نەبوو').first()).toBeVisible({ timeout: 30_000 });
+            const retry = page.getByTestId('map-retry-overlay');
+            await expect(retry).toBeVisible();
+
+            // Phase 4's cleanup already destroyed the failed adapter — the
+            // precondition that makes an in-place rebuild safe at all.
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 1 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            // The provider recovers…
+            await page.unroute(STYLE_HOST);
+            await serveDeterministicStyle(page);
+
+            /*
+             * …and Retry is pressed TWICE in the same task, before Vue can
+             * re-render the disabled attribute — the exact double-tap race.
+             * The `mapBuilding` guard must make the second press a no-op;
+             * if it does not, a second adapter is constructed and the exact
+             * context accounting below (created 2, not 3) fails.
+             */
+            const features = page.waitForResponse(
+                (response) => response.url().includes(surface.features) && response.ok(),
+            );
+            await page.evaluate(() => {
+                const button = document.querySelector<HTMLButtonElement>('[data-testid="map-retry-overlay"]');
+                button?.click();
+                button?.click();
+            });
+
+            const canvas = page.locator('.maplibregl-canvas');
+            await expect(canvas).toBeVisible({ timeout: 20_000 });
+            await expect(canvas).toHaveCount(1);
+            // One set of controls: a retry may never stack a second map.
+            await expect(page.locator('.maplibregl-ctrl-zoom-in')).toHaveCount(1);
+
+            // The rebuilt map repopulates its source through the normal
+            // success path — the features request fires and succeeds.
+            expect((await features).ok()).toBe(true);
+
+            // Context accounting: failed build (created 1, lost 1) plus the
+            // retried build (created 2), which stays live (lost stays 1).
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 2 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            // The failure state is fully withdrawn and no loader is stuck.
+            await expect(page.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+            await expect(page.getByText('بارکردنی نەخشە…')).toHaveCount(0);
+        });
+    }
+});
+
+/* ------------------------------------ Phase 5: refetch feedback, mobile tab */
+
+/*
+ * NEW-REFETCH: after the first load, a viewport refetch was invisible on the
+ * mobile map tab — the only in-flight signal lived in the list pane, which the
+ * map tab hides. These pin the pill (in flight), the stated failure with the
+ * stale data KEPT, and the Data retry — which refreshes the data without
+ * touching the map adapter. Provider Retry and Data retry are different
+ * operations; this suite exercises the latter with the map alive throughout.
+ */
+test.describe('map refetch feedback on the mobile map tab', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            (testInfo.project.use.viewport?.width ?? 0) >= 768,
+            'the map/list tab split — and the feedback gap — exists below md',
+        );
+    });
+
+    /**
+     * Drag the map ~80px so moveend schedules a debounced refetch.
+     *
+     * The grip point is the UPPER third of the map box, not its centre: raw
+     * mouse coordinates neither scroll nor hit-test, and at phone heights a
+     * map's lower half can sit under the fixed bottom navigation — a centre
+     * grip presses a nav link and the map never moves.
+     */
+    async function panMap(page: import('@playwright/test').Page): Promise<void> {
+        const map = page.locator('[role="application"]').first();
+        await map.scrollIntoViewIfNeeded();
+        const box = await map.boundingBox();
+        expect(box).not.toBeNull();
+        const gripX = box!.x + box!.width / 2;
+        const gripY = box!.y + box!.height * 0.3;
+        await page.mouse.move(gripX, gripY);
+        await page.mouse.down();
+        await page.mouse.move(gripX - 80, gripY + 50, { steps: 6 });
+        await page.mouse.up();
+    }
+
+    for (const surface of [
+        {
+            path: '/map',
+            features: '/map/features',
+            // The explorer's refetch rides on moveend: a genuine pan drives it.
+            trigger: panMap,
+        },
+        {
+            path: '/invest',
+            features: '/invest/features',
+            /*
+             * The invest surface is driven through its boundaries toggle,
+             * which runs the IDENTICAL load() path (watch(showBoundaries)).
+             * A drag is deliberately not used here: raw-coordinate drags are
+             * unreliable on this page — at phone heights the map's lower
+             * half sits under the fixed bottom navigation, and a synthetic
+             * MOUSE drag at 360×800 does not pan MapLibre even when it hits
+             * the canvas. Both effects reproduce on main (6d19710) exactly
+             * as on the Phase 5 build, and TOUCH input pans fine — a
+             * harness/input artifact, not a product defect. The toggle is
+             * deterministic (a locator click scrolls and hit-tests) and
+             * proves the same contract: updating feedback, stale retention
+             * on failure, Data retry through load(), recovery, no adapter
+             * rebuild.
+             */
+            trigger: async (page: import('@playwright/test').Page): Promise<void> => {
+                await page.getByRole('button', { name: 'سنوورەکانی ناوچە' }).click();
+            },
+        },
+    ]) {
+        test(`${surface.path}: a refetch shows the pill; a failed refetch keeps data, states it, and Data retry recovers`, async ({ page }) => {
+            await serveDeterministicStyle(page);
+
+            const first = page.waitForResponse(
+                (response) => response.url().includes(surface.features) && response.ok(),
+            );
+            await page.goto(surface.path, { waitUntil: 'domcontentloaded' });
+            await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+            await first;
+
+            // From here this test owns the features endpoint: one slow
+            // response, then a dead one, then recovery. Registered after the
+            // initial load so that load stays untouched.
+            let mode: 'slow' | 'fail' | 'ok' = 'slow';
+            let releaseSlow!: () => void;
+            const slowGate = new Promise<void>((resolve) => {
+                releaseSlow = resolve;
+            });
+            await page.route(`**${surface.features}*`, async (route) => {
+                if (mode === 'slow') {
+                    await slowGate;
+                    await route.continue();
+                    return;
+                }
+
+                if (mode === 'fail') {
+                    await route.abort();
+                    return;
+                }
+
+                await route.continue();
+            });
+
+            // Pan → debounce → refetch: the pill must be visible ON THE MAP
+            // TAB while the request is in flight. Pre-fix, nothing appears.
+            await surface.trigger(page);
+            const pill = page.getByTestId('map-updating');
+            await expect(pill).toBeVisible({ timeout: 10_000 });
+            releaseSlow();
+            await expect(pill).toBeHidden({ timeout: 10_000 });
+
+            // A dropped refetch: the failure is stated on the map tab…
+            mode = 'fail';
+            await surface.trigger(page);
+            const failedChip = page.getByTestId('map-refetch-failed');
+            await expect(failedChip).toBeVisible({ timeout: 10_000 });
+
+            // …and the stale results were KEPT, not blanked.
+            await page.getByRole('tab').nth(1).click();
+            await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeVisible();
+            await page.getByRole('tab').nth(0).click();
+
+            // Data retry refreshes the data without rebuilding the map.
+            mode = 'ok';
+            const recovered = page.waitForResponse(
+                (response) => response.url().includes(surface.features) && response.ok(),
+            );
+            await page.getByTestId('data-retry-overlay').click();
+            expect((await recovered).ok()).toBe(true);
+            await expect(failedChip).toBeHidden({ timeout: 10_000 });
+            await expect(page.locator('.maplibregl-canvas')).toHaveCount(1);
+        });
+    }
+});
+
+/* ------------------------------------------- Phase 5: touch-target floor */
+
+/*
+ * NEW-TOUCH: the interactive controls on the public map surfaces meet the
+ * 44px floor on coarse-pointer devices. The mobile Playwright projects run
+ * with hasTouch, so `(pointer: coarse)` genuinely matches — the same media
+ * query the CSS scopes the enlargement to. MapLibre's native buttons are
+ * checked width AND height (stock CSS ships them 29×29); everything else
+ * goes through the shared harness floor, on both mobile tabs.
+ */
+test.describe('map touch targets on coarse-pointer viewports', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            (testInfo.project.use.viewport?.width ?? 0) >= 768,
+            'the 44px floor is a touch-viewport requirement',
+        );
+    });
+
+    for (const path of ['/map', '/invest']) {
+        test(`${path} controls meet the 44px touch floor`, async ({ page }) => {
+            await serveDeterministicStyle(page);
+            await page.goto(path, { waitUntil: 'domcontentloaded' });
+            await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+            // The enlargement is scoped to `pointer: coarse`; prove the
+            // context actually matches it rather than trusting viewport width.
+            expect(await page.evaluate(() => matchMedia('(pointer: coarse)').matches)).toBe(true);
+
+            for (const control of ['.maplibregl-ctrl-zoom-in', '.maplibregl-ctrl-zoom-out']) {
+                const box = await page.locator(control).boundingBox();
+                expect(box, `${control} must render`).not.toBeNull();
+                expect(box!.width, `${control} width`).toBeGreaterThanOrEqual(44);
+                expect(box!.height, `${control} height`).toBeGreaterThanOrEqual(44);
+            }
+
+            const attribution = page.locator('.maplibregl-ctrl-attrib-button');
+            if ((await attribution.count()) > 0 && (await attribution.first().isVisible())) {
+                const box = await attribution.first().boundingBox();
+                expect(box!.width, 'attribution toggle width').toBeGreaterThanOrEqual(44);
+                expect(box!.height, 'attribution toggle height').toBeGreaterThanOrEqual(44);
+            }
+
+            // Every interactive control on the map tab, then the list tab.
+            await expectTouchTargets(page);
+            await page.getByRole('tab').nth(1).click();
+            await expectTouchTargets(page);
+        });
+    }
 });
 
 /* -------------------------------------------------- mobile map/list switch */

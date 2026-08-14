@@ -376,6 +376,26 @@
         box-shadow: 0 0 0 1px rgb(var(--mh-accent) / 0.35);
     }
 
+    /* --- Touch-target floor (map surfaces) ------------------------------- */
+
+    /*
+     * The 44px floor `.mh-lux-btn` documents above, extended to the rest of
+     * the interactive map-surface controls — but only under a coarse
+     * pointer, so desktop pointer density is untouched. `mh-touch-target`
+     * is additive: it grows the hit box, never the type inside it, and it
+     * deliberately says nothing about inline-size — every control it marks
+     * is already wide enough or full-width. The matching MapLibre vendor
+     * override lives at the end of this file, OUTSIDE the components layer:
+     * its class names appear in no template, and a layered rule whose class
+     * Tailwind never sees in content is purged from the build.
+     */
+    @media (pointer: coarse) {
+        .mh-touch-target,
+        .mh-invest-chip {
+            min-block-size: 2.75rem;
+        }
+    }
+
     /* Decorative markers on the homepage teaser: gold dots with a soft ring
        pulse. Static under prefers-reduced-motion — the global neutralizer
        already clamps the animation, and the dot alone still reads. */
@@ -402,5 +422,35 @@
     @keyframes mh-invest-pulse {
         0% { transform: scale(0.6); opacity: 0.9; }
         100% { transform: scale(1.8); opacity: 0; }
+    }
+}
+
+/*
+ * MapLibre's native controls under a coarse pointer (Phase 5, NEW-TOUCH).
+ *
+ * The vendor stylesheet ships the zoom buttons and the compact-attribution
+ * toggle at a fixed 29×29px — 15px under the 44px touch floor the rest of
+ * the public surface enforces. min-* beats the vendor's width/height
+ * regardless of rule order, and the glyph keeps its drawn size because the
+ * vendor CSS centres it as a background image inside whatever box the
+ * button has. Deliberately OUTSIDE every @layer: these class names appear
+ * in no template, and Tailwind purges layered component rules whose classes
+ * never occur in the content globs.
+ */
+@media (pointer: coarse) {
+    .maplibregl-ctrl-group button,
+    .maplibregl-ctrl-attrib-button {
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+    }
+
+    /*
+     * The zoom glyphs already sit at background-position:50% and keep their
+     * intrinsic 29px size inside the larger box. The attribution glyph is
+     * corner-anchored in vendor CSS (background-position defaults to 0 0),
+     * so recentre it in the enlarged box.
+     */
+    .maplibregl-ctrl-attrib-button {
+        background-position: center;
     }
 }

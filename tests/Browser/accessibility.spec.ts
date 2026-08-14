@@ -10,7 +10,13 @@ import {
  * class list, because `min-h-11` losing a specificity fight produces exactly
  * the same markup and a 30px button.
  */
-for (const path of ['/', '/projects', '/login']) {
+/*
+ * /map and /invest joined in Phase 5: they were the two public surfaces the
+ * touch sweep never visited, which is exactly where the sub-44px controls
+ * accumulated. Under this suite's hermetic network the style request fails,
+ * so these two also sweep the FAILED map state — the retry controls included.
+ */
+for (const path of ['/', '/projects', '/login', '/map', '/invest']) {
     test(`no duplicate ids on ${path}`, async ({ page }) => {
         await page.goto(path, { waitUntil: 'networkidle' });
         await expectNoDuplicateIds(page);
