@@ -216,7 +216,7 @@ export class MapLibreAdapter implements MapAdapter {
              */
             const hit = map
                 .queryRenderedFeatures(event.point, {
-                    layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'point-labels', 'clusters']),
+                    layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'point-labels', 'point-names', 'clusters']),
                 })
                 .length > 0;
 
@@ -394,11 +394,21 @@ export class MapLibreAdapter implements MapAdapter {
                 }
             };
 
+            /*
+             * Every visual piece of a project point is the SAME target:
+             * dot, trend icon, price label and street-zoom name all resolve
+             * to the project's id. `point-names` was missing from all three
+             * registrations below (click, hit guard above, cursor), so at
+             * zoom >= 13 a tap on a project's name fell through to the
+             * surface handler and CLEARED the selection it looked like it
+             * was making.
+             */
             map.on('click', 'unclustered', emitMarkerClick);
             map.on('click', 'trend-markers', emitMarkerClick);
             map.on('click', 'point-labels', emitMarkerClick);
+            map.on('click', 'point-names', emitMarkerClick);
 
-            for (const layer of ['unclustered', 'trend-markers', 'point-labels']) {
+            for (const layer of ['unclustered', 'trend-markers', 'point-labels', 'point-names']) {
                 map.on('mouseenter', layer, () => {
                     map.getCanvas().style.cursor = 'pointer';
                 });
