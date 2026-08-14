@@ -92,6 +92,12 @@ const boundaries = ref<BoundaryCollection>(emptyBoundaries);
 
 const mapFailed = ref(false);
 const mapReady = ref(false);
+/*
+ * True while a map build (initial or retried) is in flight. This is what
+ * makes the Retry button single-shot: a second tap while the first build is
+ * still running must be a no-op, never a second adapter.
+ */
+const mapBuilding = ref(false);
 const loading = ref(false);
 const loadError = ref(false);
 const offline = ref(typeof navigator !== 'undefined' ? !navigator.onLine : false);
@@ -310,6 +316,15 @@ let fallingBack = false;
  */
 let disposed = false;
 
+/*
+ * Build generation token, the wizard picker's pattern: each call to
+ * initialiseMap() claims a new generation, and an attempt that is no longer
+ * the newest may not install an adapter or touch page state. The UI guard
+ * (`mapBuilding`) already prevents overlapping builds; the token keeps a
+ * stale build harmless even if a path around that guard ever appears.
+ */
+let mapAttempt = 0;
+
 /** Adapter construction options, shared by the initial build and the fallback. */
 function adapterOptions() {
     return {
@@ -358,12 +373,15 @@ async function initialiseMap(): Promise<void> {
         return;
     }
 
+    const attempt = ++mapAttempt;
+    mapBuilding.value = true;
+
     try {
         const result = await createMapAdapter(props.provider, adapterOptions());
 
         // One check covers every provider outcome — Google, Google→MapLibre
         // fallback, plain MapLibre — they all resolve through this call.
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             result.adapter.destroy();
 
             return;
@@ -375,7 +393,7 @@ async function initialiseMap(): Promise<void> {
 
         await result.adapter.ready();
 
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             return;
         }
 
@@ -387,13 +405,39 @@ async function initialiseMap(): Promise<void> {
         // adapter installed just above must not idle behind the failure
         // message: destroy it now — after disposal the unmount hook already
         // did, and no state may change.
-        if (!disposed) {
+        if (!disposed && attempt === mapAttempt) {
             adapter.value?.destroy();
             adapter.value = null;
             mapFailed.value = true;
             void load();
         }
+    } finally {
+        if (!disposed && attempt === mapAttempt) {
+            mapBuilding.value = false;
+        }
     }
+}
+
+/**
+ * In-place recovery from a failed map: destroy whatever is left, reset the
+ * failure state, and run the SAME construction path again — provider choice
+ * and the Google→MapLibre construction fallback included. The admin pickers
+ * have carried this lifecycle since Phase 2; this is the public-surface
+ * counterpart. The `mapBuilding` guard makes a double tap a no-op instead
+ * of a second adapter, and the fresh `mapAttempt` generation strands any
+ * build this one supersedes.
+ */
+function retryMap(): void {
+    if (mapBuilding.value || disposed) {
+        return;
+    }
+
+    adapter.value?.destroy();
+    adapter.value = null;
+    mapReady.value = false;
+    mapFailed.value = false;
+
+    void initialiseMap();
 }
 
 /* ------------------------------------------------------------- controls */
@@ -540,15 +584,40 @@ watch(flat, () => syncSource());
                 :message="`${t('map.states.offline')} — ${t('map.states.offline_hint')}`"
             />
 
-            <AppAlert
-                v-else-if="mapFailed" class="mb-3" variant="warning"
-                :message="`${t('map.states.provider_failed')} — ${t('map.states.provider_failed_hint')}`"
-            />
+            <!-- Provider failure carries its own recovery: Retry rebuilds the
+                 map in place — no full page reload required. -->
+            <AppAlert v-else-if="mapFailed" class="mb-3" variant="warning">
+                {{ t('map.states.provider_failed') }} — {{ t('map.states.provider_failed_hint') }}
+                <button
+                    type="button"
+                    data-testid="map-retry"
+                    class="mh-touch-target ms-3 rounded-card border border-line px-3 py-1 text-sm text-ink
+                           transition-colors hover:bg-surface-sunken disabled:cursor-not-allowed disabled:opacity-50
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    :disabled="mapBuilding"
+                    @click="retryMap"
+                >
+                    {{ t('map.states.retry') }}
+                </button>
+            </AppAlert>
 
-            <AppAlert
-                v-if="loadError" class="mb-3" variant="danger"
-                :message="`${t('map.states.error')} — ${t('map.states.error_hint')}`"
-            />
+            <!-- A failed refresh keeps the stale data (stated by the hint) and
+                 offers a DATA retry — a plain re-run of load(), never a map
+                 rebuild. -->
+            <AppAlert v-if="loadError" class="mb-3" variant="danger">
+                {{ t('map.states.error') }} — {{ t('map.states.error_hint') }}
+                <button
+                    type="button"
+                    data-testid="data-retry"
+                    class="mh-touch-target ms-3 rounded-card border border-line px-3 py-1 text-sm text-ink
+                           transition-colors hover:bg-surface-sunken disabled:cursor-not-allowed disabled:opacity-50
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    :disabled="loading"
+                    @click="load"
+                >
+                    {{ t('map.states.retry') }}
+                </button>
+            </AppAlert>
 
             <AppAlert
                 v-if="permissionDenied" class="mb-3" variant="info"
@@ -566,7 +635,7 @@ watch(flat, () => syncSource());
                             v-for="layer in layers"
                             :key="layer.key"
                             type="button"
-                            class="rounded-full border px-3 py-1.5 text-sm transition-colors
+                            class="mh-touch-target rounded-full border px-3 py-1.5 text-sm transition-colors
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             :class="active.includes(layer.key as LayerKey)
                                 ? 'border-brand bg-brand text-white'
@@ -586,7 +655,7 @@ watch(flat, () => syncSource());
                             v-for="category in categories"
                             :key="category.key"
                             type="button"
-                            class="rounded-full border px-3 py-1 text-xs transition-colors
+                            class="mh-touch-target rounded-full border px-3 py-1 text-xs transition-colors
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             :class="activeCategories.includes(category.key)
                                 ? 'border-brand bg-brand text-white'
@@ -604,7 +673,7 @@ watch(flat, () => syncSource());
                 <div class="flex flex-wrap items-end gap-3">
                     <button
                         type="button"
-                        class="rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
+                        class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                transition-colors hover:bg-surface-sunken
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         :class="pickingCentre ? 'border-brand text-brand' : ''"
@@ -615,7 +684,7 @@ watch(flat, () => syncSource());
 
                     <button
                         type="button"
-                        class="rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
+                        class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                transition-colors hover:bg-surface-sunken
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         @click="useMyLocation"
@@ -631,7 +700,7 @@ watch(flat, () => syncSource());
                             min="0.1"
                             :max="limits.max_radius_km"
                             step="0.5"
-                            class="numeral w-20 rounded-card border border-line px-2 py-1 text-sm"
+                            class="numeral mh-touch-target w-20 rounded-card border border-line px-2 py-1 text-sm"
                             dir="ltr"
                             @change="load"
                         >
@@ -639,7 +708,7 @@ watch(flat, () => syncSource());
 
                     <button
                         type="button"
-                        class="rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
+                        class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                transition-colors hover:bg-surface-sunken
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         :class="drawing ? 'border-brand text-brand' : ''"
@@ -654,7 +723,7 @@ watch(flat, () => syncSource());
                         </span>
                         <button
                             type="button"
-                            class="rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
+                            class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             @click="finishDrawing"
                         >
@@ -662,7 +731,7 @@ watch(flat, () => syncSource());
                         </button>
                         <button
                             type="button"
-                            class="rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
+                            class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             @click="clearDrawing"
                         >
@@ -672,7 +741,7 @@ watch(flat, () => syncSource());
 
                     <button
                         type="button"
-                        class="rounded-card px-3 py-1.5 text-sm text-ink-faint underline
+                        class="mh-touch-target rounded-card px-3 py-1.5 text-sm text-ink-faint underline
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         @click="clearFilters"
                     >
@@ -690,7 +759,7 @@ watch(flat, () => syncSource());
             <div class="mb-3 flex gap-2 md:hidden" role="tablist">
                 <button
                     type="button" role="tab" :aria-selected="mobileView === 'map'"
-                    class="flex-1 rounded-card border px-3 py-2 text-sm"
+                    class="mh-touch-target flex-1 rounded-card border px-3 py-2 text-sm"
                     :class="mobileView === 'map' ? 'border-brand bg-brand text-white' : 'border-line text-ink-muted'"
                     @click="mobileView = 'map'"
                 >
@@ -698,7 +767,7 @@ watch(flat, () => syncSource());
                 </button>
                 <button
                     type="button" role="tab" :aria-selected="mobileView === 'list'"
-                    class="flex-1 rounded-card border px-3 py-2 text-sm"
+                    class="mh-touch-target flex-1 rounded-card border px-3 py-2 text-sm"
                     :class="mobileView === 'list' ? 'border-brand bg-brand text-white' : 'border-line text-ink-muted'"
                     @click="mobileView = 'list'"
                 >
@@ -726,9 +795,10 @@ watch(flat, () => syncSource());
 
                     <!-- Zero features is a STATE, not a failure: the basemap
                          stays live and pannable, with a floating notice
-                         rather than a blank surface. -->
+                         rather than a blank surface. Yields its spot to the
+                         refetch pill and the refresh-failed chip below. -->
                     <div
-                        v-if="mapReady && !loading && !hasResults"
+                        v-if="mapReady && !loading && !loadError && !hasResults"
                         class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
                         aria-live="polite"
                     >
@@ -740,11 +810,74 @@ watch(flat, () => syncSource());
                         </p>
                     </div>
 
+                    <!-- NEW-REFETCH: after the first load, a viewport or
+                         filter refetch was invisible on the mobile map tab —
+                         the only signal lived in the list pane the map tab
+                         hides. This pill states it politely, without veiling
+                         the live map or the stale markers. -->
+                    <div
+                        v-if="mapReady && loading"
+                        data-testid="map-updating"
+                        class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        aria-live="polite"
+                    >
+                        <p
+                            class="rounded-full border border-line bg-surface-raised/90 px-4 py-2 text-center text-xs
+                                   text-ink shadow-sm backdrop-blur"
+                        >
+                            {{ t('map.states.loading_features') }}
+                        </p>
+                    </div>
+
+                    <!-- A dropped refresh, stated where the visitor is
+                         looking: the stale data stays (the hint says so) and
+                         Retry re-runs the DATA fetch only — the live map is
+                         never rebuilt for a failed refresh. -->
+                    <div
+                        v-if="mapReady && loadError && !loading"
+                        data-testid="map-refetch-failed"
+                        class="absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
+                        role="status"
+                    >
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-2 rounded-card border border-line
+                                   bg-surface-raised/95 px-3 py-2 shadow-sm backdrop-blur"
+                        >
+                            <span class="text-xs text-ink">
+                                {{ t('map.states.error') }} — {{ t('map.states.error_hint') }}
+                            </span>
+                            <button
+                                type="button"
+                                data-testid="data-retry-overlay"
+                                class="mh-touch-target rounded-card border border-line px-3 py-1 text-xs text-ink
+                                       transition-colors hover:bg-surface-sunken
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                @click="load"
+                            >
+                                {{ t('map.states.retry') }}
+                            </button>
+                        </div>
+                    </div>
+
                     <div
                         v-if="mapFailed"
                         class="absolute inset-0 grid place-items-center bg-surface-sunken p-6 text-center text-sm text-ink-muted"
                     >
-                        {{ t('map.states.provider_failed_hint') }}
+                        <div>
+                            <p>{{ t('map.states.provider_failed_hint') }}</p>
+                            <button
+                                type="button"
+                                data-testid="map-retry-overlay"
+                                class="mh-touch-target mt-3 rounded-card border border-line px-4 py-1.5 text-sm text-ink
+                                       transition-colors hover:bg-surface-raised disabled:cursor-not-allowed
+                                       disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2
+                                       focus-visible:ring-accent"
+                                :disabled="mapBuilding"
+                                @click="retryMap"
+                            >
+                                {{ t('map.states.retry') }}
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -780,8 +913,8 @@ watch(flat, () => syncSource());
                                 <component
                                     :is="hrefFor(feature, layer) ? Link : 'div'"
                                     :href="hrefFor(feature, layer) ?? undefined"
-                                    class="block rounded-card border border-line px-3 py-2 text-sm transition-colors
-                                           hover:bg-surface-sunken focus-visible:outline-none
+                                    class="mh-touch-target block rounded-card border border-line px-3 py-2 text-sm
+                                           transition-colors hover:bg-surface-sunken focus-visible:outline-none
                                            focus-visible:ring-2 focus-visible:ring-accent"
                                 >
                                     <span class="flex items-start justify-between gap-3">
