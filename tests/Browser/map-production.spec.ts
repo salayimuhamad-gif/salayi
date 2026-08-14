@@ -329,6 +329,152 @@ test.describe('admin project location picker', () => {
     });
 });
 
+/* --------------------------------- construction that outlives its page */
+
+/*
+ * M1: an adapter whose construction finishes AFTER its component unmounted
+ * must be destroyed, never leaked. The race is reproduced deterministically
+ * by gating the lazy maplibre-gl chunk request — its URL resolved from the
+ * Vite manifest at runtime, never a hardcoded hash — so a page can be left
+ * mid-construction by an Inertia navigation.
+ *
+ * The resource signal is WebGL context accounting: MapLibre's remove()
+ * loses the canvas context via WEBGL_lose_context, so once the stale
+ * construction resolves, created === lost holds iff the consumer's disposal
+ * guard destroyed it. A leaked adapter's canvas is DETACHED from the
+ * document, which is exactly why a DOM count cannot see the leak and this
+ * counter can. Deliberately coupled to MapLibre's teardown internals; a
+ * maplibre-gl upgrade that stops losing the context on remove() must update
+ * this instrumentation too.
+ */
+
+async function instrumentWebglAccounting(page: import('@playwright/test').Page): Promise<void> {
+    await page.addInitScript(() => {
+        const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+        counters.__webglCreated = 0;
+        counters.__webglLost = 0;
+
+        const original = HTMLCanvasElement.prototype.getContext;
+        HTMLCanvasElement.prototype.getContext = function (
+            this: HTMLCanvasElement & { __webglCounted?: boolean },
+            type: string,
+            ...args: unknown[]
+        ) {
+            const context = original.call(this, type, ...args as never[]);
+
+            // One canvas backs one map; count each WebGL canvas once even if
+            // the library probes the same canvas for webgl2 and webgl.
+            if (context !== null && (type === 'webgl' || type === 'webgl2') && !this.__webglCounted) {
+                this.__webglCounted = true;
+                counters.__webglCreated += 1;
+                this.addEventListener('webglcontextlost', () => {
+                    counters.__webglLost += 1;
+                }, { once: true });
+            }
+
+            return context;
+        } as typeof HTMLCanvasElement.prototype.getContext;
+    });
+}
+
+/**
+ * Hold the lazy maplibre-gl chunk behind a gate the test opens explicitly.
+ * The chunk's hashed filename is read from the build manifest at runtime so
+ * this never encodes a particular emitted name.
+ */
+async function gateMaplibreChunk(page: import('@playwright/test').Page): Promise<{
+    release: () => void;
+    requested: Promise<unknown>;
+}> {
+    const manifest = await page.request.get('/build/manifest.json')
+        .then((response) => response.json()) as Record<string, { file: string }>;
+
+    const entry = Object.entries(manifest).find(([source, chunk]) =>
+        source.includes('node_modules/maplibre-gl/') && !chunk.file.includes('worker'));
+    expect(entry, 'the maplibre-gl dynamic chunk must exist in the Vite manifest').toBeDefined();
+
+    const pattern = `**/${entry![1].file}`;
+    let release!: () => void;
+    const gate = new Promise<void>((resolve) => {
+        release = resolve;
+    });
+
+    await page.route(pattern, async (route) => {
+        await gate;
+        await route.continue();
+    });
+
+    return { release, requested: page.waitForRequest(pattern) };
+}
+
+test.describe('adapter construction outliving its page', () => {
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'the lifecycle race runs once, on desktop-1440x900 only',
+        );
+    });
+
+    test('navigating away mid-construction destroys the late adapter; returning yields one healthy map', async ({ page }) => {
+        await instrumentWebglAccounting(page);
+        await serveDeterministicStyle(page);
+        const { release, requested } = await gateMaplibreChunk(page);
+
+        // Start somewhere with no map, then enter /invest through a real
+        // Inertia link so leaving it later is a genuine SPA unmount.
+        await page.goto('/projects', { waitUntil: 'domcontentloaded' });
+        await Promise.all([
+            requested,
+            page.locator('a[href$="/invest"]').first().click(),
+        ]);
+
+        // The chunk is in flight and gated: leave before construction ends.
+        await page.locator('a[href$="/projects"]').first().click();
+        await expect(page.locator('.maplibregl-canvas')).toHaveCount(0);
+
+        release();
+
+        /*
+         * The stale construction now resolves against an unmounted page. The
+         * disposal guard must destroy it: every created WebGL context ends
+         * lost. Pre-fix, the leaked map keeps its context and this times out.
+         */
+        await page.waitForFunction(() => {
+            const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+            return counters.__webglCreated > 0 && counters.__webglCreated === counters.__webglLost;
+        }, undefined, { timeout: 15_000 });
+
+        // Returning builds a fresh, healthy map — exactly one.
+        await page.locator('a[href$="/invest"]').first().click();
+        const canvas = page.locator('.maplibregl-canvas');
+        await expect(canvas).toBeVisible({ timeout: 20_000 });
+        await expect(canvas).toHaveCount(1);
+    });
+
+    test('the homepage lazy map is destroyed when navigation wins its construction race', async ({ page }) => {
+        await instrumentWebglAccounting(page);
+        await serveDeterministicStyle(page);
+        const { release, requested } = await gateMaplibreChunk(page);
+
+        await page.goto('/', { waitUntil: 'domcontentloaded' });
+
+        // The IntersectionObserver is the trigger: scroll the section into
+        // view, catch the gated chunk request, and leave immediately.
+        await Promise.all([
+            requested,
+            page.locator('[data-testid="home-project-map"]').scrollIntoViewIfNeeded(),
+        ]);
+        await page.locator('a[href$="/projects"]').first().click();
+
+        release();
+
+        await page.waitForFunction(() => {
+            const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+            return counters.__webglCreated > 0 && counters.__webglCreated === counters.__webglLost;
+        }, undefined, { timeout: 15_000 });
+    });
+});
+
 /* --------------------------------------- wizard picker provider failure */
 
 test.describe('wizard location picker provider failure', () => {

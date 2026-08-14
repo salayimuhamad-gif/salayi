@@ -46,6 +46,12 @@ const drawing = ref(false);
 const ring = ref<LngLat[]>([]);
 const failed = ref(false);
 const building = ref(false);
+/*
+ * Construction can outlive the component: unmounting mid-build destroys a
+ * still-null adapter ref, so the adapter that resolves later must be
+ * destroyed HERE, before it is installed — and no state may change after.
+ */
+let disposed = false;
 
 /*
  * Erbil. A fixed fallback for records that carry no coordinates yet — the
@@ -55,7 +61,7 @@ const building = ref(false);
 const FALLBACK_CENTRE = { lat: 36.2, lng: 44.05 };
 
 async function build(): Promise<void> {
-    if (!container.value || building.value) return;
+    if (!container.value || building.value || disposed) return;
 
     building.value = true;
     failed.value = false;
@@ -91,9 +97,19 @@ async function build(): Promise<void> {
             },
         });
 
+        if (disposed) {
+            result.adapter.destroy();
+
+            return;
+        }
+
         adapter.value = result.adapter;
 
         await result.adapter.ready();
+
+        if (disposed) {
+            return;
+        }
 
         // Existing geometry, restored on edit: pin first, then the ring —
         // and the camera fits the polygon when one exists.
@@ -116,12 +132,18 @@ async function build(): Promise<void> {
         }
     } catch {
         // Bounded readiness rejected (style failed or stalled): a clear
-        // message with a retry — never an indefinite blank surface.
-        adapter.value?.destroy();
-        adapter.value = null;
-        failed.value = true;
+        // message with a retry — never an indefinite blank surface. After
+        // disposal the unmount hook already destroyed the adapter and no
+        // state may change.
+        if (!disposed) {
+            adapter.value?.destroy();
+            adapter.value = null;
+            failed.value = true;
+        }
     } finally {
-        building.value = false;
+        if (!disposed) {
+            building.value = false;
+        }
     }
 }
 
@@ -231,7 +253,7 @@ watch(() => [props.latitude, props.longitude] as const, ([lat, lng]) => {
 });
 
 onMounted(() => { void build(); });
-onBeforeUnmount(() => { adapter.value?.destroy(); adapter.value = null; });
+onBeforeUnmount(() => { disposed = true; adapter.value?.destroy(); adapter.value = null; });
 </script>
 
 <template>
