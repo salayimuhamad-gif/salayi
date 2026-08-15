@@ -1,6 +1,7 @@
 import { execFileSync } from 'node:child_process';
 import { test, expect, LOCALES, expectTouchTargets } from './support/harness';
 import { fixtures, signInAdmin } from './support/fixtures';
+import { colourDelta, decodePng, type Rgb } from './support/png';
 
 /*
  * The map endpoints sit behind real per-IP rate limiters (map-features
@@ -392,6 +393,263 @@ test.describe('admin project location picker', () => {
         await expect(page.getByLabel('پانی', { exact: true })).toHaveValue(/^36\.195/);
         await expect(page.getByLabel('درێژی', { exact: true })).toHaveValue(/^44\.015/);
         await expect(page.locator('.maplibregl-marker')).toHaveCount(1);
+    });
+});
+
+/* --------------------------------- admin picker geometry fidelity (L1) */
+
+/*
+ * Canonical L1: the simple picker edits exactly one hole-free ring, but the
+ * server accepts Polygon-with-holes and MultiPolygon at every door. Such a
+ * boundary used to render as nothing (or as its exterior alone) and a
+ * redraw or clear then silently replaced it with a downgrade. The contract
+ * pinned here: complex geometry renders in FULL (holes genuinely punched
+ * out — proven by pixel, not by visibility), the limitation is stated,
+ * replacing or clearing demands explicit intent plus confirmation,
+ * cancelling emits nothing, and the simple single-ring flow is unchanged.
+ */
+test.describe('admin picker geometry fidelity', () => {
+    const HOLED = 'POLYGON((44.0000000 36.1800000, 44.0200000 36.1800000, '
+        + '44.0200000 36.2000000, 44.0000000 36.2000000, 44.0000000 36.1800000), '
+        + '(44.0050000 36.1850000, 44.0100000 36.1850000, 44.0100000 36.1900000, '
+        + '44.0050000 36.1900000, 44.0050000 36.1850000))';
+    const MULTI = 'MULTIPOLYGON(((44.0000000 36.1800000, 44.0200000 36.1800000, '
+        + '44.0200000 36.2000000, 44.0000000 36.2000000, 44.0000000 36.1800000)), '
+        + '((44.0300000 36.2100000, 44.0500000 36.2100000, 44.0500000 36.2300000, '
+        + '44.0300000 36.2300000, 44.0300000 36.2100000), '
+        + '(44.0350000 36.2150000, 44.0400000 36.2150000, 44.0400000 36.2200000, '
+        + '44.0350000 36.2200000, 44.0350000 36.2150000)))';
+
+    /**
+     * Create an area through the real admin form and land on its edit page,
+     * where the picker constructs WITH the stored boundary and fits the
+     * camera to it — the deterministic pose the pixel samples assume.
+     */
+    async function createAreaWithBoundary(
+        page: import('@playwright/test').Page,
+        slug: string,
+        wkt: string,
+    ): Promise<void> {
+        await page.goto('/admin/areas/create', { waitUntil: 'domcontentloaded' });
+
+        await page.getByLabel('ناو (کوردی)').fill(`ناوچەی ${slug}`);
+        await page.getByLabel('ناونیشانی وێب').fill(slug);
+        await page.getByLabel('پانی', { exact: true }).fill('36.18');
+        await page.getByLabel('درێژی', { exact: true }).fill('44.00');
+        await page.getByLabel('سنوور (WKT)').fill(wkt);
+
+        await page.getByRole('button', { name: 'دروستکردنی ناوچە' }).click();
+        await page.waitForURL(/\/admin\/areas\/\d+\/edit/, { timeout: 15_000 });
+
+        /*
+         * Fresh load of the edit page. The create→edit redirect is an
+         * Inertia visit onto the SAME page component, so Vue patches the
+         * form in place and the already-mounted picker keeps its create-page
+         * camera. A reload is the pose the pixel maths assume — an editor
+         * opening the record — where build() fits the camera to the stored
+         * geometry at zoom 13.
+         */
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+    }
+
+    /**
+     * Screenshot the picker canvas and sample pixels at offsets from its
+     * centre. MapLibre renders at zoom 13 over the geometry's bounds centre,
+     * 512-pixel tiles: 11650.8 px/deg lng, / cos(lat) for latitude.
+     */
+    async function sampleCanvas(
+        page: import('@playwright/test').Page,
+        offsets: Array<{ dx: number; dy: number }>,
+    ): Promise<Rgb[]> {
+        const canvas = page.locator('.maplibregl-canvas');
+        const png = decodePng(await canvas.screenshot());
+
+        return offsets.map(({ dx, dy }) => png.pixelAt(png.width / 2 + dx, png.height / 2 + dy));
+    }
+
+    test.beforeEach(async ({ page }, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900' && testInfo.project.name !== 'mobile-360x800',
+            'the fidelity contract runs on desktop-1440x900, plus a 360x800 notice smoke',
+        );
+        await signInAdmin(page);
+    });
+
+    test('a polygon with a hole renders in full and survives cancelled destruction untouched', async ({ page }, testInfo) => {
+        testInfo.skip(testInfo.project.name !== 'desktop-1440x900', 'pixel assertions run once, on desktop');
+
+        // Unique per run: the disposable browser database persists across
+        // local repeat runs, and the slug column is unique.
+        await createAreaWithBoundary(page, `geometry-fidelity-holed-${Date.now()}`, HOLED);
+
+        // The limitation is STATED, and the plain Draw affordance is gone —
+        // read-only by default, never a silent path into replacement.
+        await expect(page.getByTestId('boundary-complex-notice')).toBeVisible();
+        await expect(page.getByRole('button', { name: 'کێشانی سنوور' })).toHaveCount(0);
+
+        /*
+         * The hole is genuinely punched out. Camera: bounds centre
+         * (44.01, 36.19) at zoom 13. Hole centre sits 29px start-ward and
+         * 36px down from the canvas centre and must match the background;
+         * a point inside the ring but outside the hole must not.
+         */
+        await expect
+            .poll(async () => {
+                const [hole, fill, background] = await sampleCanvas(page, [
+                    { dx: -29, dy: 36 },
+                    { dx: 58, dy: -72 },
+                    { dx: 150, dy: 0 },
+                ]);
+
+                return colourDelta(hole, background) <= 4 && colourDelta(fill, background) >= 8;
+            }, { timeout: 20_000, message: 'the hole must render as background inside a filled exterior' })
+            .toBe(true);
+
+        const boundaryField = page.getByLabel('سنوور (WKT)');
+
+        // Cancelled REPLACE: nothing may change, nothing may be emitted.
+        await page.getByTestId('boundary-replace').click();
+        await expect(page.getByTestId('boundary-confirm')).toBeVisible();
+        await page.getByTestId('boundary-cancel').click();
+        await expect(boundaryField).toHaveValue(HOLED);
+        await expect(page.getByTestId('boundary-replace')).toBeVisible();
+
+        // Cancelled CLEAR: identical rule.
+        await page.getByTestId('boundary-clear-complex').click();
+        await expect(page.getByTestId('boundary-confirm')).toBeVisible();
+        await page.getByTestId('boundary-cancel').click();
+        await expect(boundaryField).toHaveValue(HOLED);
+
+        // Confirmed CLEAR is allowed — explicitly, never silently.
+        await page.getByTestId('boundary-clear-complex').click();
+        await page.getByTestId('boundary-confirm').click();
+        await expect(boundaryField).toHaveValue('');
+        await expect(page.getByTestId('boundary-complex-notice')).toHaveCount(0);
+
+        // Confirmed REPLACE draws a new simple ring — an explicit decision.
+        await boundaryField.fill(HOLED);
+        await expect(page.getByTestId('boundary-complex-notice')).toBeVisible();
+        await page.getByTestId('boundary-replace').click();
+        await page.getByTestId('boundary-confirm').click();
+
+        const picker = page.locator('[role="application"]');
+        const box = await picker.boundingBox();
+        await picker.click({ position: { x: box!.width * 0.35, y: box!.height * 0.35 } });
+        await picker.click({ position: { x: box!.width * 0.65, y: box!.height * 0.35 } });
+        await picker.click({ position: { x: box!.width * 0.5, y: box!.height * 0.65 } });
+        await page.getByRole('button', { name: 'تەواوکردن' }).click();
+
+        await expect(boundaryField).toHaveValue(/^POLYGON\(\([-0-9. ,]+\)\)$/);
+    });
+
+    test('a multipolygon renders every part with its holes intact', async ({ page }, testInfo) => {
+        testInfo.skip(testInfo.project.name !== 'desktop-1440x900', 'pixel assertions run once, on desktop');
+
+        await createAreaWithBoundary(page, `geometry-fidelity-multi-${Date.now()}`, MULTI);
+
+        await expect(page.getByTestId('boundary-complex-notice')).toBeVisible();
+
+        /*
+         * Camera: bounds centre (44.025, 36.205) at zoom 13. Both parts must
+         * carry fill, the gap between them must not (two parts, not one
+         * merged blob), and the second part's hole must read as background.
+         */
+        await expect
+            .poll(async () => {
+                const [partOne, gap, partTwo, hole] = await sampleCanvas(page, [
+                    { dx: -175, dy: 101 },
+                    { dx: 0, dy: 0 },
+                    { dx: 87, dy: -108 },
+                    { dx: 146, dy: -180 },
+                ]);
+
+                return colourDelta(partOne, gap) >= 8
+                    && colourDelta(partTwo, gap) >= 8
+                    && colourDelta(hole, gap) <= 4;
+            }, { timeout: 20_000, message: 'both parts filled, the gap and the hole background' })
+            .toBe(true);
+    });
+
+    test('the simple single-ring flow is unchanged: draw, finish, clear — no notice, no confirmation', async ({ page }, testInfo) => {
+        testInfo.skip(testInfo.project.name !== 'desktop-1440x900', 'the parity check runs once, on desktop');
+
+        await page.goto('/admin/areas/create', { waitUntil: 'domcontentloaded' });
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+        const boundaryField = page.getByLabel('سنوور (WKT)');
+        const picker = page.locator('[role="application"]');
+        const box = await picker.boundingBox();
+
+        await page.getByRole('button', { name: 'کێشانی سنوور' }).click();
+        await picker.click({ position: { x: box!.width * 0.35, y: box!.height * 0.35 } });
+        await picker.click({ position: { x: box!.width * 0.65, y: box!.height * 0.35 } });
+        await picker.click({ position: { x: box!.width * 0.5, y: box!.height * 0.65 } });
+        await page.getByRole('button', { name: 'تەواوکردن' }).click();
+
+        await expect(boundaryField).toHaveValue(/^POLYGON\(\(/);
+        await expect(page.getByTestId('boundary-complex-notice')).toHaveCount(0);
+
+        // Clear stays immediate for a simple ring — no confirmation step.
+        await page.getByRole('button', { name: 'سڕینەوەی سنوور' }).click();
+        await expect(boundaryField).toHaveValue('');
+        await expect(page.getByTestId('boundary-confirm')).toHaveCount(0);
+    });
+
+    test('the limitation notice holds the 360x800 layout', async ({ page }, testInfo) => {
+        testInfo.skip(testInfo.project.name !== 'mobile-360x800', 'the mobile smoke runs once, at 360x800');
+
+        await page.goto('/admin/areas/create', { waitUntil: 'domcontentloaded' });
+        await page.getByLabel('سنوور (WKT)').fill(HOLED);
+
+        await expect(page.getByTestId('boundary-complex-notice')).toBeVisible();
+        await expect(page.getByTestId('boundary-replace')).toBeVisible();
+
+        /*
+         * The whole-page overflow probe cannot run here: focusing ANY input
+         * on this admin page at 360 grows the document's reported
+         * scrollWidth by a sticky 111px BEFORE any of this feature's UI
+         * exists (measured: goto 360 → bare focus() 471; removing the
+         * notice, the map, and the entire form leaves 471) — a pre-existing
+         * admin-layout artifact recorded in the Phase 7 backlog, not this
+         * feature's layout. What this feature owns is asserted directly:
+         * the notice and both action rows must fit the 360px viewport, in
+         * both the intent and the confirmation state.
+         */
+        const fits = async (testId: string): Promise<void> => {
+            // Layout-space edges: viewport rects shift with the sticky
+            // artifact scroll, so add scrollLeft back (negative in RTL).
+            const edges = await page.getByTestId(testId).evaluate((element) => {
+                const rect = element.getBoundingClientRect();
+                const scroll = document.documentElement.scrollLeft;
+                return { left: rect.left + scroll, right: rect.right + scroll };
+            });
+            expect(edges.left, `${testId} start edge`).toBeGreaterThanOrEqual(-1);
+            expect(edges.right, `${testId} end edge`).toBeLessThanOrEqual(361);
+        };
+
+        await fits('boundary-complex-notice');
+        await fits('boundary-replace');
+        await fits('boundary-clear-complex');
+
+        /*
+         * The confirmation state's layout, reached by keyboard: pointer
+         * hit-testing at 360 is skewed by the same pre-existing scroll
+         * artifact (the canvas and the notice text intercept the shifted
+         * click point), and the pointer flow is already pinned on desktop.
+         * Keyboard activation is hit-test-free and a real modality.
+         */
+        await page.getByTestId('boundary-replace').focus();
+        await page.keyboard.press('Enter');
+        await expect(page.getByTestId('boundary-confirm')).toBeVisible();
+        await fits('boundary-complex-notice');
+        await fits('boundary-confirm');
+        await fits('boundary-cancel');
+
+        await page.getByTestId('boundary-cancel').focus();
+        await page.keyboard.press('Enter');
+        await expect(page.getByTestId('boundary-replace')).toBeVisible();
+        await expect(page.getByLabel('سنوور (WKT)')).toHaveValue(HOLED);
     });
 });
 

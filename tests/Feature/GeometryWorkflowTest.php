@@ -240,4 +240,112 @@ final class GeometryWorkflowTest extends TestCase
 
         $this->assertSame(0, Project::query()->count());
     }
+
+    /** A square with a fully interior square hole — the citadel courtyard. */
+    private const HOLED = 'POLYGON((44.0000000 36.1800000, 44.0200000 36.1800000, '
+        .'44.0200000 36.2000000, 44.0000000 36.2000000, 44.0000000 36.1800000), '
+        .'(44.0050000 36.1850000, 44.0100000 36.1850000, 44.0100000 36.1900000, '
+        .'44.0050000 36.1900000, 44.0050000 36.1850000))';
+
+    /** Two disjoint squares, the second carrying a hole of its own. */
+    private const MULTI = 'MULTIPOLYGON(((44.0000000 36.1800000, 44.0200000 36.1800000, '
+        .'44.0200000 36.2000000, 44.0000000 36.2000000, 44.0000000 36.1800000)), '
+        .'((44.0300000 36.2100000, 44.0500000 36.2100000, 44.0500000 36.2300000, '
+        .'44.0300000 36.2300000, 44.0300000 36.2100000), '
+        .'(44.0350000 36.2150000, 44.0400000 36.2150000, 44.0400000 36.2200000, '
+        .'44.0350000 36.2200000, 44.0350000 36.2150000)))';
+
+    /**
+     * Canonical L1: a boundary RICHER than the simple picker's single-ring
+     * editing model must survive an untouched admin-form save byte for byte.
+     *
+     * The form binds boundary_wkt two-way; when the editor never touches the
+     * boundary, the update request carries the stored WKT back verbatim —
+     * exactly what these requests simulate for a Polygon-with-hole and a
+     * MultiPolygon. The picker may only DISPLAY such geometry (read-only,
+     * with a stated limitation); nothing on the untouched path may rewrite,
+     * simplify or drop it.
+     */
+    public function test_a_holed_polygon_survives_an_untouched_form_save_verbatim(): void
+    {
+        $admin = $this->admin();
+
+        $input = [
+            'name_ckb' => 'ناوچەی کون',
+            'slug' => 'geometry-holed',
+            'type' => AreaType::District->value,
+            'latitude' => '36.1900000',
+            'longitude' => '44.0100000',
+            'boundary_wkt' => self::HOLED,
+        ];
+
+        $this->actingAs($admin)->post('/admin/areas', $input)->assertSessionHasNoErrors();
+
+        $area = Area::query()->firstOrFail();
+        $this->assertSame(self::HOLED, $area->boundary_wkt);
+
+        // The edit form hands the stored WKT back in full fidelity…
+        $this->actingAs($admin)
+            ->get("/admin/areas/{$area->id}/edit")
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('area.boundary_wkt', self::HOLED));
+
+        // …and an untouched save (same boundary, unrelated field changed)
+        // must not cost a single byte of it.
+        $this->actingAs($admin)
+            ->put("/admin/areas/{$area->id}", ['name_ckb' => 'ناوچەی کون نوێ'] + $input)
+            ->assertSessionHasNoErrors();
+
+        $area->refresh();
+        $this->assertSame(self::HOLED, $area->boundary_wkt);
+    }
+
+    public function test_a_multipolygon_survives_an_untouched_form_save_verbatim(): void
+    {
+        $admin = $this->admin();
+
+        $input = [
+            'name_ckb' => 'ناوچەی فرەپارچە',
+            'slug' => 'geometry-multi',
+            'type' => AreaType::District->value,
+            'latitude' => '36.1900000',
+            'longitude' => '44.0100000',
+            'boundary_wkt' => self::MULTI,
+        ];
+
+        $this->actingAs($admin)->post('/admin/areas', $input)->assertSessionHasNoErrors();
+
+        $area = Area::query()->firstOrFail();
+        $this->assertSame(self::MULTI, $area->boundary_wkt);
+
+        $this->actingAs($admin)
+            ->get("/admin/areas/{$area->id}/edit")
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('area.boundary_wkt', self::MULTI));
+
+        $this->actingAs($admin)
+            ->put("/admin/areas/{$area->id}", ['name_ckb' => 'ناوچەی فرەپارچە نوێ'] + $input)
+            ->assertSessionHasNoErrors();
+
+        $area->refresh();
+        $this->assertSame(self::MULTI, $area->boundary_wkt);
+    }
+
+    /**
+     * The picker's complex-boundary limitation is STATED, in every shipped
+     * locale — a key that falls back to its own name would surface raw
+     * `geography.map.…` text in the admin.
+     */
+    public function test_the_complex_boundary_strings_resolve_in_every_locale(): void
+    {
+        foreach (['ckb', 'ar', 'en'] as $locale) {
+            foreach (['complex_notice', 'replace_boundary', 'replace_confirm', 'clear_confirm'] as $key) {
+                $line = trans("geography.map.{$key}", [], $locale);
+
+                $this->assertIsString($line);
+                $this->assertNotSame("geography.map.{$key}", $line, "missing {$locale} translation for {$key}");
+                $this->assertNotSame('', trim($line));
+            }
+        }
+    }
 }

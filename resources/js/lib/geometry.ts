@@ -15,6 +15,9 @@
  * opposite of how the values read on screen.
  */
 
+import { toRenderedFeatures, type Component } from './wizard/geometry';
+import type { BoundaryCollection } from './map';
+
 export interface LngLat {
     lng: number;
     lat: number;
@@ -113,6 +116,56 @@ export function ringCentroid(ring: LngLat[]): LngLat | null {
     }
 
     return { lng: round(cx / (3 * twiceArea)), lat: round(cy / (3 * twiceArea)) };
+}
+
+/*
+ * Boundary complexity, decided on ALREADY-PARSED geometry.
+ *
+ * The picker edits exactly one hole-free ring; anything richer — a hole, a
+ * second polygon — exists in the stored WKT but not in this editor's model,
+ * and pretending otherwise is how a MultiPolygon gets silently replaced by a
+ * crude single ring. Classification therefore runs on the wizard parser's
+ * Component[] output (`fromWkt`, the one full-fidelity client parser this
+ * codebase allows) — never by re-reading the WKT text with a fourth parser.
+ */
+export type BoundaryComplexity = 'none' | 'simple' | 'complex';
+
+export function classifyBoundaryComponents(components: Component[]): BoundaryComplexity {
+    if (components.length === 0) {
+        return 'none';
+    }
+
+    if (components.length > 1) {
+        return 'complex';
+    }
+
+    return components[0].holes.length > 0 ? 'complex' : 'simple';
+}
+
+/**
+ * Full-fidelity, read-only rendering of a stored boundary.
+ *
+ * One component becomes ONE Polygon feature whose ring list is exterior
+ * first, then holes — `toRenderedFeatures` is the wizard picker's own
+ * conversion, reused verbatim so the two pickers cannot drift. The renderer
+ * punches the holes out; a MultiPolygon renders as one feature per part.
+ */
+export function boundaryDisplayCollection(components: Component[]): BoundaryCollection {
+    return {
+        type: 'FeatureCollection',
+        features: toRenderedFeatures(components, () => '').map((feature, index) => ({
+            type: 'Feature',
+            properties: { slug: `boundary-existing-${index}`, name: '', type: null },
+            geometry: { type: 'Polygon', coordinates: feature.rings },
+        })),
+    };
+}
+
+/** Bounds across every vertex of every ring, for fitting the viewport. */
+export function componentsBounds(components: Component[]): [[number, number], [number, number]] | null {
+    const vertices = components.flatMap((component) => [component.exterior, ...component.holes].flat());
+
+    return ringBounds(vertices.map((v) => ({ lng: v.lng, lat: v.lat })));
 }
 
 /** Bounds of a ring, for fitting the viewport. */
