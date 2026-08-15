@@ -240,10 +240,20 @@ export class MapLibreAdapter implements MapAdapter {
              * guard the surface handler (which pages use to CLEAR selection)
              * fired on the same click that selected, and markers could never
              * be selected from the map at all.
+             *
+             * "Belongs to" requires a real action on the other side. Cluster
+             * clicks always expand, so cluster hits are always claimed; point
+             * hits are claimed only when the surface wired onMarkerClick.
+             * The explorer wires none — selection lives in its list — and
+             * under the unconditional guard its centre-pick and draw clicks
+             * died silently whenever they landed on a project point.
              */
+            const claimed = this.options.events.onMarkerClick
+                ? ['unclustered', 'trend-markers', 'point-labels', 'point-names', 'clusters']
+                : ['clusters'];
             const hit = map
                 .queryRenderedFeatures(event.point, {
-                    layers: this.presentLayers(map, ['unclustered', 'trend-markers', 'point-labels', 'point-names', 'clusters']),
+                    layers: this.presentLayers(map, claimed),
                 })
                 .length > 0;
 
@@ -444,13 +454,22 @@ export class MapLibreAdapter implements MapAdapter {
             map.on('click', 'point-labels', emitMarkerClick);
             map.on('click', 'point-names', emitMarkerClick);
 
-            for (const layer of ['unclustered', 'trend-markers', 'point-labels', 'point-names']) {
-                map.on('mouseenter', layer, () => {
-                    map.getCanvas().style.cursor = 'pointer';
-                });
-                map.on('mouseleave', layer, () => {
-                    map.getCanvas().style.cursor = '';
-                });
+            /*
+             * The pointer cursor is a promise that clicking does something.
+             * Point layers keep that promise only where the surface wired
+             * onMarkerClick; the explorer wires none, and its markers used
+             * to advertise a click that did nothing at all. Clusters stay
+             * pointer everywhere — expansion is always a real action.
+             */
+            if (this.options.events.onMarkerClick) {
+                for (const layer of ['unclustered', 'trend-markers', 'point-labels', 'point-names']) {
+                    map.on('mouseenter', layer, () => {
+                        map.getCanvas().style.cursor = 'pointer';
+                    });
+                    map.on('mouseleave', layer, () => {
+                        map.getCanvas().style.cursor = '';
+                    });
+                }
             }
 
             /*

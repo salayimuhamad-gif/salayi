@@ -1329,6 +1329,147 @@ test.describe('homepage map in-place recovery', () => {
     });
 });
 
+/* ----------------------------------- Phase 9: explorer marker affordances */
+
+/*
+ * NEW-EXPLORER-HONESTY: on /map, selection deliberately lives in the list —
+ * the surface wires no onMarkerClick — yet the adapter advertised a pointer
+ * cursor over every project point and claimed every click that landed on
+ * one. Ordinary clicks promised an action that never came, and the
+ * explorer's own centre-pick and draw modes died silently whenever the
+ * click fell on a marker. Phase 9 makes the affordance honest: point layers
+ * show pointer and claim clicks only where a surface wired onMarkerClick;
+ * clusters keep both everywhere, because expansion is always a real action.
+ * Pre-fix, the cursor assertion and both mode pass-throughs below fail.
+ *
+ * Geometry: /map opens at (36.19, 44.009), zoom 11 — 2912.7 px/deg of
+ * longitude, 3609.6 px/deg of latitude (the Mercator 1/cos stretch). The
+ * tower and villa fixtures sit ~46px apart, inside the 50px cluster radius,
+ * and merge into one cluster near (+32, -36) from the canvas centre; the
+ * bazaar fixture at (-26, +18) stays an unclustered point.
+ */
+test.describe('explorer marker affordance honesty', () => {
+    const CLUSTER = { dx: 32, dy: -36 };
+    const BAZAAR = { dx: -26, dy: 18 };
+    /*
+     * Empty basemap, clear of every fixture. Hovers route through here
+     * because a single mouse move that leaves one registered layer and
+     * enters another can settle the cursor on either handler's outcome —
+     * approaching each probe point from neutral ground makes the enter
+     * handler's verdict the only one in play.
+     */
+    const NEUTRAL = { dx: -120, dy: 100 };
+
+    test.beforeEach(async ({}, testInfo) => {
+        testInfo.skip(
+            testInfo.project.name !== 'desktop-1440x900',
+            'the interaction contract runs once, on desktop-1440x900 only',
+        );
+    });
+
+    async function openExplorer(page: import('@playwright/test').Page): Promise<{
+        map: import('@playwright/test').Locator;
+        at: (offset: { dx: number; dy: number }) => { x: number; y: number };
+        cursor: () => Promise<string>;
+    }> {
+        await serveDeterministicStyle(page);
+
+        const first = page.waitForResponse(
+            (response) => response.url().includes('/map/features') && response.ok(),
+        );
+        await page.goto('/map', { waitUntil: 'domcontentloaded' });
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+        await first;
+
+        const map = page.locator('[role="application"]').first();
+        const box = await map.boundingBox();
+        expect(box).not.toBeNull();
+
+        const at = (offset: { dx: number; dy: number }): { x: number; y: number } =>
+            ({ x: box!.width / 2 + offset.dx, y: box!.height / 2 + offset.dy });
+        const cursor = (): Promise<string> =>
+            page.locator('.maplibregl-canvas').first().evaluate((el) => getComputedStyle(el).cursor);
+
+        // Marker layers paint asynchronously after the style settles; the
+        // cluster's pointer promise — kept on every surface — doubles as
+        // the rendered-and-interactive barrier.
+        await expect(async () => {
+            await map.hover({ position: at(NEUTRAL) });
+            await map.hover({ position: at(CLUSTER) });
+            expect(await cursor()).toBe('pointer');
+        }).toPass({ timeout: 20_000 });
+
+        await map.hover({ position: at(NEUTRAL) });
+
+        return { map, at, cursor };
+    }
+
+    test('points do not advertise a click the surface cannot deliver; clusters keep theirs', async ({ page }) => {
+        const { map, at, cursor } = await openExplorer(page);
+
+        // The unclustered point: no onMarkerClick here, so no pointer.
+        await map.hover({ position: at(BAZAAR) });
+        expect(await cursor()).not.toBe('pointer');
+
+        // An ordinary click on it triggers nothing: no selection UI exists
+        // on this surface, no navigation — and the diagnostics fixture
+        // fails the test on any console error this click might raise.
+        await map.click({ position: at(BAZAAR) });
+        await expect(page).toHaveURL(/\/map/);
+
+        // The cluster still delivers both halves of its promise: pointer,
+        // and click-to-expand — whose moveend schedules the debounced
+        // background refetch this waiter observes.
+        await map.hover({ position: at(NEUTRAL) });
+        await map.hover({ position: at(CLUSTER) });
+        expect(await cursor()).toBe('pointer');
+
+        const refetch = page.waitForResponse(
+            (response) => response.url().includes('/map/features') && response.ok(),
+        );
+        await map.click({ position: at(CLUSTER) });
+        expect((await refetch).ok()).toBe(true);
+    });
+
+    test('centre-pick lands on a project point instead of dying on the marker guard', async ({ page }) => {
+        const { map, at } = await openExplorer(page);
+
+        await page.getByRole('button', { name: 'دیاریکردنی ناوەند' }).click();
+        const hint = page.getByText('خاڵێک لەسەر نەخشە هەڵبژێرە، دواتر دووری بە کیلۆمەتر دیاری بکە');
+        await expect(hint).toBeVisible();
+
+        // The pick lands ON the bazaar marker. Pre-fix, the unconditional
+        // guard claimed the click for a marker action that does not exist
+        // here: the mode never exits and no radius search ever fires.
+        const search = page.waitForResponse(
+            (response) => response.url().includes('/map/features') && response.ok(),
+        );
+        await map.click({ position: at(BAZAAR) });
+        expect((await search).ok()).toBe(true);
+        await expect(hint).toBeHidden();
+        await expect(page.getByRole('button', { name: 'ناوەند دیاری کرا' })).toBeVisible();
+    });
+
+    test('drawing appends a vertex over a project point, and a cluster hit still expands instead', async ({ page }) => {
+        const { map, at } = await openExplorer(page);
+
+        await page.getByRole('button', { name: 'کێشانی ناوچە' }).click();
+        await expect(page.getByText('کلیک بکە بۆ زیادکردنی خاڵ. لانیکەم سێ خاڵ پێویستە.')).toBeVisible();
+
+        // The vertex lands ON the bazaar marker; the draw tools' own point
+        // counter is the product's proof of the append. Pre-fix it never
+        // appears: the guard ate the click.
+        await map.click({ position: at(BAZAAR) });
+        await expect(page.getByText('1 خاڵ')).toBeVisible();
+
+        // The mode/cluster boundary: a draw click on a CLUSTER still
+        // belongs to the cluster — it expands, and no vertex is appended.
+        await map.click({ position: at(CLUSTER) });
+        await expect(page.getByText('1 خاڵ')).toBeVisible();
+        await expect(page.getByText('2 خاڵ')).toHaveCount(0);
+    });
+});
+
 /* ------------------------------------ Phase 5: refetch feedback, mobile tab */
 
 /*
@@ -1410,9 +1551,13 @@ test.describe('map refetch feedback on the mobile map tab', () => {
 
             // From here this test owns the features endpoint: one slow
             // response, then a dead one, then recovery. Registered after the
-            // initial load so that load stays untouched.
+            // initial load so that load stays untouched. Both ends of every
+            // request's lifecycle are counted — started and settled — because
+            // the synchronization below is proven on that lifecycle, never on
+            // a clock.
             let mode: 'slow' | 'fail' | 'ok' = 'slow';
             let featureRequests = 0;
+            let featureSettled = 0;
             let releaseSlow!: () => void;
             const slowGate = new Promise<void>((resolve) => {
                 releaseSlow = resolve;
@@ -1423,15 +1568,13 @@ test.describe('map refetch feedback on the mobile map tab', () => {
                 if (mode === 'slow') {
                     await slowGate;
                     await route.continue();
-                    return;
-                }
-
-                if (mode === 'fail') {
+                } else if (mode === 'fail') {
                     await route.abort();
-                    return;
+                } else {
+                    await route.continue();
                 }
 
-                await route.continue();
+                featureSettled += 1;
             });
 
             // Pan → debounce → refetch: the pill must be visible ON THE MAP
@@ -1451,7 +1594,6 @@ test.describe('map refetch feedback on the mobile map tab', () => {
             // …and the stale results were KEPT, not blanked.
             await page.getByRole('tab').nth(1).click();
             await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeVisible();
-            await page.getByRole('tab').nth(0).click();
 
             /*
              * Returning to the map tab resizes the revealed map, MapLibre's
@@ -1461,25 +1603,44 @@ test.describe('map refetch feedback on the mobile map tab', () => {
              * MUST still be dead here: reviving it first lets the background
              * refetch succeed and withdraw the chip while the click below is
              * still lining up, and the click then waits forever for a
-             * control the product correctly removed (the post-merge CI
-             * failure). Wait for the features endpoint to go quiet — any
-             * armed debounce fires within 250ms, so a 400ms silent window
-             * proves there is nothing left in flight.
+             * control the product correctly removed. That mistake shipped
+             * twice — CI #126 pre-Phase-5, then CI #136 attempt 1, where a
+             * 400ms wall-clock silence window certified quiescence on the
+             * WRONG CLOCK (the test process's) while the page's own debounce
+             * timer was still armed and fired late under runner starvation.
+             *
+             * The synchronization is therefore the OBSERVED request
+             * lifecycle, never a delay: from a baseline recorded before the
+             * tab return, the refetch it arms must actually START and
+             * actually SETTLE against the still-dead endpoint.
              */
+            const drainedFrom = featureRequests;
+            await page.getByRole('tab').nth(0).click();
+
             await expect
-                .poll(
-                    async () => {
-                        const before = featureRequests;
-                        await new Promise((resolve) => setTimeout(resolve, 400));
-                        return featureRequests === before;
-                    },
-                    { timeout: 15_000 },
-                )
+                .poll(() => featureRequests, { timeout: 15_000 })
+                .toBeGreaterThan(drainedFrom);
+            await expect
+                .poll(() => featureSettled === featureRequests, { timeout: 15_000 })
                 .toBe(true);
 
             // Background refetches kept failing, so the failure stayed
             // stated and the stale data stayed kept.
             await expect(failedChip).toBeVisible();
+
+            /*
+             * And nothing older may remain able to mutate that state. The
+             * page-side timer below shares the page's timer queue with the
+             * 250ms debounce, and timers fire in due-time order: any
+             * debounce armed before the barrier has fired before it
+             * resolves — starvation delays both equally but cannot reorder
+             * them. The barrier is only that ordering guard, never the
+             * evidence: the lifecycle counters must not move across it.
+             */
+            const settledAt = featureRequests;
+            await page.evaluate(() => new Promise((resolve) => setTimeout(resolve, 600)));
+            expect(featureRequests).toBe(settledAt);
+            expect(featureSettled).toBe(featureRequests);
 
             /*
              * The positioning contract, asserted in the pose a visitor
