@@ -1043,6 +1043,292 @@ test.describe('public map in-place provider retry', () => {
     }
 });
 
+/* --------------------------------- Phase 8: homepage map in-place recovery */
+
+/*
+ * NEW-HOME-RETRY: the full surfaces carry Phase 5's in-place provider
+ * recovery; the homepage — the first map most visitors ever see — did not.
+ * Its failure state offered only the full-surface link, so a transient
+ * provider failure was terminal until a page reload. These pin the homepage
+ * edition of the contract, with its two lifecycle differences: the container
+ * div is v-else'd away behind the failure state (the rebuild must wait for
+ * it to re-render), and the projects were already fetched and kept — Retry
+ * repopulates the fresh map through the existing sync() path and never
+ * refetches. Pre-fix, [data-testid="home-map-retry"] does not exist and
+ * every test here fails at that locator.
+ */
+test.describe('homepage map in-place recovery', () => {
+    const FAILURE_STRINGS: Record<string, { failed: string; retry: string; open: string }> = {
+        ckb: { failed: 'نەخشە بار نەبوو', retry: 'هەوڵدانەوە', open: 'نەخشە تەواوەکە بکەرەوە' },
+        ar: { failed: 'تعذّر تحميل الخريطة', retry: 'إعادة المحاولة', open: 'افتح الخريطة الكاملة' },
+        en: { failed: 'The map could not load', retry: 'Retry', open: 'Open the full map' },
+    };
+
+    /**
+     * Break the provider before the page loads, scroll the lazy section into
+     * view so the IntersectionObserver fires exactly as in production, and
+     * wait for the settled failure state.
+     */
+    async function driveHomeMapToFailure(
+        page: import('@playwright/test').Page,
+        prefix = '',
+    ): Promise<import('@playwright/test').Locator> {
+        await page.route(STYLE_HOST, (route) => route.abort());
+        await page.goto(`${prefix}/`, { waitUntil: 'domcontentloaded' });
+
+        const section = page.locator('[data-testid="home-project-map"]');
+        await expect(section).toHaveCount(1);
+        await section.scrollIntoViewIfNeeded();
+
+        await expect(page.getByTestId('home-map-retry')).toBeVisible({ timeout: 30_000 });
+
+        return section;
+    }
+
+    /**
+     * Count canvas pixels around the map centre that are not the
+     * deterministic style's background — the fixture projects sit within
+     * ~110px of the homepage camera (36.19, 44.009 at zoom 11; 2912.7
+     * px/deg), so paint here is marker/cluster ink and nothing else. The
+     * empty rebuilt map would sample zero: this is the sync() proof.
+     */
+    async function markerInkNearCentre(canvas: import('@playwright/test').Locator): Promise<number> {
+        const png = decodePng(await canvas.screenshot());
+        const background: Rgb = { r: 232, g: 230, b: 225 };
+        let painted = 0;
+
+        for (let dx = -60; dx <= 100; dx += 2) {
+            for (let dy = -70; dy <= 70; dy += 2) {
+                if (colourDelta(png.pixelAt(png.width / 2 + dx, png.height / 2 + dy), background) > 60) {
+                    painted += 1;
+                }
+            }
+        }
+
+        return painted;
+    }
+
+    test.describe('recovery lifecycle', () => {
+        test.beforeEach(async ({}, testInfo) => {
+            testInfo.skip(
+                testInfo.project.name !== 'desktop-1440x900',
+                'the retry lifecycle accounting runs once, on desktop-1440x900 only',
+            );
+        });
+
+        test('failure offers Retry beside the kept CTA; Retry rebuilds one live map from the kept data, refetching nothing', async ({ page }) => {
+            await instrumentWebglAccounting(page);
+
+            // Every /invest/features or /map/features fetch the page ever
+            // makes — the proof that recovery repopulates WITHOUT load().
+            let featureRequests = 0;
+            page.on('request', (request) => {
+                if (request.url().includes('/features?')) featureRequests += 1;
+            });
+
+            const section = await driveHomeMapToFailure(page);
+
+            // The failure message and the full-surface CTA are preserved
+            // exactly; Retry stands beside them, not instead of them.
+            await expect(section.getByText('نەخشە بار نەبوو')).toBeVisible();
+            const retry = page.getByTestId('home-map-retry');
+            await expect(retry).toBeEnabled();
+            await expect(page.locator('[data-testid="home-map-retry"] + a')).toHaveText('نەخشە تەواوەکە بکەرەوە');
+
+            // Phase 4's cleanup destroyed the failed adapter — the
+            // precondition that makes an in-place rebuild safe.
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 1 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            // The data path already ran, once, despite the dead provider.
+            await expect.poll(() => featureRequests).toBe(1);
+
+            // The provider recovers…
+            await page.unroute(STYLE_HOST);
+            await serveDeterministicStyle(page);
+
+            /*
+             * …and Retry is pressed TWICE in the same task, before Vue can
+             * re-render the disabled attribute — the double-tap race. The
+             * synchronous mapBuilding claim must make the second press a
+             * no-op; otherwise a second adapter is constructed and the exact
+             * accounting below (created 2, not 3) fails.
+             */
+            await page.evaluate(() => {
+                const button = document.querySelector<HTMLButtonElement>('[data-testid="home-map-retry"]');
+                button?.click();
+                button?.click();
+            });
+
+            const canvas = section.locator('.maplibregl-canvas');
+            await expect(canvas).toBeVisible({ timeout: 20_000 });
+            await expect(canvas).toHaveCount(1);
+            // One set of controls: a retry may never stack a second map.
+            await expect(section.locator('.maplibregl-ctrl-zoom-in')).toHaveCount(1);
+
+            // Failed build (created 1, lost 1) plus the rebuild (created 2)
+            // which stays live: exactly one WebGL context survives.
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 2 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            // The failure state is fully withdrawn.
+            await expect(section.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+            await expect(retry).toHaveCount(0);
+
+            // The kept projects are back ON the rebuilt map via sync().
+            await expect
+                .poll(() => markerInkNearCentre(canvas), {
+                    timeout: 20_000,
+                    message: 'the rebuilt map must repaint the kept fixture projects',
+                })
+                .toBeGreaterThan(25);
+
+            // And the whole recovery refetched NOTHING.
+            expect(featureRequests).toBe(1);
+        });
+
+        test('a rebuild that fails again settles back into the stated failure, and a later Retry still recovers', async ({ page }) => {
+            await instrumentWebglAccounting(page);
+            const section = await driveHomeMapToFailure(page);
+
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 1 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            /*
+             * Retry against the STILL-dead provider. The rebuild must fail
+             * the same honest way the first build did — failure re-stated,
+             * its adapter destroyed, the building flag released so Retry is
+             * pressable again — never a wedged in-between state.
+             */
+            const retry = page.getByTestId('home-map-retry');
+            await retry.click();
+
+            await expect(retry).toBeVisible({ timeout: 30_000 });
+            await expect(retry).toBeEnabled();
+            await expect(section.getByText('نەخشە بار نەبوو')).toBeVisible();
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 2 && counters.__webglLost === 2;
+            }, undefined, { timeout: 15_000 });
+
+            // Now the provider recovers: the third attempt must come up
+            // clean — nothing the two dead builds left behind (state, late
+            // error callbacks) may poison it.
+            await page.unroute(STYLE_HOST);
+            await serveDeterministicStyle(page);
+            await retry.click();
+
+            const canvas = section.locator('.maplibregl-canvas');
+            await expect(canvas).toBeVisible({ timeout: 20_000 });
+            await expect(canvas).toHaveCount(1);
+            await expect(section.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 3 && counters.__webglLost === 2;
+            }, undefined, { timeout: 15_000 });
+        });
+
+        test('navigating away during a Retry rebuild destroys the in-flight adapter; nothing resurrects', async ({ page }) => {
+            await instrumentWebglAccounting(page);
+            await driveHomeMapToFailure(page);
+
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated === 1 && counters.__webglLost === 1;
+            }, undefined, { timeout: 15_000 });
+
+            /*
+             * Hold the rebuild's style request open so the retry build is
+             * genuinely in flight when navigation unmounts the component.
+             * The disposal guard must destroy the late adapter — it may
+             * never install itself against the dead page.
+             */
+            let release!: () => void;
+            const gate = new Promise<void>((resolve) => {
+                release = resolve;
+            });
+
+            await page.unroute(STYLE_HOST);
+            await page.route(STYLE_HOST, async (route) => {
+                await gate;
+                try {
+                    await route.fulfill({
+                        status: 200,
+                        contentType: 'application/json',
+                        body: JSON.stringify(DETERMINISTIC_STYLE),
+                    });
+                } catch {
+                    // The disposed rebuild aborted its own request — which
+                    // is exactly the behaviour under test.
+                }
+            });
+
+            const styleRequested = page.waitForRequest(STYLE_HOST);
+            await page.getByTestId('home-map-retry').click();
+            await styleRequested;
+
+            await page.locator('a[href$="/projects"]').first().click();
+
+            release();
+
+            // Every context the retry created ends lost; none survives the
+            // navigation, and no map exists on the destination page.
+            await page.waitForFunction(() => {
+                const counters = window as unknown as { __webglCreated: number; __webglLost: number };
+                return counters.__webglCreated >= 2 && counters.__webglCreated === counters.__webglLost;
+            }, undefined, { timeout: 15_000 });
+            await expect(page.locator('.maplibregl-canvas')).toHaveCount(0);
+        });
+
+        for (const locale of LOCALES) {
+            test(`the failure state speaks ${locale.code}: message, Retry, and the full-surface CTA`, async ({ page }) => {
+                const section = await driveHomeMapToFailure(page, locale.prefix);
+                const strings = FAILURE_STRINGS[locale.code];
+
+                await expect(page.locator('html')).toHaveAttribute('dir', locale.direction);
+                await expect(section.getByText(strings.failed)).toBeVisible();
+                await expect(page.getByTestId('home-map-retry')).toHaveText(strings.retry);
+                await expect(page.locator('[data-testid="home-map-retry"] + a')).toHaveText(strings.open);
+            });
+        }
+    });
+
+    test('on a phone the Retry is a real touch target inside the viewport, and one tap recovers', async ({ page }, testInfo) => {
+        testInfo.skip(
+            (testInfo.project.use.viewport?.width ?? 0) >= 768,
+            'the touch-target smoke runs on the phone viewports',
+        );
+
+        const section = await driveHomeMapToFailure(page);
+        const retry = page.getByTestId('home-map-retry');
+        await retry.scrollIntoViewIfNeeded();
+
+        const viewport = page.viewportSize()!;
+        const box = await retry.boundingBox();
+        expect(box).not.toBeNull();
+        expect(box!.height, 'retry height').toBeGreaterThanOrEqual(44);
+        expect(box!.width, 'retry width').toBeGreaterThanOrEqual(44);
+        // The recovery row fits the phone: nothing pushed off-screen.
+        expect(box!.x).toBeGreaterThanOrEqual(0);
+        expect(box!.x + box!.width).toBeLessThanOrEqual(viewport.width + 0.5);
+        await expect(page.locator('[data-testid="home-map-retry"] + a')).toBeVisible();
+
+        await page.unroute(STYLE_HOST);
+        await serveDeterministicStyle(page);
+        await retry.tap();
+
+        await expect(section.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+        await expect(section.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+    });
+});
+
 /* ------------------------------------ Phase 5: refetch feedback, mobile tab */
 
 /*

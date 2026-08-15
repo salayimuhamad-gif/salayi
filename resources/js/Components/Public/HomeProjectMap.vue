@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
 import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
@@ -99,6 +99,18 @@ let started = false;
 let disposed = false;
 let observer: IntersectionObserver | null = null;
 
+/*
+ * Build generation token, the wizard picker's pattern (Phase 5 gave it to
+ * the public surfaces): each build claims a new generation, and an attempt
+ * that is no longer the newest may not install an adapter, flip failure
+ * state, or clear the building flag. The UI guard (`mapBuilding`) already
+ * prevents overlapping builds; the token additionally strands every async
+ * effect of a superseded build — including a late `onError` from an adapter
+ * that Retry has since destroyed.
+ */
+let mapAttempt = 0;
+const mapBuilding = ref(false);
+
 const trendArrow = trendArrowGlyph;
 const pricing = computed(() => props.source === 'invest');
 
@@ -189,11 +201,13 @@ const movementTone: Record<Exclude<Movement, 'all'>, string> = {
 
 /* ------------------------------------------------------------ lifecycle -- */
 
-async function start(): Promise<void> {
-    if (started || !container.value) return;
-    started = true;
+async function buildMap(): Promise<void> {
+    const attempt = ++mapAttempt;
+    mapBuilding.value = true;
 
     try {
+        if (!container.value) throw new Error('map container missing');
+
         const result = await createMapAdapter('maplibre', {
             container: container.value,
             styleUrl: styleUrl.value,
@@ -210,6 +224,7 @@ async function start(): Promise<void> {
                     selected.value = null;
                 },
                 onError: () => {
+                    if (disposed || attempt !== mapAttempt) return;
                     if (!mapReady.value) mapFailed.value = true;
                 },
                 onMarkerClick: (id: number) => {
@@ -223,7 +238,7 @@ async function start(): Promise<void> {
             },
         });
 
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             result.adapter.destroy();
 
             return;
@@ -233,7 +248,7 @@ async function start(): Promise<void> {
 
         await result.adapter.ready();
 
-        if (disposed) {
+        if (disposed || attempt !== mapAttempt) {
             return;
         }
 
@@ -241,13 +256,24 @@ async function start(): Promise<void> {
     } catch {
         // The adapter installed just above must not idle behind the failure
         // state: destroy it now — after disposal the unmount hook already
-        // did, and no state may change.
-        if (!disposed) {
+        // did, and a superseded attempt owns nothing any more.
+        if (!disposed && attempt === mapAttempt) {
             adapter.value?.destroy();
             adapter.value = null;
             mapFailed.value = true;
         }
+    } finally {
+        if (!disposed && attempt === mapAttempt) {
+            mapBuilding.value = false;
+        }
     }
+}
+
+async function start(): Promise<void> {
+    if (started || !container.value) return;
+    started = true;
+
+    await buildMap();
 
     if (disposed) {
         return;
@@ -255,6 +281,48 @@ async function start(): Promise<void> {
 
     // The list of mapped projects is useful even when tiles failed.
     await load();
+    sync();
+}
+
+/*
+ * In-place recovery from a failed map, the Phase 5 lifecycle the full
+ * surfaces already carry — with two homepage-specific differences. The
+ * container div is v-else'd away behind the failure state, so the rebuild
+ * must wait one render flush for it to exist again. And the projects were
+ * already fetched by start() and survived the provider failure, so recovery
+ * repopulates the fresh map through sync() — it never refetches.
+ */
+async function retryMap(): Promise<void> {
+    if (mapBuilding.value || disposed) {
+        return;
+    }
+
+    // Claimed synchronously: a second tap is a no-op before the first can
+    // yield, and every callback of the failed build is stranded before the
+    // render-flush wait opens a window for a late onError to poison the
+    // rebuild.
+    mapBuilding.value = true;
+    mapAttempt++;
+
+    adapter.value?.destroy();
+    adapter.value = null;
+    mapReady.value = false;
+    mapFailed.value = false;
+
+    await nextTick();
+
+    if (disposed) {
+        mapBuilding.value = false;
+
+        return;
+    }
+
+    await buildMap();
+
+    if (disposed) {
+        return;
+    }
+
     sync();
 }
 
@@ -449,12 +517,25 @@ const isDesktop = useIsDesktop();
         </div>
 
         <div class="mh-lux-panel mh-lux-gilded relative overflow-hidden">
-            <!-- Provider failure: compact, human, with the way forward. -->
+            <!-- Provider failure: compact, human, with the way forward —
+                 an in-place Retry (Phase 5's recovery, homepage edition)
+                 beside the full-surface CTA. -->
             <div v-if="mapFailed" class="flex min-h-[220px] flex-col items-center justify-center gap-3 p-6 text-center">
                 <p class="text-sm text-ink-muted">{{ t('map.states.provider_failed') }}</p>
-                <Link :href="href" class="mh-lux-btn mh-lux-btn-primary text-sm">
-                    {{ t('home.live_map.open_full') }}
-                </Link>
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <button
+                        type="button"
+                        data-testid="home-map-retry"
+                        class="mh-lux-btn mh-lux-btn-secondary min-h-11 text-sm"
+                        :disabled="mapBuilding"
+                        @click="retryMap"
+                    >
+                        {{ t('map.states.retry') }}
+                    </button>
+                    <Link :href="href" class="mh-lux-btn mh-lux-btn-primary min-h-11 text-sm">
+                        {{ t('home.live_map.open_full') }}
+                    </Link>
+                </div>
             </div>
 
             <template v-else>
