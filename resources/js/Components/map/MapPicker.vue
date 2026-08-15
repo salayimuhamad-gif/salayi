@@ -564,6 +564,19 @@ async function buildMap(): Promise<void> {
             events: {
                 onMoveEnd: () => {},
                 onClick: handleMapClick,
+                /*
+                 * The numbered vertex/hole handles render through the
+                 * adapter's shared point layers, and the adapter claims
+                 * marker hits — absorbing them before onClick — only for
+                 * surfaces that declare onMarkerClick. This picker's handles
+                 * ARE its markers, and a click landing on one must keep
+                 * being absorbed: in draw mode it would otherwise append a
+                 * coincident duplicate vertex. The handles carry no feature
+                 * id, so this handler never actually fires — declaring it
+                 * exists to keep the claim (and the pre-existing handle
+                 * cursor) exactly as before.
+                 */
+                onMarkerClick: () => {},
                 // A provider can fail minutes after construction — a revoked
                 // key, a tile 403. Saying so beats a map that quietly stops
                 // working. Gated by token so a superseded adapter's late
