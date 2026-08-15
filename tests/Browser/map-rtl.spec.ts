@@ -1,4 +1,4 @@
-import { test, expect } from './support/harness';
+import { test, expect, LOCALES, expectNoHorizontalOverflow } from './support/harness';
 
 /*
  * Arabic-script text on the map — the RTL text plugin, behaviorally.
@@ -165,3 +165,233 @@ tick();
 
     expect(diagnostics.failedRequests, 'no request may fail during plugin load').toEqual([]);
 });
+
+/* ------------------------------------------ Phase 6: RTL layout by contract */
+
+/*
+ * NEW-RTL: the map's RTL LAYOUT — not its text shaping — used to be an
+ * accident. postcss-rtlcss processed MapLibre's own stylesheet along with
+ * the page chrome, so every physical-position rule the vendor ships
+ * (control corners, the canvas anchor, DOM-marker offsets) silently gained
+ * a [dir=rtl] mirror. Corners happened to look right; .maplibregl-marker
+ * gained a `right: 0` that displaced every DOM marker on an RTL page. The
+ * contract pinned here: vendor CSS stays direction-neutral, the page
+ * chrome keeps its generated RTL rules, control corners are chosen
+ * deliberately in the adapter per document direction, DOM markers land on
+ * their coordinates in every locale, and the corners the adapter picks
+ * never collide with the page's own floating chrome.
+ */
+
+/** The built stylesheets of the app entry, concatenated. */
+async function appEntryCss(page: import('@playwright/test').Page): Promise<string> {
+    const response = await page.request.get('/build/manifest.json');
+    expect(response.status(), 'the build manifest must be served').toBe(200);
+    const manifest = (await response.json()) as Record<string, { file?: string; css?: string[] }>;
+
+    // Both shapes: entries whose FILE is a stylesheet (the app.css input)
+    // and JS entries carrying a `css` array (the app.ts bundle that holds
+    // the MapLibre vendor rules).
+    const sheets = Object.values(manifest).flatMap((entry) => [
+        ...(entry.css ?? []),
+        ...(entry.file?.endsWith('.css') ? [entry.file] : []),
+    ]);
+    expect(sheets.length, 'the manifest must name the built stylesheets').toBeGreaterThan(0);
+
+    let css = '';
+    for (const sheet of [...new Set(sheets)]) {
+        const asset = await page.request.get(`/build/${sheet}`);
+        expect(asset.status(), `${sheet} must be served`).toBe(200);
+        css += await asset.text();
+    }
+
+    return css;
+}
+
+test('MapLibre vendor CSS ships direction-neutral while page chrome keeps its RTL rules', async ({ page }) => {
+    const css = await appEntryCss(page);
+
+    /*
+     * The mechanism itself: no [dir=…]-scoped rule may reposition the
+     * vendor's physical layout — the corner containers and controls
+     * (.maplibregl-ctrl*), the DOM marker (.maplibregl-marker) and the
+     * canvas anchor (.maplibregl-canvas). Pre-contract, postcss-rtlcss
+     * emitted dozens of exactly those, and every RTL layout fact
+     * downstream was a side effect of that list. MapLibre's OWN stylesheet
+     * ships a handful of [dir=rtl] popup rules (vendor-authored RTL
+     * support, flex-direction only) — those are the vendor's design, not
+     * our pipeline's accident, and they stay.
+     */
+    const flipped = css.match(/\[dir=[^\]]*\][^{}]*\.maplibregl-(?:ctrl|marker|canvas)[^{}]*\{[^}]*\}/g) ?? [];
+    expect(flipped, 'no [dir]-scoped rule may reposition MapLibre controls, markers or canvas').toEqual([]);
+
+    /*
+     * …and the exclusion must not have widened: the page chrome's own
+     * generated RTL rules stay. The design system's eyebrow treatment is
+     * an rtlcss COMBINED-mode artifact (uppercase tracking in LTR, none in
+     * RTL), so its [dir=rtl] variant existing proves rtlcss still ran on
+     * the page's stylesheets — the vendor's own popup rules could not
+     * satisfy this. (Minifiers strip the attribute quotes; match both.)
+     */
+    expect(
+        /\[dir=["']?rtl["']?\][^{}]*\.mh-/.test(css),
+        'page-chrome rtlcss output must still be generated',
+    ).toBe(true);
+    expect(css, 'vendor base rules must still ship').toContain('.maplibregl-ctrl-top-right');
+});
+
+for (const locale of LOCALES) {
+    test(`control corners are deliberate and collision-free on /invest [${locale.code}]`, async ({ page }) => {
+        await page.route(STYLE_HOST, (route) =>
+            route.fulfill({
+                status: 200,
+                contentType: 'application/json',
+                body: JSON.stringify(DETERMINISTIC_STYLE),
+            }),
+        );
+
+        await page.goto(`${locale.prefix}/invest`, { waitUntil: 'domcontentloaded' });
+        await expect(page.locator('html')).toHaveAttribute('dir', locale.direction);
+        await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+        const map = page.locator('[role="application"]').first();
+        const mapBox = await map.boundingBox();
+        expect(mapBox).not.toBeNull();
+        const midX = mapBox!.x + mapBox!.width / 2;
+
+        /*
+         * The corner contract, per direction: zoom at the TOP-END corner,
+         * scale at the BOTTOM-START corner, attribution at the BOTTOM-END
+         * corner — the exact positions RTL visitors have always seen.
+         * Asserted twice over: the RENDERED side (what the visitor sees)
+         * and the DOM corner container the adapter added the control to.
+         * Pre-contract those disagreed in RTL — the JS said one corner and
+         * an rtlcss side effect painted the other — so the membership
+         * assertions are the fail-before half, and the rendered-side
+         * assertions pin that the visible layout never changed.
+         */
+        const renderedSide = async (selector: string): Promise<'start' | 'end'> => {
+            const box = await page.locator(selector).first().boundingBox();
+            expect(box, `${selector} must render`).not.toBeNull();
+            const physical = box!.x + box!.width / 2 < midX ? 'left' : 'right';
+
+            if (locale.direction === 'rtl') {
+                return physical === 'right' ? 'start' : 'end';
+            }
+
+            return physical === 'left' ? 'start' : 'end';
+        };
+
+        expect(await renderedSide('.maplibregl-ctrl-zoom-in'), 'zoom control renders at top-end').toBe('end');
+        expect(await renderedSide('.maplibregl-ctrl-scale'), 'scale control renders at bottom-start').toBe('start');
+
+        // Physical corner container each control was ADDED to — the
+        // adapter's own deliberate choice, direction-resolved.
+        const topEnd = locale.direction === 'rtl' ? 'top-left' : 'top-right';
+        const bottomStart = locale.direction === 'rtl' ? 'bottom-right' : 'bottom-left';
+        const bottomEnd = locale.direction === 'rtl' ? 'bottom-left' : 'bottom-right';
+
+        await expect(
+            page.locator(`.maplibregl-ctrl-${topEnd} .maplibregl-ctrl-zoom-in`),
+            'the adapter must place the zoom control in the top-end corner container',
+        ).toHaveCount(1);
+        await expect(
+            page.locator(`.maplibregl-ctrl-${bottomStart} .maplibregl-ctrl-scale`),
+            'the adapter must place the scale control in the bottom-start corner container',
+        ).toHaveCount(1);
+        // The attribution control is hidden while the deterministic style
+        // carries no attributions, but its DOM placement is still the
+        // adapter's choice and still asserted.
+        await expect(
+            page.locator(`.maplibregl-ctrl-${bottomEnd} .maplibregl-ctrl-attrib`),
+            'the adapter must place the attribution control in the bottom-end corner container',
+        ).toHaveCount(1);
+
+        /*
+         * Collision guard: the page's own floating chrome (the boundaries
+         * toggle at start-3 top-3) and the adapter's zoom control must
+         * never share pixels, in either direction, at any viewport.
+         */
+        const toggle = await page.getByRole('button', { name: locale.code === 'en' ? 'Area boundaries' : locale.code === 'ar' ? 'حدود المناطق' : 'سنوورەکانی ناوچە' }).boundingBox();
+        const zoom = await page.locator('.maplibregl-ctrl-zoom-in').boundingBox();
+        expect(toggle, 'the boundaries toggle must render').not.toBeNull();
+        expect(zoom).not.toBeNull();
+
+        const disjoint =
+            toggle!.x + toggle!.width <= zoom!.x
+            || zoom!.x + zoom!.width <= toggle!.x
+            || toggle!.y + toggle!.height <= zoom!.y
+            || zoom!.y + zoom!.height <= toggle!.y;
+        expect(disjoint, 'floating chrome must not cover the zoom control').toBe(true);
+
+        await expectNoHorizontalOverflow(page);
+    });
+}
+
+for (const dir of [
+    { attr: 'rtl', lang: 'ckb' },
+    { attr: 'rtl', lang: 'ar' },
+    { attr: 'ltr', lang: 'en' },
+]) {
+    test(`a DOM marker lands on its coordinates under dir=${dir.attr} lang=${dir.lang}`, async ({ page, diagnostics }) => {
+        const files = await buildFiles(page);
+        const chunk = files.find((file) => file.includes('maplibre-gl-') && !file.includes('worker'));
+        const sw = await page.request.get('/build/sw.js');
+        const worker = (await sw.text()).match(/assets\/maplibre-gl-worker-[\w-]+\.js/)?.[0];
+        const manifest = (await (await page.request.get('/build/manifest.json')).json()) as Record<string, { css?: string[] }>;
+        const sheets = [...new Set(Object.values(manifest).flatMap((entry) => entry.css ?? []))];
+        expect(chunk && worker && sheets.length > 0, 'built chunk, worker and css must resolve').toBeTruthy();
+
+        /*
+         * Same-origin harness (the technique this file already uses for
+         * text shaping), now with the REAL BUILT APP CSS linked and the
+         * document direction set — the exact conditions under which the
+         * accidental `[dir=rtl] .maplibregl-marker { right: 0 }` displaced
+         * every DOM marker. A 10×10 element marker anchored at the map
+         * centre must render at the container centre in every direction.
+         */
+        await page.route('**/__map-rtl-marker-harness__', (route) =>
+            route.fulfill({
+                status: 200,
+                contentType: 'text/html; charset=utf-8',
+                body: `<!doctype html><html dir="${dir.attr}" lang="${dir.lang}"><meta charset="utf-8"><title>marker</title>
+${sheets.map((sheet) => `<link rel="stylesheet" href="/build/${sheet}">`).join('\n')}
+<div id="map" style="width:640px;height:420px;margin:0 auto"></div>
+<script type="module">
+const maplibre = await import('/build/${chunk}');
+maplibre.setWorkerUrl('/build/${worker}');
+const map = new maplibre.Map({
+    container: 'map',
+    style: { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#e8e6e1' } }] },
+    center: [44.0, 36.2],
+    zoom: 10,
+});
+const el = document.createElement('div');
+el.id = 'probe-marker';
+el.style.cssText = 'width:10px;height:10px;background:#c00;border-radius:50%';
+map.on('load', () => {
+    new maplibre.Marker({ element: el }).setLngLat([44.0, 36.2]).addTo(map);
+    document.title = 'marker-ready';
+});
+</script></html>`,
+            }),
+        );
+
+        await page.goto('/__map-rtl-marker-harness__', { waitUntil: 'domcontentloaded' });
+        await expect.poll(async () => page.title(), { timeout: 20_000 }).toBe('marker-ready');
+
+        const container = await page.locator('#map').boundingBox();
+        const marker = await page.locator('#probe-marker').boundingBox();
+        expect(container).not.toBeNull();
+        expect(marker, 'the marker element must render').not.toBeNull();
+
+        const containerCentreX = container!.x + container!.width / 2;
+        const markerCentreX = marker!.x + marker!.width / 2;
+        const containerCentreY = container!.y + container!.height / 2;
+        const markerCentreY = marker!.y + marker!.height / 2;
+
+        expect(Math.abs(markerCentreX - containerCentreX), 'marker x must match its coordinate').toBeLessThanOrEqual(8);
+        expect(Math.abs(markerCentreY - containerCentreY), 'marker y must match its coordinate').toBeLessThanOrEqual(8);
+
+        expect(diagnostics.failedRequests, 'the harness must load cleanly').toEqual([]);
+    });
+}

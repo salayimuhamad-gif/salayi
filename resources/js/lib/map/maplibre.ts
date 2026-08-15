@@ -178,11 +178,38 @@ export class MapLibreAdapter implements MapAdapter {
                     ] as [[number, number], [number, number]],
                 }
                 : {}),
-            attributionControl: { compact: true },
+            // Added manually below: the constructor option cannot choose a
+            // corner, and the corner is a direction decision now.
+            attributionControl: false,
         });
 
-        map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
-        map.addControl(new maplibre.ScaleControl({ unit: 'metric' }), 'bottom-left');
+        /*
+         * Control corners are a DELIBERATE direction decision, not a CSS
+         * side effect. MapLibre corners are physical by design, and the
+         * vendor stylesheet is excluded from the page's rtlcss pipeline
+         * (postcss.config.js) — before that exclusion, rtlcss mirrored the
+         * corner containers under [dir="rtl"] and the RTL layout only
+         * happened to look right, while `.maplibregl-marker { right: 0 }`
+         * displaced every DOM marker on RTL pages. The adapter now reads
+         * the container's computed direction (the container inherits the
+         * document's dir) and picks the physical corner itself: zoom at
+         * the top-END corner, scale at the bottom-START corner,
+         * attribution at the bottom-END corner — exactly the positions
+         * every locale has always seen. Pinned by map-rtl.spec.ts for
+         * ckb, ar and en.
+         */
+        const direction =
+            typeof getComputedStyle === 'function'
+                && getComputedStyle(this.options.container).direction === 'rtl'
+                ? 'rtl'
+                : 'ltr';
+        const topEnd = direction === 'rtl' ? 'top-left' : 'top-right';
+        const bottomStart = direction === 'rtl' ? 'bottom-right' : 'bottom-left';
+        const bottomEnd = direction === 'rtl' ? 'bottom-left' : 'bottom-right';
+
+        map.addControl(new maplibre.NavigationControl({ showCompass: false }), topEnd);
+        map.addControl(new maplibre.ScaleControl({ unit: 'metric' }), bottomStart);
+        map.addControl(new maplibre.AttributionControl({ compact: true }), bottomEnd);
 
         map.on('error', (event) => {
             /*
