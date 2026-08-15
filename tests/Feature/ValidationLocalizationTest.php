@@ -142,7 +142,7 @@ final class ValidationLocalizationTest extends TestCase
      * legitimately differs per locale — their key sets are compared too,
      * but attribute names are product wording, not rule coverage.
      *
-     * @param array<string, mixed> $messages
+     * @param  array<string, mixed>  $messages
      * @return list<string>
      */
     private function flattenKeys(array $messages, string $prefix = ''): array
