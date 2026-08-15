@@ -440,6 +440,16 @@ test.describe('admin picker geometry fidelity', () => {
 
         await page.getByRole('button', { name: 'دروستکردنی ناوچە' }).click();
         await page.waitForURL(/\/admin\/areas\/\d+\/edit/, { timeout: 15_000 });
+
+        /*
+         * Fresh load of the edit page. The create→edit redirect is an
+         * Inertia visit onto the SAME page component, so Vue patches the
+         * form in place and the already-mounted picker keeps its create-page
+         * camera. A reload is the pose the pixel maths assume — an editor
+         * opening the record — where build() fits the camera to the stored
+         * geometry at zoom 13.
+         */
+        await page.reload({ waitUntil: 'domcontentloaded' });
         await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
     }
 

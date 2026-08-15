@@ -379,8 +379,8 @@ onBeforeUnmount(() => { disposed = true; adapter.value?.destroy(); adapter.value
             data-testid="boundary-complex-notice"
         >
             <template v-if="confirming === null">
-                {{ t('geography.map.complex_notice') }}
-                <span class="ms-3 inline-flex flex-wrap gap-2 align-middle">
+                <p>{{ t('geography.map.complex_notice') }}</p>
+                <div class="mt-2 flex flex-wrap gap-2">
                     <AppButton
                         variant="secondary" size="sm" data-testid="boundary-replace"
                         @click="requestReplace"
@@ -393,13 +393,15 @@ onBeforeUnmount(() => { disposed = true; adapter.value?.destroy(); adapter.value
                     >
                         {{ t('geography.map.clear') }}
                     </AppButton>
-                </span>
+                </div>
             </template>
             <template v-else>
-                {{ confirming === 'replace'
-                    ? t('geography.map.replace_confirm')
-                    : t('geography.map.clear_confirm') }}
-                <span class="ms-3 inline-flex flex-wrap gap-2 align-middle">
+                <p>
+                    {{ confirming === 'replace'
+                        ? t('geography.map.replace_confirm')
+                        : t('geography.map.clear_confirm') }}
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
                     <AppButton
                         variant="danger" size="sm" data-testid="boundary-confirm"
                         @click="confirming === 'replace' ? confirmReplace() : confirmClear()"
@@ -412,7 +414,7 @@ onBeforeUnmount(() => { disposed = true; adapter.value?.destroy(); adapter.value
                     >
                         {{ t('app.actions.cancel') }}
                     </AppButton>
-                </span>
+                </div>
             </template>
         </AppAlert>
 
