@@ -161,7 +161,14 @@ function deriveSlug(): void {
             </button>
         </nav>
 
-        <form class="space-y-6" @submit.prevent="submit">
+        <!-- novalidate: with sections v-show'd away, native constraint
+             validation can only ever veto silently — an invalid control in a
+             hidden section cannot be focused or show its bubble, so Chrome
+             blocks the submit event with nothing but a console warning. The
+             server (ProjectRequest) is the authoritative validator and its
+             errors render inline per field; `required` attributes remain for
+             assistive technology (aria-required), not for gatekeeping. -->
+        <form class="space-y-6" novalidate @submit.prevent="submit">
             <AppCard v-show="active === 'identity'" :title="t('projects.wizard.identity')">
                 <div class="space-y-5">
                     <AppInput
@@ -305,7 +312,13 @@ function deriveSlug(): void {
 
             <AppCard v-show="active === 'sources'" :title="t('projects.wizard.sources')" :description="t('projects.fields.source_requirement')">
                 <div class="space-y-5">
-                    <AppInput v-model="form.source" :label="t('projects.fields.source')" :error="form.errors.source" required />
+                    <!-- Server truth: `source` is nullable (ProjectRequest).
+                         The template's stray `required` sat in this v-show'd
+                         section, and the browser's native validation silently
+                         vetoed EVERY submission while the invalid control was
+                         invisible — no POST, no message, a form that just did
+                         nothing. -->
+                    <AppInput v-model="form.source" :label="t('projects.fields.source')" :error="form.errors.source" />
                     <AppInput v-model="form.official_url" :label="t('projects.fields.official_url')" :error="form.errors.official_url" dir="ltr" />
                     <AppSelect
                         v-model="form.confidence"

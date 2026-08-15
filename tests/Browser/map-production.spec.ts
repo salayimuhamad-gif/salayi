@@ -433,7 +433,7 @@ test.describe('admin picker geometry fidelity', () => {
         await page.goto('/admin/areas/create', { waitUntil: 'domcontentloaded' });
 
         await page.getByLabel('ناو (کوردی)').fill(`ناوچەی ${slug}`);
-        await page.getByLabel('ناونیشانی وێب').fill(slug);
+        await page.getByLabel('ناسنامەی بەستەر (slug)').fill(slug);
         await page.getByLabel('پانی', { exact: true }).fill('36.18');
         await page.getByLabel('درێژی', { exact: true }).fill('44.00');
         await page.getByLabel('سنوور (WKT)').fill(wkt);

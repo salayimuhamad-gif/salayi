@@ -152,7 +152,7 @@ return [
         'name_ar' => 'Name (Arabic)',
         'name_en' => 'Name (English)',
         'slug' => 'URL slug',
-        'slug_hint' => 'Derived from the name',
+        'slug_hint' => 'The last part of the page link, derived from the name — letters, digits and hyphens (-) only. This is not the official website.',
         'slug_locked_hint' => 'Changing this breaks every inbound link',
         'type' => 'Project type',
         'developer' => 'Developer',
