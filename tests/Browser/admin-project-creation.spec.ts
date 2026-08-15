@@ -138,5 +138,16 @@ test.describe('admin project creation', () => {
         const residential = await select.evaluate((el) =>
             Array.from((el as HTMLSelectElement).options).find((option) => option.textContent?.trim() === 'نیشتەجێبوون')?.value);
         expect(residential).toBe('residential');
+
+        /*
+         * The wizard's slug field has its OWN label key
+         * (projects.wizard.creation.field_slug), separate from the legacy
+         * form's projects.fields.slug — and the Kurdish value of that second
+         * key ALSO read "web address" (ناونیشانی وێب). Fixing one key and not
+         * the other left the flagship step-by-step flow inviting the site
+         * URL into the slug field; this pin covers the second door.
+         */
+        await expect(page.getByLabel('ناسنامەی بەستەر (slug)').first()).toBeVisible();
+        await expect(page.getByText('ناونیشانی وێب')).toHaveCount(0);
     });
 });

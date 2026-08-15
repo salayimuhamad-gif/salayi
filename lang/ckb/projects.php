@@ -329,7 +329,7 @@ return [
             'field_currency' => 'دراو',
             'field_price_type' => 'جۆری نرخ',
             'field_association_role' => 'ڕۆڵی پەیوەندی',
-            'field_slug' => 'ناونیشانی وێب',
+            'field_slug' => 'ناسنامەی بەستەر (slug)',
             'field_completion_percent' => 'ڕێژەی تەواوبوون',
             'field_expected_delivery' => 'بەرواری تەواوبوون',
             'field_boundary' => 'سنووری پڕۆژە',
