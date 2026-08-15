@@ -151,6 +151,15 @@ async function build(): Promise<void> {
             adapter.value?.destroy();
             adapter.value = null;
             failed.value = true;
+
+            /*
+             * The fidelity gates hold even without a map: classification is
+             * pure geometry, so a complex stored boundary must still hide
+             * plain Draw and show the stated limitation while the failure
+             * message is up. The display calls inside are no-ops against
+             * the null adapter (review finding, Phase 7).
+             */
+            syncBoundary(props.boundaryWkt, false);
         }
     } finally {
         if (!disposed) {
