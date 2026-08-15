@@ -186,9 +186,15 @@ tick();
 async function appEntryCss(page: import('@playwright/test').Page): Promise<string> {
     const response = await page.request.get('/build/manifest.json');
     expect(response.status(), 'the build manifest must be served').toBe(200);
-    const manifest = (await response.json()) as Record<string, { css?: string[] }>;
+    const manifest = (await response.json()) as Record<string, { file?: string; css?: string[] }>;
 
-    const sheets = Object.values(manifest).flatMap((entry) => entry.css ?? []);
+    // Both shapes: entries whose FILE is a stylesheet (the app.css input)
+    // and JS entries carrying a `css` array (the app.ts bundle that holds
+    // the MapLibre vendor rules).
+    const sheets = Object.values(manifest).flatMap((entry) => [
+        ...(entry.css ?? []),
+        ...(entry.file?.endsWith('.css') ? [entry.file] : []),
+    ]);
     expect(sheets.length, 'the manifest must name the built stylesheets').toBeGreaterThan(0);
 
     let css = '';
@@ -205,17 +211,31 @@ test('MapLibre vendor CSS ships direction-neutral while page chrome keeps its RT
     const css = await appEntryCss(page);
 
     /*
-     * The mechanism itself: no [dir=…]-scoped rule may target a vendor
-     * .maplibregl-* class. Pre-contract, postcss-rtlcss emitted dozens
-     * (canvas anchor, ctrl corners, marker offset) and every RTL layout
-     * fact downstream was a side effect of this list.
+     * The mechanism itself: no [dir=…]-scoped rule may reposition the
+     * vendor's physical layout — the corner containers and controls
+     * (.maplibregl-ctrl*), the DOM marker (.maplibregl-marker) and the
+     * canvas anchor (.maplibregl-canvas). Pre-contract, postcss-rtlcss
+     * emitted dozens of exactly those, and every RTL layout fact
+     * downstream was a side effect of that list. MapLibre's OWN stylesheet
+     * ships a handful of [dir=rtl] popup rules (vendor-authored RTL
+     * support, flex-direction only) — those are the vendor's design, not
+     * our pipeline's accident, and they stay.
      */
-    const flipped = css.match(/\[dir=[^\]]*\][^{}]*\.maplibregl-[^{}]*\{[^}]*\}/g) ?? [];
-    expect(flipped, 'no [dir]-scoped rule may touch MapLibre vendor classes').toEqual([]);
+    const flipped = css.match(/\[dir=[^\]]*\][^{}]*\.maplibregl-(?:ctrl|marker|canvas)[^{}]*\{[^}]*\}/g) ?? [];
+    expect(flipped, 'no [dir]-scoped rule may reposition MapLibre controls, markers or canvas').toEqual([]);
 
-    // …and the exclusion must not have widened: the page chrome's own
-    // generated RTL rules stay. One representative each way suffices.
-    expect(css.includes('[dir="rtl"]') || css.includes('[dir=rtl]'), 'page-chrome RTL rules must still be generated').toBe(true);
+    /*
+     * …and the exclusion must not have widened: the page chrome's own
+     * generated RTL rules stay. The design system's eyebrow treatment is
+     * an rtlcss COMBINED-mode artifact (uppercase tracking in LTR, none in
+     * RTL), so its [dir=rtl] variant existing proves rtlcss still ran on
+     * the page's stylesheets — the vendor's own popup rules could not
+     * satisfy this. (Minifiers strip the attribute quotes; match both.)
+     */
+    expect(
+        /\[dir=["']?rtl["']?\][^{}]*\.mh-/.test(css),
+        'page-chrome rtlcss output must still be generated',
+    ).toBe(true);
     expect(css, 'vendor base rules must still ship').toContain('.maplibregl-ctrl-top-right');
 });
 
