@@ -183,7 +183,12 @@ function reset(): void {
     <Head :title="t('advisor.chat.title')" />
 
     <PublicLayout>
-        <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
+        <!-- The live-chat overlay's containment gate: the plain-JS widget is
+             loaded on every page but may decorate a header only where this
+             marker exists. Unconditional on purpose — the user-avatar island
+             below renders only for signed-in visitors, and anonymous advisor
+             sessions keep the live ring and badge too. -->
+        <div data-advisor-chat class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
             <!-- §9.2: the conversation comes first in source order, so it is
                  also first on a phone with no reordering. -->
             <div class="min-w-0 space-y-5">
