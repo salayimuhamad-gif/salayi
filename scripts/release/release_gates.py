@@ -157,6 +157,11 @@ PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/accessibility.spec.ts',
     'tests/Browser/admin.spec.ts',
     'tests/Browser/advisor.spec.ts',
+    # Advisor overlay containment (Phase 10): the live-chat header decoration
+    # is gated to the advisor page's own marker — the admin chrome stays one
+    # viewport wide on both phone widths, and neither the admin nor a public
+    # detail header carries the ring or the "AI live" badge.
+    'tests/Browser/advisor-widget-containment.spec.ts',
     'tests/Browser/auth.spec.ts',
     # The Investment Map suite: every locale, every viewport, against the
     # persisted fixture rows — including the degraded no-tiles contract.
@@ -190,6 +195,9 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'admin flow runs once, on desktop-1440x900 only',
     'tests/Browser/advisor.spec.ts':
         'advisor flow is desktop-only and feature-flag dependent',
+    'tests/Browser/advisor-widget-containment.spec.ts':
+        'the admin overflow pins are phone-width scenarios; '
+        'the public-detail negative pin runs once, on desktop',
     'tests/Browser/mfa.spec.ts':
         'MFA flow runs once, on desktop-1440x900 only',
     'tests/Browser/map-production.spec.ts':

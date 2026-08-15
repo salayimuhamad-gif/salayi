@@ -109,6 +109,6 @@
 
     {{-- Loaded globally because Inertia can enter the advisor without reloading
          this root Blade view. The script is inert unless an advisor composer exists. --}}
-    <script src="{{ asset('advisor-live-chat-v7.js') }}" defer></script>
+    <script src="{{ asset('advisor-live-chat-v8.js') }}" defer></script>
 </body>
 </html>

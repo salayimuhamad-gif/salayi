@@ -148,4 +148,20 @@ test.describe('advisor enabled', () => {
 
         await expect(page.locator('main a[href$="/advisor"]').first()).toBeVisible();
     });
+
+    /*
+     * Phase 10 containment, the KEEP side. The live-chat overlay's header
+     * decoration — the animated ring around the header icon and the "AI
+     * live" badge — is now gated on this page's own [data-advisor-chat]
+     * marker, because it used to decorate ANY header with an h1 (every
+     * admin page, every public detail page). This pins that the gate did
+     * not overshoot: on the advisor page itself, both halves of the
+     * decoration still appear exactly as before.
+     */
+    test('the live overlay still decorates the advisor header: ring and badge', async ({ page }) => {
+        await page.goto('/advisor', { waitUntil: 'networkidle' });
+
+        await expect(page.locator('[data-mh-ai-live-wrap]')).toHaveCount(1);
+        await expect(page.locator('.mh-ai-live-badge')).toBeVisible();
+    });
 });
