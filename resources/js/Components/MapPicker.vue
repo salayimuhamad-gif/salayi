@@ -4,7 +4,18 @@ import AppButton from '@/Components/ui/AppButton.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import { t } from '@/lib/i18n';
 import { createMapAdapter, type MapAdapter } from '@/lib/map';
-import { parsePolygonRing, polygonToWkt, ringBounds, ringCentroid, type LngLat } from '@/lib/geometry';
+import {
+    boundaryDisplayCollection,
+    classifyBoundaryComponents,
+    componentsBounds,
+    parsePolygonRing,
+    polygonToWkt,
+    ringBounds,
+    ringCentroid,
+    type BoundaryComplexity,
+    type LngLat,
+} from '@/lib/geometry';
+import { fromWkt } from '@/lib/wizard/geometry';
 
 /*
  * The admin location picker, ON THE SHARED ADAPTER.
@@ -46,6 +57,19 @@ const drawing = ref(false);
 const ring = ref<LngLat[]>([]);
 const failed = ref(false);
 const building = ref(false);
+/*
+ * Geometry fidelity (canonical L1). This picker edits exactly one hole-free
+ * ring, but the stored WKT may be richer — a Polygon with holes, or a
+ * MultiPolygon, both of which the server accepts at every door. Such a
+ * boundary used to render as nothing (or as its exterior alone), and a
+ * redraw or clear then silently replaced it with a downgrade. Now: complex
+ * geometry renders in FULL, read-only, with a stated limitation; replacing
+ * or clearing it demands an explicit, separate intent plus confirmation;
+ * cancelling either emits nothing. Simple single-ring boundaries keep the
+ * exact editing behavior they always had.
+ */
+const complexity = ref<BoundaryComplexity>('none');
+const confirming = ref<'replace' | 'clear' | null>(null);
 /*
  * Construction can outlive the component: unmounting mid-build destroys a
  * still-null adapter ref, so the adapter that resolves later must be
@@ -111,25 +135,13 @@ async function build(): Promise<void> {
             return;
         }
 
-        // Existing geometry, restored on edit: pin first, then the ring —
-        // and the camera fits the polygon when one exists.
+        // Existing geometry, restored on edit: pin first, then the
+        // boundary — and the camera fits the geometry when one exists.
         if (props.latitude !== null && props.longitude !== null) {
             placePin({ lng: props.longitude, lat: props.latitude });
         }
 
-        const existing = parsePolygonRing(props.boundaryWkt);
-        if (existing) {
-            ring.value = existing;
-            renderRing();
-            const bounds = ringBounds(existing);
-            if (bounds) {
-                const [[west, south], [east, north]] = bounds;
-                adapter.value.flyTo(
-                    { lng: (west + east) / 2, lat: (south + north) / 2 },
-                    13,
-                );
-            }
-        }
+        syncBoundary(props.boundaryWkt, true);
     } catch {
         // Bounded readiness rejected (style failed or stalled): a clear
         // message with a retry — never an indefinite blank surface. After
@@ -170,6 +182,45 @@ function emitPoint(point: LngLat): void {
     emit('update:longitude', Number(point.lng.toFixed(7)));
 }
 
+/**
+ * One reader for the incoming WKT, shared by construction and the prop
+ * watch. Simple single-ring boundaries keep the historical path exactly
+ * (exterior into `ring`, editable); complex ones render read-only in full
+ * fidelity through the wizard parser, with the editing ring left empty.
+ */
+function syncBoundary(value: string, fitCamera: boolean): void {
+    const components = fromWkt(value || null);
+    complexity.value = classifyBoundaryComponents(components);
+    confirming.value = null;
+
+    if (complexity.value === 'complex') {
+        ring.value = [];
+        adapter.value?.setBoundaries(boundaryDisplayCollection(components));
+
+        if (fitCamera) {
+            const bounds = componentsBounds(components);
+            if (bounds) {
+                const [[west, south], [east, north]] = bounds;
+                adapter.value?.flyTo({ lng: (west + east) / 2, lat: (south + north) / 2 }, 13);
+            }
+        }
+
+        return;
+    }
+
+    const existing = complexity.value === 'simple' ? parsePolygonRing(value) : null;
+    ring.value = existing ?? [];
+    renderRing();
+
+    if (existing && fitCamera) {
+        const bounds = ringBounds(existing);
+        if (bounds) {
+            const [[west, south], [east, north]] = bounds;
+            adapter.value?.flyTo({ lng: (west + east) / 2, lat: (south + north) / 2 }, 13);
+        }
+    }
+}
+
 function renderRing(): void {
     adapter.value?.setBoundaries(ring.value.length >= 3
         ? {
@@ -189,9 +240,46 @@ function renderRing(): void {
 }
 
 function startDrawing(): void {
+    // A complex boundary is read-only here: replacing it goes through the
+    // explicit intent + confirmation below, never through plain Draw.
+    if (complexity.value === 'complex') {
+        return;
+    }
+
+    beginDrawing();
+}
+
+function beginDrawing(): void {
     drawing.value = true;
     ring.value = [];
     renderRing();
+}
+
+/**
+ * The two-step destructive path for complex geometry: a named intent
+ * ("replace" or "clear"), then a confirmation. Cancel resets the prompt and
+ * nothing else — no state change, no emit, the stored WKT untouched.
+ */
+function requestReplace(): void {
+    confirming.value = 'replace';
+}
+
+function requestClear(): void {
+    confirming.value = 'clear';
+}
+
+function cancelConfirmation(): void {
+    confirming.value = null;
+}
+
+function confirmReplace(): void {
+    confirming.value = null;
+    beginDrawing();
+}
+
+function confirmClear(): void {
+    confirming.value = null;
+    doClear();
 }
 
 function undoPoint(): void {
@@ -221,6 +309,15 @@ function finishDrawing(): void {
 }
 
 function clearBoundary(): void {
+    // Same rule as Draw: clearing a complex boundary is confirmation-gated.
+    if (complexity.value === 'complex') {
+        return;
+    }
+
+    doClear();
+}
+
+function doClear(): void {
     drawing.value = false;
     ring.value = [];
     renderRing();
@@ -229,9 +326,7 @@ function clearBoundary(): void {
 
 watch(() => props.boundaryWkt, (value) => {
     if (drawing.value) return;
-    const parsed = parsePolygonRing(value);
-    ring.value = parsed ?? [];
-    renderRing();
+    syncBoundary(value, false);
 });
 
 /*
@@ -274,13 +369,63 @@ onBeforeUnmount(() => { disposed = true; adapter.value?.destroy(); adapter.value
             :aria-label="t('geography.map.label')"
         />
 
+        <!-- A stored boundary richer than this editor's single-ring model:
+             rendered in full above, stated here, and only replaceable or
+             clearable through an explicit intent plus confirmation. Cancel
+             leaves everything exactly as it was and emits nothing. -->
+        <AppAlert
+            v-if="mode !== 'point' && complexity === 'complex' && !drawing"
+            variant="warning"
+            data-testid="boundary-complex-notice"
+        >
+            <template v-if="confirming === null">
+                {{ t('geography.map.complex_notice') }}
+                <span class="ms-3 inline-flex flex-wrap gap-2 align-middle">
+                    <AppButton
+                        variant="secondary" size="sm" data-testid="boundary-replace"
+                        @click="requestReplace"
+                    >
+                        {{ t('geography.map.replace_boundary') }}
+                    </AppButton>
+                    <AppButton
+                        variant="ghost" size="sm" data-testid="boundary-clear-complex"
+                        @click="requestClear"
+                    >
+                        {{ t('geography.map.clear') }}
+                    </AppButton>
+                </span>
+            </template>
+            <template v-else>
+                {{ confirming === 'replace'
+                    ? t('geography.map.replace_confirm')
+                    : t('geography.map.clear_confirm') }}
+                <span class="ms-3 inline-flex flex-wrap gap-2 align-middle">
+                    <AppButton
+                        variant="danger" size="sm" data-testid="boundary-confirm"
+                        @click="confirming === 'replace' ? confirmReplace() : confirmClear()"
+                    >
+                        {{ t('app.actions.confirm') }}
+                    </AppButton>
+                    <AppButton
+                        variant="secondary" size="sm" data-testid="boundary-cancel"
+                        @click="cancelConfirmation"
+                    >
+                        {{ t('app.actions.cancel') }}
+                    </AppButton>
+                </span>
+            </template>
+        </AppAlert>
+
         <div class="flex flex-wrap items-center gap-2">
             <template v-if="mode !== 'point'">
-                <AppButton v-if="!drawing" variant="secondary" size="sm" @click="startDrawing">
+                <AppButton
+                    v-if="!drawing && complexity !== 'complex'"
+                    variant="secondary" size="sm" @click="startDrawing"
+                >
                     {{ t('geography.map.draw_boundary') }}
                 </AppButton>
 
-                <template v-else>
+                <template v-if="drawing">
                     <AppButton size="sm" :disabled="ring.length < 3" @click="finishDrawing">
                         {{ t('geography.map.finish') }}
                     </AppButton>

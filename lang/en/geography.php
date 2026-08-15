@@ -52,6 +52,10 @@ return [
         'points' => 'points',
         'click_hint' => 'Click to place the location point',
         'drawing_hint' => 'Click to add points, then finish',
+        'complex_notice' => 'This boundary contains holes or multiple polygons, which this picker cannot edit. It is shown in full and will be kept as is unless you replace or clear it.',
+        'replace_boundary' => 'Replace boundary',
+        'replace_confirm' => 'Drawing a new boundary will permanently replace the stored complex boundary with a single simple ring. Continue?',
+        'clear_confirm' => 'This will permanently remove the stored complex boundary. Continue?',
         'unavailable' => 'The map is unavailable. You can enter the coordinates and boundary by hand',
     ],
 

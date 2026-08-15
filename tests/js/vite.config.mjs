@@ -23,6 +23,7 @@ export default defineConfig({
             // short, and an explicit one fails loudly when a file is renamed.
             input: {
                 geojson: resolve(import.meta.dirname, 'geojson.test.ts'),
+                geometry: resolve(import.meta.dirname, 'geometry.test.ts'),
                 wizard: resolve(import.meta.dirname, 'wizard.test.ts'),
                 trend: resolve(import.meta.dirname, 'trend.test.ts'),
             },
