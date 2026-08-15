@@ -156,7 +156,9 @@
          * anywhere — which on every admin page wrapped the sidebar toggle's
          * icon in the live ring and pushed the "AI live" badge into the
          * chrome (overflowing the 360/390 layouts and skewing pointer
-         * coordinates), and decorated any public detail header the same way.
+         * coordinates). Public detail headers matched the finder too and
+         * escaped only because the svg guard below returns before the badge
+         * append and none of them carries an icon — an accident, not a rule.
          * The gate is the advisor page's own root marker — deliberately NOT
          * the user-avatar island, which renders only for signed-in visitors:
          * anonymous advisor sessions must keep the ring and badge unchanged.
