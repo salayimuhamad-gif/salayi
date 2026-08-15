@@ -154,6 +154,17 @@ comparability gate regressed. Check in order:
 5. Overlays/controls on the wrong side or covering content in RTL: check the
    combined-mode `postcss-rtlcss` output and the floating card positioning at
    360×800/390×844.
+6. MapLibre controls on the wrong side, or a DOM marker/pin off its
+   coordinates, in RTL only (Phase 6 contract): the vendor stylesheet must be
+   direction-neutral — no `[dir]`-scoped rule may target `.maplibregl-*`
+   (rtlcss is scoped away from `node_modules/maplibre-gl` in
+   `postcss.config.js`; an unscoped rtlcss once emitted
+   `[dir=rtl] .maplibregl-marker { right: 0 }` and displaced every pin).
+   Corner choice is the adapter's: `maplibre.ts` resolves zoom to top-END,
+   scale to bottom-START, attribution to bottom-END from the container's
+   computed direction. `map-rtl.spec.ts` pins vendor-CSS neutrality, corner
+   membership + rendered side, chrome collision, and marker placement for
+   ckb/ar/en — start there.
 
 ## Mobile touch failure
 

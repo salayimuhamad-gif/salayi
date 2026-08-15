@@ -146,6 +146,14 @@ Authoritative historical records in the repo itself: `docs/MAP_PRODUCTION_AUDIT.
 - **CSS**: `maplibre-gl/dist/maplibre-gl.css` is imported in
   `resources/js/app.ts` and guarded by `scripts/frontend-guard.php` check 2b
   (RC1: without it every surface renders as a blank/grey area). Never remove.
+- **Vendor CSS is direction-neutral (Phase 6)**: `postcss.config.js` wraps
+  postcss-rtlcss in a scoped plugin that skips MapLibre's stylesheet — rtlcss
+  used to mirror the vendor's physical-position rules under `[dir="rtl"]`,
+  making the RTL corner layout an accident and displacing every DOM marker
+  (`.maplibregl-marker { right: 0 }` — the admin picker's pin). No
+  `[dir]`-scoped rule may target a `.maplibregl-*` class; RTL corner choice
+  lives in the adapter instead. Pinned by `map-rtl.spec.ts` (vendor CSS
+  neutrality + marker placement for ckb/ar/en).
 - **Style resolution** precedence: server-provided `styleUrl` → inline
   zero-network `plain` style (admin pickers) → `demotiles.maplibre.org`
   last-resort default (documented as unsuitable for production; production
@@ -267,9 +275,13 @@ this project:
 - **States**: loading veil while the style loads; an honest, localized
   failure message when the provider fails (never a silent grey box); zero
   data still renders a live map (empty FeatureCollections, `MapZeroStateTest`).
-- Controls: MapLibre `NavigationControl` + `ScaleControl` only; keep controls
-  and floating cards from covering the list, filters, or selection UI —
-  verify at 360×800 and 390×844, both RTL and LTR.
+- Controls: MapLibre `NavigationControl` + `ScaleControl` + a manually added
+  compact `AttributionControl` only. Corners are chosen by the adapter per
+  the container's computed direction (zoom top-END, scale bottom-START,
+  attribution bottom-END — physical corners resolved per dir; Phase 6), never
+  by CSS side effects. Keep controls and floating cards from covering the
+  list, filters, or selection UI — verify at 360×800 and 390×844, both RTL
+  and LTR (corner + collision contract pinned by `map-rtl.spec.ts`).
 - Premium visual quality per the invest-surface CSS (`.mh-invest-*`,
   `.mh-lux-gilded` in `resources/css/app.css`); accent colour gold
   `#c9a227` on Invest, default `#1f6feb` elsewhere.
@@ -365,6 +377,7 @@ first suspects (each maps to a documented incident):
 | Fake −100% / absurd trend | comparability gate: null `price_from`, mixed currency, mixed price_type |
 | Worker failure | `?worker&url` import intact → built assets contain `maplibre-gl-worker-*.js` |
 | RTL/overlay problems | plugin status/double registration → postcss-rtlcss side effects → `.numeral` bidi |
+| Controls on wrong side / marker displaced in RTL | vendor CSS must stay dir-neutral (no `[dir]` rule on `.maplibregl-*`; scoped in `postcss.config.js`) → adapter corner choice (`maplibre.ts`) → `map-rtl.spec.ts` |
 | Mobile touch failure | tab-switch rebuild? touch targets? overlay intercepting events |
 | Console errors | diagnostics fixture output; treat every console error as a failure |
 
