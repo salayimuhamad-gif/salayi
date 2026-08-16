@@ -260,9 +260,16 @@ final class ProjectController extends Controller
                 'types' => $this->options(ProjectType::cases(), 'projects.types'),
                 'construction' => $this->options(ConstructionStatus::cases(), 'projects.construction_statuses'),
                 'delivery' => $this->options(DeliveryStatus::cases(), 'projects.delivery_statuses'),
+                /*
+                 * publication_status and path MUST be selected: the ancestry
+                 * filter below reads both (path via ancestorIds()), and the
+                 * strict-model mode turns the omission into a 500 on the
+                 * whole page the moment the first area row exists — found in
+                 * Phase 12 when the browser fixtures gained one.
+                 */
                 'areas' => Area::query()->orderBy('path')
                     ->where('publication_status', 'published')
-                    ->get(['id', 'name_ckb', 'name_ar', 'name_en', 'depth'])
+                    ->get(['id', 'name_ckb', 'name_ar', 'name_en', 'depth', 'path', 'publication_status'])
                     ->filter(static fn (Area $area): bool => app(AreaResolver::class)->ancestryIsPublished($area))
                     ->values()
                     ->map(fn (Area $a): array => ['id' => $a->id, 'name' => $a->name(), 'depth' => $a->depth])->all(),

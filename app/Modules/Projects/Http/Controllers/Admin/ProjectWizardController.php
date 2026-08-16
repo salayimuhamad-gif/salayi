@@ -1435,9 +1435,12 @@ final class ProjectWizardController extends Controller
                  * the platform will not disclose, and the choice is refused on
                  * save.
                  */
+                // publication_status must be selected: ancestryIsPublished()
+                // reads it, and strict mode 500s the step for the omission
+                // as soon as one area row exists (found in Phase 12).
                 'areas' => Area::query()
                     ->where('publication_status', 'published')
-                    ->get(['id', 'name_ckb', 'name_ar', 'name_en', 'depth', 'path', 'parent_id'])
+                    ->get(['id', 'name_ckb', 'name_ar', 'name_en', 'depth', 'path', 'parent_id', 'publication_status'])
                     ->filter(fn (Area $a): bool => $this->areas->ancestryIsPublished($a))
                     ->sortBy('depth')
                     ->take(500)
