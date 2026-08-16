@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { test, expect } from './support/harness';
 import { signInAdmin } from './support/fixtures';
 
@@ -31,6 +32,30 @@ const OBSERVATION_AR = 'ملاحظة الفريق';
 /** An ISO date `offset` days from now — for rows that must be freshly lapsed. */
 function day(offset: number): string {
     return new Date(Date.now() + offset * 86_400_000).toISOString().slice(0, 10);
+}
+
+/**
+ * Remove THIS SPEC'S leftovers from earlier runs against a persistent local
+ * database. The admin knowledge index is newest-effective-first with a
+ * 30-row page and no delete UI, and date ties resolve toward OLDER rows —
+ * so accumulated token rows from previous runs eventually push the current
+ * run's rows off page one, where the transition helper cannot reach them.
+ * Same artisan-through-the-app pattern as clearRateLimiter(); scoped
+ * strictly to rows this spec's own token format created.
+ */
+function purgeEarlierTokenRows(): void {
+    try {
+        execFileSync('php', [
+            'artisan', 'tinker', '--execute',
+            'App\\Modules\\Knowledge\\Models\\KnowledgeEvent::query()->where("title_ckb", "like", "%p13-%")->forceDelete();',
+        ], {
+            cwd: process.env.PLAYWRIGHT_ARTISAN_DIR ?? process.cwd(),
+            stdio: 'ignore',
+        });
+    } catch {
+        // Remote target or no artisan: accumulation may then bite on a very
+        // reused database, and the create step reports it explicitly.
+    }
 }
 
 async function areasEnabled(page: import('@playwright/test').Page): Promise<boolean> {
@@ -101,6 +126,7 @@ test.describe('public market insights', () => {
 
         const token = `p13-${Date.now()}`;
 
+        purgeEarlierTokenRows();
         await signInAdmin(page);
         await page.goto('/admin/knowledge', { waitUntil: 'networkidle' });
 
