@@ -8,6 +8,7 @@ use App\Modules\Advisor\Models\AdvisorConversation;
 use App\Modules\Advisor\Models\AdvisorMessage;
 use App\Modules\Advisor\Models\LifestyleProfile;
 use App\Modules\Advisor\Support\AdvisorCurrency;
+use App\Modules\Knowledge\Models\KnowledgeEvent;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -46,6 +47,7 @@ final class AdvisorConversationService
         private readonly AdvisorTurnComposer $turns,
         private readonly AdvisorProjectMatcher $projectMatcher,
         private readonly AdvisorAdvisoryComposer $advisory,
+        private readonly AdvisorInsightRetriever $insights,
     ) {}
 
     public function open(?int $userId, string $sessionKey, string $agent, string $locale): AdvisorConversation
@@ -305,6 +307,7 @@ final class AdvisorConversationService
                     $positions,
                     $locale,
                     criteriaChanged: true,
+                    insights: $this->insightsFor($intent, $criteria, $userText, $recommendations),
                 );
             } else {
                 $turn = $this->advisory->compose(
@@ -314,6 +317,7 @@ final class AdvisorConversationService
                     $positions,
                     $locale,
                     criteriaChanged: false,
+                    insights: $this->insightsFor($intent, $criteria, $userText, $recommendationContext),
                 );
             }
         } catch (Throwable $exception) {
@@ -328,6 +332,26 @@ final class AdvisorConversationService
             'payload' => $this->persistTurnOrPayload($conversation, $turn),
             'recommendations' => $recommendations,
         ];
+    }
+
+    /**
+     * Market insights, retrieved ONLY for a market-question turn (Phase 12).
+     *
+     * Every other intent skips the query entirely — retrieval cost is paid
+     * exactly where the evidence is used, and no other answer's grounding
+     * changes shape.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @param  array<string, mixed>|null  $recommendations
+     * @return list<KnowledgeEvent>
+     */
+    private function insightsFor(string $intent, array $criteria, string $userText, ?array $recommendations): array
+    {
+        if ($intent !== 'market_question') {
+            return [];
+        }
+
+        return $this->insights->retrieve($criteria, $userText, $recommendations);
     }
 
     /**
@@ -379,15 +403,37 @@ final class AdvisorConversationService
     {
         $normalised = mb_strtolower(trim($text));
 
-        $sets = [
+        $before = [
             'finish' => ['thank', 'شكرا', 'سوپاس', 'خلص', 'تەواو بوو'],
             'compare' => ['compare', 'بەراورد', 'قارن', 'مقارن'],
             'ask_cheaper' => ['cheaper', 'أرخص', 'ارخص', 'هەرزانتر', 'هەرزان'],
+        ];
+
+        foreach ($before as $intent => $needles) {
+            foreach ($needles as $needle) {
+                if (str_contains($normalised, $needle)) {
+                    return $intent;
+                }
+            }
+        }
+
+        /*
+         * Phase 12: between ask_cheaper and explain, deliberately. "Why did
+         * prices rise in Ankawa?" contains an explain keyword (بۆچی/why), but
+         * the person is asking about the MARKET, not about a card — checked
+         * here so the market conjunction wins, while a plain "why the first
+         * one?" still reaches explain untouched.
+         */
+        if ($this->isMarketQuestion($normalised)) {
+            return 'market_question';
+        }
+
+        $after = [
             'explain' => ['why', 'بۆچی', 'ليش', 'لماذا'],
             'project_question' => ['instalment', 'installment', 'أقساط', 'اقساط', 'قیست', 'قسط'],
         ];
 
-        foreach ($sets as $intent => $needles) {
+        foreach ($after as $intent => $needles) {
             foreach ($needles as $needle) {
                 if (str_contains($normalised, $needle)) {
                     return $intent;
@@ -396,6 +442,46 @@ final class AdvisorConversationService
         }
 
         return 'other';
+    }
+
+    /**
+     * The deterministic market-question recognizer (Phase 12), for when no
+     * model is available. Deliberately a CONJUNCTION, never a single keyword:
+     * a market subject (prices, the market) must meet a movement/state word
+     * ("why did prices RISE", "what is HAPPENING with prices"), or a buy word
+     * must meet an assessment word ("a GOOD place to BUY now"). A lone
+     * "price" stays with whatever intent owns it today, so nothing existing
+     * is stolen.
+     */
+    private function isMarketQuestion(string $normalised): bool
+    {
+        $subject = ['price', 'market', 'نرخ', 'بازاڕ', 'سعر', 'أسعار', 'اسعار', 'سوق', 'غلاء'];
+        $movement = [
+            'rise', 'rose', 'rising', 'going up', 'went up', 'go up', 'increase', 'jump',
+            'fall', 'fell', 'falling', 'drop', 'decrease', 'happen', 'trend', 'change', 'changing',
+            'بەرزبو', 'بەرز بو', 'زیادبو', 'زیادی کرد', 'دابەزی', 'هەڵکشا', 'گۆڕا', 'دەگۆڕێت',
+            'چی بەسەر', 'چ ڕوودەدات', 'ڕوودەدات', 'باری بازاڕ',
+            'ارتفع', 'يرتفع', 'ارتفاع', 'ترتفع', 'انخفض', 'ينخفض', 'انخفاض', 'نزل', 'صعد',
+            'غلت', 'رخصت', 'شنو صاير', 'شصاير', 'يصير ب', 'ماذا يحدث', 'شنو يصير', 'وضع السوق',
+        ];
+        $buy = ['buy', 'invest', 'کڕین', 'بکڕم', 'بیکڕم', 'وەبەرهێنان', 'شراء', 'أشتري', 'اشتري', 'استثمار', 'استثمر'];
+        $assessment = [
+            'good place', 'good time', 'good area', 'worth', 'a good',
+            'شوێنێکی باش', 'کاتێکی باش', 'ناوچەیەکی باش', 'باشە بۆ',
+            'مكان زين', 'وكت زين', 'منطقة زينة', 'زينة لل', 'زين لل', 'مناسبة لل', 'مناسب لل', 'جيدة لل', 'جيد لل',
+        ];
+
+        $has = static function (array $needles) use ($normalised): bool {
+            foreach ($needles as $needle) {
+                if (str_contains($normalised, $needle)) {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+
+        return ($has($subject) && $has($movement)) || ($has($buy) && $has($assessment));
     }
 
     /**

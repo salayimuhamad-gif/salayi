@@ -162,6 +162,11 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # validation.* key; the wizard's project-type options are translated.
     'tests/Browser/admin-project-creation.spec.ts',
     'tests/Browser/advisor.spec.ts',
+    # Market grounding (Phase 12): an admin records an Ankawa insight through
+    # the real Knowledge form, approves it through the real workflow, and the
+    # advisor's market answer is built FROM it with its evidence-class stance
+    # — deterministically, with no AI provider configured.
+    'tests/Browser/advisor-market-grounding.spec.ts',
     # Advisor overlay containment (Phase 10): the live-chat header decoration
     # is gated to the advisor page's own marker — the admin chrome stays one
     # viewport wide on both phone widths, and neither the admin nor a public
@@ -202,6 +207,9 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'admin creation flow runs once, on desktop-1440x900 only',
     'tests/Browser/advisor.spec.ts':
         'advisor flow is desktop-only and feature-flag dependent',
+    'tests/Browser/advisor-market-grounding.spec.ts':
+        'the market-grounding flow runs once, on desktop-1440x900, '
+        'and is feature-flag dependent',
     'tests/Browser/advisor-widget-containment.spec.ts':
         'the admin overflow pins are phone-width scenarios; '
         'the public-detail negative pin runs once, on desktop',

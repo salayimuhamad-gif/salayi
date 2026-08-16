@@ -25,6 +25,21 @@ return [
     'awaiting_review' => 'Awaiting review',
     'ai_usable_count' => 'Available to AI',
     'ai_gate_hint' => 'All three conditions together',
+    'entity_type' => 'Linked subject',
+    'evidence_class' => 'Evidence class',
+    'evidence_class_hint' => 'A verified fact is stated with its source; an observation, interpretation or prediction is never presented as a confirmed fact.',
+
+    'entity_types' => [
+        'project' => 'Project',
+        'area' => 'Area',
+    ],
+
+    'evidence_classes' => [
+        'verified_fact' => 'Verified fact',
+        'admin_observation' => 'Team observation',
+        'market_interpretation' => 'Market interpretation',
+        'prediction' => 'Prediction',
+    ],
 
     'event_types' => [
         'road' => 'Road',
@@ -56,6 +71,7 @@ return [
         'source_required' => 'Cannot be approved without a source',
         'ai_needs_source' => 'An event the AI may use needs a source to cite',
         'entity_id_required' => 'The entity must be selected',
+        'fact_needs_source' => 'A verified fact cannot be recorded without a source',
     ],
 
     'statuses' => [

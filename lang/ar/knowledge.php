@@ -25,6 +25,21 @@ return [
     'awaiting_review' => 'بانتظار المراجعة',
     'ai_usable_count' => 'متاح للذكاء الاصطناعي',
     'ai_gate_hint' => 'الشروط الثلاثة معاً',
+    'entity_type' => 'الموضوع المرتبط',
+    'evidence_class' => 'نوع الدليل',
+    'evidence_class_hint' => 'الحقيقة المؤكدة تُذكر مع مصدرها؛ الملاحظة والتفسير والتوقع لا تُقدَّم أبداً كحقيقة مؤكدة.',
+
+    'entity_types' => [
+        'project' => 'مشروع',
+        'area' => 'منطقة',
+    ],
+
+    'evidence_classes' => [
+        'verified_fact' => 'حقيقة مؤكدة',
+        'admin_observation' => 'ملاحظة الفريق',
+        'market_interpretation' => 'قراءة للسوق',
+        'prediction' => 'توقع',
+    ],
 
     'event_types' => [
         'road' => 'طريق',
@@ -56,6 +71,7 @@ return [
         'source_required' => 'لا يمكن الاعتماد بدون مصدر',
         'ai_needs_source' => 'الحدث الذي يستخدمه الذكاء الاصطناعي يحتاج مصدراً',
         'entity_id_required' => 'يجب تحديد الكيان',
+        'fact_needs_source' => 'لا يمكن تسجيل حقيقة مؤكدة بدون مصدر',
     ],
 
     'statuses' => [

@@ -6,6 +6,8 @@ namespace App\Modules\Advisor\Services;
 
 use App\Modules\Advisor\Support\NumericGuard;
 use App\Modules\Advisor\Support\RetrievalGuard;
+use App\Modules\Knowledge\Enums\EvidenceClass;
+use App\Modules\Knowledge\Models\KnowledgeEvent;
 use Throwable;
 
 /**
@@ -50,6 +52,7 @@ final class AdvisorAdvisoryComposer
      *
      * @param  array<string, mixed>  $recommendations  the last recommendation payload (matcher output)
      * @param  list<int>  $positions  1-based card positions the visitor referenced
+     * @param  list<KnowledgeEvent>  $insights  retrieved market insights (market_question turns only, Phase 12)
      * @return array<string, mixed> a persistable turn (same shape as AdvisorTurnComposer turns)
      */
     public function compose(
@@ -59,15 +62,21 @@ final class AdvisorAdvisoryComposer
         array $positions,
         string $locale,
         bool $criteriaChanged,
+        array $insights = [],
     ): array {
         $locale = $this->language->normalize($locale);
         $cards = $this->admittedCards($recommendations);
 
-        $deterministic = $this->deterministicAnswer($intent, $cards, $positions, $locale, $criteriaChanged);
+        $deterministic = $this->deterministicAnswer($intent, $cards, $positions, $locale, $criteriaChanged, $insights);
 
-        $turn = $this->baseTurn($deterministic['text'], $locale, $deterministic['kind']);
+        $turn = $this->baseTurn(
+            $deterministic['text'],
+            $locale,
+            $deterministic['kind'],
+            array_map(static fn (KnowledgeEvent $event): int => $event->id, $insights),
+        );
 
-        if ($cards === [] || ! $this->gateway->isAvailable()) {
+        if (($cards === [] && $insights === []) || ! $this->gateway->isAvailable()) {
             return $turn;
         }
 
@@ -77,13 +86,14 @@ final class AdvisorAdvisoryComposer
                 'system' => $this->systemPrompt($locale),
                 'messages' => [[
                     'role' => 'user',
-                    'content' => json_encode([
+                    'content' => json_encode(array_filter([
                         'visitor_message' => $userText,
                         'intent' => $intent,
                         'criteria_changed' => $criteriaChanged,
                         'recommendation_cards' => $this->cardFacts($cards, $positions),
+                        'market_insights' => $this->insightFacts($insights, $locale),
                         'draft_answer' => $deterministic['text'],
-                    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                    ], static fn ($value): bool => $value !== []), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
                 ]],
                 'temperature' => 0.3,
                 'max_tokens' => 260,
@@ -95,7 +105,7 @@ final class AdvisorAdvisoryComposer
 
         $text = trim((string) ($completion['text'] ?? ''));
 
-        if (! $this->isSafeProse($text, $userText, $cards, $locale)) {
+        if (! $this->isSafeProse($text, $userText, $cards, $locale, $deterministic['text'])) {
             return $turn;
         }
 
@@ -143,6 +153,7 @@ final class AdvisorAdvisoryComposer
      *
      * @param  list<array<string, mixed>>  $cards
      * @param  list<int>  $positions
+     * @param  list<KnowledgeEvent>  $insights
      * @return array{text: string, kind: string}
      */
     private function deterministicAnswer(
@@ -151,7 +162,18 @@ final class AdvisorAdvisoryComposer
         array $positions,
         string $locale,
         bool $criteriaChanged,
+        array $insights,
     ): array {
+        /*
+         * Phase 12: the market arm answers FIRST — before the criteria-changed
+         * and empty-cards shortcuts — because a market question is about the
+         * recorded market intelligence, not about the cards. It has its own
+         * honest empty state and never needs a card to answer.
+         */
+        if ($intent === 'market_question') {
+            return $this->marketAnswer($insights, $locale);
+        }
+
         if ($criteriaChanged) {
             return ['text' => $this->text($locale, 'updated_results'), 'kind' => 'analysis'];
         }
@@ -168,6 +190,119 @@ final class AdvisorAdvisoryComposer
             'finish' => ['text' => $this->text($locale, 'finish'), 'kind' => 'scenario'],
             default => ['text' => $this->text($locale, 'continue_hint'), 'kind' => 'scenario'],
         };
+    }
+
+    /**
+     * The market answer (Phase 12): recorded, reviewed KnowledgeEvents spoken
+     * in their own evidence class — or an honest "nothing recorded".
+     *
+     * The stance is STRUCTURAL. Each event renders through the template of
+     * its (effective) class, so an observation, interpretation or prediction
+     * cannot be phrased as a fact by any later step: the model only ever
+     * paraphrases this text, and a failed guard ships it verbatim. Confidence
+     * hedges within the class — a non-high, non-fact insight carries its
+     * confidence label — and never promotes one class into another.
+     *
+     * @param  list<KnowledgeEvent>  $insights
+     * @return array{text: string, kind: string}
+     */
+    private function marketAnswer(array $insights, string $locale): array
+    {
+        if ($insights === []) {
+            return ['text' => $this->text($locale, 'no_market_info'), 'kind' => 'scenario'];
+        }
+
+        $lines = [$this->text($locale, 'market_intro')];
+
+        foreach ($insights as $event) {
+            $lines[] = $this->insightLine($event, $locale);
+        }
+
+        $lines[] = $this->text($locale, 'market_scope');
+
+        return ['text' => implode("\n", $lines), 'kind' => 'analysis'];
+    }
+
+    /** One insight, in the voice of its evidence class. */
+    private function insightLine(KnowledgeEvent $event, string $locale): string
+    {
+        $class = $event->effectiveEvidenceClass();
+        $title = $this->insightText($event, 'title', $locale);
+        $summary = $this->insightText($event, 'summary', $locale);
+        $body = trim($title.($summary === '' ? '' : ' — '.$summary));
+
+        $date = $class === EvidenceClass::Prediction
+            ? ($event->expected_date ?? $event->effective_date)->toDateString()
+            : $event->effective_date->toDateString();
+
+        $line = match ($class) {
+            // A fact is stated directly, and ALWAYS with its source — the
+            // request/model layers guarantee a verified_fact has one.
+            EvidenceClass::VerifiedFact => sprintf(
+                $this->text($locale, 'stance_fact'),
+                (string) $event->source,
+                $body,
+                $date,
+            ),
+            EvidenceClass::AdminObservation => sprintf($this->text($locale, 'stance_observation'), $body, $date),
+            EvidenceClass::MarketInterpretation => sprintf($this->text($locale, 'stance_interpretation'), $body, $date),
+            EvidenceClass::Prediction => sprintf($this->text($locale, 'stance_prediction'), $body, $date),
+        };
+
+        if ($class !== EvidenceClass::VerifiedFact && $event->confidence !== 'high') {
+            $line .= ' '.sprintf(
+                $this->text($locale, 'confidence_note'),
+                $this->text($locale, 'confidence_'.$event->confidence),
+            );
+        }
+
+        return '• '.$line;
+    }
+
+    /**
+     * Localized insight text with the house fallback chain (locale, then
+     * ckb, en, ar) — an insight authored only in Sorani still answers an
+     * Arabic conversation rather than rendering blank.
+     */
+    private function insightText(KnowledgeEvent $event, string $field, string $locale): string
+    {
+        foreach (array_unique([$locale, 'ckb', 'en', 'ar']) as $candidate) {
+            $value = trim((string) ($event->{$field.'_'.$candidate} ?? ''));
+
+            if ($value !== '') {
+                return $value;
+            }
+        }
+
+        return '';
+    }
+
+    /**
+     * The insight facts the model is shown — id, class, dates, source and
+     * localized text, never the raw row.
+     *
+     * @param  list<KnowledgeEvent>  $insights
+     * @return list<array<string, mixed>>
+     */
+    private function insightFacts(array $insights, string $locale): array
+    {
+        $facts = [];
+
+        foreach ($insights as $event) {
+            $facts[] = [
+                'evidence_class' => $event->effectiveEvidenceClass()->value,
+                'title' => $this->insightText($event, 'title', $locale),
+                'summary' => $this->insightText($event, 'summary', $locale),
+                'event_type' => $event->event_type,
+                'direction' => $event->direction,
+                'confidence' => $event->confidence,
+                'source' => (string) $event->source,
+                'effective_date' => $event->effective_date->toDateString(),
+                'expected_date' => $event->expected_date?->toDateString(),
+            ];
+        }
+
+        return $facts;
     }
 
     /**
@@ -317,7 +452,7 @@ final class AdvisorAdvisoryComposer
      *
      * @param  list<array<string, mixed>>  $cards
      */
-    private function isSafeProse(string $text, string $userText, array $cards, string $locale): bool
+    private function isSafeProse(string $text, string $userText, array $cards, string $locale, string $draftText): bool
     {
         if ($text === '' || mb_strlen($text) > 900) {
             return false;
@@ -331,19 +466,23 @@ final class AdvisorAdvisoryComposer
             return false;
         }
 
-        $validation = $this->numeric->validate($text, $this->evidenceValues($cards, $userText));
+        $validation = $this->numeric->validate($text, $this->evidenceValues($cards, $userText, $draftText));
 
         return $validation['grounded'] === true;
     }
 
     /**
      * Every number the model may state: card prices, distances (m and km),
-     * and the visitor's own figures.
+     * the visitor's own figures — and (Phase 12) whatever the deterministic
+     * draft itself states. The draft is composed exclusively from admitted
+     * evidence (card facts, retrieved insight text and dates), so its numbers
+     * ARE evidence numbers; extracting them here is what lets a paraphrase of
+     * a grounded insight keep the insight's figures and dates.
      *
      * @param  list<array<string, mixed>>  $cards
      * @return list<string>
      */
-    private function evidenceValues(array $cards, string $userText): array
+    private function evidenceValues(array $cards, string $userText, string $draftText): array
     {
         $values = [];
 
@@ -364,11 +503,18 @@ final class AdvisorAdvisoryComposer
             $values[] = $claim->value->toString();
         }
 
+        foreach ($this->numeric->extract($draftText) as $claim) {
+            $values[] = $claim->value->toString();
+        }
+
         return array_values(array_unique($values));
     }
 
-    /** @return array<string, mixed> */
-    private function baseTurn(string $content, string $locale, string $kind): array
+    /**
+     * @param  list<int>  $evidenceIds
+     * @return array<string, mixed>
+     */
+    private function baseTurn(string $content, string $locale, string $kind, array $evidenceIds = []): array
     {
         return [
             'content' => $content,
@@ -377,8 +523,10 @@ final class AdvisorAdvisoryComposer
             'model' => null,
             'provider' => null,
             'content_class' => $kind === 'analysis' ? 'analysis' : 'scenario',
-            'evidence_ids' => [],
-            'prompt_version' => 'advisor-advisory-turn-v1',
+            // Phase 12: a grounded market answer names its exact rows, so
+            // every reply is auditable back to the KnowledgeEvents it used.
+            'evidence_ids' => $evidenceIds,
+            'prompt_version' => 'advisor-advisory-turn-v2',
             'cost_usd' => '0.000000',
             'latency_ms' => 0,
             'prompt_tokens' => 0,
@@ -397,7 +545,9 @@ final class AdvisorAdvisoryComposer
         return implode("\n", [
             'You are the property advisor for My Hawler, answering a follow-up about recommendations that are already final.',
             'Reply only in '.$this->language->languageName($locale).'.',
-            'You may only state facts and numbers that appear in recommendation_cards or the visitor\'s own message.',
+            'You may only state facts and numbers that appear in recommendation_cards, market_insights or the visitor\'s own message.',
+            'Each market insight carries an evidence_class. Keep its stance exactly: a verified_fact may be stated directly with its source; an admin_observation is something the team recorded; a market_interpretation is a reading, not a certainty; a prediction is an expectation, never a present or past fact.',
+            'Never upgrade an observation, interpretation or prediction into a confirmed fact, whatever its confidence.',
             'If the cards do not contain the information, say plainly that it is not available in the published data.',
             'Never invent projects, prices, availability, payment terms, distances or returns.',
             'Never change or dispute the ranking; it is final.',
@@ -420,6 +570,16 @@ final class AdvisorAdvisoryComposer
                 'facts_scope' => 'ئەمە ئەو زانیارییەیە کە لە داتا بڵاوکراوەکاندا هەیە؛ شتی زیاتر پشتڕاست نەکراوە.',
                 'finish' => 'سوپاس! هەر کاتێک بتەوێت دەتوانیت بگەڕێیتەوە و داواکارییەکەت نوێ بکەیتەوە.',
                 'continue_hint' => 'دەتوانیت پرسیار لەسەر پێشنیارەکان بکەیت، بەراوردیان بکەیت، یان بودجە و ناوچە و جۆری موڵک بگۆڕیت.',
+                'market_intro' => 'ئەمە ئەو زانیارییە بازاڕییەیە کە تیمەکەمان تۆماری کردووە:',
+                'market_scope' => 'ئەمانە تەنها ئەو زانیاریانەن کە تۆمارکراون و پێداچوونەوەیان بۆ کراوە؛ شتی زیاتر پشتڕاست نەکراوە.',
+                'no_market_info' => 'لە ئێستادا هیچ زانیارییەکی بازاڕی تۆمارکراوم نییە بۆ ئەم ناوچەیە. ناتوانم هۆکارێک بڵێم کە تۆمار نەکراوە.',
+                'stance_fact' => 'بەپێی %s: %s (بەرواری کاریگەری: %s).',
+                'stance_observation' => 'تیمەکەمان ئەم تێبینییەی تۆمار کردووە: %s (بەروار: %s).',
+                'stance_interpretation' => 'خوێندنەوەیەکی بازاڕ — بۆچوونە، نەک ڕاستییەکی پشتڕاستکراو: %s (بەروار: %s).',
+                'stance_prediction' => 'پێشبینییە و هێشتا پشتڕاست نەکراوەتەوە: %s (چاوەڕوانکراو: %s).',
+                'confidence_note' => '(متمانە: %s)',
+                'confidence_low' => 'نزم',
+                'confidence_medium' => 'مامناوەند',
             ],
             'ar' => [
                 'updated_results' => 'حدّثت طلبك والنتائج الجديدة ظاهرة بالأسفل. تكدر تكمل تسألني أي شي.',
@@ -430,6 +590,16 @@ final class AdvisorAdvisoryComposer
                 'facts_scope' => 'هذا الموجود بالبيانات المنشورة؛ أي شي إضافي غير مؤكد.',
                 'finish' => 'شكراً! تكدر ترجع بأي وقت وتحدّث طلبك.',
                 'continue_hint' => 'تكدر تسأل عن التوصيات، تقارن بينها، أو تغيّر الميزانية أو المنطقة أو نوع العقار.',
+                'market_intro' => 'هاي المعلومات السوقية اللي سجّلها فريقنا:',
+                'market_scope' => 'هاي بس المعلومات المسجّلة والمراجَعة؛ أي شي إضافي غير مؤكد.',
+                'no_market_info' => 'ما عندي حالياً أي معلومات سوقية مسجّلة عن هاي المنطقة. ما أكدر أذكر سبب غير مسجّل.',
+                'stance_fact' => 'حسب %s: %s (تاريخ السريان: %s).',
+                'stance_observation' => 'فريقنا سجّل هاي الملاحظة: %s (التاريخ: %s).',
+                'stance_interpretation' => 'قراءة للسوق — تفسير، مو حقيقة مؤكدة: %s (التاريخ: %s).',
+                'stance_prediction' => 'توقع وبعده غير مؤكد: %s (متوقع: %s).',
+                'confidence_note' => '(الثقة: %s)',
+                'confidence_low' => 'منخفضة',
+                'confidence_medium' => 'متوسطة',
             ],
             'en' => [
                 'updated_results' => 'I updated your request and the refreshed results are below. Feel free to keep asking.',
@@ -440,6 +610,16 @@ final class AdvisorAdvisoryComposer
                 'facts_scope' => 'That is what the published data shows; anything beyond it is unconfirmed.',
                 'finish' => 'Thank you! Come back any time to update your request.',
                 'continue_hint' => 'You can ask about the recommendations, compare them, or change your budget, area or property type.',
+                'market_intro' => 'Here is the market information our team has recorded:',
+                'market_scope' => 'Only recorded, reviewed information is listed; anything beyond it is unconfirmed.',
+                'no_market_info' => 'I have no recorded market information for this area right now. I cannot state a reason that was never recorded.',
+                'stance_fact' => 'According to %s: %s (effective date: %s).',
+                'stance_observation' => 'Our team has recorded this observation: %s (date: %s).',
+                'stance_interpretation' => 'A market reading — an interpretation, not a confirmed fact: %s (date: %s).',
+                'stance_prediction' => 'A prediction, not yet confirmed: %s (expected: %s).',
+                'confidence_note' => '(confidence: %s)',
+                'confidence_low' => 'low',
+                'confidence_medium' => 'medium',
             ],
         ];
 

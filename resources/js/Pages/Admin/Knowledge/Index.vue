@@ -23,7 +23,11 @@ interface Event_ {
 const props = defineProps<{
     events: { data: Event_[] };
     filters: { q: string; status: string; event_type: string };
-    options: { event_types: Option[]; statuses: Option[]; directions: Option[]; projects: Option[] };
+    options: {
+        event_types: Option[]; statuses: Option[]; directions: Option[];
+        evidence_classes: Option[]; entity_types: Option[];
+        projects: Option[]; areas: Option[];
+    };
     counts: { review: number; ai_usable: number };
     can: { create: boolean; approve: boolean };
 }>();
@@ -45,12 +49,26 @@ const form = useForm({
     entity_type: 'project', entity_id: null as number | null,
     effective_date: '', expected_date: '', expires_on: '',
     source: '', source_url: '', confidence: 'medium',
+    // Phase 12: every NEW event states what kind of claim it makes; the
+    // observation default matches how unclassified legacy rows are read.
+    evidence_class: 'admin_observation',
     ai_usage_permitted: false,
 });
+
+// Phase 12: an event about "prices in Ankawa" points at an area, not a
+// project. The options list follows the chosen entity type, and a stale id
+// from the other list is cleared rather than silently submitted.
+const entityOptions = computed(() => (form.entity_type === 'area' ? props.options.areas : props.options.projects));
+
+watch(() => form.entity_type, () => { form.entity_id = null; });
 
 // Spec 17.5 — an event the AI may use is one it will cite, so it needs
 // something to cite. Shown while the toggle is being set, not afterwards.
 const aiNeedsSource = computed(() => form.ai_usage_permitted && form.source.trim() === '');
+
+// Phase 12 — a verified FACT is spoken with attribution; without a source it
+// belongs in another class. Same live treatment as the AI-source rule.
+const factNeedsSource = computed(() => form.evidence_class === 'verified_fact' && form.source.trim() === '');
 
 function create(): void {
     form.post('/admin/knowledge', {
@@ -139,11 +157,26 @@ const tone = (direction: string): string => ({
                     />
                 </div>
 
-                <AppSelect
-                    v-model="form.entity_id" :label="t('nav.projects')"
-                    :options="options.projects" :placeholder="t('app.states.empty')"
-                    :error="form.errors.entity_id"
-                />
+                <div class="grid gap-5 sm:grid-cols-2">
+                    <AppSelect
+                        v-model="form.entity_type" :label="t('knowledge.entity_type')"
+                        :options="options.entity_types" :error="form.errors.entity_type" required
+                    />
+                    <AppSelect
+                        v-model="form.entity_id"
+                        :label="form.entity_type === 'area' ? t('nav.geography.areas') : t('nav.projects')"
+                        :options="entityOptions" :placeholder="t('app.states.empty')"
+                        :error="form.errors.entity_id"
+                    />
+                </div>
+
+                <div>
+                    <AppSelect
+                        v-model="form.evidence_class" :label="t('knowledge.evidence_class')"
+                        :options="options.evidence_classes" :error="form.errors.evidence_class" required
+                    />
+                    <p class="mt-1 text-xs text-ink-muted">{{ t('knowledge.evidence_class_hint') }}</p>
+                </div>
 
                 <div class="grid gap-5 sm:grid-cols-3">
                     <AppInput
@@ -173,9 +206,13 @@ const tone = (direction: string): string => ({
                     {{ t('knowledge.errors.ai_needs_source') }}
                 </AppAlert>
 
+                <AppAlert v-if="factNeedsSource" variant="warning">
+                    {{ t('knowledge.errors.fact_needs_source') }}
+                </AppAlert>
+
                 <div class="flex justify-end gap-2">
                     <AppButton variant="ghost" size="sm" @click="creating = false">{{ t('app.actions.cancel') }}</AppButton>
-                    <AppButton type="submit" size="sm" :disabled="aiNeedsSource" :loading="form.processing">
+                    <AppButton type="submit" size="sm" :disabled="aiNeedsSource || factNeedsSource" :loading="form.processing">
                         {{ t('app.actions.save') }}
                     </AppButton>
                 </div>
