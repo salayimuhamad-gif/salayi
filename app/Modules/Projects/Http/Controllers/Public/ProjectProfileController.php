@@ -88,28 +88,19 @@ final class ProjectProfileController extends Controller
             'ratings' => $this->ratings->forProject($project),
             // Published events only. An approved-but-unpublished event is
             // usable as AI evidence and is NOT yet a public statement — the
-            // two are deliberately different thresholds (spec 21.3).
+            // two are deliberately different thresholds (spec 21.3). Phase 13:
+            // the shared publiclyCurrent scope also keeps a lapsed row out of
+            // the sub-hour window before the expiry sweep flips its status,
+            // and publicTimelineEntry() is the one locale-aware public shape.
             'timeline' => KnowledgeEvent::query()
-                ->published()
+                ->publiclyCurrent()
                 ->where('entity_type', 'project')
                 ->where('entity_id', $project->id)
                 ->orderByDesc('effective_date')
                 ->limit(25)
                 ->get()
-                ->map(static fn (KnowledgeEvent $e): array => [
-                    'title' => $e->title_ckb,
-                    'summary' => $e->summary_ckb,
-                    'event_type' => $e->event_type,
-                    'direction' => $e->direction,
-                    'strength' => $e->strength,
-                    'effective_date' => $e->effective_date->toDateString(),
-                    'expected_date' => $e->expected_date?->toDateString(),
-                    // Every timeline entry names its source, as every other
-                    // public fact on this page does.
-                    'source' => $e->source,
-                    'source_url' => $e->source_url,
-                    'confidence' => $e->confidence,
-                ])->all(),
+                ->map(static fn (KnowledgeEvent $e): array => $e->publicTimelineEntry())
+                ->all(),
             'media' => ProjectMedia::query()
                 ->where('project_id', $project->id)
             // Rows awaiting cleanup are on their way out; showing them

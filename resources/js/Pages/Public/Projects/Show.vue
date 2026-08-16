@@ -68,8 +68,9 @@ const props = defineProps<{
         width: number | null; height: number | null;
     }>;
     timeline: Array<{
+        id: number;
         title: string; summary: string | null; event_type: string;
-        direction: string; strength: number;
+        direction: string; strength: number; evidence_class: string;
         effective_date: string | null; expected_date: string | null;
         source: string | null; source_url: string | null; confidence: string;
     }>;

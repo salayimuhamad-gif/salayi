@@ -3,6 +3,7 @@ import ErbilMapPreview from '@/Components/Public/ErbilMapPreview.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
+import KnowledgeTimeline from '@/Components/KnowledgeTimeline.vue';
 import { t, formatNumber } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 
@@ -40,6 +41,21 @@ interface PlaceRow {
     operational_status: string | null;
 }
 
+interface TimelineEntry {
+    id: number;
+    title: string;
+    summary: string | null;
+    event_type: string;
+    direction: string;
+    strength: number;
+    evidence_class: string;
+    effective_date: string | null;
+    expected_date: string | null;
+    source: string | null;
+    source_url: string | null;
+    confidence: string;
+}
+
 defineProps<{
     area: {
         slug: string;
@@ -57,6 +73,7 @@ defineProps<{
     projects: { items: ProjectRow[]; total: number; current_page: number; last_page: number };
     subtree_project_count: number;
     places: PlaceRow[];
+    timeline: TimelineEntry[];
     seo: { title: string; canonical: string; alternates: Record<string, string> };
 }>();
 </script>
@@ -208,6 +225,16 @@ defineProps<{
                     >{{ t(`geography.operational.${place.operational_status}`) }}</span>
                 </li>
             </ul>
+        </section>
+
+        <!-- ------------------------------------------------- market timeline
+             Published, unexpired knowledge events for THIS area (Phase 13) —
+             the same component and public contract as the project profile.
+             Rendered only when something is published, matching the project
+             page's own behavior. -->
+        <section v-if="timeline.length > 0" class="mt-10">
+            <h2 class="mb-3 font-display text-lg font-semibold text-ink">{{ t('knowledge.timeline_title') }}</h2>
+            <KnowledgeTimeline :timeline="timeline" />
         </section>
     </PublicLayout>
 </template>

@@ -7,6 +7,7 @@ interface Entry {
     event_type: string;
     direction: string;
     strength: number;
+    evidence_class: string;
     effective_date: string | null;
     expected_date: string | null;
     source: string | null;
@@ -30,6 +31,19 @@ const tone = (direction: string): string => ({
 
 const size = (strength: number): string =>
     strength >= 4 ? 'h-3 w-3' : strength >= 2 ? 'h-2.5 w-2.5' : 'h-2 w-2';
+
+/*
+ * The evidence class in the entry's own voice (Phase 13): a verified fact
+ * wears the brand tone, a prediction wears caution — a claim about the
+ * future must never dress like one that has happened. Observation and
+ * interpretation stay neutral; their label carries the distinction. The
+ * server resolves a legacy null class to admin_observation before it ever
+ * reaches this component.
+ */
+const classTone = (evidenceClass: string): string => ({
+    verified_fact: 'bg-brand/10 text-brand',
+    prediction: 'bg-caution/10 text-caution',
+}[evidenceClass] ?? 'bg-surface-sunken text-ink-muted');
 </script>
 
 <template>
@@ -50,6 +64,12 @@ const size = (strength: number): string =>
                 </time>
                 <span class="rounded-full bg-surface-sunken px-2 py-0.5 text-xs text-ink-muted">
                     {{ t(`knowledge.event_types.${entry.event_type}`) }}
+                </span>
+                <span
+                    class="rounded-full px-2 py-0.5 text-xs"
+                    :class="classTone(entry.evidence_class)"
+                >
+                    {{ t(`knowledge.evidence_classes.${entry.evidence_class}`) }}
                 </span>
             </div>
 

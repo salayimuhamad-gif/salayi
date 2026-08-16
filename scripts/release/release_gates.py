@@ -192,6 +192,11 @@ PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/navigation.spec.ts',
     'tests/Browser/production-assets.spec.ts',
     'tests/Browser/public-home.spec.ts',
+    # Public market insights (Phase 13): the real editorial lifecycle drives
+    # the public area timeline — approved-but-unpublished, draft and lapsed
+    # insights stay invisible; a published one appears with its evidence
+    # class, source and dates; predictions wear caution; 360px holds.
+    'tests/Browser/public-market-insights.spec.ts',
 )
 
 # The specs REVIEWED as intentionally skipping by design. Each entry names the
@@ -220,6 +225,9 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'the map/list switch exists only below md',
     'tests/Browser/navigation.spec.ts':
         'rail and drawer are each intentionally absent on one side of lg',
+    'tests/Browser/public-market-insights.spec.ts':
+        'the publish flow runs once on desktop-1440x900; '
+        'the overflow pin runs once at 360x800; both are flag-dependent',
 }
 
 

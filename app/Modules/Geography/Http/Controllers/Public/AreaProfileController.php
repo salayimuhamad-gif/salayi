@@ -8,6 +8,7 @@ use App\Modules\Core\Support\LocalizedRoutes;
 use App\Modules\Geography\Enums\AreaType;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Models\Place;
+use App\Modules\Knowledge\Models\KnowledgeEvent;
 use App\Modules\Projects\Enums\PublicationStatus;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Http\Request;
@@ -49,6 +50,9 @@ final class AreaProfileController extends Controller
 
     /** Notable places surfaced on a profile. */
     private const PLACES_LIMIT = 24;
+
+    /** Same bound as the project profile's timeline (Phase 13). */
+    private const TIMELINE_LIMIT = 25;
 
     /**
      * The area directory.
@@ -205,6 +209,23 @@ final class AreaProfileController extends Controller
                 'category' => $place->category?->name(),
                 'operational_status' => $place->operational_status,
             ])->all(),
+            /*
+             * The area's market timeline (Phase 13): the same public contract
+             * the project profile uses — Published, unexpired, scoped to THIS
+             * area's morph identity, one bounded query, the shared
+             * publicTimelineEntry() shape. Not scopeAiUsable, and never
+             * ai_usage_permitted: AI permission has never meant public
+             * visibility (spec 21.3).
+             */
+            'timeline' => KnowledgeEvent::query()
+                ->publiclyCurrent()
+                ->where('entity_type', 'area')
+                ->where('entity_id', $area->id)
+                ->orderByDesc('effective_date')
+                ->limit(self::TIMELINE_LIMIT)
+                ->get()
+                ->map(static fn (KnowledgeEvent $event): array => $event->publicTimelineEntry())
+                ->all(),
             'seo' => [
                 'title' => $area->name(),
                 'canonical' => LocalizedRoutes::canonical('/areas/'.$area->slug),

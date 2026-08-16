@@ -48,6 +48,7 @@ use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Support\Totp;
+use App\Modules\Knowledge\Models\KnowledgeEvent;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -293,7 +294,7 @@ $wizardDraftId = (int) DB::table('project_drafts')
  * advisor's market answer must ground on it. Names in all three languages so
  * the deterministic area matching is exercised the way production data is.
  */
-Area::query()->updateOrCreate(
+$ankawa = Area::query()->updateOrCreate(
     ['slug' => 'browser-ankawa'],
     [
         'type' => 'district',
@@ -301,6 +302,42 @@ Area::query()->updateOrCreate(
         'name_ar' => 'عنكاوة',
         'name_en' => 'Ankawa',
         'publication_status' => 'published',
+    ],
+);
+
+/*
+ * Phase 13: the public area profile behind its real flag, plus ONE Published
+ * market event on the fixture area — deterministic content for the mobile
+ * no-overflow and Arabic-locale assertions, which run on viewports where the
+ * admin publish flow does not. The desktop spec still drives the real
+ * create→review→approve→publish workflow for its own token event.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'geography.areas'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+KnowledgeEvent::query()->updateOrCreate(
+    [
+        'entity_type' => 'area',
+        'entity_id' => $ankawa->id,
+        'title_ckb' => 'بەرزبوونەوەی داواکاری لە ئەنکاوە',
+    ],
+    [
+        'title_ar' => 'ارتفاع الطلب في عنكاوة',
+        'title_en' => 'Demand rising in Ankawa',
+        'summary_ckb' => 'داواکاری لەسەر موڵک لە ئەنکاوە بەرزبووەتەوە.',
+        'summary_ar' => 'ارتفع الطلب على العقارات في عنكاوة.',
+        'summary_en' => 'Property demand in Ankawa has risen.',
+        'event_type' => 'demand',
+        'direction' => 'positive',
+        'strength' => 3,
+        'effective_date' => '2026-08-01',
+        'source' => 'تیمی چاودێری بازاڕ',
+        'confidence' => 'medium',
+        'evidence_class' => 'admin_observation',
+        'ai_usage_permitted' => false,
+        'status' => 'published',
     ],
 );
 
