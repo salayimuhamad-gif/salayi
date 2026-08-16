@@ -28,6 +28,11 @@ const PREDICTION_CKB = 'پێشبینی';
 /** ar label for admin_observation, asserted on the /ar visit. */
 const OBSERVATION_AR = 'ملاحظة الفريق';
 
+/** An ISO date `offset` days from now — for rows that must be freshly lapsed. */
+function day(offset: number): string {
+    return new Date(Date.now() + offset * 86_400_000).toISOString().slice(0, 10);
+}
+
 async function areasEnabled(page: import('@playwright/test').Page): Promise<boolean> {
     const payload = await page.getAttribute('#app', 'data-page');
     const props = JSON.parse(payload ?? '{}').props ?? {};
@@ -104,7 +109,7 @@ test.describe('public market insights', () => {
             title: `تێبینی بازاڕ ${token}`,
             summary: `داواکاری زیادی کردووە ${token}`,
             evidenceClass: 'admin_observation',
-            effectiveDate: '2026-08-05',
+            effectiveDate: day(-11),
         });
         await transition(page, `تێبینی بازاڕ ${token}`, ['لە پێداچوونەوەدا', 'پەسەندکراو']);
 
@@ -123,7 +128,7 @@ test.describe('public market insights', () => {
         await createEvent(page, {
             title: `ڕەشنووسی شاراوە ${token}`,
             evidenceClass: 'admin_observation',
-            effectiveDate: '2026-08-06',
+            effectiveDate: day(-9),
         });
 
         // A prediction, fully published, carrying its expected date.
@@ -131,18 +136,21 @@ test.describe('public market insights', () => {
             title: `پێشبینیی نرخ ${token}`,
             summary: `چاوەڕوان دەکرێت نرخەکان بەرز ببنەوە ${token}`,
             evidenceClass: 'prediction',
-            effectiveDate: '2026-08-07',
+            effectiveDate: day(-10),
             expectedDate: '2026-12-01',
         });
         await transition(page, `پێشبینیی نرخ ${token}`, ['لە پێداچوونەوەدا', 'پەسەندکراو', 'بڵاوکراوە']);
 
-        // A published-but-lapsed sibling: both dates in the past. The hourly
-        // sweep has not run; the public query itself must exclude it.
+        // A published-but-lapsed sibling: computed just-past dates, so it is
+        // genuinely expired on ANY run date, sorts to the top of the admin
+        // list (the index is newest-effective-first and paginated), and the
+        // hourly sweep cannot have flipped it — the public query itself must
+        // exclude it.
         await createEvent(page, {
             title: `بەسەرچووی شاراوە ${token}`,
             evidenceClass: 'admin_observation',
-            effectiveDate: '2026-01-01',
-            expiresOn: '2026-02-01',
+            effectiveDate: day(-2),
+            expiresOn: day(-1),
         });
         await transition(page, `بەسەرچووی شاراوە ${token}`, ['لە پێداچوونەوەدا', 'پەسەندکراو', 'بڵاوکراوە']);
 
@@ -153,7 +161,7 @@ test.describe('public market insights', () => {
         await expect(page.getByText(`داواکاری زیادی کردووە ${token}`)).toBeVisible();
         await expect(page.getByText(OBSERVATION_CKB).first()).toBeVisible();
         await expect(page.getByText('تیمی چاودێری بازاڕ').first()).toBeVisible();
-        await expect(page.getByText('2026-08-05').first()).toBeVisible();
+        await expect(page.getByText(day(-11)).first()).toBeVisible();
 
         // The prediction, in caution clothing with its expected date.
         await expect(page.getByText(`پێشبینیی نرخ ${token}`)).toBeVisible();
