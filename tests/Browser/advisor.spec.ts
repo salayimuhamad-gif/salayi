@@ -164,4 +164,45 @@ test.describe('advisor enabled', () => {
         await expect(page.locator('[data-mh-ai-live-wrap]')).toHaveCount(1);
         await expect(page.locator('.mh-ai-live-badge')).toBeVisible();
     });
+
+    /*
+     * Phase 14: the reply limiter, seen from the chair. Ten messages a
+     * minute pass; the eleventh is refused BEFORE any AI or database work,
+     * and the refusal must be a localized sentence in the existing error
+     * area — never a silent stall, never a raw 429 page — with the composer
+     * still usable for a later retry.
+     *
+     * Deliberately LAST in this file: it fills the signed-in account's
+     * reply bucket for up to a minute, and every spec's own sign-in resets
+     * the limiter store before it starts. No broad cache clearing happens
+     * here — the send loop itself is the scenario.
+     */
+    test('the eleventh message in a minute is refused in words, and the chat stays usable', async ({ page }) => {
+        await page.goto('/advisor', { waitUntil: 'networkidle' });
+
+        const transcript = page.locator('ul.space-y-5 > *');
+
+        for (let i = 1; i <= 10; i += 1) {
+            const before = await transcript.count();
+
+            await page.locator('textarea').fill(`پەیامی ژمارە ${i}`);
+            await expect(page.locator('textarea')).toHaveValue(`پەیامی ژمارە ${i}`);
+            await page.getByRole('button', { name: 'ناردن', exact: true }).click();
+            await expect
+                .poll(async () => transcript.count(), { timeout: 20_000 })
+                .toBeGreaterThanOrEqual(before + 2);
+        }
+
+        await page.locator('textarea').fill('پەیامی یازدەیەم');
+        await page.getByRole('button', { name: 'ناردن', exact: true }).click();
+
+        // The refusal, in Kurdish, in the error slot the page already owns.
+        await expect(page.getByText('پەیامەکان زۆر بە خێرایی نێردران').first()).toBeVisible({ timeout: 15_000 });
+
+        // No raw error page took over, and the composer is alive: the field
+        // is editable and the send control is enabled for a later retry.
+        await expect(page.locator('h1', { hasText: '429' })).toHaveCount(0);
+        await expect(page.locator('textarea')).toBeEnabled();
+        await expect(page.getByRole('button', { name: 'ناردن', exact: true })).toBeEnabled();
+    });
 });

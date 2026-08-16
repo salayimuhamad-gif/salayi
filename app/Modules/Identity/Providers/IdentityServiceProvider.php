@@ -155,6 +155,51 @@ final class IdentityServiceProvider extends ModuleServiceProvider
                 ->by('portfolio-media|'.($user !== null ? $user->id : $request->ip()));
         });
 
+        /*
+         * Advisor safety (Phase 14). One /advisor/reply can trigger up to
+         * TWO paid AI completions plus two advisor_messages rows, AiGateway
+         * carries no per-user control at all, and the monthly cost ceiling
+         * defaults to unlimited — so before this limiter, one scripted
+         * Telegram-linked account was an open-ended cost vector. Ten a
+         * minute is well above a fast human conversation (~4-6 messages)
+         * and sits inside the house's risk-graduated scale (valuation 6,
+         * media 15). Per-user key; the ip fallback covers only the
+         * unauthenticated-impossible case, exactly like its siblings.
+         *
+         * The custom response mirrors AdvisorController::reply()'s own
+         * dual-mode error shape, so the throttled turn surfaces as the
+         * SAME kind of message a failed turn does: localized JSON for the
+         * chat's fetch path, a redirect with an error bag — which the chat
+         * page already renders — for a plain Inertia post. The framework
+         * throttle layer still attaches Retry-After.
+         */
+        RateLimiter::for('advisor-reply', static function (Request $request): Limit {
+            $user = $request->user();
+
+            return Limit::perMinute(10)
+                ->by('advisor-reply|'.($user !== null ? $user->id : $request->ip()))
+                ->response(static fn (Request $blocked, array $headers) => $blocked->expectsJson()
+                    ? response()->json(['message' => __('advisor.chat.rate_limited')], 429, $headers)
+                    : back()->withErrors(['message' => __('advisor.chat.rate_limited')]));
+        });
+
+        /*
+         * The advisor's cheap mutations (amend, reset, request): no AI
+         * involved, but reset+show mints a conversation row per loop
+         * iteration and request writes a lead — generous for a person,
+         * hostile to a script. recommend (a no-op redirect) and the GET
+         * page are deliberately unthrottled.
+         */
+        RateLimiter::for('advisor-write', static function (Request $request): Limit {
+            $user = $request->user();
+
+            return Limit::perMinute(30)
+                ->by('advisor-write|'.($user !== null ? $user->id : $request->ip()))
+                ->response(static fn (Request $blocked, array $headers) => $blocked->expectsJson()
+                    ? response()->json(['message' => __('advisor.chat.rate_limited')], 429, $headers)
+                    : back()->withErrors(['message' => __('advisor.chat.rate_limited')]));
+        });
+
         RateLimiter::for('telegram-poll', static fn (Request $request): Limit => Limit::perMinute(60)
             ->by($request->session()->getId()));
 
