@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Modules\Knowledge\Http\Controllers\Admin;
 
+use App\Modules\Geography\Models\Area;
+use App\Modules\Knowledge\Enums\EvidenceClass;
 use App\Modules\Knowledge\Enums\KnowledgeStatus;
 use App\Modules\Knowledge\Http\Requests\KnowledgeEventRequest;
 use App\Modules\Knowledge\Models\KnowledgeEvent;
@@ -80,10 +82,17 @@ final class KnowledgeEventController extends Controller
 
     public function store(KnowledgeEventRequest $request): RedirectResponse
     {
-        $event = KnowledgeEvent::query()->create($request->validated() + [
-            'status' => KnowledgeStatus::Draft,
-            'author_id' => $request->user()?->id,
-        ]);
+        /*
+         * Explicit assignment for the server-owned fields, found broken in
+         * Phase 12: author_id is deliberately NOT fillable (it must never
+         * arrive from a request), so passing it through create() threw a
+         * MassAssignmentException on every submission — this endpoint had
+         * never successfully created an event.
+         */
+        $event = new KnowledgeEvent($request->validated());
+        $event->status = KnowledgeStatus::Draft;
+        $event->author_id = $request->user()?->id;
+        $event->save();
 
         $this->audit->record('knowledge_event.created', $event, $request->validated());
 
@@ -160,9 +169,31 @@ final class KnowledgeEventController extends Controller
                 'value' => $d,
                 'label' => __('knowledge.direction.'.$d),
             ], ['positive', 'neutral', 'negative']),
+            /*
+             * Phase 12: what kind of claim the event makes. The advisory
+             * composer keys its stance on this, so the form must offer the
+             * closed set with its localized names and nothing else.
+             */
+            'evidence_classes' => array_map(static fn (EvidenceClass $c): array => [
+                'value' => $c->value,
+                'label' => $c->label(),
+            ], EvidenceClass::cases()),
+            'entity_types' => array_map(static fn (string $t): array => [
+                'value' => $t,
+                'label' => __('knowledge.entity_types.'.$t),
+            ], ['project', 'area']),
             'projects' => Project::query()->orderBy('name_ckb')->limit(500)
                 ->get(['id', 'name_ckb', 'name_ar', 'name_en'])
                 ->map(fn (Project $p): array => ['value' => $p->id, 'label' => $p->name()])->all(),
+            /*
+             * Phase 12: the market-intelligence use case records insights
+             * about AREAS ("prices rose in Ankawa"), and the request rules
+             * always accepted entity_type=area — only this options list kept
+             * the form project-only.
+             */
+            'areas' => Area::query()->orderBy('name_ckb')->limit(500)
+                ->get(['id', 'name_ckb', 'name_ar', 'name_en'])
+                ->map(fn (Area $a): array => ['value' => $a->id, 'label' => $a->name()])->all(),
         ];
     }
 }

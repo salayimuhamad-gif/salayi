@@ -25,6 +25,21 @@ return [
     'awaiting_review' => 'چاوەڕوانی پێداچوونەوە',
     'ai_usable_count' => 'بەردەست بۆ AI',
     'ai_gate_hint' => 'هەر سێ مەرجەکە پێکەوە',
+    'entity_type' => 'بابەتی پەیوەندیدار',
+    'evidence_class' => 'جۆری بەڵگە',
+    'evidence_class_hint' => 'ڕاستی پشتڕاستکراو بە سەرچاوەوە دەگوترێت؛ تێبینی و لێکدانەوە و پێشبینی هەرگیز وەک ڕاستی پشتڕاستکراو ناگوترێنەوە.',
+
+    'entity_types' => [
+        'project' => 'پڕۆژە',
+        'area' => 'ناوچە',
+    ],
+
+    'evidence_classes' => [
+        'verified_fact' => 'ڕاستی پشتڕاستکراو',
+        'admin_observation' => 'تێبینیی تیم',
+        'market_interpretation' => 'لێکدانەوەی بازاڕ',
+        'prediction' => 'پێشبینی',
+    ],
 
     'event_types' => [
         'road' => 'ڕێگا',
@@ -56,6 +71,7 @@ return [
         'source_required' => 'بێ سەرچاوە ناتوانرێت پەسەند بکرێت',
         'ai_needs_source' => 'ڕووداوێک کە AI بەکاری دەهێنێت پێویستی بە سەرچاوەیە',
         'entity_id_required' => 'پێویستە بابەتەکە دیاری بکرێت',
+        'fact_needs_source' => 'ڕاستی پشتڕاستکراو بەبێ سەرچاوە ناتوانرێت تۆمار بکرێت',
     ],
 
     'statuses' => [

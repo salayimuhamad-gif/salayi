@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Knowledge\Http\Requests;
 
+use App\Modules\Knowledge\Enums\EvidenceClass;
 use App\Modules\Knowledge\Enums\KnowledgeStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Validator;
@@ -15,7 +16,7 @@ use Illuminate\Validation\Validator;
  * seeing an array of unknown strings — and it fails loudly if a rule is ever
  * added for a field the model does not have.
  *
- * @method array<'title_ckb'|'title_ar'|'title_en'|'summary_ckb'|'summary_ar'|'summary_en'|'details'|'event_type'|'direction'|'strength'|'entity_type'|'entity_id'|'effective_date'|'expected_date'|'expires_on'|'source'|'source_url'|'confidence'|'ai_usage_permitted', mixed> validated(string|null $key = null, mixed $default = null)
+ * @method array<'title_ckb'|'title_ar'|'title_en'|'summary_ckb'|'summary_ar'|'summary_en'|'details'|'event_type'|'direction'|'strength'|'entity_type'|'entity_id'|'effective_date'|'expected_date'|'expires_on'|'source'|'source_url'|'confidence'|'evidence_class'|'ai_usage_permitted', mixed> validated(string|null $key = null, mixed $default = null)
  */
 final class KnowledgeEventRequest extends FormRequest
 {
@@ -56,6 +57,17 @@ final class KnowledgeEventRequest extends FormRequest
             'source' => ['nullable', 'string', 'max:191'],
             'source_url' => ['nullable', 'url', 'max:255'],
             'confidence' => ['required', 'string', 'in:low,medium,high'],
+            /*
+             * Phase 12: required on CREATE — every new event states what kind
+             * of claim it makes. On update it stays optional so an edit to a
+             * legacy (null-class) row is not held hostage; those rows read as
+             * admin_observation until someone classifies them.
+             */
+            'evidence_class' => [
+                $this->route('event') ? 'nullable' : 'required',
+                'string',
+                'in:'.implode(',', array_column(EvidenceClass::cases(), 'value')),
+            ],
             'ai_usage_permitted' => ['boolean'],
         ];
     }
@@ -85,6 +97,14 @@ final class KnowledgeEventRequest extends FormRequest
             // An entity type without an id points at nothing.
             if ($this->input('entity_type') !== null && $this->input('entity_id') === null) {
                 $validator->errors()->add('entity_id', __('knowledge.errors.entity_id_required'));
+            }
+
+            // Phase 12: a VERIFIED FACT is spoken directly with attribution —
+            // "according to {source}". Without a source there is nothing to
+            // attribute, and the claim belongs in another class.
+            if ($this->input('evidence_class') === EvidenceClass::VerifiedFact->value
+                && trim((string) $this->input('source')) === '') {
+                $validator->errors()->add('evidence_class', __('knowledge.errors.fact_needs_source'));
             }
         });
     }

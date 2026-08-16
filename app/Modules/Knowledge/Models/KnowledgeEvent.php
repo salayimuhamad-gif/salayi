@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Knowledge\Models;
 
 use App\Modules\Geography\Concerns\HasTrilingualNames;
+use App\Modules\Knowledge\Enums\EvidenceClass;
 use App\Modules\Knowledge\Enums\KnowledgeStatus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -47,6 +48,7 @@ use RuntimeException;
  * @property string|null $source_url
  * @property string|null $source_document_path
  * @property string $confidence
+ * @property EvidenceClass|null $evidence_class
  * @property bool $ai_usage_permitted
  * @property KnowledgeStatus $status
  * @property int|null $author_id
@@ -75,7 +77,7 @@ final class KnowledgeEvent extends Model
         'event_type', 'direction', 'strength',
         'effective_date', 'expected_date', 'publication_date', 'expires_on',
         'source', 'source_url', 'source_document_path', 'confidence',
-        'ai_usage_permitted', 'status',
+        'evidence_class', 'ai_usage_permitted', 'status',
         'related_project_ids', 'related_area_ids', 'related_place_ids',
     ];
 
@@ -83,6 +85,7 @@ final class KnowledgeEvent extends Model
     {
         return [
             'status' => KnowledgeStatus::class,
+            'evidence_class' => EvidenceClass::class,
             'ai_usage_permitted' => 'boolean',
             'strength' => 'integer',
             'effective_date' => 'date',
@@ -102,6 +105,19 @@ final class KnowledgeEvent extends Model
     public function entity(): MorphTo
     {
         return $this->morphTo();
+    }
+
+    /**
+     * The class this event's claims are spoken with (Phase 12).
+     *
+     * Null — every pre-Phase-12 row — reads as admin_observation, never as
+     * verified_fact: an unclassified note is at most something the team
+     * recorded. Callers that phrase answers MUST use this accessor rather
+     * than the raw column, so the conservative default cannot be skipped.
+     */
+    public function effectiveEvidenceClass(): EvidenceClass
+    {
+        return $this->evidence_class ?? EvidenceClass::AdminObservation;
     }
 
     /** All three conditions, evaluated together. */

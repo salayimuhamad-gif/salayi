@@ -43,6 +43,7 @@ declare(strict_types=1);
  *   neutral marker and the only way to test that is to seed the absence.
  */
 
+use App\Modules\Geography\Models\Area;
 use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
@@ -285,6 +286,23 @@ $wizardDraftId = (int) DB::table('project_drafts')
     ->where('user_id', $admin->id)
     ->where('current_step', 'location')
     ->value('id');
+
+/*
+ * Phase 12: ONE published area, for the market-grounding flow — the admin
+ * records a KnowledgeEvent about this area through the real form, and the
+ * advisor's market answer must ground on it. Names in all three languages so
+ * the deterministic area matching is exercised the way production data is.
+ */
+Area::query()->updateOrCreate(
+    ['slug' => 'browser-ankawa'],
+    [
+        'type' => 'district',
+        'name_ckb' => 'ئەنکاوە',
+        'name_ar' => 'عنكاوة',
+        'name_en' => 'Ankawa',
+        'publication_status' => 'published',
+    ],
+);
 
 cache()->flush();
 
