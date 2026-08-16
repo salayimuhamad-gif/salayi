@@ -102,12 +102,17 @@ test.describe('advisor market grounding', () => {
 
         await page.goto('/advisor', { waitUntil: 'networkidle' });
 
-        // A persistent database may carry an older conversation; start clean
-        // so the transcript below is exactly this run's. The reset is an
-        // Inertia visit — wait for the EMPTIED transcript, not for network
-        // idle, or the first send races the reload.
+        /*
+         * The account may carry an older conversation (a persistent local
+         * database, or an earlier spec in the same run); start clean so the
+         * interview below is exactly this run's. The fresh-state signal is
+         * the FIRST slot's question being asked again — not an empty
+         * transcript, whose exact item count is an implementation detail.
+         * sendChat() counts transcript growth relative to whatever baseline
+         * exists, so a leftover bubble cannot skew the flow.
+         */
         await page.getByRole('button', { name: 'دەستپێکردنەوە' }).click();
-        await expect(page.locator('ul.space-y-5 > *')).toHaveCount(0, { timeout: 15_000 });
+        await expect(page.getByText('مەبەستی کڕین').first()).toBeVisible({ timeout: 15_000 });
         // A hard reload after the reset visit: the interview below must run
         // against a settled page, not the tail of an Inertia swap.
         await page.goto('/advisor', { waitUntil: 'networkidle' });
