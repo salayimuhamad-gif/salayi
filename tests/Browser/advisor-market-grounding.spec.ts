@@ -41,8 +41,12 @@ async function sendChat(page: import('@playwright/test').Page, message: string):
     const transcript = page.locator('ul.space-y-5 > *');
     const before = await transcript.count();
 
+    // The composer is Vue-bound; assert the value actually stuck before
+    // clicking, so an Inertia DOM swap between fill and click cannot turn
+    // the send into a silent empty-message no-op.
     await page.locator('textarea').fill(message);
-    await page.getByRole('button', { name: 'ناردن' }).click();
+    await expect(page.locator('textarea')).toHaveValue(message);
+    await page.getByRole('button', { name: 'ناردن', exact: true }).click();
 
     // The user turn and the assistant turn both land in the transcript.
     await expect.poll(async () => transcript.count(), { timeout: 20_000 }).toBeGreaterThanOrEqual(before + 2);
@@ -99,9 +103,14 @@ test.describe('advisor market grounding', () => {
         await page.goto('/advisor', { waitUntil: 'networkidle' });
 
         // A persistent database may carry an older conversation; start clean
-        // so the transcript below is exactly this run's.
+        // so the transcript below is exactly this run's. The reset is an
+        // Inertia visit — wait for the EMPTIED transcript, not for network
+        // idle, or the first send races the reload.
         await page.getByRole('button', { name: 'دەستپێکردنەوە' }).click();
-        await page.waitForLoadState('networkidle');
+        await expect(page.locator('ul.space-y-5 > *')).toHaveCount(0, { timeout: 15_000 });
+        // A hard reload after the reset visit: the interview below must run
+        // against a settled page, not the tail of an Inertia swap.
+        await page.goto('/advisor', { waitUntil: 'networkidle' });
 
         await sendChat(page, 'بۆ نیشتەجێبوون');
         await sendChat(page, '١٥٠ هەزار دۆلار');
