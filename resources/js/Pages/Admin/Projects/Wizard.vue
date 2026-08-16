@@ -180,7 +180,7 @@ function reviewValue(key: string, value: unknown): string {
     }
 
     const groups: Record<string, string> = {
-        project_type: 'projects.project_types',
+        project_type: 'projects.types',
         construction_status: 'projects.construction_statuses',
         delivery_status: 'projects.delivery_statuses',
         price_type: 'market.price_types',
@@ -536,7 +536,7 @@ watch(
                          the end of a long form. -->
                     <AppSelect
                         :model-value="(form.project_type as string) ?? ''"
-                        :options="enumOptions(options.project_types, 'projects.project_types')"
+                        :options="enumOptions(options.project_types, 'projects.types')"
                         :label="t('projects.wizard.creation.field_project_type')"
                         :error="form.errors.project_type"
                         required

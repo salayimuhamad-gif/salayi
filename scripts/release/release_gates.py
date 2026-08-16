@@ -156,6 +156,11 @@ PLAYWRIGHT_ACCOUNT_FIRST_SPEC = 'tests/Browser/account-first-registration.spec.t
 PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/accessibility.spec.ts',
     'tests/Browser/admin.spec.ts',
+    # Project creation truthfulness (Phase 11): a real project is created
+    # through the legacy admin form and persists across a reload; a URL
+    # pasted into the slug field fails in words, never as a raw
+    # validation.* key; the wizard's project-type options are translated.
+    'tests/Browser/admin-project-creation.spec.ts',
     'tests/Browser/advisor.spec.ts',
     # Advisor overlay containment (Phase 10): the live-chat header decoration
     # is gated to the advisor page's own marker — the admin chrome stays one
@@ -193,6 +198,8 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'touch-target and drawer checks are touch/small-viewport requirements',
     'tests/Browser/admin.spec.ts':
         'admin flow runs once, on desktop-1440x900 only',
+    'tests/Browser/admin-project-creation.spec.ts':
+        'admin creation flow runs once, on desktop-1440x900 only',
     'tests/Browser/advisor.spec.ts':
         'advisor flow is desktop-only and feature-flag dependent',
     'tests/Browser/advisor-widget-containment.spec.ts':
