@@ -133,6 +133,7 @@ return [
         'followup_hint' => 'Your results are above — keep going: ask questions, compare, or change your request.',
         'typing' => 'The advisor is typing…',
         'send_failed' => 'Something went wrong and the reply did not arrive. Please try again.',
+        'rate_limited' => 'Messages were sent too quickly. Please wait a moment and try again.',
         'enter_hint' => 'Press Enter to send, or Shift + Enter for a new line.',
         'live' => [
             'welcome' => 'Hi:name — let’s sort your request quickly.',

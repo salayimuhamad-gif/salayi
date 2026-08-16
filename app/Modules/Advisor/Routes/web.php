@@ -44,11 +44,25 @@ Route::middleware('feature:lifestyle.matching')->group(function (): void {
  * §7.11 names "personal AI conversations" explicitly: a transcript records what
  * a household can afford and where they need to be.
  */
+/*
+ * Phase 14 rate limits: reply is the paid-AI vector (up to two completions
+ * per call) and carries its own tight per-user limiter; the cheap mutations
+ * share a looser one. The GET page and the no-op recommend redirect stay
+ * unthrottled on purpose — neither spends money nor writes rows.
+ */
 Route::middleware(['feature:advisor.residential', 'telegram.linked'])->group(function (): void {
     Route::get('/advisor', [AdvisorController::class, 'show'])->name('advisor.show');
-    Route::post('/advisor/reply', [AdvisorController::class, 'reply'])->name('advisor.reply');
-    Route::post('/advisor/amend', [AdvisorController::class, 'amend'])->name('advisor.amend');
+    Route::post('/advisor/reply', [AdvisorController::class, 'reply'])
+        ->middleware('throttle:advisor-reply')
+        ->name('advisor.reply');
+    Route::post('/advisor/amend', [AdvisorController::class, 'amend'])
+        ->middleware('throttle:advisor-write')
+        ->name('advisor.amend');
     Route::post('/advisor/recommend', [AdvisorController::class, 'recommend'])->name('advisor.recommend');
-    Route::post('/advisor/reset', [AdvisorController::class, 'reset'])->name('advisor.reset');
-    Route::post('/advisor/request', [AdvisorController::class, 'submit'])->name('advisor.request');
+    Route::post('/advisor/reset', [AdvisorController::class, 'reset'])
+        ->middleware('throttle:advisor-write')
+        ->name('advisor.reset');
+    Route::post('/advisor/request', [AdvisorController::class, 'submit'])
+        ->middleware('throttle:advisor-write')
+        ->name('advisor.request');
 });

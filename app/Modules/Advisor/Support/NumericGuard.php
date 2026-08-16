@@ -73,8 +73,23 @@ final class NumericGuard
                 continue;
             }
 
-            $before = mb_substr($normalised, max(0, (int) $offset - 14), min(14, (int) $offset));
-            $after = mb_substr($normalised, (int) $offset + strlen((string) $raw), 14);
+            /*
+             * PREG_OFFSET_CAPTURE reports BYTE offsets; the windows below are
+             * carved with mb_substr, which counts CHARACTERS. In ASCII text
+             * the two agree, which is why English always classified
+             * correctly — but every Arabic-script letter is two bytes, so in
+             * Kurdish/Arabic prose the raw byte offset overshot the true
+             * character position and the windows landed on the wrong text.
+             * Whether a unit marker (٪, دۆلار, مەتر…) was seen then depended
+             * on how long the text BEFORE the number happened to be, and a
+             * small figure whose marker was missed fell through to the
+             * exempt 'count' kind — shipping ungrounded (Phase 14). One
+             * conversion makes the windows land by construction.
+             */
+            $charOffset = mb_strlen(substr($normalised, 0, (int) $offset));
+
+            $before = mb_substr($normalised, max(0, $charOffset - 14), min(14, $charOffset));
+            $after = mb_substr($normalised, $charOffset + mb_strlen((string) $raw), 14);
 
             $kind = $this->classify($value, (string) $raw, $before, $after);
 
@@ -82,7 +97,7 @@ final class NumericGuard
                 raw: (string) $raw,
                 value: $value,
                 kind: $kind,
-                offset: (int) $offset,
+                offset: $charOffset,
                 precision: $this->precisionOf($clean),
             );
         }
