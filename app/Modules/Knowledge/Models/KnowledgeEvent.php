@@ -153,6 +153,74 @@ final class KnowledgeEvent extends Model
         return $query->where('status', KnowledgeStatus::Published->value);
     }
 
+    /**
+     * What a PUBLIC page may show (Phase 13): Published AND not past its
+     * expiry date.
+     *
+     * The hourly sweep flips expired Published rows to Expired through the
+     * real state machine, so the inline date guard only closes the sub-hour
+     * window between a row lapsing and the sweep noticing — the same
+     * belt-and-braces stance scopeAiUsable() takes. Deliberately DISTINCT
+     * from scopeAiUsable(): Approved is AI evidence, not a public statement,
+     * and ai_usage_permitted has never gated visibility (spec 21.3).
+     *
+     * @param  Builder<KnowledgeEvent>  $query
+     * @return Builder<KnowledgeEvent>
+     */
+    public function scopePubliclyCurrent(Builder $query): Builder
+    {
+        return $query
+            ->published()
+            ->where(function (Builder $q): void {
+                $q->whereNull('expires_on')->orWhere('expires_on', '>=', now()->toDateString());
+            });
+    }
+
+    /** Localized title, house fallback chain [locale, ckb, en, ar]. */
+    public function title(?string $locale = null): string
+    {
+        return $this->trilingual('title', $locale);
+    }
+
+    /** Localized summary, same chain; null when no locale has one. */
+    public function summary(?string $locale = null): ?string
+    {
+        $value = $this->trilingual('summary', $locale);
+
+        return $value === '' ? null : $value;
+    }
+
+    /**
+     * The one public shape of a timeline entry (Phase 13), shared by every
+     * public consumer so the project and area timelines cannot drift apart.
+     *
+     * Only visitor-facing facts: no ai_usage_permitted, no author/reviewer
+     * ids, no internal details, no related_* metadata, no workflow state.
+     * Confidence stays because the shipped timeline component has always
+     * rendered it — an existing public contract, not a Phase 13 addition.
+     *
+     * @return array<string, mixed>
+     */
+    public function publicTimelineEntry(): array
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title(),
+            'summary' => $this->summary(),
+            'event_type' => $this->event_type,
+            'direction' => $this->direction,
+            'strength' => $this->strength,
+            // effectiveEvidenceClass(), never the raw column: a legacy null
+            // must read as an observation, never as a verified fact.
+            'evidence_class' => $this->effectiveEvidenceClass()->value,
+            'effective_date' => $this->effective_date->toDateString(),
+            'expected_date' => $this->expected_date?->toDateString(),
+            'source' => $this->source,
+            'source_url' => $this->source_url,
+            'confidence' => $this->confidence,
+        ];
+    }
+
     public function transitionTo(KnowledgeStatus $target): void
     {
         if (! $this->status->canTransitionTo($target)) {
