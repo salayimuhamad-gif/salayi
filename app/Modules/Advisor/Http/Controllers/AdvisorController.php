@@ -360,7 +360,13 @@ final class AdvisorController extends Controller
         }
 
         $criteria = (array) $request->session()->get(self::CRITERIA_KEY, []);
-        $criteria[$validated['slot']] = $validated['value'];
+        /*
+         * Phase 18: through the interview's own parsers, never verbatim.
+         * Storing the raw posted text let a prefilled display label (or a
+         * retyped "200 هەزار دۆلار") replace the canonical value, corrupting
+         * the matcher's comparisons and the recorded lead.
+         */
+        $criteria = $this->conversations->amendSlot($criteria, $validated['slot'], $validated['value']);
 
         $request->session()->put(self::CRITERIA_KEY, $criteria);
         $request->session()->put(self::SLOT_KEY, $this->flow->nextSlot($criteria));

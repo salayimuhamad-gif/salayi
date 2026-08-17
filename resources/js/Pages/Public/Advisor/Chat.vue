@@ -54,6 +54,8 @@ const { localized } = useLocale();
 interface SummaryRow {
     key: string;
     value: string | null;
+    /** The canonical criteria value behind the localized label (Phase 18). */
+    raw_value?: string | null;
     answered: boolean;
     required: boolean;
     editable: boolean;
@@ -148,7 +150,10 @@ function send(): void {
 
 function startEdit(row: SummaryRow): void {
     editing.value = row.key;
-    editValue.value = row.value ?? '';
+    // The CANONICAL value, not the localized label (Phase 18): editing what
+    // the criteria actually hold means a save-without-change is a true
+    // no-op, and a formatted caption never masquerades as the stored value.
+    editValue.value = row.raw_value ?? row.value ?? '';
 }
 
 function saveEdit(): void {

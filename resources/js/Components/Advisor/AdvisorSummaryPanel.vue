@@ -28,6 +28,8 @@ import { t, formatNumber } from '@/lib/i18n';
 interface SummaryRow {
     key: string;
     value: string | null;
+    /** The canonical criteria value behind the localized label (Phase 18). */
+    raw_value?: string | null;
     answered: boolean;
     required: boolean;
     editable: boolean;

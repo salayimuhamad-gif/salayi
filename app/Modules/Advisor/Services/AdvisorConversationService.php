@@ -794,6 +794,43 @@ final class AdvisorConversationService
     }
 
     /**
+     * A single summary-row edit, through the SAME parsers the interview
+     * itself uses (Phase 18).
+     *
+     * The amend endpoint used to store the posted text verbatim — and the
+     * edit box is prefilled with the LOCALIZED display label, so a no-op
+     * save wrote e.g. "دیناری عێراقی (IQD)" over the canonical 'IQD' and a
+     * retyped "200 هەزار دۆلار" landed as a literal string the matcher read
+     * as 200. Routing the edit through the real per-slot parsers makes the
+     * words mean the same thing whether they are typed in the chat or in
+     * the summary panel: budget keeps its unit rules (including the
+     * documented "a currency named inside the budget answer wins"),
+     * currency canonicalizes to its code or the honest unknown sentinel,
+     * and an unparseable edit KEEPS the old value rather than storing
+     * garbage — merge() never erases on a failed extraction. A blank value
+     * still clears the slot for re-asking, exactly the old contract.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @return array<string, mixed>
+     */
+    public function amendSlot(array $criteria, string $slot, ?string $text): array
+    {
+        $trimmed = trim((string) $text);
+
+        if ($trimmed === '') {
+            $criteria[$slot] = null;
+
+            return $criteria;
+        }
+
+        if ($slot === 'budget') {
+            return $this->applyBudgetReply($criteria, $trimmed);
+        }
+
+        return $this->flow->merge($criteria, $slot, $this->extract($slot, $trimmed));
+    }
+
+    /**
      * @param  array<string, mixed>  $criteria
      * @return array<string, mixed>
      */

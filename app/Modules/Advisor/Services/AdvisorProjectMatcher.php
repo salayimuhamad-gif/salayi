@@ -478,10 +478,20 @@ final class AdvisorProjectMatcher
         $difference = max(0, (float) $price->price - $budget);
         $formatted = number_format($difference, 0, '.', ',');
 
+        /*
+         * The price's OWN currency, exactly as priceLabel() above states it
+         * (Phase 18). budgetState() only reaches 'above' after
+         * AdvisorCurrency::comparable() proved budget and price share one
+         * currency, so this label is that currency — a hardcoded "USD" here
+         * told every dinar buyer their shortfall in dollars, and the wrong
+         * word travelled into the card facts the AI model is shown.
+         */
+        $currency = strtoupper((string) $price->currency);
+
         return match ($locale) {
-            'ar' => 'أعلى من الميزانية بـ '.$formatted.' USD',
-            'en' => $formatted.' USD above budget',
-            default => $formatted.' USD لە بودجەکەت زیاترە',
+            'ar' => 'أعلى من الميزانية بـ '.$formatted.' '.$currency,
+            'en' => $formatted.' '.$currency.' above budget',
+            default => $formatted.' '.$currency.' لە بودجەکەت زیاترە',
         };
     }
 
