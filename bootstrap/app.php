@@ -115,6 +115,26 @@ return Application::configure(basePath: dirname(__DIR__))
                 return $response;
             }
 
+            /*
+             * Phase 16: a JSON caller keeps the framework's own rendering.
+             *
+             * The generic page below exists for BROWSERS — replacing a JSON
+             * response with it swapped localized throttle messages and the
+             * Retry-After / X-RateLimit-* headers for an HTML page the
+             * caller cannot parse (map fetches, telegram pollers, the
+             * advisor JSON API, /api/v1 all sank with it). The framework's
+             * JSON rendering is already production-safe: with debug off a
+             * 500 is exactly {"message":"Server Error"} — no exception
+             * detail — and 4xx bodies are the framework's or the limiter's
+             * own deliberate messages. Inertia navigations do NOT take this
+             * branch (they Accept text/html, so expectsJson() is false)
+             * and keep the protocol-correct Error component; plain
+             * browsers keep the page below, byte-identical.
+             */
+            if ($request->expectsJson()) {
+                return $response;
+            }
+
             if (in_array($response->getStatusCode(), [401, 402, 403, 404, 419, 429, 500, 503], true)) {
                 return inertia('Error', [
                     'status' => $response->getStatusCode(),
