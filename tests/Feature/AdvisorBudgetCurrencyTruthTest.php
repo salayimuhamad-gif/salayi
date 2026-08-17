@@ -231,6 +231,31 @@ final class AdvisorBudgetCurrencyTruthTest extends TestCase
         }
     }
 
+    public function test_an_unparseable_currency_edit_keeps_the_known_currency(): void
+    {
+        $member = $this->member();
+        $this->completeIntake($member, '٢٠٠ ملیۆن دینار');
+        $this->assertSame('IQD', $this->criteria()['currency']);
+
+        // A typo in the edit box must not demote a known currency to the
+        // interview's honest-unknown sentinel: the old value stays.
+        $this->actingAs($member)
+            ->postJson('/advisor/amend', ['slot' => 'currency', 'value' => 'IQDD'])
+            ->assertStatus(302);
+        $this->assertSame('IQD', $this->criteria()['currency']);
+
+        // With NO known currency to lose, undetectable text still resolves
+        // to the sentinel — the same honesty the interview itself applies.
+        $this->actingAs($member)
+            ->postJson('/advisor/amend', ['slot' => 'currency', 'value' => null])
+            ->assertStatus(302);
+        $this->assertNull($this->criteria()['currency']);
+        $this->actingAs($member)
+            ->postJson('/advisor/amend', ['slot' => 'currency', 'value' => 'IQDD'])
+            ->assertStatus(302);
+        $this->assertSame('unknown', $this->criteria()['currency']);
+    }
+
     public function test_a_noop_budget_edit_preserves_budget_and_currency(): void
     {
         $member = $this->member();

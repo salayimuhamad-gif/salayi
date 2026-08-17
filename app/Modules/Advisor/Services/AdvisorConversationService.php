@@ -810,6 +810,14 @@ final class AdvisorConversationService
      * garbage — merge() never erases on a failed extraction. A blank value
      * still clears the slot for re-asking, exactly the old contract.
      *
+     * The currency slot needs one guard for that keep-the-old-value rule
+     * to actually hold: extractCurrency() resolves undetectable text to
+     * the CURRENCY_UNKNOWN sentinel so the INTERVIEW can honestly move on
+     * from an unanswerable question, but the sentinel is a non-empty
+     * string merge() would happily store — so an edit typo ("IQDD") would
+     * silently demote a known 'IQD' to 'unknown'. An edit only stores the
+     * sentinel when there is no known currency to lose.
+     *
      * @param  array<string, mixed>  $criteria
      * @return array<string, mixed>
      */
@@ -827,7 +835,16 @@ final class AdvisorConversationService
             return $this->applyBudgetReply($criteria, $trimmed);
         }
 
-        return $this->flow->merge($criteria, $slot, $this->extract($slot, $trimmed));
+        $extracted = $this->extract($slot, $trimmed);
+
+        if ($slot === 'currency'
+            && $extracted === self::CURRENCY_UNKNOWN
+            && ($criteria['currency'] ?? null) !== null
+        ) {
+            return $criteria;
+        }
+
+        return $this->flow->merge($criteria, $slot, $extracted);
     }
 
     /**
