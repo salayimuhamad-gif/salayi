@@ -252,6 +252,9 @@ final class SalesWorkspaceController extends Controller
         $matcher = app(AdvisorProjectMatcher::class);
         $result = $matcher->recommend($criteria, (string) ($lead->ai_summary_locale ?? 'ckb'));
 
+        // The matcher exposes its project cards under `items` (the same key
+        // every advisor consumer reads); `cards` never existed, so this list
+        // was permanently empty (Phase 19).
         return array_slice(array_map(static fn (array $card): array => [
             'slug' => $card['slug'] ?? null,
             'name' => $card['name'] ?? null,
@@ -259,7 +262,7 @@ final class SalesWorkspaceController extends Controller
             'price_label' => $card['price_label'] ?? null,
             'fit_label' => $card['fit_label'] ?? null,
             'budget_state' => $card['budget_state'] ?? 'not_set',
-        ], $result['cards'] ?? []), 0, 3);
+        ], $result['items'] ?? []), 0, 3);
     }
 
     /**
