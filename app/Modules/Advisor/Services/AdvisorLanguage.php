@@ -439,12 +439,33 @@ final class AdvisorLanguage
     {
         $locale = $this->normalize($locale);
 
-        return array_map(function (array $row) use ($locale): array {
+        /*
+         * The person's ACTUAL currency, read from the summary's own currency
+         * row before any localization, so the budget row can speak it
+         * (Phase 18). budgetLabel() used to say dollars unconditionally —
+         * directly beside a currency row that said dinars.
+         */
+        $currency = null;
+        foreach ($summary as $row) {
+            if (($row['key'] ?? null) === 'currency' && ($row['answered'] ?? false)) {
+                $currency = is_string($row['value'] ?? null) ? $row['value'] : null;
+            }
+        }
+
+        return array_map(function (array $row) use ($locale, $currency): array {
             if (($row['answered'] ?? false) && array_key_exists('value', $row)) {
+                /*
+                 * Additive (Phase 18): the canonical value survives beside
+                 * the localized one, so the edit box can prefill what the
+                 * criteria actually hold instead of a formatted label.
+                 * Nothing that reads `value` changes.
+                 */
+                $row['raw_value'] = trim((string) $row['value']);
                 $row['value'] = $this->displayValue(
                     (string) ($row['key'] ?? ''),
                     $row['value'],
                     $locale,
+                    $currency,
                 );
             }
 
@@ -452,7 +473,7 @@ final class AdvisorLanguage
         }, $summary);
     }
 
-    public function displayValue(string $slot, mixed $value, string $locale): string
+    public function displayValue(string $slot, mixed $value, string $locale, ?string $currency = null): string
     {
         $locale = $this->normalize($locale);
         $raw = trim((string) $value);
@@ -463,7 +484,7 @@ final class AdvisorLanguage
         }
 
         if ($slot === 'budget') {
-            return $this->budgetLabel($raw, $locale);
+            return $this->budgetLabel($raw, $locale, $currency);
         }
 
         /*
@@ -589,7 +610,9 @@ final class AdvisorLanguage
         }
 
         if ((is_string($budget) || is_numeric($budget)) && (string) $budget !== '') {
-            $parts[] = $this->budgetLabel((string) $budget, $locale);
+            // The criteria's own currency travels with its budget (Phase 18).
+            $currency = is_string($criteria['currency'] ?? null) ? $criteria['currency'] : null;
+            $parts[] = $this->budgetLabel((string) $budget, $locale, $currency);
         }
 
         if (is_string($area) && ! $this->isSkipped($area)) {
@@ -648,7 +671,7 @@ final class AdvisorLanguage
         };
     }
 
-    private function budgetLabel(string $value, string $locale): string
+    private function budgetLabel(string $value, string $locale, ?string $currency = null): string
     {
         $normalised = strtr(mb_strtolower($value), [
             '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4',
@@ -672,6 +695,23 @@ final class AdvisorLanguage
         }
 
         $display = number_format($number, abs($number - round($number)) < 0.000001 ? 0 : 2);
+
+        /*
+         * The label speaks the person's OWN currency (Phase 18). A dinar
+         * budget used to be captioned in dollars in the two most prominent
+         * recap surfaces — the editable summary and the completion sentence —
+         * directly contradicting the currency row beside it. IQD gets dinar
+         * wording; USD keeps today's wording; an unknown/unset currency keeps
+         * the historical dollar fallback so the rare intermediate turn where
+         * a budget lands before its currency renders exactly as before.
+         */
+        if (AdvisorCurrency::storable($currency) === AdvisorCurrency::IQD) {
+            return match ($locale) {
+                'ar' => $display.' دينار عراقي',
+                'en' => $display.' IQD',
+                default => $display.' دیناری عێراقی',
+            };
+        }
 
         return match ($locale) {
             'ar' => $display.' دولار',

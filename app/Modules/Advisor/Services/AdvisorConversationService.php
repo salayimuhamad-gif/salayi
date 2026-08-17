@@ -794,6 +794,60 @@ final class AdvisorConversationService
     }
 
     /**
+     * A single summary-row edit, through the SAME parsers the interview
+     * itself uses (Phase 18).
+     *
+     * The amend endpoint used to store the posted text verbatim — and the
+     * edit box is prefilled with the LOCALIZED display label, so a no-op
+     * save wrote e.g. "دیناری عێراقی (IQD)" over the canonical 'IQD' and a
+     * retyped "200 هەزار دۆلار" landed as a literal string the matcher read
+     * as 200. Routing the edit through the real per-slot parsers makes the
+     * words mean the same thing whether they are typed in the chat or in
+     * the summary panel: budget keeps its unit rules (including the
+     * documented "a currency named inside the budget answer wins"),
+     * currency canonicalizes to its code or the honest unknown sentinel,
+     * and an unparseable edit KEEPS the old value rather than storing
+     * garbage — merge() never erases on a failed extraction. A blank value
+     * still clears the slot for re-asking, exactly the old contract.
+     *
+     * The currency slot needs one guard for that keep-the-old-value rule
+     * to actually hold: extractCurrency() resolves undetectable text to
+     * the CURRENCY_UNKNOWN sentinel so the INTERVIEW can honestly move on
+     * from an unanswerable question, but the sentinel is a non-empty
+     * string merge() would happily store — so an edit typo ("IQDD") would
+     * silently demote a known 'IQD' to 'unknown'. An edit only stores the
+     * sentinel when there is no known currency to lose.
+     *
+     * @param  array<string, mixed>  $criteria
+     * @return array<string, mixed>
+     */
+    public function amendSlot(array $criteria, string $slot, ?string $text): array
+    {
+        $trimmed = trim((string) $text);
+
+        if ($trimmed === '') {
+            $criteria[$slot] = null;
+
+            return $criteria;
+        }
+
+        if ($slot === 'budget') {
+            return $this->applyBudgetReply($criteria, $trimmed);
+        }
+
+        $extracted = $this->extract($slot, $trimmed);
+
+        if ($slot === 'currency'
+            && $extracted === self::CURRENCY_UNKNOWN
+            && ($criteria['currency'] ?? null) !== null
+        ) {
+            return $criteria;
+        }
+
+        return $this->flow->merge($criteria, $slot, $extracted);
+    }
+
+    /**
      * @param  array<string, mixed>  $criteria
      * @return array<string, mixed>
      */
