@@ -7,6 +7,7 @@ namespace App\Modules\Marketplace\Models;
 use App\Modules\Companies\Models\Company;
 use App\Modules\Core\ValueObjects\Decimal;
 use App\Modules\Geography\Models\Area;
+use App\Modules\Localization\Support\SoraniText;
 use App\Modules\Marketplace\Enums\OfferStatus;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Database\Eloquent\Builder;
@@ -235,6 +236,29 @@ final class Offer extends Model
         };
     }
 
+    /**
+     * Derive the search key from the trilingual titles (Phase 17).
+     *
+     * The column shipped with the marketplace tables and BOTH offer
+     * searches — the admin moderation list and the public /offers browse —
+     * have always filtered on it, but no code path ever wrote it: Offer
+     * never adopted HasTrilingualNames, so every offer's key stayed NULL
+     * and every text query, in every locale, matched nothing. Same defect
+     * family and same remedy as knowledge events: titles only, through the
+     * repository's one fold, so admin and public search share the exact
+     * semantics of every other search_key consumer. Descriptions and
+     * company metadata stay excluded on purpose — the contract is "find
+     * the offer by its title".
+     */
+    public function syncSearchKey(): void
+    {
+        $this->setAttribute('search_key', SoraniText::searchKey(implode(' ', array_filter([
+            (string) ($this->title_ckb ?? ''),
+            (string) ($this->title_ar ?? ''),
+            (string) ($this->title_en ?? ''),
+        ]))));
+    }
+
     protected static function booted(): void
     {
         self::creating(function (self $offer): void {
@@ -242,6 +266,8 @@ final class Offer extends Model
         });
 
         self::saving(function (self $offer): void {
+            $offer->syncSearchKey();
+
             // An undisclosed advertisement is the specific harm spec 19.5 and
             // 18.4 exist to prevent, so it is unstorable rather than merely
             // discouraged.
