@@ -1549,6 +1549,24 @@ test.describe('map refetch feedback on the mobile map tab', () => {
             await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
             await first;
 
+            /*
+             * `first` proves a features response ARRIVED — not that the page
+             * APPLIED it. Under runner starvation the ok response satisfying
+             * that gate can belong to a superseded loadAttempt, which the
+             * page discards by design; if the one refetch released below then
+             * fails transiently, the page still holds nothing, and the
+             * stale-retention assertion far below finds an empty list while
+             * every assertion before it passes — exactly the CI #159 failure,
+             * reproduced mechanically from this gap. The precondition is
+             * therefore pinned on page STATE: the fixture tower is in the
+             * list DOM (attached, not visible — the list pane sits behind the
+             * map tab at this width) before the test takes ownership of the
+             * endpoint. While this waits the endpoint is untouched, so the
+             * page's own refetches can still apply what the network already
+             * delivered.
+             */
+            await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeAttached({ timeout: 15_000 });
+
             // From here this test owns the features endpoint: one slow
             // response, then a dead one, then recovery. Registered after the
             // initial load so that load stays untouched. Both ends of every
