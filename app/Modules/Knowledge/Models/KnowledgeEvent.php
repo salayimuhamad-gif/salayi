@@ -7,6 +7,7 @@ namespace App\Modules\Knowledge\Models;
 use App\Modules\Geography\Concerns\HasTrilingualNames;
 use App\Modules\Knowledge\Enums\EvidenceClass;
 use App\Modules\Knowledge\Enums\KnowledgeStatus;
+use App\Modules\Localization\Support\SoraniText;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -188,6 +189,28 @@ final class KnowledgeEvent extends Model
         $value = $this->trilingual('summary', $locale);
 
         return $value === '' ? null : $value;
+    }
+
+    /**
+     * Title-keyed override of the trait's name-keyed derivation (Phase 15).
+     *
+     * HasTrilingualNames::syncSearchKey() reads name_ckb/name_ar/name_en —
+     * columns this table has never had — so every save wrote an EMPTY key
+     * and the admin knowledge text search could not match a single row.
+     * The trait serves eight healthy name_* consumers and stays untouched;
+     * this model already localizes its name-centric API (title() and
+     * summary() beside name()), and the search key follows the same route:
+     * identical fold, identical column, titles as the source. Summaries and
+     * details are excluded on purpose — every sibling keys its names only,
+     * and the admin contract is "find the event by its title".
+     */
+    public function syncSearchKey(): void
+    {
+        $this->setAttribute('search_key', SoraniText::searchKey(implode(' ', array_filter([
+            (string) ($this->title_ckb ?? ''),
+            (string) ($this->title_ar ?? ''),
+            (string) ($this->title_en ?? ''),
+        ]))));
     }
 
     /**

@@ -180,6 +180,19 @@ test.describe('public market insights', () => {
         });
         await transition(page, `بەسەرچووی شاراوە ${token}`, ['لە پێداچوونەوەدا', 'پەسەندکراو', 'بڵاوکراوە']);
 
+        /*
+         * Phase 15: the admin search, through the real q input. The key is
+         * derived from the titles now, so this run's draft title — token
+         * included, unique to this run — must find exactly its own row,
+         * and the prediction created seconds earlier must drop out of the
+         * list. The input debounces into an Inertia GET, so the URL
+         * carrying the query is the synchronization point, not a clock.
+         */
+        await page.locator('#q').fill(`ڕەشنووسی شاراوە ${token}`);
+        await page.waitForURL((url) => String(url).includes('q='), { timeout: 10_000 });
+        await expect(page.getByText(`ڕەشنووسی شاراوە ${token}`).first()).toBeVisible();
+        await expect(page.getByText(`پێشبینیی نرخ ${token}`)).toHaveCount(0);
+
         /* ---------------------------------- the public page, in Kurdish */
         await page.goto('/areas/browser-ankawa', { waitUntil: 'networkidle' });
 
