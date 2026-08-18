@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" fill="none" aria-hidden="true">
+  <!--
+    Abstract Erbil skyline: the Citadel mound at centre with modern towers
+    either side, one weight, one fill. Hand-authored for this project —
+    original geometry, no photography, no traced landmark drawings.
+    Consumed as a fill silhouette at low opacity (hero baseline, inverted
+    above the footer band); colour comes from currentColor at the call site.
+  -->
+  <path fill="currentColor" d="M0 240V200h36v-26h10v26h22v-44h12v-14h10v14h10v44h30v-70h14v70h24v-32h34v32h26V148h12v-10h14v10h12v52h30v-84h16v-12h12v12h16v84h28v-38h40v38h22v-58h12v58h26v-96h18V92h14v12h18v96h36v-30h30v30h22 v-24h394 l8-14 12-9 16-6 44-24 16-6 12-9 8 14v0h8 l6-12 10-8 14-5 40-22 14-5 10-8 6 12h6v88h24v-30h30v30h36V104h18V92h14v12h18v96h26v-58h12v58h22v-38h40v38h28v-84h16v-12h12v12h16v84h30v-52h12v-10h14v10h12v62h26v-32h34v32h24v-70h14v70h30v-44h10v-14h10v14h12v44h22v-26h10v26h36v40H0Z"/>
+  <!-- Citadel plateau band -->
+  <path fill="currentColor" fill-opacity=".5" d="M520 216h400v6H520z"/>
+</svg>

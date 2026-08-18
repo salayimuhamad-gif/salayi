@@ -1,0 +1,2 @@
+<?php
+\Fixtures\SignatureGuard\Subject::finalise(1, 'public', 'a.jpg', 2);

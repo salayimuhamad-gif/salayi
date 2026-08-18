@@ -1,0 +1,400 @@
+name: CI
+
+# Every gate §5 of the repair instructions requires, in an environment where
+# they can actually run. The sandbox this release was assembled in had no PHP,
+# no database, and Packagist blocked at HTTP 403 — so Pint, PHPStan and PHPUnit
+# have never executed once. This workflow is where that stops being true.
+#
+# The job names are deliberately the names used in TEST_REPORT.md, so a report
+# claiming a gate passed can be checked against a run that proves it.
+
+on:
+  push:
+    branches: [main, 'release/**', 'dev/**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  APP_ENV: testing
+  APP_KEY: base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+jobs:
+  # ------------------------------------------------------------------ PHP
+  php:
+    name: PHP ${{ matrix.php }} · ${{ matrix.db }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        # composer.json declares php ^8.3. Both supported minors are tested,
+        # because "it works on 8.3" is not a claim about 8.4 and Hostinger
+        # moves PHP minors without asking.
+        php: ['8.3', '8.4']
+        db: [sqlite, mariadb]
+
+    # MariaDB, not MySQL. The geography migrations declare SRIDs with
+    # MariaDB's `REF_SYSTEM_ID=4326` syntax — deliberately, because Hostinger
+    # runs MariaDB and the final-release workflow already refuses mysql:8.0
+    # as a substitute. The first real run of this workflow proved the point:
+    # against mysql:8.0, 2026_02_01_000100_create_geography_tables failed
+    # with SQLSTATE[42000] 1064 at `REF_SYSTEM_ID=4326`.
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: root
+          MARIADB_DATABASE: mulkihawler_test
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: bcmath, fileinfo, intl, json, mbstring, openssl, pdo, pdo_mysql, pdo_sqlite, zip
+          coverage: none
+          tools: composer:v2
+
+      - name: Syntax check
+        run: find app bootstrap config database routes scripts tests -name '*.php' -print0
+             | xargs -0 -n1 -P4 php -l
+
+      - name: Validate composer.json and composer.lock
+        # --strict fails on a warning; the lock file must exist and be in sync
+        # with composer.json, which is the check that would have caught a
+        # release shipped without one.
+        run: composer validate --strict
+
+      - name: Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache
+          key: composer-${{ matrix.php }}-${{ hashFiles('composer.lock') }}
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Package discovery
+        run: php artisan package:discover --ansi
+
+      - name: Pint (code style)
+        run: vendor/bin/pint --test
+
+      - name: PHPStan / Larastan
+        run: vendor/bin/phpstan analyse --no-progress --error-format=github
+
+      - name: Configure database
+        # The sqlite lane uses a FILE, not :memory:. An in-memory SQLite
+        # database lives and dies with one process, so the separate rollback
+        # step saw a fresh empty database and failed with "no such table:
+        # migrations". A file on the workspace persists across steps — the
+        # same pattern the E2E job already uses. DB_CONNECTION stays `mysql`
+        # for MariaDB: that is Laravel's driver name for both servers.
+        run: |
+          if [ "${{ matrix.db }}" = "mariadb" ]; then
+            {
+              echo "DB_CONNECTION=mysql"
+              echo "DB_HOST=127.0.0.1"
+              echo "DB_PORT=3306"
+              echo "DB_DATABASE=mulkihawler_test"
+              echo "DB_USERNAME=root"
+              echo "DB_PASSWORD=root"
+            } >> "$GITHUB_ENV"
+          else
+            touch "${{ github.workspace }}/database/ci.sqlite"
+            echo "DB_CONNECTION=sqlite" >> "$GITHUB_ENV"
+            echo "DB_DATABASE=${{ github.workspace }}/database/ci.sqlite" >> "$GITHUB_ENV"
+          fi
+
+      - name: Migrate
+        run: php artisan migrate --force
+
+      # §4.4: rollback is executed, not asserted. A migration that cannot be
+      # reversed is discovered here rather than during an incident.
+      - name: Rollback and re-migrate
+        run: |
+          php artisan migrate:rollback --step=21 --force
+          php artisan migrate --force
+
+      - name: PHPUnit
+        run: vendor/bin/phpunit --colors=always
+
+      - name: Standalone gates
+        run: |
+          php scripts/lang-parity.php --strict
+          php scripts/lang-usage.php
+          php scripts/secret-scan.php
+          php scripts/migration-guard.php
+          php scripts/security-audit.php
+
+      - name: Dependency audit
+        run: composer audit --no-interaction
+
+  # ------------------------------------------------------------- frontend
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: TypeScript
+        run: npx vue-tsc --noEmit
+
+      - name: ESLint
+        # --max-warnings 0 once the 10 known vue/* warnings are cleared; left
+        # non-blocking today so the gate reports honestly rather than being
+        # switched off.
+        run: npx eslint resources/js --ext .ts,.vue
+
+      - name: Frontend unit suite
+        # The pure TypeScript tests (geojson, wizard geometry, trend marker
+        # semantics). They previously ran only by hand; the trend contract
+        # is now load-bearing for the investment map, so the suite gates.
+        run: node tests/js/run.mjs
+
+      - name: Build
+        run: npx vite build
+
+      - name: Frontend guard
+        # Requires PHP only as a script host; no framework, no database.
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq php8.3-cli
+          php scripts/frontend-guard.php
+
+      # A REAL gate, like `composer audit` in the PHP job. It carried
+      # `continue-on-error: true`, and underneath it the step had been exiting 1
+      # on four advisories (brace-expansion, fast-uri and js-yaml high, postcss
+      # moderate) while the job reported success — a failure presented as a
+      # warning. Those advisories are now fixed in package-lock.json and the
+      # command was observed to exit 0 on a runner, so the suppression is gone
+      # rather than the finding being tolerated.
+      #
+      # `--audit-level=high` keeps the threshold where it was: moderate and
+      # below still report without failing the build.
+      - name: npm audit
+        run: npm audit --audit-level=high
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: public/build
+          retention-days: 7
+
+  # ------------------------------------------------- navigation smoke test
+  # §2.4. The seven top-level destinations must return a successful response
+  # when their feature flag is enabled, in all three locales. This is the gate
+  # that would have caught /areas and /news being rendered in the public nav
+  # with no route behind them.
+  navigation:
+    name: Navigation destinations
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+      - name: Assert every navigation destination resolves
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ':memory:'
+        run: vendor/bin/phpunit --testsuite Feature --filter NavigationDestinations
+
+  # ------------------------------------------------------------------ e2e
+  e2e:
+    name: E2E · ckb/ar/en
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: npm ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+
+      # The environment mirrors the release runner's write_test_env contract:
+      # the app must believe it is installed (or every request redirects into
+      # the installer), account-first registration calls User::blindIndex()
+      # immediately (which throws on an empty key), the browser spec sends a
+      # real webhook (refused when the configured secret is empty), and the
+      # admin/MFA/advisor scenarios need the seeded disposable accounts —
+      # fixtures() throws a directive to run the seeder when fixtures.json is
+      # missing. APP_URL and PLAYWRIGHT_BASE_URL are ONE origin, and the
+      # server gets PHP_CLI_SERVER_WORKERS so a page and its assets can load
+      # together instead of starving mid-flight.
+      - name: Serve and run E2E
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/e2e.sqlite
+          APP_URL: http://127.0.0.1:8000
+          PLAYWRIGHT_BASE_URL: http://127.0.0.1:8000
+          MULKIHAWLER_INSTALLED: 'true'
+          MULKIHAWLER_FORCE_HTTPS: 'false'
+          SESSION_SECURE_COOKIE: 'false'
+          SESSION_DRIVER: database
+          QUEUE_CONNECTION: database
+          CACHE_STORE: database
+          TELEGRAM_BOT_USERNAME: myhawler_browser_bot
+          TELEGRAM_WEBHOOK_SECRET: browser-webhook-secret
+          PHP_CLI_SERVER_WORKERS: '10'
+        run: |
+          export MULKIHAWLER_BLIND_INDEX_KEY=$(openssl rand -hex 32)
+          export MULKIHAWLER_PII_KEY=$(openssl rand -hex 32)
+          touch database/e2e.sqlite
+          php artisan migrate --force
+          php tests/Browser/support/seed-browser-fixtures.php --confirm-disposable-database
+          php artisan serve --host=127.0.0.1 --port=8000 &
+          npx wait-on http://127.0.0.1:8000 --timeout 60000
+          npx playwright test
+
+      # Failure evidence lives where the reporters actually write it: the
+      # JSON browser report plus per-test trace/screenshot/error-context
+      # directories under storage/browser-acceptance/. No html reporter is
+      # configured, deliberately — playwright-report/ never exists, and
+      # uploading it lost the evidence of every real failure. The attempt
+      # suffix keeps a re-run's upload from colliding with attempt 1's
+      # immutable artifact.
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-failure-evidence-attempt-${{ github.run_attempt }}
+          path: storage/browser-acceptance/
+          retention-days: 7
+
+  # ------------------------------------------------------------ packaging
+  package:
+    name: Reproducible packaging
+    runs-on: ubuntu-24.04
+    needs: [php, frontend]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, fileinfo, intl, mbstring, pdo_sqlite, zip
+          tools: composer:v2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: npm ci && npx vite build
+
+      # package-release.sh's documentation gate reads EXTERNAL evidence
+      # (EvidencePath): the release documents are generated from measured gate
+      # results, and the evidence deliberately lives outside the tree — the
+      # in-tree copy recorded the tree's own manifest hash, a self-referential
+      # identity that could never converge. Collect it here by actually
+      # running the gates, exactly as an operator does before packaging.
+      - name: Collect release evidence
+        run: php scripts/collect-release-evidence.php
+
+      # Built twice from the same HEAD. Identical checksums or the build is not
+      # reproducible and the manifest in the release notes means nothing.
+      #
+      # OUTSIDE the repository, deliberately. package-release.sh refuses to
+      # build from a dirty tree — correctly, since the archive comes from HEAD
+      # — and `dist-a` written inside the checkout is untracked output that the
+      # SECOND run would see as exactly that dirt (.gitignore covers `/dist`,
+      # not `dist-a`). Writing to the runner's temp directory keeps the source
+      # pristine between the two runs and follows the same rule the evidence
+      # directory already follows: nothing generated by a run lands inside the
+      # tree that run is measuring.
+      - name: Build archives twice and compare
+        run: |
+          bash scripts/package-release.sh "$RUNNER_TEMP/dist-a"
+          bash scripts/package-release.sh "$RUNNER_TEMP/dist-b"
+          diff <(cut -d' ' -f1 "$RUNNER_TEMP/dist-a/SHA256SUMS.txt") \
+               <(cut -d' ' -f1 "$RUNNER_TEMP/dist-b/SHA256SUMS.txt")
+          echo "archives are reproducible"
+
+      # The FINAL-RELEASE delivery packaging, not just the normal archive:
+      # two full offline release cycles (freeze, builders, indexes, sealing
+      # and the clean-room verifier are real; toolchains are stubbed) from
+      # one frozen input, byte-compared under a closed classification —
+      # every product artifact must be identical, only the named operational
+      # evidence (ledger, sealed evidence, indexes, master) may differ.
+      # The final-delivery builders once stamped wall-clock times and swept
+      # interpreter caches, which no amount of npm/Vite reproducibility can
+      # see; this exercises the exact packaging path a final release runs.
+      #
+      # The baseline must be the REAL sealed v6 archive (a synthetic one is
+      # impossible by design: the deletion contract requires a member the
+      # auditor waives only under the sealed SHA-256). It is fetched from
+      # the current release-input branch and verified against the pinned
+      # waiver constant in audit_archive.py — the single source of truth
+      # for the sealed identity — before anything consumes it.
+      - name: Final-delivery packaging determinism
+        run: |
+          git fetch --depth 1 origin final-inputs/112f93f
+          git show FETCH_HEAD:release-input/baseline.zip > "$RUNNER_TEMP/baseline.zip"
+          SEALED=$(python3 - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('a', 'scripts/release/audit_archive.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          for key in module.BASELINE_LEGACY_ARTIFACTS:
+              print(key)
+          PY
+          )
+          echo "$SEALED  $RUNNER_TEMP/baseline.zip" | sha256sum -c - \
+            || { echo "fetched baseline does not match the sealed identity"; exit 1; }
+          export MYHAWLER_BASELINE_ARCHIVE="$RUNNER_TEMP/baseline.zip"
+          export MYHAWLER_BASELINE_SHA256="$SEALED"
+          bash scripts/release/verify_delivery_determinism.sh --work "$RUNNER_TEMP/determinism"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: ${{ runner.temp }}/dist-a
+          retention-days: 14
