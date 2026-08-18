@@ -406,7 +406,7 @@ storage caches, logs, sessions, uploads, databases
 ```bash
 composer install
 npm ci
-php artisan migrate      # includes the five Identity migrations new since the baseline
+php artisan migrate      # includes the eight migrations new since the baseline
 vendor/bin/phpunit
 vendor/bin/phpunit -c phpunit.mariadb.xml            # the same suite, real MariaDB
 vendor/bin/phpstan analyse --memory-limit=1G

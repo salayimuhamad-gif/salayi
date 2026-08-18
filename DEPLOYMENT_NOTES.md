@@ -10,7 +10,7 @@ the investment map surface.
 > rehearsal output and its check counts ship in the external evidence package,
 > which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships five forward-only migrations:
+**This patch DOES change the schema.** It ships eight forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -38,7 +38,8 @@ app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_sea
    middleware.
 6. `knowledge_events.evidence_class` is the nullable classification column
    behind the advisor's grounded market answers; rows without it read as
-   unclassified and the advisor withholds the stance.
+   `admin_observation`, so the advisor states them only as something the
+   team recorded, never as a verified fact.
 7. `backfill_knowledge_event_search_keys` is data-only: it derives the
    Sorani search key for existing knowledge events so admin search finds
    rows created before the key had a writer. Reversing it is a documented
@@ -394,8 +395,8 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than five -> a table or column is missing; roll back
-migration count up by more than five  -> stop and investigate before continuing
+migration count up by fewer than eight -> a table or column is missing; roll back
+migration count up by more than eight  -> stop and investigate before continuing
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back

@@ -185,7 +185,7 @@ mysql -u <db_user> -p -N -B <db_name> -e "
 "
 ```
 
-Expect `0` and `0`. The rehearsal failed on exactly this class of check until
+Expect `0`, `0` and `0`. The rehearsal failed on exactly this class of check until
 the ordering above was corrected, which is why it is a separate, explicit step.
 
 ## 7. Restore the application, keeping the failed release

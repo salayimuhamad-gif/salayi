@@ -242,7 +242,7 @@ db "$REHEARSAL_DB_NAME" < "$BACKUP/database.sql" 2>/dev/null
 check "database backup restores cleanly when the decision requires it" $?
 
 echo "== 5b. the patch's migrations are reversed =="
-# This release ships five forward-only migrations. Restoring the
+# This release ships eight forward-only migrations. Restoring the
 # pre-deployment dump removes their tables and columns along with everything
 # else; this asserts they are genuinely gone, because reverted code that still
 # sees them would be a half-rollback.
@@ -253,6 +253,10 @@ check "the patch's three tables are gone after the database restore (found ${TAB
 COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
 [ "$COLS" = "0" ]
 check "the patch's three users columns are gone after the database restore (found ${COLS:-?})" $?
+
+RESTORE_EVIDENCE_COL=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='knowledge_events' AND column_name='evidence_class';" 2>/dev/null)
+[ "$RESTORE_EVIDENCE_COL" = "0" ]
+check "the knowledge evidence-class column is gone after the database restore (found ${RESTORE_EVIDENCE_COL:-?})" $?
 
 echo "== 6. rebuild caches =="
 ( cd "$SITE/application" && "$PHP" artisan config:clear >/dev/null 2>&1 && "$PHP" artisan route:clear >/dev/null 2>&1 \
