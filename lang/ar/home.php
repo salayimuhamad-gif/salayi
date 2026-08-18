@@ -1,0 +1,84 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'hero_title' => 'ذكاء سوق العقارات في أربيل',
+    'hero_sub' => 'بيانات موثّقة بالأدلة',
+    'no_market_data' => 'لم تُنشر أي أسعار موثّقة بعد',
+    'no_projects' => 'لم تُنشر أي مشاريع بعد',
+    'no_areas' => 'لا توجد مناطق بعد',
+    'indices' => 'المؤشرات',
+    'projects' => 'المشاريع',
+    'areas' => 'المناطق',
+    'sample' => 'العينة',
+    'advisor_cta' => 'المستشار العقاري',
+    'lifestyle_cta' => 'البحث حسب نمط الحياة',
+    'portfolio_cta' => 'عقاراتي',
+    'feature_off' => 'هذا القسم غير مفعّل',
+    /*
+     * Added for the §8 homepage redesign. Every one of these labels a REAL
+     * surface: a flag-gated action, an honest empty condition, or the
+     * explanatory copy §8.1 asks for. None of them describes data.
+     */
+    'advisor_lede' => 'يجيب المستشار استناداً إلى بيانات المنصة المنشورة فقط',
+    'advisor_disabled' => 'مستشار العقارات غير مُفعَّل حالياً',
+    'examples' => 'على سبيل المثال، يمكنك أن تسأل',
+    'example_budget' => 'أي منطقة تناسب ميزانيتي؟',
+    'example_compare' => 'قارن بين أنواع المشاريع المتاحة',
+    'example_organise' => 'ساعدني في ترتيب متطلباتي',
+    'live_map' => [
+        'title' => 'المشاريع على الخريطة، مباشرة',
+        'open_full' => 'افتح الخريطة الكاملة',
+        'empty' => 'لا توجد مشاريع على الخريطة بعد — تظهر المشاريع المنشورة هنا عندما تُسجَّل إحداثياتها.',
+    ],
+    'invest_map' => [
+        'title' => 'اكتشف المشاريع الاستثمارية في أنحاء أربيل',
+        'sub' => 'خريطة تفاعلية للمشاريع السكنية والاستثمارية المعتمدة — المواقع والحدود والأسعار وحركتها.',
+        'cta' => 'افتح الخريطة',
+    ],
+    'quick_actions' => 'إجراءات سريعة',
+    'map_cta' => 'فتح الخريطة',
+    'offers_cta' => 'تصفّح العروض',
+    'area_projects' => 'مشروع',
+
+    /*
+     * Redesign additions — parity with ckb (lang-parity --strict).
+     */
+    'eyebrow' => 'معلومات عقارات أربيل',
+    'search_label' => 'البحث في المشاريع',
+    'search_placeholder' => 'ابحث عن المشاريع بالاسم…',
+    'search_action' => 'بحث',
+    'insight_title' => 'مستشار السوق الذكي',
+    'insight_body' => 'إجابات مستندة إلى بيانات موثّقة لسوق أربيل — مع عرض الأدلة.',
+    'nav' => [
+        'home' => 'الرئيسية',
+        'account' => 'الحساب',
+    ],
+    'pricing_map' => [
+        'title' => 'خريطة الأسعار المباشرة',
+        'lead' => 'كل مشروع مثبّت يعرض آخر سعر مسجّل واتجاه حركته.',
+        'pricing_unavailable' => 'طبقة الأسعار غير متاحة حالياً — تُعرض المشاريع بدون أسعار.',
+        'derived_note' => 'مشتق من الأسعار المسجّلة',
+        'last_update' => 'آخر تحديث',
+        'latest_price' => 'آخر سعر مسجّل',
+        'previous_price' => 'السعر السابق (مشتق)',
+        'price_history' => 'سجل الأسعار الكامل',
+        'movement' => 'حركة السعر',
+        'movement_up' => 'ارتفاع',
+        'movement_down' => 'انخفاض',
+        'movement_flat' => 'مستقر',
+        'movement_unknown' => 'لا بيانات للمقارنة',
+        'updated_within' => 'حُدّث خلال',
+        'updated_any' => 'أي وقت',
+        'days_7' => '7 أيام',
+        'days_30' => '30 يوماً',
+        'days_90' => '90 يوماً',
+        'price_range' => 'نطاق السعر',
+        'all_areas' => 'كل المناطق',
+        'all_types' => 'كل الأنواع',
+        'area_label' => 'المنطقة',
+        'type_label' => 'النوع',
+        'reset' => 'إعادة تعيين الفلاتر',
+    ],
+];

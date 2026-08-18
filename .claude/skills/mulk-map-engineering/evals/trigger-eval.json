@@ -1,0 +1,20 @@
+[
+  {"query": "fix the investment map", "should_trigger": true},
+  {"query": "project markers are not clickable", "should_trigger": true},
+  {"query": "area polygons are missing", "should_trigger": true},
+  {"query": "map is blank on mobile", "should_trigger": true},
+  {"query": "price trend on map is wrong", "should_trigger": true},
+  {"query": "admin polygon editor is broken", "should_trigger": true},
+  {"query": "the homepage map shows a grey box after navigating back from a project page, can you debug it", "should_trigger": true},
+  {"query": "clicking a marker on the Erbil map opens the wrong project detail page", "should_trigger": true},
+  {"query": "add clustering to the project markers so the invest map isn't cluttered when zoomed out", "should_trigger": true},
+  {"query": "the kurdish version of the map explorer has controls overlapping the area list on mobile", "should_trigger": true},
+  {"query": "implement password reset emails", "should_trigger": false},
+  {"query": "the password reset link expires too quickly, users are complaining", "should_trigger": false},
+  {"query": "telegram authentication is broken, users can't log in with telegram", "should_trigger": false},
+  {"query": "add a monthly accounting report that sums transactions per project", "should_trigger": false},
+  {"query": "the price history table on the project detail page shows wrong currency formatting", "should_trigger": false},
+  {"query": "write a database seeder for demo users", "should_trigger": false},
+  {"query": "the admin dashboard chart of signups per week is rendering with the wrong colors", "should_trigger": false},
+  {"query": "translate the invoice PDF into arabic", "should_trigger": false}
+]

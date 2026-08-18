@@ -1,0 +1,272 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Modules\Advisor\Services;
+
+use App\Modules\Advisor\Contracts\AiProvider;
+use App\Modules\Advisor\Exceptions\AiProviderException;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+
+/**
+ * The only sanctioned way to call a language model (File one §6.11, §6.14).
+ *
+ * §6.11 lists timeout, retry, fallback, circuit-breaker, token and monthly cost
+ * controls. Scattering those across call sites guarantees one of them is
+ * forgotten in the call that matters, so every completion goes through here.
+ *
+ * The controls exist for three different failure modes, and conflating them
+ * produces bad behaviour:
+ *
+ *   - A provider that is DOWN should be skipped quickly, not retried into a
+ *     timeout on every request. That is the circuit breaker.
+ *   - A provider that is RATE-LIMITED should hand off to the fallback
+ *     immediately; waiting does not help and the second provider is idle.
+ *   - A budget that is EXHAUSTED should stop everything, including fallbacks.
+ *     A fallback provider costs money too, and "we ran out of budget so we
+ *     spent more" is not a recovery strategy.
+ *
+ * The cost ceiling is checked BEFORE the call, not after. Checking afterwards
+ * means the request that breaches the limit is the one you have already paid
+ * for, and on a runaway loop that is the difference between a small overrun and
+ * an invoice nobody authorised.
+ *
+ * Telemetry: the last success and the last categorised failure are kept in the
+ * cache (provider, category, timestamp — never a request, never a body, never
+ * a credential) so the Super Admin diagnostics surface can answer "why is the
+ * AI off" without anyone reading server logs over SSH.
+ *
+ * The monthly spend LEDGER accumulates on every successful completion whether
+ * or not a limit is configured — the limit gates enforcement, never
+ * accounting — so `monthly_spent_usd` on the diagnostics surface tells the
+ * truth in the default (unlimited) configuration too.
+ */
+final class AiGateway
+{
+    /** Consecutive failures before a provider is skipped. */
+    private const FAILURE_THRESHOLD = 3;
+
+    /** How long a tripped breaker stays open. */
+    private const BREAKER_SECONDS = 300;
+
+    /** How long the last-success / last-failure telemetry survives. */
+    private const TELEMETRY_SECONDS = 604800;
+
+    /**
+     * @param  list<AiProvider>  $providers  primary first, fallbacks after
+     */
+    public function __construct(
+        private readonly array $providers,
+        private readonly float $monthlyLimitUsd = 0.0,
+    ) {}
+
+    /** Whether any provider is configured at all (§6.14 graceful fallback). */
+    public function isAvailable(): bool
+    {
+        foreach ($this->providers as $provider) {
+            if ($provider->isConfigured() && ! $this->isOpen($provider)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Complete a request, falling back through the configured providers.
+     *
+     * @param  array<string, mixed>  $request
+     * @return array<string, mixed>
+     *
+     * @throws AiProviderException when every provider fails or the budget is spent
+     */
+    public function complete(array $request): array
+    {
+        $this->assertWithinBudget();
+
+        $attempted = [];
+        $lastFailure = null;
+
+        foreach ($this->providers as $index => $provider) {
+            if (! $provider->isConfigured()) {
+                continue;
+            }
+
+            // A fallback must declare itself usable as one. A provider tuned
+            // for a specific model may be primary-only.
+            if ($index > 0 && ! $provider->supportsFallback()) {
+                continue;
+            }
+
+            if ($this->isOpen($provider)) {
+                $attempted[] = $provider->key().':breaker_open';
+
+                continue;
+            }
+
+            try {
+                $result = $provider->complete($request);
+
+                $this->recordSuccess($provider, $result);
+                // Every AiProvider result declares cost_usd.
+                $this->recordSpend($result['cost_usd']);
+
+                $result['provider'] = $provider->key();
+                $result['fell_back'] = $index > 0;
+
+                return $result;
+            } catch (AiProviderException $e) {
+                $lastFailure = $e;
+                $attempted[] = $provider->key();
+                $this->recordFailure($provider, $e);
+
+                // The message is safe — AiProviderException never carries a
+                // response body — but the request is not, so it is never logged.
+                Log::warning('ai.provider_failed', [
+                    'provider' => $provider->key(),
+                    'category' => $e->category(),
+                    'reason' => $e->getMessage(),
+                ]);
+            }
+        }
+
+        throw $lastFailure ?? AiProviderException::notConfigured('none');
+    }
+
+    /**
+     * The diagnostics readout for the Super Admin surface (audit Q20).
+     *
+     * Everything here is either this application's own configuration state or
+     * a category token this application minted — no provider bodies, no
+     * credentials, no request content.
+     *
+     * @return array{
+     *     available: bool,
+     *     providers: list<array{key: string, model: string, configured: bool, breaker_open: bool, is_fallback: bool}>,
+     *     monthly_spent_usd: string,
+     *     monthly_limit_usd: string,
+     *     budget_exhausted: bool,
+     *     cost_rates_configured: bool,
+     *     last_success: array<string, mixed>|null,
+     *     last_failure: array<string, mixed>|null
+     * }
+     */
+    public function status(): array
+    {
+        $providers = [];
+
+        foreach ($this->providers as $index => $provider) {
+            $providers[] = [
+                'key' => $provider->key(),
+                'model' => $provider->model(),
+                'configured' => $provider->isConfigured(),
+                'breaker_open' => $this->isOpen($provider),
+                'is_fallback' => $index > 0,
+            ];
+        }
+
+        $spent = $this->monthlySpent();
+
+        return [
+            'available' => $this->isAvailable(),
+            'providers' => $providers,
+            'monthly_spent_usd' => number_format($spent, 6, '.', ''),
+            'monthly_limit_usd' => number_format($this->monthlyLimitUsd, 2, '.', ''),
+            'budget_exhausted' => $this->monthlyLimitUsd > 0.0 && $spent >= $this->monthlyLimitUsd,
+            'cost_rates_configured' => (float) config('services.ai.rates.prompt', 0) > 0.0
+                || (float) config('services.ai.rates.completion', 0) > 0.0,
+            'last_success' => Cache::get('ai:last_success'),
+            'last_failure' => Cache::get('ai:last_failure'),
+        ];
+    }
+
+    public function monthlySpent(): float
+    {
+        return (float) Cache::get($this->spendKey(), 0.0);
+    }
+
+    /**
+     * Refuse before spending rather than after.
+     *
+     * @throws AiProviderException
+     */
+    private function assertWithinBudget(): void
+    {
+        if ($this->monthlyLimitUsd <= 0.0) {
+            return;
+        }
+
+        if ($this->monthlySpent() >= $this->monthlyLimitUsd) {
+            throw AiProviderException::costLimitReached(number_format($this->monthlyLimitUsd, 2, '.', ''));
+        }
+    }
+
+    /**
+     * The ledger records spend regardless of whether a monthly limit is
+     * configured; the limit controls ENFORCEMENT, not accounting. Skipping
+     * the ledger without a limit — the shipped default — made the admin
+     * diagnostics report 0.000000 spent while every completion cost real
+     * money, which is exactly the invisible-runaway state the readout
+     * exists to prevent.
+     */
+    private function recordSpend(string $costUsd): void
+    {
+        $key = $this->spendKey();
+        $spent = (float) Cache::get($key, 0.0);
+
+        // Kept for 40 days so the running total survives to the end of any
+        // month and expires on its own without a scheduled cleanup.
+        Cache::put($key, $spent + (float) $costUsd, now()->addDays(40));
+    }
+
+    private function spendKey(): string
+    {
+        return 'ai:spend:'.date('Y-m');
+    }
+
+    private function breakerKey(AiProvider $provider): string
+    {
+        return 'ai:breaker:'.$provider->key();
+    }
+
+    private function isOpen(AiProvider $provider): bool
+    {
+        return (int) Cache::get($this->breakerKey($provider), 0) >= self::FAILURE_THRESHOLD;
+    }
+
+    private function recordFailure(AiProvider $provider, AiProviderException $e): void
+    {
+        $key = $this->breakerKey($provider);
+        $failures = (int) Cache::get($key, 0) + 1;
+
+        Cache::put($key, $failures, now()->addSeconds(self::BREAKER_SECONDS));
+
+        Cache::put('ai:last_failure', [
+            'provider' => $provider->key(),
+            'category' => $e->category(),
+            'at' => now()->toIso8601String(),
+        ], now()->addSeconds(self::TELEMETRY_SECONDS));
+    }
+
+    /**
+     * One success closes the breaker completely.
+     *
+     * Decrementing instead would leave a recovered provider one failure away
+     * from being skipped again, which on an intermittent network turns a brief
+     * blip into a five-minute outage.
+     *
+     * @param  array<string, mixed>  $result
+     */
+    private function recordSuccess(AiProvider $provider, array $result): void
+    {
+        Cache::forget($this->breakerKey($provider));
+
+        Cache::put('ai:last_success', [
+            'provider' => $provider->key(),
+            'model' => (string) ($result['model'] ?? $provider->model()),
+            'latency_ms' => (int) ($result['latency_ms'] ?? 0),
+            'at' => now()->toIso8601String(),
+        ], now()->addSeconds(self::TELEMETRY_SECONDS));
+    }
+}
