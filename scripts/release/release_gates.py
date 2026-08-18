@@ -218,6 +218,12 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
     'tests/Browser/advisor-widget-containment.spec.ts':
         'the admin overflow pins are phone-width scenarios; '
         'the public-detail negative pin runs once, on desktop',
+    'tests/Browser/invest.spec.ts':
+        "the list-tab/bottom-sheet selection scenario exists only below lg "
+        "(the page renders tabs and a sheet on phones, a side panel on "
+        "desktop), so laptop-1366x768 and desktop-1440x900 skip it by design "
+        "— reviewed for final release run #30, where this Phase 4 skip "
+        "surfaced as the registry's one unrecorded entry",
     'tests/Browser/mfa.spec.ts':
         'MFA flow runs once, on desktop-1440x900 only',
     'tests/Browser/map-production.spec.ts':
