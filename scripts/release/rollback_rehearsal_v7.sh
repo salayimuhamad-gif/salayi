@@ -103,19 +103,22 @@ echo "== 2b. reverse the patch's migrations WHILE their files are still present 
 # run the SAME path-targeted commands ROLLBACK_NOTES.md documents, newest
 # first.
 PATCH_MIGRATIONS="
+app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
+app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php
+app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
 "
-PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
+PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
 
 RAN_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
 PATCH_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -E "$PATCH_NAMES_RE" | grep -c ' Ran' )
-[ "$PATCH_RAN" = "5" ]
-check "all five patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
+[ "$PATCH_RAN" = "8" ]
+check "all eight patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
 
 STATUS_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -127,8 +130,8 @@ for migration in $PATCH_MIGRATIONS; do
 done
 
 RAN_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
-[ "$RAN_AFTER" = "$((RAN_BEFORE - 5))" ]
-check "exactly the patch's five migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
+[ "$RAN_AFTER" = "$((RAN_BEFORE - 8))" ]
+check "exactly the patch's eight migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
 
 STATUS_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -147,6 +150,10 @@ check "all three patch tables are absent immediately after the exact rollback (f
 EARLY_COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
 [ "$EARLY_COLS" = "0" ]
 check "all three patch columns are gone from users (found ${EARLY_COLS:-?})" $?
+
+EVIDENCE_COL=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='knowledge_events' AND column_name='evidence_class';" 2>/dev/null)
+[ "$EVIDENCE_COL" = "0" ]
+check "the knowledge evidence-class column is gone (found ${EVIDENCE_COL:-?})" $?
 
 # A second exact rollback of every file must be a safe no-op, not a further
 # unwind.

@@ -141,11 +141,12 @@ awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/applicati
 check "environment prepared with a generated key" $?
 
 # The baseline is INSTALLED before the patch is applied: this rehearsal is an
-# upgrade of a running site. This release adds exactly FIVE migrations above
+# upgrade of a running site. This release adds exactly EIGHT migrations above
 # the v6 baseline (return handoffs, permanent verification tokens, password
-# recovery challenges, optional profile columns, the presence column), and
-# "exactly five" can only be demonstrated against a database that is already
-# migrated to the baseline.
+# recovery challenges, optional profile columns, the presence column, the
+# knowledge evidence-class column, and the two data-only search-key
+# backfills), and "exactly eight" can only be demonstrated against a database
+# that is already migrated to the baseline.
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 check "baseline schema migrated before the patch is applied" $?
 
@@ -315,28 +316,33 @@ echo "== 7. caches rebuilt =="
     && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
 check "configuration, route and view caches rebuilt" $?
 
-echo "== 8. migrations (this patch adds exactly five) =="
+echo "== 8. migrations (this patch adds exactly eight) =="
 BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 DELTA=$(( AFTER - BEFORE ))
 
-# This release ships FIVE forward-only migrations above the v6 baseline.
-# Asserting the exact number matters in both directions: a smaller delta means
-# a table or column never arrived (and if it is the verification-token table,
-# nobody can finish a registration), while a larger one would mean something
-# unintended came with it.
-[ "$DELTA" = "5" ]
-check "exactly five migrations applied ($BEFORE -> $AFTER)" $?
+# This release ships EIGHT forward-only migrations above the v6 baseline:
+# the five v7 identity migrations plus the hardening program's three (the
+# knowledge evidence-class column and the two data-only search-key
+# backfills). Asserting the exact number matters in both directions: a
+# smaller delta means a table or column never arrived (and if it is the
+# verification-token table, nobody can finish a registration), while a
+# larger one would mean something unintended came with it.
+[ "$DELTA" = "8" ]
+check "exactly eight migrations applied ($BEFORE -> $AFTER)" $?
 
 # Then prove each named migration is the one that ran — a count alone cannot
-# tell five expected arrivals apart from four expected and one stranger.
+# tell eight expected arrivals apart from seven expected and one stranger.
 for migration in \
     2026_08_06_000100_telegram_return_handoffs \
     2026_08_09_000100_telegram_verification_tokens \
     2026_08_09_000200_password_recovery_challenges \
     2026_08_09_000200_profile_optional_details \
-    2026_08_09_000300_add_last_seen_to_users; do
+    2026_08_09_000300_add_last_seen_to_users \
+    2026_08_16_000100_add_evidence_class_to_knowledge_events \
+    2026_08_17_000100_backfill_knowledge_event_search_keys \
+    2026_08_17_000200_backfill_offer_search_keys; do
     ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
         | grep "$migration" | grep -q "Ran" )
     check "migration ran: $migration" $?

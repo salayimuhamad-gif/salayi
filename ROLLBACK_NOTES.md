@@ -14,7 +14,9 @@ is not a procedure.
 
 **This patch migrates.** It added three tables — `telegram_return_handoffs`,
 `telegram_verification_tokens` and `password_recovery_challenges` — plus three
-nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`). That
+nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`), one
+nullable column on `knowledge_events` (`evidence_class`), and two data-only
+search-key backfills whose reversal is a documented no-op. That
 matters for the ORDER below, and it is the one thing people get wrong:
 restoring a `mysqldump` does **not** drop a table created after that dump was
 taken. Restoring the dump alone leaves the tables behind and reverted code
@@ -82,10 +84,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
 ```
 
-Expect **five** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **eight** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -104,10 +106,24 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'   # expect five x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'   # expect eight x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
-# Newest first. Each is path-targeted and independently verifiable.
+# Newest first. Each is path-targeted and independently verifiable. The two
+# search-key backfills reverse as documented no-ops (the derived keys stay,
+# by design), so reversing them only un-marks the migration rows.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php \
+  --force
+
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php \
   --force
@@ -140,11 +156,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'   # expect five x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly five fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'   # expect eight x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly eight fewer
 ```
 
-The count must have dropped by **exactly five**. If it dropped by more, an
+The count must have dropped by **exactly eight**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
@@ -162,6 +178,10 @@ mysql -u <db_user> -p -N -B <db_name> -e "
     WHERE table_schema = DATABASE()
       AND table_name = 'users'
       AND column_name IN ('gender','date_of_birth','last_seen_at');
+  SELECT COUNT(*) FROM information_schema.columns
+    WHERE table_schema = DATABASE()
+      AND table_name = 'knowledge_events'
+      AND column_name = 'evidence_class';
 "
 ```
 
@@ -357,7 +377,7 @@ preserved in §7.
 ### Rollback success criteria
 
 ```text
-all five migrations reversed; all three tables and all three columns absent
+all eight migrations reversed; the three tables, the three users columns and the evidence-class column absent
 restored manifest hash equals the §1 hash; every entry resolves
 route:list shows NO abandon, return, recovery or invest routes
 schedule:list shows NONE of the three cleanups
