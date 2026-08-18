@@ -36,6 +36,11 @@ use Illuminate\Support\Facades\Log;
  * cache (provider, category, timestamp — never a request, never a body, never
  * a credential) so the Super Admin diagnostics surface can answer "why is the
  * AI off" without anyone reading server logs over SSH.
+ *
+ * The monthly spend LEDGER accumulates on every successful completion whether
+ * or not a limit is configured — the limit gates enforcement, never
+ * accounting — so `monthly_spent_usd` on the diagnostics surface tells the
+ * truth in the default (unlimited) configuration too.
  */
 final class AiGateway
 {
@@ -197,12 +202,16 @@ final class AiGateway
         }
     }
 
+    /**
+     * The ledger records spend regardless of whether a monthly limit is
+     * configured; the limit controls ENFORCEMENT, not accounting. Skipping
+     * the ledger without a limit — the shipped default — made the admin
+     * diagnostics report 0.000000 spent while every completion cost real
+     * money, which is exactly the invisible-runaway state the readout
+     * exists to prevent.
+     */
     private function recordSpend(string $costUsd): void
     {
-        if ($this->monthlyLimitUsd <= 0.0) {
-            return;
-        }
-
         $key = $this->spendKey();
         $spent = (float) Cache::get($key, 0.0);
 
