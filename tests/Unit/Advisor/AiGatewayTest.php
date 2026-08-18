@@ -243,4 +243,133 @@ final class AiGatewayTest extends TestCase
         $this->assertTrue($status['budget_exhausted']);
         $this->assertSame('9.00', $status['monthly_limit_usd']);
     }
+
+    /* ------------------------------ the ledger without a limit (Phase 20) */
+
+    /*
+     * The monthly ledger is ACCOUNTING; the limit is ENFORCEMENT. They used
+     * to be coupled: recordSpend() skipped the ledger entirely when no
+     * monthly limit was configured — the shipped default — so the admin
+     * diagnostics reported monthly_spent_usd 0.000000 while every completion
+     * cost real money. These tests pin the decoupled contract: spend is
+     * recorded regardless, and the gate still only refuses when a limit
+     * exists.
+     */
+
+    public function test_spend_is_recorded_with_no_monthly_limit_configured(): void
+    {
+        $gateway = new AiGateway([new FakeAiProvider('openai', costUsd: '1.250000')]);
+
+        $gateway->complete($this->request());
+
+        $this->assertSame(1.25, $gateway->monthlySpent());
+        $this->assertSame('1.250000', $gateway->status()['monthly_spent_usd']);
+    }
+
+    public function test_no_limit_multi_call_spend_accumulates_exactly(): void
+    {
+        $gateway = new AiGateway([new FakeAiProvider('openai', costUsd: '1.250000')]);
+
+        $gateway->complete($this->request());
+        $gateway->complete($this->request());
+        $gateway->complete($this->request());
+
+        $this->assertSame(3.75, $gateway->monthlySpent());
+        $this->assertSame('3.750000', $gateway->status()['monthly_spent_usd']);
+    }
+
+    public function test_no_limit_never_refuses_and_budget_stays_unexhausted(): void
+    {
+        // Even a ledger far beyond any plausible ceiling refuses nothing
+        // when no limit is configured: the ledger informs, the limit gates.
+        Cache::put('ai:spend:'.date('Y-m'), 999999.0, now()->addDay());
+
+        $provider = new FakeAiProvider('openai');
+        $gateway = new AiGateway([$provider]);
+
+        $result = $gateway->complete($this->request());
+
+        $this->assertSame('ok from openai', $result['text']);
+        $this->assertSame(1, $provider->calls);
+        $this->assertFalse($gateway->status()['budget_exhausted']);
+    }
+
+    public function test_configured_limit_enforcement_is_unchanged_by_the_ledger_fix(): void
+    {
+        $gateway = new AiGateway([new FakeAiProvider('openai', costUsd: '2.000000')], monthlyLimitUsd: 5.0);
+
+        $gateway->complete($this->request());
+        $this->assertSame(2.0, $gateway->monthlySpent());
+        $gateway->complete($this->request());
+        $this->assertSame(4.0, $gateway->monthlySpent());
+
+        // 4.00 of 5.00: still below, so the third call proceeds and lands
+        // the ledger on 6.00 — the ceiling is checked BEFORE, not after.
+        $gateway->complete($this->request());
+        $this->assertSame(6.0, $gateway->monthlySpent());
+
+        try {
+            $gateway->complete($this->request());
+            $this->fail('over-budget call must be refused');
+        } catch (AiProviderException $e) {
+            $this->assertSame(AiProviderException::CATEGORY_BUDGET_EXHAUSTED, $e->category());
+        }
+
+        // The refused call recorded nothing.
+        $this->assertSame(6.0, $gateway->monthlySpent());
+    }
+
+    public function test_a_failed_call_records_no_spend(): void
+    {
+        $gateway = new AiGateway([new FakeAiProvider('openai', AiProviderException::failed('openai', 500))]);
+
+        try {
+            $gateway->complete($this->request());
+        } catch (AiProviderException) {
+        }
+
+        $this->assertSame(0.0, $gateway->monthlySpent());
+    }
+
+    public function test_a_rate_limited_call_records_no_spend(): void
+    {
+        $gateway = new AiGateway([new FakeAiProvider('openai', AiProviderException::rateLimited('openai'))]);
+
+        try {
+            $gateway->complete($this->request());
+        } catch (AiProviderException) {
+        }
+
+        $this->assertSame(0.0, $gateway->monthlySpent());
+    }
+
+    public function test_a_fallback_success_is_counted_exactly_once(): void
+    {
+        $primary = new FakeAiProvider('openai', AiProviderException::rateLimited('openai'), costUsd: '9.000000');
+        $fallback = new FakeAiProvider('gemini', costUsd: '0.250000');
+
+        $gateway = new AiGateway([$primary, $fallback]);
+        $gateway->complete($this->request());
+
+        // Only the call that succeeded is in the ledger: the failed primary
+        // contributed nothing, and the fallback's cost appears once.
+        $this->assertSame(0.25, $gateway->monthlySpent());
+    }
+
+    public function test_a_zero_cost_success_keeps_the_ledger_exact(): void
+    {
+        $free = new FakeAiProvider('openai', costUsd: '0.000000');
+        $gateway = new AiGateway([$free]);
+
+        $gateway->complete($this->request());
+        $gateway->complete($this->request());
+        $this->assertSame(0.0, $gateway->monthlySpent());
+
+        // A later priced call lands on exactly its own cost — the zero-cost
+        // calls fabricated nothing.
+        Cache::flush();
+        $gateway = new AiGateway([new FakeAiProvider('openai', costUsd: '0.250000')]);
+        $gateway->complete($this->request());
+        $this->assertSame(0.25, $gateway->monthlySpent());
+    }
 }
