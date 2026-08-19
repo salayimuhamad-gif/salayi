@@ -406,7 +406,7 @@ storage caches, logs, sessions, uploads, databases
 ```bash
 composer install
 npm ci
-php artisan migrate      # includes the five Identity migrations new since the baseline
+php artisan migrate      # includes the eight migrations new since the baseline
 vendor/bin/phpunit
 vendor/bin/phpunit -c phpunit.mariadb.xml            # the same suite, real MariaDB
 vendor/bin/phpstan analyse --memory-limit=1G
@@ -420,11 +420,12 @@ committed secret. Supply `APP_KEY` and any `DB_*` values through the
 environment instead. Test totals are volatile numbers and live in the external
 evidence package, not here.
 
-This release adds FIVE forward-only migrations above the baseline: the
+This release adds EIGHT forward-only migrations above the baseline: the
 single-use Telegram return handoff, the permanent verification tokens, the
-fifteen-minute password-recovery challenges, two optional profile columns and
-the presence column. All are required; DEPLOYMENT_NOTES.md names each file and
-what breaks without it.
+fifteen-minute password-recovery challenges, two optional profile columns,
+the presence column, the knowledge evidence-class column, and two data-only
+search-key backfills. All are required; DEPLOYMENT_NOTES.md names each file
+and what breaks without it.
 
 The rehearsal harness and release tooling are in `scripts/release/`. Release
 reports are delivered externally with the evidence package, not inside this

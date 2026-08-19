@@ -10,7 +10,7 @@ the investment map surface.
 > rehearsal output and its check counts ship in the external evidence package,
 > which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships five forward-only migrations:
+**This patch DOES change the schema.** It ships eight forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -18,6 +18,9 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification
 app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php
 app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php
+app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php
+app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php
+app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
 ```
 
 1. `telegram_return_handoffs` backs the secure Telegram return handoff.
@@ -33,6 +36,16 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_user
 5. `users.last_seen_at` is the nullable presence column behind the admin
    activity view; it is written at most once per interval by throttled
    middleware.
+6. `knowledge_events.evidence_class` is the nullable classification column
+   behind the advisor's grounded market answers; rows without it read as
+   `admin_observation`, so the advisor states them only as something the
+   team recorded, never as a verified fact.
+7. `backfill_knowledge_event_search_keys` is data-only: it derives the
+   Sorani search key for existing knowledge events so admin search finds
+   rows created before the key had a writer. Reversing it is a documented
+   no-op — blanking the keys would only re-break the search.
+8. `backfill_offer_search_keys` is the same data-only repair for existing
+   marketplace offers, with the same no-op reversal.
 
 Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
@@ -109,11 +122,11 @@ cd ~/domains/myhawler.com/application
 ```
 
 Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-five.
+eight.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
 ```
 
 Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
@@ -190,18 +203,18 @@ Then prove exactly what you expect:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
 ```
 
-Expect **five** lines, each reading **`Ran`** — all were `Pending` or absent in
+Expect **eight** lines, each reading **`Ran`** — all were `Pending` or absent in
 step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 5`. Both directions matter: a smaller increase means
-one of the five never arrived — and if it is `telegram_verification_tokens`,
+Expect exactly `BEFORE + 8`. Both directions matter: a smaller increase means
+one of the eight never arrived — and if it is `telegram_verification_tokens`,
 nobody can complete a registration — while a larger one means something
 unintended came along and you should stop and look at it.
 
@@ -299,8 +312,8 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                     §1
 all seven backups taken and readable          §2
 deletions applied and verified absent         §6
-all five migrations moved Pending -> Ran      §8
-migration count increased by exactly five     §8
+all eight migrations moved Pending -> Ran     §8
+migration count increased by exactly eight    §8
 verification table present, NO expires_at     §8
 recovery table + presence column present      §8
 public/build manifest resolves                §9
@@ -382,8 +395,8 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than five -> a table or column is missing; roll back
-migration count up by more than five  -> stop and investigate before continuing
+migration count up by fewer than eight -> a table or column is missing; roll back
+migration count up by more than eight  -> stop and investigate before continuing
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back
