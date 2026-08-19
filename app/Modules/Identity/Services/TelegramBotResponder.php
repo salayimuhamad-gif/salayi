@@ -176,6 +176,24 @@ final class TelegramBotResponder
     }
 
     /**
+     * This ACCOUNT is already verified — it finished through the other door
+     * (the WhatsApp code) while this link sat in the chat.
+     *
+     * Distinct from reportAlreadyConnected, which is about a TELEGRAM
+     * identity being attached elsewhere. Here nothing is attached and nothing
+     * is wrong: the person's account is simply done, and telling them so —
+     * with a plain link back to the site, same as the verified message —
+     * beats a generic failure that sends a healthy account to support.
+     */
+    public function reportAccountAlreadyVerified(int|string $chatId, string $locale = 'ckb'): bool
+    {
+        return $this->send('sendMessage', $this->withReturnButton([
+            'chat_id' => $chatId,
+            'text' => __('identity.telegram.bot_account_already_verified', [], $locale),
+        ], $locale, 'home'));
+    }
+
+    /**
      * @param  array<string, mixed>  $payload
      */
     /**

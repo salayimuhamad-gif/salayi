@@ -213,9 +213,9 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         $this->assertFalse((bool) $user->phone_verified, 'a typed number is never verified by registration');
     }
 
-    public function test_registration_redirects_to_the_verification_page(): void
+    public function test_registration_redirects_to_the_verification_choice(): void
     {
-        $this->assertStringContainsString('/account/telegram/link', $this->register());
+        $this->assertStringContainsString('/account/verify', $this->register());
     }
 
     public function test_registration_without_a_password_is_refused(): void
@@ -677,7 +677,9 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         ]);
 
         $this->assertAuthenticatedAs($user->fresh());
-        $this->assertStringContainsString('/account/telegram/link',
+        // Unverified sign-ins land on the verification choice now, where the
+        // Telegram door below is one click away.
+        $this->assertStringContainsString('/account/verify',
             (string) $response->headers->get('Location'));
 
         // And the SAME permanent link is waiting there — §17.
@@ -686,6 +688,55 @@ final class SimplifiedTelegramVerificationTest extends TestCase
             ->assertOk()
             ->assertInertia(fn ($page) => $page
                 ->where('deep_link', 'https://t.me/MyHawlerBot?start='.$this->liveToken($user)));
+    }
+
+    public function test_signing_in_toward_the_telegram_page_resumes_it_with_the_same_token(): void
+    {
+        /*
+         * The INTENDED-URL half of the sign-in contract, pinned beside the
+         * default above.
+         *
+         * The test above proves a sign-in with no stored destination lands on
+         * the verification CHOICE. This one proves the other case: a person
+         * who had already chosen Telegram, lost their session, and headed for
+         * the Telegram linking page is bounced to /login by the auth
+         * middleware — which stores that page as the session's intended URL —
+         * and `redirect()->intended(destinationFor(...))` then lands them
+         * back EXACTLY there. Not on the choice page: they already chose, and
+         * a token (possibly open in their Telegram chat) is waiting.
+         *
+         * The token half is the security-relevant part: resuming must show
+         * the SAME permanent token, never silently mint a replacement that
+         * would kill the link already sitting in the person's chat.
+         */
+        $this->register(phone: '07505551111');
+        $user = User::query()->firstOrFail();
+        $before = $this->liveToken($user);
+
+        $this->flushSession();
+        Auth::logout();
+
+        // The refused guest visit stores the intended URL.
+        $this->get('/account/telegram/link')->assertRedirect();
+
+        $response = $this->post('/login', [
+            'login' => '07505551111',
+            'password' => self::PASSWORD,
+        ]);
+
+        $this->assertAuthenticatedAs($user->fresh());
+        $this->assertStringContainsString('/account/telegram/link',
+            (string) $response->headers->get('Location'),
+            'the intended URL did not win over the sign-in default');
+
+        // Resumed, never replaced: the page renders the SAME deep link.
+        $this->continueInBrowser();
+        $this->get('/account/telegram/link')
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('deep_link', 'https://t.me/MyHawlerBot?start='.$before));
+        $this->assertSame($before, $this->liveToken($user->fresh()),
+            'signing in again replaced the verification token');
     }
 
     public function test_a_wrong_password_is_refused_with_one_generic_message(): void

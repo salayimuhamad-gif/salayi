@@ -43,6 +43,9 @@ final class PruneUnlinkedAccounts extends Command
         User::query()
             ->whereNull('telegram_verified_at')
             ->whereNull('telegram_id')
+            // Verified over WhatsApp is verified, full stop: those accounts
+            // are real and must never enter the reclamation sweep.
+            ->whereNull('whatsapp_verified_at')
             ->where('created_at', '<', now()->subHours($hours))
             ->orderBy('id')
             ->chunkById(200, function ($users) use ($policy, $dryRun, $hours, &$reclaimed, &$kept): void {

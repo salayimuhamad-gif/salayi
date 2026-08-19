@@ -61,6 +61,7 @@ use Throwable;
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
  * @property Carbon|null $telegram_verified_at
+ * @property Carbon|null $whatsapp_verified_at
  * @property Carbon|null $onboarding_completed_at
  * @property string|null $display_name
  * @property string|null $profile_photo_path
@@ -116,6 +117,7 @@ final class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'mfa_confirmed_at' => 'datetime',
             'telegram_verified_at' => 'datetime',
+            'whatsapp_verified_at' => 'datetime',
             'onboarding_completed_at' => 'datetime',
             /*
              * A DATE, not a datetime: a birthday has no time of day, and
@@ -225,6 +227,51 @@ final class User extends Authenticatable
     public function mayAuthenticate(): bool
     {
         return $this->is_active && $this->suspended_at === null;
+    }
+
+    /**
+     * THE account-verified rule, in one place.
+     *
+     * Registration offers two verification methods — Telegram Start and a
+     * WhatsApp one-time code — and both verify the SAME account, so every
+     * gate, redirect and sweep that used to read `telegram_verified_at`
+     * alone asks this ONE method instead. Each method keeps its own
+     * timestamp (distinct claims, distinct columns); this is merely the OR
+     * across them, stated once so the next route cannot forget one side.
+     */
+    public function hasVerifiedAccount(): bool
+    {
+        return $this->telegram_verified_at !== null
+            || $this->whatsapp_verified_at !== null;
+    }
+
+    /**
+     * How this account BECAME verified: 'telegram', 'whatsapp', or null while
+     * unverified.
+     *
+     * Derived from the timestamps rather than stored, so it can never drift
+     * from the facts. An account that verified one way and later gained the
+     * other channel (a WhatsApp-verified account linking Telegram through the
+     * explicit account-link flow) keeps reporting the method that verified
+     * it: the EARLIER stamp wins.
+     */
+    public function verificationMethod(): ?string
+    {
+        if ($this->telegram_verified_at === null && $this->whatsapp_verified_at === null) {
+            return null;
+        }
+
+        if ($this->telegram_verified_at === null) {
+            return 'whatsapp';
+        }
+
+        if ($this->whatsapp_verified_at === null) {
+            return 'telegram';
+        }
+
+        return $this->telegram_verified_at->lessThanOrEqualTo($this->whatsapp_verified_at)
+            ? 'telegram'
+            : 'whatsapp';
     }
 
     public function hasPermission(string $permission): bool

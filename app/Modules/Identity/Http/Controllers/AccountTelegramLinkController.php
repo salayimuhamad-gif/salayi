@@ -74,9 +74,15 @@ final class AccountTelegramLinkController extends Controller
     {
         $user = $request->user();
 
-        // Already linked: there is nothing to do here, and no second link
-        // to create.
-        if ($user->telegram_verified_at !== null) {
+        /*
+         * Already verified — through EITHER door: there is nothing to do
+         * here, and no token to mint. The WhatsApp half of this check is
+         * load-bearing: rendering this page for a WhatsApp-verified account
+         * would mint a live Telegram token for an account that no longer
+         * needs one, and a live token is exactly the second verification
+         * event the dual-method design must never allow.
+         */
+        if ($user->hasVerifiedAccount()) {
             /*
              * The canonical resolver, not a hardcoded profile route: a person
              * who has linked but not finished onboarding must land on
@@ -130,7 +136,9 @@ final class AccountTelegramLinkController extends Controller
     {
         $user = $request->user();
 
-        if ($user->telegram_verified_at !== null) {
+        // Either door, same reasoning as show(): a verified account gets no
+        // fresh token.
+        if ($user->hasVerifiedAccount()) {
             /*
              * The canonical resolver, not a hardcoded profile route: a person
              * who has linked but not finished onboarding must land on
@@ -172,7 +180,9 @@ final class AccountTelegramLinkController extends Controller
              * this session.
              */
             $fresh = $user->fresh();
-            $linked = $fresh->telegram_verified_at !== null;
+            // Either door: a WhatsApp verification completed in another tab
+            // moves this page on exactly as a Start would.
+            $linked = $fresh->hasVerifiedAccount();
 
             if ($linked) {
                 /*

@@ -114,6 +114,13 @@ final class UserReferenceContract
          * by the FK cascade.
          */
         ['telegram_verification_tokens', 'user_id', 'verification material, not content; a LIVE one blocks the sweep through the retention rule instead'],
+        /*
+         * Same family as its Telegram sibling above, with a shorter life: a
+         * code dies in ten minutes on its own clock. The sweep is stopped by
+         * the ACCOUNT's whatsapp_verified_at once one is redeemed, never by
+         * the spent row.
+         */
+        ['whatsapp_otps', 'user_id', 'ten-minute verification codes, never content; cascade-deleted'],
         ['translations', 'reviewed_by', 'moderation metadata about someone ELSE\'s content; the reviewer owns nothing here'],
     ];
 

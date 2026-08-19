@@ -6,6 +6,7 @@ namespace App\Modules\Identity\Services;
 
 use App\Modules\Identity\Models\TelegramVerificationToken;
 use App\Modules\Identity\Models\User;
+use App\Modules\Identity\Models\WhatsAppOtp;
 use App\Modules\Operations\Services\AuditLogger;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\Crypt;
@@ -249,6 +250,21 @@ final class TelegramVerificationService
                 $locale = $this->locale($token->locale);
 
                 if ($token->revoked_at !== null) {
+                    /*
+                     * One refinement for the dual-method model: a token that
+                     * was retired BECAUSE the account verified through
+                     * WhatsApp is not a failure story. The person pressing
+                     * the old link in their chat is told the truth — the
+                     * account is fine, nothing further is needed — instead
+                     * of a generic refusal that sends them to support. Only
+                     * the reply differs; the token stays exactly as dead.
+                     */
+                    $owner = User::query()->find($token->user_id);
+
+                    if ($owner !== null && $owner->hasVerifiedAccount()) {
+                        return ['ok' => false, 'reason' => 'already_verified', 'locale' => $locale];
+                    }
+
                     $this->audit->security('identity.verification_refused', [
                         'token_id' => $token->id,
                         'via' => 'revoked',
@@ -320,6 +336,11 @@ final class TelegramVerificationService
                         if ($user->telegram_verified_at === null) {
                             $user->forceFill(['telegram_verified_at' => now()])->save();
 
+                            // The account just became verified; any WhatsApp
+                            // code still in flight is for a question that no
+                            // longer exists.
+                            WhatsAppOtp::retireAllFor((int) $user->id);
+
                             $this->audit->record('identity.telegram_verified', $user, [], [
                                 'token_id' => $token->id,
                                 'via' => 'repaired_missing_timestamp',
@@ -340,6 +361,31 @@ final class TelegramVerificationService
                     ]);
 
                     return ['ok' => false, 'reason' => 'conflict', 'locale' => $locale];
+                }
+
+                if ($user->whatsapp_verified_at !== null) {
+                    /*
+                     * The account verified through the OTHER door while this
+                     * link sat in the chat — the race the user-row lock
+                     * serialises, caught here for the token the WhatsApp win
+                     * had not yet revoked. The token's one job (verifying an
+                     * unverified account) no longer exists, and attaching a
+                     * Telegram identity now would be a SECOND verification
+                     * event nobody asked for. The token is retired, nothing
+                     * about the account is written, and the reply says
+                     * "already verified". Linking Telegram to this account
+                     * later remains possible through the explicit,
+                     * confirmed account-link flow — never as a side effect
+                     * of an old registration link being pressed.
+                     */
+                    $token->forceFill(['revoked_at' => now()])->save();
+
+                    $this->audit->security('identity.verification_refused', [
+                        'token_id' => $token->id,
+                        'via' => 'account_already_verified',
+                    ]);
+
+                    return ['ok' => false, 'reason' => 'already_verified', 'locale' => $locale];
                 }
 
                 $takenByAnother = User::query()
@@ -364,6 +410,15 @@ final class TelegramVerificationService
                     'telegram_username' => $this->shortText($from['username'] ?? null, 64),
                     'telegram_verified_at' => now(),
                 ])->save();
+
+                /*
+                 * Telegram won: the road not taken is closed. Any WhatsApp
+                 * code still in flight is retired under this same user lock,
+                 * so the pending OTHER method can never mint a second
+                 * verification event — the mirror of what the WhatsApp
+                 * service does to this flow's tokens when IT wins.
+                 */
+                WhatsAppOtp::retireAllFor((int) $user->id);
 
                 $this->audit->record('identity.telegram_verified', $user, [], [
                     'token_id' => $token->id,

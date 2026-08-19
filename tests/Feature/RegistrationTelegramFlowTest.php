@@ -276,8 +276,9 @@ final class RegistrationTelegramFlowTest extends TestCase
         $this->assertTrue(Auth::check(), 'the new account was not authenticated');
         $this->assertSame($user->id, Auth::id());
 
-        // Requirement 3: straight to the linking page, not to a gated route.
-        $this->assertStringContainsString('telegram/link', $location);
+        // Requirement 3: straight to the verification choice — where both
+        // doors (Telegram and WhatsApp) are offered — not to a gated route.
+        $this->assertStringContainsString('/account/verify', $location);
     }
 
     public function test_the_session_is_regenerated_so_a_pre_registration_id_cannot_become_authenticated(): void
@@ -290,7 +291,7 @@ final class RegistrationTelegramFlowTest extends TestCase
         $this->assertNotSame($before, session()->getId(), 'the session id survived registration');
     }
 
-    public function test_registration_lands_on_the_linking_page_in_the_chosen_language(): void
+    public function test_registration_lands_on_the_verification_choice_in_the_chosen_language(): void
     {
         foreach (['ckb' => '', 'ar' => '/ar', 'en' => '/en'] as $locale => $prefix) {
             Auth::logout();
@@ -299,7 +300,7 @@ final class RegistrationTelegramFlowTest extends TestCase
 
             $location = $this->register($locale, '0750'.random_int(1000000, 9999999));
 
-            $this->assertStringContainsString($prefix.'/account/telegram/link', $location,
+            $this->assertStringContainsString($prefix.'/account/verify', $location,
                 "wrong locale destination for {$locale}");
         }
     }
@@ -329,7 +330,9 @@ final class RegistrationTelegramFlowTest extends TestCase
             $response = $this->get($path);
 
             $response->assertRedirect();
-            $this->assertStringContainsString('telegram/link', (string) $response->headers->get('Location'),
+            // The gate sends unverified sessions to the verification CHOICE,
+            // where both doors are offered.
+            $this->assertStringContainsString('/account/verify', (string) $response->headers->get('Location'),
                 "{$path} did not refuse an unlinked account");
         }
     }
