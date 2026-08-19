@@ -31,6 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 RELEASE = ROOT / 'scripts' / 'release'
 sys.path.insert(0, str(RELEASE))
 
+from build_full_source import REQUIRED as BUILDER_REQUIRED  # noqa: E402
 from release_gates import (  # noqa: E402
     ATTESTATION_ONLY_LABELS, RELEASE_EVIDENCE_LABELS,
 )
@@ -82,6 +83,14 @@ def build_fixture_source(root: Path) -> None:
             json.dumps({'resources/js/app.ts': {'file': 'assets/app.js'}}) + '\n',
         'public/build/assets/app.js': 'console.log(1)\n',
     }
+
+    # The real builder refuses to package a tree missing any of its REQUIRED
+    # files. Satisfy that contract FROM the contract, so a file added to
+    # REQUIRED can never again leave this fixture behind — final release
+    # investigation found the fixture six files short of the list, which made
+    # this test fail before it could prove anything about orchestration.
+    for rel in BUILDER_REQUIRED:
+        required.setdefault(rel, '<?php\n' if rel.endswith('.php') else 'fixture\n')
 
     for rel, body in required.items():
         target = root / rel

@@ -12,11 +12,12 @@ is not a procedure.
 > counts ship in the external evidence package, which is the authoritative
 > record for this document.
 
-**This patch migrates.** It added three tables — `telegram_return_handoffs`,
-`telegram_verification_tokens` and `password_recovery_challenges` — plus three
-nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`), one
-nullable column on `knowledge_events` (`evidence_class`), and two data-only
-search-key backfills whose reversal is a documented no-op. That
+**This patch migrates.** It added four tables — `telegram_return_handoffs`,
+`telegram_verification_tokens`, `password_recovery_challenges` and
+`whatsapp_otps` — plus four nullable columns on `users` (`gender`,
+`date_of_birth`, `last_seen_at`, `whatsapp_verified_at`), one nullable column
+on `knowledge_events` (`evidence_class`), and two data-only search-key
+backfills whose reversal is a documented no-op. That
 matters for the ORDER below, and it is the one thing people get wrong:
 restoring a `mysqldump` does **not** drop a table created after that dump was
 taken. Restoring the dump alone leaves the tables behind and reverted code
@@ -38,7 +39,10 @@ drops cleanly.
 > password-recovery challenge dies with its table — the person simply requests
 > a reset again under whatever flow the reverted build offers — and the
 > presence timestamps the patched period collected are dropped with their
-> column.
+> column. The WhatsApp door goes with the patch too: any in-flight one-time
+> code dies with the `whatsapp_otps` table, and an account that verified
+> through WhatsApp alone loses its verified status on the reverted build —
+> the reverted code recognises only `telegram_verified_at`.
 
 Written to be followed by someone who was not present for the deployment.
 
@@ -65,12 +69,23 @@ there is nothing to roll back — investigate `~/patch-v7` instead.
 
 ```bash
 cd ~/domains/myhawler.com/application
-/opt/alt/php83/usr/bin/php artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("deleted_at")->count();'
+/opt/alt/php83/usr/bin/php artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("whatsapp_verified_at")->whereNull("deleted_at")->count();'
 ```
 
-Write the number down. These are account-first registrations that never linked.
-§11 decides what happens to them, and after a database restore you cannot count
-them any more.
+Write the number down. Both verification doors exist in the patched schema, so
+"never verified" means BOTH stamps are null. These are account-first
+registrations that never verified; §11 decides what happens to them, and after
+a database restore you cannot count them any more.
+
+Count the WhatsApp-only group separately — the people this rollback strips a
+verified status from:
+
+```bash
+/opt/alt/php83/usr/bin/php artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNotNull("whatsapp_verified_at")->count();'
+```
+
+They stay verified until §5 runs; afterwards the reverted build treats them as
+unverified, and support needs this list more than any other.
 
 ## 3. Maintenance mode FIRST
 
@@ -84,10 +99,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
 ```
 
-Expect **eight** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **nine** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -106,12 +121,16 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'   # expect eight x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'   # expect nine x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
 # Newest first. Each is path-targeted and independently verifiable. The two
 # search-key backfills reverse as documented no-ops (the derived keys stay,
 # by design), so reversing them only un-marks the migration rows.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php \
+  --force
+
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php \
   --force
@@ -156,11 +175,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'   # expect eight x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly eight fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'   # expect nine x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly nine fewer
 ```
 
-The count must have dropped by **exactly eight**. If it dropped by more, an
+The count must have dropped by **exactly nine**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
@@ -173,11 +192,11 @@ count stays where it is.
 mysql -u <db_user> -p -N -B <db_name> -e "
   SELECT COUNT(*) FROM information_schema.tables
     WHERE table_schema = DATABASE()
-      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');
+      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps');
   SELECT COUNT(*) FROM information_schema.columns
     WHERE table_schema = DATABASE()
       AND table_name = 'users'
-      AND column_name IN ('gender','date_of_birth','last_seen_at');
+      AND column_name IN ('gender','date_of_birth','last_seen_at','whatsapp_verified_at');
   SELECT COUNT(*) FROM information_schema.columns
     WHERE table_schema = DATABASE()
       AND table_name = 'knowledge_events'
@@ -309,7 +328,9 @@ Two groups, and the second is new to this patch:
 - accounts registered **during** the patched period: they have a password, but
   their permanent verification link died with the table in §5, and the reverted
   `/login` only accepts an **email** — which these accounts do not have. So they
-  are unreachable too, for a different reason.
+  are unreachable too, for a different reason. Accounts that verified through
+  WhatsApp alone land in this group as well once §5 drops their column: to the
+  reverted build they are indistinguishable from accounts that never verified.
 
 Count both, and count the second group separately, because they are the people
 most likely to contact support:
@@ -377,7 +398,7 @@ preserved in §7.
 ### Rollback success criteria
 
 ```text
-all eight migrations reversed; the three tables, the three users columns and the evidence-class column absent
+all nine migrations reversed; the four tables, the four users columns and the evidence-class column absent
 restored manifest hash equals the §1 hash; every entry resolves
 route:list shows NO abandon, return, recovery or invest routes
 schedule:list shows NONE of the three cleanups

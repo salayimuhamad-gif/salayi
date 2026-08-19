@@ -153,7 +153,11 @@ REQUIRED = (
     '2026_08_09_000200_profile_optional_details.php',
     'app/Modules/Identity/Database/Migrations/'
     '2026_08_09_000300_add_last_seen_to_users.php',
+    'app/Modules/Identity/Database/Migrations/'
+    '2026_08_19_000100_whatsapp_account_verification.php',
+    'app/Modules/Identity/Services/WhatsAppVerificationService.php',
     'tests/Feature/RegistrationTelegramFlowTest.php',
+    'tests/Feature/WhatsAppVerificationTest.php',
     'tests/Browser/account-first-registration.spec.ts',
     'scripts/support/SourceIdentity.php',
 )
@@ -406,7 +410,7 @@ storage caches, logs, sessions, uploads, databases
 ```bash
 composer install
 npm ci
-php artisan migrate      # includes the eight migrations new since the baseline
+php artisan migrate      # includes the nine migrations new since the baseline
 vendor/bin/phpunit
 vendor/bin/phpunit -c phpunit.mariadb.xml            # the same suite, real MariaDB
 vendor/bin/phpstan analyse --memory-limit=1G
@@ -420,11 +424,12 @@ committed secret. Supply `APP_KEY` and any `DB_*` values through the
 environment instead. Test totals are volatile numbers and live in the external
 evidence package, not here.
 
-This release adds EIGHT forward-only migrations above the baseline: the
+This release adds NINE forward-only migrations above the baseline: the
 single-use Telegram return handoff, the permanent verification tokens, the
 fifteen-minute password-recovery challenges, two optional profile columns,
-the presence column, the knowledge evidence-class column, and two data-only
-search-key backfills. All are required; DEPLOYMENT_NOTES.md names each file
+the presence column, the knowledge evidence-class column, two data-only
+search-key backfills, and the WhatsApp verification table with its
+verified-at column. All are required; DEPLOYMENT_NOTES.md names each file
 and what breaks without it.
 
 The rehearsal harness and release tooling are in `scripts/release/`. Release

@@ -141,12 +141,13 @@ awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/applicati
 check "environment prepared with a generated key" $?
 
 # The baseline is INSTALLED before the patch is applied: this rehearsal is an
-# upgrade of a running site. This release adds exactly EIGHT migrations above
+# upgrade of a running site. This release adds exactly NINE migrations above
 # the v6 baseline (return handoffs, permanent verification tokens, password
 # recovery challenges, optional profile columns, the presence column, the
-# knowledge evidence-class column, and the two data-only search-key
-# backfills), and "exactly eight" can only be demonstrated against a database
-# that is already migrated to the baseline.
+# knowledge evidence-class column, the two data-only search-key backfills,
+# and the WhatsApp verification table with its users column), and "exactly
+# nine" can only be demonstrated against a database that is already migrated
+# to the baseline.
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 check "baseline schema migrated before the patch is applied" $?
 
@@ -316,24 +317,25 @@ echo "== 7. caches rebuilt =="
     && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
 check "configuration, route and view caches rebuilt" $?
 
-echo "== 8. migrations (this patch adds exactly eight) =="
+echo "== 8. migrations (this patch adds exactly nine) =="
 BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 DELTA=$(( AFTER - BEFORE ))
 
-# This release ships EIGHT forward-only migrations above the v6 baseline:
-# the five v7 identity migrations plus the hardening program's three (the
+# This release ships NINE forward-only migrations above the v6 baseline:
+# the five v7 identity migrations, the hardening program's three (the
 # knowledge evidence-class column and the two data-only search-key
-# backfills). Asserting the exact number matters in both directions: a
+# backfills), and the dual-verification WhatsApp table with its users
+# column. Asserting the exact number matters in both directions: a
 # smaller delta means a table or column never arrived (and if it is the
 # verification-token table, nobody can finish a registration), while a
 # larger one would mean something unintended came with it.
-[ "$DELTA" = "8" ]
-check "exactly eight migrations applied ($BEFORE -> $AFTER)" $?
+[ "$DELTA" = "9" ]
+check "exactly nine migrations applied ($BEFORE -> $AFTER)" $?
 
 # Then prove each named migration is the one that ran — a count alone cannot
-# tell eight expected arrivals apart from seven expected and one stranger.
+# tell nine expected arrivals apart from eight expected and one stranger.
 for migration in \
     2026_08_06_000100_telegram_return_handoffs \
     2026_08_09_000100_telegram_verification_tokens \
@@ -342,7 +344,8 @@ for migration in \
     2026_08_09_000300_add_last_seen_to_users \
     2026_08_16_000100_add_evidence_class_to_knowledge_events \
     2026_08_17_000100_backfill_knowledge_event_search_keys \
-    2026_08_17_000200_backfill_offer_search_keys; do
+    2026_08_17_000200_backfill_offer_search_keys \
+    2026_08_19_000100_whatsapp_account_verification; do
     ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
         | grep "$migration" | grep -q "Ran" )
     check "migration ran: $migration" $?
@@ -410,14 +413,18 @@ LOC=$(curl -sS -b "$CJ" -c "$CJ" -o /dev/null -w '%{redirect_url}' -X POST "http
     -d "password=$REHEARSAL_PASSWORD" -d "password_confirmation=$REHEARSAL_PASSWORD" \
     -d "locale=ar" -d "accept_terms=1" -d "_token=$TOKEN")
 
-printf '%s' "$LOC" | grep -q "/ar/account/telegram/link"; 
-check "registration creates an account and redirects to the Arabic linking page" $?
+# Registration is CHOICE-FIRST since the dual-verification release: the form
+# creates the account and lands on the verification choice, where the person
+# picks Telegram or WhatsApp. Landing directly on the Telegram linking page
+# is the pre-choice contract and must FAIL here.
+printf '%s' "$LOC" | grep -q "/ar/account/verify$"
+check "registration creates an account and redirects to the Arabic verification choice" $?
 
 BODY=$(curl -sS -b "$CJ" -c "$CJ" "$LOC")
 printf '%s' "$BODY" > "$EV/rehearsal-registration-body.html"
 
 grep -q 'dir="rtl"' "$EV/rehearsal-registration-body.html"
-check "the linking page is served right-to-left for Arabic" $?
+check "the choice page is served right-to-left for Arabic" $?
 
 # The flash lives inside Inertia's data-page attribute, HTML-escaped and then
 # JSON-escaped, so a literal grep cannot see it. Decode both layers and
@@ -431,9 +438,61 @@ exit($status === "تم إنشاء حسابك بنجاح" ? 0 : 1);
 ' "$EV/rehearsal-registration-body.html"
 check "the localized account-created message reached the page" $?
 
+# Decode the same attribute to prove WHAT the page offers. This rehearsal
+# never carries Bird credentials — deliberately, exactly like a host where the
+# operator has not configured WhatsApp — so the deployed contract is: the
+# verification-choice component, Telegram offered, WhatsApp marked unavailable
+# rather than erroring. Availability is configuration, not code.
+"$PHP_BIN" -r '
+$html = file_get_contents($argv[1]);
+if (!preg_match("/data-page=\"([^\"]+)\"/", $html, $m)) { exit(1); }
+$page = json_decode(html_entity_decode($m[1], ENT_QUOTES, "UTF-8"), true);
+exit(($page["component"] ?? "") === "Account/VerifyChoice" ? 0 : 1);
+' "$EV/rehearsal-registration-body.html"
+check "the landing is the verification-choice component" $?
+
+"$PHP_BIN" -r '
+$html = file_get_contents($argv[1]);
+if (!preg_match("/data-page=\"([^\"]+)\"/", $html, $m)) { exit(1); }
+$page = json_decode(html_entity_decode($m[1], ENT_QUOTES, "UTF-8"), true);
+exit(($page["props"]["telegram_available"] ?? false) === true ? 0 : 1);
+' "$EV/rehearsal-registration-body.html"
+check "the Telegram door is offered on the choice page" $?
+
+"$PHP_BIN" -r '
+$html = file_get_contents($argv[1]);
+if (!preg_match("/data-page=\"([^\"]+)\"/", $html, $m)) { exit(1); }
+$page = json_decode(html_entity_decode($m[1], ENT_QUOTES, "UTF-8"), true);
+exit(($page["props"]["whatsapp_available"] ?? true) === false ? 0 : 1);
+' "$EV/rehearsal-registration-body.html"
+check "the WhatsApp door is marked unavailable while Bird is unconfigured" $?
+
+# Choosing Telegram is a plain link out of the choice page. Follow it with
+# the same session and prove the Arabic linking page is what answers.
+LINK_BODY=$(curl -sS -b "$CJ" -c "$CJ" "http://127.0.0.1:$PORT/ar/account/telegram/link")
+printf '%s' "$LINK_BODY" > "$EV/rehearsal-telegram-link-body.html"
+
+"$PHP_BIN" -r '
+$html = file_get_contents($argv[1]);
+if (!preg_match("/data-page=\"([^\"]+)\"/", $html, $m)) { exit(1); }
+$page = json_decode(html_entity_decode($m[1], ENT_QUOTES, "UTF-8"), true);
+exit(($page["component"] ?? "") === "Account/TelegramLink" ? 0 : 1);
+' "$EV/rehearsal-telegram-link-body.html"
+check "choosing Telegram reaches the linking page" $?
+
+grep -q 'dir="rtl"' "$EV/rehearsal-telegram-link-body.html"
+check "the linking page is served right-to-left for Arabic" $?
+
 GATED=$(curl -sS -b "$CJ" -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT/ar/account/onboarding")
 [ "$GATED" = "302" ]
-check "an unlinked account is still refused by a protected page (got $GATED)" $?
+check "an unverified account is still refused by a protected page (got $GATED)" $?
+
+# The refusal must point BACK at the verification choice: the gate's redirect
+# target is part of the dual-verification contract, and a gate that still
+# pointed at the old direct linking page would strand the WhatsApp door.
+GATED_LOC=$(curl -sS -b "$CJ" -o /dev/null -w '%{redirect_url}' "http://127.0.0.1:$PORT/ar/account/onboarding")
+printf '%s' "$GATED_LOC" | grep -q "/ar/account/verify$"
+check "the refusal sends the unverified account to the verification choice" $?
 
 pkill -f "php -S 127.0.0.1:$PORT" >/dev/null 2>&1 || true
 
