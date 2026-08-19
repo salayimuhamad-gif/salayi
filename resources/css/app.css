@@ -1,0 +1,456 @@
+@import './public.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /*
+     * Sorani and Arabic set at a slightly larger size and looser leading than
+     * the Latin default. Arabic-script glyphs carry more detail per character
+     * and their ascenders/descenders collide at Latin line-heights, so the
+     * usual 1.5 is genuinely too tight to read comfortably at body size.
+     */
+    :root {
+        --mh-leading-arabic: 1.85;
+        --mh-leading-latin: 1.55;
+    }
+
+    html {
+        line-height: var(--mh-leading-latin);
+        -webkit-text-size-adjust: 100%;
+    }
+
+    html[dir='rtl'] {
+        line-height: var(--mh-leading-arabic);
+        font-size: 1.0625rem;
+    }
+
+    body {
+        text-rendering: optimizeLegibility;
+    }
+
+    /*
+     * Numerals stay Latin and stay LTR even inside RTL text. A price or an area
+     * figure embedded in a Sorani sentence must not have its digits reordered
+     * by the bidi algorithm — "240,000" reading as "000,240" is the classic
+     * failure in Arabic-script real estate listings.
+     */
+    .numeral,
+    [data-numeral] {
+        font-feature-settings: 'tnum' 1, 'lnum' 1;
+        font-variant-numeric: tabular-nums lining-nums;
+        direction: ltr;
+        unicode-bidi: isolate;
+    }
+
+    :focus-visible {
+        outline: 2px solid rgb(var(--mh-accent));
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer components {
+    .mh-card {
+        @apply rounded-card border border-line bg-surface-raised shadow-card;
+    }
+
+    /*
+     * Logical properties throughout so a single rule works in both directions.
+     * postcss-rtlcss is the safety net for anything that slips through, not
+     * the primary mechanism.
+     */
+    .mh-panel {
+        @apply rounded-panel border border-line bg-surface-raised;
+        padding-block: 1.5rem;
+        padding-inline: 1.5rem;
+    }
+
+    .mh-label {
+        @apply text-xs font-medium uppercase tracking-wide text-ink-faint;
+    }
+
+    /*
+     * Provenance chip. Spec 5: every public figure carries source and
+     * freshness. Making it a first-class component rather than an afterthought
+     * is what keeps that promise visible in the interface.
+     */
+    .mh-provenance {
+        @apply inline-flex items-center gap-1.5 rounded-full bg-surface-sunken px-2 py-0.5 text-xs text-ink-muted;
+    }
+
+    .mh-ai-notice {
+        @apply flex items-start gap-2 rounded-card border border-caution/30 bg-caution/5 p-3 text-sm text-ink-muted;
+    }
+}
+
+/* ==========================================================================
+ * Public presentation kit — LIGHT-FIRST.
+ *
+ * The former `.mh-luxury-public` block here hard-coded a dark-navy palette
+ * that overrode the admin-editable branding tokens on every public page.
+ * That override is GONE: the public site now renders on the one token system
+ * the whole application shares (warm ivory surfaces, charcoal ink, champagne
+ * accent, teal AI voice), with darkness surviving only as opt-in
+ * `.mh-dark-band` compositional sections (see public.css). Operator branding
+ * (`branding.color_*`) therefore applies to the public site again.
+ *
+ * `.mh-luxury-public` itself remains ON the PublicLayout root as an inert
+ * structural marker: the browser acceptance suite uses it as its
+ * shell/hydration probe, and keeping the name costs nothing now that no
+ * palette hangs off it. The `.mh-lux-*` component classes below are kept
+ * (they are referenced across the public templates and pinned by tests) but
+ * every one of them now reads the shared light tokens — no literal colours,
+ * no second palette, no `html:has` background patch.
+ * ========================================================================== */
+
+@layer components {
+    .mh-luxury-public {
+        background-color: rgb(var(--mh-surface));
+        color: rgb(var(--mh-ink));
+        min-height: 100dvh;
+    }
+
+    /* --- Surfaces ------------------------------------------------------- */
+
+    .mh-lux-panel {
+        @apply rounded-panel border border-line bg-surface-raised;
+    }
+
+    /* Hover lift is a border and a shadow, never a transform: a card that
+       moves under the pointer drags the market figure inside it with it. */
+    .mh-lux-card {
+        @apply rounded-panel border border-line bg-surface-raised;
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-card-interactive:hover {
+        border-color: rgb(var(--mh-accent) / 0.45);
+        box-shadow: 0 18px 40px -24px rgb(var(--mh-ink) / 0.18);
+    }
+
+    /* One hairline of gold along the block-start edge. The only place the
+       accent is used as a large area anywhere in the design. */
+    .mh-lux-gilded {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mh-lux-gilded::before {
+        content: '';
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline: 0;
+        block-size: 1px;
+        background: linear-gradient(
+            to right,
+            rgb(var(--mh-accent) / 0),
+            rgb(var(--mh-accent) / 0.7),
+            rgb(var(--mh-accent) / 0)
+        );
+    }
+
+    /* --- Type ----------------------------------------------------------- */
+
+    /* .mh-lux-eyebrow lives in public.css (dir-conditional: uppercase and
+       tracking are Latin-only treatments; Arabic keeps normal case). */
+
+    .mh-lux-gold {
+        /* accent-strong, not plain accent: gold marks/icons must clear the
+           3:1 non-text floor on ivory (plain champagne is 2.9:1). */
+        color: rgb(var(--mh-accent-strong));
+    }
+
+    /* --- Navigation ----------------------------------------------------- */
+
+    /*
+     * Logical properties throughout. The active marker sits on the INLINE
+     * start edge, so it lands on the right in Sorani and Arabic and on the
+     * left in English with no direction-specific rule and no dependence on
+     * postcss-rtlcss having caught it.
+     */
+    .mh-lux-nav-link {
+        @apply flex items-center gap-3 rounded-card px-3 py-2.5 text-sm text-ink-muted;
+        min-block-size: 2.75rem;
+        position: relative;
+        transition:
+            background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-nav-link:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-nav-link[aria-current='page'] {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-nav-link[aria-current='page']::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block: 0.5rem;
+        inline-size: 3px;
+        border-radius: 999px;
+        background-color: rgb(var(--mh-accent));
+    }
+
+    /* --- Buttons -------------------------------------------------------- */
+
+    /*
+     * 44px minimum block size on every button in the public surface.
+     *
+     * The visible control may look smaller — the summary panel's Edit is still
+     * 12px text — but the TARGET is 44px, which is the number that matters on a
+     * 360px phone held one-handed. Set here rather than per call site so a new
+     * button cannot be added below the floor, and expressed as min-block-size
+     * so a caller's `!py-*` override shrinks the padding without shrinking the
+     * target.
+     */
+    .mh-lux-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-card px-4 py-2.5 text-sm font-medium;
+        min-block-size: 2.75rem;
+        transition:
+            background-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-btn-primary {
+        background-color: rgb(var(--mh-accent));
+        /* Deep ink on champagne: 5.9:1. White here would be 3.0:1 — never. */
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-btn-primary:hover {
+        background-color: rgb(var(--mh-accent) / 0.88);
+    }
+
+    .mh-lux-btn-secondary {
+        @apply border border-line text-ink;
+    }
+
+    .mh-lux-btn-secondary:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        border-color: rgb(var(--mh-accent) / 0.45);
+    }
+
+    .mh-lux-btn-ghost {
+        @apply text-ink-muted;
+    }
+
+    .mh-lux-btn-ghost:hover {
+        background-color: rgb(var(--mh-surface-sunken));
+        color: rgb(var(--mh-ink));
+    }
+
+    .mh-lux-btn:disabled {
+        @apply cursor-not-allowed opacity-50;
+    }
+
+    /* --- Chips ---------------------------------------------------------- */
+
+    .mh-lux-chip {
+        @apply inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-xs text-ink-muted;
+    }
+
+    /*
+     * The homepage's example questions. A chip that goes somewhere — to the
+     * real advisor, never to a prewritten answer. Sized above the chip default
+     * because these are tap targets on a phone, not labels.
+     */
+    .mh-lux-example {
+        @apply inline-flex min-h-11 items-center rounded-full border border-line px-3.5 py-1.5 text-xs text-ink-muted;
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-lux-example:hover {
+        border-color: rgb(var(--mh-accent) / 0.5);
+        color: rgb(var(--mh-ink));
+    }
+
+    /* --- Decorative field ------------------------------------------------
+     * Used behind the advisor hero and on project cards in place of the
+     * photography the server does not supply. Deliberately abstract: a
+     * gradient cannot be mistaken for a photograph of a building, which a
+     * stock skyline could be.
+     * -------------------------------------------------------------------- */
+
+    .mh-lux-field {
+        background-image:
+            radial-gradient(120% 140% at 100% 0%, rgb(var(--mh-accent) / 0.1), transparent 55%),
+            radial-gradient(110% 130% at 0% 100%, rgb(var(--mh-brand-soft) / 0.22), transparent 60%);
+    }
+
+    .mh-lux-grid-field {
+        background-image:
+            linear-gradient(rgb(var(--mh-line) / 0.55) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(var(--mh-line) / 0.55) 1px, transparent 1px);
+        background-size: 28px 28px;
+    }
+
+    /* --- Investment map ---------------------------------------------------
+     * The Kimi-referenced treatment for the /invest surface, expressed in
+     * the existing token system so operator branding still applies. Three
+     * pieces only: an edge vignette over the tiles, a glass overlay card,
+     * and a glass chip. Everything else on the page is the lux kit above.
+     * -------------------------------------------------------------------- */
+
+    /* Radial edge darkening plus a block-start fade, so the dark chrome and
+       the tiles read as one surface. Pointer-events pass through: it is
+       varnish, never a control. */
+    .mh-invest-vignette {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(to bottom, rgb(var(--mh-surface) / 0.55), transparent 18%),
+            radial-gradient(130% 130% at 50% 45%, transparent 55%, rgb(var(--mh-surface) / 0.5));
+    }
+
+    /* Glass over the map: blur earns its cost here because live tiles move
+       beneath it. Kept off the rest of the site, where it would be blur for
+       blur's sake over a flat background. */
+    .mh-invest-glass {
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        box-shadow:
+            0 12px 32px -18px rgb(var(--mh-ink) / 0.35),
+            inset 0 1px 0 rgb(var(--mh-surface-raised) / 0.6);
+    }
+
+    .mh-invest-chip {
+        @apply inline-flex items-center gap-2 rounded-full px-3.5 text-sm text-ink-muted;
+        min-block-size: 2.25rem;
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        transition:
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-invest-chip[aria-pressed='true'] {
+        border-color: rgb(var(--mh-accent) / 0.55);
+        background-color: rgb(var(--mh-accent-soft) / 0.55);
+        color: rgb(var(--mh-accent-strong));
+    }
+
+    .mh-invest-chip:hover {
+        border-color: rgb(var(--mh-accent) / 0.45);
+        color: rgb(var(--mh-ink));
+    }
+
+    /* The search field: glass like the chips; its focus voice is the shared
+       champagne focus system (the former ice-blue literals were the last
+       non-token colours in the public CSS). */
+    .mh-invest-search {
+        background-color: rgb(var(--mh-surface-raised) / 0.78);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mh-invest-search:focus {
+        outline: none;
+        border-color: rgb(var(--mh-accent) / 0.7);
+        box-shadow: 0 0 0 1px rgb(var(--mh-accent) / 0.35);
+    }
+
+    /* --- Touch-target floor (map surfaces) ------------------------------- */
+
+    /*
+     * The 44px floor `.mh-lux-btn` documents above, extended to the rest of
+     * the interactive map-surface controls — but only under a coarse
+     * pointer, so desktop pointer density is untouched. `mh-touch-target`
+     * is additive: it grows the hit box, never the type inside it, and it
+     * deliberately says nothing about inline-size — every control it marks
+     * is already wide enough or full-width. The matching MapLibre vendor
+     * override lives at the end of this file, OUTSIDE the components layer:
+     * its class names appear in no template, and a layered rule whose class
+     * Tailwind never sees in content is purged from the build.
+     */
+    @media (pointer: coarse) {
+        .mh-touch-target,
+        .mh-invest-chip {
+            min-block-size: 2.75rem;
+        }
+    }
+
+    /* Decorative markers on the homepage teaser: gold dots with a soft ring
+       pulse. Static under prefers-reduced-motion — the global neutralizer
+       already clamps the animation, and the dot alone still reads. */
+    .mh-invest-teaser-dot {
+        position: absolute;
+        inline-size: 10px;
+        block-size: 10px;
+        border-radius: 999px;
+        background-color: rgb(var(--mh-accent));
+        box-shadow: 0 0 12px rgb(var(--mh-accent) / 0.55);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .mh-invest-teaser-dot::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 999px;
+            border: 1px solid rgb(var(--mh-accent) / 0.5);
+            animation: mh-invest-pulse 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        }
+    }
+
+    @keyframes mh-invest-pulse {
+        0% { transform: scale(0.6); opacity: 0.9; }
+        100% { transform: scale(1.8); opacity: 0; }
+    }
+}
+
+/*
+ * MapLibre's native controls under a coarse pointer (Phase 5, NEW-TOUCH).
+ *
+ * The vendor stylesheet ships the zoom buttons and the compact-attribution
+ * toggle at a fixed 29×29px — 15px under the 44px touch floor the rest of
+ * the public surface enforces. min-* beats the vendor's width/height
+ * regardless of rule order, and the glyph keeps its drawn size because the
+ * vendor CSS centres it as a background image inside whatever box the
+ * button has. Deliberately OUTSIDE every @layer: these class names appear
+ * in no template, and Tailwind purges layered component rules whose classes
+ * never occur in the content globs.
+ */
+@media (pointer: coarse) {
+    .maplibregl-ctrl-group button,
+    .maplibregl-ctrl-attrib-button {
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+    }
+
+    /*
+     * The zoom glyphs already sit at background-position:50% and keep their
+     * intrinsic 29px size inside the larger box. The attribution glyph is
+     * corner-anchored in vendor CSS (background-position defaults to 0 0),
+     * so recentre it in the enlarged box.
+     */
+    .maplibregl-ctrl-attrib-button {
+        background-position: center;
+    }
+}

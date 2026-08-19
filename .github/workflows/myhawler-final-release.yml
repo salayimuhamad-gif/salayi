@@ -1,0 +1,327 @@
+# MyHawler v7 — final release cycle.
+name: MyHawler final release
+
+# Manual only. This job produces a release candidate and must never fire on a
+# push: it takes a verified source archive as input, and the whole point is that
+# a human decides which archive is being finalised.
+on:
+  workflow_dispatch:
+    inputs:
+      source_archive_url:
+        description: >-
+          URL of myhawler-current-working-tree.zip. Leave blank to use an
+          archive committed under release-input/ in this repository.
+        required: false
+        type: string
+      source_sha256:
+        description: >-
+          Expected SHA-256 of the working-tree archive. The job refuses to
+          continue if the bytes do not match this value.
+        required: true
+        type: string
+      baseline_archive_url:
+        description: >-
+          URL of the verified v6 baseline archive. Omit to use
+          release-input/baseline.zip from this repository.
+        required: false
+        type: string
+      baseline_archive_sha256:
+        description: >-
+          Expected SHA-256 of the baseline archive. The rehearsals and the
+          Source Patch both diff against it, so an unverified baseline makes
+          both meaningless.
+        required: true
+        type: string
+      baseline_commit:
+        description: Ancestor commit (NOT the identity of the frozen tree).
+        required: false
+        default: 9c0188f81843cfe4786b7f72ecdc2a3fae89cd82
+        type: string
+
+# This workflow does not deploy. It builds, verifies and uploads artifacts.
+permissions:
+  contents: read
+
+concurrency:
+  group: myhawler-final-release
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    name: Freeze, verify and package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    # Real MariaDB. The accepted verification depends on MariaDB behaviour —
+    # earlier rounds found bugs that SQLite masked — so mysql:8.0 is not an
+    # acceptable substitute even though it would usually connect fine.
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: ${{ secrets.MYHAWLER_DB_PASSWORD }}
+          MARIADB_DATABASE: myh_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    env:
+      MYHAWLER_DB_HOST: 127.0.0.1
+      MYHAWLER_DB_PORT: "3306"
+      MYHAWLER_DB_USER: root
+      MYHAWLER_DB_PASSWORD: ${{ secrets.MYHAWLER_DB_PASSWORD }}
+      MYHAWLER_DB_TEST: myh_test
+      MYHAWLER_DB_REHEARSE: myh_rehearse
+      MYHAWLER_APP_KEY: ${{ secrets.MYHAWLER_APP_KEY }}
+      # The user phpunit.mariadb.xml connects as. The runner creates and grants
+      # it; the service container only ever creates root.
+      MYHAWLER_TEST_DB_USER: myh
+      MYHAWLER_TEST_DB_PASSWORD: ci
+      MYHAWLER_BASELINE_ARCHIVE: ${{ github.workspace }}/release-input/baseline.zip
+      MYHAWLER_BASELINE_SHA256: ${{ inputs.baseline_archive_sha256 }}
+      WORK: ${{ github.workspace }}/final-release-run
+
+    steps:
+      - name: Check out the release tooling
+        uses: actions/checkout@v4
+
+      - name: Set up PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: mbstring, xml, sqlite3, mysql, curl, zip, bcmath, intl, gd
+          coverage: none
+          tools: composer:v2
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the MariaDB client
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq mariadb-client
+
+      - name: Fetch the working-tree archive
+        run: |
+          set -euo pipefail
+          mkdir -p release-input
+          if [ -n "${{ inputs.source_archive_url }}" ]; then
+            curl -fsSL "${{ inputs.source_archive_url }}" \
+              -o release-input/myhawler-current-working-tree.zip
+          fi
+          test -f release-input/myhawler-current-working-tree.zip \
+            || { echo "no working-tree archive supplied"; exit 1; }
+          printf '%s  myhawler-current-working-tree.zip\n' "${{ inputs.source_sha256 }}" \
+            > release-input/myhawler-current-working-tree.zip.sha256
+          # BLOCKER 16: verify and audit BEFORE anything reads the archive. The
+          # workflow previously extracted lock files and interpolated a version
+          # string out of it while its checksum was still unchecked.
+          ( cd release-input && sha256sum -c myhawler-current-working-tree.zip.sha256 )
+          python3 scripts/release/audit_archive.py \
+            release-input/myhawler-current-working-tree.zip
+
+      # Composer's cache is keyed on the lock file INSIDE the archive, not on
+      # anything in this repository, so a different source archive cannot reuse
+      # the wrong dependency set.
+      - name: Fetch and verify the baseline archive
+        run: |
+          set -euo pipefail
+          mkdir -p release-input
+          if [ -n "${{ inputs.baseline_archive_url }}" ]; then
+            curl -fsSL "${{ inputs.baseline_archive_url }}" -o release-input/baseline.zip
+          fi
+          test -f release-input/baseline.zip || { echo "no baseline archive"; exit 1; }
+          actual=$(sha256sum release-input/baseline.zip | cut -d' ' -f1)
+          [ "$actual" = "${{ inputs.baseline_archive_sha256 }}" ] \
+            || { echo "baseline hash mismatch: $actual"; exit 1; }
+          echo "baseline verified: $actual"
+
+      - name: Read the dependency lock for cache keying
+        id: lock
+        run: |
+          set -euo pipefail
+          unzip -p release-input/myhawler-current-working-tree.zip '*/composer.lock' \
+            > /tmp/composer.lock 2>/dev/null \
+            || unzip -p release-input/myhawler-current-working-tree.zip 'composer.lock' \
+            > /tmp/composer.lock
+          echo "hash=$(sha256sum /tmp/composer.lock | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          unzip -p release-input/myhawler-current-working-tree.zip '*/package-lock.json' \
+            > /tmp/package-lock.json 2>/dev/null \
+            || unzip -p release-input/myhawler-current-working-tree.zip 'package-lock.json' \
+            > /tmp/package-lock.json
+          echo "npm_hash=$(sha256sum /tmp/package-lock.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          # BLOCKER 9: a shell glob accepts trailing junk such as
+          # "1.2.3;echo INJECT". The value is interpolated into a command that
+          # installs a browser, so it is validated by a strict semantic-version
+          # regex in a real script and the step exits before anything uses it.
+          pw=$(python3 scripts/release/read_playwright_version.py --lock /tmp/package-lock.json)
+          test -n "$pw" || { echo "no usable Playwright version"; exit 1; }
+          echo "pw=$pw" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/composer
+          key: myhawler-composer-${{ steps.lock.outputs.hash }}
+          restore-keys: myhawler-composer-
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: >-
+            myhawler-playwright-${{ runner.os }}-${{ steps.lock.outputs.pw }}-${{ steps.lock.outputs.npm_hash }}
+
+      # Installed via the official command AFTER npm ci, from the project's own
+      # node_modules, so the browser revision matches the locked client exactly.
+      # `playwright@latest` could resolve to a different release than the lock,
+      # which is how a browser mismatch reaches a release unnoticed.
+      - name: Install system dependencies for Chromium
+        run: |
+          set -euo pipefail
+          echo "Playwright version from the project lock: ${{ steps.lock.outputs.pw }}"
+          npx --yes playwright@${{ steps.lock.outputs.pw }} install-deps chromium
+
+      - name: Wait for MariaDB
+        run: |
+          set -euo pipefail
+          for _ in $(seq 1 30); do
+            if mariadb -h 127.0.0.1 -P 3306 -u root \
+                -p"${MYHAWLER_DB_PASSWORD}" -e 'SELECT 1' >/dev/null 2>&1; then
+              mariadb -h 127.0.0.1 -P 3306 -u root \
+                -p"${MYHAWLER_DB_PASSWORD}" -e 'SELECT VERSION();'
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "MariaDB did not become ready"; exit 1
+
+      # All of the actual work. The logic lives in the script so the identical
+      # cycle can run on a VPS or self-hosted runner without GitHub Actions.
+      # BLOCKER 11: the runner script must be the one inside the verified source.
+      # The script itself re-checks this and fails on any difference; this step
+      # surfaces the mismatch before an hour of work is spent.
+      - name: Confirm the checked-out runner matches the verified source
+        run: |
+          set -euo pipefail
+          tmp=$(mktemp -d)
+          unzip -q release-input/myhawler-current-working-tree.zip -d "$tmp"
+          inner=$(find "$tmp" -path '*/scripts/release/run_final_release_ci.sh' | head -1)
+          test -n "$inner" || { echo "the source carries no runner script"; exit 1; }
+          a=$(sha256sum scripts/release/run_final_release_ci.sh | cut -d' ' -f1)
+          b=$(sha256sum "$inner" | cut -d' ' -f1)
+          [ "$a" = "$b" ] || { echo "runner mismatch: $a vs $b"; exit 1; }
+          echo "runner script parity confirmed: $a"
+          rm -rf "$tmp"
+
+      - name: Run the final release cycle
+        env:
+          PHP_CLI_SERVER_WORKERS: "10"
+        run: |
+          set -euo pipefail
+          chmod +x scripts/release/run_final_release_ci.sh
+          ./scripts/release/run_final_release_ci.sh \
+            --source-archive release-input/myhawler-current-working-tree.zip \
+            --source-sha256 release-input/myhawler-current-working-tree.zip.sha256 \
+            --work "${WORK}" \
+            --baseline-commit "${{ inputs.baseline_commit }}"
+
+      - name: Summarise the frozen identity
+        if: always()
+        run: |
+          set -uo pipefail
+          {
+            echo "## MyHawler final release"
+            if [ -f "${WORK}/evidence/FROZEN_TREE_SHA256" ]; then
+              echo ""
+              echo '```text'
+              echo "frozen tree: $(cat "${WORK}/evidence/FROZEN_TREE_SHA256")"
+              if [ -f "${WORK}/final-attestation.json" ]; then
+                echo "attestation: $(sha256sum "${WORK}/final-attestation.json" | cut -d' ' -f1)"
+              fi
+              if [ -f "${WORK}/final-verification.log" ]; then
+                echo "verifier log: $(sha256sum "${WORK}/final-verification.log" | cut -d' ' -f1)"
+              fi
+              echo '```'
+            else
+              echo ""
+              echo "The tree was never frozen; the run failed before step 3."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # BLOCKER 17: a partial directory uploaded under the name "final delivery"
+      # is worse than no artifact — someone will download and trust it. Final
+      # output is uploaded only when the whole cycle succeeded.
+      - name: Upload the final delivery
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhawler-final-delivery
+          path: ${{ env.WORK }}/delivery/
+          if-no-files-found: error
+          retention-days: 90
+
+      # Uploaded even on failure: a failed cycle's logs are exactly what is
+      # needed to understand which gate stopped it.
+      - name: Upload raw evidence (successful run)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhawler-raw-evidence
+          path: ${{ env.WORK }}/evidence/
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Upload Playwright reports (successful run)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhawler-playwright-reports
+          path: ${{ env.WORK }}/evidence/browser/
+          if-no-files-found: warn
+          retention-days: 90
+
+      # BLOCKER 8: the attestation and the verifier log are deliberately OUTSIDE
+      # the package they prove, so neither is covered by the delivery or evidence
+      # uploads. Without this step a successful run would discard the only
+      # authoritative proof that the cleanroom verifier exited 0.
+      #
+      # The paths here are the runner's REAL output layout: the attestation
+      # command ledger, the attestation-evidence directory holding all post-seal
+      # raw logs (evidence-finalizer, sha256sums-verification,
+      # final-archive-audit, final-clean-verifier), and the attestation document
+      # with its detached hash. The runner asserts every one of these exists
+      # before it reports success, and the offline E2E test checks this upload
+      # list against the files a successful run actually produces.
+      - name: Upload the final attestation
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhawler-final-attestation
+          path: |
+            ${{ env.WORK }}/final-attestation.json
+            ${{ env.WORK }}/final-attestation.json.sha256
+            ${{ env.WORK }}/final-verification.log
+            ${{ env.WORK }}/attestation-ledger.json
+            ${{ env.WORK }}/attestation-evidence/
+          if-no-files-found: error
+          retention-days: 90
+
+      # Diagnostics from a FAILED run, under a name nobody can mistake for a
+      # release. Uploaded on failure only, so the two can never be confused.
+      - name: Upload failed-run diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: myhawler-FAILED-RUN-diagnostics
+          path: |
+            ${{ env.WORK }}/evidence/
+            ${{ env.WORK }}/delivery/
+          if-no-files-found: warn
+          retention-days: 30

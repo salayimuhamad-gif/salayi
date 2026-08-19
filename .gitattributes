@@ -1,0 +1,40 @@
+# Normalise line endings on commit so a Windows checkout cannot change a file's
+# hash and break SHA256SUMS.txt verification.
+* text=auto eol=lf
+
+*.php     text diff=php
+*.vue     text
+*.ts      text
+*.js      text
+*.css     text
+*.md      text
+*.json    text
+*.yml     text
+*.sh      text eol=lf
+*.htaccess text eol=lf
+
+# Binary — never diffed, never EOL-converted.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.zip  binary
+*.pdf  binary
+
+# NO export-ignore rules. This is deliberate and load-bearing.
+#
+# `git archive HEAD` — which scripts/package-release.sh uses to build the Clean
+# Source ZIP — silently honours export-ignore. That is the mechanism by which
+# tests/, .github/, .gitignore, .gitattributes and .editorconfig were listed in
+# SHA256SUMS.txt (generated from the working tree) yet absent from the shipped
+# archive (generated from the export): 125 "FAILED open or read" entries, with
+# no error at packaging time because the export succeeded exactly as told.
+#
+# The Clean Source ZIP is required to be a complete, buildable, testable
+# checkout. Nothing may be excluded from it. If a future release needs a
+# trimmed export, trim it explicitly in the packaging script where the omission
+# is visible in a diff, not here where it is invisible.

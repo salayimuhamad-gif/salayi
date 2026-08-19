@@ -1,0 +1,10 @@
+{
+ "original_findings": 1747,
+ "final_findings": 0,
+ "analyser_errors": 0,
+ "baseline": false,
+ "suppressions": false,
+ "excluded_production_paths": false,
+ "level_reduced": false,
+ "open": []
+}
