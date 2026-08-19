@@ -65,4 +65,27 @@ return [
         'bot_username' => env('TELEGRAM_BOT_USERNAME'),
         'webhook_secret' => env('TELEGRAM_WEBHOOK_SECRET'),
     ],
+
+    /*
+     * Bird (bird.com) — WhatsApp OTP delivery for account verification.
+     *
+     * The verification code travels as a WhatsApp TEMPLATE message through
+     * Bird's Channels API: POST {base_url}/workspaces/{id}/channels/{id}/
+     * messages, authenticated by `Authorization: AccessKey …`. The template
+     * is referenced by the slug configured in the Bird workspace, and the
+     * code is passed as one named body parameter — the same shape as the
+     * owner's SDK example. `otp_parameter` names that template variable.
+     *
+     * WhatsApp verification is OFF until every value below is present; the
+     * verification-choice page then offers Telegram alone, so a deployment
+     * that never configures Bird behaves exactly as before this shipped.
+     */
+    'bird' => [
+        'api_key' => env('BIRD_API_KEY'),
+        'workspace_id' => env('BIRD_WORKSPACE_ID'),
+        'channel_id' => env('BIRD_WHATSAPP_CHANNEL_ID'),
+        'otp_template_slug' => env('BIRD_OTP_TEMPLATE_SLUG'),
+        'otp_parameter' => env('BIRD_OTP_TEMPLATE_PARAMETER', 'code'),
+        'base_url' => env('BIRD_BASE_URL', 'https://api.bird.com'),
+    ],
 ];

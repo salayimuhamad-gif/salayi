@@ -200,6 +200,29 @@ final class IdentityServiceProvider extends ModuleServiceProvider
                     : back()->withErrors(['message' => __('advisor.chat.rate_limited')]));
         });
 
+        /*
+         * WhatsApp OTP delivery: every send puts a PAID message into
+         * somebody's chat, so the budget is the recovery channel's, not the
+         * poll's — three an hour per account stops a loop burning money and
+         * spamming one person's WhatsApp, and the IP ceiling stops one
+         * machine sweeping accounts. The per-minute resend cooldown on top
+         * of this lives in the service, where it can answer with the exact
+         * seconds remaining.
+         */
+        RateLimiter::for('whatsapp-otp-send', static fn (Request $request): array => [
+            Limit::perHour(3)->by('wa-otp-send:user:'.($request->user()->id ?? $request->ip())),
+            Limit::perHour(10)->by('wa-otp-send:ip:'.$request->ip()),
+        ]);
+
+        /*
+         * Code redemption attempts per account. The per-CODE budget (five
+         * tries, then the code is burnt) lives in WhatsAppVerificationService
+         * under the row lock; this bucket only bounds how fast a script can
+         * churn through fresh codes.
+         */
+        RateLimiter::for('whatsapp-otp-confirm', static fn (Request $request): Limit => Limit::perMinute(10)
+            ->by('wa-otp-confirm:'.($request->user()->id ?? $request->ip())));
+
         RateLimiter::for('telegram-poll', static fn (Request $request): Limit => Limit::perMinute(60)
             ->by($request->session()->getId()));
 

@@ -150,8 +150,9 @@ final class AuthenticatedSessionController extends Controller
      * signing in was a 403.
      *
      *   - an administrator goes to the dashboard, as before;
-     *   - a customer who has not verified Telegram goes to the verification
-     *     page, where their PERMANENT link is waiting. This is the §17 path:
+     *   - a customer who has not verified their account goes to the
+     *     verification-choice page, where both doors — the PERMANENT Telegram
+     *     link and the WhatsApp code — are waiting. This is the §17 path:
      *     signing in is how somebody resumes a registration they abandoned,
      *     and it must not dead-end;
      *   - everybody else goes wherever the post-link resolver says, which is
@@ -186,9 +187,14 @@ final class AuthenticatedSessionController extends Controller
             ? $user->preferred_locale
             : null;
 
-        return $user->telegram_verified_at === null
-            ? localized_route('account.telegram.link', locale: $locale)
-            : PostLinkDestination::for($user, $locale);
+        /*
+         * Verified by EITHER method — Telegram or the WhatsApp code — counts.
+         * An unverified account goes to the verification CHOICE page, where
+         * both doors (and the permanent Telegram link) are waiting.
+         */
+        return $user->hasVerifiedAccount()
+            ? PostLinkDestination::for($user, $locale)
+            : localized_route('account.verify', locale: $locale);
     }
 
     public function destroy(Request $request): RedirectResponse

@@ -77,6 +77,12 @@ final class AbandonedAccountPolicy
             return ['eligible' => false, 'reason' => 'linked'];
         }
 
+        // The second door counts identically: an account verified over
+        // WhatsApp is proven, whatever its Telegram columns say.
+        if ($user->whatsapp_verified_at !== null) {
+            return ['eligible' => false, 'reason' => 'verified'];
+        }
+
         if ($user->trashed()) {
             return ['eligible' => false, 'reason' => 'already_reclaimed'];
         }
@@ -133,6 +139,12 @@ final class AbandonedAccountPolicy
     {
         if ($user->telegram_verified_at !== null || $user->telegram_id !== null) {
             return ['eligible' => false, 'reason' => 'linked'];
+        }
+
+        // A WhatsApp-verified account is proven; deleting a real account
+        // must never be one POST away, whichever door proved it.
+        if ($user->whatsapp_verified_at !== null) {
+            return ['eligible' => false, 'reason' => 'verified'];
         }
 
         return $this->assessContent($user);
@@ -202,10 +214,14 @@ final class AbandonedAccountPolicy
                 return false;
             }
 
-            // Re-checked under the lock: a Telegram link could have landed
-            // between the assessment and this write, and reclaiming a
-            // just-linked account would delete a real one.
+            // Re-checked under the lock: a verification through EITHER door
+            // could have landed between the assessment and this write, and
+            // reclaiming a just-verified account would delete a real one.
             if ($fresh->telegram_verified_at !== null || $fresh->telegram_id !== null) {
+                return false;
+            }
+
+            if ($fresh->whatsapp_verified_at !== null) {
                 return false;
             }
 

@@ -194,13 +194,15 @@ final class RegistrationController extends Controller
 
         /*
          * v7 account-first: the account now exists, is signed in, and is
-         * unlinked — which is exactly the state `telegram.linked` refuses.
-         * So the destination is the linking page, in the language the person
-         * chose, and NOT onboarding: sending a fresh account to a gated route
-         * would bounce it straight back here and look like a loop.
+         * unverified — which is exactly the state the verification gate
+         * refuses. So the destination is the verification CHOICE page, in
+         * the language the person chose, where both doors are offered:
+         * Telegram Start (whose permanent token was just minted above) and
+         * the WhatsApp code. NOT onboarding: sending a fresh account to a
+         * gated route would bounce it straight back and look like a loop.
          */
         return redirect()
-            ->to(localized_route('account.telegram.link', locale: $validated['locale']))
+            ->to(localized_route('account.verify', locale: $validated['locale']))
             ->with('status', __('identity.register.account_created'));
     }
 

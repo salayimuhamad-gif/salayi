@@ -291,9 +291,19 @@ final class TelegramAuthController extends Controller
                      * problem from being handed an unrelated contact button.
                      */
                     if (($verification['reason'] ?? '') !== 'unknown_token') {
-                        ($verification['reason'] ?? '') === 'conflict'
-                            ? $this->bot->reportAlreadyConnected($chatId, $replyLocale)
-                            : $this->bot->reportFailure($chatId, $replyLocale);
+                        /*
+                         * `already_verified` is the dual-method resolution:
+                         * the account finished through WhatsApp while this
+                         * link sat in the chat, so the press gets the truth
+                         * — verified, nothing further needed — rather than a
+                         * failure that sends a perfectly fine account to
+                         * support.
+                         */
+                        match ($verification['reason'] ?? '') {
+                            'conflict' => $this->bot->reportAlreadyConnected($chatId, $replyLocale),
+                            'already_verified' => $this->bot->reportAccountAlreadyVerified($chatId, $replyLocale),
+                            default => $this->bot->reportFailure($chatId, $replyLocale),
+                        };
 
                         return response()->json(['ok' => false]);
                     }

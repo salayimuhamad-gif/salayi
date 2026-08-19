@@ -213,9 +213,9 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         $this->assertFalse((bool) $user->phone_verified, 'a typed number is never verified by registration');
     }
 
-    public function test_registration_redirects_to_the_verification_page(): void
+    public function test_registration_redirects_to_the_verification_choice(): void
     {
-        $this->assertStringContainsString('/account/telegram/link', $this->register());
+        $this->assertStringContainsString('/account/verify', $this->register());
     }
 
     public function test_registration_without_a_password_is_refused(): void
@@ -677,7 +677,9 @@ final class SimplifiedTelegramVerificationTest extends TestCase
         ]);
 
         $this->assertAuthenticatedAs($user->fresh());
-        $this->assertStringContainsString('/account/telegram/link',
+        // Unverified sign-ins land on the verification choice now, where the
+        // Telegram door below is one click away.
+        $this->assertStringContainsString('/account/verify',
             (string) $response->headers->get('Location'));
 
         // And the SAME permanent link is waiting there — §17.

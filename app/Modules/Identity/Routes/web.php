@@ -6,6 +6,7 @@ use App\Modules\Identity\Http\Controllers\Account\ConsentController;
 use App\Modules\Identity\Http\Controllers\Account\OnboardingController;
 use App\Modules\Identity\Http\Controllers\Account\ProfileController;
 use App\Modules\Identity\Http\Controllers\AccountTelegramLinkController;
+use App\Modules\Identity\Http\Controllers\AccountVerificationController;
 use App\Modules\Identity\Http\Controllers\Auth\TelegramReturnController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,24 @@ Route::middleware(['auth', 'account.active', 'telegram.linked'])->group(function
  * three routes, and nothing else personalised, until the link completes.
  */
 Route::middleware(['auth', 'account.active'])->group(function (): void {
+    /*
+     * The verification-choice surface: one account, two doors — Telegram
+     * Start (unchanged, below) or a WhatsApp one-time code through Bird.
+     * Registration lands on the choice page, and the verified-account gate
+     * sends unverified sessions here; both doors verify the SAME account and
+     * one success is enough. Send and confirm are throttled on their own
+     * buckets: every send is a paid message, and every confirm is a guess at
+     * a six-digit credential.
+     */
+    Route::get('/account/verify', [AccountVerificationController::class, 'choose'])
+        ->name('account.verify');
+    Route::get('/account/verify/whatsapp', [AccountVerificationController::class, 'showWhatsApp'])
+        ->name('account.verify.whatsapp');
+    Route::post('/account/verify/whatsapp/send', [AccountVerificationController::class, 'sendWhatsApp'])
+        ->middleware('throttle:whatsapp-otp-send')->name('account.verify.whatsapp.send');
+    Route::post('/account/verify/whatsapp/confirm', [AccountVerificationController::class, 'confirmWhatsApp'])
+        ->middleware('throttle:whatsapp-otp-confirm')->name('account.verify.whatsapp.confirm');
+
     Route::get('/account/telegram/link', [AccountTelegramLinkController::class, 'show'])
         ->name('account.telegram.link');
     Route::get('/account/telegram/link/poll', [AccountTelegramLinkController::class, 'poll'])

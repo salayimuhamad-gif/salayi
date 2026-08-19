@@ -357,10 +357,14 @@ $ok(
  * first version pinned `localized_route('account.telegram.link')` with no
  * arguments, so adding the account's own locale — a fix the browser suite
  * demanded — broke the assertion while improving the behaviour it describes.
+ *
+ * The destination moved once more with the dual-method model: an unverified
+ * sign-in now lands on the verification CHOICE page, where both doors —
+ * Telegram and the WhatsApp code — are offered.
  */
 $ok(
     'an unverified account is sent to verification rather than the admin dashboard',
-    preg_match("/localized_route\('account\.telegram\.link'/", $login) === 1
+    preg_match("/localized_route\('account\.verify'/", $login) === 1
         && preg_match('/PostLinkDestination::for\(\$user/', $login) === 1,
 );
 
@@ -650,6 +654,122 @@ $ok(
     'redemption repairs an account holding an id with no timestamp',
     str_contains($service, 'if ($user->telegram_verified_at === null) {')
         && str_contains($service, "'via' => 'repaired_missing_timestamp'"),
+);
+
+/* ------------------------------------------------ the second door */
+
+echo "\n-- the second door (WhatsApp OTP)\n";
+
+$whatsappService = $read('app/Modules/Identity/Services/WhatsAppVerificationService.php');
+$whatsappModel = $read('app/Modules/Identity/Models/WhatsAppOtp.php');
+$whatsappMigration = $read('app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php');
+$gate = $read('app/Modules/Identity/Http/Middleware/EnsureTelegramLinked.php');
+$userModel = $read('app/Modules/Identity/Models/User.php');
+$returnController = $read('app/Modules/Identity/Http/Controllers/Auth/TelegramReturnController.php');
+$abandonPolicy = $read('app/Modules/Identity/Services/AbandonedAccountPolicy.php');
+$pruneCommand = $read('app/Modules/Identity/Console/PruneUnlinkedAccounts.php');
+
+$ok('the WhatsApp service, model and migration exist', $whatsappService !== '' && $whatsappModel !== '' && $whatsappMigration !== '');
+
+/*
+ * THE INVARIANT THAT MAKES TWO DOORS SAFE: the WhatsApp flow never assigns a
+ * Telegram identity column. Matched on the ASSIGNMENT shape, not on the
+ * words — the docblock legitimately names the columns while explaining that
+ * they are never written.
+ */
+$ok(
+    'the WhatsApp service never writes a Telegram identity column',
+    preg_match("/'telegram_(id|username|verified_at)'\s*=>/", $whatsappService) === 0,
+);
+
+$ok(
+    'WhatsApp redemption stamps exactly its two claims',
+    str_contains($whatsappService, "'whatsapp_verified_at' => now()")
+        && str_contains($whatsappService, "'phone_verified' => true"),
+);
+
+$ok(
+    'an already-verified account is resolved without a second stamp',
+    str_contains($whatsappService, "'already_verified' => true")
+        && str_contains($whatsappService, 'WhatsAppOtp::retireAllFor('),
+);
+
+$ok(
+    'each side retires the other\'s pending material',
+    str_contains($service, 'WhatsAppOtp::retireAllFor(')
+        && str_contains($whatsappService, "revokeAllFor(\$fresh, 'verified_by_whatsapp')"),
+);
+
+$ok(
+    'the Telegram redemption refuses to link an account WhatsApp already verified',
+    str_contains($service, "'via' => 'account_already_verified'")
+        && str_contains($service, "'reason' => 'already_verified'"),
+);
+
+$ok(
+    'the personal-features gate honours either door through the one shared rule',
+    str_contains($gate, 'hasVerifiedAccount()')
+        && str_contains($userModel, 'public function hasVerifiedAccount(): bool')
+        && str_contains($userModel, 'telegram_verified_at !== null')
+        && str_contains($userModel, 'whatsapp_verified_at !== null'),
+);
+
+preg_match_all('/\$table->\w+\(\s*\'(\w+)\'/', $whatsappMigration, $otpColumns);
+
+$ok(
+    'the OTP table carries a clock, a consumption, a revocation and an attempts budget',
+    in_array('expires_at', $otpColumns[1], true)
+        && in_array('consumed_at', $otpColumns[1], true)
+        && in_array('revoked_at', $otpColumns[1], true)
+        && in_array('attempts', $otpColumns[1], true)
+        && in_array('code_hash', $otpColumns[1], true)
+        && in_array('phone_hash', $otpColumns[1], true),
+);
+
+$ok(
+    'the code digest is KEYED, and a missing key refuses loudly',
+    str_contains($whatsappModel, "hash_hmac('sha256', \$code, \$key)")
+        && str_contains($whatsappModel, 'RuntimeException'),
+);
+
+$ok(
+    'the model hides both digests',
+    preg_match("/protected \\\$hidden = \\['code_hash', 'phone_hash'\\];/", $whatsappModel) === 1,
+);
+
+/* Audit calls must never carry the code or a digest. */
+preg_match_all('/audit->(?:record|security)\((.*?)\);/s', $whatsappService, $whatsappAudits);
+
+$leakyWhatsApp = array_values(array_filter(
+    $whatsappAudits[1],
+    static fn (string $args): bool => str_contains($args, 'code_hash')
+        || str_contains($args, '$code')
+        || str_contains($args, 'phone_hash'),
+));
+
+$ok('no WhatsApp audit call carries a code, a digest or a phone hash', $leakyWhatsApp === []);
+
+$ok(
+    'a WhatsApp-verified account is refused by reclamation and by self-abandon',
+    str_contains($abandonPolicy, 'whatsapp_verified_at !== null')
+        && str_contains($abandonPolicy, "'reason' => 'verified'"),
+);
+
+$ok(
+    'the reclamation sweep never selects a WhatsApp-verified account',
+    str_contains($pruneCommand, "whereNull('whatsapp_verified_at')"),
+);
+
+/*
+ * The replay regression's server-side contract: every response on the return
+ * route forbids STORING, so a browser can never replay the authenticated
+ * redirect from cache or history — the exact mechanism behind "opening the
+ * same return link again returned the user to the authenticated account".
+ */
+$ok(
+    'the return handoff responses are never storable',
+    str_contains($returnController, "'no-store, private'")
+        && substr_count($returnController, 'self::CACHE_CONTROL') >= 4,
 );
 
 echo "\n";
