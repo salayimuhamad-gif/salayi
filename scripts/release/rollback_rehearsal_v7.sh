@@ -79,7 +79,11 @@ BASELINE_MANIFEST=$(sha256sum "$BACKUP/build/manifest.json" | cut -d' ' -f1)
 echo "  BASELINE_MANIFEST=$BASELINE_MANIFEST"
 
 echo "== 1. count what the patched period created, BEFORE reversing =="
-UNLINKED=$( cd "$SITE/application" && "$PHP" artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("deleted_at")->count();' 2>/dev/null | tr -dc '0-9' )
+# Both verification doors are live in the patched period, so "never verified"
+# means BOTH stamps are null: an account verified through WhatsApp alone is
+# verified, not stranded — until the rollback drops its column, which is why
+# the number is recorded now.
+UNLINKED=$( cd "$SITE/application" && "$PHP" artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("whatsapp_verified_at")->whereNull("deleted_at")->count();' 2>/dev/null | tr -dc '0-9' )
 UNLINKED=${UNLINKED:-unknown}
 echo "  UNLINKED_ACCOUNTS_AT_ROLLBACK=$UNLINKED"
 [ "$UNLINKED" != "unknown" ]
@@ -103,6 +107,7 @@ echo "== 2b. reverse the patch's migrations WHILE their files are still present 
 # run the SAME path-targeted commands ROLLBACK_NOTES.md documents, newest
 # first.
 PATCH_MIGRATIONS="
+app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php
 app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
 app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php
 app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php
@@ -112,13 +117,13 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_cha
 app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
 "
-PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
+PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
 
 RAN_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
 PATCH_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -E "$PATCH_NAMES_RE" | grep -c ' Ran' )
-[ "$PATCH_RAN" = "8" ]
-check "all eight patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
+[ "$PATCH_RAN" = "9" ]
+check "all nine patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
 
 STATUS_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -130,8 +135,8 @@ for migration in $PATCH_MIGRATIONS; do
 done
 
 RAN_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
-[ "$RAN_AFTER" = "$((RAN_BEFORE - 8))" ]
-check "exactly the patch's eight migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
+[ "$RAN_AFTER" = "$((RAN_BEFORE - 9))" ]
+check "exactly the patch's nine migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
 
 STATUS_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -143,13 +148,13 @@ PATCH_STILL_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/de
 [ "$PATCH_STILL_RAN" = "0" ]
 check "none of the patch migrations is still Ran (found $PATCH_STILL_RAN)" $?
 
-EARLY_TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');" 2>/dev/null)
+EARLY_TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps');" 2>/dev/null)
 [ "$EARLY_TABLE" = "0" ]
-check "all three patch tables are absent immediately after the exact rollback (found ${EARLY_TABLE:-?})" $?
+check "all four patch tables are absent immediately after the exact rollback (found ${EARLY_TABLE:-?})" $?
 
-EARLY_COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
+EARLY_COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at','whatsapp_verified_at');" 2>/dev/null)
 [ "$EARLY_COLS" = "0" ]
-check "all three patch columns are gone from users (found ${EARLY_COLS:-?})" $?
+check "all four patch columns are gone from users (found ${EARLY_COLS:-?})" $?
 
 EVIDENCE_COL=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='knowledge_events' AND column_name='evidence_class';" 2>/dev/null)
 [ "$EVIDENCE_COL" = "0" ]
@@ -242,17 +247,17 @@ db "$REHEARSAL_DB_NAME" < "$BACKUP/database.sql" 2>/dev/null
 check "database backup restores cleanly when the decision requires it" $?
 
 echo "== 5b. the patch's migrations are reversed =="
-# This release ships eight forward-only migrations. Restoring the
+# This release ships nine forward-only migrations. Restoring the
 # pre-deployment dump removes their tables and columns along with everything
 # else; this asserts they are genuinely gone, because reverted code that still
 # sees them would be a half-rollback.
-TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges');" 2>/dev/null)
+TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps');" 2>/dev/null)
 [ "$TABLE" = "0" ]
-check "the patch's three tables are gone after the database restore (found ${TABLE:-?})" $?
+check "the patch's four tables are gone after the database restore (found ${TABLE:-?})" $?
 
-COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at');" 2>/dev/null)
+COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at','whatsapp_verified_at');" 2>/dev/null)
 [ "$COLS" = "0" ]
-check "the patch's three users columns are gone after the database restore (found ${COLS:-?})" $?
+check "the patch's four users columns are gone after the database restore (found ${COLS:-?})" $?
 
 RESTORE_EVIDENCE_COL=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='knowledge_events' AND column_name='evidence_class';" 2>/dev/null)
 [ "$RESTORE_EVIDENCE_COL" = "0" ]
@@ -288,6 +293,15 @@ if [ $? -eq 0 ]; then
     check "the patched investment-map routes are GONE after rollback" 1
 else
     check "the patched investment-map routes are gone after rollback" 0
+fi
+
+# The verification-choice surface is this patch's too; the baseline has no
+# account/verify route at all, so anything matching is a half-rollback.
+( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/verify" )
+if [ $? -eq 0 ]; then
+    check "the patched verification-choice routes are GONE after rollback" 1
+else
+    check "the patched verification-choice routes are gone after rollback" 0
 fi
 
 ( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/telegram/link" )
@@ -361,6 +375,9 @@ CREATED=$( cd "$SITE/application" && "$PHP" artisan tinker --execute='echo App\M
 check "the reverted form created no account (${CREATED:-?} found)" $?
 
 echo "== 10. unlinked accounts from the patched period =="
+# The RESTORED baseline predates the WhatsApp door: its schema has no
+# whatsapp_verified_at column, so this count is telegram-only BY NECESSITY —
+# adding the second whereNull here would crash against the restored schema.
 STRANDED=$( cd "$SITE/application" && "$PHP" artisan tinker --execute='echo App\Modules\Identity\Models\User::whereNull("telegram_verified_at")->whereNull("deleted_at")->count();' 2>/dev/null | tr -dc '0-9' )
 echo "  STRANDED_AFTER_ROLLBACK=${STRANDED:-unknown}"
 [ -n "${STRANDED:-}" ]

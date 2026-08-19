@@ -799,6 +799,115 @@ $ok(
         && substr_count($returnController, 'self::CACHE_CONTROL') >= 4,
 );
 
+/* ------------------------------------------------ release inventory */
+
+echo "\n-- release migration inventory\n";
+
+/*
+ * Final release run #33: the dual-verification release added a NINTH
+ * migration above the sealed v6 baseline, and the deployment rehearsal still
+ * asserted "exactly eight" — while its registration journey still expected
+ * the pre-choice landing on the Telegram linking page. This suite runs inside
+ * CI and inside the final release itself, so the inventory is pinned HERE:
+ * every surface that states it must carry every name, and a post-baseline
+ * migration missing from this list fails the suite before it can fail a
+ * release. The count assertions stay fail-closed in the tooling — an
+ * unexpected tenth migration must fail exactly as the unexpected ninth did.
+ */
+$inventory = [
+    'app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php',
+    'app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php',
+    'app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php',
+    'app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php',
+];
+
+$allExist = true;
+
+foreach ($inventory as $rel) {
+    $allExist = $allExist && is_file($root.'/'.$rel);
+}
+
+$ok('every inventoried migration file exists in the tree', $allExist);
+
+/*
+ * The first post-baseline migration's date key. Any migration file at or
+ * after it, in any migration directory, belongs to this release — and must
+ * therefore be in the inventory above, in both rehearsals and in both
+ * deployment documents, or it will arrive on production undeclared.
+ */
+$postBaseline = [];
+
+foreach (array_merge(
+    glob($root.'/app/Modules/*/Database/Migrations/*.php') ?: [],
+    glob($root.'/database/migrations/*.php') ?: [],
+) as $file) {
+    if (basename($file) >= '2026_08_06') {
+        $postBaseline[] = substr($file, strlen($root) + 1);
+    }
+}
+
+sort($postBaseline);
+$expectedInventory = $inventory;
+sort($expectedInventory);
+
+$ok('no post-baseline migration exists outside the inventory', $postBaseline === $expectedInventory);
+
+$deployRehearsal = $read('scripts/release/deploy_rehearsal.sh');
+$rollbackRehearsal = $read('scripts/release/rollback_rehearsal_v7.sh');
+
+$namesEverywhere = static function (string $body) use ($inventory): bool {
+    foreach ($inventory as $rel) {
+        if (! str_contains($body, basename($rel, '.php'))) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+$ok(
+    'the deployment rehearsal names every inventoried migration and pins the count fail-closed',
+    $namesEverywhere($deployRehearsal)
+        && str_contains($deployRehearsal, '[ "$DELTA" = "9" ]')
+        && ! str_contains($deployRehearsal, '[ "$DELTA" = "8" ]'),
+);
+
+$ok(
+    'the deployment rehearsal walks the choice-first registration journey',
+    str_contains($deployRehearsal, '/ar/account/verify')
+        && str_contains($deployRehearsal, 'Account/VerifyChoice')
+        && str_contains($deployRehearsal, 'Account/TelegramLink')
+        && str_contains($deployRehearsal, 'whatsapp_available'),
+);
+
+$ok(
+    'the rollback rehearsal reverses the whole inventory by exact path and pins the count',
+    $namesEverywhere($rollbackRehearsal)
+        && str_contains($rollbackRehearsal, '[ "$PATCH_RAN" = "9" ]')
+        && str_contains($rollbackRehearsal, 'RAN_BEFORE - 9')
+        && str_contains($rollbackRehearsal, "'whatsapp_otps'")
+        && str_contains($rollbackRehearsal, "'whatsapp_verified_at'"),
+);
+
+$ok(
+    'both deployment documents name every inventoried migration',
+    $namesEverywhere($read('DEPLOYMENT_NOTES.md'))
+        && $namesEverywhere($read('ROLLBACK_NOTES.md')),
+);
+
+$ok(
+    'the full-source builder requires the WhatsApp migration',
+    str_contains(
+        $read('scripts/release/build_full_source.py'),
+        '2026_08_19_000100_whatsapp_account_verification.php',
+    ),
+);
+
 echo "\n";
 
 exit(TestTally::exitCode());

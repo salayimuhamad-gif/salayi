@@ -1437,6 +1437,100 @@ check('the rollback rehearsal restores the backed-up build directory whole',
       '"$SITE/public_html/build"' in rollback_sh
       and 'the restored build directory matches the backup exactly' in rollback_sh)
 
+# ---- the migration inventory is ONE list, told identically everywhere -----
+#
+# Final release run #33 failed on exactly this: the dual-verification release
+# added a ninth migration above the sealed v6 baseline, and the deployment
+# rehearsal still asserted "exactly eight" while its registration journey
+# still expected the pre-choice landing on the Telegram linking page. The
+# canonical list lives here; every surface that states the inventory must
+# carry every name, and the tree may carry no post-baseline migration the
+# list does not name — an unexpected tenth must fail HERE the way the
+# unexpected ninth failed the rehearsal.
+INVENTORY = (
+    'app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_challenges.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000200_profile_optional_details.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_users.php',
+    'app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php',
+    'app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php',
+    'app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php',
+    'app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php',
+)
+# The first post-baseline migration's date key: anything at or after it in any
+# migration directory is this release's to declare.
+BASELINE_HORIZON = '2026_08_06'
+
+check('every inventoried migration exists in the tree',
+      all((ROOT / rel).is_file() for rel in INVENTORY),
+      f'missing: {[rel for rel in INVENTORY if not (ROOT / rel).is_file()]}')
+
+post_baseline = {
+    str(p.relative_to(ROOT))
+    for pattern in ('app/Modules/*/Database/Migrations/*.php',
+                    'database/migrations/*.php')
+    for p in ROOT.glob(pattern) if p.name >= BASELINE_HORIZON
+}
+check('no post-baseline migration exists outside the inventory',
+      post_baseline == set(INVENTORY),
+      f'unexpected: {sorted(post_baseline - set(INVENTORY))} '
+      f'missing: {sorted(set(INVENTORY) - post_baseline)}')
+
+inventory_names = [Path(rel).stem for rel in INVENTORY]
+
+check('the deployment rehearsal names every inventoried migration',
+      all(name in deploy_sh for name in inventory_names),
+      f'missing: {[n for n in inventory_names if n not in deploy_sh]}')
+check('the deployment rehearsal pins the exact inventory count, fail-closed',
+      f'[ "$DELTA" = "{len(INVENTORY)}" ]' in deploy_sh
+      and '[ "$DELTA" = "8" ]' not in deploy_sh)
+check('the rollback rehearsal reverses every inventoried migration by exact path',
+      all(rel in rollback_sh for rel in INVENTORY),
+      f'missing: {[rel for rel in INVENTORY if rel not in rollback_sh]}')
+check('the rollback rehearsal pins the exact inventory count, fail-closed',
+      f'[ "$PATCH_RAN" = "{len(INVENTORY)}" ]' in rollback_sh
+      and f'RAN_BEFORE - {len(INVENTORY)}' in rollback_sh)
+check('the rollback rehearsal proves the WhatsApp table and users column are gone',
+      "'whatsapp_otps'" in rollback_sh and "'whatsapp_verified_at'" in rollback_sh)
+
+deployment_notes = (ROOT / 'DEPLOYMENT_NOTES.md').read_text()
+rollback_notes = (ROOT / 'ROLLBACK_NOTES.md').read_text()
+check('DEPLOYMENT_NOTES.md names every inventoried migration',
+      all(name in deployment_notes for name in inventory_names),
+      f'missing: {[n for n in inventory_names if n not in deployment_notes]}')
+check('ROLLBACK_NOTES.md names every inventoried migration',
+      all(name in rollback_notes for name in inventory_names),
+      f'missing: {[n for n in inventory_names if n not in rollback_notes]}')
+check('the full-source builder requires the WhatsApp migration',
+      '2026_08_19_000100_whatsapp_account_verification.php'
+      in (RELEASE / 'build_full_source.py').read_text())
+
+# ---- the rehearsal walks the CHOICE-FIRST registration journey -------------
+#
+# Run #33's second failure: registration now lands on the verification choice
+# (/ar/account/verify), where the person picks Telegram or WhatsApp; the
+# rehearsal still expected the direct landing on /ar/account/telegram/link.
+# The journey the rehearsal must walk: choice landing (RTL, flashed
+# confirmation, Telegram offered, WhatsApp unavailable without Bird
+# credentials), then choosing Telegram reaches the linking page, and the
+# onboarding gate still refuses — pointing BACK at the choice.
+check('the deployment rehearsal expects registration to land on the choice page',
+      '"/ar/account/verify$"' in deploy_sh
+      and 'redirects to the Arabic linking page' not in deploy_sh)
+check('the rehearsal proves the landing is the verification-choice component',
+      'Account/VerifyChoice' in deploy_sh)
+check('the rehearsal proves the Telegram door is offered',
+      '"telegram_available"' in deploy_sh)
+check('the rehearsal proves WhatsApp reads unavailable without Bird, not an error',
+      '"whatsapp_available"' in deploy_sh
+      and '=== false' in deploy_sh)
+check('the rehearsal walks the Telegram door to the linking page',
+      'Account/TelegramLink' in deploy_sh
+      and '/ar/account/telegram/link' in deploy_sh)
+check('the rehearsal proves the gate refusal points at the verification choice',
+      'GATED_LOC' in deploy_sh)
+
 # Runtime asset parity is what proves the delivered runtime build IS the
 # authenticated tree's build. The replacement policy leans on it, so it must
 # stay mandatory and stay exclusion-free.

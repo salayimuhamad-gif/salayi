@@ -1,8 +1,9 @@
 # DEPLOYMENT_NOTES.md — MyHawler v7 release
 
 The exact reversible procedure for this release: account-first registration
-with passwords, Telegram password recovery, admin presence and activity, and
-the investment map surface.
+with passwords and a Telegram-or-WhatsApp verification choice, Telegram
+password recovery, admin presence and activity, and the investment map
+surface.
 
 > **Rehearsal status.** `scripts/release/deploy_rehearsal.sh` executes this
 > exact procedure on every final-release CI run, against a staged
@@ -10,7 +11,7 @@ the investment map surface.
 > rehearsal output and its check counts ship in the external evidence package,
 > which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships eight forward-only migrations:
+**This patch DOES change the schema.** It ships nine forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -21,6 +22,7 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000300_add_last_seen_to_user
 app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_to_knowledge_events.php
 app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php
 app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
+app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php
 ```
 
 1. `telegram_return_handoffs` backs the secure Telegram return handoff.
@@ -46,6 +48,11 @@ app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_sea
    no-op — blanking the keys would only re-break the search.
 8. `backfill_offer_search_keys` is the same data-only repair for existing
    marketplace offers, with the same no-op reversal.
+9. `whatsapp_otps` and `users.whatsapp_verified_at` back the WhatsApp
+   verification door: short-lived one-time codes delivered through Bird,
+   hashed at rest, and the second verified-at stamp the shared
+   verified-account rule reads. Without them the reclamation sweep and the
+   verified-account queries name a column that does not exist.
 
 Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
@@ -55,6 +62,12 @@ not optional.
 or an email**. No existing account is altered by this and no existing
 credential stops working; see §7 of
 `docs/simplified-telegram-verification.md` for the existing-user matrix.
+**Verification is a choice of two doors**: registration lands on
+`/account/verify`, offering the existing Telegram Start and a WhatsApp
+one-time code through Bird. Either door verifies the same account and one
+success is enough. WhatsApp appears only when Bird is configured on the host
+— with no Bird credentials the page offers Telegram and marks WhatsApp
+unavailable, which is a correct state, not an error.
 Password recovery over Telegram is a separate mechanism from every
 verification, link and handoff token. The investment map (`/invest`) ships
 behind the `map.investment` feature flag, which is **off** in the shipped
@@ -122,11 +135,11 @@ cd ~/domains/myhawler.com/application
 ```
 
 Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-eight.
+nine.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
 ```
 
 Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
@@ -203,18 +216,18 @@ Then prove exactly what you expect:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
 ```
 
-Expect **eight** lines, each reading **`Ran`** — all were `Pending` or absent in
+Expect **nine** lines, each reading **`Ran`** — all were `Pending` or absent in
 step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 8`. Both directions matter: a smaller increase means
-one of the eight never arrived — and if it is `telegram_verification_tokens`,
+Expect exactly `BEFORE + 9`. Both directions matter: a smaller increase means
+one of the nine never arrived — and if it is `telegram_verification_tokens`,
 nobody can complete a registration — while a larger one means something
 unintended came along and you should stop and look at it.
 
@@ -229,11 +242,14 @@ that the recovery table and the presence column arrived with it:
   echo Schema::hasTable('password_recovery_challenges') ? 'recovery table OK' : 'RECOVERY TABLE MISSING', PHP_EOL;
   echo Schema::hasColumn('users', 'date_of_birth') ? 'profile columns OK' : 'PROFILE COLUMNS MISSING', PHP_EOL;
   echo Schema::hasColumn('users', 'last_seen_at') ? 'presence column OK' : 'PRESENCE COLUMN MISSING', PHP_EOL;
+  echo Schema::hasTable('whatsapp_otps') ? 'whatsapp table OK' : 'WHATSAPP TABLE MISSING', PHP_EOL;
+  echo Schema::hasColumn('users', 'whatsapp_verified_at') ? 'whatsapp column OK' : 'WHATSAPP COLUMN MISSING', PHP_EOL;
 "
 ```
 
 Expect `table OK`, `no expiry column OK`, `recovery table OK`,
-`profile columns OK`, `presence column OK`. The recovery table intentionally
+`profile columns OK`, `presence column OK`, `whatsapp table OK`,
+`whatsapp column OK`. The recovery table intentionally
 DOES carry an expiry — its challenges die in fifteen minutes — which is the
 designed asymmetry between the permanent verification link and the short-lived
 recovery credential.
@@ -312,10 +328,11 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                     §1
 all seven backups taken and readable          §2
 deletions applied and verified absent         §6
-all eight migrations moved Pending -> Ran     §8
-migration count increased by exactly eight    §8
+all nine migrations moved Pending -> Ran      §8
+migration count increased by exactly nine     §8
 verification table present, NO expires_at     §8
 recovery table + presence column present      §8
+whatsapp table + whatsapp column present      §8
 public/build manifest resolves                §9
 caches rebuilt without error                  §10
 abandon, return, recovery, invest routes      §11
@@ -360,21 +377,27 @@ Then the full journey by hand, with a spare number:
 
 ```text
 1. open /register, choose العربية, fill the form INCLUDING a password, submit
-2. you land on /ar/account/telegram/link
+2. you land on /ar/account/verify — the verification choice
 3. the page is right-to-left and shows: تم إنشاء حسابك بنجاح
-4. press Open Telegram, then /start in the bot
-5. the chat says to confirm in your browser, with a العودة إلى MyHawler
+4. the page offers Telegram; WhatsApp appears only if Bird is configured on
+   this host, and with no Bird credentials it must read as unavailable —
+   never as an error page
+5. choose Telegram; you land on /ar/account/telegram/link
+6. press Open Telegram, then /start in the bot
+7. the chat says to confirm in your browser, with a العودة إلى MyHawler
    button. Opening that button in a DIFFERENT browser must show the neutral
    "go back to your original tab" page — it must not sign anyone in.
-6. back in the original tab, the candidate appears on its own; confirm it
-7. the chat confirms success with a العودة إلى MyHawler button. Opening THAT
+8. back in the original tab, the candidate appears on its own; confirm it
+9. the chat confirms success with a العودة إلى MyHawler button. Opening THAT
    button in a different browser signs you in once and lands on
    /ar/account/onboarding
-8. reopening the same button a second time shows the neutral expired page
+10. reopening the same button a second time shows the neutral expired page
 ```
 
-Step 7 is the migration's payload: if the handoff table is missing, this is
-where it fails.
+Step 9 is the handoff migration's payload: if the handoff table is missing,
+this is where it fails. If Bird IS configured, verify the WhatsApp door with a
+second spare number afterwards: request the code, type it back, and confirm it
+lands on onboarding — either door alone must be enough.
 
 ## 15. Success criteria and failure handling
 
@@ -384,7 +407,7 @@ where it fails.
 every offline gate in §12 passed
 home 200, /register 200, referenced asset 200
 the §14 walkthrough completes in Arabic, including the cold-browser handoff
-the one-time handoff is genuinely one-time (step 8 shows the expired page)
+the one-time handoff is genuinely one-time (step 10 shows the expired page)
 ```
 
 Only then is the deployment complete. Leave the site up and watch the error log
@@ -395,8 +418,8 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than eight -> a table or column is missing; roll back
-migration count up by more than eight  -> stop and investigate before continuing
+migration count up by fewer than nine -> a table or column is missing; roll back
+migration count up by more than nine  -> stop and investigate before continuing
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back
@@ -414,7 +437,9 @@ cd ~/domains/myhawler.com/application
 5xx on / or /register                -> down, then roll back
 referenced asset 404                 -> down, then roll back
 registration does not reach the
-    linking page                     -> down, then roll back
+    verification choice              -> down, then roll back
+choosing Telegram does not reach
+    the linking page                 -> down, then roll back
 the cold-browser handoff fails       -> down, then roll back
 ```
 
