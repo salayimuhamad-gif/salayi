@@ -125,6 +125,23 @@ function nextPhone(): string {
     throw new Error('could not generate a unique test phone number');
 }
 
+/*
+ * Registration now lands on the verification CHOICE page — one account, two
+ * doors (Telegram Start, WhatsApp code) — and the person picks one. This
+ * suite's Bird credentials are deliberately absent, so the WhatsApp door
+ * renders as unavailable and Telegram is the one genuine door; the journeys
+ * below therefore walk register → choice → Telegram, which is exactly what a
+ * person does on such a deployment.
+ */
+async function chooseTelegram(
+    page: import('@playwright/test').Page,
+    testCase: LocaleCase,
+): Promise<void> {
+    await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/verify$`));
+    await page.getByTestId('choose-telegram').click();
+    await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/telegram/link$`));
+}
+
 async function register(page: import('@playwright/test').Page, testCase: LocaleCase, phone: string): Promise<void> {
     await page.goto('/register');
 
@@ -226,21 +243,27 @@ async function tokenFromPage(page: import('@playwright/test').Page): Promise<str
 
 for (const testCase of LOCALES) {
     test.describe(`account-first registration (${testCase.locale})`, () => {
-        test('registers, lands on the localized linking page, and shows the account-created message', async ({
+        test('registers, lands on the localized verification choice, and reaches the linking page through it', async ({
             page,
             diagnostics,
         }) => {
             await register(page, testCase, nextPhone());
 
-            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/telegram/link$`));
+            // The choice page: account created, and the Telegram door offered.
+            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/verify$`));
             await expect(page.getByTestId('account-created')).toContainText(testCase.accountCreated);
+            await expect(page.getByTestId('choose-telegram')).toBeVisible();
 
             // The direction must match the language, not the page it came from.
             await expect(page.locator('html')).toHaveAttribute('dir', testCase.dir);
 
-            expect(diagnostics.consoleErrors, 'console errors on the linking page').toEqual([]);
+            // And the door actually opens: one click reaches the linking page.
+            await chooseTelegram(page, testCase);
+            await expect(page.getByTestId('open-telegram')).toBeVisible();
+
+            expect(diagnostics.consoleErrors, 'console errors on the verification journey').toEqual([]);
             expect(diagnostics.pageErrors).toEqual([]);
-            expect(diagnostics.failedRequests, 'missing assets on the linking page').toEqual([]);
+            expect(diagnostics.failedRequests, 'missing assets on the verification journey').toEqual([]);
         });
 
         test('completes linking through Telegram and advances the waiting tab on its own', async ({
@@ -249,7 +272,7 @@ for (const testCase of LOCALES) {
             diagnostics,
         }) => {
             await register(page, testCase, nextPhone());
-            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/telegram/link$`));
+            await chooseTelegram(page, testCase);
 
             const token = await tokenFromPage(page);
             const telegramId = 700_000 + Math.floor(Math.random() * 90_000);
@@ -302,6 +325,7 @@ for (const testCase of LOCALES) {
             const phone = nextPhone();
 
             await register(page, testCase, phone);
+            await chooseTelegram(page, testCase);
             const token = await tokenFromPage(page);
 
             /*
@@ -341,6 +365,7 @@ for (const testCase of LOCALES) {
 
         test('surviving a refresh and a second tab without losing the token', async ({ page, context }) => {
             await register(page, testCase, nextPhone());
+            await chooseTelegram(page, testCase);
             const first = await tokenFromPage(page);
 
             await page.reload();
@@ -378,7 +403,7 @@ for (const testCase of LOCALES) {
             const phone = nextPhone();
 
             await register(page, testCase, phone);
-            await expect(page).toHaveURL(new RegExp(`${testCase.prefix}/account/telegram/link$`));
+            await chooseTelegram(page, testCase);
 
             const token = await tokenFromPage(page);
             const telegramId = 810_000 + Math.floor(Math.random() * 80_000);
@@ -432,16 +457,16 @@ for (const testCase of LOCALES) {
                 { timeout: 30_000 },
             );
 
-            // Emphatically NOT the verification page.
-            await expect(page).not.toHaveURL(/\/account\/telegram\/link/);
+            // Emphatically NOT a verification page — neither door, nor the choice.
+            await expect(page).not.toHaveURL(/\/account\/(telegram\/link|verify)/);
         });
     });
 }
 
 test.describe('account-first edge cases', () => {
-    test('an unlinked account is refused by a protected page and sent to linking, with no loop', async ({ page }) => {
+    test('an unverified account is refused by a protected page and sent to the verification choice, with no loop', async ({ page }) => {
         await register(page, LOCALES[0], nextPhone());
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+        await expect(page).toHaveURL(/\/account\/verify$/);
 
         const redirects: string[] = [];
         page.on('response', (response) => {
@@ -452,16 +477,17 @@ test.describe('account-first edge cases', () => {
 
         await page.goto('/account/onboarding');
 
-        // One hop to the linking page, and it renders — not a loop.
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+        // One hop to the verification choice, and it renders — not a loop.
+        await expect(page).toHaveURL(/\/account\/verify$/);
         expect(redirects.length, `redirect chain was ${redirects.join(' -> ')}`).toBeLessThan(4);
-        await expect(page.getByTestId('open-telegram')).toBeVisible();
+        await expect(page.getByTestId('choose-telegram')).toBeVisible();
     });
 
     test('cancelling an unfinished registration frees the number for an immediate retry', async ({ page }) => {
         const phone = nextPhone();
         await register(page, LOCALES[0], phone);
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+        // The abandon control lives on the Telegram linking page.
+        await chooseTelegram(page, LOCALES[0]);
 
         // The page offers this explicitly: cancelling a registration is a
         // product action, not something a test has to synthesise.
@@ -470,13 +496,13 @@ test.describe('account-first edge cases', () => {
 
         // Same number, straight away — no waiting for the retention window.
         await register(page, LOCALES[0], phone);
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+        await expect(page).toHaveURL(/\/account\/verify$/);
     });
 
     test('registering a number that is already taken is refused without signing anyone in', async ({ page }) => {
         const phone = nextPhone();
         await register(page, LOCALES[2], phone);
-        await expect(page).toHaveURL(/\/en\/account\/telegram\/link$/);
+        await expect(page).toHaveURL(/\/en\/account\/verify$/);
 
         await page.context().clearCookies();
 
@@ -520,7 +546,7 @@ test.describe('account-first edge cases', () => {
         const phone = nextPhone();
 
         await register(page, LOCALES[0], phone);
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/);
+        await chooseTelegram(page, LOCALES[0]);
 
         const before = await tokenFromPage(page);
 
@@ -534,13 +560,20 @@ test.describe('account-first edge cases', () => {
         await page.locator('input[autocomplete="current-password"]').first().fill(PASSWORD);
         await page.locator('button[type="submit"]').first().click();
 
-        // Signing in resumes the registration exactly where it stopped.
-        await expect(page).toHaveURL(/\/account\/telegram\/link$/, { timeout: 30_000 });
+        /*
+         * Signing in resumes the registration exactly where it stopped: back
+         * at the verification choice, with the SAME Telegram link still
+         * waiting behind its door — not a replacement, which would have
+         * quietly killed the one already open in their Telegram chat.
+         */
+        await expect(page).toHaveURL(/\/account\/verify$/, { timeout: 30_000 });
+        await chooseTelegram(page, LOCALES[0]);
         expect(await tokenFromPage(page), 'signing in again replaced the verification link').toBe(before);
     });
 
     test('restarting retires the old token and issues a new one', async ({ page }) => {
         await register(page, LOCALES[0], nextPhone());
+        await chooseTelegram(page, LOCALES[0]);
         const first = await tokenFromPage(page);
 
         /*
