@@ -295,6 +295,15 @@ else
     check "the patched investment-map routes are gone after rollback" 0
 fi
 
+# The verification-choice surface is this patch's too; the baseline has no
+# account/verify route at all, so anything matching is a half-rollback.
+( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/verify" )
+if [ $? -eq 0 ]; then
+    check "the patched verification-choice routes are GONE after rollback" 1
+else
+    check "the patched verification-choice routes are gone after rollback" 0
+fi
+
 ( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep -q "account/telegram/link" )
 check "the pre-patch Telegram linking route is present" $?
 

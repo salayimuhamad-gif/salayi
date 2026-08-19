@@ -300,6 +300,7 @@ Maintenance mode is still ON for all of this. These are CLI checks only.
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/return                 # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan route:list | grep forgot-password/telegram       # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan route:list | grep invest/features                # expect NOTHING
+/opt/alt/php83/usr/bin/php artisan route:list | grep account/verify                 # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan route:list | grep account/telegram/link          # expect the route
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-unlinked              # expect NOTHING
 /opt/alt/php83/usr/bin/php artisan schedule:list | grep prune-return-handoffs       # expect NOTHING
@@ -400,7 +401,7 @@ preserved in §7.
 ```text
 all nine migrations reversed; the four tables, the four users columns and the evidence-class column absent
 restored manifest hash equals the §1 hash; every entry resolves
-route:list shows NO abandon, return, recovery or invest routes
+route:list shows NO abandon, return, recovery, verify-choice or invest routes
 schedule:list shows NONE of the three cleanups
 queue worker runs
 home 200 and a referenced asset 200
