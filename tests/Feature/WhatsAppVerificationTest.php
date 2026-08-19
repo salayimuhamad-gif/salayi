@@ -61,12 +61,16 @@ final class WhatsAppVerificationTest extends TestCase
             'services.bird.api_key' => 'bk_test_key',
             'services.bird.workspace_id' => 'ws-test',
             'services.bird.channel_id' => 'ch-whatsapp',
-            'services.bird.otp_template_slug' => 'myhawler_verification',
+            // The raw Channels API references the template by PROJECT id;
+            // version, locale and the parameter key ride on their defaults
+            // here so the defaults themselves stay pinned.
+            'services.bird.otp_template_project_id' => '11111111-2222-3333-4444-555555555555',
         ]);
 
         Http::fake([
             'api.telegram.org/*' => Http::response(['ok' => true]),
-            'api.bird.com/*' => Http::response(['id' => 'msg-1', 'status' => 'accepted'], 200),
+            // The documented Channels API success: 202 Accepted.
+            'api.bird.com/*' => Http::response(['id' => 'msg-1', 'status' => 'accepted'], 202),
         ]);
     }
 
@@ -152,7 +156,7 @@ final class WhatsAppVerificationTest extends TestCase
         foreach (Http::recorded() as [$request]) {
             if (str_contains($request->url(), 'api.bird.com')) {
                 $data = $request->data();
-                $code = (string) ($data['template']['components'][0]['parameters'][0]['text'] ?? '');
+                $code = (string) ($data['template']['parameters'][0]['value'] ?? '');
             }
         }
 
@@ -243,7 +247,7 @@ final class WhatsAppVerificationTest extends TestCase
     // Sending the code
     // ----------------------------------------------------------------
 
-    public function test_requesting_a_code_delivers_six_digits_through_bird_to_the_registered_phone(): void
+    public function test_the_outgoing_request_is_byte_exact_against_birds_channels_api_contract(): void
     {
         $this->registerAndRequestCode('07501234567');
 
@@ -257,22 +261,71 @@ final class WhatsAppVerificationTest extends TestCase
 
         $this->assertNotNull($delivered, 'nothing was sent through Bird');
 
-        $data = $delivered->data();
+        /*
+         * The EXACT official Channels API contract, asserted whole rather
+         * than field-by-field: one POST to the workspace/channel messages
+         * endpoint, the receiver as a WhatsApp contact identified by its
+         * E.164 number, and the approved template referenced by PROJECT id +
+         * version + locale with the digits as one typed {type,key,value}
+         * parameter. A field this shape does not name — an SDK-style slug, a
+         * components wrapper — fails this assertion by existing.
+         */
+        $this->assertSame('POST', $delivered->method());
+        $this->assertSame(
+            'https://api.bird.com/workspaces/ws-test/channels/ch-whatsapp/messages',
+            $delivered->url(),
+        );
 
-        // The registered number in E.164, the configured template, the code.
-        $this->assertSame('+9647501234567', $data['receiver']['contacts'][0]['identifierValue'] ?? null);
-        $this->assertSame('myhawler_verification', $data['template']['slug'] ?? null);
-        $this->assertSame('code', $data['template']['components'][0]['parameters'][0]['name'] ?? null);
-        $this->assertMatchesRegularExpression('/^\d{6}$/',
-            (string) ($data['template']['components'][0]['parameters'][0]['text'] ?? ''));
+        $code = (string) ($delivered->data()['template']['parameters'][0]['value'] ?? '');
+        $this->assertMatchesRegularExpression('/^\d{6}$/', $code, 'no six-digit code in the payload');
 
-        // Authenticated by the workspace's access key.
+        $this->assertSame([
+            'receiver' => [
+                'contacts' => [
+                    ['identifierValue' => '+9647501234567'],
+                ],
+            ],
+            'template' => [
+                'projectId' => '11111111-2222-3333-4444-555555555555',
+                'version' => 'latest',
+                'locale' => 'en',
+                'parameters' => [
+                    ['type' => 'string', 'key' => 'code', 'value' => $code],
+                ],
+            ],
+        ], $delivered->data());
+
+        // Authenticated by the workspace's access key, as JSON.
         $this->assertSame('AccessKey bk_test_key', $delivered->header('Authorization')[0] ?? null);
+        $this->assertStringContainsString('application/json', (string) ($delivered->header('Content-Type')[0] ?? ''));
 
         // And the code itself is stored ONLY as a keyed digest.
-        $code = $this->lastDeliveredCode();
         $this->assertDatabaseMissing('whatsapp_otps', ['code_hash' => $code]);
         $this->assertDatabaseHas('whatsapp_otps', ['code_hash' => WhatsAppOtp::hashOf($code)]);
+    }
+
+    public function test_only_the_documented_202_accepted_counts_as_sent(): void
+    {
+        /*
+         * The Channels API's documented success is 202 Accepted. A different
+         * status — here a 200 with a plausible-looking body — is a response
+         * the contract never promised, and trusting it would leave a live
+         * code the platform cannot prove was ever handed to Bird. Refused,
+         * and the minted code is revoked. (Per-test host because stubs
+         * resolve first-match-wins against setUp's 202.)
+         */
+        config(['services.bird.base_url' => 'https://bird-odd.example']);
+        Http::fake(['bird-odd.example/*' => Http::response(['id' => 'msg-1', 'status' => 'accepted'], 200)]);
+
+        $this->register();
+        $this->continueInBrowser();
+
+        $this->post('/account/verify/whatsapp/send')
+            ->assertRedirect()
+            ->assertSessionHasErrors('whatsapp');
+
+        $this->assertSame(0, WhatsAppOtp::query()->usable()->count());
+        $this->assertSame(1, WhatsAppOtp::query()->whereNotNull('revoked_at')->count());
     }
 
     public function test_an_immediate_resend_is_refused_by_the_cooldown_and_the_first_code_survives(): void

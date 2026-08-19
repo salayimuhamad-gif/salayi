@@ -70,22 +70,31 @@ return [
      * Bird (bird.com) — WhatsApp OTP delivery for account verification.
      *
      * The verification code travels as a WhatsApp TEMPLATE message through
-     * Bird's Channels API: POST {base_url}/workspaces/{id}/channels/{id}/
-     * messages, authenticated by `Authorization: AccessKey …`. The template
-     * is referenced by the slug configured in the Bird workspace, and the
-     * code is passed as one named body parameter — the same shape as the
-     * owner's SDK example. `otp_parameter` names that template variable.
+     * Bird's official Channels API: POST {base_url}/workspaces/{id}/channels/
+     * {id}/messages, authenticated by `Authorization: AccessKey …`, answered
+     * with HTTP 202 Accepted. The raw endpoint references the approved
+     * template by its TEMPLATE-PROJECT ID plus a version and a locale — not
+     * by the slug the TypeScript SDK exposes — and the code is passed as one
+     * typed parameter `{type:"string", key:<otp_parameter_key>, value:<code>}`.
+     * The exact Bird objects each value comes from are documented in
+     * docs/BIRD_WHATSAPP_OTP.md.
      *
-     * WhatsApp verification is OFF until every value below is present; the
-     * verification-choice page then offers Telegram alone, so a deployment
-     * that never configures Bird behaves exactly as before this shipped.
+     * WhatsApp verification is OFF until api_key, workspace_id, channel_id
+     * and otp_template_project_id are all present; the verification-choice
+     * page then offers Telegram alone, so a deployment that never configures
+     * Bird behaves exactly as before this shipped.
      */
     'bird' => [
         'api_key' => env('BIRD_API_KEY'),
         'workspace_id' => env('BIRD_WORKSPACE_ID'),
         'channel_id' => env('BIRD_WHATSAPP_CHANNEL_ID'),
-        'otp_template_slug' => env('BIRD_OTP_TEMPLATE_SLUG'),
-        'otp_parameter' => env('BIRD_OTP_TEMPLATE_PARAMETER', 'code'),
+        // The template PROJECT id from the Bird workspace (a UUID), plus
+        // which published version and locale of it to render.
+        'otp_template_project_id' => env('BIRD_OTP_TEMPLATE_PROJECT_ID'),
+        'otp_template_version' => env('BIRD_OTP_TEMPLATE_VERSION', 'latest'),
+        'otp_template_locale' => env('BIRD_OTP_TEMPLATE_LOCALE', 'en'),
+        // The template variable's KEY that carries the digits.
+        'otp_parameter_key' => env('BIRD_OTP_TEMPLATE_PARAMETER_KEY', 'code'),
         'base_url' => env('BIRD_BASE_URL', 'https://api.bird.com'),
     ],
 ];

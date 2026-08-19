@@ -732,6 +732,33 @@ $ok(
         && str_contains($whatsappModel, 'RuntimeException'),
 );
 
+/*
+ * The Bird client must speak the RAW Channels API contract — template
+ * referenced by projectId + version + locale with typed {type,key,value}
+ * parameters — never the TypeScript SDK's slug/components convenience
+ * surface, which does not map 1:1 onto the endpoint. Matched on the payload
+ * ASSIGNMENTS (quoted keys), so the docblock explaining the SDK difference
+ * cannot satisfy or trip it.
+ */
+$birdClient = $read('app/Modules/Identity/Services/BirdWhatsAppClient.php');
+
+$ok(
+    'the Bird client speaks the official Channels API template contract, not the SDK surface',
+    str_contains($birdClient, "'projectId' =>")
+        && str_contains($birdClient, "'version' =>")
+        && str_contains($birdClient, "'locale' =>")
+        && str_contains($birdClient, "'identifierValue' =>")
+        && preg_match("/'type' => 'string',\s+'key' =>/", $birdClient) === 1
+        && ! str_contains($birdClient, "'slug'")
+        && ! str_contains($birdClient, "'components'"),
+);
+
+$ok(
+    'only the documented 202 Accepted counts as a sent message',
+    str_contains($birdClient, 'private const ACCEPTED = 202;')
+        && str_contains($birdClient, '$response->status() !== self::ACCEPTED'),
+);
+
 $ok(
     'the model hides both digests',
     preg_match("/protected \\\$hidden = \\['code_hash', 'phone_hash'\\];/", $whatsappModel) === 1,

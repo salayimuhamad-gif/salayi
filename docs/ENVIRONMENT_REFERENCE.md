@@ -95,3 +95,24 @@ credentials. Each provider carries its own credentials:
 is **retired**: it was stored and displayed but executed by nothing (see
 `docs/AI_ADVISOR_AUDIT.md`, finding H); the fallback model is now simply the
 fallback provider's own configured model.
+
+### Bird / WhatsApp OTP verification
+
+Account verification by WhatsApp one-time code, sent through Bird's official
+Channels API (`POST /workspaces/{id}/channels/{id}/messages`, authenticated by
+`Authorization: AccessKey …`, success = HTTP 202 Accepted). Off until the
+first four keys are all set; the verification-choice page then offers
+WhatsApp beside Telegram. Full setup walkthrough — the exact Bird objects to
+create and the one real test send required before production enablement — in
+`docs/BIRD_WHATSAPP_OTP.md`.
+
+| Key | Meaning |
+| --- | --- |
+| `BIRD_API_KEY` | Workspace access key with permission to create messages on the channel. |
+| `BIRD_WORKSPACE_ID` | The Bird workspace id (UUID). |
+| `BIRD_WHATSAPP_CHANNEL_ID` | The connected WhatsApp channel id (UUID). |
+| `BIRD_OTP_TEMPLATE_PROJECT_ID` | The approved verification template's TEMPLATE-PROJECT id (UUID). The raw Channels API references templates by project id, not by the SDK's slug. |
+| `BIRD_OTP_TEMPLATE_VERSION` | Template version to render: `latest` (default) or a version UUID. |
+| `BIRD_OTP_TEMPLATE_LOCALE` | Which published locale of the template to render (default `en`). |
+| `BIRD_OTP_TEMPLATE_PARAMETER_KEY` | The template variable key that carries the six digits (default `code`). |
+| `BIRD_BASE_URL` | Documented API host; leave at `https://api.bird.com`. |

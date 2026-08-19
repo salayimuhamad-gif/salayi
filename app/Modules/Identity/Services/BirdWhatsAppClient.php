@@ -17,28 +17,58 @@ use Throwable;
  * never a response body that might echo either — and an unreachable provider
  * degrades to "not sent" rather than to an exception in the account flow.
  *
- * The HTTP shape is Bird's Channels API: one POST to
- * `{base}/workspaces/{workspace}/channels/{channel}/messages`, authenticated
- * by `Authorization: AccessKey …`, carrying a template reference and one
- * named body parameter with the digits — the same template shape as the
- * owner's SDK example (slug + body components with named text parameters).
- * Everything an operator might need to adjust — endpoint, template slug,
- * parameter name — comes from `services.bird.*`, so a workspace difference is
- * a config change, not a code change.
+ * THE HTTP SHAPE IS BIRD'S OFFICIAL CHANNELS API CONTRACT, taken from the
+ * current official documentation for sending template messages — NOT from the
+ * TypeScript SDK's convenience surface, whose `slug`/`components` abstraction
+ * does not map 1:1 onto the raw endpoint. One POST to
+ *
+ *     {base}/workspaces/{workspaceId}/channels/{channelId}/messages
+ *     Authorization: AccessKey …
+ *
+ * whose body references the APPROVED TEMPLATE by its template-project id,
+ * version and locale, and passes the digits as one typed parameter:
+ *
+ *     {
+ *       "receiver": { "contacts": [ { "identifierValue": "+964…" } ] },
+ *       "template": {
+ *         "projectId":  "<template project UUID>",
+ *         "version":    "latest",
+ *         "locale":     "en",
+ *         "parameters": [ { "type": "string", "key": "code", "value": "123456" } ]
+ *       }
+ *     }
+ *
+ * The documented success answer is HTTP 202 Accepted — Bird enqueues the
+ * message and reports its delivery lifecycle out of band. 202 and ONLY 202 is
+ * treated as sent: anything else, including an undocumented 2xx, is refused so
+ * the caller revokes the minted code instead of trusting a response shape the
+ * contract never promised.
+ *
+ * Everything an operator might need to adjust — endpoint, template project id,
+ * version, locale, parameter key — comes from `services.bird.*`, so a
+ * workspace difference is a config change, not a code change. The exact Bird
+ * objects the owner must create, and which of these values comes from where,
+ * are documented in docs/BIRD_WHATSAPP_OTP.md.
  */
 final class BirdWhatsAppClient
 {
+    /**
+     * The documented success status for message creation on the Channels API:
+     * the message was ACCEPTED for delivery.
+     */
+    private const ACCEPTED = 202;
+
     public function isConfigured(): bool
     {
         return (string) config('services.bird.api_key', '') !== ''
             && (string) config('services.bird.workspace_id', '') !== ''
             && (string) config('services.bird.channel_id', '') !== ''
-            && (string) config('services.bird.otp_template_slug', '') !== '';
+            && (string) config('services.bird.otp_template_project_id', '') !== '';
     }
 
     /**
      * Deliver one verification code to one number. True only when Bird
-     * accepted the message.
+     * ACCEPTED the message (HTTP 202).
      */
     public function sendOtp(string $toE164, string $code): bool
     {
@@ -60,29 +90,31 @@ final class BirdWhatsAppClient
                 ->withHeaders(['Authorization' => 'AccessKey '.config('services.bird.api_key')])
                 ->asJson()
                 ->post($url, [
+                    /*
+                     * The official receiver shape for a WhatsApp channel: the
+                     * contact is identified by its E.164 number as
+                     * `identifierValue`.
+                     */
                     'receiver' => [
                         'contacts' => [
                             ['identifierValue' => $toE164],
                         ],
                     ],
                     'template' => [
-                        'slug' => (string) config('services.bird.otp_template_slug'),
-                        'components' => [
+                        'projectId' => (string) config('services.bird.otp_template_project_id'),
+                        'version' => (string) config('services.bird.otp_template_version', 'latest'),
+                        'locale' => (string) config('services.bird.otp_template_locale', 'en'),
+                        'parameters' => [
                             [
-                                'type' => 'body',
-                                'parameters' => [
-                                    [
-                                        'type' => 'text',
-                                        'name' => (string) config('services.bird.otp_parameter', 'code'),
-                                        'text' => $code,
-                                    ],
-                                ],
+                                'type' => 'string',
+                                'key' => (string) config('services.bird.otp_parameter_key', 'code'),
+                                'value' => $code,
                             ],
                         ],
                     ],
                 ]);
 
-            if (! $response->successful()) {
+            if ($response->status() !== self::ACCEPTED) {
                 // The status is safe to record; the body may echo the number,
                 // and the URL is boring — neither is logged.
                 Log::channel('security')->warning('bird.whatsapp_send_failed', [
