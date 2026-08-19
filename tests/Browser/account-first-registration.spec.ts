@@ -561,13 +561,23 @@ test.describe('account-first edge cases', () => {
         await page.locator('button[type="submit"]').first().click();
 
         /*
-         * Signing in resumes the registration exactly where it stopped: back
-         * at the verification choice, with the SAME Telegram link still
-         * waiting behind its door — not a replacement, which would have
-         * quietly killed the one already open in their Telegram chat.
+         * Signing in resumes the registration EXACTLY where it stopped — on
+         * the Telegram linking page, not on the verification choice.
+         *
+         * That is Laravel's intended-URL machinery doing its ordinary job,
+         * and it is the right product answer: the refused visit above stored
+         * `/account/telegram/link` as the session's intended URL, and
+         * `redirect()->intended(destinationFor(...))` replays it after the
+         * password succeeds. The person had already CHOSEN Telegram — a token
+         * exists, possibly open in their chat — so landing them back on that
+         * page beats a detour through the choice. The choice page is the
+         * fallback for a sign-in with no stored destination, which
+         * SimplifiedTelegramVerificationTest pins server-side; this walk pins
+         * the resume. And the SAME link is waiting — not a replacement, which
+         * would have quietly killed the one already open in their Telegram
+         * chat.
          */
-        await expect(page).toHaveURL(/\/account\/verify$/, { timeout: 30_000 });
-        await chooseTelegram(page, LOCALES[0]);
+        await expect(page).toHaveURL(/\/account\/telegram\/link$/, { timeout: 30_000 });
         expect(await tokenFromPage(page), 'signing in again replaced the verification link').toBe(before);
     });
 
