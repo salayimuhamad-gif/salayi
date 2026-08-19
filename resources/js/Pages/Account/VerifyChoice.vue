@@ -18,7 +18,8 @@ import { useLocale } from '@/Composables/useLocale';
  * is exactly the old journey with one extra sentence: Telegram, offered
  * alone.
  */
-const props = defineProps<{
+// The template reads the props by name; no script-side handle is needed.
+defineProps<{
     telegram_available: boolean;
     whatsapp_available: boolean;
     phone_masked: string | null;

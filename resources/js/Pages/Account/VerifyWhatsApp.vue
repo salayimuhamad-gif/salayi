@@ -83,8 +83,11 @@ function confirmCode(): void {
                 {{ flashStatus }}
             </AppAlert>
 
-            <AppAlert v-if="sendForm.errors.whatsapp" variant="danger" class="mt-4">
-                {{ sendForm.errors.whatsapp }}
+            <!-- Send failures arrive as the SHARED "whatsapp" error bag entry
+                 (the send form itself has no fields), read from the page props
+                 exactly as the portfolio pages read theirs. -->
+            <AppAlert v-if="page.props.errors?.whatsapp" variant="danger" class="mt-4">
+                {{ page.props.errors.whatsapp }}
             </AppAlert>
 
             <!-- Request (or re-request) a code. Disabled while the server's
