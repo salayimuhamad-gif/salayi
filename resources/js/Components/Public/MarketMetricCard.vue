@@ -96,15 +96,19 @@ const confidenceTone = computed(
 );
 </script>
 
+<!-- Wave 2B: the reference KPI treatment — micro label, prominent figure,
+     movement beside it — with every §8.2 evidence field kept, compressed
+     into the quiet metadata band below. Nothing was dropped; only the
+     hierarchy moved toward the reference. -->
 <template>
-    <article class="mh-lux-card mh-lux-gilded p-5">
-        <header class="flex items-start justify-between gap-3">
-            <h3 class="min-w-0 text-sm font-medium text-ink">{{ index.name }}</h3>
-            <span class="mh-lux-eyebrow shrink-0">{{ index.currency }}</span>
+    <article class="mh-lux-card !rounded-glass px-5 py-4">
+        <header class="flex items-baseline justify-between gap-3">
+            <h3 class="mh-microlabel min-w-0 truncate">{{ index.name }}</h3>
+            <span class="numeral shrink-0 text-[11px] text-ink-faint">{{ index.currency }}</span>
         </header>
 
-        <div class="mt-3 flex items-end gap-3">
-            <span class="numeral font-display text-3xl font-semibold leading-none text-ink md:text-4xl">
+        <div class="mt-2 flex flex-wrap items-end gap-x-3 gap-y-1">
+            <span class="numeral text-2xl font-medium leading-none text-ink">
                 <AnimatedCounter
                     v-if="animated && numericValue !== null"
                     :value="numericValue"
@@ -113,9 +117,9 @@ const confidenceTone = computed(
                 <template v-else>{{ numericValue !== null ? formatValue(numericValue) : index.value }}</template>
             </span>
 
-            <span v-if="change !== null" class="flex items-center gap-1" :class="trendTone">
-                <AppIcon :name="trendIcon" class="h-4 w-4 shrink-0" />
-                <span class="numeral text-sm font-medium">{{ index.change_percent }}%</span>
+            <span v-if="change !== null" class="flex items-center gap-1 text-xs" :class="trendTone">
+                <AppIcon :name="trendIcon" class="h-3.5 w-3.5 shrink-0" />
+                <span class="numeral font-medium">{{ index.change_percent }}%</span>
             </span>
         </div>
 
@@ -123,17 +127,17 @@ const confidenceTone = computed(
              asking, official and verified prices strictly apart, and an
              unlabelled index is exactly how an asking price gets read as a
              transaction price. -->
-        <div v-if="index.price_type || index.basis" class="mt-3 flex flex-wrap gap-1.5">
-            <span v-if="index.price_type" class="mh-lux-chip">
+        <div v-if="index.price_type || index.basis" class="mt-2.5 flex flex-wrap gap-1.5">
+            <span v-if="index.price_type" class="mh-lux-chip !py-0.5 text-[11px]">
                 {{ t(`market.price_types.${index.price_type}`) }}
             </span>
-            <span v-if="index.basis" class="mh-lux-chip">
+            <span v-if="index.basis" class="mh-lux-chip !py-0.5 text-[11px]">
                 {{ t(`market.basis.${index.basis}`) }}
             </span>
         </div>
 
-        <!-- The evidence that makes the figure readable. -->
-        <dl class="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-line pt-3 text-xs">
+        <!-- The evidence that makes the figure readable — quiet, never gone. -->
+        <dl class="mt-3 flex flex-wrap gap-x-3.5 gap-y-1 border-t border-line pt-2.5 text-[11px]">
             <div class="flex items-center gap-1.5">
                 <dt class="text-ink-faint">{{ t('market.period') }}</dt>
                 <dd class="numeral text-ink-muted">{{ index.period }}</dd>
@@ -150,7 +154,7 @@ const confidenceTone = computed(
             </div>
         </dl>
 
-        <p v-if="index.is_limited" class="mt-3 flex items-start gap-2 text-xs text-caution">
+        <p v-if="index.is_limited" class="mt-2.5 flex items-start gap-2 text-[11px] text-caution">
             <span aria-hidden="true">!</span>
             <span>{{ t('market.warnings.sample_below_minimum') }}</span>
         </p>

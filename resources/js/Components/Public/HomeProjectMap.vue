@@ -217,7 +217,11 @@ async function buildMap(): Promise<void> {
             minZoom: 9,
             maxZoom: 16,
             maxBounds: ERBIL_BOX,
-            accentColour: '#c9a227',
+            // Wave 2B map chrome: the homepage instance renders its clusters
+            // and boundary accent in the Midnight amber. Visual parameter
+            // only — the adapter, layers and semantics are untouched, and
+            // the full /map and /invest surfaces keep their own accents.
+            accentColour: '#f3c56f',
             events: {
                 onMoveEnd: () => {},
                 onClick: () => {
@@ -363,7 +367,7 @@ function sync(): void {
             lat: project.lat,
             lng: project.lng,
             title: project.name ?? '',
-            colour: '#c9a227',
+            colour: '#f3c56f',
             id: project.id,
             // Real trend from the invest rows; the explorer rows carry none
             // and read as `unknown` — a neutral marker, never a pretend arrow.
@@ -418,108 +422,105 @@ const isDesktop = useIsDesktop();
 
 <template>
     <section ref="wrapper" :aria-label="t('home.pricing_map.title')" data-testid="home-project-map">
-        <!-- Compact heading row: the map itself is the section's statement,
-             so the heading is one line with the way into the full surface. -->
-        <div class="mb-3 flex flex-wrap items-end justify-between gap-x-6 gap-y-1">
-            <div class="min-w-0">
-                <h2 class="font-display text-xl font-semibold text-ink sm:text-2xl">
-                    {{ t('home.pricing_map.title') }}
-                </h2>
-                <p v-if="pricing" class="mt-1 max-w-prose text-sm text-ink-muted">
-                    {{ t('home.pricing_map.lead') }}
+        <!-- Wave 2B: the whole surface is ONE reference analytics card — head,
+             filters and map share the glass pane, and the head's amber link is
+             the single way into the full surface (the old floating chip is
+             gone, so no overlay can ever sit in a vendor-control corner).
+             Everything below the chrome — adapter, style, layers, controls —
+             stays untouched. -->
+        <div class="mh-lux-panel mh-lux-gilded mh-frame-glow relative overflow-hidden !rounded-glass">
+            <div class="px-5 pb-3 pt-4 sm:px-6">
+                <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+                    <div class="min-w-0">
+                        <h2 class="mh-microlabel">{{ t('home.pricing_map.title') }}</h2>
+                        <p v-if="pricing" class="mt-1.5 max-w-prose text-sm text-ink-muted">
+                            {{ t('home.pricing_map.lead') }}
+                        </p>
+                    </div>
+                    <Link :href="href" class="mh-link-amber inline-flex min-h-11 items-center gap-1">
+                        {{ t('home.live_map.open_full') }}
+                        <AppIcon name="chevron" class="h-3.5 w-3.5" mirror aria-hidden="true" />
+                    </Link>
+                </div>
+
+                <!-- Honest notice: the explorer feed carries no pricing enrichment. -->
+                <p
+                    v-if="!pricing"
+                    class="mt-3 flex items-start gap-2 rounded-card border border-line bg-surface-sunken/60 p-3 text-sm text-ink-muted"
+                >
+                    <AppIcon name="layers" class="mt-0.5 h-4 w-4 shrink-0 text-ink-faint" aria-hidden="true" />
+                    {{ t('home.pricing_map.pricing_unavailable') }}
                 </p>
+
+                <!-- Client-side filters DIRECTLY ABOVE the map, all breakpoints
+                     (re-architecture §5/§6): a horizontal scroll row below lg,
+                     wrapping above it. Every control is a 44px touch target. -->
+                <div
+                    v-if="pricing && loaded && projects.length > 0"
+                    class="mt-3 flex items-center gap-2 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0"
+                >
+                    <span class="mh-microlabel shrink-0 whitespace-nowrap">{{ t('home.pricing_map.movement') }}</span>
+                    <button
+                        v-for="option in (['up', 'down', 'flat', 'unknown'] as const)"
+                        :key="option"
+                        type="button"
+                        class="mh-invest-chip min-h-11 shrink-0 whitespace-nowrap"
+                        :aria-pressed="movement === option"
+                        @click="movement = movement === option ? 'all' : option"
+                    >
+                        <span v-if="option !== 'unknown'" aria-hidden="true" :class="movementTone[option]">
+                            {{ trendArrow(option) }}
+                        </span>
+                        {{ t(`home.pricing_map.movement_${option}`) }}
+                    </button>
+
+                    <label class="mh-microlabel ms-3 shrink-0 whitespace-nowrap" for="pm-window">
+                        {{ t('home.pricing_map.updated_within') }}
+                    </label>
+                    <select
+                        id="pm-window"
+                        v-model="updatedWithin"
+                        class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                    >
+                        <option value="all">{{ t('home.pricing_map.updated_any') }}</option>
+                        <option value="7">{{ t('home.pricing_map.days_7') }}</option>
+                        <option value="30">{{ t('home.pricing_map.days_30') }}</option>
+                        <option value="90">{{ t('home.pricing_map.days_90') }}</option>
+                    </select>
+
+                    <label class="sr-only" for="pm-area">{{ t('home.pricing_map.area_label') }}</label>
+                    <select
+                        id="pm-area"
+                        v-model="areaFilter"
+                        class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                    >
+                        <option value="">{{ t('home.pricing_map.all_areas') }}</option>
+                        <option v-for="area in areasPresent" :key="area" :value="area">{{ area }}</option>
+                    </select>
+
+                    <label class="sr-only" for="pm-type">{{ t('home.pricing_map.type_label') }}</label>
+                    <select
+                        id="pm-type"
+                        v-model="typeFilter"
+                        class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
+                    >
+                        <option value="">{{ t('home.pricing_map.all_types') }}</option>
+                        <option v-for="value in typesPresent" :key="value" :value="value">
+                            {{ t(`projects.types.${value}`) }}
+                        </option>
+                    </select>
+
+                    <button
+                        v-if="filtersActive"
+                        type="button"
+                        class="mh-lux-btn mh-lux-btn-ghost min-h-11 shrink-0 whitespace-nowrap !py-1 text-xs"
+                        @click="resetFilters()"
+                    >
+                        {{ t('home.pricing_map.reset') }}
+                    </button>
+                </div>
             </div>
-            <Link
-                :href="href"
-                class="hidden min-h-11 items-center gap-1.5 text-sm font-medium text-accent-strong
-                       transition-colors duration-200 ease-calm hover:text-ink lg:inline-flex"
-            >
-                {{ t('home.live_map.open_full') }}
-                <AppIcon name="arrow-end" class="h-4 w-4" mirror />
-            </Link>
-        </div>
 
-        <!-- Honest notice: the explorer feed carries no pricing enrichment. -->
-        <p
-            v-if="!pricing"
-            class="mb-3 flex items-start gap-2 rounded-card border border-line bg-surface-sunken p-3 text-sm text-ink-muted"
-        >
-            <AppIcon name="layers" class="mt-0.5 h-4 w-4 shrink-0 text-ink-faint" aria-hidden="true" />
-            {{ t('home.pricing_map.pricing_unavailable') }}
-        </p>
-
-        <!-- Client-side filters DIRECTLY ABOVE the map, all breakpoints
-             (re-architecture §5/§6): a horizontal scroll row below lg,
-             wrapping above it. Every control is a 44px touch target. -->
-        <div
-            v-if="pricing && loaded && projects.length > 0"
-            class="mb-3 flex items-center gap-2 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0"
-        >
-            <span class="mh-label shrink-0 whitespace-nowrap">{{ t('home.pricing_map.movement') }}</span>
-            <button
-                v-for="option in (['up', 'down', 'flat', 'unknown'] as const)"
-                :key="option"
-                type="button"
-                class="mh-invest-chip min-h-11 shrink-0 whitespace-nowrap"
-                :aria-pressed="movement === option"
-                @click="movement = movement === option ? 'all' : option"
-            >
-                <span v-if="option !== 'unknown'" aria-hidden="true" :class="movementTone[option]">
-                    {{ trendArrow(option) }}
-                </span>
-                {{ t(`home.pricing_map.movement_${option}`) }}
-            </button>
-
-            <label class="mh-label ms-3 shrink-0 whitespace-nowrap" for="pm-window">
-                {{ t('home.pricing_map.updated_within') }}
-            </label>
-            <select
-                id="pm-window"
-                v-model="updatedWithin"
-                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
-            >
-                <option value="all">{{ t('home.pricing_map.updated_any') }}</option>
-                <option value="7">{{ t('home.pricing_map.days_7') }}</option>
-                <option value="30">{{ t('home.pricing_map.days_30') }}</option>
-                <option value="90">{{ t('home.pricing_map.days_90') }}</option>
-            </select>
-
-            <label class="sr-only" for="pm-area">{{ t('home.pricing_map.area_label') }}</label>
-            <select
-                id="pm-area"
-                v-model="areaFilter"
-                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
-            >
-                <option value="">{{ t('home.pricing_map.all_areas') }}</option>
-                <option v-for="area in areasPresent" :key="area" :value="area">{{ area }}</option>
-            </select>
-
-            <label class="sr-only" for="pm-type">{{ t('home.pricing_map.type_label') }}</label>
-            <select
-                id="pm-type"
-                v-model="typeFilter"
-                class="min-h-11 shrink-0 rounded-field border border-line-strong bg-surface-raised px-2 text-sm text-ink"
-            >
-                <option value="">{{ t('home.pricing_map.all_types') }}</option>
-                <option v-for="value in typesPresent" :key="value" :value="value">
-                    {{ t(`projects.types.${value}`) }}
-                </option>
-            </select>
-
-            <button
-                v-if="filtersActive"
-                type="button"
-                class="mh-lux-btn mh-lux-btn-ghost min-h-11 shrink-0 whitespace-nowrap !py-1 text-xs"
-                @click="resetFilters()"
-            >
-                {{ t('home.pricing_map.reset') }}
-            </button>
-        </div>
-
-        <!-- Wave 2A outer chrome only: glass panel, gilded hairline, framed
-             elevation. Everything inside — adapter, style, layers, controls —
-             is untouched and stays Wave 2B territory. -->
-        <div class="mh-lux-panel mh-lux-gilded mh-frame-glow relative overflow-hidden">
             <!-- Provider failure: compact, human, with the way forward —
                  an in-place Retry (Phase 5's recovery, homepage edition)
                  beside the full-surface CTA. -->
@@ -542,30 +543,14 @@ const isDesktop = useIsDesktop();
             </div>
 
             <template v-else>
-                <!-- The dominant surface (re-architecture §5): first-viewport
-                     height on desktop, a large share of the screen on mobile. -->
+                <!-- The map pane inside the analytics card: tall enough to
+                     lead the grid, calm enough to share the page rhythm. -->
                 <div
                     ref="container"
-                    class="h-[56vh] max-h-[700px] min-h-[360px] w-full lg:h-[clamp(480px,62vh,700px)]"
+                    class="h-96 w-full sm:h-[26rem] lg:h-[30rem]"
                     role="application"
                     :aria-label="t('home.pricing_map.title')"
                 />
-
-                <!-- Floating way into the full surface, ON the map — the
-                     glass chip stays visible at every breakpoint. Anchored to
-                     the inline START corner: the adapter places its zoom
-                     control at top-END (physical per direction), and the chip
-                     used to sit in that same corner, covering the zoom
-                     buttons in both LTR and RTL. start-3 is the corner the
-                     adapter leaves empty in every direction — chrome-only
-                     fix; the control itself is untouched. -->
-                <Link
-                    :href="href"
-                    class="mh-invest-chip absolute start-3 top-3 z-10 min-h-11 whitespace-nowrap"
-                >
-                    {{ t('home.live_map.open_full') }}
-                    <AppIcon name="external" class="h-4 w-4" aria-hidden="true" />
-                </Link>
 
                 <!-- Truthful empty state, over a live basemap. -->
                 <div

@@ -10,7 +10,9 @@ use App\Modules\Operations\Services\AuditLogger;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -33,6 +35,7 @@ final class BrandingController extends Controller
     {
         return Inertia::render('Admin/Branding', [
             'settings' => $this->settings->group('branding'),
+            'typography' => $this->settings->group('typography'),
             'assets' => BrandingAsset::query()
                 ->where('is_current', true)
                 ->get(['slot', 'path', 'disk', 'width', 'height', 'version'])
@@ -45,7 +48,18 @@ final class BrandingController extends Controller
     {
         $rgb = ['regex:/^\d{1,3} \d{1,3} \d{1,3}$/'];
 
-        $validated = $request->validate([
+        /*
+         * The Inertia form submits FLAT keys with literal dots
+         * ("branding.site_name"), while dotted validation rules address
+         * NESTED data — so every save of this form 422'd with "required" on
+         * fields that were filled, ever since it shipped (no test covered
+         * the save). Undotting the input before validation restores the
+         * intended contract in one place: rules match, `validated` comes
+         * back nested, and re-dotting it yields exactly the storage keys.
+         * Error message keys stay dotted, so the form's error bindings are
+         * untouched. Pinned by PublicTypographyTest.
+         */
+        $validated = Validator::make(Arr::undot($request->all()), [
             'branding.site_name' => ['required', 'string', 'max:120'],
             'branding.tagline_ckb' => ['nullable', 'string', 'max:200'],
             'branding.tagline_ar' => ['nullable', 'string', 'max:200'],
@@ -60,17 +74,36 @@ final class BrandingController extends Controller
             'branding.pwa_name' => ['nullable', 'string', 'max:45'],
             'branding.pwa_short_name' => ['nullable', 'string', 'max:12'],
             'branding.pwa_theme_color' => ['nullable', 'string', 'max:9'],
-        ]);
+            /*
+             * Public typography (Wave 2B §7). Same generic key-value store,
+             * same permission, same audit — no schema change. Every value is
+             * a closed enum: the Blade token block maps the choice to a real,
+             * bundled font stack server-side, so no free-form string can ever
+             * reach a stylesheet. The scale is a bounded percentage; the
+             * per-script faces keep Kurdish and Arabic on Arabic-script
+             * fonts — the Latin list is never offered for them.
+             */
+            'typography.font_latin' => ['nullable', 'in:outfit,noto_sans,system'],
+            'typography.font_ckb' => ['nullable', 'in:k24,kufi'],
+            'typography.font_ar' => ['nullable', 'in:noto_sans_arabic,kufi'],
+            'typography.public_scale' => ['nullable', 'in:90,95,100,105,110,115,120'],
+        ])->validate();
 
-        $before = $this->settings->group('branding');
+        $before = [
+            'branding' => $this->settings->group('branding'),
+            'typography' => $this->settings->group('typography'),
+        ];
 
-        foreach ($validated as $key => $value) {
+        foreach (Arr::dot($validated) as $key => $value) {
             $this->settings->set($key, $value, $request->user()?->id);
         }
 
         $this->audit->record('branding.updated', null, [
             'before' => $before,
-            'after' => $this->settings->group('branding'),
+            'after' => [
+                'branding' => $this->settings->group('branding'),
+                'typography' => $this->settings->group('typography'),
+            ],
         ]);
 
         return back()->with('success', __('app.states.saved'));
