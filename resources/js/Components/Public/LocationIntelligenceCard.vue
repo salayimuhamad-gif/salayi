@@ -69,23 +69,62 @@ const resultSource = ref<'geolocation' | 'manual'>('geolocation');
 
 /* --------------------------------------------------- geolocation flow -- */
 
+/**
+ * Marks the newest "Use My Location" tap, so a stale callback from an
+ * earlier attempt can never overwrite a newer interaction.
+ */
+let locateAttempt = 0;
+
+/** The API's own acquisition timeout, once permission is granted. */
+const GEOLOCATION_TIMEOUT_MS = 10_000;
+
+/**
+ * The no-trap watchdog. The Geolocation spec pauses the `timeout` clock
+ * while the permission prompt is open, so a prompt nobody answers would
+ * otherwise leave the card "locating" forever with its buttons disabled.
+ */
+const GEOLOCATION_WATCHDOG_MS = 15_000;
+
 function useMyLocation(): void {
     if (typeof navigator === 'undefined' || !navigator.geolocation) {
         phase.value = 'unavailable';
         return;
     }
 
+    const attempt = ++locateAttempt;
+
     phase.value = 'locating';
+
+    const watchdog = window.setTimeout(() => {
+        if (attempt === locateAttempt && phase.value === 'locating') {
+            phase.value = 'unavailable';
+        }
+    }, GEOLOCATION_WATCHDOG_MS);
 
     navigator.geolocation.getCurrentPosition(
         (position) => {
+            window.clearTimeout(watchdog);
+
+            // A late answer is welcome only while this attempt still owns the
+            // card — never over a newer attempt or a manual selection.
+            if (attempt !== locateAttempt || (phase.value !== 'locating' && phase.value !== 'unavailable')) {
+                return;
+            }
+
             void resolvePoint(position.coords.latitude, position.coords.longitude);
         },
         (failure) => {
+            window.clearTimeout(watchdog);
+
+            if (attempt !== locateAttempt || (phase.value !== 'locating' && phase.value !== 'unavailable')) {
+                return;
+            }
+
             // Denial is a legitimate answer, not an error — and it is
             // recoverable right here through the manual fallback.
             phase.value = failure.code === failure.PERMISSION_DENIED ? 'denied' : 'unavailable';
         },
+        { timeout: GEOLOCATION_TIMEOUT_MS, maximumAge: 60_000 },
     );
 }
 

@@ -113,7 +113,11 @@ for (const locale of LOCALES) {
         test('denied permission is a graceful localized state, not a trap', async ({ page, diagnostics }) => {
             void diagnostics;
             await armGeolocationProbe(page);
-            // No grant: Playwright's context auto-denies the request.
+            // Granting an empty set rejects everything else — the geolocation
+            // request is DENIED outright. (The default "prompt" state would
+            // hang a headless browser instead; the card's own watchdog covers
+            // that live, but the deny path must be tested as a real denial.)
+            await page.context().grantPermissions([]);
 
             await page.goto(`${locale.prefix}/`, { waitUntil: 'networkidle' });
             await page.getByTestId('use-my-location').click();
