@@ -66,9 +66,12 @@ onBeforeUnmount(() => {
                 :aria-label="title"
                 @keydown="onKeydown"
             >
+                <!-- Tokenized scrim (Wave 2A): identical ink dim in light;
+                     under midnight it deepens instead of washing out, because
+                     ink there is near-white. -->
                 <button
                     type="button"
-                    class="absolute inset-0 bg-ink/40"
+                    class="mh-scrim absolute inset-0"
                     :aria-label="t('app.actions.close')"
                     @click="emit('close')"
                 ></button>

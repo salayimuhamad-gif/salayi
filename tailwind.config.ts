@@ -85,13 +85,16 @@ export default {
                 hero: '1.75rem',
                 pill: '9999px',
             },
-            // Four elevation levels, ink-based so shadows warm with the
-            // palette instead of reading as soot. No other shadows may exist.
+            // Four elevation levels, tokenized (Wave 2A): the :root defaults in
+            // app.css are byte-for-byte the previous ink-based literals, so the
+            // admin surfaces keep their exact shadows, while the Midnight Amber
+            // public scope remaps the custom properties to its deeper, restrained
+            // values. Still exactly four levels — no other shadows may exist.
             boxShadow: {
-                hairline: '0 1px 2px rgb(23 24 26 / 0.04), 0 1px 3px rgb(23 24 26 / 0.05)',
-                card: '0 1px 2px rgb(23 24 26 / 0.04), 0 8px 24px -12px rgb(23 24 26 / 0.14)',
-                raised: '0 2px 4px rgb(23 24 26 / 0.05), 0 16px 40px -18px rgb(23 24 26 / 0.20)',
-                overlay: '0 4px 8px rgb(23 24 26 / 0.06), 0 24px 64px -24px rgb(23 24 26 / 0.28)',
+                hairline: 'var(--mh-shadow-hairline)',
+                card: 'var(--mh-shadow-card)',
+                raised: 'var(--mh-shadow-raised)',
+                overlay: 'var(--mh-shadow-overlay)',
             },
             transitionTimingFunction: {
                 calm: 'cubic-bezier(0.22, 1, 0.36, 1)',

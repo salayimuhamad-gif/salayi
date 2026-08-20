@@ -141,11 +141,13 @@ const railCardClass = 'max-sm:w-[78vw] max-sm:shrink-0 max-sm:snap-start';
 <template>
     <Head :title="t('home.hero_title')" />
 
-    <PublicLayout chrome="home">
-        <div ref="pageRoot" class="space-y-12 md:space-y-16">
+    <PublicLayout chrome="home" palette="midnight">
+        <div ref="pageRoot" class="space-y-14 md:space-y-20">
             <!-- 1 · Compact hero: the only h1, one CTA, the orb. Its own
-                 vertical padding keeps the map inside the first viewport. -->
-            <div :class="wideBox">
+                 vertical padding keeps the map inside the first viewport;
+                 under Midnight Amber it is a glass panel, so the column
+                 carries the hero→map rhythm explicitly. -->
+            <div class="space-y-6 pt-5 sm:pt-6 lg:space-y-8 lg:pt-8" :class="wideBox">
                 <AiAdvisorHero :enabled="cta.advisor" :href="actionHrefs.advisor" />
 
                 <!-- 2 · The Pricing Intelligence Map — the page's dominant

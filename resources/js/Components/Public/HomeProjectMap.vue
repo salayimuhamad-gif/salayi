@@ -516,7 +516,10 @@ const isDesktop = useIsDesktop();
             </button>
         </div>
 
-        <div class="mh-lux-panel mh-lux-gilded relative overflow-hidden">
+        <!-- Wave 2A outer chrome only: glass panel, gilded hairline, framed
+             elevation. Everything inside — adapter, style, layers, controls —
+             is untouched and stays Wave 2B territory. -->
+        <div class="mh-lux-panel mh-lux-gilded mh-frame-glow relative overflow-hidden">
             <!-- Provider failure: compact, human, with the way forward —
                  an in-place Retry (Phase 5's recovery, homepage edition)
                  beside the full-surface CTA. -->
