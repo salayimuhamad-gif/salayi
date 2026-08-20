@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
-import { Link, usePage } from '@inertiajs/vue3';
+import { Link } from '@inertiajs/vue3';
+import AccountMenu from '@/Components/Public/AccountMenu.vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
-import LocaleSwitcher from '@/Components/Public/LocaleSwitcher.vue';
+import LanguageMenu from '@/Components/LanguageMenu.vue';
 import { t } from '@/lib/i18n';
 import type { PublicNavItem } from '@/Components/Public/navigation';
-import type { SharedPageProps } from '@/Types/inertia';
 
 /*
  * The top bar (§7.1).
@@ -23,9 +23,12 @@ import type { SharedPageProps } from '@/Types/inertia';
  *   to go, which §3.4 names as a prohibited dead control. It is recorded as a
  *   future backend requirement instead.
  *
- * The signed-in name is plain text for the same reason: the portfolio is the
- * only account surface with a public route, and it already has its own call to
- * action on the homepage.
+ * Wave 1 replaced the signed-in name badge (inert text) with the account menu,
+ * and the segmented three-language row with the compact language menu. Both
+ * keep this header's standing rules: the brand link stays the FIRST anchor in
+ * the header (the locales suite pins that — the sign-in link and every menu
+ * item render after it), and both controls remain present below lg so language
+ * and account stay reachable without opening the drawer.
  */
 const props = defineProps<{
     siteName: string;
@@ -47,8 +50,6 @@ const props = defineProps<{
 }>();
 
 defineEmits<{ toggle: [] }>();
-
-const page = usePage<SharedPageProps>();
 
 const hasNav = computed(() => (props.navItems?.length ?? 0) > 0);
 
@@ -155,16 +156,9 @@ onBeforeUnmount(() => {
                 <span class="hidden truncate text-sm text-ink-muted md:inline">{{ pageTitle }}</span>
             </template>
 
-            <div class="ms-auto flex items-center gap-2">
-                <span
-                    v-if="page.props.auth.user !== null"
-                    class="hidden items-center gap-2 rounded-card border border-line px-2.5 py-1.5 text-xs text-ink-muted sm:flex"
-                >
-                    <AppIcon name="user" class="h-3.5 w-3.5" />
-                    <span class="max-w-[10rem] truncate">{{ page.props.auth.user.name }}</span>
-                </span>
-
-                <LocaleSwitcher />
+            <div class="ms-auto flex shrink-0 items-center gap-1.5">
+                <LanguageMenu />
+                <AccountMenu />
             </div>
         </div>
     </header>

@@ -4,6 +4,7 @@ import { Link, router, usePage } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
 import { useTheme } from '@/Composables/useTheme';
 import AppAlert from '@/Components/ui/AppAlert.vue';
+import LanguageMenu from '@/Components/LanguageMenu.vue';
 import type { SharedPageProps } from '@/Types/inertia';
 import ActingCompanySwitcher from '@/Components/ActingCompanySwitcher.vue';
 
@@ -15,7 +16,7 @@ interface NavItem {
 }
 
 const page = usePage<SharedPageProps & { nav: NavItem[]; navLabels: Record<string, string> }>();
-const { current, available, switchTo, isRtl } = useLocale();
+const { isRtl } = useLocale();
 const { cycle } = useTheme();
 
 const sidebarOpen = ref(false);
@@ -216,18 +217,10 @@ const route = (name: string): string =>
                         </span>
                     </Link>
 
-                    <button
-                        v-for="locale in available"
-                        :key="locale.code"
-                        type="button"
-                        class="rounded px-2 py-1 text-xs transition-colors focus-visible:outline-none
-                               focus-visible:ring-2 focus-visible:ring-accent"
-                        :class="locale.code === current ? 'bg-brand text-white' : 'text-ink-muted hover:bg-surface-sunken'"
-                        :aria-current="locale.code === current ? 'true' : undefined"
-                        @click="switchTo(locale.code)"
-                    >
-                        {{ locale.native }}
-                    </button>
+                    <!-- Wave 1: the shared language menu replaces the inline
+                         three-button row. Admin routes are not locale-routed,
+                         so `switchTo` still POSTs the session locale here. -->
+                    <LanguageMenu :show-label="false" />
 
                     <button
                         type="button"

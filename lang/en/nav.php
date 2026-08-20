@@ -44,6 +44,8 @@ return [
     'toggle_navigation' => 'Toggle navigation',
     'toggle_theme' => 'Toggle theme',
     'sign_out' => 'Sign out',
+    'language' => 'Language',
+    'admin_dashboard' => 'Admin dashboard',
     'public' => [
         'market' => 'Market',
         'map' => 'Map',
