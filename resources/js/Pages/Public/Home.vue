@@ -167,7 +167,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                         class="min-h-11 flex-1 text-sm"
                         :placeholder="t('home.search_placeholder')"
                         autocomplete="off"
-                    />
+                    >
                     <!-- Full 44px target — the touch floor is never overridden
                          down, even inside a compact bar. -->
                     <button type="submit" class="mh-lux-btn mh-lux-btn-primary shrink-0 !px-4 text-xs">
@@ -332,7 +332,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                                 :key="level.key"
                                 class="flex items-center gap-2.5 py-1 text-sm text-ink-muted"
                             >
-                                <span class="h-1.5 w-1.5 shrink-0 rounded-pill" :class="level.tone" aria-hidden="true"></span>
+                                <span class="h-1.5 w-1.5 shrink-0 rounded-pill" :class="level.tone" aria-hidden="true" />
                                 {{ t(`market.confidence.${level.key}`) }}
                             </li>
                         </ul>

@@ -112,14 +112,14 @@ function signOut(close: () => void): void {
             </Link>
 
             <template v-if="user?.is_admin === true">
-                <div class="my-1 border-t border-line" aria-hidden="true"></div>
+                <div class="my-1 border-t border-line" aria-hidden="true" />
                 <Link href="/admin" data-testid="account-menu-admin" :class="itemClass" @click="close()">
                     <AppIcon name="shield-check" class="h-4 w-4 shrink-0" />
                     {{ t('nav.admin_dashboard') }}
                 </Link>
             </template>
 
-            <div class="my-1 border-t border-line" aria-hidden="true"></div>
+            <div class="my-1 border-t border-line" aria-hidden="true" />
 
             <button
                 type="button"

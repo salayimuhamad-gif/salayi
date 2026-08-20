@@ -472,7 +472,6 @@ const requestSummary = (request: LatestRequest): string => {
                                 {{ t('identity.users.portfolio') }}: {{ formatNumber(user.portfolio_count) }}
                             </span>
                         </p>
-
                     </div>
                 </div>
             </div>

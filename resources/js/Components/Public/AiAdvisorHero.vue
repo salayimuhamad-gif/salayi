@@ -43,7 +43,7 @@ const enabled = computed(() => props.enabled);
 <template>
     <section class="pt-14 text-center sm:pt-16 lg:pt-20">
         <p class="mh-eyebrow flex items-center justify-center">
-            <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true"></span>
+            <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true" />
             {{ t('home.eyebrow') }}
         </p>
 

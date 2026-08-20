@@ -237,8 +237,10 @@ watch(currentPath, () => {
                     </nav>
                 </div>
 
-                <div class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
-                            md:flex-row md:items-center md:justify-between">
+                <div
+                    class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
+                           md:flex-row md:items-center md:justify-between"
+                >
                     <!-- Data honesty, stated where the page closes: distances
                          are straight-line; market figures carry their own
                          methodology qualifiers. Existing strings, verbatim. -->

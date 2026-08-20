@@ -18,11 +18,11 @@
 
 <template>
     <div class="mh-atmos" aria-hidden="true">
-        <div class="mh-atmos-fields"></div>
-        <span class="mh-atmos-blob mh-atmos-blob-a"></span>
-        <span class="mh-atmos-blob mh-atmos-blob-b"></span>
-        <span class="mh-atmos-blob mh-atmos-blob-c"></span>
-        <div class="mh-atmos-horizon"></div>
+        <div class="mh-atmos-fields" />
+        <span class="mh-atmos-blob mh-atmos-blob-a" />
+        <span class="mh-atmos-blob mh-atmos-blob-b" />
+        <span class="mh-atmos-blob mh-atmos-blob-c" />
+        <div class="mh-atmos-horizon" />
         <svg class="mh-atmos-skyline" viewBox="0 0 400 120" preserveAspectRatio="none" focusable="false">
             <path
                 fill="#0c1230"

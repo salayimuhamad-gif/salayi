@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
                         v-if="item.active"
                         aria-hidden="true"
                         class="absolute inset-x-3 bottom-0.5 h-0.5 rounded-pill bg-accent"
-                    ></span>
+                    />
                 </Link>
             </nav>
 

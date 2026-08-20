@@ -21,7 +21,7 @@ withDefaults(defineProps<{
     >
         <div :class="align === 'center' ? 'mx-auto' : 'min-w-0'">
             <p v-if="eyebrow" class="mh-eyebrow mb-2 flex items-center" :class="align === 'center' ? 'justify-center' : ''">
-                <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true"></span>
+                <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true" />
                 {{ eyebrow }}
             </p>
             <h2 class="font-display text-2xl font-semibold text-ink md:text-3xl">{{ title }}</h2>

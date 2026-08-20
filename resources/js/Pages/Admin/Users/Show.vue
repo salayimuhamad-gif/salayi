@@ -164,7 +164,6 @@ function sendRecovery(): void {
                     </p>
                 </div>
             </div>
-
         </AppCard>
 
         <!-- ============================ activity ============================ -->
