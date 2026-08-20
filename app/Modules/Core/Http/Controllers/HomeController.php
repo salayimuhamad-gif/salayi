@@ -49,6 +49,14 @@ final class HomeController extends Controller
                 'invest' => (bool) feature('map.investment'),
                 'offers' => (bool) feature('marketplace.offers'),
             ],
+            /*
+             * Wave 3: the location card's "Choose Area Manually" fallback.
+             * An OPTIONAL prop, absent from the initial page load and served
+             * by the SAME route through an Inertia partial reload only when
+             * the visitor actually opens manual selection — the whole
+             * directory has no business travelling with every homepage view.
+             */
+            'location_areas' => Inertia::optional(fn (): array => $this->locationAreas()),
         ]);
     }
 
@@ -214,6 +222,48 @@ final class HomeController extends Controller
             'linkable' => (bool) feature('geography.areas'),
             'items' => $areas->values()->all(),
         ];
+    }
+
+    /**
+     * Every area the public may choose by hand (Wave 3 manual fallback).
+     *
+     * REAL published areas only, under the area directory's own visibility
+     * rule: an area appears only when it and every ancestor is published —
+     * the same hierarchical-disclosure check AreaProfileController::index
+     * applies, with the same bound. Selecting one goes back through the
+     * location-resolve endpoint, so manual choice and geolocation answer
+     * under identical publication and price rules.
+     *
+     * @return list<array{slug: string, name: string, type: string}>
+     */
+    private function locationAreas(): array
+    {
+        $areas = Area::query()
+            ->published()
+            ->orderBy('depth')
+            ->orderBy('name_ckb')
+            ->limit(200)
+            ->get(['id', 'path', 'depth', 'slug', 'type', 'name_ckb', 'name_ar', 'name_en']);
+
+        $publishedIds = $areas->pluck('id')->flip();
+
+        return $areas
+            ->filter(static function (Area $area) use ($publishedIds): bool {
+                foreach ($area->ancestorIds() as $ancestorId) {
+                    if (! $publishedIds->has($ancestorId)) {
+                        return false;
+                    }
+                }
+
+                return true;
+            })
+            ->map(static fn (Area $area): array => [
+                'slug' => $area->slug,
+                'name' => $area->name(),
+                'type' => $area->type->value,
+            ])
+            ->values()
+            ->all();
     }
 
     /**

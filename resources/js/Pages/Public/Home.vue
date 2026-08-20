@@ -7,6 +7,7 @@ import AppIcon from '@/Components/Icons/AppIcon.vue';
 import AiAdvisorHero from '@/Components/Public/AiAdvisorHero.vue';
 import AiDock from '@/Components/Public/AiDock.vue';
 import HomeProjectMap from '@/Components/Public/HomeProjectMap.vue';
+import LocationIntelligenceCard from '@/Components/Public/LocationIntelligenceCard.vue';
 import MarketMetricCard from '@/Components/Public/MarketMetricCard.vue';
 import ProjectSummaryCard from '@/Components/Public/ProjectSummaryCard.vue';
 import AreaSummaryList from '@/Components/Public/AreaSummaryList.vue';
@@ -269,6 +270,17 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                         />
                     </div>
                 </div>
+            </section>
+
+            <!-- 4b · Wave 3: location intelligence, directly below the map —
+                 "know the price where you are", plus the way into the real
+                 valuation flow. Geolocation fires only on the visitor's own
+                 tap inside the card, never on load. -->
+            <section class="mh-reveal mt-3.5" :class="box" :aria-label="t('home.location.title')">
+                <LocationIntelligenceCard
+                    :portfolio-enabled="cta.portfolio"
+                    :portfolio-href="actionHrefs.portfolio"
+                />
             </section>
 
             <!-- 5 · Projects: the three-card rhythm, real records only. -->

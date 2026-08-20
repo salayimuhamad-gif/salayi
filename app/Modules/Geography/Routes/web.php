@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Modules\Geography\Http\Controllers\Public\AreaProfileController;
+use App\Modules\Geography\Http\Controllers\Public\LocationResolveController;
 use App\Modules\Geography\Http\Controllers\Public\MapExplorerController;
 use App\Modules\Geography\Http\Controllers\Public\PlaceProfileController;
 use Illuminate\Support\Facades\Route;
@@ -56,6 +57,22 @@ Route::middleware('feature:map.investment')->group(function (): void {
         ->middleware('throttle:map-search')
         ->name('map.invest.search');
 });
+
+/*
+ * Wave 3: "Know the Price Where You Are" — the homepage location card's one
+ * backend call. A GET because it is a read shaped entirely by its query
+ * string, like /map/features above; unlike the map endpoints it carries a
+ * person's coordinates, so the controller answers `no-store, private` and
+ * nothing on this path persists.
+ *
+ * Its own NAMED limiter, not a ride on map-features — the map surfaces
+ * already proved that two features sharing a bucket starve each other
+ * (see GeographyServiceProvider), and this endpoint must not spend the map's
+ * panning budget or be spent by it.
+ */
+Route::get('/location/resolve', LocationResolveController::class)
+    ->middleware('throttle:location-resolve')
+    ->name('location.resolve');
 
 /*
  * Public Place profiles (spec 10.3, 12.2).

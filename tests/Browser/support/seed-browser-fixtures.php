@@ -341,6 +341,77 @@ KnowledgeEvent::query()->updateOrCreate(
     ],
 );
 
+/*
+ * Wave 3: the location-intelligence scenario. The fixture area gains what the
+ * geolocation flow actually resolves against — a real polygon and a real
+ * published index value — because the E2E must prove the card renders from
+ * PERSISTED rows through the real resolver, exactly as the four investment
+ * projects prove the trend pipeline. The stubbed browser coordinate
+ * (36.225, 43.99) sits inside this ring; the outside-coverage coordinate
+ * (36.10, 44.20) sits inside the operating area but outside every polygon.
+ */
+$ankawa->forceFill([
+    'latitude' => '36.2250000',
+    'longitude' => '43.9900000',
+    'boundary_wkt' => 'POLYGON((43.980 36.215, 44.000 36.215, 44.000 36.235, 43.980 36.235, 43.980 36.215))',
+])->save();
+
+// The price layer's flag plus the portfolio flag, switched the operator's
+// way: the card's price block and its valuation CTA are both real gated
+// surfaces, and the specs must exercise their enabled states.
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'market.indices'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'portfolio'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+// ONE published area-scoped index with one published, reliable value — the
+// real figure the resolved card must show. Trilingual name, like the area.
+DB::table('market_indices')->updateOrInsert(
+    ['key' => 'browser-ankawa-sale'],
+    [
+        'name_ckb' => 'پێوەری فرۆشتنی ئەنکاوە',
+        'name_ar' => 'مؤشر بيع عنكاوة',
+        'name_en' => 'Ankawa sale index',
+        'scope_type' => 'area',
+        'scope_id' => $ankawa->id,
+        'price_type' => 'sale_asking',
+        'basis' => 'per_sqm',
+        'currency' => 'USD',
+        'methodology_version' => 'v1',
+        'minimum_sample' => 10,
+        'publication_status' => 'published',
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+$browserIndexId = (int) DB::table('market_indices')->where('key', 'browser-ankawa-sale')->value('id');
+
+DB::table('market_index_values')->updateOrInsert(
+    ['market_index_id' => $browserIndexId, 'period' => '2026-07'],
+    [
+        'effective_date' => '2026-07-31',
+        'methodology_version' => 'v1',
+        'value' => '1250.0000',
+        'sample_size' => 34,
+        'excluded_outliers' => 0,
+        // IndexCalculator's real vocabulary: insufficient/low/moderate/high.
+        // 'medium' is not a level the product produces, and the card renders
+        // confidence through market.confidence.* — an invented level would
+        // surface as a raw translation key.
+        'confidence' => 'moderate',
+        'is_limited' => false,
+        'publication_status' => 'published',
+        'published_at' => now(),
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
 cache()->flush();
 
 file_put_contents(
@@ -351,7 +422,7 @@ file_put_contents(
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
         'wizard_draft_id' => $wizardDraftId,
-        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
@@ -360,3 +431,5 @@ echo "  admin: {$admin->email}\n  plain: {$plain->email}\n  mfa:   {$mfa->email}
 echo "  advisor.residential = ON\n";
 echo "  map.investment = ON, map.explorer = ON\n";
 echo "  4 published projects: trends up / down / flat / unknown\n";
+echo "  market.indices = ON, portfolio = ON\n";
+echo "  browser-ankawa: boundary polygon + published sale index (Wave 3 location card)\n";
