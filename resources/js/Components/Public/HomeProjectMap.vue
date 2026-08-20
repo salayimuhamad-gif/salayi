@@ -552,10 +552,16 @@ const isDesktop = useIsDesktop();
                 />
 
                 <!-- Floating way into the full surface, ON the map — the
-                     glass chip stays visible at every breakpoint. -->
+                     glass chip stays visible at every breakpoint. Anchored to
+                     the inline START corner: the adapter places its zoom
+                     control at top-END (physical per direction), and the chip
+                     used to sit in that same corner, covering the zoom
+                     buttons in both LTR and RTL. start-3 is the corner the
+                     adapter leaves empty in every direction — chrome-only
+                     fix; the control itself is untouched. -->
                 <Link
                     :href="href"
-                    class="mh-invest-chip absolute end-3 top-3 z-10 min-h-11 whitespace-nowrap"
+                    class="mh-invest-chip absolute start-3 top-3 z-10 min-h-11 whitespace-nowrap"
                 >
                     {{ t('home.live_map.open_full') }}
                     <AppIcon name="external" class="h-4 w-4" aria-hidden="true" />

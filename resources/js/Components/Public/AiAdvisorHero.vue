@@ -54,7 +54,7 @@ defineProps<{
                     {{ t('home.eyebrow') }}
                 </p>
 
-                <h1 class="mt-3 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl">
+                <h1 class="mt-3 font-display text-2xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl">
                     {{ t('home.hero_title') }}
                 </h1>
 
