@@ -177,6 +177,14 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # persisted fixture rows — including the degraded no-tiles contract.
     'tests/Browser/invest.spec.ts',
     'tests/Browser/locales.spec.ts',
+    # Wave 3 location intelligence: geolocation strictly user-initiated
+    # (measured, not assumed), the seeded polygon resolves with its real
+    # published index value, denial/outside-coverage stay honest and
+    # localized, the manual published-area fallback answers identically,
+    # and the valuation CTA follows the real portfolio auth gate. Runs on
+    # every viewport with NO skips, so it is deliberately absent from
+    # PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
+    'tests/Browser/location-intelligence.spec.ts',
     # The working-map suite: a deterministic style served from inside the
     # tests (never demotiles), map readiness on the homepage//map//invest,
     # all four trend semantics from persisted rows, marker-click selection,
