@@ -10,14 +10,19 @@ import AppToggle from '@/Components/ui/AppToggle.vue';
 import { t } from '@/lib/i18n';
 
 const props = defineProps<{
-    settings: Record<string, string | null>;
-    typography: Record<string, string | null>;
+    /*
+     * Values arrive typed by the settings repository: strings for string
+     * settings, real booleans for boolean ones (decode() returns bool for
+     * type=boolean rows — the seeder ships dark_mode_enabled that way).
+     */
+    settings: Record<string, string | boolean | null>;
+    typography: Record<string, string | boolean | null>;
     assets: Record<string, { slot: string; path: string; version: number }>;
     slots: string[];
 }>();
 
-const s = (key: string, fallback = ''): string => props.settings[key] ?? fallback;
-const ty = (key: string, fallback: string): string => props.typography[key] ?? fallback;
+const s = (key: string, fallback = ''): string => String(props.settings[key] ?? fallback);
+const ty = (key: string, fallback: string): string => String(props.typography[key] ?? fallback);
 
 /*
  * Public typography (Wave 2B §7): the owner's font and size controls, on the
@@ -41,7 +46,14 @@ const form = useForm({
     'branding.color_accent': s('branding.color_accent', '201 162 39'),
     'branding.color_surface': s('branding.color_surface', '250 250 249'),
     'branding.color_ink': s('branding.color_ink', '23 23 23'),
-    'branding.dark_mode_enabled': s('branding.dark_mode_enabled') === '1',
+    /*
+     * The repository decodes boolean settings to real booleans, and older
+     * string rows carry '1' — accept both. The previous strict '1' check
+     * rendered the toggle OFF for a stored `true`, so the first save through
+     * the (now working) form would have silently disabled dark mode.
+     */
+    'branding.dark_mode_enabled': (['1', 'true', true] as Array<string | boolean | null>)
+        .includes(props.settings['branding.dark_mode_enabled'] ?? null),
     'branding.pwa_name': s('branding.pwa_name'),
     'branding.pwa_short_name': s('branding.pwa_short_name'),
     'typography.font_latin': ty('typography.font_latin', TYPOGRAPHY_DEFAULTS['typography.font_latin']),

@@ -137,6 +137,24 @@ final class PublicTypographyTest extends TestCase
         );
     }
 
+    public function test_dark_mode_round_trips_as_a_real_boolean(): void
+    {
+        // The repository stores type=boolean and decodes to a real bool; the
+        // form must re-render that as ON — the old strict '1' comparison
+        // showed OFF, so the first successful save would have silently
+        // disabled dark mode.
+        $this->actingAs($this->admin())
+            ->put('/admin/branding', self::BASE_PAYLOAD + ['branding.dark_mode_enabled' => true])
+            ->assertRedirect();
+
+        $this->assertTrue(app(SettingsRepository::class)->get('branding.dark_mode_enabled'));
+
+        $this->actingAs($this->admin())
+            ->get('/admin/branding')
+            ->assertInertia(fn ($page) => $page
+                ->where('settings', fn ($settings) => $settings['branding.dark_mode_enabled'] === true));
+    }
+
     public function test_reset_to_defaults_round_trips(): void
     {
         $settings = app(SettingsRepository::class);
