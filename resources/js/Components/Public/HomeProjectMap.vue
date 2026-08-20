@@ -436,7 +436,7 @@ const isDesktop = useIsDesktop();
                 <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
                     <div class="min-w-0">
                         <h2 class="mh-microlabel">{{ t('home.pricing_map.title') }}</h2>
-                        <p v-if="pricing" class="mt-1 max-w-prose text-sm text-ink-muted">
+                        <p v-if="pricing" class="mt-1 hidden max-w-prose text-sm text-ink-muted sm:block">
                             {{ t('home.pricing_map.lead') }}
                         </p>
                     </div>

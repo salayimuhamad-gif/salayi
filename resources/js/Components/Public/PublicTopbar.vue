@@ -140,9 +140,13 @@ onBeforeUnmount(() => {
                 >
                     <AppIcon name="projects" class="h-4 w-4 mh-lux-gold" />
                 </span>
+                <!-- On phones the pill keeps the amber mark alone: the long
+                     site name only ever rendered as an awkward truncation
+                     there. sr-only keeps the link's accessible name intact;
+                     nothing else about the control changes. -->
                 <span
                     class="truncate text-ink"
-                    :class="props.pill ? 'mh-wordmark text-[13px] font-medium' : 'font-display text-base font-bold'"
+                    :class="props.pill ? 'mh-wordmark text-[13px] font-medium max-sm:sr-only' : 'font-display text-base font-bold'"
                 >{{ siteName }}</span>
             </Link>
 

@@ -200,15 +200,28 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
 
                 <div v-if="!market.has_data" class="mh-lux-panel !rounded-glass">
                     <!-- The "gathering data" hint belongs to the no-data case
-                         only; a switched-off module gathers nothing. Compact:
-                         honest, but never the page's dominant panel. -->
-                    <AppEmptyState
-                        compact
-                        :title="market.reason === 'feature_disabled'
-                            ? t('home.feature_off')
-                            : t('home.no_market_data')"
-                        :description="market.reason === 'feature_disabled' ? undefined : t('market.public.none_hint')"
-                    />
+                         only; a switched-off module gathers nothing. Same
+                         honest strings in two presentations: a slim status
+                         strip on phones, the approved compact panel from sm
+                         up — the desktop composition is frozen. -->
+                    <p class="flex items-center gap-2.5 px-4 py-3 text-sm text-ink-muted sm:hidden">
+                        <AppIcon name="market" class="h-4 w-4 shrink-0 text-ink-faint" aria-hidden="true" />
+                        <span>
+                            {{ market.reason === 'feature_disabled'
+                                ? t('home.feature_off')
+                                : t('home.no_market_data') }}<template v-if="market.reason !== 'feature_disabled'">
+                                — {{ t('market.public.none_hint') }}</template>
+                        </span>
+                    </p>
+                    <div class="hidden sm:block">
+                        <AppEmptyState
+                            compact
+                            :title="market.reason === 'feature_disabled'
+                                ? t('home.feature_off')
+                                : t('home.no_market_data')"
+                            :description="market.reason === 'feature_disabled' ? undefined : t('market.public.none_hint')"
+                        />
+                    </div>
                 </div>
 
                 <div v-else class="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
