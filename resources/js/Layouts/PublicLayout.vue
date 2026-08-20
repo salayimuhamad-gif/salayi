@@ -4,6 +4,7 @@ import { Link, usePage } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
 import { t } from '@/lib/i18n';
 import InstallPrompt from '@/Components/InstallPrompt.vue';
+import MidnightAtmosphere from '@/Components/Public/MidnightAtmosphere.vue';
 import MobileBottomNav from '@/Components/Public/MobileBottomNav.vue';
 import PublicSidebar from '@/Components/Public/PublicSidebar.vue';
 import PublicTopbar from '@/Components/Public/PublicTopbar.vue';
@@ -161,16 +162,22 @@ watch(currentPath, () => {
             {{ t('nav.skip_to_content') }}
         </a>
 
+        <!-- The colored light behind the glass (Wave 2B): fixed decorative
+             layers, mounted only with the midnight palette. Content wrappers
+             below carry z-[1] so every pane blurs THIS, not each other. -->
+        <MidnightAtmosphere v-if="props.palette === 'midnight'" />
+
         <PublicTopbar
             :site-name="siteName"
             :home-href="localized('/')"
             :page-title="pageTitle"
             :mobile-open="mobileOpen"
             :nav-items="props.chrome === 'home' ? navigation : null"
+            :pill="props.chrome === 'home'"
             @toggle="mobileOpen = !mobileOpen"
         />
 
-        <div class="flex flex-1 flex-col lg:flex-row">
+        <div class="relative z-[1] flex flex-1 flex-col lg:flex-row">
             <!--
                 The rail sticks below the 4rem top bar and scrolls on its own, so
                 a long page never strands the navigation above the fold. Hidden
@@ -204,8 +211,10 @@ watch(currentPath, () => {
 
         <!-- Lighter footer (re-architecture §12): a quiet sunken band instead
              of the charcoal composition, and NO locale switcher — the language
-             control exists exactly once, in the header. -->
-        <footer class="border-t border-line bg-surface-sunken pb-14 lg:pb-0">
+             control exists exactly once, in the header. Under midnight the
+             sunken token is near-black, so the band reads as the reference's
+             quiet border-top close. -->
+        <footer class="relative z-[1] border-t border-line bg-surface-sunken pb-14 lg:pb-0">
             <div class="mx-auto w-full max-w-screen-2xl px-4 py-10 lg:px-8">
                 <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                     <div class="max-w-sm">
@@ -228,8 +237,10 @@ watch(currentPath, () => {
                     </nav>
                 </div>
 
-                <div class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
-                            md:flex-row md:items-center md:justify-between">
+                <div
+                    class="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-ink-faint
+                           md:flex-row md:items-center md:justify-between"
+                >
                     <!-- Data honesty, stated where the page closes: distances
                          are straight-line; market figures carry their own
                          methodology qualifiers. Existing strings, verbatim. -->

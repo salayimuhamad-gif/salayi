@@ -20,22 +20,29 @@ import { t, formatNumber } from '@/lib/i18n';
  *
  * The count is `.numeral` so its digits are not reordered inside a Sorani line.
  */
-defineProps<{
+withDefaults(defineProps<{
     areas: Array<{ slug: string; name: string; type: string | null; project_count: number }>;
     linkable: boolean;
     /** Locale-prefixed detail paths, resolved by the page. */
     hrefs: Record<string, string>;
-}>();
+    /**
+     * Wave 2B: render only the rows, no own panel — for hosts that already
+     * provide the glass card (the homepage analytics grid). Default keeps
+     * the self-contained panel for existing call sites.
+     */
+    bare?: boolean;
+}>(), { bare: false });
 </script>
 
 <template>
-    <ul class="mh-lux-panel divide-y divide-line">
+    <ul class="divide-y divide-line" :class="bare ? undefined : 'mh-lux-panel'">
         <li v-for="area in areas" :key="area.slug">
             <Link
                 v-if="linkable"
                 :href="hrefs[area.slug]"
-                class="flex items-center gap-3 px-5 py-3.5 transition-colors duration-200 ease-calm
+                class="flex items-center gap-3 py-3.5 transition-colors duration-200 ease-calm
                        hover:bg-surface-sunken focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                :class="bare ? 'px-1' : 'px-5'"
             >
                 <AppIcon name="areas" class="h-4 w-4 shrink-0 text-ink-faint" />
 
@@ -57,7 +64,7 @@ defineProps<{
                 <AppIcon name="chevron" mirror class="h-4 w-4 shrink-0 text-ink-faint" />
             </Link>
 
-            <div v-else class="flex items-center gap-3 px-5 py-3.5">
+            <div v-else class="flex items-center gap-3 py-3.5" :class="bare ? 'px-1' : 'px-5'">
                 <AppIcon name="areas" class="h-4 w-4 shrink-0 text-ink-faint" />
 
                 <span class="min-w-0 flex-1">

@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
                 v-if="isActive(tab)"
                 aria-hidden="true"
                 class="absolute inset-x-6 top-0 h-0.5 rounded-pill bg-accent"
-            ></span>
+            />
             <AppIcon :name="tab.icon" class="h-5 w-5" aria-hidden="true" />
             {{ tab.label }}
         </Link>

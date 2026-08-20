@@ -47,11 +47,22 @@ const props = defineProps<{
      * is untouched — the horizontal nav simply does not exist below lg.
      */
     navItems?: PublicNavItem[] | null;
+    /**
+     * Floating glass-pill geometry (Wave 2B, the reference navbar): the bar
+     * detaches from the viewport edge into a centred, rounded-pill glass
+     * chrome. Purely a visual shell — every control, order, label, testid
+     * and keyboard behavior inside is byte-identical to the classic bar, and
+     * pages that do not pass it keep today's attached header untouched.
+     */
+    pill?: boolean;
 }>();
 
 defineEmits<{ toggle: [] }>();
 
 const hasNav = computed(() => (props.navItems?.length ?? 0) > 0);
+
+/** First visible letter of the site name — the reference's brand mark chip. */
+const markLetter = computed(() => (props.siteName.trim()[0] ?? 'M').toLocaleUpperCase());
 
 /*
  * Scroll elevation (redesign §13.1, adapted): the raised shadow appears once
@@ -79,11 +90,19 @@ onBeforeUnmount(() => {
 
 <template>
     <header
-        class="sticky top-0 z-40 border-b border-line bg-surface-raised/95 backdrop-blur
-               transition-shadow duration-200 ease-calm"
-        :class="scrolled ? 'shadow-raised' : 'shadow-hairline'"
+        class="sticky z-40"
+        :class="props.pill
+            ? 'top-2.5 px-3 sm:top-4 sm:px-4'
+            : 'top-0 border-b border-line bg-surface-raised/95 backdrop-blur transition-shadow duration-200 ease-calm '
+                + (scrolled ? 'shadow-raised' : 'shadow-hairline')"
     >
-        <div class="flex h-16 items-center gap-3 px-4 lg:px-6">
+        <div
+            class="flex items-center"
+            :class="props.pill
+                ? 'mh-pill-nav mx-auto w-full max-w-[1200px] gap-2 px-3 py-2 transition-shadow duration-200 ease-calm sm:gap-3 sm:px-5 '
+                    + (scrolled ? 'shadow-overlay' : '')
+                : 'h-16 gap-3 px-4 lg:px-6'"
+        >
             <!-- §7.1 mobile: a labelled control, not an icon a reader has to
                  guess at. `nav.toggle_navigation` already existed; the previous
                  shell mislabelled this button "filter". -->
@@ -105,14 +124,30 @@ onBeforeUnmount(() => {
                 class="flex min-h-11 min-w-0 items-center gap-2.5 rounded-card
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
+                <!-- Pill chrome carries the reference's amber brand mark;
+                     the classic bar keeps its exact Wave 1 emblem. -->
                 <span
+                    v-if="props.pill"
+                    class="mh-brand-mark flex h-7 w-7 shrink-0 items-center justify-center rounded-[9px]
+                           text-[13px] font-semibold"
+                    aria-hidden="true"
+                >{{ markLetter }}</span>
+                <span
+                    v-else
                     class="hidden h-8 w-8 shrink-0 items-center justify-center rounded-card border border-line
                            mh-lux-field sm:flex"
                     aria-hidden="true"
                 >
                     <AppIcon name="projects" class="h-4 w-4 mh-lux-gold" />
                 </span>
-                <span class="truncate font-display text-base font-bold text-ink">{{ siteName }}</span>
+                <!-- On phones the pill keeps the amber mark alone: the long
+                     site name only ever rendered as an awkward truncation
+                     there. sr-only keeps the link's accessible name intact;
+                     nothing else about the control changes. -->
+                <span
+                    class="truncate text-ink"
+                    :class="props.pill ? 'mh-wordmark text-[13px] font-medium max-sm:sr-only' : 'font-display text-base font-bold'"
+                >{{ siteName }}</span>
             </Link>
 
             <!-- Horizontal primary navigation (home chrome only). Flag-gated
@@ -143,7 +178,7 @@ onBeforeUnmount(() => {
                         v-if="item.active"
                         aria-hidden="true"
                         class="absolute inset-x-3 bottom-0.5 h-0.5 rounded-pill bg-accent"
-                    ></span>
+                    />
                 </Link>
             </nav>
 

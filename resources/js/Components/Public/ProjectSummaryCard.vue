@@ -22,7 +22,7 @@ import { t } from '@/lib/i18n';
  * The whole card is one link with one accessible name — the project name — so
  * a screen-reader user is not read three separate links to the same place.
  */
-defineProps<{
+withDefaults(defineProps<{
     project: {
         slug: string;
         name: string;
@@ -31,21 +31,30 @@ defineProps<{
         construction_status: string | null;
     };
     href: string;
-}>();
+    /**
+     * Wave 2B: which of the three decorative art gradients heads the card.
+     * Rotated by the caller (index % 3) purely for rhythm — the art encodes
+     * nothing about the project and can never be mistaken for photography.
+     */
+    variant?: number;
+}>(), { variant: 0 });
+
+const artClass = ['mh-art-a', 'mh-art-b', 'mh-art-c'] as const;
 </script>
 
 <template>
-    <article class="mh-lux-card mh-lux-card-interactive overflow-hidden">
+    <article class="mh-lux-card mh-lux-card-interactive mh-lift-hover overflow-hidden !rounded-glass">
         <Link
             :href="href"
             class="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
             <!-- Decorative only: aria-hidden, and nothing in it encodes data. -->
             <div
-                class="mh-lux-field mh-lux-grid-field relative flex h-24 items-center justify-center border-b border-line"
+                class="relative flex h-[8.125rem] items-center justify-center border-b border-line text-white/85"
+                :class="artClass[((variant % 3) + 3) % 3]"
                 aria-hidden="true"
             >
-                <AppIcon name="projects" class="h-8 w-8 mh-lux-gold opacity-80" />
+                <AppIcon name="building" class="h-8 w-8 opacity-90" />
             </div>
 
             <div class="p-5">

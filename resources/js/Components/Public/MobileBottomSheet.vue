@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
                     class="mh-scrim absolute inset-0"
                     :aria-label="t('app.actions.close')"
                     @click="emit('close')"
-                ></button>
+                />
 
                 <div
                     ref="sheet"
@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
                         @pointerup="onPointerUp"
                         @pointercancel="onPointerUp"
                     >
-                        <span class="mt-2.5 h-1 w-10 rounded-pill bg-line-strong" aria-hidden="true"></span>
+                        <span class="mt-2.5 h-1 w-10 rounded-pill bg-line-strong" aria-hidden="true" />
                     </button>
 
                     <header v-if="title" class="flex items-center justify-between border-b border-line px-5 pb-3">

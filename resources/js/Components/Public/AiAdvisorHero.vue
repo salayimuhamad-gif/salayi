@@ -1,79 +1,66 @@
 <script setup lang="ts">
-import AppIcon from '@/Components/Icons/AppIcon.vue';
-import AppButton from '@/Components/ui/AppButton.vue';
-import AiOrb from '@/Components/Public/AiOrb.vue';
+import { computed } from 'vue';
 import { t } from '@/lib/i18n';
-// The night-baked twin of the contour motif: this hero renders on the
-// Midnight Amber homepage, where the light file's 7%-ink strokes vanish.
-import contourUrl from '@/Assets/erbil-contour-night.svg?url';
 
 /*
- * The homepage hero, re-architected COMPACT (homepage re-architecture §5/§6).
+ * The homepage hero, recomposed to the approved reference (Wave 2B §5A):
+ * centred editorial typography floating directly over the night atmosphere —
+ * no boxed panel, no decorative orb. Eyebrow with its hairline, one large
+ * display heading whose final word carries the amber-gradient accent, and
+ * the refined muted subtitle. The search entry and quick actions live in
+ * Home.vue beside it; this component keeps the two things that are its
+ * contract:
  *
- * The previous hero was a full gilded panel — search form, example prompts,
- * avatar column, insight card — and it pushed the map out of the first
- * viewport. The re-architecture inverts that hierarchy: the MAP is the
- * homepage's dominant element, so this hero is now a short strip that says
- * what the platform is and offers exactly ONE call to action, with the AI
- * orb as the identity mark. The search field and example prompts were
- * removed WITH the section's size: their destinations (/projects?q=, the
- * advisor) remain one click away in the primary navigation and the CTA.
+ *   - the page's ONLY h1;
+ *   - the honest advisor state: when the advisor flag is off, the
+ *     role="status" notice renders here (and the page renders no advisor
+ *     link anywhere), exactly as the acceptance suite expects.
  *
- * What §8.1 required still holds structurally:
- *   - AI central: first section, the orb, and the single CTA into the real
- *     advisor route;
- *   - AI does not invent: nothing here renders as an answered message, and
- *     when `enabled` is false the CTA is REPLACED by the unavailable notice
- *     (role="status" — the acceptance suite pins the CTA/notice exclusivity),
- *     never a link into a route the server 404s.
- *
- * Only the h1 on the page lives here. The contour texture stays (identity,
- * CSS background from the inline asset — never <img>).
+ * The gradient accent is paint only, applied to whole words split on
+ * spaces — Arabic-script joining is never broken because no split happens
+ * inside a word, and one-word titles simply take no accent.
  */
-defineProps<{
+const props = defineProps<{
     enabled: boolean;
-    href: string;
 }>();
+
+const title = computed(() => t('home.hero_title'));
+
+const titleParts = computed<{ lead: string; accent: string | null }>(() => {
+    const whole = title.value.trim();
+    const cut = whole.lastIndexOf(' ');
+
+    if (cut <= 0) {
+        return { lead: whole, accent: null };
+    }
+
+    return { lead: whole.slice(0, cut + 1), accent: whole.slice(cut + 1) };
+});
+
+const enabled = computed(() => props.enabled);
 </script>
 
 <template>
-    <!-- Wave 2A: the same compact hero, recomposed as the page's first glass
-         surface — panel, gilded block-start hairline, contour identity —
-         with the CTA/notice exclusivity and single h1 untouched. -->
-    <section
-        class="mh-contour-bg mh-glass-panel mh-lux-gilded relative overflow-hidden rounded-hero"
-        :style="{ '--mh-contour-url': `url('${contourUrl}')` }"
-    >
-        <div
-            class="flex items-center justify-between gap-6 px-5 py-8 sm:px-8 sm:py-10 lg:gap-10
-                   lg:px-10 lg:py-12"
+    <section class="pt-10 text-center sm:pt-12 lg:pt-14">
+        <p class="mh-eyebrow flex items-center justify-center">
+            <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true" />
+            {{ t('home.eyebrow') }}
+        </p>
+
+        <h1
+            class="mh-hero-title mx-auto mt-4 max-w-3xl font-display text-3xl font-medium leading-[1.14]
+                   text-ink sm:text-4xl lg:text-[3.375rem]"
         >
-            <div class="min-w-0 max-w-2xl">
-                <p class="mh-eyebrow flex items-center">
-                    <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true"></span>
-                    {{ t('home.eyebrow') }}
-                </p>
+            {{ titleParts.lead }}<span v-if="titleParts.accent" class="mh-hero-accent">{{ titleParts.accent }}</span>
+        </h1>
 
-                <h1 class="mt-3 font-display text-2xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl">
-                    {{ t('home.hero_title') }}
-                </h1>
+        <p class="mx-auto mt-3 max-w-2xl text-base font-light text-ink-muted">
+            {{ t('home.hero_sub') }}
+        </p>
 
-                <p class="mt-2 max-w-prose text-sm text-ink-muted sm:text-base">{{ t('home.hero_sub') }}</p>
-
-                <div class="mt-5">
-                    <AppButton v-if="enabled" :href="href" variant="ai" size="lg" class="w-full sm:w-auto">
-                        {{ t('home.advisor_cta') }}
-                        <AppIcon name="arrow-end" mirror class="h-4 w-4" aria-hidden="true" />
-                    </AppButton>
-
-                    <p v-else class="mh-ai-notice" role="status">
-                        <span aria-hidden="true">!</span>
-                        <span>{{ t('home.advisor_disabled') }}</span>
-                    </p>
-                </div>
-            </div>
-
-            <AiOrb class="h-24 w-24 shrink-0 sm:h-32 sm:w-32 lg:h-40 lg:w-40" />
-        </div>
+        <p v-if="!enabled" class="mh-ai-notice mx-auto mt-6 max-w-md text-start" role="status">
+            <span aria-hidden="true">!</span>
+            <span>{{ t('home.advisor_disabled') }}</span>
+        </p>
     </section>
 </template>

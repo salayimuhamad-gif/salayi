@@ -68,7 +68,10 @@ test('two MapLibre surfaces in one session register the RTL plugin exactly once'
     // re-enters initialise() in the SAME JavaScript context, where the
     // plugin state persists. A second setRTLTextPlugin() call would reject
     // — the diagnostics teardown (zero console/page errors) is the trap.
-    await home.locator('a.mh-invest-chip').click();
+    // TEST_ONLY selector update (Wave 2B): the way into the full surface is
+    // the map card's amber head link now — the floating chip that used to
+    // cover the zoom control is gone. Same navigation, same assertion.
+    await home.locator('a.mh-link-amber').click();
     await expect(page.locator('.maplibregl-canvas').first()).toBeVisible({ timeout: 20_000 });
 
     expect(diagnostics.failedRequests, 'no request may fail across the two maps').toEqual([]);

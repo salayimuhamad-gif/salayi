@@ -25,7 +25,7 @@ const clamped = computed(() => Math.max(0, Math.min(100, props.value)));
             :aria-label="label"
             class="h-1.5 w-full max-w-[8rem] overflow-hidden rounded-pill bg-ai-soft"
         >
-            <div class="h-full rounded-pill bg-ai" :style="{ inlineSize: `${clamped}%` }"></div>
+            <div class="h-full rounded-pill bg-ai" :style="{ inlineSize: `${clamped}%` }" />
         </div>
         <span v-if="label" class="text-xs text-ai-ink">{{ label }}</span>
     </div>

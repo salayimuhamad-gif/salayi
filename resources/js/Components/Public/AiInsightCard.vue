@@ -34,10 +34,10 @@ const dotClass = computed(() => ({
         class="relative overflow-hidden rounded-card border border-line bg-surface-raised p-4 shadow-hairline"
         :class="{ 'mh-ai-shimmer': status === 'analyzing' }"
     >
-        <span class="absolute inset-y-0 start-0 w-0.5 bg-ai" aria-hidden="true"></span>
+        <span class="absolute inset-y-0 start-0 w-0.5 bg-ai" aria-hidden="true" />
 
         <header class="flex items-center gap-2">
-            <span class="inline-block h-2 w-2 shrink-0 rounded-pill" :class="dotClass" aria-hidden="true"></span>
+            <span class="inline-block h-2 w-2 shrink-0 rounded-pill" :class="dotClass" aria-hidden="true" />
             <h3 class="min-w-0 text-sm font-semibold text-ink">{{ title }}</h3>
             <span v-if="statusLabel" class="ms-auto shrink-0 text-xs text-ink-faint">{{ statusLabel }}</span>
         </header>

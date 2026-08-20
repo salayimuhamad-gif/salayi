@@ -37,6 +37,50 @@ html[lang='ar'] .font-display {
     font-family: 'Noto Sans Arabic', 'Noto Kufi Arabic', ui-serif, serif;
 }
 
+/* --- Owner typography (Wave 2B §7) -----------------------------------------
+ * The typography tokens the Blade block emits from validated settings apply
+ * to the PUBLIC SHELL ONLY — the :has() guard keeps admin, auth and install
+ * screens on their stable defaults. The text scale multiplies the root size
+ * (so every rem-based utility follows, 90–120% bounded server-side), and the
+ * per-language stacks override the global locale rules above just inside the
+ * shell. Latin choices never touch the Arabic-script languages.
+ * ------------------------------------------------------------------------ */
+html:has(.mh-luxury-public) {
+    font-size: calc(1% * var(--mh-type-scale, 100));
+}
+
+html[dir='rtl']:has(.mh-luxury-public) {
+    /* Composes the existing Arabic-script 1.0625rem base with the scale. */
+    font-size: calc(1.0625% * var(--mh-type-scale, 100));
+}
+
+html[lang='en'] .mh-luxury-public,
+html[lang='en'] .mh-luxury-public .font-sans {
+    font-family: var(--mh-font-latin);
+}
+
+html[lang='en'] .mh-luxury-public .font-display {
+    font-family: var(--mh-font-latin-display);
+}
+
+html[lang='ckb'] .mh-luxury-public,
+html[lang='ckb'] .mh-luxury-public .font-sans {
+    font-family: var(--mh-font-ckb);
+}
+
+html[lang='ckb'] .mh-luxury-public .font-display {
+    font-family: var(--mh-font-ckb-display);
+}
+
+html[lang='ar'] .mh-luxury-public,
+html[lang='ar'] .mh-luxury-public .font-sans {
+    font-family: var(--mh-font-ar);
+}
+
+html[lang='ar'] .mh-luxury-public .font-display {
+    font-family: var(--mh-font-ar-display);
+}
+
 /* --- Dark compositional bands ---------------------------------------------
  * Charcoal sections (footer band, market-intelligence band) remap the token
  * MEANINGS locally, so existing token-based components render correctly
@@ -105,7 +149,14 @@ html[lang='ar'] .font-display {
     --mh-shadow-card: 0 1px 2px rgb(2 4 10 / 0.45), 0 10px 28px -14px rgb(2 4 10 / 0.55);
     --mh-shadow-raised: 0 2px 4px rgb(2 4 10 / 0.5), 0 18px 44px -18px rgb(2 4 10 / 0.65);
     --mh-shadow-overlay: 0 4px 8px rgb(2 4 10 / 0.55), 0 28px 68px -24px rgb(2 4 10 / 0.75);
-    --mh-glass-inner: inset 0 1px 0 rgb(255 255 255 / 0.06);
+    /* The reference glass material (Wave 2B): white-veil gradient over the
+       colored atmosphere, 18px blur at 160% saturation, a 13% white stroke
+       and the minimal inner highlight. */
+    --mh-glass-inner: inset 0 1px 0 rgb(255 255 255 / 0.08);
+    --mh-glass-grad: linear-gradient(135deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.035));
+    --mh-glass-stroke: rgb(255 255 255 / 0.13);
+    --mh-glass-blur: blur(18px) saturate(160%);
+    --mh-glass-fallback: rgb(15 19 36 / 0.9);
     --mh-frame-glow:
         var(--mh-shadow-raised),
         0 0 0 1px rgb(var(--mh-amber) / 0.14),
@@ -113,14 +164,10 @@ html[lang='ar'] .font-display {
     --mh-scrim-bg: rgb(2 4 10 / 0.6);
 
     background-color: rgb(var(--mh-surface));
-    /* The night atmosphere: two large, quiet radial glows — amber over the
-       block-start corner, the operator's soft brand over the other. Gradient
-       geometry only (no background-position), so postcss-rtlcss has nothing
-       to mirror; like the contour motif this is direction-neutral decoration. */
-    background-image:
-        radial-gradient(90rem 42rem at 14% -4%, rgb(var(--mh-amber) / 0.06), transparent 62%),
-        radial-gradient(80rem 40rem at 90% 2%, rgb(var(--mh-brand-soft) / 0.14), transparent 58%);
-    background-repeat: no-repeat;
+    /* The layered night atmosphere itself — blue/violet fields, purple depth,
+       amber blobs, horizon and skyline — is MidnightAtmosphere.vue: fixed,
+       viewport-anchored decoration the layout mounts with this palette. The
+       scope keeps only the solid base so content never sits on transparent. */
     color: rgb(var(--mh-ink));
 }
 
@@ -154,13 +201,24 @@ html:has(.mh-midnight) {
     filter: brightness(1.07);
 }
 
-/* Cards and panels become glass: translucent raised fill over the page
- * atmosphere plus the subtle inner rim. Solid-on-solid dark reads flat;
- * translucency is what makes night surfaces feel layered. */
+/* Cards and panels become the reference glass material: white-veil gradient
+ * and real backdrop blur over the colored atmosphere, thin translucent
+ * stroke, minimal inner rim. This is what makes the panes read as glass
+ * with light behind them instead of flat dark rectangles. */
 .mh-midnight .mh-lux-card,
 .mh-midnight .mh-lux-panel {
-    background-color: rgb(var(--mh-surface-raised) / 0.66);
+    background: var(--mh-glass-grad);
+    -webkit-backdrop-filter: var(--mh-glass-blur);
+    backdrop-filter: var(--mh-glass-blur);
+    border-color: var(--mh-glass-stroke);
     box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .mh-midnight .mh-lux-card,
+    .mh-midnight .mh-lux-panel {
+        background: var(--mh-glass-fallback);
+    }
 }
 
 /* Hover lift on night: the light kit's ink-based glow would render as a white
@@ -191,6 +249,297 @@ html:has(.mh-midnight) {
 
 .mh-midnight .mh-frame-glow {
     box-shadow: var(--mh-frame-glow), var(--mh-glass-inner);
+}
+
+/* --- Reference kit (Wave 2B) -----------------------------------------------
+ * The visual grammar of the approved Midnight Amber reference, expressed as
+ * reusable pieces on the token system. Everything below is presentation for
+ * the public shell; the amber gradient pair and the decorative art gradients
+ * are fixed design constants (like the dark-band values), never DB palette.
+ * ------------------------------------------------------------------------ */
+
+/* Micro label — the reference's 11px overline. Tracking and uppercase are
+ * LATIN treatments (same rule as the eyebrow): Arabic script carries the
+ * identity through weight and colour alone. */
+.mh-microlabel {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: rgb(var(--mh-ink-faint));
+}
+
+[dir='ltr'] .mh-microlabel {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+[dir='rtl'] .mh-microlabel {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Quiet amber text link (reference .link-amber). accent-strong is amber
+ * under midnight and the AA bronze in light. */
+.mh-link-amber {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgb(var(--mh-accent-strong));
+    text-decoration: none;
+    transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mh-link-amber:hover {
+    color: rgb(var(--mh-ink));
+}
+
+/* The premium amber gradient — actions and selected states. Vertical-ish
+ * diagonal is decorative; text on it is always the night base. */
+.mh-amber-grad {
+    background-image: linear-gradient(135deg, #f6cd7d, #dd8636);
+    color: #221302;
+}
+
+/* Floating pill navigation (reference nav geometry): glass, full pill,
+ * centred by its wrapper. The wrapper owns stickiness so the pill can keep
+ * clean internal padding. */
+.mh-pill-nav {
+    background: var(--mh-glass-grad);
+    -webkit-backdrop-filter: var(--mh-glass-blur);
+    backdrop-filter: var(--mh-glass-blur);
+    border: 1px solid var(--mh-glass-stroke);
+    border-radius: 999px;
+    box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+/* The brand mark chip inside the pill (reference .mark). */
+.mh-brand-mark {
+    background-image: linear-gradient(135deg, rgb(var(--mh-amber)), rgb(var(--mh-amber-deep)));
+    color: #1a1206;
+    box-shadow: 0 6px 16px rgb(var(--mh-amber-deep) / 0.45);
+}
+
+/* Wordmark case and tracking are Latin-only, same dir rule as the labels. */
+[dir='ltr'] .mh-wordmark {
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+/* The hero search entry (reference .searchbar): darker glass than the cards
+ * so it reads as a well, deep shadow plus one whisper of amber. A real
+ * control — the homepage wires it to the real /projects?q= filter. */
+.mh-searchbar {
+    background: rgb(8 12 24 / 0.55);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid var(--mh-glass-stroke);
+    border-radius: 1.0625rem;
+    box-shadow: 0 24px 60px rgb(0 0 0 / 0.4), 0 0 50px rgb(var(--mh-amber-deep) / 0.06);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .mh-pill-nav,
+    .mh-searchbar,
+    .mh-dock {
+        background: rgb(10 14 28 / 0.94);
+    }
+}
+
+.mh-searchbar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(var(--mh-ink));
+    font: inherit;
+    min-inline-size: 0;
+}
+
+.mh-searchbar input::placeholder {
+    color: rgb(var(--mh-ink-faint));
+}
+
+/* Glass chips (reference .chip): quiet translucent pill; the active/selected
+ * voice is the amber gradient with night text. */
+.mh-chip-glass {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.9375rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    border: 1px solid rgb(255 255 255 / 0.08);
+    background: rgb(255 255 255 / 0.06);
+    color: rgb(var(--mh-ink-muted));
+    min-block-size: 2.75rem;
+    transition:
+        background-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+        color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mh-chip-glass:hover {
+    background: rgb(255 255 255 / 0.1);
+    color: rgb(var(--mh-ink));
+}
+
+/* Hero display title: the reference's tight Latin tracking, dir-conditional
+ * because negative letter-spacing damages Arabic-script joining perception. */
+[dir='ltr'] .mh-hero-title {
+    letter-spacing: -0.02em;
+}
+
+/* Hero accent (reference h1 .accent): amber gradient type. Paint only —
+ * shaping is untouched, and it is always applied to whole words. */
+.mh-hero-accent {
+    background-image: linear-gradient(135deg, #f6cd7d, #dd8636);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Selected map movement chips join the amber-gradient selected voice. */
+.mh-midnight .mh-invest-chip[aria-pressed='true'] {
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #f6cd7d, #dd8636);
+    border-color: transparent;
+    color: #221302;
+    font-weight: 500;
+}
+
+.mh-midnight .mh-invest-chip[aria-pressed='true'] .text-positive,
+.mh-midnight .mh-invest-chip[aria-pressed='true'] .text-negative,
+.mh-midnight .mh-invest-chip[aria-pressed='true'] .text-caution,
+.mh-midnight .mh-invest-chip[aria-pressed='true'] .text-ink-faint {
+    color: #221302;
+}
+
+/* Decorative project card art (reference art-a/b/c): abstract gradient
+ * fields — deliberately unphotographic, so no card ever implies imagery
+ * the product does not have. */
+.mh-art-a {
+    background-image: linear-gradient(135deg, #3a2b66, #7a4f9e 55%, #c98a3f);
+}
+
+.mh-art-b {
+    background-image: linear-gradient(135deg, #173a4a, #2f6b63 55%, #d0a04a);
+}
+
+.mh-art-c {
+    background-image: linear-gradient(135deg, #43224e, #8a3d5f 55%, #d97f4e);
+}
+
+/* The AI strip (reference .insight): amber-tinted glass band. */
+.mh-ai-strip {
+    background: rgb(var(--mh-amber) / 0.09);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgb(var(--mh-amber) / 0.24);
+    border-radius: 1.125rem;
+}
+
+.mh-ai-strip .mh-ai-strip-text {
+    color: #f6dcae;
+}
+
+.mh-ai-strip .mh-ai-strip-text strong {
+    color: #ffe9c4;
+    font-weight: 500;
+}
+
+/* The amber spark tile (reference .spark) and the dock bubble share the
+ * gradient; the bubble adds the slow glow pulse (clamped by the global
+ * reduced-motion rule). */
+.mh-spark {
+    background-image: linear-gradient(135deg, rgb(var(--mh-amber)), rgb(var(--mh-amber-deep)));
+    color: #1a1206;
+    box-shadow: 0 8px 22px rgb(var(--mh-amber-deep) / 0.4);
+}
+
+/* Floating AI dock (reference .dock-ai). Fixed at the inline-end corner;
+ * the mobile offset clears the bottom tab bar. */
+.mh-dock {
+    background: var(--mh-glass-grad);
+    -webkit-backdrop-filter: var(--mh-glass-blur);
+    backdrop-filter: var(--mh-glass-blur);
+    border: 1px solid var(--mh-glass-stroke);
+    border-radius: 999px;
+    box-shadow: var(--mh-shadow-raised), var(--mh-glass-inner);
+}
+
+@keyframes mh-dock-glow {
+    0%,
+    100% {
+        box-shadow: 0 8px 24px rgb(var(--mh-amber-deep) / 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 34px rgb(var(--mh-amber-deep) / 0.7);
+    }
+}
+
+.mh-dock-bubble {
+    animation: mh-dock-glow 3.2s ease-in-out infinite;
+}
+
+/* Gentle hover lift (reference project/button hover). Applied only to
+ * surfaces that carry no market figure — a card whose number moves under
+ * the pointer is still forbidden. Transform transitions collapse to
+ * instant under the global reduced-motion clamp. */
+.mh-lift-hover {
+    transition:
+        transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mh-lift-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px rgb(0 0 0 / 0.5), var(--mh-glass-inner);
+}
+
+/* --- Map chrome under midnight ---------------------------------------------
+ * Visual chrome ONLY (Wave 2B §6): the vendor controls join the glass
+ * system. Palette-scoped — never [dir]-scoped — so the Phase 6 rule that no
+ * direction-conditional rule may touch .maplibregl-* stays intact, and the
+ * light /map and /invest surfaces keep today's vendor look untouched.
+ * ------------------------------------------------------------------------ */
+.mh-midnight .maplibregl-ctrl-group {
+    background: rgb(10 14 28 / 0.82);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid var(--mh-glass-stroke);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--mh-shadow-card);
+}
+
+.mh-midnight .maplibregl-ctrl-group button {
+    background-color: transparent;
+}
+
+.mh-midnight .maplibregl-ctrl-group button + button {
+    border-top: 1px solid rgb(255 255 255 / 0.08);
+}
+
+/* The vendor zoom glyphs are near-black background images; on night glass
+ * they need the light treatment. */
+.mh-midnight .maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon,
+.mh-midnight .maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon,
+.mh-midnight .maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon {
+    filter: invert(1) brightness(1.6);
+}
+
+.mh-midnight .maplibregl-ctrl-scale {
+    background: rgb(10 14 28 / 0.7);
+    border-color: rgb(255 255 255 / 0.35);
+    color: rgb(var(--mh-ink-muted));
+}
+
+.mh-midnight .maplibregl-ctrl-attrib {
+    background: rgb(10 14 28 / 0.7);
+    color: rgb(var(--mh-ink-faint));
+    border-radius: 0.5rem;
+}
+
+.mh-midnight .maplibregl-ctrl-attrib a {
+    color: rgb(var(--mh-ink-muted));
 }
 
 /* --- Eyebrow ---------------------------------------------------------------

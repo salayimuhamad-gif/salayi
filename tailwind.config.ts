@@ -84,6 +84,9 @@ export default {
                 field: '0.625rem',
                 hero: '1.75rem',
                 pill: '9999px',
+                // The reference glass radius (Wave 2B): primary translucent
+                // cards sit at exactly 18px, between card and panel.
+                glass: '1.125rem',
             },
             // Four elevation levels, tokenized (Wave 2A): the :root defaults in
             // app.css are byte-for-byte the previous ink-based literals, so the

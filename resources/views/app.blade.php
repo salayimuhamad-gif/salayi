@@ -43,8 +43,51 @@
         rel="stylesheet"
     >
 
+    @php
+        /*
+         * Public typography (Wave 2B §7): owner-chosen, admin-validated,
+         * and re-whitelisted here so nothing free-form can reach CSS. The
+         * choices map to REAL bundled faces only — Outfit is self-hosted
+         * (resources/fonts/outfit, SIL OFL), the Arabic-script stacks stay
+         * script-correct, and every stack ends in system fallbacks. The
+         * scale is a bounded integer percentage consumed by public.css on
+         * the public shell alone; admin screens never read these tokens.
+         */
+        $mhTypeScale = in_array(settings('typography.public_scale'), ['90', '95', '105', '110', '115', '120'], true)
+            ? (int) settings('typography.public_scale')
+            : 100;
+
+        $mhFontLatin = match (settings('typography.font_latin')) {
+            'noto_sans' => ["'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'Noto Serif Display', 'Noto Kufi Arabic', ui-serif, serif"],
+            'system' => ['ui-sans-serif, system-ui, sans-serif', 'ui-serif, serif'],
+            default => ["'Outfit', 'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'Outfit', 'Noto Serif Display', ui-serif, serif"],
+        };
+
+        $mhFontCkb = match (settings('typography.font_ckb')) {
+            'kufi' => ["'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'Noto Kufi Arabic', ui-serif, serif"],
+            default => ["'K24', 'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'K24', 'Noto Kufi Arabic', ui-serif, serif"],
+        };
+
+        $mhFontAr = match (settings('typography.font_ar')) {
+            'kufi' => ["'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'Noto Kufi Arabic', ui-serif, serif"],
+            default => ["'Noto Sans Arabic', 'Noto Kufi Arabic', 'Noto Sans', ui-sans-serif, system-ui, sans-serif", "'Noto Sans Arabic', 'Noto Kufi Arabic', ui-serif, serif"],
+        };
+    @endphp
     <style>
         :root {
+            {{-- Owner typography tokens (Wave 2B) — consumed only by the
+                 public shell rules in public.css. --}}
+            {{-- Raw output is safe by construction: every value above comes
+                 from a closed match() over validated enum keys — no request
+                 or DB string ever reaches this block verbatim. Escaped
+                 output would HTML-entity the quotes and break the CSS. --}}
+            --mh-type-scale: {{ $mhTypeScale }};
+            --mh-font-latin: {!! $mhFontLatin[0] !!};
+            --mh-font-latin-display: {!! $mhFontLatin[1] !!};
+            --mh-font-ckb: {!! $mhFontCkb[0] !!};
+            --mh-font-ckb-display: {!! $mhFontCkb[1] !!};
+            --mh-font-ar: {!! $mhFontAr[0] !!};
+            --mh-font-ar-display: {!! $mhFontAr[1] !!};
             {{-- Admin-editable (DB branding) — bare RGB triples, same keys,
                  same settings() mechanism, same validation. Only the shipped
                  DEFAULTS moved to the light-first palette; operator-set values
