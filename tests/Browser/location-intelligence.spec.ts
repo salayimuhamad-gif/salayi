@@ -106,6 +106,12 @@ for (const locale of LOCALES) {
             await expect(prices).toContainText('USD');
             await expect(prices).toContainText('2026-07');
 
+            // Every label in the price block is a translated string — a raw
+            // market.* or home.* key leaking through (e.g. an evidence level
+            // outside the product's vocabulary) is a defect this must catch.
+            await expect(prices).not.toContainText('market.');
+            await expect(prices).not.toContainText('home.');
+
             // RTL and LTR alike, the card must not push the page sideways.
             await expectNoHorizontalOverflow(page);
         });

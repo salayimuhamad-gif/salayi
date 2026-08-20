@@ -399,7 +399,11 @@ DB::table('market_index_values')->updateOrInsert(
         'value' => '1250.0000',
         'sample_size' => 34,
         'excluded_outliers' => 0,
-        'confidence' => 'medium',
+        // IndexCalculator's real vocabulary: insufficient/low/moderate/high.
+        // 'medium' is not a level the product produces, and the card renders
+        // confidence through market.confidence.* — an invented level would
+        // surface as a raw translation key.
+        'confidence' => 'moderate',
         'is_limited' => false,
         'publication_status' => 'published',
         'published_at' => now(),

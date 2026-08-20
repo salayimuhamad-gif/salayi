@@ -169,7 +169,7 @@ final class LocationResolveTest extends TestCase
             ->assertJsonPath('prices.indices.0.price_type', 'sale_asking')
             ->assertJsonPath('prices.indices.0.requires_qualifier', true)
             ->assertJsonPath('prices.indices.0.sample_size', 30)
-            ->assertJsonPath('prices.indices.0.confidence', 'medium');
+            ->assertJsonPath('prices.indices.0.confidence', 'moderate');
     }
 
     public function test_a_resolved_area_with_no_compatible_price_returns_no_data_not_zero(): void
@@ -489,7 +489,10 @@ final class LocationResolveTest extends TestCase
             'publication_status' => 'published',
             'is_limited' => false,
             'sample_size' => 30,
-            'confidence' => 'medium',
+            // A REAL confidence level (IndexCalculator's vocabulary), because
+            // the public card translates it — an invented level renders as a
+            // raw market.confidence.* key.
+            'confidence' => 'moderate',
         ], $attributes));
     }
 }
