@@ -14,6 +14,35 @@
     :root {
         --mh-leading-arabic: 1.85;
         --mh-leading-latin: 1.55;
+
+        /*
+         * Elevation tokens (Wave 2A). The defaults ARE the previous Tailwind
+         * literals — ink-based, warm — so every admin/auth surface renders
+         * pixel-identical shadows. The Midnight Amber public scope
+         * (.mh-midnight in public.css) remaps them to its deeper values.
+         * Compound values live here rather than the Blade token block because
+         * they are presentation-derived, never admin-editable palette.
+         */
+        --mh-shadow-hairline: 0 1px 2px rgb(23 24 26 / 0.04), 0 1px 3px rgb(23 24 26 / 0.05);
+        --mh-shadow-card: 0 1px 2px rgb(23 24 26 / 0.04), 0 8px 24px -12px rgb(23 24 26 / 0.14);
+        --mh-shadow-raised: 0 2px 4px rgb(23 24 26 / 0.05), 0 16px 40px -18px rgb(23 24 26 / 0.20);
+        --mh-shadow-overlay: 0 4px 8px rgb(23 24 26 / 0.06), 0 24px 64px -24px rgb(23 24 26 / 0.28);
+
+        /*
+         * Glass tokens: the inner block-start highlight every translucent
+         * surface carries, and the framing shadow for the homepage's dominant
+         * panels. Light default keeps glass quiet; midnight swaps in the
+         * subtle white rim and the restrained amber frame.
+         */
+        --mh-glass-inner: inset 0 1px 0 rgb(255 255 255 / 0.5);
+        --mh-frame-glow: var(--mh-shadow-raised);
+
+        /*
+         * Overlay scrim. Ink-based in light (the previous bg-ink/40 literal on
+         * the bottom sheet); midnight deepens it — a near-white ink at 40%
+         * would wash the page out instead of dimming it.
+         */
+        --mh-scrim-bg: rgb(23 24 26 / 0.4);
     }
 
     html {
@@ -80,6 +109,43 @@
 
     .mh-label {
         @apply text-xs font-medium uppercase tracking-wide text-ink-faint;
+    }
+
+    /*
+     * Skip link colours, tokenized so the one control works on both palettes:
+     * accent-strong is the AA-safe accent voice in each scheme (bronze on
+     * ivory, bright amber under midnight) and the page's own surface colour is
+     * the text — dark-on-amber under midnight, ivory-on-bronze in light.
+     * Positioning/visibility stay with the caller's sr-only utilities.
+     */
+    .mh-skip-link {
+        background-color: rgb(var(--mh-accent-strong));
+        color: rgb(var(--mh-surface));
+    }
+
+    /*
+     * The reusable glass surface (Wave 2A): translucent raised surface, thin
+     * low-opacity border, inner block-start highlight, tokenized elevation.
+     * Radius comes from the caller (rounded-panel / rounded-hero — the
+     * 16–20px family), exactly like .mh-invest-glass pairs with rounded-card.
+     * Deliberately NO backdrop-filter here: blur is a per-surface decision
+     * (`.mh-glass-blur`) reserved for chrome where content genuinely moves
+     * beneath — map overlays, sticky bars — because blur over a flat page
+     * background is blur for blur's sake, at scroll-performance cost.
+     */
+    .mh-glass-panel {
+        background-color: rgb(var(--mh-surface-raised) / 0.72);
+        border: 1px solid rgb(var(--mh-line) / 0.8);
+        box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+    }
+
+    .mh-glass-blur {
+        backdrop-filter: blur(14px) saturate(118%);
+    }
+
+    /* Overlay scrim — one class so both palettes dim, never wash. */
+    .mh-scrim {
+        background-color: var(--mh-scrim-bg);
     }
 
     /*

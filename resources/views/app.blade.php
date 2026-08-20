@@ -86,6 +86,25 @@
             --mh-dark-ink: 243 243 241;
             --mh-dark-muted: 168 172 176;
             --mh-dark-line: 54 59 64;
+            {{-- Midnight Amber (Wave 2A) — the approved public night palette,
+                 consumed by .mh-midnight (public.css), never by html.dark and
+                 never by the admin shell. Derived defaults exactly like the
+                 dark-band family above: the DB-backed branding keys keep their
+                 authority (brand/accent stay the operator's everywhere), and
+                 the scope only remaps the derived surface/ink meanings. --}}
+            --mh-night: 7 11 22;
+            --mh-night-raised: 13 19 34;
+            --mh-night-sunken: 3 6 13;
+            --mh-night-ink: 238 242 255;
+            --mh-night-muted: 169 179 201;
+            --mh-night-faint: 124 134 158;
+            --mh-night-line: 39 48 70;
+            --mh-night-line-strong: 58 70 97;
+            {{-- The premium amber family: bright amber for actions, selected
+                 states and small accent text on night surfaces (12.2:1 on the
+                 base); deep amber for gradients and large graphics (6.6:1). --}}
+            --mh-amber: 243 197 111;
+            --mh-amber-deep: 217 127 51;
         }
 
         html.dark {

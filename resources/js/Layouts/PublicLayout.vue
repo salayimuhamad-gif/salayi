@@ -22,7 +22,18 @@ import type { SharedPageProps } from '@/Types/inertia';
  * chromes: hamburger + drawer + bottom tab bar, a contract the acceptance
  * suite pins on '/'.
  */
-const props = withDefaults(defineProps<{ chrome?: 'default' | 'home' }>(), { chrome: 'default' });
+/*
+ * Palette variants (Wave 2A). Additive exactly like `chrome`: every existing
+ * page renders 'light' — the shared token system — untouched. 'midnight'
+ * applies the approved Midnight Amber public scope (`.mh-midnight`,
+ * public.css): a token remap on this root, so the topbar, drawer, bottom
+ * bar, menus and footer restyle through the one token system with zero
+ * behavioral change. Waves after 2A opt further pages in page-by-page.
+ */
+const props = withDefaults(
+    defineProps<{ chrome?: 'default' | 'home'; palette?: 'light' | 'midnight' }>(),
+    { chrome: 'default', palette: 'light' },
+);
 
 const page = usePage<SharedPageProps>();
 const { localized } = useLocale();
@@ -134,14 +145,18 @@ watch(currentPath, () => {
 </script>
 
 <template>
-    <div class="mh-luxury-public flex min-h-full flex-col">
+    <div
+        class="mh-luxury-public flex min-h-full flex-col"
+        :class="props.palette === 'midnight' ? 'mh-midnight' : undefined"
+    >
         <!-- §13: a keyboard user should not have to walk the whole rail to
-             reach the page. The key already existed and was unused. -->
+             reach the page. The key already existed and was unused. The
+             colours are the tokenized .mh-skip-link pair, AA on both
+             palettes; visibility mechanics are unchanged. -->
         <a
             href="#public-main"
-            class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-card
-                   focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium
-                   focus:text-ink"
+            class="mh-skip-link sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3
+                   focus:rounded-card focus:px-4 focus:py-2 focus:text-sm focus:font-medium"
         >
             {{ t('nav.skip_to_content') }}
         </a>

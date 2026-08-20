@@ -3,7 +3,9 @@ import AppIcon from '@/Components/Icons/AppIcon.vue';
 import AppButton from '@/Components/ui/AppButton.vue';
 import AiOrb from '@/Components/Public/AiOrb.vue';
 import { t } from '@/lib/i18n';
-import contourUrl from '@/Assets/erbil-contour.svg?url';
+// The night-baked twin of the contour motif: this hero renders on the
+// Midnight Amber homepage, where the light file's 7%-ink strokes vanish.
+import contourUrl from '@/Assets/erbil-contour-night.svg?url';
 
 /*
  * The homepage hero, re-architected COMPACT (homepage re-architecture §5/§6).
@@ -35,18 +37,24 @@ defineProps<{
 </script>
 
 <template>
+    <!-- Wave 2A: the same compact hero, recomposed as the page's first glass
+         surface — panel, gilded block-start hairline, contour identity —
+         with the CTA/notice exclusivity and single h1 untouched. -->
     <section
-        class="mh-contour-bg relative"
+        class="mh-contour-bg mh-glass-panel mh-lux-gilded relative overflow-hidden rounded-hero"
         :style="{ '--mh-contour-url': `url('${contourUrl}')` }"
     >
-        <div class="flex items-center justify-between gap-6 py-8 sm:py-10 lg:gap-10 lg:py-12">
+        <div
+            class="flex items-center justify-between gap-6 px-5 py-8 sm:px-8 sm:py-10 lg:gap-10
+                   lg:px-10 lg:py-12"
+        >
             <div class="min-w-0 max-w-2xl">
                 <p class="mh-eyebrow flex items-center">
                     <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true"></span>
                     {{ t('home.eyebrow') }}
                 </p>
 
-                <h1 class="mt-3 font-display text-2xl font-bold leading-tight text-ink sm:text-3xl lg:text-4xl">
+                <h1 class="mt-3 font-display text-2xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl">
                     {{ t('home.hero_title') }}
                 </h1>
 

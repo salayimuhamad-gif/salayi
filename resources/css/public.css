@@ -57,6 +57,142 @@ html[lang='ar'] .font-display {
     color: rgb(var(--mh-dark-ink));
 }
 
+/* --- Midnight Amber public scope (Wave 2A) ---------------------------------
+ * The approved night-first public direction, expressed through the SAME local
+ * token-remap mechanism as .mh-dark-band above — promoted from a section band
+ * to a page scope. Applied by PublicLayout (palette="midnight"); pages that do
+ * not opt in keep the light system untouched, and html.dark stays admin-only.
+ *
+ * DB branding stays authoritative exactly where the architecture supports it:
+ * --mh-brand* and --mh-accent are NOT remapped — the operator's colours keep
+ * flowing everywhere — while the derived voices (accent-strong/soft, ai-soft/
+ * ink, status colours, surfaces, ink, lines, shadows) take their midnight
+ * values, all defined as derived tokens in the Blade block alongside the
+ * dark-band family. accent-strong becomes the bright premium amber because it
+ * is the palette's designated AA-safe small-text accent in every scheme.
+ * ------------------------------------------------------------------------ */
+.mh-midnight {
+    color-scheme: dark;
+    --mh-surface: var(--mh-night);
+    --mh-surface-raised: var(--mh-night-raised);
+    --mh-surface-sunken: var(--mh-night-sunken);
+    --mh-ink: var(--mh-night-ink);
+    --mh-ink-muted: var(--mh-night-muted);
+    --mh-ink-faint: var(--mh-night-faint);
+    --mh-line: var(--mh-night-line);
+    --mh-line-strong: var(--mh-night-line-strong);
+    /* Amber leads the accent voices; plain --mh-accent stays the operator's. */
+    --mh-accent-strong: var(--mh-amber);
+    --mh-accent-soft: 66 50 24;
+    /* The AI voice keeps its fill teal (white-on-teal stays AA on buttons);
+       only its soft surface and its small-text ink swap for night. */
+    --mh-ai-soft: 13 42 44;
+    --mh-ai-ink: 178 226 219;
+    /* Status voices brightened for night (each ≥6.8:1 on the base). */
+    --mh-positive: 61 190 116;
+    --mh-negative: 240 112 112;
+    --mh-caution: 233 176 84;
+    /* A dark band inside a midnight page reads as a raised composition,
+       not a second, lighter charcoal palette. */
+    --mh-dark-surface: var(--mh-night-raised);
+    --mh-dark-raised: 19 27 45;
+    --mh-dark-ink: var(--mh-night-ink);
+    --mh-dark-muted: var(--mh-night-muted);
+    --mh-dark-line: var(--mh-night-line);
+    /* Elevation: deeper, still restrained; the frame glow carries the one
+       permitted whisper of amber around the page's dominant panels. */
+    --mh-shadow-hairline: 0 1px 2px rgb(2 4 10 / 0.4), 0 1px 3px rgb(2 4 10 / 0.35);
+    --mh-shadow-card: 0 1px 2px rgb(2 4 10 / 0.45), 0 10px 28px -14px rgb(2 4 10 / 0.55);
+    --mh-shadow-raised: 0 2px 4px rgb(2 4 10 / 0.5), 0 18px 44px -18px rgb(2 4 10 / 0.65);
+    --mh-shadow-overlay: 0 4px 8px rgb(2 4 10 / 0.55), 0 28px 68px -24px rgb(2 4 10 / 0.75);
+    --mh-glass-inner: inset 0 1px 0 rgb(255 255 255 / 0.06);
+    --mh-frame-glow:
+        var(--mh-shadow-raised),
+        0 0 0 1px rgb(var(--mh-amber) / 0.14),
+        0 24px 70px -30px rgb(var(--mh-amber) / 0.12);
+    --mh-scrim-bg: rgb(2 4 10 / 0.6);
+
+    background-color: rgb(var(--mh-surface));
+    /* The night atmosphere: two large, quiet radial glows — amber over the
+       block-start corner, the operator's soft brand over the other. Gradient
+       geometry only (no background-position), so postcss-rtlcss has nothing
+       to mirror; like the contour motif this is direction-neutral decoration. */
+    background-image:
+        radial-gradient(90rem 42rem at 14% -4%, rgb(var(--mh-amber) / 0.06), transparent 62%),
+        radial-gradient(80rem 40rem at 90% 2%, rgb(var(--mh-brand-soft) / 0.14), transparent 58%);
+    background-repeat: no-repeat;
+    color: rgb(var(--mh-ink));
+}
+
+/* Overscroll honesty: rubber-banding past a midnight page must reveal night,
+ * not the ivory body default. Same html:has technique the previous dark
+ * public shell used, now scoped to the palette that actually needs it. */
+html:has(.mh-midnight) {
+    background-color: rgb(var(--mh-night));
+}
+
+/* --- Midnight component adjustments ----------------------------------------
+ * The token remap restyles the shared kit wholesale; the rules below are the
+ * few places where a LIGHT-tuned literal inside a component would misread on
+ * night — each one stays inside the scope, so the light system is untouched.
+ * ------------------------------------------------------------------------ */
+
+/* Primary action goes premium amber: vertical gradient (direction-neutral),
+ * night-base text (12.2:1). The light kit's champagne-with-ink pairing would
+ * put near-white ink on champagne here — 1.9:1, forbidden. */
+.mh-midnight .mh-lux-btn-primary {
+    background-color: rgb(var(--mh-amber));
+    background-image: linear-gradient(to bottom, rgb(var(--mh-amber)), rgb(var(--mh-amber-deep)));
+    color: rgb(var(--mh-night));
+    transition:
+        filter 200ms cubic-bezier(0.22, 1, 0.36, 1),
+        color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mh-midnight .mh-lux-btn-primary:hover {
+    background-color: rgb(var(--mh-amber));
+    filter: brightness(1.07);
+}
+
+/* Cards and panels become glass: translucent raised fill over the page
+ * atmosphere plus the subtle inner rim. Solid-on-solid dark reads flat;
+ * translucency is what makes night surfaces feel layered. */
+.mh-midnight .mh-lux-card,
+.mh-midnight .mh-lux-panel {
+    background-color: rgb(var(--mh-surface-raised) / 0.66);
+    box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+/* Hover lift on night: the light kit's ink-based glow would render as a white
+ * halo now that ink is near-white. A thin amber ring and deeper shadow keep
+ * the lift visible and restrained — still border+shadow, never a transform. */
+.mh-midnight .mh-lux-card-interactive:hover {
+    border-color: rgb(var(--mh-amber) / 0.45);
+    box-shadow:
+        var(--mh-shadow-raised),
+        0 0 0 1px rgb(var(--mh-amber) / 0.16),
+        var(--mh-glass-inner);
+}
+
+/* Same white-halo fix for the glass overlays the map chrome reuses. */
+.mh-midnight .mh-invest-glass {
+    box-shadow: var(--mh-shadow-raised), var(--mh-glass-inner);
+}
+
+/* --- Framed dominant panel -------------------------------------------------
+ * Outer chrome for the page's dominant surfaces (the homepage map container):
+ * tokenized elevation in light, and under midnight the restrained amber frame
+ * — a hairline ring plus one soft bloom, the palette's entire glow budget.
+ * Chrome only: nothing here touches the map's own canvas or layers.
+ * ------------------------------------------------------------------------ */
+.mh-frame-glow {
+    box-shadow: var(--mh-frame-glow);
+}
+
+.mh-midnight .mh-frame-glow {
+    box-shadow: var(--mh-frame-glow), var(--mh-glass-inner);
+}
+
 /* --- Eyebrow ---------------------------------------------------------------
  * Dir-conditional: uppercase + tracking are LATIN treatments. Arabic script
  * has no case and letter-spacing harms joining perception, so under RTL the
