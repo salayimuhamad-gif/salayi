@@ -19,12 +19,17 @@ defineProps<{ href: string }>();
 </script>
 
 <template>
+    <!-- Below lg the dock anchors at the inline-START corner: the map's
+         zoom control lives at top-END (physical per direction), and a fixed
+         END-side dock crosses that control's screen path while the pane
+         scrolls by. START is the corner no map control ever occupies in
+         either direction. Desktop keeps the reference's END position. -->
     <Link
         :href="href"
         :aria-label="t('home.advisor_cta')"
         class="mh-dock fixed z-30 flex items-center gap-3 p-2 pe-2 ps-2
-               bottom-[calc(4.5rem+env(safe-area-inset-bottom))] end-4
-               lg:bottom-7 lg:end-7 lg:ps-4
+               bottom-[calc(4.5rem+env(safe-area-inset-bottom))] start-4
+               lg:bottom-7 lg:end-7 lg:start-auto lg:ps-4
                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
         <span class="hidden text-[13px] font-medium text-ink lg:inline">{{ t('home.advisor_cta') }}</span>
