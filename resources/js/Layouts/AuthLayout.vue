@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { usePage } from '@inertiajs/vue3';
-import { useLocale } from '@/Composables/useLocale';
+import LanguageMenu from '@/Components/LanguageMenu.vue';
 import type { SharedPageProps } from '@/Types/inertia';
 
 defineProps<{ title: string; subtitle?: string }>();
 
 const page = usePage<SharedPageProps>();
-const { current, available, switchTo } = useLocale();
 const siteName = computed(() => page.props.branding['branding.site_name'] ?? page.props.app.name);
 </script>
 
@@ -34,18 +33,12 @@ const siteName = computed(() => page.props.branding['branding.site_name'] ?? pag
                     <slot />
                 </div>
 
-                <div class="mt-10 flex items-center justify-center gap-1 border-t border-line pt-6">
-                    <button
-                        v-for="locale in available"
-                        :key="locale.code"
-                        type="button"
-                        class="inline-flex min-h-11 items-center rounded px-2.5 text-xs transition-colors focus-visible:outline-none
-                               focus-visible:ring-2 focus-visible:ring-accent"
-                        :class="locale.code === current ? 'bg-brand text-white' : 'text-ink-muted hover:bg-surface-sunken'"
-                        @click="switchTo(locale.code)"
-                    >
-                        {{ locale.native }}
-                    </button>
+                <!-- Wave 1: the shared language menu replaces this layout's own
+                     inline copy of the switcher, so the three surfaces cannot
+                     drift. Same `switchTo` underneath, so the session-POST
+                     behaviour of these non-localized routes is unchanged. -->
+                <div class="mt-10 flex items-center justify-center border-t border-line pt-6">
+                    <LanguageMenu />
                 </div>
             </div>
         </div>

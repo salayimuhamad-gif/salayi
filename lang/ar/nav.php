@@ -44,6 +44,8 @@ return [
     'toggle_navigation' => 'فتح/إغلاق القائمة',
     'toggle_theme' => 'تبديل المظهر',
     'sign_out' => 'تسجيل الخروج',
+    'language' => 'اللغة',
+    'admin_dashboard' => 'لوحة الإدارة',
     'public' => [
         'market' => 'السوق',
         'map' => 'الخريطة',

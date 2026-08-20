@@ -44,6 +44,8 @@ return [
     'toggle_navigation' => 'کردنەوە/داخستنی لیست',
     'toggle_theme' => 'گۆڕینی ڕووکار',
     'sign_out' => 'دەرچوون',
+    'language' => 'زمان',
+    'admin_dashboard' => 'پانێڵی بەڕێوەبردن',
     'public' => [
         'market' => 'بازاڕ',
         'map' => 'نەخشە',
