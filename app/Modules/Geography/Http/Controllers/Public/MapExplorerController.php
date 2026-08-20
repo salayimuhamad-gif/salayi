@@ -15,6 +15,7 @@ use App\Modules\Geography\Support\Wkt;
 use App\Modules\Geography\ValueObjects\Coordinates;
 use App\Modules\Market\Models\MarketIndex;
 use App\Modules\Market\Models\MarketIndexValue;
+use App\Modules\Market\Services\LatestReliableIndexValues;
 use App\Modules\Marketplace\Models\Offer;
 use App\Modules\Projects\Enums\ProjectType;
 use App\Modules\Projects\Models\Project;
@@ -866,68 +867,17 @@ final class MapExplorerController extends Controller
      * the layer got slower in direct proportion to how much data the product
      * had, which is the worst possible scaling for a market-intelligence tool.
      *
-     * The shape is a grouped MAX(period) subquery joined back to its own
-     * table. `period` is the ordering key rather than an id because a revision
-     * can be inserted after a later period was published, and an id-based
-     * "latest" would silently prefer the row that happened to be written last.
-     *
-     * The reliability rules are applied in BOTH halves. Applying them only to
-     * the outer query would let a limited or unpublished row win MAX(period)
-     * and then be filtered out, leaving the index with no value at all —
-     * silently dropping an area that does have a reliable earlier figure.
+     * The selection rule itself now lives in LatestReliableIndexValues so the
+     * Wave 3 location-resolve endpoint answers from the SAME grouped-MAX,
+     * reliability-in-both-halves query rather than a second copy. Behaviour
+     * is unchanged and stays pinned by this controller's price-layer tests.
      *
      * @param  list<int>  $indexIds
      * @return Collection<int, MarketIndexValue>
      */
     private function latestReliableValues(array $indexIds): Collection
     {
-        if ($indexIds === []) {
-            return collect();
-        }
-
-        /*
-         * EVERY COLUMN IS QUALIFIED, because this query joins a derived table
-         * that exposes the same column names.
-         *
-         * The outer query filtered on a bare `market_index_id`,
-         * `publication_status`, `value` and `is_limited` while joining a
-         * sub-select aliased `latest` that also selects `market_index_id`.
-         * SQLite and MySQL both reject that as ambiguous, so the entire price
-         * layer returned a 500 — not a degraded layer, a dead one. The inner
-         * query keeps bare names deliberately: it has no join and its own
-         * grouping refers to its own table.
-         */
-        $reliableInner = static fn ($query) => $query
-            ->where('publication_status', 'published')
-            ->whereNotNull('value')
-            ->where('is_limited', false);
-
-        $reliableOuter = static fn ($query) => $query
-            ->where('market_index_values.publication_status', 'published')
-            ->whereNotNull('market_index_values.value')
-            ->where('market_index_values.is_limited', false);
-
-        $latestPeriods = MarketIndexValue::query()
-            ->select('market_index_id')
-            ->selectRaw('MAX(period) as latest_period')
-            ->whereIn('market_index_id', $indexIds)
-            ->tap($reliableInner)
-            ->groupBy('market_index_id');
-
-        return MarketIndexValue::query()
-            ->whereIn('market_index_values.market_index_id', $indexIds)
-            ->tap($reliableOuter)
-            ->joinSub(
-                $latestPeriods,
-                'latest',
-                static function ($join): void {
-                    $join->on('market_index_values.market_index_id', '=', 'latest.market_index_id')
-                        ->on('market_index_values.period', '=', 'latest.latest_period');
-                },
-            )
-            ->select('market_index_values.*')
-            ->get()
-            ->keyBy('market_index_id');
+        return app(LatestReliableIndexValues::class)->for($indexIds);
     }
 
     /**

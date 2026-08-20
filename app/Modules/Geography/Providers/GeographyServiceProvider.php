@@ -66,6 +66,15 @@ final class GeographyServiceProvider extends ModuleServiceProvider
 
         RateLimiter::for('map-search', static fn (Request $request): Limit => Limit::perMinute(30)
             ->by('map-search|'.$request->ip()));
+
+        /*
+         * Wave 3's location-resolve endpoint. The interactive-search budget
+         * (30/min is several taps a second, sustained) in its OWN bucket, for
+         * the reason stated above: a person resolving their location must
+         * neither spend the map budgets nor be starved by them.
+         */
+        RateLimiter::for('location-resolve', static fn (Request $request): Limit => Limit::perMinute(30)
+            ->by('location-resolve|'.$request->ip()));
     }
 
     protected function registerModule(): void
