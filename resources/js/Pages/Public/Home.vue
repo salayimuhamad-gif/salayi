@@ -200,8 +200,10 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
 
                 <div v-if="!market.has_data" class="mh-lux-panel !rounded-glass">
                     <!-- The "gathering data" hint belongs to the no-data case
-                         only; a switched-off module gathers nothing. -->
+                         only; a switched-off module gathers nothing. Compact:
+                         honest, but never the page's dominant panel. -->
                     <AppEmptyState
+                        compact
                         :title="market.reason === 'feature_disabled'
                             ? t('home.feature_off')
                             : t('home.no_market_data')"
@@ -241,7 +243,9 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                             </Link>
                         </div>
 
-                        <AppEmptyState v-if="!areas.has_data" :title="t('home.no_areas')" />
+                        <div v-if="!areas.has_data" class="flex flex-1 items-center justify-center">
+                            <AppEmptyState compact :title="t('home.no_areas')" />
+                        </div>
 
                         <AreaSummaryList
                             v-else
@@ -255,7 +259,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
             </section>
 
             <!-- 5 · Projects: the three-card rhythm, real records only. -->
-            <section class="mh-reveal mt-12 lg:mt-14" :class="box" :aria-label="t('home.projects')">
+            <section class="mh-reveal mt-10 lg:mt-12" :class="box" :aria-label="t('home.projects')">
                 <div class="mb-3.5 flex items-center justify-between gap-4 px-0.5">
                     <h2 class="mh-microlabel">{{ t('home.projects') }}</h2>
                     <Link :href="actionHrefs.projects" class="mh-link-amber inline-flex min-h-11 items-center gap-1">
@@ -265,7 +269,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                 </div>
 
                 <div v-if="!projects.has_data" class="mh-lux-panel !rounded-glass">
-                    <AppEmptyState :title="t('home.no_projects')" />
+                    <AppEmptyState compact :title="t('home.no_projects')" />
                 </div>
 
                 <div v-else class="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
@@ -283,7 +287,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                  into the real advisor — never an invented market claim. -->
             <section
                 v-if="cta.advisor"
-                class="mh-reveal mt-12 lg:mt-14"
+                class="mh-reveal mt-10 lg:mt-12"
                 :class="box"
                 :aria-label="t('home.insight_title')"
             >

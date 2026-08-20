@@ -432,11 +432,11 @@ const isDesktop = useIsDesktop();
              Everything below the chrome — adapter, style, layers, controls —
              stays untouched. -->
         <div class="mh-lux-panel mh-lux-gilded mh-frame-glow relative overflow-hidden !rounded-glass">
-            <div class="px-5 pb-3 pt-4 sm:px-6">
+            <div class="px-5 pb-2.5 pt-3.5 sm:px-6">
                 <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
                     <div class="min-w-0">
                         <h2 class="mh-microlabel">{{ t('home.pricing_map.title') }}</h2>
-                        <p v-if="pricing" class="mt-1.5 max-w-prose text-sm text-ink-muted">
+                        <p v-if="pricing" class="mt-1 max-w-prose text-sm text-ink-muted">
                             {{ t('home.pricing_map.lead') }}
                         </p>
                     </div>
@@ -550,7 +550,7 @@ const isDesktop = useIsDesktop();
                      lead the grid, calm enough to share the page rhythm. -->
                 <div
                     ref="container"
-                    class="h-96 w-full sm:h-[26rem] lg:h-[30rem]"
+                    class="h-72 w-full sm:h-80 lg:h-[22.5rem]"
                     role="application"
                     :aria-label="t('home.pricing_map.title')"
                 />

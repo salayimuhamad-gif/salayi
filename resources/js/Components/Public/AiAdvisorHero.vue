@@ -41,7 +41,7 @@ const enabled = computed(() => props.enabled);
 </script>
 
 <template>
-    <section class="pt-14 text-center sm:pt-16 lg:pt-20">
+    <section class="pt-10 text-center sm:pt-12 lg:pt-14">
         <p class="mh-eyebrow flex items-center justify-center">
             <span class="inline-block h-px w-6 bg-accent me-3" aria-hidden="true" />
             {{ t('home.eyebrow') }}
@@ -54,7 +54,7 @@ const enabled = computed(() => props.enabled);
             {{ titleParts.lead }}<span v-if="titleParts.accent" class="mh-hero-accent">{{ titleParts.accent }}</span>
         </h1>
 
-        <p class="mx-auto mt-4 max-w-2xl text-base font-light text-ink-muted">
+        <p class="mx-auto mt-3 max-w-2xl text-base font-light text-ink-muted">
             {{ t('home.hero_sub') }}
         </p>
 
