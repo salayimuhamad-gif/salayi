@@ -81,4 +81,34 @@ return [
         'type_label' => 'Type',
         'reset' => 'Reset filters',
     ],
+
+    /*
+     * Wave 3 — the location intelligence card. Every string labels a real
+     * state of the resolve endpoint or a real action; none of them describes
+     * data the server did not send.
+     */
+    'location' => [
+        'title' => 'Know the Price Where You Are',
+        'lede' => 'Real published price intelligence for the area you are standing in.',
+        'use_my_location' => 'Use My Location',
+        'choose_manually' => 'Choose Area Manually',
+        'privacy_hint' => 'Your location is used only to identify the mapped area.',
+        'locating' => 'Finding your area…',
+        'your_area' => 'Your area',
+        'chosen_area' => 'Chosen area',
+        'prices_for' => 'Price intelligence — :area',
+        'no_price_data' => 'No published price intelligence for this area yet',
+        'denied' => 'Location permission was declined — you can choose your area manually instead.',
+        'unavailable' => 'Your browser could not provide a location — you can choose your area manually instead.',
+        'outside' => 'This location is outside the areas mapped so far.',
+        'rate_limited' => 'Too many attempts — please wait a moment and try again.',
+        'error' => 'Something went wrong — please try again.',
+        'try_again' => 'Try again',
+        'select_area_label' => 'Choose an area',
+        'select_placeholder' => 'Select an area…',
+        'loading_areas' => 'Loading areas…',
+        'areas_unavailable' => 'The area list could not be loaded — please try again.',
+        'valuation_lede' => 'Add your property to your portfolio and request a valuation grounded in real market data.',
+        'valuation_cta' => 'Know Your Property Value',
+    ],
 ];
