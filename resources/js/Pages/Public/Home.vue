@@ -168,7 +168,9 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                         :placeholder="t('home.search_placeholder')"
                         autocomplete="off"
                     />
-                    <button type="submit" class="mh-lux-btn mh-lux-btn-primary !min-h-9 shrink-0 !px-4 !py-1.5 text-xs">
+                    <!-- Full 44px target — the touch floor is never overridden
+                         down, even inside a compact bar. -->
+                    <button type="submit" class="mh-lux-btn mh-lux-btn-primary shrink-0 !px-4 text-xs">
                         {{ t('home.search_action') }}
                     </button>
                 </form>
