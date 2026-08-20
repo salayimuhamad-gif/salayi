@@ -167,7 +167,15 @@ test.describe('language menu', () => {
         const panel = await openMenu(page);
         await expect(panel).toBeVisible();
 
-        await page.locator('main h1').first().click();
+        /*
+         * The outside target is the footer's version line: a plain paragraph
+         * that exists on every public page and can never sit under the
+         * top-anchored panel. The page h1 was the first choice and failed on
+         * phone widths for the right reason — the open panel overlaps it
+         * there, and a tap on the panel must NOT close the menu, so
+         * Playwright correctly refused to deliver that click.
+         */
+        await page.locator('footer .numeral').first().click();
         await expect(panel).toBeHidden();
         await expect(trigger(page)).toHaveAttribute('aria-expanded', 'false');
     });

@@ -32,3 +32,10 @@ docs/FINAL_RELEASE_VERIFICATION.md
 # a stale credential file behind — seed-browser-fixtures.php writes a fresh one
 # outside the tree identity now.
 tests/Browser/support/fixtures.json
+
+# Redesign Wave 1 retired the segmented three-button language switcher: its last
+# consumer (the public top bar) now renders the shared LanguageMenu, and the
+# admin/auth layouts render the same component instead of their inline copies.
+# An overlay cannot delete, so without this entry a server upgraded from a tree
+# that shipped the component would keep a dead file the build no longer bundles.
+resources/js/Components/Public/LocaleSwitcher.vue
