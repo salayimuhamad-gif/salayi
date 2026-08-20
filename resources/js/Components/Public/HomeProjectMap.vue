@@ -421,7 +421,10 @@ const isDesktop = useIsDesktop();
 </script>
 
 <template>
-    <section ref="wrapper" :aria-label="t('home.pricing_map.title')" data-testid="home-project-map">
+    <!-- min-w-0: this section is an analytics-grid ITEM; without it the
+         non-wrapping filter scroll-row's min-content width blows the grid
+         (and the page) out below lg. -->
+    <section ref="wrapper" class="min-w-0" :aria-label="t('home.pricing_map.title')" data-testid="home-project-map">
         <!-- Wave 2B: the whole surface is ONE reference analytics card — head,
              filters and map share the glass pane, and the head's amber link is
              the single way into the full surface (the old floating chip is

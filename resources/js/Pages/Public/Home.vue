@@ -197,11 +197,13 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                 </div>
 
                 <div v-if="!market.has_data" class="mh-lux-panel !rounded-glass">
+                    <!-- The "gathering data" hint belongs to the no-data case
+                         only; a switched-off module gathers nothing. -->
                     <AppEmptyState
                         :title="market.reason === 'feature_disabled'
                             ? t('home.feature_off')
                             : t('home.no_market_data')"
-                        :description="t('market.public.none_hint')"
+                        :description="market.reason === 'feature_disabled' ? undefined : t('market.public.none_hint')"
                     />
                 </div>
 
