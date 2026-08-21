@@ -205,9 +205,14 @@ for (const locale of LOCALES) {
             await expect(page.getByTestId('outside-coverage')).toBeVisible();
 
             // NO nearest-match fabrication: the seeded area is ~9 km away and
-            // its name must appear nowhere in the answer.
+            // its name must appear nowhere in the answer. The check is scoped
+            // to the location card itself — since Wave 4 the homepage
+            // legitimately names areas in unrelated published market content
+            // (the metric cards render each index's Sorani-first name), and
+            // asserting over all of <main> would measure that content, not
+            // this answer.
             await expect(page.getByTestId('resolved-area')).toHaveCount(0);
-            await expect(page.locator('main')).not.toContainText(AREA_NAME[locale.code]);
+            await expect(page.getByTestId('location-intelligence')).not.toContainText(AREA_NAME[locale.code]);
         });
 
         test('the manual published-area fallback renders the same honest presentation', async ({ page, diagnostics }) => {
