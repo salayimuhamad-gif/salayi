@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use App\Modules\Core\ValueObjects\Decimal;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Database\Migrations\Migration;
@@ -101,6 +102,25 @@ final class PriceRecordScopeBackfillMigrationTest extends TestCase
         ]);
     }
 
+    /**
+     * Assert a raw-DB price equals the expected monetary value EXACTLY.
+     *
+     * sqlite's driver hands DECIMAL back without its fixed-scale trailing
+     * zeros ('240000'), while MariaDB preserves them ('240000.0000'). The
+     * invariant under test is numeric identity — the repair must not alter
+     * the value — never a driver's lexical formatting, so both sides are
+     * normalised to scale 4 through the money value object and compared
+     * exactly: bcmath equality, no floats, no tolerance.
+     */
+    private function assertSamePrice(string $expected, mixed $actual, string $message = ''): void
+    {
+        $this->assertSame(
+            Decimal::of($expected, 4)->toString(),
+            Decimal::of((string) $actual, 4)->toString(),
+            $message,
+        );
+    }
+
     public function test_uniquely_resolvable_rows_are_backfilled_without_touching_anything_else(): void
     {
         $area = $this->area('AR-001');
@@ -118,7 +138,7 @@ final class PriceRecordScopeBackfillMigrationTest extends TestCase
         $this->assertSame((int) $area->id, (int) $repaired->scope_id);
         // The repair writes the key the importer forgot — and only the key.
         $this->assertSame('AR-001', $repaired->scope_external_id);
-        $this->assertSame('240000.0000', (string) $repaired->price);
+        $this->assertSamePrice('240000.0000', $repaired->price);
         $this->assertSame('published', $repaired->publication_status);
         $this->assertSame('historical import', $repaired->source);
         $this->assertSame('2026-06-20 10:00:00', (string) $repaired->updated_at);
@@ -193,9 +213,9 @@ final class PriceRecordScopeBackfillMigrationTest extends TestCase
             DB::table('price_records')->whereNull('scope_id')->whereNotNull('scope_external_id')->count(),
         );
 
-        $this->assertSame(
+        $this->assertSamePrice(
             '111111.0000',
-            (string) DB::table('price_records')->where('id', $occupant)->value('price'),
+            DB::table('price_records')->where('id', $occupant)->value('price'),
             'the slot occupant is not the repair\'s to touch',
         );
     }
