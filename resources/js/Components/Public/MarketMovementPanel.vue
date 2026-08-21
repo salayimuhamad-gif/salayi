@@ -82,6 +82,7 @@ let observer: IntersectionObserver | null = null;
 let requested = false;
 
 async function load(): Promise<void> {
+    requested = true;
     controller?.abort();
     controller = new AbortController();
     phase.value = 'loading';
