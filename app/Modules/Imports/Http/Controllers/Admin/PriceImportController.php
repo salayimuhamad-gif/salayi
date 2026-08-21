@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Imports\Http\Controllers\Admin;
 
+use App\Modules\Geography\Models\Area;
 use App\Modules\Imports\Services\PriceImportService;
 use App\Modules\Imports\Support\CsvReader;
 use App\Modules\Projects\Models\Project;
@@ -82,7 +83,13 @@ final class PriceImportController extends Controller
             ]);
         }
 
+        // Both internally-backed scope types, so spec 14.3's "identify
+        // missing project or area" holds for areas as well as projects — an
+        // area row with an unknown external id errors on the preview instead
+        // of surviving to accept only to be skipped there. Accept re-resolves
+        // regardless: this list is operator feedback, not the enforcement.
         $preview = $this->imports->preview($result['rows'], [
+            'area' => Area::query()->whereNotNull('external_id')->pluck('external_id')->all(),
             'project' => Project::query()->whereNotNull('external_id')->pluck('external_id')->all(),
         ]);
 

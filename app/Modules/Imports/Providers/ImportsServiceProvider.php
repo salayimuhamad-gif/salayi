@@ -8,6 +8,7 @@ use App\Modules\Core\Support\ModuleServiceProvider;
 use App\Modules\Imports\Services\PriceImportService;
 use App\Modules\Imports\Support\CsvReader;
 use App\Modules\Imports\Support\PriceRowValidator;
+use App\Modules\Imports\Support\PriceScopeResolver;
 use App\Modules\Operations\Services\AuditLogger;
 
 /**
@@ -34,9 +35,11 @@ final class ImportsServiceProvider extends ModuleServiceProvider
         // then fail.
         $this->app->singleton(PriceRowValidator::class);
         $this->app->singleton(CsvReader::class);
+        $this->app->singleton(PriceScopeResolver::class);
 
         $this->app->singleton(PriceImportService::class, fn ($app): PriceImportService => new PriceImportService(
             $app->make(PriceRowValidator::class),
+            $app->make(PriceScopeResolver::class),
             $app->make(AuditLogger::class),
         ));
     }

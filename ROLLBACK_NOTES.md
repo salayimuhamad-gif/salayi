@@ -99,10 +99,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
 ```
 
-Expect **nine** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **ten** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -121,12 +121,17 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'   # expect nine x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'   # expect ten x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
-# Newest first. Each is path-targeted and independently verifiable. The two
-# search-key backfills reverse as documented no-ops (the derived keys stay,
-# by design), so reversing them only un-marks the migration rows.
+# Newest first. Each is path-targeted and independently verifiable. The three
+# data-only backfills (the two search keys and the price-record scope ids)
+# reverse as documented no-ops (the derived values stay, by design), so
+# reversing them only un-marks the migration rows.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php \
+  --force
+
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php \
   --force
@@ -175,11 +180,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'   # expect nine x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly nine fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'   # expect ten x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly ten fewer
 ```
 
-The count must have dropped by **exactly nine**. If it dropped by more, an
+The count must have dropped by **exactly ten**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
@@ -399,7 +404,7 @@ preserved in §7.
 ### Rollback success criteria
 
 ```text
-all nine migrations reversed; the four tables, the four users columns and the evidence-class column absent
+all ten migrations reversed; the four tables, the four users columns and the evidence-class column absent
 restored manifest hash equals the §1 hash; every entry resolves
 route:list shows NO abandon, return, recovery, verify-choice or invest routes
 schedule:list shows NONE of the three cleanups
