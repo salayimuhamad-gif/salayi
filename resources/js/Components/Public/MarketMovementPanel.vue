@@ -230,7 +230,7 @@ const formatValue = (value: string): string => {
                     v-for="mode in TRANSACTIONS"
                     :key="mode"
                     type="button"
-                    class="rounded-md px-3 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    class="inline-flex min-h-11 items-center justify-center rounded-md px-3 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     :class="transaction === mode ? 'bg-accent/15 text-ink' : 'text-ink-muted hover:text-ink'"
                     :aria-pressed="transaction === mode"
                     :data-testid="`movement-transaction-${mode}`"
@@ -252,7 +252,7 @@ const formatValue = (value: string): string => {
                 v-for="key in WINDOWS"
                 :key="key"
                 type="button"
-                class="rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-45"
+                class="inline-flex min-h-11 items-center justify-center rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-45"
                 :class="window_ === key ? 'border-accent/60 bg-accent/15 text-ink' : 'border-line text-ink-muted hover:text-ink'"
                 :aria-pressed="window_ === key"
                 :disabled="windowDisabled(key)"
@@ -272,7 +272,7 @@ const formatValue = (value: string): string => {
         >
             <button
                 type="button"
-                class="rounded-full border px-2.5 py-1 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                class="inline-flex min-h-11 items-center justify-center rounded-full border px-2.5 py-1 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 :class="categories.length === 0 ? 'border-accent/60 bg-accent/15 text-ink' : 'border-line text-ink-muted hover:text-ink'"
                 :aria-pressed="categories.length === 0"
                 data-testid="movement-category-all"
@@ -284,7 +284,7 @@ const formatValue = (value: string): string => {
                 v-for="value in propertyTypes"
                 :key="value"
                 type="button"
-                class="rounded-full border px-2.5 py-1 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                class="inline-flex min-h-11 items-center justify-center rounded-full border px-2.5 py-1 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 :class="categories.includes(value) ? 'border-accent/60 bg-accent/15 text-ink' : 'border-line text-ink-muted hover:text-ink'"
                 :aria-pressed="categories.includes(value)"
                 :data-testid="`movement-category-${value}`"
@@ -303,7 +303,7 @@ const formatValue = (value: string): string => {
             <p class="text-sm text-ink-muted">{{ t('market.movement.error') }}</p>
             <button
                 type="button"
-                class="mt-2 rounded-md border border-line px-3 py-1 text-xs text-ink hover:border-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                class="mt-2 inline-flex min-h-11 items-center justify-center rounded-md border border-line px-3 py-1 text-xs text-ink hover:border-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 @click="load"
             >
                 {{ t('market.movement.retry') }}
