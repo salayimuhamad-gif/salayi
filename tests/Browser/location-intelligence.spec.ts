@@ -63,6 +63,54 @@ async function geolocationRequests(page: Page): Promise<number> {
     return await page.evaluate(() => window.__geoRequests ?? -1);
 }
 
+/*
+ * ISOLATION FROM AN UNRELATED SHARED RATE BUDGET (main CI #224).
+ *
+ * Every homepage load mounts the Pricing Intelligence Map, whose one
+ * features fetch spends the production `map-features` limiter (60/min per
+ * IP) — the SAME bucket invest.spec drains for its own subject moments
+ * earlier in the suite order. This spec loads the homepage 21 times per
+ * viewport project, and the rolling 60-second window straddling the two
+ * specs was measured at 58 of the 60-request budget: runner pacing decided
+ * whether the 61st request fired, and when it did, the map's fetch answered
+ * 429 — handled silently by the surface, but the browser console line
+ * failed the zero-console-error gate, always mid-suite (the Arabic block).
+ *
+ * The map is not this spec's subject, so its fetch is fulfilled here with
+ * the endpoint's own zero-state envelope (a real, valid empty answer — the
+ * map renders its honest empty state; fulfilling rather than aborting keeps
+ * the console clean without ignoring anything). The REAL endpoints and the
+ * real limiter stay fully exercised where they are the subject:
+ * invest.spec, map-production.spec and public-home.spec run uninterception.
+ * No limiter, assertion, or application behaviour changes here — this spec
+ * simply stops spending an unrelated budget.
+ */
+const EMPTY_FEATURES_ENVELOPE = {
+    projects: [],
+    places: [],
+    offers: [],
+    areas: [],
+    companies: [],
+    prices: [],
+    project_boundaries: { type: 'FeatureCollection', features: [] },
+    boundaries: { type: 'FeatureCollection', features: [] },
+    boundary_zoom_threshold: 11,
+    truncated: false,
+    distance: { unit: 'km', method: 'straight_line', travel_time_available: false, applied: false },
+};
+
+test.beforeEach(async ({ page }) => {
+    for (const pattern of ['**/invest/features*', '**/map/features*']) {
+        await page.route(pattern, (route) =>
+            route.fulfill({
+                status: 200,
+                contentType: 'application/json',
+                body: JSON.stringify(EMPTY_FEATURES_ENVELOPE),
+            }),
+        );
+    }
+});
+
 for (const locale of LOCALES) {
     test.describe(`location intelligence [${locale.code}]`, () => {
         test('never requests geolocation on load — only after the visitor asks', async ({ page, diagnostics }) => {
