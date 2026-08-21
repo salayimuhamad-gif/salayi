@@ -223,11 +223,13 @@ test.describe('portfolio authorization boundary', () => {
 
         const f = fixtures();
 
-        // A guest holds nothing: the route demands a session first.
-        const guest = await page.goto(`/account/portfolio/${f.portfolio.property_ids.home}`, {
-            waitUntil: 'domcontentloaded',
-        });
-        expect(guest?.url()).toContain('/login');
+        /*
+         * Signed-in FIRST, guest second — deliberately. A guest hit on a
+         * protected URL stores it as Laravel's intended destination, so a
+         * login that follows would be redirected straight into the foreign
+         * property's (correct) 404 and never observably leave /login. The
+         * ORDER is the fix; both authorization claims stay word-for-word.
+         */
 
         // A DIFFERENT signed-in member gets 404 — not 403: a stranger must
         // not even learn that a property with this id exists.
@@ -236,5 +238,12 @@ test.describe('portfolio authorization boundary', () => {
             waitUntil: 'domcontentloaded',
         });
         expect(response?.status()).toBe(404);
+
+        // A guest holds nothing: the route demands a session first.
+        await page.context().clearCookies();
+        const guest = await page.goto(`/account/portfolio/${f.portfolio.property_ids.home}`, {
+            waitUntil: 'domcontentloaded',
+        });
+        expect(guest?.url()).toContain('/login');
     });
 });
