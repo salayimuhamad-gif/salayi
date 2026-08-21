@@ -11,7 +11,7 @@ surface.
 > rehearsal output and its check counts ship in the external evidence package,
 > which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships nine forward-only migrations:
+**This patch DOES change the schema.** It ships ten forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -23,6 +23,7 @@ app/Modules/Knowledge/Database/Migrations/2026_08_16_000100_add_evidence_class_t
 app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php
 app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
 app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php
+app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php
 ```
 
 1. `telegram_return_handoffs` backs the secure Telegram return handoff.
@@ -53,6 +54,13 @@ app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_veri
    hashed at rest, and the second verified-at stamp the shared
    verified-account rule reads. Without them the reclamation sweep and the
    verified-account queries name a column that does not exist.
+10. `backfill_price_record_scope_ids` is data-only: it resolves the canonical
+   internal `scope_id` for historical imported price records from their
+   `scope_type` and `scope_external_id`, exactly as the fixed importer now
+   does at accept time. Without it, every area- or project-scoped price
+   imported before the fix stays invisible to the scoped market indices.
+   Only uniquely, byte-exactly resolvable rows are touched; reversing it is
+   a documented no-op — nulling the ids would only re-hide those records.
 
 Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
@@ -135,11 +143,11 @@ cd ~/domains/myhawler.com/application
 ```
 
 Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-nine.
+ten.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
 ```
 
 Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
@@ -216,18 +224,18 @@ Then prove exactly what you expect:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
 ```
 
-Expect **nine** lines, each reading **`Ran`** — all were `Pending` or absent in
+Expect **ten** lines, each reading **`Ran`** — all were `Pending` or absent in
 step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 9`. Both directions matter: a smaller increase means
-one of the nine never arrived — and if it is `telegram_verification_tokens`,
+Expect exactly `BEFORE + 10`. Both directions matter: a smaller increase means
+one of the ten never arrived — and if it is `telegram_verification_tokens`,
 nobody can complete a registration — while a larger one means something
 unintended came along and you should stop and look at it.
 
@@ -328,8 +336,8 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                     §1
 all seven backups taken and readable          §2
 deletions applied and verified absent         §6
-all nine migrations moved Pending -> Ran      §8
-migration count increased by exactly nine     §8
+all ten migrations moved Pending -> Ran       §8
+migration count increased by exactly ten      §8
 verification table present, NO expires_at     §8
 recovery table + presence column present      §8
 whatsapp table + whatsapp column present      §8
@@ -418,8 +426,8 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than nine -> a table or column is missing; roll back
-migration count up by more than nine  -> stop and investigate before continuing
+migration count up by fewer than ten -> a table or column is missing; roll back
+migration count up by more than ten  -> stop and investigate before continuing
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back

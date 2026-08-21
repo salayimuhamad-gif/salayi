@@ -1457,6 +1457,7 @@ INVENTORY = (
     'app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php',
     'app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php',
     'app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php',
+    'app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php',
 )
 # The first post-baseline migration's date key: anything at or after it in any
 # migration directory is this release's to declare.
@@ -1484,7 +1485,7 @@ check('the deployment rehearsal names every inventoried migration',
       f'missing: {[n for n in inventory_names if n not in deploy_sh]}')
 check('the deployment rehearsal pins the exact inventory count, fail-closed',
       f'[ "$DELTA" = "{len(INVENTORY)}" ]' in deploy_sh
-      and '[ "$DELTA" = "8" ]' not in deploy_sh)
+      and '[ "$DELTA" = "9" ]' not in deploy_sh)
 check('the rollback rehearsal reverses every inventoried migration by exact path',
       all(rel in rollback_sh for rel in INVENTORY),
       f'missing: {[rel for rel in INVENTORY if rel not in rollback_sh]}')

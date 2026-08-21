@@ -812,7 +812,9 @@ echo "\n-- release migration inventory\n";
  * every surface that states it must carry every name, and a post-baseline
  * migration missing from this list fails the suite before it can fail a
  * release. The count assertions stay fail-closed in the tooling — an
- * unexpected tenth migration must fail exactly as the unexpected ninth did.
+ * unexpected eleventh migration must fail exactly as the unexpected ninth
+ * did. (The declared tenth is the price-record scope_id backfill, added with
+ * the import scope-integrity fix and carried through every pinned surface.)
  */
 $inventory = [
     'app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php',
@@ -824,6 +826,7 @@ $inventory = [
     'app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_event_search_keys.php',
     'app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php',
     'app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php',
+    'app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php',
 ];
 
 $allExist = true;
@@ -873,8 +876,8 @@ $namesEverywhere = static function (string $body) use ($inventory): bool {
 $ok(
     'the deployment rehearsal names every inventoried migration and pins the count fail-closed',
     $namesEverywhere($deployRehearsal)
-        && str_contains($deployRehearsal, '[ "$DELTA" = "9" ]')
-        && ! str_contains($deployRehearsal, '[ "$DELTA" = "8" ]'),
+        && str_contains($deployRehearsal, '[ "$DELTA" = "10" ]')
+        && ! str_contains($deployRehearsal, '[ "$DELTA" = "9" ]'),
 );
 
 $ok(
@@ -888,8 +891,8 @@ $ok(
 $ok(
     'the rollback rehearsal reverses the whole inventory by exact path and pins the count',
     $namesEverywhere($rollbackRehearsal)
-        && str_contains($rollbackRehearsal, '[ "$PATCH_RAN" = "9" ]')
-        && str_contains($rollbackRehearsal, 'RAN_BEFORE - 9')
+        && str_contains($rollbackRehearsal, '[ "$PATCH_RAN" = "10" ]')
+        && str_contains($rollbackRehearsal, 'RAN_BEFORE - 10')
         && str_contains($rollbackRehearsal, "'whatsapp_otps'")
         && str_contains($rollbackRehearsal, "'whatsapp_verified_at'"),
 );
