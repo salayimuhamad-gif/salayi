@@ -51,8 +51,17 @@ for (const locale of LOCALES) {
             // its lazy mount can fire without scrolling on tall viewports);
             // every identity motif ships as inline SVG paths or CSS
             // backgrounds precisely so this gate keeps meaning what it says.
+            //
+            // Wave 4 adds exactly ONE sanctioned polyline source: the Market
+            // Movement panel's sparkline, which renders nothing but genuine
+            // published observations (its own spec and the backend suite hold
+            // that line). Its fetch is intersection-driven, so whether it has
+            // mounted here depends on the viewport — the gate must not. Any
+            // polyline OUTSIDE a movement sparkline is still an invention.
             await expect(page.locator('main img')).toHaveCount(0);
-            await expect(page.locator('main polyline')).toHaveCount(0);
+            await expect(
+                page.locator('main polyline:not([data-testid="movement-sparkline"] polyline)'),
+            ).toHaveCount(0);
             await expect(page.locator('main canvas:not(.maplibregl-canvas)')).toHaveCount(0);
         });
     });

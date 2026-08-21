@@ -424,6 +424,19 @@ DB::table('market_index_values')->updateOrInsert(
  * No coordinates and no polygons: these areas must stay invisible to every
  * map surface and to the location resolver.
  */
+
+/*
+ * The whole surface lives behind `market.intelligence`, enforced at the
+ * route boundary (Market/Routes/web.php): with the flag off, /market is a
+ * genuine 404 and the homepage hides both market sections, so the spec
+ * would be measuring the flag instead of the movement panel — the same
+ * reason map.explorer is switched on above.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'market.intelligence'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
 $movementAreas = [
     'mv-kasnazan' => ['کەسنەزان', 'كسنزان', 'Kasnazan'],
     'mv-baharka' => ['بەهارکە', 'بهاركة', 'Baharka'],
@@ -515,7 +528,7 @@ file_put_contents(
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
         'wizard_draft_id' => $wizardDraftId,
-        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true, 'market.intelligence' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
