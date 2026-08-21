@@ -263,9 +263,11 @@ const statCard = 'rounded-xl border border-line bg-surface p-4';
 
             <AppCard v-for="property in properties.data" :key="property.id" class="mb-4" data-testid="property-card">
                 <div class="flex flex-wrap items-baseline justify-between gap-3">
+                    <!-- A flex child is blockified, so this link IS a measured
+                         touch target: it must carry the 44px floor itself. -->
                     <Link
                         :href="localized(`/account/portfolio/${property.id}`)"
-                        class="font-display text-lg font-semibold text-ink underline-offset-2 hover:underline"
+                        class="inline-flex min-h-11 items-center font-display text-lg font-semibold text-ink underline-offset-2 hover:underline"
                     >
                         {{ property.label ?? '—' }}
                     </Link>
@@ -338,7 +340,10 @@ const statCard = 'rounded-xl border border-line bg-surface p-4';
                 <p v-else class="mt-3 text-sm text-ink-faint">{{ t('portfolio.no_valuation') }}</p>
 
                 <div class="mt-4">
-                    <AppButton variant="ghost" size="sm" class="min-h-11" @click="remove(property.id, property.label)">
+                    <!-- md is the component's own 44px tier; a min-h-11 class
+                         appended to sm loses to the size's min-h-9 in the
+                         compiled stylesheet and measured 38px on mobile. -->
+                    <AppButton variant="ghost" size="md" @click="remove(property.id, property.label)">
                         {{ t('app.actions.delete') }}
                     </AppButton>
                 </div>

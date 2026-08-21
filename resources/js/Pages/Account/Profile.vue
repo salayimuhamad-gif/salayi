@@ -199,11 +199,13 @@ const claims = computed(() => [
                                 @change="uploadPhoto"
                             >
                             <div class="flex flex-wrap gap-2">
+                                <!-- md is the component's own 44px tier; a
+                                     min-h-11 class appended to sm loses to
+                                     the size's min-h-9 in the stylesheet. -->
                                 <AppButton
                                     type="button"
-                                    size="sm"
+                                    size="md"
                                     variant="secondary"
-                                    class="min-h-11"
                                     :loading="photoBusy"
                                     @click="photoInput?.click()"
                                 >
@@ -212,9 +214,8 @@ const claims = computed(() => [
                                 <AppButton
                                     v-if="avatar.photo"
                                     type="button"
-                                    size="sm"
+                                    size="md"
                                     variant="ghost"
-                                    class="min-h-11"
                                     :loading="photoBusy"
                                     @click="removePhoto"
                                 >

@@ -220,7 +220,7 @@ const factRows = (): Array<[string, string | null]> => [
                     {{ identity }}
                 </p>
             </div>
-            <AppButton variant="secondary" size="sm" class="min-h-11" data-testid="edit-property" :aria-expanded="editing" @click="editing = !editing">
+            <AppButton variant="secondary" size="md" data-testid="edit-property" :aria-expanded="editing" @click="editing = !editing">
                 {{ editing ? t('app.actions.cancel') : t('portfolio.form.edit') }}
             </AppButton>
         </header>
