@@ -378,7 +378,6 @@ final class MarketMovementService
     /**
      * One mover — every field measured, none invented.
      *
-     * @param  Area|Project  $entity
      * @param  array{comparable: bool, reason: string|null, change_percent: string|null, direction: string|null}  $change
      * @param  list<MarketIndexValue>  $series
      * @return array<string, mixed>
