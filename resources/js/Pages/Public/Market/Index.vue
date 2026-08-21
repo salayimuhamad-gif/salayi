@@ -5,6 +5,7 @@ import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppCard from '@/Components/ui/AppCard.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
+import MarketMovementPanel from '@/Components/Public/MarketMovementPanel.vue';
 import MarketTrendChart from '@/Components/Public/MarketTrendChart.vue';
 import IndexExplanation from '@/Components/IndexExplanation.vue';
 import { t, formatNumber } from '@/lib/i18n';
@@ -72,6 +73,11 @@ const ordered = computed(() =>
     <PublicLayout>
         <h1 class="mb-2 font-display text-2xl font-bold text-ink">{{ t('market.public.title') }}</h1>
         <p class="mb-8 max-w-2xl text-sm text-ink-muted">{{ t('market.public.intro') }}</p>
+
+        <!-- Wave 4: movement derived live from the published series. It
+             replaces the "gainers and decliners" entry that used to sit in
+             the not-yet-available list below. -->
+        <MarketMovementPanel variant="card" class="mb-8" />
 
         <AppEmptyState
             v-if="indices.length === 0"
