@@ -196,6 +196,14 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # Runs on every viewport with NO skips, so it is deliberately absent
     # from PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
     'tests/Browser/map-rtl.spec.ts',
+    # Wave 4 market movement: the panel drives the REAL /market/movement
+    # endpoint against seeded monthly series — sale/rent isolation, exact
+    # category composition, the honestly disabled 7D and honestly available
+    # 30D dated windows, genuine gainer/loser percentages, the four-point
+    # fixture sparkline, RTL/LTR and the 120% text scale. Runs on every
+    # viewport with NO skips, so it is deliberately absent from
+    # PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
+    'tests/Browser/market-movement.spec.ts',
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
     'tests/Browser/production-assets.spec.ts',
