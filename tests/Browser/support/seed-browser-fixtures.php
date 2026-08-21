@@ -49,6 +49,8 @@ use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Support\Totp;
 use App\Modules\Knowledge\Models\KnowledgeEvent;
+use App\Modules\Portfolio\Models\PortfolioProperty;
+use App\Modules\Portfolio\Models\PortfolioValuation;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -518,6 +520,87 @@ foreach ($movementIndices as $key => [$slug, $propertyType, $priceType, $series]
     }
 }
 
+/*
+ * Wave 5: the profile + portfolio scenario. A dedicated Telegram-linked
+ * member owning four properties whose REAL persisted rows exercise every
+ * honesty rule the dashboard makes: a two-point USD valuation history (the
+ * only chartable series), a second USD figure so the same-currency total is
+ * a real sum, an IQD figure that must stay in its own group — never added
+ * to the USD one — and a property with no valuation at all, which must read
+ * as awaiting rather than as zero. Labels are owner-typed synthetic strings
+ * (encrypted at rest like any label); the entity chip resolves through the
+ * published mv-kasnazan area the Wave 4 block already seeds.
+ */
+$portfolioUser = User::query()->updateOrCreate(
+    ['email' => 'portfolio@browser-test.invalid'],
+    ['name' => 'Browser Portfolio', 'password' => Hash::make($password), 'preferred_locale' => 'ckb', 'is_active' => true],
+);
+$portfolioUser->roles()->sync([]);
+$portfolioUser->phone_verified = 1;
+$portfolioUser->telegram_id = '990100';
+$portfolioUser->telegram_verified_at = now();
+$portfolioUser->save();
+
+// Idempotent: this user's portfolio is rebuilt from nothing on every run,
+// so a re-seed never doubles the totals the spec asserts.
+foreach (PortfolioProperty::query()->where('user_id', $portfolioUser->id)->get() as $stale) {
+    $stale->valuations()->delete();
+    $stale->forceDelete();
+}
+
+$portfolioSeed = [
+    // key => [label, currency, type, area id, [[midpoint, calculated_at], …]]
+    'home' => ['W5 Kasnazan home', 'USD', 'apartment', $movementAreaIds['mv-kasnazan'], [
+        ['150000.0000', '2026-05-10 09:00:00'],
+        ['165000.0000', '2026-07-20 09:00:00'],
+    ]],
+    'flat' => ['W5 City flat', 'USD', 'apartment', null, [
+        ['85000.0000', '2026-07-01 09:00:00'],
+    ]],
+    'land' => ['W5 Baharka land', 'IQD', 'land', $movementAreaIds['mv-baharka'], [
+        ['320000000.0000', '2026-06-15 09:00:00'],
+    ]],
+    'awaiting' => ['W5 Awaiting office', 'USD', 'commercial', null, []],
+];
+
+$portfolioPropertyIds = [];
+
+foreach ($portfolioSeed as $key => [$label, $currency, $type, $areaId, $valuations]) {
+    $property = new PortfolioProperty;
+    $property->fill([
+        'user_id' => $portfolioUser->id,
+        'property_type' => $type,
+        'area_id' => $areaId,
+        'currency' => $currency,
+        'location_precision' => PortfolioProperty::PRECISION_AREA_ONLY,
+        'consent_valuation' => true,
+    ]);
+    $property->setLabel($label);
+    $property->setNotes(null);
+    $property->save();
+
+    $portfolioPropertyIds[$key] = $property->id;
+
+    foreach ($valuations as [$midpoint, $calculatedAt]) {
+        PortfolioValuation::query()->create([
+            'portfolio_property_id' => $property->id,
+            'midpoint' => $midpoint,
+            'low' => $midpoint,
+            'high' => $midpoint,
+            'currency' => $currency,
+            'confidence' => 'moderate',
+            'match_level' => 2,
+            'match_label' => 'area',
+            'methodology' => 'median_comparables_v1',
+            'comparison_count' => 8,
+            'excluded_asking_count' => 3,
+            'excluded_asking_note' => 'Asking prices were excluded from this estimate.',
+            'no_valuation_reason' => null,
+            'calculated_at' => $calculatedAt,
+        ]);
+    }
+}
+
 cache()->flush();
 
 file_put_contents(
@@ -527,6 +610,7 @@ file_put_contents(
         'admin' => ['email' => $admin->email, 'secret' => $adminSecret],
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
+        'portfolio' => ['email' => $portfolioUser->email, 'property_ids' => $portfolioPropertyIds],
         'wizard_draft_id' => $wizardDraftId,
         'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true, 'market.intelligence' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
@@ -538,4 +622,5 @@ echo "  advisor.residential = ON\n";
 echo "  map.investment = ON, map.explorer = ON\n";
 echo "  4 published projects: trends up / down / flat / unknown\n";
 echo "  market.indices = ON, portfolio = ON\n";
+echo "  portfolio member: {$portfolioUser->email} — 4 properties (USD ×2 valued, IQD ×1, 1 awaiting)\n";
 echo "  browser-ankawa: boundary polygon + published sale index (Wave 3 location card)\n";
