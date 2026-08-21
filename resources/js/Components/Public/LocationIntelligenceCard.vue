@@ -272,7 +272,7 @@ const priceHeading = computed(() => {
 </script>
 
 <template>
-    <div class="mh-lux-panel mh-lux-gilded !rounded-glass p-5 sm:p-6">
+    <div class="mh-lux-panel mh-lux-gilded !rounded-glass p-5 sm:p-6" data-testid="location-intelligence">
         <!-- Header: the concept, stated once. -->
         <div class="flex items-start gap-3.5">
             <span

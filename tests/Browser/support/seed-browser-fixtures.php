@@ -412,6 +412,112 @@ DB::table('market_index_values')->updateOrInsert(
     ],
 );
 
+/*
+ * Wave 4: the market-movement scenario. Two published areas with published
+ * monthly index series — a genuine gainer, a genuine loser, a second sale
+ * category and one rent series — so the browser spec can drive the REAL
+ * /market/movement endpoint against persisted rows, exactly as the four
+ * investment projects prove the map trend pipeline. The June and July
+ * observations sit exactly 30 real days apart (2026-06-01 → 2026-07-01),
+ * which is what makes the 30D dated window HONESTLY available; nothing sits
+ * within 7 days of anything, so 7D must render disabled with its reason.
+ * No coordinates and no polygons: these areas must stay invisible to every
+ * map surface and to the location resolver.
+ */
+
+/*
+ * The whole surface lives behind `market.intelligence`, enforced at the
+ * route boundary (Market/Routes/web.php): with the flag off, /market is a
+ * genuine 404 and the homepage hides both market sections, so the spec
+ * would be measuring the flag instead of the movement panel — the same
+ * reason map.explorer is switched on above.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'market.intelligence'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+$movementAreas = [
+    'mv-kasnazan' => ['کەسنەزان', 'كسنزان', 'Kasnazan'],
+    'mv-baharka' => ['بەهارکە', 'بهاركة', 'Baharka'],
+];
+
+$movementAreaIds = [];
+
+foreach ($movementAreas as $slug => [$ckb, $ar, $en]) {
+    $movementAreaIds[$slug] = Area::query()->updateOrCreate(
+        ['slug' => $slug],
+        [
+            'type' => 'district',
+            'name_ckb' => $ckb,
+            'name_ar' => $ar,
+            'name_en' => $en,
+            'publication_status' => 'published',
+        ],
+    )->id;
+}
+
+$movementIndices = [
+    // key => [area slug, property_type, price_type, series period => value]
+    'movement-kasnazan-apartment-sale' => ['mv-kasnazan', 'apartment', 'sale_asking', [
+        '2026-02' => '100000', '2026-03' => '104000', '2026-06' => '110000', '2026-07' => '121000',
+    ]],
+    'movement-baharka-apartment-sale' => ['mv-baharka', 'apartment', 'sale_asking', [
+        '2026-02' => '190000', '2026-03' => '195000', '2026-06' => '200000', '2026-07' => '184000',
+    ]],
+    'movement-kasnazan-office-sale' => ['mv-kasnazan', 'office', 'sale_asking', [
+        '2026-06' => '300000', '2026-07' => '306000',
+    ]],
+    'movement-kasnazan-apartment-rent' => ['mv-kasnazan', 'apartment', 'rent_asking', [
+        '2026-06' => '700', '2026-07' => '665',
+    ]],
+];
+
+foreach ($movementIndices as $key => [$slug, $propertyType, $priceType, $series]) {
+    DB::table('market_indices')->updateOrInsert(
+        ['key' => $key],
+        [
+            'name_ckb' => 'پێوەری '.$movementAreas[$slug][0],
+            'name_ar' => 'مؤشر '.$movementAreas[$slug][1],
+            'name_en' => $movementAreas[$slug][2].' index',
+            'scope_type' => 'area',
+            'scope_id' => $movementAreaIds[$slug],
+            'property_type' => $propertyType,
+            'price_type' => $priceType,
+            'basis' => 'median',
+            'currency' => 'USD',
+            'methodology_version' => 'v1',
+            'minimum_sample' => 3,
+            'publication_status' => 'published',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+    );
+
+    $indexId = (int) DB::table('market_indices')->where('key', $key)->value('id');
+
+    foreach ($series as $period => $value) {
+        DB::table('market_index_values')->updateOrInsert(
+            ['market_index_id' => $indexId, 'period' => $period, 'revision_number' => 0],
+            [
+                'effective_date' => $period.'-01',
+                'value' => $value,
+                'sample_size' => 12,
+                'excluded_outliers' => 0,
+                'confidence' => 'moderate',
+                'is_limited' => false,
+                'warning' => null,
+                'methodology_version' => 'v1',
+                'revision_status' => 'initial',
+                'publication_status' => 'published',
+                'published_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        );
+    }
+}
+
 cache()->flush();
 
 file_put_contents(
@@ -422,7 +528,7 @@ file_put_contents(
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
         'wizard_draft_id' => $wizardDraftId,
-        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true, 'market.intelligence' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 

@@ -9,6 +9,7 @@ import AiDock from '@/Components/Public/AiDock.vue';
 import HomeProjectMap from '@/Components/Public/HomeProjectMap.vue';
 import LocationIntelligenceCard from '@/Components/Public/LocationIntelligenceCard.vue';
 import MarketMetricCard from '@/Components/Public/MarketMetricCard.vue';
+import MarketMovementPanel from '@/Components/Public/MarketMovementPanel.vue';
 import ProjectSummaryCard from '@/Components/Public/ProjectSummaryCard.vue';
 import AreaSummaryList from '@/Components/Public/AreaSummaryList.vue';
 import { t } from '@/lib/i18n';
@@ -233,6 +234,19 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
                         animated
                     />
                 </div>
+            </section>
+
+            <!-- 3b · Market pulse (Wave 4): gainers and decliners derived live
+                 from the published series. Mounted only while the module is
+                 on — a switched-off module derives nothing — and honest about
+                 every state it can be in, including "no history yet". -->
+            <section
+                v-if="marketLinkable"
+                class="mh-reveal mt-3.5"
+                :class="box"
+                :aria-label="t('market.movement.title')"
+            >
+                <MarketMovementPanel variant="lux" />
             </section>
 
             <!-- 4 · Analytics grid: the map beside the real area intelligence. -->
