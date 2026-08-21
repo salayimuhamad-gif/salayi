@@ -235,7 +235,7 @@ final class MarketMovementService
             return collect();
         }
 
-        return MarketIndexValue::query()
+        $values = MarketIndexValue::query()
             ->whereIn('market_index_id', $indexIds)
             ->where('publication_status', 'published')
             ->whereNotNull('value')
@@ -243,13 +243,25 @@ final class MarketMovementService
             ->orderBy('period')
             ->orderBy('revision_number')
             ->orderBy('id')
-            ->get()
-            ->groupBy('market_index_id')
-            ->map(
-                static fn (Collection $values): Collection => $values
-                    ->keyBy('period')   // later rows overwrite: highest revision per period wins
-                    ->values(),
-            );
+            ->get();
+
+        /*
+         * Grouped in plain PHP: assigning to the same period key overwrites
+         * in place, so the highest published revision wins its period while
+         * the period keeps its ascending position — the same array
+         * semantics groupBy()/keyBy() are built on, spelled out where the
+         * generics stay exact.
+         */
+        /** @var array<int, array<string, MarketIndexValue>> $byIndex */
+        $byIndex = [];
+
+        foreach ($values as $value) {
+            $byIndex[$value->market_index_id][$value->period] = $value;
+        }
+
+        return collect($byIndex)->map(
+            static fn (array $periods): Collection => collect(array_values($periods)),
+        );
     }
 
     /**

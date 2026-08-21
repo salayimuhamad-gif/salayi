@@ -44,7 +44,7 @@ final class MarketMovementTest extends TestCase
         return app(MarketMovementService::class);
     }
 
-    /** @param array<string, mixed> $overrides */
+    /** @param array<model-property<Area>, mixed> $overrides */
     private function area(string $slug, array $overrides = []): Area
     {
         return Area::query()->create($overrides + [
@@ -55,7 +55,7 @@ final class MarketMovementTest extends TestCase
         ]);
     }
 
-    /** @param array<string, mixed> $overrides */
+    /** @param array<model-property<Project>, mixed> $overrides */
     private function project(string $slug, array $overrides = []): Project
     {
         return Project::query()->create($overrides + [
@@ -68,7 +68,7 @@ final class MarketMovementTest extends TestCase
         ]);
     }
 
-    /** @param array<string, mixed> $overrides */
+    /** @param array<model-property<MarketIndex>, mixed> $overrides */
     private function index(Area|Project $entity, array $overrides = []): MarketIndex
     {
         static $sequence = 0;
@@ -88,7 +88,7 @@ final class MarketMovementTest extends TestCase
         ]);
     }
 
-    /** @param array<string, mixed> $overrides */
+    /** @param array<model-property<MarketIndexValue>, mixed> $overrides */
     private function value(MarketIndex $index, string $period, ?string $value, array $overrides = []): MarketIndexValue
     {
         return MarketIndexValue::query()->create($overrides + [
