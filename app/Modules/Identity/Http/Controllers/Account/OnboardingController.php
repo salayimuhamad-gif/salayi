@@ -37,8 +37,11 @@ final class OnboardingController extends Controller
      * anywhere reads it — it is profile colour, not a gate. Kept here rather
      * than in an enum column so changing it is a product decision, not a
      * migration.
+     *
+     * Public since Wave 5: the profile screen edits the same optional detail,
+     * and two copies of this list is how the two screens would drift apart.
      */
-    private const GENDERS = ['female', 'male', 'undisclosed'];
+    public const GENDERS = ['female', 'male', 'undisclosed'];
 
     public function __construct(private readonly AuditLogger $audit) {}
 

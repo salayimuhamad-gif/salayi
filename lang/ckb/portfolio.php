@@ -38,6 +38,23 @@ return [
     'no_valuation' => 'هێشتا خەمڵاندن نییە',
     'excluded_asking' => 'نرخی داواکراو دەرکراوە',
     'history' => 'مێژووی خەمڵاندن',
+    'history_trend' => 'ڕەوتی خەمڵاندن',
+    'history_trend_hint' => 'تەنها خەمڵاندنە تۆمارکراوەکان بە :currency — هیچ شتێک دانەهێنراوە و پڕنەکراوەتەوە.',
+
+    // Wave 5: the derived dashboard band. Every figure below is computed from
+    // persisted rows on each read; currencies are never combined.
+    'summary' => [
+        'title' => 'پوختەی موڵکەکان',
+        'properties' => 'موڵکەکان',
+        'coverage' => ':valued لە :total خەمڵاندنی ئێستایان هەیە',
+        'awaiting' => 'چاوەڕوانی خەمڵاندن',
+        'total_label' => 'بەهای ئێستا',
+        'per_currency_count' => ':count بە :currency بەهایان هەیە',
+        'multi_currency_note' => 'کۆکراوەکان بۆ هەر دراوێک جیان — بڕەکانی دراوی جیاواز هەرگیز کۆناکرێنەوە.',
+        'latest_valued' => 'دوایین خەمڵاندن',
+        'no_valuations' => 'هێشتا هیچ خەمڵاندنێکی ئێستا بەردەست نییە.',
+        'composition' => 'پێکهاتە',
+    ],
     'export' => 'دەرهێنان',
     'delete_confirm' => 'دڵنیایت؟ ئەمە ناگەڕێتەوە',
     'consent_valuation' => 'ڕازیم بە خەمڵاندنی موڵکەکەم',

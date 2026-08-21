@@ -306,6 +306,16 @@ return [
         'contact_either' => 'أيهما',
         'save' => 'حفظ الملف',
         'saved' => 'تم حفظ الملف.',
+
+        // Wave 5: the grouped profile. Section titles plus the independent
+        // verification claims — one channel's proof never speaks for another.
+        'section_identity' => 'الهوية',
+        'section_contact' => 'التواصل',
+        'section_residence' => 'مكان الإقامة',
+        'section_verification' => 'التوثيق',
+        'verification_intro' => 'كل ادعاء أدناه مستقل بذاته — توثيق قناة لا يقول شيئاً عن قناة أخرى.',
+        'status_whatsapp_linked' => 'تم توثيق حساب واتساب',
+        'status_not_linked' => 'غير مرتبط',
     ],
 
     'administrators' => [

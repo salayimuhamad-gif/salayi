@@ -38,6 +38,23 @@ return [
     'no_valuation' => 'No valuation yet',
     'excluded_asking' => 'asking prices excluded',
     'history' => 'Valuation history',
+    'history_trend' => 'Valuation trend',
+    'history_trend_hint' => 'Recorded :currency valuations only — nothing is interpolated or invented.',
+
+    // Wave 5: the derived dashboard band. Every figure below is computed from
+    // persisted rows on each read; currencies are never combined.
+    'summary' => [
+        'title' => 'Portfolio overview',
+        'properties' => 'Properties',
+        'coverage' => ':valued of :total with a current valuation',
+        'awaiting' => 'Awaiting valuation',
+        'total_label' => 'Current value',
+        'per_currency_count' => ':count with a value in :currency',
+        'multi_currency_note' => 'Totals are kept per currency — amounts in different currencies are never added together.',
+        'latest_valued' => 'Latest valuation',
+        'no_valuations' => 'No current valuation is available yet.',
+        'composition' => 'Composition',
+    ],
     'export' => 'Export',
     'delete_confirm' => 'Are you sure? This cannot be undone',
     'consent_valuation' => 'I consent to my property being valued',
