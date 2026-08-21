@@ -27,6 +27,14 @@ final class ProfileWave5Test extends TestCase
         parent::setUp();
 
         Cache::flush();
+
+        // setPhone() builds the keyed blind index and refuses, loudly, to
+        // run unkeyed — the same test key the other phone-flow suites use.
+        if ((string) config('mulkihawler.security.blind_index_key', '') === '') {
+            config([
+                'mulkihawler.security.blind_index_key' => str_repeat('a', 64),
+            ]);
+        }
     }
 
     /** A member who has completed the Telegram link — the profile's gate. */
