@@ -84,9 +84,10 @@ final class MarketController extends Controller
             'indices' => $indices,
             // Declared rather than silently absent (spec 17.5): a market page
             // missing its heat map reads as a broken page, not an unbuilt one.
+            // Wave 4 removed gainers_and_decliners from this list: movement is
+            // now derived live from the published series by the panel below.
             'unavailable' => [
                 'heat_map' => true,
-                'gainers_and_decliners' => true,
                 'demand_movement' => true,
                 'transaction_activity' => true,
                 'market_digest' => true,
