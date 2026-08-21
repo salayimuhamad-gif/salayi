@@ -71,6 +71,13 @@ final class PriceRecord extends Model
         'sample_size', 'source_count', 'effective_date', 'published_date', 'period',
         'source', 'source_url', 'confidence', 'notes',
         'is_outlier', 'outlier_reason', 'import_batch_id', 'publication_status',
+        // PriceImportService::accept() attributes the row to the operator who
+        // accepted it. Absent from this list, every accept threw
+        // MassAssignmentException outside production (where discarding is
+        // strict) and silently dropped the attribution in production — the
+        // same gap Area::$fillable documents for 'created_by'. Nothing
+        // exercised this door until PriceImportScopeIntegrityTest did.
+        'created_by',
     ];
 
     protected function casts(): array
