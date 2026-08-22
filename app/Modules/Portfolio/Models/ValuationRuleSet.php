@@ -22,6 +22,8 @@ use RuntimeException;
  * set is what persisted owner answers point at — editing one in place would
  * silently change what thousands of stored answers mean.
  *
+ * @property-read int|null $questions_count withCount alias, admin listing
+ *
  * ---- generated model properties (scripts/generate-model-annotations.php)
  *
  * @property int $id
