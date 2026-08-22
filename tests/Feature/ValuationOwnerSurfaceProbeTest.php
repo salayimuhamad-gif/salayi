@@ -14,6 +14,7 @@ use App\Modules\Portfolio\Models\ValuationQuestionOption;
 use App\Modules\Portfolio\Models\ValuationRuleSet;
 use App\Modules\Portfolio\Services\ValuationRulePublisher;
 use Illuminate\Database\Events\QueryExecuted;
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -25,19 +26,27 @@ use Tests\TestCase;
  * and flag-off contract pins the review found untested.
  *
  * Probes 6a/6b are in INVARIANT form: each asserts the request-level
- * all-or-nothing contract, so on code where the property save and the
- * answer transaction are separate units the probe FAILS. The failure is
- * injected deterministically with a DB::listen hook that throws on the
- * first statement touching portfolio_property_answers — after the
- * property row has already been written, exactly where a real database
- * error (or the concurrent updateOrCreate unique violation) would land.
- * No production code is modified to create the failure.
+ * all-or-nothing contract. On the pre-fix code — where the property save
+ * committed before the answer writes ran in their own transaction — both
+ * FAILED (run #262: an orphaned property row on store, a torn
+ * new-fields/old-answers state on update); under the single outer
+ * request transaction they are the permanent regression suite. The
+ * failure is injected deterministically with a DB::listen hook that
+ * throws on the first statement touching portfolio_property_answers —
+ * after the property write, exactly where a real database error (or the
+ * concurrent updateOrCreate unique violation) lands. No production code
+ * is modified to create the failure.
  *
  *   6a  STORE: a failed answer write must leave NO property row behind —
  *       a property that exists without the answers submitted with it is
  *       a half-applied request.
  *   6b  UPDATE: a failed answer write must leave the property's fields
  *       UNTOUCHED — original label, original scope, original answers.
+ *
+ * The success path and the real database-exception path are pinned too:
+ * a field change plus several answer changes commit together normally,
+ * and a genuine unique violation raised by a concurrent answer row rolls
+ * the WHOLE request back — property changes included.
  *
  * The remaining tests are permanent contract pins, expected to PASS:
  * consent refusal happens before any answer persistence and any
@@ -106,10 +115,11 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
     }
 
     /**
-     * One published set with one question and two options (+5.000/-3.500),
-     * through the real publisher.
+     * One published set with two questions, through the real publisher:
+     * the first carries two options (+5.000/-3.500), the second one
+     * option (+2.000) — enough for a multi-change submission.
      *
-     * @return array{0: ValuationRuleSet, 1: ValuationQuestion, 2: ValuationQuestionOption, 3: ValuationQuestionOption}
+     * @return array{0: ValuationRuleSet, 1: ValuationQuestion, 2: ValuationQuestionOption, 3: ValuationQuestionOption, 4: ValuationQuestion, 5: ValuationQuestionOption}
      */
     private function activeRules(): array
     {
@@ -121,24 +131,31 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
             'status' => ValuationRuleSet::STATUS_DRAFT,
         ]);
 
-        $question = ValuationQuestion::query()->create([
-            'valuation_rule_set_id' => $set->id,
-            'key' => 'op_q',
-            'label_ckb' => 'پرسیار op_q',
-            'label_ar' => 'سؤال op_q',
-            'label_en' => 'Question op_q',
-            'sort_order' => 0,
-            'is_active' => true,
-        ]);
-
+        $question = $this->question($set, 'op_q');
         $plus = $this->option($question, 'op_plus', '5.000');
         $minus = $this->option($question, 'op_minus', '-3.500');
+
+        $second = $this->question($set, 'op_q2');
+        $secondOption = $this->option($second, 'op_q2_a', '2.000');
 
         $publisher = app(ValuationRulePublisher::class);
         $publisher->publish($set);
         $set->refresh();
 
-        return [$set, $question, $plus, $minus];
+        return [$set, $question, $plus, $minus, $second, $secondOption];
+    }
+
+    private function question(ValuationRuleSet $set, string $key): ValuationQuestion
+    {
+        return ValuationQuestion::query()->create([
+            'valuation_rule_set_id' => $set->id,
+            'key' => $key,
+            'label_ckb' => 'پرسیار '.$key,
+            'label_ar' => 'سؤال '.$key,
+            'label_en' => 'Question '.$key,
+            'sort_order' => 0,
+            'is_active' => true,
+        ]);
     }
 
     private function option(ValuationQuestion $question, string $key, string $percent): ValuationQuestionOption
@@ -272,6 +289,119 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
             ->firstOrFail();
 
         $this->assertSame($plus->id, $stored->valuation_question_option_id);
+    }
+
+    public function test_a_field_change_and_several_answer_changes_commit_together(): void
+    {
+        [, $question, $plus, $minus, $second, $secondOption] = $this->activeRules();
+        $owner = $this->member();
+        $property = $this->property([], $owner);
+        $this->answer($property, $question, $plus);
+        $this->answer($property, $second, $secondOption);
+
+        // The success path of the same unit of work: one request changes a
+        // field, REPLACES one answer and CLEARS another — and all of it
+        // lands together.
+        $this->actingAs($owner)
+            ->put('/account/portfolio/'.$property->id, [
+                'label' => 'Committed together',
+                'property_type' => 'apartment',
+                'area_id' => $this->district->id,
+                'currency' => 'USD',
+                'consent_valuation' => true,
+                'answers' => [
+                    $question->id => $minus->id,
+                    $second->id => null,
+                ],
+            ])
+            ->assertRedirect()
+            ->assertSessionHasNoErrors();
+
+        $this->assertSame('Committed together', $property->refresh()->label());
+
+        $stored = PortfolioPropertyAnswer::query()
+            ->where('portfolio_property_id', $property->id)
+            ->where('valuation_question_id', $question->id)
+            ->firstOrFail();
+        $this->assertSame($minus->id, $stored->valuation_question_option_id);
+
+        $this->assertSame(
+            1,
+            PortfolioPropertyAnswer::query()->where('portfolio_property_id', $property->id)->count(),
+            'the cleared answer must be gone and the replaced one present — exactly one row remains',
+        );
+    }
+
+    public function test_a_concurrent_unique_violation_rolls_the_whole_request_back(): void
+    {
+        [, $question, $plus, $minus] = $this->activeRules();
+        $owner = $this->member();
+        $property = $this->property([], $owner);
+        $propertyId = $property->id;
+        $questionId = $question->id;
+        $minusId = $minus->id;
+
+        /*
+         * The REAL database exception, not a simulated one: between
+         * updateOrCreate's miss and its INSERT, a concurrent request's row
+         * for the same (property, question) lands — reproduced by
+         * inserting it from the query hook — so the INSERT dies on
+         * ppa_property_question_unique. Safety invariant only: the OUTER
+         * transaction must roll the property changes back completely. The
+         * friendly 422 mapping for this rare race stays a separate issue.
+         */
+        $armed = true;
+        DB::listen(static function (QueryExecuted $event) use (&$armed, $propertyId, $questionId, $minusId): void {
+            if (! $armed) {
+                return;
+            }
+
+            $sql = strtolower($event->sql);
+
+            if (! str_starts_with(ltrim($sql), 'select') || ! str_contains($sql, 'portfolio_property_answers')) {
+                return;
+            }
+
+            $armed = false;
+
+            DB::table('portfolio_property_answers')->insert([
+                'portfolio_property_id' => $propertyId,
+                'valuation_question_id' => $questionId,
+                'valuation_question_option_id' => $minusId,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        });
+
+        $this->withoutExceptionHandling();
+
+        try {
+            $this->actingAs($owner)->put('/account/portfolio/'.$property->id, [
+                'label' => 'Raced update',
+                'property_type' => 'apartment',
+                'area_id' => $this->district->id,
+                'currency' => 'USD',
+                'consent_valuation' => true,
+                'answers' => [$question->id => $plus->id],
+            ]);
+            $this->fail('the unique violation never fired');
+        } catch (QueryException) {
+            // The database refused the duplicate — expected.
+        }
+
+        $this->assertFalse($armed, 'probe harness: the answer lookup was never observed');
+
+        $this->assertSame(
+            'Rules fixture',
+            $property->refresh()->label(),
+            'a unique-violation during the answer writes left the property half-updated',
+        );
+
+        $this->assertSame(
+            0,
+            PortfolioPropertyAnswer::query()->where('portfolio_property_id', $property->id)->count(),
+            'the rolled-back request left answer rows behind',
+        );
     }
 
     /* ---------------------------------------------------------------------

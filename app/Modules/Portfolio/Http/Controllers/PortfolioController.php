@@ -225,9 +225,17 @@ final class PortfolioController extends Controller
         // street address, and notes routinely contain the tenant's name.
         $property->setLabel($validated['label']);
         $property->setNotes($validated['notes'] ?? null);
-        $property->save();
 
-        $this->applyAnswerChanges($property, $answerChanges);
+        /*
+         * ONE unit of work (probe 6a): the property row and the answers
+         * submitted with it commit together or not at all — a failed
+         * answer write must not leave an orphaned property behind. The
+         * answer helper's own transaction nests as a savepoint.
+         */
+        DB::transaction(function () use ($property, $answerChanges): void {
+            $property->save();
+            $this->applyAnswerChanges($property, $answerChanges);
+        });
 
         $this->audit->record('portfolio.property_created', $property);
 
@@ -298,9 +306,17 @@ final class PortfolioController extends Controller
 
         $model->setLabel($validated['label']);
         $model->setNotes($validated['notes'] ?? null);
-        $model->save();
 
-        $this->applyAnswerChanges($model, $answerChanges);
+        /*
+         * Same unit-of-work contract as store (probe 6b): the field
+         * changes and the answer changes land together, or the request
+         * changes nothing — never a half-updated property whose answer
+         * writes failed.
+         */
+        DB::transaction(function () use ($model, $answerChanges): void {
+            $model->save();
+            $this->applyAnswerChanges($model, $answerChanges);
+        });
 
         $this->audit->record('portfolio.property_updated', $model);
 
@@ -328,6 +344,12 @@ final class PortfolioController extends Controller
          * Wave 6: answers submitted WITH the request are persisted first,
          * so "submitted beats persisted" is literal — by the time the
          * valuer reads the answer rows, the submission is the answer rows.
+         *
+         * Deliberately NOT one transaction with the derived calculation:
+         * the answers are the owner's durable input and stay saved even if
+         * the valuation write later fails. That is the retained current
+         * contract (Phase 3 review) — an implementation decision, not an
+         * externally specified requirement.
          */
         $this->applyAnswerChanges(
             $model,
