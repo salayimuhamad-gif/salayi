@@ -227,7 +227,7 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
         });
 
         try {
-            $doomed->delete();
+            $doomed->refresh()->delete();
         } catch (RuntimeException) {
             // Refusal is the CORRECT outcome.
         }
