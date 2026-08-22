@@ -200,7 +200,8 @@ final class ValuationRulesTest extends TestCase
         $plus = $this->option($question, 'renovated', '5.000');
         $minus = $this->option($question, 'original', '-3.500');
 
-        $set = app(ValuationRulePublisher::class)->publish($set);
+        app(ValuationRulePublisher::class)->publish($set);
+        $set->refresh();
 
         return [$set, $question, $plus, $minus];
     }
@@ -609,7 +610,8 @@ final class ValuationRulesTest extends TestCase
     {
         [$v1] = $this->activeSet();
 
-        $v2 = app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        $v2 = ValuationRuleSet::query()->orderByDesc('id')->firstOrFail();
         $this->assertSame($v1->version + 1, $v2->version);
         $this->assertSame(ValuationRuleSet::STATUS_DRAFT, $v2->status);
 
@@ -656,11 +658,12 @@ final class ValuationRulesTest extends TestCase
         }
 
         // Retired content is read-only too.
-        $retired = app(ValuationRulePublisher::class)->retire($set->refresh());
+        app(ValuationRulePublisher::class)->retire($set->refresh());
+        $set->refresh();
 
         try {
-            $retired->name = 'Renamed after retirement';
-            $retired->save();
+            $set->name = 'Renamed after retirement';
+            $set->save();
             $this->fail('a retired set accepted an edit');
         } catch (RuntimeException) {
         }
@@ -682,7 +685,8 @@ final class ValuationRulesTest extends TestCase
         $this->answer($property, $question, $plus);
 
         // Supersede v1 with v2 (fresh rows, fresh ids).
-        $v2 = app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        $v2 = ValuationRuleSet::query()->orderByDesc('id')->firstOrFail();
         app(ValuationRulePublisher::class)->publish($v2);
 
         // The old answer points at v1's question: excluded AND reported.
@@ -924,7 +928,8 @@ final class ValuationRulesTest extends TestCase
         $this->assertSame('5.000', (string) $first->adjustment_total_percent);
 
         // Version 2 doubles the percent; the owner re-answers under it.
-        $v2 = app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        app(ValuationRulePublisher::class)->duplicateAsDraft($v1);
+        $v2 = ValuationRuleSet::query()->orderByDesc('id')->firstOrFail();
         /** @var ValuationQuestion $newQuestion */
         $newQuestion = $v2->questions()->where('key', 'renovation')->firstOrFail();
         /** @var ValuationQuestionOption $newOption */

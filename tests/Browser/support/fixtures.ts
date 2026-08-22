@@ -26,6 +26,8 @@ export interface BrowserFixtures {
     mfa: { email: string; secret: string };
     /** The Wave 5 member whose four seeded properties the portfolio spec asserts. */
     portfolio: { email: string; property_ids: Record<string, number> };
+    /** The Wave 6 member whose one apartment the valuation-rules spec drives. */
+    valuation: { email: string; property_id: number };
     /** An admin-owned wizard draft whose Location step is directly reachable. */
     wizard_draft_id: number;
     flags: Record<string, boolean>;
