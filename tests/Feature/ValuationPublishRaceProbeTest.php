@@ -215,7 +215,7 @@ final class ValuationPublishRaceProbeTest extends TestCase
             // The second request repoints the still-draft target at villas
             // AFTER validation read the apartment scope into memory.
             $fresh = ValuationRuleSet::query()->findOrFail($draftId);
-            $fresh->property_types = ['villa'];
+            $fresh->fill(['property_types' => ['villa']]);
             $fresh->save();
         });
 
