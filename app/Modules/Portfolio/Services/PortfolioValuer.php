@@ -41,6 +41,15 @@ final class PortfolioValuer
 {
     private const MAX_COMPARABLES = 400;
 
+    /**
+     * The transaction basis this valuation flow estimates, in the
+     * PriceType::transaction() vocabulary that stamps the column at import.
+     * The portfolio's "estimated value" is a SALE value — no rent flow
+     * exists — and stating the basis once, here, is what keeps the evidence
+     * boundary honest about it.
+     */
+    private const TRANSACTION_BASIS = 'sale';
+
     public function __construct(private readonly ValuationEngine $engine) {}
 
     /**
@@ -140,6 +149,26 @@ final class PortfolioValuer
     {
         $query = PriceRecord::query()
             ->published()
+            /*
+             * Compatible bases only — PriceType::mayAggregateWith()'s own
+             * discipline, applied at the evidence boundary: a sale price and
+             * a monthly rent are not summable, so a sale valuation consumes
+             * only records that DECLARE the sale basis. Official snapshots
+             * are currently stored with transaction_type 'either' (the
+             * import writes PriceType::transaction() verbatim), which
+             * declares no basis — they are excluded rather than assumed
+             * sale-compatible, until their write-path semantics are resolved
+             * in a separately approved task. Same-currency sale_asking rows
+             * still pass this filter deliberately: the ENGINE excludes the
+             * asking family and counts it for the required disclosure.
+             */
+            ->where('transaction_type', self::TRANSACTION_BASIS)
+            /*
+             * A valuation is stated in the property's own currency. Evidence
+             * in any other currency is not convertible here — there is no FX
+             * in this product — and must never blend into the median.
+             */
+            ->where('currency', $property->currency)
             ->where(function ($scope) use ($property, $ancestorIds): void {
                 $applied = false;
 
