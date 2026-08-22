@@ -107,6 +107,7 @@ echo "== 2b. reverse the patch's migrations WHILE their files are still present 
 # run the SAME path-targeted commands ROLLBACK_NOTES.md documents, newest
 # first.
 PATCH_MIGRATIONS="
+app/Modules/Portfolio/Database/Migrations/2026_08_22_000100_valuation_rule_engine.php
 app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php
 app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php
 app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
@@ -118,13 +119,13 @@ app/Modules/Identity/Database/Migrations/2026_08_09_000200_password_recovery_cha
 app/Modules/Identity/Database/Migrations/2026_08_09_000100_telegram_verification_tokens.php
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
 "
-PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
+PATCH_NAMES_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'
 
 RAN_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
 PATCH_RAN=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -E "$PATCH_NAMES_RE" | grep -c ' Ran' )
-[ "$PATCH_RAN" = "10" ]
-check "all ten patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
+[ "$PATCH_RAN" = "11" ]
+check "all eleven patch migrations are Ran before the rollback (found $PATCH_RAN)" $?
 
 STATUS_BEFORE=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -136,8 +137,8 @@ for migration in $PATCH_MIGRATIONS; do
 done
 
 RAN_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
-[ "$RAN_AFTER" = "$((RAN_BEFORE - 10))" ]
-check "exactly the patch's ten migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
+[ "$RAN_AFTER" = "$((RAN_BEFORE - 11))" ]
+check "exactly the patch's eleven migrations were reversed ($RAN_BEFORE -> $RAN_AFTER)" $?
 
 STATUS_AFTER=$( cd "$SITE/application" && "$PHP" artisan migrate:status 2>/dev/null \
     | grep -vE "$PATCH_NAMES_RE" | sha256sum | cut -d' ' -f1 )
@@ -248,13 +249,17 @@ db "$REHEARSAL_DB_NAME" < "$BACKUP/database.sql" 2>/dev/null
 check "database backup restores cleanly when the decision requires it" $?
 
 echo "== 5b. the patch's migrations are reversed =="
-# This release ships ten forward-only migrations. Restoring the
+# This release ships eleven forward-only migrations. Restoring the
 # pre-deployment dump removes their tables and columns along with everything
 # else; this asserts they are genuinely gone, because reverted code that still
 # sees them would be a half-rollback.
-TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps');" 2>/dev/null)
+TABLE=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps','valuation_rule_sets','valuation_questions','valuation_question_options','portfolio_property_answers','portfolio_valuation_adjustments');" 2>/dev/null)
 [ "$TABLE" = "0" ]
-check "the patch's four tables are gone after the database restore (found ${TABLE:-?})" $?
+check "the patch's nine tables are gone after the database restore (found ${TABLE:-?})" $?
+
+VALUATION_COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='portfolio_valuations' AND column_name IN ('base_midpoint','base_low','base_high','adjustment_total_percent');" 2>/dev/null)
+[ "$VALUATION_COLS" = "0" ]
+check "the patch's four portfolio_valuations columns are gone after the database restore (found ${VALUATION_COLS:-?})" $?
 
 COLS=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM information_schema.columns WHERE table_schema='$REHEARSAL_DB_NAME' AND table_name='users' AND column_name IN ('gender','date_of_birth','last_seen_at','whatsapp_verified_at');" 2>/dev/null)
 [ "$COLS" = "0" ]

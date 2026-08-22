@@ -11,7 +11,7 @@ surface.
 > rehearsal output and its check counts ship in the external evidence package,
 > which is the authoritative record for this document.
 
-**This patch DOES change the schema.** It ships ten forward-only migrations:
+**This patch DOES change the schema.** It ships eleven forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -24,6 +24,7 @@ app/Modules/Knowledge/Database/Migrations/2026_08_17_000100_backfill_knowledge_e
 app/Modules/Marketplace/Database/Migrations/2026_08_17_000200_backfill_offer_search_keys.php
 app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php
 app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php
+app/Modules/Portfolio/Database/Migrations/2026_08_22_000100_valuation_rule_engine.php
 ```
 
 1. `telegram_return_handoffs` backs the secure Telegram return handoff.
@@ -61,6 +62,15 @@ app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_s
    imported before the fix stays invisible to the scoped market indices.
    Only uniquely, byte-exactly resolvable rows are touched; reversing it is
    a documented no-op — nulling the ids would only re-hide those records.
+11. `valuation_rule_engine` is purely additive: five new tables behind the
+   question-driven portfolio valuation adjustments (versioned rule sets,
+   their questions and options, owners' persisted answers, and the immutable
+   per-valuation adjustment snapshots) plus four nullable columns on
+   `portfolio_valuations` (`base_midpoint`, `base_low`, `base_high`,
+   `adjustment_total_percent`). No existing row is touched and nothing is
+   backfilled. The whole surface sits behind the
+   `portfolio.valuation_rules` feature flag, which ships OFF — with the
+   flag off, valuation behaviour is byte-identical to the previous release.
 
 Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
@@ -143,11 +153,11 @@ cd ~/domains/myhawler.com/application
 ```
 
 Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-ten.
+eleven.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'
 ```
 
 Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
@@ -224,18 +234,18 @@ Then prove exactly what you expect:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'
 ```
 
-Expect **ten** lines, each reading **`Ran`** — all were `Pending` or absent in
-step 3.
+Expect **eleven** lines, each reading **`Ran`** — all were `Pending` or absent
+in step 3.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 10`. Both directions matter: a smaller increase means
-one of the ten never arrived — and if it is `telegram_verification_tokens`,
+Expect exactly `BEFORE + 11`. Both directions matter: a smaller increase means
+one of the eleven never arrived — and if it is `telegram_verification_tokens`,
 nobody can complete a registration — while a larger one means something
 unintended came along and you should stop and look at it.
 
@@ -252,12 +262,14 @@ that the recovery table and the presence column arrived with it:
   echo Schema::hasColumn('users', 'last_seen_at') ? 'presence column OK' : 'PRESENCE COLUMN MISSING', PHP_EOL;
   echo Schema::hasTable('whatsapp_otps') ? 'whatsapp table OK' : 'WHATSAPP TABLE MISSING', PHP_EOL;
   echo Schema::hasColumn('users', 'whatsapp_verified_at') ? 'whatsapp column OK' : 'WHATSAPP COLUMN MISSING', PHP_EOL;
+  echo Schema::hasTable('valuation_rule_sets') ? 'valuation rules tables OK' : 'VALUATION RULES TABLES MISSING', PHP_EOL;
+  echo Schema::hasColumn('portfolio_valuations', 'base_midpoint') ? 'valuation base columns OK' : 'VALUATION BASE COLUMNS MISSING', PHP_EOL;
 "
 ```
 
 Expect `table OK`, `no expiry column OK`, `recovery table OK`,
 `profile columns OK`, `presence column OK`, `whatsapp table OK`,
-`whatsapp column OK`. The recovery table intentionally
+`whatsapp column OK`, `valuation rules tables OK`, `valuation base columns OK`. The recovery table intentionally
 DOES carry an expiry — its challenges die in fifteen minutes — which is the
 designed asymmetry between the permanent verification link and the short-lived
 recovery credential.
@@ -336,11 +348,12 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                     §1
 all seven backups taken and readable          §2
 deletions applied and verified absent         §6
-all ten migrations moved Pending -> Ran       §8
-migration count increased by exactly ten      §8
+all eleven migrations moved Pending -> Ran    §8
+migration count increased by exactly eleven   §8
 verification table present, NO expires_at     §8
 recovery table + presence column present      §8
 whatsapp table + whatsapp column present      §8
+valuation rules tables + base columns present §8
 public/build manifest resolves                §9
 caches rebuilt without error                  §10
 abandon, return, recovery, invest routes      §11
@@ -426,8 +439,8 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than ten -> a table or column is missing; roll back
-migration count up by more than ten  -> stop and investigate before continuing
+migration count up by fewer than eleven -> a table or column is missing; roll back
+migration count up by more than eleven  -> stop and investigate before continuing
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back
