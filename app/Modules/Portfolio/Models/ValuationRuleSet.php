@@ -29,7 +29,7 @@ use RuntimeException;
  * @property string $name
  * @property string $scope_transaction
  * @property int|null $project_id
- * @property list<string>|null $property_types
+ * @property array<string, mixed>|null $property_types
  * @property int $version
  * @property string $status
  * @property Carbon|null $published_at
