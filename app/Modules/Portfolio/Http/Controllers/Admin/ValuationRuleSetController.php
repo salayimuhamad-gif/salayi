@@ -587,7 +587,7 @@ final class ValuationRuleSetController extends Controller
     {
         $this->audit->record('portfolio.valuation_rules.edit_refused', $set, [], [
             'error' => 'frozen',
-        ] + ($e?->context ?? ['status' => $set->status]), result: 'failure', severity: 'warning');
+        ] + ($e === null ? ['status' => $set->status] : $e->context), result: 'failure', severity: 'warning');
 
         return back()->withErrors([
             'lifecycle' => __('portfolio.valuation_rules.errors.frozen'),
