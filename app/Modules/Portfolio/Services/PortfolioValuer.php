@@ -9,7 +9,9 @@ use App\Modules\Market\Enums\ScopeType;
 use App\Modules\Market\Models\PriceRecord;
 use App\Modules\Portfolio\Models\PortfolioProperty;
 use App\Modules\Portfolio\Models\PortfolioValuation;
+use App\Modules\Portfolio\Models\PortfolioValuationAdjustment;
 use App\Modules\Projects\Models\Project;
+use Illuminate\Support\Facades\DB;
 
 /**
  * The valuation TRIGGER (spec §11): the missing link between the shipped
@@ -50,7 +52,10 @@ final class PortfolioValuer
      */
     private const TRANSACTION_BASIS = 'sale';
 
-    public function __construct(private readonly ValuationEngine $engine) {}
+    public function __construct(
+        private readonly ValuationEngine $engine,
+        private readonly ValuationAdjustments $adjustments,
+    ) {}
 
     /**
      * Value the property from published evidence and append the result —
@@ -75,7 +80,7 @@ final class PortfolioValuer
             $property->currency,
         );
 
-        return PortfolioValuation::query()->create([
+        $attributes = [
             'portfolio_property_id' => $property->id,
             'midpoint' => $result['midpoint'],
             'low' => $result['low'],
@@ -94,7 +99,55 @@ final class PortfolioValuer
             // shows that sentence instead of a fabricated number.
             'no_valuation_reason' => $result['reason'],
             'calculated_at' => now(),
-        ]);
+        ];
+
+        /*
+         * Wave 6: the owner's answers, applied ONCE, after the evidence has
+         * spoken. Three deliberate absences here:
+         *
+         *   - a baseline REFUSAL is never adjusted — a percentage of a
+         *     number the evidence refused to produce is still fabrication;
+         *   - the empty plan (flag off, no applicable set, zero valid
+         *     answers) changes nothing, so the row stays byte-identical to
+         *     pre-rule-engine behaviour;
+         *   - stale answers are already excluded inside the plan, and
+         *     surfacing them is the interface's job, not this row's.
+         */
+        $plan = $this->adjustments->planFor($property);
+        $adjusted = $result['reason'] === null && $plan['applied'] !== [];
+
+        if ($adjusted) {
+            $attributes = array_merge($attributes, $this->adjustments->apply($result, $plan));
+        }
+
+        /*
+         * One transaction for the valuation and its snapshots: a valuation
+         * whose breakdown half-exists would be a history row that cannot
+         * explain itself.
+         */
+        return DB::transaction(static function () use ($attributes, $plan, $adjusted): PortfolioValuation {
+            $valuation = PortfolioValuation::query()->create($attributes);
+
+            if ($adjusted) {
+                foreach ($plan['applied'] as $row) {
+                    PortfolioValuationAdjustment::query()->create([
+                        'portfolio_valuation_id' => $valuation->id,
+                        'question_key' => $row['question_key'],
+                        'option_key' => $row['option_key'],
+                        'question_ckb' => $row['question_ckb'],
+                        'question_ar' => $row['question_ar'],
+                        'question_en' => $row['question_en'],
+                        'option_ckb' => $row['option_ckb'],
+                        'option_ar' => $row['option_ar'],
+                        'option_en' => $row['option_en'],
+                        'adjustment_percent' => $row['adjustment_percent'],
+                        'position' => $row['position'],
+                    ]);
+                }
+            }
+
+            return $valuation;
+        });
     }
 
     /**
