@@ -70,9 +70,9 @@ final class ValuationRulesTest extends TestCase
         ]);
     }
 
-    /* ------------------------------------------------------------------ */
-    /* fixtures                                                            */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * fixtures
+     * ------------------------------------------------------------------- */
 
     private function member(): User
     {
@@ -233,9 +233,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertSame(0, $valuation->adjustments()->count());
     }
 
-    /* ------------------------------------------------------------------ */
-    /* inertness — the flag, the scope, the empty answer set               */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * inertness — the flag, the scope, the empty answer set
+     * ------------------------------------------------------------------- */
 
     public function test_flag_off_is_byte_identical_even_with_answers_persisted(): void
     {
@@ -277,9 +277,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertBaselineRow($this->value($property));
     }
 
-    /* ------------------------------------------------------------------ */
-    /* the arithmetic — exact, additive, uncapped, refusing at zero        */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * the arithmetic — exact, additive, uncapped, refusing at zero
+     * ------------------------------------------------------------------- */
 
     public function test_a_single_adjustment_applies_exact_decimal_math_once(): void
     {
@@ -498,9 +498,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertSame('asking_prices_excluded_from_valuation', $valuation->excluded_asking_note);
     }
 
-    /* ------------------------------------------------------------------ */
-    /* scope resolution                                                    */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * scope resolution
+     * ------------------------------------------------------------------- */
 
     public function test_scope_resolution_is_deterministic_and_project_beats_global(): void
     {
@@ -564,9 +564,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertGreaterThan($older->id, $newer->id);
     }
 
-    /* ------------------------------------------------------------------ */
-    /* lifecycle and immutability                                          */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * lifecycle and immutability
+     * ------------------------------------------------------------------- */
 
     public function test_publish_validates_content_and_the_authoring_bound(): void
     {
@@ -672,9 +672,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertSame('5.000', (string) ValuationQuestionOption::query()->find($plus->id)?->adjustment_percent);
     }
 
-    /* ------------------------------------------------------------------ */
-    /* staleness, rehydration, server authority over answers               */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * staleness, rehydration, server authority over answers
+     * ------------------------------------------------------------------- */
 
     public function test_a_superseded_answer_is_excluded_and_surfaced_never_applied(): void
     {
@@ -868,9 +868,9 @@ final class ValuationRulesTest extends TestCase
         $this->assertBaselineRow($this->value($property->refresh()));
     }
 
-    /* ------------------------------------------------------------------ */
-    /* history — snapshots, append-only, survival                          */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * history — snapshots, append-only, survival
+     * ------------------------------------------------------------------- */
 
     public function test_snapshots_are_append_only(): void
     {

@@ -102,9 +102,9 @@ final class ValuationRuleAdminTest extends TestCase
         return $set;
     }
 
-    /* ------------------------------------------------------------------ */
-    /* access control                                                      */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * access control
+     * ------------------------------------------------------------------- */
 
     public function test_the_flag_gates_the_surface_for_ordinary_administrators(): void
     {
@@ -143,9 +143,9 @@ final class ValuationRuleAdminTest extends TestCase
             ->assertInertia(fn ($page) => $page->where('can.manage', true));
     }
 
-    /* ------------------------------------------------------------------ */
-    /* draft authoring                                                     */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * draft authoring
+     * ------------------------------------------------------------------- */
 
     public function test_a_draft_is_created_with_a_computed_version_and_audited(): void
     {
@@ -239,9 +239,9 @@ final class ValuationRuleAdminTest extends TestCase
         $this->assertSame(2, ValuationQuestionOption::query()->count());
     }
 
-    /* ------------------------------------------------------------------ */
-    /* lifecycle over HTTP                                                 */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * lifecycle over HTTP
+     * ------------------------------------------------------------------- */
 
     public function test_publish_activates_supersedes_and_refuses_empty_drafts(): void
     {
@@ -344,9 +344,9 @@ final class ValuationRuleAdminTest extends TestCase
         $this->assertNull(ValuationRuleSet::query()->find($set->id));
     }
 
-    /* ------------------------------------------------------------------ */
-    /* the authoring surface shows percents; preview persists nothing      */
-    /* ------------------------------------------------------------------ */
+    /* ---------------------------------------------------------------------
+     * the authoring surface shows percents; preview persists nothing
+     * ------------------------------------------------------------------- */
 
     public function test_the_builder_page_shows_percentages_to_the_authoring_role(): void
     {

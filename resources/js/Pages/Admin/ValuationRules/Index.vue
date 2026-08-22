@@ -30,7 +30,7 @@ interface RuleSet {
     created_at: string | null;
 }
 
-const props = defineProps<{
+defineProps<{
     sets: RuleSet[];
     projects: NamedProject[];
     property_types: string[];

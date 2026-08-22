@@ -25,7 +25,6 @@ use RuntimeException;
  * @property-read int|null $questions_count withCount alias, admin listing
  *
  * ---- generated model properties (scripts/generate-model-annotations.php)
- *
  * @property int $id
  * @property string $name
  * @property string $scope_transaction
