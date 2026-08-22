@@ -137,7 +137,7 @@ final class ValuationRuleSet extends Model
     protected static function booted(): void
     {
         self::updating(static function (self $set): void {
-            $original = (string) $set->getOriginal('status');
+            $original = self::persistedStatus($set);
 
             if ($original === self::STATUS_RETIRED) {
                 // Retired sets are the read-only record of what WAS active.
@@ -184,9 +184,28 @@ final class ValuationRuleSet extends Model
             // Draft and retired sets may be deleted (history lives in the
             // valuation snapshots, not here); the active set must be retired
             // first so there is never a moment with a half-deleted live set.
-            if ((string) $set->getOriginal('status') === self::STATUS_ACTIVE) {
+            if (self::persistedStatus($set) === self::STATUS_ACTIVE) {
                 throw new RuntimeException('Retire an active valuation rule set before deleting it.');
             }
         });
+    }
+
+    /**
+     * The status the DATABASE holds for this row right now — never the
+     * instance's memory of it. A stale draft-era model whose row activated
+     * meanwhile used to sail through guards that trusted getOriginal()
+     * (probe 5a); judging the persisted row refuses it in every state.
+     * Defence-in-depth only: the editor and publisher transactions are the
+     * actual atomicity mechanism. A vanished row fails closed.
+     */
+    private static function persistedStatus(self $set): string
+    {
+        $status = self::query()->whereKey($set->getKey())->value('status');
+
+        if (! is_string($status) || $status === '') {
+            throw new RuntimeException('This valuation rule set no longer exists — reload before editing.');
+        }
+
+        return $status;
     }
 }

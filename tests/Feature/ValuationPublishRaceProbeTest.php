@@ -27,12 +27,16 @@ use Tests\TestCase;
  * model, never a locked re-read of the row.
  *
  * The concurrent writer is reproduced deterministically with a DB::listen
- * hook: when the LAST pre-transaction validation read (the options eager
- * load) is observed, the hook performs the second request's write — a
- * perfectly legal draft edit at that instant — and disarms. No sleeps, no
- * timing, identical interleaving on SQLite and MariaDB. This is faithful
- * to the current code because publish() holds no lock at the mutation
- * point, so a real second connection's write would land the same way.
+ * hook: when publish()'s options validation read is observed, the hook
+ * performs the second request's write — a legal draft edit at that
+ * instant — and disarms. No sleeps, no timing, identical interleaving on
+ * SQLite and MariaDB. Against the pre-fix code (runs #257/#259) that
+ * write landed and these probes failed; under the serialized publisher
+ * the same-connection injection lands INSIDE the publish transaction,
+ * where the final fresh re-assertions detect it and roll the whole
+ * transition back — drifted write included — which is why the harness
+ * checks below accept either "the write persisted" or "the publish
+ * refused and rolled it back", never a silent third state.
  *
  * Probed invariants:
  *   4a  an ACTIVE set must never hold content that publish validation
@@ -156,20 +160,28 @@ final class ValuationPublishRaceProbeTest extends TestCase
         });
 
         $publisher = app(ValuationRulePublisher::class);
+        $refused = false;
 
         try {
             $publisher->publish($set);
         } catch (ValuationRulePublishException) {
-            // A refusal is a CORRECT outcome: drifted content must not go live.
+            // A refusal is a CORRECT outcome: drifted content must not go
+            // live — and the refusal's rollback legitimately undoes the
+            // in-transaction drifted write along with the transition.
+            $refused = true;
         }
 
-        // Harness proofs: the hook fired and the concurrent edit persisted.
+        // Harness proofs: the hook fired, and unless the refusal rolled it
+        // back, the concurrent edit persisted.
         $this->assertFalse($armed, 'probe harness: the validation read was never observed');
-        $this->assertSame(
-            '30.000',
-            (string) ValuationQuestionOption::query()->findOrFail($optionId)->adjustment_percent,
-            'probe harness: the concurrent edit did not land',
-        );
+
+        if (! $refused) {
+            $this->assertSame(
+                '30.000',
+                (string) ValuationQuestionOption::query()->findOrFail($optionId)->adjustment_percent,
+                'probe harness: the concurrent edit did not land',
+            );
+        }
 
         // The invariant: no ACTIVE set may carry an active option outside
         // the authoring bound the publisher exists to prove.
@@ -219,18 +231,25 @@ final class ValuationPublishRaceProbeTest extends TestCase
             $fresh->save();
         });
 
+        $refused = false;
+
         try {
             $publisher->publish($draft);
         } catch (ValuationRulePublishException) {
-            // Refusing the drifted target is a CORRECT outcome.
+            // Refusing the drifted target is a CORRECT outcome — and its
+            // rollback legitimately undoes the in-transaction scope edit.
+            $refused = true;
         }
 
         $this->assertFalse($armed, 'probe harness: the validation read was never observed');
-        $this->assertSame(
-            ['villa'],
-            ValuationRuleSet::query()->findOrFail($draftId)->property_types,
-            'probe harness: the concurrent scope edit did not land',
-        );
+
+        if (! $refused) {
+            $this->assertSame(
+                ['villa'],
+                ValuationRuleSet::query()->findOrFail($draftId)->property_types,
+                'probe harness: the concurrent scope edit did not land',
+            );
+        }
 
         /*
          * The invariant: whatever the outcome, at most ONE active set in
@@ -284,18 +303,25 @@ final class ValuationPublishRaceProbeTest extends TestCase
             $fresh->save();
         });
 
+        $refused = false;
+
         try {
             $publisher->publish($draft);
         } catch (ValuationRulePublishException) {
-            // Refusing the drifted target is a CORRECT outcome.
+            // Refusing the drifted target is a CORRECT outcome — and its
+            // rollback legitimately undoes the in-transaction family move.
+            $refused = true;
         }
 
         $this->assertFalse($armed, 'probe harness: the validation read was never observed');
-        $this->assertSame(
-            $projectId,
-            ValuationRuleSet::query()->findOrFail($draftId)->project_id,
-            'probe harness: the concurrent family move did not land',
-        );
+
+        if (! $refused) {
+            $this->assertSame(
+                $projectId,
+                ValuationRuleSet::query()->findOrFail($draftId)->project_id,
+                'probe harness: the concurrent family move did not land',
+            );
+        }
 
         // The invariant: at most one active set may claim this project's
         // properties. Two mean predecessor selection locked and swept the

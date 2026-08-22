@@ -12,6 +12,7 @@ use App\Modules\Portfolio\Models\ValuationQuestion;
 use App\Modules\Portfolio\Models\ValuationQuestionOption;
 use App\Modules\Portfolio\Models\ValuationRuleSet;
 use App\Modules\Portfolio\Services\ValuationAdjustments;
+use App\Modules\Portfolio\Services\ValuationRuleEditor;
 use App\Modules\Portfolio\Services\ValuationRulePublisher;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Http\JsonResponse;
@@ -30,6 +31,13 @@ use Inertia\Response;
  * anything else structurally — this controller's pre-checks exist to turn
  * that refusal into a translated sentence instead of a 500.
  *
+ * Every structural write goes through the ValuationRuleEditor: one
+ * transaction that locks the parent rule-set row, re-checks the PERSISTED
+ * status, and only then resolves and mutates the children — so an edit that
+ * raced a publish refuses with the same translated sentence instead of
+ * landing on the published set. The pre-checks below stay as the fast path;
+ * the editor's locked re-check is the authority.
+ *
  * The authoring bound (±25 per option) is validated at this boundary AND
  * re-proven at publish, because the boundary can be bypassed by nobody but
  * time: a bound loosened here next year must still fail a publish until the
@@ -40,6 +48,7 @@ final class ValuationRuleSetController extends Controller
     public function __construct(
         private readonly AuditLogger $audit,
         private readonly ValuationRulePublisher $publisher,
+        private readonly ValuationRuleEditor $editor,
     ) {}
 
     public function index(Request $request): Response
@@ -151,22 +160,33 @@ final class ValuationRuleSetController extends Controller
 
         $validated = $this->validateSet($request);
 
-        $model->name = $validated['name'];
-        $model->property_types = $validated['property_types'] ?? null;
+        try {
+            $model = $this->editor->withLockedDraft($set, function (ValuationRuleSet $locked) use ($validated): ValuationRuleSet {
+                $locked->name = $validated['name'];
+                $locked->property_types = $validated['property_types'] ?? null;
 
-        /*
-         * Moving a draft to another scope family moves it to that family's
-         * version sequence — keeping the old number could collide with a
-         * version that already exists over there.
-         */
-        $newProject = $validated['project_id'] ?? null;
+                /*
+                 * Moving a draft to another scope family moves it to that
+                 * family's version sequence — keeping the old number could
+                 * collide with a version that already exists over there.
+                 * Computed HERE, inside the lock, from the locked row.
+                 */
+                $newProject = $validated['project_id'] ?? null;
 
-        if ($newProject !== $model->project_id) {
-            $model->project_id = $newProject;
-            $model->version = $this->publisher->nextVersion($model->scope_transaction, $newProject);
+                if ($newProject !== $locked->project_id) {
+                    $locked->project_id = $newProject;
+                    $locked->version = $this->publisher->nextVersion($locked->scope_transaction, $newProject);
+                }
+
+                $locked->save();
+
+                return $locked;
+            });
+        } catch (ValuationRulePublishException) {
+            return back()->withErrors([
+                'lifecycle' => __('portfolio.valuation_rules.errors.frozen'),
+            ]);
         }
-
-        $model->save();
 
         $this->audit->recordModelChange('portfolio.valuation_rules.set_updated', $model);
 
@@ -183,9 +203,19 @@ final class ValuationRuleSetController extends Controller
             ]);
         }
 
-        // Draft or retired: deletable. History is untouched by construction —
-        // valuations snapshot their adjustments and never join back here.
-        $model->delete();
+        /*
+         * Draft or retired: deletable. History is untouched by construction —
+         * valuations snapshot their adjustments and never join back here.
+         * The locked re-check refuses a set that ACTIVATED after the fast
+         * pre-check above.
+         */
+        try {
+            $model = $this->editor->deleteSetIfNotActive($set);
+        } catch (ValuationRulePublishException) {
+            return back()->withErrors([
+                'lifecycle' => __('portfolio.valuation_rules.errors.delete_active'),
+            ]);
+        }
 
         $this->audit->record('portfolio.valuation_rules.set_deleted', $model, [], [
             'status' => $model->status,
@@ -331,9 +361,15 @@ final class ValuationRuleSetController extends Controller
 
         $validated = $this->validateQuestion($request, $model);
 
-        $question = $model->questions()->create($validated + [
-            'question_type' => ValuationQuestion::TYPE_SINGLE_SELECT,
-        ]);
+        try {
+            $question = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($validated): ValuationQuestion {
+                return $locked->questions()->create($validated + [
+                    'question_type' => ValuationQuestion::TYPE_SINGLE_SELECT,
+                ]);
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->record('portfolio.valuation_rules.question_created', $question, [], [
             'set_id' => $model->id,
@@ -351,11 +387,25 @@ final class ValuationRuleSetController extends Controller
             return $refusal;
         }
 
-        /** @var ValuationQuestion $row */
-        $row = $model->questions()->findOrFail($question);
+        // Existence first (404 parity with the pre-editor behaviour), then
+        // syntax validation; the row the WRITE uses is re-resolved through
+        // the locked set inside the transaction.
+        $model->questions()->findOrFail($question);
 
-        $row->fill($this->validateQuestion($request, $model, $row->id));
-        $row->save();
+        $validated = $this->validateQuestion($request, $model, $question);
+
+        try {
+            $row = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($question, $validated): ValuationQuestion {
+                /** @var ValuationQuestion $fresh */
+                $fresh = $locked->questions()->findOrFail($question);
+                $fresh->fill($validated);
+                $fresh->save();
+
+                return $fresh;
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->recordModelChange('portfolio.valuation_rules.question_updated', $row);
 
@@ -370,9 +420,19 @@ final class ValuationRuleSetController extends Controller
             return $refusal;
         }
 
-        /** @var ValuationQuestion $row */
-        $row = $model->questions()->findOrFail($question);
-        $row->delete();
+        $model->questions()->findOrFail($question);
+
+        try {
+            $row = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($question): ValuationQuestion {
+                /** @var ValuationQuestion $fresh */
+                $fresh = $locked->questions()->findOrFail($question);
+                $fresh->delete();
+
+                return $fresh;
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->record('portfolio.valuation_rules.question_deleted', $row, [], [
             'set_id' => $model->id,
@@ -393,7 +453,18 @@ final class ValuationRuleSetController extends Controller
         /** @var ValuationQuestion $parent */
         $parent = $model->questions()->findOrFail($question);
 
-        $option = $parent->options()->create($this->validateOption($request, $parent));
+        $validated = $this->validateOption($request, $parent);
+
+        try {
+            $option = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($question, $validated): ValuationQuestionOption {
+                /** @var ValuationQuestion $freshParent */
+                $freshParent = $locked->questions()->findOrFail($question);
+
+                return $freshParent->options()->create($validated);
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->record('portfolio.valuation_rules.option_created', $option, [], [
             'set_id' => $model->id,
@@ -415,11 +486,24 @@ final class ValuationRuleSetController extends Controller
 
         /** @var ValuationQuestion $parent */
         $parent = $model->questions()->findOrFail($question);
-        /** @var ValuationQuestionOption $row */
-        $row = $parent->options()->findOrFail($option);
+        $parent->options()->findOrFail($option);
 
-        $row->fill($this->validateOption($request, $parent, $row->id));
-        $row->save();
+        $validated = $this->validateOption($request, $parent, $option);
+
+        try {
+            $row = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($question, $option, $validated): ValuationQuestionOption {
+                /** @var ValuationQuestion $freshParent */
+                $freshParent = $locked->questions()->findOrFail($question);
+                /** @var ValuationQuestionOption $fresh */
+                $fresh = $freshParent->options()->findOrFail($option);
+                $fresh->fill($validated);
+                $fresh->save();
+
+                return $fresh;
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->recordModelChange('portfolio.valuation_rules.option_updated', $row);
 
@@ -436,9 +520,21 @@ final class ValuationRuleSetController extends Controller
 
         /** @var ValuationQuestion $parent */
         $parent = $model->questions()->findOrFail($question);
-        /** @var ValuationQuestionOption $row */
-        $row = $parent->options()->findOrFail($option);
-        $row->delete();
+        $parent->options()->findOrFail($option);
+
+        try {
+            $row = $this->editor->withLockedDraft($set, static function (ValuationRuleSet $locked) use ($question, $option): ValuationQuestionOption {
+                /** @var ValuationQuestion $freshParent */
+                $freshParent = $locked->questions()->findOrFail($question);
+                /** @var ValuationQuestionOption $fresh */
+                $fresh = $freshParent->options()->findOrFail($option);
+                $fresh->delete();
+
+                return $fresh;
+            });
+        } catch (ValuationRulePublishException) {
+            return $this->frozenRefusal();
+        }
 
         $this->audit->record('portfolio.valuation_rules.option_deleted', $row, [], [
             'set_id' => $model->id,
@@ -463,6 +559,16 @@ final class ValuationRuleSetController extends Controller
             return null;
         }
 
+        return $this->frozenRefusal();
+    }
+
+    /**
+     * The same sentence whether the set was already published when the
+     * request arrived (fast pre-check) or published while the request was
+     * in flight (the editor's locked re-check).
+     */
+    private function frozenRefusal(): RedirectResponse
+    {
         return back()->withErrors([
             'lifecycle' => __('portfolio.valuation_rules.errors.frozen'),
         ]);

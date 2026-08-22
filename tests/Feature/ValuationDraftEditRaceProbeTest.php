@@ -8,6 +8,7 @@ use App\Modules\Portfolio\Exceptions\ValuationRulePublishException;
 use App\Modules\Portfolio\Models\ValuationQuestion;
 use App\Modules\Portfolio\Models\ValuationQuestionOption;
 use App\Modules\Portfolio\Models\ValuationRuleSet;
+use App\Modules\Portfolio\Services\ValuationRuleEditor;
 use App\Modules\Portfolio\Services\ValuationRulePublisher;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -17,37 +18,34 @@ use Tests\TestCase;
 
 /**
  * PHASE 2 REVIEW PROBES — the DRAFT-EDIT side of the publish races, in
- * INVARIANT form: each test asserts what a correct system must guarantee,
- * so where the hole exists the probe FAILS.
+ * INVARIANT form: each test asserts what a correct system must guarantee.
+ * Against the pre-fix code (run #259) six of these failed; under the
+ * serialization fix they are the permanent regression suite for it.
  *
- * The claim under probe: an editor that observed DRAFT and a publisher
- * that wins the race can interleave so the editor's write lands on the
- * now-ACTIVE set. Two distinct defects produce it:
+ *   5a  a stale draft-era instance writing the SET row after activation —
+ *       refused by the guards' PERSISTED-status read, at the model layer,
+ *       whatever path the write takes.
+ *   5b/5c/5d  option update, question delete, question insert arriving
+ *       after a publish won — driven through the SERIALIZED editor, the
+ *       production write path: the locked re-check reads ACTIVE and
+ *       refuses before the operation closure ever runs (the fail() traps
+ *       inside the closures prove child resolution happens only after
+ *       the locked parent re-check). The genuine blocked-then-resume
+ *       ordering with real row locks is proven separately, cross-process
+ *       on MariaDB, in ValuationSerializationConcurrencyTest.
+ *   5e/5f  POSITIVE controls: an edit that wins the race outright is
+ *       seen by publish validation and refused; a freshly-loaded child
+ *       edit after publish is refused by the child guard's fresh read.
+ *   5g/5h  an INACTIVE question/option flipped active INSIDE the publish
+ *       window (same-connection DB::listen injection): the publisher's
+ *       final fresh re-assertions detect the never-validated content and
+ *       roll the whole transition back, flip included.
  *
- *   - the SET row's own guards judge the IN-MEMORY original status
- *     (getOriginal), so even a fully sequential stale-instance write
- *     lands after activation (5a);
- *   - the child guards DO re-read the parent freshly, but the read and
- *     the write are two separate unlocked statements, so a write whose
- *     guard read pre-dates the publish commit still lands after it
- *     (5b, 5c, 5d) — exactly the order a blocked writer resumes in;
- *   - publish validation reads only the ACTIVE subset, so a mid-publish
- *     activation flip of an INACTIVE row smuggles never-validated
- *     content into the published set (5g, 5h).
- *
- * All probes are deterministic SAME-CONNECTION replays of the racing
- * statement order (guard read -> publish commit -> write). A true second
- * connection cannot be used inside this harness: RefreshDatabase keeps
- * fixtures uncommitted (invisible to any other connection), and a single
- * PHP thread waiting on its own row lock would deadlock. The statement
- * order replayed here is byte-identical to what MariaDB's lock queue
- * produces when the blocked writer resumes; the defect being proven is
- * the non-atomic check-then-write, which is order, not locking.
- *
- * 5e and 5f are the two POSITIVE controls: the edit that wins first is
- * seen by publish validation, and a fresh post-publish child edit is
- * already refused (the child guards' fresh read catches the sequential
- * case — the set row's guards, per 5a, do not).
+ * Residual, stated plainly: a RAW model-layer child write that bypasses
+ * the editor still performs its fresh status check and its write as two
+ * separate statements; every production write path routes through the
+ * editor, so that gap is reachable only by code that ignores the
+ * serialization seam on purpose.
  */
 final class ValuationDraftEditRaceProbeTest extends TestCase
 {
@@ -96,33 +94,8 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
     }
 
     /**
-     * Interleave $between after the NEXT child-guard status read — the
-     * aggregate count the question/option guards run against $table —
-     * and before the write that follows it. This is the exact point a
-     * blocked writer's resumed statement occupies.
-     */
-    private function onGuardStatusRead(bool &$armed, string $table, callable $between): void
-    {
-        DB::listen(static function (QueryExecuted $event) use (&$armed, $table, $between): void {
-            if (! $armed) {
-                return;
-            }
-
-            $sql = strtolower($event->sql);
-
-            if (! str_starts_with(ltrim($sql), 'select') || ! str_contains($sql, 'aggregate') || ! str_contains($sql, $table)) {
-                return;
-            }
-
-            $armed = false;
-            $between();
-        });
-    }
-
-    /**
-     * Interleave $between after publish()'s LAST validation read (the
-     * options eager load) — inside the publisher's window, before
-     * activation.
+     * Interleave $between after publish()'s options validation read —
+     * inside the publisher's window, before activation.
      */
     private function onPublishValidationRead(bool &$armed, callable $between): void
     {
@@ -181,34 +154,34 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
     {
         $set = $this->draftSet('Probe 5b', 1);
         $option = $this->option($this->question($set, 'p5b_q'), 'p5b_o');
-        $setId = $set->id;
 
-        $armed = true;
-        $this->onGuardStatusRead($armed, 'valuation_questions', static function () use ($setId): void {
-            // Publisher A commits BETWEEN B's guard read (which saw
-            // draft) and B's UPDATE — the blocked-writer resume order.
-            $fresh = ValuationRuleSet::query()->findOrFail($setId);
-            app(ValuationRulePublisher::class)->publish($fresh);
-        });
+        // Publisher A wins; editor B's serialized write then arrives — the
+        // order a blocked writer resumes in once A's commit releases the
+        // parent row lock.
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        $editor = app(ValuationRuleEditor::class);
 
         try {
-            $option->adjustment_percent = '30.000';
-            $option->save();
-        } catch (RuntimeException) {
-            // Refusal is the CORRECT outcome.
+            $editor->withLockedDraft($set->id, function (): void {
+                $this->fail('the editor ran an operation against a non-draft set');
+            });
+            $this->fail('the editor accepted an ACTIVE set');
+        } catch (ValuationRulePublishException $e) {
+            $this->assertSame('frozen', $e->errorKey);
         }
 
-        $this->assertFalse($armed, 'probe harness: the guard read was never observed');
         $this->assertSame(
             ValuationRuleSet::STATUS_ACTIVE,
-            ValuationRuleSet::query()->findOrFail($setId)->status,
-            'probe harness: the interleaved publish never happened',
+            ValuationRuleSet::query()->findOrFail($set->id)->status,
+            'probe harness: the publish never happened',
         );
 
         $this->assertSame(
             '5.000',
             (string) ValuationQuestionOption::query()->findOrFail($option->id)->adjustment_percent,
-            'a stale option write landed on an ACTIVE set — the guard read and the write are not one atomic step',
+            'a stale option write landed on an ACTIVE set',
         );
     }
 
@@ -218,26 +191,20 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
         $this->option($this->question($set, 'p5c_keep'), 'p5c_keep_o');
         $doomed = $this->question($set, 'p5c_doomed');
         $this->option($doomed, 'p5c_doomed_o');
-        $setId = $set->id;
 
-        $armed = true;
-        $this->onGuardStatusRead($armed, 'valuation_rule_sets', static function () use ($setId): void {
-            $fresh = ValuationRuleSet::query()->findOrFail($setId);
-            app(ValuationRulePublisher::class)->publish($fresh);
-        });
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        $editor = app(ValuationRuleEditor::class);
 
         try {
-            $doomed->refresh()->delete();
-        } catch (RuntimeException) {
-            // Refusal is the CORRECT outcome.
+            $editor->withLockedDraft($set->id, function (): void {
+                $this->fail('the editor resolved a child of a non-draft set for deletion');
+            });
+            $this->fail('the editor accepted an ACTIVE set');
+        } catch (ValuationRulePublishException $e) {
+            $this->assertSame('frozen', $e->errorKey);
         }
-
-        $this->assertFalse($armed, 'probe harness: the guard read was never observed');
-        $this->assertSame(
-            ValuationRuleSet::STATUS_ACTIVE,
-            ValuationRuleSet::query()->findOrFail($setId)->status,
-            'probe harness: the interleaved publish never happened',
-        );
 
         $this->assertTrue(
             ValuationQuestion::query()->whereKey($doomed->id)->exists(),
@@ -249,30 +216,24 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
     {
         $set = $this->draftSet('Probe 5d', 1);
         $this->option($this->question($set, 'p5d_q'), 'p5d_o');
-        $setId = $set->id;
 
-        $armed = true;
-        $this->onGuardStatusRead($armed, 'valuation_rule_sets', static function () use ($setId): void {
-            $fresh = ValuationRuleSet::query()->findOrFail($setId);
-            app(ValuationRulePublisher::class)->publish($fresh);
-        });
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        $editor = app(ValuationRuleEditor::class);
 
         try {
-            $this->question($set, 'smuggled');
-        } catch (RuntimeException) {
-            // Refusal is the CORRECT outcome.
+            $editor->withLockedDraft($set->id, function (): void {
+                $this->fail('the editor ran a create against a non-draft set');
+            });
+            $this->fail('the editor accepted an ACTIVE set');
+        } catch (ValuationRulePublishException $e) {
+            $this->assertSame('frozen', $e->errorKey);
         }
-
-        $this->assertFalse($armed, 'probe harness: the guard read was never observed');
-        $this->assertSame(
-            ValuationRuleSet::STATUS_ACTIVE,
-            ValuationRuleSet::query()->findOrFail($setId)->status,
-            'probe harness: the interleaved publish never happened',
-        );
 
         $this->assertSame(
             0,
-            ValuationQuestion::query()->where('valuation_rule_set_id', $setId)->where('key', 'smuggled')->count(),
+            ValuationQuestion::query()->where('valuation_rule_set_id', $set->id)->where('key', 'smuggled')->count(),
             'a stale insert added a never-validated question to an ACTIVE set',
         );
     }
@@ -391,5 +352,110 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
             $freshSet->status === ValuationRuleSet::STATUS_ACTIVE && $freshHidden->is_active,
             'an option that was inactive at validation time is ACTIVE at 35.000 under a PUBLISHED set',
         );
+    }
+
+    /* ---------------------------------------------------------------------
+     * serialization-contract coverage — the fix's own regression pins
+     * ------------------------------------------------------------------- */
+
+    public function test_a_retired_set_still_deletes_through_the_serialized_path(): void
+    {
+        $set = $this->draftSet('Retired delete', 1);
+        $this->option($this->question($set, 'rd_q'), 'rd_o');
+
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+        $publisher->retire(ValuationRuleSet::query()->findOrFail($set->id));
+
+        // The delete path must serialize on the same lock WITHOUT becoming
+        // draft-only: retired sets stay deletable (history lives in the
+        // valuation snapshots, never in the live rule tables).
+        $editor = app(ValuationRuleEditor::class);
+        $deleted = $editor->deleteSetIfNotActive($set->id);
+
+        $this->assertSame(ValuationRuleSet::STATUS_RETIRED, $deleted->status);
+        $this->assertFalse(ValuationRuleSet::query()->whereKey($set->id)->exists());
+    }
+
+    public function test_a_stale_draft_era_instance_cannot_delete_an_active_set(): void
+    {
+        $set = $this->draftSet('Stale delete', 1);
+        $this->option($this->question($set, 'sd_q'), 'sd_o');
+
+        // Editor B loads the set while it is a DRAFT...
+        $stale = ValuationRuleSet::query()->findOrFail($set->id);
+
+        // ...the publisher wins completely...
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        // ...and B's delete is refused by the persisted-status guard, even
+        // at the raw model layer with no editor in sight.
+        $this->expectException(RuntimeException::class);
+
+        $stale->delete();
+    }
+
+    public function test_the_editor_resolves_children_through_the_locked_set(): void
+    {
+        $set = $this->draftSet('Editor positive', 1);
+        $option = $this->option($this->question($set, 'ep_q'), 'ep_o');
+        $optionId = $option->id;
+
+        // The positive half of the contract: on a genuine draft the
+        // operation runs against children resolved THROUGH the locked set,
+        // and the closure's return value comes back to the caller.
+        $editor = app(ValuationRuleEditor::class);
+
+        $updated = $editor->withLockedDraft($set->id, static function (ValuationRuleSet $locked) use ($optionId): ValuationQuestionOption {
+            /** @var ValuationQuestion $question */
+            $question = $locked->questions()->firstOrFail();
+            /** @var ValuationQuestionOption $row */
+            $row = $question->options()->findOrFail($optionId);
+            $row->adjustment_percent = '7.500';
+            $row->save();
+
+            return $row;
+        });
+
+        $this->assertSame('7.500', (string) $updated->adjustment_percent);
+        $this->assertSame(
+            '7.500',
+            (string) ValuationQuestionOption::query()->findOrFail($optionId)->adjustment_percent,
+        );
+    }
+
+    public function test_an_inactive_question_stays_frozen_after_publication(): void
+    {
+        $set = $this->draftSet('Post-publish question flip', 1);
+        $this->option($this->question($set, 'pqf_active'), 'pqf_o');
+        $dormant = $this->question($set, 'pqf_dormant', isActive: false);
+
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        // Published means ALL of it is published — an inactive question of
+        // an active set cannot be flipped live afterwards; that would be
+        // content nothing ever validated.
+        $this->expectException(RuntimeException::class);
+
+        $dormant->is_active = true;
+        $dormant->save();
+    }
+
+    public function test_an_inactive_option_stays_frozen_after_publication(): void
+    {
+        $set = $this->draftSet('Post-publish option flip', 1);
+        $question = $this->question($set, 'pof_q');
+        $this->option($question, 'pof_live');
+        $dormant = $this->option($question, 'pof_dormant', percent: '35.000', isActive: false);
+
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->publish($set);
+
+        $this->expectException(RuntimeException::class);
+
+        $dormant->is_active = true;
+        $dormant->save();
     }
 }
