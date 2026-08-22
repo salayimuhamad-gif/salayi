@@ -8,6 +8,7 @@ use App\Modules\Core\Contracts\FeatureFlagRepository;
 use App\Modules\Core\ValueObjects\Decimal;
 use App\Modules\Portfolio\Models\PortfolioProperty;
 use App\Modules\Portfolio\Models\PortfolioPropertyAnswer;
+use App\Modules\Portfolio\Models\PortfolioValuation;
 use App\Modules\Portfolio\Models\ValuationQuestion;
 use App\Modules\Portfolio\Models\ValuationQuestionOption;
 
@@ -181,7 +182,7 @@ final class ValuationAdjustments
      *
      * @param  array{midpoint: string|null, low: string|null, high: string|null}  $result
      * @param  AdjustmentPlan  $plan
-     * @return array<model-property<\App\Modules\Portfolio\Models\PortfolioValuation>, string|null>
+     * @return array<model-property<PortfolioValuation>, string|null>
      */
     public function apply(array $result, array $plan): array
     {
