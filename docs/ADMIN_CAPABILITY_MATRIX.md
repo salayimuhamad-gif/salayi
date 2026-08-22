@@ -1,7 +1,7 @@
 # Admin capability matrix — Super Admin audit and repair
 
 The requirement-by-requirement comparison of `PermissionRegistry::catalogue()`
-(one hundred and nine permissions) against the implemented Admin Panel:
+(one hundred and ten permissions) against the implemented Admin Panel:
 routes, middleware, controllers, Inertia pages, navigation and frontend
 conditions. Produced for the Super Admin visibility audit; kept because the
 category-4 list below is the honest statement of what the catalogue promises

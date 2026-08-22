@@ -62,7 +62,8 @@ final class SuperAdminCoverageTest extends TestCase
         sort($effective);
 
         $this->assertSame($all, $effective);
-        $this->assertCount(108, $effective);
+        // Wave 6 added the portfolio family's two valuation-rule permissions.
+        $this->assertCount(110, $effective);
 
         foreach ($all as $permission) {
             $this->assertTrue($admin->hasPermission($permission), $permission);
