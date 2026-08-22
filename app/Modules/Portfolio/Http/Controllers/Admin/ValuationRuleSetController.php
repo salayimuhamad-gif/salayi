@@ -182,10 +182,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $locked;
             });
-        } catch (ValuationRulePublishException) {
-            return back()->withErrors([
-                'lifecycle' => __('portfolio.valuation_rules.errors.frozen'),
-            ]);
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->recordModelChange('portfolio.valuation_rules.set_updated', $model);
@@ -198,6 +196,11 @@ final class ValuationRuleSetController extends Controller
         $model = ValuationRuleSet::query()->findOrFail($set);
 
         if ($model->isActive()) {
+            $this->audit->record('portfolio.valuation_rules.set_delete_refused', $model, [], [
+                'error' => 'delete_active',
+                'status' => $model->status,
+            ], result: 'failure', severity: 'warning');
+
             return back()->withErrors([
                 'lifecycle' => __('portfolio.valuation_rules.errors.delete_active'),
             ]);
@@ -211,7 +214,11 @@ final class ValuationRuleSetController extends Controller
          */
         try {
             $model = $this->editor->deleteSetIfNotActive($set);
-        } catch (ValuationRulePublishException) {
+        } catch (ValuationRulePublishException $e) {
+            $this->audit->record('portfolio.valuation_rules.set_delete_refused', $model, [], [
+                'error' => $e->errorKey,
+            ] + $e->context, result: 'failure', severity: 'warning');
+
             return back()->withErrors([
                 'lifecycle' => __('portfolio.valuation_rules.errors.delete_active'),
             ]);
@@ -256,6 +263,10 @@ final class ValuationRuleSetController extends Controller
         try {
             $model = $this->publisher->retire($model);
         } catch (ValuationRulePublishException $e) {
+            $this->audit->record('portfolio.valuation_rules.set_retire_refused', $model, [], [
+                'error' => $e->errorKey,
+            ] + $e->context, result: 'failure', severity: 'warning');
+
             return back()->withErrors([
                 'lifecycle' => __('portfolio.valuation_rules.errors.'.$e->errorKey),
             ]);
@@ -286,8 +297,10 @@ final class ValuationRuleSetController extends Controller
     /**
      * The publish-time arithmetic on a hypothetical base and a hypothetical
      * answer set — the SAME Decimal path a real valuation takes, with no
-     * way to persist anything. This is how an admin sees what a draft will
-     * do before an owner ever does.
+     * way to persist anything. It answers for a set in ANY lifecycle state:
+     * on a draft it shows what publishing would do, on an active or retired
+     * set what those rules do or did — deliberate, because both readings
+     * are pure computation behind the configure permission.
      */
     public function preview(Request $request, int $set): JsonResponse
     {
@@ -367,8 +380,8 @@ final class ValuationRuleSetController extends Controller
                     'question_type' => ValuationQuestion::TYPE_SINGLE_SELECT,
                 ]);
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->record('portfolio.valuation_rules.question_created', $question, [], [
@@ -403,8 +416,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $fresh;
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->recordModelChange('portfolio.valuation_rules.question_updated', $row);
@@ -430,8 +443,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $fresh;
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->record('portfolio.valuation_rules.question_deleted', $row, [], [
@@ -462,8 +475,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $freshParent->options()->create($validated);
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->record('portfolio.valuation_rules.option_created', $option, [], [
@@ -501,8 +514,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $fresh;
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->recordModelChange('portfolio.valuation_rules.option_updated', $row);
@@ -532,8 +545,8 @@ final class ValuationRuleSetController extends Controller
 
                 return $fresh;
             });
-        } catch (ValuationRulePublishException) {
-            return $this->frozenRefusal();
+        } catch (ValuationRulePublishException $e) {
+            return $this->frozenRefusal($model, $e);
         }
 
         $this->audit->record('portfolio.valuation_rules.option_deleted', $row, [], [
@@ -559,16 +572,23 @@ final class ValuationRuleSetController extends Controller
             return null;
         }
 
-        return $this->frozenRefusal();
+        return $this->frozenRefusal($set);
     }
 
     /**
      * The same sentence whether the set was already published when the
      * request arrived (fast pre-check) or published while the request was
-     * in flight (the editor's locked re-check).
+     * in flight (the editor's locked re-check) — and either way the
+     * refusal is audited as a failure, so structural writes probing a
+     * frozen set leave a trail. The editor's exception carries the status
+     * it read under the lock; the fast path logs the status it just read.
      */
-    private function frozenRefusal(): RedirectResponse
+    private function frozenRefusal(ValuationRuleSet $set, ?ValuationRulePublishException $e = null): RedirectResponse
     {
+        $this->audit->record('portfolio.valuation_rules.edit_refused', $set, [], [
+            'error' => 'frozen',
+        ] + ($e?->context ?? ['status' => $set->status]), result: 'failure', severity: 'warning');
+
         return back()->withErrors([
             'lifecycle' => __('portfolio.valuation_rules.errors.frozen'),
         ]);

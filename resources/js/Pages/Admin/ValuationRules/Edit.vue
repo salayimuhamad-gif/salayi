@@ -81,6 +81,12 @@ function projectName(project: NamedProject | null): string {
         ?? project.name_ckb;
 }
 
+// The page's locale rule, applied to a trilingual rule row (labels are
+// required in all three languages, so no fallback is needed).
+function localizedLabel(row: { label_ckb: string; label_ar: string; label_en: string }): string {
+    return locale === 'ar' ? row.label_ar : locale === 'en' ? row.label_en : row.label_ckb;
+}
+
 /* ------------------------------- scope ------------------------------- */
 
 const scopeForm = useForm({
@@ -627,10 +633,10 @@ const lifecycleError = computed(() => (page.props.errors as Record<string, strin
                     v-for="question in activeQuestions"
                     :key="question.id"
                     v-model="previewAnswers[question.id]"
-                    :label="question.label_ckb"
+                    :label="localizedLabel(question)"
                     :options="question.options.map((option) => ({
                         value: option.id,
-                        label: `${option.label_ckb} (${option.adjustment_percent.startsWith('-') ? option.adjustment_percent : `+${option.adjustment_percent}`}%)`,
+                        label: `${localizedLabel(option)} (${option.adjustment_percent.startsWith('-') ? option.adjustment_percent : `+${option.adjustment_percent}`}%)`,
                     }))"
                     :placeholder="t('portfolio.valuation_questions.not_answered')"
                 />

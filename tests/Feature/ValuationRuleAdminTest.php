@@ -411,4 +411,412 @@ final class ValuationRuleAdminTest extends TestCase
         $this->assertSame(0, PortfolioValuation::query()->count());
         $this->assertSame(0, PortfolioPropertyAnswer::query()->count());
     }
+
+    /* ---------------------------------------------------------------------
+     * Phase 4 hardening pins
+     * ------------------------------------------------------------------- */
+
+    public function test_child_routes_refuse_cross_set_and_cross_question_ids(): void
+    {
+        $manager = $this->manager();
+
+        $setA = $this->publishableDraft();
+        /** @var ValuationQuestion $qA */
+        $qA = $setA->questions()->firstOrFail();
+        /** @var ValuationQuestionOption $oA */
+        $oA = $qA->options()->firstOrFail();
+
+        // A second question in set A, and a whole second draft set B.
+        $qA2 = ValuationQuestion::query()->create([
+            'valuation_rule_set_id' => $setA->id,
+            'key' => 'second',
+            'label_ckb' => 'دووەم', 'label_ar' => 'ثانٍ', 'label_en' => 'Second',
+            'sort_order' => 1, 'is_active' => true,
+        ]);
+
+        $setB = $this->draftSet(['name' => 'Other draft']);
+        $qB = ValuationQuestion::query()->create([
+            'valuation_rule_set_id' => $setB->id,
+            'key' => 'foreign',
+            'label_ckb' => 'بیانی', 'label_ar' => 'أجنبي', 'label_en' => 'Foreign',
+            'sort_order' => 0, 'is_active' => true,
+        ]);
+        $oB = ValuationQuestionOption::query()->create([
+            'valuation_question_id' => $qB->id,
+            'key' => 'foreign_opt',
+            'label_ckb' => 'بژاردە', 'label_ar' => 'خيار', 'label_en' => 'Choice',
+            'adjustment_percent' => '9.000',
+            'sort_order' => 0, 'is_active' => true,
+        ]);
+
+        $questionPayload = [
+            'key' => 'forged',
+            'label_ckb' => 'دەستکاری', 'label_ar' => 'مزوّر', 'label_en' => 'Forged',
+        ];
+        $optionPayload = $questionPayload + ['adjustment_percent' => '1.000'];
+
+        // Another set's question id through set A's path: 404 on every verb.
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$setA->id.'/questions/'.$qB->id, $questionPayload)
+            ->assertNotFound();
+        $this->actingAs($manager)
+            ->delete(self::BASE.'/'.$setA->id.'/questions/'.$qB->id)
+            ->assertNotFound();
+        $this->actingAs($manager)
+            ->post(self::BASE.'/'.$setA->id.'/questions/'.$qB->id.'/options', $optionPayload)
+            ->assertNotFound();
+
+        // A sibling question's option id: 404, not a reparented write.
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$setA->id.'/questions/'.$qA2->id.'/options/'.$oA->id, $optionPayload)
+            ->assertNotFound();
+        $this->actingAs($manager)
+            ->delete(self::BASE.'/'.$setA->id.'/questions/'.$qA2->id.'/options/'.$oA->id)
+            ->assertNotFound();
+
+        // A foreign set's option id under the right-looking question: 404.
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$setA->id.'/questions/'.$qA->id.'/options/'.$oB->id, $optionPayload)
+            ->assertNotFound();
+
+        // Nothing moved, nothing changed, nothing was deleted.
+        $this->assertSame('foreign', $qB->refresh()->key);
+        $this->assertSame($setB->id, $qB->valuation_rule_set_id);
+        $this->assertSame('9.000', (string) $oB->refresh()->adjustment_percent);
+        $this->assertSame($qB->id, $oB->valuation_question_id);
+        $this->assertSame('5.000', (string) $oA->refresh()->adjustment_percent);
+        $this->assertSame($qA->id, $oA->valuation_question_id);
+        $this->assertSame(3, ValuationQuestion::query()->count());
+        $this->assertSame(2, ValuationQuestionOption::query()->count());
+    }
+
+    public function test_the_flag_gates_writes_and_the_super_admin_preview_is_audited(): void
+    {
+        $this->setFeatures(['portfolio.valuation_rules' => false]);
+
+        // A write with the flag off refuses before the controller runs, and
+        // the attempt itself is a recorded security event.
+        $this->actingAs($this->manager())
+            ->post(self::BASE, ['name' => 'Dark write'])
+            ->assertForbidden();
+        $this->assertSame(0, ValuationRuleSet::query()->count());
+        $this->assertSame(1, AuditLog::query()->where('action', 'feature.access_denied')->count());
+
+        // A Super Admin still reaches the admin surface while the flag is
+        // off — the documented, audited preview exception.
+        $superAdmin = User::factory()->create();
+        $this->attachRole($superAdmin, RoleKey::SuperAdmin);
+
+        $this->actingAs($superAdmin)->get(self::BASE)->assertOk();
+        $this->assertSame(1, AuditLog::query()->where('action', 'feature.preview_while_disabled')->count());
+    }
+
+    public function test_preview_refuses_forged_question_and_option_pairings(): void
+    {
+        $manager = $this->manager();
+        $set = $this->publishableDraft();
+
+        /** @var ValuationQuestion $q1 */
+        $q1 = $set->questions()->firstOrFail();
+        /** @var ValuationQuestionOption $o1 */
+        $o1 = $q1->options()->firstOrFail();
+
+        $q2 = ValuationQuestion::query()->create([
+            'valuation_rule_set_id' => $set->id,
+            'key' => 'view',
+            'label_ckb' => 'دیمەن', 'label_ar' => 'إطلالة', 'label_en' => 'View',
+            'sort_order' => 1, 'is_active' => true,
+        ]);
+
+        $foreignSet = $this->draftSet(['name' => 'Foreign']);
+        $foreignQuestion = ValuationQuestion::query()->create([
+            'valuation_rule_set_id' => $foreignSet->id,
+            'key' => 'foreign',
+            'label_ckb' => 'بیانی', 'label_ar' => 'أجنبي', 'label_en' => 'Foreign',
+            'sort_order' => 0, 'is_active' => true,
+        ]);
+        $foreignOption = ValuationQuestionOption::query()->create([
+            'valuation_question_id' => $foreignQuestion->id,
+            'key' => 'foreign_opt',
+            'label_ckb' => 'بژاردە', 'label_ar' => 'خيار', 'label_en' => 'Choice',
+            'adjustment_percent' => '9.000',
+            'sort_order' => 0, 'is_active' => true,
+        ]);
+
+        // A REAL option id under the wrong question of the same set refuses.
+        $this->actingAs($manager)
+            ->getJson(self::BASE.'/'.$set->id.'/preview?base=100000&answers['.$q2->id.']='.$o1->id)
+            ->assertStatus(422);
+
+        // Another set's genuine question/option pair refuses on this set.
+        $this->actingAs($manager)
+            ->getJson(self::BASE.'/'.$set->id.'/preview?base=100000&answers['.$foreignQuestion->id.']='.$foreignOption->id)
+            ->assertStatus(422);
+
+        // The straight pairing still computes — the refusals above were the
+        // forgery, not a broken endpoint.
+        $this->actingAs($manager)
+            ->getJson(self::BASE.'/'.$set->id.'/preview?base=100000&answers['.$q1->id.']='.$o1->id)
+            ->assertOk()
+            ->assertJson(['final' => '105000.0000']);
+
+        $this->assertSame(0, PortfolioValuation::query()->count());
+        $this->assertSame(0, PortfolioPropertyAnswer::query()->count());
+    }
+
+    public function test_every_configure_endpoint_refuses_the_view_only_role(): void
+    {
+        $auditor = $this->auditor();
+
+        $set = $this->publishableDraft();
+        /** @var ValuationQuestion $question */
+        $question = $set->questions()->firstOrFail();
+        /** @var ValuationQuestionOption $option */
+        $option = $question->options()->firstOrFail();
+
+        $endpoints = [
+            ['PUT', self::BASE.'/'.$set->id],
+            ['DELETE', self::BASE.'/'.$set->id],
+            ['POST', self::BASE.'/'.$set->id.'/retire'],
+            ['POST', self::BASE.'/'.$set->id.'/duplicate'],
+            ['GET', self::BASE.'/'.$set->id.'/preview?base=100000'],
+            ['POST', self::BASE.'/'.$set->id.'/questions'],
+            ['PUT', self::BASE.'/'.$set->id.'/questions/'.$question->id],
+            ['DELETE', self::BASE.'/'.$set->id.'/questions/'.$question->id],
+            ['POST', self::BASE.'/'.$set->id.'/questions/'.$question->id.'/options'],
+            ['PUT', self::BASE.'/'.$set->id.'/questions/'.$question->id.'/options/'.$option->id],
+            ['DELETE', self::BASE.'/'.$set->id.'/questions/'.$question->id.'/options/'.$option->id],
+        ];
+
+        foreach ($endpoints as [$method, $url]) {
+            $response = match ($method) {
+                'GET' => $this->actingAs($auditor)->get($url),
+                'POST' => $this->actingAs($auditor)->post($url),
+                'PUT' => $this->actingAs($auditor)->put($url),
+                default => $this->actingAs($auditor)->delete($url),
+            };
+
+            $response->assertForbidden();
+        }
+
+        // The permission wall left the draft byte-identical.
+        $this->assertSame(ValuationRuleSet::STATUS_DRAFT, $set->refresh()->status);
+        $this->assertSame(1, ValuationQuestion::query()->count());
+        $this->assertSame('5.000', (string) $option->refresh()->adjustment_percent);
+    }
+
+    public function test_the_full_lifecycle_leaves_a_complete_audit_trail(): void
+    {
+        $manager = $this->manager();
+
+        $this->actingAs($manager)->post(self::BASE, ['name' => 'Trail'])->assertRedirect();
+        $set = ValuationRuleSet::query()->firstOrFail();
+        $base = self::BASE.'/'.$set->id;
+
+        $this->actingAs($manager)->put($base, ['name' => 'Trail renamed'])
+            ->assertRedirect()->assertSessionHasNoErrors();
+
+        $labels = ['label_ckb' => 'پرسیار', 'label_ar' => 'سؤال', 'label_en' => 'Question'];
+        $this->actingAs($manager)->post($base.'/questions', ['key' => 'first'] + $labels)->assertRedirect();
+        $this->actingAs($manager)->post($base.'/questions', ['key' => 'second'] + $labels)->assertRedirect();
+
+        /** @var ValuationQuestion $first */
+        $first = $set->questions()->where('key', 'first')->firstOrFail();
+        /** @var ValuationQuestion $second */
+        $second = $set->questions()->where('key', 'second')->firstOrFail();
+
+        $this->actingAs($manager)
+            ->put($base.'/questions/'.$second->id, ['key' => 'second', 'label_en' => 'Renamed'] + $labels)
+            ->assertRedirect()->assertSessionHasNoErrors();
+
+        $optionLabels = ['label_ckb' => 'بژاردە', 'label_ar' => 'خيار', 'label_en' => 'Choice'];
+        $this->actingAs($manager)
+            ->post($base.'/questions/'.$first->id.'/options', ['key' => 'kept', 'adjustment_percent' => '5.000'] + $optionLabels)
+            ->assertRedirect();
+        $this->actingAs($manager)
+            ->post($base.'/questions/'.$first->id.'/options', ['key' => 'doomed', 'adjustment_percent' => '-3.500'] + $optionLabels)
+            ->assertRedirect();
+
+        /** @var ValuationQuestionOption $doomed */
+        $doomed = $first->options()->where('key', 'doomed')->firstOrFail();
+
+        $this->actingAs($manager)
+            ->put($base.'/questions/'.$first->id.'/options/'.$doomed->id, ['key' => 'doomed', 'adjustment_percent' => '-4.000'] + $optionLabels)
+            ->assertRedirect()->assertSessionHasNoErrors();
+        $this->actingAs($manager)
+            ->delete($base.'/questions/'.$first->id.'/options/'.$doomed->id)
+            ->assertRedirect()->assertSessionHasNoErrors();
+        $this->actingAs($manager)->delete($base.'/questions/'.$second->id)
+            ->assertRedirect()->assertSessionHasNoErrors();
+
+        $this->actingAs($manager)->post($base.'/publish')->assertRedirect()->assertSessionHasNoErrors();
+        $this->actingAs($manager)->post($base.'/duplicate')->assertRedirect();
+        $this->actingAs($manager)->post($base.'/retire')->assertRedirect()->assertSessionHasNoErrors();
+        $this->actingAs($manager)->delete($base)->assertRedirect(self::BASE);
+
+        $expected = [
+            'set_created' => 1,
+            'set_updated' => 1,
+            'question_created' => 2,
+            'question_updated' => 1,
+            'question_deleted' => 1,
+            'option_created' => 2,
+            'option_updated' => 1,
+            'option_deleted' => 1,
+            'set_published' => 1,
+            'set_duplicated' => 1,
+            'set_retired' => 1,
+            'set_deleted' => 1,
+        ];
+
+        foreach ($expected as $event => $count) {
+            $this->assertSame($count, AuditLog::query()
+                ->where('action', 'portfolio.valuation_rules.'.$event)
+                ->where('result', 'success')
+                ->count(), $event);
+        }
+    }
+
+    public function test_duplicate_leaves_the_source_byte_identical(): void
+    {
+        $manager = $this->manager();
+
+        // Duplicate from a FROZEN source — the strongest case.
+        $source = $this->publishableDraft();
+        $this->actingAs($manager)->post(self::BASE.'/'.$source->id.'/publish')->assertRedirect();
+
+        /** @var ValuationQuestion $sourceQuestion */
+        $sourceQuestion = $source->questions()->firstOrFail();
+        /** @var ValuationQuestionOption $sourceOption */
+        $sourceOption = $sourceQuestion->options()->firstOrFail();
+        $sourceVersion = $source->refresh()->version;
+
+        $this->actingAs($manager)->post(self::BASE.'/'.$source->id.'/duplicate')->assertRedirect();
+
+        // The source kept its status, content, and exactly its own rows.
+        $this->assertSame(ValuationRuleSet::STATUS_ACTIVE, $source->refresh()->status);
+        $this->assertSame($sourceVersion, $source->version);
+        $this->assertSame(1, $source->questions()->count());
+        $this->assertSame('renovation', $sourceQuestion->refresh()->key);
+        $this->assertSame($source->id, $sourceQuestion->valuation_rule_set_id);
+        $this->assertSame('5.000', (string) $sourceOption->refresh()->adjustment_percent);
+        $this->assertSame($sourceQuestion->id, $sourceOption->valuation_question_id);
+
+        // The draft is a fresh-row copy in the same family, one version up.
+        /** @var ValuationRuleSet $draft */
+        $draft = ValuationRuleSet::query()
+            ->where('status', ValuationRuleSet::STATUS_DRAFT)
+            ->orderByDesc('id')
+            ->firstOrFail();
+        $this->assertSame($sourceVersion + 1, $draft->version);
+        /** @var ValuationQuestion $copiedQuestion */
+        $copiedQuestion = $draft->questions()->firstOrFail();
+        /** @var ValuationQuestionOption $copiedOption */
+        $copiedOption = $copiedQuestion->options()->firstOrFail();
+        $this->assertNotSame($sourceQuestion->id, $copiedQuestion->id);
+        $this->assertNotSame($sourceOption->id, $copiedOption->id);
+        $this->assertSame('renovation', $copiedQuestion->key);
+        $this->assertSame('5.000', (string) $copiedOption->adjustment_percent);
+    }
+
+    public function test_refused_lifecycle_actions_are_audited_as_failures(): void
+    {
+        $manager = $this->manager();
+        $set = $this->publishableDraft();
+        /** @var ValuationQuestion $question */
+        $question = $set->questions()->firstOrFail();
+
+        $failed = fn (string $event) => AuditLog::query()
+            ->where('action', 'portfolio.valuation_rules.'.$event)
+            ->where('result', 'failure')
+            ->where('severity', 'warning');
+
+        // Retiring a DRAFT refuses exactly as before — and now leaves a row.
+        $this->actingAs($manager)
+            ->post(self::BASE.'/'.$set->id.'/retire')
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(ValuationRuleSet::STATUS_DRAFT, $set->refresh()->status);
+        $this->assertSame(1, $failed('set_retire_refused')->count());
+
+        $this->actingAs($manager)->post(self::BASE.'/'.$set->id.'/publish')->assertRedirect();
+
+        // Deleting the ACTIVE set refuses and is recorded.
+        $this->actingAs($manager)
+            ->delete(self::BASE.'/'.$set->id)
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(ValuationRuleSet::STATUS_ACTIVE, $set->refresh()->status);
+        $this->assertSame(1, $failed('set_delete_refused')->count());
+
+        // A frozen structural edit refuses and is recorded — for a child row
+        // and for the scope form alike.
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$set->id.'/questions/'.$question->id, [
+                'key' => 'renovation',
+                'label_ckb' => 'گۆڕدرا', 'label_ar' => 'معدل', 'label_en' => 'Changed',
+            ])
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(1, $failed('edit_refused')->count());
+
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$set->id, ['name' => 'Renamed while frozen'])
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(2, $failed('edit_refused')->count());
+        $this->assertSame('renovation', $question->refresh()->key);
+    }
+
+    public function test_the_lifecycle_matrix_matches_the_server(): void
+    {
+        $manager = $this->manager();
+
+        // A draft WITH content deletes cleanly at the server: the page not
+        // offering the button is presentation, not policy.
+        $fullDraft = $this->publishableDraft();
+        $this->actingAs($manager)
+            ->delete(self::BASE.'/'.$fullDraft->id)
+            ->assertRedirect(self::BASE)
+            ->assertSessionHasNoErrors();
+        $this->assertNull(ValuationRuleSet::query()->find($fullDraft->id));
+
+        // An ACTIVE set refuses a second publish.
+        $active = $this->publishableDraft();
+        $this->actingAs($manager)->post(self::BASE.'/'.$active->id.'/publish')->assertRedirect();
+        $this->actingAs($manager)
+            ->post(self::BASE.'/'.$active->id.'/publish')
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(ValuationRuleSet::STATUS_ACTIVE, $active->refresh()->status);
+
+        // RETIRED: frozen for edits and both transitions, open to duplicate
+        // and delete.
+        $this->actingAs($manager)->post(self::BASE.'/'.$active->id.'/retire')->assertRedirect();
+        $retired = $active->refresh();
+
+        $this->actingAs($manager)
+            ->put(self::BASE.'/'.$retired->id, ['name' => 'Rename retired'])
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->actingAs($manager)
+            ->post(self::BASE.'/'.$retired->id.'/publish')
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->actingAs($manager)
+            ->post(self::BASE.'/'.$retired->id.'/retire')
+            ->assertRedirect()
+            ->assertSessionHasErrors(['lifecycle']);
+        $this->assertSame(ValuationRuleSet::STATUS_RETIRED, $retired->refresh()->status);
+
+        $this->actingAs($manager)->post(self::BASE.'/'.$retired->id.'/duplicate')->assertRedirect();
+        $this->assertSame(1, ValuationRuleSet::query()
+            ->where('status', ValuationRuleSet::STATUS_DRAFT)->count());
+
+        $this->actingAs($manager)
+            ->delete(self::BASE.'/'.$retired->id)
+            ->assertRedirect(self::BASE)
+            ->assertSessionHasNoErrors();
+        $this->assertNull(ValuationRuleSet::query()->find($retired->id));
+    }
 }
