@@ -306,6 +306,16 @@ return [
         'contact_either' => 'هەرکامیان',
         'save' => 'پاشەکەوتکردنی پرۆفایل',
         'saved' => 'پرۆفایلەکە پاشەکەوت کرا.',
+
+        // Wave 5: the grouped profile. Section titles plus the independent
+        // verification claims — one channel's proof never speaks for another.
+        'section_identity' => 'ناسنامە',
+        'section_contact' => 'پەیوەندی',
+        'section_residence' => 'شوێنی نیشتەجێبوون',
+        'section_verification' => 'پشتڕاستکردنەوە',
+        'verification_intro' => 'هەر بانگەشەیەکی خوارەوە سەربەخۆیە — پشتڕاستکردنەوەی کەناڵێک هیچ شتێک دەربارەی کەناڵێکی تر ناڵێت.',
+        'status_whatsapp_linked' => 'هەژماری واتسئاپ پشتڕاستکراوەتەوە',
+        'status_not_linked' => 'بەسترا نییە',
     ],
 
     'administrators' => [

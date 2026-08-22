@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Modules\Identity\Http\Controllers\Account;
 
-use App\Modules\Geography\Models\Area;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\ProfilePhotoService;
+use App\Modules\Identity\Support\ProfileLocationOptions;
 use App\Modules\Identity\Support\ProfilePhoneConflict;
 use App\Modules\Operations\Services\AuditLogger;
 use Illuminate\Database\UniqueConstraintViolationException;
@@ -61,6 +61,7 @@ final class ProfileController extends Controller
     public function show(Request $request): Response
     {
         $user = $request->user();
+        $locale = app()->getLocale();
 
         return Inertia::render('Account/Profile', [
             'profile' => [
@@ -68,23 +69,49 @@ final class ProfileController extends Controller
                 'display_name' => $user->display_name,
                 'preferred_locale' => $user->preferred_locale,
                 'phone' => $this->maskedPhone($user),
+                /*
+                 * Wave 5: the optional details onboarding already stores —
+                 * email, gender, date of birth — become editable here too.
+                 * Same columns, same vocabularies, same validation; the
+                 * profile is where people expect to correct them later.
+                 */
+                'email' => $user->email,
+                'gender' => $user->gender,
+                'date_of_birth' => $user->date_of_birth?->toDateString(),
                 'profile_area_id' => $user->profile_area_id,
                 'profile_bio' => $user->profile_bio,
                 'contact_preference' => $user->contact_preference,
             ],
             'avatar' => $user->avatarPayload(),
-            'phone_verified' => (bool) $user->phone_verified,
-            'telegram_linked' => $user->telegram_verified_at !== null,
-            'areas' => Area::query()
-                ->where('publication_status', 'published')
-                ->orderBy('name_ckb')
-                ->get(['id', 'name_ckb', 'name_ar', 'name_en']),
+            /*
+             * Wave 5 §3: every verification claim at its own strength,
+             * independently. Telegram and WhatsApp are separate proofs of the
+             * account; the phone is separate again (provided vs proven). The
+             * page must never let one claim borrow another's certainty.
+             */
+            'verification' => [
+                'telegram_linked' => $user->telegram_verified_at !== null,
+                'whatsapp_linked' => $user->whatsapp_verified_at !== null,
+                'phone_provided' => $user->phone_index !== null,
+                'phone_verified' => (bool) $user->phone_verified,
+            ],
+            'genders' => OnboardingController::GENDERS,
+            /*
+             * The SAME canonical residence the onboarding screen writes:
+             * one stored column (`profile_area_id`), the city derived from
+             * the area's place in the hierarchy — never a second column.
+             */
+            'profile_city_id' => ProfileLocationOptions::cityIdFor($user->profile_area_id),
+            'cities' => ProfileLocationOptions::cities($locale),
+            'areas' => ProfileLocationOptions::areas($locale),
             'contact_preferences' => ['phone', 'telegram', 'either'],
         ]);
     }
 
     public function update(Request $request): RedirectResponse
     {
+        $user = $request->user();
+
         $request->merge([
             'phone' => preg_replace('/[\s\-]+/', '', (string) $request->input('phone', '')),
         ]);
@@ -94,6 +121,17 @@ final class ProfileController extends Controller
             'display_name' => ['nullable', 'string', 'min:2', 'max:120'],
             'preferred_locale' => ['required', 'in:ckb,ar,en'],
             'phone' => ['nullable', 'string', 'regex:/^(\+?964|0)?7[0-9]{9}$/'],
+            /*
+             * Wave 5: the optional details, under EXACTLY the onboarding
+             * screen's rules — same columns, same vocabularies, same bounds.
+             * Two screens editing one field must refuse the same inputs.
+             */
+            'email' => [
+                'nullable', 'string', 'email', 'max:190',
+                Rule::unique('users', 'email')->ignore($user->id)->whereNull('deleted_at'),
+            ],
+            'gender' => ['nullable', 'in:'.implode(',', OnboardingController::GENDERS)],
+            'date_of_birth' => ['nullable', 'date', 'before:'.now()->subYears(13)->toDateString(), 'after:'.now()->subYears(120)->toDateString()],
             /*
              * Correction v4, BLOCKER 4. `exists:areas,id` accepted ANY row
              * in the table, published or not. The page only ever offers
@@ -115,8 +153,6 @@ final class ProfileController extends Controller
             'contact_preference' => ['nullable', 'in:phone,telegram,either'],
         ]);
 
-        $user = $request->user();
-
         $user->fill([
             'name' => trim($validated['name']),
             'preferred_locale' => $validated['preferred_locale'],
@@ -134,6 +170,15 @@ final class ProfileController extends Controller
             'profile_area_id' => $validated['profile_area_id'] ?? null,
             'profile_bio' => $validated['profile_bio'] ?? null,
             'contact_preference' => $validated['contact_preference'] ?? null,
+            /*
+             * Blank clears, exactly as onboarding does: emptying an optional
+             * detail is a legitimate act, and `users.email` is UNIQUE and
+             * nullable — storing '' would let one account hold the empty
+             * address and collide every later one.
+             */
+            'email' => $this->nullIfBlank($validated['email'] ?? null),
+            'gender' => $validated['gender'] ?? null,
+            'date_of_birth' => $this->nullIfBlank($validated['date_of_birth'] ?? null),
         ]);
 
         /*
@@ -305,6 +350,17 @@ final class ProfileController extends Controller
         }
 
         return substr($phone, 0, 4).'•••'.substr($phone, -3);
+    }
+
+    /**
+     * An empty string from a cleared input is "no value", not the value "" —
+     * the same rule, for the same columns, as the onboarding screen.
+     */
+    private function nullIfBlank(?string $value): ?string
+    {
+        $value = trim((string) $value);
+
+        return $value === '' ? null : $value;
     }
 
     private function toE164(string $phone): string

@@ -38,6 +38,23 @@ return [
     'no_valuation' => 'لا يوجد تقييم بعد',
     'excluded_asking' => 'أسعار الطلب مستبعدة',
     'history' => 'سجل التقييم',
+    'history_trend' => 'اتجاه التقييم',
+    'history_trend_hint' => 'التقييمات المسجلة بعملة :currency فقط — لا شيء مُقدَّر أو مُخترع.',
+
+    // Wave 5: the derived dashboard band. Every figure below is computed from
+    // persisted rows on each read; currencies are never combined.
+    'summary' => [
+        'title' => 'ملخص العقارات',
+        'properties' => 'العقارات',
+        'coverage' => ':valued من :total لديها تقييم حالي',
+        'awaiting' => 'بانتظار التقييم',
+        'total_label' => 'القيمة الحالية',
+        'per_currency_count' => ':count لها قيمة بعملة :currency',
+        'multi_currency_note' => 'تُحفظ المجاميع لكل عملة على حدة — لا تُجمع مبالغ بعملات مختلفة أبداً.',
+        'latest_valued' => 'أحدث تقييم',
+        'no_valuations' => 'لا يتوفر تقييم حالي بعد.',
+        'composition' => 'التكوين',
+    ],
     'export' => 'تصدير',
     'delete_confirm' => 'هل أنت متأكد؟ لا يمكن التراجع',
     'consent_valuation' => 'أوافق على تقييم عقاري',

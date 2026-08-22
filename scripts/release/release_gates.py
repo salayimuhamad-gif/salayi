@@ -207,6 +207,12 @@ PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
     'tests/Browser/production-assets.spec.ts',
+    # Profile + portfolio (redesign Wave 5): the grouped profile edits real
+    # fields under the onboarding rules and refuses dishonest input; the
+    # portfolio dashboard derives counts, per-currency totals, coverage and
+    # the two-point history trend from persisted rows; a stranger's direct
+    # property URL answers 404. No skips on any viewport.
+    'tests/Browser/profile-portfolio.spec.ts',
     'tests/Browser/public-home.spec.ts',
     # Public market insights (Phase 13): the real editorial lifecycle drives
     # the public area timeline — approved-but-unpublished, draft and lapsed

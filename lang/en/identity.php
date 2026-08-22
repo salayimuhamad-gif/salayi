@@ -306,6 +306,16 @@ return [
         'contact_either' => 'Either',
         'save' => 'Save profile',
         'saved' => 'Profile saved.',
+
+        // Wave 5: the grouped profile. Section titles plus the independent
+        // verification claims — one channel's proof never speaks for another.
+        'section_identity' => 'Identity',
+        'section_contact' => 'Contact',
+        'section_residence' => 'Residence',
+        'section_verification' => 'Verification',
+        'verification_intro' => 'Each claim below stands on its own — one verified channel says nothing about another.',
+        'status_whatsapp_linked' => 'WhatsApp account verified',
+        'status_not_linked' => 'Not linked',
     ],
 
     'administrators' => [

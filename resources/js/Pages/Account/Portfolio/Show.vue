@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { Head, Link, router, usePage } from '@inertiajs/vue3';
+import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppCard from '@/Components/ui/AppCard.vue';
 import AppButton from '@/Components/ui/AppButton.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
+import MarketTrendChart from '@/Components/Public/MarketTrendChart.vue';
 import PropertyForm from '@/Components/Portfolio/PropertyForm.vue';
 import { t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
@@ -136,6 +138,50 @@ function formatSize(bytes: number): string {
     return `${Math.max(1, Math.round(bytes / 1024))} KB`;
 }
 
+/*
+ * The repository's client-side name fallback (the same rule Profile has always
+ * used): the page's language first, Sorani as the floor. Real stored identity
+ * only — a property with neither reference simply shows none.
+ */
+function entityName(option: NamedOption | undefined): string | null {
+    if (!option) return null;
+
+    const locale = document.documentElement.lang || 'ckb';
+
+    return (locale === 'ar' ? option.name_ar : locale === 'en' ? option.name_en : option.name_ckb)
+        ?? option.name_ckb;
+}
+
+const identity = computed<string | null>(() => {
+    const parts = [
+        entityName(props.property.project_id === null ? undefined : props.projects.find((p) => p.id === props.property.project_id)),
+        entityName(props.property.area_id === null ? undefined : props.areas.find((a) => a.id === props.property.area_id)),
+    ].filter((name): name is string => name !== null);
+
+    return parts.length === 0 ? null : parts.join(' · ');
+});
+
+/*
+ * Wave 5 §8: a chart drawn ONLY from real recorded valuations — and only the
+ * ones sharing the current figure's currency, because two currencies on one
+ * line is a unit error wearing a trend's clothes. Refusal rows are honesty,
+ * not points; nothing is interpolated between dates. Fewer than two genuine
+ * points means the list carries the history alone, with no decorative line.
+ */
+const chartCurrency = computed<string | null>(
+    () => props.history.find((row) => row.midpoint !== null)?.currency ?? null,
+);
+
+const trendSeries = computed<Array<{ period: string; value: string; is_limited: boolean }>>(() => {
+    if (chartCurrency.value === null) return [];
+
+    return props.history
+        .filter((row): row is HistoryRow & { midpoint: string; created_at: string } =>
+            row.midpoint !== null && row.created_at !== null && row.currency === chartCurrency.value)
+        .map((row) => ({ period: row.created_at, value: row.midpoint, is_limited: false }))
+        .reverse();
+});
+
 const factRows = (): Array<[string, string | null]> => [
     [t('portfolio.form.property_type'), t(`portfolio.types.${props.property.property_type}`)],
     [t('portfolio.form.unit_type'), props.property.unit_type],
@@ -155,7 +201,8 @@ const factRows = (): Array<[string, string | null]> => [
 <template>
     <Head :title="property.label ?? t('portfolio.title')" />
 
-    <main class="mx-auto max-w-3xl px-4 py-8">
+    <PublicLayout>
+    <main class="mx-auto max-w-3xl px-4 py-8 sm:py-10">
         <Link
             :href="localized('/account/portfolio')"
             class="mb-5 inline-block text-sm text-ink-muted transition-colors hover:text-ink
@@ -165,8 +212,15 @@ const factRows = (): Array<[string, string | null]> => [
         </Link>
 
         <header class="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <h1 class="font-display text-2xl font-bold text-ink">{{ property.label ?? '—' }}</h1>
-            <AppButton variant="secondary" size="sm" data-testid="edit-property" :aria-expanded="editing" @click="editing = !editing">
+            <div class="min-w-0">
+                <h1 class="font-display text-2xl font-bold text-ink">{{ property.label ?? '—' }}</h1>
+                <!-- Real stored identity only: the published project/area the
+                     owner attached, in the page's language — or nothing. -->
+                <p v-if="identity" class="mt-1 text-sm text-ink-muted" data-testid="property-entity">
+                    {{ identity }}
+                </p>
+            </div>
+            <AppButton variant="secondary" size="md" data-testid="edit-property" :aria-expanded="editing" @click="editing = !editing">
                 {{ editing ? t('app.actions.cancel') : t('portfolio.form.edit') }}
             </AppButton>
         </header>
@@ -244,11 +298,24 @@ const factRows = (): Array<[string, string | null]> => [
 
         <!-- =========================== history =========================== -->
         <AppCard :title="t('portfolio.history')">
+            <!-- §8: the trend line exists only when at least two REAL
+                 same-currency valuations exist. No interpolation, no invented
+                 intermediate values; refusal rows stay in the list below. -->
+            <figure v-if="trendSeries.length >= 2" class="mb-4" data-testid="history-trend">
+                <figcaption class="mh-microlabel mb-2">
+                    {{ t('portfolio.history_trend') }}
+                </figcaption>
+                <MarketTrendChart :series="trendSeries" />
+                <p class="mt-1.5 text-xs text-ink-faint">
+                    {{ t('portfolio.history_trend_hint', { currency: chartCurrency ?? '' }) }}
+                </p>
+            </figure>
+
             <p v-if="history.length === 0" class="text-sm text-ink-muted">
                 {{ t('portfolio.no_valuation') }}
             </p>
 
-            <ul v-else class="divide-y divide-line">
+            <ul v-else class="divide-y divide-line" data-testid="history-list">
                 <li v-for="(row, index) in history" :key="index" class="py-3">
                     <div class="flex flex-wrap items-baseline justify-between gap-3">
                         <span v-if="row.midpoint" class="numeral font-medium text-ink" dir="ltr">
@@ -331,4 +398,5 @@ const factRows = (): Array<[string, string | null]> => [
             </ul>
         </AppCard>
     </main>
+    </PublicLayout>
 </template>

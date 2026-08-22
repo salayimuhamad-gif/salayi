@@ -10,6 +10,7 @@ use App\Modules\Portfolio\Models\PortfolioMedia;
 use App\Modules\Portfolio\Models\PortfolioProperty;
 use App\Modules\Portfolio\Models\PortfolioValuation;
 use App\Modules\Portfolio\Services\PortfolioMediaService;
+use App\Modules\Portfolio\Services\PortfolioSummaryService;
 use App\Modules\Portfolio\Services\PortfolioValuer;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Database\Eloquent\Builder;
@@ -39,7 +40,7 @@ final class PortfolioController extends Controller
 {
     public function __construct(private readonly AuditLogger $audit) {}
 
-    public function index(Request $request): Response
+    public function index(Request $request, PortfolioSummaryService $summary): Response
     {
         /*
          * H9: paginated. `get()` was fine for a person with six properties
@@ -56,6 +57,13 @@ final class PortfolioController extends Controller
             ->through(fn (PortfolioProperty $property): array => $this->summarise($property));
 
         return Inertia::render('Account/Portfolio/Index', [
+            /*
+             * Wave 5 §6/§13: the derived dashboard band. Computed from the
+             * same rows the cards below render — per-currency exact totals,
+             * coverage and the latest valued date — so the band can never
+             * disagree with the list.
+             */
+            'summary' => $summary->summarise($request->user()->id),
             'properties' => $properties,
             // The add/edit form's option lists: published entities only, the
             // three name columns so the form speaks the page's language.
