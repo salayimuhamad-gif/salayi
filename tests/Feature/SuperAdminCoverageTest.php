@@ -162,9 +162,9 @@ final class SuperAdminCoverageTest extends TestCase
 
         $this->assertSame([
             'overview', 'notifications', 'projects', 'geography', 'market',
-            'imports', 'marketplace', 'companies', 'company_developers',
-            'project_drafts', 'leads', 'content', 'knowledge', 'branding',
-            'features', 'system',
+            'valuation_rules', 'imports', 'marketplace', 'companies',
+            'company_developers', 'project_drafts', 'leads', 'content',
+            'knowledge', 'branding', 'features', 'system',
         ], array_column($nav, 'key'));
 
         $children = [];

@@ -381,17 +381,19 @@ final class ValuationRulesTest extends TestCase
 
         /*
          * Every option is authored in the DRAFT — a published set's content
-         * is frozen, so the edge-case options exist before publish, like
-         * they would in production.
+         * is frozen — and every SINGLE option respects the ±25 authoring
+         * bound; the threshold cases are reached by COMBINING answers,
+         * which is exactly how a real total crosses it.
          */
         $set = $this->draftSet();
         $a = $this->question($set, 'q_a');
         $b = $this->question($set, 'q_b');
         $optionA = $this->option($a, 'a', '25.000');
         $optionB = $this->option($b, 'b', '25.000');
-        $justUnder = $this->option($a, 'edge_under', '29.999');
+        $justUnder = $this->option($a, 'edge_under', '24.999');
         $under = $this->option($a, 'edge_minus', '-5.000');
         $exactly = $this->option($b, 'edge_at', '-25.000');
+        $five = $this->option($b, 'edge_five', '5.000');
         app(ValuationRulePublisher::class)->publish($set);
 
         $property = $this->property();
@@ -406,10 +408,14 @@ final class ValuationRulesTest extends TestCase
         $plan = app(ValuationAdjustments::class)->planFor($property);
         $this->assertTrue($plan['warned']);
 
-        // The threshold is exact: |29.999| stays quiet, |-30.000| warns.
+        // The threshold is exact: 24.999 + 5.000 = |29.999| stays quiet,
+        // -5.000 + -25.000 = |-30.000| warns.
         $quiet = $this->property();
         $this->answer($quiet, $a, $justUnder);
-        $this->assertFalse(app(ValuationAdjustments::class)->planFor($quiet)['warned']);
+        $this->answer($quiet, $b, $five);
+        $plan = app(ValuationAdjustments::class)->planFor($quiet);
+        $this->assertSame('29.999', $plan['total_percent']);
+        $this->assertFalse($plan['warned']);
 
         $loud = $this->property();
         $this->answer($loud, $a, $under);
@@ -858,10 +864,18 @@ final class ValuationRulesTest extends TestCase
         $property = $this->property([], $owner);
         $this->answer($property, $question, $plus);
 
+        /*
+         * The payload carries the property's real fields — update() REPLACES
+         * them, exactly as the form (which always submits everything) does;
+         * omitting area_id here would clear the lineage and turn the
+         * baseline into a refusal about geography, not a proof about
+         * answers.
+         */
         $this->actingAs($owner)
             ->put('/account/portfolio/'.$property->id, [
                 'label' => 'Cleared',
                 'property_type' => 'apartment',
+                'area_id' => $this->district->id,
                 'currency' => 'USD',
                 'consent_valuation' => true,
                 'answers' => [$question->id => null],
