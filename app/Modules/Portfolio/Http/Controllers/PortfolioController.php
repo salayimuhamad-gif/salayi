@@ -135,10 +135,12 @@ final class PortfolioController extends Controller
                 ->orderByDesc('calculated_at')
                 ->limit(24)
                 /*
-                 * Wave 6: each row carries ITS OWN adjustment snapshots —
-                 * keys, labels and percents as they read at calculation
-                 * time. History never joins back to the live rule tables,
-                 * so retiring or deleting a rule set changes nothing here.
+                 * Wave 6: each row carries ITS OWN adjustment snapshots
+                 * as they read at calculation time — the owner payload
+                 * shows their labels and direction while the exact
+                 * percents stay in the stored rows. History never joins
+                 * back to the live rule tables, so retiring or deleting
+                 * a rule set changes nothing here.
                  */
                 ->with('adjustments')
                 ->get()
@@ -694,8 +696,14 @@ final class PortfolioController extends Controller
     }
 
     /**
-     * One valuation's adjustment snapshots, exactly as stored — trilingual
-     * labels and the applied percent, never a join to the live rule tables.
+     * One valuation's adjustment snapshots for the OWNER — trilingual
+     * labels and a derived direction, never a join to the live rule tables
+     * and never the exact configured weight. Product decision (Phase 3):
+     * the owner sees WHICH factors moved the estimate and WHICH WAY; the
+     * exact per-option percentage stays in the stored snapshot, the admin
+     * builder and the calculation itself. The direction is derived from
+     * the snapshot the valuation itself recorded, so history still
+     * explains itself without the live rules.
      *
      * @return list<array<string, string|int>>
      */
@@ -710,7 +718,11 @@ final class PortfolioController extends Controller
                 'option_ckb' => $row->option_ckb,
                 'option_ar' => $row->option_ar,
                 'option_en' => $row->option_en,
-                'adjustment_percent' => (string) $row->adjustment_percent,
+                'direction' => match (Decimal::of((string) $row->adjustment_percent, 3)->compareTo('0')) {
+                    1 => 'positive',
+                    -1 => 'negative',
+                    default => 'neutral',
+                },
                 'position' => (int) $row->position,
             ])
             ->values()

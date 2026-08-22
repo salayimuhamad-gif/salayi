@@ -143,6 +143,22 @@ final class ValuationRuleAdminTest extends TestCase
             ->assertInertia(fn ($page) => $page->where('can.manage', true));
     }
 
+    public function test_the_builder_still_shows_the_exact_percentages(): void
+    {
+        $set = $this->publishableDraft();
+
+        /*
+         * Product decision (Phase 3): the OWNER surface derives a
+         * direction and never receives the configured weight; the ADMIN
+         * builder is the authoring surface and keeps the exact value.
+         * This pin fails if a payload trim ever reaches the wrong side.
+         */
+        $this->actingAs($this->manager())->get(self::BASE.'/'.$set->id)
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('set.questions.0.options.0.adjustment_percent', '5.000'));
+    }
+
     /* ---------------------------------------------------------------------
      * draft authoring
      * ------------------------------------------------------------------- */

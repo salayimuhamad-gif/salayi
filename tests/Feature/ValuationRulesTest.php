@@ -736,6 +736,54 @@ final class ValuationRulesTest extends TestCase
             ->missing('valuation_rules.questions.0.adjustment_percent'));
     }
 
+    public function test_the_owner_breakdown_shows_direction_never_the_exact_weight(): void
+    {
+        $this->evidence();
+        [, $question, $plus, $minus] = $this->activeSet();
+
+        $owner = $this->member();
+        $property = $this->property([], $owner);
+        $answer = $this->answer($property, $question, $plus);
+        $valuation = $this->value($property);
+
+        $response = $this->actingAs($owner)->get('/account/portfolio/'.$property->id);
+
+        $response->assertOk();
+        $response->assertInertia(fn ($page) => $page
+            /*
+             * Product decision (Phase 3): the owner learns WHICH factor
+             * moved the estimate and WHICH WAY — never the configured
+             * exact weight. Both breakdown payloads, current and history,
+             * carry a derived direction and no adjustment_percent field.
+             */
+            ->where('valuation_adjustments.0.direction', 'positive')
+            ->missing('valuation_adjustments.0.adjustment_percent')
+            ->where('history.0.adjustments.0.direction', 'positive')
+            ->missing('history.0.adjustments.0.adjustment_percent')
+            /*
+             * The TOTAL keeps its exact percent: the base and final
+             * figures the owner already sees imply the net effect, so
+             * trimming it would hide nothing — it stays, unchanged.
+             */
+            ->where('property.valuation.adjustment_total_percent', '5.000')
+            ->where('history.0.adjustment_total_percent', '5.000'));
+
+        // The snapshot row itself still stores the exact weight — the
+        // calculation and the audit trail are untouched by the payload trim.
+        $this->assertSame('5.000', (string) $valuation->adjustments()->firstOrFail()->adjustment_percent);
+
+        // And a negative weight derives the opposite direction.
+        $answer->valuation_question_option_id = $minus->id;
+        $answer->save();
+        $this->value($property);
+
+        $this->actingAs($owner)
+            ->get('/account/portfolio/'.$property->id)
+            ->assertInertia(fn ($page) => $page
+                ->where('valuation_adjustments.0.direction', 'negative')
+                ->missing('valuation_adjustments.0.adjustment_percent'));
+    }
+
     public function test_submitted_answers_beat_persisted_and_are_persisted_themselves(): void
     {
         $this->evidence();

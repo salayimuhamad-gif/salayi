@@ -149,6 +149,9 @@ return [
         'title' => 'How this estimate was formed',
         'baseline' => 'Market baseline',
         'total' => 'Total adjustment',
+        'raised' => 'Raised the estimate',
+        'lowered' => 'Lowered the estimate',
+        'no_change' => 'No effect',
         'warning' => 'The combined adjustment is unusually large, so this estimate leans more on your answers than on market evidence.',
     ],
 

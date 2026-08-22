@@ -11,9 +11,12 @@ import { fixtures, signIn, clearRateLimiter } from './support/fixtures';
  *
  * The fixture geometry is the proof material: three published USD sale
  * records make the evidence median a real 110000, the seeded question's
- * "+5.000%" option turns it into exactly 115500.0000, and the option list
- * the browser sees carries NO percentage anywhere — server authority made
- * visible.
+ * +5.000% option turns it into exactly 115500.0000 server-side, and the
+ * owner never sees that configured weight: the option list carries no
+ * percentage, and each breakdown row shows only the factor's direction.
+ * The TOTAL keeps its exact percent — the base and final figures already
+ * imply the net effect, so the total hides nothing worth hiding — and it
+ * is the only percent anywhere on the owner surface.
  *
  * Only the UNRELATED homepage map endpoints are fulfilled with their valid
  * empty envelope (the Wave 3 pattern): the brief landing on the shell must
@@ -114,8 +117,11 @@ for (const locale of LOCALES) {
 
             /*
              * The valuation: engine median 110000 from the three seeded
-             * records, adjusted ONCE by the answered +5.000% to exactly
-             * 115500.0000 — Decimal end to end, asserted as exact strings.
+             * records, adjusted ONCE by the answered +5.000% server-side to
+             * exactly 115500.0000 — Decimal end to end, asserted as exact
+             * strings. The breakdown ROW explains the factor by direction
+             * only; the exact weight never renders. The TOTAL keeps its
+             * exact percent.
              */
             await page.getByTestId('request-valuation').click();
 
@@ -126,17 +132,25 @@ for (const locale of LOCALES) {
             const breakdown = page.getByTestId('valuation-breakdown');
             await expect(breakdown).toBeVisible();
             await expect(breakdown).toContainText('110000.0000');
-            await expect(page.getByTestId('breakdown-adjustment')).toContainText(RENOVATED[locale.code]);
-            await expect(page.getByTestId('breakdown-adjustment')).toContainText('+5.000%');
+            const adjustmentRow = page.getByTestId('breakdown-adjustment');
+            await expect(adjustmentRow).toContainText(RENOVATED[locale.code]);
+            await expect(adjustmentRow).toContainText('▲');
+            await expect(adjustmentRow).not.toContainText('%');
+            await expect(adjustmentRow).not.toContainText('5.000');
             await expect(page.getByTestId('breakdown-total')).toContainText('+5.000%');
 
             // No warning for a modest total: the threshold is |30.000|.
             await expect(page.getByTestId('adjustment-warning')).toHaveCount(0);
 
-            // The history's newest row carries ITS OWN snapshot breakdown.
+            // The history's newest row carries ITS OWN snapshot breakdown —
+            // direction-only factor rows, exact percent on the total alone.
             const newest = page.locator('[data-testid="history-list"] > li').first();
             await expect(newest).toContainText('115500.0000');
-            await expect(newest.getByTestId('history-adjustments')).toContainText('+5.000%');
+            const historyRow = newest.getByTestId('history-adjustment-row');
+            await expect(historyRow).toContainText('▲');
+            await expect(historyRow).not.toContainText('%');
+            await expect(historyRow).not.toContainText('5.000');
+            await expect(newest.getByTestId('history-total')).toContainText('+5.000%');
 
             // The owner-configurable maximum text scale keeps the breakdown
             // inside the viewport.

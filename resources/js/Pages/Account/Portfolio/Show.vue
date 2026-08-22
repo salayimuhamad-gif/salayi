@@ -24,8 +24,9 @@ const { localized } = useLocale();
  */
 /*
  * Wave 6: an adjustment as SNAPSHOTTED on the valuation row — labels and
- * percent exactly as applied, independent of whatever the live rule tables
- * say today.
+ * a derived direction, independent of whatever the live rule tables say
+ * today. The exact percent stays server-side (snapshot + admin builder);
+ * the owner sees which factors moved the estimate and which way.
  */
 interface AdjustmentRow {
     question_key: string;
@@ -35,7 +36,7 @@ interface AdjustmentRow {
     option_ckb: string;
     option_ar: string;
     option_en: string;
-    adjustment_percent: string;
+    direction: 'positive' | 'negative' | 'neutral';
     position: number;
 }
 
@@ -199,9 +200,11 @@ function entityName(option: NamedOption | undefined): string | null {
 
 /*
  * Wave 6 breakdown helpers. Labels come from the SNAPSHOT rows in the
- * page's language (Sorani floor); the signed percent renders verbatim —
- * exact stored scale, no reformatting — with an explicit plus so a
- * positive adjustment cannot read as a stray number.
+ * page's language (Sorani floor). Per-factor rows show a direction, not
+ * the configured weight — the exact percent never reaches this page. The
+ * signed percent stays for the TOTAL only, rendered verbatim — exact
+ * stored scale, no reformatting — with an explicit plus so a positive
+ * total cannot read as a stray number.
  */
 function adjustmentLabel(row: AdjustmentRow, part: 'question' | 'option'): string {
     const locale = document.documentElement.lang || 'ckb';
@@ -212,6 +215,26 @@ function adjustmentLabel(row: AdjustmentRow, part: 'question' | 'option'): strin
 
 function signedPercent(value: string): string {
     return value.startsWith('-') ? `${value}%` : `+${value}%`;
+}
+
+function directionGlyph(direction: AdjustmentRow['direction']): string {
+    return direction === 'positive' ? '▲' : direction === 'negative' ? '▼' : '—';
+}
+
+function directionLabel(direction: AdjustmentRow['direction']): string {
+    return direction === 'positive'
+        ? t('portfolio.valuation_breakdown.raised')
+        : direction === 'negative'
+          ? t('portfolio.valuation_breakdown.lowered')
+          : t('portfolio.valuation_breakdown.no_change');
+}
+
+function directionClass(direction: AdjustmentRow['direction']): string {
+    return direction === 'positive'
+        ? 'text-positive'
+        : direction === 'negative'
+          ? 'text-negative'
+          : 'text-ink-muted';
 }
 
 /** Display-only: whether |total| crosses the server's warning threshold. */
@@ -376,8 +399,9 @@ const factRows = (): Array<[string, string | null]> => [
                                 {{ adjustmentLabel(row, 'question') }}
                                 <span class="text-ink-faint">— {{ adjustmentLabel(row, 'option') }}</span>
                             </dt>
-                            <dd class="numeral shrink-0 text-ink" dir="ltr">
-                                {{ signedPercent(row.adjustment_percent) }}
+                            <dd class="shrink-0" :class="directionClass(row.direction)">
+                                <span aria-hidden="true">{{ directionGlyph(row.direction) }}</span>
+                                {{ directionLabel(row.direction) }}
                             </dd>
                         </div>
 
@@ -487,12 +511,20 @@ const factRows = (): Array<[string, string | null]> => [
                             v-for="adjustment in row.adjustments"
                             :key="adjustment.question_key"
                             class="text-xs text-ink-faint"
+                            data-testid="history-adjustment-row"
                         >
                             {{ adjustmentLabel(adjustment, 'question') }} —
                             {{ adjustmentLabel(adjustment, 'option') }}
-                            <span class="numeral" dir="ltr">{{ signedPercent(adjustment.adjustment_percent) }}</span>
+                            <span :class="directionClass(adjustment.direction)">
+                                <span aria-hidden="true">{{ directionGlyph(adjustment.direction) }}</span>
+                                {{ directionLabel(adjustment.direction) }}
+                            </span>
                         </p>
-                        <p v-if="row.adjustment_total_percent" class="text-xs font-medium text-ink-muted">
+                        <p
+                            v-if="row.adjustment_total_percent"
+                            class="text-xs font-medium text-ink-muted"
+                            data-testid="history-total"
+                        >
                             {{ t('portfolio.valuation_breakdown.total') }}
                             <span class="numeral" dir="ltr">{{ signedPercent(row.adjustment_total_percent) }}</span>
                         </p>
