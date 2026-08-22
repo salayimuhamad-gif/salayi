@@ -28,8 +28,8 @@ use Tests\TestCase;
  *   5b/5c/5d  option update, question delete, question insert arriving
  *       after a publish won — driven through the SERIALIZED editor, the
  *       production write path: the locked re-check reads ACTIVE and
- *       refuses before the operation closure ever runs (the fail() traps
- *       inside the closures prove child resolution happens only after
+ *       refuses before the operation closure ever runs (each probe's
+ *       operationRan flag proves child resolution happens only after
  *       the locked parent re-check). The genuine blocked-then-resume
  *       ordering with real row locks is proven separately, cross-process
  *       on MariaDB, in ValuationSerializationConcurrencyTest.
@@ -162,15 +162,20 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
         $publisher->publish($set);
 
         $editor = app(ValuationRuleEditor::class);
+        $operationRan = false;
+        $refused = false;
 
         try {
-            $editor->withLockedDraft($set->id, function (): void {
-                $this->fail('the editor ran an operation against a non-draft set');
+            $editor->withLockedDraft($set->id, static function () use (&$operationRan): void {
+                $operationRan = true;
             });
-            $this->fail('the editor accepted an ACTIVE set');
         } catch (ValuationRulePublishException $e) {
+            $refused = true;
             $this->assertSame('frozen', $e->errorKey);
         }
+
+        $this->assertTrue($refused, 'the editor accepted an ACTIVE set');
+        $this->assertFalse($operationRan, 'the editor ran an operation against a non-draft set');
 
         $this->assertSame(
             ValuationRuleSet::STATUS_ACTIVE,
@@ -196,15 +201,20 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
         $publisher->publish($set);
 
         $editor = app(ValuationRuleEditor::class);
+        $operationRan = false;
+        $refused = false;
 
         try {
-            $editor->withLockedDraft($set->id, function (): void {
-                $this->fail('the editor resolved a child of a non-draft set for deletion');
+            $editor->withLockedDraft($set->id, static function () use (&$operationRan): void {
+                $operationRan = true;
             });
-            $this->fail('the editor accepted an ACTIVE set');
         } catch (ValuationRulePublishException $e) {
+            $refused = true;
             $this->assertSame('frozen', $e->errorKey);
         }
+
+        $this->assertTrue($refused, 'the editor accepted an ACTIVE set');
+        $this->assertFalse($operationRan, 'the editor resolved a child of a non-draft set for deletion');
 
         $this->assertTrue(
             ValuationQuestion::query()->whereKey($doomed->id)->exists(),
@@ -221,15 +231,20 @@ final class ValuationDraftEditRaceProbeTest extends TestCase
         $publisher->publish($set);
 
         $editor = app(ValuationRuleEditor::class);
+        $operationRan = false;
+        $refused = false;
 
         try {
-            $editor->withLockedDraft($set->id, function (): void {
-                $this->fail('the editor ran a create against a non-draft set');
+            $editor->withLockedDraft($set->id, static function () use (&$operationRan): void {
+                $operationRan = true;
             });
-            $this->fail('the editor accepted an ACTIVE set');
         } catch (ValuationRulePublishException $e) {
+            $refused = true;
             $this->assertSame('frozen', $e->errorKey);
         }
+
+        $this->assertTrue($refused, 'the editor accepted an ACTIVE set');
+        $this->assertFalse($operationRan, 'the editor ran a create against a non-draft set');
 
         $this->assertSame(
             0,
