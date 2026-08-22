@@ -20,7 +20,9 @@ is not a procedure.
 nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`,
 `whatsapp_verified_at`), one nullable column on `knowledge_events`
 (`evidence_class`), four nullable columns on `portfolio_valuations`
-(`base_midpoint`, `base_low`, `base_high`, `adjustment_total_percent`), and
+(`base_midpoint`, `base_low`, `base_high`, `adjustment_total_percent`), one
+generated family-key column with its unique index on `valuation_rule_sets`
+(`project_family`, `vrs_family_version_unique`), and
 three data-only backfills (two search keys and the price-record scope ids)
 whose reversal is a documented no-op. That
 matters for the ORDER below, and it is the one thing people get wrong:
@@ -105,10 +107,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
 ```
 
-Expect **eleven** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **twelve** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -127,16 +129,22 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'   # expect eleven x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'   # expect twelve x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
 # Newest first. Each is path-targeted and independently verifiable. The three
 # data-only backfills (the two search keys and the price-record scope ids)
 # reverse as documented no-ops (the derived values stay, by design), so
-# reversing them only un-marks the migration rows. The valuation rule engine
+# reversing them only un-marks the migration rows. The family-uniqueness
+# reversal drops only its own unique index and generated column — no data
+# lives in either. The valuation rule engine
 # reversal drops its five additive tables and four additive columns — rule
 # definitions, stored answers and adjustment snapshots created during the
 # patched period go with them, which is the documented cost of this rollback.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Portfolio/Database/Migrations/2026_08_22_000200_valuation_rule_set_family_uniqueness.php \
+  --force
+
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Portfolio/Database/Migrations/2026_08_22_000100_valuation_rule_engine.php \
   --force
@@ -193,11 +201,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine'   # expect eleven x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly eleven fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'   # expect twelve x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly twelve fewer
 ```
 
-The count must have dropped by **exactly eleven**. If it dropped by more, an
+The count must have dropped by **exactly twelve**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 

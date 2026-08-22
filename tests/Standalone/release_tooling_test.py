@@ -1445,7 +1445,7 @@ check('the rollback rehearsal restores the backed-up build directory whole',
 # still expected the pre-choice landing on the Telegram linking page. The
 # canonical list lives here; every surface that states the inventory must
 # carry every name, and the tree may carry no post-baseline migration the
-# list does not name — an unexpected twelfth must fail HERE the way the
+# list does not name — an unexpected thirteenth must fail HERE the way the
 # unexpected ninth failed the rehearsal.
 INVENTORY = (
     'app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php',
@@ -1459,6 +1459,7 @@ INVENTORY = (
     'app/Modules/Identity/Database/Migrations/2026_08_19_000100_whatsapp_account_verification.php',
     'app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php',
     'app/Modules/Portfolio/Database/Migrations/2026_08_22_000100_valuation_rule_engine.php',
+    'app/Modules/Portfolio/Database/Migrations/2026_08_22_000200_valuation_rule_set_family_uniqueness.php',
 )
 # The first post-baseline migration's date key: anything at or after it in any
 # migration directory is this release's to declare.

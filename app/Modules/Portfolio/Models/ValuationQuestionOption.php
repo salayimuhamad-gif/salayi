@@ -62,27 +62,37 @@ final class ValuationQuestionOption extends Model
     protected static function booted(): void
     {
         /*
-         * Same freeze as the question: an option of a published set is what
-         * a persisted answer points at and what its percentage MEANS.
-         * Editable and deletable only while the owning set is a draft.
+         * Same freeze as the question, and the same both-endpoint rule: an
+         * option of a published set is what a persisted answer points at
+         * and what its percentage MEANS. Editable and deletable only while
+         * every owning set it touches — the ORIGINAL question's on a
+         * reparent, not just the new one's — is a draft. Fail-closed: a
+         * missing question or a non-draft set on either end refuses.
          */
-        $assertDraft = static function (self $option): void {
-            $status = ValuationRuleSet::query()
-                ->whereKey(
-                    ValuationQuestion::query()
-                        ->whereKey($option->valuation_question_id)
-                        ->value('valuation_rule_set_id'),
-                )
-                ->value('status');
+        $assertDraftParents = static function (self $option): void {
+            $questionIds = [$option->valuation_question_id];
 
-            if ($status !== ValuationRuleSet::STATUS_DRAFT) {
+            if ($option->exists && $option->isDirty('valuation_question_id')) {
+                $questionIds[] = $option->getOriginal('valuation_question_id');
+            }
+
+            $questionIds = array_values(array_unique($questionIds));
+
+            $draftParents = ValuationQuestion::query()
+                ->whereIn('id', $questionIds)
+                ->whereHas('ruleSet', static function ($query): void {
+                    $query->where('status', ValuationRuleSet::STATUS_DRAFT);
+                })
+                ->count();
+
+            if ($draftParents !== count($questionIds)) {
                 throw new RuntimeException(
                     'Options of a published valuation rule set are frozen — corrections are a new draft version.',
                 );
             }
         };
 
-        self::saving($assertDraft);
-        self::deleting($assertDraft);
+        self::saving($assertDraftParents);
+        self::deleting($assertDraftParents);
     }
 }

@@ -34,6 +34,12 @@ use Illuminate\Support\Facades\DB;
  * Corrections never edit published content: duplicateAsDraft() copies a set
  * into version N+1 with fresh rows, which is what keeps every persisted
  * answer meaning exactly what it meant when the owner gave it.
+ *
+ * This service is the ONLY lifecycle channel. The model refuses every dirty
+ * lifecycle column through ordinary saves in every state, so the publisher
+ * persists its own validated transitions with saveQuietly() — an event
+ * bypass that exists only at these three call sites, never as a writable
+ * flag somebody else could set.
  */
 final class ValuationRulePublisher
 {
@@ -86,15 +92,22 @@ final class ValuationRulePublisher
                 ->get()
                 ->filter(fn (ValuationRuleSet $active): bool => $this->scopeIntersects($active, $set));
 
+            /*
+             * saveQuietly(): the model's updating guard refuses EVERY
+             * lifecycle change through ordinary saves, publisher-shaped or
+             * not. These transitions are validated above and serialised by
+             * the lock, so they bypass the events instead of carrying a
+             * bypass flag the guard would have to trust.
+             */
             foreach ($predecessors as $predecessor) {
                 $predecessor->status = ValuationRuleSet::STATUS_RETIRED;
                 $predecessor->retired_at = now();
-                $predecessor->save();
+                $predecessor->saveQuietly();
             }
 
             $set->status = ValuationRuleSet::STATUS_ACTIVE;
             $set->published_at = now();
-            $set->save();
+            $set->saveQuietly();
 
             /*
              * The fail-closed assertion. By construction nothing should
@@ -123,9 +136,11 @@ final class ValuationRulePublisher
             throw new ValuationRulePublishException('not_active', ['status' => $set->status]);
         }
 
+        // The third and last of the publisher's quiet saves — the explicit
+        // active -> retired transition, validated by the isActive() check.
         $set->status = ValuationRuleSet::STATUS_RETIRED;
         $set->retired_at = now();
-        $set->save();
+        $set->saveQuietly();
 
         return $set->refresh();
     }
@@ -182,10 +197,14 @@ final class ValuationRulePublisher
     }
 
     /**
-     * The next free version in a scope family. Computed, not trusted from
-     * input: the unique index cannot police NULL-project families (NULLs
-     * never collide in a unique index), so the sequence is derived from
-     * the family's actual maximum every time.
+     * The next free version in a scope family, derived from the family's
+     * actual maximum every time — computed, never trusted from input.
+     *
+     * Uniqueness itself is the database's: the project_family generated key
+     * (coalesce(project_id, 0), migration 2026_08_22_000200) folds the
+     * NULL-project family into an indexable value, so when two writers both
+     * read MAX+1 concurrently the second insert dies on the unique index
+     * instead of minting a duplicate version.
      */
     public function nextVersion(string $scopeTransaction, ?int $projectId): int
     {

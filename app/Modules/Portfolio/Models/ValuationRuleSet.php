@@ -22,6 +22,12 @@ use RuntimeException;
  * set is what persisted owner answers point at — editing one in place would
  * silently change what thousands of stored answers mean.
  *
+ * The lifecycle columns (status, published_at, retired_at) move through the
+ * ValuationRulePublisher and nowhere else: an ordinary save refuses to touch
+ * them in EVERY state, and the publisher persists its own validated
+ * transitions with saveQuietly(), so there is no writable flag a caller
+ * could set to borrow that authority.
+ *
  * @property-read int|null $questions_count withCount alias, admin listing
  *
  * ---- generated model properties (scripts/generate-model-annotations.php)
@@ -37,6 +43,7 @@ use RuntimeException;
  * @property int|null $created_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property int|null $project_family
  *
  * ---- end generated model properties
  */
@@ -137,22 +144,39 @@ final class ValuationRuleSet extends Model
                 throw new RuntimeException('A retired valuation rule set is read-only.');
             }
 
-            if ($original !== self::STATUS_ACTIVE) {
+            if ($original === self::STATUS_ACTIVE) {
+                /*
+                 * Active content is frozen ENTIRELY — there is no legal
+                 * plain-save transition out of this state. Retirement
+                 * (status + retired_at together) is the publisher's move,
+                 * persisted with saveQuietly() after its own validation, so
+                 * any dirty attribute arriving through model events is an
+                 * in-place edit of rules that persisted answers and live
+                 * valuations depend on. Only the updated_at touch is
+                 * harmless.
+                 */
+                if (array_diff(array_keys($set->getDirty()), ['updated_at']) !== []) {
+                    throw new RuntimeException(
+                        'An active valuation rule set is frozen — corrections are a new draft version.',
+                    );
+                }
+
                 return;
             }
 
             /*
-             * Active content is frozen: the only legal transition is
-             * retirement (status + retired_at together). Any other dirty
-             * attribute is an in-place edit of rules that persisted answers
-             * and live valuations depend on.
+             * A draft edits content freely, but the lifecycle columns are
+             * the publisher's alone: a plain save that flips status is
+             * exactly how a draft would skip publish validation and
+             * supersession, and it has no business stamping published_at or
+             * retired_at either.
              */
-            $illegal = array_diff(array_keys($set->getDirty()), ['status', 'retired_at', 'updated_at']);
-
-            if ($illegal !== [] || ($set->isDirty('status') && $set->status !== self::STATUS_RETIRED)) {
-                throw new RuntimeException(
-                    'An active valuation rule set is frozen — corrections are a new draft version.',
-                );
+            foreach (['status', 'published_at', 'retired_at'] as $lifecycle) {
+                if ($set->isDirty($lifecycle)) {
+                    throw new RuntimeException(
+                        'Lifecycle transitions go through the publisher — a plain save cannot change status, published_at or retired_at.',
+                    );
+                }
             }
         });
 

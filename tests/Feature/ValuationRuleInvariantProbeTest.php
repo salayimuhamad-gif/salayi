@@ -15,12 +15,13 @@ use RuntimeException;
 use Tests\TestCase;
 
 /**
- * PHASE 1 REVIEW PROBES — invariant tests for three suspected lifecycle
- * bypasses, written in INVARIANT form: each asserts what a correct system
- * must refuse, so on the current code a confirmed hole shows up as a
- * FAILING test. They are expected to fail until the fixes are approved
- * and applied, at which point this file becomes the regression suite for
- * exactly these holes — no rewrite needed.
+ * PHASE 1 REVIEW PROBES — invariant tests for three lifecycle bypasses,
+ * written in INVARIANT form: each asserts what a correct system must
+ * refuse. On the pre-fix code every confirmed hole showed up as a FAILING
+ * test (CI run #254 on cc445d5 — probes 1a, 1b, 2a, 2b and 3a); with the
+ * fixes applied this file is the permanent regression suite for exactly
+ * those holes, plus the positive coverage proving the legal moves still
+ * work.
  *
  * Probed invariants:
  *   1a  draft -> active must be impossible by plain model save; only the
@@ -29,6 +30,9 @@ use Tests\TestCase;
  *   1b  retirement metadata must not be independently mutable on an
  *       active set: retired_at may only change together with the
  *       status transition to retired.
+ *   1c  active -> retired must go through the publisher too — even the
+ *       correctly shaped transition (status + retired_at together) is
+ *       refused as a plain save.
  *   2a  a question of a PUBLISHED set must not escape the freeze by
  *       being reparented onto a draft set first.
  *   2b  an option of a PUBLISHED set must not escape the freeze by
@@ -40,9 +44,15 @@ use Tests\TestCase;
  *       insert, exactly the interleaving two concurrent
  *       duplicateAsDraft() calls produce.
  *   3b  contrast control: the same duplicate insert in a PROJECT family
- *       IS refused by the composite unique index, proving the hole is
- *       specific to NULL project_id (NULLs never collide in a unique
- *       index on either engine).
+ *       IS refused by the 000100 composite unique index, proving hole 3
+ *       was specific to NULL project_id (NULLs never collide in a
+ *       unique index on either engine).
+ *
+ * The positive side — draft -> draft reparenting, distinct versions in
+ * one family, the same version across distinct families, and the
+ * publisher's own publish/supersede/retire channel — is covered at the
+ * bottom, so the freeze can never quietly widen into refusing the moves
+ * the design allows.
  */
 final class ValuationRuleInvariantProbeTest extends TestCase
 {
@@ -129,6 +139,21 @@ final class ValuationRuleInvariantProbeTest extends TestCase
         $set->save();
     }
 
+    public function test_probe_1c_an_active_set_cannot_be_retired_by_plain_save(): void
+    {
+        [$set] = $this->activeSet('p1c', 1);
+
+        $this->expectException(RuntimeException::class);
+
+        // Bypass attempt: the full retirement shape (status + retired_at
+        // together) — legal in meaning, but through a plain save instead of
+        // the publisher, which is the only channel allowed to move
+        // lifecycle columns.
+        $set->status = ValuationRuleSet::STATUS_RETIRED;
+        $set->retired_at = now();
+        $set->save();
+    }
+
     public function test_probe_2a_a_published_question_cannot_escape_the_freeze_by_reparenting(): void
     {
         [, $question] = $this->activeSet('p2a', 1);
@@ -163,19 +188,28 @@ final class ValuationRuleInvariantProbeTest extends TestCase
 
         /*
          * The exact interleaving of two concurrent writers: BOTH compute
-         * the next version before EITHER inserts. MAX+1 with no lock and
-         * no enforceable unique constraint (NULL project_id rows never
-         * collide) means both reads agree...
+         * the next version before EITHER inserts. MAX+1 with no lock means
+         * both reads agree...
          */
         $first = $publisher->nextVersion(ValuationRuleSet::SCOPE_TRANSACTION_SALE, null);
         $second = $publisher->nextVersion(ValuationRuleSet::SCOPE_TRANSACTION_SALE, null);
 
         $this->assertSame($first, $second);
 
-        // ...and both inserts land. For the invariant to hold, at most ONE
-        // row with this version may exist in the global family afterwards.
+        /*
+         * ...but only the FIRST insert lands. The project_family generated
+         * key (migration 2026_08_22_000200) folds NULL project_id into an
+         * indexable 0, so the second writer dies on vrs_family_version_unique
+         * at the database — the race's damage is refused, not stored.
+         */
         $this->draftSet('Racer A', $first);
-        $this->draftSet('Racer B', $second);
+
+        try {
+            $this->draftSet('Racer B', $second);
+            $this->fail('the GLOBAL scope family accepted duplicate version numbers');
+        } catch (QueryException) {
+            // Refused by the database, exactly where a race cannot skip it.
+        }
 
         $this->assertSame(
             1,
@@ -208,5 +242,108 @@ final class ValuationRuleInvariantProbeTest extends TestCase
         $this->expectException(QueryException::class);
 
         $this->draftSet('Project racer B', 1, $project->id);
+    }
+
+    /* ---------------------------------------------------------------------
+     * positive coverage — the legal moves the freeze must never swallow
+     * ------------------------------------------------------------------- */
+
+    private function project(string $slug): Project
+    {
+        return Project::query()->create([
+            'slug' => $slug,
+            'name_ckb' => 'پڕۆژەی '.$slug,
+            'name_en' => 'Project '.$slug,
+            'project_type' => 'residential',
+            'construction_status' => 'under_construction',
+            'delivery_status' => 'not_started',
+            'publication_status' => 'published',
+        ]);
+    }
+
+    public function test_a_draft_question_may_reparent_onto_another_draft(): void
+    {
+        $source = $this->draftSet('Draft source', 1);
+        $target = $this->draftSet('Draft target', 2);
+        $question = $this->question($source, 'movable_q');
+
+        // Both endpoints are drafts, so the move is authoring, not escape.
+        $question->valuation_rule_set_id = $target->id;
+        $question->save();
+
+        $this->assertSame($target->id, $question->refresh()->valuation_rule_set_id);
+    }
+
+    public function test_a_draft_option_may_reparent_onto_another_draft_question(): void
+    {
+        $source = $this->draftSet('Draft option source', 1);
+        $target = $this->draftSet('Draft option target', 2);
+        $option = $this->option($this->question($source, 'src_q'), 'movable_o');
+        $targetQuestion = $this->question($target, 'dst_q');
+
+        $option->valuation_question_id = $targetQuestion->id;
+        $option->save();
+
+        $this->assertSame($targetQuestion->id, $option->refresh()->valuation_question_id);
+    }
+
+    public function test_distinct_versions_still_coexist_in_the_global_family(): void
+    {
+        $this->draftSet('Global v1', 1);
+        $this->draftSet('Global v2', 2);
+
+        // The family index binds (scope, family, version) — the version
+        // SEQUENCE within one family stays perfectly legal.
+        $this->assertSame(
+            2,
+            ValuationRuleSet::query()
+                ->where('scope_transaction', ValuationRuleSet::SCOPE_TRANSACTION_SALE)
+                ->whereNull('project_id')
+                ->count(),
+        );
+    }
+
+    public function test_the_same_version_number_still_coexists_across_distinct_families(): void
+    {
+        $projectA = $this->project('family-a');
+        $projectB = $this->project('family-b');
+
+        // coalesce(project_id, 0) keeps families APART: global folds to 0,
+        // never onto a real project id, so version 1 exists once per family
+        // without any cross-family collision.
+        $this->draftSet('Global v1', 1);
+        $this->draftSet('Project A v1', 1, $projectA->id);
+        $this->draftSet('Project B v1', 1, $projectB->id);
+
+        $this->assertSame(3, ValuationRuleSet::query()->where('version', 1)->count());
+    }
+
+    public function test_the_publisher_remains_the_working_lifecycle_channel(): void
+    {
+        [$set] = $this->activeSet('lifecycle', 1);
+
+        // Publish worked: the guard refuses plain saves, not the publisher.
+        $this->assertSame(ValuationRuleSet::STATUS_ACTIVE, $set->status);
+        $this->assertNotNull($set->published_at);
+
+        // Supersession still works: v2 publishes and retires v1 atomically.
+        $publisher = app(ValuationRulePublisher::class);
+        $publisher->duplicateAsDraft($set);
+
+        $v2 = ValuationRuleSet::query()->orderByDesc('id')->firstOrFail();
+        $publisher->publish($v2);
+
+        $retired = ValuationRuleSet::query()->findOrFail($set->id);
+        $this->assertSame(ValuationRuleSet::STATUS_RETIRED, $retired->status);
+        $this->assertNotNull($retired->retired_at);
+
+        // And the explicit retirement path still works too.
+        $active = ValuationRuleSet::query()->findOrFail($v2->id);
+        $publisher->retire($active);
+
+        $this->assertSame(
+            ValuationRuleSet::STATUS_RETIRED,
+            ValuationRuleSet::query()->findOrFail($v2->id)->status,
+        );
     }
 }

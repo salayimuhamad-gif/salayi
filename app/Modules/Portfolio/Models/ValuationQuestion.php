@@ -81,23 +81,36 @@ final class ValuationQuestion extends Model
     protected static function booted(): void
     {
         /*
-         * The set's freeze extends to its content: questions are writable
-         * and deletable only while the set is a DRAFT. Once published, the
-         * rows are what persisted answers point at.
+         * The set's freeze extends to its content, and to BOTH ends of a
+         * move: a question is writable or deletable only while every set it
+         * touches is a DRAFT. On a reparent (a dirty valuation_rule_set_id
+         * on an existing row) that includes the ORIGINAL parent — a guard
+         * that read only the new one let a published set's question escape
+         * the freeze by being pointed at a draft first. Fail-closed: a
+         * missing or non-draft parent on either end refuses.
          */
-        $assertDraft = static function (self $question): void {
-            $status = ValuationRuleSet::query()
-                ->whereKey($question->valuation_rule_set_id)
-                ->value('status');
+        $assertDraftParents = static function (self $question): void {
+            $setIds = [$question->valuation_rule_set_id];
 
-            if ($status !== ValuationRuleSet::STATUS_DRAFT) {
+            if ($question->exists && $question->isDirty('valuation_rule_set_id')) {
+                $setIds[] = $question->getOriginal('valuation_rule_set_id');
+            }
+
+            $setIds = array_values(array_unique($setIds));
+
+            $draftParents = ValuationRuleSet::query()
+                ->whereIn('id', $setIds)
+                ->where('status', ValuationRuleSet::STATUS_DRAFT)
+                ->count();
+
+            if ($draftParents !== count($setIds)) {
                 throw new RuntimeException(
                     'Questions of a published valuation rule set are frozen — corrections are a new draft version.',
                 );
             }
         };
 
-        self::saving($assertDraft);
-        self::deleting($assertDraft);
+        self::saving($assertDraftParents);
+        self::deleting($assertDraftParents);
     }
 }
