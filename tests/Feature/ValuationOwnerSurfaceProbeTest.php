@@ -14,7 +14,6 @@ use App\Modules\Portfolio\Models\ValuationQuestionOption;
 use App\Modules\Portfolio\Models\ValuationRuleSet;
 use App\Modules\Portfolio\Services\ValuationRulePublisher;
 use Illuminate\Database\Events\QueryExecuted;
-use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -43,10 +42,12 @@ use Tests\TestCase;
  *   6b  UPDATE: a failed answer write must leave the property's fields
  *       UNTOUCHED — original label, original scope, original answers.
  *
- * The success path and the real database-exception path are pinned too:
- * a field change plus several answer changes commit together normally,
- * and a genuine unique violation raised by a concurrent answer row rolls
- * the WHOLE request back — property changes included.
+ * The success path and the real concurrent-race path are pinned too: a
+ * field change plus several answer changes commit together normally, and
+ * a genuine mid-request duplicate answer row is ABSORBED by the
+ * framework's createOrFirst recovery — the request commits whole with
+ * the submitted option winning, no exception, no torn state (run #263
+ * proved no unique violation escapes updateOrCreate).
  *
  * The remaining tests are permanent contract pins, expected to PASS:
  * consent refusal happens before any answer persistence and any
@@ -332,7 +333,7 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
         );
     }
 
-    public function test_a_concurrent_unique_violation_rolls_the_whole_request_back(): void
+    public function test_a_concurrent_duplicate_answer_row_is_absorbed_not_torn(): void
     {
         [, $question, $plus, $minus] = $this->activeRules();
         $owner = $this->member();
@@ -342,13 +343,20 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
         $minusId = $minus->id;
 
         /*
-         * The REAL database exception, not a simulated one: between
-         * updateOrCreate's miss and its INSERT, a concurrent request's row
-         * for the same (property, question) lands — reproduced by
-         * inserting it from the query hook — so the INSERT dies on
-         * ppa_property_question_unique. Safety invariant only: the OUTER
-         * transaction must roll the property changes back completely. The
-         * friendly 422 mapping for this rare race stays a separate issue.
+         * The REAL concurrent race: between updateOrCreate's miss and its
+         * INSERT, a competing request's row for the same (property,
+         * question) lands — reproduced by inserting it from the query
+         * hook, so the INSERT genuinely hits ppa_property_question_unique.
+         *
+         * Run #263 established what actually happens: the framework's
+         * updateOrCreate (firstOrCreate -> createOrFirst) CATCHES its own
+         * unique-violation, re-reads the winning row and updates it with
+         * the submitted option — the race is absorbed at row level, no
+         * exception escapes, and the request commits WHOLE. This pins
+         * exactly that: the safety invariant holds with no torn state and
+         * not even an error to map. The other half — a database error that
+         * DOES escape rolls property and answers back together — is what
+         * probes 6a/6b prove, injected at this same statement.
          */
         $armed = true;
         DB::listen(static function (QueryExecuted $event) use (&$armed, $propertyId, $questionId, $minusId): void {
@@ -373,34 +381,34 @@ final class ValuationOwnerSurfaceProbeTest extends TestCase
             ]);
         });
 
-        $this->withoutExceptionHandling();
-
-        try {
-            $this->actingAs($owner)->put('/account/portfolio/'.$property->id, [
+        $this->actingAs($owner)
+            ->put('/account/portfolio/'.$property->id, [
                 'label' => 'Raced update',
                 'property_type' => 'apartment',
                 'area_id' => $this->district->id,
                 'currency' => 'USD',
                 'consent_valuation' => true,
                 'answers' => [$question->id => $plus->id],
-            ]);
-            $this->fail('the unique violation never fired');
-        } catch (QueryException) {
-            // The database refused the duplicate — expected.
-        }
+            ])
+            ->assertRedirect()
+            ->assertSessionHasNoErrors();
 
         $this->assertFalse($armed, 'probe harness: the answer lookup was never observed');
 
-        $this->assertSame(
-            'Rules fixture',
-            $property->refresh()->label(),
-            'a unique-violation during the answer writes left the property half-updated',
-        );
+        // The whole request landed together: the field change committed
+        // and the SUBMITTED option won over the mid-flight duplicate.
+        $this->assertSame('Raced update', $property->refresh()->label());
+
+        $stored = PortfolioPropertyAnswer::query()
+            ->where('portfolio_property_id', $property->id)
+            ->where('valuation_question_id', $question->id)
+            ->firstOrFail();
+        $this->assertSame($plus->id, $stored->valuation_question_option_id);
 
         $this->assertSame(
-            0,
+            1,
             PortfolioPropertyAnswer::query()->where('portfolio_property_id', $property->id)->count(),
-            'the rolled-back request left answer rows behind',
+            'the absorbed race must resolve to exactly one row per question',
         );
     }
 
