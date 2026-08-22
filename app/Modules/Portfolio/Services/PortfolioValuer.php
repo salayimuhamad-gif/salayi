@@ -167,6 +167,15 @@ final class PortfolioValuer
                 }
             })
             ->orderByDesc('effective_date')
+            /*
+             * Same-date ties need a stable total order. Aggregate records for
+             * one period routinely share an effective_date, and without a
+             * secondary key WHICH of them survive the 400-row window was up
+             * to the engine's query plan. `id` is the immutable insertion
+             * key, so the window is now identical on every run, every
+             * engine, and every plan; ranking is otherwise unchanged.
+             */
+            ->orderByDesc('id')
             ->limit(self::MAX_COMPARABLES);
 
         $records = $query->get();
