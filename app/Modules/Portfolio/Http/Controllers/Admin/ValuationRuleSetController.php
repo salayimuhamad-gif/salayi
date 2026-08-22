@@ -482,7 +482,7 @@ final class ValuationRuleSetController extends Controller
     }
 
     /**
-     * @return array<string, mixed>
+     * @return array<model-property<ValuationQuestion>, mixed>
      */
     private function validateQuestion(Request $request, ValuationRuleSet $set, ?int $ignoreId = null): array
     {
@@ -505,7 +505,7 @@ final class ValuationRuleSetController extends Controller
     }
 
     /**
-     * @return array<string, mixed>
+     * @return array<model-property<ValuationQuestionOption>, mixed>
      */
     private function validateOption(Request $request, ValuationQuestion $question, ?int $ignoreId = null): array
     {

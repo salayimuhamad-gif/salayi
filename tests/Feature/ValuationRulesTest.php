@@ -558,9 +558,11 @@ final class ValuationRulesTest extends TestCase
 
         $resolver = app(ValuationRuleResolver::class);
 
-        $this->assertSame($newer->id, $resolver->activeSetFor(null, 'apartment')?->id);
-        // Stable across repeated calls.
-        $this->assertSame($newer->id, $resolver->activeSetFor(null, 'apartment')?->id);
+        // The later-published set wins the anomalous tie, deterministically:
+        // same inputs and the same ordering can produce no other answer.
+        $resolved = $resolver->activeSetFor(null, 'apartment');
+        $this->assertNotNull($resolved);
+        $this->assertSame($newer->id, $resolved->id);
         $this->assertGreaterThan($older->id, $newer->id);
     }
 
@@ -617,8 +619,10 @@ final class ValuationRulesTest extends TestCase
 
         app(ValuationRulePublisher::class)->publish($v2);
 
-        $this->assertSame(ValuationRuleSet::STATUS_RETIRED, ValuationRuleSet::query()->find($v1->id)?->status);
-        $this->assertNotNull(ValuationRuleSet::query()->find($v1->id)?->retired_at);
+        $retiredV1 = ValuationRuleSet::query()->find($v1->id);
+        $this->assertNotNull($retiredV1);
+        $this->assertSame(ValuationRuleSet::STATUS_RETIRED, $retiredV1->status);
+        $this->assertNotNull($retiredV1->retired_at);
         $this->assertSame(ValuationRuleSet::STATUS_ACTIVE, ValuationRuleSet::query()->find($v2->id)?->status);
 
         // Exactly one active claim on the family, before and after.

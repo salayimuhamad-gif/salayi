@@ -181,7 +181,7 @@ final class ValuationAdjustments
      *
      * @param  array{midpoint: string|null, low: string|null, high: string|null}  $result
      * @param  AdjustmentPlan  $plan
-     * @return array<string, string|null>
+     * @return array<model-property<\App\Modules\Portfolio\Models\PortfolioValuation>, string|null>
      */
     public function apply(array $result, array $plan): array
     {

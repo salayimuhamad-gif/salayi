@@ -80,6 +80,7 @@ final class PortfolioValuer
             $property->currency,
         );
 
+        /** @var array<model-property<PortfolioValuation>, mixed> $attributes */
         $attributes = [
             'portfolio_property_id' => $property->id,
             'midpoint' => $result['midpoint'],
