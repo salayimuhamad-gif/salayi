@@ -132,5 +132,23 @@ return [
         'insufficient' => 'لا توجد أدلة منشورة كافية للتقدير. تم تسجيل المحاولة.',
         'reason_no_transaction_evidence_available' => 'لا توجد بعد أدلة معاملات منشورة لهذا الموقع.',
         'reason_insufficient_comparables_at_every_match_level' => 'توجد أدلة منشورة لكن القليل منها يطابق هذا العقار، حتى عند أوسع مستوى مقارنة.',
+        'reason_adjustments_exceed_valuation_basis' => 'إجاباتك تخفض التقدير إلى صفر أو أقل، لذا لا يُعرض أي رقم — الأساس السوقي والتعديلات المطبقة مسجلة.',
+    ],
+
+    // Wave 6: the optional valuation questions an active rule set asks.
+    'valuation_questions' => [
+        'title' => 'تفاصيل التقييم',
+        'hint' => 'اختياري. تصف هذه الإجابات هذا العقار تحديدًا وتعدّل تقديره السوقي. تخطي أي منها لا بأس به.',
+        'not_answered' => 'بدون إجابة',
+        'stale_notice' => 'بعض الإجابات السابقة لم تعد تطابق الأسئلة الحالية ولا تُطبَّق. يرجى مراجعة اختياراتك أدناه.',
+        'invalid' => 'إحدى الإجابات المرسلة لم تعد متاحة. أعد تحميل الصفحة واختر مجددًا.',
+    ],
+
+    // Wave 6: how an adjusted estimate is explained, from its own snapshot.
+    'valuation_breakdown' => [
+        'title' => 'كيف تكوّن هذا التقدير',
+        'baseline' => 'الأساس السوقي',
+        'total' => 'إجمالي التعديل',
+        'warning' => 'إجمالي التعديل كبير بشكل غير معتاد، لذا يعتمد هذا التقدير على إجاباتك أكثر من اعتماده على أدلة السوق.',
     ],
 ];

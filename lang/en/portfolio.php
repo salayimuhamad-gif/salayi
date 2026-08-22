@@ -132,5 +132,23 @@ return [
         'insufficient' => 'There was not enough published evidence for an estimate. The attempt was recorded.',
         'reason_no_transaction_evidence_available' => 'No published transaction evidence exists for this location yet.',
         'reason_insufficient_comparables_at_every_match_level' => 'Published evidence exists but too little of it matches this property, even at the widest comparison level.',
+        'reason_adjustments_exceed_valuation_basis' => 'Your answers would adjust the estimate to zero or below, so no figure is shown — the market baseline and the applied adjustments are recorded instead.',
+    ],
+
+    // Wave 6: the optional valuation questions an active rule set asks.
+    'valuation_questions' => [
+        'title' => 'Valuation details',
+        'hint' => 'Optional. These answers describe this specific property and adjust its market estimate. Skipping any of them is fine.',
+        'not_answered' => 'Not answered',
+        'stale_notice' => 'Some earlier answers no longer match the current questions and are not applied. Please review your choices below.',
+        'invalid' => 'One of the submitted answers is no longer available. Reload the page and choose again.',
+    ],
+
+    // Wave 6: how an adjusted estimate is explained, from its own snapshot.
+    'valuation_breakdown' => [
+        'title' => 'How this estimate was formed',
+        'baseline' => 'Market baseline',
+        'total' => 'Total adjustment',
+        'warning' => 'The combined adjustment is unusually large, so this estimate leans more on your answers than on market evidence.',
     ],
 ];

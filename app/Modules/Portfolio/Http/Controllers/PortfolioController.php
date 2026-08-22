@@ -4,21 +4,30 @@ declare(strict_types=1);
 
 namespace App\Modules\Portfolio\Http\Controllers;
 
+use App\Modules\Core\ValueObjects\Decimal;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Operations\Services\AuditLogger;
 use App\Modules\Portfolio\Models\PortfolioMedia;
 use App\Modules\Portfolio\Models\PortfolioProperty;
+use App\Modules\Portfolio\Models\PortfolioPropertyAnswer;
 use App\Modules\Portfolio\Models\PortfolioValuation;
+use App\Modules\Portfolio\Models\PortfolioValuationAdjustment;
+use App\Modules\Portfolio\Models\ValuationQuestion;
+use App\Modules\Portfolio\Models\ValuationQuestionOption;
 use App\Modules\Portfolio\Services\PortfolioMediaService;
 use App\Modules\Portfolio\Services\PortfolioSummaryService;
 use App\Modules\Portfolio\Services\PortfolioValuer;
+use App\Modules\Portfolio\Services\ValuationAdjustments;
+use App\Modules\Portfolio\Services\ValuationRuleResolver;
 use App\Modules\Projects\Models\Project;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -38,7 +47,11 @@ use Inertia\Response;
  */
 final class PortfolioController extends Controller
 {
-    public function __construct(private readonly AuditLogger $audit) {}
+    public function __construct(
+        private readonly AuditLogger $audit,
+        private readonly ValuationAdjustments $adjustments,
+        private readonly ValuationRuleResolver $resolver,
+    ) {}
 
     public function index(Request $request, PortfolioSummaryService $summary): Response
     {
@@ -121,11 +134,23 @@ final class PortfolioController extends Controller
             'history' => $model->valuations()
                 ->orderByDesc('calculated_at')
                 ->limit(24)
+                /*
+                 * Wave 6: each row carries ITS OWN adjustment snapshots —
+                 * keys, labels and percents as they read at calculation
+                 * time. History never joins back to the live rule tables,
+                 * so retiring or deleting a rule set changes nothing here.
+                 */
+                ->with('adjustments')
                 ->get()
-                ->map(static fn (PortfolioValuation $valuation): array => [
+                ->map(fn (PortfolioValuation $valuation): array => [
                     'midpoint' => $valuation->midpoint === null ? null : (string) $valuation->midpoint,
                     'low' => $valuation->low === null ? null : (string) $valuation->low,
                     'high' => $valuation->high === null ? null : (string) $valuation->high,
+                    'base_midpoint' => $valuation->base_midpoint === null ? null : (string) $valuation->base_midpoint,
+                    'adjustment_total_percent' => $valuation->adjustment_total_percent === null
+                        ? null
+                        : (string) $valuation->adjustment_total_percent,
+                    'adjustments' => $this->adjustmentRows($valuation),
                     'currency' => $valuation->currency,
                     'confidence' => $valuation->confidence,
                     'match_level' => $valuation->match_level,
@@ -137,12 +162,34 @@ final class PortfolioController extends Controller
                 ])
                 ->values()
                 ->all(),
+            /*
+             * Wave 6: the question surface for the edit form — null with
+             * the flag off, so the page cannot even hint at the feature.
+             */
+            'valuation_rules' => $this->valuationRulesProps($model),
+            // The current estimate's breakdown, straight from its own
+            // snapshot rows (flag-independent: history explains itself).
+            'valuation_adjustments' => $model->latestValuation === null
+                ? []
+                : $this->adjustmentRows($model->latestValuation),
+            'adjustment_warning_threshold' => ValuationAdjustments::LARGE_ADJUSTMENT_WARNING,
         ]);
     }
 
     public function store(Request $request): RedirectResponse
     {
         $validated = $this->validateProperty($request);
+
+        /*
+         * Wave 6: answers are validated BEFORE the property exists, against
+         * the scope the VALIDATED input describes, so a refused answer set
+         * leaves nothing behind — not even the property row.
+         */
+        $answerChanges = $this->validateAnswers(
+            $request,
+            $validated['project_id'] ?? null,
+            $validated['property_type'],
+        );
 
         $hasPin = ($validated['latitude'] ?? null) !== null;
 
@@ -180,6 +227,8 @@ final class PortfolioController extends Controller
         $property->setNotes($validated['notes'] ?? null);
         $property->save();
 
+        $this->applyAnswerChanges($property, $answerChanges);
+
         $this->audit->record('portfolio.property_created', $property);
 
         return redirect(localized_route('portfolio.index'))->with('success', __('portfolio.saved'));
@@ -195,6 +244,17 @@ final class PortfolioController extends Controller
         $model = $this->ownedQuery($request)->findOrFail($property);
 
         $validated = $this->validateProperty($request, updating: true);
+
+        /*
+         * Wave 6: validated against the scope this SAVE will produce — an
+         * edit that moves the property to another project or type is judged
+         * by the destination's questions, not the ones it is leaving.
+         */
+        $answerChanges = $this->validateAnswers(
+            $request,
+            $validated['project_id'] ?? null,
+            $validated['property_type'],
+        );
 
         /*
          * H9 location semantics on edit. §9.3 keeps stored coordinates
@@ -240,6 +300,8 @@ final class PortfolioController extends Controller
         $model->setNotes($validated['notes'] ?? null);
         $model->save();
 
+        $this->applyAnswerChanges($model, $answerChanges);
+
         $this->audit->record('portfolio.property_updated', $model);
 
         return redirect(localized_route('portfolio.show', [$model->id]))->with('success', __('portfolio.saved'));
@@ -262,11 +324,33 @@ final class PortfolioController extends Controller
             return back()->withErrors(['valuation' => __('portfolio.valuation_actions.consent_required')]);
         }
 
+        /*
+         * Wave 6: answers submitted WITH the request are persisted first,
+         * so "submitted beats persisted" is literal — by the time the
+         * valuer reads the answer rows, the submission is the answer rows.
+         */
+        $this->applyAnswerChanges(
+            $model,
+            $this->validateAnswers($request, $model->project_id, $model->property_type),
+        );
+
         $valuation = $valuer->value($model);
+
+        /*
+         * Audit carries COUNTS and the total, never labels or answer
+         * content — enough to explain "why did the figure move" without
+         * copying an owner's property details into the log.
+         */
+        $total = $valuation->adjustment_total_percent;
 
         $this->audit->record('portfolio.valuation_requested', $model, [], [
             'valuation_id' => $valuation->id,
             'outcome' => $valuation->no_valuation_reason ?? 'valued',
+            'answered_count' => $valuation->adjustments()->count(),
+            'total_percent' => $total === null ? null : (string) $total,
+            'warned' => $total !== null && Decimal::of((string) $total, 3)
+                ->abs()
+                ->compareTo(ValuationAdjustments::LARGE_ADJUSTMENT_WARNING) >= 0,
         ]);
 
         return back()->with(
@@ -554,6 +638,18 @@ final class PortfolioController extends Controller
                 'midpoint' => $valuation->midpoint === null ? null : (string) $valuation->midpoint,
                 'low' => $valuation->low === null ? null : (string) $valuation->low,
                 'high' => $valuation->high === null ? null : (string) $valuation->high,
+                /*
+                 * Wave 6: the pre-adjustment engine figures and the exact
+                 * total, null on every row the rule engine never touched —
+                 * absence is the honest statement about how an old row was
+                 * computed.
+                 */
+                'base_midpoint' => $valuation->base_midpoint === null ? null : (string) $valuation->base_midpoint,
+                'base_low' => $valuation->base_low === null ? null : (string) $valuation->base_low,
+                'base_high' => $valuation->base_high === null ? null : (string) $valuation->base_high,
+                'adjustment_total_percent' => $valuation->adjustment_total_percent === null
+                    ? null
+                    : (string) $valuation->adjustment_total_percent,
                 'confidence' => $valuation->confidence,
                 'no_valuation_reason' => $valuation->no_valuation_reason,
                 'calculated_at' => $valuation->calculated_at->toDateString(),
@@ -573,5 +669,219 @@ final class PortfolioController extends Controller
                 'created_at' => $valuation->calculated_at->toDateString(),
             ],
         ];
+    }
+
+    /**
+     * One valuation's adjustment snapshots, exactly as stored — trilingual
+     * labels and the applied percent, never a join to the live rule tables.
+     *
+     * @return list<array<string, string|int>>
+     */
+    private function adjustmentRows(PortfolioValuation $valuation): array
+    {
+        return $valuation->adjustments
+            ->map(static fn (PortfolioValuationAdjustment $row): array => [
+                'question_key' => $row->question_key,
+                'question_ckb' => $row->question_ckb,
+                'question_ar' => $row->question_ar,
+                'question_en' => $row->question_en,
+                'option_ckb' => $row->option_ckb,
+                'option_ar' => $row->option_ar,
+                'option_en' => $row->option_en,
+                'adjustment_percent' => (string) $row->adjustment_percent,
+                'position' => (int) $row->position,
+            ])
+            ->values()
+            ->all();
+    }
+
+    /**
+     * The Wave 6 question surface for the edit form.
+     *
+     * Null while the flag is off — the page then has nothing to render or
+     * hint at. With the flag on: the resolved active set's active questions
+     * WITHOUT their percentages (the browser shows choices, the server owns
+     * the numbers), the owner's valid persisted answers for rehydration,
+     * and a count of stale answers so the form can say why an old choice
+     * is no longer preselected.
+     *
+     * @return array{
+     *     questions: list<array<string, mixed>>,
+     *     answers: array<int, int>,
+     *     stale: int,
+     * }|null
+     */
+    private function valuationRulesProps(PortfolioProperty $model): ?array
+    {
+        if (! feature(ValuationAdjustments::FLAG)) {
+            return null;
+        }
+
+        $plan = $this->adjustments->planFor($model);
+
+        $questions = [];
+
+        if ($plan['rule_set_id'] !== null) {
+            $questions = ValuationQuestion::query()
+                ->where('valuation_rule_set_id', $plan['rule_set_id'])
+                ->where('is_active', true)
+                ->orderBy('sort_order')
+                ->orderBy('id')
+                ->with(['options' => static function ($query): void {
+                    $query->where('is_active', true);
+                }])
+                ->get()
+                ->map(static fn (ValuationQuestion $question): array => [
+                    'id' => (int) $question->id,
+                    'key' => $question->key,
+                    'question_type' => $question->question_type,
+                    'label_ckb' => $question->label_ckb,
+                    'label_ar' => $question->label_ar,
+                    'label_en' => $question->label_en,
+                    'help_ckb' => $question->help_ckb,
+                    'help_ar' => $question->help_ar,
+                    'help_en' => $question->help_en,
+                    'options' => $question->options
+                        ->map(static fn (ValuationQuestionOption $option): array => [
+                            'id' => (int) $option->id,
+                            'key' => $option->key,
+                            'label_ckb' => $option->label_ckb,
+                            'label_ar' => $option->label_ar,
+                            'label_en' => $option->label_en,
+                        ])
+                        ->values()
+                        ->all(),
+                ])
+                ->values()
+                ->all();
+        }
+
+        $answers = [];
+
+        foreach ($plan['applied'] as $row) {
+            $answers[$row['question_id']] = $row['option_id'];
+        }
+
+        return [
+            'questions' => $questions,
+            'answers' => $answers,
+            'stale' => count($plan['stale']),
+        ];
+    }
+
+    /**
+     * Validate a submitted `answers` payload against the server's own
+     * authority chain, refusing the WHOLE submission on the first break.
+     *
+     * The chain, per answer: the question must be an ACTIVE question of the
+     * ACTIVE set that applies to the given scope, and the option must be an
+     * ACTIVE option of THAT question. Anything else — a tampered id, a
+     * cross-set question, a retired option — fails validation, and because
+     * this runs before any write, a refusal persists NOTHING. The payload
+     * carries ids only; a percentage has no field to arrive in.
+     *
+     * @return array{writes: array<int, int>, clears: list<int>}
+     */
+    private function validateAnswers(Request $request, ?int $projectId, string $propertyType): array
+    {
+        $none = ['writes' => [], 'clears' => []];
+
+        // Flag off: the form never offered questions, so a stray payload
+        // is ignored rather than judged — baseline behaviour, byte for byte.
+        if (! feature(ValuationAdjustments::FLAG) || ! $request->has('answers')) {
+            return $none;
+        }
+
+        $raw = $request->input('answers');
+
+        if (! is_array($raw)) {
+            throw ValidationException::withMessages([
+                'answers' => __('portfolio.valuation_questions.invalid'),
+            ]);
+        }
+
+        if ($raw === []) {
+            return $none;
+        }
+
+        $set = $this->resolver->activeSetFor($projectId, $propertyType);
+
+        $questions = $set === null
+            ? collect()
+            : ValuationQuestion::query()
+                ->where('valuation_rule_set_id', $set->id)
+                ->where('is_active', true)
+                ->with(['options' => static function ($query): void {
+                    $query->where('is_active', true);
+                }])
+                ->get()
+                ->keyBy('id');
+
+        $writes = [];
+        $clears = [];
+
+        foreach ($raw as $questionId => $optionId) {
+            $question = is_numeric((string) $questionId) ? $questions->get((int) $questionId) : null;
+
+            if (! $question instanceof ValuationQuestion) {
+                throw ValidationException::withMessages([
+                    'answers' => __('portfolio.valuation_questions.invalid'),
+                ]);
+            }
+
+            // Null (or blank) clears the stored answer: "no answer" is a
+            // legitimate state and the form never invents a default.
+            if ($optionId === null || $optionId === '') {
+                $clears[] = (int) $question->id;
+
+                continue;
+            }
+
+            $option = is_numeric($optionId)
+                ? $question->options->firstWhere('id', (int) $optionId)
+                : null;
+
+            if (! $option instanceof ValuationQuestionOption) {
+                throw ValidationException::withMessages([
+                    'answers' => __('portfolio.valuation_questions.invalid'),
+                ]);
+            }
+
+            $writes[(int) $question->id] = (int) $option->id;
+        }
+
+        return ['writes' => $writes, 'clears' => $clears];
+    }
+
+    /**
+     * Persist a VALIDATED answer change set: one row per question per
+     * property, replaced on change, removed on clear — all or nothing.
+     *
+     * @param  array{writes: array<int, int>, clears: list<int>}  $changes
+     */
+    private function applyAnswerChanges(PortfolioProperty $property, array $changes): void
+    {
+        if ($changes['writes'] === [] && $changes['clears'] === []) {
+            return;
+        }
+
+        DB::transaction(static function () use ($property, $changes): void {
+            foreach ($changes['writes'] as $questionId => $optionId) {
+                PortfolioPropertyAnswer::query()->updateOrCreate(
+                    [
+                        'portfolio_property_id' => $property->id,
+                        'valuation_question_id' => $questionId,
+                    ],
+                    ['valuation_question_option_id' => $optionId],
+                );
+            }
+
+            if ($changes['clears'] !== []) {
+                PortfolioPropertyAnswer::query()
+                    ->where('portfolio_property_id', $property->id)
+                    ->whereIn('valuation_question_id', $changes['clears'])
+                    ->delete();
+            }
+        });
     }
 }
