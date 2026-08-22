@@ -6,6 +6,7 @@ namespace App\Modules\Portfolio\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use RuntimeException;
 
@@ -23,6 +24,10 @@ use RuntimeException;
  * @property string|null $midpoint
  * @property string|null $low
  * @property string|null $high
+ * @property string|null $base_midpoint
+ * @property string|null $base_low
+ * @property string|null $base_high
+ * @property string|null $adjustment_total_percent
  * @property string $currency
  * @property string $confidence
  * @property int|null $match_level
@@ -47,7 +52,9 @@ final class PortfolioValuation extends Model
     protected $table = 'portfolio_valuations';
 
     protected $fillable = [
-        'portfolio_property_id', 'midpoint', 'low', 'high', 'currency',
+        'portfolio_property_id', 'midpoint', 'low', 'high',
+        'base_midpoint', 'base_low', 'base_high', 'adjustment_total_percent',
+        'currency',
         'confidence', 'match_level', 'match_label', 'methodology',
         'comparison_count', 'data_period_from', 'data_period_to',
         'excluded_asking_count', 'excluded_asking_note', 'no_valuation_reason',
@@ -60,6 +67,10 @@ final class PortfolioValuation extends Model
             'midpoint' => 'decimal:4',
             'low' => 'decimal:4',
             'high' => 'decimal:4',
+            'base_midpoint' => 'decimal:4',
+            'base_low' => 'decimal:4',
+            'base_high' => 'decimal:4',
+            'adjustment_total_percent' => 'decimal:3',
             'match_level' => 'integer',
             'comparison_count' => 'integer',
             'excluded_asking_count' => 'integer',
@@ -75,6 +86,19 @@ final class PortfolioValuation extends Model
     public function property(): BelongsTo
     {
         return $this->belongsTo(PortfolioProperty::class, 'portfolio_property_id');
+    }
+
+    /**
+     * The adjustments THIS valuation applied, as snapshotted at calculation
+     * time (Wave 6) — display order, never a join to the live rule tables.
+     *
+     * @return HasMany<PortfolioValuationAdjustment, $this>
+     */
+    public function adjustments(): HasMany
+    {
+        return $this->hasMany(PortfolioValuationAdjustment::class, 'portfolio_valuation_id')
+            ->orderBy('position')
+            ->orderBy('id');
     }
 
     /** A row with no midpoint records that no valuation was possible, and why. */

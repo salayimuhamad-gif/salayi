@@ -1,0 +1,211 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Modules\Portfolio\Models;
+
+use App\Modules\Identity\Models\User;
+use App\Modules\Projects\Models\Project;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
+use RuntimeException;
+
+/**
+ * A versioned set of valuation adjustment questions (Wave 6).
+ *
+ * The lifecycle is the whole design: a DRAFT is editable and invisible to
+ * valuations; publishing freezes it as the single ACTIVE version for its
+ * scope; a correction is a NEW draft version with fresh rows, never an edit.
+ * The freeze is enforced HERE, not by admin-UI discipline, because an active
+ * set is what persisted owner answers point at — editing one in place would
+ * silently change what thousands of stored answers mean.
+ *
+ * The lifecycle columns (status, published_at, retired_at) move through the
+ * ValuationRulePublisher and nowhere else: an ordinary save refuses to touch
+ * them in EVERY state, and the publisher persists its own validated
+ * transitions with saveQuietly(), so there is no writable flag a caller
+ * could set to borrow that authority.
+ *
+ * @property-read int|null $questions_count withCount alias, admin listing
+ *
+ * ---- generated model properties (scripts/generate-model-annotations.php)
+ * @property int $id
+ * @property string $name
+ * @property string $scope_transaction
+ * @property int|null $project_id
+ * @property array<string, mixed>|null $property_types
+ * @property int $version
+ * @property string $status
+ * @property Carbon|null $published_at
+ * @property Carbon|null $retired_at
+ * @property int|null $created_by
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property int|null $project_family
+ *
+ * ---- end generated model properties
+ */
+final class ValuationRuleSet extends Model
+{
+    public const STATUS_DRAFT = 'draft';
+
+    public const STATUS_ACTIVE = 'active';
+
+    public const STATUS_RETIRED = 'retired';
+
+    public const STATUSES = [self::STATUS_DRAFT, self::STATUS_ACTIVE, self::STATUS_RETIRED];
+
+    /**
+     * The only transaction basis the portfolio values today — the same
+     * 'sale' the PortfolioValuer states as its evidence basis. Stored per
+     * set so the claim is explicit on every row.
+     */
+    public const SCOPE_TRANSACTION_SALE = 'sale';
+
+    protected $table = 'valuation_rule_sets';
+
+    protected $fillable = [
+        'name', 'scope_transaction', 'project_id', 'property_types',
+        'version', 'status', 'published_at', 'retired_at', 'created_by',
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            'property_types' => 'array',
+            'version' => 'integer',
+            'published_at' => 'datetime',
+            'retired_at' => 'datetime',
+        ];
+    }
+
+    /**
+     * Every question, in the order the owner form and the admin builder
+     * both render them.
+     *
+     * @return HasMany<ValuationQuestion, $this>
+     */
+    public function questions(): HasMany
+    {
+        return $this->hasMany(ValuationQuestion::class, 'valuation_rule_set_id')
+            ->orderBy('sort_order')
+            ->orderBy('id');
+    }
+
+    /** @return BelongsTo<Project, $this> */
+    public function project(): BelongsTo
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    /** @return BelongsTo<User, $this> */
+    public function creator(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function isDraft(): bool
+    {
+        return $this->status === self::STATUS_DRAFT;
+    }
+
+    public function isActive(): bool
+    {
+        return $this->status === self::STATUS_ACTIVE;
+    }
+
+    /**
+     * Whether this set's questions apply to the given property facts. Scope
+     * is deliberately coarse and deterministic: the basis must match, a
+     * project-scoped set matches only its project, and a property-type list
+     * matches only listed types. Anything finer belongs in the questions
+     * themselves, where the owner answers it explicitly.
+     */
+    public function appliesTo(?int $projectId, string $propertyType): bool
+    {
+        if ($this->project_id !== null && $this->project_id !== $projectId) {
+            return false;
+        }
+
+        $types = $this->property_types;
+
+        return $types === null || $types === [] || in_array($propertyType, $types, true);
+    }
+
+    protected static function booted(): void
+    {
+        self::updating(static function (self $set): void {
+            $original = self::persistedStatus($set);
+
+            if ($original === self::STATUS_RETIRED) {
+                // Retired sets are the read-only record of what WAS active.
+                throw new RuntimeException('A retired valuation rule set is read-only.');
+            }
+
+            if ($original === self::STATUS_ACTIVE) {
+                /*
+                 * Active content is frozen ENTIRELY — there is no legal
+                 * plain-save transition out of this state. Retirement
+                 * (status + retired_at together) is the publisher's move,
+                 * persisted with saveQuietly() after its own validation, so
+                 * any dirty attribute arriving through model events is an
+                 * in-place edit of rules that persisted answers and live
+                 * valuations depend on. Only the updated_at touch is
+                 * harmless.
+                 */
+                if (array_diff(array_keys($set->getDirty()), ['updated_at']) !== []) {
+                    throw new RuntimeException(
+                        'An active valuation rule set is frozen — corrections are a new draft version.',
+                    );
+                }
+
+                return;
+            }
+
+            /*
+             * A draft edits content freely, but the lifecycle columns are
+             * the publisher's alone: a plain save that flips status is
+             * exactly how a draft would skip publish validation and
+             * supersession, and it has no business stamping published_at or
+             * retired_at either.
+             */
+            foreach (['status', 'published_at', 'retired_at'] as $lifecycle) {
+                if ($set->isDirty($lifecycle)) {
+                    throw new RuntimeException(
+                        'Lifecycle transitions go through the publisher — a plain save cannot change status, published_at or retired_at.',
+                    );
+                }
+            }
+        });
+
+        self::deleting(static function (self $set): void {
+            // Draft and retired sets may be deleted (history lives in the
+            // valuation snapshots, not here); the active set must be retired
+            // first so there is never a moment with a half-deleted live set.
+            if (self::persistedStatus($set) === self::STATUS_ACTIVE) {
+                throw new RuntimeException('Retire an active valuation rule set before deleting it.');
+            }
+        });
+    }
+
+    /**
+     * The status the DATABASE holds for this row right now — never the
+     * instance's memory of it. A stale draft-era model whose row activated
+     * meanwhile used to sail through guards that trusted getOriginal()
+     * (probe 5a); judging the persisted row refuses it in every state.
+     * Defence-in-depth only: the editor and publisher transactions are the
+     * actual atomicity mechanism. A vanished row fails closed.
+     */
+    private static function persistedStatus(self $set): string
+    {
+        $status = self::query()->whereKey($set->getKey())->value('status');
+
+        if (! is_string($status) || $status === '') {
+            throw new RuntimeException('This valuation rule set no longer exists — reload before editing.');
+        }
+
+        return $status;
+    }
+}

@@ -32,7 +32,12 @@ use App\Modules\Market\Models\PriceRecord;
 use App\Modules\Marketplace\Models\Offer;
 use App\Modules\Marketplace\Models\OfferMedia;
 use App\Modules\Portfolio\Models\PortfolioProperty;
+use App\Modules\Portfolio\Models\PortfolioPropertyAnswer;
 use App\Modules\Portfolio\Models\PortfolioValuation;
+use App\Modules\Portfolio\Models\PortfolioValuationAdjustment;
+use App\Modules\Portfolio\Models\ValuationQuestion;
+use App\Modules\Portfolio\Models\ValuationQuestionOption;
+use App\Modules\Portfolio\Models\ValuationRuleSet;
 use App\Modules\Projects\Models\Developer;
 use App\Modules\Projects\Models\OrphanedFile;
 use App\Modules\Projects\Models\Project;
@@ -143,6 +148,20 @@ final class CoreServiceProvider extends ModuleServiceProvider
             // --- Step 6: portfolio, alerts, leads ---
             'portfolio_property' => PortfolioProperty::class,
             'portfolio_valuation' => PortfolioValuation::class,
+
+            /*
+             * --- Wave 6: the valuation rule engine. ---
+             *
+             * Registered the day they shipped, because the admin builder
+             * audits every rule mutation with the model as its subject —
+             * and an unmapped subject is exactly the silent audit failure
+             * the block comment above describes.
+             */
+            'valuation_rule_set' => ValuationRuleSet::class,
+            'valuation_question' => ValuationQuestion::class,
+            'valuation_question_option' => ValuationQuestionOption::class,
+            'portfolio_property_answer' => PortfolioPropertyAnswer::class,
+            'portfolio_valuation_adjustment' => PortfolioValuationAdjustment::class,
 
             // --- Step 7: knowledge, content, analytics ---
             'knowledge_event' => KnowledgeEvent::class,

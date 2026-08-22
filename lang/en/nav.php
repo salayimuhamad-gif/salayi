@@ -17,6 +17,7 @@ return [
     'market' => 'Market',
     'market.prices' => 'Prices',
     'market.indices' => 'Indices',
+    'valuation_rules' => 'Valuation rules',
     'market.imports' => 'Imports',
     'imports' => 'Imports',
     'geography.place_categories' => 'Place categories',

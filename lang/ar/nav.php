@@ -17,6 +17,7 @@ return [
     'market' => 'السوق',
     'market.prices' => 'الأسعار',
     'market.indices' => 'المؤشرات',
+    'valuation_rules' => 'قواعد التقييم',
     'market.imports' => 'الاستيراد',
     'imports' => 'الاستيراد',
     'geography.place_categories' => 'فئات الأماكن',

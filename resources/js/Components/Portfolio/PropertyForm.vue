@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useForm } from '@inertiajs/vue3';
+import AppAlert from '@/Components/ui/AppAlert.vue';
 import AppButton from '@/Components/ui/AppButton.vue';
 import AppInput from '@/Components/ui/AppInput.vue';
 import { t } from '@/lib/i18n';
@@ -19,9 +20,35 @@ const { localized } = useLocale();
  */
 interface NamedOption { id: number; name_ckb: string; name_ar: string | null; name_en: string | null }
 
+/*
+ * Wave 6: the applicable valuation questions, resolved SERVER-side for this
+ * property's scope. Options deliberately carry no percentage — the browser
+ * offers choices and submits ids; every number stays on the server. The
+ * whole prop is null while the feature flag is off, so the form cannot even
+ * hint at the surface.
+ */
+interface RuleOption { id: number; key: string; label_ckb: string; label_ar: string; label_en: string }
+interface RuleQuestion {
+    id: number;
+    key: string;
+    question_type: string;
+    label_ckb: string;
+    label_ar: string;
+    label_en: string;
+    help_ckb: string | null;
+    help_ar: string | null;
+    help_en: string | null;
+    options: RuleOption[];
+}
+
 const props = defineProps<{
     projects: NamedOption[];
     areas: NamedOption[];
+    valuationRules?: {
+        questions: RuleQuestion[];
+        answers: Record<number, number>;
+        stale: number;
+    } | null;
     property?: {
         id: number;
         label: string | null;
@@ -60,6 +87,17 @@ const unitTypes = [
 const currencies = ['USD', 'IQD'];
 const occupancyOptions = ['owner_occupied', 'rented', 'vacant'];
 
+/*
+ * Rehydration without defaults: every applicable question starts at the
+ * owner's PERSISTED valid answer, or at "not answered". A stale stored
+ * answer never preselects anything — the notice below explains why.
+ */
+const initialAnswers: Record<number, number | null> = {};
+
+for (const question of props.valuationRules?.questions ?? []) {
+    initialAnswers[question.id] = props.valuationRules?.answers?.[question.id] ?? null;
+}
+
 const form = useForm({
     label: props.property?.label ?? '',
     property_type: props.property?.property_type ?? 'apartment',
@@ -89,6 +127,7 @@ const form = useForm({
             : 'exact',
     remove_location: false,
     notes: '',
+    answers: initialAnswers,
 });
 
 const locale = document.documentElement.lang || 'ckb';
@@ -96,6 +135,16 @@ const locale = document.documentElement.lang || 'ckb';
 function optionName(option: NamedOption): string {
     return (locale === 'ar' ? option.name_ar : locale === 'en' ? option.name_en : option.name_ckb)
         ?? option.name_ckb;
+}
+
+/** The stored trilingual label in the page's language, Sorani as the floor. */
+function ruleLabel(row: { label_ckb: string; label_ar: string; label_en: string }): string {
+    return locale === 'ar' ? row.label_ar : locale === 'en' ? row.label_en : row.label_ckb;
+}
+
+function ruleHelp(question: RuleQuestion): string | null {
+    return (locale === 'ar' ? question.help_ar : locale === 'en' ? question.help_en : question.help_ckb)
+        ?? question.help_ckb;
 }
 
 const editing = computed(() => props.property != null);
@@ -124,6 +173,15 @@ function submit(): void {
 
         if (!editing.value) {
             delete payload.remove_location;
+        }
+
+        /*
+         * Answers travel only when the server offered questions: a form
+         * that never showed the section must not submit the key at all —
+         * that absence is what keeps flag-off requests byte-identical.
+         */
+        if (!props.valuationRules || props.valuationRules.questions.length === 0) {
+            delete payload.answers;
         }
 
         return payload;
@@ -309,6 +367,64 @@ function submit(): void {
             </div>
             <p v-if="form.errors.occupancy_status" class="mt-1 text-sm text-negative">
                 {{ form.errors.occupancy_status }}
+            </p>
+        </fieldset>
+
+        <!--
+            Wave 6: the valuation questions the ACTIVE rule set asks about
+            this property. All optional, all single-select, none defaulted —
+            "not answered" is a complete answer. The section exists only when
+            the server resolved an applicable set; the flag off means the
+            prop is null and nothing here renders.
+        -->
+        <fieldset
+            v-if="valuationRules && valuationRules.questions.length > 0"
+            data-testid="valuation-questions"
+        >
+            <legend class="mb-1.5 block text-sm font-medium text-ink">
+                {{ t('portfolio.valuation_questions.title') }}
+            </legend>
+            <p class="mb-2 text-xs text-ink-faint">{{ t('portfolio.valuation_questions.hint') }}</p>
+
+            <!-- A stored answer whose question or option was superseded is
+                 EXCLUDED, and the owner is told — never silently applied. -->
+            <AppAlert
+                v-if="valuationRules.stale > 0"
+                data-testid="stale-answers"
+                variant="warning"
+                class="mb-3"
+            >
+                {{ t('portfolio.valuation_questions.stale_notice') }}
+            </AppAlert>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+                <div v-for="question in valuationRules.questions" :key="question.id">
+                    <label
+                        :for="`pf-vq-${question.id}`"
+                        class="mb-1.5 block text-sm font-medium text-ink"
+                    >
+                        {{ ruleLabel(question) }}
+                    </label>
+                    <select
+                        :id="`pf-vq-${question.id}`"
+                        v-model="form.answers[question.id]"
+                        :data-testid="`valuation-question-${question.key}`"
+                        class="block min-h-11 w-full rounded-card border border-line bg-surface px-3 text-sm text-ink
+                               focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                    >
+                        <option :value="null">{{ t('portfolio.valuation_questions.not_answered') }}</option>
+                        <option v-for="option in question.options" :key="option.id" :value="option.id">
+                            {{ ruleLabel(option) }}
+                        </option>
+                    </select>
+                    <p v-if="ruleHelp(question)" class="mt-1 text-xs text-ink-faint">
+                        {{ ruleHelp(question) }}
+                    </p>
+                </div>
+            </div>
+
+            <p v-if="form.errors.answers" class="mt-1 text-sm text-negative" role="alert">
+                {{ form.errors.answers }}
             </p>
         </fieldset>
 

@@ -69,6 +69,17 @@ return [
 
         // Step 6
         'portfolio' => false,
+
+        /*
+         * Wave 6: question-driven valuation adjustments on top of the
+         * portfolio valuation baseline. Independent of `portfolio` (which
+         * gates the whole surface) so the rule engine can be introduced —
+         * and, if needed, withdrawn — without touching the portfolio
+         * itself. OFF means the valuation path is byte-identical to the
+         * pre-Wave-6 behaviour: no questions shown, no answers consumed,
+         * no adjustment applied.
+         */
+        'portfolio.valuation_rules' => false,
         'alerts.telegram' => false,
         'alerts.email' => false,
         'alerts.push' => false,

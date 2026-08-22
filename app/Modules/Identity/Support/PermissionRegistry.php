@@ -92,6 +92,17 @@ final class PermissionRegistry
                 'market.indices.view', 'market.indices.configure', 'market.indices.publish',
                 'market.methodology.update',
             ],
+            /*
+             * Wave 6: the portfolio valuation rule sets. Configure is the
+             * whole lifecycle — draft, questions, publish, retire — while
+             * view is read-only, so a Security Auditor can inspect what
+             * governs owners' valuations without being able to change it.
+             * Owners never hold either: their surface is their own
+             * portfolio, and rule administration is a platform judgement.
+             */
+            'portfolio' => [
+                'portfolio.valuation_rules.view', 'portfolio.valuation_rules.configure',
+            ],
             'knowledge' => [
                 'knowledge.events.view', 'knowledge.events.create',
                 'knowledge.events.review', 'knowledge.events.publish',
@@ -196,7 +207,13 @@ final class PermissionRegistry
             ),
 
             RoleKey::MarketDataManager->value => array_merge(
-                $c['market'], $c['imports'],
+                /*
+                 * The portfolio valuation rules ride with the market data
+                 * role: the adjustments they define are claims about market
+                 * value, and the person who curates the evidence is the one
+                 * accountable for what modifies its output.
+                 */
+                $c['market'], $c['portfolio'], $c['imports'],
                 ['projects.view', 'geography.areas.view', 'analytics.dashboard.view'],
             ),
 

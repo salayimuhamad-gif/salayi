@@ -67,6 +67,14 @@ final class AdminNavigation
             ]),
 
             /*
+             * Wave 6: the portfolio valuation rule sets. Top level — there
+             * is no other portfolio administration surface to parent it
+             * under — and gated exactly as its routes are: the dedicated
+             * flag plus the view permission.
+             */
+            self::item('valuation_rules', 'admin.portfolio.valuation-rules.index', 'calculator', 'portfolio.valuation_rules.view', flag: 'portfolio.valuation_rules'),
+
+            /*
              * Top-level, NOT a child of Market. The import routes carry no
              * feature flag and no market permission, so parking the entry
              * under a parent gated by BOTH made a reachable, implemented page

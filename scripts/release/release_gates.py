@@ -206,6 +206,13 @@ PLAYWRIGHT_REMAINING_SPECS = (
     'tests/Browser/market-movement.spec.ts',
     'tests/Browser/mfa.spec.ts',
     'tests/Browser/navigation.spec.ts',
+    # Valuation rules (redesign Wave 6): the active set's question renders
+    # trilingually from persisted rows with NO percentage anywhere in the
+    # owner DOM; the answer travels as an option id, rehydrates by id after
+    # a reload of the edit fold, and the requested valuation lands at the
+    # exact adjusted Decimal (110000 -> 115500.0000) with the snapshot-backed
+    # breakdown, total and history row. No skips on any viewport.
+    'tests/Browser/portfolio-valuation.spec.ts',
     'tests/Browser/production-assets.spec.ts',
     # Profile + portfolio (redesign Wave 5): the grouped profile edits real
     # fields under the onboarding rules and refuses dishonest input; the

@@ -49,8 +49,15 @@ use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Support\Totp;
 use App\Modules\Knowledge\Models\KnowledgeEvent;
+use App\Modules\Market\Enums\PriceType;
+use App\Modules\Market\Enums\ScopeType;
+use App\Modules\Market\Models\PriceRecord;
 use App\Modules\Portfolio\Models\PortfolioProperty;
 use App\Modules\Portfolio\Models\PortfolioValuation;
+use App\Modules\Portfolio\Models\ValuationQuestion;
+use App\Modules\Portfolio\Models\ValuationQuestionOption;
+use App\Modules\Portfolio\Models\ValuationRuleSet;
+use App\Modules\Portfolio\Services\ValuationRulePublisher;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -601,6 +608,143 @@ foreach ($portfolioSeed as $key => [$label, $currency, $type, $areaId, $valuatio
     }
 }
 
+/*
+ * Wave 6: the valuation-rules scenario, fully isolated from the Wave 5
+ * member so neither spec's persisted counts can drift into the other's
+ * assertions. A dedicated Telegram-linked member owns ONE apartment in a
+ * dedicated two-level lineage (district under city — the only geometry the
+ * engine's wider-area tier can reach while aggregate evidence carries no
+ * unit size), three published USD sale records make the median a REAL
+ * 110000, and one ACTIVE rule set — published through the real publisher —
+ * asks one trilingual question whose signed percentages live server-side
+ * only.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'portfolio.valuation_rules'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+$valuationUser = User::query()->updateOrCreate(
+    ['email' => 'valuation@browser-test.invalid'],
+    ['name' => 'Browser Valuation', 'password' => Hash::make($password), 'preferred_locale' => 'ckb', 'is_active' => true],
+);
+$valuationUser->roles()->sync([]);
+$valuationUser->phone_verified = 1;
+$valuationUser->telegram_id = '990200';
+$valuationUser->telegram_verified_at = now();
+$valuationUser->save();
+
+$w6City = Area::query()->updateOrCreate(
+    ['slug' => 'w6-erbil'],
+    [
+        'type' => 'city',
+        'name_ckb' => 'هەولێری ڕێسا',
+        'name_ar' => 'أربيل القواعد',
+        'name_en' => 'Rules Erbil',
+        'publication_status' => 'published',
+    ],
+);
+
+$w6District = Area::query()->updateOrCreate(
+    ['slug' => 'w6-rules'],
+    [
+        'type' => 'district',
+        'parent_id' => $w6City->id,
+        'name_ckb' => 'گەڕەکی ڕێسا',
+        'name_ar' => 'حي القواعد',
+        'name_en' => 'Rules district',
+        'publication_status' => 'published',
+    ],
+);
+
+// Idempotent evidence: three keyed records, rewritten in place on re-seed.
+foreach ([['w6-rules-1', '100000.0000'], ['w6-rules-2', '110000.0000'], ['w6-rules-3', '120000.0000']] as [$recordId, $price]) {
+    PriceRecord::query()->updateOrCreate(
+        ['record_id' => $recordId],
+        [
+            'scope_type' => ScopeType::Area,
+            'scope_id' => $w6District->id,
+            'property_type' => 'apartment',
+            'transaction_type' => 'sale',
+            'price_type' => PriceType::SaleVerified,
+            'currency' => 'USD',
+            'price' => $price,
+            'effective_date' => '2026-06-01',
+            'period' => '2026-06',
+            'publication_status' => 'published',
+        ],
+    );
+}
+
+// Rebuild the member's portfolio and the rule set from nothing on every
+// run: the spec's history grows as each locale requests a valuation, so a
+// re-seed must reset it, and rule rows are raw-deleted (FKs cascade the
+// children) because the model layer rightly refuses to edit active sets.
+foreach (PortfolioProperty::query()->where('user_id', $valuationUser->id)->get() as $stale) {
+    $stale->valuations()->delete();
+    $stale->forceDelete();
+}
+
+DB::table('valuation_rule_sets')->where('name', 'W6 browser rules')->delete();
+
+$w6Property = new PortfolioProperty;
+$w6Property->fill([
+    'user_id' => $valuationUser->id,
+    'property_type' => 'apartment',
+    'area_id' => $w6District->id,
+    'currency' => 'USD',
+    'location_precision' => PortfolioProperty::PRECISION_AREA_ONLY,
+    'consent_valuation' => true,
+]);
+$w6Property->setLabel('W6 Rules flat');
+$w6Property->setNotes(null);
+$w6Property->save();
+
+$w6Set = ValuationRuleSet::query()->create([
+    'name' => 'W6 browser rules',
+    'scope_transaction' => ValuationRuleSet::SCOPE_TRANSACTION_SALE,
+    'property_types' => ['apartment'],
+    'version' => app(ValuationRulePublisher::class)
+        ->nextVersion(ValuationRuleSet::SCOPE_TRANSACTION_SALE, null),
+    'status' => ValuationRuleSet::STATUS_DRAFT,
+]);
+
+$w6Question = ValuationQuestion::query()->create([
+    'valuation_rule_set_id' => $w6Set->id,
+    'key' => 'renovation_state',
+    'label_ckb' => 'دۆخی نۆژەنکردنەوە',
+    'label_ar' => 'حالة التجديد',
+    'label_en' => 'Renovation state',
+    'sort_order' => 0,
+    'is_active' => true,
+]);
+
+ValuationQuestionOption::query()->create([
+    'valuation_question_id' => $w6Question->id,
+    'key' => 'renovated',
+    'label_ckb' => 'بەم دواییە نۆژەنکراوەتەوە',
+    'label_ar' => 'مجدد حديثاً',
+    'label_en' => 'Recently renovated',
+    'adjustment_percent' => '5.000',
+    'sort_order' => 0,
+    'is_active' => true,
+]);
+
+ValuationQuestionOption::query()->create([
+    'valuation_question_id' => $w6Question->id,
+    'key' => 'original',
+    'label_ckb' => 'دۆخی بنەڕەتی',
+    'label_ar' => 'بحالته الأصلية',
+    'label_en' => 'Original condition',
+    'adjustment_percent' => '-3.500',
+    'sort_order' => 1,
+    'is_active' => true,
+]);
+
+// Published through the REAL lifecycle, so the browser exercises exactly
+// what an operator would have produced.
+app(ValuationRulePublisher::class)->publish($w6Set);
+
 cache()->flush();
 
 file_put_contents(
@@ -611,8 +755,9 @@ file_put_contents(
         'plain' => ['email' => $plain->email],
         'mfa' => ['email' => $mfa->email, 'secret' => $secret],
         'portfolio' => ['email' => $portfolioUser->email, 'property_ids' => $portfolioPropertyIds],
+        'valuation' => ['email' => $valuationUser->email, 'property_id' => $w6Property->id],
         'wizard_draft_id' => $wizardDraftId,
-        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true, 'market.intelligence' => true],
+        'flags' => ['advisor.residential' => true, 'map.investment' => true, 'map.explorer' => true, 'projects.wizard' => true, 'market.indices' => true, 'portfolio' => true, 'market.intelligence' => true, 'portfolio.valuation_rules' => true],
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\n",
 );
 
@@ -623,4 +768,5 @@ echo "  map.investment = ON, map.explorer = ON\n";
 echo "  4 published projects: trends up / down / flat / unknown\n";
 echo "  market.indices = ON, portfolio = ON\n";
 echo "  portfolio member: {$portfolioUser->email} — 4 properties (USD ×2 valued, IQD ×1, 1 awaiting)\n";
+echo "  valuation member: {$valuationUser->email} — 1 apartment, 3 USD sale records, active rule set (portfolio.valuation_rules = ON)\n";
 echo "  browser-ankawa: boundary polygon + published sale index (Wave 3 location card)\n";

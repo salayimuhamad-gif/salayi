@@ -1,7 +1,7 @@
 # Admin capability matrix — Super Admin audit and repair
 
 The requirement-by-requirement comparison of `PermissionRegistry::catalogue()`
-(one hundred and seven permissions) against the implemented Admin Panel:
+(one hundred and ten permissions) against the implemented Admin Panel:
 routes, middleware, controllers, Inertia pages, navigation and frontend
 conditions. Produced for the Super Admin visibility audit; kept because the
 category-4 list below is the honest statement of what the catalogue promises
@@ -89,6 +89,13 @@ coverage matrix asserts this list stays true.
   `ratings.update` (per-project ratings page), `developers.manage`.
 - **market**: `prices.view/approve`, `indices.view/configure` (+ index value
   publishing under `configure`).
+- **portfolio** (Wave 6): `valuation_rules.view` (rule-set list and read-only
+  builder), `valuation_rules.configure` (draft CRUD, question/option builder,
+  preview, publish/retire/duplicate/delete) — routes under
+  `/admin/portfolio/valuation-rules`, gated by the `portfolio.valuation_rules`
+  flag then the permission, with a matching top-level nav entry. Granted to
+  Market Data Manager; `.view` reaches read-only roles through the
+  read-everything derivation.
 - **knowledge**: `events.view/create/publish` (+ `review` enforced on the
   transition).
 - **content**: `view/create/update/publish`.

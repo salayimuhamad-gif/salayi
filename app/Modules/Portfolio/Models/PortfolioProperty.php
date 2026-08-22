@@ -164,6 +164,17 @@ final class PortfolioProperty extends Model
     }
 
     /**
+     * The owner's persisted valuation-question answers (Wave 6) — option
+     * IDs only; every percentage stays server-side on the option rows.
+     *
+     * @return HasMany<PortfolioPropertyAnswer, $this>
+     */
+    public function answers(): HasMany
+    {
+        return $this->hasMany(PortfolioPropertyAnswer::class, 'portfolio_property_id');
+    }
+
+    /**
      * The current estimate.
      *
      * A separate relation rather than `valuations->first()` so an index page

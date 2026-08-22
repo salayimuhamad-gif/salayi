@@ -141,13 +141,14 @@ awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/applicati
 check "environment prepared with a generated key" $?
 
 # The baseline is INSTALLED before the patch is applied: this rehearsal is an
-# upgrade of a running site. This release adds exactly TEN migrations above
+# upgrade of a running site. This release adds exactly TWELVE migrations above
 # the v6 baseline (return handoffs, permanent verification tokens, password
 # recovery challenges, optional profile columns, the presence column, the
-# knowledge evidence-class column, the two data-only search-key backfills,
-# and the WhatsApp verification table with its users column), and "exactly
-# ten" can only be demonstrated against a database that is already migrated
-# to the baseline.
+# knowledge evidence-class column, the three data-only backfills, the
+# WhatsApp verification table with its users column, the valuation rule
+# engine's five tables with their four additive valuation columns, and the
+# rule-set family-uniqueness key), and "exactly twelve" can only be
+# demonstrated against a database that is already migrated to the baseline.
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 check "baseline schema migrated before the patch is applied" $?
 
@@ -317,27 +318,31 @@ echo "== 7. caches rebuilt =="
     && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
 check "configuration, route and view caches rebuilt" $?
 
-echo "== 8. migrations (this patch adds exactly ten) =="
+echo "== 8. migrations (this patch adds exactly twelve) =="
 BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
 DELTA=$(( AFTER - BEFORE ))
 
-# This release ships TEN forward-only migrations above the v6 baseline:
+# This release ships TWELVE forward-only migrations above the v6 baseline:
 # the five v7 identity migrations, the hardening program's three (the
 # knowledge evidence-class column and the two data-only search-key
 # backfills), the dual-verification WhatsApp table with its users
-# column, and the data-only price-record scope_id backfill that makes
-# historical imported prices visible to the scoped market indices.
+# column, the data-only price-record scope_id backfill that makes
+# historical imported prices visible to the scoped market indices,
+# the Wave 6 valuation rule engine (five additive rule/answer/snapshot
+# tables plus four nullable portfolio_valuations columns), and the
+# rule-set family-uniqueness key (a generated project_family column with
+# its unique index, so duplicate global versions die at the database).
 # Asserting the exact number matters in both directions: a
 # smaller delta means a table or column never arrived (and if it is the
 # verification-token table, nobody can finish a registration), while a
 # larger one would mean something unintended came with it.
-[ "$DELTA" = "10" ]
-check "exactly ten migrations applied ($BEFORE -> $AFTER)" $?
+[ "$DELTA" = "12" ]
+check "exactly twelve migrations applied ($BEFORE -> $AFTER)" $?
 
 # Then prove each named migration is the one that ran — a count alone cannot
-# tell ten expected arrivals apart from nine expected and one stranger.
+# tell twelve expected arrivals apart from eleven expected and one stranger.
 for migration in \
     2026_08_06_000100_telegram_return_handoffs \
     2026_08_09_000100_telegram_verification_tokens \
@@ -348,7 +353,9 @@ for migration in \
     2026_08_17_000100_backfill_knowledge_event_search_keys \
     2026_08_17_000200_backfill_offer_search_keys \
     2026_08_19_000100_whatsapp_account_verification \
-    2026_08_21_000100_backfill_price_record_scope_ids; do
+    2026_08_21_000100_backfill_price_record_scope_ids \
+    2026_08_22_000100_valuation_rule_engine \
+    2026_08_22_000200_valuation_rule_set_family_uniqueness; do
     ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
         | grep "$migration" | grep -q "Ran" )
     check "migration ran: $migration" $?

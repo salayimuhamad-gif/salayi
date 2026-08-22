@@ -12,12 +12,19 @@ is not a procedure.
 > counts ship in the external evidence package, which is the authoritative
 > record for this document.
 
-**This patch migrates.** It added four tables — `telegram_return_handoffs`,
-`telegram_verification_tokens`, `password_recovery_challenges` and
-`whatsapp_otps` — plus four nullable columns on `users` (`gender`,
-`date_of_birth`, `last_seen_at`, `whatsapp_verified_at`), one nullable column
-on `knowledge_events` (`evidence_class`), and two data-only search-key
-backfills whose reversal is a documented no-op. That
+**This patch migrates.** It added nine tables — `telegram_return_handoffs`,
+`telegram_verification_tokens`, `password_recovery_challenges`,
+`whatsapp_otps`, and the valuation rule engine's five (`valuation_rule_sets`,
+`valuation_questions`, `valuation_question_options`,
+`portfolio_property_answers`, `portfolio_valuation_adjustments`) — plus four
+nullable columns on `users` (`gender`, `date_of_birth`, `last_seen_at`,
+`whatsapp_verified_at`), one nullable column on `knowledge_events`
+(`evidence_class`), four nullable columns on `portfolio_valuations`
+(`base_midpoint`, `base_low`, `base_high`, `adjustment_total_percent`), one
+generated family-key column with its unique index on `valuation_rule_sets`
+(`project_family`, `vrs_family_version_unique`), and
+three data-only backfills (two search keys and the price-record scope ids)
+whose reversal is a documented no-op. That
 matters for the ORDER below, and it is the one thing people get wrong:
 restoring a `mysqldump` does **not** drop a table created after that dump was
 taken. Restoring the dump alone leaves the tables behind and reverted code
@@ -25,8 +32,9 @@ running against a schema it does not know. Each migration must be rolled back
 deliberately, and its file must still be on disk when you do it.
 
 **Reversal order is newest first**, which is also the order they are listed in
-§5. The tables have foreign keys to `users`; nothing depends on them, so each
-drops cleanly.
+§5. The added tables hold foreign keys pointing outward (to `users`,
+`projects` and the portfolio tables); nothing pre-existing depends on them,
+so each drops cleanly.
 
 > **What rolling back costs the customer.** Reverting removes the permanent
 > verification links. Anyone who registered during the patched period and has
@@ -99,10 +107,10 @@ Before any schema or file change. Everything below assumes the site is down.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
 ```
 
-Expect **ten** lines, each `Ran`. Any that says `Pending` or is absent never
+Expect **twelve** lines, each `Ran`. Any that says `Pending` or is absent never
 applied: skip it in §5 and §6, but check why the deployment reported success.
 
 ## 5. Roll back THAT migration, while its file still exists
@@ -121,13 +129,26 @@ cd ~/domains/myhawler.com/application
 
 # Prove the state BEFORE anything is reversed:
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'   # expect ten x Ran
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'   # expect twelve x Ran
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # record this number
 
 # Newest first. Each is path-targeted and independently verifiable. The three
 # data-only backfills (the two search keys and the price-record scope ids)
 # reverse as documented no-ops (the derived values stay, by design), so
-# reversing them only un-marks the migration rows.
+# reversing them only un-marks the migration rows. The family-uniqueness
+# reversal drops only its own unique index and generated column — no data
+# lives in either. The valuation rule engine
+# reversal drops its five additive tables and four additive columns — rule
+# definitions, stored answers and adjustment snapshots created during the
+# patched period go with them, which is the documented cost of this rollback.
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Portfolio/Database/Migrations/2026_08_22_000200_valuation_rule_set_family_uniqueness.php \
+  --force
+
+/opt/alt/php83/usr/bin/php artisan migrate:rollback \
+  --path=app/Modules/Portfolio/Database/Migrations/2026_08_22_000100_valuation_rule_engine.php \
+  --force
+
 /opt/alt/php83/usr/bin/php artisan migrate:rollback \
   --path=app/Modules/Market/Database/Migrations/2026_08_21_000100_backfill_price_record_scope_ids.php \
   --force
@@ -180,11 +201,11 @@ Prove the state AFTER:
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
-  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids'   # expect ten x Pending
-/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly ten fewer
+  | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'   # expect twelve x Pending
+/opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran                                # exactly twelve fewer
 ```
 
-The count must have dropped by **exactly ten**. If it dropped by more, an
+The count must have dropped by **exactly twelve**. If it dropped by more, an
 unrelated migration was reversed: stop, re-apply with `migrate --force`, and get
 help rather than continuing to unwind migrations blindly.
 
@@ -197,7 +218,7 @@ count stays where it is.
 mysql -u <db_user> -p -N -B <db_name> -e "
   SELECT COUNT(*) FROM information_schema.tables
     WHERE table_schema = DATABASE()
-      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps');
+      AND table_name IN ('telegram_return_handoffs','telegram_verification_tokens','password_recovery_challenges','whatsapp_otps','valuation_rule_sets','valuation_questions','valuation_question_options','portfolio_property_answers','portfolio_valuation_adjustments');
   SELECT COUNT(*) FROM information_schema.columns
     WHERE table_schema = DATABASE()
       AND table_name = 'users'
@@ -206,11 +227,16 @@ mysql -u <db_user> -p -N -B <db_name> -e "
     WHERE table_schema = DATABASE()
       AND table_name = 'knowledge_events'
       AND column_name = 'evidence_class';
+  SELECT COUNT(*) FROM information_schema.columns
+    WHERE table_schema = DATABASE()
+      AND table_name = 'portfolio_valuations'
+      AND column_name IN ('base_midpoint','base_low','base_high','adjustment_total_percent');
 "
 ```
 
-Expect `0`, `0` and `0`. The rehearsal failed on exactly this class of check until
-the ordering above was corrected, which is why it is a separate, explicit step.
+Expect `0`, `0`, `0` and `0`. The rehearsal failed on exactly this class of check
+until the ordering above was corrected, which is why it is a separate, explicit
+step.
 
 ## 7. Restore the application, keeping the failed release
 

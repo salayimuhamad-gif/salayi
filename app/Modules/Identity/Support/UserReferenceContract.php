@@ -122,6 +122,13 @@ final class UserReferenceContract
          */
         ['whatsapp_otps', 'user_id', 'ten-minute verification codes, never content; cascade-deleted'],
         ['translations', 'reviewed_by', 'moderation metadata about someone ELSE\'s content; the reviewer owns nothing here'],
+        /*
+         * Wave 6: authorship provenance on platform rule configuration —
+         * the same class as feature_flags.updated_by. A rule set is the
+         * PLATFORM's content, not the author's; the column nulls on user
+         * deletion and must never hold an account hostage.
+         */
+        ['valuation_rule_sets', 'created_by', 'authorship provenance on platform rule configuration; the author owns nothing here'],
     ];
 
     /**

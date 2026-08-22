@@ -17,6 +17,7 @@ return [
     'market' => 'بازاڕ',
     'market.prices' => 'نرخەکان',
     'market.indices' => 'پێوەرەکان',
+    'valuation_rules' => 'یاساکانی خەمڵاندن',
     'market.imports' => 'هاوردەکردن',
     'imports' => 'هاوردەکردن',
     'geography.place_categories' => 'پۆلەکانی شوێن',
