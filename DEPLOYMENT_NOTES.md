@@ -87,6 +87,66 @@ Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
 not optional.
 
+## Verified production state (2026-08-23) — read this before every count below
+
+The twelve files above are the release inventory, but **how many of them a
+host still has to run depends on which host you are standing on**. There are
+exactly two valid contexts, and every migration count in this document must be
+read against the right one:
+
+| Context | Starting ledger | Already `Ran` from the inventory | To apply | Expected increase |
+|---|---|---|---|---|
+| **A — sealed-v6 rehearsal baseline** (what `scripts/release/deploy_rehearsal.sh` stages on every final-release CI run) | the v6 baseline count | none | all twelve | plus twelve — the number the rehearsal script pins |
+| **B — live `myhawler.com` production** (verified read-only on 2026-08-23) | **59** `Ran` rows | the **protected five** below | the **seven** below | **plus seven: 59 → 66** |
+
+Facts captured read-only from the live application
+(`/home/u730182942/domains/myhawler.com/application`): environment
+`production`, Laravel `12.64.0`, PHP CLI `8.3.30`, MariaDB `11.8.8-MariaDB-log`
+(satisfies the generated-column requirement of
+`valuation_rule_set_family_uniqueness`, which needs MariaDB 10.2 or newer),
+migration ledger `59` rows, and `knowledge_events.evidence_class` **absent** —
+so `add_evidence_class_to_knowledge_events` may legitimately run again after
+its earlier recovery rollback.
+
+**The protected five — already `Ran` on the live host. They belong to the
+recovery history, not to this deployment, and they are OUTSIDE this release's
+normal rollback scope. Never reverse them as part of this release:**
+
+```text
+2026_08_06_000100_telegram_return_handoffs
+2026_08_09_000100_telegram_verification_tokens
+2026_08_09_000200_password_recovery_challenges
+2026_08_09_000200_profile_optional_details
+2026_08_09_000300_add_last_seen_to_users
+```
+
+**The seven this release applies to the live host** (the three Aug-16/17 files
+were applied once and rolled back during the production recovery, so they are
+legitimately pending again; the last four have never run there):
+
+```text
+2026_08_16_000100_add_evidence_class_to_knowledge_events
+2026_08_17_000100_backfill_knowledge_event_search_keys
+2026_08_17_000200_backfill_offer_search_keys
+2026_08_19_000100_whatsapp_account_verification
+2026_08_21_000100_backfill_price_record_scope_ids
+2026_08_22_000100_valuation_rule_engine
+2026_08_22_000200_valuation_rule_set_family_uniqueness
+```
+
+One expected wrinkle: the CURRENT production source predates the seven files,
+so before §7 copies the new code they do not appear in `migrate:status` at all
+— not even as `Pending`. That is correct. They resolve as `Pending` only once
+the new source is in place, which is why §8 re-checks them right before
+migrating.
+
+The rehearsal keeps context A on purpose — it proves the whole inventory
+against the sealed baseline — and nothing in `deploy_rehearsal.sh`,
+`rollback_rehearsal_v7.sh` or their CI gates changes for context B. On the
+live host, use the context-B numbers in §3, §8, §12 and §15, and STOP the
+moment reality disagrees with them. `artisan migrate` exiting 0 is not the
+success condition; the reconciled ledger arithmetic is.
+
 **Registration now requires a password**, and `/login` accepts a **phone number
 or an email**. No existing account is altered by this and no existing
 credential stops working; see §7 of
@@ -163,16 +223,50 @@ cd ~/domains/myhawler.com/application
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Write the number down — call it `BEFORE`. Step 8 proves it went up by exactly
-twelve.
+Write the number down — call it `BEFORE`. What it must be depends on the
+context table at the top: on the sealed-v6 rehearsal baseline it is the
+baseline count and §8 proves plus twelve; on **live production it must be
+exactly `59`** and §8 proves plus seven. If the live count is anything other
+than `59`, STOP — the host does not match the verified 2026-08-23 state and
+the reconciliation must be redone before anything changes.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status \
   | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
 ```
 
-Expect **nothing**, or lines reading `Pending`. If any already says `Ran`, this
-patch is already partly applied; stop and investigate rather than continuing.
+What to expect, by context:
+
+- **Sealed-v6 rehearsal baseline:** nothing, or lines reading `Pending`. If
+  any already says `Ran` there, the staged copy is not the sealed baseline;
+  stop and investigate.
+- **Live production:** exactly **five** lines, all `Ran` — the protected five
+  (`telegram_return_handoffs`, `telegram_verification_tokens`,
+  `password_recovery_challenges`, `profile_optional_details`,
+  `add_last_seen_to_users`) — and nothing else, because the old source does
+  not yet carry the seven new files. **If any of the protected five is NOT
+  `Ran`, STOP.** Do not migrate, do not "fix" it by rolling anything back:
+  live accounts depend on those five, and a missing one means the host does
+  not match the verified state. If any of the seven ALREADY shows here
+  before §7 copied the new code, stop the same way — something else deployed
+  them.
+
+Still before anything changes, prove the two remaining preconditions on the
+live host (both verified true on 2026-08-23 — this re-proves them on
+deployment day):
+
+```bash
+/opt/alt/php83/usr/bin/php artisan tinker --execute="
+  echo Schema::hasColumn('knowledge_events', 'evidence_class') ? 'UNEXPECTED evidence_class — STOP' : 'evidence_class absent OK', PHP_EOL;
+  echo DB::select('select version() as v')[0]->v, PHP_EOL;
+"
+```
+
+Expect `evidence_class absent OK` (the Aug-16 file was rolled back during the
+production recovery and may legitimately run again — but if the column is
+somehow present, its re-run fails on a duplicate column: STOP and reconcile
+first) and a MariaDB version of 10.2 or newer (verified: `11.8.8-MariaDB-log`),
+which the generated family-key column requires.
 
 ## 4. Stage the runtime in a NEW directory
 
@@ -236,8 +330,22 @@ cp -a ~/patch-v7/public_html/build public_html/
 
 ## 8. Run the migration — mandatory
 
+The new source is in place now (§7), so on the live host the seven release
+migrations must resolve as `Pending` — no more, no fewer — before anything
+runs:
+
 ```bash
 cd ~/domains/myhawler.com/application
+/opt/alt/php83/usr/bin/php artisan migrate:status \
+  | grep -E 'add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
+```
+
+Live production: exactly **seven** lines, each `Pending`. (Sealed-v6
+rehearsal baseline: these seven plus the other five all read `Pending`.) Any
+of the seven missing means §7 copied an incomplete tree; any already `Ran`
+means something else migrated this host — STOP either way.
+
+```bash
 /opt/alt/php83/usr/bin/php artisan migrate --force
 ```
 
@@ -248,17 +356,23 @@ Then prove exactly what you expect:
   | grep -E 'telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
 ```
 
-Expect **twelve** lines, each reading **`Ran`** — all were `Pending` or absent
-in step 3.
+Expect **twelve** lines, each reading **`Ran`** — in both contexts, but for
+different reasons the arithmetic below tells apart: on the live host the
+protected five were already `Ran` in §3 and only the seven moved
+`Pending` → `Ran` now; on the sealed-v6 rehearsal baseline all twelve moved.
 
 ```bash
 /opt/alt/php83/usr/bin/php artisan migrate:status | grep -c Ran
 ```
 
-Expect exactly `BEFORE + 12`. Both directions matter: a smaller increase means
-one of the twelve never arrived — and if it is `telegram_verification_tokens`,
-nobody can complete a registration — while a larger one means something
-unintended came along and you should stop and look at it.
+Live production: expect exactly **`BEFORE + 7`** — with the verified starting
+ledger, **`59 + 7 = 66`**. (Sealed-v6 rehearsal baseline: `BEFORE`
+plus twelve, the number `deploy_rehearsal.sh` pins.) Both directions matter:
+a smaller increase means one of the seven never arrived, while a larger one
+means something unintended came along. Either way STOP and look — do not
+continue merely because `artisan migrate` exited 0, and do not "correct" a
+shortfall by rolling anything back: the protected five must remain `Ran`
+throughout.
 
 Then prove the verification table is really there and really has no expiry
 column, because the whole "your link never expires" promise rests on it — and
@@ -361,8 +475,10 @@ the site is exposed to anyone. Confirm each, in order:
 runtime checksum verified                     §1
 all seven backups taken and readable          §2
 deletions applied and verified absent         §6
-all twelve migrations moved Pending -> Ran    §8
-migration count increased by exactly twelve   §8
+protected five already Ran; seven Pending     §3/§8
+the seven release migrations moved to Ran     §8
+ledger: live 59 -> 66 exactly (plus seven);
+    sealed-v6 rehearsal: plus twelve          §8
 verification table present, NO expires_at     §8
 recovery table + presence column present      §8
 whatsapp table + whatsapp column present      §8
@@ -453,8 +569,15 @@ nothing is user-visible:
 
 ```text
 checksum mismatch at §1               -> do not proceed; the artifact is wrong
-migration count up by fewer than twelve -> a table or column is missing; roll back
-migration count up by more than twelve  -> stop and investigate before continuing
+a protected migration not Ran at §3   -> STOP; reconcile first — NEVER roll the
+                                         protected five back to "fix" it
+live ledger not exactly 59 at §3      -> STOP; the host does not match the
+                                         verified state
+live increase smaller than seven      -> a table or column is missing; roll back
+                                         THIS release's migrations only (§ROLLBACK,
+                                         production scope)
+live increase larger than seven       -> stop and investigate before continuing
+(sealed-v6 rehearsal: the same two rules with twelve)
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
 routes or schedules absent            -> incomplete copy; roll back
