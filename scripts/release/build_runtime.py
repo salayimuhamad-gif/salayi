@@ -97,6 +97,13 @@ def main() -> int:
     parser.add_argument('--source', required=True)
     parser.add_argument('--output', required=True, help='basename, without .zip')
     parser.add_argument('--runtime-dir', required=True)
+    parser.add_argument('--vendor', default=None,
+                        help='a PRODUCTION (--no-dev) Composer vendor tree to '
+                             'ship inside application/. The staged eligible '
+                             'set never carries vendor, and production must '
+                             'not install packages over the network during a '
+                             'maintenance window, so the tested dependency '
+                             'bytes travel inside the runtime artifact.')
     args = parser.parse_args()
 
     stage, source = Path(args.stage), Path(args.source)
@@ -123,6 +130,24 @@ def main() -> int:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
             assets += 1
+
+    vendor_files = 0
+    if args.vendor:
+        vendor_src = Path(args.vendor)
+        if not (vendor_src / 'autoload.php').is_file():
+            raise SystemExit('FAIL: --vendor does not point at a Composer '
+                             f'vendor tree (no autoload.php): {vendor_src}')
+        # symlinks dereferenced: the archive audit refuses symlink entries,
+        # and Hostinger receives plain files either way.
+        shutil.copytree(vendor_src, runtime / 'application' / 'vendor',
+                        symlinks=False)
+        vendor_files = sum(1 for p in (runtime / 'application' / 'vendor')
+                           .rglob('*') if p.is_file())
+        for required in ('vendor/autoload.php', 'vendor/composer/installed.json',
+                         'composer.json', 'composer.lock'):
+            if not (runtime / 'application' / required).is_file():
+                raise SystemExit('FAIL: the dependency-bearing runtime is '
+                                 f'missing {required}')
 
     deletions = source / 'DELETE_FILES.txt'
     if deletions.is_file():
@@ -155,7 +180,8 @@ def main() -> int:
     subprocess.run(f'sha256sum -c {archive.name}.sha256', shell=True,
                    cwd=str(archive.parent), check=True, stdout=subprocess.DEVNULL)
 
-    print(f'runtime: application={copied} assets={assets} archive={archive.name}')
+    print(f'runtime: application={copied} assets={assets} '
+          f'vendor={vendor_files} archive={archive.name}')
     return 0
 
 

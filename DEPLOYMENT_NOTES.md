@@ -203,11 +203,19 @@ cp -a application/config            ~/patch-backup-$TS/config
 cp -a application/routes            ~/patch-backup-$TS/routes
 cp -a application/bootstrap/app.php ~/patch-backup-$TS/bootstrap-app.php
 cp -a public_html/build             ~/patch-backup-$TS/build
+cp -a application/composer.json     ~/patch-backup-$TS/composer.json
+cp -a application/composer.lock     ~/patch-backup-$TS/composer.lock
+cp -a application/vendor            ~/patch-backup-$TS/vendor
 
 mysqldump -u <db_user> -p <db_name> > ~/patch-backup-$TS/database.sql
 ```
 
-All seven are mandatory. The WHOLE application-code directory is backed up —
+All ten are mandatory. The Composer trio — `composer.json`, `composer.lock`
+and the WHOLE `vendor/` directory — is backed up as ONE unit, because this
+release replaces the dependency tree and a rollback must be able to put the
+old code back together with the old dependencies: old code under a new
+vendor, or the reverse, is precisely the code/dependency mismatch this
+release closes. The WHOLE application-code directory is backed up —
 this release touches several modules (Identity, Geography, Core, Projects) and
 deletes a file, and a per-module selection tuned to one release is exactly how
 a rollback ends up missing the directory it needs. `routes` and
@@ -273,8 +281,13 @@ which the generated family-key column requires.
 ```bash
 mkdir -p ~/patch-v7 && cd ~/patch-v7
 unzip -q ~/myhawler-account-first-registration-corrected-runtime.zip
-ls application public_html/build/manifest.json DELETE_FILES.txt
+ls application public_html/build/manifest.json DELETE_FILES.txt \
+   application/composer.lock application/vendor/autoload.php
 ```
+
+The last two matter: this runtime SHIPS its dependency tree. A staged patch
+without `application/vendor/autoload.php` is an old-format artifact from
+before the dependency-parity fix and must not be deployed.
 
 Never unzip over the live tree. Staging is what makes rollback possible.
 
@@ -321,12 +334,45 @@ cp -a ~/patch-v7/application/config/. application/config/
 cp -a ~/patch-v7/application/routes/. application/routes/
 cp -a ~/patch-v7/application/bootstrap/app.php application/bootstrap/app.php
 
+# The Composer trio travels with the code, from the SAME checksum-verified
+# staged runtime. The vendor tree is REPLACED, never merged — a merged vendor
+# keeps orphaned classes beside a new autoloader the same way a merged build
+# directory keeps stale chunks. NO Composer runs on this host, no package
+# registry is contacted, and `composer update` must never be typed here: the
+# dependency bytes below were installed --no-dev from the frozen lock inside
+# the release cycle and are exactly what the rehearsal tested.
+cp -a ~/patch-v7/application/composer.json application/composer.json
+cp -a ~/patch-v7/application/composer.lock application/composer.lock
+rm -rf application/vendor
+cp -a ~/patch-v7/application/vendor application/
+
 # REPLACED, never merged: Vite content-hashes filenames, so a merged directory
 # leaves old chunks beside a new manifest and the browser requests assets the
 # manifest never names.
 rm -rf public_html/build
 cp -a ~/patch-v7/public_html/build public_html/
 ```
+
+Then prove the deployed dependency state BEFORE anything executes on it —
+byte-equal lock, the production tree (never the CI dev tree), and the locked
+CommonMark rather than the superseded 2.8.3 production was caught holding:
+
+```bash
+cd ~/domains/myhawler.com
+cmp application/composer.lock ~/patch-v7/application/composer.lock \
+  && echo "lock OK" || echo "LOCK MISMATCH — STOP"
+[ -d application/vendor/phpunit ] \
+  && echo "DEV TREE DEPLOYED — STOP" || echo "production tree OK"
+/opt/alt/php83/usr/bin/php -r '
+  require "application/vendor/autoload.php";
+  echo "league/commonmark: ",
+      \Composer\InstalledVersions::getPrettyVersion("league/commonmark"), PHP_EOL;'
+```
+
+Expect `lock OK`, `production tree OK`, and the CommonMark version the staged
+lock names — never `2.8.3`. Any other outcome: STOP, do not continue to §8,
+and restore per `ROLLBACK_NOTES.md` — the dependency state is part of the
+release, not an accessory.
 
 ## 8. Run the migration — mandatory
 
@@ -421,6 +467,7 @@ maintenance mode and go to §15 failure handling, which routes to
 
 ```bash
 cd ~/domains/myhawler.com/application
+/opt/alt/php83/usr/bin/php artisan package:discover
 /opt/alt/php83/usr/bin/php artisan config:clear
 /opt/alt/php83/usr/bin/php artisan route:clear
 /opt/alt/php83/usr/bin/php artisan view:clear
@@ -429,8 +476,12 @@ cd ~/domains/myhawler.com/application
 /opt/alt/php83/usr/bin/php artisan view:cache
 ```
 
-A cached route table from before the patch keeps serving the old registration
-behaviour.
+`package:discover` comes FIRST and is not optional: the vendor tree changed
+in §7, and the package manifest in `bootstrap/cache` was written for the old
+one. It is the offline stand-in for the Composer post-autoload-dump hook the
+production dependency build deliberately skipped, and it runs entirely
+against the shipped vendor — no network. A cached route table from before
+the patch keeps serving the old registration behaviour.
 
 ## 11. Routes, middleware, scheduler, queue
 
@@ -473,8 +524,14 @@ the site is exposed to anyone. Confirm each, in order:
 
 ```text
 runtime checksum verified                     §1
-all seven backups taken and readable          §2
+all ten backups taken and readable            §2
 deletions applied and verified absent         §6
+composer.json, composer.lock and vendor
+    replaced from the staged runtime          §7
+deployed lock byte-equal, production tree,
+    locked CommonMark (never 2.8.3)           §7
+package manifest rediscovered (shipped
+    vendor) before caches                     §10
 protected five already Ran; seven Pending     §3/§8
 the seven release migrations moved to Ran     §8
 ledger: live 59 -> 66 exactly (plus seven);
@@ -580,6 +637,10 @@ live increase larger than seven       -> stop and investigate before continuing
 (sealed-v6 rehearsal: the same two rules with twelve)
 expires_at present on the token table -> wrong migration ran; roll back
 manifest reports MISSING              -> incomplete copy; roll back
+lock mismatch, dev tree, or wrong
+    CommonMark at the §7 check        -> the dependency state is wrong; roll
+                                         back — never "fix" it with composer
+                                         on this host
 routes or schedules absent            -> incomplete copy; roll back
 ```
 

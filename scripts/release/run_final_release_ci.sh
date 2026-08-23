@@ -463,6 +463,28 @@ chmod -R a-w "$SOURCE" 2>/dev/null || true
 chmod -R u+w "$SOURCE/storage" "$SOURCE/bootstrap/cache" "$SOURCE/.phpunit.cache" 2>/dev/null || true
 chmod -R u+w "$SOURCE/node_modules" "$SOURCE/vendor" 2>/dev/null || true
 
+step "Build the PRODUCTION dependency tree from the frozen lock"
+
+# The dev vendor above serves the gates; production ships a DIFFERENT tree:
+# installed --no-dev from the frozen composer.lock, so the exact dependency
+# bytes the site will run travel inside the runtime artifact and no Composer
+# or network access is ever needed on the production host. Installed into a
+# full copy of the frozen stage so --optimize-autoloader can classmap the
+# application's own namespaces, and with --no-scripts: the only Laravel hook
+# (post-autoload-dump -> artisan package:discover) writes bootstrap/cache,
+# not vendor, and both the runbook and the deployment rehearsal run
+# package:discover on the deployed site instead — offline, against the
+# shipped vendor.
+PROD_DEPS="$WORK/production-deps"
+rm -rf "$PROD_DEPS"
+mkdir -p "$PROD_DEPS"
+cp -a "$STAGE/." "$PROD_DEPS/"
+chmod -R u+w "$PROD_DEPS" 2>/dev/null || true
+
+record_tool production-vendor-install --server "Composer 2, --no-dev from the frozen lock" \
+    composer install --no-dev --prefer-dist --optimize-autoloader \
+    --no-interaction --no-progress --no-scripts --working-dir "$PROD_DEPS"
+
 # BLOCKER 1: phpunit.mariadb.xml connects as a dedicated test user. The service
 # container only creates root, so that user must be created and granted here or
 # every MariaDB gate fails authentication. One contract, provisioned explicitly.
@@ -893,11 +915,31 @@ fi
 
 step "Record the runtime build in the Hostinger layout"
 
+# The production vendor ships INSIDE the runtime. In stub mode composer never
+# ran and no tree exists, so the argument is added only when the build did.
+RUNTIME_VENDOR_ARGS=()
+[ -d "$PROD_DEPS/vendor" ] && RUNTIME_VENDOR_ARGS=(--vendor "$PROD_DEPS/vendor")
+
 record runtime-builder python3 "$SOURCE/scripts/release/build_runtime.py" \
-    --stage "$STAGE" --source "$SOURCE" --output "$RUNTIME_BASE" --runtime-dir "$RUNTIME_DIR"
+    --stage "$STAGE" --source "$SOURCE" --output "$RUNTIME_BASE" --runtime-dir "$RUNTIME_DIR" \
+    ${RUNTIME_VENDOR_ARGS[@]+"${RUNTIME_VENDOR_ARGS[@]}"}
 
 record runtime-manifest-audit python3 "$SOURCE/scripts/release/audit_runtime_manifest.py" \
     --build-dir "$RUNTIME_DIR/public_html/build"
+
+# The runtime the operator deploys must carry the EXACT production dependency
+# state of the frozen lock: same composer.json and composer.lock bytes, every
+# locked package at its locked version and reference, nothing from
+# packages-dev, and never the superseded CommonMark production was caught
+# holding. Then Composer itself confirms the shipped tree satisfies the
+# platform requirements without dev packages.
+record_tool dependency-parity python3 "$SOURCE/scripts/release/check_vendor_parity.py" \
+    --lock "$STAGE/composer.lock" --composer "$STAGE/composer.json" \
+    --runtime-app "$RUNTIME_DIR/application" \
+    --forbid league/commonmark=2.8.3
+
+record_tool platform-requirements composer check-platform-reqs --no-dev \
+    --working-dir "$RUNTIME_DIR/application"
 
 step "Record both rehearsals against those exact runtime bytes"
 
@@ -920,6 +962,12 @@ export REHEARSAL_DB_PORT="$DB_PORT"
 export REHEARSAL_DB_USER="$TEST_DB_USER"
 export REHEARSAL_DB_PASSWORD="$TEST_DB_PASSWORD"
 export REHEARSAL_DB_NAME="$DB_REHEARSE"
+# The BASELINE stand-in only. The staged "before" site needs some vendor to
+# boot the v6 baseline, standing in for production's own old tree; the
+# deployment overlay then REPLACES it with the vendor shipped inside the
+# runtime artifact, and the rehearsal proves the replacement (the dev-only
+# markers of this stand-in must be gone after the apply step). Nothing after
+# the apply step may run on this tree.
 export REHEARSAL_VENDOR="$SOURCE/vendor"
 export REHEARSAL_PORT="${MYHAWLER_REHEARSAL_PORT:-8123}"
 

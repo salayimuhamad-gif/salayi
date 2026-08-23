@@ -211,6 +211,25 @@ check "pre-deployment routes restored from the backup" $?
 cp -a "$BACKUP/bootstrap-app.php" "$SITE/application/bootstrap/app.php"
 check "pre-deployment HTTP bootstrap restored from the backup" $?
 
+# The Composer trio moves as ONE unit with the code: restored code running
+# against the release's new vendor — or restored dependencies under the new
+# code — is the exact code/dependency mismatch this release exists to close.
+# The vendor tree is REPLACED, never merged, for the same reason the build
+# directory is.
+cp -a "$BACKUP/composer.json" "$SITE/application/composer.json"
+cp -a "$BACKUP/composer.lock" "$SITE/application/composer.lock"
+rm -rf "$SITE/application/vendor"
+cp -a "$BACKUP/vendor" "$SITE/application/vendor"
+check "pre-deployment composer.json, composer.lock and vendor restored as one unit" $?
+
+cmp -s "$SITE/application/composer.lock" "$BACKUP/composer.lock"
+check "the restored composer.lock matches the backup byte-for-byte" $?
+
+RESTORED_VENDOR_LIST=$(cd "$SITE/application/vendor" && find . -type f | sort | sha256sum | cut -d' ' -f1)
+BACKUP_VENDOR_LIST=$(cd "$BACKUP/vendor" && find . -type f | sort | sha256sum | cut -d' ' -f1)
+[ "$RESTORED_VENDOR_LIST" = "$BACKUP_VENDOR_LIST" ]
+check "the restored vendor tree matches the backup exactly" $?
+
 echo "== 4. restore the public build (replaced, never merged) =="
 rm -rf "$SITE/public_html/build"
 cp -a "$BACKUP/build" "$SITE/public_html/build"

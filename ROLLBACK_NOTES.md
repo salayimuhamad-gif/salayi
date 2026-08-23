@@ -124,7 +124,8 @@ Pick the newest backup that predates the deployment, then set it once:
 
 ```bash
 BACKUP=~/patch-backup-YYYYmmdd-HHMMSS
-ls "$BACKUP"    # expect: app lang config routes bootstrap-app.php build database.sql
+ls "$BACKUP"    # expect: app lang config routes bootstrap-app.php build
+                #         composer.json composer.lock vendor database.sql
 sha256sum "$BACKUP/build/manifest.json"
 ```
 
@@ -357,6 +358,22 @@ rm -rf application/routes
 cp -a "$BACKUP/routes" application/routes
 
 cp -a "$BACKUP/bootstrap-app.php" application/bootstrap/app.php
+
+# The Composer trio comes back as ONE unit with the code — old code must
+# never run under the release's new dependency tree, and old dependencies
+# must never sit under the new code. The vendor tree is REPLACED, never
+# merged, and no Composer runs on this host in either direction.
+cp -a "$BACKUP/composer.json" application/composer.json
+cp -a "$BACKUP/composer.lock" application/composer.lock
+rm -rf application/vendor
+cp -a "$BACKUP/vendor" application/vendor
+
+cmp application/composer.lock "$BACKUP/composer.lock" \
+  && echo "restored lock OK" || echo "RESTORED LOCK MISMATCH — STOP"
+
+# The restored code needs its package manifest rebuilt against the RESTORED
+# vendor — offline, exactly as the deployment did against the shipped one.
+/opt/alt/php83/usr/bin/php application/artisan package:discover
 ```
 
 The WHOLE application-code directory moves, mirroring the backup: this release
@@ -366,7 +383,10 @@ the only shape that undoes both without a per-release list. `routes` and
 controllers the restored code no longer defines, so leaving either behind is
 the half-rollback where `route:cache` crashes on a class that does not exist.
 Configuration is restored because the patch changed two config files that
-reverted code never defined.
+reverted code never defined. The dependency trio must come back with it for
+the same reason in the other direction: the release replaced `vendor/`, and
+restored code over the new tree is the exact code/dependency mismatch the
+dependency-parity fix exists to close.
 
 Keep the failed release. It costs nothing and it is the only evidence of what
 went wrong.
