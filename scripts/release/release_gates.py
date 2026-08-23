@@ -64,6 +64,14 @@ GATES: tuple[Gate, ...] = (
     Gate('middleware-check', 'middleware_check', 'runtime-checks'),
     Gate('scheduler-check', 'scheduler_check', 'runtime-checks'),
     Gate('queue-check', 'queue_check', 'runtime-checks'),
+    # The production dependency tree: installed --no-dev from the frozen
+    # lock, shipped inside the runtime artifact, and proven to match that
+    # lock exactly. Discovered live: the runtime used to ship no vendor at
+    # all, so production kept an old tree (league/commonmark 2.8.3) that no
+    # rehearsal had ever tested against the new code.
+    Gate('production-vendor-install', 'production_vendor_install', 'runtime-checks'),
+    Gate('dependency-parity', 'dependency_parity', 'runtime-checks'),
+    Gate('platform-requirements', 'platform_requirements', 'runtime-checks'),
     # ---------------------------------------------------------------- browser
     # The browser suite needs a migrated, seeded, dedicated database and an
     # application that believes it is installed. Preparing that is release

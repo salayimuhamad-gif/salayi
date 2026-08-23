@@ -2754,6 +2754,138 @@ check('the settings test aims the environment writer at storage instead',
       "storage_path('framework/testing/system-settings/.env')"
       in (ROOT / 'tests' / 'Feature' / 'SystemSettingsTest.php').read_text())
 
+# ---- runtime dependency parity (the production-vendor blocker) -------------
+#
+# Discovered on the live host: the runtime artifact shipped NO vendor, the
+# runbook installed none, and production kept an old dependency tree
+# (league/commonmark 2.8.3) that no rehearsal had ever tested with the new
+# code. Everything below would have caught it.
+runner_text = (RELEASE / 'run_final_release_ci.sh').read_text()
+builder_text = (RELEASE / 'build_runtime.py').read_text()
+deploy_text = (RELEASE / 'deploy_rehearsal.sh').read_text()
+rollback_text = (RELEASE / 'rollback_rehearsal_v7.sh').read_text()
+gates_text = (RELEASE / 'release_gates.py').read_text()
+deploy_doc = (ROOT / 'DEPLOYMENT_NOTES.md').read_text()
+rollback_doc = (ROOT / 'ROLLBACK_NOTES.md').read_text()
+
+check('the cycle builds a dedicated PRODUCTION dependency tree from the frozen lock',
+      'production-vendor-install' in runner_text
+      and '--no-dev --prefer-dist --optimize-autoloader' in runner_text
+      and '--no-scripts --working-dir "$PROD_DEPS"' in runner_text)
+check('the runtime builder ships that vendor inside application/',
+      '--vendor' in builder_text
+      and "runtime / 'application' / 'vendor'" in builder_text
+      and "'vendor/composer/installed.json'" in builder_text)
+check('the runner hands the production vendor to the runtime builder',
+      '--vendor "$PROD_DEPS/vendor"' in runner_text)
+check('dependency parity is a recorded release gate with the CommonMark pin',
+      'check_vendor_parity.py' in runner_text
+      and '--forbid league/commonmark=2.8.3' in runner_text)
+check('platform requirements are proven against the SHIPPED runtime, --no-dev',
+      'check-platform-reqs --no-dev' in runner_text
+      and '--working-dir "$RUNTIME_DIR/application"' in runner_text)
+check('the three dependency gates are required release evidence',
+      all(label in gates_text for label in
+          ("'production-vendor-install'", "'dependency-parity'",
+           "'platform-requirements'")))
+check('the deployment rehearsal deploys the RUNTIME vendor, replaced never merged',
+      'rm -rf "$SITE/application/vendor"' in deploy_text
+      and 'cp -a "$STAGE/patch/application/vendor" "$SITE/application/vendor"' in deploy_text)
+check('the rehearsal proves the dev stand-in is gone after the apply step',
+      '[ ! -d "$SITE/application/vendor/phpunit" ]' in deploy_text
+      and '[ -d "$SITE/application/vendor/phpunit" ]' in deploy_text)
+check('the rehearsal pins the deployed lock and the locked CommonMark',
+      'cmp -s "$SITE/application/composer.lock" "$STAGE/patch/application/composer.lock"' in deploy_text
+      and 'InstalledVersions::getPrettyVersion("league/commonmark")' in deploy_text)
+check('the rehearsal rebuilds the package manifest against the shipped vendor',
+      'artisan package:discover' in deploy_text)
+check('the rehearsal backs up the Composer trio with the code',
+      'cp -a "$SITE/application/composer.lock"     "$BACKUP/composer.lock"' in deploy_text
+      and 'cp -a "$SITE/application/vendor"            "$BACKUP/vendor"' in deploy_text)
+check('the rollback rehearsal restores the Composer trio as one unit',
+      'cp -a "$BACKUP/vendor" "$SITE/application/vendor"' in rollback_text
+      and 'the restored vendor tree matches the backup exactly' in rollback_text)
+check('DEPLOYMENT_NOTES backs up and deploys the dependency trio without Composer',
+      'cp -a application/vendor            ~/patch-backup-$TS/vendor' in deploy_doc
+      and 'cp -a ~/patch-v7/application/vendor application/' in deploy_doc
+      and 'composer update' not in deploy_doc.replace('`composer update` must never be typed', ''))
+check('DEPLOYMENT_NOTES verifies the deployed dependency state before artisan up',
+      'InstalledVersions::getPrettyVersion("league/commonmark")' in deploy_doc
+      and 'cmp application/composer.lock ~/patch-v7/application/composer.lock' in deploy_doc)
+check('ROLLBACK_NOTES restores code and dependencies as one coherent unit',
+      'cp -a "$BACKUP/vendor" application/vendor' in rollback_doc
+      and 'composer.json composer.lock vendor' in rollback_doc)
+
+# Behavioural: the parity checker must pass a faithful runtime and refuse a
+# version drift, a dev leak, and the forbidden CommonMark — with fixtures.
+with tempfile.TemporaryDirectory() as tmp:
+    base = Path(tmp)
+    lock_doc = {
+        'packages': [
+            {'name': 'league/commonmark', 'version': '2.9.0',
+             'source': {'reference': 'aaaa1111'}},
+            {'name': 'acme/lib', 'version': '1.2.3',
+             'dist': {'reference': 'bbbb2222'}},
+        ],
+        'packages-dev': [{'name': 'phpunit/phpunit', 'version': '11.0.0'}],
+    }
+    (base / 'composer.lock').write_text(json.dumps(lock_doc))
+    (base / 'composer.json').write_text('{"name": "fixture/app"}\n')
+
+    def runtime_fixture(name: str, installed: dict, lock_bytes: str | None = None,
+                        composer_bytes: str | None = None) -> Path:
+        app = base / name
+        (app / 'vendor' / 'composer').mkdir(parents=True)
+        (app / 'vendor' / 'autoload.php').write_text('<?php // autoload\n')
+        (app / 'vendor' / 'composer' / 'installed.json').write_text(
+            json.dumps(installed))
+        (app / 'composer.lock').write_text(
+            lock_bytes if lock_bytes is not None
+            else (base / 'composer.lock').read_text())
+        (app / 'composer.json').write_text(
+            composer_bytes if composer_bytes is not None
+            else (base / 'composer.json').read_text())
+        return app
+
+    good_installed = {
+        'packages': [
+            {'name': 'league/commonmark', 'version': '2.9.0',
+             'source': {'reference': 'aaaa1111'}},
+            {'name': 'acme/lib', 'version': '1.2.3',
+             'dist': {'reference': 'bbbb2222'}},
+        ],
+        'dev': False, 'dev-package-names': [],
+    }
+
+    def parity(app: Path) -> subprocess.CompletedProcess:
+        return run(str(RELEASE / 'check_vendor_parity.py'),
+                   '--lock', str(base / 'composer.lock'),
+                   '--composer', str(base / 'composer.json'),
+                   '--runtime-app', str(app),
+                   '--forbid', 'league/commonmark=2.8.3')
+
+    verdict = parity(runtime_fixture('good', good_installed))
+    check('vendor parity passes a faithful production runtime',
+          verdict.returncode == 0, verdict.stderr.strip()[-200:])
+
+    drift = json.loads(json.dumps(good_installed))
+    drift['packages'][0]['version'] = '2.8.3'
+    drift['packages'][0]['source']['reference'] = '1902f60f9842'
+    verdict = parity(runtime_fixture('drift', drift))
+    check('vendor parity refuses the superseded CommonMark 2.8.3',
+          verdict.returncode != 0 and 'league/commonmark' in verdict.stderr)
+
+    leak = json.loads(json.dumps(good_installed))
+    leak['packages'].append({'name': 'phpunit/phpunit', 'version': '11.0.0'})
+    verdict = parity(runtime_fixture('leak', leak))
+    check('vendor parity refuses a dev-only package in the shipped tree',
+          verdict.returncode != 0 and 'phpunit/phpunit' in verdict.stderr)
+
+    verdict = parity(runtime_fixture('stale-lock', good_installed,
+                                     lock_bytes='{"packages": []}\n'))
+    check('vendor parity refuses a runtime lock that differs from the source lock',
+          verdict.returncode != 0 and 'composer.lock' in verdict.stderr)
+
 print()
 
 if FAILED == 0:

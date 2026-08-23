@@ -157,11 +157,14 @@ echo "== 1. checksum verification =="
 check "runtime archive checksum verifies before anything is touched" $?
 
 echo "== 2. mandatory backups =="
-# DEPLOYMENT_NOTES.md §2 requires SEVEN backups. This release touches several
+# DEPLOYMENT_NOTES.md §2 requires TEN backups. This release touches several
 # modules (Identity, Geography, Core, Projects) plus the route files, the HTTP
 # bootstrap and two config files, so the backup is the WHOLE application-code
 # directory rather than a per-module selection — a cherry-picked list tuned to
 # one release is exactly how the rollback ends up missing the file it needs.
+# The Composer trio (composer.json, composer.lock, vendor) is backed up as ONE
+# unit: a rollback that restores old code under a new dependency tree — or the
+# reverse — is exactly the mismatch this release exists to close.
 TS=$(date +%Y%m%d-%H%M%S)
 BACKUP="$STAGE/backup-$TS"
 mkdir -p "$BACKUP"
@@ -172,6 +175,9 @@ cp -a "$SITE/application/config"            "$BACKUP/config"
 cp -a "$SITE/application/routes"            "$BACKUP/routes"
 cp -a "$SITE/application/bootstrap/app.php" "$BACKUP/bootstrap-app.php"
 cp -a "$SITE/public_html/build"             "$BACKUP/build"
+cp -a "$SITE/application/composer.json"     "$BACKUP/composer.json"
+cp -a "$SITE/application/composer.lock"     "$BACKUP/composer.lock"
+cp -a "$SITE/application/vendor"            "$BACKUP/vendor"
 "$MYSQLDUMP_BIN" -h "$REHEARSAL_DB_HOST" -P "$REHEARSAL_DB_PORT" \
     -u "$REHEARSAL_DB_USER" -p"$REHEARSAL_DB_PASSWORD" "$REHEARSAL_DB_NAME" \
     > "$BACKUP/database.sql" 2>/dev/null
@@ -180,7 +186,8 @@ cp -a "$SITE/public_html/build"             "$BACKUP/build"
 # exists AND is readable AND is not empty.
 backup_failures=0
 
-for item in app lang config routes bootstrap-app.php build database.sql; do
+for item in app lang config routes bootstrap-app.php build database.sql \
+            composer.json composer.lock vendor; do
     if [ ! -e "$BACKUP/$item" ] || [ ! -r "$BACKUP/$item" ]; then
         echo "  FAIL  backup item missing or unreadable: $item"
         backup_failures=$((backup_failures + 1))
@@ -194,7 +201,7 @@ for item in app lang config routes bootstrap-app.php build database.sql; do
 done
 
 [ "$backup_failures" = "0" ]
-check "all seven documented backups taken, readable and non-empty" $?
+check "all ten documented backups taken, readable and non-empty" $?
 
 printf '%s\n' "$BACKUP" > "$STAGE/LAST_BACKUP_PATH"
 
@@ -210,6 +217,14 @@ echo "== 4. maintenance mode =="
 check "site placed in maintenance mode before files move" $?
 
 echo "== 5. apply =="
+# The staged BASELINE runs on a stand-in vendor (REHEARSAL_VENDOR — the CI dev
+# tree, standing in for production's own old dependencies). Prove the stand-in
+# is really there with its dev-only marker BEFORE the overlay, so the absence
+# of that marker afterwards demonstrates a real replacement rather than a
+# vacuous check.
+[ -d "$SITE/application/vendor/phpunit" ]
+check "baseline runs on the stand-in vendor (dev marker present before apply)" $?
+
 # routes/ and bootstrap/app.php are part of this release's delta: the Telegram
 # password-recovery routes live in routes/auth.php and the presence middleware
 # is registered in bootstrap/app.php. Copying app/ alone would deploy
@@ -219,9 +234,37 @@ cp -a "$STAGE/patch/application/lang/." "$SITE/application/lang/"
 cp -a "$STAGE/patch/application/config/." "$SITE/application/config/" 2>/dev/null || true
 cp -a "$STAGE/patch/application/routes/." "$SITE/application/routes/"
 cp -a "$STAGE/patch/application/bootstrap/app.php" "$SITE/application/bootstrap/app.php"
+
+# The Composer trio travels with the code, from the SAME checksum-verified
+# runtime archive, and the vendor tree is REPLACED, never merged — a merged
+# vendor keeps orphaned classes beside a new autoloader exactly the way a
+# merged build directory keeps stale chunks. No Composer, no network: the
+# dependency bytes were installed --no-dev from the frozen lock inside the
+# release cycle and tested there.
+cp -a "$STAGE/patch/application/composer.json" "$SITE/application/composer.json"
+cp -a "$STAGE/patch/application/composer.lock" "$SITE/application/composer.lock"
+rm -rf "$SITE/application/vendor"
+cp -a "$STAGE/patch/application/vendor" "$SITE/application/vendor"
+
 rm -rf "$SITE/public_html/build"
 cp -a "$STAGE/patch/public_html/build" "$SITE/public_html/"
 check "runtime files applied" $?
+
+# Dependency-state proofs, in the same spirit as the build-directory ones:
+# the deployed lock IS the shipped lock, the tree serving requests is the
+# runtime's production tree (the stand-in's dev marker must be gone), and
+# Composer's own runtime API reports the locked CommonMark — the package
+# production was caught holding at a superseded version.
+cmp -s "$SITE/application/composer.lock" "$STAGE/patch/application/composer.lock"
+check "the deployed composer.lock matches the runtime lock byte-for-byte" $?
+
+[ ! -d "$SITE/application/vendor/phpunit" ]
+check "the deployed vendor is the production tree, not the CI dev stand-in" $?
+
+WANT_COMMONMARK=$("$PHP_BIN" -r '$l = json_decode(file_get_contents($argv[1]), true); foreach ($l["packages"] as $p) { if ($p["name"] === "league/commonmark") { echo $p["version"]; } }' "$STAGE/patch/application/composer.lock")
+GOT_COMMONMARK=$(cd "$SITE/application" && "$PHP_BIN" -r 'require "vendor/autoload.php"; echo \Composer\InstalledVersions::getPrettyVersion("league/commonmark");' 2>/dev/null)
+[ -n "$WANT_COMMONMARK" ] && [ "$GOT_COMMONMARK" = "$WANT_COMMONMARK" ] && [ "$GOT_COMMONMARK" != "2.8.3" ]
+check "deployed CommonMark is the locked version, not the superseded 2.8.3 ($GOT_COMMONMARK)" $?
 
 # The build directory is REPLACED, never merged, and that replacement is what
 # retires the previous build's content-hashed chunks — the source patch does not
@@ -313,6 +356,14 @@ exit($missing === 0 ? 0 : 1);' "$SITE/public_html/build/manifest.json"
 check "every manifest entry resolves to a shipped file" $?
 
 echo "== 7. caches rebuilt =="
+# package:discover FIRST: the vendor tree just changed, and the package
+# manifest in bootstrap/cache was written for the old one. It is the offline
+# stand-in for the composer post-autoload-dump hook the production build
+# deliberately skipped (--no-scripts), and it must run against the SHIPPED
+# vendor before any cache is rebuilt.
+( cd "$SITE/application" && "$PHP_BIN" artisan package:discover >/dev/null 2>&1 )
+check "package manifest rediscovered against the shipped vendor" $?
+
 ( cd "$SITE/application" && "$PHP_BIN" artisan config:clear >/dev/null 2>&1 && "$PHP_BIN" artisan route:clear >/dev/null 2>&1 \
     && "$PHP_BIN" artisan view:clear >/dev/null 2>&1 && "$PHP_BIN" artisan config:cache >/dev/null 2>&1 \
     && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
