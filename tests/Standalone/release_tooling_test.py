@@ -2886,6 +2886,139 @@ with tempfile.TemporaryDirectory() as tmp:
     check('vendor parity refuses a runtime lock that differs from the source lock',
           verdict.returncode != 0 and 'composer.lock' in verdict.stderr)
 
+# ---- stale package-discovery manifests (final release rehearsal #36) -------
+#
+# The reproduced failure: the baseline boots on a dev vendor, Laravel writes
+# bootstrap/cache/{packages.php,services.php} naming the dev-only Collision
+# provider, the deployment swaps in the --no-dev vendor, and the next artisan
+# boot — package:discover itself — reads the stale manifest and dies on the
+# class the shipped tree deliberately lacks. The harness below models exactly
+# the framework's load contract for those two generated files (the cached
+# services.php manifest is authoritative at boot and every eager provider in
+# it is instantiated); the failing branch fails through PHP's own class
+# resolution against a genuinely Collision-less vendor, and only the shared
+# invalidation helper turns it into the passing branch.
+COLLISION = 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider'
+HELPER = RELEASE / 'invalidate_package_manifests.sh'
+
+with tempfile.TemporaryDirectory() as tmp:
+    site = Path(tmp) / 'application'
+    (site / 'bootstrap' / 'cache').mkdir(parents=True)
+    (site / 'vendor' / 'composer').mkdir(parents=True)
+
+    # The production vendor: autoloads ONLY the real provider; Collision is
+    # genuinely absent, exactly like the shipped --no-dev tree.
+    (site / 'vendor' / 'autoload.php').write_text(
+        "<?php spl_autoload_register(function ($class) {\n"
+        "    if ($class === 'Acme\\\\RealServiceProvider') {\n"
+        "        eval('namespace Acme; class RealServiceProvider {}');\n"
+        "    }\n"
+        "});\n")
+    (site / 'vendor' / 'composer' / 'installed.json').write_text(json.dumps({
+        'packages': [{'name': 'acme/real', 'version': '1.0.0',
+                      'extra': {'laravel': {'providers': ['Acme\\RealServiceProvider']}}}],
+        'dev': False, 'dev-package-names': [],
+    }))
+
+    # The stale manifests, in the real generated shapes, written while the
+    # dev vendor (with Collision) was the one booting.
+    (site / 'bootstrap' / 'cache' / 'packages.php').write_text(
+        "<?php return ['nunomaduro/collision' => ['providers' => "
+        f"['{COLLISION}']]];\n")
+    (site / 'bootstrap' / 'cache' / 'services.php').write_text(
+        "<?php return ['providers' => "
+        f"['{COLLISION}', 'Acme\\\\RealServiceProvider'], "
+        f"'eager' => ['{COLLISION}', 'Acme\\\\RealServiceProvider'], "
+        "'deferred' => []];\n")
+
+    boot = Path(tmp) / 'boot.php'
+    boot.write_text(
+        "<?php\n"
+        "// The framework's load contract for the generated discovery files:\n"
+        "// when the cached services manifest exists it is authoritative, and\n"
+        "// every eager provider it names is instantiated at boot — BEFORE\n"
+        "// anything could rewrite it. Absent, discovery rebuilds both files\n"
+        "// from the vendor actually present (installed.json metadata).\n"
+        "require $argv[1].'/vendor/autoload.php';\n"
+        "$manifest = $argv[1].'/bootstrap/cache/services.php';\n"
+        "if (! file_exists($manifest)) {\n"
+        "    $installed = json_decode(file_get_contents($argv[1].'/vendor/composer/installed.json'), true);\n"
+        "    $providers = [];\n"
+        "    foreach ($installed['packages'] as $p) {\n"
+        "        foreach (($p['extra']['laravel']['providers'] ?? []) as $prov) { $providers[] = $prov; }\n"
+        "    }\n"
+        "    file_put_contents($argv[1].'/bootstrap/cache/packages.php',\n"
+        "        '<?php return '.var_export(['providers' => $providers], true).';');\n"
+        "    file_put_contents($manifest,\n"
+        "        '<?php return '.var_export(['providers' => $providers, 'eager' => $providers, 'deferred' => []], true).';');\n"
+        "}\n"
+        "$loaded = require $manifest;\n"
+        "foreach ($loaded['eager'] as $provider) { new $provider(); }\n"
+        "echo 'BOOTED: '.count($loaded['eager']).' providers', PHP_EOL;\n")
+
+    stale = subprocess.run(['php', str(boot), str(site)],
+                           capture_output=True, text=True)
+    check('a stale discovery manifest kills the boot under the production vendor',
+          stale.returncode != 0 and 'CollisionServiceProvider' in
+          (stale.stderr + stale.stdout),
+          (stale.stderr + stale.stdout).strip()[-200:])
+
+    invalidated = subprocess.run(
+        ['bash', str(HELPER), str(site)], capture_output=True, text=True)
+    check('the shared helper removes exactly the two discovery manifests',
+          invalidated.returncode == 0
+          and not (site / 'bootstrap' / 'cache' / 'packages.php').exists()
+          and not (site / 'bootstrap' / 'cache' / 'services.php').exists(),
+          invalidated.stderr.strip()[-200:])
+
+    healed = subprocess.run(['php', str(boot), str(site)],
+                            capture_output=True, text=True)
+    fresh = (site / 'bootstrap' / 'cache' / 'services.php').read_text()
+    check('after invalidation, discovery rebuilds and boots from the shipped vendor',
+          healed.returncode == 0 and 'BOOTED: 1 providers' in healed.stdout
+          and 'Collision' not in fresh,
+          (healed.stderr + healed.stdout).strip()[-200:])
+
+# The wiring pins: the invalidation must sit between the vendor swap and the
+# first artisan command, in both directions, with the discover output kept as
+# evidence instead of being discarded.
+helper_text = HELPER.read_text()
+deploy_text = (RELEASE / 'deploy_rehearsal.sh').read_text()
+rollback_text = (RELEASE / 'rollback_rehearsal_v7.sh').read_text()
+deploy_doc = (ROOT / 'DEPLOYMENT_NOTES.md').read_text()
+rollback_doc = (ROOT / 'ROLLBACK_NOTES.md').read_text()
+
+check('the invalidation helper is the single source of the manifest list',
+      'bootstrap/cache/packages.php bootstrap/cache/services.php' in helper_text)
+check('the deployment rehearsal invalidates AFTER the vendor swap, BEFORE discover',
+      deploy_text.index('cp -a "$STAGE/patch/application/vendor"')
+      < deploy_text.index('invalidate_package_manifests.sh')
+      < deploy_text.index('artisan package:discover'))
+check('the rollback rehearsal invalidates AFTER the restore, BEFORE discover',
+      rollback_text.index('cp -a "$BACKUP/vendor" "$SITE/application/vendor"')
+      < rollback_text.index('invalidate_package_manifests.sh')
+      < rollback_text.index('artisan package:discover'))
+check('package:discover output is evidence, not /dev/null, in both rehearsals',
+      'package:discover >/dev/null' not in deploy_text
+      and 'package:discover >/dev/null' not in rollback_text
+      and '$EV/package-discover.log' in deploy_text
+      and '$EV/rollback-package-discover.log' in rollback_text)
+check('cache-rebuild output is captured as evidence in both rehearsals',
+      '$EV/cache-rebuild.log' in deploy_text
+      and '$EV/rollback-cache-rebuild.log' in rollback_text)
+check('a failed discover prints its captured output into the workflow log',
+      'tail -n 40 "$EV/package-discover.log"' in deploy_text
+      and 'tail -n 40 "$EV/rollback-package-discover.log"' in rollback_text)
+check('DEPLOYMENT_NOTES invalidates both manifests before its only discover',
+      deploy_doc.index('rm -f application/bootstrap/cache/packages.php')
+      < deploy_doc.index('rm -f application/bootstrap/cache/services.php')
+      < deploy_doc.index('artisan package:discover')
+      and deploy_doc.count('artisan package:discover') == 1)
+check('ROLLBACK_NOTES invalidates both manifests before its discover',
+      rollback_doc.index('rm -f application/bootstrap/cache/packages.php')
+      < rollback_doc.index('rm -f application/bootstrap/cache/services.php')
+      < rollback_doc.index('artisan package:discover'))
+
 print()
 
 if FAILED == 0:

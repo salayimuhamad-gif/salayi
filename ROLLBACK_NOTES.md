@@ -371,8 +371,14 @@ cp -a "$BACKUP/vendor" application/vendor
 cmp application/composer.lock "$BACKUP/composer.lock" \
   && echo "restored lock OK" || echo "RESTORED LOCK MISMATCH — STOP"
 
-# The restored code needs its package manifest rebuilt against the RESTORED
-# vendor — offline, exactly as the deployment did against the shipped one.
+# The dependency tree just changed direction (new -> old), so the discovery
+# manifests Laravel wrote for the NEW vendor must not survive under the OLD
+# one: they are read at boot, and a stale entry can kill the very artisan
+# command that would rebuild them. Invalidate BOTH generated manifests —
+# and only these two — then rediscover against the RESTORED vendor.
+# Offline, exactly as the deployment did against the shipped one.
+rm -f application/bootstrap/cache/packages.php
+rm -f application/bootstrap/cache/services.php
 /opt/alt/php83/usr/bin/php application/artisan package:discover
 ```
 

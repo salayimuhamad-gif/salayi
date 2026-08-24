@@ -346,6 +346,17 @@ cp -a ~/patch-v7/application/composer.lock application/composer.lock
 rm -rf application/vendor
 cp -a ~/patch-v7/application/vendor application/
 
+# The vendor tree just changed, so the two GENERATED package-discovery
+# manifests Laravel wrote for the OLD tree are stale — and they are read at
+# boot, so the very next artisan command (package:discover included) can die
+# on a provider class the new tree does not carry, exactly the failure the
+# release rehearsal reproduced. Invalidate BOTH — and only these two; the
+# config/route/view caches are separate and rebuilt in §10 — then rediscover
+# against the vendor that is actually present. Offline, no network.
+rm -f application/bootstrap/cache/packages.php
+rm -f application/bootstrap/cache/services.php
+/opt/alt/php83/usr/bin/php application/artisan package:discover
+
 # REPLACED, never merged: Vite content-hashes filenames, so a merged directory
 # leaves old chunks beside a new manifest and the browser requests assets the
 # manifest never names.
@@ -467,7 +478,6 @@ maintenance mode and go to §15 failure handling, which routes to
 
 ```bash
 cd ~/domains/myhawler.com/application
-/opt/alt/php83/usr/bin/php artisan package:discover
 /opt/alt/php83/usr/bin/php artisan config:clear
 /opt/alt/php83/usr/bin/php artisan route:clear
 /opt/alt/php83/usr/bin/php artisan view:clear
@@ -476,12 +486,12 @@ cd ~/domains/myhawler.com/application
 /opt/alt/php83/usr/bin/php artisan view:cache
 ```
 
-`package:discover` comes FIRST and is not optional: the vendor tree changed
-in §7, and the package manifest in `bootstrap/cache` was written for the old
-one. It is the offline stand-in for the Composer post-autoload-dump hook the
-production dependency build deliberately skipped, and it runs entirely
-against the shipped vendor — no network. A cached route table from before
-the patch keeps serving the old registration behaviour.
+The package-discovery manifests were already invalidated and rebuilt in §7,
+immediately after the vendor swap and before ANY artisan command — that
+ordering is the fix the release rehearsal proved, and it must not drift back
+here. This step rebuilds only the ordinary config, route and view caches. A
+cached route table from before the patch keeps serving the old registration
+behaviour.
 
 ## 11. Routes, middleware, scheduler, queue
 
@@ -530,8 +540,9 @@ composer.json, composer.lock and vendor
     replaced from the staged runtime          §7
 deployed lock byte-equal, production tree,
     locked CommonMark (never 2.8.3)           §7
-package manifest rediscovered (shipped
-    vendor) before caches                     §10
+stale discovery manifests invalidated,
+    then rediscovered (shipped vendor),
+    before any artisan command                §7
 protected five already Ran; seven Pending     §3/§8
 the seven release migrations moved to Ran     §8
 ledger: live 59 -> 66 exactly (plus seven);

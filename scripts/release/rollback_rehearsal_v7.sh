@@ -230,6 +230,27 @@ BACKUP_VENDOR_LIST=$(cd "$BACKUP/vendor" && find . -type f | sort | sha256sum | 
 [ "$RESTORED_VENDOR_LIST" = "$BACKUP_VENDOR_LIST" ]
 check "the restored vendor tree matches the backup exactly" $?
 
+# The dependency tree just changed direction (new -> old), so the same rule
+# as the deployment applies in reverse: the discovery manifests written for
+# the NEW vendor must not survive under the OLD one, and they go BEFORE the
+# first artisan command boots on the restored tree. Then package:discover
+# rebuilds them from the restored vendor, with its output kept as evidence.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+bash "$SCRIPT_DIR/invalidate_package_manifests.sh" "$SITE/application"
+[ ! -e "$SITE/application/bootstrap/cache/packages.php" ] \
+    && [ ! -e "$SITE/application/bootstrap/cache/services.php" ]
+check "new-vendor discovery manifests invalidated before any artisan boots" $?
+
+( cd "$SITE/application" && "$PHP" artisan package:discover ) \
+    > "$EV/rollback-package-discover.log" 2>&1
+DISCOVER_RC=$?
+if [ "$DISCOVER_RC" != "0" ]; then
+    echo "  ---- package:discover output (see rehearsal evidence: rollback-package-discover.log) ----"
+    tail -n 40 "$EV/rollback-package-discover.log" | sed 's/^/    /'
+fi
+[ "$DISCOVER_RC" = "0" ]
+check "package manifest rediscovered against the restored vendor" $?
+
 echo "== 4. restore the public build (replaced, never merged) =="
 rm -rf "$SITE/public_html/build"
 cp -a "$BACKUP/build" "$SITE/public_html/build"
@@ -290,9 +311,16 @@ RESTORE_EVIDENCE_COL=$(db -N -B "$REHEARSAL_DB_NAME" -e "SELECT COUNT(*) FROM in
 check "the knowledge evidence-class column is gone after the database restore (found ${RESTORE_EVIDENCE_COL:-?})" $?
 
 echo "== 6. rebuild caches =="
-( cd "$SITE/application" && "$PHP" artisan config:clear >/dev/null 2>&1 && "$PHP" artisan route:clear >/dev/null 2>&1 \
-    && "$PHP" artisan view:clear >/dev/null 2>&1 && "$PHP" artisan config:cache >/dev/null 2>&1 \
-    && "$PHP" artisan route:cache >/dev/null 2>&1 && "$PHP" artisan view:cache >/dev/null 2>&1 )
+( cd "$SITE/application" && "$PHP" artisan config:clear && "$PHP" artisan route:clear \
+    && "$PHP" artisan view:clear && "$PHP" artisan config:cache \
+    && "$PHP" artisan route:cache && "$PHP" artisan view:cache ) \
+    > "$EV/rollback-cache-rebuild.log" 2>&1
+CACHES_RC=$?
+if [ "$CACHES_RC" != "0" ]; then
+    echo "  ---- cache rebuild output (see rehearsal evidence: rollback-cache-rebuild.log) ----"
+    tail -n 40 "$EV/rollback-cache-rebuild.log" | sed 's/^/    /'
+fi
+[ "$CACHES_RC" = "0" ]
 check "caches cleared and rebuilt against the restored code" $?
 
 echo "== 7. the application still boots =="

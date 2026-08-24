@@ -246,6 +246,19 @@ cp -a "$STAGE/patch/application/composer.lock" "$SITE/application/composer.lock"
 rm -rf "$SITE/application/vendor"
 cp -a "$STAGE/patch/application/vendor" "$SITE/application/vendor"
 
+# Rehearsal #36's root cause: the baseline phase booted on the dev stand-in
+# vendor and Laravel wrote bootstrap/cache/{packages.php,services.php} with
+# the dev-only Collision provider in them. After the swap above, the very
+# next artisan command boots THROUGH those stale manifests and dies on the
+# provider class the production vendor deliberately lacks — package:discover
+# included, so the state can never repair itself. The discovery manifests
+# are invalidated the moment the tree changes, BEFORE any artisan runs.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+bash "$SCRIPT_DIR/invalidate_package_manifests.sh" "$SITE/application"
+[ ! -e "$SITE/application/bootstrap/cache/packages.php" ] \
+    && [ ! -e "$SITE/application/bootstrap/cache/services.php" ]
+check "stale package-discovery manifests invalidated before any artisan boots" $?
+
 rm -rf "$SITE/public_html/build"
 cp -a "$STAGE/patch/public_html/build" "$SITE/public_html/"
 check "runtime files applied" $?
@@ -356,17 +369,32 @@ exit($missing === 0 ? 0 : 1);' "$SITE/public_html/build/manifest.json"
 check "every manifest entry resolves to a shipped file" $?
 
 echo "== 7. caches rebuilt =="
-# package:discover FIRST: the vendor tree just changed, and the package
-# manifest in bootstrap/cache was written for the old one. It is the offline
-# stand-in for the composer post-autoload-dump hook the production build
-# deliberately skipped (--no-scripts), and it must run against the SHIPPED
-# vendor before any cache is rebuilt.
-( cd "$SITE/application" && "$PHP_BIN" artisan package:discover >/dev/null 2>&1 )
+# package:discover FIRST: the vendor tree just changed, the stale discovery
+# manifests were invalidated in §5, and this rebuilds them from the SHIPPED
+# vendor. It is the offline stand-in for the composer post-autoload-dump
+# hook the production build deliberately skipped (--no-scripts). Its output
+# is EVIDENCE, not noise — rehearsal #36 threw the real exception away with
+# >/dev/null and left a bare FAIL nobody could act on.
+( cd "$SITE/application" && "$PHP_BIN" artisan package:discover ) \
+    > "$EV/package-discover.log" 2>&1
+DISCOVER_RC=$?
+if [ "$DISCOVER_RC" != "0" ]; then
+    echo "  ---- package:discover output (see rehearsal evidence: package-discover.log) ----"
+    tail -n 40 "$EV/package-discover.log" | sed 's/^/    /'
+fi
+[ "$DISCOVER_RC" = "0" ]
 check "package manifest rediscovered against the shipped vendor" $?
 
-( cd "$SITE/application" && "$PHP_BIN" artisan config:clear >/dev/null 2>&1 && "$PHP_BIN" artisan route:clear >/dev/null 2>&1 \
-    && "$PHP_BIN" artisan view:clear >/dev/null 2>&1 && "$PHP_BIN" artisan config:cache >/dev/null 2>&1 \
-    && "$PHP_BIN" artisan route:cache >/dev/null 2>&1 && "$PHP_BIN" artisan view:cache >/dev/null 2>&1 )
+( cd "$SITE/application" && "$PHP_BIN" artisan config:clear && "$PHP_BIN" artisan route:clear \
+    && "$PHP_BIN" artisan view:clear && "$PHP_BIN" artisan config:cache \
+    && "$PHP_BIN" artisan route:cache && "$PHP_BIN" artisan view:cache ) \
+    > "$EV/cache-rebuild.log" 2>&1
+CACHES_RC=$?
+if [ "$CACHES_RC" != "0" ]; then
+    echo "  ---- cache rebuild output (see rehearsal evidence: cache-rebuild.log) ----"
+    tail -n 40 "$EV/cache-rebuild.log" | sed 's/^/    /'
+fi
+[ "$CACHES_RC" = "0" ]
 check "configuration, route and view caches rebuilt" $?
 
 echo "== 8. migrations (this patch adds exactly twelve) =="
