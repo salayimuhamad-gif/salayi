@@ -547,7 +547,14 @@ final class TelegramOwnershipTransferTest extends TestCase
         $this->assertNotNull($freshSource->telegram_verified_at);
         $this->assertTrue($freshSource->hasVerifiedAccount());
 
-        // Access restores automatically — no support step, no new status.
+        /*
+         * Access restores automatically — no support step, no new status. A
+         * real browser's next request re-resolves the user from the session
+         * against the database; `actingAs` pins the pre-relink model
+         * instance, so the harness re-authenticates with the fresh row to
+         * ask the gate the question a real request would.
+         */
+        $this->actingAs($freshSource);
         $this->get('/account/profile')->assertOk();
     }
 
