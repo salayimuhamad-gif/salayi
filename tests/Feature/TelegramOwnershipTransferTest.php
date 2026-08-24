@@ -13,6 +13,7 @@ use App\Modules\Identity\Services\TelegramVerificationService;
 use App\Modules\Operations\Models\AuditLog;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -186,6 +187,9 @@ final class TelegramOwnershipTransferTest extends TestCase
             ->first();
     }
 
+    /**
+     * @return TestResponse<JsonResponse>
+     */
     private function confirmTransfer(TelegramLoginIntent $intent, bool $accept = true): TestResponse
     {
         $payload = ['candidate_handle' => $intent->candidateHandle()];
