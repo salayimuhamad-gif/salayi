@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace App\Modules\Identity\Http\Controllers\Auth;
 
 use App\Modules\Identity\Models\TelegramLoginIntent;
+use App\Modules\Identity\Models\TelegramVerificationToken;
 use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\TelegramAuthenticator;
 use App\Modules\Identity\Services\TelegramBotResponder;
+use App\Modules\Identity\Services\TelegramOwnershipTransfer;
 use App\Modules\Identity\Services\TelegramRegistrar;
 use App\Modules\Identity\Services\TelegramVerificationService;
 use App\Modules\Identity\Services\TelegramWebhookInbox;
@@ -44,6 +46,7 @@ final class TelegramAuthController extends Controller
         private readonly TelegramBotResponder $bot,
         private readonly TelegramWebhookInbox $inbox,
         private readonly TelegramVerificationService $verification,
+        private readonly TelegramOwnershipTransfer $transfer,
     ) {}
 
     /**
@@ -282,6 +285,25 @@ final class TelegramAuthController extends Controller
                     }
 
                     /*
+                     * The ownership-transfer offer: the Start proved control
+                     * of a Telegram identity that belongs to another account.
+                     * Nothing has moved and nothing will move from here — the
+                     * candidate is parked and the person is sent back to the
+                     * browser where the destination account is signed in,
+                     * which is the only place the transfer can be confirmed.
+                     * The chat reply is the same neutral "confirm in your
+                     * browser" the link flow uses; it says nothing about the
+                     * other account, because the chat must not learn anything
+                     * from a collision.
+                     */
+                    if (($verification['reason'] ?? '') === 'transfer_available') {
+                        $this->parkTransferCandidate($verification, $from);
+                        $this->bot->requestBrowserConfirmation($chatId, $replyLocale);
+
+                        return response()->json(['ok' => false]);
+                    }
+
+                    /*
                      * `unknown_token` is the ONLY reason that falls through. It
                      * means this token belongs to neither table, so the legacy
                      * Share-Contact prompt below is still the right answer —
@@ -355,6 +377,31 @@ final class TelegramAuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    /**
+     * Park an ownership-transfer candidate off a verification Start that
+     * collided with an existing claim.
+     *
+     * Best-effort against races by design: parking states a QUESTION, never
+     * a fact. Every fact it rests on is re-checked under row locks when the
+     * destination's browser confirms, so a park raced by anything at all can
+     * mislead nobody — at worst the person is asked to press Start again.
+     *
+     * @param  array{token_id?: int, user_id?: int}  $verification
+     * @param  array<string, mixed>  $from
+     */
+    private function parkTransferCandidate(array $verification, array $from): void
+    {
+        $token = TelegramVerificationToken::query()->find((int) ($verification['token_id'] ?? 0));
+        $destination = User::query()->find((int) ($verification['user_id'] ?? 0));
+        $telegramId = (string) ($from['id'] ?? '');
+
+        if ($token === null || $destination === null || $telegramId === '') {
+            return;
+        }
+
+        $this->transfer->park($token, $destination, $telegramId, $from);
     }
 
     /**

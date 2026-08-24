@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace App\Modules\Identity\Http\Controllers;
 
 use App\Modules\Identity\Models\TelegramLoginIntent;
+use App\Modules\Identity\Models\User;
 use App\Modules\Identity\Services\AbandonedAccountPolicy;
 use App\Modules\Identity\Services\TelegramBotResponder;
+use App\Modules\Identity\Services\TelegramOwnershipTransfer;
 use App\Modules\Identity\Services\TelegramRegistrar;
 use App\Modules\Identity\Services\TelegramReturnHandoff;
 use App\Modules\Identity\Services\TelegramVerificationService;
@@ -68,6 +70,7 @@ final class AccountTelegramLinkController extends Controller
         private readonly TelegramBotResponder $bot,
         private readonly TelegramReturnHandoff $handoff,
         private readonly TelegramVerificationService $verification,
+        private readonly TelegramOwnershipTransfer $transfer,
     ) {}
 
     public function show(Request $request): Response|RedirectResponse
@@ -117,7 +120,7 @@ final class AccountTelegramLinkController extends Controller
          */
         $pending = $this->currentIntent($request);
 
-        return Inertia::render('Account/TelegramLink', $this->payload($rawToken, $pending));
+        return Inertia::render('Account/TelegramLink', $this->payload($request, $rawToken, $pending));
     }
 
     /**
@@ -184,6 +187,31 @@ final class AccountTelegramLinkController extends Controller
             // moves this page on exactly as a Start would.
             $linked = $fresh->hasVerifiedAccount();
 
+            /*
+             * The ownership-transfer question, when a Start collided with an
+             * existing claim: shown BEFORE the pending state so the person
+             * who just pressed Start sees the decision, not a spinner. Only
+             * for a still-unverified account — once verified through either
+             * door, a stale question must not resurface.
+             *
+             * The payload is the candidate's own Telegram display identity
+             * and an HMAC handle, exactly what the link confirmation shows.
+             * Nothing about the account currently holding the claim is ever
+             * present — not its name, not its phone, not its existence
+             * beyond the yes/no question itself.
+             */
+            if (! $linked) {
+                $pendingTransfer = $this->transfer->pending($fresh);
+
+                if ($pendingTransfer !== null) {
+                    return response()->json([
+                        'state' => 'awaiting_transfer',
+                        'candidate' => $pendingTransfer->candidatePayload(),
+                        'candidate_handle' => $pendingTransfer->candidateHandle(),
+                    ]);
+                }
+            }
+
             if ($linked) {
                 /*
                  * Rotate before telling the browser, exactly as the intent
@@ -234,8 +262,18 @@ final class AccountTelegramLinkController extends Controller
          * the authority on whether it is too late.
          */
         if ($intent->candidate_telegram_id !== null) {
+            /*
+             * Same candidate machinery, two different questions. A candidate
+             * that belongs to another account is a TRANSFER decision, and
+             * the page must ask that question — with its warning about the
+             * old account — rather than the plain "is this your Telegram".
+             * The confirm endpoint enforces the distinction server-side
+             * whatever the page shows.
+             */
             return response()->json([
-                'state' => 'awaiting_confirmation',
+                'state' => $this->candidateOwnedElsewhere($user, $intent)
+                    ? 'awaiting_transfer'
+                    : 'awaiting_confirmation',
                 'candidate' => $intent->candidatePayload(),
                 'candidate_handle' => $intent->candidateHandle(),
             ]);
@@ -260,19 +298,56 @@ final class AccountTelegramLinkController extends Controller
     {
         $validated = $request->validate([
             'candidate_handle' => ['required', 'string', 'size:64'],
+            /*
+             * The ownership acknowledgement. Moving a claim from another
+             * account requires the browser to say it is doing exactly that;
+             * a bare confirm — an old client, a stale page, a replayed
+             * request — keeps the old refusal. The flag alone moves nothing:
+             * the services re-establish who actually owns the identity under
+             * row locks, and a flag sent when nothing is owned elsewhere
+             * simply falls through to the ordinary link.
+             */
+            'accept_transfer' => ['sometimes', 'boolean'],
         ]);
+
+        $acceptTransfer = (bool) ($validated['accept_transfer'] ?? false);
+        $user = $request->user();
 
         $intent = $this->currentIntent($request);
 
-        if ($intent === null || ! $intent->candidateHandleMatches($validated['candidate_handle'])) {
-            return response()->json(['state' => 'candidate_changed'], 409);
-        }
+        if ($intent !== null && $intent->candidateHandleMatches($validated['candidate_handle'])) {
+            // The legacy session-bound intent, confirmed by the session that
+            // minted it — now able to carry the transfer decision too.
+            $result = $this->registrar->confirmAccountLink(
+                $user,
+                $request->session()->getId(),
+                (string) $intent->candidate_telegram_id,
+                $acceptTransfer,
+            );
+        } else {
+            /*
+             * The account-transfer question parked by a verification Start.
+             * It is bound to the ACCOUNT rather than to a browser session
+             * (the permanent token that carried the Start has none), so the
+             * gate is this authenticated browser itself: only a session
+             * signed in as the destination can reach this line, and it must
+             * still present the handle of the candidate it was shown AND the
+             * explicit acknowledgement.
+             */
+            $pendingTransfer = $this->transfer->pending($user);
 
-        $result = $this->registrar->confirmAccountLink(
-            $request->user(),
-            $request->session()->getId(),
-            (string) $intent->candidate_telegram_id,
-        );
+            if ($pendingTransfer === null
+                || ! $pendingTransfer->candidateHandleMatches($validated['candidate_handle'])) {
+                return response()->json(['state' => 'candidate_changed'], 409);
+            }
+
+            if (! $acceptTransfer) {
+                return response()->json(['state' => 'transfer_required'], 409);
+            }
+
+            $intent = $pendingTransfer;
+            $result = $this->transfer->confirm($user, (string) $pendingTransfer->candidate_telegram_id);
+        }
 
         if (! $result['ok']) {
             return response()->json([
@@ -344,6 +419,16 @@ final class AccountTelegramLinkController extends Controller
             $request->user(),
             $request->session()->getId(),
         );
+
+        /*
+         * The transfer question, if one is parked, dies with the same click:
+         * "cancel" on this page means "stop whatever identity decision is
+         * pending", and leaving a live transfer question behind a cancelled
+         * screen would spring it on the next poll. The claim stays exactly
+         * where it is — cancelling decides nothing except that nothing was
+         * decided.
+         */
+        $this->transfer->cancel($request->user());
 
         return response()->json(['state' => 'cancelled']);
     }
@@ -455,24 +540,59 @@ final class AccountTelegramLinkController extends Controller
      *
      * @return array<string, mixed>
      */
-    private function payload(string $rawToken, ?TelegramLoginIntent $pending): array
+    private function payload(Request $request, string $rawToken, ?TelegramLoginIntent $pending): array
     {
         $username = (string) config('services.telegram.bot_username', '');
+        $user = $request->user();
+
+        /*
+         * The candidate this page must ask about, and WHICH question it is.
+         * A session-bound `account_link` intent (legacy, still served) wins;
+         * otherwise a parked ownership-transfer question, which survives a
+         * reload because it is bound to the account rather than to anything
+         * this tab holds. `candidate_transfer` tells the page to render the
+         * transfer decision — with its warning about the old account —
+         * instead of the plain "is this your Telegram"; the server enforces
+         * the distinction on confirm regardless.
+         */
+        $candidateIntent = $pending !== null && $pending->candidate_telegram_id !== null
+            ? $pending
+            : $this->transfer->pending($user);
+
+        $requiresTransfer = $candidateIntent !== null
+            && $candidateIntent->candidate_telegram_id !== null
+            && $this->candidateOwnedElsewhere($user, $candidateIntent);
 
         return [
             'deep_link' => $username === '' ? null : 'https://t.me/'.$username.'?start='.$rawToken,
             'bot_configured' => $username !== '',
             /*
-             * Legacy, and null for everybody registered since this shipped:
-             * the parked-candidate confirmation that an in-flight `account_link`
-             * intent may still be waiting on. The page renders the
-             * confirmation UI only when it is non-null, so the new flow never
-             * shows a second step.
+             * Either the legacy parked-candidate confirmation an in-flight
+             * `account_link` intent is waiting on, or the ownership-transfer
+             * question a colliding Start parked. The page renders the
+             * decision UI only when it is non-null, so the ordinary journey
+             * never shows a second step.
              */
-            'candidate' => $pending?->candidatePayload(),
-            'candidate_handle' => $pending === null || $pending->candidate_telegram_id === null
+            'candidate' => $candidateIntent?->candidatePayload(),
+            'candidate_handle' => $candidateIntent === null || $candidateIntent->candidate_telegram_id === null
                 ? null
-                : $pending->candidateHandle(),
+                : $candidateIntent->candidateHandle(),
+            'candidate_transfer' => $requiresTransfer,
         ];
+    }
+
+    /**
+     * Whether a parked candidate identity currently belongs to a DIFFERENT
+     * account — the fact that turns a confirmation into a transfer decision.
+     * Advisory for rendering only; every confirm path re-establishes it
+     * under row locks.
+     */
+    private function candidateOwnedElsewhere(User $user, TelegramLoginIntent $intent): bool
+    {
+        return $intent->candidate_telegram_id !== null
+            && User::query()
+                ->where('telegram_id', $intent->candidate_telegram_id)
+                ->whereKeyNot($user->id)
+                ->exists();
     }
 }

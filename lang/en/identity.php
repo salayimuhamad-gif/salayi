@@ -123,6 +123,12 @@ return [
         'candidate_changed' => 'A different Telegram account pressed Start. Please look again before confirming.',
         'candidate_unknown' => 'Telegram account',
         'restart_hint' => 'Starting again replaces your current link — the old one stops working.',
+        'transfer_title' => 'Move this Telegram to this account?',
+        'transfer_lead' => 'This Telegram account is already linked to an older MULK account. Do you want to move it to this account?',
+        'transfer_warning' => 'After the move, the previous account will need another verification method before it can use personal features again. Nothing else moves — no data, no properties, no history.',
+        'transfer_button' => 'Transfer Telegram to this account',
+        'transfer_cancel' => 'Cancel',
+        'transfer_stale' => 'The Telegram ownership changed while you were deciding. Press START in Telegram again to continue.',
     ],
     'verify' => [
         'title' => 'Verify your account',

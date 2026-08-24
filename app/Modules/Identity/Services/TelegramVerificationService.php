@@ -45,7 +45,14 @@ use Illuminate\Support\Facades\DB;
  * THE THREE REFUSALS THAT ARE NOT NEGOTIABLE, each enforced under a row lock
  * and again by a UNIQUE index on `users.telegram_id`:
  *
- *   1. a Telegram identity already on another account is never reassigned;
+ *   1. a Telegram identity already on another account is never reassigned BY
+ *      A START ALONE. The ownership rule changed — the identity belongs to
+ *      whoever can currently prove control of it — so the collision is no
+ *      longer a dead end: the Start parks a transfer candidate, and
+ *      {@see TelegramOwnershipTransfer} moves the claim only after the
+ *      destination's authenticated browser explicitly confirms it. What this
+ *      refusal still guarantees, unweakened, is that nothing about pressing
+ *      Start changes who owns anything;
  *   2. an account already linked to a DIFFERENT Telegram identity is never
  *      silently re-pointed;
  *   3. a used token never links a second, different Telegram account — which
@@ -216,7 +223,7 @@ final class TelegramVerificationService
      * dead one.
      *
      * @param  array<string, mixed>  $from  Telegram's `message.from`
-     * @return array{ok: bool, reason?: string, user_id?: int, locale?: string, already_verified?: bool}
+     * @return array{ok: bool, reason?: string, user_id?: int, locale?: string, already_verified?: bool, token_id?: int}
      */
     public function redeem(string $rawToken, array $from): array
     {
@@ -394,12 +401,33 @@ final class TelegramVerificationService
                     ->exists();
 
                 if ($takenByAnother) {
+                    /*
+                     * The ownership-transfer case: this Start just proved
+                     * control of a Telegram identity that currently belongs
+                     * to another account, and the person proving it is
+                     * signed in here as the destination. Under the ownership
+                     * rule that is not a dead end — but it is also not a
+                     * link: NOTHING moves on a Start. The webhook parks a
+                     * transfer candidate (see TelegramOwnershipTransfer) and
+                     * the destination's authenticated browser decides. The
+                     * token is deliberately not consumed: whatever the
+                     * person decides, their link keeps working.
+                     *
+                     * The distinct reason lets the caller park; the audit
+                     * keeps recording the collision exactly as before.
+                     */
                     $this->audit->security('identity.verification_refused', [
                         'token_id' => $token->id,
-                        'via' => 'telegram_id_taken',
+                        'via' => 'telegram_id_taken_transfer_offered',
                     ]);
 
-                    return ['ok' => false, 'reason' => 'conflict', 'locale' => $locale];
+                    return [
+                        'ok' => false,
+                        'reason' => 'transfer_available',
+                        'locale' => $locale,
+                        'token_id' => (int) $token->id,
+                        'user_id' => (int) $user->id,
+                    ];
                 }
 
                 // Everything below mutates, inside THIS transaction.

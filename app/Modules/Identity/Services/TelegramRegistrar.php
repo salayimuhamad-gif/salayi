@@ -29,7 +29,10 @@ use Illuminate\Support\Facades\DB;
  */
 final class TelegramRegistrar
 {
-    public function __construct(private readonly AuditLogger $audit) {}
+    public function __construct(
+        private readonly AuditLogger $audit,
+        private readonly TelegramOwnershipTransfer $transfer,
+    ) {}
 
     /**
      * Create an account-first registration: the account exists and is signed
@@ -631,6 +634,41 @@ final class TelegramRegistrar
                     ->exists();
 
                 if ($telegramTaken) {
+                    /*
+                     * The ownership rule: this Start just proved control of a
+                     * Telegram identity another account holds, so instead of
+                     * the old terminal conflict the candidate is PARKED and
+                     * the original browser is asked whether to move it —
+                     * through exactly the §5 confirmation machinery, because
+                     * a transfer is strictly more consequential than a link
+                     * and gets at least the same gate. A Start alone still
+                     * moves nothing.
+                     *
+                     * Only when the browser gate exists, though: with
+                     * confirmation configured off there is no browser step,
+                     * and a transfer without an explicit human decision in
+                     * the destination's authenticated browser must never
+                     * happen — that deployment keeps the old refusal.
+                     */
+                    if (self::confirmationRequired()) {
+                        $locked->forceFill([
+                            'candidate_telegram_id' => $telegramId,
+                            'candidate_username' => $this->shortText($from['username'] ?? null, 64),
+                            'candidate_name' => $this->candidateName($from),
+                            'candidate_at' => now(),
+                        ])->save();
+
+                        $this->audit->record('identity.telegram_transfer_candidate', $user, [], [
+                            'intent_id' => $locked->id,
+                        ]);
+
+                        return [
+                            'ok' => true,
+                            'user_id' => (int) $user->id,
+                            'pending_confirmation' => true,
+                        ];
+                    }
+
                     $locked->forceFill(['result' => TelegramLoginIntent::RESULT_CONFLICT])->save();
                     $this->audit->security('identity.telegram_link_refused', [
                         'intent_id' => $locked->id,
@@ -743,16 +781,24 @@ final class TelegramRegistrar
      * than silently linking whoever arrived last — which is the whole point
      * of asking a human to look at it.
      *
+     * `$acceptTransfer` is the ownership-rule extension: when the parked
+     * candidate belongs to ANOTHER account, confirming is no longer a plain
+     * link but a transfer, and the browser must say so explicitly — a stale
+     * page or an old client that posts a bare confirm gets the old conflict,
+     * never a silent move. The move itself runs through
+     * {@see TelegramOwnershipTransfer::execute()}, the one implementation of
+     * ordered locks, post-lock re-checks and the stale-decision guard.
+     *
      * @return array{ok: bool, reason?: string, user_id?: int}
      */
-    public function confirmAccountLink(User $user, string $sessionId, string $expected): array
+    public function confirmAccountLink(User $user, string $sessionId, string $expected, bool $acceptTransfer = false): array
     {
         if ($expected === '') {
             return ['ok' => false, 'reason' => 'not_applicable'];
         }
 
         try {
-            return DB::transaction(function () use ($user, $sessionId, $expected): array {
+            return DB::transaction(function () use ($user, $sessionId, $expected, $acceptTransfer): array {
                 $locked = TelegramLoginIntent::query()
                     ->where('purpose', TelegramLoginIntent::PURPOSE_ACCOUNT_LINK)
                     ->where('user_id', $user->id)
@@ -789,6 +835,27 @@ final class TelegramRegistrar
                     return ['ok' => false, 'reason' => 'candidate_changed'];
                 }
 
+                /*
+                 * The explicitly-accepted transfer takes the ownership path
+                 * BEFORE any user row is locked here: the executor owns all
+                 * user locking (both rows, ascending-id order) so that no
+                 * code path can ever acquire the pair in the other order.
+                 * Advisory reads decide whether this is a transfer at all;
+                 * the executor re-decides everything under its locks.
+                 */
+                if ($acceptTransfer) {
+                    $ownedElsewhere = User::query()
+                        ->where('telegram_id', $expected)
+                        ->whereKeyNot($user->id)
+                        ->exists();
+
+                    if ($ownedElsewhere) {
+                        return $this->transfer->execute($locked, (int) $user->id, $expected);
+                    }
+                    // Not owned by anyone else after all: fall through to the
+                    // ordinary confirm, which links or answers idempotently.
+                }
+
                 $fresh = User::query()->whereKey($user->id)->lockForUpdate()->first();
 
                 if ($fresh === null || ! $fresh->mayAuthenticate()) {
@@ -822,12 +889,27 @@ final class TelegramRegistrar
                     ->exists();
 
                 if ($taken) {
+                    /*
+                     * Owned by another account and the browser did NOT
+                     * explicitly accept a transfer (or the acceptance raced
+                     * a claim that appeared only after the advisory read):
+                     * the old refusal stands. A transfer decision the person
+                     * never saw, or saw and did not take, must never happen
+                     * as a side effect of an ordinary confirm.
+                     */
                     $locked->forceFill(['result' => TelegramLoginIntent::RESULT_CONFLICT])->save();
 
                     $this->audit->security('identity.telegram_link_refused', [
                         'intent_id' => $locked->id,
                         'via' => 'telegram_id_taken',
                     ]);
+
+                    if (! $acceptTransfer) {
+                        $this->audit->security('identity.telegram_transfer_refused', [
+                            'intent_id' => $locked->id,
+                            'via' => 'not_accepted',
+                        ]);
+                    }
 
                     return ['ok' => false, 'reason' => 'conflict'];
                 }
