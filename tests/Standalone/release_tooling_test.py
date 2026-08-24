@@ -3019,6 +3019,144 @@ check('ROLLBACK_NOTES invalidates both manifests before its discover',
       < rollback_doc.index('rm -f application/bootstrap/cache/services.php')
       < rollback_doc.index('artisan package:discover'))
 
+# ---- post-v7 production baseline rollover (incremental release) -------------
+#
+# Production deployed the v7 release: its ledger holds sixty-six Ran rows with
+# the whole inventory applied. The next candidate is INCREMENTAL — zero new
+# migrations — so the authoritative rehearsal must model THAT, not the sealed
+# v6 history, and no future release may accidentally reuse the stale
+# fifty-nine-to-sixty-six arithmetic. These pins hold the new model together.
+
+prod_rollback = (RELEASE / 'rollback_rehearsal_production.sh').read_text()
+runner_text = (RELEASE / 'run_final_release_ci.sh').read_text()
+gates_text = (RELEASE / 'release_gates.py').read_text()
+workflow_text = (ROOT / '.github' / 'workflows' / 'myhawler-final-release.yml').read_text()
+
+check('the deployment rehearsal offers both baseline modes, post-v7 and sealed-v6',
+      'REHEARSAL_BASELINE_MODE' in deploy_text
+      and 'post-v7' in deploy_text and 'sealed-v6' in deploy_text
+      and 'REHEARSAL_PREVIOUS:?' in deploy_text)
+
+check('the post-v7 baseline commit is the deployed production commit',
+      'e0753176c42d0c4b98cb185004a962087f5d0423' in deploy_text
+      and 'e0753176c42d0c4b98cb185004a962087f5d0423' in runner_text)
+
+check('the production ledger is pinned at sixty-six in both rehearsal scripts',
+      'POST_V7_LEDGER=66' in deploy_text and 'POST_V7_LEDGER=66' in prod_rollback)
+
+check('the post-v7 baseline must hold the full ledger BEFORE the apply',
+      '[ "$BASELINE_RAN" = "$POST_V7_LEDGER" ]' in deploy_text
+      and '[ "$BASELINE_INVENTORY_RAN" = "12" ]' in deploy_text
+      and '[ "$BASELINE_PENDING" = "0" ]' in deploy_text)
+
+check('the incremental candidate pins a migration delta of exactly zero',
+      '[ "$AFTER" = "$POST_V7_LEDGER" ] && [ "$DELTA" = "0" ]' in deploy_text
+      and '[ "$BEFORE" = "$POST_V7_LEDGER" ]' in deploy_text)
+
+check('the migrate step must answer Nothing to migrate, kept as evidence',
+      'grep -qi "Nothing to migrate" "$EV/production-migrate.log"' in deploy_text)
+
+check('the applied candidate may introduce no Pending migration at all',
+      '[ "$POST_PENDING" = "0" ]' in deploy_text
+      and '[ "$INVENTORY_STILL_RAN" = "12" ]' in deploy_text)
+
+check('the sealed-v6 full-upgrade arithmetic survives as the compatibility gate',
+      '[ "$DELTA" = "12" ]' in deploy_text)
+
+check('the transfer code is proven against the migrated schema in the rehearsal',
+      'TelegramOwnershipTransfer' in deploy_text
+      and 'account/telegram/link/confirm' in deploy_text)
+
+check('the production rollback never touches the database',
+      'migrate:rollback' not in prod_rollback
+      and '--step' not in prod_rollback
+      and '< "$BACKUP/database.sql"' not in prod_rollback)
+
+check('the production rollback pins the ledger at sixty-six on BOTH sides',
+      '[ "$RAN_BEFORE" = "$POST_V7_LEDGER" ]' in prod_rollback
+      and '[ "$RAN_AFTER" = "$POST_V7_LEDGER" ]' in prod_rollback
+      and '[ "$STATUS_BEFORE" = "$STATUS_AFTER" ]' in prod_rollback)
+
+check('the production rollback proves the protected five and the whole inventory untouched',
+      '[ "$PROTECTED_AFTER" = "5" ]' in prod_rollback
+      and '[ "$INVENTORY_AFTER" = "12" ]' in prod_rollback
+      and '[ "$PENDING_AFTER" = "0" ]' in prod_rollback)
+
+check('the production rollback restores the Composer trio as one unit, no Composer run',
+      'cp -a "$BACKUP/composer.json"' in prod_rollback
+      and 'cp -a "$BACKUP/composer.lock"' in prod_rollback
+      and 'cp -a "$BACKUP/vendor"' in prod_rollback
+      and 'composer install' not in prod_rollback
+      and 'composer update' not in prod_rollback)
+
+check('the production rollback invalidates discovery manifests between restore and discover',
+      prod_rollback.index('cp -a "$BACKUP/vendor" "$SITE/application/vendor"')
+      < prod_rollback.index('invalidate_package_manifests.sh')
+      < prod_rollback.index('artisan package:discover'))
+
+check('the production rollback replaces the build whole and proves it identical',
+      'rm -rf "$SITE/public_html/build"' in prod_rollback
+      and '[ "$RESTORED_LIST" = "$BACKUP_LIST" ]' in prod_rollback
+      and '[ "$RESTORED_MANIFEST" = "$BASELINE_MANIFEST" ]' in prod_rollback)
+
+check('the candidate service must be GONE after the production rollback',
+      'TelegramOwnershipTransfer' in prod_rollback)
+
+check('the runner requires and hash-verifies the previous-release archive',
+      'MYHAWLER_PREVIOUS_ARCHIVE:?' in runner_text
+      and 'MYHAWLER_PREVIOUS_SHA256:?' in runner_text
+      and 'PREVIOUS_ARCHIVE_SHA256' in runner_text)
+
+check('the runner audits the previous-release archive as a recorded gate',
+      'record previous-archive-audit' in runner_text)
+
+check('the production rehearsal pair runs FIRST, on its own database and evidence',
+      runner_text.index('deployment-rehearsal-production')
+      < runner_text.index('rollback-rehearsal-production')
+      < runner_text.index('record_isolated deployment-rehearsal "')
+      and 'DB_REHEARSE_PROD' in runner_text
+      and runner_text.index('REHEARSAL_BASELINE_MODE="post-v7"')
+      < runner_text.index('deployment-rehearsal-production'))
+
+check('all four rehearsal gates and the previous audit are registered and required',
+      "Gate('deployment-rehearsal-production', 'deployment_rehearsal_production', 'rehearsal')" in gates_text
+      and "Gate('rollback-rehearsal-production', 'rollback_rehearsal_production', 'rehearsal')" in gates_text
+      and "Gate('deployment-rehearsal', 'deployment_rehearsal', 'rehearsal')" in gates_text
+      and "Gate('rollback-rehearsal', 'rollback_rehearsal', 'rehearsal')" in gates_text
+      and "Gate('previous-archive-audit', 'previous_archive_audit', 'verification')" in gates_text)
+
+check('the final-release workflow fetches and pins the previous-release archive',
+      'previous_archive_sha256' in workflow_text
+      and 'release-input/previous.zip' in workflow_text
+      and 'MYHAWLER_PREVIOUS_ARCHIVE' in workflow_text
+      and 'MYHAWLER_DB_REHEARSE_PROD' in workflow_text
+      and '--previous-commit' in workflow_text)
+
+migration_files = sorted(
+    p for p in ROOT.glob('app/Modules/*/Database/Migrations/*.php')
+) + sorted(p for p in ROOT.glob('database/migrations/*.php'))
+check('the tree holds exactly the sixty-six migrations the ledger expects',
+      len(migration_files) == 66, f'found {len(migration_files)}')
+
+lock_data = json.loads((ROOT / 'composer.lock').read_text())
+commonmark = next((p['version'] for p in lock_data['packages']
+                   if p['name'] == 'league/commonmark'), None)
+check('the frozen lock still pins league/commonmark at 2.9.0',
+      commonmark == '2.9.0', f'found {commonmark}')
+
+check('DEPLOYMENT_NOTES separates the current incremental context from v7 history',
+      'Current production baseline and the incremental release' in deploy_doc
+      and 'INCREASE = 0' in deploy_doc
+      and 'Nothing to migrate' in deploy_doc
+      and 'DEPLOYED AND COMPLETE' in deploy_doc
+      and 'MUST NOT be used' in deploy_doc)
+
+check('ROLLBACK_NOTES makes the incremental rollback code-and-runtime only',
+      'Incremental release rollback' in rollback_doc
+      and 'CODE AND RUNTIME ONLY' in rollback_doc
+      and rollback_doc.index('Incremental release rollback')
+      < rollback_doc.index('## 1. Identify and verify the backups'))
+
 print()
 
 if FAILED == 0:

@@ -66,6 +66,9 @@ SOURCE_ARCHIVE=""
 SOURCE_SHA256_FILE=""
 WORK="${WORK:-$(pwd)/final-release-run}"
 BASELINE_COMMIT="${BASELINE_COMMIT:-9c0188f81843cfe4786b7f72ecdc2a3fae89cd82}"
+# The commit live production currently runs — the post-v7 baseline every
+# incremental candidate is rehearsed against.
+PREVIOUS_COMMIT="${PREVIOUS_COMMIT:-e0753176c42d0c4b98cb185004a962087f5d0423}"
 OFFLINE_STUB=0
 MIN_FILES=""
 
@@ -75,6 +78,7 @@ while [ $# -gt 0 ]; do
         --source-sha256)   SOURCE_SHA256_FILE="$2"; shift 2 ;;
         --work)            WORK="$2"; shift 2 ;;
         --baseline-commit) BASELINE_COMMIT="$2"; shift 2 ;;
+        --previous-commit) PREVIOUS_COMMIT="$2"; shift 2 ;;
         --min-files)       MIN_FILES="$2"; shift 2 ;;
         --offline-stub)    OFFLINE_STUB=1; shift ;;
         *) fail "unknown argument: $1" ;;
@@ -86,6 +90,12 @@ done
 
 BASELINE_ARCHIVE="${MYHAWLER_BASELINE_ARCHIVE:?set MYHAWLER_BASELINE_ARCHIVE}"
 BASELINE_SHA256="${MYHAWLER_BASELINE_SHA256:?set MYHAWLER_BASELINE_SHA256}"
+# The PREVIOUS release: the tree production is running right now. The
+# authoritative production-candidate rehearsal stages it, migrates it to the
+# full ledger, and proves the candidate changes nothing — so it is as
+# mandatory an input as the sealed baseline, and just as hash-pinned.
+PREVIOUS_ARCHIVE="${MYHAWLER_PREVIOUS_ARCHIVE:?set MYHAWLER_PREVIOUS_ARCHIVE to the previously-deployed source archive}"
+PREVIOUS_SHA256="${MYHAWLER_PREVIOUS_SHA256:?set MYHAWLER_PREVIOUS_SHA256}"
 
 # Resolved BEFORE the existence checks below, so both the checks and every
 # later use see the same absolute path — and so a failure names the path that
@@ -93,10 +103,12 @@ BASELINE_SHA256="${MYHAWLER_BASELINE_SHA256:?set MYHAWLER_BASELINE_SHA256}"
 SOURCE_ARCHIVE=$(absolute "$SOURCE_ARCHIVE")
 SOURCE_SHA256_FILE=$(absolute "$SOURCE_SHA256_FILE")
 BASELINE_ARCHIVE=$(absolute "$BASELINE_ARCHIVE")
+PREVIOUS_ARCHIVE=$(absolute "$PREVIOUS_ARCHIVE")
 
 [ -f "$SOURCE_ARCHIVE" ]     || fail "source archive not found: $SOURCE_ARCHIVE"
 [ -f "$SOURCE_SHA256_FILE" ] || fail "detached checksum not found: $SOURCE_SHA256_FILE"
 [ -f "$BASELINE_ARCHIVE" ]   || fail "baseline archive not found: $BASELINE_ARCHIVE"
+[ -f "$PREVIOUS_ARCHIVE" ]   || fail "previous-release archive not found: $PREVIOUS_ARCHIVE"
 
 # TWO SETS OF DATABASE CREDENTIALS, AND THEY MUST NOT SHARE NAMES.
 #
@@ -138,6 +150,10 @@ DB_HOST="${MYHAWLER_DB_HOST:-127.0.0.1}"
 DB_PORT="${MYHAWLER_DB_PORT:-3306}"
 DB_TEST="${MYHAWLER_DB_TEST:-myh_test}"
 DB_REHEARSE="${MYHAWLER_DB_REHEARSE:-myh_rehearse}"
+# A SEPARATE disposable database for the post-v7 production rehearsal: it
+# migrates to the full ledger, which would poison the sealed-v6 rehearsal's
+# plus-twelve arithmetic if they shared one schema.
+DB_REHEARSE_PROD="${MYHAWLER_DB_REHEARSE_PROD:-myh_rehearse_prod}"
 
 PHP_BIN="${PHP_BIN:-php}"
 MYSQL_BIN="${MYSQL_BIN:-mariadb}"
@@ -355,6 +371,10 @@ ACTUAL_BASELINE=$(sha256sum "$BASELINE_ARCHIVE" | cut -d' ' -f1)
 [ "$ACTUAL_BASELINE" = "$BASELINE_SHA256" ] \
     || fail "baseline archive hash mismatch: expected $BASELINE_SHA256, got $ACTUAL_BASELINE"
 echo "$ACTUAL_BASELINE" > "$EVIDENCE/BASELINE_ARCHIVE_SHA256"
+ACTUAL_PREVIOUS=$(sha256sum "$PREVIOUS_ARCHIVE" | cut -d' ' -f1)
+[ "$ACTUAL_PREVIOUS" = "$PREVIOUS_SHA256" ] \
+    || fail "previous-release archive hash mismatch: expected $PREVIOUS_SHA256, got $ACTUAL_PREVIOUS"
+echo "$ACTUAL_PREVIOUS" > "$EVIDENCE/PREVIOUS_ARCHIVE_SHA256"
 sha256sum "$SOURCE_ARCHIVE" | cut -d' ' -f1 > "$EVIDENCE/SOURCE_ARCHIVE_SHA256"
 
 # SOURCE_DATE_EPOCH — the deterministic timestamp for everything this run
@@ -517,12 +537,16 @@ if [ "$OFFLINE_STUB" = "0" ]; then
             CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
         CREATE DATABASE IF NOT EXISTS \`$DB_REHEARSE\`
             CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+        CREATE DATABASE IF NOT EXISTS \`$DB_REHEARSE_PROD\`
+            CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
         CREATE USER IF NOT EXISTS '$TEST_DB_USER'@'%' IDENTIFIED BY '$TEST_DB_PASSWORD';
         CREATE USER IF NOT EXISTS '$TEST_DB_USER'@'localhost' IDENTIFIED BY '$TEST_DB_PASSWORD';
         GRANT ALL PRIVILEGES ON \`$DB_TEST\`.* TO '$TEST_DB_USER'@'%';
         GRANT ALL PRIVILEGES ON \`$DB_TEST\`.* TO '$TEST_DB_USER'@'localhost';
         GRANT ALL PRIVILEGES ON \`$DB_REHEARSE\`.* TO '$TEST_DB_USER'@'%';
         GRANT ALL PRIVILEGES ON \`$DB_REHEARSE\`.* TO '$TEST_DB_USER'@'localhost';
+        GRANT ALL PRIVILEGES ON \`$DB_REHEARSE_PROD\`.* TO '$TEST_DB_USER'@'%';
+        GRANT ALL PRIVILEGES ON \`$DB_REHEARSE_PROD\`.* TO '$TEST_DB_USER'@'localhost';
         FLUSH PRIVILEGES;"
 
     # Prove the credentials PHPUnit will use actually work, before the gates run.
@@ -772,6 +796,8 @@ record_in_db "$RUNTIME_WORKSPACE" queue-check "$PHP_BIN" artisan queue:work \
 record source-archive-audit python3 "$SOURCE/scripts/release/audit_archive.py" "$SOURCE_ARCHIVE"
 record baseline-archive-audit python3 "$SOURCE/scripts/release/audit_archive.py" "$BASELINE_ARCHIVE"
 
+record previous-archive-audit python3 "$SOURCE/scripts/release/audit_archive.py" "$PREVIOUS_ARCHIVE"
+
 step "Prepare the disposable browser workspace, database and fixtures"
 
 # The registry drives which specs the release executes, so the registry and
@@ -953,6 +979,8 @@ export REHEARSAL_STAGE="$REHEARSAL/stage"
 export REHEARSAL_RUNTIME="$RUNTIME_BASE"
 export REHEARSAL_BASELINE="$BASELINE_ARCHIVE"
 export REHEARSAL_BASELINE_COMMIT="$BASELINE_COMMIT"
+export REHEARSAL_PREVIOUS="$PREVIOUS_ARCHIVE"
+export REHEARSAL_PREVIOUS_COMMIT="$PREVIOUS_COMMIT"
 export REHEARSAL_EVIDENCE="$EVIDENCE/rehearsal"
 export REHEARSAL_PHP="$PHP_BIN"
 export REHEARSAL_MYSQL="$MYSQL_BIN"
@@ -1001,6 +1029,32 @@ done
 #
 # Neither assertion was wrong. The rehearsal was measuring the wrong database
 # with the wrong key.
+# THE AUTHORITATIVE PRODUCTION-CANDIDATE GATE runs FIRST: the post-v7
+# baseline — the tree production is running right now, migrated to the full
+# ledger — upgraded incrementally by the candidate, which must change the
+# ledger by exactly nothing. Its rollback is code-and-runtime only and the
+# database is never touched. A separate stage directory, evidence directory
+# and disposable database keep it fully independent of the sealed-v6
+# compatibility pair below.
+export REHEARSAL_BASELINE_MODE="post-v7"
+export REHEARSAL_DB_NAME="$DB_REHEARSE_PROD"
+export REHEARSAL_EVIDENCE="$EVIDENCE/rehearsal-production"
+
+record_isolated deployment-rehearsal-production "disposable staged site (post-v7 baseline)" \
+    bash "$SOURCE/scripts/release/deploy_rehearsal.sh" "$REHEARSAL/stage-production" "$RUNTIME_BASE"
+
+record_isolated rollback-rehearsal-production "fresh session (env -i, post-v7 baseline)" \
+    bash "$SOURCE/scripts/release/rollback_rehearsal_production.sh" "$REHEARSAL/stage-production"
+
+# The HISTORICAL FULL-UPGRADE COMPATIBILITY PAIR: the sealed v6 baseline
+# upgraded by the complete inventory (plus twelve) and rolled all the way
+# back. It proves the inventory still applies and reverses cleanly from
+# scratch; it is NOT a model of current production and its arithmetic must
+# never be read as production's.
+export REHEARSAL_BASELINE_MODE="sealed-v6"
+export REHEARSAL_DB_NAME="$DB_REHEARSE"
+export REHEARSAL_EVIDENCE="$EVIDENCE/rehearsal"
+
 record_isolated deployment-rehearsal "disposable staged site" \
     bash "$SOURCE/scripts/release/deploy_rehearsal.sh" "$REHEARSAL/stage" "$RUNTIME_BASE"
 

@@ -37,6 +37,25 @@ on:
         required: false
         default: 9c0188f81843cfe4786b7f72ecdc2a3fae89cd82
         type: string
+      previous_archive_url:
+        description: >-
+          URL of the verified PREVIOUS-release source archive — the tree
+          production is running right now. Omit to use
+          release-input/previous.zip from this repository.
+        required: false
+        type: string
+      previous_archive_sha256:
+        description: >-
+          Expected SHA-256 of the previous-release archive. The authoritative
+          production-candidate rehearsal stages this exact tree, so an
+          unverified previous release makes it meaningless.
+        required: true
+        type: string
+      previous_commit:
+        description: The commit live production currently runs (post-v7 baseline).
+        required: false
+        default: e0753176c42d0c4b98cb185004a962087f5d0423
+        type: string
 
 # This workflow does not deploy. It builds, verifies and uploads artifacts.
 permissions:
@@ -83,6 +102,9 @@ jobs:
       MYHAWLER_TEST_DB_PASSWORD: ci
       MYHAWLER_BASELINE_ARCHIVE: ${{ github.workspace }}/release-input/baseline.zip
       MYHAWLER_BASELINE_SHA256: ${{ inputs.baseline_archive_sha256 }}
+      MYHAWLER_PREVIOUS_ARCHIVE: ${{ github.workspace }}/release-input/previous.zip
+      MYHAWLER_PREVIOUS_SHA256: ${{ inputs.previous_archive_sha256 }}
+      MYHAWLER_DB_REHEARSE_PROD: myh_rehearse_prod
       WORK: ${{ github.workspace }}/final-release-run
 
     steps:
@@ -141,6 +163,19 @@ jobs:
           [ "$actual" = "${{ inputs.baseline_archive_sha256 }}" ] \
             || { echo "baseline hash mismatch: $actual"; exit 1; }
           echo "baseline verified: $actual"
+
+      - name: Fetch and verify the previous-release archive
+        run: |
+          set -euo pipefail
+          mkdir -p release-input
+          if [ -n "${{ inputs.previous_archive_url }}" ]; then
+            curl -fsSL "${{ inputs.previous_archive_url }}" -o release-input/previous.zip
+          fi
+          test -f release-input/previous.zip || { echo "no previous-release archive"; exit 1; }
+          actual=$(sha256sum release-input/previous.zip | cut -d' ' -f1)
+          [ "$actual" = "${{ inputs.previous_archive_sha256 }}" ] \
+            || { echo "previous-release hash mismatch: $actual"; exit 1; }
+          echo "previous release verified: $actual"
 
       - name: Read the dependency lock for cache keying
         id: lock
@@ -230,7 +265,8 @@ jobs:
             --source-archive release-input/myhawler-current-working-tree.zip \
             --source-sha256 release-input/myhawler-current-working-tree.zip.sha256 \
             --work "${WORK}" \
-            --baseline-commit "${{ inputs.baseline_commit }}"
+            --baseline-commit "${{ inputs.baseline_commit }}" \
+            --previous-commit "${{ inputs.previous_commit }}"
 
       - name: Summarise the frozen identity
         if: always()

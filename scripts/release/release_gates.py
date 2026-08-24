@@ -97,6 +97,16 @@ GATES: tuple[Gate, ...] = (
     # and skips only in the specs reviewed as intentionally viewport-driven.
     Gate('playwright-remaining-merge', 'playwright_remaining_merge', 'browser'),
     # ------------------------------------------------------------- rehearsals
+    # The authoritative production-candidate pair: the post-v7 baseline
+    # (the tree production runs right now, at the full ledger) upgraded
+    # incrementally with a migration delta of exactly zero, and rolled
+    # back code-and-runtime-only with the database untouched.
+    Gate('deployment-rehearsal-production', 'deployment_rehearsal_production', 'rehearsal'),
+    Gate('rollback-rehearsal-production', 'rollback_rehearsal_production', 'rehearsal'),
+    # The historical full-upgrade compatibility pair: sealed v6 plus the
+    # complete inventory, and its full reversal. Still required — it
+    # proves the inventory applies from scratch — but NOT a model of
+    # current production.
     Gate('deployment-rehearsal', 'deployment_rehearsal', 'rehearsal'),
     Gate('rollback-rehearsal', 'rollback_rehearsal', 'rehearsal'),
     Gate('deletion-apply-restore', 'deletion_apply_restore', 'rehearsal'),
@@ -109,6 +119,7 @@ GATES: tuple[Gate, ...] = (
     # ----------------------------------------------------------- verification
     Gate('source-archive-audit', 'source_archive_audit', 'verification'),
     Gate('baseline-archive-audit', 'baseline_archive_audit', 'verification'),
+    Gate('previous-archive-audit', 'previous_archive_audit', 'verification'),
     Gate('source-runtime-parity', 'source_runtime_parity', 'verification'),
     Gate('runtime-asset-parity', 'runtime_asset_parity', 'verification'),
     # Audits the component artifacts that exist BEFORE indexing. Named for what
