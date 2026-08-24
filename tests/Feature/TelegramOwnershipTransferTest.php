@@ -362,33 +362,44 @@ final class TelegramOwnershipTransferTest extends TestCase
     {
         ['source' => $source, 'destination' => $first] = $this->stageCollision();
 
-        // A THIRD account parks the same question.
+        $firstIntent = $this->pendingTransfer($first);
+        $this->assertNotNull($firstIntent);
+        $firstHandle = $firstIntent->candidateHandle();
+
+        // A THIRD account parks the same question. Its Start is the FRESHEST
+        // proof of control, so it withdraws the first account's parked
+        // question the moment it parks its own.
         $this->flushSession();
         Auth::logout();
         $second = $this->register('07503330000', 'Third Person');
         $this->get('/account/telegram/link');
         $this->sendStart($this->liveToken($second), self::TELEGRAM, updateId: 2001);
 
-        $firstIntent = $this->pendingTransfer($first);
         $secondIntent = $this->pendingTransfer($second);
-        $this->assertNotNull($firstIntent);
         $this->assertNotNull($secondIntent);
+        $this->assertNull(
+            $this->pendingTransfer($first)?->candidate_telegram_id,
+            'the superseded question must have been withdrawn at park time',
+        );
 
-        // The first destination confirms and wins.
+        // The first account's confirmation answers a question that no longer
+        // exists — refused, instead of moving the claim on a superseded
+        // proof.
         $this->actingAs($first->fresh());
-        $this->confirmTransfer($firstIntent)->assertOk()->assertJsonPath('state', 'completed');
-        $this->assertClaimHeldOnlyBy($first);
+        $this->postJson('/account/telegram/link/confirm', [
+            'candidate_handle' => $firstHandle,
+            'accept_transfer' => true,
+        ])->assertStatus(409)->assertJsonPath('state', 'candidate_changed');
 
-        // The second's confirmation is now STALE: ownership changed after its
-        // question was parked, so it is refused instead of stealing the claim
-        // straight back from the winner.
+        $this->assertClaimHeldOnlyBy($source);
+        $this->assertNull($first->fresh()->telegram_id);
+
+        // The freshest prover confirms and is the ONE winner.
         $this->actingAs($second->fresh());
-        $this->confirmTransfer($secondIntent)
-            ->assertStatus(409)
-            ->assertJsonPath('state', 'candidate_changed');
+        $this->confirmTransfer($secondIntent)->assertOk()->assertJsonPath('state', 'completed');
 
-        $this->assertClaimHeldOnlyBy($first);
-        $this->assertNull($second->fresh()->telegram_id);
+        $this->assertClaimHeldOnlyBy($second);
+        $this->assertNull($first->fresh()->telegram_id);
         $this->assertNull($source->fresh()->telegram_id);
     }
 

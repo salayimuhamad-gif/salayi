@@ -658,6 +658,11 @@ final class TelegramRegistrar
                             'candidate_at' => now(),
                         ])->save();
 
+                        // The freshest proof of control withdraws every other
+                        // account's parked question about this identity —
+                        // the same rule, whichever flow parks.
+                        $this->transfer->sweepCompetingCandidates($telegramId, (int) $locked->id);
+
                         $this->audit->record('identity.telegram_transfer_candidate', $user, [], [
                             'intent_id' => $locked->id,
                         ]);

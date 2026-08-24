@@ -45,16 +45,19 @@ use Illuminate\Support\Facades\DB;
  * THE RACE MODEL, because two accounts can both prove control (one human with
  * two MULK accounts racing themself, or a shared/hijacked Telegram):
  *
+ *   - a Start is the FRESHEST proof of control, so parking a candidate
+ *     WITHDRAWS every other account's parked question about the same
+ *     identity ({@see sweepCompetingCandidates()}). At most one live
+ *     transfer decision exists per Telegram identity at any moment, and the
+ *     racer whose question was withdrawn is refused at confirm by the same
+ *     candidate-handle machinery that refuses a swapped candidate — by
+ *     STATE, never by comparing second-resolution timestamps, which cannot
+ *     order two events inside the same second;
  *   - execution happens in ONE transaction under row locks on the intent and
  *     on BOTH user rows, the user rows always locked in ascending-id order so
  *     two concurrent transfers can never deadlock each other;
- *   - every assumption is re-checked AFTER the locks are held;
- *   - a confirm is only valid for the ownership the person was LOOKING AT:
- *     if the claim moved after the candidate was parked (the current owner's
- *     `telegram_verified_at` is at or after `candidate_at`), the stale
- *     confirmation is refused and the person must press Start again — this is
- *     what makes "two destinations race, exactly one wins" true, instead of
- *     the loser's stale confirmation stealing the claim straight back;
+ *   - every assumption is re-checked AFTER the locks are held, on the LOCKED
+ *     rows;
  *   - the UNIQUE index on `users.telegram_id` stays the final word: the old
  *     claim is cleared before the new one is written, inside the same
  *     transaction, so the same id never sits on two rows even transiently.
@@ -134,6 +137,8 @@ final class TelegramOwnershipTransfer
                 'candidate_name' => $this->candidateName($from),
                 'candidate_at' => now(),
             ])->save();
+
+            $this->sweepCompetingCandidates($telegramId, (int) $intent->id);
 
             $source = $this->currentOwner($telegramId, $destination->id);
 
@@ -350,27 +355,15 @@ final class TelegramOwnershipTransfer
         }
 
         /*
-         * Re-check 4, the stale-decision guard: a confirmation is only valid
-         * for the ownership state the person was shown. Every path that
-         * assigns a Telegram identity stamps `telegram_verified_at` at that
-         * moment, so a claim stamped at or after this candidate was parked
-         * means the ownership CHANGED after the question was asked — the
-         * classic two-destinations race, where the loser's stale confirm
-         * must not steal the claim straight back from the winner. (A null
-         * stamp is a legacy Share-Contact row: a claim that predates parking
-         * by construction, so it transfers normally.)
+         * There is deliberately no timestamp comparison here. The
+         * stale-decision problem — a racer confirming a question that was
+         * asked about an ownership state that no longer exists — is closed
+         * at PARK time by {@see sweepCompetingCandidates()}: the moment a
+         * fresh Start parks a candidate for this identity, every other
+         * account's parked question about it is withdrawn, so a stale
+         * confirm arrives with no candidate to match and is refused by the
+         * handle machinery before this method is ever reached.
          */
-        if ($source->telegram_verified_at !== null
-            && $lockedIntent->candidate_at !== null
-            && $source->telegram_verified_at->greaterThanOrEqualTo($lockedIntent->candidate_at)) {
-            $this->audit->security('identity.telegram_transfer_refused', [
-                'intent_id' => $lockedIntent->id,
-                'via' => 'ownership_changed_since_park',
-                'source_user_id' => $source->id,
-            ]);
-
-            return ['ok' => false, 'reason' => 'candidate_changed'];
-        }
 
         /*
          * The move. Old claim cleared FIRST, new claim written second, both
@@ -443,6 +436,39 @@ final class TelegramOwnershipTransfer
                 'source_user_id' => $source?->id,
             ]);
         });
+    }
+
+    /**
+     * Withdraw every OTHER parked question about this Telegram identity —
+     * transfer intents and legacy account-link candidates alike.
+     *
+     * A Start is the freshest proof of control, so the question it parks is
+     * the only one that may still be answered: leaving an older account's
+     * parked question alive would let a stale confirmation move the claim
+     * on the strength of a proof that has since been superseded. Withdrawal
+     * clears ONLY the candidate columns — the competing intents themselves
+     * survive, exactly as they do when a candidate is rejected, so the
+     * other browser's poll simply returns to waiting for a fresh Start.
+     *
+     * Runs inside the caller's transaction. Two simultaneous parks for the
+     * same identity can in principle sweep each other's rows in opposite
+     * orders; InnoDB resolves that by rolling one webhook delivery back,
+     * the inbox marks it failed, and Telegram's redelivery completes it —
+     * self-healing by the same path every webhook error takes.
+     */
+    public function sweepCompetingCandidates(string $telegramId, int $keepIntentId): void
+    {
+        TelegramLoginIntent::query()
+            ->where('candidate_telegram_id', $telegramId)
+            ->whereKeyNot($keepIntentId)
+            ->whereNull('consumed_at')
+            ->whereNull('cancelled_at')
+            ->update([
+                'candidate_telegram_id' => null,
+                'candidate_username' => null,
+                'candidate_name' => null,
+                'candidate_at' => null,
+            ]);
     }
 
     /** The account currently holding this Telegram identity, if any other. */
