@@ -391,6 +391,26 @@ jobs:
             || { echo "fetched baseline does not match the sealed identity"; exit 1; }
           export MYHAWLER_BASELINE_ARCHIVE="$RUNNER_TEMP/baseline.zip"
           export MYHAWLER_BASELINE_SHA256="$SEALED"
+          # The previously-deployed production source (post-v7 baseline): the
+          # authoritative production-candidate rehearsal stages it, so the
+          # offline cycle requires it exactly as the real one does. Fetched
+          # from its committed input ref and verified against the identity
+          # pinned in audit_archive.py before anything consumes it.
+          git fetch --depth 1 origin final-inputs/e075317
+          git show FETCH_HEAD:release-input/myhawler-current-working-tree.zip \
+            > "$RUNNER_TEMP/previous.zip"
+          PREVIOUS=$(python3 - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('a', 'scripts/release/audit_archive.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          print(module.POST_V7_PREVIOUS_ARCHIVE_SHA256)
+          PY
+          )
+          echo "$PREVIOUS  $RUNNER_TEMP/previous.zip" | sha256sum -c - \
+            || { echo "fetched previous release does not match the pinned identity"; exit 1; }
+          export MYHAWLER_PREVIOUS_ARCHIVE="$RUNNER_TEMP/previous.zip"
+          export MYHAWLER_PREVIOUS_SHA256="$PREVIOUS"
           bash scripts/release/verify_delivery_determinism.sh --work "$RUNNER_TEMP/determinism"
 
       - uses: actions/upload-artifact@v4

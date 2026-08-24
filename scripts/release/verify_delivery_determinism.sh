@@ -101,6 +101,12 @@ fi
     || fail "MYHAWLER_BASELINE_SHA256 must carry the sealed baseline's SHA-256"
 [ -f "$MYHAWLER_BASELINE_ARCHIVE" ] \
     || fail "baseline archive not found: $MYHAWLER_BASELINE_ARCHIVE"
+[ -n "${MYHAWLER_PREVIOUS_ARCHIVE:-}" ] \
+    || fail "MYHAWLER_PREVIOUS_ARCHIVE must point at the previously-deployed source (see header)"
+[ -n "${MYHAWLER_PREVIOUS_SHA256:-}" ] \
+    || fail "MYHAWLER_PREVIOUS_SHA256 must carry the previous release's SHA-256"
+[ -f "$MYHAWLER_PREVIOUS_ARCHIVE" ] \
+    || fail "previous-release archive not found: $MYHAWLER_PREVIOUS_ARCHIVE"
 
 # ------------------------------------------------------------- two cycles
 for run in a b; do

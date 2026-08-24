@@ -3132,6 +3132,24 @@ check('the final-release workflow fetches and pins the previous-release archive'
       and 'MYHAWLER_DB_REHEARSE_PROD' in workflow_text
       and '--previous-commit' in workflow_text)
 
+audit_text = (RELEASE / 'audit_archive.py').read_text()
+ci_text = (ROOT / '.github' / 'workflows' / 'ci.yml').read_text()
+determinism_text = (RELEASE / 'verify_delivery_determinism.sh').read_text()
+
+check('the previous-release identity is pinned once, in the audit module',
+      "POST_V7_PREVIOUS_ARCHIVE_SHA256 = (\n"
+      "    '3ac140c913b5b73c9c7ff0169747aab9aa176979d681b45005f000dfb78c8d7f'\n"
+      ")" in audit_text)
+
+check('normal CI feeds the determinism harness the pinned previous release',
+      'final-inputs/e075317' in ci_text
+      and 'POST_V7_PREVIOUS_ARCHIVE_SHA256' in ci_text
+      and 'MYHAWLER_PREVIOUS_ARCHIVE' in ci_text)
+
+check('the determinism harness refuses to run without the previous release',
+      'MYHAWLER_PREVIOUS_ARCHIVE' in determinism_text
+      and 'MYHAWLER_PREVIOUS_SHA256' in determinism_text)
+
 migration_files = sorted(
     p for p in ROOT.glob('app/Modules/*/Database/Migrations/*.php')
 ) + sorted(p for p in ROOT.glob('database/migrations/*.php'))
