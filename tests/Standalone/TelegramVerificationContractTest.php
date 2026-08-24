@@ -187,10 +187,19 @@ $ok(
 );
 
 /*
- * The one-press property, asserted where it can actually be broken: the
- * verification branch of the webhook must not park a candidate or ask for a
- * browser confirmation. The account-link branch above it still does both, and
- * must — so the check is scoped to the new branch rather than to the file.
+ * The one-press property, asserted where it can actually be broken: an
+ * ORDINARY verification Start — an unclaimed Telegram identity — completes in
+ * one press with no second step. The account-link branch above still has its
+ * confirmation, and must — so the check is scoped to the new branch rather
+ * than to the file.
+ *
+ * The ownership-transfer rule carved out ONE deliberate exception inside this
+ * branch: a Start that collides with an identity another account holds parks
+ * a transfer question and asks the destination's browser to decide, because
+ * MOVING a claim must never be a side effect of a press. The contract is
+ * therefore sharper than "never confirm": the browser is consulted exactly
+ * once, only on the `transfer_available` answer, and the ordinary success
+ * path stays a single press with nothing to come back for.
  */
 $start = strpos($webhook, 'if ($intent === null) {');
 $end = strpos($webhook, 'if ($intent !== null && $senderId !== \'\') {');
@@ -200,11 +209,25 @@ $verificationBranch = $start !== false && $end !== false && $end > $start
 
 $ok('the verification branch is present in the webhook', $verificationBranch !== '');
 
+$transferGate = strpos($verificationBranch, "'transfer_available'");
+$transferPark = strpos($verificationBranch, 'parkTransferCandidate');
+$transferAsk = strpos($verificationBranch, 'requestBrowserConfirmation');
+
 $ok(
-    'the verification branch never requests a browser confirmation',
+    'the ordinary verification success still completes in one press',
     $verificationBranch !== ''
-        && ! str_contains($verificationBranch, 'requestBrowserConfirmation')
-        && ! str_contains($verificationBranch, 'candidate'),
+        && str_contains($verificationBranch, 'confirmVerified')
+        && strpos($verificationBranch, 'confirmVerified') < ($transferGate === false ? PHP_INT_MAX : $transferGate),
+);
+
+$ok(
+    'only the transfer collision consults the browser, and only once',
+    $transferGate !== false
+        && $transferPark !== false
+        && $transferAsk !== false
+        && $transferGate < $transferPark
+        && $transferPark < $transferAsk
+        && substr_count($verificationBranch, 'requestBrowserConfirmation') === 1,
 );
 
 $ok(

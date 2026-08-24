@@ -75,6 +75,17 @@ final class TelegramLoginIntent extends Model
     /** Correction C1: linking Telegram to an EXISTING signed-in account. */
     public const PURPOSE_ACCOUNT_LINK = 'account_link';
 
+    /**
+     * Moving a Telegram identity claim from the account that holds it to the
+     * signed-in account that just re-proved control of it. Minted by the
+     * webhook when a verification Start collides with an existing claim,
+     * bound to the destination ACCOUNT (the fingerprint derives from the
+     * verification token, not from a browser session), and completed only by
+     * an explicit confirmation in that account's authenticated browser. Its
+     * own purpose so no account-link or login path can ever redeem one.
+     */
+    public const PURPOSE_ACCOUNT_TRANSFER = 'account_transfer';
+
     public const RESULT_COMPLETED = 'completed';
 
     public const RESULT_CONFLICT = 'conflict';

@@ -54,13 +54,21 @@ const props = defineProps<{
     deep_link: string | null;
     bot_configured: boolean;
     /*
-     * Legacy, and null for every account registered since the simplified flow
-     * shipped: a candidate parked by an `account_link` intent that was already
-     * in flight at deploy time. The confirmation UI below renders only when it
-     * is non-null, so the ordinary journey never sees a second step.
+     * Either a candidate parked by a legacy `account_link` intent, or the
+     * ownership-transfer question a colliding Start parked. The decision UI
+     * below renders only when it is non-null, so the ordinary journey never
+     * sees a second step.
      */
     candidate: Candidate | null;
     candidate_handle: string | null;
+    /*
+     * True when the parked candidate currently belongs to ANOTHER account,
+     * so confirming means MOVING the Telegram identity here — the page asks
+     * the transfer question with its warning instead of the plain "is this
+     * your Telegram". Advisory for rendering; the server re-establishes the
+     * fact under locks and requires the explicit acknowledgement either way.
+     */
+    candidate_transfer: boolean;
 }>();
 
 const page = usePage();
@@ -83,6 +91,7 @@ type LinkState =
     | 'idle'
     | 'waiting'
     | 'awaiting_confirmation'
+    | 'awaiting_transfer'
     | 'confirming'
     | 'completed'
     | 'expired'
@@ -92,12 +101,24 @@ type LinkState =
 
 /*
  * A candidate may already be parked when the page RENDERS — the person
- * pressed Start, then closed and reopened the tab. Because the intent
- * survives a reload now, the confirmation has to survive one too.
+ * pressed Start, then closed and reopened the tab. Because the question
+ * survives a reload (the transfer one is bound to the account itself), the
+ * decision UI has to survive one too.
  */
-const state = ref<LinkState>(props.candidate !== null ? 'awaiting_confirmation' : 'idle');
+const state = ref<LinkState>(
+    props.candidate !== null
+        ? (props.candidate_transfer ? 'awaiting_transfer' : 'awaiting_confirmation')
+        : 'idle',
+);
 const candidate = ref<Candidate | null>(props.candidate);
 const candidateHandle = ref<string | null>(props.candidate_handle);
+/*
+ * Which question is on screen. Set from the render props and from every
+ * poll, and read when the person presses the primary button so the request
+ * carries the transfer acknowledgement exactly when the transfer question
+ * was the one being answered.
+ */
+const transferMode = ref<boolean>(props.candidate_transfer);
 let timer: ReturnType<typeof setInterval> | undefined;
 
 function candidateLabel(value: Candidate | null): string {
@@ -138,18 +159,22 @@ async function poll(): Promise<void> {
             setTimeout(() => {
                 window.location.href = body.redirect ?? localized('/account/profile');
             }, 1200);
-        } else if (body.state === 'awaiting_confirmation') {
+        } else if (body.state === 'awaiting_confirmation' || body.state === 'awaiting_transfer') {
             /*
              * Keep polling. A second Start from a different Telegram
              * account replaces the candidate, and the person must see the
              * one that is actually parked right now — not the one that was
-             * parked when they walked away from the screen.
+             * parked when they walked away from the screen. The QUESTION can
+             * change too: a candidate that was unclaimed a moment ago may be
+             * claimed now, which turns the plain confirmation into the
+             * transfer decision.
              */
             candidate.value = body.candidate ?? null;
             candidateHandle.value = body.candidate_handle ?? null;
+            transferMode.value = body.state === 'awaiting_transfer';
 
             if (state.value !== 'confirming') {
-                state.value = 'awaiting_confirmation';
+                state.value = body.state;
             }
         } else if (body.state === 'expired' || body.state === 'conflict' || body.state === 'cancelled') {
             stopPolling();
@@ -217,6 +242,14 @@ async function confirmCandidate(): Promise<void> {
         return;
     }
 
+    /*
+     * Remember WHICH question is being answered before flipping to the
+     * in-flight state: the transfer acknowledgement must describe the screen
+     * the person pressed the button on, and a failed attempt must return
+     * them to that same question.
+     */
+    const answeringTransfer = transferMode.value;
+
     state.value = 'confirming';
 
     try {
@@ -224,7 +257,17 @@ async function confirmCandidate(): Promise<void> {
             method: 'POST',
             credentials: 'same-origin',
             headers: jsonHeaders(),
-            body: JSON.stringify({ candidate_handle: candidateHandle.value }),
+            body: JSON.stringify({
+                candidate_handle: candidateHandle.value,
+                /*
+                 * The explicit acknowledgement, sent ONLY when the transfer
+                 * question was on screen. The server refuses a transfer
+                 * without it, and a plain confirmation never sends it — so a
+                 * stale page can neither move a claim by accident nor be
+                 * tricked into it.
+                 */
+                ...(answeringTransfer ? { accept_transfer: true } : {}),
+            }),
         });
 
         const body = (await response.json()) as { state: string; redirect?: string };
@@ -239,7 +282,7 @@ async function confirmCandidate(): Promise<void> {
             return;
         }
 
-        if (body.state === 'candidate_changed') {
+        if (body.state === 'candidate_changed' || body.state === 'transfer_required') {
             state.value = 'candidate_changed';
             void poll();
 
@@ -251,7 +294,7 @@ async function confirmCandidate(): Promise<void> {
     } catch {
         // Network trouble mid-confirm: fall back to the poll loop, which
         // will re-report whatever the server actually thinks.
-        state.value = 'awaiting_confirmation';
+        state.value = answeringTransfer ? 'awaiting_transfer' : 'awaiting_confirmation';
     }
 }
 
@@ -333,6 +376,63 @@ onBeforeUnmount(stopPolling);
                 <AppAlert variant="success" class="mt-4">
                     {{ t('identity.link.success') }}
                 </AppAlert>
+            </template>
+
+            <!--
+                The ownership-transfer decision. The candidate Telegram account
+                is already linked to an older MULK account, and the person is
+                asked — in this authenticated browser, never in the chat —
+                whether to move it here. Only the candidate's own Telegram
+                display identity is shown; nothing about the older account
+                appears, because this page must never describe one person's
+                account to another.
+            -->
+            <template v-else-if="state === 'awaiting_transfer' || ((state === 'confirming' || state === 'candidate_changed') && transferMode)">
+                <h2 class="mt-4 text-base font-semibold" data-testid="transfer-title">
+                    {{ t('identity.link.transfer_title') }}
+                </h2>
+
+                <AppAlert v-if="state === 'candidate_changed'" variant="warning" class="mt-3" data-testid="transfer-stale">
+                    {{ t('identity.link.transfer_stale') }}
+                </AppAlert>
+
+                <p class="mt-2 text-sm leading-relaxed opacity-90">
+                    {{ t('identity.link.transfer_lead') }}
+                </p>
+
+                <p
+                    class="mt-4 rounded border px-3 py-2 text-sm font-medium"
+                    data-testid="candidate-identity"
+                    dir="ltr"
+                >
+                    {{ candidateLabel(candidate) }}
+                </p>
+
+                <AppAlert variant="warning" class="mt-4" data-testid="transfer-warning">
+                    {{ t('identity.link.transfer_warning') }}
+                </AppAlert>
+
+                <AppButton
+                    class="mt-4 w-full"
+                    data-testid="confirm-transfer"
+                    :disabled="state === 'confirming' || candidateHandle === null"
+                    @click="confirmCandidate"
+                >
+                    {{ t('identity.link.transfer_button') }}
+                </AppButton>
+
+                <p v-if="state === 'confirming'" class="mt-3 text-sm opacity-80" aria-live="polite">
+                    {{ t('identity.link.confirm_waiting') }}
+                </p>
+
+                <button
+                    type="button"
+                    class="mt-4 text-sm underline opacity-70 hover:opacity-100"
+                    data-testid="reject-transfer"
+                    @click="rejectCandidate"
+                >
+                    {{ t('identity.link.transfer_cancel') }}
+                </button>
             </template>
 
             <template v-else-if="state === 'awaiting_confirmation' || state === 'confirming' || state === 'candidate_changed'">
