@@ -62,6 +62,15 @@ BASELINE_LEGACY_ARTIFACTS: dict[str, frozenset[str]] = {
     }),
 }
 
+# The previously-deployed production source — the post-v7 baseline of commit
+# e0753176c42d0c4b98cb185004a962087f5d0423, the tree live production runs.
+# The authoritative production-candidate rehearsal stages this exact archive,
+# so its identity is pinned HERE, beside the sealed baseline's, as the single
+# source of truth every consumer (the CI determinism harness included) reads.
+POST_V7_PREVIOUS_ARCHIVE_SHA256 = (
+    '3ac140c913b5b73c9c7ff0169747aab9aa176979d681b45005f000dfb78c8d7f'
+)
+
 
 def sha256_file(path: str) -> str:
     """Streamed digest: the archive is the identity the waiver is pinned to."""

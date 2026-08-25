@@ -1,17 +1,88 @@
-# DEPLOYMENT_NOTES.md — MyHawler v7 release
+# DEPLOYMENT_NOTES.md — MyHawler production deployments
 
-The exact reversible procedure for this release: account-first registration
-with passwords and a Telegram-or-WhatsApp verification choice, Telegram
-password recovery, admin presence and activity, and the investment map
-surface.
+Two deployments live in this document, and they must never be confused:
 
-> **Rehearsal status.** `scripts/release/deploy_rehearsal.sh` executes this
-> exact procedure on every final-release CI run, against a staged
-> Hostinger-layout copy built from the sealed v6 baseline archive. The raw
-> rehearsal output and its check counts ship in the external evidence package,
-> which is the authoritative record for this document.
+1. **The v7 account-first release — DEPLOYED AND COMPLETE.** Everything from
+   the inventory below through §15 documents that deployment. It happened:
+   live production applied its seven pending files, the ledger moved from
+   `59` `Ran` rows to `66`, and the site is serving the v7 build. That
+   history is kept intact — it explains the state production is in — but it
+   is **not the procedure for the next deployment**.
 
-**This patch DOES change the schema.** It ships twelve forward-only migrations:
+2. **The CURRENT incremental release (Telegram ownership transfer) — the
+   next deployment.** Its complete rules live in the section
+   [Current production baseline and the incremental release](#current-production-baseline-and-the-incremental-release)
+   immediately below, and THAT section is authoritative for deployment day.
+   Any procedure or count that still describes live production as moving
+   from `59` to `66` is stale for the next deployment and MUST NOT be used.
+
+> **Rehearsal status.** `scripts/release/deploy_rehearsal.sh` executes the
+> deployment on every final-release CI run, in TWO baseline contexts: the
+> AUTHORITATIVE production-candidate rehearsal stages the post-v7 tree
+> production actually runs (`REHEARSAL_BASELINE_MODE=post-v7`, ledger pinned
+> at `66` with a migration delta of exactly zero), and the historical
+> sealed-v6 full-upgrade rehearsal keeps proving the complete inventory
+> applies from scratch. The raw rehearsal output and check counts ship in
+> the external evidence package, which is the authoritative record for this
+> document.
+
+## Current production baseline and the incremental release
+
+**Verified current production state (post-v7):** live `myhawler.com` runs
+the source tree of commit `e0753176c42d0c4b98cb185004a962087f5d0423` with
+the Final Release production vendor (league/commonmark `2.9.0`, the
+package-discovery invalidation fix live), feature flags unchanged, and a
+migration ledger of exactly **`66` `Ran` rows** — all twelve inventory
+files below included, the protected five among them. That is the floor the
+next deployment stands on.
+
+**What the incremental release changes:** the Telegram ownership-transfer
+candidate ships code, language files and a rebuilt public build. It ships
+**zero release migrations, zero schema changes, zero feature-flag changes
+and zero dependency changes** — the Composer trio it carries is
+byte-identical in lock terms to what production already runs, and the
+migration directory is identical file-for-file to the deployed tree.
+
+**Deployment-day migration arithmetic — the only numbers that matter now:**
+
+```text
+BEFORE   = 66   Ran rows, counted before anything changes; anything else is a STOP
+AFTER    = 66   Ran rows, counted after the code/runtime swap
+INCREASE = 0    exactly; a nonzero delta in either direction is a STOP
+```
+
+The incremental procedure is the SAME file-and-runtime procedure as §1–§7
+and §9–§15 below — checksum first, the ten backups, staging in a new
+directory, maintenance mode, the deletion manifest, the trio replaced never
+merged, the discovery-manifest invalidation then rediscovery, caches, the
+offline gate, smoke tests — with §3 and §8 replaced by these rules:
+
+- **Before the swap (§3 replacement):** `migrate:status | grep -c Ran` must
+  print exactly `66`, and the twelve-file inventory grep must show all
+  twelve `Ran`. Anything else means the host is not the verified post-v7
+  baseline: STOP and reconcile before touching anything.
+- **After the swap (§8 replacement):** `migrate:status` must show **no new
+  `Pending` rows at all**. The standard step
+  `php artisan migrate --force` MAY still be run so the procedure stays
+  uniform — and if it is run, it must answer **`Nothing to migrate`** and
+  the ledger must still count exactly `66`. Any `Pending` row, any count
+  other than `66`, or any migrate output other than nothing-to-migrate
+  means a file arrived that this release does not declare: STOP,
+  investigate, and if needed go to rollback.
+- **Rollback for this release is CODE AND RUNTIME ONLY** — see
+  `ROLLBACK_NOTES.md`, section "Incremental release rollback". The ledger
+  stays at `66` through the entire rollback; no `migrate:rollback` of any
+  form, no `--step`, no batch walk, no database restore, and the protected
+  five are never touched. This release added nothing to the database, so
+  nothing database-side is ever reversed for it.
+
+Everything below this line documents the COMPLETED v7 deployment and the
+full-upgrade rehearsal context. Read it for history and for the sealed-v6
+rehearsal; do not deploy from it again.
+
+---
+
+**The v7 patch DID change the schema.** It shipped twelve forward-only migrations:
 
 ```text
 app/Modules/Identity/Database/Migrations/2026_08_06_000100_telegram_return_handoffs.php
@@ -87,12 +158,19 @@ Copying the code without running the migrations leaves the application querying
 tables and columns that do not exist. The migration step below is mandatory,
 not optional.
 
-## Verified production state (2026-08-23) — read this before every count below
+## Verified production state (2026-08-23) — HISTORICAL: the v7 deployment day
+
+**This section captured the state live production was in BEFORE the v7
+deployment, and the v7 deployment has since completed.** The ledger is no
+longer `59`: it is `66`, exactly as the plus-seven arithmetic below
+predicted, and the current-state facts for the NEXT deployment live in
+"Current production baseline and the incremental release" at the top of
+this document. Nothing here is the procedure for the next deployment.
 
 The twelve files above are the release inventory, but **how many of them a
-host still has to run depends on which host you are standing on**. There are
-exactly two valid contexts, and every migration count in this document must be
-read against the right one:
+host still had to run depended on which host you were standing on**. There
+were exactly two valid contexts on v7 deployment day, and every migration
+count in the historical sections must be read against the right one:
 
 | Context | Starting ledger | Already `Ran` from the inventory | To apply | Expected increase |
 |---|---|---|---|---|
@@ -140,12 +218,17 @@ so before §7 copies the new code they do not appear in `migrate:status` at all
 the new source is in place, which is why §8 re-checks them right before
 migrating.
 
-The rehearsal keeps context A on purpose — it proves the whole inventory
-against the sealed baseline — and nothing in `deploy_rehearsal.sh`,
-`rollback_rehearsal_v7.sh` or their CI gates changes for context B. On the
-live host, use the context-B numbers in §3, §8, §12 and §15, and STOP the
-moment reality disagrees with them. `artisan migrate` exiting 0 is not the
-success condition; the reconciled ledger arithmetic is.
+The sealed-v6 rehearsal keeps context A on purpose — it proves the whole
+inventory against the sealed baseline — and it remains a required
+compatibility gate. On v7 deployment day the live host used the context-B
+numbers in §3, §8, §12 and §15, and they held: the ledger moved `59` to
+`66` exactly. Since that day, **context B is finished history**. The next
+deployment's context is the post-v7 baseline at `66` with a delta of
+exactly zero, rehearsed authoritatively by
+`REHEARSAL_BASELINE_MODE=post-v7` and rolled back code-and-runtime-only by
+`rollback_rehearsal_production.sh` — see the incremental section at the
+top. `artisan migrate` exiting 0 was never the success condition; the
+reconciled ledger arithmetic is, in every era.
 
 **Registration now requires a password**, and `/login` accepts a **phone number
 or an email**. No existing account is altered by this and no existing
@@ -225,6 +308,12 @@ still in place points at controllers that no longer exist. The database dump
 is mandatory because this release migrates.
 
 ## 3. Record the migration count BEFORE anything changes
+
+> **HISTORICAL (v7 deployment day).** For the CURRENT incremental
+> release, this section is replaced by the before-the-swap rule in the
+> incremental section at the top: the count must read exactly `66` and
+> the whole inventory must already be `Ran` — nothing here about `59`
+> applies any more.
 
 ```bash
 cd ~/domains/myhawler.com/application
@@ -386,6 +475,12 @@ and restore per `ROLLBACK_NOTES.md` — the dependency state is part of the
 release, not an accessory.
 
 ## 8. Run the migration — mandatory
+
+> **HISTORICAL (v7 deployment day).** For the CURRENT incremental
+> release, this section is replaced by the after-the-swap rule in the
+> incremental section at the top: no new `Pending` rows, the standard
+> migrate step answering `Nothing to migrate` if invoked, and the
+> ledger still counting exactly `66`.
 
 The new source is in place now (§7), so on the live host the seven release
 migrations must resolve as `Pending` — no more, no fewer — before anything

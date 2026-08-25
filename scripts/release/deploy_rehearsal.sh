@@ -4,8 +4,31 @@
 # public_html.
 #
 # Nothing here touches the working tree or any live system. The staged copy is
-# built from the v6 baseline commit, the patch is applied the way
+# built from a chosen BASELINE, the patch is applied the way
 # DEPLOYMENT_NOTES.md says to apply it, and the result is exercised over HTTP.
+#
+# TWO BASELINE CONTEXTS, selected by REHEARSAL_BASELINE_MODE, because the
+# question "what is production running right now" changed its answer when the
+# v7 release actually shipped:
+#
+#   post-v7     THE AUTHORITATIVE PRODUCTION-CANDIDATE GATE. Live production
+#               deployed the v7 release and now runs the post-v7 baseline with
+#               its migration ledger fully applied — sixty-six Ran rows, all
+#               twelve inventory migrations included. The candidate on top of
+#               it is an INCREMENTAL release that adds zero migrations, so the
+#               rehearsal stages the PREVIOUS release's tree
+#               (REHEARSAL_PREVIOUS), migrates it fully, pins the ledger at
+#               exactly 66 with the whole inventory Ran BEFORE the apply, and
+#               then proves the apply changes NOTHING in the ledger: migrate
+#               answers "Nothing to migrate", the count stays 66, delta zero.
+#
+#   sealed-v6   The historical full-upgrade compatibility gate: the sealed v6
+#               baseline (REHEARSAL_BASELINE) upgraded by the whole inventory,
+#               pinning the original plus-twelve arithmetic. It remains a
+#               required gate — it proves the complete inventory still applies
+#               cleanly from scratch — but it is NOT a model of current
+#               production and must never be read as one.
+#
 # NOT `set -e`: every step below is a CHECK whose failure must be recorded and
 # reported, not swallowed by the shell aborting mid-rehearsal. The exit status
 # at the end is what decides pass/fail.
@@ -33,8 +56,31 @@ REHEARSAL_DB_PASSWORD="${REHEARSAL_DB_PASSWORD:?set REHEARSAL_DB_PASSWORD before
 #   REHEARSAL_PORT           loopback port for the staged site
 STAGE="${1:-${REHEARSAL_STAGE:-./rehearsal}}"
 RUNTIME="${2:-${REHEARSAL_RUNTIME:?set REHEARSAL_RUNTIME or pass the runtime path as $2}}"
-BASELINE="${REHEARSAL_BASELINE:?set REHEARSAL_BASELINE to the v6 baseline repo or archive}"
-BASELINE_COMMIT="${REHEARSAL_BASELINE_COMMIT:-9c0188f81843cfe4786b7f72ecdc2a3fae89cd82}"
+MODE="${REHEARSAL_BASELINE_MODE:-sealed-v6}"
+
+# The baseline the site is staged FROM, by mode. Each mode requires its own
+# source so a missing input fails loudly instead of silently rehearsing the
+# wrong history.
+case "$MODE" in
+    post-v7)
+        BASELINE="${REHEARSAL_PREVIOUS:?set REHEARSAL_PREVIOUS to the post-v7 previously-deployed tree (repo or archive)}"
+        BASELINE_COMMIT="${REHEARSAL_PREVIOUS_COMMIT:-e0753176c42d0c4b98cb185004a962087f5d0423}"
+        ;;
+    sealed-v6)
+        BASELINE="${REHEARSAL_BASELINE:?set REHEARSAL_BASELINE to the v6 baseline repo or archive}"
+        BASELINE_COMMIT="${REHEARSAL_BASELINE_COMMIT:-9c0188f81843cfe4786b7f72ecdc2a3fae89cd82}"
+        ;;
+    *)
+        echo "  FAIL  unknown REHEARSAL_BASELINE_MODE: $MODE (expected post-v7 or sealed-v6)"
+        exit 1
+        ;;
+esac
+
+# The ledger a fully-migrated post-v7 baseline must hold: the complete
+# migration inventory of the previously-deployed tree. Production was verified
+# at this exact count after the v7 deployment, and every post-v7 assertion
+# below pins against it.
+POST_V7_LEDGER=66
 EV="${REHEARSAL_EVIDENCE:-$STAGE/evidence}"
 PHP_BIN="${REHEARSAL_PHP:-php}"
 SITE="$STAGE/domains/myhawler.test"
@@ -57,7 +103,7 @@ check() {
 rm -rf "$STAGE"
 mkdir -p "$SITE"
 
-echo "== staging the v6 baseline =="
+echo "== staging the $MODE baseline =="
 # The baseline may be a git repository OR a plain archive, because a machine
 # rehearsing a delivered release will not necessarily have the repository.
 mkdir -p "$SITE/application"
@@ -80,7 +126,7 @@ else
     exit 1
 fi
 
-[ -f "$SITE/application/artisan" ]; check "baseline staged from the sealed commit" $?
+[ -f "$SITE/application/artisan" ]; check "baseline staged from the $MODE commit" $?
 
 # Hostinger splits the public root out of the application directory.
 mv "$SITE/application/public" "$SITE/public_html"
@@ -141,16 +187,44 @@ awk -F= '/^APP_KEY/ { exit (length($2) > 20 ? 0 : 1) } END { }' "$SITE/applicati
 check "environment prepared with a generated key" $?
 
 # The baseline is INSTALLED before the patch is applied: this rehearsal is an
-# upgrade of a running site. This release adds exactly TWELVE migrations above
-# the v6 baseline (return handoffs, permanent verification tokens, password
-# recovery challenges, optional profile columns, the presence column, the
-# knowledge evidence-class column, the three data-only backfills, the
-# WhatsApp verification table with its users column, the valuation rule
-# engine's five tables with their four additive valuation columns, and the
-# rule-set family-uniqueness key), and "exactly twelve" can only be
-# demonstrated against a database that is already migrated to the baseline.
+# upgrade of a running site.
+#
+# sealed-v6: the v7 inventory adds exactly TWELVE migrations above this
+# baseline (return handoffs, permanent verification tokens, password recovery
+# challenges, optional profile columns, the presence column, the knowledge
+# evidence-class column, the three data-only backfills, the WhatsApp
+# verification table with its users column, the valuation rule engine's five
+# tables with their four additive valuation columns, and the rule-set
+# family-uniqueness key), and "exactly twelve" can only be demonstrated
+# against a database that is already migrated to the baseline.
+#
+# post-v7: the baseline IS the fully-deployed previous release, so migrating
+# it lands the ledger at the production count with the whole inventory Ran —
+# the state live production was verified in — and the candidate on top must
+# then change none of it.
 ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
 check "baseline schema migrated before the patch is applied" $?
+
+INVENTORY_RE='telegram_return_handoffs|telegram_verification_tokens|password_recovery_challenges|profile_optional_details|add_last_seen_to_users|add_evidence_class_to_knowledge_events|backfill_knowledge_event_search_keys|backfill_offer_search_keys|whatsapp_account_verification|backfill_price_record_scope_ids|valuation_rule_engine|valuation_rule_set_family_uniqueness'
+
+if [ "$MODE" = "post-v7" ]; then
+    # The production-baseline proofs, BEFORE anything is applied. These are
+    # the facts the incremental release rests on, pinned fail-closed: a
+    # baseline that is not at exactly the production ledger is not a model of
+    # production, and continuing would rehearse a fiction.
+    BASELINE_RAN=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
+    [ "$BASELINE_RAN" = "$POST_V7_LEDGER" ]
+    check "post-v7 baseline ledger holds exactly the production count ($BASELINE_RAN of $POST_V7_LEDGER)" $?
+
+    BASELINE_INVENTORY_RAN=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
+        | grep -E "$INVENTORY_RE" | grep -c ' Ran' )
+    [ "$BASELINE_INVENTORY_RAN" = "12" ]
+    check "all twelve inventory migrations already Ran on the post-v7 baseline (found $BASELINE_INVENTORY_RAN)" $?
+
+    BASELINE_PENDING=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c ' Pending' )
+    [ "$BASELINE_PENDING" = "0" ]
+    check "the post-v7 baseline has nothing Pending before the apply (found $BASELINE_PENDING)" $?
+fi
 
 echo "== 1. checksum verification =="
 ( cd "$(dirname "$RUNTIME")" && sha256sum -c "$(basename "$RUNTIME").zip.sha256" ) >/dev/null 2>&1
@@ -397,52 +471,105 @@ fi
 [ "$CACHES_RC" = "0" ]
 check "configuration, route and view caches rebuilt" $?
 
-echo "== 8. migrations (this patch adds exactly twelve) =="
-BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
-( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
-AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
-DELTA=$(( AFTER - BEFORE ))
+if [ "$MODE" = "post-v7" ]; then
+    echo "== 8. migrations (this candidate adds exactly ZERO) =="
+    # The incremental contract, pinned in both directions and with the
+    # command's own words kept as evidence: the candidate ships no new
+    # migration files, so running the standard migrate step against the
+    # fully-migrated production baseline must answer "Nothing to migrate",
+    # the ledger must hold the production count on both sides, and the delta
+    # must be exactly zero. A positive delta means a migration file arrived
+    # that the release does not declare; a negative one is impossible short
+    # of corruption; either is a hard stop.
+    BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
+    [ "$BEFORE" = "$POST_V7_LEDGER" ]
+    check "ledger before the migrate step is the production count ($BEFORE of $POST_V7_LEDGER)" $?
 
-# This release ships TWELVE forward-only migrations above the v6 baseline:
-# the five v7 identity migrations, the hardening program's three (the
-# knowledge evidence-class column and the two data-only search-key
-# backfills), the dual-verification WhatsApp table with its users
-# column, the data-only price-record scope_id backfill that makes
-# historical imported prices visible to the scoped market indices,
-# the Wave 6 valuation rule engine (five additive rule/answer/snapshot
-# tables plus four nullable portfolio_valuations columns), and the
-# rule-set family-uniqueness key (a generated project_family column with
-# its unique index, so duplicate global versions die at the database).
-# Asserting the exact number matters in both directions: a
-# smaller delta means a table or column never arrived (and if it is the
-# verification-token table, nobody can finish a registration), while a
-# larger one would mean something unintended came with it.
-[ "$DELTA" = "12" ]
-check "exactly twelve migrations applied ($BEFORE -> $AFTER)" $?
+    ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force ) \
+        > "$EV/production-migrate.log" 2>&1
+    MIGRATE_RC=$?
+    if [ "$MIGRATE_RC" != "0" ]; then
+        echo "  ---- migrate output (see rehearsal evidence: production-migrate.log) ----"
+        tail -n 40 "$EV/production-migrate.log" | sed 's/^/    /'
+    fi
+    [ "$MIGRATE_RC" = "0" ]
+    check "the standard migrate step exits cleanly on the incremental candidate" $?
 
-# Then prove each named migration is the one that ran — a count alone cannot
-# tell twelve expected arrivals apart from eleven expected and one stranger.
-for migration in \
-    2026_08_06_000100_telegram_return_handoffs \
-    2026_08_09_000100_telegram_verification_tokens \
-    2026_08_09_000200_password_recovery_challenges \
-    2026_08_09_000200_profile_optional_details \
-    2026_08_09_000300_add_last_seen_to_users \
-    2026_08_16_000100_add_evidence_class_to_knowledge_events \
-    2026_08_17_000100_backfill_knowledge_event_search_keys \
-    2026_08_17_000200_backfill_offer_search_keys \
-    2026_08_19_000100_whatsapp_account_verification \
-    2026_08_21_000100_backfill_price_record_scope_ids \
-    2026_08_22_000100_valuation_rule_engine \
-    2026_08_22_000200_valuation_rule_set_family_uniqueness; do
-    ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
-        | grep "$migration" | grep -q "Ran" )
-    check "migration ran: $migration" $?
-done
+    grep -qi "Nothing to migrate" "$EV/production-migrate.log"
+    check "the migrate step reports Nothing to migrate (captured as evidence)" $?
+
+    AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c ' Ran' )
+    DELTA=$(( AFTER - BEFORE ))
+    [ "$AFTER" = "$POST_V7_LEDGER" ] && [ "$DELTA" = "0" ]
+    check "ledger unchanged by the incremental candidate ($BEFORE -> $AFTER, delta $DELTA)" $?
+
+    POST_PENDING=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c ' Pending' )
+    [ "$POST_PENDING" = "0" ]
+    check "the applied candidate introduces no Pending migrations (found $POST_PENDING)" $?
+
+    INVENTORY_STILL_RAN=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
+        | grep -E "$INVENTORY_RE" | grep -c ' Ran' )
+    [ "$INVENTORY_STILL_RAN" = "12" ]
+    check "all twelve inventory migrations still Ran after the apply (found $INVENTORY_STILL_RAN)" $?
+else
+    echo "== 8. migrations (this patch adds exactly twelve) =="
+    BEFORE=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
+    ( cd "$SITE/application" && "$PHP_BIN" artisan migrate --force >/dev/null 2>&1 )
+    AFTER=$( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null | grep -c Ran )
+    DELTA=$(( AFTER - BEFORE ))
+
+    # This release ships TWELVE forward-only migrations above the v6 baseline:
+    # the five v7 identity migrations, the hardening program's three (the
+    # knowledge evidence-class column and the two data-only search-key
+    # backfills), the dual-verification WhatsApp table with its users
+    # column, the data-only price-record scope_id backfill that makes
+    # historical imported prices visible to the scoped market indices,
+    # the Wave 6 valuation rule engine (five additive rule/answer/snapshot
+    # tables plus four nullable portfolio_valuations columns), and the
+    # rule-set family-uniqueness key (a generated project_family column with
+    # its unique index, so duplicate global versions die at the database).
+    # Asserting the exact number matters in both directions: a
+    # smaller delta means a table or column never arrived (and if it is the
+    # verification-token table, nobody can finish a registration), while a
+    # larger one would mean something unintended came with it.
+    [ "$DELTA" = "12" ]
+    check "exactly twelve migrations applied ($BEFORE -> $AFTER)" $?
+
+    # Then prove each named migration is the one that ran — a count alone cannot
+    # tell twelve expected arrivals apart from eleven expected and one stranger.
+    for migration in \
+        2026_08_06_000100_telegram_return_handoffs \
+        2026_08_09_000100_telegram_verification_tokens \
+        2026_08_09_000200_password_recovery_challenges \
+        2026_08_09_000200_profile_optional_details \
+        2026_08_09_000300_add_last_seen_to_users \
+        2026_08_16_000100_add_evidence_class_to_knowledge_events \
+        2026_08_17_000100_backfill_knowledge_event_search_keys \
+        2026_08_17_000200_backfill_offer_search_keys \
+        2026_08_19_000100_whatsapp_account_verification \
+        2026_08_21_000100_backfill_price_record_scope_ids \
+        2026_08_22_000100_valuation_rule_engine \
+        2026_08_22_000200_valuation_rule_set_family_uniqueness; do
+        ( cd "$SITE/application" && "$PHP_BIN" artisan migrate:status 2>/dev/null \
+            | grep "$migration" | grep -q "Ran" )
+        check "migration ran: $migration" $?
+    done
+fi
 
 echo "== 9. runtime checks =="
 ( cd "$SITE/application" && "$PHP_BIN" artisan route:list >/dev/null 2>&1 )
 check "route table resolves" $?
+
+# The Telegram ownership-transfer release: the new domain service must load
+# through the DEPLOYED autoloader (its class map was dumped inside the release
+# cycle) and its confirmation endpoint must resolve — both against the
+# already-migrated schema, because the transfer ships no migration of its own
+# and operates entirely on columns and tables the ledger already holds.
+( cd "$SITE/application" && "$PHP_BIN" -r 'require "vendor/autoload.php"; exit(class_exists("App\\Modules\\Identity\\Services\\TelegramOwnershipTransfer") ? 0 : 1);' )
+check "the ownership-transfer service loads through the deployed autoloader" $?
+
+( cd "$SITE/application" && "$PHP_BIN" artisan route:list 2>/dev/null | grep -q "account/telegram/link/confirm" )
+check "the transfer confirmation endpoint resolves on the migrated schema" $?
 
 ( cd "$SITE/application" && "$PHP_BIN" artisan route:list 2>/dev/null | grep -q "account/registration/abandon" )
 check "the registration-abandon route is present" $?

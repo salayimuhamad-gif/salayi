@@ -1,4 +1,4 @@
-# ROLLBACK_NOTES.md — MyHawler v7 release
+# ROLLBACK_NOTES.md — MyHawler production rollbacks
 
 This procedure is designed to be run under `env -i` — no inherited environment,
 no warmed cache, nothing left from the deployment — because that is the
@@ -6,11 +6,63 @@ situation a rollback happens in: somebody opens a new SSH session on a site that
 is misbehaving. A procedure that only works with the deployer's shell still open
 is not a procedure.
 
-> **Rehearsal status.** `scripts/release/rollback_rehearsal_v7.sh` executes
-> this exact procedure on every final-release CI run, reversing the real
-> deployed tree the deployment rehearsal produced. Its raw output and check
-> counts ship in the external evidence package, which is the authoritative
-> record for this document.
+> **Rehearsal status.** Two rollback rehearsals run on every final-release CI
+> run. The AUTHORITATIVE one, `scripts/release/rollback_rehearsal_production.sh`,
+> reverses the incremental candidate off the post-v7 baseline —
+> code-and-runtime only, database untouched, ledger pinned at `66` on both
+> sides. The historical `scripts/release/rollback_rehearsal_v7.sh` keeps
+> reversing the full v7 upgrade against the sealed-v6 stage. Raw output and
+> check counts ship in the external evidence package, which is the
+> authoritative record for this document.
+
+## Incremental release rollback — the CURRENT procedure (read this first)
+
+**The next deployment is the Telegram ownership-transfer candidate on top of
+the deployed post-v7 baseline. It ships zero release migrations, so its
+rollback is CODE AND RUNTIME ONLY.** The database is never touched: the
+ledger reads exactly **`66` `Ran` rows before the rollback and exactly `66`
+after it**, every one of the twelve inventory files stays `Ran`, and the
+protected five are never approached. Specifically, for this release there is
+**no `php artisan migrate:rollback` in any form** — not path-targeted, not
+`--step`, not batch — and **no database restore**. Everything in §4–§6 and
+§11–§12 below about reversing migrations belongs to the COMPLETED v7
+deployment, not to this one.
+
+What the incremental rollback restores, coherently and from the backup the
+deployment took (the same ten items §1 verifies):
+
+1. Maintenance mode first: `php artisan down`.
+2. Verify the ledger reads exactly `66` `Ran` rows and the twelve-file
+   inventory grep (§4's command) shows all twelve `Ran`. If not, STOP —
+   the host is not in the state this procedure assumes.
+3. Restore `app/`, `lang/`, `config/`, `routes/` and `bootstrap/app.php`
+   from the backup — whole directories, replaced not merged (§7's file
+   steps).
+4. Restore the Composer trio as ONE unit — `composer.json`,
+   `composer.lock`, `vendor/` — exactly as §7 documents, `cmp` the restored
+   lock against the backup, and refuse to continue on any mismatch.
+5. Invalidate the generated discovery manifests and rediscover against the
+   RESTORED vendor — §7's `rm -f` pair and `package:discover`, unchanged:
+   the vendor direction reversed, so the rule applies in reverse.
+6. Restore `public_html/build` whole — replaced, never merged (§8).
+7. Rebuild the config, route and view caches (§9).
+8. Re-verify the ledger: still exactly `66` `Ran` rows, zero `Pending`,
+   twelve of twelve inventory files `Ran`, protected five `Ran`. Any
+   difference from step 2's reading means something outside this procedure
+   happened: investigate before lifting maintenance.
+9. Smoke and lift maintenance (§10, §13–§14 of DEPLOYMENT_NOTES.md).
+
+The database dump in the backup stays where it is. It exists for
+catastrophes with their own explicitly-authorized plans, not for this
+rollback — restoring it here would destroy data the patched period wrote for
+no schema benefit at all, because this release changed no schema.
+
+Everything below this line is the COMPLETED v7 deployment's rollback — kept
+because it documents how the current schema state came to be, and because
+the sealed-v6 rehearsal still exercises it. Do not run it for the
+incremental release.
+
+---
 
 **This patch migrates.** It added nine tables — `telegram_return_handoffs`,
 `telegram_verification_tokens`, `password_recovery_challenges`,
