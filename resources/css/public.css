@@ -658,12 +658,23 @@ html.mh-boot-night body {
 
 /* Hero accent (reference h1 .accent): amber gradient type on night, deep
  * bronze on day — the light creams sit under 2:1 on ivory. Paint only —
- * shaping is untouched, and it is always applied to whole words. */
+ * shaping is untouched, and it is always applied to whole words. The angle
+ * lives in the palette token; rtlcss cannot see inside custom properties,
+ * so the RTL mirror the literal rule used to get automatically is declared
+ * explicitly below, the same way the eyebrow handles direction. */
 .mh-hero-accent {
     background-image: var(--mh-hero-grad, linear-gradient(135deg, #f6cd7d, #dd8636));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+[dir='rtl'] .mh-midnight {
+    --mh-hero-grad: linear-gradient(-135deg, #f6cd7d, #dd8636);
+}
+
+[dir='rtl'] .mh-day {
+    --mh-hero-grad: linear-gradient(-135deg, #b07a1d, #8a5a14);
 }
 
 /* Arabic-script display lines need more leading than the Latin hero's tight
