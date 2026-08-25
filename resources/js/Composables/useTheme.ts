@@ -1,4 +1,4 @@
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -38,6 +38,49 @@ function writeStored(value: Theme): void {
 
 const theme = ref<Theme>(readStored());
 
+const media = typeof window !== 'undefined' && window.matchMedia
+    ? window.matchMedia('(prefers-color-scheme: dark)')
+    : null;
+
+function apply(value: Theme): void {
+    const root = document.documentElement;
+    const dark = value === 'dark' || (value === 'system' && (media?.matches ?? false));
+    root.classList.toggle('dark', dark);
+
+    /*
+     * Keep the pre-paint marker the boot script set in step with the live
+     * state, so a back/forward-cache restore of a public page paints the
+     * palette the visitor last chose.
+     */
+    if (root.dataset.mhShell === 'public') {
+        root.classList.toggle('mh-boot-night', value !== 'light');
+    }
+}
+
+/*
+ * Singleton wiring, once per document rather than once per consumer: the
+ * composable used to arm its media listener inside every component that
+ * called it, which was fine while the admin header was the only caller and
+ * became a slow listener pile-up once the public shell (layout, topbar,
+ * offline screen) joined. State changes re-render through the one shared
+ * ref; the watcher persists the choice and repaints the document classes.
+ */
+if (typeof document !== 'undefined') {
+    apply(theme.value);
+
+    media?.addEventListener('change', () => {
+        if (theme.value === 'system') apply('system');
+    });
+
+    watch(theme, (value) => {
+        apply(value);
+        writeStored(value);
+    });
+}
+
+/** Night-first public palette: true unless the visitor chose light. */
+const night = computed(() => theme.value !== 'light');
+
 /**
  * Theme state, shared by the admin shell and the public shell.
  *
@@ -54,50 +97,16 @@ const theme = ref<Theme>(readStored());
  *     choice, which the admin shell then also honours — the preference is
  *     one preference, wherever it was expressed.
  *
- * An explicit choice now persists to localStorage (guarded above) so the
+ * An explicit choice persists to localStorage (guarded above) so the
  * selected appearance survives reload; the inline boot script in
- * app.blade.php reads the same key before first paint so neither shell
- * flashes the wrong scheme. A signed-in preference column remains the
+ * app.blade.php reads the same key before first paint so neither themed
+ * shell flashes the wrong scheme. A signed-in preference column remains the
  * better long-term home and would supersede this without changing the API.
  */
 export function useTheme() {
-    const media = typeof window !== 'undefined' && window.matchMedia
-        ? window.matchMedia('(prefers-color-scheme: dark)')
-        : null;
-
-    const apply = (value: Theme): void => {
-        const root = document.documentElement;
-        const dark = value === 'dark' || (value === 'system' && (media?.matches ?? false));
-        root.classList.toggle('dark', dark);
-
-        /*
-         * Keep the pre-paint marker the boot script set in step with the
-         * live state, so a back/forward-cache restore of a public page
-         * paints the palette the visitor last chose.
-         */
-        if (root.dataset.mhShell === 'public') {
-            root.classList.toggle('mh-boot-night', value !== 'light');
-        }
-    };
-
-    onMounted(() => {
-        apply(theme.value);
-        media?.addEventListener('change', () => {
-            if (theme.value === 'system') apply('system');
-        });
-    });
-
-    watch(theme, (value) => {
-        apply(value);
-        writeStored(value);
-    });
-
     const cycle = (): void => {
         theme.value = theme.value === 'light' ? 'dark' : theme.value === 'dark' ? 'system' : 'light';
     };
-
-    /** Night-first public palette: true unless the visitor chose light. */
-    const night = computed(() => theme.value !== 'light');
 
     /** The public control is a plain two-state switch, always explicit. */
     const togglePublic = (): void => {
