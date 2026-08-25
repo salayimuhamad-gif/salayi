@@ -142,7 +142,7 @@ const requestSummary = (request: LatestRequest): string => {
                     @change="applyFilter({ locale: ($event.target as HTMLSelectElement).value || null })"
                 >
                     <option value="">—</option>
-                    <option value="ckb">کوردیی ناوەندی</option>
+                    <option value="ckb">کوردی</option>
                     <option value="ar">العربية</option>
                     <option value="en">English</option>
                 </select>

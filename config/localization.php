@@ -23,7 +23,13 @@ return [
     'supported' => [
         'ckb' => [
             'name' => 'کوردیی ناوەندی',
-            'native' => 'کوردیی ناوەندی',
+            /*
+             * Displayed name (product decision, glass-UI refinement): the
+             * public/admin language controls show simply "کوردی". The formal
+             * `name` above stays "کوردیی ناوەندی" for anything that needs the
+             * unambiguous variant name; `native` is what users see.
+             */
+            'native' => 'کوردی',
             'english' => 'Kurdish Sorani',
             'direction' => 'rtl',
             'script' => 'Arab',

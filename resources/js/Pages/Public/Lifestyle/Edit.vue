@@ -106,7 +106,7 @@ function submit(): void {
     <Head :title="t('advisor.lifestyle.title')" />
 
     <PublicLayout>
-        <article class="mx-auto max-w-3xl space-y-6 px-4 py-8">
+        <article class="mx-auto max-w-3xl space-y-6">
             <h1 class="font-display text-2xl font-bold text-ink">
                 {{ t('advisor.lifestyle.title') }}
             </h1>
@@ -117,16 +117,14 @@ function submit(): void {
                         <label for="bmin" class="mh-label mb-1 block">min</label>
                         <input
                             id="bmin" v-model="form.budget_min" type="text" dir="ltr"
-                            class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                   focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                            class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                         >
                     </div>
                     <div>
                         <label for="bmax" class="mh-label mb-1 block">max</label>
                         <input
                             id="bmax" v-model="form.budget_max" type="text" dir="ltr"
-                            class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                   focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                            class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                         >
                         <p v-if="form.errors.budget_max" class="mt-1 text-xs text-negative">
                             {{ form.errors.budget_max }}
@@ -136,8 +134,7 @@ function submit(): void {
                         <label for="bcur" class="mh-label mb-1 block">currency</label>
                         <select
                             id="bcur" v-model="form.budget_currency"
-                            class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                   focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                            class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                         >
                             <option value="USD">USD</option>
                             <option value="IQD">IQD</option>
@@ -168,8 +165,7 @@ function submit(): void {
                         <label for="kind" class="mh-label mb-1 block">kind</label>
                         <select
                             id="kind" v-model="newKind"
-                            class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                   focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                            class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                         >
                             <option v-for="kind in priority_kinds" :key="kind.value" :value="kind.value">
                                 {{ kind.label }}
@@ -201,16 +197,14 @@ function submit(): void {
                                 <label class="mh-label mb-1 block">{{ t('advisor.lifestyle.importance') }}</label>
                                 <input
                                     v-model.number="priority.importance" type="number" min="1" max="5" dir="ltr"
-                                    class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                           focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                                    class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                                 >
                             </div>
                             <div>
                                 <label class="mh-label mb-1 block">{{ t('advisor.lifestyle.max_distance') }}</label>
                                 <input
                                     v-model.number="priority.max_distance_m" type="number" dir="ltr"
-                                    class="w-full rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                                           focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                                    class="mh-field-glass min-h-11 w-full rounded-card px-3 py-2 text-sm"
                                 >
                             </div>
                             <label class="flex items-center gap-2 self-end text-sm text-ink">

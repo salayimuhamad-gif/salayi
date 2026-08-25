@@ -76,8 +76,10 @@ const ordered = computed(() =>
 
         <!-- Wave 4: movement derived live from the published series. It
              replaces the "gainers and decliners" entry that used to sit in
-             the not-yet-available list below. -->
-        <MarketMovementPanel variant="card" class="mb-8" />
+             the not-yet-available list below. The lux variant — the same
+             glass panel the homepage renders — now that the whole public
+             surface shares the one glass system. -->
+        <MarketMovementPanel variant="lux" class="mb-8" />
 
         <AppEmptyState
             v-if="indices.length === 0"

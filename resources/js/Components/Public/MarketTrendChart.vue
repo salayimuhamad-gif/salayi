@@ -92,7 +92,10 @@ const limitedPoints = computed(() => pts.value.filter((p) => p.limited));
         class="w-full"
         role="img"
     >
-        <!-- Main trend line — the only element carrying the draw-on class. -->
+        <!-- Main trend line — the only element carrying the draw-on class.
+             mh-trend-line is a stable styling hook: the midnight scope
+             brightens the stroke there, where brand-soft alone sinks into
+             the glass (public.css). -->
         <polyline
             ref="polyline"
             :points="points"
@@ -102,6 +105,7 @@ const limitedPoints = computed(() => pts.value.filter((p) => p.limited));
             stroke-linecap="round"
             stroke-linejoin="round"
             vector-effect="non-scaling-stroke"
+            class="mh-trend-line"
             :class="{ 'mh-chart-draw': drawOn, 'is-drawn': drawn }"
             :style="drawOn ? { '--len': pathLength } : undefined"
         />

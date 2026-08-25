@@ -55,7 +55,7 @@ function search(): void {
     <Head :title="t('companies.public.directory')" />
 
     <PublicLayout>
-        <article class="mx-auto max-w-5xl px-4 py-8">
+        <article class="mx-auto max-w-5xl">
             <h1 class="font-display text-2xl font-bold text-ink">
                 {{ t('companies.public.directory') }}
             </h1>
@@ -66,14 +66,12 @@ function search(): void {
                     type="search"
                     :placeholder="t('companies.public.search')"
                     :aria-label="t('companies.public.search')"
-                    class="min-w-0 flex-1 rounded-card border border-line bg-surface-raised px-3 py-2 text-sm text-ink
-                           focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                    class="mh-field-glass min-h-11 min-w-0 flex-1 rounded-card px-3 py-2 text-sm"
                     @keyup.enter="search"
                 >
                 <button
                     type="button"
-                    class="rounded-card bg-brand px-4 py-2 text-sm font-medium text-white
-                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    class="mh-lux-btn mh-lux-btn-primary shrink-0"
                     @click="search"
                 >
                     {{ t('app.actions.search') }}

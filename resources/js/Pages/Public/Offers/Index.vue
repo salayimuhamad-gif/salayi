@@ -56,16 +56,14 @@ watch(filters, () => {
                 v-model="filters.q"
                 type="search"
                 :placeholder="t('marketplace.public.search')"
-                class="min-w-0 flex-1 rounded-card border border-line bg-surface-raised px-3 py-2 text-ink
-                       focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                class="mh-field-glass min-h-11 min-w-0 flex-1 rounded-card px-3 py-2 text-sm"
             >
             <input
                 v-model="filters.budget"
                 type="text"
                 dir="ltr"
                 :placeholder="t('marketplace.public.budget')"
-                class="w-40 rounded-card border border-line bg-surface-raised px-3 py-2 text-ink
-                       focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent"
+                class="mh-field-glass min-h-11 w-40 rounded-card px-3 py-2 text-sm"
             >
         </div>
 
@@ -86,7 +84,7 @@ watch(filters, () => {
                 <p class="text-xs text-ink-faint">{{ t('marketplace.sponsorship.disclosure_notice') }}</p>
             </div>
 
-            <div class="grid gap-4 rounded-panel border border-caution/25 bg-caution/[0.03] p-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-4 rounded-panel border border-caution/30 bg-caution/[0.07] p-4 sm:grid-cols-2 lg:grid-cols-3">
                 <OfferCard
                     v-for="offer in sponsored"
                     :key="offer.public_id"

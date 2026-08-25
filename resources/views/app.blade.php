@@ -13,6 +13,7 @@
     lang="{{ config('localization.supported.'.app()->getLocale().'.html_lang', app()->getLocale()) }}"
     dir="{{ locale_direction() }}"
     class="h-full antialiased"
+    data-mh-shell="{{ str_starts_with((string) ($page['component'] ?? ''), 'Public/') ? 'public' : (str_starts_with((string) ($page['component'] ?? ''), 'Admin/') ? 'admin' : 'app') }}"
 >
 <head>
     <meta charset="utf-8">
@@ -139,8 +140,13 @@
             --mh-night-raised: 13 19 34;
             --mh-night-sunken: 3 6 13;
             --mh-night-ink: 238 242 255;
-            --mh-night-muted: 169 179 201;
-            --mh-night-faint: 124 134 158;
+            {{-- muted/faint lifted one step (glass-UI refinement §3): the
+                 secondary voices sit on translucent panes over the colored
+                 atmosphere, not on the solid base, so both are tuned to stay
+                 comfortably readable at 11–13px on the veiled surfaces —
+                 muted ≈9:1 and faint ≈5.6:1 against the glass ground. --}}
+            --mh-night-muted: 178 187 209;
+            --mh-night-faint: 143 153 177;
             --mh-night-line: 39 48 70;
             --mh-night-line-strong: 58 70 97;
             {{-- The premium amber family: bright amber for actions, selected
@@ -161,6 +167,36 @@
             --mh-line-strong: 64 70 76;
         }
     </style>
+
+    {{-- Theme boot: the stored appearance is applied BEFORE first paint so
+         neither themed shell flashes the wrong scheme. Mirrors useTheme.ts:
+         an explicit choice drives html.dark; with no choice the OS preference
+         does (the admin's 'system' default). Scoped to the two shells that
+         actually manage a theme — public (whose palette scopes shadow the
+         dark tokens anyway) and admin — so auth, install and the other
+         AuthLayout screens keep their designed always-light rendering
+         exactly as before this control existed. The public shell is
+         night-first by design, so its pre-paint marker is set unless the
+         visitor explicitly chose light. Storage access is guarded — where
+         storage throws, the defaults simply apply. --}}
+    <script>
+        (function () {
+            var stored = null;
+            try { stored = window.localStorage.getItem('mh-theme'); } catch (error) { /* storage unavailable */ }
+            var root = document.documentElement;
+            var shell = root.getAttribute('data-mh-shell');
+            if (shell === 'public' || shell === 'admin') {
+                if (stored === 'light' || stored === 'dark') {
+                    root.classList.toggle('dark', stored === 'dark');
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    root.classList.add('dark');
+                }
+            }
+            if (shell === 'public' && stored !== 'light') {
+                root.classList.add('mh-boot-night');
+            }
+        })();
+    </script>
 
     @routes
     @vite(['resources/css/app.css', 'resources/js/app.ts'])

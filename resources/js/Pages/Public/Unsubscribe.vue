@@ -58,9 +58,9 @@ function undo(): void {
     <Head :title="t('notifications.unsubscribe.title')" />
 
     <PublicLayout>
-        <div class="mx-auto w-full max-w-xl px-4 py-12">
+        <div class="mx-auto w-full max-w-xl">
             <div class="mh-card p-6 sm:p-8">
-                <h1 class="font-display text-xl font-bold text-ink">
+                <h1 class="font-display text-2xl font-bold text-ink">
                     {{ t('notifications.unsubscribe.title') }}
                 </h1>
 

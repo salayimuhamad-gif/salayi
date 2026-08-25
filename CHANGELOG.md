@@ -3,6 +3,52 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Premium glass UI unification
+
+**Status: NOT DEPLOYED.** Frontend/design refinement only: no backend
+behavior, schema, migration or feature-flag semantics changed.
+
+### Added
+- Public light/dark appearance choice: the existing
+  `branding.dark_mode_enabled` setting (previously stored but consumed by
+  nothing) now gates a compact theme toggle in the public header. The choice
+  persists via localStorage through the shared `useTheme` mechanism, and an
+  inline boot script applies it before first paint so neither shell flashes
+  the wrong scheme. Night (the approved Midnight Amber direction) remains
+  the default for visitors who have not chosen.
+- `.mh-day` — the daylight counterpart of the midnight palette: same glass
+  material and the same atmosphere grammar (fields, blobs, horizon, the
+  Erbil skyline silhouette) in ivory and champagne, with its own AA-tuned
+  component voices (`DayAtmosphere.vue`, day token set in `public.css`).
+- Priority navigation in the public topbar: the horizontal nav measures its
+  items in an inert mirror row and moves what does not fit into a "More"
+  disclosure — the bar can no longer grow a horizontal scrollbar or clip a
+  destination in any locale or at the owner's 120% type scale.
+- Published-projects search surfaced on `/projects`: the index now renders
+  the same `q` filter the homepage hero already submits (existing server
+  contract; no backend change), with honest search-specific empty-state copy
+  in all three languages.
+
+### Changed
+- Every public page now renders under the one theme-driven glass system —
+  the per-page `palette` prop is gone, so Market, Projects, Areas, Offers,
+  Companies, Places, Advisor, Lifestyle, the map surfaces, Unsubscribe and
+  Offline share the homepage's identity instead of falling back to the
+  legacy white admin look. The shared `.mh-card`/`.mh-panel` kit becomes a
+  (blur-free) glass pane inside the public scopes; admin screens are
+  untouched.
+- The desktop rail is a glass navigation surface; the drawer scrim uses the
+  tokenized `.mh-scrim`; map Explorer chrome (frame, status overlays, layer
+  chips, mobile tabs) joins the invest-surface glass kit with the shared
+  amber selected voice.
+- Contrast hierarchy pass: night muted/faint inks lifted one step; search
+  placeholder promoted to the muted voice; secondary buttons, alert tints,
+  the sparkline stroke and champagne fills corrected for night glass;
+  Arabic-script hero display lines get proper leading; the AI dock's ground
+  is near-solid so the control no longer sinks into the atmosphere.
+- The Kurdish language option now displays simply «کوردی» (product
+  decision); the formal name in `config/localization.php` is unchanged.
+
 ## [Unreleased] — Simplified registration and Telegram verification
 
 **Status: NOT DEPLOYED.** Product change; needs the CI host for PHPUnit and

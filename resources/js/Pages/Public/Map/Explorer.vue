@@ -676,11 +676,8 @@ watch(flat, () => syncSource());
                             v-for="layer in layers"
                             :key="layer.key"
                             type="button"
-                            class="mh-touch-target rounded-full border px-3 py-1.5 text-sm transition-colors
+                            class="mh-invest-chip mh-touch-target
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                            :class="active.includes(layer.key as LayerKey)
-                                ? 'border-brand bg-brand text-white'
-                                : 'border-line text-ink-muted hover:bg-surface-sunken'"
                             :aria-pressed="active.includes(layer.key as LayerKey)"
                             @click="toggleLayer(layer.key as LayerKey)"
                         >
@@ -696,11 +693,8 @@ watch(flat, () => syncSource());
                             v-for="category in categories"
                             :key="category.key"
                             type="button"
-                            class="mh-touch-target rounded-full border px-3 py-1 text-xs transition-colors
+                            class="mh-invest-chip mh-touch-target !text-xs
                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                            :class="activeCategories.includes(category.key)
-                                ? 'border-brand bg-brand text-white'
-                                : 'border-line text-ink-muted hover:bg-surface-sunken'"
                             :aria-pressed="activeCategories.includes(category.key)"
                             @click="toggleCategory(category.key)"
                         >
@@ -717,7 +711,7 @@ watch(flat, () => syncSource());
                         class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                transition-colors hover:bg-surface-sunken
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                        :class="pickingCentre ? 'border-brand text-brand' : ''"
+                        :class="pickingCentre ? '!border-accent-strong/60 !text-accent-strong' : ''"
                         @click="pickingCentre = !pickingCentre; drawing = false"
                     >
                         {{ centre ? t('map.search.centre_set') : t('map.search.set_centre') }}
@@ -752,7 +746,7 @@ watch(flat, () => syncSource());
                         class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
                                transition-colors hover:bg-surface-sunken
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                        :class="drawing ? 'border-brand text-brand' : ''"
+                        :class="drawing ? '!border-accent-strong/60 !text-accent-strong' : ''"
                         @click="drawing = !drawing; pickingCentre = false"
                     >
                         {{ t('map.search.draw') }}
@@ -800,16 +794,14 @@ watch(flat, () => syncSource());
             <div class="mb-3 flex gap-2 md:hidden" role="tablist">
                 <button
                     type="button" role="tab" :aria-selected="mobileView === 'map'"
-                    class="mh-touch-target flex-1 rounded-card border px-3 py-2 text-sm"
-                    :class="mobileView === 'map' ? 'border-brand bg-brand text-white' : 'border-line text-ink-muted'"
+                    class="mh-invest-chip mh-touch-target flex-1 justify-center !rounded-card"
                     @click="mobileView = 'map'"
                 >
                     {{ t('map.map_view') }}
                 </button>
                 <button
                     type="button" role="tab" :aria-selected="mobileView === 'list'"
-                    class="mh-touch-target flex-1 rounded-card border px-3 py-2 text-sm"
-                    :class="mobileView === 'list' ? 'border-brand bg-brand text-white' : 'border-line text-ink-muted'"
+                    class="mh-invest-chip mh-touch-target flex-1 justify-center !rounded-card"
                     @click="mobileView = 'list'"
                 >
                     {{ t('map.list_view') }}
@@ -819,13 +811,14 @@ watch(flat, () => syncSource());
             <div class="grid gap-4 lg:grid-cols-[3fr_2fr]">
                 <!-- ------------------------------------------------- map -->
                 <div
-                    class="relative overflow-hidden rounded-card border border-line"
+                    class="mh-lux-panel mh-lux-gilded relative overflow-hidden"
                     :class="mobileView === 'list' ? 'hidden md:block' : ''"
                 >
                     <div
                         ref="container" class="h-[420px] w-full lg:h-[560px]" role="application"
                         :aria-label="t('nav.public.map')"
                     />
+                    <div class="mh-invest-vignette" aria-hidden="true" />
 
                     <div
                         v-if="!mapReady && !mapFailed"
@@ -851,10 +844,7 @@ watch(flat, () => syncSource());
                         class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
-                        <p
-                            class="rounded-full border border-line bg-surface-raised/90 px-4 py-2 text-center text-xs
-                                   text-ink shadow-sm backdrop-blur"
-                        >
+                        <p class="mh-invest-glass rounded-full px-4 py-2 text-center text-xs text-ink">
                             {{ t('map.states.map_empty_overlay') }}
                         </p>
                     </div>
@@ -870,10 +860,7 @@ watch(flat, () => syncSource());
                         class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
-                        <p
-                            class="rounded-full border border-line bg-surface-raised/90 px-4 py-2 text-center text-xs
-                                   text-ink shadow-sm backdrop-blur"
-                        >
+                        <p class="mh-invest-glass rounded-full px-4 py-2 text-center text-xs text-ink">
                             {{ t('map.states.loading_features') }}
                         </p>
                     </div>
@@ -890,10 +877,7 @@ watch(flat, () => syncSource());
                         data-testid="map-refetch-failed"
                         class="absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                     >
-                        <div
-                            class="flex flex-wrap items-center justify-center gap-2 rounded-card border border-line
-                                   bg-surface-raised/95 px-3 py-2 shadow-sm backdrop-blur"
-                        >
+                        <div class="mh-invest-glass flex flex-wrap items-center justify-center gap-2 rounded-card px-3 py-2">
                             <span class="text-xs text-ink">
                                 {{ t('map.states.error') }} — {{ t('map.states.error_hint') }}
                             </span>

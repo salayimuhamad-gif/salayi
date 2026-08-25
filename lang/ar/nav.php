@@ -46,6 +46,7 @@ return [
     'toggle_theme' => 'تبديل المظهر',
     'sign_out' => 'تسجيل الخروج',
     'language' => 'اللغة',
+    'more' => 'المزيد',
     'admin_dashboard' => 'لوحة الإدارة',
     'public' => [
         'market' => 'السوق',

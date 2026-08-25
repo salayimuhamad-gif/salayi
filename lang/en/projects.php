@@ -100,6 +100,8 @@ return [
     'translation_fallback' => 'This name is not available in the requested language',
     'not_yet_available' => 'Not yet available',
     'none_published' => 'No published projects',
+    'search_none' => 'No projects match this search',
+    'search_none_hint' => 'Try a different name or clear the search',
     'none_published_hint' => 'They will be added soon',
 
     'ratings' => [

@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
+import { ref } from 'vue';
+import { Head, Link, router } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
+import AppIcon from '@/Components/Icons/AppIcon.vue';
 import { t } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 
@@ -22,19 +24,54 @@ interface Row {
     completion_percent: number | null;
 }
 
-defineProps<{ projects: { data: Row[] }; filters: { q: string } }>();
+const props = defineProps<{ projects: { data: Row[] }; filters: { q: string } }>();
+
+/*
+ * The index consumes the same `q` the homepage hero submits — the server has
+ * filtered by it all along (ProjectProfileController), the page just never
+ * SHOWED it, so a visitor arriving from the hero search saw a filtered list
+ * with no visible query and no way to refine it. Same GET contract, nothing
+ * new server-side; an empty query is simply the unfiltered index.
+ */
+const searchQuery = ref(props.filters.q ?? '');
+
+function submitSearch(): void {
+    const q = searchQuery.value.trim();
+
+    router.get(localized('/projects'), q === '' ? {} : { q });
+}
 </script>
 
 <template>
     <Head :title="t('nav.projects')" />
 
     <PublicLayout>
-        <h1 class="mb-6 font-display text-2xl font-bold text-ink">{{ t('nav.projects') }}</h1>
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+            <h1 class="font-display text-2xl font-bold text-ink">{{ t('nav.projects') }}</h1>
+
+            <form
+                role="search"
+                class="mh-searchbar flex w-full items-center gap-2.5 !rounded-pill px-4 py-1 sm:w-80"
+                @submit.prevent="submitSearch"
+            >
+                <AppIcon name="search" class="h-4 w-4 shrink-0 text-ink-faint" aria-hidden="true" />
+                <label class="sr-only" for="projects-search">{{ t('home.search_label') }}</label>
+                <input
+                    id="projects-search"
+                    v-model="searchQuery"
+                    type="search"
+                    name="q"
+                    class="min-h-11 flex-1 text-sm"
+                    :placeholder="t('home.search_placeholder')"
+                    autocomplete="off"
+                >
+            </form>
+        </div>
 
         <AppEmptyState
             v-if="projects.data.length === 0"
-            :title="t('projects.none_published')"
-            :description="t('projects.none_published_hint')"
+            :title="filters.q ? t('projects.search_none') : t('projects.none_published')"
+            :description="filters.q ? t('projects.search_none_hint') : t('projects.none_published_hint')"
         />
 
         <div v-else class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +79,7 @@ defineProps<{ projects: { data: Row[] }; filters: { q: string } }>();
                 v-for="project in projects.data"
                 :key="project.slug"
                 :href="localized(`/projects/${project.slug}`)"
-                class="mh-card block p-5 transition-shadow hover:shadow-raised
+                class="mh-card mh-lux-card-interactive block p-5
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
                 <p v-if="project.area" class="mh-label">{{ project.area }}</p>

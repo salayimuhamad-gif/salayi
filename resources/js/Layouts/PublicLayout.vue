@@ -2,7 +2,9 @@
 import { computed, ref, watch } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
+import { useTheme } from '@/Composables/useTheme';
 import { t } from '@/lib/i18n';
+import DayAtmosphere from '@/Components/Public/DayAtmosphere.vue';
 import InstallPrompt from '@/Components/InstallPrompt.vue';
 import MidnightAtmosphere from '@/Components/Public/MidnightAtmosphere.vue';
 import MobileBottomNav from '@/Components/Public/MobileBottomNav.vue';
@@ -24,20 +26,29 @@ import type { SharedPageProps } from '@/Types/inertia';
  * suite pins on '/'.
  */
 /*
- * Palette variants (Wave 2A). Additive exactly like `chrome`: every existing
- * page renders 'light' — the shared token system — untouched. 'midnight'
- * applies the approved Midnight Amber public scope (`.mh-midnight`,
- * public.css): a token remap on this root, so the topbar, drawer, bottom
+ * Palette (glass-UI unification). The per-page `palette` prop is gone: the
+ * whole public surface now renders ONE glass identity, driven by the shared
+ * theme state instead of by which page happened to opt in — that split is
+ * exactly the two-products feeling this refinement removes.
+ *
+ *   - night (`.mh-midnight`, public.css): the approved Midnight Amber
+ *     direction, still the default for every visitor who has not chosen.
+ *   - day (`.mh-day`, public.css): the light counterpart — same glass
+ *     material, same atmosphere grammar, ivory instead of night.
+ *
+ * Both are token remaps on this root, so the topbar, rail, drawer, bottom
  * bar, menus and footer restyle through the one token system with zero
- * behavioral change. Waves after 2A opt further pages in page-by-page.
+ * behavioral change. The choice persists via useTheme and is applied before
+ * first paint by the boot script in app.blade.php.
  */
 const props = withDefaults(
-    defineProps<{ chrome?: 'default' | 'home'; palette?: 'light' | 'midnight' }>(),
-    { chrome: 'default', palette: 'light' },
+    defineProps<{ chrome?: 'default' | 'home' }>(),
+    { chrome: 'default' },
 );
 
 const page = usePage<SharedPageProps>();
 const { localized } = useLocale();
+const { night } = useTheme();
 
 const siteName = computed(() => page.props.branding['branding.site_name'] ?? page.props.app.name);
 
@@ -148,7 +159,7 @@ watch(currentPath, () => {
 <template>
     <div
         class="mh-luxury-public flex min-h-full flex-col"
-        :class="props.palette === 'midnight' ? 'mh-midnight' : undefined"
+        :class="night ? 'mh-midnight' : 'mh-day'"
     >
         <!-- §13: a keyboard user should not have to walk the whole rail to
              reach the page. The key already existed and was unused. The
@@ -162,10 +173,12 @@ watch(currentPath, () => {
             {{ t('nav.skip_to_content') }}
         </a>
 
-        <!-- The colored light behind the glass (Wave 2B): fixed decorative
-             layers, mounted only with the midnight palette. Content wrappers
-             below carry z-[1] so every pane blurs THIS, not each other. -->
-        <MidnightAtmosphere v-if="props.palette === 'midnight'" />
+        <!-- The colored light behind the glass: fixed decorative layers on
+             every public page now — the same place at two hours of day.
+             Content wrappers below carry z-[1] so every pane blurs THIS,
+             not each other. -->
+        <MidnightAtmosphere v-if="night" />
+        <DayAtmosphere v-else />
 
         <PublicTopbar
             :site-name="siteName"
@@ -189,8 +202,8 @@ watch(currentPath, () => {
             -->
             <aside
                 v-if="props.chrome === 'default'"
-                class="sticky top-16 hidden h-[calc(100dvh-4rem)] w-64 shrink-0
-                       overflow-y-auto border-e border-line bg-surface-raised lg:block"
+                class="mh-rail-glass sticky top-16 hidden h-[calc(100dvh-4rem)] w-64 shrink-0
+                       overflow-y-auto lg:block"
             >
                 <PublicSidebar :items="navigation" />
             </aside>

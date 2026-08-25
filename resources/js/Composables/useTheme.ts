@@ -1,17 +1,64 @@
-import { onMounted, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 
 type Theme = 'light' | 'dark' | 'system';
 
-const theme = ref<Theme>('system');
+const STORAGE_KEY = 'mh-theme';
+
+/*
+ * Storage access is best-effort everywhere: this project runs in contexts
+ * where browser storage throws (embedded webviews, storage-blocked browsers),
+ * and a theme preference is a convenience, never a requirement. A visitor
+ * whose storage is unavailable simply gets the defaults on each load.
+ */
+function readStored(): Theme {
+    if (typeof window === 'undefined') {
+        return 'system';
+    }
+
+    try {
+        const value = window.localStorage.getItem(STORAGE_KEY);
+
+        return value === 'light' || value === 'dark' ? value : 'system';
+    } catch {
+        return 'system';
+    }
+}
+
+function writeStored(value: Theme): void {
+    try {
+        if (value === 'system') {
+            window.localStorage.removeItem(STORAGE_KEY);
+        } else {
+            window.localStorage.setItem(STORAGE_KEY, value);
+        }
+    } catch {
+        // Storage unavailable — the in-memory state still drives this visit.
+    }
+}
+
+const theme = ref<Theme>(readStored());
 
 /**
- * Dark mode.
+ * Theme state, shared by the admin shell and the public shell.
  *
- * Deliberately not persisted to localStorage: artifacts of this project run in
- * environments where browser storage is unavailable, and more importantly a
- * signed-in administrator's preference belongs on their user record so it
- * follows them between the office desktop and their phone. Until that column
- * exists this honours the OS setting, which is the correct default anyway.
+ * One state, one storage key, two consumers:
+ *
+ *   - The ADMIN shell keeps its original contract: `html.dark` remaps the
+ *     core tokens, `system` follows the OS, `cycle` walks light → dark →
+ *     system. Nothing an admin screen renders has changed.
+ *
+ *   - The PUBLIC shell reads the same state through `night`: the Midnight
+ *     Amber palette is the site's designed default, so `night` is true for
+ *     both 'dark' AND 'system' (no explicit choice) and false only when the
+ *     visitor explicitly chose 'light'. `togglePublic` writes an explicit
+ *     choice, which the admin shell then also honours — the preference is
+ *     one preference, wherever it was expressed.
+ *
+ * An explicit choice now persists to localStorage (guarded above) so the
+ * selected appearance survives reload; the inline boot script in
+ * app.blade.php reads the same key before first paint so neither shell
+ * flashes the wrong scheme. A signed-in preference column remains the
+ * better long-term home and would supersede this without changing the API.
  */
 export function useTheme() {
     const media = typeof window !== 'undefined' && window.matchMedia
@@ -22,6 +69,15 @@ export function useTheme() {
         const root = document.documentElement;
         const dark = value === 'dark' || (value === 'system' && (media?.matches ?? false));
         root.classList.toggle('dark', dark);
+
+        /*
+         * Keep the pre-paint marker the boot script set in step with the
+         * live state, so a back/forward-cache restore of a public page
+         * paints the palette the visitor last chose.
+         */
+        if (root.dataset.mhShell === 'public') {
+            root.classList.toggle('mh-boot-night', value !== 'light');
+        }
     };
 
     onMounted(() => {
@@ -31,11 +87,22 @@ export function useTheme() {
         });
     });
 
-    watch(theme, apply);
+    watch(theme, (value) => {
+        apply(value);
+        writeStored(value);
+    });
 
     const cycle = (): void => {
         theme.value = theme.value === 'light' ? 'dark' : theme.value === 'dark' ? 'system' : 'light';
     };
 
-    return { theme, cycle };
+    /** Night-first public palette: true unless the visitor chose light. */
+    const night = computed(() => theme.value !== 'light');
+
+    /** The public control is a plain two-state switch, always explicit. */
+    const togglePublic = (): void => {
+        theme.value = night.value ? 'light' : 'dark';
+    };
+
+    return { theme, cycle, night, togglePublic };
 }

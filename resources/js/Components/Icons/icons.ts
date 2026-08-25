@@ -36,6 +36,8 @@ export type IconName =
     | 'map-pin'
     | 'market'
     | 'menu'
+    | 'moon'
+    | 'more'
     | 'news'
     | 'offers'
     | 'portfolio'
@@ -44,6 +46,7 @@ export type IconName =
     | 'send'
     | 'shield-check'
     | 'spark'
+    | 'sun'
     | 'trend-down'
     | 'trend-flat'
     | 'trend-up'
@@ -92,6 +95,14 @@ export const iconPaths: Record<IconName, string> = {
     layers: 'm12 3.8 8.4 4.4L12 12.6 3.6 8.2Zm-8.4 8.6L12 16.8l8.4-4.4M3.6 16.4 12 20.8l8.4-4.4',
     locate: 'M12 19.4a7.4 7.4 0 1 0 0-14.8 7.4 7.4 0 0 0 0 14.8Zm0-4.6a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6ZM12 2.2v2.4m0 14.8v2.4M2.2 12h2.4m14.8 0h2.4',
     'map-pin': 'M12 21.2s6.8-6 6.8-11a6.8 6.8 0 1 0-13.6 0c0 5 6.8 11 6.8 11Zm0-8.4a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2Z',
+    /*
+     * Theme control pair. `moon` matches the admin header's crescent so the
+     * one action reads the same on both shells; `sun` is its daylight
+     * counterpart. `more` is three round-cap dots for the overflow menu.
+     */
+    moon: 'M20.2 13.1A8.3 8.3 0 1 1 10.9 3.8a6.5 6.5 0 0 0 9.3 9.3Z',
+    more: 'M5.2 12h.01M12 12h.01M18.8 12h.01',
+    sun: 'M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4ZM12 2.9v2.2m0 13.8v2.2M2.9 12h2.2m13.8 0h2.2M5.6 5.6l1.5 1.5m9.8 9.8 1.5 1.5m0-12.8-1.5 1.5M7.1 16.9l-1.5 1.5',
     search: 'M10.8 17.2a6.4 6.4 0 1 0 0-12.8 6.4 6.4 0 0 0 0 12.8Zm4.8-1.6 4.6 4.6',
     'shield-check': 'M12 3.4 5 6v5.2c0 4.6 3 8 7 9.4 4-1.4 7-4.8 7-9.4V6Zm-3.2 8.8 2.3 2.3 4.1-4.6',
     'x-circle': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.2 9.2l5.6 5.6m0-5.6-5.6 5.6',

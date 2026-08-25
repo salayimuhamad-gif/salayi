@@ -105,7 +105,7 @@ test.describe('language menu', () => {
         await expect(trigger(page)).toHaveAttribute('aria-expanded', 'true');
 
         await expect(panel.locator('button')).toHaveCount(3);
-        await expect(panel.getByRole('button', { name: 'کوردیی ناوەندی' })).toBeVisible();
+        await expect(panel.getByRole('button', { name: 'کوردی' })).toBeVisible();
         await expect(panel.getByRole('button', { name: 'العربية' })).toBeVisible();
         await expect(panel.getByRole('button', { name: 'English' })).toBeVisible();
 
@@ -142,7 +142,7 @@ test.describe('language menu', () => {
         await page.goto('/ar/projects', { waitUntil: 'networkidle' });
 
         const panel = await openMenu(page);
-        await panel.getByRole('button', { name: 'کوردیی ناوەندی' }).click();
+        await panel.getByRole('button', { name: 'کوردی' }).click();
 
         await page.waitForURL((url) => url.pathname === '/projects');
         await expect(page.locator('html')).toHaveAttribute('lang', 'ckb');
@@ -200,6 +200,107 @@ test.describe('language menu', () => {
         const panel = await openMenu(page);
         await expect(panel).toBeVisible();
         await expectNoHorizontalOverflow(page);
+    });
+});
+
+/*
+ * The glass-shell controls (UI refinement): the theme choice and the
+ * priority navigation. Both are assertions about behavior the harness's
+ * page-level overflow probe cannot see — a scrollbar INSIDE the nav never
+ * widened the document, and a palette class is invisible to every other
+ * check.
+ */
+test.describe('glass shell controls', () => {
+    test('theme toggle follows the operator setting and persists the choice', async ({ page }) => {
+        await page.goto('/', { waitUntil: 'networkidle' });
+
+        const raw = (await page.locator('#app').getAttribute('data-page')) ?? '{}';
+        const branding = (JSON.parse(raw).props?.branding ?? {}) as Record<string, unknown>;
+        const offered = [true, '1', 'true'].includes(branding['branding.dark_mode_enabled'] as string | boolean);
+
+        const toggle = page.locator('header [data-testid="theme-toggle"]');
+
+        if (!offered) {
+            // The operator switched visitor theming off: the control must be
+            // absent from the DOM, not merely hidden, and the shell keeps its
+            // night-first default.
+            await expect(toggle).toHaveCount(0);
+            await expect(page.locator('.mh-luxury-public')).toHaveClass(/mh-midnight/);
+
+            return;
+        }
+
+        await expect(toggle).toBeVisible();
+        // Night-first: with no stored choice the public shell is midnight.
+        await expect(page.locator('.mh-luxury-public')).toHaveClass(/mh-midnight/);
+
+        await toggle.click();
+        await expect(page.locator('.mh-luxury-public')).toHaveClass(/mh-day/);
+
+        // The choice survives a full reload (localStorage + boot script).
+        await page.reload({ waitUntil: 'networkidle' });
+        await expect(page.locator('.mh-luxury-public')).toHaveClass(/mh-day/);
+
+        await page.locator('header [data-testid="theme-toggle"]').click();
+        await expect(page.locator('.mh-luxury-public')).toHaveClass(/mh-midnight/);
+    });
+
+    test('the horizontal navigation clips nothing and overflows into More', async ({ page }, testInfo) => {
+        const width = testInfo.project.use.viewport?.width ?? 0;
+        test.skip(width < 1024, 'the horizontal nav exists only from lg');
+
+        await page.goto('/', { waitUntil: 'networkidle' });
+
+        const nav = page.locator('header nav');
+
+        if ((await nav.count()) === 0) {
+            return; // every flag-gated destination is off in this deployment
+        }
+
+        // How many destinations the shared flags actually enable — the same
+        // definition PublicLayout resolves (pinned by NavigationDestinationsTest).
+        const raw = (await page.locator('#app').getAttribute('data-page')) ?? '{}';
+        const features = (JSON.parse(raw).props?.features ?? {}) as Record<string, boolean>;
+        const definition: Array<[string, string | null]> = [
+            ['market', 'market.intelligence'],
+            ['map', 'map.explorer'],
+            ['invest', 'map.investment'],
+            ['projects', null],
+            ['areas', 'geography.areas'],
+            ['advisor', 'advisor.residential'],
+            ['offers', 'marketplace.offers'],
+            ['news', 'content.news'],
+        ];
+        const expected = definition.filter(([, flag]) => flag === null || features[flag] === true).length;
+
+        // Every rendered item sits fully inside the nav box — no scrollbar,
+        // no clipped label, in RTL and LTR alike.
+        const navBox = await nav.boundingBox();
+        expect(navBox).not.toBeNull();
+
+        const links = nav.locator('> a');
+        const visible = await links.count();
+
+        for (let i = 0; i < visible; i += 1) {
+            const box = await links.nth(i).boundingBox();
+            expect(box).not.toBeNull();
+            expect(box!.x).toBeGreaterThanOrEqual(navBox!.x - 1);
+            expect(box!.x + box!.width).toBeLessThanOrEqual(navBox!.x + navBox!.width + 1);
+        }
+
+        if (visible < expected) {
+            // The rest live behind the More disclosure, every one reachable.
+            const more = nav.locator('button[aria-haspopup="true"]');
+            await expect(more).toBeVisible();
+
+            await more.click();
+            const panelId = await more.getAttribute('aria-controls');
+            await expect(page.locator(`[id="${panelId}"] a`)).toHaveCount(expected - visible);
+
+            await page.keyboard.press('Escape');
+        } else {
+            expect(visible).toBe(expected);
+        }
     });
 });
 

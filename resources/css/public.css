@@ -154,14 +154,34 @@ html[lang='ar'] .mh-luxury-public .font-display {
        and the minimal inner highlight. */
     --mh-glass-inner: inset 0 1px 0 rgb(255 255 255 / 0.08);
     --mh-glass-grad: linear-gradient(135deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.035));
-    --mh-glass-stroke: rgb(255 255 255 / 0.13);
+    --mh-glass-stroke: rgb(255 255 255 / 0.15);
     --mh-glass-blur: blur(18px) saturate(160%);
-    --mh-glass-fallback: rgb(15 19 36 / 0.9);
+    --mh-glass-fallback: rgb(15 19 36 / 0.92);
     --mh-frame-glow:
         var(--mh-shadow-raised),
         0 0 0 1px rgb(var(--mh-amber) / 0.14),
         0 24px 70px -30px rgb(var(--mh-amber) / 0.12);
     --mh-scrim-bg: rgb(2 4 10 / 0.6);
+    /* Component voices the day scope re-tunes (the values here are the
+       approved reference literals, unchanged in effect). Placeholder ink
+       steps up to the muted voice — faint over the search well's darker
+       glass was the readability complaint §3 names. */
+    --mh-search-bg: rgb(8 12 24 / 0.58);
+    --mh-search-stroke: var(--mh-glass-stroke);
+    --mh-search-shadow: 0 24px 60px rgb(0 0 0 / 0.4), 0 0 50px rgb(var(--mh-amber-deep) / 0.06);
+    --mh-search-placeholder: rgb(var(--mh-ink-muted));
+    --mh-chip-bg: rgb(255 255 255 / 0.07);
+    --mh-chip-stroke: rgb(255 255 255 / 0.12);
+    --mh-chip-hover-bg: rgb(255 255 255 / 0.12);
+    --mh-hero-grad: linear-gradient(135deg, #f6cd7d, #dd8636);
+    --mh-strip-bg: rgb(var(--mh-amber) / 0.09);
+    --mh-strip-stroke: rgb(var(--mh-amber) / 0.24);
+    --mh-strip-ink: #f6dcae;
+    --mh-strip-strong: #ffe9c4;
+    --mh-dock-bg: linear-gradient(135deg, rgb(23 30 51 / 0.92), rgb(15 21 38 / 0.88));
+    --mh-dock-stroke: rgb(255 255 255 / 0.18);
+    --mh-field-bg: rgb(8 12 24 / 0.5);
+    --mh-field-stroke: rgb(255 255 255 / 0.16);
 
     background-color: rgb(var(--mh-surface));
     /* The layered night atmosphere itself — blue/violet fields, purple depth,
@@ -176,6 +196,81 @@ html[lang='ar'] .mh-luxury-public .font-display {
  * public shell used, now scoped to the palette that actually needs it. */
 html:has(.mh-midnight) {
     background-color: rgb(var(--mh-night));
+}
+
+/* Pre-paint theme boot (set by the inline script in app.blade.php before any
+ * JS framework runs): a public document paints night-first unless the
+ * visitor explicitly chose light, so the glass shell never flashes ivory on
+ * a midnight load. useTheme keeps the class in step after hydration. */
+html.mh-boot-night body {
+    background-color: rgb(var(--mh-night));
+}
+
+/* --- Day public scope --------------------------------------------------------
+ * The light counterpart of Midnight Amber — same glass identity at another
+ * hour, applied by PublicLayout when the visitor chose the light appearance.
+ * The core tokens deliberately stay the shared light system (operator
+ * branding untouched); this scope only tunes the derived glass voices where
+ * the :root defaults were written for opaque ivory surfaces rather than for
+ * panes over the daylight atmosphere.
+ * ------------------------------------------------------------------------- */
+.mh-day {
+    color-scheme: light;
+    /* Helper text one step darker than the shared ivory default: 11px
+       metadata sits on translucent panes here, and the admin value was
+       tuned for opaque white (§3 hierarchy, same reasoning as the night
+       bump in the Blade token block). */
+    --mh-ink-faint: 99 102 108;
+    /* Slightly fuller veil than the :root default: these panes float over
+       the daylight atmosphere, and text needs a dependable ground. */
+    --mh-glass-grad: linear-gradient(135deg, rgb(255 255 255 / 0.88), rgb(255 255 255 / 0.64));
+    --mh-glass-stroke: rgb(var(--mh-line) / 0.9);
+    --mh-frame-glow:
+        var(--mh-shadow-raised),
+        0 0 0 1px rgb(var(--mh-amber-deep) / 0.14),
+        0 24px 70px -30px rgb(var(--mh-amber-deep) / 0.14);
+    /* The same component voices the midnight scope declares, in daylight:
+       the search well is a bright glass basin instead of a dark one; chips
+       are white glass on the atmosphere; the hero accent and the AI strip
+       swap their night creams for AA bronzes on ivory. */
+    --mh-search-bg: rgb(255 255 255 / 0.78);
+    --mh-search-stroke: rgb(var(--mh-line-strong) / 0.75);
+    --mh-search-shadow: 0 24px 60px rgb(23 24 26 / 0.14), 0 0 50px rgb(var(--mh-amber-deep) / 0.05);
+    --mh-search-placeholder: rgb(var(--mh-ink-faint));
+    --mh-chip-bg: rgb(255 255 255 / 0.62);
+    --mh-chip-stroke: rgb(var(--mh-line-strong) / 0.7);
+    --mh-chip-hover-bg: rgb(255 255 255 / 0.92);
+    --mh-hero-grad: linear-gradient(135deg, #b07a1d, #8a5a14);
+    --mh-strip-bg: rgb(var(--mh-amber-deep) / 0.08);
+    --mh-strip-stroke: rgb(var(--mh-amber-deep) / 0.3);
+    --mh-strip-ink: rgb(109 77 16);
+    --mh-strip-strong: rgb(74 52 6);
+    --mh-dock-bg: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(255 255 255 / 0.85));
+    --mh-dock-stroke: rgb(var(--mh-line-strong) / 0.9);
+    --mh-field-bg: rgb(255 255 255 / 0.7);
+    --mh-field-stroke: rgb(var(--mh-line-strong) / 0.7);
+
+    background-color: rgb(var(--mh-surface));
+    color: rgb(var(--mh-ink));
+}
+
+/* Day component adjustments: the same shared kit the midnight scope
+ * restyles, tuned for panes over the daylight atmosphere. No backdrop blur
+ * on cards here — the veil is near-solid white, so blur would cost GPU for
+ * no visible change; the shell surfaces (pill, rail, dock, menus) keep it. */
+.mh-day .mh-lux-card,
+.mh-day .mh-lux-panel {
+    background: var(--mh-glass-grad);
+    border-color: var(--mh-glass-stroke);
+    box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+.mh-day .mh-lux-card-interactive:hover {
+    border-color: rgb(var(--mh-accent) / 0.55);
+    box-shadow:
+        var(--mh-shadow-raised),
+        0 0 0 1px rgb(var(--mh-accent) / 0.25),
+        var(--mh-glass-inner);
 }
 
 /* --- Midnight component adjustments ----------------------------------------
@@ -221,6 +316,55 @@ html:has(.mh-midnight) {
     }
 }
 
+/* The shared admin-born kit (.mh-card / .mh-panel — AppCard and friends)
+ * joins the same glass family inside the public scopes, which is what
+ * unifies the internal pages with the homepage in one rule. A deliberately
+ * MORE SOLID pane than the lux cards, and with no backdrop blur: these are
+ * the list/detail workhorses that can appear a dozen-plus times per page,
+ * so their ground is a tinted veil (readable at any count, §14 discipline)
+ * rather than a per-element filter. Admin screens never carry these scopes
+ * and keep their exact flat rendering. */
+.mh-midnight .mh-card,
+.mh-midnight .mh-panel {
+    background-color: rgb(var(--mh-night-raised) / 0.72);
+    background-image: linear-gradient(135deg, rgb(255 255 255 / 0.07), rgb(255 255 255 / 0.02));
+    border-color: var(--mh-glass-stroke);
+    box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+.mh-day .mh-card,
+.mh-day .mh-panel {
+    background-color: transparent;
+    background-image: var(--mh-glass-grad);
+    border-color: var(--mh-glass-stroke);
+    box-shadow: var(--mh-shadow-card), var(--mh-glass-inner);
+}
+
+/* AppCard's sunken footer band, translucent inside glass so the card still
+ * reads as one pane rather than a pane with a solid slab glued on. */
+.mh-midnight .mh-card > footer.bg-surface-sunken {
+    background-color: rgb(var(--mh-night-sunken) / 0.55);
+}
+
+.mh-day .mh-card > footer.bg-surface-sunken {
+    background-color: rgb(var(--mh-surface-sunken) / 0.55);
+}
+
+/* The desktop rail as a glass navigation surface (§8): one blurred pane per
+ * page, the same material family as the pill and the dock. */
+.mh-rail-glass {
+    background: var(--mh-glass-grad);
+    -webkit-backdrop-filter: var(--mh-glass-blur);
+    backdrop-filter: var(--mh-glass-blur);
+    border-inline-end: 1px solid var(--mh-glass-stroke);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .mh-rail-glass {
+        background: var(--mh-glass-fallback);
+    }
+}
+
 /* Hover lift on night: the light kit's ink-based glow would render as a white
  * halo now that ink is near-white. A thin amber ring and deeper shadow keep
  * the lift visible and restrained — still border+shadow, never a transform. */
@@ -235,6 +379,94 @@ html:has(.mh-midnight) {
 /* Same white-halo fix for the glass overlays the map chrome reuses. */
 .mh-midnight .mh-invest-glass {
     box-shadow: var(--mh-shadow-raised), var(--mh-glass-inner);
+}
+
+/* --- Shared-kit corrections under the public palettes -----------------------
+ * Small, scoped fixes for token pairings that were tuned for the flat ivory
+ * system and misread on the glass scopes. Admin screens carry neither scope
+ * and render exactly as before.
+ * ------------------------------------------------------------------------- */
+
+/* Quiet hover/active fills. The shared "sunken" voice DARKENS a control —
+ * right on ivory, inverted on night glass, where the resting surface is
+ * already near-black and a hover should catch light instead. One scoped
+ * pair keeps every header control, menu row and rail link consistent. */
+.mh-midnight .hover\:bg-surface-sunken:hover {
+    background-color: rgb(255 255 255 / 0.08);
+}
+
+.mh-midnight .mh-lux-nav-link:hover {
+    background-color: rgb(255 255 255 / 0.07);
+}
+
+.mh-midnight .mh-lux-nav-link[aria-current='page'] {
+    background-color: rgb(255 255 255 / 0.09);
+}
+
+/* Quiet outline buttons: the night line token nearly vanishes on glass, so
+ * the secondary voice gets a white-glass stroke and a whisper of fill. */
+.mh-midnight .mh-lux-btn-secondary {
+    border-color: rgb(255 255 255 / 0.22);
+    background-color: rgb(255 255 255 / 0.04);
+}
+
+.mh-midnight .mh-lux-btn-secondary:hover {
+    background-color: rgb(255 255 255 / 0.09);
+    border-color: rgb(var(--mh-amber) / 0.5);
+}
+
+/* Champagne fills (AppButton's accent voice, chips that select with
+ * bg-accent) pair with text-ink — near-white under midnight, 1.9:1 on
+ * champagne. The night base is the accessible ink on every accent fill,
+ * the same correction .mh-lux-btn-primary already documents. */
+.mh-midnight button.bg-accent,
+.mh-midnight a.bg-accent {
+    color: rgb(var(--mh-night));
+}
+
+/* The gentle hover lift shadow was a night literal; on day it read as a
+ * smudge of soot under a white card. */
+.mh-day .mh-lift-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px rgb(23 24 26 / 0.18), var(--mh-glass-inner);
+}
+
+/* Alert tints, audible on night glass: the shared 5% fills disappear there,
+ * and the petrol info border needs its soft voice to stay visible at all.
+ * Values chosen so the ink (night-ink via text-ink) stays ≥ 10:1 on every
+ * filled body. */
+.mh-midnight .mh-alert-info {
+    border-color: rgb(var(--mh-brand-soft) / 0.5);
+    background-color: rgb(var(--mh-brand-soft) / 0.16);
+}
+
+.mh-midnight .mh-alert-success {
+    border-color: rgb(var(--mh-positive) / 0.4);
+    background-color: rgb(var(--mh-positive) / 0.12);
+}
+
+.mh-midnight .mh-alert-warning {
+    border-color: rgb(var(--mh-caution) / 0.45);
+    background-color: rgb(var(--mh-caution) / 0.14);
+}
+
+.mh-midnight .mh-alert-danger {
+    border-color: rgb(var(--mh-negative) / 0.45);
+    background-color: rgb(var(--mh-negative) / 0.14);
+}
+
+/* The caution notice band (mh-ai-notice, sponsored strips) — same fix. */
+.mh-midnight .mh-ai-notice {
+    border-color: rgb(var(--mh-caution) / 0.45);
+    background-color: rgb(var(--mh-caution) / 0.12);
+}
+
+/* Sparkline main stroke: the operator's brand-soft is a mid-tone tuned for
+ * ivory and sinks into night glass (§3 graphics floor). color-mix lifts it
+ * toward white while keeping the operator's hue; browsers without color-mix
+ * simply keep the attribute value — dimmer, never broken. */
+.mh-midnight .mh-trend-line {
+    stroke: color-mix(in srgb, rgb(var(--mh-brand-soft)) 45%, rgb(255 255 255));
 }
 
 /* --- Framed dominant panel -------------------------------------------------
@@ -323,24 +555,39 @@ html:has(.mh-midnight) {
     text-transform: uppercase;
 }
 
-/* The hero search entry (reference .searchbar): darker glass than the cards
- * so it reads as a well, deep shadow plus one whisper of amber. A real
- * control — the homepage wires it to the real /projects?q= filter. */
+/* The hero search entry (reference .searchbar): on night, darker glass than
+ * the cards so it reads as a well; on day, a bright glass basin. Deep shadow
+ * plus one whisper of amber in both. A real control — the homepage wires it
+ * to the real /projects?q= filter. */
 .mh-searchbar {
-    background: rgb(8 12 24 / 0.55);
+    background: var(--mh-search-bg);
     -webkit-backdrop-filter: blur(16px) saturate(150%);
     backdrop-filter: blur(16px) saturate(150%);
-    border: 1px solid var(--mh-glass-stroke);
+    border: 1px solid var(--mh-search-stroke);
     border-radius: 1.0625rem;
-    box-shadow: 0 24px 60px rgb(0 0 0 / 0.4), 0 0 50px rgb(var(--mh-amber-deep) / 0.06);
+    box-shadow: var(--mh-search-shadow);
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .mh-pill-nav,
-    .mh-searchbar,
-    .mh-dock {
+    .mh-midnight .mh-pill-nav,
+    .mh-midnight .mh-searchbar,
+    .mh-midnight .mh-dock {
         background: rgb(10 14 28 / 0.94);
     }
+
+    .mh-day .mh-pill-nav,
+    .mh-day .mh-searchbar,
+    .mh-day .mh-dock {
+        background: rgb(255 255 255 / 0.96);
+    }
+}
+
+/* Keyboard focus on the search well itself, not only on the inner input:
+ * the input is borderless by design, so without this the focused search
+ * field showed nothing at all (§13). */
+.mh-searchbar:focus-within {
+    border-color: rgb(var(--mh-accent) / 0.65);
+    box-shadow: var(--mh-search-shadow), 0 0 0 1px rgb(var(--mh-accent) / 0.4);
 }
 
 .mh-searchbar input {
@@ -353,7 +600,29 @@ html:has(.mh-midnight) {
 }
 
 .mh-searchbar input::placeholder {
-    color: rgb(var(--mh-ink-faint));
+    color: var(--mh-search-placeholder);
+}
+
+/* The shared input surface of the glass system (§7 tokens): filter fields
+ * and small search inputs outside the hero well. Palette-driven through the
+ * same voice pair as the searchbar; focus is the champagne system. */
+.mh-field-glass {
+    background-color: var(--mh-field-bg, rgb(255 255 255 / 0.7));
+    border: 1px solid var(--mh-field-stroke, rgb(var(--mh-line-strong) / 0.7));
+    color: rgb(var(--mh-ink));
+    transition:
+        border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mh-field-glass::placeholder {
+    color: var(--mh-search-placeholder, rgb(var(--mh-ink-faint)));
+}
+
+.mh-field-glass:focus {
+    outline: none;
+    border-color: rgb(var(--mh-accent) / 0.7);
+    box-shadow: 0 0 0 1px rgb(var(--mh-accent) / 0.35);
 }
 
 /* Glass chips (reference .chip): quiet translucent pill; the active/selected
@@ -366,8 +635,8 @@ html:has(.mh-midnight) {
     padding-inline: 0.9375rem;
     border-radius: 999px;
     font-size: 0.75rem;
-    border: 1px solid rgb(255 255 255 / 0.08);
-    background: rgb(255 255 255 / 0.06);
+    border: 1px solid var(--mh-chip-stroke);
+    background: var(--mh-chip-bg);
     color: rgb(var(--mh-ink-muted));
     min-block-size: 2.75rem;
     transition:
@@ -377,7 +646,7 @@ html:has(.mh-midnight) {
 }
 
 .mh-chip-glass:hover {
-    background: rgb(255 255 255 / 0.1);
+    background: var(--mh-chip-hover-bg);
     color: rgb(var(--mh-ink));
 }
 
@@ -387,17 +656,27 @@ html:has(.mh-midnight) {
     letter-spacing: -0.02em;
 }
 
-/* Hero accent (reference h1 .accent): amber gradient type. Paint only —
+/* Hero accent (reference h1 .accent): amber gradient type on night, deep
+ * bronze on day — the light creams sit under 2:1 on ivory. Paint only —
  * shaping is untouched, and it is always applied to whole words. */
 .mh-hero-accent {
-    background-image: linear-gradient(135deg, #f6cd7d, #dd8636);
+    background-image: var(--mh-hero-grad, linear-gradient(135deg, #f6cd7d, #dd8636));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-/* Selected map movement chips join the amber-gradient selected voice. */
-.mh-midnight .mh-invest-chip[aria-pressed='true'] {
+/* Arabic-script display lines need more leading than the Latin hero's tight
+ * 1.14: at Sorani/Arabic display sizes the ascender/descender field is
+ * taller, and the tight value clipped diacritics on low-DPI screens. */
+[dir='rtl'] .mh-hero-title {
+    line-height: 1.38;
+}
+
+/* Selected map chips join the amber-gradient selected voice — both the
+ * pressed toggles and the mobile map/list tabs (aria-selected). */
+.mh-midnight .mh-invest-chip[aria-pressed='true'],
+.mh-midnight .mh-invest-chip[aria-selected='true'] {
     background-color: transparent;
     background-image: linear-gradient(135deg, #f6cd7d, #dd8636);
     border-color: transparent;
@@ -427,21 +706,22 @@ html:has(.mh-midnight) {
     background-image: linear-gradient(135deg, #43224e, #8a3d5f 55%, #d97f4e);
 }
 
-/* The AI strip (reference .insight): amber-tinted glass band. */
+/* The AI strip (reference .insight): amber-tinted glass band. Cream inks on
+ * night, bronze inks on day — same band, AA in both. */
 .mh-ai-strip {
-    background: rgb(var(--mh-amber) / 0.09);
+    background: var(--mh-strip-bg);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
-    border: 1px solid rgb(var(--mh-amber) / 0.24);
+    border: 1px solid var(--mh-strip-stroke);
     border-radius: 1.125rem;
 }
 
 .mh-ai-strip .mh-ai-strip-text {
-    color: #f6dcae;
+    color: var(--mh-strip-ink);
 }
 
 .mh-ai-strip .mh-ai-strip-text strong {
-    color: #ffe9c4;
+    color: var(--mh-strip-strong);
     font-weight: 500;
 }
 
@@ -455,14 +735,20 @@ html:has(.mh-midnight) {
 }
 
 /* Floating AI dock (reference .dock-ai). Fixed at the inline-end corner;
- * the mobile offset clears the bottom tab bar. */
+ * the mobile offset clears the bottom tab bar. §6: the pill's ground is now
+ * near-solid rather than the faint card veil — the control was disappearing
+ * into the atmosphere — with a whisper of amber in the keyline to say
+ * "advisor" before the label does. Same size, same behavior. */
 .mh-dock {
-    background: var(--mh-glass-grad);
+    background: var(--mh-dock-bg);
     -webkit-backdrop-filter: var(--mh-glass-blur);
     backdrop-filter: var(--mh-glass-blur);
-    border: 1px solid var(--mh-glass-stroke);
+    border: 1px solid var(--mh-dock-stroke);
     border-radius: 999px;
-    box-shadow: var(--mh-shadow-raised), var(--mh-glass-inner);
+    box-shadow:
+        var(--mh-shadow-raised),
+        0 0 0 1px rgb(var(--mh-amber) / 0.14),
+        var(--mh-glass-inner);
 }
 
 @keyframes mh-dock-glow {

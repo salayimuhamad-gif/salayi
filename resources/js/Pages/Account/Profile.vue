@@ -137,7 +137,7 @@ function save(): void {
 }
 
 const localeNames: Record<string, string> = {
-    ckb: 'کوردیی ناوەندی',
+    ckb: 'کوردی',
     ar: 'العربية',
     en: 'English',
 };
