@@ -46,6 +46,7 @@ return [
     'toggle_theme' => 'Toggle theme',
     'sign_out' => 'Sign out',
     'language' => 'Language',
+    'more' => 'More',
     'admin_dashboard' => 'Admin dashboard',
     'public' => [
         'market' => 'Market',

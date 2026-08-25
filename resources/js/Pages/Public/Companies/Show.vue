@@ -62,7 +62,7 @@ defineProps<{
     <Head :title="company.name" />
 
     <PublicLayout>
-        <article class="mx-auto max-w-3xl space-y-6 px-4 py-8">
+        <article class="mx-auto max-w-3xl space-y-6">
             <header>
                 <h1 class="font-display text-2xl font-bold text-ink">{{ company.name }}</h1>
                 <p v-if="company.is_verified" class="numeral mt-1 text-sm text-positive">

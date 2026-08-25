@@ -147,7 +147,7 @@ const box = 'mx-auto w-full max-w-[1200px] px-5 sm:px-8';
 <template>
     <Head :title="t('home.hero_title')" />
 
-    <PublicLayout chrome="home" palette="midnight">
+    <PublicLayout chrome="home">
         <div ref="pageRoot" class="pb-8">
             <!-- 1 · Hero: typography over the atmosphere. -->
             <div class="mh-reveal" :class="box">

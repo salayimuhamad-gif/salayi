@@ -100,6 +100,8 @@ return [
     'translation_fallback' => 'هذا الاسم غير متوفر باللغة المطلوبة',
     'not_yet_available' => 'غير متوفر بعد',
     'none_published' => 'لا توجد مشاريع منشورة',
+    'search_none' => 'لا توجد مشاريع تطابق هذا البحث',
+    'search_none_hint' => 'جرّب اسماً آخر أو امسح البحث',
     'none_published_hint' => 'ستُضاف قريباً',
 
     'ratings' => [

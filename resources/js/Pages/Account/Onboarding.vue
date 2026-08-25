@@ -96,7 +96,7 @@ function submit(next: 'advisor' | 'portfolio' | 'home'): void {
 }
 
 const localeNames: Record<string, string> = {
-    ckb: 'کوردیی ناوەندی',
+    ckb: 'کوردی',
     ar: 'العربية',
     en: 'English',
 };

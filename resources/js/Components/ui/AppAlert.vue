@@ -16,11 +16,17 @@ const props = withDefaults(defineProps<{
     message?: string | null;
 }>(), { variant: 'info', message: null });
 
+/*
+ * Component classes rather than inline utility pairs (glass-UI refinement):
+ * the :root values in app.css are byte-identical to the former utilities,
+ * so admin and auth alerts render unchanged, while the public palettes can
+ * raise the tints where a 5% fill vanishes on night glass (public.css).
+ */
 const tone = computed(() => ({
-    info: 'border-brand/25 bg-brand/5 text-ink',
-    success: 'border-positive/30 bg-positive/5 text-ink',
-    warning: 'border-caution/30 bg-caution/5 text-ink',
-    danger: 'border-negative/30 bg-negative/5 text-ink',
+    info: 'mh-alert-info text-ink',
+    success: 'mh-alert-success text-ink',
+    warning: 'mh-alert-warning text-ink',
+    danger: 'mh-alert-danger text-ink',
 }[props.variant]));
 
 // assertive for danger so a screen reader interrupts; polite otherwise.

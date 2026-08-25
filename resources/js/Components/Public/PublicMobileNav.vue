@@ -107,9 +107,12 @@ onBeforeUnmount(unlock);
         <!-- A real button rather than a div with a click handler, so it is
              reachable and announced. Its label is the close action because that
              is what activating it does. -->
+        <!-- The tokenized scrim (.mh-scrim) dims per palette — ink-veil on
+             day, deep night on midnight — instead of the flat black literal
+             that ignored the token that exists for exactly this. -->
         <button
             type="button"
-            class="absolute inset-0 bg-black/70"
+            class="mh-scrim absolute inset-0"
             :aria-label="t('app.actions.close')"
             @click="emit('close')"
         />

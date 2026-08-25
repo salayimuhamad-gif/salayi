@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
 import { useLocale } from '@/Composables/useLocale';
+import { useTheme } from '@/Composables/useTheme';
 
 const { current } = useLocale();
+const { night } = useTheme();
 
 /*
  * Copy is inlined rather than read from the translation files because this
@@ -42,13 +44,20 @@ function reload(): void {
 <template>
     <Head :title="text.title" />
 
-    <div class="flex min-h-full items-center justify-center px-4">
+    <!-- Deliberately no PublicLayout: this page is served by the service
+         worker with no live navigation to offer. It still wears the shell's
+         palette classes (driven by the same stored theme) so landing here
+         offline never flips the product back to the legacy ivory look. -->
+    <div
+        class="mh-luxury-public flex min-h-full items-center justify-center px-4"
+        :class="night ? 'mh-midnight' : 'mh-day'"
+    >
         <div class="mh-panel max-w-md text-center">
             <h1 class="font-display text-xl font-bold text-ink">{{ text.title }}</h1>
             <p class="mt-2 text-ink-muted">{{ text.body }}</p>
             <button
                 type="button"
-                class="mt-5 rounded-card bg-brand px-4 py-2 text-sm font-medium text-white"
+                class="mh-lux-btn mh-lux-btn-primary mt-5"
                 @click="reload"
             >
                 {{ text.action }}

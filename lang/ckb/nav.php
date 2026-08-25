@@ -46,6 +46,7 @@ return [
     'toggle_theme' => 'گۆڕینی ڕووکار',
     'sign_out' => 'دەرچوون',
     'language' => 'زمان',
+    'more' => 'زیاتر',
     'admin_dashboard' => 'پانێڵی بەڕێوەبردن',
     'public' => [
         'market' => 'بازاڕ',

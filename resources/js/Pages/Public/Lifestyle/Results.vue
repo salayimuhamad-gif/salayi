@@ -79,7 +79,7 @@ const scoreTone = (score: number): string =>
     <Head :title="t('advisor.lifestyle.results_title')" />
 
     <PublicLayout>
-        <article class="mx-auto max-w-3xl space-y-6 px-4 py-8">
+        <article class="mx-auto max-w-3xl space-y-6">
             <header>
                 <h1 class="font-display text-2xl font-bold text-ink">
                     {{ t('advisor.lifestyle.results_title') }}
