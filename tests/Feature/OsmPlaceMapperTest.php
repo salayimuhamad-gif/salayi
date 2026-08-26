@@ -137,8 +137,10 @@ final class OsmPlaceMapperTest extends TestCase
 
         $this->assertSame('osm:way:445566', $way['external_id']);
         $this->assertSame('https://www.openstreetmap.org/way/445566', $way['source_url']);
-        // Only the matched mapping tags travel — nothing else.
-        $this->assertSame(['amenity' => 'hospital'], $way['tags']);
+        // Only the matched mapping tags travel — plus the REQUIRED honesty
+        // marker: this fixture has no name:ckb, so the canonical OSM name
+        // filled the primary column and the provenance says exactly that.
+        $this->assertSame(['amenity' => 'hospital', 'name_fallback' => 'name'], $way['tags']);
 
         $relation = $this->candidate($this->mapper()->map([
             'type' => 'relation', 'id' => 7, 'lat' => 36.21, 'lon' => 44.03,

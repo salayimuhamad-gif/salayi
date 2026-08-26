@@ -10,6 +10,8 @@ use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Models\Place;
 use App\Modules\Geography\Models\PlaceCategory;
 use App\Modules\Geography\Services\Osm\OsmPlaceImporter;
+use App\Modules\Identity\Enums\RoleKey;
+use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
 use App\Modules\Projects\Enums\PublicationStatus;
 use App\Modules\Projects\Models\Project;
@@ -284,18 +286,47 @@ final class OsmPlaceImportTest extends TestCase
         ]]];
     }
 
+    /** An ordinary places administrator: full geography permissions, no super-admin bypass. */
+    private function gisPlacesManager(): User
+    {
+        $user = User::factory()->create();
+
+        $role = Role::query()->firstOrCreate(
+            ['key' => RoleKey::GisPlacesManager->value],
+            ['name' => RoleKey::GisPlacesManager->value, 'is_system' => true],
+        );
+
+        $user->roles()->syncWithoutDetaching([$role->id]);
+
+        return $user;
+    }
+
     public function test_the_import_screen_is_gated_by_flag_and_permission(): void
     {
-        $this->actingAs(User::factory()->superAdmin()->create());
+        // Flag OFF, ordinary places manager: the launch switch holds even
+        // for a user holding every geography permission.
         $this->setFeatures(['places.database' => false]);
-        $this->get('/admin/places/import')->assertNotFound();
+        $manager = $this->gisPlacesManager();
+        $this->actingAs($manager)->get('/admin/places/import')->assertNotFound();
 
+        // Flag OFF, Super Admin: the EXISTING EnsureFeatureEnabled contract
+        // — a disabled ADMIN surface stays reachable for a Super Admin as an
+        // audited preview, because a flag is a launch switch, not an
+        // authorisation. The import screen must not be an exception.
+        $this->actingAs(User::factory()->superAdmin()->create())
+            ->get('/admin/places/import')
+            ->assertSuccessful();
+
+        // Flag ON, user without geography.places.create: forbidden.
         $this->setFeatures(['places.database' => true]);
         $this->actingAs(User::factory()->create());
         $this->get('/admin/places/import')->assertForbidden();
         $this->post('/admin/places/import/preview', [
             'scope' => 'operating_area', 'groups' => ['education'],
         ])->assertForbidden();
+
+        // Flag ON, places manager: the intended everyday path.
+        $this->actingAs($manager)->get('/admin/places/import')->assertSuccessful();
     }
 
     public function test_preview_writes_nothing_and_stores_the_plan_in_session(): void
