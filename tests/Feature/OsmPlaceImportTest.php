@@ -304,10 +304,13 @@ final class OsmPlaceImportTest extends TestCase
     public function test_the_import_screen_is_gated_by_flag_and_permission(): void
     {
         // Flag OFF, ordinary places manager: the launch switch holds even
-        // for a user holding every geography permission.
+        // for a user holding every geography permission. On an ADMIN surface
+        // EnsureFeatureEnabled says what happened (403, audited) — the 404
+        // shape is reserved for public surfaces, which must not confirm the
+        // feature exists.
         $this->setFeatures(['places.database' => false]);
         $manager = $this->gisPlacesManager();
-        $this->actingAs($manager)->get('/admin/places/import')->assertNotFound();
+        $this->actingAs($manager)->get('/admin/places/import')->assertForbidden();
 
         // Flag OFF, Super Admin: the EXISTING EnsureFeatureEnabled contract
         // — a disabled ADMIN surface stays reachable for a Super Admin as an
