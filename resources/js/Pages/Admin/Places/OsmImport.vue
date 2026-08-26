@@ -132,7 +132,7 @@ const writable = computed(() =>
                         >
                             <option value="" disabled>{{ t('geography.osm.choose_area') }}</option>
                             <option v-for="a in areas" :key="a.value" :value="a.value">
-                                {{ ' '.repeat(a.depth * 2) }}{{ a.label }}
+                                {{ '\u00A0'.repeat(a.depth * 2) }}{{ a.label }}
                             </option>
                         </select>
                         <p v-if="form.errors.area_id" role="alert" class="mt-1 text-xs text-negative">

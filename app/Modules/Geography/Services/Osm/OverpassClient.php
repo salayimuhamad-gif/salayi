@@ -104,6 +104,8 @@ final class OverpassClient
     /**
      * One union query over node/way/relation for every selector, JSON out,
      * `out center` so ways and relations arrive with a representative point.
+     *
+     * @param  list<string>  $selectors
      */
     private function query(array $selectors, BoundingBox $box): string
     {

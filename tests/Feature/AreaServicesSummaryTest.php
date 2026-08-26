@@ -56,7 +56,7 @@ final class AreaServicesSummaryTest extends TestCase
         );
     }
 
-    /** @param  array<string, mixed>  $attributes */
+    /** @param  array<model-property<Place>, mixed>  $attributes */
     private function place(Area $area, PlaceCategory $category, array $attributes = []): Place
     {
         static $n = 0;

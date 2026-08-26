@@ -38,7 +38,10 @@ final class OsmPlaceMapperTest extends TestCase
         return $result['candidate'] ?? [];
     }
 
-    /** @param  array<string, string>  $tags */
+    /**
+     * @param  array<string, string>  $tags
+     * @return array<string, mixed>
+     */
     private function node(array $tags, float $lat = 36.19, float $lon = 44.01, int $id = 1): array
     {
         return ['type' => 'node', 'id' => $id, 'lat' => $lat, 'lon' => $lon,

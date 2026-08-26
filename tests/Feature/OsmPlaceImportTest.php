@@ -74,7 +74,10 @@ final class OsmPlaceImportTest extends TestCase
         return $area->refresh();
     }
 
-    /** @return array<string, mixed> */
+    /**
+     * @param  array<string, mixed>  $overrides
+     * @return array<string, mixed>
+     */
     private function candidate(array $overrides = []): array
     {
         return array_merge([

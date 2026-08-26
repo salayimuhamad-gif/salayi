@@ -111,17 +111,19 @@ final class PlaceOsmImportController extends Controller
 
     public function run(Request $request): RedirectResponse
     {
-        /** @var array{criteria: array<string, mixed>}|null $preview */
+        // Session content is treated as untyped until proven: a stale or
+        // foreign shape must degrade to "preview expired", never to a 500.
         $preview = $request->session()->get(self::SESSION_KEY);
+        $criteria = is_array($preview) ? ($preview['criteria'] ?? null) : null;
 
-        if (! is_array($preview) || ! is_array($preview['criteria'] ?? null)) {
+        if (! is_array($criteria)) {
             return back()->withErrors(['preview' => __('geography.osm.errors.preview_expired')]);
         }
 
         try {
             // Re-derived from the cached Overpass answers — the criteria come
             // from the session the preview wrote, never from this request.
-            $plan = $this->plan($preview['criteria']);
+            $plan = $this->plan($criteria);
         } catch (OverpassUnavailable $exception) {
             return back()->withErrors(['overpass' => $this->overpassMessage($exception)]);
         }
@@ -134,7 +136,7 @@ final class PlaceOsmImportController extends Controller
         $summary['remaining'] = $remaining;
 
         $this->audit->record('places.osm_imported', null, [], [
-            'criteria' => $preview['criteria'],
+            'criteria' => $criteria,
             'summary' => $summary,
         ]);
 
