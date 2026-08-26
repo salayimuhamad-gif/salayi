@@ -9,9 +9,9 @@ When code and this document disagree, the code wins — then update this documen
 
 | File | Responsibility |
 |---|---|
-| `types.ts` | `MapAdapter` interface (`ready()`, `getBounds()`, `getZoom()`, `setPoints()`, `setBoundaries()`, `setPin?()`, `flyTo()`, `resize()`, `destroy()`), `AdapterOptions`, `AdapterEvents`, `PointFeature`, `PriceTrend = 'up'|'down'|'flat'|'unknown'`. |
+| `types.ts` | `MapAdapter` interface (`ready()`, `getBounds()`, `getZoom()`, `setPoints()`, `setBoundaries()`, `setPin?()`, `setPois?()`, `flyTo()`, `resize()`, `destroy()`), `AdapterOptions` (incl. `labelScheme: 'light'\|'dark'` for adapter-drawn text/pin paint), `AdapterEvents`, `PointFeature`, `PoiFeature` + `PoiCategory` (Phase 2 places hook; no consumer yet), `PriceTrend = 'up'\|'down'\|'flat'\|'unknown'`. |
 | `index.ts` | `createMapAdapter(provider, options)` — the only sanctioned constructor. Converts Google construction failure into MapLibre fallback with `fallbackReason`. |
-| `maplibre.ts` | `MapLibreAdapter`. Worker URL wiring (`?worker&url` import + `setWorkerUrl` before first Map), RTL plugin registration (guarded by `getRTLTextPluginStatus() === 'unavailable'`), style resolution (options.styleUrl → `plain` inline style → demotiles default), clustered `features` source + separate `boundaries` source, layers `clusters`/`cluster-count`/`unclustered`/`trend-markers`/`point-labels`/`point-names`/`boundary-fill`/`boundary-line`, canvas-drawn trend icons, draggable pin, ResizeObserver, bounded `ready()` (load vs error vs 20s deadline), direction-aware control corners (Phase 6: reads the container's computed direction; zoom top-END, scale bottom-START, manually added compact attribution bottom-END — physical corners resolved per dir, because the vendor stylesheet is excluded from rtlcss in `postcss.config.js` and no CSS side effect mirrors controls any more). |
+| `maplibre.ts` | `MapLibreAdapter`. Worker URL wiring (`?worker&url` import + `setWorkerUrl` before first Map), RTL plugin registration (guarded by `getRTLTextPluginStatus() === 'unavailable'`), style resolution (options.styleUrl → `plain` inline style → same-origin `/map-styles/mulk-dark.json` default — CARTO Dark Matter raster over a near-black ground, no glyphs entry so adapter-drawn labels render via local TinySDF + the RTL plugin), clustered `features` source + separate `boundaries` source, layers `clusters`/`cluster-count`/`unclustered`/`trend-markers`/`point-labels`/`point-names`/`boundary-fill`/`boundary-line` plus the reserved POI pair `poi-dots`/`poi-labels` (zoom-gated 13/15, subdued grey with amber `active` voice, both inserted with `beforeId: 'clusters'` so POIs render beneath every project layer and project symbols keep collision priority; fed only through `setPois()` — Phase 1 ships the hook, no surface calls it), canvas-drawn trend icons, draggable pin, ResizeObserver, bounded `ready()` (load vs error vs 20s deadline), direction-aware control corners (Phase 6: reads the container's computed direction; zoom top-END, scale bottom-START, manually added compact attribution bottom-END — physical corners resolved per dir, because the vendor stylesheet is excluded from rtlcss in `postcss.config.js` and no CSS side effect mirrors controls any more). |
 | `google.ts` | `GoogleMapsAdapter` (optional provider). Script injection with timeout, `gm_authFailure` save/restore with ownership guard, `tilesloaded`-gated readiness, custom grid clusterer (parity with MapLibre budgets), MultiPolygon via `toGooglePolygons`, exhaustive `destroy()`. Never emits `onMarkerClick` (documented gap). |
 | `geojson.ts` | Pure, unit-tested GeoJSON↔Google conversion: `toPolygonComponents` (MultiPolygon → per-component `{exterior, holes[]}`), `normaliseComponent` (RFC-7946 winding for Google's even-odd hole rendering), `signedArea`, `isClockwise`, `ringToPath` ([lng,lat] → {lat,lng}). |
 | `trend.ts` | Single source of trend presentation: `trendIconName`, `trendColour`, `trendArrowGlyph`, `trendHasClaim`, `normaliseTrend` (garbage/null → `unknown`, never `flat`). Colours: up `#15803d`, down `#b91c1c`, flat `#b45309`, unknown `#0f3e59`. |
@@ -53,6 +53,19 @@ When code and this document disagree, the code wins — then update this documen
 - Dependencies (locked): `maplibre-gl` 6.0.0, `@mapbox/mapbox-gl-rtl-text`
   0.4.0 exact. No supercluster (clustering ships inside maplibre-gl), no draw
   library, no @types/google.maps.
+
+### Map status chrome (Map Phase 1)
+
+- `.mh-map-toast` (+ `--error`) in `resources/css/app.css` — the ONE compact
+  status voice floating over a map (loading, empty view, dropped refresh);
+  no backdrop blur by design. Positioning stays with each surface (the
+  measured `bottom-24`/`lg:bottom-4` slots that clear the mobile tab bar).
+- `.mh-map-ground` — near-black ground under every public map canvas so
+  style/tile loading never flashes a light void; constant across UI themes.
+- The public basemap default is `public/map-styles/mulk-dark.json`
+  (CARTO Dark Matter raster; attribution flows through the compact
+  AttributionControl). `MAPLIBRE_STYLE_URL` still overrides. The browser
+  specs' `STYLE_HOST` constants point at this same-origin path.
 
 ## 2. Backend file map
 

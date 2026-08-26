@@ -33,6 +33,46 @@ export interface MapBounds {
  */
 export type PriceTrend = 'up' | 'down' | 'flat' | 'unknown';
 
+/**
+ * The POI vocabulary the Phase 2 places layers will speak (Map Phase 1
+ * prepares the hook; no ingestion exists yet). A closed union rather than a
+ * free string so a typo cannot invent a category the toggles and styling
+ * never heard of.
+ */
+export type PoiCategory =
+    | 'school'
+    | 'university'
+    | 'hospital'
+    | 'clinic'
+    | 'pharmacy'
+    | 'supermarket'
+    | 'shopping'
+    | 'mosque'
+    | 'park'
+    | 'transport'
+    | 'government'
+    | 'bank'
+    | 'atm'
+    | 'fuel'
+    | 'restaurant'
+    | 'other';
+
+/**
+ * One point-of-interest for the controlled overlay layers. Deliberately
+ * SEPARATE from PointFeature: POIs are ambient context, never selectable
+ * real-estate records — they carry no price, no trend, no record id, and the
+ * renderer keeps them visually subordinate to project markers.
+ */
+export interface PoiFeature {
+    lat: number;
+    lng: number;
+    /** Canonical MULK display name (already locale-resolved by the caller). */
+    title: string;
+    category: PoiCategory;
+    /** Amber active voice for the one POI a user focussed; default subdued. */
+    active?: boolean;
+}
+
 export interface PointFeature {
     lat: number;
     lng: number;
@@ -110,6 +150,17 @@ export interface MapAdapter {
     setBoundaries(collection: BoundaryCollection): void;
 
     /**
+     * Replace the controlled POI overlay (Phase 2 places layers). Optional
+     * capability like setPin: the MapLibre adapter renders POIs as a
+     * separate zoom-gated, deliberately subdued layer pair; pages must
+     * feature-test before relying on it, and the Google adapter may skip it.
+     * An empty array clears the overlay. Phase 1 ships the hook only — no
+     * surface calls it yet, and no browser ever talks to Overpass directly;
+     * future data arrives through cached MULK endpoints.
+     */
+    setPois?(pois: PoiFeature[]): void;
+
+    /**
      * A single editable pin (the admin picker's point). null removes it.
      * Optional capability: the MapLibre adapter implements it with a
      * draggable marker; pages must feature-test before relying on it.
@@ -144,18 +195,28 @@ export interface AdapterOptions {
     /** Accent for clusters and boundary polygons. Defaults to the explorer blue. */
     accentColour?: string;
     /**
+     * Paint scheme for the ADAPTER-DRAWN text and pin (project names, price
+     * labels, the picker pin) — light ink on white halos for light basemaps
+     * (the historical default, byte-identical when omitted), near-white ink
+     * on night halos for the dark public basemap. This tunes MULK-drawn
+     * paint only; it never touches provider tiles or vendor chrome.
+     */
+    labelScheme?: 'light' | 'dark';
+    /**
      * Deadline for ready(), milliseconds. A style whose tiles/glyphs stall
      * without ever erroring must still settle the page into its error state
      * instead of an indefinite spinner. Defaults to 20 s.
      */
     readyTimeoutMs?: number;
     /**
-     * What to render when NO style URL is configured. 'demo' (default)
-     * keeps the historical public-surface behaviour; 'plain' is an inline
-     * neutral background with no network dependency at all — the admin
-     * picker's contract, where clicking and drawing must work even with
-     * zero map configuration.
+     * What to render when NO style URL is configured. 'dark' (default) is
+     * the MULK dark basemap style served from this origin
+     * (/map-styles/mulk-dark.json — CARTO Dark Matter raster tiles over a
+     * near-black ground), which replaced the third-party demotiles demo
+     * default; 'plain' is an inline neutral background with no network
+     * dependency at all — the admin picker's contract, where clicking and
+     * drawing must work even with zero map configuration.
      */
-    fallbackStyle?: 'demo' | 'plain';
+    fallbackStyle?: 'dark' | 'plain';
     events: AdapterEvents;
 }

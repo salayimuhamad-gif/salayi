@@ -374,6 +374,8 @@ function adapterOptions() {
         googleKey: props.google_key,
         centre: { lat: 36.19, lng: 44.009 },
         zoom: 11,
+        // MULK-drawn text and pins tuned for the dark public basemap.
+        labelScheme: 'dark' as const,
         events: {
             onMoveEnd: () => {
                 if (!pickingCentre.value && !drawing.value) {
@@ -815,16 +817,20 @@ watch(flat, () => syncSource());
                     :class="mobileView === 'list' ? 'hidden md:block' : ''"
                 >
                     <div
-                        ref="container" class="h-[420px] w-full lg:h-[560px]" role="application"
+                        ref="container" class="mh-map-ground h-[420px] w-full lg:h-[560px]" role="application"
                         :aria-label="t('nav.public.map')"
                     />
                     <div class="mh-invest-vignette" aria-hidden="true" />
 
+                    <!-- Loading is a compact status over the dark ground,
+                         not a veil across the whole surface (Map Phase 1):
+                         the map area stays visually the map. -->
                     <div
                         v-if="!mapReady && !mapFailed"
-                        class="absolute inset-0 grid place-items-center bg-surface-raised/80 text-sm text-ink-muted"
+                        class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
+                        aria-live="polite"
                     >
-                        {{ t('map.states.loading') }}
+                        <p class="mh-map-toast">{{ t('map.states.loading') }}</p>
                     </div>
 
                     <!-- Zero features is a STATE, not a failure: the basemap
@@ -844,7 +850,7 @@ watch(flat, () => syncSource());
                         class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
-                        <p class="mh-invest-glass rounded-full px-4 py-2 text-center text-xs text-ink">
+                        <p class="mh-map-toast">
                             {{ t('map.states.map_empty_overlay') }}
                         </p>
                     </div>
@@ -860,7 +866,7 @@ watch(flat, () => syncSource());
                         class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
-                        <p class="mh-invest-glass rounded-full px-4 py-2 text-center text-xs text-ink">
+                        <p class="mh-map-toast">
                             {{ t('map.states.loading_features') }}
                         </p>
                     </div>
@@ -877,7 +883,7 @@ watch(flat, () => syncSource());
                         data-testid="map-refetch-failed"
                         class="absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                     >
-                        <div class="mh-invest-glass flex flex-wrap items-center justify-center gap-2 rounded-card px-3 py-2">
+                        <div class="mh-map-toast mh-map-toast--error">
                             <span class="text-xs text-ink">
                                 {{ t('map.states.error') }} — {{ t('map.states.error_hint') }}
                             </span>

@@ -444,14 +444,18 @@
 
     /* Radial edge darkening plus a block-start fade, so the dark chrome and
        the tiles read as one surface. Pointer-events pass through: it is
-       varnish, never a control. */
+       varnish, never a control. Pinned to the basemap's own night family,
+       not the palette surface token: the public basemap is dark in BOTH UI
+       palettes (Map Phase 1), and an ivory vignette over dark tiles reads
+       as glare, not depth. 7 11 22 is exactly what the surface token
+       resolved to under .mh-midnight, so night rendering is unchanged. */
     .mh-invest-vignette {
         pointer-events: none;
         position: absolute;
         inset: 0;
         background:
-            linear-gradient(to bottom, rgb(var(--mh-surface) / 0.55), transparent 18%),
-            radial-gradient(130% 130% at 50% 45%, transparent 55%, rgb(var(--mh-surface) / 0.5));
+            linear-gradient(to bottom, rgb(7 11 22 / 0.55), transparent 18%),
+            radial-gradient(130% 130% at 50% 45%, transparent 55%, rgb(7 11 22 / 0.5));
     }
 
     /* Glass over the map: blur earns its cost here because live tiles move
@@ -504,6 +508,45 @@
         outline: none;
         border-color: rgb(var(--mh-accent) / 0.7);
         box-shadow: 0 0 0 1px rgb(var(--mh-accent) / 0.35);
+    }
+
+    /* --- Compact map status toast (Map Phase 1) --------------------------
+     * The one voice for messages floating over a map: loading, empty view,
+     * dropped refresh. Deliberately small — a status may inform, never
+     * hide the map. No backdrop blur (these sit over live tiles, where
+     * blur is the expensive kind); a near-opaque token surface carries the
+     * contrast on both palettes. Positioning stays with the caller, whose
+     * bottom-24/bottom-4 geometry is measured against the mobile tab bar.
+     * -------------------------------------------------------------------- */
+    .mh-map-toast {
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        max-inline-size: min(24rem, 100%);
+        padding-block: 0.4375rem;
+        padding-inline: 0.75rem;
+        border-radius: 0.625rem;
+        font-size: 0.75rem;
+        line-height: 1.45;
+        text-align: center;
+        color: rgb(var(--mh-ink));
+        background-color: rgb(var(--mh-surface-raised) / 0.92);
+        border: 1px solid rgb(var(--mh-line) / 0.9);
+        box-shadow: var(--mh-shadow-card);
+    }
+
+    .mh-map-toast--error {
+        border-color: rgb(var(--mh-negative) / 0.5);
+    }
+
+    /* The ground beneath a public map canvas: the basemap's own near-black,
+       painted by the page so style/tile loading never flashes a light void
+       under the dark map. Constant by design — the public basemap is dark
+       in both UI palettes. */
+    .mh-map-ground {
+        background-color: #0a0e18;
     }
 
     /* --- Touch-target floor (map surfaces) ------------------------------- */

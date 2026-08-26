@@ -5,6 +5,7 @@ import type {
     MapAdapter,
     MapBounds,
     PointFeature,
+    PoiFeature,
 } from './types';
 import { trendColour, trendIconName } from './trend';
 
@@ -81,9 +82,14 @@ export class MapLibreAdapter implements MapAdapter {
     private readyPromise: Promise<void> | null = null;
     private readyDeadline: number | null = null;
     private settleReady: { resolve: () => void; reject: (error: Error) => void } | null = null;
-    private pending: { points: PointFeature[]; boundaries: BoundaryCollection | null } = {
+    private pending: {
+        points: PointFeature[];
+        boundaries: BoundaryCollection | null;
+        pois: PoiFeature[];
+    } = {
         points: [],
         boundaries: null,
+        pois: [],
     };
 
     private constructor(private readonly options: AdapterOptions) {}
@@ -139,11 +145,18 @@ export class MapLibreAdapter implements MapAdapter {
         /*
          * Style resolution: the configured URL wins; with none set, the
          * 'plain' fallback is a zero-network inline background (the admin
-         * picker's contract — usable with nothing configured), and 'demo'
-         * keeps the historical public default. The demo host is
-         * documentation-grade infrastructure and unsuitable for production
-         * — the completion doc names real options — but silently swapping
-         * providers is not this adapter's call.
+         * picker's contract — usable with nothing configured), and the
+         * default public fallback is the MULK dark basemap style served
+         * from THIS origin (Map Phase 1): CARTO Dark Matter raster tiles
+         * over a near-black ground. Same-origin replaced the historical
+         * demotiles.maplibre.org demo default, so a no-config deployment —
+         * and CI's hermetic browser matrix — no longer depends on
+         * third-party demo infrastructure for the style document. The
+         * style deliberately names NO glyphs endpoint: maplibre-gl v6 then
+         * rasterizes label glyphs locally (TinySDF) from device fonts, and
+         * with the RTL plugin above that is what makes the adapter-drawn
+         * Sorani and Arabic names render with correct joined shaping
+         * instead of the tofu a Latin-only glyph server produces.
          */
         const style: string | import('maplibre-gl').StyleSpecification = this.options.styleUrl
             && this.options.styleUrl.trim() !== ''
@@ -158,7 +171,7 @@ export class MapLibreAdapter implements MapAdapter {
                         paint: { 'background-color': '#e8e6e1' },
                     }],
                 }
-                : 'https://demotiles.maplibre.org/style.json';
+                : '/map-styles/mulk-dark.json';
 
         const map = new maplibre.Map({
             container: this.options.container,
@@ -298,6 +311,19 @@ export class MapLibreAdapter implements MapAdapter {
             // second adapter. The default is the explorer's existing blue.
             const accent = this.options.accentColour ?? '#1f6feb';
 
+            /*
+             * Adapter-drawn text paint, per basemap scheme (Map Phase 1).
+             * 'light' is the byte-identical historical pairing; 'dark' puts
+             * near-white ink on a night halo so MULK's own labels sit
+             * quietly on the CARTO dark basemap instead of shouting from a
+             * white outline. Restrained by design: same 11px size, same
+             * weight, halo does the readability work.
+             */
+            const scheme = this.options.labelScheme ?? 'light';
+            const labelPaint = scheme === 'dark'
+                ? { price: '#eef2ff', name: '#d5ddf3', halo: 'rgba(7, 11, 22, 0.85)' }
+                : { price: '#17181a', name: '#0f3e59', halo: '#ffffff' };
+
             map.addLayer({
                 id: 'boundary-fill',
                 type: 'fill',
@@ -395,8 +421,8 @@ export class MapLibreAdapter implements MapAdapter {
                     'text-optional': true,
                 },
                 paint: {
-                    'text-color': '#17181a',
-                    'text-halo-color': '#ffffff',
+                    'text-color': labelPaint.price,
+                    'text-halo-color': labelPaint.halo,
                     'text-halo-width': 1.4,
                 },
             });
@@ -426,11 +452,64 @@ export class MapLibreAdapter implements MapAdapter {
                     'text-optional': true,
                 },
                 paint: {
-                    'text-color': '#0f3e59',
-                    'text-halo-color': '#ffffff',
+                    'text-color': labelPaint.name,
+                    'text-halo-color': labelPaint.halo,
                     'text-halo-width': 1.4,
                 },
             });
+
+            /*
+             * Controlled POI overlay (Map Phase 1 prepares, Phase 2 fills).
+             * A third, separate, UNCLUSTERED source: POIs are ambient
+             * neighbourhood context, deliberately subordinate to project
+             * markers - smaller dots, muted ink, amber only for the one a
+             * user focussed, and zoom-gated so no zoomed-out view ever
+             * drowns in generic pins. Both layers are inserted BENEATH
+             * 'clusters' (the lowest project-marker layer): project dots
+             * draw over POI dots, and the project symbol layers, being
+             * above, keep collision priority - a POI name never displaces
+             * a project's price or name. No surface feeds this yet;
+             * setPois() below is the hook the cached MULK POI endpoints
+             * will drive.
+             */
+            map.addSource('pois', {
+                type: 'geojson',
+                data: this.poiCollection(this.pending.pois),
+            });
+
+            map.addLayer({
+                id: 'poi-dots',
+                type: 'circle',
+                source: 'pois',
+                minzoom: 13,
+                paint: {
+                    'circle-color': ['case', ['==', ['get', 'active'], true], '#f3c56f', '#8b95ad'],
+                    'circle-radius': ['case', ['==', ['get', 'active'], true], 5, 3.5],
+                    'circle-opacity': 0.85,
+                    'circle-stroke-width': 1,
+                    'circle-stroke-color': scheme === 'dark' ? '#070b16' : '#ffffff',
+                },
+            }, 'clusters');
+
+            map.addLayer({
+                id: 'poi-labels',
+                type: 'symbol',
+                source: 'pois',
+                minzoom: 15,
+                layout: {
+                    'text-field': ['get', 'title'],
+                    'text-size': 10,
+                    'text-anchor': 'top',
+                    'text-offset': [0, 0.7],
+                    'text-allow-overlap': false,
+                    'text-optional': true,
+                },
+                paint: {
+                    'text-color': scheme === 'dark' ? '#aab4cc' : '#5c5e61',
+                    'text-halo-color': labelPaint.halo,
+                    'text-halo-width': 1.2,
+                },
+            }, 'clusters');
 
             const emitMarkerClick = (event: import('maplibre-gl').MapLayerMouseEvent): void => {
                 const id = event.features?.[0]?.properties?.id as number | undefined;
@@ -656,6 +735,20 @@ export class MapLibreAdapter implements MapAdapter {
         source?.setData(collection as Parameters<typeof source.setData>[0]);
     }
 
+    setPois(pois: PoiFeature[]): void {
+        this.pending.pois = pois;
+
+        if (!this.loaded) {
+            return;
+        }
+
+        const source = this.map?.getSource('pois') as
+            | import('maplibre-gl').GeoJSONSource
+            | undefined;
+
+        source?.setData(this.poiCollection(pois) as Parameters<typeof source.setData>[0]);
+    }
+
     flyTo(point: LatLng, zoom?: number): void {
         this.map?.flyTo({ center: [point.lng, point.lat], zoom: zoom ?? this.map.getZoom() });
     }
@@ -685,7 +778,13 @@ export class MapLibreAdapter implements MapAdapter {
                 return;
             }
 
-            this.pin = new maplibre.Marker({ color: '#0f3e59', draggable: true })
+            // Petrol on light basemaps (the historical pin); amber on the
+            // dark public basemap, where petrol sinks into the ground it
+            // is supposed to mark.
+            this.pin = new maplibre.Marker({
+                color: this.options.labelScheme === 'dark' ? '#f3c56f' : '#0f3e59',
+                draggable: true,
+            })
                 .setLngLat([point.lng, point.lat])
                 .addTo(this.map);
 
@@ -723,6 +822,24 @@ export class MapLibreAdapter implements MapAdapter {
     /** Layers that exist right now — query only what has been added. */
     private presentLayers(map: import('maplibre-gl').Map, candidates: string[]): string[] {
         return candidates.filter((layer) => map.getLayer(layer) !== undefined);
+    }
+
+    private poiCollection(pois: PoiFeature[]) {
+        return {
+            type: 'FeatureCollection' as const,
+            features: pois.map((poi) => ({
+                type: 'Feature' as const,
+                geometry: {
+                    type: 'Point' as const,
+                    coordinates: [poi.lng, poi.lat] as [number, number],
+                },
+                properties: {
+                    title: poi.title,
+                    category: poi.category,
+                    active: poi.active === true,
+                },
+            })),
+        };
     }
 
     private pointCollection(points: PointFeature[]) {

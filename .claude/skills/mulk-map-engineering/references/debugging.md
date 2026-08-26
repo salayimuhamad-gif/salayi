@@ -13,10 +13,12 @@ RC1/RC2 for an entire release).
    pass (it greps built CSS for `maplibregl-map`). Without the CSS the canvas
    is mispositioned/unstyled on every surface at once.
 2. **Style URL** (RC2): what does `page.props.map.style_url` actually resolve
-   to? `MAPLIBRE_STYLE_URL` unset → code falls back to
-   `demotiles.maplibre.org` (country-scale demo — renders as a flat rectangle
-   at Erbil zoom even when "working"). In hermetic browser tests, external
-   styles are deliberately blanked unless the spec serves a deterministic one.
+   to? `MAPLIBRE_STYLE_URL` unset → code falls back to the same-origin
+   `/map-styles/mulk-dark.json` MULK dark basemap (CARTO Dark Matter raster;
+   the style document loads from this origin, the tiles from
+   `basemaps.cartocdn.com`). In hermetic browser tests, external hosts are
+   deliberately blanked — the style document still loads, the tiles never do —
+   unless the spec serves a deterministic style or aborts the style route.
 3. **Worker asset** (RC8): does `public/build/assets/` contain
    `maplibre-gl-worker-*.js`? Is the `?worker&url` import in `maplibre.ts`
    intact and is `setWorkerUrl()` called before Map construction? Symptom

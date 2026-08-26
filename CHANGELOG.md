@@ -3,6 +3,45 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 1: premium dark basemap
+
+**Status: NOT DEPLOYED.** Map presentation only: no backend behavior,
+schema, migration, feature-flag or release-tooling change.
+
+### Added
+- `public/map-styles/mulk-dark.json` — the MULK dark basemap: official
+  CARTO Dark Matter raster tiles (keyless, "© OpenStreetMap contributors
+  © CARTO" attribution built in) over a near-black ground. The adapter's
+  no-config public fallback now serves this same-origin style instead of
+  third-party `demotiles.maplibre.org`; `MAPLIBRE_STYLE_URL` still
+  overrides (see `.env.example` for the production adoption note). The
+  style deliberately names no glyph server, keeping every MULK-drawn label
+  on maplibre-gl's local TinySDF path where the bundled RTL plugin renders
+  Sorani/Arabic names with correct joined shaping.
+- `labelScheme` adapter option: adapter-drawn text and the picker pin gain
+  a dark-basemap paint scheme (near-white ink on night halos, amber pin);
+  the four public map surfaces opt in, admin pickers keep their exact
+  light rendering.
+- Phase 2 POI preparation: `PoiCategory`/`PoiFeature` types and an
+  optional `setPois()` adapter capability rendering a separate, subdued,
+  zoom-gated overlay pair (`poi-dots`/`poi-labels`, amber active voice) —
+  a hook only; no surface feeds it and no browser ever calls Overpass.
+
+### Changed
+- Map status messages moved onto one compact `.mh-map-toast` voice:
+  Explorer's full-surface loading veil became a small edge status over the
+  new `.mh-map-ground` dark canvas ground, the wide loading/empty/refetch
+  pills tightened, and Invest's standing AI-companion glass panel shrank
+  to its avatar chip — nothing large covers the lower map any more.
+- The detail-page map preview's locator dot went amber (petrol sank into
+  the dark basemap).
+- `.mh-invest-vignette` pinned to the basemap's night family instead of
+  the palette surface token: the basemap is dark in both UI palettes now,
+  and the day palette's ivory vignette read as glare over dark tiles.
+  Night rendering is unchanged (the token resolved to the same values).
+- Browser specs' `STYLE_HOST` moved to the same-origin fallback path, with
+  the one hermetic-reliant failure test now aborting the style explicitly.
+
 ## [Unreleased] — Premium glass UI unification
 
 **Status: NOT DEPLOYED.** Frontend/design refinement only: no backend

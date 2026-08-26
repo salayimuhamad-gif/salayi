@@ -214,6 +214,8 @@ async function buildMap(): Promise<void> {
             googleKey: null,
             centre: { lat: 36.19, lng: 44.009 },
             zoom: 11,
+            // MULK-drawn text and pins tuned for the dark public basemap.
+            labelScheme: 'dark' as const,
             minZoom: 9,
             maxZoom: 16,
             maxBounds: ERBIL_BOX,
@@ -550,7 +552,7 @@ const isDesktop = useIsDesktop();
                      lead the grid, calm enough to share the page rhythm. -->
                 <div
                     ref="container"
-                    class="h-72 w-full sm:h-80 lg:h-[22.5rem]"
+                    class="mh-map-ground h-72 w-full sm:h-80 lg:h-[22.5rem]"
                     role="application"
                     :aria-label="t('home.pricing_map.title')"
                 />
@@ -561,7 +563,7 @@ const isDesktop = useIsDesktop();
                     class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center px-4"
                     aria-live="polite"
                 >
-                    <p class="mh-invest-chip !cursor-default text-center">{{ t('home.live_map.empty') }}</p>
+                    <p class="mh-map-toast">{{ t('home.live_map.empty') }}</p>
                 </div>
 
                 <!-- Desktop selection: the pin card as a glass popover. -->
