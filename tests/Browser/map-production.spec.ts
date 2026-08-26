@@ -124,6 +124,56 @@ test('/map leaves its loading state and becomes an interactive map', async ({ pa
     await expect(page.getByText('نەخشە بار نەبوو')).toHaveCount(0);
 });
 
+/*
+ * Map Phase 2: the places layer rides the POI overlay. Toggling the layer
+ * must request it from /map/features, surface the seeded category chips,
+ * and leave the map alive — the setPois() path runs for real here, and the
+ * console-error diagnostics fail the test on any runtime fault in it. A
+ * category chip then narrows the next fetch. Pixel-level dot assertions are
+ * deliberately absent: the overlay is zoom-gated adapter internals; the
+ * contract under test is the flag→request→overlay wiring.
+ */
+test('/map places layer fetches POIs and filters by category without breaking the map', async ({ page }) => {
+    await serveDeterministicStyle(page);
+    await page.goto('/map', { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+    const placesChip = page.getByRole('button', { name: 'شوێنەکان', exact: true });
+    await expect(placesChip).toBeVisible();
+
+    const placesFetch = page.waitForResponse((response) =>
+        response.url().includes('/map/features')
+        && decodeURIComponent(response.url()).includes('layers[]=places'));
+
+    await placesChip.click();
+    await expect(placesChip).toHaveAttribute('aria-pressed', 'true');
+
+    const placesResponse = await placesFetch;
+    const payload = await placesResponse.json();
+    expect(Array.isArray(payload.places)).toBe(true);
+    expect(payload.places.length).toBeGreaterThanOrEqual(2);
+
+    // The seeded categories arrive as filter chips once the layer is live.
+    const schoolChip = page.getByRole('button', { name: 'قوتابخانە', exact: true });
+    await expect(schoolChip).toBeVisible();
+
+    const filteredFetch = page.waitForResponse((response) =>
+        response.url().includes('/map/features')
+        && decodeURIComponent(response.url()).includes('categories[]=school'));
+
+    await schoolChip.click();
+    const filtered = await (await filteredFetch).json();
+
+    // Server-side narrowing: only the school remains in the layer payload.
+    expect(filtered.places.length).toBe(1);
+    expect(filtered.places[0].category).toBe('school');
+
+    // The map itself never flinched.
+    await expect(page.locator('.maplibregl-canvas')).toBeVisible();
+    await expect(page.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+});
+
 test('/map states a provider failure and keeps the list; no infinite loader', async ({ page }, testInfo) => {
     // The style is broken EXPLICITLY: the fallback style document is served
     // same-origin now (/map-styles/mulk-dark.json), so the hermetic harness

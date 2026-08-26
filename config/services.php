@@ -60,6 +60,20 @@ return [
         'google_key' => env('GOOGLE_MAPS_API_KEY'),
     ],
 
+    /*
+     * Overpass API (Map Phase 2) — the SERVER-SIDE discovery source for the
+     * admin's OpenStreetMap place import. Not a secret: it is a public,
+     * keyless community service, which is exactly why every request must be
+     * polite — identified User-Agent, bounded timeouts, 24h response cache,
+     * no retry storms, and never any call from a public visitor's request
+     * path. Only the admin import flow talks to it.
+     */
+    'overpass' => [
+        'endpoint' => env('OVERPASS_ENDPOINT', 'https://overpass-api.de/api/interpreter'),
+        'connect_timeout' => (int) env('OVERPASS_CONNECT_TIMEOUT', 5),
+        'timeout' => (int) env('OVERPASS_TIMEOUT', 30),
+    ],
+
     'telegram' => [
         'bot_token' => env('TELEGRAM_BOT_TOKEN'),
         'bot_username' => env('TELEGRAM_BOT_USERNAME'),

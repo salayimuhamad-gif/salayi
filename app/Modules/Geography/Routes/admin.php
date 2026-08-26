@@ -15,6 +15,7 @@ declare(strict_types=1);
 use App\Modules\Geography\Http\Controllers\Admin\AreaController;
 use App\Modules\Geography\Http\Controllers\Admin\PlaceCategoryController;
 use App\Modules\Geography\Http\Controllers\Admin\PlaceController;
+use App\Modules\Geography\Http\Controllers\Admin\PlaceOsmImportController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('permission:geography.areas.view')->group(function (): void {
@@ -42,9 +43,30 @@ Route::middleware(['feature:places.database', 'permission:geography.places.creat
 });
 
 Route::middleware(['feature:places.database', 'permission:geography.places.update'])->group(function (): void {
+    /*
+     * Bulk review (Map Phase 2): registered before the {place} routes so the
+     * literal path can never be captured by the model-bound parameter.
+     * Publishing additionally requires geography.places.verify — checked in
+     * the controller, exactly as the single-row transition does.
+     */
+    Route::post('/places/bulk-transition', [PlaceController::class, 'bulkTransition'])->name('places.bulk_transition');
+
     Route::get('/places/{place}/edit', [PlaceController::class, 'edit'])->name('places.edit');
     Route::put('/places/{place}', [PlaceController::class, 'update'])->name('places.update');
     Route::post('/places/{place}/transition', [PlaceController::class, 'transition'])->name('places.transition');
+});
+
+/*
+ * OpenStreetMap import (Map Phase 2). Behind the same flag as the places
+ * database it feeds and the create permission its writes amount to. The
+ * preview writes nothing; only the explicit run does, and public visitors
+ * have no route anywhere near Overpass.
+ */
+Route::middleware(['feature:places.database', 'permission:geography.places.create'])->group(function (): void {
+    Route::get('/places/import', [PlaceOsmImportController::class, 'index'])->name('places.osm.index');
+    Route::post('/places/import/preview', [PlaceOsmImportController::class, 'preview'])->name('places.osm.preview');
+    Route::post('/places/import/run', [PlaceOsmImportController::class, 'run'])->name('places.osm.run');
+    Route::post('/places/import/discard', [PlaceOsmImportController::class, 'discard'])->name('places.osm.discard');
 });
 
 /*

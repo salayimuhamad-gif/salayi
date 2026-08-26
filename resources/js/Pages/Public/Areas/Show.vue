@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import ErbilMapPreview from '@/Components/Public/ErbilMapPreview.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
+import AppIcon from '@/Components/Icons/AppIcon.vue';
+import type { IconName } from '@/Components/Icons/icons';
 import KnowledgeTimeline from '@/Components/KnowledgeTimeline.vue';
 import { t, formatNumber } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
@@ -41,6 +44,19 @@ interface PlaceRow {
     operational_status: string | null;
 }
 
+interface ServiceCategory {
+    key: string;
+    label: string;
+    count: number;
+}
+
+interface ServiceGroup {
+    key: string;
+    label: string;
+    count: number;
+    categories: ServiceCategory[];
+}
+
 interface TimelineEntry {
     id: number;
     title: string;
@@ -72,10 +88,42 @@ defineProps<{
     children: Child[];
     projects: { items: ProjectRow[]; total: number; current_page: number; last_page: number };
     subtree_project_count: number;
+    services: ServiceGroup[];
     places: PlaceRow[];
     timeline: TimelineEntry[];
     seo: { title: string; canonical: string; alternates: Record<string, string> };
 }>();
+
+/*
+ * Services summary (Map Phase 2). One group tile is expandable at a time —
+ * enough to answer "which schools count?" without the summary unfolding
+ * into a second places list.
+ */
+const openService = ref<string | null>(null);
+
+function toggleService(key: string): void {
+    openService.value = openService.value === key ? null : key;
+}
+
+// Group -> glyph. Everything the server could send is covered; an
+// admin-invented group degrades to the neutral pin.
+const serviceIcons: Record<string, IconName> = {
+    education: 'education',
+    health: 'health',
+    shopping: 'bag',
+    transport: 'bus',
+    recreation: 'tree',
+    worship: 'dome',
+    civic: 'landmark',
+    finance: 'banknote',
+    hospitality: 'cup',
+    employment: 'portfolio',
+    other: 'map-pin',
+};
+
+function serviceIcon(key: string): IconName {
+    return serviceIcons[key] ?? 'map-pin';
+}
 </script>
 
 <template>
@@ -201,6 +249,68 @@ defineProps<{
                             {{ formatNumber(child.project_count) }}
                         </span>
                     </Link>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ------------------------------------------------------ services
+             The area's service summary (Map Phase 2): grouped counts from
+             the reviewed places database, rendered as compact glass tiles.
+             Zero-count groups never arrive from the server, and with no
+             services at all the whole section stays silent — the places
+             list below carries its own empty state. -->
+        <section v-if="services.length > 0" class="mt-10">
+            <h2 class="mb-1 font-display text-lg font-semibold text-ink">
+                {{ t('geography.public.services_title') }}
+            </h2>
+            <p class="mb-3 text-xs text-ink-faint">{{ t('geography.public.services_hint') }}</p>
+
+            <ul class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+                <li v-for="group in services" :key="group.key">
+                    <button
+                        type="button"
+                        class="mh-card mh-touch-target flex w-full items-center gap-3 p-3 text-start
+                               transition-shadow hover:shadow-raised
+                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        :aria-expanded="openService === group.key"
+                        :aria-controls="`service-${group.key}`"
+                        @click="toggleService(group.key)"
+                    >
+                        <span
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-card
+                                   border border-line text-accent-strong"
+                            aria-hidden="true"
+                        >
+                            <AppIcon :name="serviceIcon(group.key)" class="h-[1.15rem] w-[1.15rem]" />
+                        </span>
+                        <span class="min-w-0 flex-1">
+                            <span class="block truncate text-sm font-medium text-ink">{{ group.label }}</span>
+                            <span class="numeral block text-xs text-ink-muted" dir="ltr">
+                                {{ formatNumber(group.count) }}
+                            </span>
+                        </span>
+                        <AppIcon
+                            name="chevron-down"
+                            class="h-3.5 w-3.5 shrink-0 text-ink-faint transition-transform"
+                            :class="openService === group.key ? 'rotate-180' : ''"
+                            aria-hidden="true"
+                        />
+                    </button>
+
+                    <ul
+                        v-show="openService === group.key"
+                        :id="`service-${group.key}`"
+                        class="mt-1.5 space-y-1 rounded-card border border-line px-3 py-2"
+                    >
+                        <li
+                            v-for="category in group.categories"
+                            :key="category.key"
+                            class="flex items-center justify-between gap-2 text-xs"
+                        >
+                            <span class="truncate text-ink-muted">{{ category.label }}</span>
+                            <span class="numeral shrink-0 text-ink" dir="ltr">{{ formatNumber(category.count) }}</span>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </section>
