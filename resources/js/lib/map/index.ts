@@ -2,7 +2,8 @@ import { GoogleMapsAdapter } from './google';
 import { MapLibreAdapter } from './maplibre';
 import type { AdapterOptions, MapAdapter } from './types';
 
-export type { MapAdapter, MapBounds, PointFeature, PriceTrend, BoundaryCollection, LatLng } from './types';
+export type { MapAdapter, MapBounds, PointFeature, PoiCategory, PoiFeature, PriceTrend, BoundaryCollection, LatLng } from './types';
+export { poiCategoryFor } from './poiCategories';
 
 export interface AdapterResult {
     adapter: MapAdapter;

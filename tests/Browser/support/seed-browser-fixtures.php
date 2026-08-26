@@ -44,6 +44,8 @@ declare(strict_types=1);
  */
 
 use App\Modules\Geography\Models\Area;
+use App\Modules\Geography\Models\Place;
+use App\Modules\Geography\Models\PlaceCategory;
 use App\Modules\Identity\Enums\RoleKey;
 use App\Modules\Identity\Models\Role;
 use App\Modules\Identity\Models\User;
@@ -324,6 +326,80 @@ $ankawa = Area::query()->updateOrCreate(
 DB::table('feature_flags')->updateOrInsert(
     ['flag' => 'geography.areas'],
     ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+/*
+ * Map Phase 2: the places layer behind its real flag, with two published
+ * places in two categories inside the explorer's opening viewport. The map
+ * spec toggles the layer and a category chip against this data, driving the
+ * setPois() overlay path in a real browser — any runtime error there fails
+ * the run through the console-error diagnostics.
+ */
+DB::table('feature_flags')->updateOrInsert(
+    ['flag' => 'places.database'],
+    ['enabled' => true, 'updated_at' => now(), 'created_at' => now()],
+);
+
+$poiSchoolCategory = PlaceCategory::query()->updateOrCreate(
+    ['key' => 'school'],
+    [
+        'group' => 'education',
+        'name_ckb' => 'قوتابخانە',
+        'name_ar' => 'مدرسة',
+        'name_en' => 'School',
+        'is_active' => true,
+        'sort_order' => 1,
+    ],
+);
+
+$poiPharmacyCategory = PlaceCategory::query()->updateOrCreate(
+    ['key' => 'pharmacy'],
+    [
+        'group' => 'health',
+        'name_ckb' => 'دەرمانخانە',
+        'name_ar' => 'صيدلية',
+        'name_en' => 'Pharmacy',
+        'is_active' => true,
+        'sort_order' => 2,
+    ],
+);
+
+Place::query()->updateOrCreate(
+    ['slug' => 'browser-poi-school'],
+    [
+        'external_id' => 'osm:node:900001',
+        'place_category_id' => $poiSchoolCategory->id,
+        'name_ckb' => 'قوتابخانەی ئازادی',
+        'name_ar' => 'مدرسة آزادي',
+        'name_en' => 'Azadi School',
+        'latitude' => 36.1910000,
+        'longitude' => 44.0080000,
+        'publication_status' => 'published',
+        'is_public' => true,
+        'is_duplicate_primary' => true,
+        'operational_status' => 'operating',
+        'source' => 'openstreetmap',
+        'source_url' => 'https://www.openstreetmap.org/node/900001',
+    ],
+);
+
+Place::query()->updateOrCreate(
+    ['slug' => 'browser-poi-pharmacy'],
+    [
+        'external_id' => 'osm:node:900002',
+        'place_category_id' => $poiPharmacyCategory->id,
+        'name_ckb' => 'دەرمانخانەی نەورۆز',
+        'name_ar' => 'صيدلية نوروز',
+        'name_en' => 'Nawroz Pharmacy',
+        'latitude' => 36.1880000,
+        'longitude' => 44.0120000,
+        'publication_status' => 'published',
+        'is_public' => true,
+        'is_duplicate_primary' => true,
+        'operational_status' => 'operating',
+        'source' => 'openstreetmap',
+        'source_url' => 'https://www.openstreetmap.org/node/900002',
+    ],
 );
 
 KnowledgeEvent::query()->updateOrCreate(

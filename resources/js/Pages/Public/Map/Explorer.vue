@@ -5,7 +5,7 @@ import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import { t, formatNumber } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
-import { createMapAdapter, type BoundaryCollection, type MapAdapter } from '@/lib/map';
+import { createMapAdapter, poiCategoryFor, type BoundaryCollection, type MapAdapter } from '@/lib/map';
 
 /*
  * The public Map Explorer (File one §5, File two §10).
@@ -254,13 +254,36 @@ function syncSource(): void {
         return;
     }
 
+    /*
+     * Places and record markers are separate visual languages (Map Phase 2):
+     * projects/offers/companies/prices stay on the clustered point source,
+     * while places ride the Phase 1 POI overlay — subdued, zoom-gated dots
+     * BENEATH every record marker, so ambient context never competes with
+     * the records the visitor is actually here for. The LIST keeps showing
+     * place rows either way; only the map rendering splits.
+     */
     adapter.value?.setPoints(
-        flat.value.map((feature) => ({
-            lat: feature.lat,
-            lng: feature.lng,
-            title: feature.name ?? feature.title ?? '',
-            colour: feature.colour ?? '#1f6feb',
-        })),
+        availableKeys.value
+            .flatMap((key) => (key !== 'places' && active.value.includes(key) ? features.value[key] : []))
+            .map((feature) => ({
+                lat: feature.lat,
+                lng: feature.lng,
+                title: feature.name ?? feature.title ?? '',
+                colour: feature.colour ?? '#1f6feb',
+            })),
+    );
+
+    // Optional capability, feature-tested like setPin — the Google adapter
+    // may not implement it, and the layer degrades to list-only there.
+    adapter.value?.setPois?.(
+        active.value.includes('places')
+            ? features.value.places.map((feature) => ({
+                lat: feature.lat,
+                lng: feature.lng,
+                title: feature.name ?? feature.title ?? '',
+                category: poiCategoryFor(feature.category),
+            }))
+            : [],
     );
 
     adapter.value?.setBoundaries(boundaries.value);

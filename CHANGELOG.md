@@ -3,6 +3,65 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 2: OSM POI ingestion & area service intelligence
+
+**Status: NOT DEPLOYED.** No schema change, no migration, no new
+dependency; authentication, Telegram/WhatsApp, feature-flag semantics and
+release tooling untouched. Public request paths never call Overpass.
+
+### Added
+- Server-side Overpass client (`Services/Osm/OverpassClient`): admin-only,
+  one bounded request per category group over the Erbil operating bbox (or
+  one area's bbox + exact polygon post-filter through the existing
+  `AreaResolver`), identified User-Agent, connect/request timeouts, typed
+  failures (timeout / 429 with honored Retry-After / 5xx / malformed), and
+  a 24h cache of successful responses keyed on endpoint+bbox+group+query
+  version. Failures are never cached and never retried. Config:
+  `services.overpass` / `OVERPASS_ENDPOINT` (documented in `.env.example`;
+  not a secret).
+- Explicit OSM→MULK mapping (`OsmPlaceMapper`): whitelisted tags only into
+  the existing 31 place categories (bus stops become `bus_station` +
+  `subcategory=bus_stop`; worship maps only with a stated muslim/christian
+  religion; everything unconfident is skipped with a counted reason).
+  Multilingual names are never machine-translated: `name:ckb` first,
+  canonical/ar/en fallbacks flagged in `tags.name_fallback` for review,
+  alternates preserved in `aliases`. Provenance: `source=openstreetmap`,
+  per-object `source_url`, no editor usernames/changesets anywhere.
+- Idempotent importer (`OsmPlaceImporter`) writing into the EXISTING
+  `places` schema by unique `external_id` (`osm:{type}:{id}`): new rows
+  land as draft + unverified + medium confidence with slug, search key and
+  resolver-assigned area (provenance trio, manual assignments protected);
+  refresh touches only unreviewed OSM-sourced drafts — verified, reviewed,
+  published, differently-sourced or admin-deleted rows are counted as
+  protected and left byte-identical.
+- Admin "Import from OpenStreetMap" flow under the existing Places admin
+  (flag `places.database`, permissions `geography.places.*`): scope +
+  category-group picker, session preview that writes NOTHING, explicit
+  confirm bounded to 1000 candidates per run in chunked transactions (the
+  summary reports the remainder; re-running continues idempotently).
+- Bulk review on the Places index: source/publication/verification/area
+  filters, page-local selection, publish/unpublish walking each row's
+  LEGAL transition path (publish gated on `geography.places.verify`,
+  archived rows never resurrected, ≤200 rows per request). The final
+  publish hop fires the existing `PlaceObserver` →
+  `RecalculateNearbyPlaces` hand-off on the `maintenance` queue.
+- Public area pages: a "Services in this area" premium-glass summary —
+  grouped counts (expandable per category) from published + public +
+  duplicate-primary + operating places assigned to the area; zero-count
+  groups hidden; new service-group glyphs in the shared icon set.
+- `resources/js/lib/map/poiCategories.ts`: the one explicit, tested map
+  from open DB category keys into Phase 1's closed `PoiCategory` union
+  (unknown → `other`; church/hotel deliberately `other` so the union and
+  the mosque semantics stay untouched).
+
+### Changed
+- `/map` Explorer renders the places layer through Phase 1's `setPois()`
+  overlay (subdued, zoom-gated, beneath project markers) instead of mixing
+  places into the clustered record source; the list keeps its place rows.
+- Admin Place create/edit now stamps a hand-picked area as manual
+  (`area_is_manual` + provenance), making the existing protection columns
+  enforceable against importer refreshes.
+
 ## [Unreleased] — Map Phase 1: premium dark basemap
 
 **Status: NOT DEPLOYED.** Map presentation only: no backend behavior,

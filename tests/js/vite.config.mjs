@@ -26,6 +26,7 @@ export default defineConfig({
                 geometry: resolve(import.meta.dirname, 'geometry.test.ts'),
                 wizard: resolve(import.meta.dirname, 'wizard.test.ts'),
                 trend: resolve(import.meta.dirname, 'trend.test.ts'),
+                poi: resolve(import.meta.dirname, 'poi.test.ts'),
             },
             output: { entryFileNames: '[name].mjs', format: 'es' },
         },

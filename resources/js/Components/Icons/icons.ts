@@ -17,19 +17,27 @@ export type IconName =
     | 'advisor'
     | 'areas'
     | 'arrow-end'
+    | 'bag'
+    | 'banknote'
     | 'bell'
     | 'building'
+    | 'bus'
     | 'chart-line'
     | 'check'
     | 'chevron'
     | 'chevron-down'
     | 'close'
     | 'compass'
+    | 'cup'
+    | 'dome'
+    | 'education'
     | 'external'
     | 'filter'
     | 'globe'
+    | 'health'
     | 'home'
     | 'invest'
+    | 'landmark'
     | 'layers'
     | 'locate'
     | 'map'
@@ -47,6 +55,7 @@ export type IconName =
     | 'shield-check'
     | 'spark'
     | 'sun'
+    | 'tree'
     | 'trend-down'
     | 'trend-flat'
     | 'trend-up'
@@ -103,6 +112,21 @@ export const iconPaths: Record<IconName, string> = {
     moon: 'M20.2 13.1A8.3 8.3 0 1 1 10.9 3.8a6.5 6.5 0 0 0 9.3 9.3Z',
     more: 'M5.2 12h.01M12 12h.01M18.8 12h.01',
     sun: 'M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4ZM12 2.9v2.2m0 13.8v2.2M2.9 12h2.2m13.8 0h2.2M5.6 5.6l1.5 1.5m9.8 9.8 1.5 1.5m0-12.8-1.5 1.5M7.1 16.9l-1.5 1.5',
+    /*
+     * Service-group glyphs (Map Phase 2) for the area "services" summary.
+     * Same 24-grid, single-path, stroke-only discipline as everything above.
+     * The worship glyph is a neutral dome — it stands for the group, never
+     * for one religion's building; the category label carries the specifics.
+     */
+    bag: 'M6 8.2h12l-.9 10.9a1.7 1.7 0 0 1-1.7 1.5H8.6a1.7 1.7 0 0 1-1.7-1.5Zm2.6 0V7a3.4 3.4 0 0 1 6.8 0v1.2',
+    banknote: 'M3.6 7h16.8v10H3.6Zm3 0v10m10.8-10v10M12 14.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z',
+    bus: 'M5.2 4.8h13.6a1 1 0 0 1 1 1v9.8a1.6 1.6 0 0 1-1.6 1.6H5.8a1.6 1.6 0 0 1-1.6-1.6V5.8a1 1 0 0 1 1-1Zm-1 6.6h15.6M7.6 20v-2.8m8.8 2.8v-2.8M7.8 14.4h.01m8.4 0h.01',
+    cup: 'M5.4 8.2h11v7a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4Zm11 1.4h1.6a2.4 2.4 0 0 1 0 4.8h-1.6M7.6 5.4V3.6m3.4 1.8V3.6m3.4 1.8V3.6',
+    dome: 'M6 20.2V11a6 6 0 0 1 12 0v9.2M3.8 20.2h16.4M12 5V3.2m-1.6 14v3.2h3.2V17.2a1.6 1.6 0 0 0-3.2 0Z',
+    education: 'M12 4.6 21 8.4l-9 3.8-9-3.8Zm-5.4 5.2v4.6c0 1.4 2.4 2.8 5.4 2.8s5.4-1.4 5.4-2.8V9.8M21 8.4v5.2',
+    health: 'M9.6 4.4h4.8v5.2h5.2v4.8h-5.2v5.2H9.6v-5.2H4.4V9.6h5.2Z',
+    landmark: 'M12 3.8 20.4 8H3.6ZM5.2 8v9.4m4.5-9.4v9.4m4.6-9.4v9.4M18.8 8v9.4M3.6 17.4h16.8v2.8H3.6Z',
+    tree: 'M12 3.8c2.9 0 5.2 2.1 5.2 4.7 0 .4-.1.8-.2 1.2a4.4 4.4 0 0 1 1.6 3.4c0 2.5-2.1 4.5-4.7 4.5H10.1c-2.6 0-4.7-2-4.7-4.5 0-1.4.6-2.6 1.6-3.4-.1-.4-.2-.8-.2-1.2 0-2.6 2.3-4.7 5.2-4.7Zm0 8v8.4m0-5.4 2.6-2m-2.6 4-2.4-1.9',
     search: 'M10.8 17.2a6.4 6.4 0 1 0 0-12.8 6.4 6.4 0 0 0 0 12.8Zm4.8-1.6 4.6 4.6',
     'shield-check': 'M12 3.4 5 6v5.2c0 4.6 3 8 7 9.4 4-1.4 7-4.8 7-9.4V6Zm-3.2 8.8 2.3 2.3 4.1-4.6',
     'x-circle': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM9.2 9.2l5.6 5.6m0-5.6-5.6 5.6',
