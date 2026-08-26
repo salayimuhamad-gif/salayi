@@ -418,6 +418,8 @@ function adapterOptions() {
         googleKey: props.google_key,
         centre: { lat: 36.19, lng: 44.009 },
         zoom: 12,
+        // MULK-drawn text and pins tuned for the dark public basemap.
+        labelScheme: 'dark' as const,
         // Pinned to Erbil and its suburbs: the surface is about one city,
         // and nobody should have to find it from a world view.
         minZoom: 10,
@@ -696,7 +698,7 @@ watch(showBoundaries, () => void load());
             >
                 <div
                     ref="container"
-                    class="h-[420px] w-full lg:h-[560px]"
+                    class="mh-map-ground h-[420px] w-full lg:h-[560px]"
                     role="application"
                     :aria-label="t('map.invest.title')"
                 />
@@ -718,7 +720,7 @@ watch(showBoundaries, () => void load());
                     class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                     aria-live="polite"
                 >
-                    <p class="mh-invest-chip !cursor-default text-center">
+                    <p class="mh-map-toast">
                         {{ t('map.invest.map_empty_overlay') }}
                     </p>
                 </div>
@@ -734,7 +736,7 @@ watch(showBoundaries, () => void load());
                     class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                     aria-live="polite"
                 >
-                    <p class="mh-invest-chip !cursor-default text-center">
+                    <p class="mh-map-toast">
                         {{ t('map.states.loading_features') }}
                     </p>
                 </div>
@@ -751,10 +753,7 @@ watch(showBoundaries, () => void load());
                     data-testid="map-refetch-failed"
                     class="absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                 >
-                    <div
-                        class="mh-invest-glass flex flex-wrap items-center justify-center gap-2 rounded-card
-                               px-3 py-2"
-                    >
+                    <div class="mh-map-toast mh-map-toast--error">
                         <span class="text-xs text-ink">
                             {{ t('map.states.error') }} — {{ t('map.states.error_hint') }}
                         </span>
@@ -814,14 +813,15 @@ watch(showBoundaries, () => void load());
                      selected card's role=status already announces), no
                      timers, no cursor tracking; its only motion is the eye
                      pulse the global reduced-motion rule stops. -->
+                <!-- Compacted (Map Phase 1): the companion keeps its quiet
+                     corner presence as the avatar alone — the text panel made
+                     it a standing glass notice over the lower map, and the
+                     selection card already announces the selected project. -->
                 <div
-                    class="mh-invest-glass absolute bottom-3 end-3 hidden items-center gap-2.5 rounded-card p-2.5 pe-4 lg:flex"
+                    class="mh-invest-glass absolute bottom-3 end-3 hidden rounded-full p-1.5 lg:flex"
                     aria-hidden="true"
                 >
-                    <AiAvatar class="h-10 w-10 shrink-0" :glow="false" />
-                    <p class="max-w-44 text-xs leading-snug text-ink-muted">
-                        {{ selected ? selected.name : t('map.invest.companion_hint') }}
-                    </p>
+                    <AiAvatar class="h-9 w-9 shrink-0" :glow="false" />
                 </div>
 
                 <!-- Selected project on DESKTOP: glass card floating over the

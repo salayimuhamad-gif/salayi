@@ -25,9 +25,10 @@ test.beforeAll(() => {
 /*
  * The map surfaces with a WORKING style — the other half of the contract.
  *
- * invest.spec.ts pins the degraded path: the harness's hermetic network makes
- * every external request return an empty body, so the style fails and the
- * product must state that and keep the list alive. This suite pins the path
+ * invest.spec.ts pins the degraded path: the harness's hermetic network drops
+ * every external request, so the CARTO tiles never arrive and the surface
+ * must stay calm on its dark ground with the list alive; the explicit
+ * style-abort test below pins the full provider-failure statement. This suite pins the path
  * production was shipping broken: the style LOADS, the map becomes ready, the
  * canvas is laid out by the MapLibre stylesheet, markers carry data for all
  * four trends, a marker click selects, and the admin picker built inside a
@@ -36,13 +37,13 @@ test.beforeAll(() => {
  * DETERMINISM: the style these tests load is served from inside the test via
  * route interception — a background-only MapLibre style with no sources, no
  * sprite, no glyph server and no tiles, so nothing here ever contacts
- * demotiles.maplibre.org or any other provider. CI must not depend on public
- * demo infrastructure; a style that needs zero further requests is the
- * strongest form of that rule. Marker icons render regardless, because the
+ * any tile provider. CI must not depend on outside map infrastructure — the
+ * fallback style document itself is same-origin since Map Phase 1 — and a
+ * style that needs zero further requests is the strongest form of that rule. Marker icons render regardless, because the
  * adapter draws them onto a canvas at registration time.
  */
 
-const STYLE_HOST = 'https://demotiles.maplibre.org/**';
+const STYLE_HOST = '**/map-styles/mulk-dark.json';
 
 const DETERMINISTIC_STYLE = {
     version: 8,
@@ -124,9 +125,11 @@ test('/map leaves its loading state and becomes an interactive map', async ({ pa
 });
 
 test('/map states a provider failure and keeps the list; no infinite loader', async ({ page }, testInfo) => {
-    // NO deterministic style here: the harness's hermetic network answers the
-    // style URL with an empty body, which is exactly what a dead or blocked
-    // provider looks like from a browser in Erbil.
+    // The style is broken EXPLICITLY: the fallback style document is served
+    // same-origin now (/map-styles/mulk-dark.json), so the hermetic harness
+    // no longer breaks it for free — aborting it here reproduces exactly
+    // what a dead or blocked provider looks like from a browser in Erbil.
+    await page.route(STYLE_HOST, (route) => route.abort());
     await page.goto('/map', { waitUntil: 'domcontentloaded' });
 
     // The failure is stated in human words…

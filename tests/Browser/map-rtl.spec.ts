@@ -26,7 +26,7 @@ import { test, expect, LOCALES, expectNoHorizontalOverflow } from './support/har
  * harness style is inline and needs no network at all.
  */
 
-const STYLE_HOST = 'https://demotiles.maplibre.org/**';
+const STYLE_HOST = '**/map-styles/mulk-dark.json';
 
 const DETERMINISTIC_STYLE = {
     version: 8,

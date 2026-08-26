@@ -55,6 +55,8 @@ async function start(): Promise<void> {
             zoom: props.zoom,
             minZoom: 9,
             maxZoom: 17,
+            // MULK-drawn pin tuned for the dark public basemap.
+            labelScheme: 'dark' as const,
             events: {
                 onMoveEnd: () => {},
                 onClick: () => {},
@@ -81,7 +83,9 @@ async function start(): Promise<void> {
             lat: props.lat,
             lng: props.lng,
             title: props.label,
-            colour: '#0f3e59',
+            // Amber, not petrol: the single locator dot must read against
+            // the dark public basemap (petrol sank into it).
+            colour: '#f3c56f',
         }]);
     } catch {
         // Silent degradation stays silent — but not leaky: the adapter
@@ -123,6 +127,6 @@ onBeforeUnmount(() => {
 <template>
     <!-- Silent degradation: on provider failure the whole box collapses. -->
     <div v-show="!failed" ref="wrapper" class="overflow-hidden rounded-card border border-line">
-        <div ref="container" class="h-64 w-full sm:h-72" role="application" :aria-label="label" />
+        <div ref="container" class="mh-map-ground h-64 w-full sm:h-72" role="application" :aria-label="label" />
     </div>
 </template>

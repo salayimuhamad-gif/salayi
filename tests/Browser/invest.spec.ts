@@ -8,13 +8,14 @@ import {
  * browser coverage any map surface in this product has had.
  *
  * The harness's hermetic network fulfils every EXTERNAL request with an empty
- * body, so map tiles and the MapLibre style can never load here. That is the
+ * body, so the CARTO raster tiles can never load here (the style document
+ * itself is served same-origin since Map Phase 1 and does load). That is the
  * point, not a limitation: the contract under test is the degraded path the
- * product promises on Erbil mobile data — the provider failure is STATED, the
- * list still renders real persisted rows, prices and trends included, and
- * nothing freezes or errors. Marker rendering itself is exercised by the
- * geometry and endpoint suites; a tile server would prove pixels, not
- * behaviour.
+ * product promises on Erbil mobile data — with every tile dropped the map
+ * keeps its dark ground and stays up, the list still renders real persisted
+ * rows, prices and trends included, and nothing freezes or errors. Marker
+ * rendering itself is exercised by the geometry and endpoint suites; a tile
+ * server would prove pixels, not behaviour.
  */
 for (const locale of LOCALES) {
     test.describe(`invest [${locale.code}]`, () => {

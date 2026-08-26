@@ -155,9 +155,12 @@ Authoritative historical records in the repo itself: `docs/MAP_PRODUCTION_AUDIT.
   lives in the adapter instead. Pinned by `map-rtl.spec.ts` (vendor CSS
   neutrality + marker placement for ckb/ar/en).
 - **Style resolution** precedence: server-provided `styleUrl` → inline
-  zero-network `plain` style (admin pickers) → `demotiles.maplibre.org`
-  last-resort default (documented as unsuitable for production; production
-  must set `MAPLIBRE_STYLE_URL`).
+  zero-network `plain` style (admin pickers) → same-origin
+  `/map-styles/mulk-dark.json` default (Map Phase 1: official CARTO Dark
+  Matter raster tiles, keyless, attribution baked in; deliberately no
+  `glyphs` entry so adapter-drawn labels stay on the local TinySDF path).
+  `MAPLIBRE_STYLE_URL` remains the override for deployments that want a
+  different style.
 - **Readiness**: `ready()` races `load` vs `error` vs a 20s deadline. Never
   wait on `load` alone — an unreachable style used to hang every caller
   forever. Sources and layers may only be added inside the `load` handler.
@@ -369,7 +372,7 @@ first suspects (each maps to a documented incident):
 |---|---|
 | Blank/grey map | MapLibre CSS in `app.ts` (RC1) → style URL config (RC2) → worker asset 404 (RC8) → container 0×0 (RC3) → WebGL |
 | Wrong size | hidden container at construction → ResizeObserver alive → resize after SPA nav |
-| Missing style/tiles | `MAPLIBRE_STYLE_URL` set? demotiles fallback in play? network blocked (hermetic tests)? |
+| Missing style/tiles | `MAPLIBRE_STYLE_URL` set? same-origin `/map-styles/mulk-dark.json` fallback in play (public file present in the deploy)? CARTO tile host reachable? network blocked (hermetic tests)? |
 | Missing markers | **worker first** (map loads, sources stay empty) → `/features` response → layer filters → cluster swallowing |
 | Broken polygon | zoom gate → coordinate order ([lng,lat]!) → WKT validity → winding (Google) |
 | Wrong project on click | `feature.properties.id` → `queryRenderedFeatures` layer set → cluster vs point |
