@@ -104,6 +104,14 @@ export class MapLibreAdapter implements MapAdapter {
 
     private hoveredBoundarySlug: string | null = null;
 
+    /*
+     * Market heat (Map Phase 4), buffered exactly like the selection slug:
+     * a payload set before `load` paints the moment the layers exist. Keys
+     * are area slugs; the values are the ONLY directions the market engine
+     * ever asserts — absence is "unknown" and stays untinted.
+     */
+    private marketHeat: Record<string, 'up' | 'down' | 'flat'> | null = null;
+
     private constructor(private readonly options: AdapterOptions) {}
 
     static async create(options: AdapterOptions): Promise<MapLibreAdapter> {
@@ -407,6 +415,37 @@ export class MapLibreAdapter implements MapAdapter {
                         ['boolean', ['feature-state', 'hover'], false], 0.9,
                         0.6,
                     ],
+                },
+            });
+
+            /*
+             * Market heat (Map Phase 4): in Market mode the polygons
+             * THEMSELVES carry the market claim — the same trend colours the
+             * markers already speak (trend.ts is the single source), matched
+             * by slug from the payload the market engine asserted. Anything
+             * the engine did not assert stays fully transparent: "unknown"
+             * is the untinted dark base, never a pretended colour. Added
+             * here — above the passive boundary wash, beneath the Phase 3
+             * selection layers and every marker/POI/label that follows.
+             */
+            map.addLayer({
+                id: 'market-fill',
+                type: 'fill',
+                source: 'boundaries',
+                paint: {
+                    'fill-color': this.marketColourExpression(),
+                    'fill-opacity': 0.32,
+                },
+            });
+
+            map.addLayer({
+                id: 'market-line',
+                type: 'line',
+                source: 'boundaries',
+                paint: {
+                    'line-color': this.marketColourExpression(),
+                    'line-width': 1.8,
+                    'line-opacity': 0.85,
                 },
             });
 
@@ -924,6 +963,55 @@ export class MapLibreAdapter implements MapAdapter {
             this.map.setFilter('boundary-selected-fill', filter);
             this.map.setFilter('boundary-selected-line', filter);
         }
+    }
+
+    /**
+     * Tint the area polygons as the market heatmap (Map Phase 4), or clear
+     * with null. Buffered like every other setter; stateless per update —
+     * one match-expression over the (≤40) painted slugs, rebuilt whole, so
+     * there is no per-feature state to leak when the viewport changes.
+     */
+    setMarketHeat(heat: Record<string, 'up' | 'down' | 'flat'> | null): void {
+        this.marketHeat = heat;
+
+        if (!this.loaded || this.map === null || this.map.getLayer('market-fill') === undefined) {
+            return;
+        }
+
+        const colour = this.marketColourExpression();
+
+        this.map.setPaintProperty('market-fill', 'fill-color', colour);
+        this.map.setPaintProperty('market-line', 'line-color', colour);
+    }
+
+    /**
+     * The heat payload as one slug-matched colour expression. Directions
+     * translate through trend.ts — the single source of trend colour — and
+     * everything unmatched resolves fully transparent: an area the market
+     * engine made no claim about keeps the base map's neutral dark look.
+     */
+    private marketColourExpression(): import('maplibre-gl').ExpressionSpecification | string {
+        const transparent = 'rgba(0, 0, 0, 0)';
+        const heat = this.marketHeat ?? {};
+
+        const expression: unknown[] = ['match', ['get', 'slug']];
+
+        for (const direction of ['up', 'down', 'flat'] as const) {
+            const slugs = Object.keys(heat).filter((slug) => heat[slug] === direction);
+
+            // A match branch with an empty label list is invalid — omit it.
+            if (slugs.length > 0) {
+                expression.push(slugs, trendColour(direction));
+            }
+        }
+
+        if (expression.length === 2) {
+            return transparent;
+        }
+
+        expression.push(transparent);
+
+        return expression as import('maplibre-gl').ExpressionSpecification;
     }
 
     /**

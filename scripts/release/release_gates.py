@@ -211,6 +211,13 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # measured by the same probe as location-intelligence) resolves/denies/
     # answers outside-coverage honestly through /location/resolve.
     'tests/Browser/map-area-selection.spec.ts',
+    # Map Phase 4 market heatmap on /map: the seeded ring paints the
+    # movement engine's own +5.04% verdict green (pixel-sampled per locale)
+    # and clears on mode exit; window chips disable exactly what the
+    # monthly evidence cannot support; rent and typed-category views answer
+    # with honest reasons instead of tints; Phase 3 selection still works
+    # under the heat; the 360 layout holds.
+    'tests/Browser/map-market-heatmap.spec.ts',
     # The working-map suite: a deterministic style served from inside the
     # tests (never demotiles), map readiness on the homepage//map//invest,
     # all four trend semantics from persisted rows, marker-click selection,
@@ -286,6 +293,9 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'hit-test priority, dismissal, geolocation outcomes and POI wiring '
         'run once each on desktop-1440x900 (plus one 360x800 sheet pass and '
         'one 390x844 live-location pass)',
+    'tests/Browser/map-market-heatmap.spec.ts':
+        'pixel sampling and the filter contract run on desktop-1440x900 '
+        '(the locale pass loops there), plus one 360x800 layout pass',
     'tests/Browser/map-production.spec.ts':
         'marker interaction and the admin picker are desktop scenarios; '
         'the map/list switch exists only below md',
