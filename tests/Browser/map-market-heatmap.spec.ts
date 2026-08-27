@@ -133,6 +133,21 @@ for (const locale of LOCALES) {
         await expect(modeChip).toBeVisible();
         await expect(modeChip).toHaveText(MODE_MARKET[locale.code]);
 
+        /*
+         * Baseline WITH the ordinary boundary wash: the areas layer is
+         * switched on first — exactly what Market mode itself would do —
+         * because that wash legitimately remains when the mode exits.
+         * A baseline taken against the bare basemap would read the wash
+         * as residual heat. (The auto-enable contract itself is proven
+         * from a clean state in the 360 test below.)
+         */
+        const boundariesFetch = page.waitForResponse((response) =>
+            response.url().includes('/map/features')
+            && decodeURIComponent(response.url()).includes('layers[]=areas'));
+        await page.getByRole('button', { name: AREAS_CHIP[locale.code], exact: true }).click();
+        await boundariesFetch;
+        await page.waitForTimeout(1_200);
+
         const before = await sampleHeatPixel(page, map);
 
         const payload = await enterMarketMode(page, locale.code);
@@ -262,9 +277,14 @@ test('market mode holds the 360x800 layout', async ({ page, diagnostics }, testI
 
     await openExplorer(page);
 
+    // From a CLEAN state here: entering the mode must itself switch the
+    // areas layer on — the polygons the heat paints arrive through the
+    // ordinary layer pipeline.
     const heatFetch = page.waitForResponse((response) => response.url().includes('/map/market'));
     await page.getByTestId('map-mode-market').click();
     expect((await heatFetch).ok()).toBe(true);
+    await expect(page.getByRole('button', { name: AREAS_CHIP.ckb, exact: true }))
+        .toHaveAttribute('aria-pressed', 'true');
 
     await expect(page.getByTestId('market-controls')).toBeVisible();
     await expect(page.getByTestId('market-legend')).toBeVisible();
