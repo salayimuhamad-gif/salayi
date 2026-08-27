@@ -3,6 +3,72 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 5: unified trilingual map search
+
+**Status: NOT DEPLOYED.** No schema change, no migration, no new
+dependency; authentication, Telegram/WhatsApp, feature-flag semantics,
+the OSM import architecture, market calculation and release tooling
+untouched. There is ONE text normalizer: the incoming query folds
+through the same `SoraniText::searchKey()` that built every stored
+`search_key` — no parallel index, no second Kurdish normalization, no
+external geocoder.
+
+### Added
+- `GET /map/search` — unified search over MULK's own Areas, Projects and
+  Places (gated `feature:map.explorer`, its own `map-explorer-search`
+  limiter at the interactive 30/min so explorer autocomplete neither
+  spends nor is starved by the invest search or the viewport budgets).
+  `q` is required, 2–80 chars; a query that folds to fewer than two
+  meaningful characters answers honest empty groups, not an error.
+  Response rows carry navigation-safe fields only: areas
+  (`slug/name/type/type_label/breadcrumb/lat/lng` + the cached bbox as
+  `bounds` — never boundary WKT), projects
+  (`slug/name/project_type/area_name/area_slug/lat/lng`), places
+  (`slug/name/category/category_name/area_name/lat/lng`); no phone
+  fields, no OSM review metadata. Caps 5 areas / 5 projects / 7 places.
+- `MapSearchService` — bounded, portable, deterministic: per type, two
+  `search_key LIKE` passes with explicit `ESCAPE '!'` (identical on
+  SQLite and MariaDB; `!`/`%`/`_` escaped so wildcards can never act as
+  wildcards), prefix candidates filling a 3×cap budget before contains
+  candidates may, then a small PHP re-rank — exact name/alias > name or
+  alias starts-with > combined-key starts-with > contains, ties on
+  display name then slug. Visibility is each surface's own public rule:
+  areas published WITH fully published ancestry (one bulk ancestor query
+  that doubles as the breadcrumb), projects published with real
+  coordinates, places published + public + operating + duplicate-primary
+  and the whole group only while `places.database` is enabled.
+- A premium glass **search combobox** on `/map` (compact above the map,
+  full-width on phones): 300ms debounce, AbortController + attempt-token
+  race guard (older answers can never overwrite the newest query),
+  grouped results labelled with the existing layer vocabulary, real
+  keyboard support (ArrowDown/Up walk `aria-activedescendant`, Enter
+  selects, Escape closes), localized empty/error/rate-limit states
+  inside the dropdown — the map is never replaced, nothing `alert()`s.
+- Search selection is **navigation**: an Area result funnels into the
+  Phase 3 canonical `selectArea()` — same polygon highlight, same Area
+  Intelligence card — using the response's cached bbox/centroid as the
+  camera fallback when the polygon is outside the loaded viewport (the
+  geometry then arrives through the ordinary viewport fetch). A Project
+  or Place result clears any open Area card (no contradictory selection),
+  enables its layer (a Place also enables ONLY its own category — never
+  all, never disabling others), flies to the stored coordinate (zoom
+  15/16), and leaves a compact glass context strip with the real
+  `/projects/{slug}` / `/places/{slug}` route. Explore/Market mode, every
+  market filter, and the visitor's radius/drawn-area state stay exactly
+  as they were — text search is city-wide by design and sends no spatial
+  parameters.
+- `map.discovery.*` strings (ckb/ar/en) for the control's label,
+  placeholder, states and actions.
+- Tests: `MapSearchTest` (trilingual + alias + keyboard-variant matching,
+  wildcard escaping, every exclusion gate, exact row shapes, caps,
+  deterministic ranking, both CI database lanes) and
+  `map-search.spec.ts` (the three navigation contracts across ckb/en/ar,
+  the stale-response race, the keyboard combobox, Market-mode
+  preservation, and both phone widths), with its registry entry in
+  `scripts/release/release_gates.py`. Browser fixtures gain `name_en`
+  on `browser-invest-tower` and a `search_key` sync pass for the
+  raw-upserted fixture projects.
+
 ## [Unreleased] — Map Phase 4: market heatmap & visual market intelligence
 
 **Status: NOT DEPLOYED.** No schema change, no migration, no new

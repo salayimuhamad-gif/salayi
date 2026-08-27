@@ -15,6 +15,7 @@ import {
     type BoundaryCollection,
     type BoundaryIdentity,
     type MapAdapter,
+    type MapBounds,
 } from '@/lib/map';
 import { trendColour } from '@/lib/map/trend';
 
@@ -168,7 +169,7 @@ function armBoundaryInteraction(): void {
 // adapter's boundary interaction is simply off while a mode is active.
 watch([pickingCentre, drawing], () => armBoundaryInteraction());
 
-function selectArea(identity: BoundaryIdentity, focus = true): void {
+function selectArea(identity: BoundaryIdentity, focus = true, hint?: AreaFocusHint): void {
     // A repeated tap on the already-selected area re-frames and re-opens
     // the sheet, but never burns a second resolve round-trip (and with it
     // the shared rate limit) on data that is already here or in flight.
@@ -180,7 +181,7 @@ function selectArea(identity: BoundaryIdentity, focus = true): void {
     adapter.value?.setSelectedBoundary?.(identity.slug);
 
     if (focus) {
-        focusArea(identity);
+        focusArea(identity, hint);
     }
 
     if (!repeat) {
@@ -198,6 +199,17 @@ function clearArea(): void {
     adapter.value?.setSelectedBoundary?.(null);
 }
 
+/**
+ * Search results carry navigation data an unloaded area cannot supply from
+ * the viewport (Phase 5 §21): the server's cached bbox and centroid ride
+ * along as LAST-RESORT camera fallbacks — loaded geometry, when present,
+ * still wins.
+ */
+interface AreaFocusHint {
+    bounds?: MapBounds | null;
+    point?: { lat: number; lng: number } | null;
+}
+
 /*
  * Camera focus happens ONCE, at the moment of explicit selection (§15) —
  * never from a watcher — with padding reserving room for the desktop card
@@ -205,7 +217,7 @@ function clearArea(): void {
  * mobile sheet. A polygon absent from the loaded boundaries (zoomed-out
  * entry from the list) falls back to the area's centroid point.
  */
-function focusArea(identity: BoundaryIdentity): void {
+function focusArea(identity: BoundaryIdentity, hint?: AreaFocusHint): void {
     const map = adapter.value;
 
     if (!map) return;
@@ -229,7 +241,11 @@ function focusArea(identity: BoundaryIdentity): void {
     const feature = boundaries.value.features.find(
         (candidate) => (candidate.properties as { slug?: string } | undefined)?.slug === identity.slug,
     );
-    const box = feature ? boundaryBounds(feature.geometry) : null;
+    // Loaded geometry first; the search response's cached bbox only when
+    // the polygon is not in this viewport's payload (§21) — the fit then
+    // moves the camera, and the ordinary moveend fetch brings the real
+    // geometry in for the selection styling to land on.
+    const box = (feature ? boundaryBounds(feature.geometry) : null) ?? hint?.bounds ?? null;
 
     if (box && map.fitBounds) {
         map.fitBounds(box, { padding, maxZoom: 15 });
@@ -237,7 +253,7 @@ function focusArea(identity: BoundaryIdentity): void {
         return;
     }
 
-    const row = features.value.areas.find((area) => area.slug === identity.slug);
+    const row = features.value.areas.find((area) => area.slug === identity.slug) ?? hint?.point ?? null;
 
     if (row) {
         map.flyTo({ lat: row.lat, lng: row.lng }, 13);
@@ -323,6 +339,330 @@ function selectAreaFromRow(feature: Feature): void {
     if (!feature.slug) return;
 
     selectArea({ slug: feature.slug, name: feature.name ?? '', type: (feature as { type?: string }).type ?? '' });
+}
+
+/* ---------------------------------------------- unified search (Phase 5) */
+
+/*
+ * One trilingual search over MULK's own Areas, Projects and Places —
+ * /map/search, never a geocoder. Selection is NAVIGATION: an area result
+ * lands in the Phase 3 canonical selection (same card, same highlight), a
+ * project/place result flies the camera and leaves a compact context strip
+ * with the real profile route. Nothing here touches the Market mode, its
+ * filters, or the visitor's radius/drawn-area state — the query goes to
+ * the server bare, so text search is city-wide while spatial filters keep
+ * governing the layer fetches they always governed.
+ */
+
+interface SearchAreaRow {
+    kind: 'area';
+    slug: string;
+    name: string;
+    type: string;
+    type_label: string;
+    breadcrumb: Array<{ name: string }>;
+    lat: number | null;
+    lng: number | null;
+    bounds: MapBounds | null;
+}
+
+interface SearchProjectRow {
+    kind: 'project';
+    slug: string;
+    name: string;
+    project_type: string;
+    area_name: string | null;
+    area_slug: string | null;
+    lat: number;
+    lng: number;
+}
+
+interface SearchPlaceRow {
+    kind: 'place';
+    slug: string;
+    name: string;
+    category: string | null;
+    category_name: string | null;
+    area_name: string | null;
+    lat: number;
+    lng: number;
+}
+
+type SearchRow = SearchAreaRow | SearchProjectRow | SearchPlaceRow;
+
+const searchQuery = ref('');
+const searchOpen = ref(false);
+const searchPhase = ref<'loading' | 'ready' | 'error' | 'rate_limited'>('ready');
+const searchGroups = ref<{ areas: SearchAreaRow[]; projects: SearchProjectRow[]; places: SearchPlaceRow[] }>({
+    areas: [], projects: [], places: [],
+});
+/** Keyboard-active option, as an index into searchFlat; −1 = none. */
+const searchActive = ref(-1);
+const searchInput = ref<HTMLInputElement | null>(null);
+
+/**
+ * Compact context for a searched project/place — name, containing area,
+ * and the profile route. Mutually exclusive with the Area card (§25): a
+ * project/place choice clears the area selection, and any area selection
+ * retires this strip, so the map never claims two subjects at once.
+ */
+const searchContext = ref<{ kind: 'project' | 'place'; slug: string; name: string; area_name: string | null } | null>(null);
+
+watch(selectedArea, (identity) => {
+    if (identity !== null) searchContext.value = null;
+});
+
+let searchAttempt = 0;
+let searchAbort: AbortController | null = null;
+let searchDebounce: ReturnType<typeof setTimeout> | undefined;
+
+const searchFlat = computed<SearchRow[]>(() => [
+    ...searchGroups.value.areas,
+    ...searchGroups.value.projects,
+    ...searchGroups.value.places,
+]);
+
+/** Grouped for rendering, with each option's global index for the combobox. */
+const searchGrouped = computed(() => {
+    let index = 0;
+    const build = (key: 'areas' | 'projects' | 'places', rows: SearchRow[]) =>
+        ({ key, rows: rows.map((row) => ({ row, index: index++ })) });
+
+    return [
+        build('areas', searchGroups.value.areas),
+        build('projects', searchGroups.value.projects),
+        build('places', searchGroups.value.places),
+    ].filter((group) => group.rows.length > 0);
+});
+
+const searchActiveId = computed(() =>
+    (searchOpen.value && searchActive.value >= 0 ? `map-search-option-${searchActive.value}` : undefined));
+
+const searchContextHref = computed(() => {
+    const context = searchContext.value;
+
+    if (!context) return null;
+
+    return context.kind === 'project'
+        ? localized(`/projects/${context.slug}`)
+        : localized(`/places/${context.slug}`);
+});
+
+/** The secondary line under a result: what it is, and where. */
+function searchRowMeta(row: SearchRow): string {
+    if (row.kind === 'area') {
+        const crumbs = row.breadcrumb.map((crumb) => crumb.name).filter((name) => name !== '');
+
+        return crumbs.length > 0 ? `${row.type_label} · ${crumbs.join(' · ')}` : row.type_label;
+    }
+
+    const label = row.kind === 'project' ? t(`projects.types.${row.project_type}`) : (row.category_name ?? '');
+
+    if (row.area_name === null || row.area_name === '') return label;
+
+    return label === '' ? row.area_name : `${label} · ${row.area_name}`;
+}
+
+function onSearchInput(): void {
+    searchActive.value = -1;
+
+    if (searchDebounce !== undefined) clearTimeout(searchDebounce);
+
+    const query = searchQuery.value.trim();
+
+    // Below the server's own minimum there is nothing to ask (§6/§17):
+    // strand any in-flight answer so it cannot reopen a closed dropdown.
+    if (query.length < 2) {
+        searchAttempt += 1;
+        searchAbort?.abort();
+        searchAbort = null;
+        searchGroups.value = { areas: [], projects: [], places: [] };
+        searchPhase.value = 'ready';
+        searchOpen.value = false;
+
+        return;
+    }
+
+    searchOpen.value = true;
+    searchPhase.value = 'loading';
+    searchDebounce = setTimeout(() => {
+        void runSearch(query);
+    }, 300);
+}
+
+async function runSearch(query: string): Promise<void> {
+    // Generation token + abort (§17): M→Mu→Muf→Mufti may overlap on the
+    // wire, but only the LATEST query's answer may render.
+    const attempt = ++searchAttempt;
+
+    searchAbort?.abort();
+    const controller = new AbortController();
+    searchAbort = controller;
+
+    searchPhase.value = 'loading';
+
+    try {
+        const response = await fetch(localized(`/map/search?q=${encodeURIComponent(query)}`), {
+            headers: { Accept: 'application/json' },
+            signal: controller.signal,
+        });
+
+        if (attempt !== searchAttempt) return;
+
+        if (response.status === 429) {
+            searchPhase.value = 'rate_limited';
+
+            return;
+        }
+
+        if (!response.ok) {
+            searchPhase.value = 'error';
+
+            return;
+        }
+
+        const payload = (await response.json()) as {
+            groups?: { areas?: SearchAreaRow[]; projects?: SearchProjectRow[]; places?: SearchPlaceRow[] };
+        };
+
+        if (attempt !== searchAttempt) return;
+
+        searchGroups.value = {
+            areas: payload.groups?.areas ?? [],
+            projects: payload.groups?.projects ?? [],
+            places: payload.groups?.places ?? [],
+        };
+        searchPhase.value = 'ready';
+        searchActive.value = -1;
+    } catch (error) {
+        if ((error as { name?: string }).name === 'AbortError' || attempt !== searchAttempt) return;
+
+        searchPhase.value = 'error';
+    }
+}
+
+function retrySearch(): void {
+    const query = searchQuery.value.trim();
+
+    if (query.length >= 2) void runSearch(query);
+}
+
+function closeSearch(): void {
+    searchOpen.value = false;
+    searchActive.value = -1;
+}
+
+function onSearchFocus(): void {
+    if (searchQuery.value.trim().length >= 2) {
+        searchOpen.value = true;
+    }
+}
+
+function scrollActiveOption(): void {
+    if (typeof document === 'undefined' || searchActive.value < 0) return;
+
+    document.getElementById(`map-search-option-${searchActive.value}`)?.scrollIntoView({ block: 'nearest' });
+}
+
+function onSearchKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape') {
+        if (searchOpen.value) {
+            event.preventDefault();
+            closeSearch();
+        }
+
+        return;
+    }
+
+    if (!searchOpen.value) {
+        if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && searchQuery.value.trim().length >= 2) {
+            event.preventDefault();
+            searchOpen.value = true;
+        }
+
+        return;
+    }
+
+    const count = searchFlat.value.length;
+
+    if (event.key === 'ArrowDown' && count > 0) {
+        event.preventDefault();
+        searchActive.value = (searchActive.value + 1) % count;
+        scrollActiveOption();
+    } else if (event.key === 'ArrowUp' && count > 0) {
+        event.preventDefault();
+        searchActive.value = searchActive.value <= 0 ? count - 1 : searchActive.value - 1;
+        scrollActiveOption();
+    } else if (event.key === 'Enter') {
+        const row = searchFlat.value[searchActive.value];
+
+        if (searchActive.value >= 0 && row) {
+            event.preventDefault();
+            chooseResult(row);
+        }
+    }
+}
+
+function chooseResult(row: SearchRow): void {
+    closeSearch();
+    // Blurring also closes the on-screen keyboard, so on a phone the map
+    // the visitor just navigated is actually visible (§35).
+    searchInput.value?.blur();
+    searchQuery.value = row.name;
+    mobileView.value = 'map';
+
+    if (row.kind === 'area') {
+        chooseArea(row);
+    } else if (row.kind === 'project') {
+        chooseProject(row);
+    } else {
+        choosePlace(row);
+    }
+}
+
+function chooseArea(row: SearchAreaRow): void {
+    // Phase 3's canonical selection — same card, same polygon highlight,
+    // same resolve budget — with the response's cached bbox/centroid as
+    // the camera fallback for an area outside the loaded viewport (§21).
+    // Explore/Market mode and every market filter stay untouched (§20/§26).
+    selectArea({ slug: row.slug, name: row.name, type: row.type }, true, {
+        bounds: row.bounds,
+        point: row.lat !== null && row.lng !== null ? { lat: row.lat, lng: row.lng } : null,
+    });
+}
+
+function chooseProject(row: SearchProjectRow): void {
+    clearArea();
+
+    // The marker arrives the ordinary way: layer on, camera there, and the
+    // debounced viewport fetch loads it — no second lookup, no DOM marker.
+    if (!active.value.includes('projects') && availableKeys.value.includes('projects')) {
+        active.value = [...active.value, 'projects'];
+    }
+
+    adapter.value?.flyTo({ lat: row.lat, lng: row.lng }, 15);
+    scheduleLoad();
+    searchContext.value = { kind: 'project', slug: row.slug, name: row.name, area_name: row.area_name };
+}
+
+function choosePlace(row: SearchPlaceRow): void {
+    clearArea();
+
+    // Enable the places layer and THIS category only (§27) — never all
+    // categories, and never switching an unrelated one off.
+    if (availableKeys.value.includes('places')) {
+        if (!active.value.includes('places')) {
+            active.value = [...active.value, 'places'];
+        }
+
+        if (row.category !== null && !activeCategories.value.includes(row.category)) {
+            activeCategories.value = [...activeCategories.value, row.category];
+        }
+    }
+
+    adapter.value?.flyTo({ lat: row.lat, lng: row.lng }, 16);
+    scheduleLoad();
+    searchContext.value = { kind: 'place', slug: row.slug, name: row.name, area_name: row.area_name };
 }
 
 /* --------------------------------------------- market heatmap (Phase 4) */
@@ -1286,6 +1626,9 @@ onBeforeUnmount(() => {
     areaAbort?.abort();
     marketAttempt += 1;
     marketAbort?.abort();
+    searchAttempt += 1;
+    searchAbort?.abort();
+    if (searchDebounce !== undefined) clearTimeout(searchDebounce);
     if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
     if (locationNoticeTimer !== undefined) clearTimeout(locationNoticeTimer);
     adapter.value?.destroy();
@@ -1376,6 +1719,118 @@ watch(flat, () => syncSource());
 
             <!-- ------------------------------------------------- controls -->
             <div class="mb-4 space-y-3">
+                <!-- Unified search (Phase 5): MULK's own areas, projects and
+                     places, trilingual, in the invest search's glass voice —
+                     compact above the map, never a page-wide panel. A real
+                     combobox: debounced, race-guarded, keyboard-complete. -->
+                <div class="relative max-w-md">
+                    <label class="mh-label mb-1.5 block" for="map-search">{{ t('map.discovery.label') }}</label>
+                    <input
+                        id="map-search"
+                        ref="searchInput"
+                        v-model="searchQuery"
+                        type="search"
+                        role="combobox"
+                        class="mh-invest-search mh-touch-target w-full rounded-card px-3.5 py-2.5 text-sm text-ink"
+                        :placeholder="t('map.discovery.placeholder')"
+                        autocomplete="off"
+                        data-testid="map-search-input"
+                        :aria-expanded="searchOpen"
+                        aria-controls="map-search-listbox"
+                        aria-autocomplete="list"
+                        :aria-activedescendant="searchActiveId"
+                        @input="onSearchInput"
+                        @focus="onSearchFocus"
+                        @blur="closeSearch"
+                        @keydown="onSearchKeydown"
+                    >
+
+                    <!-- @mousedown.prevent keeps the input focused through a
+                         click inside the dropdown, so blur-to-close can never
+                         race the option's own click handler. -->
+                    <div
+                        v-if="searchOpen"
+                        id="map-search-listbox"
+                        role="listbox"
+                        :aria-label="t('map.discovery.label')"
+                        data-testid="map-search-results"
+                        class="mh-invest-glass absolute inset-x-0 top-full z-30 mt-1 max-h-[min(60vh,420px)]
+                               overflow-y-auto rounded-card"
+                        @mousedown.prevent
+                    >
+                        <p
+                            v-if="searchPhase === 'loading' && searchFlat.length === 0"
+                            class="px-3.5 py-2.5 text-sm text-ink-muted"
+                        >
+                            {{ t('map.discovery.searching') }}
+                        </p>
+                        <p
+                            v-else-if="searchPhase === 'rate_limited'"
+                            data-testid="map-search-error"
+                            class="px-3.5 py-2.5 text-sm text-ink-muted"
+                        >
+                            {{ t('map.discovery.rate_limited') }}
+                        </p>
+                        <div
+                            v-else-if="searchPhase === 'error'"
+                            data-testid="map-search-error"
+                            class="flex items-center justify-between gap-3 px-3.5 py-2.5"
+                        >
+                            <span class="text-sm text-ink-muted">{{ t('map.discovery.error') }}</span>
+                            <button
+                                type="button"
+                                class="mh-touch-target shrink-0 rounded-card border border-line px-3 py-1 text-xs text-ink
+                                       transition-colors hover:bg-surface-sunken
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                @click="retrySearch"
+                            >
+                                {{ t('map.states.retry') }}
+                            </button>
+                        </div>
+                        <p
+                            v-else-if="searchFlat.length === 0"
+                            data-testid="map-search-empty"
+                            class="px-3.5 py-2.5 text-sm text-ink-muted"
+                        >
+                            {{ t('map.discovery.empty') }}
+                        </p>
+                        <template v-else>
+                            <div
+                                v-for="group in searchGrouped"
+                                :key="group.key"
+                                role="group"
+                                :aria-labelledby="`map-search-group-${group.key}`"
+                            >
+                                <p :id="`map-search-group-${group.key}`" class="mh-label px-3.5 pb-1 pt-2.5">
+                                    {{ t(`map.layers.${group.key}`) }}
+                                </p>
+                                <button
+                                    v-for="{ row, index } in group.rows"
+                                    :id="`map-search-option-${index}`"
+                                    :key="`${row.kind}-${row.slug}`"
+                                    type="button"
+                                    role="option"
+                                    :aria-selected="index === searchActive"
+                                    :data-testid="`map-search-option-${row.kind}`"
+                                    :data-slug="row.slug"
+                                    class="mh-touch-target block w-full px-3.5 py-2.5 text-start text-sm text-ink
+                                           transition-colors hover:bg-surface-sunken focus-visible:outline-none"
+                                    :class="index === searchActive ? 'bg-surface-sunken' : ''"
+                                    @click="chooseResult(row)"
+                                >
+                                    <span class="block truncate">{{ row.name }}</span>
+                                    <span
+                                        v-if="searchRowMeta(row) !== ''"
+                                        class="mt-0.5 block truncate text-xs text-ink-muted"
+                                    >
+                                        {{ searchRowMeta(row) }}
+                                    </span>
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
                 <!-- Map mode (Phase 4): Explore is the map as it has always
                      been; Market wears the movement engine's answer on the
                      area polygons. The switch exists only where the market
@@ -1679,6 +2134,48 @@ watch(flat, () => syncSource());
                             @retry="retryAreaIntel"
                             @toggle-service="toggleServiceGroup"
                         />
+                    </div>
+
+                    <!-- Searched project/place context (Phase 5): a compact
+                         glass strip naming what the camera just flew to,
+                         with the real profile route. Mutually exclusive
+                         with the Area card (§25), horizontally inset clear
+                         of the corner controls at every width. -->
+                    <div
+                        v-if="searchContext"
+                        data-testid="map-search-context"
+                        class="pointer-events-none absolute inset-x-16 top-3 z-20 flex justify-center"
+                    >
+                        <div class="mh-invest-glass pointer-events-auto flex max-w-full items-center gap-2.5 rounded-card px-3.5 py-2">
+                            <span class="min-w-0">
+                                <span class="block truncate text-sm text-ink">{{ searchContext.name }}</span>
+                                <span
+                                    v-if="searchContext.area_name"
+                                    class="block truncate text-xs text-ink-muted"
+                                >{{ searchContext.area_name }}</span>
+                            </span>
+                            <Link
+                                v-if="searchContextHref"
+                                :href="searchContextHref"
+                                data-testid="map-search-context-view"
+                                class="mh-touch-target shrink-0 rounded-card border border-line px-3 py-1 text-xs text-ink
+                                       transition-colors hover:bg-surface-sunken
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                            >
+                                {{ searchContext.kind === 'project' ? t('map.discovery.view_project') : t('map.discovery.view_place') }}
+                            </Link>
+                            <button
+                                type="button"
+                                data-testid="map-search-context-dismiss"
+                                class="mh-touch-target shrink-0 rounded-card px-2 py-1 text-xs text-ink-muted
+                                       transition-colors hover:text-ink
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                :aria-label="t('map.discovery.dismiss')"
+                                @click="searchContext = null"
+                            >
+                                ✕
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Location outcome notice (Phase 3 §8): the compact

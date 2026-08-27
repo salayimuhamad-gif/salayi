@@ -229,6 +229,16 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # Runs on every viewport with NO skips, so it is deliberately absent
     # from PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
     'tests/Browser/map-rtl.spec.ts',
+    # Map Phase 5 unified search on /map: the trilingual combobox finds the
+    # seeded area (Sorani), project (English) and place (Arabic) through the
+    # ONE stored search_key; an area choice lands in the Phase 3 canonical
+    # card, a project/place choice flies the camera (proven by the zoom-15/16
+    # follow-up viewport fetch) and leaves the context strip with the real
+    # profile route enabling only its own category; a delayed stale answer
+    # never overwrites the newest query; the arrows/Enter/Escape combobox
+    # contract; Market mode and its filters survive a search untouched; and
+    # the dropdown fits and taps at both phone widths.
+    'tests/Browser/map-search.spec.ts',
     # Wave 4 market movement: the panel drives the REAL /market/movement
     # endpoint against seeded monthly series — sale/rent isolation, exact
     # category composition, the honestly disabled 7D and honestly available
@@ -296,6 +306,11 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
     'tests/Browser/map-market-heatmap.spec.ts':
         'pixel sampling and the filter contract run on desktop-1440x900 '
         '(the locale pass loops there), plus one 360x800 layout pass',
+    'tests/Browser/map-search.spec.ts':
+        'the three navigation contracts, the race guard, the keyboard '
+        'combobox and Market-mode preservation run once each on '
+        'desktop-1440x900 (the trio spans ckb/en/ar there); the dropdown '
+        'layout-and-tap pass runs once at each phone width',
     'tests/Browser/map-production.spec.ts':
         'marker interaction and the admin picker are desktop scenarios; '
         'the map/list switch exists only below md',

@@ -86,6 +86,17 @@ return [
     'area_card' => [
         'view_full' => 'View the full area',
     ],
+    'discovery' => [
+        'label' => 'Find on the map',
+        'placeholder' => 'Search areas, projects and places…',
+        'searching' => 'Searching…',
+        'empty' => 'No matching areas, projects or places found',
+        'error' => 'Search failed — try again',
+        'rate_limited' => 'Too many searches — wait a moment',
+        'view_project' => 'View project',
+        'view_place' => 'View place',
+        'dismiss' => 'Dismiss',
+    ],
     'market' => [
         'mode_label' => 'Map mode',
         'explore' => 'Explore',

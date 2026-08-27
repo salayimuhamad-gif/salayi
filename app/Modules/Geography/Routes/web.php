@@ -39,6 +39,16 @@ Route::middleware('feature:map.explorer')->group(function (): void {
     Route::get('/map/features', [MapExplorerController::class, 'features'])
         ->middleware('throttle:map-features')
         ->name('map.features');
+
+    /*
+     * Map Phase 5: unified trilingual search over MULK's own Areas,
+     * Projects and Places. Its own limiter — explorer autocomplete must
+     * never spend the investment search's `map-search` budget, nor the
+     * viewport's `map-features` one (RC9's one-surface / one-bucket rule).
+     */
+    Route::get('/map/search', [MapExplorerController::class, 'search'])
+        ->middleware('throttle:map-explorer-search')
+        ->name('map.search');
 });
 
 /*
