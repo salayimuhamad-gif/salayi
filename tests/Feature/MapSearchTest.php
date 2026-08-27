@@ -316,6 +316,20 @@ final class MapSearchTest extends TestCase
             ->assertJsonCount(0, 'groups.places');
     }
 
+    public function test_a_low_confidence_place_is_never_offered_as_a_destination(): void
+    {
+        // The map pin layer refuses low-confidence coordinates ("precise and
+        // wrong"), so a search result promising to fly there could never show
+        // its pin — search applies the PIN's rule, not just the profile's.
+        $this->place('vague', ['name_ckb' => 'vagueplace', 'confidence' => 'low']);
+        $this->place('sure', ['name_ckb' => 'vagueplace two', 'confidence' => 'high']);
+
+        $this->search('vagueplace')
+            ->assertOk()
+            ->assertJsonCount(1, 'groups.places')
+            ->assertJsonPath('groups.places.0.slug', 'sure');
+    }
+
     public function test_a_disabled_places_feature_removes_the_places_group_content(): void
     {
         $this->place('mufti-school', ['name_ckb' => 'قوتابخانەی موفتی']);

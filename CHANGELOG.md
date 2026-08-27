@@ -36,7 +36,10 @@ external geocoder.
   areas published WITH fully published ancestry (one bulk ancestor query
   that doubles as the breadcrumb), projects published with real
   coordinates, places published + public + operating + duplicate-primary
-  and the whole group only while `places.database` is enabled.
+  with the map pin's reliability rule (`confidence != 'low'` — a search
+  choice flies to the coordinate and promises the pin, which the places
+  layer refuses to draw for a low-confidence coordinate) and the whole
+  group only while `places.database` is enabled.
 - A premium glass **search combobox** on `/map` (compact above the map,
   full-width on phones): 300ms debounce, AbortController + attempt-token
   race guard (older answers can never overwrite the newest query),

@@ -192,6 +192,14 @@ final class MapSearchService
                 ->published()
                 ->where('is_public', true)
                 ->operating()
+                /*
+                 * The map PIN's reliability rule, not just the profile's: a
+                 * search result flies the camera to this exact coordinate and
+                 * promises the pin will be there (§24) — a low-confidence
+                 * place can never honor that promise, because the places
+                 * layer itself refuses to pin it.
+                 */
+                ->where('confidence', '!=', 'low')
                 ->with([
                     'category:id,key,name_ckb,name_ar,name_en',
                     'area:id,name_ckb,name_ar,name_en',
