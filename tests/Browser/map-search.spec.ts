@@ -379,19 +379,21 @@ for (const project of ['mobile-360x800', 'mobile-390x844'] as const) {
         await expectTouchTargets(page);
 
         // Tapping a result closes the keyboard's claim on the screen and
-        // opens the SAME area intelligence, as the mobile bottom sheet.
+        // opens the SAME area intelligence, as the mobile bottom sheet
+        // (Phase 3's convention: below lg the sheet dialog IS the card).
         const intel = page.waitForResponse((response) => response.url().includes('/location/resolve'));
         await listbox.getByTestId('map-search-option-area').filter({ hasText: AREA_NAME.ckb }).first().tap();
         expect((await intel).ok()).toBe(true);
 
-        const card = page.getByTestId('area-intelligence-card');
-        await expect(card).toBeVisible();
+        const sheet = page.getByRole('dialog');
+        await expect(sheet).toBeVisible();
+        await expect(sheet).toContainText(AREA_NAME.ckb);
 
         // Closing the sheet hands the map back. (The sheet header owns the
-        // close control on mobile — the card's own close is the desktop
-        // float's; scope to the dialog and take its header button.)
-        await page.getByRole('dialog').getByRole('button', { name: 'داخستن' }).last().tap();
-        await expect(card).toBeHidden();
+        // close control on mobile; its scrim shares the label, so take the
+        // header's — the last close button inside the dialog.)
+        await sheet.getByRole('button', { name: 'داخستن' }).last().tap();
+        await expect(page.getByRole('dialog')).toHaveCount(0);
         await expect(page.locator('.maplibregl-canvas')).toBeVisible();
         await expectNoHorizontalOverflow(page);
     });
