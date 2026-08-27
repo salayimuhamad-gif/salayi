@@ -134,6 +134,14 @@ final class MapExplorerController extends Controller
             ...$this->providerPageProps(),
             'layers' => $this->availableLayers(),
             'categories' => $this->categories(),
+            /*
+             * Map Phase 4: whether the Market heatmap mode may exist at all.
+             * The mode's data endpoint (/map/market) sits behind the same
+             * market.intelligence flag server-side; this prop only decides
+             * whether the switch renders, so a disabled deployment shows no
+             * dead control.
+             */
+            'market' => ['available' => (bool) feature('market.intelligence')],
         ]);
     }
 

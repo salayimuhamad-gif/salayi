@@ -192,6 +192,209 @@ final class MarketMovementService
     }
 
     /**
+     * Movement for a SET OF AREAS — the map heatmap's question (Map Phase 4):
+     * one honest claim per area, under exactly the rules movement() already
+     * enforces. Same eligibility, same reliable series, same window pairing,
+     * same calculator verdict; the ONLY new decisions are scoping and
+     * selection, both stated here:
+     *
+     *   - AREAS ONLY, from the caller's id list (the visible, paintable
+     *     polygons) — project indices never tint an area;
+     *   - the CATEGORY filter is single-valued and strict: a named category
+     *     matches indices declaring exactly that category; NULL means the
+     *     spanning all-categories index ONLY. That is the product's existing
+     *     honest "all": an index with property_type NULL spans every
+     *     category, and a typed index never stands in for it — averaging
+     *     incomparable typed indices is exactly what this refuses to do;
+     *   - ONE row per area: its indices are walked in key order (the same
+     *     deterministic order movement() queries in) and the FIRST whose
+     *     pair the calculator accepts for the requested window makes the
+     *     claim. The row carries that index's full identity — currency,
+     *     basis, price type, family, category — so the claim is always
+     *     scoped and stated, never an anonymous blend;
+     *   - an area with no acceptable pair simply has NO row. Absence is the
+     *     wire form of "unknown": the polygon stays untinted, and nothing
+     *     here ever turns missing into flat or zero.
+     *
+     * @param  list<int>  $areaIds
+     * @return array{
+     *     available: bool, reason: string|null,
+     *     transaction: string, window: string, property_type: string|null,
+     *     windows: array<string, bool>,
+     *     property_types: list<string>,
+     *     rows: list<array<string, mixed>>
+     * }
+     */
+    public function areaMovement(string $transaction, string $window, ?string $propertyType, array $areaIds): array
+    {
+        $empty = fn (string $reason, array $windows = []): array => [
+            'available' => false,
+            'reason' => $reason,
+            'transaction' => $transaction,
+            'window' => $window,
+            'property_type' => $propertyType,
+            'windows' => $windows === [] ? array_fill_keys(self::WINDOWS, false) : $windows,
+            'property_types' => $this->propertyTypeValues(),
+            'rows' => [],
+        ];
+
+        if ($areaIds === []) {
+            return $empty('insufficient_history');
+        }
+
+        $indices = $this->areaEligibleIndices($transaction, $propertyType, $areaIds);
+
+        if ($indices->isEmpty()) {
+            // The movement() distinction, kept: "your category filter matched
+            // nothing" invites picking another category; "no history" does not.
+            $anyForTransaction = $propertyType !== null
+                && $this->areaEligibleIndices($transaction, null, $areaIds)->isNotEmpty();
+
+            return $empty($anyForTransaction ? 'no_data_for_filters' : 'insufficient_history');
+        }
+
+        $seriesByIndex = $this->reliableSeries($indices->pluck('id')->all());
+
+        // Published areas only, exactly like entities(): an index whose area
+        // vanished or lost publication paints nothing.
+        $slugsById = Area::query()
+            ->whereIn('id', $indices->pluck('scope_id')->unique()->values()->all())
+            ->where('publication_status', 'published')
+            ->pluck('slug', 'id');
+
+        $rows = [];
+        $windowsAvailable = array_fill_keys(self::WINDOWS, false);
+        $sawSeries = false;
+
+        foreach ($indices as $index) {
+            /** @var list<MarketIndexValue> $series */
+            $series = $seriesByIndex->get($index->id, collect())->values()->all();
+
+            if (count($series) < 2) {
+                continue;
+            }
+
+            $slug = $slugsById->get($index->scope_id);
+
+            if ($slug === null) {
+                continue;
+            }
+
+            $sawSeries = true;
+
+            foreach (self::WINDOWS as $candidate) {
+                $wanted = $candidate === $window && ! isset($rows[$slug]);
+
+                if ($windowsAvailable[$candidate] && ! $wanted) {
+                    continue;
+                }
+
+                $pair = $this->pairFor($candidate, $series);
+
+                if ($pair === null) {
+                    continue;
+                }
+
+                $change = $this->change($index, $pair['previous'], $pair['current']);
+
+                if (! $change['comparable']) {
+                    continue;
+                }
+
+                $windowsAvailable[$candidate] = true;
+
+                if ($wanted) {
+                    $rows[$slug] = $this->areaRow($slug, $index, $pair['previous'], $pair['current'], $change);
+                }
+            }
+        }
+
+        if ($rows === []) {
+            if (! $sawSeries) {
+                return $empty('insufficient_history', $windowsAvailable);
+            }
+
+            $reason = isset(self::DATED_WINDOW_DAYS[$window])
+                ? 'unsupported_short_window'
+                : 'no_compatible_pair';
+
+            return $empty($reason, $windowsAvailable);
+        }
+
+        ksort($rows);
+
+        return [
+            'available' => true,
+            'reason' => null,
+            'transaction' => $transaction,
+            'window' => $window,
+            'property_type' => $propertyType,
+            'windows' => $windowsAvailable,
+            'property_types' => $this->propertyTypeValues(),
+            'rows' => array_values($rows),
+        ];
+    }
+
+    /**
+     * The heatmap's index eligibility: movement()'s rule, narrowed to area
+     * scope, the caller's areas, and the single-category semantics the
+     * method docblock states (NULL = the spanning index only).
+     *
+     * @param  list<int>  $areaIds
+     * @return Collection<int, MarketIndex>
+     */
+    private function areaEligibleIndices(string $transaction, ?string $propertyType, array $areaIds): Collection
+    {
+        return MarketIndex::query()
+            ->where('publication_status', 'published')
+            ->where('scope_type', ScopeType::Area->value)
+            ->whereIn('scope_id', $areaIds)
+            ->when(
+                $propertyType === null,
+                static fn ($q) => $q->whereNull('property_type'),
+                static fn ($q) => $q->where('property_type', $propertyType),
+            )
+            ->orderBy('key')
+            ->get()
+            ->filter(static fn (MarketIndex $index): bool => $index->price_type->transaction() === $transaction)
+            ->values();
+    }
+
+    /**
+     * One heat row — the mover shape flattened to what a polygon needs,
+     * every field measured, the claiming index's identity stated in full.
+     *
+     * @param  array{comparable: bool, reason: string|null, change_percent: string|null, direction: string|null}  $change
+     * @return array<string, mixed>
+     */
+    private function areaRow(
+        string $slug,
+        MarketIndex $index,
+        MarketIndexValue $previous,
+        MarketIndexValue $current,
+        array $change,
+    ): array {
+        return [
+            'area_slug' => $slug,
+            'direction' => $change['direction'],
+            'change_percent' => $change['change_percent'],
+            'current_value' => (string) $current->value,
+            'previous_value' => (string) $previous->value,
+            'currency' => $index->currency,
+            'basis' => $index->basis,
+            'transaction' => $index->price_type->transaction(),
+            'price_type' => $index->price_type->value,
+            'family' => $index->price_type->family(),
+            'property_type' => $index->property_type?->value,
+            'requires_qualifier' => $index->requiresPublicQualifier(),
+            'period_current' => $current->period,
+            'period_previous' => $previous->period,
+            'sample_size' => $current->sample_size,
+            'confidence' => $current->confidence,
+        ];
+    }
+
+    /**
      * Indices that may honestly move: published, scoped to an area or a
      * project, declaring the requested transaction basis outright, and —
      * when categories are filtered — declaring exactly one of them.

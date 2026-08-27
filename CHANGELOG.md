@@ -3,6 +3,61 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 4: market heatmap & visual market intelligence
+
+**Status: NOT DEPLOYED.** No schema change, no migration, no new
+dependency; authentication, Telegram/WhatsApp, feature-flag semantics,
+the OSM import architecture and release tooling untouched. No second
+market calculation engine exists: every painted direction is
+`IndexCalculator::change()`'s verdict, reached through
+`MarketMovementService`.
+
+### Added
+- A **Market mode** on the `/map` explorer (rendered only where
+  `market.intelligence` is enabled): the area polygons themselves become
+  the heatmap — the movement engine's trend colours (`trend.ts`, the same
+  greens/reds/ambers the markers speak) at a restrained wash, with
+  "unknown or insufficient evidence" staying the untinted dark base,
+  never a pretended colour. Explore mode is untouched; Phase 3 selection,
+  hover and the Area Intelligence card keep working under the heat.
+- Compact Market filters reusing the movement product's own vocabularies
+  and strings: Sale XOR Rent, the exact `7d/30d/1m/3m/6m/1y/all` window
+  list with the pulse panel's honest-disabling convention (a window the
+  stored evidence cannot support disables with the reason), and a
+  single-select property category straight from the `PropertyType` enum —
+  where "All categories" means the spanning `property_type NULL` index
+  ONLY, the product's existing honest definition, never an average of
+  incomparable typed indices. A legend pairs every swatch with a word.
+- `GET /map/market` — the smallest read-only market-map endpoint
+  (feature `market.intelligence`, its own `map-market` limiter): bbox +
+  transaction + period + property_type in; per-area heat rows out, scoped
+  to published areas WITH boundaries intersecting the viewport (the same
+  intersection rule and 40 ceiling as the boundary payload, `truncated`
+  detected). Geometry and market intelligence stay separately fetchable;
+  `/map/features` carries no market history.
+- `MarketMovementService::areaMovement()` — the movement engine opened to
+  per-area questions under its existing rules (same eligibility, reliable
+  series, exact window pairing, calculator-verdict comparisons): ONE
+  deterministic first-by-key claim per area with its full identity
+  (currency, basis, price type, family, category, periods, sample size,
+  confidence, qualifier) on the row; an area with no honest pair has NO
+  row — absence is the wire form of unknown, and nothing turns missing
+  into flat or zero, or compares across sale/rent, currencies, bases or
+  methodology versions.
+- Adapter capability `setMarketHeat()`: `market-fill`/`market-line`
+  layers between the boundary wash and the Phase 3 selection layers,
+  painted through one slug-matched expression rebuilt per update.
+- Tests: `MarketMapTest` (15 scenarios pinning the flag gate, vocabulary
+  validation, viewport/boundary scoping, honest directions with exact
+  figures, unknown-by-absence, methodology/gap/short-window refusals,
+  sale/rent isolation, the spanning-index "All" in both directions,
+  deterministic one-claim-per-area, publication gates, the detected
+  ceiling) and `map-market-heatmap.spec.ts` (per-locale pixel-sampled
+  paint + clear, honest filter answers, Phase 3 selection under the heat,
+  360 layout), with one year-apart fixture value added to
+  `browser-ankawa-sale` — analyzed to leave every existing movement-panel
+  assertion untouched.
+
 ## [Unreleased] — Map Phase 3: interactive area selection & live-location intelligence
 
 **Status: NOT DEPLOYED.** No schema change, no migration, no new

@@ -16,6 +16,7 @@ import {
     type BoundaryIdentity,
     type MapAdapter,
 } from '@/lib/map';
+import { trendColour } from '@/lib/map/trend';
 
 /*
  * The public Map Explorer (File one §5, File two §10).
@@ -82,6 +83,8 @@ const props = defineProps<{
     categories: Array<{ key: string; name: string | null; icon: string | null; colour: string | null }>;
     distance: { unit: string; method: string; travel_time_available: boolean };
     limits: { max_per_layer: number; max_radius_km: number };
+    /** Map Phase 4: whether the Market heatmap mode may exist at all. */
+    market: { available: boolean };
 }>();
 
 /* ------------------------------------------------------------------ state */
@@ -322,6 +325,220 @@ function selectAreaFromRow(feature: Feature): void {
     selectArea({ slug: feature.slug, name: feature.name ?? '', type: (feature as { type?: string }).type ?? '' });
 }
 
+/* --------------------------------------------- market heatmap (Phase 4) */
+
+/*
+ * The Market mode: the SAME explorer, wearing the market engine's answer
+ * on its polygons. Every figure and direction below comes from
+ * /map/market, which derives through MarketMovementService — the exact
+ * rules the Market pulse panel answers from. This page adds no arithmetic:
+ * an area the engine made no claim about simply is not in the payload,
+ * and its polygon stays untinted. Unknown is never dressed up as flat.
+ */
+
+interface MarketHeatRow {
+    area_slug: string;
+    direction: 'up' | 'down' | 'flat';
+    change_percent: string | null;
+    current_value: string;
+    previous_value: string;
+    currency: string;
+    basis: string;
+    transaction: string;
+    price_type: string;
+    family: string;
+    property_type: string | null;
+    requires_qualifier: boolean;
+    period_current: string;
+    period_previous: string;
+    sample_size: number | null;
+    confidence: string;
+}
+
+interface MarketHeatResponse {
+    available: boolean;
+    reason: string | null;
+    transaction: string;
+    window: string;
+    property_type: string | null;
+    windows: Record<string, boolean>;
+    property_types: string[];
+    rows: MarketHeatRow[];
+    truncated: boolean;
+}
+
+/** The movement product's window vocabulary, verbatim — never a new one. */
+const MARKET_WINDOWS = ['7d', '30d', '1m', '3m', '6m', '1y', 'all'] as const;
+
+const MARKET_TRANSACTIONS = ['sale', 'rent'] as const;
+
+const mapMode = ref<'explore' | 'market'>('explore');
+const marketTransaction = ref<string>('sale');
+const marketWindow = ref<string>('all');
+/** null = the spanning all-categories index — the product's honest "all". */
+const marketPropertyType = ref<string | null>(null);
+const marketData = ref<MarketHeatResponse | null>(null);
+const marketPhase = ref<'idle' | 'loading' | 'ready' | 'error'>('idle');
+const marketBelowZoom = ref(false);
+
+/** Adopted from the features response, never hardcoded twice. */
+const boundaryZoomThreshold = ref(11);
+
+let marketAttempt = 0;
+let marketAbort: AbortController | null = null;
+
+function setMapMode(mode: 'explore' | 'market'): void {
+    if (mapMode.value === mode) return;
+
+    mapMode.value = mode;
+
+    if (mode === 'market') {
+        // The heat paints the area polygons, and polygons only arrive with
+        // the areas layer — entering the mode switches it on the ordinary
+        // way, visible on the ordinary chip.
+        if (!active.value.includes('areas')) {
+            active.value = [...active.value, 'areas'];
+            void load();
+        }
+
+        void fetchMarketHeat();
+
+        return;
+    }
+
+    marketAttempt += 1;
+    marketAbort?.abort();
+    marketAbort = null;
+    marketPhase.value = 'idle';
+    marketBelowZoom.value = false;
+    adapter.value?.setMarketHeat?.(null);
+}
+
+async function fetchMarketHeat(): Promise<void> {
+    if (mapMode.value !== 'market') return;
+
+    const attempt = ++marketAttempt;
+
+    marketAbort?.abort();
+    const controller = new AbortController();
+    marketAbort = controller;
+
+    const zoom = adapter.value?.getZoom();
+    const bounds = adapter.value?.getBounds();
+
+    // Below the boundary gate there is nothing to paint: state it instead
+    // of fetching heat for polygons the server will not send.
+    marketBelowZoom.value = zoom !== null && zoom !== undefined && zoom < boundaryZoomThreshold.value;
+
+    if (marketBelowZoom.value || !bounds) {
+        adapter.value?.setMarketHeat?.(null);
+        marketPhase.value = 'ready';
+
+        return;
+    }
+
+    if (marketData.value === null) {
+        marketPhase.value = 'loading';
+    }
+
+    try {
+        const params = new URLSearchParams();
+        params.set('north', String(bounds.north));
+        params.set('south', String(bounds.south));
+        params.set('east', String(bounds.east));
+        params.set('west', String(bounds.west));
+        params.set('transaction', marketTransaction.value);
+        params.set('period', marketWindow.value);
+        if (marketPropertyType.value !== null) {
+            params.set('property_type', marketPropertyType.value);
+        }
+
+        const response = await fetch(localized(`/map/market?${params.toString()}`), {
+            headers: { Accept: 'application/json' },
+            signal: controller.signal,
+        });
+
+        if (attempt !== marketAttempt) return;
+
+        if (!response.ok) {
+            marketPhase.value = 'error';
+
+            return;
+        }
+
+        const payload = (await response.json()) as MarketHeatResponse;
+
+        if (attempt !== marketAttempt) return;
+
+        marketData.value = payload;
+        marketPhase.value = 'ready';
+
+        const heat: Record<string, 'up' | 'down' | 'flat'> = {};
+
+        for (const row of payload.rows) {
+            heat[row.area_slug] = row.direction;
+        }
+
+        adapter.value?.setMarketHeat?.(payload.rows.length > 0 ? heat : null);
+    } catch (error) {
+        if ((error as { name?: string }).name === 'AbortError' || attempt !== marketAttempt) return;
+
+        marketPhase.value = 'error';
+    }
+}
+
+function pickMarketTransaction(mode: string): void {
+    if (marketTransaction.value === mode) return;
+
+    marketTransaction.value = mode;
+    void fetchMarketHeat();
+}
+
+function pickMarketWindow(key: string): void {
+    if (marketWindow.value === key) return;
+
+    marketWindow.value = key;
+    void fetchMarketHeat();
+}
+
+function pickMarketPropertyType(value: string | null): void {
+    if (marketPropertyType.value === value) return;
+
+    marketPropertyType.value = value;
+    void fetchMarketHeat();
+}
+
+/* The category vocabulary comes from the server's enum exposure — a case
+ * added to PropertyType appears here without touching this page. */
+const marketPropertyTypes = computed<string[]>(() => marketData.value?.property_types ?? []);
+
+/* The pulse panel's convention: the selected window stays operable (its
+ * emptiness is explained in the notice); every OTHER window with no honest
+ * pair is disabled with the reason on the control. */
+const marketWindowDisabled = (key: string): boolean =>
+    marketPhase.value === 'ready'
+    && !marketBelowZoom.value
+    && key !== marketWindow.value
+    && !(marketData.value?.windows?.[key] ?? false);
+
+const marketNotice = computed<string | null>(() => {
+    if (mapMode.value !== 'market') return null;
+
+    if (marketPhase.value === 'loading') return t('market.movement.loading');
+
+    if (marketPhase.value !== 'ready') return null;
+
+    if (marketBelowZoom.value) return t('map.market.zoom_hint');
+
+    const data = marketData.value;
+
+    if (data !== null && !data.available && data.reason !== null) {
+        return t(`market.movement.reasons.${data.reason}`);
+    }
+
+    return null;
+});
+
 const flat = computed<Feature[]>(() =>
     availableKeys.value.flatMap((key) => (active.value.includes(key) ? features.value[key] : [])),
 );
@@ -337,7 +554,15 @@ function scheduleLoad(): void {
     if (debounce !== undefined) {
         clearTimeout(debounce);
     }
-    debounce = setTimeout(() => void load(), 250);
+    debounce = setTimeout(() => {
+        void load();
+
+        // Market heat follows the viewport under the same debounce; its
+        // own generation token keeps overlapping fetches honest.
+        if (mapMode.value === 'market') {
+            void fetchMarketHeat();
+        }
+    }, 250);
 }
 
 /*
@@ -431,6 +656,13 @@ async function load(): Promise<void> {
         };
         boundaries.value = data.boundaries ?? emptyBoundaries;
         truncated.value = Boolean(data.truncated);
+
+        // The server states its own boundary zoom gate; the market mode's
+        // "zoom in" hint reads it from here rather than hardcoding 11 twice.
+        const threshold = Number(data.boundary_zoom_threshold);
+        if (Number.isFinite(threshold)) {
+            boundaryZoomThreshold.value = threshold;
+        }
     } catch {
         // The previously loaded features are kept deliberately. Blanking the
         // list on a failed refresh punishes a visitor for a dropped request by
@@ -1028,6 +1260,8 @@ onBeforeUnmount(() => {
     locateAttempt += 1;
     areaAttempt += 1;
     areaAbort?.abort();
+    marketAttempt += 1;
+    marketAbort?.abort();
     if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
     if (locationNoticeTimer !== undefined) clearTimeout(locationNoticeTimer);
     adapter.value?.destroy();
@@ -1118,6 +1352,138 @@ watch(flat, () => syncSource());
 
             <!-- ------------------------------------------------- controls -->
             <div class="mb-4 space-y-3">
+                <!-- Map mode (Phase 4): Explore is the map as it has always
+                     been; Market wears the movement engine's answer on the
+                     area polygons. The switch exists only where the market
+                     feature itself is enabled. -->
+                <div
+                    v-if="market.available"
+                    role="group"
+                    :aria-label="t('map.market.mode_label')"
+                    class="flex w-fit rounded-card border border-line p-0.5"
+                >
+                    <button
+                        v-for="mode in (['explore', 'market'] as const)"
+                        :key="mode"
+                        type="button"
+                        class="mh-touch-target rounded-card px-4 py-1.5 text-sm font-medium transition-colors
+                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        :class="mapMode === mode ? 'bg-accent/15 text-ink' : 'text-ink-muted hover:text-ink'"
+                        :aria-pressed="mapMode === mode"
+                        :data-testid="`map-mode-${mode}`"
+                        @click="setMapMode(mode)"
+                    >
+                        {{ t(`map.market.${mode}`) }}
+                    </button>
+                </div>
+
+                <!-- Market filters (Phase 4): the movement product's own
+                     vocabularies — sale XOR rent, its window list with the
+                     same honest disabling, the PropertyType enum served by
+                     the endpoint. One polygon paints one claim, so the
+                     category control is single-select and "all" means the
+                     spanning all-categories index, never a blend. -->
+                <div v-if="mapMode === 'market'" class="space-y-2" data-testid="market-controls">
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+                        <div
+                            role="group"
+                            :aria-label="t('market.movement.transaction_label')"
+                            class="flex rounded-card border border-line p-0.5"
+                        >
+                            <button
+                                v-for="mode in MARKET_TRANSACTIONS"
+                                :key="mode"
+                                type="button"
+                                class="mh-touch-target rounded-card px-3 py-1 text-xs font-medium transition-colors
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                :class="marketTransaction === mode ? 'bg-accent/15 text-ink' : 'text-ink-muted hover:text-ink'"
+                                :aria-pressed="marketTransaction === mode"
+                                :data-testid="`market-transaction-${mode}`"
+                                @click="pickMarketTransaction(mode)"
+                            >
+                                {{ t(`market.movement.transaction.${mode}`) }}
+                            </button>
+                        </div>
+
+                        <div
+                            role="group"
+                            :aria-label="t('market.movement.period_label')"
+                            class="flex flex-wrap gap-1.5"
+                        >
+                            <button
+                                v-for="key in MARKET_WINDOWS"
+                                :key="key"
+                                type="button"
+                                class="mh-invest-chip mh-touch-target !text-xs
+                                       disabled:cursor-not-allowed disabled:opacity-45
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                :aria-pressed="marketWindow === key"
+                                :disabled="marketWindowDisabled(key)"
+                                :title="marketWindowDisabled(key) ? t('market.movement.period_unavailable') : undefined"
+                                :data-testid="`market-period-${key}`"
+                                @click="pickMarketWindow(key)"
+                            >
+                                <span class="numeral">{{ t(`market.movement.periods.${key}`) }}</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        role="group"
+                        :aria-label="t('market.movement.categories_label')"
+                        class="flex flex-wrap gap-1.5"
+                    >
+                        <button
+                            type="button"
+                            class="mh-invest-chip mh-touch-target !text-xs
+                                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                            :aria-pressed="marketPropertyType === null"
+                            data-testid="market-type-all"
+                            @click="pickMarketPropertyType(null)"
+                        >
+                            {{ t('market.movement.all_categories') }}
+                        </button>
+                        <button
+                            v-for="value in marketPropertyTypes"
+                            :key="value"
+                            type="button"
+                            class="mh-invest-chip mh-touch-target !text-xs
+                                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                            :aria-pressed="marketPropertyType === value"
+                            :data-testid="`market-type-${value}`"
+                            @click="pickMarketPropertyType(value)"
+                        >
+                            {{ t(`market.property_types.${value}`) }}
+                        </button>
+                    </div>
+
+                    <!-- Legend: swatch AND word, never colour alone. The
+                         swatches come from trend.ts — the same single source
+                         the marker icons speak. -->
+                    <div
+                        class="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-xs text-ink-muted"
+                        data-testid="market-legend"
+                    >
+                        <span class="mh-label">{{ t('map.market.legend') }}</span>
+                        <span
+                            v-for="direction in (['up', 'down', 'flat'] as const)"
+                            :key="direction"
+                            class="flex items-center gap-1.5"
+                        >
+                            <span
+                                class="h-2.5 w-2.5 shrink-0 rounded-sm"
+                                :style="{ backgroundColor: trendColour(direction) }"
+                                aria-hidden="true"
+                            />
+                            {{ t(`market.movement.direction.${direction}`) }}
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <span class="h-2.5 w-2.5 shrink-0 rounded-sm border border-line-strong" aria-hidden="true" />
+                            {{ t('map.market.unknown') }}
+                        </span>
+                    </div>
+                </div>
+
                 <div>
                     <p class="mh-label mb-1.5">{{ t('map.layers_title') }}</p>
                     <div class="flex flex-wrap gap-2">
@@ -1303,6 +1669,42 @@ watch(flat, () => syncSource());
                         aria-live="polite"
                     >
                         <p class="mh-map-toast">{{ locationNotice }}</p>
+                    </div>
+
+                    <!-- Market-mode status (Phase 4): loading, the zoom
+                         gate, or the movement engine's honest empty reason
+                         — the same compact toast voice, yielding its slot
+                         to a live location notice. -->
+                    <div
+                        v-if="marketNotice && !locationNotice"
+                        data-testid="market-notice"
+                        class="pointer-events-none absolute inset-x-0 bottom-36 z-10 flex justify-center px-4 lg:bottom-16"
+                        aria-live="polite"
+                    >
+                        <p class="mh-map-toast">{{ marketNotice }}</p>
+                    </div>
+
+                    <!-- A dropped heat fetch: stated where the visitor is
+                         looking, with a data-only retry — the map itself
+                         never rebuilds for market data. -->
+                    <div
+                        v-if="mapMode === 'market' && marketPhase === 'error'"
+                        data-testid="market-error"
+                        class="absolute inset-x-0 bottom-36 z-10 flex justify-center px-4 lg:bottom-16"
+                    >
+                        <div class="mh-map-toast mh-map-toast--error">
+                            <span class="text-xs text-ink">{{ t('market.movement.error') }}</span>
+                            <button
+                                type="button"
+                                data-testid="market-retry"
+                                class="mh-touch-target rounded-card border border-line px-3 py-1 text-xs text-ink
+                                       transition-colors hover:bg-surface-sunken
+                                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                @click="fetchMarketHeat"
+                            >
+                                {{ t('market.movement.retry') }}
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Loading is a compact status over the dark ground,

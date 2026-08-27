@@ -222,6 +222,16 @@ export interface MapAdapter {
     setBoundaryInteractive?(enabled: boolean): void;
 
     /**
+     * Tint the area polygons as the market heatmap (Map Phase 4), or clear
+     * with null. Keys are area slugs; values are the only directions the
+     * market engine ever asserts — there is no 'unknown' value because
+     * absence IS unknown: an unpainted area keeps the neutral dark base.
+     * Optional capability like setPois; rendering stays beneath every
+     * marker and the selection outline, so nothing else changes.
+     */
+    setMarketHeat?(heat: Record<string, 'up' | 'down' | 'flat'> | null): void;
+
+    /**
      * Recompute the canvas after the container's size changed. The adapter
      * also self-heals via a ResizeObserver (a map built inside a hidden
      * v-show tab measures 0×0 and must recover when revealed); this exists

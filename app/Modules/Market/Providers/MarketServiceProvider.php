@@ -54,6 +54,12 @@ final class MarketServiceProvider extends ModuleServiceProvider
          */
         RateLimiter::for('market-movement', static fn (Request $request): Limit => Limit::perMinute(60)
             ->by('market-movement|'.$request->ip()));
+
+        // Map Phase 4: the heatmap's viewport refetches spend their own
+        // counter — panning in Market mode must never starve the pulse
+        // panel, and the pulse panel must never starve the map.
+        RateLimiter::for('map-market', static fn (Request $request): Limit => Limit::perMinute(60)
+            ->by('map-market|'.$request->ip()));
     }
 
     protected function registerModule(): void

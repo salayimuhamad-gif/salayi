@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Modules\Market\Http\Controllers\Public\MarketController;
+use App\Modules\Market\Http\Controllers\Public\MarketMapController;
 use App\Modules\Market\Http\Controllers\Public\MarketMovementController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,14 @@ Route::middleware('feature:market.intelligence')->group(function (): void {
     Route::get('/market/movement', MarketMovementController::class)
         ->middleware('throttle:market-movement')
         ->name('market.movement');
+
+    /*
+     * Map Phase 4: market heat for the explorer's visible area polygons —
+     * the same movement rules, scoped to a viewport. Its own limiter,
+     * because panning the map in Market mode must never starve the pulse
+     * panel (or vice versa): one bucket per surface is the RC9 rule.
+     */
+    Route::get('/map/market', MarketMapController::class)
+        ->middleware('throttle:map-market')
+        ->name('map.market');
 });

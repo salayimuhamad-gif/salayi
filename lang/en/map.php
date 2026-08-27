@@ -86,6 +86,14 @@ return [
     'area_card' => [
         'view_full' => 'View the full area',
     ],
+    'market' => [
+        'mode_label' => 'Map mode',
+        'explore' => 'Explore',
+        'market' => 'Market',
+        'legend' => 'Legend',
+        'unknown' => 'Not enough evidence',
+        'zoom_hint' => 'Zoom in to see area market movement',
+    ],
     'use_my_location' => 'My location',
     'zoom_in_notice' => 'Not all results are shown. Zoom in.',
 ];

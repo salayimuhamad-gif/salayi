@@ -537,6 +537,34 @@ DB::table('market_index_values')->updateOrInsert(
 );
 
 /*
+ * Map Phase 4: ONE observation exactly twelve months older, so the
+ * heatmap's 1y and All windows hold a genuine +5.04% pair for the seeded
+ * ring (1190 → 1250) while every other movement expectation stays
+ * byte-identical: the pair is a year apart, so 7d/30d/1m stay honestly
+ * unsupported, and the index carries no property_type — the spanning
+ * "all categories" case — so the pulse panel's category-filter counts
+ * (exact-count assertions in market-movement.spec.ts) never see it.
+ * The latest reliable value is still 2026-07's 1250, so the Wave 3
+ * location card and Phase 3 area card keep their figure untouched.
+ */
+DB::table('market_index_values')->updateOrInsert(
+    ['market_index_id' => $browserIndexId, 'period' => '2025-07'],
+    [
+        'effective_date' => '2025-07-31',
+        'methodology_version' => 'v1',
+        'value' => '1190.0000',
+        'sample_size' => 30,
+        'excluded_outliers' => 0,
+        'confidence' => 'moderate',
+        'is_limited' => false,
+        'publication_status' => 'published',
+        'published_at' => now(),
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
+/*
  * Wave 4: the market-movement scenario. Two published areas with published
  * monthly index series — a genuine gainer, a genuine loser, a second sale
  * category and one rent series — so the browser spec can drive the REAL
