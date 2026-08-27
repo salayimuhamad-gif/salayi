@@ -432,7 +432,19 @@ async function fetchMarketHeat(): Promise<void> {
 
     if (marketBelowZoom.value || !bounds) {
         adapter.value?.setMarketHeat?.(null);
-        marketPhase.value = 'ready';
+
+        /*
+         * Missing bounds while the map is still CONSTRUCTING is not an
+         * answer — hold the loading voice; the map-ready paths re-invoke
+         * this fetch the moment bounds exist, so entering the mode during
+         * the adapter chunk's load self-corrects instead of stranding a
+         * silent, dataless "ready". A genuinely failed map settles as
+         * ready: there is nothing to paint on, and the failure overlay
+         * already owns that story.
+         */
+        marketPhase.value = bounds !== null && bounds !== undefined
+            ? 'ready'
+            : (mapFailed.value ? 'ready' : 'loading');
 
         return;
     }
@@ -781,6 +793,12 @@ async function handleRuntimeFailure(): Promise<void> {
         armBoundaryInteraction();
         mapFailed.value = false;
         void load();
+
+        // A Market mode entered while the map was still constructing was
+        // held at "loading"; real bounds exist now, so complete it.
+        if (mapMode.value === 'market') {
+            void fetchMarketHeat();
+        }
     } catch {
         // The fallback build itself failed: destroy whatever was installed
         // before readiness rejected. After disposal the unmount hook already
@@ -920,6 +938,12 @@ async function initialiseMap(): Promise<void> {
         mapReady.value = true;
         armBoundaryInteraction();
         void load();
+
+        // Same self-correction as the fallback path: a Market mode entered
+        // before construction finished completes now that bounds exist.
+        if (mapMode.value === 'market') {
+            void fetchMarketHeat();
+        }
     } catch {
         // Both providers are gone. The list keeps working, which is why it is
         // rendered as a peer of the map rather than as a degraded mode. The
