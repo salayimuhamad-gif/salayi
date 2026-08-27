@@ -18,13 +18,21 @@ import { test, expect, LOCALES, expectNoHorizontalOverflow } from './support/har
  * two interaction pixels below are chosen against the seeded geometry so
  * that each click can only mean one thing:
  *
- *   POLYGON_PIXEL (−120, −170) ⇒ (43.9678, 36.2371): inside the ring with
- *   ≥22px to every ring edge, ≥75px from the area's own centroid marker
- *   (36.225, 43.99 ⇒ −55, −126) and from the in-ring project marker.
+ *   POLYGON_PIXEL (−42, −72) ⇒ (43.9946, 36.2099): inside the ring with
+ *   ≥16px to every ring edge at 360px width, ≥55px from the area's own
+ *   centroid marker (36.225, 43.99 ⇒ −55, −126), ≥66px from the in-ring
+ *   project dot — and, critically, clear of the navigation control. In the
+ *   RTL locales that control renders physically top-LEFT with the app's
+ *   enlarged touch targets (≈62px from the start edge): the first cut of
+ *   this pixel (−120, −170) landed ON the zoom button at phone widths, so
+ *   every "polygon click" was silently a zoom click. Verified against the
+ *   live page at 360 and 390: elementFromPoint at this pixel is the
+ *   MapLibre canvas and the first click opens the sheet.
  *
  *   MARKER_PIXEL (−107.8, −75.8) ⇒ the seeded `browser-area-project` dot
  *   (36.211, 43.972) — INSIDE the ring, ≥70px from the centroid marker so
- *   the two never cluster at zoom 11.
+ *   the two never cluster at zoom 11, 66px from POLYGON_PIXEL. Used only
+ *   on desktop-1440x900, where it sits far from the control corner.
  *
  * The deterministic style and the hermetic network keep every run
  * self-contained; the console/diagnostics gate fails any runtime fault in
@@ -56,7 +64,7 @@ const AREA_NAME: Record<string, string> = { ckb: 'ئەنکاوە', ar: 'عنكا
 /** The areas layer chip label per locale (map.layers.areas). */
 const AREAS_CHIP: Record<string, string> = { ckb: 'ناوچەکان', ar: 'المناطق', en: 'Areas' };
 
-const POLYGON_PIXEL = { dx: -120, dy: -170 };
+const POLYGON_PIXEL = { dx: -42, dy: -72 };
 const MARKER_PIXEL = { dx: -107.8, dy: -75.8 };
 
 /** Inside the seeded browser-ankawa ring. */
