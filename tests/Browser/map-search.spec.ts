@@ -112,8 +112,11 @@ test('an English project query flies the camera and offers the project route', a
     await openExplorer(page, '/en');
     await search(page, 'Empire');
 
+    // The Latin query finds the tower through its admin-style ALIAS in the
+    // derived search_key (§3's transliteration model); the DISPLAYED name
+    // stays the stored Sorani one — search never mutates names (§34).
     const option = page.getByTestId('map-search-option-project')
-        .filter({ hasText: 'Empire Investment Tower' })
+        .filter({ hasText: 'بورجی وەبەرهێنانی تاقیکردنەوە' })
         .first();
 
     /*
@@ -147,7 +150,7 @@ test('an English project query flies the camera and offers the project route', a
 
     const context = page.getByTestId('map-search-context');
     await expect(context).toBeVisible();
-    await expect(context).toContainText('Empire Investment Tower');
+    await expect(context).toContainText('بورجی وەبەرهێنانی تاقیکردنەوە');
     await expect(page.getByTestId('map-search-context-view'))
         .toHaveAttribute('href', '/en/projects/browser-invest-tower');
 

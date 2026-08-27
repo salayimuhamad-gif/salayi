@@ -220,12 +220,13 @@ DB::table('feature_flags')->updateOrInsert(
  * the derivation, they never bypass it.
  */
 $projects = [
-    // +4.8% across two USD sale_asking rows → up. Carries an English name
-    // too (Map Phase 5): the unified-search spec finds THIS project with a
-    // Latin query, proving the trilingual index end to end. The invest
-    // search remains unaffected — its Sorani queries match name_ckb either
-    // way, and an extra nullable name can only add English matches.
-    ['slug' => 'browser-invest-tower', 'name' => 'بورجی وەبەرهێنانی تاقیکردنەوە', 'name_en' => 'Empire Investment Tower', 'type' => 'tower',
+    // +4.8% across two USD sale_asking rows → up. Carries an ALIAS (Map
+    // Phase 5): the unified-search spec finds THIS project with the Latin
+    // query "Empire" through the derived search_key — the product's own
+    // model for transliterations (§3: admin adds aliases, nothing machine-
+    // translates). An alias, unlike a name_en, changes NO rendered name,
+    // so every invest.spec assertion on the Sorani display name stands.
+    ['slug' => 'browser-invest-tower', 'name' => 'بورجی وەبەرهێنانی تاقیکردنەوە', 'aliases' => ['Empire Investment Tower'], 'type' => 'tower',
         'lat' => 36.1950000, 'lng' => 44.0150000, 'history' => [['100000.00', '2026-06-01'], ['104800.00', '2026-07-01']]],
     // ONE observation → unknown: a current price exists, but a single point
     // is not a direction. This row is the "never dress missing history up
@@ -246,7 +247,7 @@ foreach ($projects as $fixture) {
         ['slug' => $fixture['slug']],
         [
             'name_ckb' => $fixture['name'],
-            'name_en' => $fixture['name_en'] ?? null,
+            'aliases' => isset($fixture['aliases']) ? json_encode($fixture['aliases']) : null,
             'project_type' => $fixture['type'],
             'construction_status' => 'under_construction',
             'delivery_status' => 'not_started',
@@ -306,12 +307,23 @@ DB::table('projects')->updateOrInsert(
  * find no fixture project at all. One quiet save per row lets the REAL
  * HasTrilingualNames::syncSearchKey() fill the column exactly the way
  * production writes do — no duplicated normalization in fixture code.
- * Idempotent: rows keyed on a later run are skipped.
+ * The raw-seeded slugs are always re-derived (a reused database must pick
+ * up name/alias edits to these fixtures), plus any row still unkeyed.
  */
-Project::query()->whereNull('search_key')->get()->each(static function (Project $project): void {
-    $project->syncSearchKey();
-    $project->saveQuietly();
-});
+$rawSeededProjects = [
+    'browser-invest-tower', 'browser-invest-villa', 'browser-invest-bazaar',
+    'browser-invest-court', 'browser-area-project',
+];
+
+Project::query()
+    ->where(static function ($query) use ($rawSeededProjects): void {
+        $query->whereIn('slug', $rawSeededProjects)->orWhereNull('search_key');
+    })
+    ->get()
+    ->each(static function (Project $project): void {
+        $project->syncSearchKey();
+        $project->saveQuietly();
+    });
 
 /*
  * The project wizard, for the map suite's provider-failure test: the flag

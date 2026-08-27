@@ -68,9 +68,10 @@ external geocoder.
   `map-search.spec.ts` (the three navigation contracts across ckb/en/ar,
   the stale-response race, the keyboard combobox, Market-mode
   preservation, and both phone widths), with its registry entry in
-  `scripts/release/release_gates.py`. Browser fixtures gain `name_en`
-  on `browser-invest-tower` and a `search_key` sync pass for the
-  raw-upserted fixture projects.
+  `scripts/release/release_gates.py`. Browser fixtures gain an
+  `Empire Investment Tower` alias on `browser-invest-tower` (findable in
+  English through the derived key without changing any rendered name)
+  and a `search_key` sync pass for the raw-upserted fixture projects.
 
 ## [Unreleased] — Map Phase 4: market heatmap & visual market intelligence
 
