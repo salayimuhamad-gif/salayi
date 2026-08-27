@@ -67,6 +67,12 @@ final class GeographyServiceProvider extends ModuleServiceProvider
         RateLimiter::for('map-search', static fn (Request $request): Limit => Limit::perMinute(30)
             ->by('map-search|'.$request->ip()));
 
+        // Map Phase 5: the explorer's unified autocomplete — its OWN bucket,
+        // same interactive budget, so it neither spends nor is starved by
+        // the investment search or the viewport fetches.
+        RateLimiter::for('map-explorer-search', static fn (Request $request): Limit => Limit::perMinute(30)
+            ->by('map-explorer-search|'.$request->ip()));
+
         /*
          * Wave 3's location-resolve endpoint. The interactive-search budget
          * (30/min is several taps a second, sustained) in its OWN bucket, for

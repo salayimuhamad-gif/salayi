@@ -6,9 +6,11 @@ namespace App\Modules\Geography\Http\Controllers\Public;
 
 use App\Modules\Companies\Models\Company;
 use App\Modules\Companies\Models\CompanyBranch;
+use App\Modules\Geography\Http\Requests\MapSearchRequest;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Models\Place;
 use App\Modules\Geography\Models\PlaceCategory;
+use App\Modules\Geography\Services\MapSearchService;
 use App\Modules\Geography\Support\Geodesy;
 use App\Modules\Geography\Support\Polygon;
 use App\Modules\Geography\Support\Wkt;
@@ -244,6 +246,24 @@ final class MapExplorerController extends Controller
      * the camera and select the marker — the features endpoint remains the
      * source of everything else.
      */
+    /**
+     * Unified trilingual search over Areas, Projects and Places (Map Phase
+     * 5): MULK's own curated database, never a geocoder. A thin boundary —
+     * validation in the request, normalization/visibility/ranking in
+     * MapSearchService — on its own `map-explorer-search` limiter so
+     * explorer autocomplete and investment search never spend one bucket
+     * (RC9's rule).
+     */
+    public function search(MapSearchRequest $request, MapSearchService $search): JsonResponse
+    {
+        $query = $request->query_();
+
+        return response()->json([
+            'query' => $query,
+            'groups' => $search->search($query),
+        ]);
+    }
+
     public function investSearch(Request $request): JsonResponse
     {
         $validated = $request->validate([
