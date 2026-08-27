@@ -7,6 +7,7 @@ namespace App\Modules\Geography\Http\Controllers\Public;
 use App\Modules\Geography\Http\Requests\LocationResolveRequest;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Services\AreaResolver;
+use App\Modules\Geography\Services\AreaServiceSummary;
 use App\Modules\Market\Models\MarketIndex;
 use App\Modules\Market\Services\LatestReliableIndexValues;
 use Illuminate\Http\JsonResponse;
@@ -46,6 +47,7 @@ final class LocationResolveController extends Controller
     public function __construct(
         private readonly AreaResolver $resolver,
         private readonly LatestReliableIndexValues $latestValues,
+        private readonly AreaServiceSummary $services,
     ) {}
 
     public function __invoke(LocationResolveRequest $request): JsonResponse
@@ -80,6 +82,15 @@ final class LocationResolveController extends Controller
                     static fn (Area $ancestor): array => ['name' => $ancestor->name()],
                     $ancestors,
                 ),
+                /*
+                 * Map Phase 3's one extension: the SAME grouped service
+                 * counts the Area profile renders, from the same extracted
+                 * implementation — published places only, direct assignment,
+                 * zero-count groups absent. Counts of already-public data
+                 * add nothing a visitor could not read on the profile page,
+                 * so the endpoint's privacy posture is unchanged.
+                 */
+                'services' => $this->services->summarize($area),
             ],
             'prices' => $prices['available'] ? [
                 'area_name' => $prices['area_name'],

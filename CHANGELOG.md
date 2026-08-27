@@ -3,6 +3,61 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 3: interactive area selection & live-location intelligence
+
+**Status: NOT DEPLOYED.** No schema change, no migration, no new
+dependency; authentication, Telegram/WhatsApp, feature-flag semantics, the
+OSM import architecture and release tooling untouched. The public map still
+never calls Overpass or any external service from the browser.
+
+### Added
+- Clickable area polygons on the `/map` explorer (the sanctioned exception
+  to boundaries being decorative, adapter-owned as always): hover firms the
+  outline on desktop, a restrained amber selected state
+  (`boundary-selected-fill`/`-line`) sits beneath every marker, and the
+  adapter enforces the click priority — project marker > POI > polygon >
+  empty map — so a polygon can never steal a record click. Interaction is
+  gated off while centre-pick/draw modes are armed. New optional adapter
+  surface: `onBoundarySelect(BoundaryIdentity)`, `setSelectedBoundary()`,
+  `setBoundaryInteractive()`, `fitBounds()` (per-side padding + maxZoom;
+  fit-once at explicit selection, never from a watcher), plus the pure
+  `boundaryBounds()` helper (unit-tested; degenerate geometry → centroid
+  fallback).
+- ONE canonical selected-area state on the explorer: polygon click, the
+  area list rows (now select-in-place buttons with a stated pressed state)
+  and live location all resolve into the same compact Area Intelligence
+  card — a desktop glass float on the start side, the existing bottom
+  sheet below `lg`; the map stays dominant, never a full-screen modal. The
+  card renders ONLY authoritative `/location/resolve` data: identity +
+  breadcrumb, real published price indices through the same
+  `MarketMetricCard` contract as the homepage (honest absence, never a
+  zero), the Phase 2 service counts as live controls (activating a group
+  enables that POI category through the real layer + category filters),
+  and a "view the full area" action.
+- Upgraded "My location" on `/map`: explicit tap → browser geolocation
+  (timeout + wall-clock watchdog, ported from the homepage card) → centre
+  + camera as before → the SAME `/location/resolve` coordinate mode
+  selects the containing Area. Coordinates are used transiently and never
+  persisted, logged, or sent anywhere else; denial keeps the map fully
+  usable (existing notice), outside-coverage is stated honestly with no
+  nearest-area guess, `no_data` still selects the area.
+- `/location/resolve` payload gains `area.services` — the same grouped
+  counts the Area profile shows, now extracted into ONE implementation
+  (`AreaServiceSummary`) shared by both surfaces; `serviceIcons` moved to
+  a shared module so the two surfaces cannot drift.
+- Tests: `LocationResolveTest` services contract (both modes, empty list),
+  `boundaryBounds` unit cases, and a new `map-area-selection.spec.ts`
+  browser suite (all five viewports + three locales where it matters;
+  geolocation fully MOCKED — a probe proves zero requests before the
+  explicit click; hit-test priority proven against a seeded in-ring
+  project marker).
+
+### Changed
+- `tests/Browser` fixtures: the `browser-ankawa` ring widened (both Wave 3
+  geolocation coordinates keep their meaning), the two seeded places are
+  now assigned to it (real service counts), and one price-less published
+  project sits inside the ring for the priority test.
+
 ## [Unreleased] — Map Phase 2: OSM POI ingestion & area service intelligence
 
 **Status: NOT DEPLOYED.** No schema change, no migration, no new

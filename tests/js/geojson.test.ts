@@ -15,6 +15,7 @@
  */
 
 import {
+    boundaryBounds,
     isClockwise,
     normaliseComponent,
     ringToPath,
@@ -163,6 +164,49 @@ ok('component two keeps exactly its own hole', components[1].length === 2);
 ok(
     'holes are not pooled across components',
     components.every((component) => component.length === 2),
+);
+
+/* -------------------------------------------------------- boundaryBounds */
+
+/*
+ * The camera-fit extent (Map Phase 3). Order-of-coordinates bugs here send
+ * fitBounds to the Indian Ocean, and a degenerate geometry must yield null —
+ * the explorer then falls back to the area's centroid instead of fitting a
+ * box made of Infinities.
+ */
+
+equal('a polygon yields its own extent', boundaryBounds(square), {
+    north: 36.2,
+    south: 36.18,
+    east: 44.02,
+    west: 44.0,
+});
+
+// The hole lies inside the exterior, so the extent must not change.
+equal('holes never widen the extent', boundaryBounds(withHole), boundaryBounds(square));
+
+equal('a multipolygon spans every part', boundaryBounds(multi), {
+    north: 36.22,
+    south: 36.18,
+    east: 44.04,
+    west: 44.0,
+});
+
+equal('an empty polygon yields null', boundaryBounds({ type: 'Polygon', coordinates: [] }), null);
+
+equal(
+    'a ring of non-finite points yields null',
+    boundaryBounds({ type: 'Polygon', coordinates: [[[Number.NaN, Number.NaN], [Infinity, 36.2]]] }),
+    null,
+);
+
+equal(
+    'non-finite points are skipped, finite ones still count',
+    boundaryBounds({
+        type: 'Polygon',
+        coordinates: [[[44.0, 36.18], [Number.NaN, 99], [44.02, 36.2]]],
+    }),
+    { north: 36.2, south: 36.18, east: 44.02, west: 44.0 },
 );
 
 /* -------------------------------------------- Google adapter lifecycles */

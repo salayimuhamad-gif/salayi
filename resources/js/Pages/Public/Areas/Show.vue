@@ -5,9 +5,9 @@ import { Head, Link } from '@inertiajs/vue3';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppEmptyState from '@/Components/ui/AppEmptyState.vue';
 import AppIcon from '@/Components/Icons/AppIcon.vue';
-import type { IconName } from '@/Components/Icons/icons';
 import KnowledgeTimeline from '@/Components/KnowledgeTimeline.vue';
 import { t, formatNumber } from '@/lib/i18n';
+import { serviceIcon } from '@/lib/serviceIcons';
 import { useLocale } from '@/Composables/useLocale';
 
 /*
@@ -103,26 +103,6 @@ const openService = ref<string | null>(null);
 
 function toggleService(key: string): void {
     openService.value = openService.value === key ? null : key;
-}
-
-// Group -> glyph. Everything the server could send is covered; an
-// admin-invented group degrades to the neutral pin.
-const serviceIcons: Record<string, IconName> = {
-    education: 'education',
-    health: 'health',
-    shopping: 'bag',
-    transport: 'bus',
-    recreation: 'tree',
-    worship: 'dome',
-    civic: 'landmark',
-    finance: 'banknote',
-    hospitality: 'cup',
-    employment: 'portfolio',
-    other: 'map-pin',
-};
-
-function serviceIcon(key: string): IconName {
-    return serviceIcons[key] ?? 'map-pin';
 }
 </script>
 

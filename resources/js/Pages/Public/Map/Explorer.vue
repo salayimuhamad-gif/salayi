@@ -5,7 +5,17 @@ import PublicLayout from '@/Layouts/PublicLayout.vue';
 import AppAlert from '@/Components/ui/AppAlert.vue';
 import { t, formatNumber } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
-import { createMapAdapter, poiCategoryFor, type BoundaryCollection, type MapAdapter } from '@/lib/map';
+import AreaIntelligenceCard, { type AreaIntel } from '@/Components/Public/AreaIntelligenceCard.vue';
+import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
+import { useIsDesktop } from '@/Composables/useIsDesktop';
+import {
+    boundaryBounds,
+    createMapAdapter,
+    poiCategoryFor,
+    type BoundaryCollection,
+    type BoundaryIdentity,
+    type MapAdapter,
+} from '@/lib/map';
 
 /*
  * The public Map Explorer (File one §5, File two §10).
@@ -122,6 +132,195 @@ const pickingCentre = ref(false);
 /* Drawn area */
 const drawing = ref(false);
 const ring = ref<Array<{ lat: number; lng: number }>>([]);
+
+/* ----------------------------------------------- selected area (Phase 3) */
+
+const isDesktop = useIsDesktop();
+const { isRtl } = useLocale();
+
+/*
+ * ONE canonical selected-area state. Every entry path — polygon click, the
+ * area list, live location — resolves into selectArea() and renders the
+ * same card; there is no second selection system to drift from this one.
+ */
+const selectedArea = ref<BoundaryIdentity | null>(null);
+const areaIntel = ref<AreaIntel | null>(null);
+const areaIntelPhase = ref<'loading' | 'ready' | 'error' | 'rate_limited'>('loading');
+/** Mobile sheet visibility; desktop renders the floating card instead. */
+const areaSheetOpen = ref(false);
+
+/*
+ * Race safety (§23): only the LATEST selection may populate the card. The
+ * attempt token invalidates stale responses outright and the controller
+ * aborts the in-flight request so a quick A→B click never renders A late.
+ */
+let areaAttempt = 0;
+let areaAbort: AbortController | null = null;
+
+function armBoundaryInteraction(): void {
+    adapter.value?.setBoundaryInteractive?.(!pickingCentre.value && !drawing.value);
+}
+
+// Centre-pick and draw KEEP their click meanings even over a polygon: the
+// adapter's boundary interaction is simply off while a mode is active.
+watch([pickingCentre, drawing], () => armBoundaryInteraction());
+
+function selectArea(identity: BoundaryIdentity, focus = true): void {
+    // A repeated tap on the already-selected area re-frames and re-opens
+    // the sheet, but never burns a second resolve round-trip (and with it
+    // the shared rate limit) on data that is already here or in flight.
+    const repeat = selectedArea.value?.slug === identity.slug
+        && (areaIntelPhase.value === 'ready' || areaIntelPhase.value === 'loading');
+
+    selectedArea.value = identity;
+    areaSheetOpen.value = true;
+    adapter.value?.setSelectedBoundary?.(identity.slug);
+
+    if (focus) {
+        focusArea(identity);
+    }
+
+    if (!repeat) {
+        void fetchAreaIntel(identity.slug);
+    }
+}
+
+function clearArea(): void {
+    areaAttempt += 1;
+    areaAbort?.abort();
+    areaAbort = null;
+    selectedArea.value = null;
+    areaIntel.value = null;
+    areaSheetOpen.value = false;
+    adapter.value?.setSelectedBoundary?.(null);
+}
+
+/*
+ * Camera focus happens ONCE, at the moment of explicit selection (§15) —
+ * never from a watcher — with padding reserving room for the desktop card
+ * (on the START side, so the physical side follows the locale) or the
+ * mobile sheet. A polygon absent from the loaded boundaries (zoomed-out
+ * entry from the list) falls back to the area's centroid point.
+ */
+function focusArea(identity: BoundaryIdentity): void {
+    const map = adapter.value;
+
+    if (!map) return;
+
+    /*
+     * Desktop reserves the card's START-side float (340px + gutters); the
+     * physical side follows the locale. Mobile reserves a modest bottom band
+     * — the sheet overlays the page, not the 420px map panel, and a heavier
+     * reservation would force the fit below BOUNDARY_MIN_ZOOM and unload
+     * the very polygon that was just selected.
+     */
+    const padding = isDesktop.value
+        ? {
+            top: 56,
+            bottom: 56,
+            left: isRtl.value ? 56 : 396,
+            right: isRtl.value ? 396 : 56,
+        }
+        : { top: 48, bottom: 120, left: 24, right: 24 };
+
+    const feature = boundaries.value.features.find(
+        (candidate) => (candidate.properties as { slug?: string } | undefined)?.slug === identity.slug,
+    );
+    const box = feature ? boundaryBounds(feature.geometry) : null;
+
+    if (box && map.fitBounds) {
+        map.fitBounds(box, { padding, maxZoom: 15 });
+
+        return;
+    }
+
+    const row = features.value.areas.find((area) => area.slug === identity.slug);
+
+    if (row) {
+        map.flyTo({ lat: row.lat, lng: row.lng }, 13);
+    }
+}
+
+async function fetchAreaIntel(slug: string): Promise<void> {
+    const attempt = ++areaAttempt;
+
+    areaAbort?.abort();
+    const controller = new AbortController();
+    areaAbort = controller;
+
+    areaIntelPhase.value = 'loading';
+
+    try {
+        const response = await fetch(localized(`/location/resolve?area=${encodeURIComponent(slug)}`), {
+            headers: { Accept: 'application/json' },
+            signal: controller.signal,
+        });
+
+        if (attempt !== areaAttempt) return;
+
+        if (response.status === 429) {
+            areaIntelPhase.value = 'rate_limited';
+
+            return;
+        }
+
+        if (!response.ok) {
+            areaIntelPhase.value = 'error';
+
+            return;
+        }
+
+        const payload = (await response.json()) as AreaIntel;
+
+        if (attempt !== areaAttempt) return;
+
+        areaIntel.value = payload;
+        areaIntelPhase.value = 'ready';
+
+        // The payload's identity is locale-fresh; adopt it so a language
+        // switch mid-session never leaves a stale name on the card.
+        if (payload.area) {
+            selectedArea.value = { slug: payload.area.slug, name: payload.area.name, type: payload.area.type };
+        }
+    } catch (error) {
+        if ((error as { name?: string }).name === 'AbortError' || attempt !== areaAttempt) return;
+
+        areaIntelPhase.value = 'error';
+    }
+}
+
+function retryAreaIntel(): void {
+    if (selectedArea.value) {
+        void fetchAreaIntel(selectedArea.value.slug);
+    }
+}
+
+/**
+ * A service group activated from the card (§16): enable the places layer
+ * and toggle exactly that group's categories — never everything at once,
+ * and the existing zoom gates and marker priority stay untouched.
+ */
+function toggleServiceGroup(group: { categories: Array<{ key: string }> }): void {
+    const keys = group.categories.map((category) => category.key);
+
+    if (!active.value.includes('places') && availableKeys.value.includes('places')) {
+        active.value = [...active.value, 'places'];
+    }
+
+    const allOn = keys.every((key) => activeCategories.value.includes(key));
+
+    activeCategories.value = allOn
+        ? activeCategories.value.filter((key) => !keys.includes(key))
+        : [...new Set([...activeCategories.value, ...keys])];
+
+    scheduleLoad();
+}
+
+function selectAreaFromRow(feature: Feature): void {
+    if (!feature.slug) return;
+
+    selectArea({ slug: feature.slug, name: feature.name ?? '', type: (feature as { type?: string }).type ?? '' });
+}
 
 const flat = computed<Feature[]>(() =>
     availableKeys.value.flatMap((key) => (active.value.includes(key) ? features.value[key] : [])),
@@ -347,6 +546,7 @@ async function handleRuntimeFailure(): Promise<void> {
         }
 
         mapReady.value = true;
+        armBoundaryInteraction();
         mapFailed.value = false;
         void load();
     } catch {
@@ -415,8 +615,30 @@ function adapterOptions() {
 
                 if (drawing.value) {
                     ring.value = [...ring.value, point];
+
+                    return;
+                }
+
+                /*
+                 * Empty-map click (§24). Cluster and polygon hits were
+                 * already claimed inside the adapter's priority order, so a
+                 * click arriving here landed on bare map — it dismisses the
+                 * area selection and NOTHING else: layers, filters and the
+                 * drawn ring all stay. (A click on an inert record marker
+                 * also falls through to here by adapter design; dismissing
+                 * on it reads as the ordinary "tap elsewhere closes".)
+                 */
+                if (selectedArea.value) {
+                    clearArea();
                 }
             },
+            /*
+             * Polygon selection (Phase 3). The adapter enforces the click
+             * priority — project marker > POI > polygon > empty map — and
+             * only emits for a click no record layer claimed, so wiring
+             * this cannot change what marker or cluster clicks do.
+             */
+            onBoundarySelect: (identity: BoundaryIdentity) => selectArea(identity),
             onError: () => {
                 // A Google failure AFTER construction — a revoked key, a tile
                 // 403, billing disabled mid-session — must still fall back,
@@ -464,6 +686,7 @@ async function initialiseMap(): Promise<void> {
         }
 
         mapReady.value = true;
+        armBoundaryInteraction();
         void load();
     } catch {
         // Both providers are gone. The list keeps working, which is why it is
@@ -545,25 +768,164 @@ function clearDrawing(): void {
     void load();
 }
 
+/* --------------------------------------------- live location (Phase 3) */
+
+/*
+ * Geolocation discipline, ported from the homepage location card (§6–§7):
+ * the browser API is touched ONLY inside this click handler, and the fix is
+ * used transiently — centre the camera, hand the coordinates once to the
+ * existing /location/resolve — then dropped. Nothing here writes them to
+ * storage, analytics, logs or any other request; from that point on the
+ * visitor is an Area identity, not a coordinate pair.
+ */
+const GEOLOCATION_TIMEOUT_MS = 10_000;
+
+/*
+ * The permission prompt pauses the geolocation timeout clock in Chromium,
+ * so a prompt dismissed without an answer can leave the button "locating"
+ * forever unless a wall-clock watchdog stands behind it.
+ */
+const GEOLOCATION_WATCHDOG_MS = 15_000;
+
+const locating = ref(false);
+let locateAttempt = 0;
+let locateWatchdog: ReturnType<typeof setTimeout> | undefined;
+
+/** Transient location-outcome toast (§8) — compact, auto-clearing, never a blocker. */
+const locationNotice = ref<string | null>(null);
+let locationNoticeTimer: ReturnType<typeof setTimeout> | undefined;
+
+function showLocationNotice(message: string): void {
+    locationNotice.value = message;
+
+    if (locationNoticeTimer !== undefined) clearTimeout(locationNoticeTimer);
+    locationNoticeTimer = setTimeout(() => {
+        locationNotice.value = null;
+    }, 6000);
+}
+
 function useMyLocation(): void {
     if (typeof navigator === 'undefined' || !navigator.geolocation) {
         permissionDenied.value = true;
         return;
     }
 
+    if (locating.value) {
+        return;
+    }
+
+    const attempt = ++locateAttempt;
+
+    locating.value = true;
+    permissionDenied.value = false;
+    locationNotice.value = null;
+
+    if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
+    locateWatchdog = setTimeout(() => {
+        if (attempt === locateAttempt && locating.value) {
+            locating.value = false;
+            showLocationNotice(t('home.location.unavailable'));
+        }
+    }, GEOLOCATION_WATCHDOG_MS);
+
     navigator.geolocation.getCurrentPosition(
         (position) => {
-            permissionDenied.value = false;
-            centre.value = { lat: position.coords.latitude, lng: position.coords.longitude };
-            adapter.value?.flyTo(centre.value, 13);
+            if (attempt !== locateAttempt) return;
+
+            clearTimeout(locateWatchdog);
+            locating.value = false;
+
+            const point = { lat: position.coords.latitude, lng: position.coords.longitude };
+
+            // Exactly the pre-Phase-3 behaviour first: the fix becomes the
+            // distance centre and the camera goes there…
+            centre.value = point;
+            adapter.value?.flyTo(point, 13);
             void load();
+
+            // …then the SAME resolver every other entry path uses turns the
+            // point into an Area selection.
+            void resolveMyLocation(point);
         },
-        () => {
-            // Denial is expected and recoverable: the centre can still be set
-            // by tapping the map, so this is a notice rather than an error.
-            permissionDenied.value = true;
+        (error) => {
+            if (attempt !== locateAttempt) return;
+
+            clearTimeout(locateWatchdog);
+            locating.value = false;
+
+            if (error.code === error.PERMISSION_DENIED) {
+                // Denial is expected and recoverable: the centre can still be
+                // set by tapping the map, so this is a notice rather than an
+                // error — and the map stays fully usable manually.
+                permissionDenied.value = true;
+            } else {
+                showLocationNotice(t('home.location.unavailable'));
+            }
         },
+        // A cached fix younger than a minute is plenty for area resolution
+        // and skips a second GPS spin-up.
+        { timeout: GEOLOCATION_TIMEOUT_MS, maximumAge: 60_000 },
     );
+}
+
+/**
+ * Live-location → Area (§6): the /location/resolve coordinate mode — the
+ * SAME endpoint, contract and rate limiter as the homepage card; no second
+ * resolution algorithm anywhere. The camera is already at the visitor's
+ * position, so adopting the payload skips the refit and a second fetch.
+ */
+async function resolveMyLocation(point: { lat: number; lng: number }): Promise<void> {
+    const attempt = ++areaAttempt;
+
+    areaAbort?.abort();
+    const controller = new AbortController();
+    areaAbort = controller;
+
+    try {
+        const response = await fetch(
+            localized(`/location/resolve?lat=${point.lat}&lng=${point.lng}`),
+            { headers: { Accept: 'application/json' }, signal: controller.signal },
+        );
+
+        if (attempt !== areaAttempt) return;
+
+        if (response.status === 429) {
+            showLocationNotice(t('home.location.rate_limited'));
+
+            return;
+        }
+
+        if (!response.ok) {
+            showLocationNotice(t('home.location.error'));
+
+            return;
+        }
+
+        const payload = (await response.json()) as AreaIntel;
+
+        if (attempt !== areaAttempt) return;
+
+        if (payload.state === 'outside_coverage' || payload.area === null) {
+            // §19: outside coverage is stated honestly — no nearest-area
+            // guess — and the map stays exactly where the visitor is.
+            showLocationNotice(t('home.location.outside'));
+
+            return;
+        }
+
+        // `no_data` still SELECTS the area (§19): the card itself renders
+        // the honest no-price line. Only the identity is kept — never the
+        // coordinates that produced it.
+        selectedArea.value = { slug: payload.area.slug, name: payload.area.name, type: payload.area.type };
+        areaSheetOpen.value = true;
+        adapter.value?.setSelectedBoundary?.(payload.area.slug);
+        areaIntel.value = payload;
+        areaIntelPhase.value = 'ready';
+    } catch (error) {
+        if ((error as { name?: string }).name === 'AbortError' || attempt !== areaAttempt) return;
+
+        showLocationNotice(t('home.location.error'));
+    }
 }
 
 function hrefFor(feature: Feature, layer: LayerKey): string | null {
@@ -606,6 +968,15 @@ onBeforeUnmount(() => {
     window.removeEventListener('online', goOnline);
     window.removeEventListener('offline', goOffline);
     if (debounce !== undefined) clearTimeout(debounce);
+    // Strand the location/selection async work the same way `disposed`
+    // strands map builds: bump the tokens, abort the in-flight resolve,
+    // stop the timers. A geolocation callback landing after this touches
+    // nothing.
+    locateAttempt += 1;
+    areaAttempt += 1;
+    areaAbort?.abort();
+    if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
+    if (locationNoticeTimer !== undefined) clearTimeout(locationNoticeTimer);
     adapter.value?.destroy();
 });
 
@@ -745,11 +1116,13 @@ watch(flat, () => syncSource());
                     <button
                         type="button"
                         class="mh-touch-target rounded-card border border-line px-3 py-1.5 text-sm text-ink-muted
-                               transition-colors hover:bg-surface-sunken
+                               transition-colors hover:bg-surface-sunken disabled:cursor-not-allowed disabled:opacity-50
                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        data-testid="use-my-location"
+                        :disabled="locating"
                         @click="useMyLocation"
                     >
-                        {{ t('map.use_my_location') }}
+                        {{ locating ? t('home.location.locating') : t('map.use_my_location') }}
                     </button>
 
                     <label class="flex items-center gap-2 text-sm text-ink-muted">
@@ -844,6 +1217,40 @@ watch(flat, () => syncSource());
                         :aria-label="t('nav.public.map')"
                     />
                     <div class="mh-invest-vignette" aria-hidden="true" />
+
+                    <!-- Desktop Area Intelligence (Phase 3 §9): a compact
+                         glass float on the START side — the map stays the
+                         hero, pannable beside it; never a page-wide modal.
+                         Below lg the same content rides the bottom sheet. -->
+                    <div
+                        v-if="selectedArea"
+                        data-testid="area-card-float"
+                        class="mh-invest-glass absolute start-3 top-3 z-20 hidden max-h-[calc(100%-1.5rem)]
+                               w-[340px] max-w-[calc(100%-1.5rem)] rounded-card p-4 lg:flex"
+                    >
+                        <AreaIntelligenceCard
+                            :identity="selectedArea"
+                            :intel="areaIntel"
+                            :phase="areaIntelPhase"
+                            @close="clearArea"
+                            @retry="retryAreaIntel"
+                            @toggle-service="toggleServiceGroup"
+                        />
+                    </div>
+
+                    <!-- Location outcome notice (Phase 3 §8): the compact
+                         toast language, floated clear of the data pills so
+                         a locate that also triggers a refetch never stacks
+                         two toasts on one pixel. Auto-clears; the map stays
+                         fully usable behind it. -->
+                    <div
+                        v-if="locationNotice"
+                        data-testid="location-notice"
+                        class="pointer-events-none absolute inset-x-0 bottom-36 z-10 flex justify-center px-4 lg:bottom-16"
+                        aria-live="polite"
+                    >
+                        <p class="mh-map-toast">{{ locationNotice }}</p>
+                    </div>
 
                     <!-- Loading is a compact status over the dark ground,
                          not a veil across the whole surface (Map Phase 1):
@@ -976,12 +1383,24 @@ watch(flat, () => syncSource());
                     <ul v-else class="max-h-[520px] space-y-2 overflow-y-auto pe-1">
                         <template v-for="layer in availableKeys" :key="layer">
                             <li v-for="feature in (active.includes(layer) ? features[layer] : [])" :key="`${layer}-${feature.id}`">
+                                <!-- Area rows select IN PLACE (Phase 3 §13):
+                                     the same canonical selection a polygon
+                                     click sets, so list and map can never
+                                     disagree. The profile link lives on in
+                                     the card's "view full area" action. -->
                                 <component
-                                    :is="hrefFor(feature, layer) ? Link : 'div'"
-                                    :href="hrefFor(feature, layer) ?? undefined"
-                                    class="mh-touch-target block rounded-card border border-line px-3 py-2 text-sm
-                                           transition-colors hover:bg-surface-sunken focus-visible:outline-none
+                                    :is="layer === 'areas' && feature.slug ? 'button' : (hrefFor(feature, layer) ? Link : 'div')"
+                                    :href="layer === 'areas' && feature.slug ? undefined : (hrefFor(feature, layer) ?? undefined)"
+                                    :type="layer === 'areas' && feature.slug ? 'button' : undefined"
+                                    :aria-pressed="layer === 'areas' && feature.slug ? selectedArea?.slug === feature.slug : undefined"
+                                    :data-testid="layer === 'areas' ? 'area-row' : undefined"
+                                    class="mh-touch-target block w-full rounded-card border border-line px-3 py-2 text-start
+                                           text-sm transition-colors hover:bg-surface-sunken focus-visible:outline-none
                                            focus-visible:ring-2 focus-visible:ring-accent"
+                                    :class="layer === 'areas' && selectedArea?.slug === feature.slug
+                                        ? '!border-accent-strong/60 bg-surface-sunken'
+                                        : ''"
+                                    @click="layer === 'areas' && feature.slug ? selectAreaFromRow(feature) : undefined"
                                 >
                                     <span class="flex items-start justify-between gap-3">
                                         <span>
@@ -1027,6 +1446,30 @@ watch(flat, () => syncSource());
                     </ul>
                 </div>
             </div>
+
+            <!-- Selected area below lg: the same card as a bottom sheet,
+                 teleported over either mobile tab. The gate rides the
+                 sheet's `open` prop, not CSS alone — the sheet scroll-locks
+                 the body from a watcher on `open` (Invest's rule), so a
+                 logically-open sheet on desktop would lock the page with no
+                 visible dialog. The sheet header owns the name + close; the
+                 card's `sheet` variant drops its own copies. -->
+            <MobileBottomSheet
+                :open="selectedArea !== null && areaSheetOpen && !isDesktop"
+                :title="selectedArea?.name || t('home.location.chosen_area')"
+                @close="clearArea"
+            >
+                <AreaIntelligenceCard
+                    v-if="selectedArea"
+                    variant="sheet"
+                    :identity="selectedArea"
+                    :intel="areaIntel"
+                    :phase="areaIntelPhase"
+                    @close="clearArea"
+                    @retry="retryAreaIntel"
+                    @toggle-service="toggleServiceGroup"
+                />
+            </MobileBottomSheet>
         </template>
     </PublicLayout>
 </template>

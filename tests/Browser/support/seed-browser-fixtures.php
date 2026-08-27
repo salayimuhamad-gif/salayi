@@ -271,6 +271,30 @@ foreach ($projects as $fixture) {
 }
 
 /*
+ * Map Phase 3: ONE published project INSIDE the browser-ankawa ring (its
+ * south-west quarter), so the hit-test priority is provable in a real
+ * browser — a click on this marker must NEVER select the polygon beneath
+ * it. Deliberately without price history: the marker is a lone neutral dot
+ * with no trend glyph and no price-label band. Placed ≥70px (at the
+ * explorer's default camera) from the area's own centroid marker so the
+ * two never cluster, and clear of the polygon-click pixel the spec uses.
+ */
+DB::table('projects')->updateOrInsert(
+    ['slug' => 'browser-area-project'],
+    [
+        'name_ckb' => 'پڕۆژەی ناو ئەنکاوە',
+        'project_type' => 'residential',
+        'construction_status' => 'under_construction',
+        'delivery_status' => 'not_started',
+        'publication_status' => 'published',
+        'latitude' => 36.2110000,
+        'longitude' => 43.9720000,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
+/*
  * The project wizard, for the map suite's provider-failure test: the flag
  * switched on the operator's way, plus ONE unscoped draft owned by the admin
  * with the identity step already completed — so the Location step (the
@@ -364,10 +388,17 @@ $poiPharmacyCategory = PlaceCategory::query()->updateOrCreate(
     ],
 );
 
+/*
+ * Map Phase 3: both places are ASSIGNED to the fixture area (assignment is
+ * the services contract — the summary counts area_id, never point-in-
+ * polygon), so the browser-ankawa Area Intelligence card renders real
+ * seeded service counts: education 1, health 1.
+ */
 Place::query()->updateOrCreate(
     ['slug' => 'browser-poi-school'],
     [
         'external_id' => 'osm:node:900001',
+        'area_id' => $ankawa->id,
         'place_category_id' => $poiSchoolCategory->id,
         'name_ckb' => 'قوتابخانەی ئازادی',
         'name_ar' => 'مدرسة آزادي',
@@ -387,6 +418,7 @@ Place::query()->updateOrCreate(
     ['slug' => 'browser-poi-pharmacy'],
     [
         'external_id' => 'osm:node:900002',
+        'area_id' => $ankawa->id,
         'place_category_id' => $poiPharmacyCategory->id,
         'name_ckb' => 'دەرمانخانەی نەورۆز',
         'name_ar' => 'صيدلية نوروز',
@@ -434,11 +466,18 @@ KnowledgeEvent::query()->updateOrCreate(
  * projects prove the trend pipeline. The stubbed browser coordinate
  * (36.225, 43.99) sits inside this ring; the outside-coverage coordinate
  * (36.10, 44.20) sits inside the operating area but outside every polygon.
+ *
+ * Map Phase 3 widened the ring (43.960–44.004 × 36.205–36.245, previously
+ * 43.980–44.000 × 36.215–36.235): the explorer's polygon-click tests need a
+ * pixel INSIDE the ring that clears the area's own centroid marker, the
+ * in-ring project above, and every ring edge by a comfortable margin at the
+ * default camera (36.19, 44.009, z11). Both Wave 3 coordinates keep their
+ * meaning — INSIDE stays inside, OUTSIDE stays outside.
  */
 $ankawa->forceFill([
     'latitude' => '36.2250000',
     'longitude' => '43.9900000',
-    'boundary_wkt' => 'POLYGON((43.980 36.215, 44.000 36.215, 44.000 36.235, 43.980 36.235, 43.980 36.215))',
+    'boundary_wkt' => 'POLYGON((43.960 36.205, 44.004 36.205, 44.004 36.245, 43.960 36.245, 43.960 36.205))',
 ])->save();
 
 // The price layer's flag plus the portfolio flag, switched the operator's
