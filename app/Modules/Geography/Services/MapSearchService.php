@@ -239,9 +239,15 @@ final class MapSearchService
     {
         $budget = $cap * self::CANDIDATE_FACTOR;
 
+        /*
+         * COALESCE states the NULL rule instead of leaving it to LIKE's
+         * three-valued logic: a row whose search_key was never derived is
+         * simply unfindable. The pattern itself is ALWAYS a bound `?` —
+         * never concatenated into the SQL string.
+         */
         /** @var EloquentCollection<int, TModel> $prefix The base builder is Builder<TModel>; orderBy/limit passthroughs drop the generic. */
         $prefix = (clone $base)
-            ->whereRaw("search_key like ? escape '!'", [self::likePattern($key).'%'])
+            ->whereRaw("coalesce(search_key, '') like ? escape '!'", [self::likePattern($key).'%'])
             ->orderBy('name_ckb')
             ->orderBy('id')
             ->limit($budget)
@@ -253,7 +259,7 @@ final class MapSearchService
 
         /** @var EloquentCollection<int, TModel> $contains */
         $contains = (clone $base)
-            ->whereRaw("search_key like ? escape '!'", ['%'.self::likePattern($key).'%'])
+            ->whereRaw("coalesce(search_key, '') like ? escape '!'", ['%'.self::likePattern($key).'%'])
             ->whereNotIn('id', $prefix->modelKeys())
             ->orderBy('name_ckb')
             ->orderBy('id')
