@@ -773,10 +773,13 @@ function clearDrawing(): void {
 /*
  * Geolocation discipline, ported from the homepage location card (§6–§7):
  * the browser API is touched ONLY inside this click handler, and the fix is
- * used transiently — centre the camera, hand the coordinates once to the
- * existing /location/resolve — then dropped. Nothing here writes them to
- * storage, analytics, logs or any other request; from that point on the
- * visitor is an Area identity, not a coordinate pair.
+ * used transiently — it becomes the distance-search centre exactly as it
+ * has since this button shipped (the same /map/features refresh a manually
+ * tapped centre triggers), centres the camera, and goes ONCE to the
+ * existing /location/resolve to name the containing Area. It is never
+ * written to storage, analytics or logs, and never leaves those two
+ * same-origin MULK endpoints; from then on the visitor is an Area
+ * identity, not a coordinate pair.
  */
 const GEOLOCATION_TIMEOUT_MS = 10_000;
 
@@ -804,6 +807,21 @@ function showLocationNotice(message: string): void {
     }, 6000);
 }
 
+/*
+ * A locate that claimed the selection generation aborted whatever fetch a
+ * still-rendered selection had in flight. When the locate then produces no
+ * selection of its own (denied, unavailable, outside coverage, failed),
+ * the card must not sit on a permanent spinner — re-issue the visible
+ * selection's fetch. Callers only invoke this while their claim is still
+ * the current generation, so a newer selection's own fetch is never
+ * duplicated.
+ */
+function recoverPendingSelection(): void {
+    if (selectedArea.value && areaIntelPhase.value === 'loading') {
+        void fetchAreaIntel(selectedArea.value.slug);
+    }
+}
+
 function useMyLocation(): void {
     if (typeof navigator === 'undefined' || !navigator.geolocation) {
         permissionDenied.value = true;
@@ -816,6 +834,20 @@ function useMyLocation(): void {
 
     const attempt = ++locateAttempt;
 
+    /*
+     * My Location IS a selection action (§23), so it claims the shared
+     * selection generation NOW, at the click — not when the GPS finally
+     * answers. A polygon or list selection made while the fix is still
+     * acquiring mints a newer generation and wins: the stale fix then
+     * touches neither the camera nor the card. Without this, a slow
+     * acquisition would land AFTER a faster explicit selection and
+     * silently replace it.
+     */
+    const claim = ++areaAttempt;
+
+    areaAbort?.abort();
+    areaAbort = null;
+
     locating.value = true;
     permissionDenied.value = false;
     locationNotice.value = null;
@@ -823,8 +855,13 @@ function useMyLocation(): void {
     if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
     locateWatchdog = setTimeout(() => {
         if (attempt === locateAttempt && locating.value) {
+            // The watchdog is the deadline: strand the attempt so a fix
+            // arriving after "unavailable" was announced changes nothing.
+            locateAttempt += 1;
             locating.value = false;
             showLocationNotice(t('home.location.unavailable'));
+
+            if (claim === areaAttempt) recoverPendingSelection();
         }
     }, GEOLOCATION_WATCHDOG_MS);
 
@@ -835,6 +872,11 @@ function useMyLocation(): void {
             clearTimeout(locateWatchdog);
             locating.value = false;
 
+            // A newer explicit selection superseded this locate while the
+            // browser was acquiring: drop the fix entirely — no camera
+            // yank, no centre change, no resolve.
+            if (claim !== areaAttempt) return;
+
             const point = { lat: position.coords.latitude, lng: position.coords.longitude };
 
             // Exactly the pre-Phase-3 behaviour first: the fix becomes the
@@ -844,8 +886,8 @@ function useMyLocation(): void {
             void load();
 
             // …then the SAME resolver every other entry path uses turns the
-            // point into an Area selection.
-            void resolveMyLocation(point);
+            // point into an Area selection, under the claim made above.
+            void resolveMyLocation(point, claim);
         },
         (error) => {
             if (attempt !== locateAttempt) return;
@@ -861,6 +903,8 @@ function useMyLocation(): void {
             } else {
                 showLocationNotice(t('home.location.unavailable'));
             }
+
+            if (claim === areaAttempt) recoverPendingSelection();
         },
         // A cached fix younger than a minute is plenty for area resolution
         // and skips a second GPS spin-up.
@@ -873,11 +917,15 @@ function useMyLocation(): void {
  * SAME endpoint, contract and rate limiter as the homepage card; no second
  * resolution algorithm anywhere. The camera is already at the visitor's
  * position, so adopting the payload skips the refit and a second fetch.
+ * Runs under the selection generation useMyLocation claimed at CLICK time
+ * (`claim`): any newer explicit selection invalidates every step here.
  */
-async function resolveMyLocation(point: { lat: number; lng: number }): Promise<void> {
-    const attempt = ++areaAttempt;
+async function resolveMyLocation(point: { lat: number; lng: number }, claim: number): Promise<void> {
+    if (claim !== areaAttempt) return;
 
-    areaAbort?.abort();
+    // The click already aborted any older request when it claimed the
+    // generation; this registers the locate fetch as the one a NEWER
+    // selection must abort.
     const controller = new AbortController();
     areaAbort = controller;
 
@@ -887,28 +935,32 @@ async function resolveMyLocation(point: { lat: number; lng: number }): Promise<v
             { headers: { Accept: 'application/json' }, signal: controller.signal },
         );
 
-        if (attempt !== areaAttempt) return;
+        if (claim !== areaAttempt) return;
 
         if (response.status === 429) {
             showLocationNotice(t('home.location.rate_limited'));
+            recoverPendingSelection();
 
             return;
         }
 
         if (!response.ok) {
             showLocationNotice(t('home.location.error'));
+            recoverPendingSelection();
 
             return;
         }
 
         const payload = (await response.json()) as AreaIntel;
 
-        if (attempt !== areaAttempt) return;
+        if (claim !== areaAttempt) return;
 
         if (payload.state === 'outside_coverage' || payload.area === null) {
             // §19: outside coverage is stated honestly — no nearest-area
-            // guess — and the map stays exactly where the visitor is.
+            // guess — the map stays exactly where the visitor is, and a
+            // previously selected area keeps its card.
             showLocationNotice(t('home.location.outside'));
+            recoverPendingSelection();
 
             return;
         }
@@ -922,9 +974,10 @@ async function resolveMyLocation(point: { lat: number; lng: number }): Promise<v
         areaIntel.value = payload;
         areaIntelPhase.value = 'ready';
     } catch (error) {
-        if ((error as { name?: string }).name === 'AbortError' || attempt !== areaAttempt) return;
+        if ((error as { name?: string }).name === 'AbortError' || claim !== areaAttempt) return;
 
         showLocationNotice(t('home.location.error'));
+        recoverPendingSelection();
     }
 }
 
