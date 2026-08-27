@@ -22,8 +22,10 @@ type-checks with `tsc --noEmit` first, then builds via a dedicated Vite config,
 then executes:
 
 - `tests/js/geojson.test.ts` — `lib/map/geojson.ts` conversions/winding/hole
-  regressions + Google adapter lifecycle (script load/failure/stall,
-  `gm_authFailure` chain, listener cleanup).
+  regressions + `boundaryBounds` (Phase 3 camera-fit extent: polygon /
+  multipolygon / holes-don't-widen / degenerate→null) + Google adapter
+  lifecycle (script load/failure/stall, `gm_authFailure` chain, listener
+  cleanup).
 - `tests/js/trend.test.ts` — `lib/map/trend.ts` (colours, glyphs,
   `trendHasClaim`, `normaliseTrend` never yields `flat` for garbage).
 - `tests/js/wizard.test.ts` — `lib/wizard/geometry.ts` (imports the
@@ -41,6 +43,7 @@ Framework-free coverage of `Polygon`, `Wkt`, `Topology`, `Coordinates`
 | Spec | Pins |
 |---|---|
 | `map-production.spec.ts` | The working-style path (serves a deterministic zero-network style for `**/map-styles/mulk-dark.json` — the same-origin fallback path; the provider-failure test aborts that route explicitly): homepage map becomes a real painted canvas in ckb/ar/en; canvas `position:absolute` regression; `/map` loading veil leaves; honest failure + live list when style unavailable; all four trend semantics on `/invest` markers from the real features response; marker click on the actual canvas selects the project; admin picker recovers from `v-show`-hidden tab; click-to-place yields Erbil-plausible coords; mobile map/list tab switch with no rebuild/no loader. |
+| `map-area-selection.spec.ts` | Map Phase 3 on `/map` (deterministic style; pixel geometry derived from the default camera 36.19/44.009 z11, documented in the file header): polygon click opens the Area Intelligence card from the seeded ring on every viewport (desktop float vs bottom-sheet dialog); ckb/ar/en identity + profile route; the in-ring project marker's click is never stolen by the polygon; area list rows select in place (aria-pressed sync); empty-map click clears only the selection; live location with MOCKED browser geolocation (probe counts `getCurrentPosition` — zero before the click) resolves through `/location/resolve`, denial keeps the map usable, outside-coverage answers honestly with no nearest guess; a card service group enables the real places layer + category chip. |
 | `map-rtl.spec.ts` | RTL plugin behavioral half: registered exactly once across two map surfaces in one SPA session (zero console errors); plugin served same-origin from `/build/assets/`; harness page proves `getRTLTextPluginStatus() === 'loaded'` with Arabic + Sorani labels using the REAL built chunks. |
 | `invest.spec.ts` | `/invest` under fully hermetic network (tiles never load — the degraded path): map container occupies real space before any tile (blank-map defect class), list renders with trend badge, search opens floating card with real project link, filters narrow, no overflow/duplicate ids — 3 locales × 5 viewports. |
 | `public-home.spec.ts` | Homepage: the only sanctioned canvas is the MapLibre canvas. |

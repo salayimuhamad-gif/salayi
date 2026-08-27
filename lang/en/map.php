@@ -83,6 +83,9 @@ return [
         'empty' => 'No investment projects in this view',
         'empty_hint' => 'Move the map or zoom out to see more',
     ],
+    'area_card' => [
+        'view_full' => 'View the full area',
+    ],
     'use_my_location' => 'My location',
     'zoom_in_notice' => 'Not all results are shown. Zoom in.',
 ];

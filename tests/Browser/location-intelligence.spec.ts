@@ -16,7 +16,7 @@ import {
  * asked for nothing" is measured, not assumed.
  *
  * Everything the card then shows is a PERSISTED fixture: the seeded
- * `browser-ankawa` polygon (36.215–36.235 × 43.980–44.000) and its one
+ * `browser-ankawa` polygon (36.205–36.245 × 43.960–44.004) and its one
  * published sale index (USD 1,250, period 2026-07) — rendered through the
  * real resolver and the real price selection, never injected client-side.
  */

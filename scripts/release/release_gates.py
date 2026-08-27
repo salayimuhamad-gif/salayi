@@ -204,6 +204,13 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # every viewport with NO skips, so it is deliberately absent from
     # PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS — a skip here is a defect.
     'tests/Browser/location-intelligence.spec.ts',
+    # Map Phase 3 area selection on /map: polygon click opens the Area
+    # Intelligence card from the seeded ring on every viewport, hit-test
+    # priority proven against an in-ring marker, list rows select in place,
+    # empty-map click clears, and live location (mocked, user-initiated —
+    # measured by the same probe as location-intelligence) resolves/denies/
+    # answers outside-coverage honestly through /location/resolve.
+    'tests/Browser/map-area-selection.spec.ts',
     # The working-map suite: a deterministic style served from inside the
     # tests (never demotiles), map readiness on the homepage//map//invest,
     # all four trend semantics from persisted rows, marker-click selection,
@@ -274,6 +281,11 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         "surfaced as the registry's one unrecorded entry",
     'tests/Browser/mfa.spec.ts':
         'MFA flow runs once, on desktop-1440x900 only',
+    'tests/Browser/map-area-selection.spec.ts':
+        'the polygon-click card runs on every viewport; the locale pass, '
+        'hit-test priority, dismissal, geolocation outcomes and POI wiring '
+        'run once each on desktop-1440x900 (plus one 360x800 sheet pass and '
+        'one 390x844 live-location pass)',
     'tests/Browser/map-production.spec.ts':
         'marker interaction and the admin picker are desktop scenarios; '
         'the map/list switch exists only below md',

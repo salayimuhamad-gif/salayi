@@ -1,0 +1,1 @@
+const n={education:"education",health:"health",shopping:"bag",transport:"bus",recreation:"tree",worship:"dome",civic:"landmark",finance:"banknote",hospitality:"cup",employment:"portfolio",other:"map-pin"};function o(e){return n[e]??"map-pin"}export{o as s};

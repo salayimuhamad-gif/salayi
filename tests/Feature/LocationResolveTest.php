@@ -7,6 +7,8 @@ namespace Tests\Feature;
 use App\Http\Middleware\HandleInertiaRequests;
 use App\Modules\Geography\Enums\AreaType;
 use App\Modules\Geography\Models\Area;
+use App\Modules\Geography\Models\Place;
+use App\Modules\Geography\Models\PlaceCategory;
 use App\Modules\Market\Models\MarketIndex;
 use App\Modules\Market\Models\MarketIndexValue;
 use App\Modules\Projects\Enums\PublicationStatus;
@@ -340,6 +342,50 @@ final class LocationResolveTest extends TestCase
             ->assertStatus(422);
     }
 
+    /* ------------------------------------------- services (Map Phase 3) - */
+
+    public function test_the_area_payload_carries_the_service_summary_in_both_modes(): void
+    {
+        $area = $this->makeBoundedArea('ankawa');
+
+        $school = PlaceCategory::query()->firstOrCreate(
+            ['key' => 'school'],
+            ['group' => 'education', 'name_ckb' => 'قوتابخانە', 'is_active' => true, 'sort_order' => 1],
+        );
+
+        $this->makePlace($area, $school, 'school-open');
+
+        // One gated-out counter-example. The full gate matrix is proven in
+        // AreaServicesSummaryTest; this pins that the resolve payload
+        // answers from THAT implementation, not a second counting path.
+        $this->makePlace($area, $school, 'school-draft', [
+            'publication_status' => PublicationStatus::Draft,
+        ]);
+
+        foreach ([
+            '/location/resolve?lat='.self::LAT.'&lng='.self::LNG,
+            '/location/resolve?area=ankawa',
+        ] as $url) {
+            $this->getJson($url)
+                ->assertOk()
+                ->assertJsonPath('area.services.0.key', 'education')
+                ->assertJsonPath('area.services.0.count', 1)
+                ->assertJsonPath('area.services.0.categories.0.key', 'school')
+                ->assertJsonPath('area.services.0.categories.0.count', 1)
+                ->assertJsonCount(1, 'area.services');
+        }
+    }
+
+    public function test_an_area_with_no_qualifying_places_carries_an_empty_services_list(): void
+    {
+        $this->makeBoundedArea('ankawa');
+
+        $this->getJson('/location/resolve?area=ankawa')
+            ->assertOk()
+            ->assertJsonPath('state', 'no_data')
+            ->assertJsonPath('area.services', []);
+    }
+
     /* -------------------------------------------------- rate limiting --- */
 
     public function test_the_named_rate_limiter_answers_429_beyond_the_budget(): void
@@ -493,6 +539,27 @@ final class LocationResolveTest extends TestCase
             // the public card translates it — an invented level renders as a
             // raw market.confidence.* key.
             'confidence' => 'moderate',
+        ], $attributes));
+    }
+
+    /**
+     * A place that passes every public-pin gate unless an override says
+     * otherwise — the same defaults AreaServicesSummaryTest builds on.
+     *
+     * @param  array<model-property<Place>, mixed>  $attributes
+     */
+    private function makePlace(Area $area, PlaceCategory $category, string $name, array $attributes = []): Place
+    {
+        return Place::query()->create(array_merge([
+            'name_ckb' => $name,
+            'place_category_id' => $category->id,
+            'area_id' => $area->id,
+            'latitude' => self::LAT,
+            'longitude' => self::LNG,
+            'publication_status' => PublicationStatus::Published,
+            'is_public' => true,
+            'is_duplicate_primary' => true,
+            'operational_status' => 'operating',
         ], $attributes));
     }
 }

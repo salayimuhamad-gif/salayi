@@ -92,6 +92,18 @@ export class MapLibreAdapter implements MapAdapter {
         pois: [],
     };
 
+    /*
+     * Area-selection state (Map Phase 3). The slug is buffered exactly like
+     * pending data so a selection set before `load` (a restored page state)
+     * paints the moment the layers exist; interactivity is OFF until the
+     * page opts in, so every other surface keeps its exact click behavior.
+     */
+    private selectedBoundarySlug: string | null = null;
+
+    private boundaryInteractive = false;
+
+    private hoveredBoundarySlug: string | null = null;
+
     private constructor(private readonly options: AdapterOptions) {}
 
     static async create(options: AdapterOptions): Promise<MapLibreAdapter> {
@@ -270,9 +282,54 @@ export class MapLibreAdapter implements MapAdapter {
                 })
                 .length > 0;
 
-            if (!hit) {
-                this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng });
+            if (hit) {
+                return;
             }
+
+            /*
+             * Area polygon selection (Map Phase 3) sits BELOW every record
+             * interaction in the priority order: project markers first,
+             * intentional POI interaction second (its layers are already in
+             * the reserved set for the day it exists), polygon third, empty
+             * map last. A click that touches any record pixel therefore
+             * NEVER selects the polygon under it — it falls through to
+             * onClick exactly as before, so centre-picking over a marker
+             * keeps working and a marker tap never reads as an area tap.
+             */
+            if (this.boundaryInteractive && this.options.events.onBoundarySelect) {
+                const reserved = [
+                    'unclustered', 'trend-markers', 'point-labels', 'point-names',
+                    'clusters', 'poi-dots', 'poi-labels',
+                ];
+                const recordHit = map
+                    .queryRenderedFeatures(event.point, {
+                        layers: this.presentLayers(map, reserved),
+                    })
+                    .length > 0;
+
+                if (!recordHit) {
+                    const boundary = map.queryRenderedFeatures(event.point, {
+                        layers: this.presentLayers(map, ['boundary-fill']),
+                    })[0];
+                    const props = boundary?.properties as
+                        | { slug?: unknown; name?: unknown; type?: unknown }
+                        | undefined;
+
+                    // Identity travels through the feature's own public
+                    // properties — never layer internals.
+                    if (props && typeof props.slug === 'string' && props.slug !== '') {
+                        this.options.events.onBoundarySelect({
+                            slug: props.slug,
+                            name: typeof props.name === 'string' ? props.name : '',
+                            type: typeof props.type === 'string' ? props.type : '',
+                        });
+
+                        return;
+                    }
+                }
+            }
+
+            this.options.events.onClick({ lat: event.lngLat.lat, lng: event.lngLat.lng });
         });
 
         /*
@@ -300,9 +357,12 @@ export class MapLibreAdapter implements MapAdapter {
 
             // Boundaries are their own source. Merging them into `features`
             // would put polygons through the clusterer, which silently drops
-            // non-point geometry.
+            // non-point geometry. promoteId lifts each feature's stable slug
+            // into its feature id so the hover feature-state (Map Phase 3)
+            // needs no generated ids and survives data refreshes.
             map.addSource('boundaries', {
                 type: 'geojson',
+                promoteId: 'slug',
                 data: this.pending.boundaries ?? { type: 'FeatureCollection', features: [] },
             });
 
@@ -335,7 +395,47 @@ export class MapLibreAdapter implements MapAdapter {
                 id: 'boundary-line',
                 type: 'line',
                 source: 'boundaries',
-                paint: { 'line-color': accent, 'line-width': 1.5, 'line-opacity': 0.6 },
+                paint: {
+                    'line-color': accent,
+                    'line-width': 1.5,
+                    // Hover is a whisper, not a shout: the outline firms up
+                    // under the pointer (Map Phase 3) and nothing else moves.
+                    // With no feature-state set this is exactly the historic
+                    // 0.6, so non-interactive surfaces render unchanged.
+                    'line-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false], 0.9,
+                        0.6,
+                    ],
+                },
+            });
+
+            /*
+             * The selected area's premium highlight (Map Phase 3): restrained
+             * warm amber outline over a barely-there interior lift, filtered
+             * to one slug. Added HERE — beneath every cluster, marker, POI
+             * and label layer that follows — so the selection never obscures
+             * roads, projects or places. ' ' matches no real slug, so
+             * with nothing selected both layers draw nothing.
+             */
+            map.addLayer({
+                id: 'boundary-selected-fill',
+                type: 'fill',
+                source: 'boundaries',
+                filter: ['==', ['get', 'slug'], this.selectedBoundarySlug ?? ' '],
+                paint: { 'fill-color': '#f3c56f', 'fill-opacity': 0.1 },
+            });
+
+            map.addLayer({
+                id: 'boundary-selected-line',
+                type: 'line',
+                source: 'boundaries',
+                filter: ['==', ['get', 'slug'], this.selectedBoundarySlug ?? ' '],
+                paint: {
+                    'line-color': '#f3c56f',
+                    'line-width': 2.5,
+                    'line-opacity': 0.95,
+                },
             });
 
             map.addLayer({
@@ -585,6 +685,61 @@ export class MapLibreAdapter implements MapAdapter {
                 map.getCanvas().style.cursor = '';
             });
 
+            /*
+             * Boundary hover (Map Phase 3): registered only for the surface
+             * that wired onBoundarySelect, so every other map pays nothing.
+             * The hovered polygon's outline firms up through feature-state
+             * (the paint expression above) and the cursor promises the click
+             * — but only while interaction is enabled and no record marker
+             * or POI sits under the pointer, mirroring the click priority
+             * exactly. Touch devices never depend on this: the first
+             * intentional tap selects through the click path.
+             */
+            if (this.options.events.onBoundarySelect) {
+                map.on('mousemove', (event) => {
+                    // Clusters stay clickable in every mode, so their cursor
+                    // promise is computed here too — this handler owns the
+                    // cursor on the one surface that registers it, and the
+                    // values agree with the generic cluster handlers above.
+                    const clusterUnder = map
+                        .queryRenderedFeatures(event.point, {
+                            layers: this.presentLayers(map, ['clusters']),
+                        })
+                        .length > 0;
+
+                    let hoverSlug: string | null = null;
+
+                    if (this.boundaryInteractive && !clusterUnder) {
+                        const recordUnder = map
+                            .queryRenderedFeatures(event.point, {
+                                layers: this.presentLayers(map, [
+                                    'unclustered', 'trend-markers', 'point-labels',
+                                    'point-names', 'poi-dots', 'poi-labels',
+                                ]),
+                            })
+                            .length > 0;
+
+                        if (!recordUnder) {
+                            const boundary = map.queryRenderedFeatures(event.point, {
+                                layers: this.presentLayers(map, ['boundary-fill']),
+                            })[0];
+
+                            hoverSlug = typeof boundary?.properties?.slug === 'string'
+                                ? boundary.properties.slug
+                                : null;
+                        }
+                    }
+
+                    this.setBoundaryHover(map, hoverSlug);
+                    map.getCanvas().style.cursor = clusterUnder || hoverSlug !== null ? 'pointer' : '';
+                });
+
+                map.on('mouseout', () => {
+                    this.setBoundaryHover(map, null);
+                    map.getCanvas().style.cursor = '';
+                });
+            }
+
             this.loaded = true;
         });
 
@@ -747,6 +902,80 @@ export class MapLibreAdapter implements MapAdapter {
             | undefined;
 
         source?.setData(this.poiCollection(pois) as Parameters<typeof source.setData>[0]);
+    }
+
+    /**
+     * Highlight one boundary by its stable slug (Map Phase 3), null to
+     * clear. Pre-load values are buffered like every other setter: the
+     * selected layers are CREATED with the stored slug in their filter.
+     */
+    setSelectedBoundary(slug: string | null): void {
+        this.selectedBoundarySlug = slug;
+
+        if (!this.loaded || this.map === null) {
+            return;
+        }
+
+        // ' ' can never equal a real slug (the grammar is [a-z0-9-]), so a
+        // cleared selection genuinely draws nothing.
+        const filter: import('maplibre-gl').FilterSpecification = ['==', ['get', 'slug'], slug ?? ' '];
+
+        if (this.map.getLayer('boundary-selected-fill') !== undefined) {
+            this.map.setFilter('boundary-selected-fill', filter);
+            this.map.setFilter('boundary-selected-line', filter);
+        }
+    }
+
+    /**
+     * Gate polygon selection (Map Phase 3). Disabling also drops any live
+     * hover so a pick/draw mode never leaves a stale highlight behind.
+     */
+    setBoundaryInteractive(enabled: boolean): void {
+        this.boundaryInteractive = enabled;
+
+        if (!enabled && this.map !== null && this.loaded) {
+            this.setBoundaryHover(this.map, null);
+        }
+    }
+
+    /**
+     * Fit the camera to a lat/lng box once, at the moment of an explicit
+     * selection. Padding is per-side CSS pixels so the caller can reserve
+     * room for its card or sheet; maxZoom stops a tiny mahalla from filling
+     * the screen and stripping all spatial context.
+     */
+    fitBounds(bounds: MapBounds, options?: {
+        padding?: { top: number; bottom: number; left: number; right: number };
+        maxZoom?: number;
+    }): void {
+        this.map?.fitBounds(
+            [[bounds.west, bounds.south], [bounds.east, bounds.north]],
+            {
+                padding: options?.padding ?? { top: 48, bottom: 48, left: 48, right: 48 },
+                maxZoom: options?.maxZoom ?? 15,
+                duration: 650,
+            },
+        );
+    }
+
+    /** Feature-state bookkeeping for the boundary hover — state only, never cursor. */
+    private setBoundaryHover(map: import('maplibre-gl').Map, slug: string | null): void {
+        if (slug === this.hoveredBoundarySlug) {
+            return;
+        }
+
+        if (this.hoveredBoundarySlug !== null && map.getSource('boundaries') !== undefined) {
+            map.setFeatureState(
+                { source: 'boundaries', id: this.hoveredBoundarySlug },
+                { hover: false },
+            );
+        }
+
+        if (slug !== null && map.getSource('boundaries') !== undefined) {
+            map.setFeatureState({ source: 'boundaries', id: slug }, { hover: true });
+        }
+
+        this.hoveredBoundarySlug = slug;
     }
 
     flyTo(point: LatLng, zoom?: number): void {

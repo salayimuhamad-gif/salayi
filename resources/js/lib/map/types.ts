@@ -129,6 +129,29 @@ export interface AdapterEvents {
      * adapter does not emit it — the list remains the selection path there.
      */
     onMarkerClick?: (id: number) => void;
+
+    /**
+     * A click that selected an AREA POLYGON (Map Phase 3). Optional: only
+     * the Explorer wires it, and the MapLibre adapter emits it only when
+     * boundary interaction is enabled AND the click hit no record marker or
+     * POI layer — the interaction priority (project marker, then intentional
+     * POI interaction, then polygon) is enforced inside the adapter, never
+     * left to pages. Identity comes from the boundary feature's own
+     * properties — stable public fields, never internal layer ids.
+     */
+    onBoundarySelect?: (identity: BoundaryIdentity) => void;
+}
+
+/**
+ * The stable identity a boundary feature carries (the /map/features
+ * boundaries payload writes exactly these properties). Slug is the public
+ * identifier every area route already uses; ids stay server-side.
+ */
+export interface BoundaryIdentity {
+    slug: string;
+    /** Locale-resolved server-side, exactly as the list renders it. */
+    name: string;
+    type: string;
 }
 
 export interface MapAdapter {
@@ -168,6 +191,35 @@ export interface MapAdapter {
     setPin?(point: LatLng | null, onDragEnd?: (point: LatLng) => void): void;
 
     flyTo(point: LatLng, zoom?: number): void;
+
+    /**
+     * Fit the camera to a lat/lng box ONCE (Map Phase 3's selection focus).
+     * Optional capability like setPin. Padding is CSS pixels per side so a
+     * floating card or bottom sheet can be accounted for; maxZoom keeps a
+     * tiny polygon from filling the screen. Called only at the moment of an
+     * explicit selection — never from a watcher — so user panning afterwards
+     * is respected.
+     */
+    fitBounds?(bounds: MapBounds, options?: {
+        padding?: { top: number; bottom: number; left: number; right: number };
+        maxZoom?: number;
+    }): void;
+
+    /**
+     * Highlight one area boundary by its stable slug (Map Phase 3), or clear
+     * with null. Optional capability: the MapLibre adapter renders a
+     * restrained amber outline + faint interior over the existing boundaries
+     * source; nothing else changes and record markers stay on top.
+     */
+    setSelectedBoundary?(slug: string | null): void;
+
+    /**
+     * Gate polygon selection (Map Phase 3). The Explorer switches it OFF
+     * while centre-picking or drawing so those clicks keep their existing
+     * meaning even over a polygon; onBoundarySelect fires only while
+     * enabled. Off by default until the page opts in.
+     */
+    setBoundaryInteractive?(enabled: boolean): void;
 
     /**
      * Recompute the canvas after the container's size changed. The adapter

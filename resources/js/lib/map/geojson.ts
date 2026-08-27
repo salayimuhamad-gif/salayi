@@ -154,3 +154,41 @@ export function toGooglePolygons(geometry: BoundaryGeometry): LatLngLiteral[][][
 export function emptyBoundaryCollection(): BoundaryCollection {
     return { type: 'FeatureCollection', features: [] };
 }
+
+/**
+ * The lat/lng box enclosing a boundary geometry (Map Phase 3) — the input to
+ * the adapter's fitBounds when an area is selected. Pure ring arithmetic over
+ * exteriors AND holes (a hole's vertices lie inside the exterior's box, so
+ * including them costs nothing and skipping them saves nothing), degenerate
+ * geometry answers null so a caller falls back to the area's centroid rather
+ * than flying to a fabricated box.
+ */
+export function boundaryBounds(
+    geometry: BoundaryGeometry,
+): { north: number; south: number; east: number; west: number } | null {
+    let north = -Infinity;
+    let south = Infinity;
+    let east = -Infinity;
+    let west = Infinity;
+    let seen = false;
+
+    const rings: LinearRing[] = geometry.type === 'Polygon'
+        ? geometry.coordinates
+        : geometry.coordinates.flat();
+
+    for (const ring of rings) {
+        for (const [lng, lat] of ring) {
+            if (!Number.isFinite(lng) || !Number.isFinite(lat)) {
+                continue;
+            }
+
+            seen = true;
+            north = Math.max(north, lat);
+            south = Math.min(south, lat);
+            east = Math.max(east, lng);
+            west = Math.min(west, lng);
+        }
+    }
+
+    return seen ? { north, south, east, west } : null;
+}
