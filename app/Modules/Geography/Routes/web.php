@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Modules\Geography\Http\Controllers\Public\AreaProfileController;
 use App\Modules\Geography\Http\Controllers\Public\LocationResolveController;
+use App\Modules\Geography\Http\Controllers\Public\MapCompareController;
 use App\Modules\Geography\Http\Controllers\Public\MapExplorerController;
 use App\Modules\Geography\Http\Controllers\Public\PlaceProfileController;
 use Illuminate\Support\Facades\Route;
@@ -49,6 +50,16 @@ Route::middleware('feature:map.explorer')->group(function (): void {
     Route::get('/map/search', [MapExplorerController::class, 'search'])
         ->middleware('throttle:map-explorer-search')
         ->name('map.search');
+
+    /*
+     * Map Phase 6: 2–3 areas side by side, composed entirely from existing
+     * authorities. Its own limiter — comparing must neither spend nor be
+     * starved by search, viewport or heat budgets (the one-surface /
+     * one-bucket rule).
+     */
+    Route::get('/map/compare', MapCompareController::class)
+        ->middleware('throttle:map-compare')
+        ->name('map.compare');
 });
 
 /*

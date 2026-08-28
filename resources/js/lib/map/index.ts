@@ -5,6 +5,7 @@ import type { AdapterOptions, MapAdapter } from './types';
 export type { BoundaryIdentity, MapAdapter, MapBounds, PointFeature, PoiCategory, PoiFeature, PriceTrend, BoundaryCollection, LatLng } from './types';
 export { poiCategoryFor } from './poiCategories';
 export { boundaryBounds } from './geojson';
+export { COMPARE_IDENTITIES, type CompareIdentity } from './compare';
 
 export interface AdapterResult {
     adapter: MapAdapter;

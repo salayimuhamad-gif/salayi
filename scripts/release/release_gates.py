@@ -211,6 +211,15 @@ PLAYWRIGHT_REMAINING_SPECS = (
     # measured by the same probe as location-intelligence) resolves/denies/
     # answers outside-coverage honestly through /location/resolve.
     'tests/Browser/map-area-selection.spec.ts',
+    # Map Phase 6 area comparison on /map: Compare mode builds a 2–3 area
+    # set through the Phase 5 search (areas-only picker), the panel renders
+    # the seeded services counts and the honest per-area movement states,
+    # compatible apartment evidence produces factual difference lines while
+    # filter changes preserve the selected set, a fourth or duplicate area
+    # is refused in words, a currency mismatch is refused with its reason
+    # (never converted), the phone widths stack A/B cards with no sideways
+    # scroll, and the Arabic pass renders the grid RTL.
+    'tests/Browser/map-compare.spec.ts',
     # Map Phase 4 market heatmap on /map: the seeded ring paints the
     # movement engine's own +5.04% verdict green (pixel-sampled per locale)
     # and clears on mode exit; window chips disable exactly what the
@@ -303,6 +312,10 @@ PLAYWRIGHT_REMAINING_INTENTIONAL_SKIPS = {
         'hit-test priority, dismissal, geolocation outcomes and POI wiring '
         'run once each on desktop-1440x900 (plus one 360x800 sheet pass and '
         'one 390x844 live-location pass)',
+    'tests/Browser/map-compare.spec.ts':
+        'the comparison contracts run once each on desktop-1440x900, the '
+        'Arabic pass on laptop-1366x768, and the stacked layout once at '
+        'each phone width',
     'tests/Browser/map-market-heatmap.spec.ts':
         'pixel sampling and the filter contract run on desktop-1440x900 '
         '(the locale pass loops there), plus one 360x800 layout pass',

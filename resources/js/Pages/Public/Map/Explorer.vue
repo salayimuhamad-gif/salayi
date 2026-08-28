@@ -6,6 +6,7 @@ import AppAlert from '@/Components/ui/AppAlert.vue';
 import { t, formatNumber } from '@/lib/i18n';
 import { useLocale } from '@/Composables/useLocale';
 import AreaIntelligenceCard, { type AreaIntel } from '@/Components/Public/AreaIntelligenceCard.vue';
+import CompareAreasPanel, { type CompareResponse } from '@/Components/Public/CompareAreasPanel.vue';
 import MobileBottomSheet from '@/Components/Public/MobileBottomSheet.vue';
 import { useIsDesktop } from '@/Composables/useIsDesktop';
 import {
@@ -416,17 +417,27 @@ let searchAttempt = 0;
 let searchAbort: AbortController | null = null;
 let searchDebounce: ReturnType<typeof setTimeout> | undefined;
 
-const searchFlat = computed<SearchRow[]>(() => [
-    ...searchGroups.value.areas,
-    ...searchGroups.value.projects,
-    ...searchGroups.value.places,
-]);
+const searchFlat = computed<SearchRow[]>(() =>
+    (mapMode.value === 'compare'
+        ? [...searchGroups.value.areas]
+        : [
+            ...searchGroups.value.areas,
+            ...searchGroups.value.projects,
+            ...searchGroups.value.places,
+        ]));
 
 /** Grouped for rendering, with each option's global index for the combobox. */
 const searchGrouped = computed(() => {
     let index = 0;
     const build = (key: 'areas' | 'projects' | 'places', rows: SearchRow[]) =>
         ({ key, rows: rows.map((row) => ({ row, index: index++ })) });
+
+    // Compare mode picks AREAS (Phase 6 §26): the same search, narrowed to
+    // the one group a comparison slot can hold.
+    if (mapMode.value === 'compare') {
+        return [build('areas', searchGroups.value.areas)]
+            .filter((group) => group.rows.length > 0);
+    }
 
     return [
         build('areas', searchGroups.value.areas),
@@ -621,6 +632,14 @@ function chooseResult(row: SearchRow): void {
 }
 
 function chooseArea(row: SearchAreaRow): void {
+    // Compare mode's picker IS this search (Phase 6 §26): an area result
+    // fills the next A/B/C slot instead of opening the Phase 3 card.
+    if (mapMode.value === 'compare') {
+        addComparedArea(row);
+
+        return;
+    }
+
     // Phase 3's canonical selection — same card, same polygon highlight,
     // same resolve budget — with the response's cached bbox/centroid as
     // the camera fallback for an area outside the loaded viewport (§21).
@@ -712,7 +731,15 @@ const MARKET_WINDOWS = ['7d', '30d', '1m', '3m', '6m', '1y', 'all'] as const;
 
 const MARKET_TRANSACTIONS = ['sale', 'rent'] as const;
 
-const mapMode = ref<'explore' | 'market'>('explore');
+const mapMode = ref<'explore' | 'market' | 'compare'>('explore');
+
+/**
+ * The mode vocabulary: Explore always, Market only where the market
+ * feature exists, Compare always (Phase 6 — it needs only the explorer
+ * itself; each metric states its own availability).
+ */
+const mapModes = computed<Array<'explore' | 'market' | 'compare'>>(() =>
+    (props.market.available ? ['explore', 'market', 'compare'] : ['explore', 'compare']));
 const marketTransaction = ref<string>('sale');
 const marketWindow = ref<string>('all');
 /** null = the spanning all-categories index — the product's honest "all". */
@@ -727,31 +754,64 @@ const boundaryZoomThreshold = ref(11);
 let marketAttempt = 0;
 let marketAbort: AbortController | null = null;
 
-function setMapMode(mode: 'explore' | 'market'): void {
+function setMapMode(mode: 'explore' | 'market' | 'compare'): void {
     if (mapMode.value === mode) return;
+
+    const previous = mapMode.value;
 
     mapMode.value = mode;
 
-    if (mode === 'market') {
-        // The heat paints the area polygons, and polygons only arrive with
-        // the areas layer — entering the mode switches it on the ordinary
-        // way, visible on the ordinary chip.
+    // Leaving a mode retires ITS claims on the map — heat clears exactly
+    // as it always has; compare outlines clear while the selected set is
+    // kept, so returning to Compare restores it.
+    if (previous === 'market') {
+        marketAttempt += 1;
+        marketAbort?.abort();
+        marketAbort = null;
+        marketPhase.value = 'idle';
+        marketBelowZoom.value = false;
+        adapter.value?.setMarketHeat?.(null);
+    }
+
+    if (previous === 'compare') {
+        compareAttempt += 1;
+        compareAbort?.abort();
+        compareAbort = null;
+        focusedCompared.value = null;
+        adapter.value?.setComparedBoundaries?.(null);
+    }
+
+    if (mode === 'market' || mode === 'compare') {
+        // Heat paints polygons and compare outlines them, and polygons only
+        // arrive with the areas layer — entering either mode switches it on
+        // the ordinary way, visible on the ordinary chip.
         if (!active.value.includes('areas')) {
             active.value = [...active.value, 'areas'];
             void load();
         }
-
-        void fetchMarketHeat();
-
-        return;
     }
 
-    marketAttempt += 1;
-    marketAbort?.abort();
-    marketAbort = null;
-    marketPhase.value = 'idle';
-    marketBelowZoom.value = false;
-    adapter.value?.setMarketHeat?.(null);
+    if (mode === 'market') {
+        void fetchMarketHeat();
+    }
+
+    if (mode === 'compare') {
+        /*
+         * §33: Compare owns the multi-area state; the Phase 3 single-area
+         * card would contradict it, so entering the mode clears any open
+         * selection and boundary clicks focus comparison columns instead.
+         */
+        clearArea();
+        adapter.value?.setComparedBoundaries?.(
+            comparedAreas.value.length > 0
+                ? comparedAreas.value.map((area) => area.slug)
+                : null,
+        );
+
+        if (comparedAreas.value.length >= 2) {
+            void fetchCompare();
+        }
+    }
 }
 
 async function fetchMarketHeat(): Promise<void> {
@@ -839,11 +899,19 @@ async function fetchMarketHeat(): Promise<void> {
     }
 }
 
+/*
+ * §37: ONE shared filter state. Compare inherits whatever Market holds and
+ * writes back to the same refs, so the two modes can never contradict;
+ * each pick refreshes only the active mode's data (fetchMarketHeat and
+ * fetchCompare both no-op outside their own mode), and §38 holds by
+ * construction — the compared areas live in their own state.
+ */
 function pickMarketTransaction(mode: string): void {
     if (marketTransaction.value === mode) return;
 
     marketTransaction.value = mode;
     void fetchMarketHeat();
+    void fetchCompare();
 }
 
 function pickMarketWindow(key: string): void {
@@ -851,6 +919,7 @@ function pickMarketWindow(key: string): void {
 
     marketWindow.value = key;
     void fetchMarketHeat();
+    void fetchCompare();
 }
 
 function pickMarketPropertyType(value: string | null): void {
@@ -858,6 +927,7 @@ function pickMarketPropertyType(value: string | null): void {
 
     marketPropertyType.value = value;
     void fetchMarketHeat();
+    void fetchCompare();
 }
 
 /* The category vocabulary comes from the server's enum exposure — a case
@@ -890,6 +960,238 @@ const marketNotice = computed<string | null>(() => {
 
     return null;
 });
+
+/* ---------------------------------------------- area comparison (Phase 6) */
+
+/*
+ * Compare mode: 2–3 areas side by side, every figure composed server-side
+ * by /map/compare from the existing authorities. ONE canonical compared
+ * set — the slot chips, the map outlines and the panel columns all derive
+ * from `comparedAreas`; a lightweight `focusedCompared` marks the column
+ * under inspection (§33) without resurrecting the Phase 3 card. The
+ * Phase 5 search doubles as the picker: in Compare mode an area result
+ * ADDS a slot instead of selecting, and the dropdown offers areas only.
+ */
+
+interface ComparedArea {
+    slug: string;
+    name: string;
+    type: string;
+    lat: number | null;
+    lng: number | null;
+    bounds: MapBounds | null;
+}
+
+const comparedAreas = ref<ComparedArea[]>([]);
+const focusedCompared = ref<string | null>(null);
+const compareData = ref<CompareResponse | null>(null);
+const comparePhase = ref<'idle' | 'loading' | 'ready' | 'error'>('idle');
+
+/** Transient picker feedback (duplicate / full) — compact, auto-clearing. */
+const compareNotice = ref<string | null>(null);
+let compareNoticeTimer: ReturnType<typeof setTimeout> | undefined;
+
+let compareAttempt = 0;
+let compareAbort: AbortController | null = null;
+
+function showCompareNotice(message: string): void {
+    compareNotice.value = message;
+
+    if (compareNoticeTimer !== undefined) clearTimeout(compareNoticeTimer);
+    compareNoticeTimer = setTimeout(() => {
+        compareNotice.value = null;
+    }, 5000);
+}
+
+async function fetchCompare(): Promise<void> {
+    if (mapMode.value !== 'compare' || comparedAreas.value.length < 2) return;
+
+    const attempt = ++compareAttempt;
+
+    compareAbort?.abort();
+    const controller = new AbortController();
+    compareAbort = controller;
+
+    comparePhase.value = 'loading';
+
+    try {
+        const params = new URLSearchParams();
+        comparedAreas.value.forEach((area) => params.append('areas[]', area.slug));
+        params.set('transaction', marketTransaction.value);
+        params.set('period', marketWindow.value);
+        if (marketPropertyType.value !== null) {
+            params.set('property_type', marketPropertyType.value);
+        }
+
+        const response = await fetch(localized(`/map/compare?${params.toString()}`), {
+            headers: { Accept: 'application/json' },
+            signal: controller.signal,
+        });
+
+        if (attempt !== compareAttempt) return;
+
+        if (!response.ok) {
+            comparePhase.value = 'error';
+
+            return;
+        }
+
+        const payload = (await response.json()) as CompareResponse;
+
+        if (attempt !== compareAttempt) return;
+
+        compareData.value = payload;
+        comparePhase.value = 'ready';
+    } catch (error) {
+        if ((error as { name?: string }).name === 'AbortError' || attempt !== compareAttempt) return;
+
+        // §53: the failure is stated in the panel with a retry; the slots
+        // and the map stay exactly as they were.
+        comparePhase.value = 'error';
+    }
+}
+
+function retryCompare(): void {
+    void fetchCompare();
+}
+
+/**
+ * Re-derive everything from the canonical set: outlines, data, camera.
+ * The camera fits ONLY here — on add/remove — and on the explicit
+ * Show-all action, never while the visitor pans (§32).
+ */
+function syncCompare(): void {
+    adapter.value?.setComparedBoundaries?.(
+        comparedAreas.value.length > 0
+            ? comparedAreas.value.map((area) => area.slug)
+            : null,
+    );
+
+    if (comparedAreas.value.length >= 2) {
+        void fetchCompare();
+        fitComparedAreas();
+
+        return;
+    }
+
+    compareAttempt += 1;
+    compareAbort?.abort();
+    compareAbort = null;
+    compareData.value = null;
+    comparePhase.value = 'idle';
+}
+
+function addComparedArea(row: SearchAreaRow): void {
+    if (comparedAreas.value.some((area) => area.slug === row.slug)) {
+        showCompareNotice(t('map.compare.duplicate'));
+
+        return;
+    }
+
+    if (comparedAreas.value.length >= 3) {
+        showCompareNotice(t('map.compare.full'));
+
+        return;
+    }
+
+    comparedAreas.value = [...comparedAreas.value, {
+        slug: row.slug,
+        name: row.name,
+        type: row.type,
+        lat: row.lat,
+        lng: row.lng,
+        bounds: row.bounds,
+    }];
+    syncCompare();
+}
+
+function removeComparedArea(slug: string): void {
+    comparedAreas.value = comparedAreas.value.filter((area) => area.slug !== slug);
+
+    if (focusedCompared.value === slug) {
+        focusedCompared.value = null;
+    }
+
+    syncCompare();
+}
+
+function focusComparedColumn(slug: string): void {
+    focusedCompared.value = focusedCompared.value === slug ? null : slug;
+}
+
+/** Focus the Phase 5 search input — the compare picker IS that search. */
+function requestCompareAddition(): void {
+    searchInput.value?.focus();
+}
+
+/**
+ * Fit the camera to every compared area at once, from the cached bboxes
+ * (centroid fallback) — never a geometry fetch (§32).
+ */
+function fitComparedAreas(): void {
+    const map = adapter.value;
+
+    if (!map?.fitBounds) return;
+
+    let north = -90;
+    let south = 90;
+    let east = -180;
+    let west = 180;
+    let any = false;
+
+    for (const area of comparedAreas.value) {
+        const box = area.bounds
+            ?? (area.lat !== null && area.lng !== null
+                ? { north: area.lat, south: area.lat, east: area.lng, west: area.lng }
+                : null);
+
+        if (box === null) continue;
+
+        any = true;
+        north = Math.max(north, box.north);
+        south = Math.min(south, box.south);
+        east = Math.max(east, box.east);
+        west = Math.min(west, box.west);
+    }
+
+    if (!any) return;
+
+    const padding = isDesktop.value
+        ? { top: 56, bottom: 56, left: 56, right: 56 }
+        : { top: 48, bottom: 120, left: 24, right: 24 };
+
+    map.fitBounds({ north, south, east, west }, { padding, maxZoom: 14 });
+}
+
+/**
+ * Window chips disable under each mode's OWN evidence map, with the pulse
+ * panel's shared convention: the selected window stays operable.
+ */
+function windowChipDisabled(key: string): boolean {
+    if (mapMode.value === 'compare') {
+        return comparePhase.value === 'ready'
+            && key !== marketWindow.value
+            && !(compareData.value?.windows?.[key] ?? false);
+    }
+
+    return marketWindowDisabled(key);
+}
+
+/** The category vocabulary from whichever mode's response is live. */
+const filterPropertyTypes = computed<string[]>(() =>
+    (mapMode.value === 'compare'
+        ? compareData.value?.property_types ?? []
+        : marketPropertyTypes.value));
+
+/**
+ * §51: with the movement feature off the filters would govern nothing the
+ * comparison can show — hide them rather than render dead controls; the
+ * panel states the unavailability in words.
+ */
+const compareFiltersHidden = computed(() =>
+    mapMode.value === 'compare'
+    && compareData.value !== null
+    && compareData.value.movement.reason === 'feature_disabled');
 
 const flat = computed<Feature[]>(() =>
     availableKeys.value.flatMap((key) => (active.value.includes(key) ? features.value[key] : [])),
@@ -1228,7 +1530,23 @@ function adapterOptions() {
              * only emits for a click no record layer claimed, so wiring
              * this cannot change what marker or cluster clicks do.
              */
-            onBoundarySelect: (identity: BoundaryIdentity) => selectArea(identity),
+            onBoundarySelect: (identity: BoundaryIdentity) => {
+                /*
+                 * Compare mode (§33): clicking a COMPARED polygon focuses
+                 * its panel column; any other polygon does nothing — the
+                 * Phase 3 card never opens over the comparison. Outside
+                 * Compare mode the canonical selection is untouched.
+                 */
+                if (mapMode.value === 'compare') {
+                    if (comparedAreas.value.some((area) => area.slug === identity.slug)) {
+                        focusComparedColumn(identity.slug);
+                    }
+
+                    return;
+                }
+
+                selectArea(identity);
+            },
             onError: () => {
                 // A Google failure AFTER construction — a revoked key, a tile
                 // 403, billing disabled mid-session — must still fall back,
@@ -1628,7 +1946,10 @@ onBeforeUnmount(() => {
     marketAbort?.abort();
     searchAttempt += 1;
     searchAbort?.abort();
+    compareAttempt += 1;
+    compareAbort?.abort();
     if (searchDebounce !== undefined) clearTimeout(searchDebounce);
+    if (compareNoticeTimer !== undefined) clearTimeout(compareNoticeTimer);
     if (locateWatchdog !== undefined) clearTimeout(locateWatchdog);
     if (locationNoticeTimer !== undefined) clearTimeout(locationNoticeTimer);
     adapter.value?.destroy();
@@ -1831,18 +2152,17 @@ watch(flat, () => syncSource());
                     </div>
                 </div>
 
-                <!-- Map mode (Phase 4): Explore is the map as it has always
-                     been; Market wears the movement engine's answer on the
-                     area polygons. The switch exists only where the market
-                     feature itself is enabled. -->
+                <!-- Map mode (Phase 4 + 6): Explore is the map as it has
+                     always been; Market wears the movement engine's answer
+                     on the area polygons (only where that feature exists);
+                     Compare puts 2–3 areas side by side. -->
                 <div
-                    v-if="market.available"
                     role="group"
                     :aria-label="t('map.market.mode_label')"
                     class="flex w-fit rounded-card border border-line p-0.5"
                 >
                     <button
-                        v-for="mode in (['explore', 'market'] as const)"
+                        v-for="mode in mapModes"
                         :key="mode"
                         type="button"
                         class="mh-touch-target rounded-card px-4 py-1.5 text-sm font-medium transition-colors
@@ -1856,13 +2176,20 @@ watch(flat, () => syncSource());
                     </button>
                 </div>
 
-                <!-- Market filters (Phase 4): the movement product's own
-                     vocabularies — sale XOR rent, its window list with the
-                     same honest disabling, the PropertyType enum served by
-                     the endpoint. One polygon paints one claim, so the
-                     category control is single-select and "all" means the
-                     spanning all-categories index, never a blend. -->
-                <div v-if="mapMode === 'market'" class="space-y-2" data-testid="market-controls">
+                <!-- Market filters (Phase 4, shared by Compare in Phase 6):
+                     the movement product's own vocabularies — sale XOR rent,
+                     its window list with the same honest disabling under
+                     whichever mode's evidence map is live, the PropertyType
+                     enum served by the endpoint. One polygon paints one
+                     claim, so the category control is single-select and
+                     "all" means the spanning all-categories index, never a
+                     blend. Hidden in Compare when movement is feature-off —
+                     dead controls explain nothing. -->
+                <div
+                    v-if="(mapMode === 'market' || mapMode === 'compare') && !compareFiltersHidden"
+                    class="space-y-2"
+                    data-testid="market-controls"
+                >
                     <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
                         <div
                             role="group"
@@ -1897,8 +2224,8 @@ watch(flat, () => syncSource());
                                        disabled:cursor-not-allowed disabled:opacity-45
                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                                 :aria-pressed="marketWindow === key"
-                                :disabled="marketWindowDisabled(key)"
-                                :title="marketWindowDisabled(key) ? t('market.movement.period_unavailable') : undefined"
+                                :disabled="windowChipDisabled(key)"
+                                :title="windowChipDisabled(key) ? t('market.movement.period_unavailable') : undefined"
                                 :data-testid="`market-period-${key}`"
                                 @click="pickMarketWindow(key)"
                             >
@@ -1923,7 +2250,7 @@ watch(flat, () => syncSource());
                             {{ t('market.movement.all_categories') }}
                         </button>
                         <button
-                            v-for="value in marketPropertyTypes"
+                            v-for="value in filterPropertyTypes"
                             :key="value"
                             type="button"
                             class="mh-invest-chip mh-touch-target !text-xs
@@ -1938,8 +2265,10 @@ watch(flat, () => syncSource());
 
                     <!-- Legend: swatch AND word, never colour alone. The
                          swatches come from trend.ts — the same single source
-                         the marker icons speak. -->
+                         the marker icons speak. Market's own vocabulary, so
+                         it renders in Market mode only. -->
                     <div
+                        v-if="mapMode === 'market'"
                         class="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-xs text-ink-muted"
                         data-testid="market-legend"
                     >
@@ -2205,6 +2534,18 @@ watch(flat, () => syncSource());
                         <p class="mh-map-toast">{{ marketNotice }}</p>
                     </div>
 
+                    <!-- Compare picker feedback (Phase 6): duplicate or
+                         full-set taps answered in the compact toast voice,
+                         yielding its slot to the location notice. -->
+                    <div
+                        v-if="compareNotice && !locationNotice"
+                        data-testid="compare-notice"
+                        class="pointer-events-none absolute inset-x-0 bottom-36 z-10 flex justify-center px-4 lg:bottom-16"
+                        aria-live="polite"
+                    >
+                        <p class="mh-map-toast">{{ compareNotice }}</p>
+                    </div>
+
                     <!-- A dropped heat fetch: stated where the visitor is
                          looking, with a data-only retry — the map itself
                          never rebuilds for market data. -->
@@ -2332,94 +2673,114 @@ watch(flat, () => syncSource());
 
                 <!-- ------------------------------------------------ list -->
                 <div :class="mobileView === 'map' ? 'hidden md:block' : ''">
-                    <div class="mb-2 flex items-center justify-between">
-                        <p class="mh-label">{{ t('map.results', { count: flat.length }) }}</p>
-                        <span v-if="loading" class="text-xs text-ink-faint">
-                            {{ t('map.states.loading_features') }}
-                        </span>
+                    <!-- Compare mode (Phase 6): the data pane IS the
+                         comparison — the map stays the hero beside/above
+                         it, one tap away on phones (§36). Leaving the mode
+                         hands the ordinary results list straight back. -->
+                    <div v-if="mapMode === 'compare'" class="mh-invest-glass rounded-card p-4">
+                        <CompareAreasPanel
+                            :selection="comparedAreas"
+                            :data="compareData"
+                            :phase="comparePhase"
+                            :focused="focusedCompared"
+                            @remove="removeComparedArea"
+                            @focus="focusComparedColumn"
+                            @retry="retryCompare"
+                            @add-request="requestCompareAddition"
+                            @show-all="fitComparedAreas"
+                        />
                     </div>
 
-                    <!-- §10.5. Stated once, above the results, rather than
-                         repeated on every row. -->
-                    <p v-if="distanceApplied" class="mb-2 text-xs text-ink-faint">
-                        {{ t('map.distance.straight_line_notice') }}
-                    </p>
-                    <p v-if="distanceApplied && !distance.travel_time_available" class="mb-2 text-xs text-ink-faint">
-                        {{ t('map.distance.travel_time_unavailable') }}
-                    </p>
+                    <template v-else>
+                        <div class="mb-2 flex items-center justify-between">
+                            <p class="mh-label">{{ t('map.results', { count: flat.length }) }}</p>
+                            <span v-if="loading" class="text-xs text-ink-faint">
+                                {{ t('map.states.loading_features') }}
+                            </span>
+                        </div>
 
-                    <div
-                        v-if="!hasResults && !loading"
-                        class="rounded-card border border-dashed border-line p-6 text-center"
-                    >
-                        <p class="text-sm text-ink-muted">{{ t('map.states.empty') }}</p>
-                        <p class="mt-1 text-xs text-ink-faint">{{ t('map.states.empty_hint') }}</p>
-                    </div>
+                        <!-- §10.5. Stated once, above the results, rather than
+                             repeated on every row. -->
+                        <p v-if="distanceApplied" class="mb-2 text-xs text-ink-faint">
+                            {{ t('map.distance.straight_line_notice') }}
+                        </p>
+                        <p v-if="distanceApplied && !distance.travel_time_available" class="mb-2 text-xs text-ink-faint">
+                            {{ t('map.distance.travel_time_unavailable') }}
+                        </p>
 
-                    <ul v-else class="max-h-[520px] space-y-2 overflow-y-auto pe-1">
-                        <template v-for="layer in availableKeys" :key="layer">
-                            <li v-for="feature in (active.includes(layer) ? features[layer] : [])" :key="`${layer}-${feature.id}`">
-                                <!-- Area rows select IN PLACE (Phase 3 §13):
-                                     the same canonical selection a polygon
-                                     click sets, so list and map can never
-                                     disagree. The profile link lives on in
-                                     the card's "view full area" action. -->
-                                <component
-                                    :is="layer === 'areas' && feature.slug ? 'button' : (hrefFor(feature, layer) ? Link : 'div')"
-                                    :href="layer === 'areas' && feature.slug ? undefined : (hrefFor(feature, layer) ?? undefined)"
-                                    :type="layer === 'areas' && feature.slug ? 'button' : undefined"
-                                    :aria-pressed="layer === 'areas' && feature.slug ? selectedArea?.slug === feature.slug : undefined"
-                                    :data-testid="layer === 'areas' ? 'area-row' : undefined"
-                                    class="mh-touch-target block w-full rounded-card border border-line px-3 py-2 text-start
-                                           text-sm transition-colors hover:bg-surface-sunken focus-visible:outline-none
-                                           focus-visible:ring-2 focus-visible:ring-accent"
-                                    :class="layer === 'areas' && selectedArea?.slug === feature.slug
-                                        ? '!border-accent-strong/60 bg-surface-sunken'
-                                        : ''"
-                                    @click="layer === 'areas' && feature.slug ? selectAreaFromRow(feature) : undefined"
-                                >
-                                    <span class="flex items-start justify-between gap-3">
-                                        <span>
-                                            <span class="text-ink">{{ labelFor(feature) }}</span>
-                                            <span class="ms-2 text-xs text-ink-faint">
-                                                {{ t(`map.layers.${layer}`) }}
+                        <div
+                            v-if="!hasResults && !loading"
+                            class="rounded-card border border-dashed border-line p-6 text-center"
+                        >
+                            <p class="text-sm text-ink-muted">{{ t('map.states.empty') }}</p>
+                            <p class="mt-1 text-xs text-ink-faint">{{ t('map.states.empty_hint') }}</p>
+                        </div>
+
+                        <ul v-else class="max-h-[520px] space-y-2 overflow-y-auto pe-1">
+                            <template v-for="layer in availableKeys" :key="layer">
+                                <li v-for="feature in (active.includes(layer) ? features[layer] : [])" :key="`${layer}-${feature.id}`">
+                                    <!-- Area rows select IN PLACE (Phase 3 §13):
+                                         the same canonical selection a polygon
+                                         click sets, so list and map can never
+                                         disagree. The profile link lives on in
+                                         the card's "view full area" action. -->
+                                    <component
+                                        :is="layer === 'areas' && feature.slug ? 'button' : (hrefFor(feature, layer) ? Link : 'div')"
+                                        :href="layer === 'areas' && feature.slug ? undefined : (hrefFor(feature, layer) ?? undefined)"
+                                        :type="layer === 'areas' && feature.slug ? 'button' : undefined"
+                                        :aria-pressed="layer === 'areas' && feature.slug ? selectedArea?.slug === feature.slug : undefined"
+                                        :data-testid="layer === 'areas' ? 'area-row' : undefined"
+                                        class="mh-touch-target block w-full rounded-card border border-line px-3 py-2 text-start
+                                               text-sm transition-colors hover:bg-surface-sunken focus-visible:outline-none
+                                               focus-visible:ring-2 focus-visible:ring-accent"
+                                        :class="layer === 'areas' && selectedArea?.slug === feature.slug
+                                            ? '!border-accent-strong/60 bg-surface-sunken'
+                                            : ''"
+                                        @click="layer === 'areas' && feature.slug ? selectAreaFromRow(feature) : undefined"
+                                    >
+                                        <span class="flex items-start justify-between gap-3">
+                                            <span>
+                                                <span class="text-ink">{{ labelFor(feature) }}</span>
+                                                <span class="ms-2 text-xs text-ink-faint">
+                                                    {{ t(`map.layers.${layer}`) }}
+                                                </span>
+                                                <!-- §12.2: a paid placement is
+                                                     labelled wherever it appears. -->
+                                                <span v-if="feature.is_sponsored" class="ms-2 text-xs text-caution">
+                                                    {{ feature.disclosure }}
+                                                </span>
                                             </span>
-                                            <!-- §12.2: a paid placement is
-                                                 labelled wherever it appears. -->
-                                            <span v-if="feature.is_sponsored" class="ms-2 text-xs text-caution">
-                                                {{ feature.disclosure }}
+
+                                            <span
+                                                v-if="feature.distance_km !== null"
+                                                class="numeral shrink-0 text-xs text-ink-faint"
+                                                dir="ltr"
+                                                :title="t('map.distance.straight_line')"
+                                            >{{ t('map.distance.km', { distance: formatNumber(feature.distance_km, 2) }) }}</span>
+                                        </span>
+
+                                        <span v-if="feature.area" class="mt-0.5 block text-xs text-ink-muted">
+                                            {{ feature.area }}
+                                        </span>
+
+                                        <!-- Price rows carry the qualifier, sample
+                                             size and period with the figure. -->
+                                        <span v-if="layer === 'prices'" class="mt-1 block text-xs text-ink-muted">
+                                            <span class="numeral" dir="ltr">{{ feature.value }}</span>
+                                            {{ feature.currency }}
+                                            <span v-if="feature.period" class="ms-2">{{ feature.period }}</span>
+                                            <span v-if="feature.sample_size !== null" class="numeral ms-2" dir="ltr">
+                                                n={{ feature.sample_size }}
+                                            </span>
+                                            <span v-if="feature.requires_qualifier" class="ms-2 text-caution">
+                                                {{ t('market.public.qualifier.sale_asking') }}
                                             </span>
                                         </span>
-
-                                        <span
-                                            v-if="feature.distance_km !== null"
-                                            class="numeral shrink-0 text-xs text-ink-faint"
-                                            dir="ltr"
-                                            :title="t('map.distance.straight_line')"
-                                        >{{ t('map.distance.km', { distance: formatNumber(feature.distance_km, 2) }) }}</span>
-                                    </span>
-
-                                    <span v-if="feature.area" class="mt-0.5 block text-xs text-ink-muted">
-                                        {{ feature.area }}
-                                    </span>
-
-                                    <!-- Price rows carry the qualifier, sample
-                                         size and period with the figure. -->
-                                    <span v-if="layer === 'prices'" class="mt-1 block text-xs text-ink-muted">
-                                        <span class="numeral" dir="ltr">{{ feature.value }}</span>
-                                        {{ feature.currency }}
-                                        <span v-if="feature.period" class="ms-2">{{ feature.period }}</span>
-                                        <span v-if="feature.sample_size !== null" class="numeral ms-2" dir="ltr">
-                                            n={{ feature.sample_size }}
-                                        </span>
-                                        <span v-if="feature.requires_qualifier" class="ms-2 text-caution">
-                                            {{ t('market.public.qualifier.sale_asking') }}
-                                        </span>
-                                    </span>
-                                </component>
-                            </li>
-                        </template>
-                    </ul>
+                                    </component>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
                 </div>
             </div>
 

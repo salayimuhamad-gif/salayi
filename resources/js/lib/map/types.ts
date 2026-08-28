@@ -214,6 +214,15 @@ export interface MapAdapter {
     setSelectedBoundary?(slug: string | null): void;
 
     /**
+     * Outline up to three compared areas by slug in the visitor's own
+     * A/B/C order (Map Phase 6), or clear with null. Optional capability:
+     * each position keeps a fixed neutral colour + dash identity outside
+     * the market movement palette, drawn over the existing boundaries
+     * source; markers stay on top and Phase 3/4 styling is untouched.
+     */
+    setComparedBoundaries?(slugs: string[] | null): void;
+
+    /**
      * Gate polygon selection (Map Phase 3). The Explorer switches it OFF
      * while centre-picking or drawing so those clicks keep their existing
      * meaning even over a polygon; onBoundarySelect fires only while

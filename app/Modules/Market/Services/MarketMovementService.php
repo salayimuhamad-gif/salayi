@@ -387,6 +387,10 @@ final class MarketMovementService
             'family' => $index->price_type->family(),
             'property_type' => $index->property_type?->value,
             'requires_qualifier' => $index->requiresPublicQualifier(),
+            // Map Phase 6: the claim's methodology version rides along so a
+            // cross-area comparison can apply the calculator's own refusal
+            // rules; the pair itself was already same-version by change().
+            'methodology_version' => $current->methodology_version,
             'period_current' => $current->period,
             'period_previous' => $previous->period,
             'sample_size' => $current->sample_size,

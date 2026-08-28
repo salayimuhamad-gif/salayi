@@ -73,6 +73,12 @@ final class GeographyServiceProvider extends ModuleServiceProvider
         RateLimiter::for('map-explorer-search', static fn (Request $request): Limit => Limit::perMinute(30)
             ->by('map-explorer-search|'.$request->ip()));
 
+        // Map Phase 6: the area comparison — its OWN bucket for the same
+        // reason. Interactive budget: a filter change or an area swap is one
+        // request, and 30/min is several of those a minute, sustained.
+        RateLimiter::for('map-compare', static fn (Request $request): Limit => Limit::perMinute(30)
+            ->by('map-compare|'.$request->ip()));
+
         /*
          * Wave 3's location-resolve endpoint. The interactive-search budget
          * (30/min is several taps a second, sustained) in its OWN bucket, for
