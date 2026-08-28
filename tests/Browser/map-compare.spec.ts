@@ -95,8 +95,10 @@ test('compare mode builds a two-area comparison through the Phase 5 search', asy
      * The first add: one slot, an honest "choose two" hint, and the
      * fit-to-compared camera framing the ring — proven by its consequence,
      * the ZOOMED-IN viewport refetch that still brackets the whole seeded
-     * ring (the page-load fetch at z11 covers half the city; only the fit
-     * produces a z≥13 request this tightly around the polygon).
+     * ring. Measured live at 1440×900 the fit lands at z≈12.63 with west
+     * ≈43.946 — the page-load fetch at z11 spans half the city (west
+     * ≈43.898), so z≥12 with a west edge inside (43.9, 43.96) uniquely
+     * identifies the fitted camera.
      */
     const fitFetch = page.waitForRequest((request) => {
         if (!request.url().includes('/map/features')) return false;
@@ -104,8 +106,8 @@ test('compare mode builds a two-area comparison through the Phase 5 search', asy
         const params = new URL(request.url()).searchParams;
         const west = Number(params.get('west'));
 
-        return Number(params.get('zoom')) >= 13
-            && west < 43.96 && west > 43.5
+        return Number(params.get('zoom')) >= 12
+            && west < 43.96 && west > 43.9
             && Number(params.get('east')) > 44.004
             && Number(params.get('south')) < 36.205 && Number(params.get('north')) > 36.245;
     }, { timeout: 20_000 });
