@@ -8,8 +8,7 @@ use App\Modules\Geography\Http\Requests\LocationResolveRequest;
 use App\Modules\Geography\Models\Area;
 use App\Modules\Geography\Services\AreaResolver;
 use App\Modules\Geography\Services\AreaServiceSummary;
-use App\Modules\Market\Models\MarketIndex;
-use App\Modules\Market\Services\LatestReliableIndexValues;
+use App\Modules\Market\Services\AreaPriceIntelligence;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 
@@ -46,7 +45,7 @@ final class LocationResolveController extends Controller
 {
     public function __construct(
         private readonly AreaResolver $resolver,
-        private readonly LatestReliableIndexValues $latestValues,
+        private readonly AreaPriceIntelligence $priceIntelligence,
         private readonly AreaServiceSummary $services,
     ) {}
 
@@ -65,7 +64,10 @@ final class LocationResolveController extends Controller
         }
 
         $ancestors = $this->publishedAncestors($area);
-        $prices = $this->priceIntelligence($area);
+        // Map Phase 6 moved the price lookup into AreaPriceIntelligence so
+        // the area comparison answers from the same selection rule; the
+        // payload here is field-for-field what the private method returned.
+        $prices = $this->priceIntelligence->for($area);
 
         return $this->respond([
             'state' => $prices['available'] ? 'resolved' : 'no_data',
@@ -175,108 +177,6 @@ final class LocationResolveController extends Controller
         }
 
         return $ordered;
-    }
-
-    /**
-     * Real published price intelligence for the resolved location.
-     *
-     * The source is exactly the map price layer's: published area-scoped
-     * MarketIndex definitions, each carrying ONE price_type, basis and
-     * currency, valued by the shared latest-reliable selection (published,
-     * non-null, not limited, MAX(period) with reliability in both halves).
-     *
-     * The lookup walks the point's own containment chain — the resolved area
-     * first, then its published ancestors nearest-first — and answers from
-     * the MOST SPECIFIC area that carries any reliable figure. Every area in
-     * that chain genuinely contains the point (hierarchy containment is
-     * enforced on save), so this is never a nearest-area guess; the answer
-     * names the area the figures describe.
-     *
-     * Indices are returned as SEPARATE rows, never combined: a sale index and
-     * a rent index, or two currencies, stay apart exactly as §14.1 requires —
-     * the one-price_type-per-index schema makes mixing unrepresentable, and
-     * this endpoint adds no arithmetic of its own. No figure, no zero, no
-     * average, no fallback.
-     *
-     * @return array{available: bool, reason: string|null, area_name: string|null, indices: list<array<string, mixed>>}
-     */
-    private function priceIntelligence(Area $area): array
-    {
-        // The same flag that gates the map's price layer: a switched-off
-        // module gathers nothing, and saying "no data" would be the wrong
-        // honesty.
-        if (! feature('market.indices')) {
-            return ['available' => false, 'reason' => 'feature_disabled', 'area_name' => null, 'indices' => []];
-        }
-
-        // Most specific first: the area itself, then ancestors inward-out.
-        $chain = [$area->id, ...array_reverse($area->ancestorIds())];
-
-        $indices = MarketIndex::query()
-            ->where('publication_status', 'published')
-            ->where('scope_type', 'area')
-            ->whereIn('scope_id', $chain)
-            ->orderBy('key')
-            ->get();
-
-        if ($indices->isEmpty()) {
-            return ['available' => false, 'reason' => 'no_published_values', 'area_name' => null, 'indices' => []];
-        }
-
-        $latestByIndex = $this->latestValues->for($indices->pluck('id')->all());
-
-        foreach ($chain as $areaId) {
-            $rows = [];
-
-            foreach ($indices as $index) {
-                if ((int) $index->scope_id !== (int) $areaId) {
-                    continue;
-                }
-
-                $latest = $latestByIndex->get($index->id);
-
-                if ($latest === null) {
-                    continue;
-                }
-
-                $rows[] = [
-                    'key' => $index->key,
-                    'name' => $index->name(),
-                    'price_type' => $index->price_type->value,
-                    'basis' => $index->basis,
-                    'value' => (string) $latest->value,
-                    'change_percent' => $latest->change_percent === null ? null : (string) $latest->change_percent,
-                    'period' => $latest->period,
-                    'currency' => $index->currency,
-                    'sample_size' => $latest->sample_size,
-                    'confidence' => $latest->confidence,
-                    // Selection already excluded limited values; stated
-                    // explicitly so the card's warning logic reads real state.
-                    'is_limited' => (bool) $latest->is_limited,
-                    // §15.3: a non-verified figure must not travel unlabelled.
-                    'requires_qualifier' => $index->requiresPublicQualifier(),
-                ];
-            }
-
-            if ($rows !== []) {
-                $pricedArea = (int) $areaId === (int) $area->id
-                    ? $area
-                    : Area::query()->published()->find($areaId);
-
-                if ($pricedArea === null) {
-                    continue;
-                }
-
-                return [
-                    'available' => true,
-                    'reason' => null,
-                    'area_name' => $pricedArea->name(),
-                    'indices' => $rows,
-                ];
-            }
-        }
-
-        return ['available' => false, 'reason' => 'no_published_values', 'area_name' => null, 'indices' => []];
     }
 
     /**

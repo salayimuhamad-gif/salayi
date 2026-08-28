@@ -3,6 +3,80 @@
 All notable changes to this project. Format follows Keep a Changelog;
 versioning is `MAJOR.MINOR.PATCH-step<N>` until the roadmap completes.
 
+## [Unreleased] — Map Phase 6: area comparison intelligence
+
+**Status: NOT DEPLOYED.** No schema change, no migration, no new
+dependency; no new ranking, weighting or scoring methodology exists
+anywhere — the comparison presents dimensional facts and the visitor
+decides. Market calculation is untouched: every figure and every refusal
+comes from `IndexCalculator::change()` and the existing services.
+
+### Added
+- `GET /map/compare` — 2–3 published areas side by side (gated
+  `feature:map.explorer`, its own `map-compare` limiter at 30/min).
+  Exactly two or three DISTINCT public slugs (one, four, or duplicates
+  answer 422 with real validation messages; a missing, unpublished, or
+  unpublished-ancestry slug answers one undisclosing 404), order
+  preserved. The response composes ONLY existing authorities per area:
+  `AreaServiceSummary` counts (a disabled places feature is `null` with a
+  reason — never rendered as zero services), the extracted current-price
+  intelligence, and ONE bulk `MarketMovementService::areaMovement()`
+  claim — plus a compatibility verdict and a strictly factual `facts`
+  list. Navigation-safe area rows only: cached bbox, never WKT, no
+  internal ids, no phones, no user coordinates.
+- `AreaPriceIntelligence` — `LocationResolveController::priceIntelligence()`
+  extracted VERBATIM into a Market service so the location card and the
+  comparison answer from one selection rule: `resolve()` keeps the
+  (index, latest-value) models the comparison's identity checks need;
+  `publicPayload()` renders the exact legacy row shape, so
+  `/location/resolve` is unchanged field for field (its full test suite
+  pins the refactor, and the comparison test asserts byte-equality of
+  the two payloads for the same area).
+- **Strict comparability (§14–§18):** two figures are directly compared
+  only when their full evidence identity matches — transaction, property
+  category, exact price type (asking never meets verified), family,
+  currency (no FX conversion exists, USD never meets IQD), basis, and
+  methodology version — enforced by an exact-equality pre-gate plus
+  `IndexCalculator::change()` as both arbiter and arithmetic. Anything
+  else is stated as "not directly comparable" with the differing
+  dimension named; two areas priced by the same published ancestor are
+  refused as `shared_source` rather than fabricating a 0% difference.
+  All numeric differences are computed server-side with the calculator's
+  own `Decimal` primitives; the frontend only formats.
+- A **Compare mode** on `/map` beside Explore/Market (the Market chip
+  still appears only where `market.intelligence` is on): ONE canonical
+  compared set (max three) drives the A/B/C slot chips, the map
+  outlines, and the fetch; the Phase 5 search doubles as the picker
+  (areas-only results while comparing — no second autocomplete); Phase 4
+  market filters are the SAME shared state, so changing sale/rent,
+  window or category refreshes the comparison while both selected areas
+  stand; entering Compare clears the Phase 3 card and polygon clicks
+  focus panel columns instead — no contradictory selection states.
+- `MapAdapter.setComparedBoundaries()` — up to three fixed-position
+  outline identities (neutral blue/violet/cyan, each with its own dash —
+  never green/red/amber, which keep their market meaning, and never
+  colour alone), buffered like every adapter setter so compare state
+  survives a style rebuild; the camera fits the compared bboxes only on
+  add/remove/Show-all, never while the visitor pans.
+- `CompareAreasPanel.vue` — the payload rendered as aligned metric rows
+  (movement, each price index separately, service groups side by side
+  with "0 recorded" for an absent group, view-area links) in the list
+  pane on desktop and as stacked A/B/C cards below lg; compact
+  loading/error states that keep the selected slots through a failed
+  request; a "Key differences" list rendering the server's facts.
+- `map.compare.*` strings (ckb/ar/en) and a `compare` mode label.
+- One additive wire field: `/map/market` heat rows now carry the claim's
+  `methodology_version` (the comparison's compatibility check needs it;
+  no consumer changed).
+- Tests: `MapCompareTest` (22 cases — bounds, order, disclosure-safe
+  404s, byte-equal price extraction regression, every isolation and
+  mismatch refusal, caps, budgets) on both database lanes, and
+  `map-compare.spec.ts` (the search-driven flow, compatible facts,
+  refusals in words, phone stacking, Arabic RTL) with its registry
+  entry. Browser fixtures gain `browser-dinar` — a published area whose
+  single IQD value exercises the currency refusal while staying
+  invisible to movement counts, heat and every map layer.
+
 ## [Unreleased] — Map Phase 5: unified trilingual map search
 
 **Status: NOT DEPLOYED.** No schema change, no migration, no new

@@ -7,6 +7,7 @@ import type {
     PointFeature,
     PoiFeature,
 } from './types';
+import { COMPARE_IDENTITIES } from './compare';
 import { trendColour, trendIconName } from './trend';
 
 /*
@@ -111,6 +112,16 @@ export class MapLibreAdapter implements MapAdapter {
      * ever asserts — absence is "unknown" and stays untinted.
      */
     private marketHeat: Record<string, 'up' | 'down' | 'flat'> | null = null;
+
+    /*
+     * Compared areas (Map Phase 6), buffered the same way: up to three
+     * slugs in the visitor's own A/B/C order, each drawn by its fixed
+     * positional outline identity. Deliberately OUTSIDE the market palette
+     * — green/red/amber keep their movement meaning under a comparison —
+     * and never colour alone: each position also carries its own dash
+     * pattern, and the comparison panel names the letters.
+     */
+    private comparedSlugs: string[] | null = null;
 
     private constructor(private readonly options: AdapterOptions) {}
 
@@ -475,6 +486,31 @@ export class MapLibreAdapter implements MapAdapter {
                     'line-width': 2.5,
                     'line-opacity': 0.95,
                 },
+            });
+
+            /*
+             * Compared-area outlines (Map Phase 6): one layer per A/B/C
+             * position, because line-dasharray cannot be data-driven — and
+             * the dash IS part of the identity, so colour is never the only
+             * distinction. Neutral hues outside the market palette; above
+             * the market wash and the amber selection, beneath every
+             * marker, so comparison membership reads without hiding data.
+             * Filters are seeded from the buffered slugs exactly like the
+             * selection layer, so compare state survives a style rebuild.
+             */
+            COMPARE_IDENTITIES.forEach((identity, position) => {
+                map.addLayer({
+                    id: `compare-line-${position}`,
+                    type: 'line',
+                    source: 'boundaries',
+                    filter: ['==', ['get', 'slug'], this.comparedSlugs?.[position] ?? ' '],
+                    paint: {
+                        'line-color': identity.colour,
+                        'line-width': 3,
+                        'line-opacity': 0.95,
+                        'line-dasharray': identity.dash,
+                    },
+                });
             });
 
             map.addLayer({
@@ -962,6 +998,34 @@ export class MapLibreAdapter implements MapAdapter {
         if (this.map.getLayer('boundary-selected-fill') !== undefined) {
             this.map.setFilter('boundary-selected-fill', filter);
             this.map.setFilter('boundary-selected-line', filter);
+        }
+    }
+
+    /**
+     * Outline up to three compared areas by slug, in the visitor's own
+     * order (Map Phase 6), or clear with null. Buffered like every other
+     * setter — the layers are CREATED from the stored slugs — and each
+     * position keeps its fixed colour+dash identity, so removing the
+     * middle area re-letters the rest exactly as the panel does.
+     */
+    setComparedBoundaries(slugs: string[] | null): void {
+        this.comparedSlugs = slugs;
+
+        if (!this.loaded || this.map === null) {
+            return;
+        }
+
+        for (let position = 0; position < COMPARE_IDENTITIES.length; position++) {
+            if (this.map.getLayer(`compare-line-${position}`) === undefined) {
+                continue;
+            }
+
+            // ' ' can never equal a real slug, so an empty position
+            // genuinely draws nothing.
+            this.map.setFilter(
+                `compare-line-${position}`,
+                ['==', ['get', 'slug'], slugs?.[position] ?? ' '],
+            );
         }
     }
 

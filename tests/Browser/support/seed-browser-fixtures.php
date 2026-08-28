@@ -625,6 +625,67 @@ $movementAreas = [
     'mv-baharka' => ['بەهارکە', 'بهاركة', 'Baharka'],
 ];
 
+/*
+ * Map Phase 6: ONE published area whose only price evidence is a SINGLE
+ * IQD value — the comparison spec's currency-incompatibility case. A
+ * single observation is a price but never a movement pair, so this area
+ * adds NO mover to /market/movement (the movement spec's exact counts
+ * stand), no heat row, and — with no coordinates and no polygon — no
+ * presence on any map layer. Its NULL property_type + sale_asking +
+ * per_sqm identity deliberately matches browser-ankawa-sale in everything
+ * BUT currency, so /map/compare must answer "the currencies differ"
+ * rather than a difference.
+ */
+$dinarAreaId = Area::query()->updateOrCreate(
+    ['slug' => 'browser-dinar'],
+    [
+        'type' => 'district',
+        'name_ckb' => 'گەڕەکی دینار',
+        'name_ar' => 'حي الدينار',
+        'name_en' => 'Dinar Quarter',
+        'publication_status' => 'published',
+    ],
+)->id;
+
+DB::table('market_indices')->updateOrInsert(
+    ['key' => 'browser-dinar-sale'],
+    [
+        'name_ckb' => 'پێوەری فرۆشتنی دینار',
+        'name_ar' => 'مؤشر بيع الدينار',
+        'name_en' => 'Dinar sale index',
+        'scope_type' => 'area',
+        'scope_id' => $dinarAreaId,
+        'property_type' => null,
+        'price_type' => 'sale_asking',
+        'basis' => 'per_sqm',
+        'currency' => 'IQD',
+        'methodology_version' => 'v1',
+        'minimum_sample' => 10,
+        'publication_status' => 'published',
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
+$dinarIndexId = (int) DB::table('market_indices')->where('key', 'browser-dinar-sale')->value('id');
+
+DB::table('market_index_values')->updateOrInsert(
+    ['market_index_id' => $dinarIndexId, 'period' => '2026-07'],
+    [
+        'effective_date' => '2026-07-31',
+        'methodology_version' => 'v1',
+        'value' => '1650000.0000',
+        'sample_size' => 18,
+        'excluded_outliers' => 0,
+        'confidence' => 'moderate',
+        'is_limited' => false,
+        'publication_status' => 'published',
+        'published_at' => now(),
+        'created_at' => now(),
+        'updated_at' => now(),
+    ],
+);
+
 $movementAreaIds = [];
 
 foreach ($movementAreas as $slug => [$ckb, $ar, $en]) {
