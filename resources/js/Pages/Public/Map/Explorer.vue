@@ -1067,9 +1067,14 @@ function syncCompare(): void {
             : null,
     );
 
+    // Every add/remove that leaves a non-empty set re-frames it — the very
+    // FIRST pick included, so the visitor sees the area they just chose.
+    if (comparedAreas.value.length > 0) {
+        fitComparedAreas();
+    }
+
     if (comparedAreas.value.length >= 2) {
         void fetchCompare();
-        fitComparedAreas();
 
         return;
     }
