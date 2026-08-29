@@ -241,6 +241,14 @@ test('a throttled comparison refresh says wait and keeps slots, data and filters
     const grid = page.getByTestId('compare-grid');
     await expect(grid).toBeVisible();
 
+    // Narrow to the apartment series both areas share — that comparison
+    // carries 30-day movement, so the 30d window chip becomes available
+    // for the throttled round below.
+    const typed = page.waitForResponse((response) => response.url().includes('/map/compare') && response.ok());
+    await page.getByTestId('market-type-apartment').click();
+    await typed;
+    await expect(page.getByTestId('market-period-30d')).toBeEnabled();
+
     // From here the limiter "answers" the comparison endpoint.
     await page.route('**/map/compare**', (route) =>
         route.fulfill({ status: 429, contentType: 'application/json', body: '{}' }));
@@ -258,6 +266,7 @@ test('a throttled comparison refresh says wait and keeps slots, data and filters
     await expect(page.getByTestId('compare-slot-B')).toContainText('بەهارکە');
     await expect(grid).toBeVisible();
     await expect(page.getByTestId('market-period-30d')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('market-type-apartment')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.getByTestId('map-mode-compare')).toHaveAttribute('aria-pressed', 'true');
 
     // The limiter relents: the next pick recovers the ordinary voice.
