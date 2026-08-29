@@ -68,7 +68,7 @@ WORK="${WORK:-$(pwd)/final-release-run}"
 BASELINE_COMMIT="${BASELINE_COMMIT:-9c0188f81843cfe4786b7f72ecdc2a3fae89cd82}"
 # The commit live production currently runs — the post-v7 baseline every
 # incremental candidate is rehearsed against.
-PREVIOUS_COMMIT="${PREVIOUS_COMMIT:-e0753176c42d0c4b98cb185004a962087f5d0423}"
+PREVIOUS_COMMIT="${PREVIOUS_COMMIT:-900e8871e92bf0e629224d5a39ad74aa507ab081}"
 OFFLINE_STUB=0
 MIN_FILES=""
 
