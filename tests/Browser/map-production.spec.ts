@@ -202,7 +202,12 @@ test('/map places layer fetches POIs and filters by category without breaking th
  * list, the active layers and the whole filter state stand; and switching
  * every layer off clears the throttle voice WITHOUT issuing a request.
  */
-test('/map states throttling honestly, keeps the loaded data, and clears without a request', async ({ page, diagnostics }) => {
+test('/map states throttling honestly, keeps the loaded data, and clears without a request', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the throttle contract runs once, on desktop-1440x900 only — the list anchor lives in the desktop layout',
+    );
+
     await serveDeterministicStyle(page);
     await page.goto('/map', { waitUntil: 'domcontentloaded' });
     await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });

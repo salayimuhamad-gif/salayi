@@ -270,7 +270,10 @@ test('a throttled heat refresh says wait, keeps the paint and the filters', asyn
         response.url().includes('/map/market') && response.ok());
     await page.getByTestId('market-transaction-sale').click();
     expect((await recovered).ok()).toBe(true);
-    await expect(page.getByTestId('market-notice')).not.toContainText('داواکاری زۆرە');
+
+    // Recovery restores the pre-throttle state exactly: heat painted, no
+    // notice at all — the element leaves the DOM with the throttle voice.
+    await expect(page.getByTestId('market-notice')).toHaveCount(0);
 
     // Exactly the one injected 429 and nothing else reached the console.
     consumeRateLimitConsole(diagnostics, 1);
