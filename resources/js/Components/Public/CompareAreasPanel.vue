@@ -89,7 +89,7 @@ export interface CompareResponse {
 const props = defineProps<{
     selection: Array<{ slug: string; name: string }>;
     data: CompareResponse | null;
-    phase: 'idle' | 'loading' | 'ready' | 'error';
+    phase: 'idle' | 'loading' | 'ready' | 'error' | 'rate_limited';
     focused: string | null;
 }>();
 
@@ -269,6 +269,18 @@ function priceUnavailable(column: CompareAreaColumn): string {
                 </button>
             </li>
         </ul>
+
+        <!-- F-2: a throttled refresh says "wait" while the selected slots
+             AND the last comparison below stand exactly as they were —
+             never the error state, never a blank. -->
+        <p
+            v-if="phase === 'rate_limited'"
+            data-testid="compare-rate-limited"
+            class="text-xs text-caution"
+            aria-live="polite"
+        >
+            {{ t('map.compare.rate_limited') }}
+        </p>
 
         <p v-if="selection.length < 2" class="text-sm text-ink-muted" data-testid="compare-hint">
             {{ t('map.compare.need_two') }}

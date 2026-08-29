@@ -1,6 +1,27 @@
 import { execFileSync } from 'node:child_process';
 import type { Locator, Page } from '@playwright/test';
-import { test, expect, expectNoHorizontalOverflow } from './support/harness';
+import { test, expect, expectNoHorizontalOverflow, type PageDiagnostics } from './support/harness';
+
+/*
+ * The one console line Chromium logs for each 429 THIS FILE deliberately
+ * injects (measured verbatim against a route-fulfilled 429). Consumed
+ * locally, exactly and countedly — the shared IGNORED_CONSOLE allowlist
+ * stays untouched, so any other console error, Vue warning or page error
+ * still fails the diagnostics teardown.
+ */
+const RATE_LIMIT_CONSOLE = 'Failed to load resource: the server responded with a status of 429 (Too Many Requests)';
+
+function consumeRateLimitConsole(diagnostics: PageDiagnostics, expected: number): void {
+    const matches = diagnostics.consoleErrors.filter((text) => text === RATE_LIMIT_CONSOLE);
+
+    expect(matches, 'deliberately injected 429 console entries').toHaveLength(expected);
+
+    for (let index = diagnostics.consoleErrors.length - 1; index >= 0; index--) {
+        if (diagnostics.consoleErrors[index] === RATE_LIMIT_CONSOLE) {
+            diagnostics.consoleErrors.splice(index, 1);
+        }
+    }
+}
 
 /*
  * Map Phase 6: the area comparison on the public explorer.
@@ -193,6 +214,64 @@ test('compatible apartment evidence compares factually and filters preserve the 
     await expect(page.getByTestId('compare-slot-A')).toContainText('کەسنەزان');
     await expect(page.getByTestId('compare-slot-B')).toContainText('بەهارکە');
     await expect(page.getByTestId('compare-panel')).toBeVisible();
+});
+
+/* --------------------------------------------- throttling is not failure */
+
+/*
+ * F-2 (map RC hardening): a throttled /map/compare answer must speak the
+ * dedicated rate-limited voice — never the error state with its retry —
+ * while the selected A/B slots, the LAST comparison payload and every
+ * filter stand exactly as they were.
+ */
+test('a throttled comparison refresh says wait and keeps slots, data and filters', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the throttle contract runs once, on desktop-1440x900 only',
+    );
+
+    await openExplorer(page);
+    await page.getByTestId('map-mode-compare').click();
+
+    await addArea(page, 'کەسنەزان', 'mv-kasnazan');
+    const compared = page.waitForResponse((response) => response.url().includes('/map/compare') && response.ok());
+    await addArea(page, 'بەهارکە', 'mv-baharka');
+    await compared;
+
+    const grid = page.getByTestId('compare-grid');
+    await expect(grid).toBeVisible();
+
+    // From here the limiter "answers" the comparison endpoint.
+    await page.route('**/map/compare**', (route) =>
+        route.fulfill({ status: 429, contentType: 'application/json', body: '{}' }));
+
+    await page.getByTestId('market-period-30d').click();
+
+    // The dedicated voice, verbatim in Sorani — and only that voice.
+    await expect(page.getByTestId('compare-rate-limited'))
+        .toHaveText('داواکاری زۆرە — کەمێک چاوەڕوان بە؛ ناوچە هەڵبژێردراوەکان هەر دەمێننەوە.');
+    await expect(page.getByTestId('compare-error')).toHaveCount(0);
+    await expect(page.getByTestId('compare-retry')).toHaveCount(0);
+
+    // Slots, last comparison and filters all stand.
+    await expect(page.getByTestId('compare-slot-A')).toContainText('کەسنەزان');
+    await expect(page.getByTestId('compare-slot-B')).toContainText('بەهارکە');
+    await expect(grid).toBeVisible();
+    await expect(page.getByTestId('market-period-30d')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('map-mode-compare')).toHaveAttribute('aria-pressed', 'true');
+
+    // The limiter relents: the next pick recovers the ordinary voice.
+    await page.unroute('**/map/compare**');
+
+    const recovered = page.waitForResponse((response) =>
+        response.url().includes('/map/compare') && response.ok());
+    await page.getByTestId('market-period-all').click();
+    expect((await recovered).ok()).toBe(true);
+    await expect(page.getByTestId('compare-rate-limited')).toHaveCount(0);
+    await expect(grid).toBeVisible();
+
+    // Exactly the one injected 429 and nothing else reached the console.
+    consumeRateLimitConsole(diagnostics, 1);
 });
 
 /* ------------------------------------------------ 2–3 bounds and echo */

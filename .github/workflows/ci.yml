@@ -327,6 +327,17 @@ jobs:
           node-version: '22'
           cache: npm
 
+      # F-1: the same Composer download-cache the PHP job keeps — the key
+      # matches the php-8.3 matrix entry exactly, so packaging restores the
+      # cache that job already saved instead of re-downloading every
+      # dependency. Only the download cache is cached; composer.lock still
+      # decides every installed byte.
+      - name: Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache
+          key: composer-8.3-${{ hashFiles('composer.lock') }}
+
       - run: composer install --no-interaction --no-progress --prefer-dist
       - run: npm ci && npx vite build
 

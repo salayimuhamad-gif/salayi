@@ -115,6 +115,12 @@ const mapReady = ref(false);
 const mapBuilding = ref(false);
 const loading = ref(false);
 const loadError = ref(false);
+/**
+ * F-6: a throttled viewport fetch is neither an error nor emptiness. The
+ * stale features, boundaries, list and every filter stand; this flag only
+ * changes what the page SAYS. Real failures keep `loadError`.
+ */
+const featuresRateLimited = ref(false);
 const offline = ref(typeof navigator !== 'undefined' ? !navigator.onLine : false);
 const truncated = ref(false);
 const permissionDenied = ref(false);
@@ -745,7 +751,7 @@ const marketWindow = ref<string>('all');
 /** null = the spanning all-categories index — the product's honest "all". */
 const marketPropertyType = ref<string | null>(null);
 const marketData = ref<MarketHeatResponse | null>(null);
-const marketPhase = ref<'idle' | 'loading' | 'ready' | 'error'>('idle');
+const marketPhase = ref<'idle' | 'loading' | 'ready' | 'error' | 'rate_limited'>('idle');
 const marketBelowZoom = ref(false);
 
 /** Adopted from the features response, never hardcoded twice. */
@@ -872,6 +878,17 @@ async function fetchMarketHeat(): Promise<void> {
 
         if (attempt !== marketAttempt) return;
 
+        if (response.status === 429) {
+            /*
+             * Throttled is neither broken nor empty (F-2): the last heat
+             * stays painted, marketData keeps its last honest answer and
+             * every filter stands — only the voice changes, to "wait".
+             */
+            marketPhase.value = 'rate_limited';
+
+            return;
+        }
+
         if (!response.ok) {
             marketPhase.value = 'error';
 
@@ -948,6 +965,10 @@ const marketNotice = computed<string | null>(() => {
 
     if (marketPhase.value === 'loading') return t('market.movement.loading');
 
+    // F-2: throttling has its own honest voice — never the error toast,
+    // never an empty reason; the painted heat stays underneath it.
+    if (marketPhase.value === 'rate_limited') return t('map.market.rate_limited');
+
     if (marketPhase.value !== 'ready') return null;
 
     if (marketBelowZoom.value) return t('map.market.zoom_hint');
@@ -985,7 +1006,7 @@ interface ComparedArea {
 const comparedAreas = ref<ComparedArea[]>([]);
 const focusedCompared = ref<string | null>(null);
 const compareData = ref<CompareResponse | null>(null);
-const comparePhase = ref<'idle' | 'loading' | 'ready' | 'error'>('idle');
+const comparePhase = ref<'idle' | 'loading' | 'ready' | 'error' | 'rate_limited'>('idle');
 
 /** Transient picker feedback (duplicate / full) — compact, auto-clearing. */
 const compareNotice = ref<string | null>(null);
@@ -1029,6 +1050,17 @@ async function fetchCompare(): Promise<void> {
         });
 
         if (attempt !== compareAttempt) return;
+
+        if (response.status === 429) {
+            /*
+             * Throttled is neither broken nor empty (F-2): the selected
+             * slots, the last comparison payload and every filter stand —
+             * the panel states "wait" instead of an error or a blank.
+             */
+            comparePhase.value = 'rate_limited';
+
+            return;
+        }
 
         if (!response.ok) {
             comparePhase.value = 'error';
@@ -1242,6 +1274,9 @@ async function load(): Promise<void> {
         loadAttempt += 1;
         features.value = { ...empty };
         loading.value = false;
+        // Nothing is being asked for, so nothing is being throttled: the
+        // state clears explicitly here, without issuing a request (F-6).
+        featuresRateLimited.value = false;
         return;
     }
 
@@ -1295,6 +1330,20 @@ async function load(): Promise<void> {
             headers: { Accept: 'application/json' },
         });
 
+        /*
+         * F-6: HTTP 429 is the limiter speaking, not the data failing.
+         * Everything already loaded stands exactly as it is — features,
+         * boundaries, the list, layers, categories, radius and drawn ring —
+         * and only the NEWEST attempt may claim the throttle voice.
+         */
+        if (response.status === 429) {
+            if (attempt === loadAttempt) {
+                featuresRateLimited.value = true;
+            }
+
+            return;
+        }
+
         if (!response.ok) {
             throw new Error(String(response.status));
         }
@@ -1315,6 +1364,7 @@ async function load(): Promise<void> {
         };
         boundaries.value = data.boundaries ?? emptyBoundaries;
         truncated.value = Boolean(data.truncated);
+        featuresRateLimited.value = false;
 
         // The server states its own boundary zoom gate; the market mode's
         // "zoom in" hint reads it from here rather than hardcoding 11 twice.
@@ -1328,6 +1378,7 @@ async function load(): Promise<void> {
         // taking away data they already had.
         if (attempt === loadAttempt) {
             loadError.value = true;
+            featuresRateLimited.value = false;
         }
     } finally {
         if (attempt === loadAttempt) {
@@ -2598,12 +2649,26 @@ watch(flat, () => syncSource());
                          view: a bottom-4 chip overlaps the nav band and
                          elementFromPoint at its centre returns the nav. -->
                     <div
-                        v-if="mapReady && !loading && !loadError && !hasResults"
+                        v-if="mapReady && !loading && !loadError && !featuresRateLimited && !hasResults"
                         class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
                         aria-live="polite"
                     >
                         <p class="mh-map-toast">
                             {{ t('map.states.map_empty_overlay') }}
+                        </p>
+                    </div>
+
+                    <!-- F-6: throttling states itself as "wait", in the same
+                         compact toast voice — never the error chip, never the
+                         empty overlay. The stale markers stay live behind it. -->
+                    <div
+                        v-if="mapReady && featuresRateLimited && !loading && !loadError"
+                        data-testid="map-rate-limited"
+                        class="pointer-events-none absolute inset-x-0 bottom-24 z-10 flex justify-center px-4 lg:bottom-4"
+                        aria-live="polite"
+                    >
+                        <p class="mh-map-toast">
+                            {{ t('map.states.rate_limited') }}
                         </p>
                     </div>
 
@@ -2717,8 +2782,19 @@ watch(flat, () => syncSource());
                             v-if="!hasResults && !loading"
                             class="rounded-card border border-dashed border-line p-6 text-center"
                         >
-                            <p class="text-sm text-ink-muted">{{ t('map.states.empty') }}</p>
-                            <p class="mt-1 text-xs text-ink-faint">{{ t('map.states.empty_hint') }}</p>
+                            <!-- F-6: with nothing loaded yet, a throttled
+                                 fetch must not read as an empty city. -->
+                            <p
+                                v-if="featuresRateLimited"
+                                data-testid="list-rate-limited"
+                                class="text-sm text-ink-muted"
+                            >
+                                {{ t('map.states.rate_limited') }}
+                            </p>
+                            <template v-else>
+                                <p class="text-sm text-ink-muted">{{ t('map.states.empty') }}</p>
+                                <p class="mt-1 text-xs text-ink-faint">{{ t('map.states.empty_hint') }}</p>
+                            </template>
                         </div>
 
                         <ul v-else class="max-h-[520px] space-y-2 overflow-y-auto pe-1">
