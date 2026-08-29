@@ -1,7 +1,28 @@
 import { execFileSync } from 'node:child_process';
-import { test, expect, LOCALES, expectTouchTargets } from './support/harness';
+import { test, expect, LOCALES, expectTouchTargets, type PageDiagnostics } from './support/harness';
 import { fixtures, signInAdmin } from './support/fixtures';
 import { colourDelta, decodePng, type Rgb } from './support/png';
+
+/*
+ * The one console line Chromium logs for each 429 THIS FILE deliberately
+ * injects (measured verbatim against a route-fulfilled 429). Consumed
+ * locally, exactly and countedly — the shared IGNORED_CONSOLE allowlist
+ * stays untouched, so any other console error, Vue warning or page error
+ * still fails the diagnostics teardown.
+ */
+const RATE_LIMIT_CONSOLE = 'Failed to load resource: the server responded with a status of 429 (Too Many Requests)';
+
+function consumeRateLimitConsole(diagnostics: PageDiagnostics, expected: number): void {
+    const matches = diagnostics.consoleErrors.filter((text) => text === RATE_LIMIT_CONSOLE);
+
+    expect(matches, 'deliberately injected 429 console entries').toHaveLength(expected);
+
+    for (let index = diagnostics.consoleErrors.length - 1; index >= 0; index--) {
+        if (diagnostics.consoleErrors[index] === RATE_LIMIT_CONSOLE) {
+            diagnostics.consoleErrors.splice(index, 1);
+        }
+    }
+}
 
 /*
  * The map endpoints sit behind real per-IP rate limiters (map-features
@@ -172,6 +193,85 @@ test('/map places layer fetches POIs and filters by category without breaking th
     // The map itself never flinched.
     await expect(page.locator('.maplibregl-canvas')).toBeVisible();
     await expect(page.getByText('نەخشە بار نەبوو')).toHaveCount(0);
+});
+
+/*
+ * F-6 (map RC hardening): a throttled /map/features answer is the limiter
+ * speaking, not the data failing. The page must say "wait" in its own
+ * voice — never the error alert, never the empty state — while the stale
+ * list, the active layers and the whole filter state stand; and switching
+ * every layer off clears the throttle voice WITHOUT issuing a request.
+ */
+test('/map states throttling honestly, keeps the loaded data, and clears without a request', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the throttle contract runs once, on desktop-1440x900 only — the list anchor lives in the desktop layout',
+    );
+
+    await serveDeterministicStyle(page);
+    await page.goto('/map', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+
+    // A real first load: the seeded tower is in the list. Let the initial
+    // fetches settle completely so the injected-429 count stays exact.
+    const towerRow = page.getByRole('link', { name: /بورجی وەبەرهێنانی تاقیکردنەوە/ });
+    await expect(towerRow.first()).toBeVisible({ timeout: 15_000 });
+    await page.waitForTimeout(600);
+
+    // From here the limiter "answers" every viewport fetch.
+    await page.route('**/map/features**', (route) =>
+        route.fulfill({ status: 429, contentType: 'application/json', body: '{}' }));
+
+    const areasChip = page.getByRole('button', { name: 'ناوچەکان', exact: true });
+    const projectsChip = page.getByRole('button', { name: 'پڕۆژەکان', exact: true });
+
+    await areasChip.click();
+
+    // The throttle voice — and ONLY the throttle voice.
+    await expect(page.getByTestId('map-rate-limited')).toBeVisible();
+    await expect(page.getByTestId('map-rate-limited'))
+        .toContainText('داواکاری زۆرە — کەمێک چاوەڕوان بە');
+    await expect(page.getByTestId('data-retry')).toHaveCount(0);
+    await expect(page.getByTestId('map-refetch-failed')).toHaveCount(0);
+
+    // Everything already loaded stands: the stale list row and the layer
+    // state the visitor just set.
+    await expect(towerRow.first()).toBeVisible();
+    await expect(areasChip).toHaveAttribute('aria-pressed', 'true');
+    await expect(projectsChip).toHaveAttribute('aria-pressed', 'true');
+
+    /*
+     * Switching the layers off, one then the other: the first OFF still
+     * has an active layer, so it fetches (and is throttled again); the
+     * second OFF empties the set — the throttle state must clear WITHOUT
+     * any request leaving the page.
+     */
+    let featureRequests = 0;
+    page.on('request', (request) => {
+        if (request.url().includes('/map/features')) featureRequests++;
+    });
+
+    await areasChip.click();
+    await expect(page.getByTestId('map-rate-limited')).toBeVisible();
+    expect(featureRequests).toBe(1);
+
+    await projectsChip.click();
+    await expect(page.getByTestId('map-rate-limited')).toHaveCount(0);
+    expect(featureRequests).toBe(1);
+
+    // The limiter relents; the next real fetch recovers the ordinary voice.
+    await page.unroute('**/map/features**');
+
+    const recovered = page.waitForResponse((response) =>
+        response.url().includes('/map/features') && response.ok());
+    await projectsChip.click();
+    expect((await recovered).ok()).toBe(true);
+    await expect(towerRow.first()).toBeVisible();
+    await expect(page.getByTestId('map-rate-limited')).toHaveCount(0);
+
+    // Exactly the two injected 429s (layer ON, then the first layer OFF —
+    // the empty-set OFF issued no request) and nothing else.
+    consumeRateLimitConsole(diagnostics, 2);
 });
 
 test('/map states a provider failure and keeps the list; no infinite loader', async ({ page }, testInfo) => {

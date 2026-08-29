@@ -1,7 +1,28 @@
 import { execFileSync } from 'node:child_process';
 import type { Locator, Page } from '@playwright/test';
-import { test, expect, LOCALES, expectNoHorizontalOverflow } from './support/harness';
+import { test, expect, LOCALES, expectNoHorizontalOverflow, type PageDiagnostics } from './support/harness';
 import { colourDelta, decodePng, type Rgb } from './support/png';
+
+/*
+ * The one console line Chromium logs for each 429 THIS FILE deliberately
+ * injects (measured verbatim against a route-fulfilled 429). Consumed
+ * locally, exactly and countedly — the shared IGNORED_CONSOLE allowlist
+ * stays untouched, so any other console error, Vue warning or page error
+ * still fails the diagnostics teardown.
+ */
+const RATE_LIMIT_CONSOLE = 'Failed to load resource: the server responded with a status of 429 (Too Many Requests)';
+
+function consumeRateLimitConsole(diagnostics: PageDiagnostics, expected: number): void {
+    const matches = diagnostics.consoleErrors.filter((text) => text === RATE_LIMIT_CONSOLE);
+
+    expect(matches, 'deliberately injected 429 console entries').toHaveLength(expected);
+
+    for (let index = diagnostics.consoleErrors.length - 1; index >= 0; index--) {
+        if (diagnostics.consoleErrors[index] === RATE_LIMIT_CONSOLE) {
+            diagnostics.consoleErrors.splice(index, 1);
+        }
+    }
+}
 
 /*
  * Map Phase 4: the Market heatmap on the public explorer.
@@ -191,6 +212,72 @@ for (const locale of LOCALES) {
             .toBe(true);
     });
 }
+
+/* --------------------------------------------- throttling is not failure */
+
+/*
+ * F-2 (map RC hardening): a throttled /map/market answer must speak the
+ * dedicated rate-limited voice — never the error toast with its retry, and
+ * never an "insufficient evidence" reason — while the LAST heat stays
+ * painted on the polygons and every filter stands exactly as chosen.
+ */
+test('a throttled heat refresh says wait, keeps the paint and the filters', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the throttle contract runs once, on desktop-1440x900 only',
+    );
+
+    const map = await openExplorer(page);
+    await enterMarketMode(page);
+
+    // Wait for the +5.04% verdict to actually paint before throttling.
+    await expect
+        .poll(async () => {
+            const tinted = await sampleHeatPixel(page, map);
+
+            return tinted.g - tinted.r >= 15;
+        }, { timeout: 15_000, message: 'the rising area must paint before the throttle test' })
+        .toBe(true);
+
+    const painted = await sampleHeatPixel(page, map);
+
+    // From here the limiter "answers" the heat endpoint.
+    await page.route('**/map/market**', (route) =>
+        route.fulfill({ status: 429, contentType: 'application/json', body: '{}' }));
+
+    await page.getByTestId('market-transaction-rent').click();
+
+    // The dedicated throttle voice, in the notice slot — no error toast,
+    // no retry button, no honest-empty reason dressed over a limiter.
+    await expect(page.getByTestId('market-notice'))
+        .toContainText('داواکاری زۆرە — کەمێک چاوەڕوان بە');
+    await expect(page.getByTestId('market-error')).toHaveCount(0);
+    await expect(page.getByTestId('market-retry')).toHaveCount(0);
+
+    // The filters stand exactly as the visitor set them, in Market mode.
+    await expect(page.getByTestId('market-transaction-rent')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('market-period-all')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('map-mode-market')).toHaveAttribute('aria-pressed', 'true');
+
+    // And the LAST heat is still on the polygons — throttled, not blanked.
+    const during = await sampleHeatPixel(page, map);
+    expect(colourDelta(during, painted)).toBeLessThanOrEqual(8);
+
+    // The limiter relents: the next pick recovers the ordinary voices.
+    await page.unroute('**/map/market**');
+
+    const recovered = page.waitForResponse((response) =>
+        response.url().includes('/map/market') && response.ok());
+    await page.getByTestId('market-transaction-sale').click();
+    expect((await recovered).ok()).toBe(true);
+
+    // Recovery restores the pre-throttle state exactly: heat painted, no
+    // notice at all — the element leaves the DOM with the throttle voice.
+    await expect(page.getByTestId('market-notice')).toHaveCount(0);
+
+    // Exactly the one injected 429 and nothing else reached the console.
+    consumeRateLimitConsole(diagnostics, 1);
+});
 
 /* ------------------------------------------------- honest filter answers */
 

@@ -59,6 +59,7 @@ return [
         'disabled' => 'The map is switched off',
         'disabled_hint' => 'An administrator has disabled this section',
         'no_layers' => 'No layers are available',
+        'rate_limited' => 'Too many requests — wait a moment; the data already loaded stays shown.',
     ],
     'invest' => [
         'map_empty_overlay' => 'No investment projects are currently available in this area — the map stays open, pan and zoom freely.',
@@ -104,6 +105,7 @@ return [
         'compare' => 'Compare',
         'legend' => 'Legend',
         'unknown' => 'Not enough evidence',
+        'rate_limited' => 'Too many requests — wait a moment; the last market view stays shown.',
         'zoom_hint' => 'Zoom in to see area market movement',
     ],
     'compare' => [
@@ -123,6 +125,7 @@ return [
         'from_area' => 'From :name',
         'facts_title' => 'Key differences',
         'not_comparable' => 'Not directly comparable — :reason',
+        'rate_limited' => 'Too many requests — wait a moment; your selected areas stay as they are.',
         'rows' => [
             'movement' => 'Movement',
             'prices' => 'Current price evidence',
