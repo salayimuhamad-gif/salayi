@@ -215,10 +215,29 @@ ROUTES=$( cd "$SITE/application" && "$PHP" artisan route:list 2>/dev/null | grep
 [ "$ROUTES" -gt 100 ]
 check "route table resolves ($ROUTES lines)" $?
 
-# The candidate's new domain service must be GONE from the restored tree —
-# its survival would mean the code restore was partial.
-( cd "$SITE/application" && "$PHP" -r 'require "vendor/autoload.php"; exit(class_exists("App\\Modules\\Identity\\Services\\TelegramOwnershipTransfer") ? 1 : 0);' )
-check "the candidate's ownership-transfer service is gone after the rollback" $?
+# BASELINE-RELATIVE: the restored tree must MATCH the pre-deployment backup,
+# so the BACKUP decides whether the ownership-transfer service exists after
+# the rollback — never a hard-coded era. Since Release #38 the service IS
+# part of deployed production, so a faithful rollback preserves it
+# byte-for-byte; against an older backup that predates it, the same contract
+# proves it gone. A candidate-only file surviving and a baseline file
+# vanishing are the same failure: a partial restore.
+OWNERSHIP_REL="app/Modules/Identity/Services/TelegramOwnershipTransfer.php"
+if [ -f "$BACKUP/$OWNERSHIP_REL" ]; then
+    OWNERSHIP_IN_BACKUP=true
+    cmp -s "$SITE/application/$OWNERSHIP_REL" "$BACKUP/$OWNERSHIP_REL"
+    check "the ownership-transfer service is restored byte-identical to the backup (present in the previous release)" $?
+
+    ( cd "$SITE/application" && "$PHP" -r 'require "vendor/autoload.php"; exit(class_exists("App\\Modules\\Identity\\Services\\TelegramOwnershipTransfer") ? 0 : 1);' )
+    check "the restored ownership-transfer service loads through the restored autoloader" $?
+else
+    OWNERSHIP_IN_BACKUP=false
+    [ ! -e "$SITE/application/$OWNERSHIP_REL" ]
+    check "the candidate's ownership-transfer service file is gone after the rollback (absent from the previous release)" $?
+
+    ( cd "$SITE/application" && "$PHP" -r 'require "vendor/autoload.php"; exit(class_exists("App\\Modules\\Identity\\Services\\TelegramOwnershipTransfer") ? 1 : 0);' )
+    check "the candidate's ownership-transfer service does not load after the rollback" $?
+fi
 
 # The restored previous release still serves its own full surface — these
 # routes predate the candidate and must survive a code-only rollback intact.
@@ -262,6 +281,7 @@ cat > "$EV/production-rollback-rehearsal.json" <<JSONEOF
   "shell": "env -i (fresh session, no inherited environment)",
   "target": "$SITE",
   "model": "post-v7 incremental: code and runtime only, database untouched",
+  "ownership_transfer_in_backup": $OWNERSHIP_IN_BACKUP,
   "ledger_before": "$RAN_BEFORE",
   "ledger_after": "$RAN_AFTER",
   "ledger_expected": "$POST_V7_LEDGER",
