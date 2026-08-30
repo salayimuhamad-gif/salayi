@@ -3099,6 +3099,30 @@ check('the production rollback replaces the build whole and proves it identical'
       and '[ "$RESTORED_LIST" = "$BACKUP_LIST" ]' in prod_rollback
       and '[ "$RESTORED_MANIFEST" = "$BASELINE_MANIFEST" ]' in prod_rollback)
 
+builder_text = (RELEASE / 'build_runtime.py').read_text()
+
+check('the runtime ships the static map-styles web assets beside build',
+      "for static_dir in ('map-styles',):" in builder_text
+      and "runtime / 'public_html' / static_dir" in builder_text
+      and 'the runtime requires the static public' in builder_text)
+
+check('the deployment replaces map-styles whole and proves the MULK identity',
+      'rm -rf "$SITE/public_html/map-styles"' in deploy_text
+      and 'cp -a "$STAGE/patch/public_html/map-styles" "$SITE/public_html/"' in deploy_text
+      and '[ -f "$STAGE/patch/public_html/map-styles/mulk-dark.json" ]' in deploy_text
+      and 'MULK Dark (CARTO Dark Matter raster)' in deploy_text
+      and 'json_last_error() === JSON_ERROR_NONE' in deploy_text
+      and '/map-styles/mulk-dark.json' in deploy_text)
+
+check('the rollback restores map-styles against the backup, not an era',
+      '[ -d "$BACKUP/map-styles" ]' in prod_rollback
+      and 'cp -a "$BACKUP/map-styles" "$SITE/public_html/map-styles"' in prod_rollback
+      and 'rm -rf "$SITE/public_html/map-styles"' in prod_rollback)
+
+check('the runbooks carry the map-styles web-asset step',
+      'public_html/map-styles' in deploy_doc
+      and 'public_html/map-styles' in rollback_doc)
+
 check('the rollback proves the ownership-transfer service against the backup, not an era',
       'OWNERSHIP_REL="app/Modules/Identity/Services/TelegramOwnershipTransfer.php"' in prod_rollback
       and '[ -f "$BACKUP/$OWNERSHIP_REL" ]' in prod_rollback

@@ -174,6 +174,23 @@ echo "  RESTORED_MANIFEST=$RESTORED_MANIFEST"
 [ "$RESTORED_MANIFEST" = "$BASELINE_MANIFEST" ]
 check "restored manifest is byte-identical to the pre-deployment build" $?
 
+# Static map-styles assets: BASELINE-RELATIVE, the backup decides. Present in
+# the backup: restored to match it exactly. Absent (the pre-deployment web
+# root had none): the candidate's copy is removed, restoring that absence —
+# either direction, the web root ends exactly as it was before the deploy.
+if [ -d "$BACKUP/map-styles" ]; then
+    rm -rf "$SITE/public_html/map-styles"
+    cp -a "$BACKUP/map-styles" "$SITE/public_html/map-styles"
+    RESTORED_STYLES=$(cd "$SITE/public_html/map-styles" && find . -type f | sort)
+    BACKUP_STYLES=$(cd "$BACKUP/map-styles" && find . -type f | sort)
+    [ "$RESTORED_STYLES" = "$BACKUP_STYLES" ]
+    check "pre-deployment map-styles restored to match the backup exactly" $?
+else
+    rm -rf "$SITE/public_html/map-styles"
+    [ ! -e "$SITE/public_html/map-styles" ]
+    check "the candidate's map-styles removed (absent from the pre-deployment web root)" $?
+fi
+
 echo "== 5. rebuild caches against the restored code =="
 ( cd "$SITE/application" && "$PHP" artisan config:clear && "$PHP" artisan route:clear \
     && "$PHP" artisan view:clear && "$PHP" artisan config:cache \

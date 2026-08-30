@@ -286,6 +286,9 @@ cp -a application/config            ~/patch-backup-$TS/config
 cp -a application/routes            ~/patch-backup-$TS/routes
 cp -a application/bootstrap/app.php ~/patch-backup-$TS/bootstrap-app.php
 cp -a public_html/build             ~/patch-backup-$TS/build
+# map-styles exists only from the map release onward — back it up when present
+# so a rollback can restore it; when absent, its absence IS the backup state.
+[ -d public_html/map-styles ] && cp -a public_html/map-styles ~/patch-backup-$TS/map-styles
 cp -a application/composer.json     ~/patch-backup-$TS/composer.json
 cp -a application/composer.lock     ~/patch-backup-$TS/composer.lock
 cp -a application/vendor            ~/patch-backup-$TS/vendor
@@ -451,6 +454,13 @@ rm -f application/bootstrap/cache/services.php
 # manifest never names.
 rm -rf public_html/build
 cp -a ~/patch-v7/public_html/build public_html/
+
+# Static map-styles web assets: replaced whole, exactly like build — and ONLY
+# this named directory, never a blind public_html copy (index.php, .htaccess
+# and .user.ini are host-owned and stay untouched). Ships the MULK dark style
+# the map resolves at /map-styles/mulk-dark.json (404 on Release #41).
+rm -rf public_html/map-styles
+cp -a ~/patch-v7/public_html/map-styles public_html/
 ```
 
 Then prove the deployed dependency state BEFORE anything executes on it —
