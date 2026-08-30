@@ -249,6 +249,12 @@ cp -a "$SITE/application/config"            "$BACKUP/config"
 cp -a "$SITE/application/routes"            "$BACKUP/routes"
 cp -a "$SITE/application/bootstrap/app.php" "$BACKUP/bootstrap-app.php"
 cp -a "$SITE/public_html/build"             "$BACKUP/build"
+# public_html/map-styles ships with the map program; a pre-map production web
+# root legitimately lacks it. Captured when present, its absence otherwise
+# recorded by omission — the rollback restores whichever state was true.
+if [ -d "$SITE/public_html/map-styles" ]; then
+    cp -a "$SITE/public_html/map-styles"    "$BACKUP/map-styles"
+fi
 cp -a "$SITE/application/composer.json"     "$BACKUP/composer.json"
 cp -a "$SITE/application/composer.lock"     "$BACKUP/composer.lock"
 cp -a "$SITE/application/vendor"            "$BACKUP/vendor"
@@ -285,6 +291,9 @@ mkdir -p "$STAGE/patch"
 unzip -q "$RUNTIME.zip" -d "$STAGE/patch"
 [ -d "$STAGE/patch/application" ] && [ -d "$STAGE/patch/public_html/build" ]
 check "patch unpacked to a staging directory" $?
+
+[ -f "$STAGE/patch/public_html/map-styles/mulk-dark.json" ]
+check "the patch ships the static map-styles web assets" $?
 
 echo "== 4. maintenance mode =="
 ( cd "$SITE/application" && "$PHP_BIN" artisan down --render="errors::503" >/dev/null 2>&1 )
@@ -337,6 +346,13 @@ rm -rf "$SITE/public_html/build"
 cp -a "$STAGE/patch/public_html/build" "$SITE/public_html/"
 check "runtime files applied" $?
 
+# Static public assets: replaced whole, exactly like build — and ONLY the
+# named directory, never a blind public_html copy (index.php, .htaccess and
+# .user.ini are host-owned runtime files and stay untouched).
+rm -rf "$SITE/public_html/map-styles"
+cp -a "$STAGE/patch/public_html/map-styles" "$SITE/public_html/"
+check "static map-styles web assets applied" $?
+
 # Dependency-state proofs, in the same spirit as the build-directory ones:
 # the deployed lock IS the shipped lock, the tree serving requests is the
 # runtime's production tree (the stand-in's dev marker must be gone), and
@@ -369,6 +385,23 @@ PREVIOUS_LIST=$(cd "$BACKUP/build" && find . -type f | sort)
 
 [ "$DEPLOYED_LIST" = "$STAGED_LIST" ]
 check "the deployed build directory matches the runtime build exactly" $?
+
+# The static map-styles assets, proven with the same rigor as build: arrived,
+# byte-identical to the staged runtime copy, structurally valid JSON, and
+# carrying the MULK Dark identity the map explorer resolves by default.
+[ -f "$SITE/public_html/map-styles/mulk-dark.json" ]
+check "the MULK dark style arrived at the web root" $?
+
+DEPLOYED_STYLES=$(cd "$SITE/public_html/map-styles" && find . -type f | sort)
+STAGED_STYLES=$(cd "$STAGE/patch/public_html/map-styles" && find . -type f | sort)
+[ "$DEPLOYED_STYLES" = "$STAGED_STYLES" ]
+check "the deployed map-styles directory matches the staged runtime exactly" $?
+
+cmp -s "$SITE/public_html/map-styles/mulk-dark.json" "$STAGE/patch/public_html/map-styles/mulk-dark.json"
+check "the deployed MULK dark style is byte-identical to the staged runtime copy" $?
+
+"$PHP_BIN" -r '$style = json_decode(file_get_contents($argv[1]), true); exit(json_last_error() === JSON_ERROR_NONE && is_array($style) && ($style["name"] ?? "") === "MULK Dark (CARTO Dark Matter raster)" && ($style["version"] ?? 0) === 8 ? 0 : 1);' "$SITE/public_html/map-styles/mulk-dark.json"
+check "the deployed style is valid JSON and carries the MULK Dark identity" $?
 
 stale_kept=0
 retired=0
@@ -613,6 +646,10 @@ if [ -n "$ASSET" ]; then
 else
     check "home page references a built asset" 1
 fi
+
+STYLE_CODE=$(curl -sS -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT/map-styles/mulk-dark.json" || echo 000)
+[ "$STYLE_CODE" = "200" ]
+check "the MULK dark style is served over HTTP (got $STYLE_CODE)" $?
 
 echo "== 11. the new registration flow, end to end on the deployed copy =="
 CJ=$(mktemp)

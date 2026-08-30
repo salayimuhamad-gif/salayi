@@ -131,6 +131,31 @@ def main() -> int:
             shutil.copy2(path, target)
             assets += 1
 
+    # Static public assets the application requires at the web root, shipped
+    # beside build/. An EXPLICIT directory list — never a blind copy of
+    # public/: the deployed web root also holds host-owned runtime files
+    # (index.php, .htaccess, .user.ini) a wholesale copy could clobber. Each
+    # named directory ships complete and is REPLACED on apply, exactly like
+    # build/. map-styles carries the MULK dark map style the map explorer
+    # resolves by default; Release #41 shipped without it and production
+    # served 404 for /map-styles/mulk-dark.json — so a source tree missing a
+    # required directory now refuses to package at all.
+    static_assets = 0
+    for static_dir in ('map-styles',):
+        static_src = source / 'public' / static_dir
+        if not static_src.is_dir():
+            raise SystemExit('FAIL: the runtime requires the static public '
+                             f'directory public/{static_dir} and the source '
+                             'does not carry it')
+        for path in sorted(p for p in static_src.rglob('*') if p.is_file()):
+            target = (runtime / 'public_html' / static_dir
+                      / path.relative_to(static_src))
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target)
+            static_assets += 1
+    if static_assets == 0:
+        raise SystemExit('FAIL: the static public asset directories are empty')
+
     vendor_files = 0
     if args.vendor:
         vendor_src = Path(args.vendor)
@@ -181,7 +206,7 @@ def main() -> int:
                    cwd=str(archive.parent), check=True, stdout=subprocess.DEVNULL)
 
     print(f'runtime: application={copied} assets={assets} '
-          f'vendor={vendor_files} archive={archive.name}')
+          f'static={static_assets} vendor={vendor_files} archive={archive.name}')
     return 0
 
 

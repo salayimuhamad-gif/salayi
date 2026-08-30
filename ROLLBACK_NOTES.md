@@ -44,7 +44,11 @@ deployment took (the same ten items §1 verifies):
 5. Invalidate the generated discovery manifests and rediscover against the
    RESTORED vendor — §7's `rm -f` pair and `package:discover`, unchanged:
    the vendor direction reversed, so the rule applies in reverse.
-6. Restore `public_html/build` whole — replaced, never merged (§8).
+6. Restore `public_html/build` whole — replaced, never merged (§8). Treat
+   `public_html/map-styles` the same way, baseline-relative: restore it from
+   the backup when the backup carries it, remove it when the backup does not
+   (the pre-deployment web root had none) — either way the web root ends
+   exactly as it was before the deploy.
 7. Rebuild the config, route and view caches (§9).
 8. Re-verify the ledger: still exactly `66` `Ran` rows, zero `Pending`,
    twelve of twelve inventory files `Ran`, protected five `Ran`. Any
@@ -457,6 +461,12 @@ rm -rf public_html/build
 cp -a "$BACKUP/build" public_html/build
 
 sha256sum public_html/build/manifest.json
+
+# map-styles is baseline-relative: the backup decides. Restore it when the
+# backup carries it; remove it when the backup does not — the pre-deployment
+# web root had none, and that absence is the state being restored.
+rm -rf public_html/map-styles
+[ -d "$BACKUP/map-styles" ] && cp -a "$BACKUP/map-styles" public_html/map-styles
 ```
 
 This must equal the hash recorded in §1. A merged directory is the classic
