@@ -560,11 +560,12 @@ echo "== 9. runtime checks =="
 ( cd "$SITE/application" && "$PHP_BIN" artisan route:list >/dev/null 2>&1 )
 check "route table resolves" $?
 
-# The Telegram ownership-transfer release: the new domain service must load
-# through the DEPLOYED autoloader (its class map was dumped inside the release
-# cycle) and its confirmation endpoint must resolve — both against the
-# already-migrated schema, because the transfer ships no migration of its own
-# and operates entirely on columns and tables the ledger already holds.
+# The Telegram ownership-transfer service — part of deployed production since
+# Release #38, and of every candidate above it — must load through the
+# DEPLOYED autoloader (its class map was dumped inside the release cycle) and
+# its confirmation endpoint must resolve — both against the already-migrated
+# schema, because the transfer ships no migration of its own and operates
+# entirely on columns and tables the ledger already holds.
 ( cd "$SITE/application" && "$PHP_BIN" -r 'require "vendor/autoload.php"; exit(class_exists("App\\Modules\\Identity\\Services\\TelegramOwnershipTransfer") ? 0 : 1);' )
 check "the ownership-transfer service loads through the deployed autoloader" $?
 

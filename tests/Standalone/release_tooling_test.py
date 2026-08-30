@@ -3099,8 +3099,12 @@ check('the production rollback replaces the build whole and proves it identical'
       and '[ "$RESTORED_LIST" = "$BACKUP_LIST" ]' in prod_rollback
       and '[ "$RESTORED_MANIFEST" = "$BASELINE_MANIFEST" ]' in prod_rollback)
 
-check('the candidate service must be GONE after the production rollback',
-      'TelegramOwnershipTransfer' in prod_rollback)
+check('the rollback proves the ownership-transfer service against the backup, not an era',
+      'OWNERSHIP_REL="app/Modules/Identity/Services/TelegramOwnershipTransfer.php"' in prod_rollback
+      and '[ -f "$BACKUP/$OWNERSHIP_REL" ]' in prod_rollback
+      and 'cmp -s "$SITE/application/$OWNERSHIP_REL" "$BACKUP/$OWNERSHIP_REL"' in prod_rollback
+      and 'TelegramOwnershipTransfer' in prod_rollback
+      and '? 0 : 1' in prod_rollback and '? 1 : 0' in prod_rollback)
 
 check('the runner requires and hash-verifies the previous-release archive',
       'MYHAWLER_PREVIOUS_ARCHIVE:?' in runner_text
