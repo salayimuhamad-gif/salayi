@@ -3123,6 +3123,45 @@ check('the runbooks carry the map-styles web-asset step',
       'public_html/map-styles' in deploy_doc
       and 'public_html/map-styles' in rollback_doc)
 
+# ---- doc-portability scratch cleanup: read-only trees must be removable ----
+portability_text = (ROOT / 'scripts' / 'doc-portability.php').read_text()
+
+check('the portability cleanup restores write before deleting, for both scratch trees',
+      'register_shutdown_function(static function () use ($scratch, $scratchEvidence)' in portability_text
+      and 'chmod -R u+rwX ' in portability_text
+      and portability_text.index('chmod -R u+rwX')
+      < portability_text.index("exec('rm -rf '.escapeshellarg($tree)")
+      and portability_text.index('register_shutdown_function')
+      < portability_text.index("'cp -a %s %s 2>&1'"))
+
+with tempfile.TemporaryDirectory() as _cleanup_tmp:
+    _tree = Path(_cleanup_tmp) / 'doc-portability-regression'
+    (_tree / 'public' / 'build' / 'assets').mkdir(parents=True)
+    (_tree / 'public' / 'map-styles').mkdir(parents=True)
+    (_tree / 'tests').mkdir()
+    (_tree / 'public' / 'build' / 'assets' / 'app.js').write_text('x')
+    (_tree / 'public' / 'map-styles' / 'mulk-dark.json').write_text('{}')
+    (_tree / 'public' / 'index.php').write_text('x')
+    (_tree / 'package.json').write_text('{}')
+    (_tree / 'tests' / 'spec.ts').write_text('x')
+    subprocess.run(['chmod', '-R', 'a-w', str(_tree)], check=True)
+
+    # The exact sequence the shutdown trap runs: restore owner write and
+    # directory execute recursively, THEN delete. On a non-root runner (the
+    # Final Release environment) this is the only sequence that can remove
+    # the read-only copy `cp -a` takes of the locked frozen source.
+    _cleanup = subprocess.run(
+        f'chmod -R u+rwX "{_tree}" 2>/dev/null; rm -rf "{_tree}"', shell=True)
+
+    check('the cleanup sequence removes a nested read-only scratch tree',
+          _cleanup.returncode == 0 and not _tree.exists())
+
+check('the retired-chunk gate accepts a byte-identical build only with proof',
+      'if [ "$retired" -gt "0" ]; then' in deploy_text
+      and '[ -n "$PREVIOUS_LIST" ] && [ "$PREVIOUS_LIST" = "$STAGED_LIST" ]' in deploy_text
+      and 'no chunk retired: the staged build is the same set as the previous build' in deploy_text
+      and 'every retired build chunk is gone' in deploy_text)
+
 check('the rollback proves the ownership-transfer service against the backup, not an era',
       'OWNERSHIP_REL="app/Modules/Identity/Services/TelegramOwnershipTransfer.php"' in prod_rollback
       and '[ -f "$BACKUP/$OWNERSHIP_REL" ]' in prod_rollback

@@ -424,8 +424,20 @@ done <<PREVIOUS_BUILD
 $PREVIOUS_LIST
 PREVIOUS_BUILD
 
-[ "$stale_kept" = "0" ] && [ "$retired" -gt "0" ]
-check "every retired build chunk is gone ($retired retired, $stale_kept survived)" $?
+if [ "$retired" -gt "0" ]; then
+    [ "$stale_kept" = "0" ]
+    check "every retired build chunk is gone ($retired retired, $stale_kept survived)" $?
+else
+    # A tooling-only release rebuilds byte-identical assets: nothing retires,
+    # so nothing can survive. That verdict is only trustworthy when the
+    # comparison genuinely ran over the real lists and the two builds are the
+    # SAME set — assert exactly that, instead of assuming every release
+    # changes the build. A zero-retired result with differing or empty lists
+    # still fails: it would mean the comparison broke, not that the
+    # deployment is clean.
+    [ -n "$PREVIOUS_LIST" ] && [ "$PREVIOUS_LIST" = "$STAGED_LIST" ]
+    check "no chunk retired: the staged build is the same set as the previous build" $?
+fi
 
 echo "== 5b. apply the deletion manifest =="
 # A ZIP overlay cannot delete. Without this step a file removed by the release
