@@ -88,6 +88,27 @@ if ($failures !== []) {
  * and regenerate there. The real tree is never modified.
  */
 $scratch = sys_get_temp_dir().'/doc-portability-'.bin2hex(random_bytes(4));
+$scratchEvidence = $scratch.'-evidence';
+
+/*
+ * ONE cleanup trap for both scratch trees, registered before anything is
+ * created so every exit path passes through it. The Final Release runner
+ * locks the frozen source read-only and `cp -a` preserves that, so the
+ * copied directories arrive without owner write — a plain rm cannot unlink
+ * a single file from them, and the multi-gigabyte copy leaks into the temp
+ * directory (observed as a thousand "Permission denied" lines in the run
+ * log). Restoring owner write and directory execute first (u+rwX, applied
+ * recursively) makes removal possible for nested read-only directories and
+ * files alike. Cleanup runs AFTER the gate's verdict and exit code are
+ * decided, and its own output is silenced — it can never turn the check's
+ * substantive result in either direction.
+ */
+register_shutdown_function(static function () use ($scratch, $scratchEvidence): void {
+    foreach ([$scratch, $scratchEvidence] as $tree) {
+        exec('chmod -R u+rwX '.escapeshellarg($tree).' 2>/dev/null');
+        exec('rm -rf '.escapeshellarg($tree).' 2>/dev/null');
+    }
+});
 
 exec(sprintf(
     'cp -a %s %s 2>&1',
@@ -99,10 +120,6 @@ if ($copyCode !== 0) {
     echo "  FAIL  could not stage a copy of the tree\n";
     exit(1);
 }
-
-register_shutdown_function(static function () use ($scratch): void {
-    exec('rm -rf '.escapeshellarg($scratch));
-});
 
 $removed = 0;
 
@@ -133,7 +150,6 @@ printf("  %-46s %d\n", 'runtime files removed, as packaging does', $removed);
  * tree. Reports live outside the source now, so the comparison has to follow
  * them rather than look in a docs/ directory that no longer exists.
  */
-$scratchEvidence = $scratch.'-evidence';
 @mkdir($scratchEvidence.'/reports', 0o777, true);
 copy(EvidencePath::evidenceFile($root, $argv), $scratchEvidence.'/'.EvidencePath::FILENAME);
 
