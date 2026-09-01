@@ -295,6 +295,51 @@ test('/map states a provider failure and keeps the list; no infinite loader', as
     await expect(page.getByText('بورجی وەبەرهێنانی تاقیکردنەوە').first()).toBeVisible();
 });
 
+test('/map rides the keyless OpenFreeMap basemap: no CARTO, no API key', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the basemap contract runs once, on desktop-1440x900 only',
+    );
+    void diagnostics;
+
+    /*
+     * The REAL committed style document this time — no deterministic
+     * stand-in — with the OpenFreeMap endpoints answered by valid stubs,
+     * so the run proves the shipped style parses, paints and provokes no
+     * request toward any API-key-demanding basemap host.
+     */
+    const requested: string[] = [];
+    page.on('request', (request) => requested.push(request.url()));
+
+    await page.route('https://tiles.openfreemap.org/planet**', (route) => route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+            tilejson: '3.0.0',
+            tiles: ['https://tiles.openfreemap.org/stub/{z}/{x}/{y}.pbf'],
+            minzoom: 0,
+            maxzoom: 14,
+        }),
+    }));
+    await page.route('https://tiles.openfreemap.org/stub/**', (route) =>
+        route.fulfill({ status: 204, body: '' }));
+
+    await page.goto('/map', { waitUntil: 'domcontentloaded' });
+    await expect(page.locator('.maplibregl-canvas')).toBeVisible({ timeout: 20_000 });
+    await expect(
+        page.getByRole('link', { name: /بورجی وەبەرهێنانی تاقیکردنەوە/ }).first(),
+    ).toBeVisible({ timeout: 15_000 });
+
+    // The style document itself and its keyless provider were consulted…
+    expect(requested.some((url) => url.includes('/map-styles/mulk-dark.json'))).toBe(true);
+    expect(requested.some((url) => url.includes('tiles.openfreemap.org'))).toBe(true);
+    // …and NOTHING went toward the key-demanding raster host.
+    expect(requested.filter((url) => /carto|cartocdn|basemaps\/apikey/i.test(url))).toEqual([]);
+
+    // Required attribution stays on the surface with the live style.
+    await expect(page.locator('.maplibregl-ctrl-attrib')).toContainText('OpenFreeMap');
+});
+
 /* -------------------------------------------------- /invest trend markers */
 
 test.describe('invest markers on a live map', () => {

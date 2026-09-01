@@ -3110,7 +3110,7 @@ check('the deployment replaces map-styles whole and proves the MULK identity',
       'rm -rf "$SITE/public_html/map-styles"' in deploy_text
       and 'cp -a "$STAGE/patch/public_html/map-styles" "$SITE/public_html/"' in deploy_text
       and '[ -f "$STAGE/patch/public_html/map-styles/mulk-dark.json" ]' in deploy_text
-      and 'MULK Dark (CARTO Dark Matter raster)' in deploy_text
+      and 'MULK Dark (OpenFreeMap vector)' in deploy_text
       and 'json_last_error() === JSON_ERROR_NONE' in deploy_text
       and '/map-styles/mulk-dark.json' in deploy_text)
 
@@ -3122,6 +3122,38 @@ check('the rollback restores map-styles against the backup, not an era',
 check('the runbooks carry the map-styles web-asset step',
       'public_html/map-styles' in deploy_doc
       and 'public_html/map-styles' in rollback_doc)
+
+# ---- the MULK dark style itself: keyless OpenFreeMap, device-font labels ----
+style_raw = (ROOT / 'public' / 'map-styles' / 'mulk-dark.json').read_text()
+style_doc = json.loads(style_raw)
+
+check('the MULK dark style is valid JSON with the MULK Dark identity',
+      style_doc.get('name') == 'MULK Dark (OpenFreeMap vector)'
+      and style_doc.get('version') == 8)
+
+check('the basemap needs no API key: no CARTO endpoint or key banner remains',
+      'carto' not in style_raw.lower()
+      and 'basemaps/apikey' not in style_raw
+      and 'API KEY REQUIRED' not in style_raw)
+
+check('the basemap rides OpenFreeMap vector tiles',
+      'tiles.openfreemap.org' in style_raw
+      and any(s.get('type') == 'vector' for s in style_doc.get('sources', {}).values()))
+
+check('the style keeps MULK labels on device fonts: no glyphs, no symbol layers',
+      'glyphs' not in style_doc
+      and 'sprite' not in style_doc
+      and all(layer.get('type') != 'symbol' for layer in style_doc.get('layers', [])))
+
+check('the basemap attribution credits OpenFreeMap, OpenMapTiles and OSM',
+      'openfreemap.org' in style_raw
+      and 'openmaptiles.org' in style_raw
+      and 'openstreetmap.org/copyright' in style_raw)
+
+check('the deployment proves the deployed style is keyless, both directions',
+      'the deployed basemap is keyless OpenFreeMap with no API-key endpoint' in deploy_text
+      and 'stripos($raw, "carto") === false' in deploy_text
+      and 'strpos($raw, "tiles.openfreemap.org") !== false' in deploy_text)
 
 # ---- doc-portability scratch cleanup: read-only trees must be removable ----
 portability_text = (ROOT / 'scripts' / 'doc-portability.php').read_text()

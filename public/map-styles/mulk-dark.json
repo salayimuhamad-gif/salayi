@@ -1,22 +1,14 @@
 {
     "version": 8,
-    "name": "MULK Dark (CARTO Dark Matter raster)",
+    "name": "MULK Dark (OpenFreeMap vector)",
     "metadata": {
-        "mulk:notes": "The public basemap default: official CARTO Dark Matter raster tiles over a near-black ground tuned to the MULK midnight palette. Raster deliberately - CARTO bakes properly shaped Arabic/Kurdish labels server-side, and a style with NO glyphs entry keeps every MULK-drawn label (project names, prices, cluster counts) on maplibre-gl's local TinySDF path, where the bundled RTL plugin plus device Arabic fonts render Sorani correctly. Served same-origin so no-config deployments and CI depend on no third-party demo infrastructure for the style document itself."
+        "mulk:notes": "The public basemap default: OpenFreeMap's keyless worldwide vector tiles (tiles.openfreemap.org - no API key, no token, no account) rendered by a MULK-authored dark layer set tuned to the MULK midnight palette. The previous raster basemap endpoint began demanding an API key for every tile, so it is gone entirely. Deliberately NO glyphs entry and NO symbol layers: maplibre-gl v6 then rasterizes every MULK-drawn label (project names, prices, cluster counts) locally (TinySDF) from device fonts, which with the bundled RTL plugin is what renders Sorani and Arabic with correct joined shaping - the measured contract this file has always carried. Basemap place labels are intentionally absent; the MULK overlays carry the product's trilingual labels. Served same-origin so no-config deployments and CI depend on no third-party infrastructure for the style document itself."
     },
     "sources": {
-        "carto-dark": {
-            "type": "raster",
-            "tiles": [
-                "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-                "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-                "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-                "https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png"
-            ],
-            "tileSize": 256,
-            "minzoom": 0,
-            "maxzoom": 19,
-            "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\" target=\"_blank\" rel=\"noopener\">CARTO</a>"
+        "openmaptiles": {
+            "type": "vector",
+            "url": "https://tiles.openfreemap.org/planet",
+            "attribution": "<a href=\"https://openfreemap.org\" target=\"_blank\" rel=\"noopener\">OpenFreeMap</a> &copy; <a href=\"https://www.openmaptiles.org/\" target=\"_blank\" rel=\"noopener\">OpenMapTiles</a> Data from <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a>"
         }
     },
     "layers": [
@@ -26,12 +18,127 @@
             "paint": { "background-color": "#0a0e18" }
         },
         {
-            "id": "carto-dark",
-            "type": "raster",
-            "source": "carto-dark",
+            "id": "park",
+            "type": "fill",
+            "source": "openmaptiles",
+            "source-layer": "park",
+            "paint": { "fill-color": "#0d1a18", "fill-opacity": 0.6 }
+        },
+        {
+            "id": "landcover-wood",
+            "type": "fill",
+            "source": "openmaptiles",
+            "source-layer": "landcover",
+            "filter": ["in", "class", "wood", "forest"],
+            "paint": { "fill-color": "#0b141d", "fill-opacity": 0.5 }
+        },
+        {
+            "id": "landcover-grass",
+            "type": "fill",
+            "source": "openmaptiles",
+            "source-layer": "landcover",
+            "filter": ["in", "class", "grass", "grassland", "meadow", "farmland"],
+            "paint": { "fill-color": "#0c1520", "fill-opacity": 0.4 }
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "source": "openmaptiles",
+            "source-layer": "water",
+            "paint": { "fill-color": "#071523" }
+        },
+        {
+            "id": "waterway",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "waterway",
             "paint": {
-                "raster-opacity": 1,
-                "raster-fade-duration": 150
+                "line-color": "#0d2036",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.5, 14, 2]
+            }
+        },
+        {
+            "id": "aeroway",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "aeroway",
+            "minzoom": 10,
+            "filter": ["in", "class", "runway", "taxiway"],
+            "paint": {
+                "line-color": "#1a2436",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 10, 1, 14, 4]
+            }
+        },
+        {
+            "id": "building",
+            "type": "fill",
+            "source": "openmaptiles",
+            "source-layer": "building",
+            "minzoom": 13,
+            "paint": { "fill-color": "#111a2b", "fill-opacity": 0.7 }
+        },
+        {
+            "id": "road-minor",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "minzoom": 11,
+            "filter": ["in", "class", "minor", "service", "track", "minor_construction"],
+            "layout": { "line-cap": "round", "line-join": "round" },
+            "paint": {
+                "line-color": "#1a2334",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 18, 6]
+            }
+        },
+        {
+            "id": "road-secondary",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "minzoom": 9,
+            "filter": ["in", "class", "secondary", "tertiary"],
+            "layout": { "line-cap": "round", "line-join": "round" },
+            "paint": {
+                "line-color": "#202b44",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 18, 9]
+            }
+        },
+        {
+            "id": "road-primary",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "minzoom": 7,
+            "filter": ["in", "class", "primary"],
+            "layout": { "line-cap": "round", "line-join": "round" },
+            "paint": {
+                "line-color": "#26324e",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 8, 1, 18, 12]
+            }
+        },
+        {
+            "id": "road-motorway",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "transportation",
+            "minzoom": 5,
+            "filter": ["in", "class", "motorway", "trunk"],
+            "layout": { "line-cap": "round", "line-join": "round" },
+            "paint": {
+                "line-color": "#2e3c5e",
+                "line-width": ["interpolate", ["linear"], ["zoom"], 6, 1, 18, 14]
+            }
+        },
+        {
+            "id": "boundary-admin",
+            "type": "line",
+            "source": "openmaptiles",
+            "source-layer": "boundary",
+            "filter": ["all", ["<=", "admin_level", 4], ["!=", "maritime", 1]],
+            "paint": {
+                "line-color": "#33405e",
+                "line-dasharray": [3, 2],
+                "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.8, 10, 1.6]
             }
         }
     ]
