@@ -400,8 +400,14 @@ check "the deployed map-styles directory matches the staged runtime exactly" $?
 cmp -s "$SITE/public_html/map-styles/mulk-dark.json" "$STAGE/patch/public_html/map-styles/mulk-dark.json"
 check "the deployed MULK dark style is byte-identical to the staged runtime copy" $?
 
-"$PHP_BIN" -r '$style = json_decode(file_get_contents($argv[1]), true); exit(json_last_error() === JSON_ERROR_NONE && is_array($style) && ($style["name"] ?? "") === "MULK Dark (CARTO Dark Matter raster)" && ($style["version"] ?? 0) === 8 ? 0 : 1);' "$SITE/public_html/map-styles/mulk-dark.json"
+"$PHP_BIN" -r '$style = json_decode(file_get_contents($argv[1]), true); exit(json_last_error() === JSON_ERROR_NONE && is_array($style) && ($style["name"] ?? "") === "MULK Dark (OpenFreeMap vector)" && ($style["version"] ?? 0) === 8 ? 0 : 1);' "$SITE/public_html/map-styles/mulk-dark.json"
 check "the deployed style is valid JSON and carries the MULK Dark identity" $?
+
+# The basemap must stay keyless: no request the style provokes may hit an
+# API-key-demanding endpoint. The style names its provider explicitly, so
+# the deployed bytes are checked for both directions of the contract.
+"$PHP_BIN" -r '$raw = file_get_contents($argv[1]); exit(stripos($raw, "carto") === false && strpos($raw, "basemaps/apikey") === false && strpos($raw, "API KEY REQUIRED") === false && strpos($raw, "tiles.openfreemap.org") !== false ? 0 : 1);' "$SITE/public_html/map-styles/mulk-dark.json"
+check "the deployed basemap is keyless OpenFreeMap with no API-key endpoint" $?
 
 stale_kept=0
 retired=0
