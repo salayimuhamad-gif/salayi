@@ -3258,8 +3258,8 @@ check('the tree holds exactly the sixty-six migrations the ledger expects',
 lock_data = json.loads((ROOT / 'composer.lock').read_text())
 commonmark = next((p['version'] for p in lock_data['packages']
                    if p['name'] == 'league/commonmark'), None)
-check('the frozen lock still pins league/commonmark at 2.9.1',
-      commonmark == '2.9.1', f'found {commonmark}')
+check('the frozen lock still pins league/commonmark at 2.10.0',
+      commonmark == '2.10.0', f'found {commonmark}')
 
 check('DEPLOYMENT_NOTES separates the current incremental context from v7 history',
       'Current production baseline and the incremental release' in deploy_doc
