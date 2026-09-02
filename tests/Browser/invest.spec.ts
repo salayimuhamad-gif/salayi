@@ -12,6 +12,25 @@ const BOUNDARIES_TOGGLE: Record<string, string> = {
 };
 
 /*
+ * Canvas assertions need the deterministic style, exactly as in
+ * map-area-selection.spec.ts and map-market-heatmap.spec.ts: the REAL
+ * basemap is a vector style whose source TileJSON lives on an external
+ * host, and the hermetic harness answers every external request with an
+ * empty 200 — an error BEFORE `load`, which the page answers with its
+ * honest provider-failure teardown (overlay + list, no canvas). That
+ * degraded path is deliberate and covered elsewhere; here the map must
+ * LIVE so the area-context contract can be observed on it.
+ */
+const STYLE_HOST = '**/map-styles/mulk-dark.json';
+
+const DETERMINISTIC_STYLE = {
+    version: 8,
+    name: 'deterministic-e2e',
+    sources: {},
+    layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#e8e6e1' } }],
+};
+
+/*
  * The seeded browser-ankawa centroid (36.225, 43.99) projected from the
  * invest camera centre (36.19, 44.009) at zoom 10 — 1456.35 px/°lng,
  * 1804.7 px/°lat (Web Mercator, 512px tiles, DPR-1 desktop project):
@@ -166,10 +185,21 @@ for (const locale of LOCALES) {
                 'pixel sampling and zoom choreography run once per locale, on desktop-1440x900',
             );
 
+            // Reload onto the deterministic style — the shared beforeEach
+            // navigated with the real one, which cannot construct a live
+            // map under the hermetic harness (see STYLE_HOST above).
+            await page.route(STYLE_HOST, (route) =>
+                route.fulfill({
+                    status: 200,
+                    contentType: 'application/json',
+                    body: JSON.stringify(DETERMINISTIC_STYLE),
+                }));
+            await page.goto(`${locale.prefix}/invest`, { waitUntil: 'domcontentloaded' });
+
             const canvas = page.locator('.maplibregl-canvas').first();
             await expect(canvas).toBeVisible({ timeout: 20_000 });
 
-            /** Sample a 60×60 patch around the seeded area's projected mark. */
+            /** Sample an 80×80 patch around the seeded area's projected mark. */
             const samplePatch = async (): Promise<Rgb[]> => {
                 const box = await canvas.boundingBox();
                 const png = decodePng(await canvas.screenshot());
@@ -177,8 +207,8 @@ for (const locale of LOCALES) {
                 const cy = Math.round(box!.height / 2 + AREA_MARK.dy);
                 const samples: Rgb[] = [];
 
-                for (let dy = -30; dy <= 30; dy += 2) {
-                    for (let dx = -30; dx <= 30; dx += 2) {
+                for (let dy = -40; dy <= 40; dy += 2) {
+                    for (let dx = -40; dx <= 40; dx += 2) {
                         samples.push(png.pixelAt(cx + dx, cy + dy));
                     }
                 }
@@ -189,8 +219,20 @@ for (const locale of LOCALES) {
             const changedPixels = (a: Rgb[], b: Rgb[]): number =>
                 a.filter((pixel, index) => colourDelta(pixel, b[index]) > 40).length;
 
-            // Drop below the gate FIRST, with area context still off — this
-            // is the camera every later screenshot shares.
+            /*
+             * Drop below the gate FIRST, with area context still off — this
+             * is the camera every later screenshot shares. Each zoom click
+             * waits for its own settled fetch: a second click fired into the
+             * first click's ease re-targets from a fractional mid-animation
+             * zoom, and the final camera (and every projected pixel the
+             * patch below relies on) lands somewhere run-dependent.
+             */
+            const zoomOut = page.locator('.maplibregl-ctrl-zoom-out');
+
+            const firstStep = page.waitForResponse((response) => response.url().includes('/invest/features'));
+            await zoomOut.click();
+            expect((await firstStep).ok(), 'the zoom-11 step settles').toBe(true);
+
             const projectsOnly = page.waitForResponse((response) => {
                 if (!response.url().includes('/invest/features')) return false;
 
@@ -198,13 +240,22 @@ for (const locale of LOCALES) {
 
                 return Number.isFinite(zoom) && zoom < 11;
             });
-
-            const zoomOut = page.locator('.maplibregl-ctrl-zoom-out');
             await zoomOut.click();
-            await zoomOut.click();
-            expect((await projectsOnly).ok()).toBe(true);
+            expect((await projectsOnly).ok(), 'the zoom-10 step settles').toBe(true);
 
-            const before = await samplePatch();
+            // The baseline must be a SETTLED frame: sampled until two
+            // consecutive frames agree, so repaint noise can never
+            // masquerade as the area's mark.
+            let before = await samplePatch();
+            await expect
+                .poll(async () => {
+                    const again = await samplePatch();
+                    const settled = changedPixels(again, before) === 0;
+                    before = again;
+
+                    return settled;
+                }, { timeout: 15_000, message: 'the pre-toggle frame must settle' })
+                .toBe(true);
 
             // Switching context on below the gate must still REQUEST the
             // areas layer, and the answer carries the point with an honestly
@@ -235,8 +286,9 @@ for (const locale of LOCALES) {
                 })
                 .toBeGreaterThanOrEqual(4);
 
-            // Back above the gate the polygon returns through the ordinary
-            // fetch — restored, never re-derived from the point.
+            // Back above the gate — one settled step, 10 → 11 — the polygon
+            // returns through the ordinary fetch: restored, never re-derived
+            // from the point.
             const aboveGate = page.waitForResponse((response) => {
                 if (!response.url().includes('/invest/features')) return false;
                 if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
@@ -246,9 +298,7 @@ for (const locale of LOCALES) {
                 return Number.isFinite(zoom) && zoom >= 11;
             });
 
-            const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
-            await zoomIn.click();
-            await zoomIn.click();
+            await page.locator('.maplibregl-ctrl-zoom-in').click();
 
             const restored = (await (await aboveGate).json()) as { boundaries: { features: unknown[] } };
 

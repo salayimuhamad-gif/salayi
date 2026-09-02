@@ -486,8 +486,13 @@ test('the area survives the boundary zoom gate: row, selection and card persist 
     await expect(float).toBeVisible();
     await expect(row).toHaveAttribute('aria-pressed', 'true');
 
-    // Below the gate the areas layer must STILL be requested, its point row
-    // must still arrive, and the polygon collection is honestly empty.
+    /*
+     * Below the gate the areas layer must STILL be requested, its point row
+     * must still arrive, and the polygon collection is honestly empty. Each
+     * zoom click waits for its own settled fetch — a second click fired into
+     * the first click's ease re-targets from a fractional mid-animation zoom
+     * and lands the camera somewhere run-dependent.
+     */
     const belowGate = page.waitForResponse((response) => {
         if (!response.url().includes('/map/features')) return false;
         if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
@@ -499,10 +504,13 @@ test('the area survives the boundary zoom gate: row, selection and card persist 
 
     const zoomOut = page.locator('.maplibregl-ctrl-zoom-out');
     await zoomOut.click();
-    await zoomOut.click();
 
     const below = (await (await belowGate)
         .json()) as { areas: Array<{ slug: string }>; boundaries: { features: unknown[] } };
+
+    const secondStep = page.waitForResponse((response) => response.url().includes('/map/features'));
+    await zoomOut.click();
+    expect((await secondStep).ok(), 'the deeper zoom-out step settles').toBe(true);
 
     expect(below.areas.length, 'the point row is served below the gate').toBeGreaterThanOrEqual(1);
     expect(below.boundaries.features, 'the polygon is honestly gated').toHaveLength(0);
@@ -513,7 +521,14 @@ test('the area survives the boundary zoom gate: row, selection and card persist 
     await expect(float).toBeVisible();
 
     // Back above the gate: the polygon returns, and the seeded area still
-    // has exactly ONE list row — restored, not duplicated.
+    // has exactly ONE list row — restored, not duplicated. Two settled
+    // steps again, so the camera provably re-crosses the threshold.
+    const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
+
+    const returnStep = page.waitForResponse((response) => response.url().includes('/map/features'));
+    await zoomIn.click();
+    expect((await returnStep).ok(), 'the first zoom-in step settles').toBe(true);
+
     const aboveGate = page.waitForResponse((response) => {
         if (!response.url().includes('/map/features')) return false;
         if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
@@ -522,9 +537,6 @@ test('the area survives the boundary zoom gate: row, selection and card persist 
 
         return Number.isFinite(zoom) && zoom >= 11;
     });
-
-    const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
-    await zoomIn.click();
     await zoomIn.click();
 
     const above = (await (await aboveGate).json()) as { boundaries: { features: unknown[] } };
