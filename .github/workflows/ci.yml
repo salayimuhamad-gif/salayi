@@ -407,7 +407,7 @@ jobs:
           # offline cycle requires it exactly as the real one does. Fetched
           # from its committed input ref and verified against the identity
           # pinned in audit_archive.py before anything consumes it.
-          git fetch --depth 1 origin final-inputs/f634694
+          git fetch --depth 1 origin final-inputs/14672f4
           git show FETCH_HEAD:release-input/myhawler-current-working-tree.zip \
             > "$RUNNER_TEMP/previous.zip"
           PREVIOUS=$(python3 - <<'PY'
