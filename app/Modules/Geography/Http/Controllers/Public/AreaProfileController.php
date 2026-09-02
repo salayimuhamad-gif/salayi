@@ -83,7 +83,7 @@ final class AreaProfileController extends Controller
             ->groupBy(static fn (Area $area): string => $area->type->value)
             ->map(static fn (Collection $group): array => $group
                 ->map(static fn (Area $area): array => [
-                    'slug' => $area->slug,
+                    'slug' => $area->publicSlug(),
                     'name' => $area->name(),
                     'name_is_fallback' => $area->nameIsFallback(),
                     'project_count' => $projectCounts[$area->id] ?? 0,
@@ -127,9 +127,12 @@ final class AreaProfileController extends Controller
      */
     public function show(Request $request, string $slug): Response
     {
+        // canonicalSlug rather than a bare where: legacy rows may store mixed
+        // case, and the lowercase URL this route accepts must resolve them on
+        // every engine, not only under MySQL's ci collation.
         $area = Area::query()
             ->published()
-            ->where('slug', $slug)
+            ->canonicalSlug($slug)
             ->first();
 
         // 404 rather than 403 for an unpublished area, matching
@@ -170,7 +173,7 @@ final class AreaProfileController extends Controller
 
         return Inertia::render('Public/Areas/Show', [
             'area' => [
-                'slug' => $area->slug,
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
                 'name_is_fallback' => $area->nameIsFallback(),
                 'description' => $area->description(),
@@ -185,11 +188,11 @@ final class AreaProfileController extends Controller
                 'has_boundary' => filled($area->boundary_wkt),
             ],
             'breadcrumb' => array_map(static fn (Area $ancestor): array => [
-                'slug' => $ancestor->slug,
+                'slug' => $ancestor->publicSlug(),
                 'name' => $ancestor->name(),
             ], $ancestors),
             'children' => $children->map(static fn (Area $child): array => [
-                'slug' => $child->slug,
+                'slug' => $child->publicSlug(),
                 'name' => $child->name(),
                 'type_label' => __('geography.public.type.'.$child->type->value),
                 'project_count' => $childCounts[$child->id] ?? 0,
@@ -239,8 +242,11 @@ final class AreaProfileController extends Controller
                 ->all(),
             'seo' => [
                 'title' => $area->name(),
-                'canonical' => LocalizedRoutes::canonical('/areas/'.$area->slug),
-                'alternates' => LocalizedRoutes::alternates('/areas/'.$area->slug),
+                // publicSlug, not the raw column: a canonical or hreflang URL
+                // built from a legacy mixed-case slug advertises an address
+                // the route constraint itself refuses.
+                'canonical' => LocalizedRoutes::canonical('/areas/'.$area->publicSlug()),
+                'alternates' => LocalizedRoutes::alternates('/areas/'.$area->publicSlug()),
             ],
         ]);
     }

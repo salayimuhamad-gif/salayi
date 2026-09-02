@@ -59,6 +59,20 @@ interface SearchResult {
     lng: number;
 }
 
+/**
+ * An area's representative point from the features payload. The server's own
+ * contract (MapExplorerController): polygons draw the border, POINTS carry
+ * the label — and only the polygon is zoom-gated. Below the boundary gate
+ * this point is all that keeps a published area on the map.
+ */
+interface AreaContextPoint {
+    id: number;
+    slug: string;
+    name: string | null;
+    lat: number;
+    lng: number;
+}
+
 const props = defineProps<{
     style_url: string | null;
     provider: string;
@@ -81,6 +95,14 @@ const clientFallbackReason = ref<string | null>(null);
 
 const emptyBoundaries: BoundaryCollection = { type: 'FeatureCollection', features: [] };
 const boundaries = ref<BoundaryCollection>(emptyBoundaries);
+
+/*
+ * Area representative points, alongside the polygons above and NEVER derived
+ * from them. The server zoom-gates the polygons at the boundary threshold but
+ * serves the points at every zoom; keeping only the polygons made a published
+ * area vanish entirely the moment the visitor zoomed below the gate.
+ */
+const areaPoints = ref<AreaContextPoint[]>([]);
 
 const projects = ref<ProjectFeature[]>([]);
 const selected = ref<ProjectFeature | null>(null);
@@ -246,6 +268,13 @@ async function load(): Promise<void> {
 
         projects.value = data.projects ?? [];
         boundaries.value = showBoundaries.value ? (data.boundaries ?? emptyBoundaries) : emptyBoundaries;
+        /*
+         * The points are gated on the visitor's TOGGLE, never on the zoom
+         * level: below the boundary threshold the polygon payload is
+         * legitimately empty while the points still arrive, and they are
+         * what keeps the area from disappearing on zoom out.
+         */
+        areaPoints.value = showBoundaries.value ? (data.areas ?? []) : [];
         projectBoundaries.value = data.project_boundaries ?? { type: 'FeatureCollection', features: [] };
         truncated.value = Boolean(data.truncated);
 
@@ -278,8 +307,8 @@ function syncSource(): void {
         return;
     }
 
-    adapter.value?.setPoints(
-        projects.value.map((project) => ({
+    adapter.value?.setPoints([
+        ...projects.value.map((project) => ({
             lat: project.lat,
             lng: project.lng,
             title: project.name ?? '',
@@ -297,7 +326,20 @@ function syncSource(): void {
              */
             trend: normaliseTrend(project.trend),
         })),
-    );
+        /*
+         * Area context as plain dots — the explorer's exact vocabulary: no
+         * `id`, so a click cannot masquerade as a project selection, and no
+         * trend, so the marker layer never implies a price claim for an
+         * area. Present whenever the context toggle is on, at EVERY zoom —
+         * below the boundary gate these dots are the area's only mark.
+         */
+        ...areaPoints.value.map((area) => ({
+            lat: area.lat,
+            lng: area.lng,
+            title: area.name ?? '',
+            colour: '#c9a227',
+        })),
+    ]);
 
     // One boundaries source: area context (when toggled) plus the projects'
     // own outlines. The adapter renders both with the gold accent.

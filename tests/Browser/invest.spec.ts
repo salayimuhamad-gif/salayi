@@ -2,6 +2,22 @@ import {
     test, expect, LOCALES,
     expectNoHorizontalOverflow, expectNoDuplicateIds,
 } from './support/harness';
+import { colourDelta, decodePng, type Rgb } from './support/png';
+
+/** The area-context toggle's label (map.invest.boundaries_label). */
+const BOUNDARIES_TOGGLE: Record<string, string> = {
+    ckb: 'سنوورەکانی ناوچە',
+    ar: 'حدود المناطق',
+    en: 'Area boundaries',
+};
+
+/*
+ * The seeded browser-ankawa centroid (36.225, 43.99) projected from the
+ * invest camera centre (36.19, 44.009) at zoom 10 — 1456.35 px/°lng,
+ * 1804.7 px/°lat (Web Mercator, 512px tiles, DPR-1 desktop project):
+ * dx = (43.99 − 44.009) × 1456.35, dy = −(36.225 − 36.19) × 1804.7.
+ */
+const AREA_MARK = { dx: -27.7, dy: -63.2 };
 
 /*
  * The Investment Map, in every locale and at every viewport — the first
@@ -132,6 +148,111 @@ for (const locale of LOCALES) {
         test('does not scroll sideways and has no duplicate ids', async ({ page }) => {
             await expectNoHorizontalOverflow(page);
             await expectNoDuplicateIds(page);
+        });
+
+        /*
+         * The production "published area disappears on zoom out" defect: with
+         * area context on, the ONLY thing this page rendered for an area was
+         * its polygon, and the server legitimately gates polygons below zoom
+         * 11 — so crossing the gate erased the area entirely even though the
+         * payload still carried its representative point. Pinned here: below
+         * the gate the areas layer is still requested, its point row still
+         * arrives with an empty polygon collection, the point leaves a real
+         * mark on the canvas, and zooming back restores the polygon.
+         */
+        test('area context survives below the boundary zoom gate', async ({ page }, testInfo) => {
+            testInfo.skip(
+                testInfo.project.name !== 'desktop-1440x900',
+                'pixel sampling and zoom choreography run once per locale, on desktop-1440x900',
+            );
+
+            const canvas = page.locator('.maplibregl-canvas').first();
+            await expect(canvas).toBeVisible({ timeout: 20_000 });
+
+            /** Sample a 60×60 patch around the seeded area's projected mark. */
+            const samplePatch = async (): Promise<Rgb[]> => {
+                const box = await canvas.boundingBox();
+                const png = decodePng(await canvas.screenshot());
+                const cx = Math.round(box!.width / 2 + AREA_MARK.dx);
+                const cy = Math.round(box!.height / 2 + AREA_MARK.dy);
+                const samples: Rgb[] = [];
+
+                for (let dy = -30; dy <= 30; dy += 2) {
+                    for (let dx = -30; dx <= 30; dx += 2) {
+                        samples.push(png.pixelAt(cx + dx, cy + dy));
+                    }
+                }
+
+                return samples;
+            };
+
+            const changedPixels = (a: Rgb[], b: Rgb[]): number =>
+                a.filter((pixel, index) => colourDelta(pixel, b[index]) > 40).length;
+
+            // Drop below the gate FIRST, with area context still off — this
+            // is the camera every later screenshot shares.
+            const projectsOnly = page.waitForResponse((response) => {
+                if (!response.url().includes('/invest/features')) return false;
+
+                const zoom = Number(new URL(response.url()).searchParams.get('zoom'));
+
+                return Number.isFinite(zoom) && zoom < 11;
+            });
+
+            const zoomOut = page.locator('.maplibregl-ctrl-zoom-out');
+            await zoomOut.click();
+            await zoomOut.click();
+            expect((await projectsOnly).ok()).toBe(true);
+
+            const before = await samplePatch();
+
+            // Switching context on below the gate must still REQUEST the
+            // areas layer, and the answer carries the point with an honestly
+            // empty polygon collection.
+            const belowGate = page.waitForResponse((response) => {
+                if (!response.url().includes('/invest/features')) return false;
+                if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
+
+                const zoom = Number(new URL(response.url()).searchParams.get('zoom'));
+
+                return Number.isFinite(zoom) && zoom < 11;
+            });
+
+            await page.getByRole('button', { name: BOUNDARIES_TOGGLE[locale.code], exact: true }).click();
+
+            const payload = (await (await belowGate)
+                .json()) as { areas: Array<{ slug: string }>; boundaries: { features: unknown[] } };
+
+            expect(payload.areas.length, 'the point row is served below the gate').toBeGreaterThanOrEqual(1);
+            expect(payload.boundaries.features, 'the polygon is honestly gated').toHaveLength(0);
+
+            // The point must leave a visible mark where only ground was —
+            // the area no longer vanishes with its polygon.
+            await expect
+                .poll(async () => changedPixels(await samplePatch(), before), {
+                    timeout: 15_000,
+                    message: 'the area point must mark the map below the boundary gate',
+                })
+                .toBeGreaterThanOrEqual(4);
+
+            // Back above the gate the polygon returns through the ordinary
+            // fetch — restored, never re-derived from the point.
+            const aboveGate = page.waitForResponse((response) => {
+                if (!response.url().includes('/invest/features')) return false;
+                if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
+
+                const zoom = Number(new URL(response.url()).searchParams.get('zoom'));
+
+                return Number.isFinite(zoom) && zoom >= 11;
+            });
+
+            const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
+            await zoomIn.click();
+            await zoomIn.click();
+
+            const restored = (await (await aboveGate).json()) as { boundaries: { features: unknown[] } };
+
+            expect(restored.boundaries.features.length, 'the polygon returns above the gate').toBeGreaterThanOrEqual(1);
         });
     });
 }

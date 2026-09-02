@@ -457,3 +457,81 @@ test('activating a service group from the card enables that POI category on the 
         .toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.maplibregl-canvas')).toBeVisible();
 });
+
+/* ------------------------------------- the boundary gate never eats the area */
+
+/**
+ * Zoom persistence across the server's boundary gate (the production
+ * "published area disappears on zoom out" report). The polygon payload is
+ * legitimately empty below zoom 11 — points carry the label and the list row
+ * there — so crossing the gate may take ONLY the polygon: the areas layer
+ * stays requested, the row stays listed, the selection and its card stand,
+ * and returning above the gate brings the polygon back without duplicating
+ * the point row.
+ */
+test('the area survives the boundary zoom gate: row, selection and card persist below 11', async ({ page, diagnostics }, testInfo) => {
+    testInfo.skip(
+        testInfo.project.name !== 'desktop-1440x900',
+        'the zoom choreography runs once, on desktop-1440x900',
+    );
+    void diagnostics;
+
+    await openExplorerWithBoundaries(page);
+
+    const row = page.getByTestId('area-row').filter({ hasText: AREA_NAME.ckb }).first();
+    await expect(row).toBeVisible();
+    await row.click();
+
+    const float = page.getByTestId('area-card-float');
+    await expect(float).toBeVisible();
+    await expect(row).toHaveAttribute('aria-pressed', 'true');
+
+    // Below the gate the areas layer must STILL be requested, its point row
+    // must still arrive, and the polygon collection is honestly empty.
+    const belowGate = page.waitForResponse((response) => {
+        if (!response.url().includes('/map/features')) return false;
+        if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
+
+        const zoom = Number(new URL(response.url()).searchParams.get('zoom'));
+
+        return Number.isFinite(zoom) && zoom < 11;
+    });
+
+    const zoomOut = page.locator('.maplibregl-ctrl-zoom-out');
+    await zoomOut.click();
+    await zoomOut.click();
+
+    const below = (await (await belowGate)
+        .json()) as { areas: Array<{ slug: string }>; boundaries: { features: unknown[] } };
+
+    expect(below.areas.length, 'the point row is served below the gate').toBeGreaterThanOrEqual(1);
+    expect(below.boundaries.features, 'the polygon is honestly gated').toHaveLength(0);
+
+    // Nothing was taken away with the polygon.
+    await expect(row).toBeVisible();
+    await expect(row).toHaveAttribute('aria-pressed', 'true');
+    await expect(float).toBeVisible();
+
+    // Back above the gate: the polygon returns, and the seeded area still
+    // has exactly ONE list row — restored, not duplicated.
+    const aboveGate = page.waitForResponse((response) => {
+        if (!response.url().includes('/map/features')) return false;
+        if (!decodeURIComponent(response.url()).includes('layers[]=areas')) return false;
+
+        const zoom = Number(new URL(response.url()).searchParams.get('zoom'));
+
+        return Number.isFinite(zoom) && zoom >= 11;
+    });
+
+    const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
+    await zoomIn.click();
+    await zoomIn.click();
+
+    const above = (await (await aboveGate).json()) as { boundaries: { features: unknown[] } };
+
+    expect(above.boundaries.features.length, 'the polygon returns above the gate').toBeGreaterThanOrEqual(1);
+
+    await expect(page.getByTestId('area-row').filter({ hasText: AREA_NAME.ckb })).toHaveCount(1);
+    await expect(row).toHaveAttribute('aria-pressed', 'true');
+    await expect(float).toBeVisible();
+});

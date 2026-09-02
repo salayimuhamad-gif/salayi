@@ -137,7 +137,7 @@ final class MapSearchService
 
                 return [
                     'kind' => 'area',
-                    'slug' => $area->slug,
+                    'slug' => $area->publicSlug(),
                     'name' => $area->name(),
                     'type' => $area->type->value,
                     'type_label' => __('geography.public.type.'.$area->type->value),
@@ -176,7 +176,7 @@ final class MapSearchService
                 'name' => $project->name(),
                 'project_type' => $project->project_type->value,
                 'area_name' => $project->area?->name(),
-                'area_slug' => $project->area?->slug,
+                'area_slug' => $project->area?->publicSlug(),
                 'lat' => (float) $project->latitude,
                 'lng' => (float) $project->longitude,
             ])

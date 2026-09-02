@@ -73,8 +73,10 @@ final class LocationResolveController extends Controller
             'state' => $prices['available'] ? 'resolved' : 'no_data',
             'area' => [
                 // The slug is the stable public identifier the profile routes
-                // already use; ids stay internal.
-                'slug' => $area->slug,
+                // already use; ids stay internal. Canonical lowercase, because
+                // this value comes straight back as `?area=` (whose validator
+                // rejects uppercase) and feeds the card's profile href.
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
                 'type' => $area->type->value,
                 'type_label' => __('geography.public.type.'.$area->type->value),
@@ -135,9 +137,11 @@ final class LocationResolveController extends Controller
      */
     private function manuallyChosenArea(string $slug): Area
     {
+        // canonicalSlug: the request validator only admits lowercase, and a
+        // legacy mixed-case row must still answer to it on every engine.
         $area = Area::query()
             ->published()
-            ->where('slug', $slug)
+            ->canonicalSlug($slug)
             ->first();
 
         abort_if($area === null, 404);

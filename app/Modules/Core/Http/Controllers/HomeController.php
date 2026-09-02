@@ -208,7 +208,8 @@ final class HomeController extends Controller
             ->map(static fn (Area $area): array => [
                 // Slug rather than id: the profile route is /areas/{slug},
                 // and an id in a URL is stable but unreadable and unshareable.
-                'slug' => $area->slug,
+                // Canonical lowercase — the route refuses any other casing.
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
                 'type' => $area->type->value,
                 'project_count' => $area->projects_count,
@@ -258,7 +259,9 @@ final class HomeController extends Controller
                 return true;
             })
             ->map(static fn (Area $area): array => [
-                'slug' => $area->slug,
+                // Canonical lowercase: this value is sent back verbatim as
+                // /location/resolve?area=…, whose validator admits nothing else.
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
                 'type' => $area->type->value,
             ])

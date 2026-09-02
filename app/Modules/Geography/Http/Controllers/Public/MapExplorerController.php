@@ -860,7 +860,7 @@ final class MapExplorerController extends Controller
             $rows[] = [
                 'id' => $index->id,
                 'area' => $area->name(),
-                'area_slug' => $area->slug,
+                'area_slug' => $area->publicSlug(),
                 'lat' => (float) $area->latitude,
                 'lng' => (float) $area->longitude,
                 'value' => $latest->value,
@@ -932,7 +932,7 @@ final class MapExplorerController extends Controller
 
         return $this->cap($rows, static fn (Area $a): array => [
             'id' => $a->id,
-            'slug' => $a->slug,
+            'slug' => $a->publicSlug(),
             'name' => $a->name(),
             'type' => $a->type->value,
             'lat' => (float) $a->latitude,
@@ -1232,7 +1232,10 @@ final class MapExplorerController extends Controller
                 'type' => 'Feature',
                 'geometry' => $geometry,
                 'properties' => [
-                    'slug' => $area->slug,
+                    // The same canonical form the point rows and heat rows
+                    // carry — selection and heat pair polygons to those by
+                    // slug equality, so all three must speak one casing.
+                    'slug' => $area->publicSlug(),
                     'name' => $area->name(),
                     'type' => $area->type->value,
                 ],
