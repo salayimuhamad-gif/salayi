@@ -30,6 +30,23 @@ final class AreaRequest extends FormRequest
         ) ?? false;
     }
 
+    /**
+     * New and updated slugs are stored in their canonical lowercase form, so
+     * the row matches the public route constraint (`[a-z0-9\-]+`) from the day
+     * it is written. Normalising BEFORE validation means the unique check runs
+     * against the value that will actually be stored. Existing rows are left
+     * alone — legacy mixed-case slugs (production's `EBL-CITY`) are handled at
+     * read time by Area::publicSlug()/scopeCanonicalSlug(), never rewritten.
+     */
+    protected function prepareForValidation(): void
+    {
+        $slug = $this->input('slug');
+
+        if (is_string($slug)) {
+            $this->merge(['slug' => mb_strtolower($slug)]);
+        }
+    }
+
     /** @return array<string, mixed> */
     public function rules(): array
     {

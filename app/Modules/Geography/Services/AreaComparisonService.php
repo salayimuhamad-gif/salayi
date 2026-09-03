@@ -12,6 +12,7 @@ use App\Modules\Market\Models\MarketIndexValue;
 use App\Modules\Market\Services\AreaPriceIntelligence;
 use App\Modules\Market\Services\IndexCalculator;
 use App\Modules\Market\Services\MarketMovementService;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Side-by-side comparison of 2–3 published areas (Map Phase 6) — a
@@ -60,11 +61,26 @@ final class AreaComparisonService
      */
     public function compare(array $slugs, string $transaction, string $window, ?string $propertyType): ?array
     {
+        /*
+         * Everything below keys by slug — the resolved areas, the movement
+         * rows, the price payloads. One canonical casing for all of them:
+         * requested slugs are lowered on entry, rows match through LOWER()
+         * (a legacy `EBL-CITY` must answer to `ebl-city` on every engine,
+         * not only under MySQL's ci collation), and every emitted slug is
+         * publicSlug(). Two submitted spellings of one area collapse to one
+         * key and fail the count check — comparing an area to itself was
+         * never a comparison.
+         */
+        $slugs = array_map(
+            static fn (string $slug): string => mb_strtolower($slug),
+            $slugs,
+        );
+
         $areasBySlug = Area::query()
             ->published()
-            ->whereIn('slug', $slugs)
+            ->whereIn(DB::raw('LOWER(slug)'), $slugs)
             ->get()
-            ->keyBy('slug');
+            ->keyBy(static fn (Area $area): string => $area->publicSlug());
 
         if ($areasBySlug->count() !== count($slugs)) {
             return null;
@@ -105,7 +121,11 @@ final class AreaComparisonService
             )
             : $this->disabledMovementEnvelope($transaction, $window, $propertyType);
 
-        $movementRows = collect($movement['rows'])->keyBy('area_slug');
+        // Keyed through the same canonical lowering the requested slugs went
+        // through, so a movement row for a legacy mixed-case area still lands
+        // on its column.
+        $movementRows = collect($movement['rows'])
+            ->keyBy(static fn (array $row): string => mb_strtolower((string) $row['area_slug']));
 
         /** @var array<string, array{available: bool, reason: string|null, area: Area|null, matches: list<array{index: MarketIndex, latest: MarketIndexValue}>}> $resolvedPrices */
         $resolvedPrices = [];
@@ -132,7 +152,7 @@ final class AreaComparisonService
             $areas[] = [
                 // The Phase 5 area-row vocabulary — navigation-safe fields
                 // only, cached bbox, never boundary WKT (§12).
-                'slug' => $area->slug,
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
                 'type' => $area->type->value,
                 'type_label' => __('geography.public.type.'.$area->type->value),

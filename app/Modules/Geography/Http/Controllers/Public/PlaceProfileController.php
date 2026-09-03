@@ -152,7 +152,9 @@ final class PlaceProfileController extends Controller
                 'tags' => is_array($place->tags) ? $place->tags : [],
             ],
             'area' => $areaIsPublic ? [
-                'slug' => $area->slug,
+                // Canonical lowercase: this feeds the "containing area" href,
+                // and the area route refuses any other casing.
+                'slug' => $area->publicSlug(),
                 'name' => $area->name(),
             ] : null,
             'nearby' => $this->nearbyInSameArea($place),

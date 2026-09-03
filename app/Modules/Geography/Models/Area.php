@@ -176,6 +176,35 @@ final class Area extends Model
         return $query->where('type', $type->value);
     }
 
+    /**
+     * Match a stored slug against its canonical public form, on any engine.
+     *
+     * The public routes constrain `{slug}` to lowercase, but legacy rows may
+     * store mixed case (production's `EBL-CITY`). MySQL's ci collation made
+     * `where('slug', 'ebl-city')` find that row while SQLite's byte equality
+     * did not — the same URL resolved on one engine and 404ed on the other.
+     * Comparing both sides through LOWER() states the rule instead of
+     * inheriting whichever collation the deployment happens to run.
+     *
+     * @param  Builder<Area>  $query
+     * @return Builder<Area>
+     */
+    public function scopeCanonicalSlug(Builder $query, string $slug): Builder
+    {
+        return $query->whereRaw('LOWER(slug) = ?', [mb_strtolower($slug)]);
+    }
+
+    /**
+     * The slug in its canonical public form: lowercase, matching the
+     * `[a-z0-9\-]+` route constraint. Every public payload and href must emit
+     * this rather than the raw column — a stored legacy `EBL-CITY` linked
+     * verbatim builds a URL its own route refuses.
+     */
+    public function publicSlug(): string
+    {
+        return mb_strtolower($this->slug);
+    }
+
     /** @return list<int> ancestor ids, outermost first */
     public function ancestorIds(): array
     {

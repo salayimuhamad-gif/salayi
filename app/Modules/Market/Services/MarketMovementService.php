@@ -256,11 +256,15 @@ final class MarketMovementService
         $seriesByIndex = $this->reliableSeries($indices->pluck('id')->all());
 
         // Published areas only, exactly like entities(): an index whose area
-        // vanished or lost publication paints nothing.
+        // vanished or lost publication paints nothing. Slugs are lowered to
+        // their canonical public form here, at the source — the heat client
+        // pairs these rows to boundary polygons by slug equality, and the
+        // polygons already carry publicSlug().
         $slugsById = Area::query()
             ->whereIn('id', $indices->pluck('scope_id')->unique()->values()->all())
             ->where('publication_status', 'published')
-            ->pluck('slug', 'id');
+            ->pluck('slug', 'id')
+            ->map(static fn ($slug): string => mb_strtolower((string) $slug));
 
         $rows = [];
         $windowsAvailable = array_fill_keys(self::WINDOWS, false);
@@ -612,8 +616,10 @@ final class MarketMovementService
         return [
             // The slug is the stable public identifier the profile routes
             // already use; ids stay internal (the location card's rule).
+            // Areas emit their canonical lowercase form — the raw column may
+            // hold a legacy casing the public route refuses.
             'entity' => [
-                'slug' => $entity->slug,
+                'slug' => $entity instanceof Area ? $entity->publicSlug() : $entity->slug,
                 'type' => $index->scope_type->value,
                 'name' => $entity->name(),
             ],
