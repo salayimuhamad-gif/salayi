@@ -63,12 +63,12 @@ BASELINE_LEGACY_ARTIFACTS: dict[str, frozenset[str]] = {
 }
 
 # The previously-deployed production source — the post-v7 baseline of commit
-# 14672f4c80be40e45896822ef32210d8ee6ccbd1, the tree live production runs.
+# c42a6039924e4e85c78f74eebbe748651c4230a8, the tree live production runs.
 # The authoritative production-candidate rehearsal stages this exact archive,
 # so its identity is pinned HERE, beside the sealed baseline's, as the single
 # source of truth every consumer (the CI determinism harness included) reads.
 POST_V7_PREVIOUS_ARCHIVE_SHA256 = (
-    'a1f6f314dc87fe0f8503727ef0530cba7b283fd1ad101af3af984346de681c7f'
+    '3d0e64073ecc95a29ae8196aa87380106a53d2bf375202caa12ba64ad934630a'
 )
 
 
