@@ -1,8 +1,27 @@
+import { execFileSync } from 'node:child_process';
 import {
     test, expect, LOCALES,
     expectNoHorizontalOverflow, expectNoDuplicateIds,
 } from './support/harness';
 import { colourDelta, decodePng, type Rgb } from './support/png';
+
+/*
+ * /invest/features rides the real shared `map-features` limiter, and the
+ * zoom-gate scenario below adds several viewport fetches per locale — enough
+ * that the LAST locale of a serial project pass used to inherit an exhausted
+ * window and answer 429 to its first zoom step. Reset the window at the top
+ * of every locale block — the same limiter hygiene map-production.spec.ts
+ * and map-area-selection.spec.ts apply once per pass, applied per block
+ * because this file walks three locales through the same budget back to
+ * back. Silent no-op against a remote target.
+ */
+function resetRateLimitWindows(): void {
+    try {
+        execFileSync('php', ['artisan', 'cache:clear'], { stdio: 'ignore' });
+    } catch {
+        // Remote target or no artisan on this runner: nothing to clear.
+    }
+}
 
 /** The area-context toggle's label (map.invest.boundaries_label). */
 const BOUNDARIES_TOGGLE: Record<string, string> = {
@@ -54,6 +73,8 @@ const AREA_MARK = { dx: -27.7, dy: -63.2 };
  */
 for (const locale of LOCALES) {
     test.describe(`invest [${locale.code}]`, () => {
+        test.beforeAll(() => resetRateLimitWindows());
+
         test.beforeEach(async ({ page }) => {
             await page.goto(`${locale.prefix}/invest`, { waitUntil: 'networkidle' });
         });
