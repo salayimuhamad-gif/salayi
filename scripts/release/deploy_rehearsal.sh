@@ -64,7 +64,7 @@ MODE="${REHEARSAL_BASELINE_MODE:-sealed-v6}"
 case "$MODE" in
     post-v7)
         BASELINE="${REHEARSAL_PREVIOUS:?set REHEARSAL_PREVIOUS to the post-v7 previously-deployed tree (repo or archive)}"
-        BASELINE_COMMIT="${REHEARSAL_PREVIOUS_COMMIT:-c42a6039924e4e85c78f74eebbe748651c4230a8}"
+        BASELINE_COMMIT="${REHEARSAL_PREVIOUS_COMMIT:-48e6b32c60906975b7a0595c319ecf5013d47724}"
         ;;
     sealed-v6)
         BASELINE="${REHEARSAL_BASELINE:?set REHEARSAL_BASELINE to the v6 baseline repo or archive}"
