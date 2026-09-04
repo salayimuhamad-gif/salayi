@@ -3038,8 +3038,8 @@ check('the deployment rehearsal offers both baseline modes, post-v7 and sealed-v
       and 'REHEARSAL_PREVIOUS:?' in deploy_text)
 
 check('the post-v7 baseline commit is the deployed production commit',
-      'c42a6039924e4e85c78f74eebbe748651c4230a8' in deploy_text
-      and 'c42a6039924e4e85c78f74eebbe748651c4230a8' in runner_text)
+      '48e6b32c60906975b7a0595c319ecf5013d47724' in deploy_text
+      and '48e6b32c60906975b7a0595c319ecf5013d47724' in runner_text)
 
 check('the production ledger is pinned at sixty-six in both rehearsal scripts',
       'POST_V7_LEDGER=66' in deploy_text and 'POST_V7_LEDGER=66' in prod_rollback)
@@ -3237,11 +3237,11 @@ determinism_text = (RELEASE / 'verify_delivery_determinism.sh').read_text()
 
 check('the previous-release identity is pinned once, in the audit module',
       "POST_V7_PREVIOUS_ARCHIVE_SHA256 = (\n"
-      "    '3d0e64073ecc95a29ae8196aa87380106a53d2bf375202caa12ba64ad934630a'\n"
+      "    'cfa0b56e0c58f5f606d09a11c18c74a25067a164fc11a18578df4e73bfb72018'\n"
       ")" in audit_text)
 
 check('normal CI feeds the determinism harness the pinned previous release',
-      'final-inputs/c42a603' in ci_text
+      'final-inputs/48e6b32' in ci_text
       and 'POST_V7_PREVIOUS_ARCHIVE_SHA256' in ci_text
       and 'MYHAWLER_PREVIOUS_ARCHIVE' in ci_text)
 

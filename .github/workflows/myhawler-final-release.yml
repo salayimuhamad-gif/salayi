@@ -54,7 +54,7 @@ on:
       previous_commit:
         description: The commit live production currently runs (post-v7 baseline).
         required: false
-        default: c42a6039924e4e85c78f74eebbe748651c4230a8
+        default: 48e6b32c60906975b7a0595c319ecf5013d47724
         type: string
 
 # This workflow does not deploy. It builds, verifies and uploads artifacts.

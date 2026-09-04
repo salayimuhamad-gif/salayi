@@ -29,7 +29,7 @@ Two deployments live in this document, and they must never be confused:
 ## Current production baseline and the incremental release
 
 **Verified current production state (post-v7):** live `myhawler.com` runs
-the source tree of commit `c42a6039924e4e85c78f74eebbe748651c4230a8` with
+the source tree of commit `48e6b32c60906975b7a0595c319ecf5013d47724` with
 the Final Release production vendor (league/commonmark `2.10.0`, the
 package-discovery invalidation fix live), feature flags unchanged, and a
 migration ledger of exactly **`66` `Ran` rows** — all twelve inventory
