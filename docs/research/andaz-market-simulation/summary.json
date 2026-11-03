@@ -1,0 +1,1631 @@
+{
+ "seed": 20261103,
+ "composition": {
+  "age": {
+   "25-34": {
+    "count": 317,
+    "pct": 31.7
+   },
+   "35-44": {
+    "count": 222,
+    "pct": 22.2
+   },
+   "18-24": {
+    "count": 166,
+    "pct": 16.6
+   },
+   "45-54": {
+    "count": 150,
+    "pct": 15.0
+   },
+   "55-64": {
+    "count": 87,
+    "pct": 8.7
+   },
+   "65+": {
+    "count": 58,
+    "pct": 5.8
+   }
+  },
+  "gender": {
+   "male": {
+    "count": 504,
+    "pct": 50.4
+   },
+   "female": {
+    "count": 496,
+    "pct": 49.6
+   }
+  },
+  "location": {
+   "erbil_city": {
+    "count": 600,
+    "pct": 60.0
+   },
+   "erbil_governorate_town_rural": {
+    "count": 160,
+    "pct": 16.0
+   },
+   "other_kri": {
+    "count": 100,
+    "pct": 10.0
+   },
+   "rest_of_iraq": {
+    "count": 82,
+    "pct": 8.2
+   },
+   "diaspora_abroad": {
+    "count": 58,
+    "pct": 5.8
+   }
+  },
+  "income_usd_month": {
+   "500-1000": {
+    "count": 302,
+    "pct": 30.2
+   },
+   "1000-2000": {
+    "count": 287,
+    "pct": 28.7
+   },
+   "<500": {
+    "count": 189,
+    "pct": 18.9
+   },
+   "2000-4000": {
+    "count": 140,
+    "pct": 14.0
+   },
+   ">4000": {
+    "count": 82,
+    "pct": 8.2
+   }
+  },
+  "education": {
+   "diploma_or_bachelor": {
+    "count": 428,
+    "pct": 42.8
+   },
+   "secondary": {
+    "count": 307,
+    "pct": 30.7
+   },
+   "below_secondary": {
+    "count": 154,
+    "pct": 15.4
+   },
+   "postgraduate": {
+    "count": 111,
+    "pct": 11.1
+   }
+  },
+  "occupation": {
+   "public_employee": {
+    "count": 254,
+    "pct": 25.4
+   },
+   "self_employed_business": {
+    "count": 182,
+    "pct": 18.2
+   },
+   "private_employee": {
+    "count": 176,
+    "pct": 17.6
+   },
+   "student": {
+    "count": 99,
+    "pct": 9.9
+   },
+   "homemaker": {
+    "count": 93,
+    "pct": 9.3
+   },
+   "unemployed": {
+    "count": 75,
+    "pct": 7.5
+   },
+   "retired": {
+    "count": 46,
+    "pct": 4.6
+   },
+   "real_estate_agent": {
+    "count": 43,
+    "pct": 4.3
+   },
+   "developer_or_market_professional": {
+    "count": 32,
+    "pct": 3.2
+   }
+  },
+  "housing": {
+   "owner_occupier": {
+    "count": 447,
+    "pct": 44.7
+   },
+   "living_with_family": {
+    "count": 278,
+    "pct": 27.8
+   },
+   "renter": {
+    "count": 227,
+    "pct": 22.7
+   },
+   "other": {
+    "count": 48,
+    "pct": 4.8
+   }
+  },
+  "experience": {
+   "none": {
+    "count": 365,
+    "pct": 36.5
+   },
+   "beginner": {
+    "count": 272,
+    "pct": 27.2
+   },
+   "occasional": {
+    "count": 172,
+    "pct": 17.2
+   },
+   "experienced_owner": {
+    "count": 76,
+    "pct": 7.6
+   },
+   "agent": {
+    "count": 43,
+    "pct": 4.3
+   },
+   "investor": {
+    "count": 40,
+    "pct": 4.0
+   },
+   "developer_or_professional": {
+    "count": 32,
+    "pct": 3.2
+   }
+  },
+  "digital_skill": {
+   "medium": {
+    "count": 428,
+    "pct": 42.8
+   },
+   "high": {
+    "count": 360,
+    "pct": 36.0
+   },
+   "low": {
+    "count": 212,
+    "pct": 21.2
+   }
+  },
+  "reading_confidence": {
+   "high": {
+    "count": 484,
+    "pct": 48.4
+   },
+   "medium": {
+    "count": 355,
+    "pct": 35.5
+   },
+   "low": {
+    "count": 161,
+    "pct": 16.1
+   }
+  },
+  "numeracy_terminology": {
+   "medium": {
+    "count": 463,
+    "pct": 46.3
+   },
+   "low": {
+    "count": 326,
+    "pct": 32.6
+   },
+   "high": {
+    "count": 211,
+    "pct": 21.1
+   }
+  },
+  "decision_style": {
+   "practical": {
+    "count": 276,
+    "pct": 27.6
+   },
+   "analytical": {
+    "count": 183,
+    "pct": 18.3
+   },
+   "skeptical": {
+    "count": 166,
+    "pct": 16.6
+   },
+   "traditional": {
+    "count": 116,
+    "pct": 11.6
+   },
+   "emotional": {
+    "count": 108,
+    "pct": 10.8
+   },
+   "impatient": {
+    "count": 99,
+    "pct": 9.9
+   },
+   "early_adopter": {
+    "count": 52,
+    "pct": 5.2
+   }
+  },
+  "ai_attitude": {
+   "cautious": {
+    "count": 418,
+    "pct": 41.8
+   },
+   "indifferent": {
+    "count": 240,
+    "pct": 24.0
+   },
+   "enthusiastic": {
+    "count": 173,
+    "pct": 17.3
+   },
+   "resistant": {
+    "count": 169,
+    "pct": 16.9
+   }
+  },
+  "buying_readiness": {
+   "no_current_need": {
+    "count": 446,
+    "pct": 44.6
+   },
+   "casual_browsing": {
+    "count": 270,
+    "pct": 27.0
+   },
+   "future_6_24m": {
+    "count": 194,
+    "pct": 19.4
+   },
+   "immediate_0_6m": {
+    "count": 90,
+    "pct": 9.0
+   }
+  },
+  "device": {
+   "android_phone": {
+    "count": 720,
+    "pct": 72.0
+   },
+   "iphone": {
+    "count": 238,
+    "pct": 23.8
+   },
+   "desktop_mainly": {
+    "count": 42,
+    "pct": 4.2
+   }
+  },
+  "payment_access": {
+   "cash_only": {
+    "count": 560,
+    "pct": 56.0
+   },
+   "digital_wallet_or_card": {
+    "count": 440,
+    "pct": 44.0
+   }
+  },
+  "primary_language": {
+   "sorani": {
+    "count": 705,
+    "pct": 70.5
+   },
+   "arabic": {
+    "count": 196,
+    "pct": 19.6
+   },
+   "badini_or_other": {
+    "count": 55,
+    "pct": 5.5
+   },
+   "english": {
+    "count": 44,
+    "pct": 4.4
+   }
+  },
+  "life_circumstance": {
+   "salaried_worker": {
+    "count": 316,
+    "pct": 31.6
+   },
+   "busy_parent": {
+    "count": 251,
+    "pct": 25.1
+   },
+   "business_owner": {
+    "count": 182,
+    "pct": 18.2
+   },
+   "student": {
+    "count": 99,
+    "pct": 9.9
+   },
+   "unemployed": {
+    "count": 75,
+    "pct": 7.5
+   },
+   "retiree": {
+    "count": 46,
+    "pct": 4.6
+   },
+   "homemaker_no_children": {
+    "count": 31,
+    "pct": 3.1
+   }
+  },
+  "segment": {
+   "no_current_need": {
+    "count": 307,
+    "pct": 30.7
+   },
+   "casual_browsers": {
+    "count": 178,
+    "pct": 17.8
+   },
+   "future_buyers_6_24m": {
+    "count": 139,
+    "pct": 13.9
+   },
+   "active_buyers_0_6m": {
+    "count": 72,
+    "pct": 7.2
+   },
+   "rest_of_iraq_considering_erbil": {
+    "count": 70,
+    "pct": 7.0
+   },
+   "owners_curious_about_value": {
+    "count": 67,
+    "pct": 6.7
+   },
+   "diaspora": {
+    "count": 52,
+    "pct": 5.2
+   },
+   "agents_brokers": {
+    "count": 43,
+    "pct": 4.3
+   },
+   "individual_investors": {
+    "count": 40,
+    "pct": 4.0
+   },
+   "developers_professionals": {
+    "count": 32,
+    "pct": 3.2
+   }
+  },
+  "core_target": {
+   "true": {
+    "count": 562,
+    "pct": 56.2
+   },
+   "false": {
+    "count": 438,
+    "pct": 43.8
+   }
+  }
+ },
+ "conservative_baseline": {
+  "label": "conservative baseline (>=40% non-positive first reactions imposed)",
+  "n": 1000,
+  "first_reaction": {
+   "negative": {
+    "count": 249,
+    "pct": 24.9
+   },
+   "positive": {
+    "count": 213,
+    "pct": 21.3
+   },
+   "indifferent": {
+    "count": 201,
+    "pct": 20.1
+   },
+   "curious": {
+    "count": 188,
+    "pct": 18.8
+   },
+   "confused": {
+    "count": 149,
+    "pct": 14.9
+   }
+  },
+  "usage_intent": {
+   "would_not_use": {
+    "count": 465,
+    "pct": 46.5
+   },
+   "would_use": {
+    "count": 275,
+    "pct": 27.5
+   },
+   "might_use": {
+    "count": 260,
+    "pct": 26.0
+   }
+  },
+  "return_pattern": {
+   "never": {
+    "count": 465,
+    "pct": 46.5
+   },
+   "once": {
+    "count": 238,
+    "pct": 23.8
+   },
+   "occasional_during_decision": {
+    "count": 236,
+    "pct": 23.6
+   },
+   "regular_weekly_or_more": {
+    "count": 61,
+    "pct": 6.1
+   }
+  },
+  "payment_intent": {
+   "would_not_pay": {
+    "count": 809,
+    "pct": 80.9
+   },
+   "might_pay": {
+    "count": 155,
+    "pct": 15.5
+   },
+   "would_pay": {
+    "count": 36,
+    "pct": 3.6
+   }
+  },
+  "use_x_pay": {
+   "might_use|might_pay": 57,
+   "might_use|would_not_pay": 197,
+   "might_use|would_pay": 6,
+   "would_not_use|would_not_pay": 465,
+   "would_use|might_pay": 98,
+   "would_use|would_not_pay": 147,
+   "would_use|would_pay": 30
+  },
+  "negative_indifferent_confused_pct": 59.9,
+  "segments": {
+   "no_current_need": {
+    "n": 307,
+    "would_use_pct": 4.6,
+    "might_use_pct": 24.4,
+    "would_not_use_pct": 71.0,
+    "would_pay_pct": 0.0,
+    "might_pay_pct": 8.1,
+    "regular_return_pct": 0.7,
+    "top_objections": [
+     "no_current_need",
+     "where_do_prices_come_from",
+     "prefer_agent_or_family"
+    ]
+   },
+   "casual_browsers": {
+    "n": 178,
+    "would_use_pct": 26.4,
+    "might_use_pct": 32.0,
+    "would_not_use_pct": 41.6,
+    "would_pay_pct": 1.1,
+    "might_pay_pct": 15.7,
+    "regular_return_pct": 2.8,
+    "top_objections": [
+     "paying_for_information",
+     "prefer_agent_or_family",
+     "register_or_verify_before_value"
+    ]
+   },
+   "future_buyers_6_24m": {
+    "n": 139,
+    "would_use_pct": 54.7,
+    "might_use_pct": 25.9,
+    "would_not_use_pct": 19.4,
+    "would_pay_pct": 5.0,
+    "might_pay_pct": 18.0,
+    "regular_return_pct": 12.2,
+    "top_objections": [
+     "where_do_prices_come_from",
+     "register_or_verify_before_value",
+     "paying_for_information"
+    ]
+   },
+   "active_buyers_0_6m": {
+    "n": 72,
+    "would_use_pct": 69.4,
+    "might_use_pct": 18.1,
+    "would_not_use_pct": 12.5,
+    "would_pay_pct": 12.5,
+    "might_pay_pct": 37.5,
+    "regular_return_pct": 11.1,
+    "top_objections": [
+     "prefer_agent_or_family",
+     "where_do_prices_come_from",
+     "paying_for_information"
+    ]
+   },
+   "rest_of_iraq_considering_erbil": {
+    "n": 70,
+    "would_use_pct": 20.0,
+    "might_use_pct": 34.3,
+    "would_not_use_pct": 45.7,
+    "would_pay_pct": 1.4,
+    "might_pay_pct": 17.1,
+    "regular_return_pct": 1.4,
+    "top_objections": [
+     "no_current_need",
+     "where_do_prices_come_from",
+     "register_or_verify_before_value"
+    ]
+   },
+   "owners_curious_about_value": {
+    "n": 67,
+    "would_use_pct": 19.4,
+    "might_use_pct": 26.9,
+    "would_not_use_pct": 53.7,
+    "would_pay_pct": 0.0,
+    "might_pay_pct": 11.9,
+    "regular_return_pct": 3.0,
+    "top_objections": [
+     "no_current_need",
+     "where_do_prices_come_from",
+     "ai_cannot_be_trusted_for_money"
+    ]
+   },
+   "diaspora": {
+    "n": 52,
+    "would_use_pct": 42.3,
+    "might_use_pct": 23.1,
+    "would_not_use_pct": 34.6,
+    "would_pay_pct": 7.7,
+    "might_pay_pct": 21.2,
+    "regular_return_pct": 3.8,
+    "top_objections": [
+     "where_do_prices_come_from",
+     "prefer_agent_or_family",
+     "sponsored_bias_suspected"
+    ]
+   },
+   "agents_brokers": {
+    "n": 43,
+    "would_use_pct": 16.3,
+    "might_use_pct": 20.9,
+    "would_not_use_pct": 62.8,
+    "would_pay_pct": 9.3,
+    "might_pay_pct": 9.3,
+    "regular_return_pct": 11.6,
+    "top_objections": [
+     "threat_to_my_business",
+     "where_do_prices_come_from",
+     "no_current_need"
+    ]
+   },
+   "individual_investors": {
+    "n": 40,
+    "would_use_pct": 57.5,
+    "might_use_pct": 22.5,
+    "would_not_use_pct": 20.0,
+    "would_pay_pct": 17.5,
+    "might_pay_pct": 30.0,
+    "regular_return_pct": 42.5,
+    "top_objections": [
+     "prefer_agent_or_family",
+     "stale_or_thin_data",
+     "ai_cannot_be_trusted_for_money"
+    ]
+   },
+   "developers_professionals": {
+    "n": 32,
+    "would_use_pct": 28.1,
+    "might_use_pct": 21.9,
+    "would_not_use_pct": 50.0,
+    "would_pay_pct": 6.2,
+    "might_pay_pct": 9.4,
+    "regular_return_pct": 6.2,
+    "top_objections": [
+     "where_do_prices_come_from",
+     "too_complex_or_too_much_text",
+     "ai_cannot_be_trusted_for_money"
+    ]
+   }
+  },
+  "core_target": {
+   "n": 562,
+   "usage_intent": {
+    "would_use": {
+     "count": 223,
+     "pct": 39.7
+    },
+    "would_not_use": {
+     "count": 195,
+     "pct": 34.7
+    },
+    "might_use": {
+     "count": 144,
+     "pct": 25.6
+    }
+   },
+   "payment_intent": {
+    "would_not_pay": {
+     "count": 419,
+     "pct": 74.6
+    },
+    "might_pay": {
+     "count": 109,
+     "pct": 19.4
+    },
+    "would_pay": {
+     "count": 34,
+     "pct": 6.0
+    }
+   },
+   "first_reaction": {
+    "positive": {
+     "count": 182,
+     "pct": 32.4
+    },
+    "curious": {
+     "count": 131,
+     "pct": 23.3
+    },
+    "negative": {
+     "count": 89,
+     "pct": 15.8
+    },
+    "indifferent": {
+     "count": 89,
+     "pct": 15.8
+    },
+    "confused": {
+     "count": 71,
+     "pct": 12.6
+    }
+   }
+  },
+  "non_target": {
+   "n": 438,
+   "usage_intent": {
+    "would_not_use": {
+     "count": 270,
+     "pct": 61.6
+    },
+    "might_use": {
+     "count": 116,
+     "pct": 26.5
+    },
+    "would_use": {
+     "count": 52,
+     "pct": 11.9
+    }
+   },
+   "payment_intent": {
+    "would_not_pay": {
+     "count": 390,
+     "pct": 89.0
+    },
+    "might_pay": {
+     "count": 46,
+     "pct": 10.5
+    },
+    "would_pay": {
+     "count": 2,
+     "pct": 0.5
+    }
+   }
+  },
+  "objections": [
+   {
+    "key": "where_do_prices_come_from",
+    "label": "Trust: who verifies the prices? Asking price vs real deal price unclear",
+    "count": 366,
+    "pct_of_panel": 36.6
+   },
+   {
+    "key": "prefer_agent_or_family",
+    "label": "Habit: I ask a broker, a relative, or a Facebook group instead",
+    "count": 326,
+    "pct_of_panel": 32.6
+   },
+   {
+    "key": "no_current_need",
+    "label": "Relevance: I am not buying or selling anything",
+    "count": 323,
+    "pct_of_panel": 32.3
+   },
+   {
+    "key": "register_or_verify_before_value",
+    "label": "Friction: must register / verify phone (Telegram or WhatsApp) before the advisor or valuation",
+    "count": 310,
+    "pct_of_panel": 31.0
+   },
+   {
+    "key": "paying_for_information",
+    "label": "Pricing: information should be free; I will not pay for answers",
+    "count": 308,
+    "pct_of_panel": 30.8
+   },
+   {
+    "key": "ai_cannot_be_trusted_for_money",
+    "label": "AI distrust: a chatbot should not advise on a 100,000 dollar decision",
+    "count": 275,
+    "pct_of_panel": 27.5
+   },
+   {
+    "key": "too_complex_or_too_much_text",
+    "label": "Usability: map, charts and terminology are too much on a phone",
+    "count": 270,
+    "pct_of_panel": 27.0
+   },
+   {
+    "key": "stale_or_thin_data",
+    "label": "Data: too few projects/prices, or figures could be out of date",
+    "count": 227,
+    "pct_of_panel": 22.7
+   },
+   {
+    "key": "not_a_listings_site",
+    "label": "Expectation gap: I wanted listings with phone numbers, there is no 'call the owner'",
+    "count": 206,
+    "pct_of_panel": 20.6
+   },
+   {
+    "key": "sponsored_bias_suspected",
+    "label": "Bias: developers or advertisers may pay to look good",
+    "count": 203,
+    "pct_of_panel": 20.3
+   },
+   {
+    "key": "cannot_pay_online",
+    "label": "Payment: no card or wallet, or I do not trust online payment",
+    "count": 201,
+    "pct_of_panel": 20.1
+   },
+   {
+    "key": "privacy_of_my_property_data",
+    "label": "Privacy: I do not want to enter my property and price into a website",
+    "count": 151,
+    "pct_of_panel": 15.1
+   },
+   {
+    "key": "name_unclear",
+    "label": "Brand: 'Andaz' does not tell me what it does",
+    "count": 140,
+    "pct_of_panel": 14.0
+   },
+   {
+    "key": "valuation_is_only_an_estimate",
+    "label": "Value: an estimate range is not an official valuation I can use",
+    "count": 127,
+    "pct_of_panel": 12.7
+   },
+   {
+    "key": "sorani_quality_or_language",
+    "label": "Language: wording is formal or technical in Sorani/Arabic; or my dialect is not served",
+    "count": 95,
+    "pct_of_panel": 9.5
+   },
+   {
+    "key": "threat_to_my_business",
+    "label": "Professional conflict: price transparency weakens my negotiating position",
+    "count": 30,
+    "pct_of_panel": 3.0
+   }
+  ],
+  "mean_objections_per_person": 3.56,
+  "attractions": [
+   {
+    "key": "prices_in_one_place",
+    "label": "Project prices and price history in one place instead of calling five offices",
+    "count": 267,
+    "pct_of_panel": 26.7
+   },
+   {
+    "key": "map_with_boundaries",
+    "label": "Seeing where a project actually is, its boundary and what is nearby",
+    "count": 249,
+    "pct_of_panel": 24.9
+   },
+   {
+    "key": "asking_vs_verified_labelled",
+    "label": "Asking price and verified deal price are kept separate and labelled",
+    "count": 225,
+    "pct_of_panel": 22.5
+   },
+   {
+    "key": "sorani_first",
+    "label": "Works properly in Sorani (and Arabic) with RTL",
+    "count": 215,
+    "pct_of_panel": 21.5
+   },
+   {
+    "key": "developer_status_and_delays",
+    "label": "Construction status and delay warnings per project",
+    "count": 211,
+    "pct_of_panel": 21.1
+   },
+   {
+    "key": "portfolio_value_tracking",
+    "label": "A private place to track my properties and an estimated value range",
+    "count": 188,
+    "pct_of_panel": 18.8
+   },
+   {
+    "key": "ai_advisor_structured",
+    "label": "The advisor organises my budget and needs and points to matching projects",
+    "count": 173,
+    "pct_of_panel": 17.3
+   },
+   {
+    "key": "compare_areas",
+    "label": "Comparing two or three areas side by side on the same evidence",
+    "count": 129,
+    "pct_of_panel": 12.9
+   },
+   {
+    "key": "remote_research_from_abroad",
+    "label": "Researching Erbil from abroad before trusting a relative with my money",
+    "count": 72,
+    "pct_of_panel": 7.2
+   }
+  ],
+  "wtp": {
+   "consumers_active_buyers": {
+    "n_segment": 211,
+    "n_would_or_might_pay": 68,
+    "zero_payment_pct": 67.8,
+    "per_question_usd_p25_p50_p75": [
+     0.34,
+     0.6,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     3.0,
+     6.0,
+     11.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     1.0,
+     3.0
+    ]
+   },
+   "owners_curious_about_value": {
+    "n_segment": 67,
+    "n_would_or_might_pay": 8,
+    "zero_payment_pct": 88.1,
+    "per_question_usd_p25_p50_p75": [
+     0.3,
+     0.45,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     2.0,
+     3.0,
+     4.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     0.0,
+     2.0
+    ]
+   },
+   "diaspora": {
+    "n_segment": 52,
+    "n_would_or_might_pay": 15,
+    "zero_payment_pct": 71.2,
+    "per_question_usd_p25_p50_p75": [
+     0.9,
+     1.35,
+     2.52
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     4.0,
+     13.0,
+     18.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     2.0,
+     3.0
+    ]
+   },
+   "individual_investors": {
+    "n_segment": 40,
+    "n_would_or_might_pay": 19,
+    "zero_payment_pct": 52.5,
+    "per_question_usd_p25_p50_p75": [
+     0.5,
+     0.6,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     4.0,
+     5.0,
+     7.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     9.0,
+     22.0,
+     38.0
+    ]
+   },
+   "agents_brokers": {
+    "n_segment": 43,
+    "n_would_or_might_pay": 8,
+    "zero_payment_pct": 81.4,
+    "per_question_usd_p25_p50_p75": [
+     0.38,
+     0.5,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     7.0,
+     15.0,
+     15.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     18.0,
+     22.0,
+     30.0
+    ]
+   },
+   "developers_professionals": {
+    "n_segment": 32,
+    "n_would_or_might_pay": 5,
+    "zero_payment_pct": 84.4,
+    "per_question_usd_p25_p50_p75": [
+     0.3,
+     0.45,
+     1.05
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     9.0,
+     12.0,
+     20.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     12.0,
+     30.0,
+     100.0
+    ]
+   },
+   "casual_or_no_need": {
+    "n_segment": 555,
+    "n_would_or_might_pay": 68,
+    "zero_payment_pct": 87.7,
+    "per_question_usd_p25_p50_p75": [
+     0.3,
+     0.45,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     2.0,
+     6.0,
+     12.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     1.0,
+     3.0
+    ]
+   }
+  }
+ },
+ "unconstrained_variant": {
+  "label": "unconstrained variant (same model, forced overrides removed, thresholds relaxed)",
+  "n": 1000,
+  "first_reaction": {
+   "positive": {
+    "count": 272,
+    "pct": 27.2
+   },
+   "curious": {
+    "count": 259,
+    "pct": 25.9
+   },
+   "negative": {
+    "count": 215,
+    "pct": 21.5
+   },
+   "indifferent": {
+    "count": 210,
+    "pct": 21.0
+   },
+   "confused": {
+    "count": 44,
+    "pct": 4.4
+   }
+  },
+  "usage_intent": {
+   "might_use": {
+    "count": 356,
+    "pct": 35.6
+   },
+   "would_not_use": {
+    "count": 353,
+    "pct": 35.3
+   },
+   "would_use": {
+    "count": 291,
+    "pct": 29.1
+   }
+  },
+  "return_pattern": {
+   "never": {
+    "count": 353,
+    "pct": 35.3
+   },
+   "once": {
+    "count": 324,
+    "pct": 32.4
+   },
+   "occasional_during_decision": {
+    "count": 254,
+    "pct": 25.4
+   },
+   "regular_weekly_or_more": {
+    "count": 69,
+    "pct": 6.9
+   }
+  },
+  "payment_intent": {
+   "would_not_pay": {
+    "count": 765,
+    "pct": 76.5
+   },
+   "might_pay": {
+    "count": 191,
+    "pct": 19.1
+   },
+   "would_pay": {
+    "count": 44,
+    "pct": 4.4
+   }
+  },
+  "use_x_pay": {
+   "might_use|might_pay": 87,
+   "might_use|would_not_pay": 265,
+   "might_use|would_pay": 4,
+   "would_not_use|would_not_pay": 353,
+   "would_use|might_pay": 104,
+   "would_use|would_not_pay": 147,
+   "would_use|would_pay": 40
+  },
+  "negative_indifferent_confused_pct": 46.9,
+  "segments": {
+   "no_current_need": {
+    "n": 307,
+    "would_use_pct": 2.6,
+    "might_use_pct": 33.6,
+    "would_not_use_pct": 63.8,
+    "would_pay_pct": 0.0,
+    "might_pay_pct": 8.8,
+    "regular_return_pct": 0.3,
+    "top_objections": [
+     "no_current_need",
+     "where_do_prices_come_from",
+     "register_or_verify_before_value"
+    ]
+   },
+   "casual_browsers": {
+    "n": 178,
+    "would_use_pct": 23.6,
+    "might_use_pct": 52.2,
+    "would_not_use_pct": 24.2,
+    "would_pay_pct": 2.8,
+    "might_pay_pct": 17.4,
+    "regular_return_pct": 0.6,
+    "top_objections": [
+     "where_do_prices_come_from",
+     "paying_for_information",
+     "register_or_verify_before_value"
+    ]
+   },
+   "future_buyers_6_24m": {
+    "n": 139,
+    "would_use_pct": 61.9,
+    "might_use_pct": 30.9,
+    "would_not_use_pct": 7.2,
+    "would_pay_pct": 1.4,
+    "might_pay_pct": 31.7,
+    "regular_return_pct": 12.2,
+    "top_objections": [
+     "where_do_prices_come_from",
+     "register_or_verify_before_value",
+     "not_a_listings_site"
+    ]
+   },
+   "active_buyers_0_6m": {
+    "n": 72,
+    "would_use_pct": 83.3,
+    "might_use_pct": 12.5,
+    "would_not_use_pct": 4.2,
+    "would_pay_pct": 16.7,
+    "might_pay_pct": 31.9,
+    "regular_return_pct": 22.2,
+    "top_objections": [
+     "ai_cannot_be_trusted_for_money",
+     "prefer_agent_or_family",
+     "not_a_listings_site"
+    ]
+   },
+   "rest_of_iraq_considering_erbil": {
+    "n": 70,
+    "would_use_pct": 25.7,
+    "might_use_pct": 37.1,
+    "would_not_use_pct": 37.1,
+    "would_pay_pct": 4.3,
+    "might_pay_pct": 20.0,
+    "regular_return_pct": 2.9,
+    "top_objections": [
+     "prefer_agent_or_family",
+     "register_or_verify_before_value",
+     "paying_for_information"
+    ]
+   },
+   "owners_curious_about_value": {
+    "n": 67,
+    "would_use_pct": 19.4,
+    "might_use_pct": 44.8,
+    "would_not_use_pct": 35.8,
+    "would_pay_pct": 0.0,
+    "might_pay_pct": 16.4,
+    "regular_return_pct": 1.5,
+    "top_objections": [
+     "no_current_need",
+     "where_do_prices_come_from",
+     "ai_cannot_be_trusted_for_money"
+    ]
+   },
+   "diaspora": {
+    "n": 52,
+    "would_use_pct": 46.2,
+    "might_use_pct": 32.7,
+    "would_not_use_pct": 21.2,
+    "would_pay_pct": 11.5,
+    "might_pay_pct": 28.8,
+    "regular_return_pct": 7.7,
+    "top_objections": [
+     "too_complex_or_too_much_text",
+     "prefer_agent_or_family",
+     "where_do_prices_come_from"
+    ]
+   },
+   "agents_brokers": {
+    "n": 43,
+    "would_use_pct": 20.9,
+    "might_use_pct": 20.9,
+    "would_not_use_pct": 58.1,
+    "would_pay_pct": 9.3,
+    "might_pay_pct": 14.0,
+    "regular_return_pct": 11.6,
+    "top_objections": [
+     "threat_to_my_business",
+     "where_do_prices_come_from",
+     "stale_or_thin_data"
+    ]
+   },
+   "individual_investors": {
+    "n": 40,
+    "would_use_pct": 52.5,
+    "might_use_pct": 37.5,
+    "would_not_use_pct": 10.0,
+    "would_pay_pct": 20.0,
+    "might_pay_pct": 35.0,
+    "regular_return_pct": 37.5,
+    "top_objections": [
+     "paying_for_information",
+     "cannot_pay_online",
+     "where_do_prices_come_from"
+    ]
+   },
+   "developers_professionals": {
+    "n": 32,
+    "would_use_pct": 31.2,
+    "might_use_pct": 34.4,
+    "would_not_use_pct": 34.4,
+    "would_pay_pct": 12.5,
+    "might_pay_pct": 18.8,
+    "regular_return_pct": 21.9,
+    "top_objections": [
+     "register_or_verify_before_value",
+     "no_current_need",
+     "ai_cannot_be_trusted_for_money"
+    ]
+   }
+  },
+  "core_target": {
+   "n": 562,
+   "usage_intent": {
+    "would_use": {
+     "count": 250,
+     "pct": 44.5
+    },
+    "might_use": {
+     "count": 183,
+     "pct": 32.6
+    },
+    "would_not_use": {
+     "count": 129,
+     "pct": 23.0
+    }
+   },
+   "payment_intent": {
+    "would_not_pay": {
+     "count": 386,
+     "pct": 68.7
+    },
+    "might_pay": {
+     "count": 137,
+     "pct": 24.4
+    },
+    "would_pay": {
+     "count": 39,
+     "pct": 6.9
+    }
+   },
+   "first_reaction": {
+    "positive": {
+     "count": 234,
+     "pct": 41.6
+    },
+    "curious": {
+     "count": 152,
+     "pct": 27.0
+    },
+    "indifferent": {
+     "count": 88,
+     "pct": 15.7
+    },
+    "negative": {
+     "count": 67,
+     "pct": 11.9
+    },
+    "confused": {
+     "count": 21,
+     "pct": 3.7
+    }
+   }
+  },
+  "non_target": {
+   "n": 438,
+   "usage_intent": {
+    "would_not_use": {
+     "count": 224,
+     "pct": 51.1
+    },
+    "might_use": {
+     "count": 173,
+     "pct": 39.5
+    },
+    "would_use": {
+     "count": 41,
+     "pct": 9.4
+    }
+   },
+   "payment_intent": {
+    "would_not_pay": {
+     "count": 379,
+     "pct": 86.5
+    },
+    "might_pay": {
+     "count": 54,
+     "pct": 12.3
+    },
+    "would_pay": {
+     "count": 5,
+     "pct": 1.1
+    }
+   }
+  },
+  "objections": [
+   {
+    "key": "where_do_prices_come_from",
+    "label": "Trust: who verifies the prices? Asking price vs real deal price unclear",
+    "count": 365,
+    "pct_of_panel": 36.5
+   },
+   {
+    "key": "register_or_verify_before_value",
+    "label": "Friction: must register / verify phone (Telegram or WhatsApp) before the advisor or valuation",
+    "count": 311,
+    "pct_of_panel": 31.1
+   },
+   {
+    "key": "no_current_need",
+    "label": "Relevance: I am not buying or selling anything",
+    "count": 311,
+    "pct_of_panel": 31.1
+   },
+   {
+    "key": "paying_for_information",
+    "label": "Pricing: information should be free; I will not pay for answers",
+    "count": 299,
+    "pct_of_panel": 29.9
+   },
+   {
+    "key": "prefer_agent_or_family",
+    "label": "Habit: I ask a broker, a relative, or a Facebook group instead",
+    "count": 294,
+    "pct_of_panel": 29.4
+   },
+   {
+    "key": "ai_cannot_be_trusted_for_money",
+    "label": "AI distrust: a chatbot should not advise on a 100,000 dollar decision",
+    "count": 280,
+    "pct_of_panel": 28.0
+   },
+   {
+    "key": "stale_or_thin_data",
+    "label": "Data: too few projects/prices, or figures could be out of date",
+    "count": 250,
+    "pct_of_panel": 25.0
+   },
+   {
+    "key": "too_complex_or_too_much_text",
+    "label": "Usability: map, charts and terminology are too much on a phone",
+    "count": 243,
+    "pct_of_panel": 24.3
+   },
+   {
+    "key": "not_a_listings_site",
+    "label": "Expectation gap: I wanted listings with phone numbers, there is no 'call the owner'",
+    "count": 204,
+    "pct_of_panel": 20.4
+   },
+   {
+    "key": "cannot_pay_online",
+    "label": "Payment: no card or wallet, or I do not trust online payment",
+    "count": 203,
+    "pct_of_panel": 20.3
+   },
+   {
+    "key": "sponsored_bias_suspected",
+    "label": "Bias: developers or advertisers may pay to look good",
+    "count": 183,
+    "pct_of_panel": 18.3
+   },
+   {
+    "key": "privacy_of_my_property_data",
+    "label": "Privacy: I do not want to enter my property and price into a website",
+    "count": 148,
+    "pct_of_panel": 14.8
+   },
+   {
+    "key": "name_unclear",
+    "label": "Brand: 'Andaz' does not tell me what it does",
+    "count": 146,
+    "pct_of_panel": 14.6
+   },
+   {
+    "key": "valuation_is_only_an_estimate",
+    "label": "Value: an estimate range is not an official valuation I can use",
+    "count": 139,
+    "pct_of_panel": 13.9
+   },
+   {
+    "key": "sorani_quality_or_language",
+    "label": "Language: wording is formal or technical in Sorani/Arabic; or my dialect is not served",
+    "count": 82,
+    "pct_of_panel": 8.2
+   },
+   {
+    "key": "threat_to_my_business",
+    "label": "Professional conflict: price transparency weakens my negotiating position",
+    "count": 29,
+    "pct_of_panel": 2.9
+   }
+  ],
+  "mean_objections_per_person": 3.49,
+  "attractions": [
+   {
+    "key": "map_with_boundaries",
+    "label": "Seeing where a project actually is, its boundary and what is nearby",
+    "count": 309,
+    "pct_of_panel": 30.9
+   },
+   {
+    "key": "prices_in_one_place",
+    "label": "Project prices and price history in one place instead of calling five offices",
+    "count": 305,
+    "pct_of_panel": 30.5
+   },
+   {
+    "key": "developer_status_and_delays",
+    "label": "Construction status and delay warnings per project",
+    "count": 240,
+    "pct_of_panel": 24.0
+   },
+   {
+    "key": "sorani_first",
+    "label": "Works properly in Sorani (and Arabic) with RTL",
+    "count": 211,
+    "pct_of_panel": 21.1
+   },
+   {
+    "key": "ai_advisor_structured",
+    "label": "The advisor organises my budget and needs and points to matching projects",
+    "count": 206,
+    "pct_of_panel": 20.6
+   },
+   {
+    "key": "asking_vs_verified_labelled",
+    "label": "Asking price and verified deal price are kept separate and labelled",
+    "count": 205,
+    "pct_of_panel": 20.5
+   },
+   {
+    "key": "portfolio_value_tracking",
+    "label": "A private place to track my properties and an estimated value range",
+    "count": 178,
+    "pct_of_panel": 17.8
+   },
+   {
+    "key": "compare_areas",
+    "label": "Comparing two or three areas side by side on the same evidence",
+    "count": 130,
+    "pct_of_panel": 13.0
+   },
+   {
+    "key": "remote_research_from_abroad",
+    "label": "Researching Erbil from abroad before trusting a relative with my money",
+    "count": 81,
+    "pct_of_panel": 8.1
+   }
+  ],
+  "wtp": {
+   "consumers_active_buyers": {
+    "n_segment": 211,
+    "n_would_or_might_pay": 81,
+    "zero_payment_pct": 61.6,
+    "per_question_usd_p25_p50_p75": [
+     0.3,
+     0.45,
+     1.0
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     3.0,
+     5.0,
+     9.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     1.0,
+     3.0
+    ]
+   },
+   "owners_curious_about_value": {
+    "n_segment": 67,
+    "n_would_or_might_pay": 11,
+    "zero_payment_pct": 83.6,
+    "per_question_usd_p25_p50_p75": [
+     0.45,
+     0.67,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     4.0,
+     5.0,
+     11.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "diaspora": {
+    "n_segment": 52,
+    "n_would_or_might_pay": 21,
+    "zero_payment_pct": 59.6,
+    "per_question_usd_p25_p50_p75": [
+     0.63,
+     1.35,
+     1.89
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     6.0,
+     10.0,
+     18.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     0.0,
+     4.0
+    ]
+   },
+   "individual_investors": {
+    "n_segment": 40,
+    "n_would_or_might_pay": 22,
+    "zero_payment_pct": 45.0,
+    "per_question_usd_p25_p50_p75": [
+     0.45,
+     0.5,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     3.0,
+     7.0,
+     9.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     15.0,
+     21.0,
+     45.0
+    ]
+   },
+   "agents_brokers": {
+    "n_segment": 43,
+    "n_would_or_might_pay": 10,
+    "zero_payment_pct": 76.7,
+    "per_question_usd_p25_p50_p75": [
+     0.15,
+     0.22,
+     0.6
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     2.0,
+     5.0,
+     18.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     14.0,
+     15.0,
+     30.0
+    ]
+   },
+   "developers_professionals": {
+    "n_segment": 32,
+    "n_would_or_might_pay": 10,
+    "zero_payment_pct": 68.8,
+    "per_question_usd_p25_p50_p75": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     6.0,
+     10.0,
+     13.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     20.0,
+     30.0,
+     60.0
+    ]
+   },
+   "casual_or_no_need": {
+    "n_segment": 555,
+    "n_would_or_might_pay": 80,
+    "zero_payment_pct": 85.6,
+    "per_question_usd_p25_p50_p75": [
+     0.25,
+     0.45,
+     0.9
+    ],
+    "valuation_report_usd_p25_p50_p75": [
+     3.0,
+     4.0,
+     8.0
+    ],
+    "monthly_pro_usd_p25_p50_p75": [
+     0.0,
+     1.0,
+     2.0
+    ]
+   }
+  }
+ }
+}
