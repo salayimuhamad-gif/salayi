@@ -1,0 +1,285 @@
+{
+ "panel_size": 1000,
+ "seed": 20261103,
+ "note": "Purposive stress-test sample of AI-generated personas; NOT a probability sample; counts are realised values.",
+ "age_band": {
+  "25-34": 250,
+  "35-44": 220,
+  "18-24": 150,
+  "45-54": 150,
+  "55-64": 100,
+  "65-74": 55,
+  "14-17": 40,
+  "75+": 35
+ },
+ "gender": {
+  "female": 516,
+  "male": 475,
+  "unspecified": 9
+ },
+ "purchasing_role": {
+  "independent_adult": 960,
+  "household_influencer_minor": 40
+ },
+ "education": {
+  "secondary": 304,
+  "bachelor": 288,
+  "vocational_diploma": 124,
+  "primary_or_none": 101,
+  "postgraduate": 85,
+  "university_student": 58,
+  "in_secondary_school": 40
+ },
+ "occupation": {
+  "Real estate agent / broker": 89,
+  "Retired": 73,
+  "Civil servant (government employee)": 66,
+  "Homemaker": 66,
+  "School teacher": 46,
+  "Shopkeeper": 42,
+  "University student": 42,
+  "Secondary-school student": 40,
+  "Property developer staff (sales/marketing)": 37,
+  "Taxi / delivery driver": 36,
+  "Unemployed / looking for work": 34,
+  "Doctor": 29,
+  "Small-business owner / entrepreneur": 29,
+  "Farmer / livestock": 24,
+  "Nurse": 24,
+  "Restaurant / hotel worker": 20,
+  "Software engineer": 20,
+  "Accountant": 18,
+  "Civil engineer": 18,
+  "Construction worker": 17,
+  "Car mechanic": 14,
+  "University lecturer": 14,
+  "Barber / salon worker": 13,
+  "Marketing / social-media manager": 12,
+  "Sports coach / gym trainer": 12,
+  "Architect": 11,
+  "Electrician": 11,
+  "Police / security forces": 11,
+  "IT support technician": 10,
+  "Retired farmer": 10,
+  "Truck driver": 10,
+  "Oil & gas field worker": 9,
+  "Plumber": 9,
+  "Journalist / media": 8,
+  "Pharmacist": 8,
+  "UX / product designer": 8,
+  "Hotel / hospitality manager": 7,
+  "Lawyer": 7,
+  "Security guard": 7,
+  "Cleaner / domestic worker": 6,
+  "Interior designer": 6,
+  "Carpenter / furniture maker": 5,
+  "Land surveyor": 5,
+  "NGO / humanitarian worker": 5,
+  "Bank employee": 4,
+  "Professional athlete": 3,
+  "Data analyst": 2,
+  "Tailor": 2,
+  "Translator / interpreter": 1
+ },
+ "is_specialist": {
+  "false": 765,
+  "true": 235
+ },
+ "specialist_domain": {
+  "": 765,
+  "real_estate": 126,
+  "built_environment": 34,
+  "technology": 32,
+  "finance": 22,
+  "design": 14,
+  "legal": 7
+ },
+ "household": {
+  "parents_young_kids": 197,
+  "single_with_parents": 186,
+  "couple_no_kids": 135,
+  "parents_teens": 122,
+  "single_alone": 93,
+  "large_multigen": 86,
+  "divorced_or_widowed": 60,
+  "parents_adult_kids": 55,
+  "teen_with_parents": 40,
+  "student_shared": 26
+ },
+ "location_context": {
+  "erbil_centre": 300,
+  "erbil_suburb": 250,
+  "diaspora": 150,
+  "kri_other_city": 120,
+  "erbil_rural": 100,
+  "iraq_other": 80
+ },
+ "primary_language": {
+  "ckb": 520,
+  "ar": 270,
+  "en": 160,
+  "other": 50
+ },
+ "reading_ability": {
+  "good": 357,
+  "basic": 347,
+  "high": 158,
+  "low": 138
+ },
+ "income_band": {
+  "middle": 353,
+  "low": 254,
+  "upper_middle": 222,
+  "high": 94,
+  "very_low": 77
+ },
+ "savings": {
+  "can_pay_installments": 282,
+  "small_savings": 270,
+  "no_savings": 192,
+  "cash_partial": 166,
+  "cash_full": 90
+ },
+ "employment_stability": {
+  "stable_public": 161,
+  "irregular": 148,
+  "self_employed": 145,
+  "stable_private": 139,
+  "commission": 89,
+  "pension": 83,
+  "student": 82,
+  "no_own_income": 66,
+  "unemployed": 34,
+  "stable_mixed": 29,
+  "seasonal": 24
+ },
+ "housing_situation": {
+  "renting": 287,
+  "owns_home": 253,
+  "with_family": 232,
+  "owns_multiple": 120,
+  "owns_abroad": 39,
+  "renting_abroad": 37,
+  "owns_home_abroad": 18,
+  "temporary": 14
+ },
+ "property_intent": {
+  "first_time_buyer": 180,
+  "renter": 170,
+  "researching": 120,
+  "no_need": 100,
+  "upgrader": 90,
+  "investor_local": 80,
+  "seller": 70,
+  "investor_diaspora": 60,
+  "landlord": 60,
+  "broker": 50,
+  "developer_staff": 20
+ },
+ "property_knowledge": {
+  "basic": 384,
+  "moderate": 285,
+  "none": 197,
+  "expert": 134
+ },
+ "digital_confidence": {
+  "medium": 350,
+  "high": 312,
+  "low": 195,
+  "very_high": 143
+ },
+ "patience": {
+  "medium": 475,
+  "low": 287,
+  "high": 238
+ },
+ "trust_disposition": {
+  "neutral": 430,
+  "skeptical": 377,
+  "trusting": 193
+ },
+ "privacy_concern": {
+  "medium": 458,
+  "high": 297,
+  "low": 245
+ },
+ "urgency": {
+  "someday": 341,
+  "soon": 340,
+  "none": 179,
+  "immediate": 140
+ },
+ "device": {
+  "android_budget": 434,
+  "iphone": 258,
+  "desktop": 139,
+  "android_flagship": 109,
+  "tablet": 60
+ },
+ "screen": {
+  "medium_361-414px": 470,
+  "small_<=360px": 217,
+  "large_phone_>414px": 114,
+  "laptop_1366px": 86,
+  "tablet_768-1024px": 60,
+  "desktop_1920px": 53
+ },
+ "network": {
+  "4g_good": 339,
+  "4g_variable": 300,
+  "wifi_fast": 234,
+  "slow_unstable": 127
+ },
+ "mobile_data_cost_sensitive": {
+  "false": 750,
+  "true": 250
+ },
+ "accessibility_need": {
+  "none": 806,
+  "low_vision": 101,
+  "colour_vision": 26,
+  "reading_cognitive": 24,
+  "motor": 20,
+  "screen_reader": 14,
+  "keyboard_only": 9
+ },
+ "tasks_assigned_total": 3068,
+ "task_frequency": {
+  "T01": 1000,
+  "T02": 94,
+  "T03": 156,
+  "T04": 93,
+  "T05": 86,
+  "T06": 183,
+  "T07": 185,
+  "T08": 148,
+  "T09": 96,
+  "T10": 147,
+  "T11": 151,
+  "T12": 174,
+  "T13": 140,
+  "T14": 75,
+  "T15": 172,
+  "T16": 37,
+  "T17": 131
+ },
+ "task_catalogue": {
+  "T01": "Understand within ~30 seconds what the platform is, whom it serves and why to use it.",
+  "T02": "Find a home/unit within a stated budget and preferred area.",
+  "T03": "Check a project's location, unit types, availability and prices.",
+  "T04": "Compare two suitable properties/projects.",
+  "T05": "Understand cash price vs installment terms and total cost.",
+  "T06": "Find nearby services or understand the map location of a project/area.",
+  "T07": "Check who supplied an advertisement/project and whether it appears trustworthy.",
+  "T08": "Identify a suitable contact method and prepare an inquiry (without sending).",
+  "T09": "Save a useful option and find it again later.",
+  "T10": "Ask the AI adviser a practical question and judge clarity, honesty and usefulness.",
+  "T11": "Understand whether registration, Telegram/WhatsApp verification or payment is required.",
+  "T12": "Switch interface language and continue the same task.",
+  "T13": "Recover from an empty search, wrong filter or unclear error.",
+  "T14": "Understand how an owner/landlord/agent can list a property or request a valuation.",
+  "T15": "Understand market/price-trend data, its source and how fresh it is.",
+  "T16": "Check an area's amenities (schools, parks, internet, distance) and share a link with family.",
+  "T17": "Assess data credibility, methodology transparency and legal/attribution clarity as a specialist."
+ }
+}
