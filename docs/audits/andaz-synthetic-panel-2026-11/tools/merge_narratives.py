@@ -74,8 +74,13 @@ def main(root: str) -> None:
             p["narrative_source"] = n.get("_source", "llm_batch_agent")
             obj = n.get("objection")
             if obj:
-                recon.append({"id": p["id"], "computed_category": o["adoption_category"], "proposed_category": obj.get("proposed_category"),
-                              "reason": obj.get("reason"), "decision": "keep_computed", "decision_reason": "narrative disagreement only; no uncovered rule named (policy in merge_narratives.py)"})
+                proposed = obj.get("proposed_category")
+                if proposed == o["adoption_category"]:
+                    decision, why = "resolved_by_engine_fix", "the objection pointed at a systematic engine weakness (category A resting on tangential or untested tasks); the primary-task gate added on 2026-11-03 now yields the proposed category for everyone in the same situation"
+                else:
+                    decision, why = "keep_computed", "narrative disagreement only; no uncovered rule named (policy in merge_narratives.py)"
+                recon.append({"id": p["id"], "computed_category": o["adoption_category"], "proposed_category": proposed,
+                              "reason": obj.get("reason"), "decision": decision, "decision_reason": why})
         else:
             p["narrative_source"] = "missing"
             if not p.get("what_would_change_decision"):

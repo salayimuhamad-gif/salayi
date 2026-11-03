@@ -50,6 +50,14 @@ CATS = OrderedDict([
 ])
 NEED_INTENTS = {"renter", "first_time_buyer", "upgrader", "seller", "landlord", "investor_local",
                 "investor_diaspora", "broker", "developer_staff", "researching"}
+# The task(s) that carry a persona's actual goal. A persona cannot be rated "would use now" unless at least
+# one of these was in its task set AND was observable; if none was observable the honest outcome is E.
+# Added 2026-11-03 after batch-08 narrative objections showed category A resting on tangential tasks only.
+PRIMARY_TASKS = {
+    "renter": ["T02"], "first_time_buyer": ["T03", "T02"], "upgrader": ["T03"], "seller": ["T14"], "landlord": ["T14"],
+    "investor_local": ["T15", "T03"], "investor_diaspora": ["T15", "T03"], "broker": ["T07", "T14", "T17"],
+    "developer_staff": ["T03", "T17"], "researching": ["T15", "T03", "T06"],
+}
 
 
 def jitter(pid: str, salt: str = "") -> float:
@@ -173,15 +181,21 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
     has_need = p["property_intent"] in NEED_INTENTS and not (p["property_intent"] == "researching" and p["urgency"] == "none")
     if p["age_band"] == "14-17":
         has_need = False
+    primary_present = [t for t in PRIMARY_TASKS.get(p["property_intent"], []) if t in task_results]
+    primary_observable = [t for t in primary_present if task_results[t]["outcome"] != "cannot_assess"]
     if not has_need:
         cat = "D"
     elif n_cannot >= max(1, (n + 1) // 2):
+        cat = "E"
+    elif not primary_observable:
+        # the goal-carrying task was never assigned or was not observable: no defensible verdict on use
         cat = "E"
     else:
         completes = core_levels.count("completes")
         abandons = core_levels.count("abandons")
         trust_fail = (trust_breaks > 0 and p["trust_disposition"] == "skeptical") or (trust_breaks >= 2 and p["trust_disposition"] == "neutral")
-        if abandons == 0 and completes >= max(1, len(core_levels) - 1) and not trust_fail and value_gaps == 0:
+        primary_ok = all(task_results[t]["outcome"] == "completes" for t in primary_observable)
+        if abandons == 0 and completes >= max(1, len(core_levels) - 1) and not trust_fail and value_gaps == 0 and primary_ok:
             cat = "A"
         elif abandons == len(core_levels) and (trust_fail or value_gaps >= 2 or p["patience"] == "low"):
             cat = "C"
@@ -207,6 +221,7 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
         "task_outcomes": task_results, "applied_rule_ids": sorted(set(applied_all)),
         "improvements_that_change_decision": [k for k, _ in improvements.most_common(3)],
         "would_return": would_return, "trust_breaks": trust_breaks, "value_gaps": value_gaps, "tolerance": round(tol, 2),
+        "primary_tasks_observable": primary_observable,
     }
 
 

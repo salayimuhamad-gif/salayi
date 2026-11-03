@@ -2,51 +2,51 @@
 
 These are **synthetic panel outcomes** from AI-generated personas evaluated against the evidence log with the documented rule engine. They are not conversion, retention, market share or probability of commercial success.
 
-Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Category E (insufficient evidence): 228.
+Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Category E (insufficient evidence): 293.
 
 **All panel** (denominator = 1000)
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 191 | 19% |
-| B — Would use it after specific improvements | 310 | 31% |
-| C — Would reject it despite having a relevant need | 119 | 12% |
+| A — Would use the platform now | 104 | 10% |
+| B — Would use it after specific improvements | 336 | 34% |
+| C — Would reject it despite having a relevant need | 115 | 12% |
 | D — Has no current relevant need | 152 | 15% |
-| E — Cannot assess because evidence is insufficient | 228 | 23% |
+| E — Cannot assess because evidence is insufficient | 293 | 29% |
 | Total | 1000 | 100% |
 
 **Personas with a current relevant need** (denominator = 848)
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 191 | 23% |
-| B — Would use it after specific improvements | 310 | 37% |
-| C — Would reject it despite having a relevant need | 119 | 14% |
+| A — Would use the platform now | 104 | 12% |
+| B — Would use it after specific improvements | 336 | 40% |
+| C — Would reject it despite having a relevant need | 115 | 14% |
 | D — Has no current relevant need | 0 | 0% |
-| E — Cannot assess because evidence is insufficient | 228 | 27% |
+| E — Cannot assess because evidence is insufficient | 293 | 35% |
 | Total | 848 | 101% (rounding) |
 
 ## Task-level outcomes
 
 | Task | assigned | completes | struggles | abandons | cannot_assess |
 |---|---:|---:|---:|---:|---:|
-| T01 | 1000 | 680 (68%) | 165 (16%) | 83 (8%) | 72 (7%) |
-| T02 | 94 | 0 (0%) | 0 (0%) | 0 (0%) | 94 (100%) |
-| T03 | 156 | 26 (17%) | 77 (49%) | 53 (34%) | 0 (0%) |
-| T04 | 93 | 0 (0%) | 0 (0%) | 0 (0%) | 93 (100%) |
-| T05 | 86 | 0 (0%) | 0 (0%) | 0 (0%) | 86 (100%) |
-| T06 | 183 | 157 (86%) | 10 (5%) | 12 (7%) | 4 (2%) |
-| T07 | 185 | 48 (26%) | 68 (37%) | 50 (27%) | 19 (10%) |
-| T08 | 148 | 25 (17%) | 67 (45%) | 45 (30%) | 11 (7%) |
-| T09 | 96 | 0 (0%) | 0 (0%) | 0 (0%) | 96 (100%) |
-| T10 | 147 | 0 (0%) | 0 (0%) | 0 (0%) | 147 (100%) |
-| T11 | 151 | 31 (21%) | 65 (43%) | 51 (34%) | 4 (3%) |
-| T12 | 174 | 41 (24%) | 80 (46%) | 53 (30%) | 0 (0%) |
-| T13 | 140 | 48 (34%) | 38 (27%) | 54 (39%) | 0 (0%) |
-| T14 | 75 | 8 (11%) | 47 (63%) | 20 (27%) | 0 (0%) |
-| T15 | 172 | 8 (5%) | 98 (57%) | 66 (38%) | 0 (0%) |
+| T01 | 1000 | 617 (62%) | 220 (22%) | 91 (9%) | 72 (7%) |
+| T02 | 208 | 0 (0%) | 0 (0%) | 0 (0%) | 208 (100%) |
+| T03 | 330 | 30 (9%) | 158 (48%) | 142 (43%) | 0 (0%) |
+| T04 | 89 | 0 (0%) | 0 (0%) | 0 (0%) | 89 (100%) |
+| T05 | 79 | 0 (0%) | 0 (0%) | 0 (0%) | 79 (100%) |
+| T06 | 177 | 151 (85%) | 10 (6%) | 12 (7%) | 4 (2%) |
+| T07 | 170 | 46 (27%) | 64 (38%) | 44 (26%) | 16 (9%) |
+| T08 | 132 | 22 (17%) | 58 (44%) | 42 (32%) | 10 (8%) |
+| T09 | 89 | 0 (0%) | 0 (0%) | 0 (0%) | 89 (100%) |
+| T10 | 137 | 0 (0%) | 0 (0%) | 0 (0%) | 137 (100%) |
+| T11 | 138 | 27 (20%) | 59 (43%) | 48 (35%) | 4 (3%) |
+| T12 | 164 | 36 (22%) | 76 (46%) | 52 (32%) | 0 (0%) |
+| T13 | 136 | 46 (34%) | 38 (28%) | 52 (38%) | 0 (0%) |
+| T14 | 155 | 8 (5%) | 85 (55%) | 62 (40%) | 0 (0%) |
+| T15 | 255 | 8 (3%) | 142 (56%) | 105 (41%) | 0 (0%) |
 | T16 | 37 | 20 (54%) | 5 (14%) | 7 (19%) | 5 (14%) |
-| T17 | 131 | 47 (36%) | 61 (47%) | 23 (18%) | 0 (0%) |
+| T17 | 111 | 42 (38%) | 51 (46%) | 18 (16%) | 0 (0%) |
 
 ## Subgroups (percentages only where n ≥ 25)
 
@@ -54,30 +54,30 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 
 | age_band | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| 25-34 | 250 | 28% | 30% | 13% | 7% | 23% |
-| 35-44 | 220 | 19% | 30% | 10% | 11% | 30% |
-| 45-54 | 150 | 14% | 37% | 10% | 11% | 28% |
-| 18-24 | 150 | 25% | 35% | 8% | 14% | 18% |
-| 55-64 | 100 | 13% | 37% | 21% | 9% | 20% |
-| 65-74 | 55 | 16% | 33% | 18% | 16% | 16% |
+| 25-34 | 250 | 11% | 30% | 12% | 7% | 40% |
+| 35-44 | 220 | 12% | 39% | 11% | 11% | 27% |
+| 45-54 | 150 | 13% | 47% | 11% | 11% | 19% |
+| 18-24 | 150 | 7% | 21% | 5% | 14% | 53% |
+| 55-64 | 100 | 11% | 45% | 19% | 9% | 16% |
+| 65-74 | 55 | 13% | 36% | 18% | 16% | 16% |
 | 14-17 | 40 | 0% | 0% | 0% | 100% | 0% |
-| 75+ | 35 | 3% | 23% | 17% | 40% | 17% |
+| 75+ | 35 | 6% | 26% | 20% | 40% | 9% |
 
 
 ### by property_intent
 
 | property_intent | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| first_time_buyer | 180 | 17% | 27% | 8% | 0% | 49% |
-| renter | 170 | 39% | 32% | 15% | 0% | 14% |
-| researching | 120 | 15% | 26% | 11% | 43% | 5% |
+| first_time_buyer | 180 | 18% | 36% | 16% | 0% | 31% |
+| renter | 170 | 0% | 0% | 0% | 0% | 100% |
+| researching | 120 | 13% | 26% | 12% | 43% | 5% |
 | no_need | 100 | 0% | 0% | 0% | 100% | 0% |
-| upgrader | 90 | 34% | 10% | 0% | 0% | 56% |
-| investor_local | 80 | 14% | 34% | 12% | 0% | 40% |
-| seller | 70 | 9% | 54% | 36% | 0% | 1% |
-| investor_diaspora | 60 | 20% | 28% | 13% | 0% | 38% |
-| landlord | 60 | 5% | 63% | 28% | 0% | 3% |
-| broker | 50 | 18% | 72% | 10% | 0% | 0% |
+| upgrader | 90 | 38% | 30% | 0% | 0% | 32% |
+| investor_local | 80 | 8% | 58% | 15% | 0% | 20% |
+| seller | 70 | 0% | 64% | 36% | 0% | 0% |
+| investor_diaspora | 60 | 3% | 50% | 20% | 0% | 27% |
+| landlord | 60 | 0% | 72% | 28% | 0% | 0% |
+| broker | 50 | 16% | 76% | 8% | 0% | 0% |
 | developer_staff | 20 | (too small for percentages) | | | | |
 
 
@@ -85,73 +85,73 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 
 | primary_language | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| ckb | 520 | 20% | 32% | 12% | 13% | 23% |
-| ar | 270 | 16% | 34% | 13% | 17% | 21% |
-| en | 160 | 19% | 22% | 9% | 18% | 31% |
-| other | 50 | 28% | 34% | 12% | 18% | 8% |
+| ckb | 520 | 11% | 35% | 11% | 13% | 30% |
+| ar | 270 | 8% | 34% | 13% | 17% | 27% |
+| en | 160 | 10% | 29% | 12% | 18% | 31% |
+| other | 50 | 16% | 28% | 10% | 18% | 28% |
 
 
 ### by digital_confidence
 
 | digital_confidence | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| medium | 350 | 14% | 32% | 11% | 17% | 27% |
-| high | 312 | 27% | 32% | 7% | 12% | 21% |
-| low | 195 | 9% | 32% | 22% | 16% | 22% |
-| very_high | 143 | 29% | 25% | 11% | 17% | 18% |
+| medium | 350 | 7% | 36% | 11% | 17% | 29% |
+| high | 312 | 15% | 34% | 9% | 12% | 29% |
+| low | 195 | 6% | 32% | 21% | 16% | 26% |
+| very_high | 143 | 15% | 29% | 6% | 17% | 34% |
 
 
 ### by income_band
 
 | income_band | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| middle | 353 | 17% | 28% | 14% | 18% | 24% |
-| low | 254 | 19% | 31% | 10% | 14% | 26% |
-| upper_middle | 222 | 20% | 36% | 9% | 15% | 20% |
-| high | 94 | 17% | 31% | 17% | 13% | 22% |
-| very_low | 77 | 27% | 34% | 13% | 9% | 17% |
+| middle | 353 | 10% | 31% | 13% | 18% | 27% |
+| low | 254 | 9% | 35% | 9% | 14% | 32% |
+| upper_middle | 222 | 10% | 37% | 10% | 15% | 27% |
+| high | 94 | 12% | 35% | 17% | 13% | 23% |
+| very_low | 77 | 13% | 26% | 8% | 9% | 44% |
 
 
 ### by location_context
 
 | location_context | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| erbil_centre | 300 | 17% | 34% | 14% | 16% | 19% |
-| erbil_suburb | 250 | 20% | 30% | 13% | 15% | 23% |
-| diaspora | 150 | 19% | 23% | 11% | 19% | 28% |
-| kri_other_city | 120 | 25% | 32% | 10% | 10% | 22% |
-| erbil_rural | 100 | 24% | 38% | 6% | 11% | 21% |
-| iraq_other | 80 | 11% | 28% | 12% | 20% | 29% |
+| erbil_centre | 300 | 11% | 32% | 13% | 16% | 27% |
+| erbil_suburb | 250 | 12% | 29% | 11% | 15% | 33% |
+| diaspora | 150 | 7% | 37% | 13% | 19% | 25% |
+| kri_other_city | 120 | 11% | 38% | 8% | 10% | 33% |
+| erbil_rural | 100 | 10% | 38% | 8% | 11% | 33% |
+| iraq_other | 80 | 9% | 35% | 14% | 20% | 22% |
 
 
 ### by device
 
 | device | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| android_budget | 434 | 20% | 31% | 12% | 14% | 23% |
-| iphone | 258 | 19% | 31% | 11% | 16% | 23% |
-| desktop | 139 | 22% | 35% | 15% | 16% | 13% |
-| android_flagship | 109 | 16% | 29% | 13% | 17% | 25% |
-| tablet | 60 | 15% | 22% | 10% | 13% | 40% |
+| android_budget | 434 | 11% | 33% | 10% | 14% | 32% |
+| iphone | 258 | 9% | 35% | 10% | 16% | 29% |
+| desktop | 139 | 14% | 29% | 16% | 16% | 24% |
+| android_flagship | 109 | 10% | 34% | 15% | 17% | 24% |
+| tablet | 60 | 5% | 38% | 8% | 13% | 35% |
 
 
 ### by network
 
 | network | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| 4g_good | 339 | 20% | 28% | 13% | 17% | 22% |
-| 4g_variable | 300 | 20% | 31% | 10% | 13% | 27% |
-| wifi_fast | 234 | 19% | 32% | 12% | 19% | 19% |
-| slow_unstable | 127 | 16% | 39% | 14% | 9% | 23% |
+| 4g_good | 339 | 11% | 29% | 12% | 17% | 31% |
+| 4g_variable | 300 | 11% | 36% | 10% | 13% | 31% |
+| wifi_fast | 234 | 10% | 36% | 12% | 19% | 22% |
+| slow_unstable | 127 | 9% | 35% | 13% | 9% | 34% |
 
 
 ### by accessibility_need
 
 | accessibility_need | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| none | 806 | 20% | 31% | 11% | 15% | 23% |
-| low_vision | 101 | 14% | 39% | 22% | 14% | 12% |
-| colour_vision | 26 | 15% | 23% | 15% | 15% | 31% |
+| none | 806 | 11% | 34% | 10% | 15% | 30% |
+| low_vision | 101 | 9% | 44% | 19% | 14% | 15% |
+| colour_vision | 26 | 4% | 23% | 15% | 15% | 42% |
 | reading_cognitive | 24 | (too small for percentages) | | | | |
 | motor | 20 | (too small for percentages) | | | | |
 | screen_reader | 14 | (too small for percentages) | | | | |
@@ -162,36 +162,36 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 
 | trust_disposition | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| neutral | 430 | 23% | 32% | 8% | 16% | 22% |
-| skeptical | 377 | 9% | 30% | 20% | 18% | 23% |
-| trusting | 193 | 31% | 31% | 4% | 9% | 25% |
+| neutral | 430 | 12% | 37% | 7% | 16% | 29% |
+| skeptical | 377 | 6% | 27% | 22% | 18% | 28% |
+| trusting | 193 | 16% | 39% | 3% | 9% | 33% |
 
 
 ### by privacy_concern
 
 | privacy_concern | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| medium | 458 | 20% | 30% | 10% | 17% | 23% |
-| high | 297 | 17% | 33% | 13% | 16% | 22% |
-| low | 245 | 20% | 31% | 13% | 12% | 24% |
+| medium | 458 | 14% | 32% | 11% | 17% | 27% |
+| high | 297 | 6% | 34% | 12% | 16% | 32% |
+| low | 245 | 9% | 37% | 12% | 12% | 30% |
 
 
 ### by is_specialist
 
 | is_specialist | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| False | 765 | 18% | 26% | 13% | 18% | 26% |
-| True | 235 | 22% | 47% | 10% | 8% | 14% |
+| False | 765 | 10% | 29% | 12% | 18% | 31% |
+| True | 235 | 13% | 48% | 9% | 8% | 23% |
 
 
 ### by specialist_domain
 
 | specialist_domain | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-|  | 765 | 18% | 26% | 13% | 18% | 26% |
-| real_estate | 126 | 20% | 58% | 6% | 3% | 13% |
-| built_environment | 34 | 24% | 32% | 15% | 15% | 15% |
-| technology | 32 | 31% | 31% | 9% | 12% | 16% |
+|  | 765 | 10% | 29% | 12% | 18% | 31% |
+| real_estate | 126 | 17% | 57% | 6% | 3% | 17% |
+| built_environment | 34 | 3% | 44% | 15% | 15% | 24% |
+| technology | 32 | 16% | 25% | 12% | 12% | 34% |
 | finance | 22 | (too small for percentages) | | | | |
 | design | 14 | (too small for percentages) | | | | |
 | legal | 7 | (too small for percentages) | | | | |
@@ -201,11 +201,11 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 
 | Category | high (all tasks observable) | medium (one task unobservable) | low (two or more unobservable) |
 |---|---:|---:|---:|
-| A | 96 | 95 | 0 |
-| B | 196 | 114 | 0 |
-| C | 93 | 26 | 0 |
-| D | 131 | 14 | 7 |
-| E | 0 | 0 | 228 |
+| A | 40 | 64 | 0 |
+| B | 173 | 163 | 0 |
+| C | 78 | 37 | 0 |
+| D | 132 | 15 | 5 |
+| E | 0 | 144 | 149 |
 
 ## Most frequently applied evidence rules
 
@@ -214,29 +214,29 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 | R01-dual-value-prop | 581 |
 | R25-advisor-exists-positive | 455 |
 | R16-mixed-script-spelling | 413 |
-| R05-no-legal-contact-pages | 312 |
+| R09-thin-project-pages | 330 |
+| R05-no-legal-contact-pages | 300 |
+| R08-no-price-in-project-data | 300 |
 | R20-valuation-promise-positive | 300 |
-| R08-no-price-in-project-data | 173 |
-| R02-coming-soon-market | 172 |
-| R09-thin-project-pages | 156 |
-| R21-provenance-wording-positive | 149 |
-| R11-geo-coordinates-positive | 148 |
-| R04b-raw-i18n-key-investors | 148 |
-| R04a-raw-i18n-key-specialists | 145 |
-| R17-dead-end-404-template | 140 |
-| R03-coming-soon-companies | 140 |
-| R12-auth-pages-english-only | 136 |
-| R13-auth-pages-english-minor | 135 |
-| R22-structured-data-anomalies | 131 |
-| R28-areas-broad-coverage-positive | 129 |
-| R10-rich-project-pages-positive | 105 |
-| R23-no-social-presence | 91 |
+| R02-coming-soon-market | 255 |
+| R04b-raw-i18n-key-investors | 220 |
+| R03-coming-soon-companies | 198 |
+| R10-rich-project-pages-positive | 155 |
+| R11-geo-coordinates-positive | 143 |
+| R21-provenance-wording-positive | 138 |
+| R17-dead-end-404-template | 136 |
+| R13-auth-pages-english-minor | 130 |
+| R19-no-listing-path-for-owners | 130 |
+| R12-auth-pages-english-only | 127 |
+| R28-areas-broad-coverage-positive | 125 |
+| R04a-raw-i18n-key-specialists | 125 |
+| R22-structured-data-anomalies | 111 |
+| R18-coming-soon-dead-ends-impatient | 91 |
 | R15-area-names-not-localised-ar | 86 |
-| R06-no-phone-anywhere | 84 |
-| R18-coming-soon-dead-ends-impatient | 77 |
-| R27-area-names-script-digits | 61 |
+| R23-no-social-presence | 84 |
+| R06-no-phone-anywhere | 73 |
 | R14-area-names-not-localised-en | 58 |
-| R19-no-listing-path-for-owners | 50 |
+| R27-area-names-script-digits | 57 |
 | R24-areas-index-no-heading | 26 |
 | R07-no-phone-impatient | 4 |
 
@@ -245,34 +245,34 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Categ
 | Improvement | personas |
 |---|---:|
 | One-sentence purpose line under the hero that names the three things a visitor can do here | 581 |
-| Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages | 409 |
-| Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone | 260 |
-| Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles | 178 |
-| Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page | 150 |
-| Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists | 118 |
-| Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it | 109 |
-| Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale | 108 |
-| Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages | 100 |
-| Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map | 97 |
-| Same as R12 | 71 |
+| Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages | 407 |
+| Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone | 250 |
+| Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page | 234 |
+| Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles | 196 |
+| Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages | 168 |
+| Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists | 167 |
+| Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it | 142 |
+| Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale | 104 |
+| Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map | 94 |
 | Same as R14 | 67 |
+| Same as R12 | 66 |
 | Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe' | 47 |
-| Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time) | 45 |
-| Normalise area names (Kurdish letters, one digit system, consistent spacing) | 42 |
-| Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer | 40 |
-| Fix addressLocality mapping, add consistent canonical/hreflang per locale | 36 |
-| Hide unfinished sections from navigation or label them clearly before the click | 28 |
-| If owners cannot list, say so and offer the valuation + a request form; if they can, surface the entry point on the homepage | 24 |
+| Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time) | 42 |
+| Normalise area names (Kurdish letters, one digit system, consistent spacing) | 41 |
+| Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer | 39 |
+| If owners cannot list, say so and offer the valuation + a request form; if they can, surface the entry point on the homepage | 38 |
+| Fix addressLocality mapping, add consistent canonical/hreflang per locale | 34 |
+| Hide unfinished sections from navigation or label them clearly before the click | 33 |
 | Give the areas and offers index pages a visible H1 and a descriptive title | 18 |
 
 ## Sensitivity to panel weights
 
 | Weighting scenario | effective n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| panel_as_built | 1000 | 19% | 31% | 12% | 15% | 23% |
-| more_low_digital_and_older | 1332 | 17% | 31% | 14% | 16% | 22% |
-| more_diaspora_english | 1225 | 19% | 30% | 12% | 16% | 24% |
-| arabic_heavy | 1270 | 18% | 32% | 12% | 16% | 22% |
-| mobile_budget_slow_network | 1554 | 19% | 32% | 11% | 14% | 24% |
-| buyers_and_renters_only | 440 | 29% | 25% | 9% | 0% | 37% |
-| specialists_only | 235 | 22% | 47% | 10% | 8% | 14% |
+| panel_as_built | 1000 | 10% | 34% | 12% | 15% | 29% |
+| more_low_digital_and_older | 1332 | 10% | 34% | 14% | 16% | 27% |
+| more_diaspora_english | 1225 | 10% | 34% | 12% | 16% | 28% |
+| arabic_heavy | 1270 | 10% | 34% | 12% | 16% | 29% |
+| mobile_budget_slow_network | 1554 | 11% | 34% | 11% | 14% | 31% |
+| buyers_and_renters_only | 440 | 15% | 21% | 6% | 0% | 58% |
+| specialists_only | 235 | 13% | 48% | 9% | 8% | 23% |

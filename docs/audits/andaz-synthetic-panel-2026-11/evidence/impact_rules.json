@@ -558,7 +558,7 @@
    "T01"
   ],
   "effect": "positive",
-  "weight": 0.5,
+  "weight": 0.0,
   "applies_if": {
    "digital_confidence": [
     "high",
@@ -566,7 +566,7 @@
    ]
   },
   "improvement": "",
-  "note": "An advisor landing page exists and is reachable without login; its usefulness is unverified."
+  "note": "An advisor landing page exists and is reachable without login (E-SITE-13); its usefulness is UNVERIFIED, so this rule carries zero weight (changed 2026-11-03 after narrative objections showed category A resting on it)."
  },
  {
   "id": "R26-slow-network-heavy-pages-hypothesis",

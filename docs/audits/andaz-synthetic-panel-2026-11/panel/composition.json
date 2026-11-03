@@ -243,25 +243,25 @@
   "screen_reader": 14,
   "keyboard_only": 9
  },
- "tasks_assigned_total": 3068,
+ "tasks_assigned_total": 3407,
  "task_frequency": {
   "T01": 1000,
-  "T02": 94,
-  "T03": 156,
-  "T04": 93,
-  "T05": 86,
-  "T06": 183,
-  "T07": 185,
-  "T08": 148,
-  "T09": 96,
-  "T10": 147,
-  "T11": 151,
-  "T12": 174,
-  "T13": 140,
-  "T14": 75,
-  "T15": 172,
+  "T02": 208,
+  "T03": 330,
+  "T04": 89,
+  "T05": 79,
+  "T06": 177,
+  "T07": 170,
+  "T08": 132,
+  "T09": 89,
+  "T10": 137,
+  "T11": 138,
+  "T12": 164,
+  "T13": 136,
+  "T14": 155,
+  "T15": 255,
   "T16": 37,
-  "T17": 131
+  "T17": 111
  },
  "task_catalogue": {
   "T01": "Understand within ~30 seconds what the platform is, whom it serves and why to use it.",
@@ -281,5 +281,6 @@
   "T15": "Understand market/price-trend data, its source and how fresh it is.",
   "T16": "Check an area's amenities (schools, parks, internet, distance) and share a link with family.",
   "T17": "Assess data credibility, methodology transparency and legal/attribution clarity as a specialist."
- }
+ },
+ "task_correction_note": "458 personas received their goal-carrying task on 2026-11-03 (ensure_primary_tasks.py)."
 }
