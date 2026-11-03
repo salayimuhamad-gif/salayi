@@ -321,8 +321,8 @@
  },
  {
   "id": "P0005",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -371,7 +371,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 1.74,
@@ -892,8 +892,8 @@
  },
  {
   "id": "P0012",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -983,7 +983,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.44,
@@ -4006,8 +4006,8 @@
  },
  {
   "id": "P0048",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -4094,7 +4094,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Same as R14"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.46,
@@ -5260,8 +5260,8 @@
  },
  {
   "id": "P0063",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -5335,7 +5335,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.17,
@@ -8101,8 +8101,8 @@
  },
  {
   "id": "P0097",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -8162,7 +8162,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.41,
@@ -9322,8 +9322,8 @@
  },
  {
   "id": "P0112",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -9411,7 +9411,7 @@
    "Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time)",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.22,
@@ -13559,8 +13559,8 @@
  },
  {
   "id": "P0163",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -13628,7 +13628,7 @@
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
    "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.27,
@@ -14977,8 +14977,8 @@
  },
  {
   "id": "P0180",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -15047,7 +15047,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.75,
@@ -16327,8 +16327,8 @@
  },
  {
   "id": "P0197",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -16392,7 +16392,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 2.85,
@@ -16403,8 +16403,8 @@
  },
  {
   "id": "P0198",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -16462,7 +16462,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.28,
@@ -17958,8 +17958,8 @@
  },
  {
   "id": "P0219",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -18027,7 +18027,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.61,
@@ -18037,8 +18037,8 @@
  },
  {
   "id": "P0220",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -18114,7 +18114,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 5.21,
@@ -19281,8 +19281,8 @@
  },
  {
   "id": "P0235",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -19364,7 +19364,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Same as R12"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.09,
@@ -20758,8 +20758,8 @@
  },
  {
   "id": "P0252",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -20830,7 +20830,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.36,
@@ -21028,8 +21028,8 @@
  },
  {
   "id": "P0255",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -21079,7 +21079,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.14,
@@ -21240,8 +21240,8 @@
  },
  {
   "id": "P0258",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -21313,7 +21313,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.56,
@@ -21785,8 +21785,8 @@
  },
  {
   "id": "P0264",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -21864,7 +21864,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.57,
@@ -22410,8 +22410,8 @@
  },
  {
   "id": "P0271",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -22472,7 +22472,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.55,
@@ -22941,8 +22941,8 @@
  },
  {
   "id": "P0277",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -23025,7 +23025,7 @@
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 2.23,
@@ -25110,8 +25110,8 @@
  },
  {
   "id": "P0303",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -25203,7 +25203,7 @@
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
    "Same as R12"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.54,
@@ -26564,8 +26564,8 @@
  },
  {
   "id": "P0320",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -26634,7 +26634,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.77,
@@ -26796,8 +26796,8 @@
  },
  {
   "id": "P0323",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -26873,7 +26873,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.3,
@@ -27498,8 +27498,8 @@
  },
  {
   "id": "P0331",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -27581,7 +27581,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 2.9,
@@ -29129,8 +29129,8 @@
  },
  {
   "id": "P0350",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -29225,7 +29225,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.37,
@@ -29328,8 +29328,8 @@
  },
  {
   "id": "P0352",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -29390,7 +29390,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.24,
@@ -30737,8 +30737,8 @@
  },
  {
   "id": "P0368",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -30835,7 +30835,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.58,
@@ -32746,8 +32746,8 @@
  },
  {
   "id": "P0390",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -32832,7 +32832,7 @@
    "Give the areas and offers index pages a visible H1 and a descriptive title",
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.18,
@@ -33131,8 +33131,8 @@
  },
  {
   "id": "P0395",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -33230,7 +33230,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Same as R12"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.2,
@@ -33756,8 +33756,8 @@
  },
  {
   "id": "P0402",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -33840,7 +33840,7 @@
    "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
    "Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.39,
@@ -33850,8 +33850,8 @@
  },
  {
   "id": "P0403",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -33942,7 +33942,7 @@
    "Same as R14",
    "Give the areas and offers index pages a visible H1 and a descriptive title"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.33,
@@ -34202,8 +34202,8 @@
  },
  {
   "id": "P0407",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -34289,7 +34289,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.78,
@@ -34463,8 +34463,8 @@
  },
  {
   "id": "P0410",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -34526,7 +34526,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.24,
@@ -36224,8 +36224,8 @@
  },
  {
   "id": "P0431",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -36285,7 +36285,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.65,
@@ -36295,8 +36295,8 @@
  },
  {
   "id": "P0432",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -36392,7 +36392,7 @@
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
    "Fix addressLocality mapping, add consistent canonical/hreflang per locale"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 5.02,
@@ -36753,8 +36753,8 @@
  },
  {
   "id": "P0437",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -36823,7 +36823,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.97,
@@ -36922,8 +36922,8 @@
  },
  {
   "id": "P0439",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -36986,7 +36986,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.98,
@@ -39162,8 +39162,8 @@
  },
  {
   "id": "P0464",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -39222,7 +39222,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.27,
@@ -40842,8 +40842,8 @@
  },
  {
   "id": "P0484",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -40921,7 +40921,7 @@
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
    "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.46,
@@ -41352,8 +41352,8 @@
  },
  {
   "id": "P0490",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -41425,7 +41425,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.3,
@@ -42939,8 +42939,8 @@
  },
  {
   "id": "P0508",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -43004,7 +43004,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.04,
@@ -43398,8 +43398,8 @@
  },
  {
   "id": "P0514",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -43487,7 +43487,7 @@
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
    "Fix addressLocality mapping, add consistent canonical/hreflang per locale"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.3,
@@ -44813,8 +44813,8 @@
  },
  {
   "id": "P0530",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -44878,7 +44878,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.55,
@@ -44961,8 +44961,8 @@
  },
  {
   "id": "P0532",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -45049,7 +45049,7 @@
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
    "Fix addressLocality mapping, add consistent canonical/hreflang per locale"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.11,
@@ -45059,8 +45059,8 @@
  },
  {
   "id": "P0533",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -45117,7 +45117,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.06,
@@ -49270,8 +49270,8 @@
  },
  {
   "id": "P0584",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -49336,7 +49336,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.36,
@@ -49767,8 +49767,8 @@
  },
  {
   "id": "P0590",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -49848,7 +49848,7 @@
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.65,
@@ -50153,8 +50153,8 @@
  },
  {
   "id": "P0595",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -50235,7 +50235,7 @@
    "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
    "Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.95,
@@ -52436,8 +52436,8 @@
  },
  {
   "id": "P0622",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -52534,7 +52534,7 @@
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
    "Fix addressLocality mapping, add consistent canonical/hreflang per locale"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.01,
@@ -52695,8 +52695,8 @@
  },
  {
   "id": "P0625",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -52753,7 +52753,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.4,
@@ -52918,8 +52918,8 @@
  },
  {
   "id": "P0628",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -52977,7 +52977,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.84,
@@ -54150,8 +54150,8 @@
  },
  {
   "id": "P0642",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -54217,7 +54217,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.98,
@@ -54300,8 +54300,8 @@
  },
  {
   "id": "P0644",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -54363,7 +54363,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.75,
@@ -55752,8 +55752,8 @@
  },
  {
   "id": "P0661",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -55821,7 +55821,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.75,
@@ -56006,8 +56006,8 @@
  },
  {
   "id": "P0664",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -56076,7 +56076,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.35,
@@ -60684,8 +60684,8 @@
  },
  {
   "id": "P0719",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -60739,7 +60739,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.24,
@@ -60931,8 +60931,8 @@
  },
  {
   "id": "P0722",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -61021,7 +61021,7 @@
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.1,
@@ -61825,8 +61825,8 @@
  },
  {
   "id": "P0732",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -61897,7 +61897,7 @@
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
    "Fix addressLocality mapping, add consistent canonical/hreflang per locale"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.71,
@@ -63119,8 +63119,8 @@
  },
  {
   "id": "P0747",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -63203,7 +63203,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 3.76,
@@ -63482,8 +63482,8 @@
  },
  {
   "id": "P0752",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -63564,7 +63564,7 @@
    "Same as R12",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.6,
@@ -64619,8 +64619,8 @@
  },
  {
   "id": "P0764",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -64703,7 +64703,7 @@
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.55,
@@ -66492,8 +66492,8 @@
  },
  {
   "id": "P0785",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -66577,7 +66577,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.14,
@@ -66985,8 +66985,8 @@
  },
  {
   "id": "P0791",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -67070,7 +67070,7 @@
    "Same as R12",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.98,
@@ -67702,8 +67702,8 @@
  },
  {
   "id": "P0799",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -67780,7 +67780,7 @@
    "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'",
    "One-sentence purpose line under the hero that names the three things a visitor can do here"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.48,
@@ -68914,8 +68914,8 @@
  },
  {
   "id": "P0814",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -68986,7 +68986,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.77,
@@ -69335,8 +69335,8 @@
  },
  {
   "id": "P0819",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -69393,7 +69393,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.63,
@@ -70768,8 +70768,8 @@
  },
  {
   "id": "P0836",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -70838,7 +70838,7 @@
    "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 1.35,
@@ -70944,8 +70944,8 @@
  },
  {
   "id": "P0838",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -71007,7 +71007,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.45,
@@ -71257,8 +71257,8 @@
  },
  {
   "id": "P0842",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -71315,7 +71315,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.64,
@@ -71407,8 +71407,8 @@
  },
  {
   "id": "P0844",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -71472,7 +71472,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 5.78,
@@ -72291,8 +72291,8 @@
  },
  {
   "id": "P0854",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -72372,7 +72372,7 @@
    "Same as R12",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 5.16,
@@ -73347,8 +73347,8 @@
  },
  {
   "id": "P0866",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -73419,7 +73419,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.46,
@@ -73429,8 +73429,8 @@
  },
  {
   "id": "P0867",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -73508,7 +73508,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.36,
@@ -74373,8 +74373,8 @@
  },
  {
   "id": "P0878",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -74434,7 +74434,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.78,
@@ -75443,8 +75443,8 @@
  },
  {
   "id": "P0890",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -75505,7 +75505,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.26,
@@ -75599,8 +75599,8 @@
  },
  {
   "id": "P0892",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -75663,7 +75663,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.22,
@@ -76620,8 +76620,8 @@
  },
  {
   "id": "P0904",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -76704,7 +76704,7 @@
    "One-sentence purpose line under the hero that names the three things a visitor can do here",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.75,
@@ -77217,8 +77217,8 @@
  },
  {
   "id": "P0911",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -77309,7 +77309,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Normalise area names (Kurdish letters, one digit system, consistent spacing)"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.23,
@@ -77418,8 +77418,8 @@
  },
  {
   "id": "P0913",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -77489,7 +77489,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.89,
@@ -78859,8 +78859,8 @@
  },
  {
   "id": "P0929",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -78941,7 +78941,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.0,
@@ -79937,8 +79937,8 @@
  },
  {
   "id": "P0942",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -80017,7 +80017,7 @@
    "Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.58,
@@ -80284,8 +80284,8 @@
  },
  {
   "id": "P0946",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -80363,7 +80363,7 @@
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.16,
@@ -81538,8 +81538,8 @@
  },
  {
   "id": "P0961",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -81602,7 +81602,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.45,
@@ -81861,8 +81861,8 @@
  },
  {
   "id": "P0965",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -81944,7 +81944,7 @@
    "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
    "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 4.19,
@@ -81955,8 +81955,8 @@
  },
  {
   "id": "P0966",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -82005,7 +82005,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 4.17,
@@ -82015,8 +82015,8 @@
  },
  {
   "id": "P0967",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "medium",
   "task_outcomes": {
@@ -82114,7 +82114,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "One-sentence purpose line under the hero that names the three things a visitor can do here"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 1,
   "value_gaps": 0,
   "tolerance": 5.85,
@@ -83052,8 +83052,8 @@
  },
  {
   "id": "P0979",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -83128,7 +83128,7 @@
    "Same as R14",
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 3.27,
@@ -84286,8 +84286,8 @@
  },
  {
   "id": "P0993",
-  "adoption_category": "A",
-  "adoption_label": "Would use the platform now",
+  "adoption_category": "B",
+  "adoption_label": "Would use it after specific improvements",
   "has_relevant_need": true,
   "outcome_confidence": "high",
   "task_outcomes": {
@@ -84336,7 +84336,7 @@
    "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
    "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages"
   ],
-  "would_return": "yes",
+  "would_return": "yes_if_fixed",
   "trust_breaks": 0,
   "value_gaps": 0,
   "tolerance": 2.9,

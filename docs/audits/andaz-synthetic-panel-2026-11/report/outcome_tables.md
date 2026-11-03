@@ -8,8 +8,8 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 104 | 10% |
-| B — Would use it after specific improvements | 336 | 34% |
+| A — Would use the platform now | 17 | 2% |
+| B — Would use it after specific improvements | 423 | 42% |
 | C — Would reject it despite having a relevant need | 115 | 12% |
 | D — Has no current relevant need | 152 | 15% |
 | E — Cannot assess because evidence is insufficient | 293 | 29% |
@@ -19,8 +19,8 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 104 | 12% |
-| B — Would use it after specific improvements | 336 | 40% |
+| A — Would use the platform now | 17 | 2% |
+| B — Would use it after specific improvements | 423 | 50% |
 | C — Would reject it despite having a relevant need | 115 | 14% |
 | D — Has no current relevant need | 0 | 0% |
 | E — Cannot assess because evidence is insufficient | 293 | 35% |
@@ -54,30 +54,30 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | age_band | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| 25-34 | 250 | 11% | 30% | 12% | 7% | 40% |
-| 35-44 | 220 | 12% | 39% | 11% | 11% | 27% |
-| 45-54 | 150 | 13% | 47% | 11% | 11% | 19% |
-| 18-24 | 150 | 7% | 21% | 5% | 14% | 53% |
-| 55-64 | 100 | 11% | 45% | 19% | 9% | 16% |
-| 65-74 | 55 | 13% | 36% | 18% | 16% | 16% |
+| 25-34 | 250 | 2% | 38% | 12% | 7% | 40% |
+| 35-44 | 220 | 1% | 50% | 11% | 11% | 27% |
+| 45-54 | 150 | 1% | 59% | 11% | 11% | 19% |
+| 18-24 | 150 | 3% | 25% | 5% | 14% | 53% |
+| 55-64 | 100 | 2% | 54% | 19% | 9% | 16% |
+| 65-74 | 55 | 2% | 47% | 18% | 16% | 16% |
 | 14-17 | 40 | 0% | 0% | 0% | 100% | 0% |
-| 75+ | 35 | 6% | 26% | 20% | 40% | 9% |
+| 75+ | 35 | 0% | 31% | 20% | 40% | 9% |
 
 
 ### by property_intent
 
 | property_intent | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| first_time_buyer | 180 | 18% | 36% | 16% | 0% | 31% |
+| first_time_buyer | 180 | 1% | 53% | 16% | 0% | 31% |
 | renter | 170 | 0% | 0% | 0% | 0% | 100% |
-| researching | 120 | 13% | 26% | 12% | 43% | 5% |
+| researching | 120 | 8% | 31% | 12% | 43% | 5% |
 | no_need | 100 | 0% | 0% | 0% | 100% | 0% |
-| upgrader | 90 | 38% | 30% | 0% | 0% | 32% |
-| investor_local | 80 | 8% | 58% | 15% | 0% | 20% |
+| upgrader | 90 | 0% | 68% | 0% | 0% | 32% |
+| investor_local | 80 | 0% | 65% | 15% | 0% | 20% |
 | seller | 70 | 0% | 64% | 36% | 0% | 0% |
-| investor_diaspora | 60 | 3% | 50% | 20% | 0% | 27% |
+| investor_diaspora | 60 | 2% | 52% | 20% | 0% | 27% |
 | landlord | 60 | 0% | 72% | 28% | 0% | 0% |
-| broker | 50 | 16% | 76% | 8% | 0% | 0% |
+| broker | 50 | 6% | 86% | 8% | 0% | 0% |
 | developer_staff | 20 | (too small for percentages) | | | | |
 
 
@@ -85,73 +85,73 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | primary_language | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| ckb | 520 | 11% | 35% | 11% | 13% | 30% |
-| ar | 270 | 8% | 34% | 13% | 17% | 27% |
-| en | 160 | 10% | 29% | 12% | 18% | 31% |
-| other | 50 | 16% | 28% | 10% | 18% | 28% |
+| ckb | 520 | 2% | 44% | 11% | 13% | 30% |
+| ar | 270 | 1% | 41% | 13% | 17% | 27% |
+| en | 160 | 2% | 38% | 12% | 18% | 31% |
+| other | 50 | 0% | 44% | 10% | 18% | 28% |
 
 
 ### by digital_confidence
 
 | digital_confidence | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| medium | 350 | 7% | 36% | 11% | 17% | 29% |
-| high | 312 | 15% | 34% | 9% | 12% | 29% |
-| low | 195 | 6% | 32% | 21% | 16% | 26% |
-| very_high | 143 | 15% | 29% | 6% | 17% | 34% |
+| medium | 350 | 1% | 42% | 11% | 17% | 29% |
+| high | 312 | 2% | 47% | 9% | 12% | 29% |
+| low | 195 | 1% | 36% | 21% | 16% | 26% |
+| very_high | 143 | 2% | 41% | 6% | 17% | 34% |
 
 
 ### by income_band
 
 | income_band | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| middle | 353 | 10% | 31% | 13% | 18% | 27% |
-| low | 254 | 9% | 35% | 9% | 14% | 32% |
-| upper_middle | 222 | 10% | 37% | 10% | 15% | 27% |
-| high | 94 | 12% | 35% | 17% | 13% | 23% |
-| very_low | 77 | 13% | 26% | 8% | 9% | 44% |
+| middle | 353 | 2% | 40% | 13% | 18% | 27% |
+| low | 254 | 1% | 43% | 9% | 14% | 32% |
+| upper_middle | 222 | 3% | 45% | 10% | 15% | 27% |
+| high | 94 | 1% | 46% | 17% | 13% | 23% |
+| very_low | 77 | 1% | 38% | 8% | 9% | 44% |
 
 
 ### by location_context
 
 | location_context | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| erbil_centre | 300 | 11% | 32% | 13% | 16% | 27% |
-| erbil_suburb | 250 | 12% | 29% | 11% | 15% | 33% |
-| diaspora | 150 | 7% | 37% | 13% | 19% | 25% |
-| kri_other_city | 120 | 11% | 38% | 8% | 10% | 33% |
-| erbil_rural | 100 | 10% | 38% | 8% | 11% | 33% |
-| iraq_other | 80 | 9% | 35% | 14% | 20% | 22% |
+| erbil_centre | 300 | 2% | 42% | 13% | 16% | 27% |
+| erbil_suburb | 250 | 1% | 40% | 11% | 15% | 33% |
+| diaspora | 150 | 1% | 43% | 13% | 19% | 25% |
+| kri_other_city | 120 | 2% | 46% | 8% | 10% | 33% |
+| erbil_rural | 100 | 2% | 46% | 8% | 11% | 33% |
+| iraq_other | 80 | 2% | 41% | 14% | 20% | 22% |
 
 
 ### by device
 
 | device | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| android_budget | 434 | 11% | 33% | 10% | 14% | 32% |
-| iphone | 258 | 9% | 35% | 10% | 16% | 29% |
-| desktop | 139 | 14% | 29% | 16% | 16% | 24% |
-| android_flagship | 109 | 10% | 34% | 15% | 17% | 24% |
-| tablet | 60 | 5% | 38% | 8% | 13% | 35% |
+| android_budget | 434 | 1% | 43% | 10% | 14% | 32% |
+| iphone | 258 | 2% | 43% | 10% | 16% | 29% |
+| desktop | 139 | 4% | 40% | 16% | 16% | 24% |
+| android_flagship | 109 | 2% | 42% | 15% | 17% | 24% |
+| tablet | 60 | 2% | 42% | 8% | 13% | 35% |
 
 
 ### by network
 
 | network | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| 4g_good | 339 | 11% | 29% | 12% | 17% | 31% |
-| 4g_variable | 300 | 11% | 36% | 10% | 13% | 31% |
-| wifi_fast | 234 | 10% | 36% | 12% | 19% | 22% |
-| slow_unstable | 127 | 9% | 35% | 13% | 9% | 34% |
+| 4g_good | 339 | 2% | 38% | 12% | 17% | 31% |
+| 4g_variable | 300 | 2% | 44% | 10% | 13% | 31% |
+| wifi_fast | 234 | 1% | 45% | 12% | 19% | 22% |
+| slow_unstable | 127 | 1% | 43% | 13% | 9% | 34% |
 
 
 ### by accessibility_need
 
 | accessibility_need | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| none | 806 | 11% | 34% | 10% | 15% | 30% |
-| low_vision | 101 | 9% | 44% | 19% | 14% | 15% |
-| colour_vision | 26 | 4% | 23% | 15% | 15% | 42% |
+| none | 806 | 2% | 43% | 10% | 15% | 30% |
+| low_vision | 101 | 1% | 51% | 19% | 14% | 15% |
+| colour_vision | 26 | 0% | 27% | 15% | 15% | 42% |
 | reading_cognitive | 24 | (too small for percentages) | | | | |
 | motor | 20 | (too small for percentages) | | | | |
 | screen_reader | 14 | (too small for percentages) | | | | |
@@ -162,36 +162,36 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | trust_disposition | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| neutral | 430 | 12% | 37% | 7% | 16% | 29% |
-| skeptical | 377 | 6% | 27% | 22% | 18% | 28% |
-| trusting | 193 | 16% | 39% | 3% | 9% | 33% |
+| neutral | 430 | 2% | 47% | 7% | 16% | 29% |
+| skeptical | 377 | 0% | 32% | 22% | 18% | 28% |
+| trusting | 193 | 3% | 52% | 3% | 9% | 33% |
 
 
 ### by privacy_concern
 
 | privacy_concern | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| medium | 458 | 14% | 32% | 11% | 17% | 27% |
-| high | 297 | 6% | 34% | 12% | 16% | 32% |
-| low | 245 | 9% | 37% | 12% | 12% | 30% |
+| medium | 458 | 2% | 43% | 11% | 17% | 27% |
+| high | 297 | 1% | 39% | 12% | 16% | 32% |
+| low | 245 | 2% | 44% | 12% | 12% | 30% |
 
 
 ### by is_specialist
 
 | is_specialist | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| False | 765 | 10% | 29% | 12% | 18% | 31% |
-| True | 235 | 13% | 48% | 9% | 8% | 23% |
+| False | 765 | 1% | 38% | 12% | 18% | 31% |
+| True | 235 | 4% | 57% | 9% | 8% | 23% |
 
 
 ### by specialist_domain
 
 | specialist_domain | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-|  | 765 | 10% | 29% | 12% | 18% | 31% |
-| real_estate | 126 | 17% | 57% | 6% | 3% | 17% |
-| built_environment | 34 | 3% | 44% | 15% | 15% | 24% |
-| technology | 32 | 16% | 25% | 12% | 12% | 34% |
+|  | 765 | 1% | 38% | 12% | 18% | 31% |
+| real_estate | 126 | 6% | 68% | 6% | 3% | 17% |
+| built_environment | 34 | 0% | 47% | 15% | 15% | 24% |
+| technology | 32 | 6% | 34% | 12% | 12% | 34% |
 | finance | 22 | (too small for percentages) | | | | |
 | design | 14 | (too small for percentages) | | | | |
 | legal | 7 | (too small for percentages) | | | | |
@@ -201,8 +201,8 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | Category | high (all tasks observable) | medium (one task unobservable) | low (two or more unobservable) |
 |---|---:|---:|---:|
-| A | 40 | 64 | 0 |
-| B | 173 | 163 | 0 |
+| A | 9 | 8 | 0 |
+| B | 204 | 219 | 0 |
 | C | 78 | 37 | 0 |
 | D | 132 | 15 | 5 |
 | E | 0 | 144 | 149 |
@@ -269,10 +269,10 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 707. Categ
 
 | Weighting scenario | effective n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| panel_as_built | 1000 | 10% | 34% | 12% | 15% | 29% |
-| more_low_digital_and_older | 1332 | 10% | 34% | 14% | 16% | 27% |
-| more_diaspora_english | 1225 | 10% | 34% | 12% | 16% | 28% |
-| arabic_heavy | 1270 | 10% | 34% | 12% | 16% | 29% |
-| mobile_budget_slow_network | 1554 | 11% | 34% | 11% | 14% | 31% |
-| buyers_and_renters_only | 440 | 15% | 21% | 6% | 0% | 58% |
-| specialists_only | 235 | 13% | 48% | 9% | 8% | 23% |
+| panel_as_built | 1000 | 2% | 42% | 12% | 15% | 29% |
+| more_low_digital_and_older | 1332 | 2% | 42% | 14% | 16% | 27% |
+| more_diaspora_english | 1225 | 2% | 42% | 12% | 16% | 28% |
+| arabic_heavy | 1270 | 2% | 42% | 12% | 16% | 29% |
+| mobile_budget_slow_network | 1554 | 1% | 43% | 11% | 14% | 31% |
+| buyers_and_renters_only | 440 | 0% | 36% | 6% | 0% | 58% |
+| specialists_only | 235 | 4% | 57% | 9% | 8% | 23% |

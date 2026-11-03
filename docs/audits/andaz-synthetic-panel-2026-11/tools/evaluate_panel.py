@@ -206,7 +206,9 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
             else:
                 cat = "B"
         else:
-            cat = "B" if (core_levels.count("struggles") >= 1 and positives == 0) else "A"
+            # no abandons, no trust break, no value gap: A only when the primary task was actually completed
+            # and nothing struggled; a positive rule never outweighs a struggled primary task (fix 2026-11-03)
+            cat = "A" if (primary_ok and core_levels.count("struggles") == 0) else "B"
 
     would_return = {"A": "yes", "B": "yes_if_fixed", "C": "no", "D": "unlikely_no_need", "E": "unknown"}[cat]
     # confidence of the persona-level outcome: how much of this persona's own task set was actually observable
