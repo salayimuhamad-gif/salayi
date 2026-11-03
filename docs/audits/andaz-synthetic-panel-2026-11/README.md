@@ -6,7 +6,7 @@ Working folder for the audit requested on 2026-11-03. Report language is Arabic;
 
 ## Status
 
-Live inspection of https://andaz.app/ is **blocked by this environment's network policy** (see `report/00_STATUS_AND_ACCESS.md`). Everything that does not depend on live access is complete; outcome fields are deliberately `pending_evidence`.
+Direct browser access to https://andaz.app/ is blocked by this environment's network policy. On 2026-11-03 the owner approved using the connected cloud scraping workspace instead (text and metadata of cloud-rendered pages; no screenshots or interaction) and confirmed that andaz.app does not run this repository's code. See `report/00_STATUS_AND_ACCESS.md`.
 
 ## Layout
 
@@ -18,8 +18,7 @@ Live inspection of https://andaz.app/ is **blocked by this environment's network
 | `panel/personas.json` · `panel/personas.csv` | The 1,000 persona records (P0001–P1000) |
 | `panel/composition.json` | Realised panel composition |
 | `evidence/evidence_log.csv` | Evidence log (E-… ids) |
-| `evidence/code_feature_map_repository.md` | Feature map derived from this repository's code (category A-code; deployment match to andaz.app unverified) |
-| `evidence/hypotheses_from_code.md` | 22 code-derived hypotheses (category D) with the exact live-site check for each; doubles as the inspection checklist |
+| `archive/excluded_repository_code_analysis/` | Repository code analysis, EXCLUDED on 2026-11-03 after the owner confirmed andaz.app is a different product |
 | `tools/narrative_batch_brief.md` | Brief for the 10 non-overlapping narrative batches (run only after the evidence log exists) |
 | `tools/generate_panel.py` | Deterministic panel generator (`python3 -I generate_panel.py --out ../panel`) |
 | `tools/pw_audit.mjs` | Read-only Playwright evidence harness (`AUDIT_BASE=https://andaz.app node pw_audit.mjs`) |
