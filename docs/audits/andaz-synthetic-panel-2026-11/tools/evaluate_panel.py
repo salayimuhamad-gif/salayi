@@ -146,16 +146,20 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
                     gate_cost -= 0.5
                 friction += gate_cost
                 reasons.append("login_gate")
-            if status == "partial":
-                friction += 1.0
-                reasons.append("feature_partial")
-            f = friction + jitter(p["id"], t) * 0.6
-            if f <= tol * 0.45:
-                level = "completes"
-            elif f <= tol:
-                level = "struggles"
+            if status == "partial" and not applicable:
+                # the surface exists but nothing we observed bears on THIS persona's version of the task
+                level = "cannot_assess"
+                reasons.append("partial_observation_no_applicable_evidence")
             else:
-                level = "abandons"
+                if status == "partial":
+                    reasons.append("partial_observation")
+                f = friction + jitter(p["id"], t) * 0.6
+                if f <= tol * 0.45:
+                    level = "completes"
+                elif f <= tol:
+                    level = "struggles"
+                else:
+                    level = "abandons"
         task_results[t] = {"outcome": level, "friction": round(friction, 2), "tolerance": round(tol, 2),
                            "feature_status": status, "reasons": sorted(set(reasons)), "evidence_ids": sorted(set(avail.get("evidence_ids", []) + [e for r in applicable for e in r.get("evidence_ids", [])]))}
 
@@ -176,7 +180,7 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
     else:
         completes = core_levels.count("completes")
         abandons = core_levels.count("abandons")
-        trust_fail = trust_breaks > 0 and p["trust_disposition"] in {"skeptical", "neutral"}
+        trust_fail = (trust_breaks > 0 and p["trust_disposition"] == "skeptical") or (trust_breaks >= 2 and p["trust_disposition"] == "neutral")
         if abandons == 0 and completes >= max(1, len(core_levels) - 1) and not trust_fail and value_gaps == 0:
             cat = "A"
         elif abandons == len(core_levels) and (trust_fail or value_gaps >= 2 or p["patience"] == "low"):
@@ -191,8 +195,15 @@ def evaluate(p: dict, rules: list[dict], availability: dict) -> dict:
             cat = "B" if (core_levels.count("struggles") >= 1 and positives == 0) else "A"
 
     would_return = {"A": "yes", "B": "yes_if_fixed", "C": "no", "D": "unlikely_no_need", "E": "unknown"}[cat]
+    # confidence of the persona-level outcome: how much of this persona's own task set was actually observable
+    if n_cannot == 0:
+        confidence = "high"
+    elif n_cannot == 1 and n >= 3:
+        confidence = "medium"
+    else:
+        confidence = "low"
     return {
-        "id": p["id"], "adoption_category": cat, "adoption_label": CATS[cat], "has_relevant_need": has_need,
+        "id": p["id"], "adoption_category": cat, "adoption_label": CATS[cat], "has_relevant_need": has_need, "outcome_confidence": confidence,
         "task_outcomes": task_results, "applied_rule_ids": sorted(set(applied_all)),
         "improvements_that_change_decision": [k for k, _ in improvements.most_common(3)],
         "would_return": would_return, "trust_breaks": trust_breaks, "value_gaps": value_gaps, "tolerance": round(tol, 2),
@@ -273,10 +284,10 @@ def main(root: str) -> None:
         json.dump(list(outcomes.values()), f, ensure_ascii=False, indent=1)
     with open(os.path.join(root, "panel", "outcomes.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, lineterminator="\n")
-        w.writerow(["id", "adoption_category", "has_relevant_need", "would_return", "trust_breaks", "value_gaps", "tolerance",
+        w.writerow(["id", "adoption_category", "outcome_confidence", "has_relevant_need", "would_return", "trust_breaks", "value_gaps", "tolerance",
                     "task_outcomes", "applied_rule_ids", "improvements_that_change_decision"])
         for o in outcomes.values():
-            w.writerow([o["id"], o["adoption_category"], o["has_relevant_need"], o["would_return"], o["trust_breaks"], o["value_gaps"], o["tolerance"],
+            w.writerow([o["id"], o["adoption_category"], o["outcome_confidence"], o["has_relevant_need"], o["would_return"], o["trust_breaks"], o["value_gaps"], o["tolerance"],
                         json.dumps({t: v["outcome"] for t, v in o["task_outcomes"].items()}), ";".join(o["applied_rule_ids"]), ";".join(o["improvements_that_change_decision"])])
 
     # ---- aggregate tables ----
@@ -306,7 +317,12 @@ def main(root: str) -> None:
     for key in ("age_band", "property_intent", "primary_language", "digital_confidence", "income_band", "location_context",
                 "device", "network", "accessibility_need", "trust_disposition", "privacy_concern", "is_specialist", "specialist_domain"):
         md += [f"### by {key}", "", subgroup(personas, outcomes, key), ""]
-    md += ["## Most frequently applied evidence rules", "", "| Rule | personas affected |", "|---|---:|"]
+    conf = Counter((o["adoption_category"], o["outcome_confidence"]) for o in outcomes.values())
+    md += ["## Outcome confidence (share of each persona's own tasks that was observable)", "",
+           "| Category | high (all tasks observable) | medium (one task unobservable) | low (two or more unobservable) |", "|---|---:|---:|---:|"]
+    for k in CATS:
+        md.append(f"| {k} | {conf[(k, 'high')]} | {conf[(k, 'medium')]} | {conf[(k, 'low')]} |")
+    md += ["", "## Most frequently applied evidence rules", "", "| Rule | personas affected |", "|---|---:|"]
     md += [f"| {r} | {c} |" for r, c in rule_hits.most_common(30)]
     md += ["", "## Improvements most often named as decision-changing (B personas)", "", "| Improvement | personas |", "|---|---:|"]
     md += [f"| {i} | {c} |" for i, c in imp.most_common(20)]

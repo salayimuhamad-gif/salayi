@@ -1,131 +1,575 @@
 [
-  {"id": "R01-dual-value-prop", "evidence_ids": ["E-SITE-04"], "tasks": ["T01"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"property_knowledge": ["none", "basic"]},
-   "improvement": "One-sentence purpose line under the hero that names the three things a visitor can do here",
-   "note": "H1 sells valuation ('true value of your property'); meta sells discovery (properties, indicators, offers). First-time visitors with little property knowledge must reconcile two promises."},
-
-  {"id": "R02-coming-soon-market", "evidence_ids": ["E-SITE-14", "E-SITE-04"], "tasks": ["T15", "T01"], "effect": "value_gap", "weight": 1.0,
-   "applies_if": {"property_intent": ["investor_local", "investor_diaspora", "researching", "seller", "landlord", "broker", "developer_staff", "upgrader"]},
-   "improvement": "Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists",
-   "note": "/market is a 'coming soon' placeholder while the homepage meta description promises market indicators."},
-
-  {"id": "R03-coming-soon-companies", "evidence_ids": ["E-SITE-14"], "tasks": ["T07", "T14"], "effect": "major", "weight": 1.0,
-   "applies_if": {"property_intent": ["broker", "developer_staff", "seller", "landlord", "investor_diaspora"]},
-   "improvement": "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
-   "note": "/companies is 'coming soon'; professionals cannot evaluate who is on the platform."},
-
-  {"id": "R04-raw-i18n-key", "evidence_ids": ["E-SITE-15"], "tasks": ["T01", "T13", "T17"], "effect": "trust_break", "weight": 0.6,
-   "applies_if": {},
-   "improvement": "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
-   "note": "The /invest page title and heading read 'map.investment'. Anyone reaching it sees a broken page; specialists read it as low engineering care."},
-
-  {"id": "R05-no-legal-contact-pages", "evidence_ids": ["E-SITE-17", "E-SITE-18", "E-SITE-03"], "tasks": ["T07", "T11", "T08"], "effect": "trust_break", "weight": 1.0,
-   "applies_if": {"trust_disposition": ["skeptical", "neutral"]},
-   "improvement": "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
-   "note": "No about/contact/privacy/terms/help pages at conventional paths; only info@ addresses found by deep scan; no social profiles."},
-
-  {"id": "R06-no-phone-anywhere", "evidence_ids": ["E-SITE-01", "E-SITE-08", "E-SITE-17"], "tasks": ["T08"], "effect": "major", "weight": 1.0,
-   "applies_if": {"property_intent": ["renter", "first_time_buyer", "upgrader", "investor_local", "investor_diaspora"]},
-   "improvement": "Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time)",
-   "note": "0 phone numbers across 59 scanned pages. Local buyers and renters expect to call or WhatsApp."},
-
-  {"id": "R07-no-phone-impatient", "evidence_ids": ["E-SITE-08", "E-SITE-17"], "tasks": ["T08"], "effect": "block", "weight": 1.0,
-   "applies_if": {"patience": ["low"], "urgency": ["immediate"], "digital_confidence": ["low", "medium"]},
-   "improvement": "Same as R06",
-   "note": "Urgent, impatient, less confident users will not hunt for a hidden contact path."},
-
-  {"id": "R08-no-price-in-project-data", "evidence_ids": ["E-SITE-08"], "tasks": ["T03", "T05"], "effect": "major", "weight": 1.0,
-   "applies_if": {"property_intent": ["first_time_buyer", "upgrader", "investor_local", "investor_diaspora", "renter"]},
-   "improvement": "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
-   "note": "No price, availability or payment term appears in the structured data or descriptions of 16 project pages. Absence in the rendered page is NOT confirmed — verify visually."},
-
-  {"id": "R09-thin-project-pages", "evidence_ids": ["E-SITE-08"], "tasks": ["T03"], "effect": "minor", "weight": 1.0,
-   "applies_if": {},
-   "improvement": "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
-   "note": "Some project pages carry only a one-sentence template or no description at all (e.g. erbil-mahalla-033-project)."},
-
-  {"id": "R10-rich-project-pages-positive", "evidence_ids": ["E-SITE-08"], "tasks": ["T03", "T06"], "effect": "positive", "weight": 1.0,
-   "applies_if": {"property_knowledge": ["moderate", "expert"]},
-   "improvement": "",
-   "note": "Several projects expose units, towers, floors, land area, unit-area ranges, developer, status and coordinates — useful to knowledgeable users."},
-
-  {"id": "R11-geo-coordinates-positive", "evidence_ids": ["E-SITE-08", "E-SITE-16"], "tasks": ["T06"], "effect": "positive", "weight": 1.0,
-   "applies_if": {"digital_confidence": ["medium", "high", "very_high"]},
-   "improvement": "",
-   "note": "Coordinates on most project pages and a dedicated price map page support location tasks for users comfortable with maps."},
-
-  {"id": "R12-auth-pages-english-only", "evidence_ids": ["E-SITE-12", "E-SITE-18"], "tasks": ["T11", "T12"], "effect": "major", "weight": 1.0,
-   "applies_if": {"primary_language": ["ckb", "ar", "other"], "reading_ability": ["low", "basic"]},
-   "improvement": "Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale",
-   "note": "At the Kurdish default path the sign-in and register pages are served in English ('Welcome back', 'Create your Andaz account')."},
-
-  {"id": "R13-auth-pages-english-minor", "evidence_ids": ["E-SITE-12"], "tasks": ["T11", "T12"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"primary_language": ["ckb", "ar", "other"], "reading_ability": ["good", "high"]},
-   "improvement": "Same as R12",
-   "note": "Readers who manage English still experience a language break at the account step."},
-
-  {"id": "R14-area-names-not-localised-en", "evidence_ids": ["E-SITE-20"], "tasks": ["T06", "T12", "T16"], "effect": "major", "weight": 1.0,
-   "applies_if": {"primary_language": ["en"]},
-   "improvement": "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'",
-   "note": "English area pages use raw transliterations as names."},
-
-  {"id": "R15-area-names-not-localised-ar", "evidence_ids": ["E-SITE-20"], "tasks": ["T06", "T12", "T16"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"primary_language": ["ar"]},
-   "improvement": "Same as R14",
-   "note": "Arabic area pages show the Kurdish name (in a different spelling)."},
-
-  {"id": "R16-mixed-script-spelling", "evidence_ids": ["E-SITE-10", "E-SITE-20"], "tasks": ["T01", "T03", "T17"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"reading_ability": ["good", "high"], "primary_language": ["ckb", "ar"]},
-   "improvement": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages",
-   "note": "Several names spelled three ways on one page; Arabic written with Kurdish yeh; Kurdish written with Arabic kaf."},
-
-  {"id": "R17-dead-end-404-template", "evidence_ids": ["E-SITE-17", "E-SITE-19"], "tasks": ["T13"], "effect": "minor", "weight": 1.0,
-   "applies_if": {},
-   "improvement": "Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map",
-   "note": "404 page renders on a different template with only '404' as title and heading."},
-
-  {"id": "R18-coming-soon-dead-ends-impatient", "evidence_ids": ["E-SITE-14", "E-SITE-15"], "tasks": ["T13", "T15"], "effect": "major", "weight": 1.0,
-   "applies_if": {"patience": ["low"]},
-   "improvement": "Hide unfinished sections from navigation or label them clearly before the click",
-   "note": "Impatient visitors who land on 'coming soon' or a raw key page leave."},
-
-  {"id": "R19-no-listing-path-for-owners", "evidence_ids": ["E-SITE-14", "E-SITE-16", "E-SITE-17"], "tasks": ["T14"], "effect": "value_gap", "weight": 1.0,
-   "applies_if": {"property_intent": ["seller", "landlord"]},
-   "improvement": "If owners cannot list, say so and offer the valuation + a request form; if they can, surface the entry point on the homepage",
-   "note": "No 'list your property' path found; companies directory coming soon; a valuation page exists but its purpose for visitors is unclear."},
-
-  {"id": "R20-valuation-promise-positive", "evidence_ids": ["E-SITE-04", "E-SITE-16"], "tasks": ["T14", "T01"], "effect": "positive", "weight": 1.0,
-   "applies_if": {"property_intent": ["seller", "landlord", "upgrader", "investor_local"]},
-   "improvement": "",
-   "note": "The hero promise 'the true value of your property' and a valuation page address a real owner need."},
-
-  {"id": "R21-provenance-wording-positive", "evidence_ids": ["E-SITE-08", "E-SITE-20"], "tasks": ["T07", "T17"], "effect": "positive", "weight": 1.0,
-   "applies_if": {"property_knowledge": ["moderate", "expert"]},
-   "improvement": "",
-   "note": "Project summaries state 'the latest inspected/reviewed source describes it as …' and name the developer — a provenance signal knowledgeable users value."},
-
-  {"id": "R22-structured-data-anomalies", "evidence_ids": ["E-SITE-19", "E-SITE-09"], "tasks": ["T17"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"is_specialist": ["true"]},
-   "improvement": "Fix addressLocality mapping, add consistent canonical/hreflang per locale",
-   "note": "Locality field holds non-place values; localized project pages canonicalise to the Kurdish URL."},
-
-  {"id": "R23-no-social-presence", "evidence_ids": ["E-SITE-03"], "tasks": ["T07"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"age_band": ["18-24", "25-34", "35-44"], "trust_disposition": ["skeptical", "neutral"]},
-   "improvement": "Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer",
-   "note": "No social profile links found anywhere; in this market younger users validate businesses through social pages."},
-
-  {"id": "R24-areas-index-no-heading", "evidence_ids": ["E-SITE-06"], "tasks": ["T06", "T16"], "effect": "minor", "weight": 1.0,
-   "applies_if": {"accessibility_need": ["screen_reader", "low_vision", "reading_cognitive"]},
-   "improvement": "Give the areas and offers index pages a visible H1 and a descriptive title",
-   "note": "Areas index pages have no H1 and a generic title; offers index pages have no H1 in ckb/ar."},
-
-  {"id": "R25-advisor-exists-positive", "evidence_ids": ["E-SITE-13", "E-SITE-18"], "tasks": ["T10", "T01"], "effect": "positive", "weight": 0.5,
-   "applies_if": {"digital_confidence": ["high", "very_high"]},
-   "improvement": "",
-   "note": "An advisor landing page exists and is reachable without login; its usefulness is unverified."},
-
-  {"id": "R26-slow-network-heavy-pages-hypothesis", "evidence_ids": [], "tasks": [], "effect": "minor", "weight": 0.0,
-   "applies_if": {},
-   "improvement": "",
-   "note": "Placeholder: page weight and load behaviour were NOT measured through this route. No effect applied."}
+ {
+  "id": "R01-dual-value-prop",
+  "evidence_ids": [
+   "E-SITE-04"
+  ],
+  "tasks": [
+   "T01"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "property_knowledge": [
+    "none",
+    "basic"
+   ]
+  },
+  "improvement": "One-sentence purpose line under the hero that names the three things a visitor can do here",
+  "note": "H1 sells valuation ('true value of your property'); meta sells discovery (properties, indicators, offers). First-time visitors with little property knowledge must reconcile two promises."
+ },
+ {
+  "id": "R02-coming-soon-market",
+  "evidence_ids": [
+   "E-SITE-14",
+   "E-SITE-04"
+  ],
+  "tasks": [
+   "T15"
+  ],
+  "effect": "value_gap",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "investor_local",
+    "investor_diaspora",
+    "researching",
+    "seller",
+    "landlord",
+    "broker",
+    "developer_staff",
+    "upgrader"
+   ]
+  },
+  "improvement": "Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists",
+  "note": "/market is a 'coming soon' placeholder while the homepage meta description promises market indicators."
+ },
+ {
+  "id": "R03-coming-soon-companies",
+  "evidence_ids": [
+   "E-SITE-14"
+  ],
+  "tasks": [
+   "T07",
+   "T14"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "broker",
+    "developer_staff",
+    "seller",
+    "landlord",
+    "investor_diaspora"
+   ]
+  },
+  "improvement": "Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it",
+  "note": "/companies is 'coming soon'; professionals cannot evaluate who is on the platform."
+ },
+ {
+  "id": "R04a-raw-i18n-key-specialists",
+  "evidence_ids": [
+   "E-SITE-15"
+  ],
+  "tasks": [
+   "T17",
+   "T13"
+  ],
+  "effect": "trust_break",
+  "weight": 0.6,
+  "applies_if": {
+   "is_specialist": [
+    "true"
+   ]
+  },
+  "improvement": "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
+  "note": "The /invest page title and heading read 'map.investment'. Anyone reaching it sees a broken page; specialists read it as low engineering care."
+ },
+ {
+  "id": "R04b-raw-i18n-key-investors",
+  "evidence_ids": [
+   "E-SITE-15"
+  ],
+  "tasks": [
+   "T15",
+   "T13"
+  ],
+  "effect": "trust_break",
+  "weight": 0.6,
+  "applies_if": {
+   "property_intent": [
+    "investor_local",
+    "investor_diaspora",
+    "researching",
+    "broker",
+    "developer_staff"
+   ]
+  },
+  "improvement": "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
+  "note": "Investment-minded visitors are the ones who open the investment map and meet the raw key 'map.investment'."
+ },
+ {
+  "id": "R05-no-legal-contact-pages",
+  "evidence_ids": [
+   "E-SITE-17",
+   "E-SITE-18",
+   "E-SITE-03"
+  ],
+  "tasks": [
+   "T07",
+   "T11",
+   "T08"
+  ],
+  "effect": "trust_break",
+  "weight": 1.0,
+  "applies_if": {
+   "trust_disposition": [
+    "skeptical",
+    "neutral"
+   ]
+  },
+  "improvement": "Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
+  "note": "No about/contact/privacy/terms/help pages at conventional paths; only info@ addresses found by deep scan; no social profiles."
+ },
+ {
+  "id": "R06-no-phone-anywhere",
+  "evidence_ids": [
+   "E-SITE-01",
+   "E-SITE-08",
+   "E-SITE-17"
+  ],
+  "tasks": [
+   "T08"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "renter",
+    "first_time_buyer",
+    "upgrader",
+    "investor_local",
+    "investor_diaspora"
+   ]
+  },
+  "improvement": "Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time)",
+  "note": "0 phone numbers across 59 scanned pages. Local buyers and renters expect to call or WhatsApp."
+ },
+ {
+  "id": "R07-no-phone-impatient",
+  "evidence_ids": [
+   "E-SITE-08",
+   "E-SITE-17"
+  ],
+  "tasks": [
+   "T08"
+  ],
+  "effect": "block",
+  "weight": 1.0,
+  "applies_if": {
+   "patience": [
+    "low"
+   ],
+   "urgency": [
+    "immediate"
+   ],
+   "digital_confidence": [
+    "low",
+    "medium"
+   ]
+  },
+  "improvement": "Same as R06",
+  "note": "Urgent, impatient, less confident users will not hunt for a hidden contact path."
+ },
+ {
+  "id": "R08-no-price-in-project-data",
+  "evidence_ids": [
+   "E-SITE-08"
+  ],
+  "tasks": [
+   "T03",
+   "T05"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "first_time_buyer",
+    "upgrader",
+    "investor_local",
+    "investor_diaspora",
+    "renter"
+   ]
+  },
+  "improvement": "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page",
+  "note": "No price, availability or payment term appears in the structured data or descriptions of 16 project pages. Absence in the rendered page is NOT confirmed — verify visually."
+ },
+ {
+  "id": "R09-thin-project-pages",
+  "evidence_ids": [
+   "E-SITE-08"
+  ],
+  "tasks": [
+   "T03"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {},
+  "improvement": "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
+  "note": "Some project pages carry only a one-sentence template or no description at all (e.g. erbil-mahalla-033-project)."
+ },
+ {
+  "id": "R10-rich-project-pages-positive",
+  "evidence_ids": [
+   "E-SITE-08"
+  ],
+  "tasks": [
+   "T03",
+   "T06"
+  ],
+  "effect": "positive",
+  "weight": 1.0,
+  "applies_if": {
+   "property_knowledge": [
+    "moderate",
+    "expert"
+   ]
+  },
+  "improvement": "",
+  "note": "Several projects expose units, towers, floors, land area, unit-area ranges, developer, status and coordinates — useful to knowledgeable users."
+ },
+ {
+  "id": "R11-geo-coordinates-positive",
+  "evidence_ids": [
+   "E-SITE-08",
+   "E-SITE-16"
+  ],
+  "tasks": [
+   "T06"
+  ],
+  "effect": "positive",
+  "weight": 1.0,
+  "applies_if": {
+   "digital_confidence": [
+    "medium",
+    "high",
+    "very_high"
+   ]
+  },
+  "improvement": "",
+  "note": "Coordinates on most project pages and a dedicated price map page support location tasks for users comfortable with maps."
+ },
+ {
+  "id": "R12-auth-pages-english-only",
+  "evidence_ids": [
+   "E-SITE-12",
+   "E-SITE-18"
+  ],
+  "tasks": [
+   "T11",
+   "T12"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "primary_language": [
+    "ckb",
+    "ar",
+    "other"
+   ],
+   "reading_ability": [
+    "low",
+    "basic"
+   ]
+  },
+  "improvement": "Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale",
+  "note": "At the Kurdish default path the sign-in and register pages are served in English ('Welcome back', 'Create your Andaz account')."
+ },
+ {
+  "id": "R13-auth-pages-english-minor",
+  "evidence_ids": [
+   "E-SITE-12"
+  ],
+  "tasks": [
+   "T11",
+   "T12"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "primary_language": [
+    "ckb",
+    "ar",
+    "other"
+   ],
+   "reading_ability": [
+    "good",
+    "high"
+   ]
+  },
+  "improvement": "Same as R12",
+  "note": "Readers who manage English still experience a language break at the account step."
+ },
+ {
+  "id": "R14-area-names-not-localised-en",
+  "evidence_ids": [
+   "E-SITE-20"
+  ],
+  "tasks": [
+   "T06",
+   "T12",
+   "T16"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "primary_language": [
+    "en"
+   ]
+  },
+  "improvement": "Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe'",
+  "note": "English area pages use raw transliterations as names."
+ },
+ {
+  "id": "R15-area-names-not-localised-ar",
+  "evidence_ids": [
+   "E-SITE-20"
+  ],
+  "tasks": [
+   "T06",
+   "T12",
+   "T16"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "primary_language": [
+    "ar"
+   ]
+  },
+  "improvement": "Same as R14",
+  "note": "Arabic area pages show the Kurdish name (in a different spelling)."
+ },
+ {
+  "id": "R16-mixed-script-spelling",
+  "evidence_ids": [
+   "E-SITE-10",
+   "E-SITE-20"
+  ],
+  "tasks": [
+   "T01",
+   "T03",
+   "T17"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "reading_ability": [
+    "good",
+    "high"
+   ],
+   "primary_language": [
+    "ckb",
+    "ar"
+   ]
+  },
+  "improvement": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages",
+  "note": "Several names spelled three ways on one page; Arabic written with Kurdish yeh; Kurdish written with Arabic kaf."
+ },
+ {
+  "id": "R17-dead-end-404-template",
+  "evidence_ids": [
+   "E-SITE-17",
+   "E-SITE-19"
+  ],
+  "tasks": [
+   "T13"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {},
+  "improvement": "Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map",
+  "note": "404 page renders on a different template with only '404' as title and heading."
+ },
+ {
+  "id": "R18-coming-soon-dead-ends-impatient",
+  "evidence_ids": [
+   "E-SITE-14",
+   "E-SITE-15"
+  ],
+  "tasks": [
+   "T13",
+   "T15"
+  ],
+  "effect": "major",
+  "weight": 1.0,
+  "applies_if": {
+   "patience": [
+    "low"
+   ]
+  },
+  "improvement": "Hide unfinished sections from navigation or label them clearly before the click",
+  "note": "Impatient visitors who land on 'coming soon' or a raw key page leave."
+ },
+ {
+  "id": "R19-no-listing-path-for-owners",
+  "evidence_ids": [
+   "E-SITE-14",
+   "E-SITE-16",
+   "E-SITE-17"
+  ],
+  "tasks": [
+   "T14"
+  ],
+  "effect": "value_gap",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "seller",
+    "landlord"
+   ]
+  },
+  "improvement": "If owners cannot list, say so and offer the valuation + a request form; if they can, surface the entry point on the homepage",
+  "note": "No 'list your property' path found; companies directory coming soon; a valuation page exists but its purpose for visitors is unclear."
+ },
+ {
+  "id": "R20-valuation-promise-positive",
+  "evidence_ids": [
+   "E-SITE-04",
+   "E-SITE-16"
+  ],
+  "tasks": [
+   "T14",
+   "T01"
+  ],
+  "effect": "positive",
+  "weight": 1.0,
+  "applies_if": {
+   "property_intent": [
+    "seller",
+    "landlord",
+    "upgrader",
+    "investor_local"
+   ]
+  },
+  "improvement": "",
+  "note": "The hero promise 'the true value of your property' and a valuation page address a real owner need."
+ },
+ {
+  "id": "R21-provenance-wording-positive",
+  "evidence_ids": [
+   "E-SITE-08",
+   "E-SITE-20"
+  ],
+  "tasks": [
+   "T07",
+   "T17"
+  ],
+  "effect": "positive",
+  "weight": 1.0,
+  "applies_if": {
+   "property_knowledge": [
+    "moderate",
+    "expert"
+   ]
+  },
+  "improvement": "",
+  "note": "Project summaries state 'the latest inspected/reviewed source describes it as …' and name the developer — a provenance signal knowledgeable users value."
+ },
+ {
+  "id": "R22-structured-data-anomalies",
+  "evidence_ids": [
+   "E-SITE-19",
+   "E-SITE-09"
+  ],
+  "tasks": [
+   "T17"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "is_specialist": [
+    "true"
+   ]
+  },
+  "improvement": "Fix addressLocality mapping, add consistent canonical/hreflang per locale",
+  "note": "Locality field holds non-place values; localized project pages canonicalise to the Kurdish URL."
+ },
+ {
+  "id": "R23-no-social-presence",
+  "evidence_ids": [
+   "E-SITE-03"
+  ],
+  "tasks": [
+   "T07"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "age_band": [
+    "18-24",
+    "25-34",
+    "35-44"
+   ],
+   "trust_disposition": [
+    "skeptical",
+    "neutral"
+   ]
+  },
+  "improvement": "Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer",
+  "note": "No social profile links found anywhere; in this market younger users validate businesses through social pages."
+ },
+ {
+  "id": "R24-areas-index-no-heading",
+  "evidence_ids": [
+   "E-SITE-06"
+  ],
+  "tasks": [
+   "T06",
+   "T16"
+  ],
+  "effect": "minor",
+  "weight": 1.0,
+  "applies_if": {
+   "accessibility_need": [
+    "screen_reader",
+    "low_vision",
+    "reading_cognitive"
+   ]
+  },
+  "improvement": "Give the areas and offers index pages a visible H1 and a descriptive title",
+  "note": "Areas index pages have no H1 and a generic title; offers index pages have no H1 in ckb/ar."
+ },
+ {
+  "id": "R25-advisor-exists-positive",
+  "evidence_ids": [
+   "E-SITE-13",
+   "E-SITE-18"
+  ],
+  "tasks": [
+   "T10",
+   "T01"
+  ],
+  "effect": "positive",
+  "weight": 0.5,
+  "applies_if": {
+   "digital_confidence": [
+    "high",
+    "very_high"
+   ]
+  },
+  "improvement": "",
+  "note": "An advisor landing page exists and is reachable without login; its usefulness is unverified."
+ },
+ {
+  "id": "R26-slow-network-heavy-pages-hypothesis",
+  "evidence_ids": [],
+  "tasks": [],
+  "effect": "minor",
+  "weight": 0.0,
+  "applies_if": {},
+  "improvement": "",
+  "note": "Placeholder: page weight and load behaviour were NOT measured through this route. No effect applied."
+ }
 ]
