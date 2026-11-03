@@ -34,15 +34,25 @@ def main(root: str) -> None:
     personas = json.load(open(os.path.join(root, "panel", "personas.json"), encoding="utf-8"))
     outcomes = {o["id"]: o for o in json.load(open(os.path.join(root, "panel", "outcomes.json"), encoding="utf-8"))}
     narr = {}
+    fb = os.path.join(root, "panel", "narratives", "fallback_engine.jsonl")
+    if os.path.exists(fb):
+        for line in open(fb, encoding="utf-8"):
+            line = line.strip()
+            if line:
+                rec = json.loads(line); rec["_source"] = "engine_template"; narr[rec["id"]] = rec
     files = sorted(glob.glob(os.path.join(root, "panel", "narratives", "batch_*.jsonl")))
+    n_llm = 0
     for f in files:
         for line in open(f, encoding="utf-8"):
             line = line.strip()
             if not line:
                 continue
-            rec = json.loads(line)
-            narr[rec["id"]] = rec
-    print(f"narrative files: {len(files)}; narrative records: {len(narr)}")
+            try:
+                rec = json.loads(line)
+            except Exception:
+                continue
+            rec["_source"] = "llm_batch_agent"; narr[rec["id"]] = rec; n_llm += 1
+    print(f"narrative files: {len(files)}; llm records: {n_llm}; total records (llm overrides template): {len(narr)}")
 
     recon = []
     filled = 0
@@ -61,7 +71,7 @@ def main(root: str) -> None:
             filled += 1
             for k in FIELDS:
                 p[k] = n.get(k)
-            p["narrative_source"] = "llm_batch_agent"
+            p["narrative_source"] = n.get("_source", "llm_batch_agent")
             obj = n.get("objection")
             if obj:
                 recon.append({"id": p["id"], "computed_category": o["adoption_category"], "proposed_category": obj.get("proposed_category"),
@@ -76,7 +86,8 @@ def main(root: str) -> None:
     reactions = Counter(p.get("simulated_reaction") for p in personas if p.get("simulated_reaction"))
     dups = [(r, c) for r, c in reactions.items() if c > 1]
     cats = Counter(p["adoption_category"] for p in personas)
-    print("narratives merged:", filled, "missing:", 1000 - filled)
+    src = Counter(p.get("narrative_source") for p in personas)
+    print("narratives merged:", filled, "missing:", 1000 - filled, "by source:", dict(src))
     print("duplicate simulated reactions:", len(dups), dups[:5])
     print("categories:", dict(cats), "sum:", sum(cats.values()))
     print("objections:", len(recon))
