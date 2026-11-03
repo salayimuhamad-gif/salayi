@@ -731,7 +731,7 @@ Every number in this step is a **simulated outcome under the stated assumptions*
 | Occasionally, around a property decision | 236 | 23.6 |
 | Regularly (weekly or more) | 61 | 6.1 |
 
-Of the 61 regular returners, 24 are investors, agents or developers and 32 are active or future buyers; only 5 come from the casual, no-need, diaspora or rest-of-Iraq groups. Consumers return around a decision, then leave. That is the shape of the demand: **episodic for consumers, habitual only for professionals.**
+Of the 61 regular returners, 24 are investors, agents or developers, 25 are active or future buyers, and 12 come from the remaining groups (casual browsers, owners, diaspora, rest of Iraq, no current need). Consumers return around a decision, then leave. That is the shape of the demand: **episodic for consumers, habitual only for professionals.**
 
 **Target audience versus everyone else.**
 
