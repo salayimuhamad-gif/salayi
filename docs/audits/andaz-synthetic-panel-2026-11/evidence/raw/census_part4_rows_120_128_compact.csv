@@ -1,0 +1,10 @@
+page_url,schema_name,description_class,geo,address_locality,notes
+https://andaz.krd/projects/rami-towers,ڕامی تاوەرز,long,yes,,"developer ڕامی هۆڵدینگ; 2976 units; 10 towers; 31 floors; 70–225 m²"
+https://andaz.krd/projects/slava-city,سلاڤا ستی,template_plus_units,yes,,"700 units"
+https://andaz.krd/projects/spanish-village,گوندی ئیسپانی,template_plus_units,yes,,"developer فۆر بریجز; 320–500 m²"
+https://andaz.krd/projects/sun-towers,سەن تاوەر,template_plus_units,yes,,"developer گرووپی لالاڤ; 1254 units; 6 towers; 20 floors"
+https://andaz.krd/projects/talar-city-0,تــــەلار ســـتی,one_line,yes,"تەلار ستی, IQ","tatweel in name"
+https://andaz.krd/projects/voyage-mall,ڤۆیــــاج مۆڵ,long,yes,"كورانی نوێ, IQ","tatweel in name; commercial type"
+https://andaz.krd/projects/white-towers,وایت تاوەر,template_plus_units,yes,,"576 units; 4 towers; 68 floors"
+https://andaz.krd/projects/zaner-city,شاری زانەر,one_line,yes,,
+https://andaz.krd/projects/zin-city,زین ستی,long,yes,,

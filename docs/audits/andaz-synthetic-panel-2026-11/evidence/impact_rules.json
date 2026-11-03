@@ -208,7 +208,8 @@
  {
   "id": "R09-thin-project-pages",
   "evidence_ids": [
-   "E-SITE-08"
+   "E-SITE-08",
+   "E-SITE-22"
   ],
   "tasks": [
    "T03"
@@ -217,7 +218,7 @@
   "weight": 1.0,
   "applies_if": {},
   "improvement": "Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
-  "note": "Some project pages carry only a one-sentence template or no description at all (e.g. erbil-mahalla-033-project)."
+  "note": "14 of 64 project pages (22%) carry only a one-line template or no description at all (4 empty). Census E-SITE-22."
  },
  {
   "id": "R10-rich-project-pages-positive",
@@ -243,7 +244,8 @@
   "id": "R11-geo-coordinates-positive",
   "evidence_ids": [
    "E-SITE-08",
-   "E-SITE-16"
+   "E-SITE-16",
+   "E-SITE-22"
   ],
   "tasks": [
    "T06"
@@ -258,7 +260,7 @@
    ]
   },
   "improvement": "",
-  "note": "Coordinates on most project pages and a dedicated price map page support location tasks for users comfortable with maps."
+  "note": "Every project page in the inventory carries GeoCoordinates (52/52 census + 11/11 visible batch 1) and a dedicated price map page exists."
  },
  {
   "id": "R12-auth-pages-english-only",
@@ -355,7 +357,9 @@
   "id": "R16-mixed-script-spelling",
   "evidence_ids": [
    "E-SITE-10",
-   "E-SITE-20"
+   "E-SITE-20",
+   "E-SITE-22",
+   "E-SITE-23"
   ],
   "tasks": [
    "T01",
@@ -375,7 +379,7 @@
    ]
   },
   "improvement": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages",
-  "note": "Several names spelled three ways on one page; Arabic written with Kurdish yeh; Kurdish written with Arabic kaf."
+  "note": "Tatweel inside 6 project names, Arabic kaf/yeh in 9 of 77 area names and several project names, mixed digit systems, three spellings of one project, Arabic written with Kurdish yeh."
  },
  {
   "id": "R17-dead-end-404-template",
@@ -480,8 +484,10 @@
  {
   "id": "R22-structured-data-anomalies",
   "evidence_ids": [
+   "E-SITE-09",
    "E-SITE-19",
-   "E-SITE-09"
+   "E-SITE-22",
+   "E-SITE-23"
   ],
   "tasks": [
    "T17"
@@ -494,7 +500,7 @@
    ]
   },
   "improvement": "Fix addressLocality mapping, add consistent canonical/hreflang per locale",
-  "note": "Locality field holds non-place values; localized project pages canonicalise to the Kurdish URL."
+  "note": "Address block present on only ~20% of project pages; localized project pages canonicalise to the Kurdish URL; area pages have no structured data and generic meta descriptions."
  },
  {
   "id": "R23-no-social-presence",
@@ -571,5 +577,50 @@
   "applies_if": {},
   "improvement": "",
   "note": "Placeholder: page weight and load behaviour were NOT measured through this route. No effect applied."
+ },
+ {
+  "id": "R27-area-names-script-digits",
+  "evidence_ids": [
+   "E-SITE-23"
+  ],
+  "tasks": [
+   "T06",
+   "T16"
+  ],
+  "effect": "minor",
+  "weight": 0.5,
+  "applies_if": {
+   "primary_language": [
+    "ckb"
+   ],
+   "reading_ability": [
+    "good",
+    "high"
+   ]
+  },
+  "improvement": "Normalise area names (Kurdish letters, one digit system, consistent spacing)",
+  "note": "9 of 77 Kurdish area names use Arabic letters; digits and spacing inconsistent."
+ },
+ {
+  "id": "R28-areas-broad-coverage-positive",
+  "evidence_ids": [
+   "E-SITE-23",
+   "E-SITE-11"
+  ],
+  "tasks": [
+   "T06",
+   "T16"
+  ],
+  "effect": "positive",
+  "weight": 0.5,
+  "applies_if": {
+   "location_context": [
+    "erbil_centre",
+    "erbil_suburb",
+    "erbil_rural"
+   ]
+  },
+  "improvement": "",
+  "note": "81 area pages with the names residents actually use; local users can find their own neighbourhood."
  }
 ]

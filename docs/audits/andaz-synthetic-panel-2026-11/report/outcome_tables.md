@@ -2,29 +2,29 @@
 
 These are **synthetic panel outcomes** from AI-generated personas evaluated against the evidence log with the documented rule engine. They are not conversion, retention, market share or probability of commercial success.
 
-Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Category E (insufficient evidence): 230.
+Personas evaluated: 1000. Personas with a computable outcome (A–D): 772. Category E (insufficient evidence): 228.
 
 **All panel** (denominator = 1000)
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 189 | 19% |
+| A — Would use the platform now | 191 | 19% |
 | B — Would use it after specific improvements | 310 | 31% |
 | C — Would reject it despite having a relevant need | 119 | 12% |
 | D — Has no current relevant need | 152 | 15% |
-| E — Cannot assess because evidence is insufficient | 230 | 23% |
+| E — Cannot assess because evidence is insufficient | 228 | 23% |
 | Total | 1000 | 100% |
 
 **Personas with a current relevant need** (denominator = 848)
 
 | Category | Count | % |
 |---|---:|---:|
-| A — Would use the platform now | 189 | 22% |
+| A — Would use the platform now | 191 | 23% |
 | B — Would use it after specific improvements | 310 | 37% |
 | C — Would reject it despite having a relevant need | 119 | 14% |
 | D — Has no current relevant need | 0 | 0% |
-| E — Cannot assess because evidence is insufficient | 230 | 27% |
-| Total | 848 | 100% |
+| E — Cannot assess because evidence is insufficient | 228 | 27% |
+| Total | 848 | 101% (rounding) |
 
 ## Task-level outcomes
 
@@ -35,7 +35,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | T03 | 156 | 26 (17%) | 77 (49%) | 53 (34%) | 0 (0%) |
 | T04 | 93 | 0 (0%) | 0 (0%) | 0 (0%) | 93 (100%) |
 | T05 | 86 | 0 (0%) | 0 (0%) | 0 (0%) | 86 (100%) |
-| T06 | 183 | 148 (81%) | 11 (6%) | 16 (9%) | 8 (4%) |
+| T06 | 183 | 157 (86%) | 10 (5%) | 12 (7%) | 4 (2%) |
 | T07 | 185 | 48 (26%) | 68 (37%) | 50 (27%) | 19 (10%) |
 | T08 | 148 | 25 (17%) | 67 (45%) | 45 (30%) | 11 (7%) |
 | T09 | 96 | 0 (0%) | 0 (0%) | 0 (0%) | 96 (100%) |
@@ -45,7 +45,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | T13 | 140 | 48 (34%) | 38 (27%) | 54 (39%) | 0 (0%) |
 | T14 | 75 | 8 (11%) | 47 (63%) | 20 (27%) | 0 (0%) |
 | T15 | 172 | 8 (5%) | 98 (57%) | 66 (38%) | 0 (0%) |
-| T16 | 37 | 3 (8%) | 3 (8%) | 10 (27%) | 21 (57%) |
+| T16 | 37 | 20 (54%) | 5 (14%) | 7 (19%) | 5 (14%) |
 | T17 | 131 | 47 (36%) | 61 (47%) | 23 (18%) | 0 (0%) |
 
 ## Subgroups (percentages only where n ≥ 25)
@@ -54,9 +54,9 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 
 | age_band | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| 25-34 | 250 | 27% | 30% | 13% | 7% | 23% |
+| 25-34 | 250 | 28% | 30% | 13% | 7% | 23% |
 | 35-44 | 220 | 19% | 30% | 10% | 11% | 30% |
-| 45-54 | 150 | 13% | 37% | 10% | 11% | 29% |
+| 45-54 | 150 | 14% | 37% | 10% | 11% | 28% |
 | 18-24 | 150 | 25% | 35% | 8% | 14% | 18% |
 | 55-64 | 100 | 13% | 37% | 21% | 9% | 20% |
 | 65-74 | 55 | 16% | 33% | 18% | 16% | 16% |
@@ -70,9 +70,9 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 |---|---:|---:|---:|---:|---:|---:|
 | first_time_buyer | 180 | 17% | 27% | 8% | 0% | 49% |
 | renter | 170 | 39% | 32% | 15% | 0% | 14% |
-| researching | 120 | 14% | 26% | 11% | 43% | 6% |
+| researching | 120 | 15% | 26% | 11% | 43% | 5% |
 | no_need | 100 | 0% | 0% | 0% | 100% | 0% |
-| upgrader | 90 | 33% | 10% | 0% | 0% | 57% |
+| upgrader | 90 | 34% | 10% | 0% | 0% | 56% |
 | investor_local | 80 | 14% | 34% | 12% | 0% | 40% |
 | seller | 70 | 9% | 54% | 36% | 0% | 1% |
 | investor_diaspora | 60 | 20% | 28% | 13% | 0% | 38% |
@@ -97,7 +97,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 |---|---:|---:|---:|---:|---:|---:|
 | medium | 350 | 14% | 32% | 11% | 17% | 27% |
 | high | 312 | 27% | 32% | 7% | 12% | 21% |
-| low | 195 | 8% | 32% | 22% | 16% | 23% |
+| low | 195 | 9% | 32% | 22% | 16% | 22% |
 | very_high | 143 | 29% | 25% | 11% | 17% | 18% |
 
 
@@ -120,7 +120,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | erbil_suburb | 250 | 20% | 30% | 13% | 15% | 23% |
 | diaspora | 150 | 19% | 23% | 11% | 19% | 28% |
 | kri_other_city | 120 | 25% | 32% | 10% | 10% | 22% |
-| erbil_rural | 100 | 23% | 38% | 6% | 11% | 22% |
+| erbil_rural | 100 | 24% | 38% | 6% | 11% | 21% |
 | iraq_other | 80 | 11% | 28% | 12% | 20% | 29% |
 
 
@@ -130,8 +130,8 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 |---|---:|---:|---:|---:|---:|---:|
 | android_budget | 434 | 20% | 31% | 12% | 14% | 23% |
 | iphone | 258 | 19% | 31% | 11% | 16% | 23% |
-| desktop | 139 | 21% | 35% | 15% | 16% | 14% |
-| android_flagship | 109 | 15% | 29% | 13% | 17% | 26% |
+| desktop | 139 | 22% | 35% | 15% | 16% | 13% |
+| android_flagship | 109 | 16% | 29% | 13% | 17% | 25% |
 | tablet | 60 | 15% | 22% | 10% | 13% | 40% |
 
 
@@ -140,7 +140,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | network | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
 | 4g_good | 339 | 20% | 28% | 13% | 17% | 22% |
-| 4g_variable | 300 | 19% | 31% | 10% | 13% | 28% |
+| 4g_variable | 300 | 20% | 31% | 10% | 13% | 27% |
 | wifi_fast | 234 | 19% | 32% | 12% | 19% | 19% |
 | slow_unstable | 127 | 16% | 39% | 14% | 9% | 23% |
 
@@ -162,7 +162,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 
 | trust_disposition | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
-| neutral | 430 | 22% | 32% | 8% | 16% | 22% |
+| neutral | 430 | 23% | 32% | 8% | 16% | 22% |
 | skeptical | 377 | 9% | 30% | 20% | 18% | 23% |
 | trusting | 193 | 31% | 31% | 4% | 9% | 25% |
 
@@ -172,7 +172,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | privacy_concern | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
 | medium | 458 | 20% | 30% | 10% | 17% | 23% |
-| high | 297 | 16% | 33% | 13% | 16% | 22% |
+| high | 297 | 17% | 33% | 13% | 16% | 22% |
 | low | 245 | 20% | 31% | 13% | 12% | 24% |
 
 
@@ -181,7 +181,7 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | is_specialist | n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
 | False | 765 | 18% | 26% | 13% | 18% | 26% |
-| True | 235 | 21% | 47% | 10% | 8% | 14% |
+| True | 235 | 22% | 47% | 10% | 8% | 14% |
 
 
 ### by specialist_domain
@@ -201,11 +201,11 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 
 | Category | high (all tasks observable) | medium (one task unobservable) | low (two or more unobservable) |
 |---|---:|---:|---:|
-| A | 95 | 94 | 0 |
+| A | 96 | 95 | 0 |
 | B | 196 | 114 | 0 |
 | C | 93 | 26 | 0 |
-| D | 113 | 25 | 14 |
-| E | 0 | 0 | 230 |
+| D | 131 | 14 | 7 |
+| E | 0 | 0 | 228 |
 
 ## Most frequently applied evidence rules
 
@@ -228,11 +228,13 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | R12-auth-pages-english-only | 136 |
 | R13-auth-pages-english-minor | 135 |
 | R22-structured-data-anomalies | 131 |
+| R28-areas-broad-coverage-positive | 129 |
 | R10-rich-project-pages-positive | 105 |
 | R23-no-social-presence | 91 |
 | R15-area-names-not-localised-ar | 86 |
 | R06-no-phone-anywhere | 84 |
 | R18-coming-soon-dead-ends-impatient | 77 |
+| R27-area-names-script-digits | 61 |
 | R14-area-names-not-localised-en | 58 |
 | R19-no-listing-path-for-owners | 50 |
 | R24-areas-index-no-heading | 26 |
@@ -245,19 +247,20 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | One-sentence purpose line under the hero that names the three things a visitor can do here | 581 |
 | Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages | 409 |
 | Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone | 260 |
-| Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles | 182 |
-| Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page | 151 |
+| Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles | 178 |
+| Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page | 150 |
 | Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists | 118 |
 | Ship a minimal companies/developers directory (name, licence, projects, contact) before advertising it | 109 |
 | Localise /login and /register (lang attribute, headings, fields, errors) into Sorani and Arabic and keep the visitor's locale | 108 |
-| Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages | 101 |
-| Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map | 100 |
-| Same as R12 | 72 |
+| Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages | 100 |
+| Give the 404 page the site chrome, a plain-language message in the visitor's language and links to projects, areas and the offers map | 97 |
+| Same as R12 | 71 |
 | Same as R14 | 67 |
 | Provide proper English (and Arabic) names for all 81 areas; never fall back to a transliteration such as 'kwrany nwe' | 47 |
 | Show a clear contact route on every project and offer (call, WhatsApp, or an in-platform request with an expected response time) | 45 |
+| Normalise area names (Kurdish letters, one digit system, consistent spacing) | 42 |
 | Link verified social profiles (Facebook, Instagram, Telegram channel) from the footer | 40 |
-| Fix addressLocality mapping, add consistent canonical/hreflang per locale | 37 |
+| Fix addressLocality mapping, add consistent canonical/hreflang per locale | 36 |
 | Hide unfinished sections from navigation or label them clearly before the click | 28 |
 | If owners cannot list, say so and offer the valuation + a request form; if they can, surface the entry point on the homepage | 24 |
 | Give the areas and offers index pages a visible H1 and a descriptive title | 18 |
@@ -267,9 +270,9 @@ Personas evaluated: 1000. Personas with a computable outcome (A–D): 770. Categ
 | Weighting scenario | effective n | A | B | C | D | E |
 |---|---:|---:|---:|---:|---:|---:|
 | panel_as_built | 1000 | 19% | 31% | 12% | 15% | 23% |
-| more_low_digital_and_older | 1332 | 16% | 31% | 14% | 16% | 22% |
+| more_low_digital_and_older | 1332 | 17% | 31% | 14% | 16% | 22% |
 | more_diaspora_english | 1225 | 19% | 30% | 12% | 16% | 24% |
-| arabic_heavy | 1270 | 18% | 32% | 12% | 16% | 23% |
+| arabic_heavy | 1270 | 18% | 32% | 12% | 16% | 22% |
 | mobile_budget_slow_network | 1554 | 19% | 32% | 11% | 14% | 24% |
 | buyers_and_renters_only | 440 | 29% | 25% | 9% | 0% | 37% |
-| specialists_only | 235 | 21% | 47% | 10% | 8% | 14% |
+| specialists_only | 235 | 22% | 47% | 10% | 8% | 14% |

@@ -1,0 +1,82 @@
+[
+ {
+  "tag": "A_high_renter",
+  "id": "P0007"
+ },
+ {
+  "tag": "A_high_investor_local",
+  "id": "P0537"
+ },
+ {
+  "tag": "C_skeptical_buyer",
+  "id": "P0122"
+ },
+ {
+  "tag": "C_seller_elder",
+  "id": "P0169"
+ },
+ {
+  "tag": "B_diaspora_investor_en",
+  "id": "P0131"
+ },
+ {
+  "tag": "B_landlord_ar",
+  "id": "P0066"
+ },
+ {
+  "tag": "E_renter_untested",
+  "id": "P0119"
+ },
+ {
+  "tag": "D_teen",
+  "id": "P0008"
+ },
+ {
+  "tag": "D_no_need_75plus",
+  "id": "P0022"
+ },
+ {
+  "tag": "screen_reader",
+  "id": "P0067"
+ },
+ {
+  "tag": "low_vision_low_digital",
+  "id": "P0023"
+ },
+ {
+  "tag": "broker_specialist",
+  "id": "P0013"
+ },
+ {
+  "tag": "developer_staff",
+  "id": "P0083"
+ },
+ {
+  "tag": "architect_specialist",
+  "id": "P0027"
+ },
+ {
+  "tag": "software_engineer_ux",
+  "id": "P0021"
+ },
+ {
+  "tag": "lawyer_or_accountant",
+  "id": "P0014"
+ },
+ {
+  "tag": "other_lang_kurmanji",
+  "id": "P0006"
+ },
+ {
+  "tag": "rural_slow_network_buyer",
+  "id": "P0017"
+ },
+ {
+  "tag": "upgrader_installments_B",
+  "id": "P0245"
+ },
+ {
+  "tag": "researching_iraq_other_ar",
+  "id": "P0087"
+ }
+]
