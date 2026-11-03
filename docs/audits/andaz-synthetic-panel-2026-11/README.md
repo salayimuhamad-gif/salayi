@@ -26,7 +26,7 @@
 | Phased roadmap with dependencies | `report/09_ROADMAP.md` |
 | Downside / base / upside scenarios and evidence needed for viability | `report/10_SCENARIOS.md` |
 | Real-user validation plan | `report/12_VALIDATION_PLAN.md` |
-| Persona registry P0001–P1000 (attributes, tasks, outcomes, narratives — 350 LLM-written, 650 engine-template, disclosed per record in `narrative_source`) | `panel/personas.json` · `panel/personas.csv` · `panel/outcomes.json` · `panel/outcomes.csv` · `panel/narratives/batch_NN.jsonl` · `panel/reconciliation.csv` |
+| Persona registry P0001–P1000 (attributes, tasks, outcomes, narratives — 420 LLM-written, 580 engine-template, disclosed per record in `narrative_source`) | `panel/personas.json` · `panel/personas.csv` · `panel/outcomes.json` · `panel/outcomes.csv` · `panel/narratives/batch_NN.jsonl` · `panel/reconciliation.csv` |
 | Panel composition (realised counts) | `panel/composition.json` |
 | Evidence log (E-ACC-*, E-SITE-*) and raw exports | `evidence/evidence_log.csv` · `evidence/raw/` |
 | Evaluation inputs | `evidence/feature_availability.json` · `evidence/impact_rules.json` |
