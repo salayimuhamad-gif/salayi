@@ -9040,7 +9040,7 @@
   },
   "main_confusion": "Arabic area pages such as «کورانی نوی» carry Kurdish names; reading only Arabic, he cannot match them to the neighbourhoods along the 60-metre road (E-SITE-20).",
   "trust_concern_observed": "Neutral and unbothered; the Arabic template «يصفه أحدث مصدر تمت مراجعته» even sounds careful, though its spelling («اربيل») is off (E-SITE-20).",
-  "frustration_point": "His trigger is missing prices; projects list units and floors but no price or currency, so his fees-and-currency question cannot be answered (E-SITE-08).",
+  "frustration_point": "Absent prices would send him away; projects list units and floors but no price or currency, so his fees-and-currency question cannot be answered (E-SITE-08).",
   "most_useful_feature": "Geocoded projects and 81 area pages let him place a project relative to the 60-metre road (E-SITE-22, E-SITE-23).",
   "missing_information": "School, gym and internet near the project — amenity content was not observable — and any price in USD or IQD (E-ACC-05, E-SITE-08).",
   "would_return": "unlikely_no_need",
@@ -9292,7 +9292,7 @@
    "E-SITE-20",
    "E-SITE-23"
   ],
-  "initial_understanding": "Reads the hero promise and the description (E-SITE-04) and understands this is an Erbil property site; has no purchasing role.",
+  "initial_understanding": "«القيمة الحقيقية لعقارك» and «مؤشرات السوق» are grown-up words to her; with basic reading she never gets a simple 'here are house prices' message (E-SITE-04).",
   "predicted_outcome": {
    "T01": "abandons",
    "T16": "abandons"
@@ -9333,15 +9333,15 @@
     ]
    }
   },
-  "main_confusion": "Area names shown in another language or as a transliteration (E-SITE-20).",
-  "trust_concern_observed": "Developer names and the provenance phrase on project pages (E-SITE-08) are reassuring; operator identity not observed",
-  "frustration_point": "An area page named 'kwrany nwe' or a Kurdish name on the Arabic site (E-SITE-20).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Area names in the persona's language.",
+  "main_confusion": "«مؤشرات السوق» — 'market indicators' is exactly the kind of term she cannot decode, and the page behind it is a Kurdish coming-soon heading (E-SITE-04, E-SITE-14).",
+  "trust_concern_observed": "Nothing registered as untrustworthy; she left before trust mattered, with Arabic area pages showing Kurdish names like «کورانی نوی» as the last puzzle (E-SITE-20).",
+  "frustration_point": "Her trigger is unfamiliar terms; indicators, «نرخاندنی ناوخۆیی» and 'map.investment' arrive with no explanation, and she closes the page (E-SITE-16, E-SITE-15).",
+  "most_useful_feature": "81 area pages mean neighbourhoods like hers may be findable, though Shawes and Bahrka were not confirmed among observed names (E-SITE-23).",
+  "missing_information": "A simple price with currency and a note on fees; no price text anywhere in project data (E-SITE-08).",
   "would_return": "unlikely_no_need",
-  "what_would_change_decision": "One-sentence purpose line under the hero that names the three things a visitor can do here; Same as R14",
+  "what_would_change_decision": "A one-line plain-Arabic explanation of each section, and prices with currency.",
   "adoption_category": "D",
-  "simulated_reaction": "موقع عقارات. لا أحتاجه الآن. (A property site; no need now.)",
+  "simulated_reaction": "«مؤشرات؟ تقييم داخلي؟ أنا بس أريد أعرف البيت بكم.» (Indicators? Internal valuation? I just want to know how much a house costs.)",
   "adoption_label": "Has no current relevant need",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -9350,7 +9350,7 @@
    "R25-advisor-exists-positive",
    "R28-areas-broad-coverage-positive"
   ],
-  "narrative_source": "engine_template"
+  "narrative_source": "llm_batch_agent"
  },
  {
   "id": "P0062",
@@ -9424,7 +9424,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "The Sorani homepage reads as a valuation-and-indicators service for Erbil, which is what an investor comparing two areas hopes for (E-SITE-04, E-SITE-01).",
   "predicted_outcome": {
    "T01": "completes",
    "T04": "cannot_assess",
@@ -9500,15 +9500,15 @@
     ]
    }
   },
-  "main_confusion": "A page titled 'map.investment' (E-SITE-15).",
-  "trust_concern_observed": "No about/contact/privacy/terms pages and no social profiles were found (E-SITE-03, E-SITE-17)",
-  "frustration_point": "Opening «نیشاندەرەکانی بازاڕ» and finding a 'coming soon' page after the homepage promised indicators (E-SITE-14).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Dated, sourced market indicators.",
+  "main_confusion": "«نرخاندنی ناوخۆیی» — is 'internal valuation' something she can run for a Havalan unit, or an internal tool? Its page has no description (E-SITE-16).",
+  "trust_concern_observed": "«نوێترین سەرچاوەی پشکنراو» and named developers such as «ڕامی هۆڵدینگ» raise trust; /contact and /terms returning 404 lower it for a neutral visitor (E-SITE-22, E-SITE-17).",
+  "frustration_point": "Her trigger is a map that never finishes; «نەخشەی نرخەکان» exists but load behaviour on a slow connection was not measured (E-SITE-16, E-ACC-05).",
+  "most_useful_feature": "Developer and status facts per project let her judge who is behind a Havalan or Royal City scheme (E-SITE-08).",
+  "missing_information": "Price trends with currency and fee basis for both areas; comparison and shortlist were not observable, and Royal City was not confirmed in the sitemap excerpt (E-ACC-05, E-SITE-02).",
   "would_return": "yes_if_fixed",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
+  "what_would_change_decision": "Dated price-per-metre trends per area, stating USD or IQD and whether fees are included.",
   "adoption_category": "B",
-  "simulated_reaction": "بۆ نیشاندەرەکان هاتم و «بەم زووانە»م بینی. (Came for indicators, found 'coming soon'.)",
+  "simulated_reaction": "«گەشەپێدەرەکە دیارە، سەرچاوەش پشکنراوە، بەڵام نرخ بە دۆلار یان دینار؟ هیچ نییە.» (The developer is shown, the source is checked, but price in dollars or dinars? There is none.)",
   "adoption_label": "Would use it after specific improvements",
   "outcome_confidence": "medium",
   "applied_rule_ids": [
@@ -9520,7 +9520,7 @@
    "R21-provenance-wording-positive",
    "R25-advisor-exists-positive"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
@@ -9592,7 +9592,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site.",
+  "initial_understanding": "Reading Sorani slowly, she still catches «بەهای ڕاستەقینەی خانووبەرەکەت» — value my house — which is step one of her sell-then-buy plan (E-SITE-04).",
   "predicted_outcome": {
    "T01": "completes",
    "T06": "completes",
@@ -9659,15 +9659,15 @@
     ]
    }
   },
-  "main_confusion": "Project pages with units and floors but no price or payment basis (E-SITE-08).",
-  "trust_concern_observed": "Developer names and the provenance phrase on project pages (E-SITE-08) are reassuring; operator identity not observed",
-  "frustration_point": "A project page with units, floors and areas but no price (E-SITE-08).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Price or price range, payment basis and update date.",
+  "main_confusion": "'Welcome back' — trying the account route from the Kurdish site brings English, a language she does not read (E-SITE-12).",
+  "trust_concern_observed": "Neutral; what she notices is that no date appears on any project, so she cannot tell whether a Havalan listing is current (E-SITE-08).",
+  "frustration_point": "Her trigger is 'no updated date' and it fires: the template says «نوێترین سەرچاوەی پشکنراو» but never when (E-SITE-08).",
+  "most_useful_feature": "Project facts such as unit-area ranges and «تەواوکراو یان ئامادە» status, plus 81 area pages for a local resident (E-SITE-08, E-SITE-23).",
+  "missing_information": "Whether Havalan has an area page, price per unit with currency and fees, and a side-by-side comparison, which was not observable (E-SITE-23, E-ACC-05).",
   "would_return": "yes_if_fixed",
-  "what_would_change_decision": "Show at least an indicative price range (or 'price not published by developer') and the payment basis on every project page; Define a minimum content standard per project (location, type, status, developer, units, delivery, price basis) and flag incomplete pages",
+  "what_would_change_decision": "A date on every project and prices with currency.",
   "adoption_category": "B",
-  "simulated_reaction": "وحدات وطوابق، ولا سعر واحد. (Units and floors, no price.)",
+  "simulated_reaction": "«بۆ فرۆشتن بڕیار دەدەم ئەگەر بزانم نرخەکان ئەمساڵن یان پارساڵ؛ بەروار نییە.» (I'd decide to sell if I knew the prices are this year's or last year's; there's no date.)",
   "adoption_label": "Would use it after specific improvements",
   "outcome_confidence": "medium",
   "applied_rule_ids": [
@@ -9677,7 +9677,7 @@
    "R20-valuation-promise-positive",
    "R28-areas-broad-coverage-positive"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
@@ -9749,7 +9749,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "She reads the Sorani homepage as a market-data brand for Erbil property, promising indicators a broker could quote to clients (E-SITE-01, E-SITE-04).",
   "predicted_outcome": {
    "T01": "completes",
    "T17": "struggles",
@@ -9834,15 +9834,15 @@
     ]
    }
   },
-  "main_confusion": "A page titled 'map.investment' (E-SITE-15).",
-  "trust_concern_observed": "Developer names and the provenance phrase on project pages (E-SITE-08) are reassuring; operator identity not observed",
-  "frustration_point": "Opening «نیشاندەرەکانی بازاڕ» and finding a 'coming soon' page after the homepage promised indicators (E-SITE-14).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Dated, sourced market indicators.",
+  "main_confusion": "'map.investment' — the investment map she would show clients has a raw key as its title (E-SITE-15).",
+  "trust_concern_observed": "Provenance wording «نوێترین سەرچاوەی پشکنراو» helps; «مــاونـتـن ڤیـــو» with tatweel and a bilingual «Park View پارک ڤیو» look unprofessional to a broker (E-SITE-08, E-SITE-22).",
+  "frustration_point": "Impatient, she opens the indicators page and reads «نیشاندەرەکانی بازاڕ بەم زووانە»; a coming-soon page ends T15 at once (E-SITE-14).",
+  "most_useful_feature": "Login and registration exist and are reachable, though their requirements and any cost were not observed (E-SITE-12).",
+  "missing_information": "Listing cost, lead volume and a phone to reach the platform; 0 phones on scanned pages and only an info@ address found (E-SITE-01, E-SITE-03).",
   "would_return": "yes_if_fixed",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles",
+  "what_would_change_decision": "A broker page stating listing fees, lead handling and a phone number.",
   "adoption_category": "B",
-  "simulated_reaction": "«map.investment»؟ ئەمە شکاوە. ('map.investment'? Broken page.)",
+  "simulated_reaction": "«کڕیارەکانم چاوەڕێن؛ نیشاندەرەکان بەم زووانە و ژمارەی تەلەفۆنیش نییە، چۆن کار بکەم؟» (My clients are waiting; indicators coming soon and no phone number, how do I work?)",
   "adoption_label": "Would use it after specific improvements",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -9855,7 +9855,7 @@
    "R21-provenance-wording-positive",
    "R22-structured-data-anomalies"
   ],
-  "narrative_source": "engine_template"
+  "narrative_source": "llm_batch_agent"
  },
  {
   "id": "P0065",
@@ -9921,7 +9921,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "«القيمة الحقيقية لعقارك» versus «اكتشف عقارات أربيل…» — two first-screen promises, and neither says 'compare areas', which is what she came for (E-SITE-04).",
   "predicted_outcome": {
    "T01": "abandons",
    "T03": "abandons"
@@ -9971,15 +9971,15 @@
     ]
    }
   },
-  "main_confusion": "Project pages with units and floors but no price or payment basis (E-SITE-08).",
-  "trust_concern_observed": "Developer names and the provenance phrase on project pages (E-SITE-08) are reassuring; operator identity not observed",
-  "frustration_point": "A project page with units, floors and areas but no price (E-SITE-08).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Price or price range, payment basis and update date.",
+  "main_confusion": "Arabic area pages titled in Kurdish («کورانی نوی»); reading Arabic only, she cannot be sure which page is Zanko or Mamostayan to share (E-SITE-20).",
+  "trust_concern_observed": "Arabic copy with «المدينة الايطالية 2» beside «ايطالي ستي 2» and «تتكون المشروع» looks unedited to a skeptical reader; no phone was requested, which she likes (E-SITE-10, E-SITE-13).",
+  "frustration_point": "Missing prices are her breaking point; project pages hold no price and 14 of 64 hold a line or nothing, so she abandons the project view (E-SITE-08, E-SITE-22).",
+  "most_useful_feature": "Nothing asked for her number; areas and projects are open to anonymous browsing (E-SITE-11, E-SITE-08).",
+  "missing_information": "Comparable facts for Zanko and Mamostayan in Arabic; area descriptions are generic and names untranslated (E-SITE-11, E-SITE-20).",
   "would_return": "unlikely_no_need",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; One-sentence purpose line under the hero that names the three things a visitor can do here",
+  "what_would_change_decision": "Arabic area names and a few price facts per area page.",
   "adoption_category": "D",
-  "simulated_reaction": "موقع عقارات. لا أحتاجه الآن. (A property site; no need now.)",
+  "simulated_reaction": "«ما طلب رقمي، تمام، لكن بدون أسعار شو أشارك مع قريبي؟» (It didn't ask for my number, fine, but without prices what do I share with my relative?)",
   "adoption_label": "Has no current relevant need",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -9988,7 +9988,7 @@
    "R16-mixed-script-spelling",
    "R25-advisor-exists-positive"
   ],
-  "narrative_source": "engine_template"
+  "narrative_source": "llm_batch_agent"
  },
  {
   "id": "P0066",
@@ -10053,7 +10053,7 @@
    "E-SITE-17",
    "E-SITE-18"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "The Arabic heading «القيمة الحقيقية لعقارك» speaks to an owner; he expects to learn what his Kalak house is worth and how to let it (E-SITE-04).",
   "predicted_outcome": {
    "T01": "completes",
    "T08": "struggles",
@@ -10112,15 +10112,15 @@
     ]
    }
   },
-  "main_confusion": "Whether the site is for valuing a property or for finding one (E-SITE-04).",
-  "trust_concern_observed": "No about/contact/privacy/terms pages and no social profiles were found (E-SITE-03, E-SITE-17)",
-  "frustration_point": "Looking for who operates the site and finding 404 at /about and /contact (E-SITE-17).",
-  "most_useful_feature": "The valuation promise «بەهای ڕاستەقینەی خانووبەرەکەت» (E-SITE-04)",
-  "missing_information": "Operator identity, address, legal pages.",
+  "main_confusion": "'Your property advisor — Andaz' and «نرخاندنی ناوخۆیی» — two possible places to ask about rent, one English and one Kurdish, neither Arabic (E-SITE-18, E-SITE-16).",
+  "trust_concern_observed": "/contact and /privacy return '404 · Andaz' and only info@ emails exist; a privacy-conscious owner has nowhere to read how his details are used (E-SITE-17, E-SITE-03).",
+  "frustration_point": "His trigger is a map that never loads; map behaviour was not measured, so the observable stop is the missing owner path — no listing route and a coming-soon companies page (E-ACC-05, E-SITE-14).",
+  "most_useful_feature": "The valuation promise itself and an info@andaz.app address as a fallback contact (E-SITE-04, E-SITE-03).",
+  "missing_information": "Typical rents in Kalak and how an owner lists; Kalak is outside the observed area names and no listing route was found (E-SITE-23, E-SITE-16).",
   "would_return": "yes_if_fixed",
-  "what_would_change_decision": "One-sentence purpose line under the hero that names the three things a visitor can do here; Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
+  "what_would_change_decision": "An Arabic owner page: how to list, the fee, and a phone number.",
   "adoption_category": "B",
-  "simulated_reaction": "هل هذا للبيع والشراء أم لتقدير السعر؟ (Marketplace or valuation tool?)",
+  "simulated_reaction": "«يقول القيمة الحقيقية لعقاري، طيب؛ لكن كيف أعرضه للإيجار ومن أكلم؟» (It says the true value of my property, fine; but how do I list it for rent and who do I talk to?)",
   "adoption_label": "Would use it after specific improvements",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -10130,7 +10130,7 @@
    "R19-no-listing-path-for-owners",
    "R20-valuation-promise-positive"
   ],
-  "narrative_source": "engine_template"
+  "narrative_source": "llm_batch_agent"
  },
  {
   "id": "P0067",
@@ -10191,7 +10191,7 @@
    "E-SITE-17",
    "E-SITE-19"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "'The true value of your property' is announced first; a screen-reader user hears a valuation service before anything says Erbil prices can be browsed (E-SITE-04).",
   "predicted_outcome": {
    "T01": "abandons",
    "T13": "abandons",
@@ -10249,15 +10249,15 @@
     ]
    }
   },
-  "main_confusion": "A page titled 'map.investment' (E-SITE-15).",
-  "trust_concern_observed": "none observed for this persona's tasks",
-  "frustration_point": "Opening «نیشاندەرەکانی بازاڕ» and finding a 'coming soon' page after the homepage promised indicators (E-SITE-14).",
-  "most_useful_feature": "81 named area pages (E-SITE-23)",
-  "missing_information": "Dated, sourced market indicators.",
+  "main_confusion": "'map.investment' read aloud as a page title — a word pair that means nothing, on the page that should show investment prices (E-SITE-15).",
+  "trust_concern_observed": "Trusting, but his fear is remote; no phone and no contact page mean nobody can call him back (E-SITE-01, E-SITE-17).",
+  "frustration_point": "Prices are what he came for and none exist in project data; a wrong path then reads only '404' with no message or links to recover by (E-SITE-08, E-SITE-17, E-SITE-19).",
+  "most_useful_feature": "none for this persona — the areas index has an empty H1 and a generic title, which gives a screen reader nothing to announce (E-SITE-06).",
+  "missing_information": "Price levels near Rizgary Hospital and a call-back route; heading structure beyond the H1 was not observable (E-SITE-08, E-ACC-05).",
   "would_return": "unlikely_no_need",
-  "what_would_change_decision": "Fix the untranslated key on /invest and add an automated check that fails the build on raw keys in titles; One-sentence purpose line under the hero that names the three things a visitor can do here",
+  "what_would_change_decision": "Prices on pages, a labelled 404 with links, and a phone number.",
   "adoption_category": "D",
-  "simulated_reaction": "A property site. Not something I need now. (A property site; no need now.)",
+  "simulated_reaction": "'My screen reader says four-zero-four and nothing else, and I never heard a single price.' (Dead end with no recovery; no prices.)",
   "adoption_label": "Has no current relevant need",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -10266,7 +10266,7 @@
    "R04b-raw-i18n-key-investors",
    "R17-dead-end-404-template"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
@@ -10339,7 +10339,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "She wants one sentence saying 'find flats for sale'; instead the first screen offers «بەهای ڕاستەقینەی خانووبەرەکەت» plus a three-part description, and she gives up (E-SITE-04, E-SITE-01).",
   "predicted_outcome": {
    "T01": "abandons",
    "T04": "cannot_assess",
@@ -10409,15 +10409,15 @@
     ]
    }
   },
-  "main_confusion": "Project pages with units and floors but no price or payment basis (E-SITE-08).",
-  "trust_concern_observed": "none observed for this persona's tasks",
-  "frustration_point": "A project page with units, floors and areas but no price (E-SITE-08).",
-  "most_useful_feature": "none for this persona",
-  "missing_information": "Price or price range, payment basis and update date.",
+  "main_confusion": "«بەهای ڕاستەقینەی خانووبەرەکەت» — she has no property; the heading seems to address someone else (E-SITE-04).",
+  "trust_concern_observed": "No phone on any page and /contact at 404; neutral, but with no way to ask, trust never gets a chance to build (E-SITE-01, E-SITE-17).",
+  "frustration_point": "Her trigger is an unclear homepage, and it fires: two promises, no plain purpose line, on an expensive, unstable connection (E-SITE-04).",
+  "most_useful_feature": "none for this persona — comparison (T04) and advisor (T10) were not observable, and no contact route was found (E-ACC-05, E-SITE-08).",
+  "missing_information": "What $80,000 buys and whom to ask; 0 phones and no price text in any project description (E-SITE-01, E-SITE-08).",
   "would_return": "unknown",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; One-sentence purpose line under the hero that names the three things a visitor can do here",
+  "what_would_change_decision": "A one-line Sorani purpose statement and a phone number on the homepage.",
   "adoption_category": "E",
-  "simulated_reaction": "یەکە و نهۆم هەیە، نرخ نییە. (Units and floors, no price.)",
+  "simulated_reaction": "«لە یەکەم شاشە تێنەگەیشتم ئەمە بۆ چییە؛ داتای مۆبایلم بۆ ئەمە بەفیڕۆ نادەم.» (From the first screen I didn't understand what this is for; I won't waste my mobile data on it.)",
   "adoption_label": "Cannot assess because evidence is insufficient",
   "outcome_confidence": "low",
   "applied_rule_ids": [
@@ -10426,7 +10426,7 @@
    "R09-thin-project-pages",
    "R16-mixed-script-spelling"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
@@ -10501,7 +10501,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "The Sorani homepage reads as Erbil property with valuation and offers; a cash buyer with moderate knowledge expects project pages with sizes and prices (E-SITE-04, E-SITE-01).",
   "predicted_outcome": {
    "T01": "completes",
    "T11": "struggles",
@@ -10589,15 +10589,15 @@
     ]
    }
   },
-  "main_confusion": "The account pages appearing in English at the Kurdish/Arabic path (E-SITE-12).",
-  "trust_concern_observed": "No about/contact/privacy/terms pages and no social profiles were found (E-SITE-03, E-SITE-17)",
-  "frustration_point": "Reaching a suitable project and finding no phone, WhatsApp or form in any observed page (E-SITE-08, E-SITE-17).",
-  "most_useful_feature": "Project facts (developer, status, units, floors, unit areas) and coordinates on every project (E-SITE-08, E-SITE-22)",
-  "missing_information": "Price or price range, payment basis and update date.",
+  "main_confusion": "'Sign in or create an account · Andaz' — the one page in a language he did not choose, and his trigger is exactly a language he cannot switch (E-SITE-12).",
+  "trust_concern_observed": "Skeptical and privacy-minded, he finds /privacy and /terms at 404 and no phone anywhere; developer names are the only accountable party (E-SITE-17, E-SITE-08).",
+  "frustration_point": "The English account page is his trigger in miniature; whether a language switch exists in its body was not observed (E-SITE-12, E-ACC-05).",
+  "most_useful_feature": "Unit-area ranges and towers/floors on richer project pages, and an advisor open without login (E-SITE-08, E-SITE-13).",
+  "missing_information": "What $275,000 buys — no price in any project data — and a contact route: 0 phones, only info@ emails (E-SITE-08, E-SITE-03).",
   "would_return": "yes_if_fixed",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; Add About, Contact, Privacy and Terms pages linked from the footer with the operator's legal name, address, email and phone",
+  "what_would_change_decision": "Sorani account pages and a price range with a WhatsApp contact per project.",
   "adoption_category": "B",
-  "simulated_reaction": "لاپەڕەی هەژمار بە ئینگلیزییە… بۆ من نییە. (The account page is in English; not for me.)",
+  "simulated_reaction": "«هەموو شتێک بە کوردییە تا پەڕەی ئەکاونت؛ لەوێ لەپڕ ئینگلیزی دەبێت.» (Everything is Kurdish until the account page; there it suddenly turns English.)",
   "adoption_label": "Would use it after specific improvements",
   "outcome_confidence": "high",
   "applied_rule_ids": [
@@ -10610,7 +10610,7 @@
    "R16-mixed-script-spelling",
    "R25-advisor-exists-positive"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
@@ -10681,7 +10681,7 @@
    "E-SITE-22",
    "E-SITE-23"
   ],
-  "initial_understanding": "From the hero «بەهای ڕاستەقینەی خانووبەرەکەت» and the description about Erbil properties, indicators and offers (E-SITE-04), understands it as an Erbil property-information site but has to reconcile the valuation promise with the discovery promise.",
+  "initial_understanding": "An expert reads the Sorani homepage as valuation plus market data for Erbil; she expects developer credibility and price provenance to follow (E-SITE-04, E-SITE-01).",
   "predicted_outcome": {
    "T01": "completes",
    "T10": "cannot_assess",
@@ -10747,15 +10747,15 @@
     ]
    }
   },
-  "main_confusion": "A page titled 'map.investment' (E-SITE-15).",
-  "trust_concern_observed": "none observed for this persona's tasks",
-  "frustration_point": "Opening «نیشاندەرەکانی بازاڕ» and finding a 'coming soon' page after the homepage promised indicators (E-SITE-14).",
-  "most_useful_feature": "The valuation promise «بەهای ڕاستەقینەی خانووبەرەکەت» (E-SITE-04)",
-  "missing_information": "Dated, sourced market indicators.",
+  "main_confusion": "«گوندی ( ئینكلیزی)» — a project with a malformed name and no description; she cannot tell whether it is a real listing or a placeholder (E-SITE-22).",
+  "trust_concern_observed": "Developer names on roughly 1 in 5 pages and «نوێترین سەرچاوەی پشکنراو» on about half help; /contact at 404 and a second domain mulkwallet.com puzzle her (E-SITE-22, E-SITE-17, E-SITE-03).",
+  "frustration_point": "Her trigger is an empty result with no next step; the market page «نیشاندەرەکانی بازاڕ بەم زووانە» is exactly that for someone seeking price trends (E-SITE-14).",
+  "most_useful_feature": "Named developers such as «هێمن گروپ» and status values let her judge credibility without registering (E-SITE-22).",
+  "missing_information": "Verified prices (none exist), proximity to schools (places content not observable), and whether registration is ever required (E-SITE-08, E-SITE-16, E-ACC-05).",
   "would_return": "unknown",
-  "what_would_change_decision": "Normalise Kurdish/Arabic letters (ی/ي, ک/ك), fix hamza and ta-marbuta spellings, and use one name per project across languages; Either publish the market indicators page with dated, sourced figures or remove the promise from the homepage copy until it exists",
+  "what_would_change_decision": "A price with source and date next to each developer name.",
   "adoption_category": "E",
-  "simulated_reaction": "بۆ نیشاندەرەکان هاتم و «بەم زووانە»م بینی. (Came for indicators, found 'coming soon'.)",
+  "simulated_reaction": "«گەشەپێدەرەکان دەناسم، بەڵام نرخی پشکنراو هیچ نییە؛ بێ نرخ متمانە واتای نییە.» (I know the developers, but there is no verified price at all; without a price, credibility means nothing.)",
   "adoption_label": "Cannot assess because evidence is insufficient",
   "outcome_confidence": "low",
   "applied_rule_ids": [
@@ -10764,7 +10764,7 @@
    "R16-mixed-script-spelling",
    "R20-valuation-promise-positive"
   ],
-  "narrative_source": "engine_template",
+  "narrative_source": "llm_batch_agent",
   "tasks_corrected": true
  },
  {
