@@ -272,7 +272,7 @@ def main(root: str) -> None:
     with open(os.path.join(root, "panel", "outcomes.json"), "w", encoding="utf-8") as f:
         json.dump(list(outcomes.values()), f, ensure_ascii=False, indent=1)
     with open(os.path.join(root, "panel", "outcomes.csv"), "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["id", "adoption_category", "has_relevant_need", "would_return", "trust_breaks", "value_gaps", "tolerance",
                     "task_outcomes", "applied_rule_ids", "improvements_that_change_decision"])
         for o in outcomes.values():

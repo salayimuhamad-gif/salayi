@@ -1058,7 +1058,7 @@ def main(out_dir: str) -> None:
         json.dump(composition, f, ensure_ascii=False, indent=1)
     cols = list(personas[0].keys())
     with open(os.path.join(out_dir, "personas.csv"), "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(cols)
         for p in personas:
             row = []

@@ -1,0 +1,18 @@
+page_url,title_tag,h1,lang,canonical,robots,schema_types,json_ld_address_locality,phone_count,note
+https://andaz.krd/projects/cihan-city,جيهان ستي · Andaz,جيهان ستي,ckb,https://andaz.krd/projects/cihan-city,"index,follow",Residence,"ڕاستی, IQ",0,JSON-LD description mentions 1404 apartments; address locality is not a place name
+https://andaz.krd/projects/bafrin-city,بەفرین ستی · Andaz,بەفرین ستی,ckb,https://andaz.krd/projects/bafrin-city,"index,follow",Residence,,0,one-line description; geo 36.2938645/44.1179966
+https://andaz.krd/projects/dubai-city,دوبەی ستی · Andaz,دوبەی ستی,ckb,https://andaz.krd/projects/dubai-city,"index,follow",Residence,"دوبەی ستی, IQ",0,locality equals project name; geo 36.2064956/44.1127939
+https://andaz.krd/en/projects/italian-city-2,Italian City 2 · Andaz,Italian City 2,en,https://andaz.krd/projects/italian-city-2,"index,follow",Residence,,0,canonical points to ckb URL; full English description (1561 houses; 200/240 m² house types)
+https://andaz.krd/areas/erbil-city,هەولێر — Andaz,هەولێر,ckb,https://andaz.krd/areas/erbil-city,"index,follow",,,0,meta description = site default
+https://andaz.krd/areas/erbil-mahalla-104,گردە ڕەشە موفتی 14 — Andaz,گردە ڕەشە موفتی 14,ckb,https://andaz.krd/areas/erbil-mahalla-104,"index,follow",,,0,meta description = site default
+https://andaz.krd/ar/areas/erbil-city,أربيل — Andaz,أربيل,ar,https://andaz.krd/ar/areas/erbil-city,"index,follow",,,0,
+https://andaz.krd/en/areas/erbil-city,Erbil — Andaz,Erbil,en,https://andaz.krd/en/areas/erbil-city,"index,follow",,,0,
+https://andaz.krd/login,Sign in or create an account · Andaz,Welcome back,en,https://andaz.krd/login,"noindex,follow",,,0,csrf-token meta present; theme-color #087a5d
+https://andaz.krd/market,نیشاندەرەکانی بازاڕ بەم زووانە · Andaz,نیشاندەرەکانی بازاڕ بەم زووانە,ckb,https://andaz.krd/market,"noindex,follow",,,0,coming-soon page
+https://andaz.krd/about,404 · Andaz,404,ckb,,"noindex,nofollow",,,0,404 template: theme-color #ffffff; viewport without viewport-fit
+https://andaz.krd/companies,کۆمپانیاکانی خانووبەرە بەم زووانە · Andaz,کۆمپانیاکانی خانووبەرە بەم زووانە,ckb,https://andaz.krd/companies,"noindex,follow",,,0,coming-soon page
+https://andaz.krd/invest,map.investment · Andaz,map.investment,ckb,https://andaz.krd/invest,"noindex,follow",,,0,raw translation key as title and H1
+https://andaz.krd/pricing,نرخاندنی ناوخۆیی · Andaz,نرخاندنی ناوخۆیی,ckb,,"noindex,nofollow",,,0,
+https://andaz.krd/help,404 · Andaz,404,ckb,,"noindex,nofollow",,,0,
+https://andaz.krd/en/login,Sign in or create an account · Andaz,Welcome back,en,https://andaz.krd/login,"noindex,follow",,,0,
+https://andaz.krd/this-page-should-not-exist-404-probe,404 · Andaz,404,ckb,,"noindex,nofollow",,,0,
