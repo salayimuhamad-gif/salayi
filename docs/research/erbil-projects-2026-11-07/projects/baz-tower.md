@@ -54,7 +54,7 @@ Project ID: baz-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Payment plan | Not verified | — | — | — | — |
 
 ## PART E — LOCATION & SURROUNDINGS
-Paya places the tower "in the heart of Erbil", "along 100 Meter Street", which it describes as one of the city's main commercial arteries. No neighbourhood, cross-street, landmark, distance or coordinate is given by any source, and no other primary site in the evidence pack has a page for this project.
+Paya places the tower "in the heart of Erbil", "along 100 Meter Street", which it describes as one of the city's main commercial arteries. No neighbourhood, cross-street, landmark or distance is given by any source, and no other primary site in the evidence pack has a page for this project. Map position (low confidence, from agency map pins): 36.1807004, 43.9618505.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

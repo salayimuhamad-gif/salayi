@@ -43,17 +43,17 @@ Project ID: new-erbil-showrooms-alcove | Tier: 2 | In Erbil city: Yes | Last res
 | Ready two-floor house 125 m2, 3 bed / 2 bath - asking price, negotiable (homele listing under same area) | 87,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove |
 
 ## PART E — LOCATION & SURROUNDINGS
-The homele area name places the showrooms in New Erbil (Hawler Nwê), within the study scope. No street, landmark or coordinates are published.
+The homele area name places the showrooms in New Erbil (Hawler Nwê), within the study scope. No street or landmark are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-نیو ئەربیل شۆڕوومز بای ئەلکۆڤ (New Erbil Showrooms by Alcove) پڕۆژەیەکی بازرگانیی پێشانگایە (شۆڕووم) لە هەولێر، کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە؛ ناوەکە ئاماژە بە ناوچەی هەولێری نوێ و کۆمپانیای ئەلکۆڤ (Alcove) دەکات. ئەو یەکانەی لەوێ ڕیکلامیان بۆ کراوە پێشانگای لەسەر نەخشەن بۆ فرۆشتن بە پارەی پێشەکی: پێشانگایەکی ١٥٢ م² بە ٢٠٠,٠٠٠ دۆلاری ئەمریکی، پێشانگایەکی ٢٠٠ م² بە ٢٥٠,٠٠٠ دۆلار، و پێشانگایەکی گۆشەی ٢٠٠ م² بە ٣٠٠,٠٠٠ دۆلار. هەروەها خانوویەکی ئامادەی دوو نهۆمی بە ڕووبەری ١٢٥ م² بە سێ ژووری نووستن و دوو حەمام لە ژێر هەمان ناوچەدا بە ٨٧,٠٠٠ دۆلار تۆمار کراوە، کە نرخەکەی گفتوگۆی لەسەر دەکرێت.
+پێشانگاکانی هەولێری نوێ لەلایەن ئەلکۆڤ (New Erbil Showrooms by Alcove) پڕۆژەیەکی بازرگانیی پێشانگایە (شۆڕووم) لە ناوچەی هەولێری نوێ لە شاری هەولێر. پڕۆژەکە پێشانگای ١٥٢ م² و ٢٠٠ م² پێشکەش دەکات، لەوانە پێشانگایەکی سووچی ٢٠٠ م². پێشانگاکان پێش تەواوبوونی دروستکردن (ئۆف پلان) دەفرۆشرێن.
 
 ### 2. Arabic (العربية)
-معارض نيو أربيل من ألكوف (New Erbil Showrooms by Alcove) مشروع تجاري للمعارض في أربيل، مدرج بهذا الاسم على بوابة العقارات homele.com، ويشير اسمه إلى منطقة أربيل الجديدة (Hawler Nwê) وإلى شركة ألكوف (Alcove). والوحدات المعلن عنها فيه معارض على الخارطة للبيع بدفعة أولى: معرض بمساحة 152 م² بسعر 200,000 دولار أمريكي، ومعرض بمساحة 200 م² بسعر 250,000 دولار، ومعرض زاوية بمساحة 200 م² بسعر 300,000 دولار. كما يُدرج تحت المنطقة نفسها بيت جاهز من طابقين بمساحة 125 م² بثلاث غرف نوم وحمامين بسعر 87,000 دولار قابل للتفاوض.
+معارض أربيل الجديدة من ألكوف (New Erbil Showrooms by Alcove) مشروع تجاري لصالات العرض في منطقة أربيل الجديدة (هولير نوي) بمدينة أربيل. يوفر المشروع صالات عرض بمساحتي ١٥٢ م² و٢٠٠ م²، منها صالة عرض على زاوية بمساحة ٢٠٠ م². وتُباع صالات العرض على الخارطة قبل اكتمال البناء.
 
 ### 3. English
-New Erbil Showrooms by Alcove is a commercial showroom project in Erbil, listed under this name on the homele.com property portal; the name refers to the New Erbil (Hawler Nwê) area and to the company Alcove. The units advertised there are off-plan showrooms for sale with a down payment: a 152 m² showroom at USD 200,000, a 200 m² showroom at USD 250,000 and a 200 m² corner showroom at USD 300,000. A ready two-floor house of 125 m² with three bedrooms and two bathrooms is also listed under the same area at USD 87,000, negotiable.
+New Erbil Showrooms by Alcove is a commercial project of showrooms in the New Erbil (Hawler Nwê) area of Erbil. The project offers showroom units of 152 m² and 200 m², including a 200 m² corner showroom. The showrooms are sold off-plan.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

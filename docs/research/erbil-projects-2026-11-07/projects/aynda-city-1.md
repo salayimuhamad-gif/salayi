@@ -39,17 +39,17 @@ Project ID: aynda-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Ready house 224 m2, 4 bed / 3 bath - listing asking price (negotiable) | 160,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Aynda City 1' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Aynda City 1' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شاری ئایندە ١ (ئایندە ستی ١) ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمارکراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە خانوون. خانوویەکی مۆدێرن و ئامادە بۆ نیشتەجێبوون لە شاری ئایندە ١ بە نرخی ١٦٠,٠٠٠ دۆلاری ئەمریکی بۆ فرۆشتن ڕیکلامی بۆ کراوە و نرخەکەی گفتوگۆی لەسەر دەکرێت. ڕووبەری ئەو خانووە ٢٢٤ م²ـە و چوار ژووری نووستن و سێ حەمامی هەیە. ناوچەیەکی پەیوەندیدار بە ناوی شاری ئایندە ٢ بە جیا لە هەمان پۆرتاڵدا تۆمارکراوە.
+شاری ئایندە ١ (Aynda City 1) ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر. لە خانووەکانی ئەم ناوچەیە خانوویەکی ٢٢٤ م² هەیە بە چوار ژووری نووستن و سێ حەمام. شاری ئایندە ٢ ناوچەیەکی جیاوازە.
 
 ### 2. Arabic (العربية)
-آينده سيتي 1 (مدينة آينده 1) منطقة سكنية للبيوت في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. العقارات المعلن عنها فيها بيوت. ويُعرض للبيع بيت حديث جاهز للسكن في آينده سيتي 1 بسعر 160,000 دولار أمريكي قابل للتفاوض. تبلغ مساحة هذا البيت 224 م²، ويضم أربع غرف نوم وثلاثة حمامات. وتُدرج منطقة ذات صلة باسم آينده سيتي 2 بشكل منفصل على البوابة نفسها.
+آينده سيتي 1 (Aynda City 1) منطقة سكنية من المنازل في أربيل. ومن المنازل فيها منزل بمساحة 224 م² يضم أربع غرف نوم وثلاثة حمامات. أما آينده سيتي 2 فمنطقة منفصلة.
 
 ### 3. English
-Aynda City 1 (Ayenda City 1) is a residential housing area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are houses. A ready-to-move-in modern house in Aynda City 1 is advertised for sale at USD 160,000, negotiable. The advertised house measures 224 m² and has four bedrooms and three bathrooms. A related area named Aynda City 2 is listed separately on the same portal.
+Aynda City 1, also written Ayenda City 1, is a residential area of houses in Erbil. Houses in the area include a 224 m² house with four bedrooms and three bathrooms. Aynda City 2 is a separate area.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

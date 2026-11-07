@@ -48,13 +48,13 @@ Within Mass City on the 120 m ring road along Masif Road, Erbil (location taken 
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ماس دایمۆند بەشێکی ڤێلای تەواوبووی پڕۆژەی ماس سیتییە کە ماس گرووپ گەشەی پێداوە، لەسەر شەقامی ١٢٠ مەتری بە درێژایی ڕێگای مەسیف لە هەولێر. ڤێلاکان لەسەر پارچە زەویی ٢٤٠ م² و ٣٢٠ م² دروستکراون و هەر قەبارەیەک دوو دیزاینی جۆری A و جۆری B ی هەیە؛ وەسفی پڕۆژەی ماس سیتی ڤێلای ٦٠٠ م²یش بۆ ئەم بەشە دیاری دەکات. ڤێلاکان دوو نهۆمین و ژووری دانیشتن، چەند ژووری نووستن، چێشتخانەی مۆدێرن، باخچەی تایبەت و شوێنی پارکینگیان هەیە. لە تشرینی دووەمی ٢٠٢٦دا، خانووی ٣٢٠ م² بە چوار یان پێنج ژووری نووستن بە نرخی ٣٣٠٬٠٠٠ تا ٤١٠٬٠٠٠ دۆلاری ئەمریکی بە نەقد بۆ فرۆشتن ڕیکلامیان بۆ کرابوو.
+ماس دایمۆند (Mass Diamond) بەشێکی ڤێلای تەواوبووی پڕۆژەی ماس سیتییە لە هەولێر، کە ماس گرووپ گەشەی پێداوە. لە ناو ماس سیتی لەسەر شەقامی ١٢٠ مەتری بە درێژایی ڕێگای مەسیف هەڵکەوتووە. ڤێلاکان لەسەر پارچە زەویی ٢٤٠ م² و ٣٢٠ م² دروست کراون، و هەر ڕووبەرێک دوو دیزاینی هەیە، جۆری A و جۆری B. ڤێلاکان دوو نهۆمین، و هەر ڤێلایەک باخچەی تایبەت و شوێنی پارکینگی خۆی هەیە. خانووەکانی ٣٢٠ م² چوار تا پێنج ژووری نووستن و چوار تا پێنج حەمامیان هەیە.
 
 ### 2. Arabic (العربية)
-ماس دايموند قسم فلل مكتمل ضمن مشروع ماس ستي، طورته مجموعة ماس على شارع ١٢٠ متر على امتداد طريق مصيف في أربيل. بُنيت الفلل على قطع أراضٍ بمساحة ٢٤٠ م² و٣٢٠ م²، ولكل مساحة تصميمان من النوع A والنوع B؛ كما يذكر وصف مشروع ماس ستي فللاً بمساحة ٦٠٠ م² في هذا القسم. تتكون الفلل من طابقين وتضم صالات معيشة وعدة غرف نوم ومطبخاً حديثاً وحديقة خاصة وموقفاً للسيارة. في تشرين الثاني ٢٠٢٦، عُرضت للبيع نقداً منازل بمساحة ٣٢٠ م² وأربع أو خمس غرف نوم بأسعار تتراوح بين ٣٣٠٬٠٠٠ و٤١٠٬٠٠٠ دولار أمريكي.
+ماس دايموند (Mass Diamond) قسم فلل مكتمل ضمن مشروع ماس ستي في أربيل، طوّرته مجموعة ماس. ويقع داخل ماس ستي على شارع 120 متر على امتداد طريق مصيف. بُنيت الفلل على قطع أراضٍ بمساحة 240 م² و320 م²، ولكل مساحة تصميمان، النوع A والنوع B. وتتكوّن الفلل من طابقين، ولكل فيلا حديقة خاصة وموقف سيارة خاص بها. وتضم المنازل بمساحة 320 م² من أربع إلى خمس غرف نوم ومن أربعة إلى خمسة حمامات.
 
 ### 3. English
-Mass Diamond is a completed villa section of Mass City, developed by Mass Group on the 120 m Street along Masif Road in Erbil. The villas are built on plots of 240 m² and 320 m², and each size is available in Type A and Type B designs; the Mass City project description also lists 600 m² villas in this section. The villas have two floors with living areas, several bedrooms, a modern kitchen, a private garden and a parking space. In November 2026, 320 m² houses with four or five bedrooms were advertised for sale for cash at USD 330,000 to USD 410,000.
+Mass Diamond is a completed villa section of Mass City in Erbil, developed by Mass Group. It lies within Mass City on the 120 m Street along Masif Road. The villas are built on plots of 240 m² and 320 m², and each plot size comes in two designs, Type A and Type B. The villas have two levels, and each villa has a private garden and its own parking space. The 320 m² houses have four to five bedrooms and four to five bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -40,17 +40,17 @@ Project ID: true-star | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Payment plan: 18% advance, 20% after structure completion, 22% on delivery, 40% over 5 years (no prices given) | — | USD | developer | accessed 2026-11-07 (page undated) | https://baghyshaqlawa.net/en/projects/true-star |
 
 ## PART E — LOCATION & SURROUNDINGS
-On Bahrka Road in north Erbil, near its junction with the 150 m ring road (Baghy text and map pin).
+ Map position (low confidence, from agency map pins): 36.283192, 44.014454.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ترو ستار پڕۆژەیەکی شوقەی نیشتەجێبوونە کە لە هەولێر لە ژێر بیناکردندایە و لەسەر ڕێگای بەحرکە، لە نزیک شەقامی ١٥٠ مەتری هەڵکەوتووە. پڕۆژەکە لە سێ تاوەری نیشتەجێبوون پێکدێت. جۆرەکانی شوقە بریتین لە شوقەی یەک ژووری نووستن، دوو ژووری نووستن و سێ ژووری نووستن، لەگەڵ شوقەی دووبلێکس. پلانی پارەدان بریتییە لە ٪١٨ پێشەکی، ٪٢٠ دوای تەواوبوونی چوارچێوەی بینا، ٪٢٢ لە کاتی ڕادەستکردن، و ٪٤٠ی ماوە بە قیست لە ماوەی پێنج ساڵدا.
+ترو ستار پڕۆژەیەکی شوقەی نیشتەجێبوونە کە لە هەولێر لە ژێر بیناکردندایە و لەسەر ڕێگای بەحرکە، لە نزیک شەقامی ١٥٠ مەتری هەڵکەوتووە. پڕۆژەکە لە سێ تاوەری نیشتەجێبوون پێکدێت. جۆرەکانی شوقە بریتین لە شوقەی یەک ژووری نووستن، دوو ژووری نووستن و سێ ژووری نووستن، لەگەڵ شوقەی دووبلێکس.
 
 ### 2. Arabic (العربية)
-ترو ستار (True Star) مشروع شقق سكنية قيد الإنشاء في أربيل، يقع على طريق بحركة بالقرب من شارع ١٥٠ متر. يتكون المشروع من ثلاثة أبراج سكنية. تشمل أنواع الشقق شققاً بغرفة نوم واحدة وغرفتين وثلاث غرف نوم، إضافة إلى شقق دوبلكس. خطة الدفع هي ١٨٪ دفعة مقدمة، و٢٠٪ بعد اكتمال الهيكل، و٢٢٪ عند التسليم، و٤٠٪ المتبقية على أقساط لمدة خمس سنوات.
+ترو ستار (True Star) مشروع شقق سكنية قيد الإنشاء في أربيل، يقع على طريق بحركة بالقرب من شارع ١٥٠ متر. يتكون المشروع من ثلاثة أبراج سكنية. تشمل أنواع الشقق شققاً بغرفة نوم واحدة وغرفتين وثلاث غرف نوم، إضافة إلى شقق دوبلكس.
 
 ### 3. English
-True Star is a residential apartment project under construction in Erbil, located on Bahrka Road near the 150 m ring road. The project consists of three residential towers. Apartment types include one-bedroom, two-bedroom and three-bedroom apartments, as well as duplexes. The payment plan is 18% as an advance payment, 20% after completion of the structure, 22% on delivery, and the remaining 40% in instalments over five years.
+True Star is a residential apartment project under construction in Erbil, located on Bahrka Road near the 150 m ring road. The project consists of three residential towers. Apartment types include one-bedroom, two-bedroom and three-bedroom apartments, as well as duplexes.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

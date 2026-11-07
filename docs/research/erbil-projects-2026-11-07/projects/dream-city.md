@@ -48,7 +48,7 @@ Project ID: dream-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Office space 250 m2 - monthly rent | 1,300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dream-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Dream City lies on Erbil's 100-metre street, about 2 km north-west of the city centre and about five minutes by car from Erbil International Airport (Baghy; b-arrow). Haji Salam places it between the 100-metre road and the 40-metre road near the airport. Distances are as stated by the sources; none are estimated here.
+Dream City lies on Erbil's 100-metre street, about 2 km north-west of the city centre and about five minutes by car from Erbil International Airport (Baghy; b-arrow). Haji Salam places it between the 100-metre road and the 40-metre road near the airport. Distances are as stated by the sources; none are estimated here. Map position (low confidence, from agency map pins): 36.20567, 43.976855.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -43,17 +43,17 @@ Project ID: zhyan-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11
 | Ready furnished apartment 147 m2, 2 bed / 2 bath - asking price, negotiable (homele listing) | 62,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zhyan-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Zhyan City' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Zhyan City' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ژیان ستی (Zhyan City) ناوچەیەکی نیشتەجێبوونە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە خانوو و شوقەی ئامادەن بۆ فرۆشتن، و نرخی هەموویان گفتوگۆی لەسەر دەکرێت. خانوویەکی نوێی ١٢٥ م² بە چوار ژووری نووستن و سێ حەمام لەلایەن خاوەنی یەکەمییەوە بە ١٠٧,٥٠٠ دۆلاری ئەمریکی، و خانوویەکی دوو نهۆمی بە ڕووبەری ٢٠٠ م² بە سێ ژووری نووستن و سێ حەمام بە ٨١,٠٠٠ دۆلار خراونەتە ڕوو. شوقەیەکی سێ ژووری نووستن بە ڕووبەری ١٥٠ م² بە ٩٥,٠٠٠ دۆلار، و شوقەیەکی دوو ژووری نووستنی بە کەلوپەلەوە بە ڕووبەری ١٤٧ م² بە ٦٢,٠٠٠ دۆلار تۆمار کراون.
+ژیان سیتی (Zhyan City) ناوچەیەکی نیشتەجێبوونە لە هەولێر کە لە خانوو و شوقە پێکدێت. لە خانووەکانیدا خانوویەکی ١٢٥ م² هەیە بە چوار ژووری نووستن و سێ حەمام، و خانوویەکی دوو نهۆمیی ٢٠٠ م² بە سێ ژووری نووستن و سێ حەمام. لە شوقەکانیشدا شوقەیەکی ١٥٠ م² هەیە بە سێ ژووری نووستن و دوو حەمام، و شوقەیەکی ١٤٧ م² بە دوو ژووری نووستن و دوو حەمام.
 
 ### 2. Arabic (العربية)
-زيان سيتي (Zhyan City) منطقة سكنية في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. والعقارات المعلن عنها فيها بيوت وشقق جاهزة للبيع، وجميع أسعارها قابلة للتفاوض. إذ يُعرض بيت جديد بمساحة 125 م² بأربع غرف نوم وثلاثة حمامات من مالكه الأول بسعر 107,500 دولار أمريكي، وبيت من طابقين بمساحة 200 م² بثلاث غرف نوم وثلاثة حمامات بسعر 81,000 دولار. كما تُعرض شقة بثلاث غرف نوم بمساحة 150 م² بسعر 95,000 دولار، وشقة مفروشة بغرفتي نوم بمساحة 147 م² بسعر 62,000 دولار.
+زيان سيتي (Zhyan City) منطقة سكنية في أربيل تضم بيوتاً وشققاً. ومن البيوت فيها بيت بمساحة ١٢٥ م² بأربع غرف نوم وثلاثة حمامات، وبيت من طابقين بمساحة ٢٠٠ م² بثلاث غرف نوم وثلاثة حمامات. ومن الشقق شقة بمساحة ١٥٠ م² بثلاث غرف نوم وحمامين، وشقة بمساحة ١٤٧ م² بغرفتي نوم وحمامين.
 
 ### 3. English
-Zhyan City is a residential area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are ready houses and apartments for sale, all with negotiable prices. A new 125 m² house with four bedrooms and three bathrooms is offered by its first owner at USD 107,500, and a two-floor house of 200 m² with three bedrooms and three bathrooms at USD 81,000. A three-bedroom flat of 150 m² is listed at USD 95,000 and a furnished two-bedroom apartment of 147 m² at USD 62,000.
+Zhyan City is a residential area in Erbil made up of houses and apartments. Houses in Zhyan City include a 125 m² house with four bedrooms and three bathrooms and a two-floor house of 200 m² with three bedrooms and three bathrooms. Apartments include a 150 m² unit with three bedrooms and two bathrooms and a 147 m² unit with two bedrooms and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

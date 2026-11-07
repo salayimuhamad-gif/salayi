@@ -40,17 +40,17 @@ Project ID: vip-class | Tier: 2 | In Erbil city: No | Last researched: 2026-11-0
 | Remaining balance paid monthly after key handover | 300 | USD | developer | from 2023-03-01 | https://paya-realestate.com/en/projects/vip-class-201 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Paya states the project is located in Shaqlawa, a separate town in Erbil Governorate, not in Erbil city; no street, landmark or coordinates are given.
+Paya states the project is located in Shaqlawa, a separate town in Erbil Governorate, not in Erbil city; no street or landmark are given.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڤی ئای پی کلاس پڕۆژەیەکی شوقەیە لە شەقڵاوە، لە دەرەوەی شاری هەولێر، و لە چوار تاوەر بە ناوەکانی A، B، C و D پێکدێت. هەر تاوەرێک ١٥ نهۆمە و لە هەر نهۆمێکدا دوو شوقە هەیە؛ ڕووبەری شوقەکان ١٢٥ م²ـە و بە تاپۆ دەفرۆشرێن. تاوەرەکانی A و B تەواو بوون و درانە دەست خاوەنەکانیان. پلانی قیست چوار پارەدانی ١٢,٥٠٠ دۆلاری ئەمریکی لەخۆدەگرت: لەگەڵ گرێبەست (١/٥/٢٠٢٢)، لە تەواوبوونی ٧٠٪ (١/٩/٢٠٢٢)، لە تەواوبوونی ٩٠٪ (١/١٢/٢٠٢٢) و لە کاتی وەرگرتنی کلیل (١/٣/٢٠٢٣)، و ماوەکەی بە مانگانە ٣٠٠ دۆلار دەدرێت. خزمەتگوزارییەکان بریتین لە ئاو، کارەبا، پاککردنەوە، پاسەوانی و سیستەمی گاز؛ هەروەها پارکینگ، مۆلیدە، ڕیسێپشن، مزگەوت، قوتابخانە، فێنککەرەوە، چێشتخانە، سوپەرمارکێت و باخچەی گشتی تۆمار کراون.
+ڤی ئای پی کلاس (VIP Class) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شەقڵاوە، کە شارۆچکەیەکی پارێزگای هەولێرە و دەکەوێتە دەرەوەی شاری هەولێر. پڕۆژەکە لە چوار تاوەر پێکدێت بە ناوەکانی A، B، C و D، کە هەر یەکەیان ١٥ نهۆمە و لە هەر نهۆمێکدا دوو شوقە هەیە. ڕووبەری شوقەکان ١٢٥ م²یە و بە تاپۆ دەفرۆشرێن.
 
 ### 2. Arabic (العربية)
-في آي بي كلاس مشروع شقق في شقلاوة، خارج مدينة أربيل، يتكوّن من أربعة أبراج هي A وB وC وD. يتألف كل برج من 15 طابقاً بواقع شقتين في كل طابق، وتبلغ مساحة الشقق 125 م² وتُباع بسند ملكية (طابو). اكتمل البرجان A وB وسُلِّما إلى مالكيهما. تضمنت خطة التقسيط أربع دفعات قيمة كل منها 12,500 دولار أمريكي: عند توقيع العقد (1/5/2022)، وعند إنجاز 70% (1/9/2022)، وعند إنجاز 90% (1/12/2022)، وعند استلام المفاتيح (1/3/2023)، على أن يُسدَّد الباقي بأقساط شهرية قدرها 300 دولار. تشمل الخدمات المياه والكهرباء والتنظيف والحراسة الأمنية ونظام الغاز، كما تُدرج مواقف السيارات ومولد كهربائي واستقبال ومسجد ومدرسة وتكييف ومطعم وسوبرماركت وحديقة عامة.
+في آي بي كلاس (VIP Class) مشروع سكني للشقق في شقلاوة، وهي بلدة في محافظة أربيل خارج مدينة أربيل. يتكوّن المشروع من أربعة أبراج، هي A وB وC وD، يضم كل منها 15 طابقاً بواقع شقتين في كل طابق. وتبلغ مساحة الشقق 125 م²، وتُباع بسند ملكية (طابو).
 
 ### 3. English
-VIP Class is an apartment project in Shaqlawa, outside Erbil city, consisting of four towers named A, B, C and D. Each tower has 15 floors with two apartments per floor; apartments measure 125 m² and are sold with title deeds (tapu). Towers A and B have been completed and handed over to their owners. The instalment plan comprised four payments of USD 12,500 each, due at contract signing (1 May 2022), at 70% completion (1 September 2022), at 90% completion (1 December 2022) and at key handover (1 March 2023), with the remainder paid at USD 300 per month. Services include water, electricity, cleaning, security and a gas system; listed amenities also include car parking, a generator, reception, a mosque, a school, air conditioning, a restaurant, a supermarket and a public garden.
+VIP Class is a residential apartment project in Shaqlawa, a town in Erbil Governorate outside Erbil city. The project consists of four towers, named A, B, C and D, each with 15 floors and two apartments per floor. Apartments measure 125 m² and come with a title deed (tapu).
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

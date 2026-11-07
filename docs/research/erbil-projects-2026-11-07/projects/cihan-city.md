@@ -48,7 +48,7 @@ Project ID: cihan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Studio 38 m2 - monthly rent | 200 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Cihan City lies on Erbil's 120-metre ring street at its junction with the road to Kirkuk (Paya: '120 meters street and on the road to Kirkuk'; Baghy: 'Erbil-Kirkuk Road -120m'). No neighbourhood name, nearby landmarks or distances are given by the sources, and none are estimated here.
+Cihan City lies on Erbil's 120-metre ring street at its junction with the road to Kirkuk (Paya: '120 meters street and on the road to Kirkuk'; Baghy: 'Erbil-Kirkuk Road -120m'). No neighbourhood name, nearby landmarks or distances are given by the sources, and none are estimated here. Map position (medium confidence, from agency map pins): 36.137046, 44.014998.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

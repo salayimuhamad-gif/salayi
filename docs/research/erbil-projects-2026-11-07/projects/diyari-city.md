@@ -48,7 +48,7 @@ Project ID: diyari-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | 'Diyari Towers' apartment 180 m2, 3 bed, off-plan instalment - listed price labelled '(Down payment)' | 103,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diyari-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-According to Paya, Diyari City lies in Erbil between the Mosul Road (Erbil–Mosul highway) and the 120-metre ring road, near Gulan Street, in the western sector of the city. Paya also states that supermarkets, schools and a mosque are accessible nearby, without naming them. No other source describes the location, and no distances are given or estimated.
+According to Paya, Diyari City lies in Erbil between the Mosul Road (Erbil–Mosul highway) and the 120-metre ring road, near Gulan Street, in the western sector of the city. Paya also states that supermarkets, schools and a mosque are accessible nearby, without naming them. No other source describes the location, and no distances are given or estimated. Map position (low confidence, from agency map pins): 36.1611718, 43.9174803.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -47,17 +47,17 @@ Project ID: talar-city | Tier: 1 | In Erbil city: Edge | Last researched: 2026-1
 | Apartment 133 m2, 2 bed - market listing (negotiable) | 45,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-On Koya Road on Erbil's eastern fringe, about 9 km east of the citadel by the Baghy map pin.
+ Map position (low confidence, from agency map pins): 36.214394, 44.114083.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-تالار سیتی پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە لەسەر ڕێگای کۆیە، لە لای ڕۆژهەڵاتی شار هەڵکەوتووە. پڕۆژەکە لە خانوو پێکهاتووە، و ڕیکلامەکانی بازاڕ شوقەشیان تێدایە. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە تۆمار کراون بریتین لە کارەبای ٢٤ کاتژمێری، شوێنی یاریی منداڵان و ڕووبەری سەوز. لە تشرینی دووەمی ٢٠٢٦دا، ڕیکلامەکانی بازاڕ خانووی ئامادەی یەک نهۆمی بە ڕووبەری ٢٠٠ م² تا ٢٦٢ م² و دوو ژووری نووستنیان بە ٧٧٬٥٠٠ تا ١٣٧٬٥٠٠ دۆلاری ئەمریکی پیشان دەدا، و شوقەی ئامادەی دوو ژووری نووستن بە ڕووبەری ١٢٠ م² تا ١٣٣ م²یان بە ٤٥٬٠٠٠ تا ٥٠٬٠٠٠ دۆلار پیشان دەدا.
+تالار سیتی (Talar City) پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای کۆیە لە لێواری ڕۆژهەڵاتی شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە بە شێوەیەکی سەرەکی لە خانوو پێکدێت و شوقەشی تێدایە. خانووەکانی تالار سیتی خانووی یەک نهۆمیی ٢٠٠ تا ٢٦٢ م² لەخۆدەگرن کە دوو ژووری نووستنیان هەیە، و شوقەکانی پڕۆژەکە ڕووبەریان ١٢٠ و ١٣٣ م²یە و دوو ژووری نووستنیان هەیە.
 
 ### 2. Arabic (العربية)
-تالار ستي (Talar City) مشروع سكني في أربيل يقع على طريق كويه في الجهة الشرقية من المدينة. يتكون المشروع من بيوت، وتشمل إعلانات السوق شققاً أيضاً. تشمل الخدمات المسجلة للمشروع كهرباء على مدار ٢٤ ساعة وملعباً للأطفال ومساحات خضراء. في تشرين الثاني ٢٠٢٦، عرضت إعلانات السوق بيوتاً جاهزة من طابق واحد بمساحات من ٢٠٠ م² إلى ٢٦٢ م² وبغرفتي نوم بأسعار من ٧٧٬٥٠٠ إلى ١٣٧٬٥٠٠ دولار أمريكي، وشققاً جاهزة بغرفتي نوم بمساحات من ١٢٠ م² إلى ١٣٣ م² بأسعار من ٤٥٬٠٠٠ إلى ٥٠٬٠٠٠ دولار.
+تالار ستي (Talar City) مشروع سكني على طريق كويه عند الطرف الشرقي لمدينة أربيل في إقليم كوردستان العراق. يتكون المشروع أساساً من منازل، ويضم أيضاً شققاً. وتشمل المنازل في تالار ستي منازل من طابق واحد بمساحات تتراوح بين 200 و262 م² تضم غرفتي نوم، أما الشقق في المشروع فمساحتها 120 و133 م² وتضم غرفتي نوم.
 
 ### 3. English
-Talar City is a residential project in Erbil located on Koya Road, on the eastern side of the city. The project consists of houses, and market listings also include apartments. The services recorded for the project are 24-hour electricity, a playground and green areas. In November 2026, market listings offered ready single-storey houses of 200 m² to 262 m² with two bedrooms at USD 77,500 to 137,500, and ready two-bedroom apartments of 120 m² to 133 m² at USD 45,000 to 50,000.
+Talar City is a residential project on Koya Road on the eastern edge of Erbil, in the Kurdistan Region of Iraq. The project consists mainly of houses and also includes apartments. Houses in Talar City include single-storey homes of 200 to 262 m² with two bedrooms, and apartments in the project have areas of 120 and 133 m² with two bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

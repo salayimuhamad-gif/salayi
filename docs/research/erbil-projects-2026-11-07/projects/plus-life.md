@@ -37,17 +37,17 @@ Project ID: plus-life | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Plus Life lies on the Koya Road side of Erbil (Baghy). Paya's Parosh Twin Towers page places that project on Kasnazan Road opposite 'Plus Life Apartments', so Plus Life fronts the Kasnazan Road approach. No coordinates are published.
+Plus Life lies on the Koya Road side of Erbil (Baghy). Paya's Parosh Twin Towers page places that project on Kasnazan Road opposite 'Plus Life Apartments', so Plus Life fronts the Kasnazan Road approach. Map position (low confidence, from agency map pins): 36.20481, 44.120751.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-پلاس لایف پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر، لەسەر ڕێگای کۆیە. بە ناوی شوقەکانی پلاس لایف (Plus Life Apartments)یش ناسراوە، و پڕۆژەی پارۆش توین تاوەرز لەسەر ڕێگای کەسنەزان بەرامبەری دەکەوێت. پڕۆژەکە شوقە پێشکەش دەکات. ئاسانکارییە ڕاگەیەندراوەکانی بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، جیم و سەنتەری وەرزشی، پاسەوانی، پارکینگ، ناوچەی سەوز و باخچەی گشتی. پڕۆژەکە لەلایەن ئاژانسی باغی شەقڵاوەوە ڕیکلامی بۆ دەکرێت، کە نزیکترین نووسینگەی لە پڕۆژەکەوە لقی ڕێگای کۆیەیە.
+پلاس لایف (Plus Life)، کە بە پلاس لایف ئەپارتمێنتسیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لە لای ڕێگای کۆیەی شار هەڵکەوتووە، و پڕۆژەی پارۆش توین تاوەرز لەسەر ڕێگای کەسنەزان بەرامبەری دەکەوێت. پڕۆژەکە لە شوقەی نیشتەجێبوون پێکدێت.
 
 ### 2. Arabic (العربية)
-بلس لايف مشروع سكني للشقق في أربيل، يقع على طريق كويه. يُعرف أيضاً باسم شقق بلس لايف (Plus Life Apartments)، ويقع مقابله مشروع باروش توين تاورز على طريق كسنزان. يوفر المشروع شققاً سكنية. تشمل الميزات المعلنة الكهرباء على مدار 24 ساعة، والإنترنت، وملعباً للأطفال، وصالة رياضية ومركز لياقة، والحراسة، ومواقف السيارات، ومساحات خضراء، وحديقة عامة. تعرض المشروعَ وكالة باغي شقلاوة، وأقرب مكاتبها إليه هو فرع طريق كويه.
+بلس لايف (Plus Life)، المعروف أيضاً باسم بلس لايف للشقق، مشروع سكني للشقق في أربيل. يقع المشروع على جانب طريق كويه من المدينة، ويقع مقابله مشروع باروش توين تاورز على طريق كسنزان. ويتكوّن المشروع من شقق سكنية.
 
 ### 3. English
-Plus Life is a residential apartment project in Erbil, located on the Koya Road. It is also known as Plus Life Apartments, and the Parosh Twin Towers project on the Kasnazan Road lies opposite it. The project offers apartments. Its listed features are 24-hour electricity, internet access, a children's playground, a gym and fitness centre, security, parking, green areas and a public garden. The project is listed by the Baghy Shaqlawa agency, whose nearest office to the project is its Koya Road branch.
+Plus Life, also known as Plus Life Apartments, is a residential apartment project in Erbil. It is located on the Koya Road side of the city, and the Parosh Twin Towers project on Kasnazan Road stands opposite it. The project consists of apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

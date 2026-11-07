@@ -53,7 +53,7 @@ Project ID: italian-village-1 | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Ready house 200 m2, 4 bed - homele rental listing (per month) | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Italian City 1 lies between Erbil's 100 m and 40 m roads, beside Sami Abdulrahman Park; no coordinates are published.
+Italian City 1 lies between Erbil's 100 m and 40 m roads, beside Sami Abdulrahman Park. Map position (low confidence, from agency map pins): 36.188236, 43.969943.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -52,27 +52,27 @@ Project ID: green-land | Tier: 1 | In Erbil city: Edge | Last researched: 2026-1
 | 'Castle No 112 P3', 3,000 m2 land, built 2024 - Roya listing (seen via web search) | 1,500,000 | USD | resale | accessed 2026-11-07 | https://roya-iq.com/?p=10625 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Green Land lies on the Erbil–Pirmam (Massif/Shaqlawa) road opposite Khanzad Hotel, with Green Hills behind American Village, on high ground at Erbil's urban fringe. No coordinates are published.
+Green Land lies on the Erbil–Pirmam (Massif/Shaqlawa) road opposite Khanzad Hotel, with Green Hills behind American Village, on high ground at Erbil's urban fringe. Map position (medium confidence, from agency map pins): 36.312415, 44.16918.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
 گرین لاند پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای هەولێر–پیرمام، کە بە ڕێگای مەسیف یان ڕێگای شەقڵاوەش ناسراوە، بەرامبەر هوتێلی خانزاد لە کەناری شاری هەولێر. شوێنەکە لەسەر زەوییەکی بەرزە و دیمەنی چیای مەسیف، گردەکانی دەوروبەر و شارەکەی لێوە دیارە. پڕۆژەکە سێ باڵەخانەی شوقە، هەریەکەیان ١٢ نهۆم، بە شوقەی ٩٥ م²، ١٢٥ م² و ١٥٠ م²، لەگەڵ چوار قۆناغی ڤێلا لەخۆدەگرێت.
 
-هەموو ڤێلاکانی قۆناغی یەکەم و دووەم فرۆشراون. قۆناغی سێیەم، «گرین هیڵز»، ١٢٠ ڤێلا لەسەر زەوی بە ڕووبەری ٢٬٠٠٠ م² تا ٤٬٠٠٠ م² لەخۆدەگرێت. ڤێلاکانی گرین هیڵز سێ نهۆمن و شەش ژووری نووستن، چێشتخانە، هۆڵی دانیشتن، ئاسانسۆر، باخچە، مەلەوانگەی تایبەت، ساونا، حەمامی تورکی و هۆڵی وەرزشیان هەیە، و هەر ڤێلایەک دەرگای تایبەت و گەراجی لە دوو لاوە هەیە. قۆناغی چوارەم، «هەولێر هایتس»، ١٢٠ ڤێلا لەخۆدەگرێت کە لەسەر زەویی ١٬٠٠٠ م² دروست دەکرێن و بە پلانی پارەدان دەفرۆشرێن: ٢٥٪ لە کاتی واژۆکردنی گرێبەست، حەوت قیست هەر سێ مانگ جارێک و قیستی کۆتایی ٥٪. یەکێکی تر لە ڕووبەرەکانی ڤێلا لە پڕۆژەکەدا ٩٠٠ م²یە.
+هەموو ڤێلاکانی قۆناغی یەکەم و دووەم فرۆشراون. قۆناغی سێیەم، «گرین هیڵز»، ١٢٠ ڤێلا لەسەر زەوی بە ڕووبەری ٢٬٠٠٠ م² تا ٤٬٠٠٠ م² لەخۆدەگرێت. ڤێلاکانی گرین هیڵز سێ نهۆمن و شەش ژووری نووستن، چێشتخانە، هۆڵی دانیشتن، ئاسانسۆر، باخچە، مەلەوانگەی تایبەت، ساونا، حەمامی تورکی و هۆڵی وەرزشیان هەیە، و هەر ڤێلایەک دەرگای تایبەت و گەراجی لە دوو لاوە هەیە. قۆناغی چوارەم، «هەولێر هایتس»، ١٢٠ ڤێلا لەخۆدەگرێت کە لەسەر زەویی ١٬٠٠٠ م² دروست دەکرێن. یەکێکی تر لە ڕووبەرەکانی ڤێلا لە پڕۆژەکەدا ٩٠٠ م²یە.
 
 پڕۆژەکە بازاڕ، مزگەوت، کارەبای گشتی و تایبەت، خزمەتگوزاریی گاز و ئاو، پاسەوانی، پارکینگ، یاریگای منداڵان و ڕووبەری سەوزی هەیە.
 
 ### 2. Arabic (العربية)
 غرين لاند مشروع سكني على طريق أربيل–بيرمام، المعروف أيضاً بطريق مصيف أو طريق شقلاوة، مقابل فندق خانزاد على أطراف أربيل. يقع الموقع على أرض مرتفعة تطل على جبال مصيف والتلال المحيطة والمدينة. يجمع المشروع بين ثلاث بنايات سكنية من 12 طابقاً لكل منها، تضم شققاً بمساحات 95 م² و125 م² و150 م²، وأربع مراحل من الفلل.
 
-بيعت جميع فلل المرحلتين الأولى والثانية. تضم المرحلة الثالثة «غرين هيلز» 120 فيلا على قطع أراضٍ تتراوح مساحتها بين 2,000 م² و4,000 م². تتكوّن فلل غرين هيلز من ثلاثة طوابق وتضم ست غرف نوم ومطبخاً وصالة معيشة ومصعداً وحديقة ومسبحاً خاصاً وساونا وحماماً تركياً وصالة رياضية، ولكل فيلا أبواب خاصة ومرائب على جانبين. وتضم المرحلة الرابعة «أربيل هايتس» 120 فيلا تقوم على قطع بمساحة 1,000 م²، وتُباع بخطة دفع تبدأ بـ25% عند توقيع العقد، ثم سبعة أقساط كل ثلاثة أشهر، ودفعة أخيرة بنسبة 5%. ومن مساحات الفلل الأخرى في المشروع 900 م².
+بيعت جميع فلل المرحلتين الأولى والثانية. تضم المرحلة الثالثة «غرين هيلز» 120 فيلا على قطع أراضٍ تتراوح مساحتها بين 2,000 م² و4,000 م². تتكوّن فلل غرين هيلز من ثلاثة طوابق وتضم ست غرف نوم ومطبخاً وصالة معيشة ومصعداً وحديقة ومسبحاً خاصاً وساونا وحماماً تركياً وصالة رياضية، ولكل فيلا أبواب خاصة ومرائب على جانبين. وتضم المرحلة الرابعة «أربيل هايتس» 120 فيلا تقوم على قطع بمساحة 1,000 م². ومن مساحات الفلل الأخرى في المشروع 900 م².
 
 يضم المشروع سوقاً ومسجداً وكهرباء عامة وخاصة وخدمات الغاز والماء وحراسة أمنية ومواقف للسيارات وملاعب للأطفال ومساحات خضراء.
 
 ### 3. English
 Green Land is a residential development on the Erbil–Pirmam road, also known as the Massif or Shaqlawa road, opposite Khanzad Hotel on the edge of Erbil. The site sits on high ground with views of the Massif mountains, the surrounding hills and the city. The development combines three apartment buildings of 12 floors each, with apartments of 95 m², 125 m² and 150 m², and four villa phases.
 
-The first and second villa phases are sold out. Phase three, Green Hills, contains 120 villas on plots from 2,000 m² to 4,000 m². Green Hills villas have three floors with six bedrooms, a kitchen, a living room, an elevator, a garden, a private swimming pool, a sauna, a Turkish bath and a gym, and each villa has private doors and garages on two sides. Phase four, Erbil Heights, contains 120 villas; its villas stand on 1,000 m² plots and are sold with a payment plan of 25% on signing, seven instalments every three months and a final payment of 5%. Other villa sizes in the project include 900 m².
+The first and second villa phases are sold out. Phase three, Green Hills, contains 120 villas on plots from 2,000 m² to 4,000 m². Green Hills villas have three floors with six bedrooms, a kitchen, a living room, an elevator, a garden, a private swimming pool, a sauna, a Turkish bath and a gym, and each villa has private doors and garages on two sides. Phase four, Erbil Heights, contains 120 villas; its villas stand on 1,000 m² plots. Other villa sizes in the project include 900 m².
 
 The project has a market, a mosque, public and private electricity, gas and water services, security, parking, playgrounds and green areas.
 

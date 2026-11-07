@@ -43,17 +43,17 @@ Project ID: ganjan-life | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | 3BR 206 m2 - monthly rent (homele listing) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life |
 
 ## PART E — LOCATION & SURROUNDINGS
-Bagh-y Shaqlawa gives the address as 'Erbil – 150m Street' and handles the project through its Ganjan City branch, which suggests it lies near Ganjan City on the 150m ring road. No coordinates or cross-streets are stated.
+Bagh-y Shaqlawa gives the address as 'Erbil – 150m Street' and handles the project through its Ganjan City branch, which suggests it lies near Ganjan City on the 150m ring road. No cross-streets are stated. Map position (low confidence, from agency map pins): 36.288085, 44.043963.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گەنجان لایف پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر شەقامی ١٥٠ مەتری لە شاری هەولێر و پڕۆژەیەکی جیاوازە لە گەنجان سیتی؛ باغی شەقڵاوە لە ڕێگەی لقی گەنجان سیتییەوە خزمەتی دەکات. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە لیست کراون بریتین لە کارەبای ٢٤ کاتژمێری، پاسەوانی، پارکینگ، ناوچەی سەوز، چاککردنەوە و سوپەرمارکێت. شوقە ئامادەکان کە لە بازاڕدا ڕیکلامیان بۆ کراوە بە ڕووبەری ١١٨، ١٥٢، ١٥٨ و ٢٠٦ م²ن، لە شوقەی دوو ژووری نووستنی ١١٨ م²ەوە تا شوقەی سێ ژووری نووستنی ٢٠٦ م². نرخی فرۆشتنی ڕیکلامکراو لە نزیکەی ٨٩٬٠٠٠ تا ١١٧٬٠٠٠ دۆلارە، و کرێی مانگانەی شوقەکان لە ٤٠٠ تا ٦٠٠ دۆلارە.
+گەنجان لایف (Ganjan Life) پڕۆژەیەکی شوقەی نیشتەجێبوونە لەسەر شەقامی ١٥٠ مەتری لە هەولێر، و پڕۆژەیەکی جیاوازە لە گەنجان ستی. شوقەی دوو ژووری نووستن لەم پڕۆژەیەدا ڕووبەریان ١١٨ و ١٥٨ م²یە، و شوقەی سێ ژووری نووستن ڕووبەریان ١٥٢ و ٢٠٦ م²یە.
 
 ### 2. Arabic (العربية)
-كنجان لايف مشروع سكني للشقق على شارع 150 متراً في مدينة أربيل، وهو مشروع مختلف عن مشروع كنجان سيتي؛ ويخدمه موقع باغي شقلاوة من فرعه في كنجان سيتي. تشمل الميزات المدرجة للمشروع كهرباء على مدار 24 ساعة وحراسة ومواقف سيارات ومساحات خضراء وصيانة وسوبرماركت. تبلغ مساحات الشقق الجاهزة المعلن عنها في السوق 118 و152 و158 و206 م²، من شقق بغرفتي نوم بمساحة 118 م² إلى شقق بثلاث غرف نوم بمساحة 206 م². تتراوح أسعار البيع المعلنة بين نحو 89,000 و117,000 دولار، ويتراوح الإيجار الشهري للشقق بين 400 و600 دولار.
+كنجان لايف (Ganjan Life) مشروع شقق سكنية على شارع 150 متر، الطريق الدائري 150 م في أربيل، وهو مشروع منفصل عن مشروع كنجان سيتي. وتبلغ مساحة الشقق ذات غرفتي النوم في المشروع 118 و158 م²، فيما تبلغ مساحة الشقق ذات ثلاث غرف النوم 152 و206 م².
 
 ### 3. English
-Ganjan Life is a residential apartment project on 150m Street in Erbil and is a separate project from Ganjan City; Bagh-y Shaqlawa serves it from its Ganjan City branch. Features listed for the project include 24-hour electricity, security, parking, green areas, maintenance and a supermarket. Ready apartments advertised on the market have areas of 118, 152, 158 and 206 m², from two-bedroom units of 118 m² to three-bedroom units of 206 m². Advertised sale prices range from about USD 89,000 to USD 117,000, and apartments rent for USD 400–600 per month.
+Ganjan Life is a residential apartment project on 150m Street, Erbil's 150 m ring road, and is a separate project from Ganjan City. Two-bedroom apartments in the project measure 118 and 158 m², and three-bedroom apartments measure 152 and 206 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

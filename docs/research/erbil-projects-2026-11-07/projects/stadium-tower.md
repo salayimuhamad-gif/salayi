@@ -39,17 +39,17 @@ Project ID: stadium-tower | Tier: 2 | In Erbil city: Yes | Last researched: 2026
 | Ready new apartment 87 m2, 1 bed / 1 bath - asking price, negotiable, 'New Price' (homele listing) | 30,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/stadium-tower |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Stadium Tower' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Stadium Tower' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ستادیۆم تاوەر (Stadium Tower) پڕۆژەیەکی شوقەیە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. تاکە موڵکێک کە لەوێ ڕیکلامی بۆ کراوە شوقەیەکی نوێی ئامادەیە بە یەک ژووری نووستن و یەک حەمام و ڕووبەری ٨٧ م²، کە بە ٣٠,٠٠٠ دۆلاری ئەمریکی بۆ فرۆشتن خراوەتە ڕوو. ڕیکلامەکە نرخەکەی وەک نرخی نوێ و شیاوی گفتوگۆ دیاری کردووە، و لە ٧ی تشرینی دووەمی ٢٠٢٦ لەسەر پۆرتاڵەکە چالاک بوو.
+ستادیۆم تاوەر (Stadium Tower) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. لە نێو شوقەکانی پڕۆژەکەدا شوقەیەکی یەک ژووری نووستن و یەک حەمام بە ڕووبەری ٨٧ م² هەیە.
 
 ### 2. Arabic (العربية)
-ستاديوم تاور (Stadium Tower) مشروع شقق في أربيل، مدرج بهذا الاسم على بوابة العقارات homele.com. والعقار الوحيد المعلن عنه فيه شقة جديدة جاهزة بغرفة نوم واحدة وحمام واحد بمساحة 87 م²، معروضة للبيع بسعر 30,000 دولار أمريكي. ويصف الإعلان السعر بأنه سعر جديد وقابل للتفاوض، وكان نشطاً على البوابة في 7 تشرين الثاني 2026.
+ستاديوم تاور (Stadium Tower) مشروع سكني للشقق في أربيل. ومن بين الشقق في المشروع شقة بغرفة نوم واحدة وحمام واحد بمساحة 87 م².
 
 ### 3. English
-Stadium Tower is an apartment project in Erbil, listed under this name on the homele.com property portal. The single property advertised there is a ready, new one-bedroom apartment of 87 m² with one bathroom, offered for sale at USD 30,000. The listing marks the price as a new price and as negotiable, and it was active on the portal on 7 November 2026.
+Stadium Tower is a residential apartment project in Erbil. Apartments in the project include a one-bedroom apartment of 87 m² with one bathroom.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

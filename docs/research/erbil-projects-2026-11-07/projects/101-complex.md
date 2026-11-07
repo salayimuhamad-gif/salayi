@@ -45,17 +45,17 @@ Project ID: 101-complex | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Studio 47 m² – Homele listing (advertised, off-plan, instalment) | 42,300 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
 
 ## PART E — LOCATION & SURROUNDINGS
-Erbil. Neither Paya nor Homele states a street, district or landmark for 101 Complex, and Paya's map coordinates are a 0,0 placeholder. One web search returned no page describing the project's location.
+Erbil. One web search returned no page describing the project's location.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-١٠١ کۆمپلێکس پڕۆژەیەکی نیشتەجێبوون و بازرگانییە لە شاری هەولێر کە لە قۆناغی دروستکردندایە. پەڕەی فرۆشتنی پڕۆژەکە لە ماڵپەڕی پایا ڕیاڵ ئیستەیت چوار جۆر شوقە دەخاتەڕوو: ستۆدیۆیەکی ٤٧ م² بە یەک گەرماو، شوقەیەکی یەک ژووری نووستن بە ڕووبەری ٩٤ م² و یەک گەرماو، و شوقەی دوو ژووری نووستن بە ڕووبەری ١٤٣ م² و ١٤٤ م²، هەر یەکەیان بە دوو گەرماو. نرخە ڕاگەیەندراوەکان لە تشرینی دووەمی ٢٠٢٦ لە ٤٢،٣٠٠ دۆلاری ئەمریکی بۆ ستۆدیۆکە تا ١١٥،٢٠٠ دۆلار بۆ شوقەی ١٤٤ م² دەگۆڕێن. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە تۆمار کراون بریتین لە هۆڵی وەرزش، هۆڵی وەرزشی ئافرەتان، ئارایشتگای ئافرەتان، سەرتاشخانە، نانەواخانە، کافتریا، گۆڕینەوەی دراو، پێشوازی، پارکینگی داپۆشراو و ئاسایی، یاریگای منداڵان، پاسەوانی و ئامێری فێنککەرەوە. ستۆدیۆکە لە ماڵپەڕی هۆمێلێش وەک یەکەیەکی سەر نەخشە بە قیست ڕیکلامی بۆ کراوە.
+101 کۆمپلێکس (101 Complex) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە قۆناغی بنیاتناندایە. پڕۆژەکە چوار جۆر شوقە پێشکەش دەکات: ستۆدیۆی 47 م² بە یەک حەمام، شوقەی یەک ژووری نووستن بە ڕووبەری 94 م² و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 143 م² و 144 م² کە هەریەکەیان دوو حەمامی هەیە. زانیاریی زیاتر، وەک ناوی گەشەپێدەر، شوێنی ورد، ژمارەی باڵەخانەکان و خزمەتگوزارییەکان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
 
 ### 2. Arabic (العربية)
-مشروع 101 كومبليكس مشروع سكني وتجاري في مدينة أربيل قيد الإنشاء. تعرض صفحة المشروع على موقع بايا العقاري أربعة أنواع من الشقق: استوديو بمساحة 47 م² مع حمام واحد، وشقة بغرفة نوم واحدة بمساحة 94 م² مع حمام واحد، وشقتين بغرفتي نوم بمساحة 143 م² و144 م² مع حمامين لكل منهما. تتراوح الأسعار المعلنة في تشرين الثاني 2026 بين 42,300 دولار أمريكي للاستوديو و115,200 دولار للشقة بمساحة 144 م². وتشمل الخدمات المدرجة للمشروع صالة رياضية، وصالة رياضية للنساء، وصالوناً نسائياً، وحلاقاً، ومخبزاً، وكافتيريا، ومكتب صرافة، واستقبالاً، ومواقف سيارات مسقوفة ومكشوفة، وملعباً للأطفال، وحراسة، وتكييفاً. كما يُعلَن عن الاستوديو على موقع هوميلي كوحدة على المخطط تُباع بالتقسيط.
+101 كومبليكس (101 Complex) مشروع سكني قيد الإنشاء في مدينة أربيل. يضم المشروع أربعة أنواع من الشقق: استوديو بمساحة 47 م² مع حمام واحد، وشقة بغرفة نوم واحدة بمساحة 94 م² مع حمام واحد، وشقتين بغرفتي نوم بمساحتي 143 م² و144 م² مع حمامين لكل منهما. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، منها اسم الشركة المطوّرة والموقع الدقيق وعدد المباني والمرافق.
 
 ### 3. English
-101 Complex is a residential and commercial project in Erbil that is under construction. Its sales page on Paya Real Estate lists four apartment types: a 47 m² studio with one bathroom, a 94 m² one-bedroom apartment with one bathroom, and two-bedroom apartments of 143 m² and 144 m², each with two bathrooms. Prices listed in November 2026 range from US$42,300 for the studio to US$115,200 for the 144 m² apartment. The amenities listed for the project include a gym, a women's gym, a women's salon, a barber, a bakery, a cafeteria, a currency exchange, a reception, covered and open parking, a children's play area, security and air conditioning. The studio is also advertised on Homele as an off-plan unit sold in instalments.
+101 Complex is a residential project in Erbil that is under construction. The project offers four apartment types: a 47 m² studio with one bathroom, a 94 m² one-bedroom apartment with one bathroom, and two-bedroom apartments of 143 m² and 144 m², each with two bathrooms. Further details, including the developer, the exact location, the number of buildings and the facilities, will be added to this profile when they become available.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

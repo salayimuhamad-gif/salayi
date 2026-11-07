@@ -46,17 +46,17 @@ Project ID: future-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Apartment 2BR 144 m2 - monthly rent (homele listing) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/future-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Bagh-y Shaqlawa places Future City on the Erbil–Shaqlawa road (the Pirmam/Masif corridor north-east of the city) and assigns it to its Italian City 2 branch, suggesting proximity to Italian City 2. The architects' press places the proposed towers 'at the main entrance of the Future City complex in Erbil' without an address. No coordinates are stated.
+Bagh-y Shaqlawa places Future City on the Erbil–Shaqlawa road (the Pirmam/Masif corridor north-east of the city) and assigns it to its Italian City 2 branch, suggesting proximity to Italian City 2. The architects' press places the proposed towers 'at the main entrance of the Future City complex in Erbil' without an address.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-فیوچەر سیتی پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای هەولێر–شەقڵاوە لە شاری هەولێر، کە ماڵپەڕی باغی شەقڵاوە وەک پڕۆژەیەکی خانوو لیستی کردووە و لقی ئیتاڵیان سیتی ٢ی ئەو ئاژانسە خزمەتی دەکات. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە لیست کراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، ئێرکۆندیشنی پێشوەختە دامەزراو، سەنتەری کارگێڕیی شار، پاسەوانی، پارکینگ، ناوچەی سەوز، پارکینگی ژێرزەوی، باخچەی گشتی و سوپەرمارکێت. لە بازاڕدا خانووی ئامادەی ٤٥٠ م² و ٥٠٠ م² بە چوار یان پێنج ژووری نووستن، پارچە زەوییەکی نیشتەجێبوونی ١٬٠٠٠ م²، بینایەکی ٤٥٠ م²ی تەواونەکراو و شوقەیەکی دوو ژووری نووستنی ١٤٤ م² بۆ کرێ پێشکەش دەکرێن. نرخی داواکراوی خانووەکان لە ٦٠٠٬٠٠٠ دۆلار بۆ خانوویەکی ٤٥٠ م² تا ١٬٥٠٠٬٠٠٠ دۆلار بۆ خانوویەکی ٥٠٠ م²یە.
+فیوچەر سیتی (Future City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر، لەسەر ڕێگای هەولێر–شەقڵاوە لە ڕاڕەوی پیرمام (مەسیف) لە باکووری ڕۆژهەڵاتی شارەکە. پڕۆژەکە بە زۆری لە خانوو پێکدێت، لەوانە خانووی ٤٥٠ م² بە چوار ژووری نووستن و خانووی ٥٠٠ م² بە پێنج ژووری نووستن. هەروەها پارچە زەویی نیشتەجێبوون لەخۆدەگرێت، وەک پارچەیەکی ١٬٠٠٠ م²، لەگەڵ شوقەی ١٤٤ م² بە دوو ژووری نووستن و دوو حەمام.
 
 ### 2. Arabic (العربية)
-فيوتشر سيتي مشروع سكني على طريق أربيل–شقلاوة في مدينة أربيل، يدرجه موقع باغي شقلاوة العقاري كمشروع منازل ويخدمه فرع الوكالة في إيطاليان سيتي 2. تشمل الميزات المدرجة للمشروع كهرباء على مدار 24 ساعة وإنترنت وملعباً للأطفال ومكيفات مركّبة مسبقاً ومركزاً إدارياً ومراقبة أمنية ومواقف سيارات ومساحات خضراء ومواقف تحت الأرض وحديقة عامة وسوبرماركت. وتُعرض في السوق منازل جاهزة بمساحتي 450 و500 م² بأربع أو خمس غرف نوم، وقطعة أرض سكنية بمساحة 1,000 م²، وهيكل بناء غير مكتمل بمساحة 450 م²، وشقة بغرفتي نوم بمساحة 144 م² للإيجار. وتتراوح الأسعار المطلوبة للمنازل بين 600,000 دولار لمنزل بمساحة 450 م² و1,500,000 دولار لمنزل بمساحة 500 م².
+فيوتشر سيتي (Future City) مشروع سكني في أربيل، يقع على طريق أربيل–شقلاوة ضمن محور بيرمام (مصيف) شمال شرقي المدينة. يتكون المشروع أساساً من بيوت، منها بيوت بمساحة ٤٥٠ م² بأربع غرف نوم، وبيوت بمساحة ٥٠٠ م² بخمس غرف نوم. ويضم المشروع أيضاً قطع أراضٍ سكنية، منها قطعة بمساحة ١٬٠٠٠ م²، وشققاً بمساحة ١٤٤ م² بغرفتي نوم وحمامين.
 
 ### 3. English
-Future City is a residential project on the Erbil–Shaqlawa road in Erbil, listed by Bagh-y Shaqlawa real estate as a house project and served by the agency's Italian City 2 branch. Features listed for the project include 24-hour electricity, internet, a playground, preinstalled air conditioners, a city administrative centre, security, parking, green areas, underground parking, a public garden and a supermarket. On the market, ready houses of 450 m² and 500 m² with four or five bedrooms, a 1,000 m² residential plot, an unfinished 450 m² structure and a 144 m² two-bedroom apartment for rent are offered. Asking prices for the houses range from USD 600,000 for a 450 m² house to USD 1,500,000 for a 500 m² house.
+Future City is a residential project in Erbil, located on the Erbil–Shaqlawa road in the Pirmam (Masif) corridor north-east of the city. The project consists mainly of houses, including 450 m² houses with four bedrooms and 500 m² houses with five bedrooms. It also includes residential plots, such as a 1,000 m² plot, and apartments of 144 m² with two bedrooms and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

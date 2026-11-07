@@ -37,17 +37,17 @@ Project ID: hana-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Hana City is listed on the Erbil–Koya road near Majidi Mall on Erbil's eastern approach; no street detail or coordinates are published.
+Hana City is listed on the Erbil–Koya road near Majidi Mall on Erbil's eastern approach; no street detail are published. Map position (low confidence, from agency map pins): 36.195614, 44.061462.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-هانا سیتی پڕۆژەیەکی نیشتەجێبوونە لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای هەولێر–کۆیە، نزیک ماجیدی مۆڵ هەڵکەوتووە. پڕۆژەکە لە شوقە پێکهاتووە. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە دیاری کراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، ڕووبەری سەوز و مزگەوت. ڕێگای هەولێر–کۆیە پڕۆژەکە بە ناوەندی شار و ئاراستەی کۆیەوە دەبەستێتەوە.
+هانا سیتی (Hana City) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر، پایتەختی هەرێمی کوردستان. پڕۆژەکە لەسەر ڕێگای هەولێر – کۆیە، نزیک ماجیدی مۆڵ، لە دەروازەی ڕۆژهەڵاتی شار هەڵکەوتووە. پڕۆژەکە لە شوقەی نیشتەجێبوون پێکدێت.
 
 ### 2. Arabic (العربية)
-هانا سيتي مشروع سكني في أربيل، عاصمة إقليم كوردستان العراق. يقع على طريق أربيل–كويه بالقرب من ماجدي مول. يتكوّن المشروع من شقق سكنية. والخدمات المذكورة للمشروع هي الكهرباء على مدار 24 ساعة، وخدمة الإنترنت، والمساحات الخضراء، ومسجد. ويربط طريق أربيل–كويه المشروع بمركز المدينة وباتجاه كويه.
+هانا سيتي (Hana City) مشروع سكني للشقق في أربيل، عاصمة إقليم كردستان العراق. يقع المشروع على طريق أربيل – كويه بالقرب من ماجدي مول، عند المدخل الشرقي للمدينة. ويتكوّن المشروع من شقق سكنية.
 
 ### 3. English
-Hana City is a residential project in Erbil, the capital of the Kurdistan Region of Iraq. It is located on the Erbil–Koya road, close to Majidi Mall. The project is made up of apartments. The services listed for the project are 24-hour electricity, internet service, green areas and a mosque. The Erbil–Koya road connects the project with the city centre and with the Koya direction.
+Hana City is a residential apartment project in Erbil, the capital of the Kurdistan Region of Iraq. It is located on the Erbil–Koya road near Majidi Mall, on the eastern approach to the city. The project consists of apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

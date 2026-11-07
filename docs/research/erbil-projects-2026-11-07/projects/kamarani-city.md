@@ -38,7 +38,7 @@ Project ID: kamarani-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam places Kamarany City on Kasnazan Road behind Majdi Mall, in the Kasnazan approach of Erbil. No coordinates are published.
+Haji Salam places Kamarany City on Kasnazan Road behind Majdi Mall, in the Kasnazan approach of Erbil.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -45,17 +45,17 @@ Project ID: zaiton-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-1
 | Ready house 300 m2, 5 bed / 2 bath - listing asking price (negotiable) | 125,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Zaiton City' as an Erbil area; Paya's Olive City page places Olive City on 120 m Street next to Zaiton City. No direct address or coordinates.
+Homele lists 'Zaiton City' as an Erbil area; Paya's Olive City page places Olive City on 120 m Street next to Zaiton City.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زەیتوون سیتی (Zaytoon City) ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمارکراوە. ماڵپەڕی ئاژانسی پایا پڕۆژەی ئۆلیڤ سیتی لەسەر شەقامی ١٢٠ مەتری لە تەنیشت زەیتوون سیتی دادەنێت. ئەو موڵکانەی لە زەیتوون سیتی ڕیکلامیان بۆ کراوە خانووی ئامادەن، زۆربەیان بە ڕووبەری ٢٠٠ م² و دوو تا چوار ژووری نووستن، و خانوویەکیش بە ڕووبەری ٣٠٠ م² و پێنج ژووری نووستن. نرخی داواکراوی خانووی ٢٠٠ م² لە ٨٢٬٥٠٠ تا ١٣٧٬٥٠٠ دۆلاری ئەمریکییە، و خانووی ٣٠٠ م² بە ١٢٥٬٠٠٠ دۆلار خراوەتە ڕوو؛ هەندێک لە نرخەکان گفتوگۆیان لەسەر دەکرێت. زەیتوون پلەس سیتی، کە ئۆلیڤ سیتی لەخۆدەگرێت، پڕۆژەیەکی جیاوازە.
+زەیتوون سیتی (Zaiton City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. لە تەنیشت پڕۆژەی ئۆلیڤ سیتی لەسەر شەقامی ١٢٠ مەتری هەڵکەوتووە. خانووەکانی زەیتوون سیتی خانووی یەک نهۆمی و دوو نهۆمیی ٢٠٠ م² لەخۆدەگرن کە دوو تا چوار ژووری نووستنیان هەیە، هەروەها خانووی ٣٠٠ م² بە پێنج ژووری نووستن. زەیتوون پلەس سیتی، کە ئۆلیڤ سیتی لەخۆدەگرێت، پڕۆژەیەکی جیاوازە و دراوسێی زەیتوون سیتییە.
 
 ### 2. Arabic (العربية)
-زيتون سيتي (Zaytoon City) منطقة سكنية للبيوت في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. ويضع موقع وكالة بايا مشروع أوليف سيتي على شارع ١٢٠ متر بجوار زيتون سيتي. العقارات المعلن عنها في زيتون سيتي بيوت جاهزة، معظمها بمساحة ٢٠٠ م² وبغرفتين إلى أربع غرف نوم، إضافة إلى بيت بمساحة ٣٠٠ م² وخمس غرف نوم. تتراوح الأسعار المطلوبة للبيوت بمساحة ٢٠٠ م² بين ٨٢٬٥٠٠ و١٣٧٬٥٠٠ دولار أمريكي، ويُعرض البيت بمساحة ٣٠٠ م² بسعر ١٢٥٬٠٠٠ دولار؛ وبعض الأسعار قابلة للتفاوض. أما زيتون بلس سيتي، الذي يضم أوليف سيتي، فهو مشروع منفصل.
+زيتون سيتي (Zaiton City) منطقة سكنية للمنازل في مدينة أربيل في إقليم كوردستان العراق. تقع بجوار مشروع أوليف سيتي على شارع 120 متر. وتشمل المنازل في زيتون سيتي منازل من طابق واحد ومن طابقين بمساحة 200 م² تضم من غرفتي نوم إلى أربع غرف، ومنازل بمساحة 300 م² تضم خمس غرف نوم. أما زيتون بلس سيتي، الذي يضم أوليف سيتي، فهو مشروع منفصل مجاور لزيتون سيتي.
 
 ### 3. English
-Zaiton City (Zaytoon City) is a residential housing area in Erbil, listed under this name on the homele.com property portal. The Paya agency site places the Olive City project on 120 m Street next to Zaiton City. The properties advertised in Zaiton City are ready houses, mostly of 200 m² with two to four bedrooms, and one house of 300 m² with five bedrooms. Asking prices for 200 m² houses range from USD 82,500 to USD 137,500, and the 300 m² house is offered at USD 125,000; some prices are negotiable. Zaiton Plus City, which includes Olive City, is a separate project.
+Zaiton City, also spelled Zaytoon City, is a residential area of houses in Erbil, in the Kurdistan Region of Iraq. It lies next to the Olive City project on 120 m Street. Houses in Zaiton City include one-floor and two-floor homes of 200 m² with two to four bedrooms, and houses of 300 m² with five bedrooms. Zaiton Plus City, which includes Olive City, is a separate project adjoining Zaiton City.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

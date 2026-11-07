@@ -45,17 +45,17 @@ Project ID: rasan-towers | Tier: 2 | In Erbil city: Yes | Last researched: 2026-
 | Ready apartment 150 m2 (3+1) - monthly rent (homele listing) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Rasan Towers' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Rasan Towers' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڕاسان تاوەرز (Rasan Towers) پڕۆژەیەکی شوقەیە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە، و ڕیکلامەکانی شەش لاپەڕەی ئەنجام پڕ دەکەنەوە. هەموو ئەو شوقانەی لە لاپەڕەی یەکەمدا ڕیکلامیان بۆ کراوە ئامادەن. کرێی مانگانە لە ٢٥٠ دۆلاری ئەمریکی بۆ شوقەیەکی یەک ژووری نووستن بە ڕووبەری ٧٤ م² تا ٥٠٠ دۆلار بۆ شوقەیەکی سێ ژووری نووستن بە ڕووبەری ١٥٠ م² دەگۆڕێت، و شوقەی دوو ژووری نووستن بە ڕووبەری ١١٥ م²، لەوانە شوقەیەکی بە کەلوپەلەوە، بە ٣٥٠ تا ٤٠٠ دۆلار خراونەتە ڕوو. بۆ فرۆشتن، شوقەی سێ ژووری نووستن بە ڕووبەری ١٥٠ م² بە ٦٦,٥٠٠ و ٦٧,٠٠٠ دۆلار، و شوقەیەکی دوو ژووری نووستن بە ڕووبەری ١١٠ م² بە ٦٨,٠٠٠ دۆلار بە پارەی پێشەکی تۆمار کراون.
+ڕاسان تاوەرز (Rasan Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر. ڕووبەری شوقەکانی پڕۆژەکە لە ٧٤ م²ەوە تا ١٥٠ م² دەگات. شوقەکانی ٧٤ م² یەک ژووری نووستن و یەک حەمامیان هەیە. شوقەکانی ١١٠ م² یان یەک ژووری نووستن و یەک حەمامیان هەیە یان دوو ژووری نووستن و دوو حەمام، و شوقەکانی ١١٥ م² دوو ژووری نووستنیان هەیە. شوقەکانی ١٥٠ م² سێ ژووری نووستن و دوو حەمامیان هەیە. هەندێک لە شوقەکانی ڕاسان تاوەرز بە کەلوپەلەوەن.
 
 ### 2. Arabic (العربية)
-راسان تاورز (Rasan Towers) مشروع شقق في أربيل، مدرج بهذا الاسم على بوابة العقارات homele.com، وتملأ إعلاناته ست صفحات من النتائج. وجميع الشقق المعلن عنها في الصفحة الأولى جاهزة. ويتراوح الإيجار الشهري بين 250 دولاراً أمريكياً لشقة بغرفة نوم واحدة بمساحة 74 م² و500 دولار لشقة بثلاث غرف نوم بمساحة 150 م²، وتُعرض شقق بغرفتي نوم بمساحة 115 م²، منها شقة مفروشة، بسعر 350 إلى 400 دولار. وللبيع تُعرض شقق بثلاث غرف نوم بمساحة 150 م² بسعر 66,500 و67,000 دولار، وشقة بغرفتي نوم بمساحة 110 م² بسعر 68,000 دولار بدفعة أولى.
+راسان تاورز (Rasan Towers) مشروع سكني للشقق في مدينة أربيل. تتراوح مساحات الشقق في المشروع بين 74 و150 م². وتضم الشقق بمساحة 74 م² غرفة نوم واحدة وحماماً واحداً. أما الشقق بمساحة 110 م² فتضم إما غرفة نوم واحدة وحماماً واحداً أو غرفتي نوم وحمامين، وتضم الشقق بمساحة 115 م² غرفتي نوم. وتضم الشقق بمساحة 150 م² ثلاث غرف نوم وحمامين. وبعض الشقق في راسان تاورز مفروشة.
 
 ### 3. English
-Rasan Towers is an apartment project in Erbil, listed under this name on the homele.com property portal, where its listings fill six result pages. All apartments advertised on the first page are ready units. Monthly rents range from USD 250 for a one-bedroom unit of 74 m² to USD 500 for a three-bedroom unit of 150 m², and two-bedroom units of 115 m², including a furnished one, are offered at USD 350–400. For sale, three-bedroom apartments of 150 m² are listed at USD 66,500 and USD 67,000, and a two-bedroom unit of 110 m² at USD 68,000 with a down payment.
+Rasan Towers is a residential apartment project in Erbil. Apartments in the project range from 74 m² to 150 m². The 74 m² apartments have one bedroom and one bathroom. Apartments of 110 m² have either one bedroom and one bathroom or two bedrooms and two bathrooms, and apartments of 115 m² have two bedrooms. Apartments of 150 m² have three bedrooms and two bathrooms. Some apartments in Rasan Towers are furnished.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

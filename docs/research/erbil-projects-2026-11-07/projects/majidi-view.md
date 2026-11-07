@@ -46,17 +46,17 @@ Project ID: majidi-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Apartment 182 m2, 3 beds - off-plan market listing (cash) | 123,700 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
 
 ## PART E — LOCATION & SURROUNDINGS
-On Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m ring roads (Baghy).
+On Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m ring roads (Baghy). Map position (low confidence, from agency map pins): 36.204262, 44.092099.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-مەجیدی ڤیو پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای کۆیە لە هەولێر، لە تەنیشت هیوا ستی، لە نێوان شەقامی ١٢٠ مەتری و ١٥٠ مەتری. پڕۆژەکە لەلایەن کۆمپانیای هیوا هۆڵدینگەوە دروست دەکرێت، کە پێشتر پڕۆژەکانی هیوا ستی، مەجیدی لاند، مەجیدی مۆڵ و گراند مەجیدی جێبەجێ کردووە. پڕۆژەکە لە ١١ بلۆک پێکدێت کە هەر یەکەیان ٢٥ نهۆمە و لە نێو ڕووبەری سەوزدا دروست دەکرێن. شوقەکان بە دوو جۆر پێشکەش دەکرێن: شوقەی دوو ژووری نووستن (2+1) بە ڕووبەری ١٠٨، ١١٥ و ١٥٣ م²، و شوقەی سێ ژووری نووستن (3+1) بە ڕووبەری ١٥٦ و ١٦٧ م². یەکەکان بە نەقد و بە قیست دەفرۆشرێن. پلانی قیستی بڵاوکراوە بریتییە لە ١٨٪ پێشەکی، ٢٢٪ دوای تەواوبوونی هەیکەل، ٣٠٪ لە کاتی ڕادەستکردن و بڕی ماوە بە ٣٦ قیستی مانگانە. لە تشرینی دووەمی ٢٠٢٦دا، ڕیکلامەکانی بازاڕ بۆ یەکەی سەر نەخشە شوقەیەکی ١٥٣ م²یان بە ١٠٤٬٠٠٠ دۆلاری ئەمریکی، شوقەیەکی ١٥٦ م² بە ١٠٦٬٠٠٠ دۆلار و شوقەیەکی ١٦٧ م² بە ١١٣٬٥٠٠ دۆلار پیشان دەدا.
+مەجیدی ڤیو (Majidi View) پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لە قۆناغی دروستکردندایە لەسەر ڕێگای کۆیە لە هەولێر، لە تەنیشت هیوا ستی و لە نێوان شەقامی ١٢٠ مەتری و ١٥٠ مەتری. پڕۆژەکە لە ١١ بلۆک پێکدێت کە هەر یەکەیان ٢٥ نهۆمە، و ڕووبەری سەوز بە دەوریاندا پلانی بۆ دانراوە. شوقەکان بە دوو جۆرن: شوقەی دوو ژووری نووستن بە ڕووبەری ١٠٨، ١١٥ و ١٥٣ م²، و شوقەی سێ ژووری نووستن بە ڕووبەری ١٥٦ و ١٦٧ م².
 
 ### 2. Arabic (العربية)
-مجيدي فيو مشروع سكني للشقق يقع على طريق كويه في أربيل، بجوار هيوا سيتي، بين شارعي ١٢٠ متر و١٥٠ متر. تقوم ببناء المشروع شركة هيوا القابضة، التي نفذت سابقاً مشاريع هيوا سيتي ومجيدي لاند ومجيدي مول وكراند مجيدي. يتكون المشروع من ١١ بلوكاً بارتفاع ٢٥ طابقاً لكل منها، وسط مساحات خضراء. تُعرض الشقق بنمطين: شقق بغرفتي نوم (2+1) بمساحات ١٠٨ و١١٥ و١٥٣ م²، وشقق بثلاث غرف نوم (3+1) بمساحات ١٥٦ و١٦٧ م². تُباع الوحدات نقداً وبالتقسيط، وتتكون خطة التقسيط المنشورة من ١٨٪ دفعة مقدمة، و٢٢٪ بعد اكتمال الهيكل، و٣٠٪ عند التسليم، ويُقسَّم المبلغ المتبقي على ٣٦ قسطاً شهرياً. في تشرين الثاني ٢٠٢٦، عرضت إعلانات السوق للوحدات على الخارطة شقة بمساحة ١٥٣ م² بسعر ١٠٤٬٠٠٠ دولار أمريكي، وشقة بمساحة ١٥٦ م² بسعر ١٠٦٬٠٠٠ دولار، وشقة بمساحة ١٦٧ م² بسعر ١١٣٬٥٠٠ دولار.
+مجيدي فيو (Majidi View) مشروع سكني للشقق قيد الإنشاء على طريق كويه في أربيل، بجوار هيوا سيتي وبين شارعي ١٢٠ متر و١٥٠ متر. يتكون المشروع من ١١ بلوكاً بارتفاع ٢٥ طابقاً لكل منها، مع مساحات خضراء مخطط لها حولها. تتوفر الشقق بنمطين: شقق بغرفتي نوم بمساحات ١٠٨ و١١٥ و١٥٣ م²، وشقق بثلاث غرف نوم بمساحتي ١٥٦ و١٦٧ م².
 
 ### 3. English
-Majidi View is a residential apartment project on Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m roads. It is being built by Hiwa Holding Company, whose earlier projects include Hiwa City, Majidi Land, Majidi Mall and Grand Majidi. The project consists of 11 blocks of 25 floors each, set among green spaces. Apartments are offered in two layouts: two-bedroom (2+1) units of 108, 115 and 153 m², and three-bedroom (3+1) units of 156 and 167 m². Units are sold for cash or by instalments; the published instalment plan is an 18% advance payment, 22% after completion of the structure, 30% on delivery, and the remaining amount in 36 monthly instalments. In November 2026, off-plan market listings advertised a 153 m² apartment at USD 104,000, a 156 m² apartment at USD 106,000 and a 167 m² apartment at USD 113,500.
+Majidi View is a residential apartment project under construction on Koya Road in Erbil, next to Hiwa City and between the 120 m and 150 m roads. The project consists of 11 blocks of 25 floors each, with green spaces planned around them. Apartments come in two layouts: two-bedroom units of 108, 115 and 153 m², and three-bedroom units of 156 and 167 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -40,17 +40,17 @@ Project ID: beirut-palace | Tier: 2 | In Erbil city: Yes | Last researched: 2026
 | Ready house 500 m2, 5 bed / 5 bath - monthly rent (homele market listing) | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Beirut Palace' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Beirut Palace' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-بەیرووت پالاس (Beirut Palace) ناوچەیەکی نیشتەجێبوونە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە خانووی ئامادەن بۆ کرێی مانگانە. خانوویەکی ٣٠٠ م² بە چوار ژووری نووستن و چوار حەمام بە ١,١٠٠ دۆلاری ئەمریکی لە مانگێکدا خراوەتە ڕوو، و خانوویەکی ٥٠٠ م² بە پێنج ژووری نووستن و پێنج حەمام بە ١,٥٠٠ دۆلار لە مانگێکدا. هەردوو ڕیکلامەکە لە ٧ی تشرینی دووەمی ٢٠٢٦ لەسەر پۆرتاڵەکە چالاک بوون.
+بەیرووت پالاس (Beirut Palace) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر، پایتەختی هەرێمی کوردستان. خانووەکانی ئەم ناوچەیە خانوویەکی 300 م² بە چوار ژووری نووستن و چوار حەمام، و خانوویەکی 500 م² بە پێنج ژووری نووستن و پێنج حەمام لەخۆ دەگرن.
 
 ### 2. Arabic (العربية)
-بيروت بالاس (Beirut Palace) منطقة سكنية في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. والعقارات المعلن عنها فيها بيوت جاهزة معروضة للإيجار الشهري، إذ يُعرض بيت بمساحة 300 م² بأربع غرف نوم وأربعة حمامات بسعر 1,100 دولار أمريكي شهرياً، وبيت بمساحة 500 م² بخمس غرف نوم وخمسة حمامات بسعر 1,500 دولار شهرياً. وكان الإعلانان نشطين على البوابة في 7 تشرين الثاني 2026.
+بيروت بالاس (Beirut Palace) منطقة سكنية من المنازل في مدينة أربيل، عاصمة إقليم كردستان العراق. وتشمل المنازل فيها منزلاً بمساحة 300 م² يضم أربع غرف نوم وأربعة حمامات، ومنزلاً بمساحة 500 م² يضم خمس غرف نوم وخمسة حمامات.
 
 ### 3. English
-Beirut Palace is a residential area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are ready houses offered for monthly rent. A 300 m² house with four bedrooms and four bathrooms is listed at USD 1,100 per month, and a 500 m² house with five bedrooms and five bathrooms is listed at USD 1,500 per month. Both listings were active on the portal on 7 November 2026.
+Beirut Palace is a residential area of houses in Erbil, the capital of the Kurdistan Region of Iraq. Houses in Beirut Palace include a 300 m² house with four bedrooms and four bathrooms and a 500 m² house with five bedrooms and five bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

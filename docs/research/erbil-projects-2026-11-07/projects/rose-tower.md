@@ -37,17 +37,17 @@ Project ID: rose-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Rose Tower is on the Koya Road in Erbil (Baghy). Floria City, whose 'Rose Garden' section contains Paya's 'Rose Garden Tower', is also on the Koya Road. No coordinates are published.
+Rose Tower is on the Koya Road in Erbil (Baghy). Floria City, whose 'Rose Garden' section contains Paya's 'Rose Garden Tower', is also on the Koya Road. Map position (low confidence, from agency map pins): 36.205164, 44.123055.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڕۆز تاوەر پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر، لەسەر ڕێگای کۆیە. پڕۆژەکە شوقە پێشکەش دەکات. ئاسانکارییە ڕاگەیەندراوەکانی بریتین لە کارەبای ٢٤ کاتژمێری، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت و ڕیسێپشن، و بەخێوکردنی ئاژەڵی ماڵی لە پڕۆژەکەدا ڕێگەپێدراوە. پڕۆژەکە لەلایەن ئاژانسی باغی شەقڵاوەوە ڕیکلامی بۆ دەکرێت، کە نزیکترین نووسینگەی لە پڕۆژەکەوە لقی ڕێگای کۆیەیە.
+ڕۆز تاوەر (Rose Tower) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای کۆیە هەڵکەوتووە و یەکەکانی شوقەن.
 
 ### 2. Arabic (العربية)
-روز تاور مشروع سكني للشقق في أربيل، يقع على طريق كويه. يوفر المشروع شققاً سكنية. تشمل الميزات المعلنة الكهرباء على مدار 24 ساعة، والحراسة، ومواقف السيارات، والمساحات الخضراء، وحديقة عامة، وسوبرماركت، والاستقبال، ويُسمح باقتناء الحيوانات الأليفة في المشروع. تعرض المشروعَ وكالة باغي شقلاوة، وأقرب مكاتبها إليه هو فرع طريق كويه.
+روز تاور (Rose Tower) مشروع سكني في مدينة أربيل في إقليم كوردستان العراق. يقع المشروع على طريق كويه، ووحداته السكنية شقق.
 
 ### 3. English
-Rose Tower is a residential apartment project in Erbil, located on the Koya Road. The project offers apartments. Its listed features are 24-hour electricity, security, parking, green areas, a public garden, a supermarket and a reception, and pets are allowed in the project. The project is listed by the Baghy Shaqlawa agency, whose nearest office to the project is its Koya Road branch.
+Rose Tower is a residential project in Erbil, in the Kurdistan Region of Iraq. It is located on the Koya Road, and its units are apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

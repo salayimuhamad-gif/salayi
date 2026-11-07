@@ -42,17 +42,17 @@ Project ID: zanko-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | House 250 m2, 5 bed, 4 bath (Baghy card) | 215,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zanko-village |
 
 ## PART E — LOCATION & SURROUNDINGS
-Zanko Village is on the Kirkuk Road in southern Erbil, opposite the 18 Shubat dormitory for girls (Baghy Shaqlawa). Baghy's map marker is at 36.138633, 44.028042.
+Zanko Village is on the Kirkuk Road in southern Erbil, opposite the 18 Shubat dormitory for girls (Baghy Shaqlawa). Map position (low confidence, from agency map pins): 36.138633, 44.028042.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گوندی زانکۆ پڕۆژەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای کەرکووک و بەرامبەر بەشی ناوخۆیی کچانی ١٨ی شوبات هەڵکەوتووە. پڕۆژەکە لە خانوو پێکدێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە ئینتەرنێت، یاریگای منداڵان، پاسەوانی، پارکینگ و ناوچەی سەوز. خانووەکانی گوندی زانکۆ وەک خانووی ئامادە بۆ فرۆشتنەوە ڕیکلامیان بۆ دەکرێت. ڕووبەری ئەو خانووانەی ڕیکلامیان بۆ کراوە ٢٥٠ م²یە، لە دوو تا پێنج ژووری نووستن و لە دوو تا چوار حەمامیان هەیە، و یەکێکیان خانوویەکی دوو نهۆمییە.
+گوندی زانکۆ (Zanko Village) پڕۆژەیەکی نیشتەجێبوونی خانووە لە باشووری هەولێر. پڕۆژەکە لەسەر ڕێگای کەرکووک، بەرامبەر بەشی ناوخۆیی کچانی ١٨ی شوبات هەڵکەوتووە. پڕۆژەکە لە خانووی ٢٥٠ م² پێکدێت. خانووەکانی گوندی زانکۆ دوو تا پێنج ژووری نووستن و دوو تا چوار حەمامیان هەیە، و هەندێکیان دوو نهۆمین. خزمەتگوزارییەکانی پڕۆژەکە بریتین لە پاسەوانی، پارکینگ، ئینتەرنێت، یاریگای منداڵان و ڕووبەری سەوز.
 
 ### 2. Arabic (العربية)
-قرية زانكو مشروع سكني للمنازل في مدينة أربيل في إقليم كوردستان العراق. يقع المشروع على طريق كركوك مقابل القسم الداخلي للطالبات 18 شباط. يتكوّن المشروع من منازل سكنية. تشمل المزايا المدرجة للمشروع الإنترنت وملاعب الأطفال والحراسة ومواقف السيارات والمساحات الخضراء. تُعرض منازل قرية زانكو لإعادة البيع كمنازل جاهزة. تبلغ مساحة المنازل المعلن عنها 250 م²، وتضم من غرفتي نوم إلى خمس غرف ومن حمّامين إلى أربعة حمّامات، وأحدها منزل من طابقين.
+قرية زانكو (Zanko Village) مشروع سكني للبيوت في جنوب أربيل. يقع المشروع على طريق كركوك، مقابل القسم الداخلي للطالبات 18 شباط. ويتكون المشروع من بيوت بمساحة 250 م². وتضم البيوت في قرية زانكو من غرفتي نوم إلى خمس غرف نوم ومن حمامين إلى أربعة حمامات، وبعضها مبني على طابقين. وتشمل مرافق المشروع الحراسة الأمنية ومواقف السيارات وخدمة الإنترنت وملعباً للأطفال ومساحات خضراء.
 
 ### 3. English
-Zanko Village is a residential house project in Erbil, Kurdistan Region of Iraq. It is located on the Kirkuk Road, opposite the 18 Shubat girls' dormitory. The project consists of houses. The features listed for the project are internet, playgrounds, security, parking and green areas. Houses in Zanko Village are offered for resale as ready homes. Advertised houses have an area of 250 m², with two to five bedrooms and two to four bathrooms, and one of them is a two-floor house.
+Zanko Village is a residential housing project in southern Erbil. It is located on the Kirkuk Road, opposite the 18 Shubat dormitory for girls. The project consists of houses of 250 m². Houses in Zanko Village have two to five bedrooms and two to four bathrooms, and some are built on two floors. Facilities in the project include security, parking, internet service, a playground and green areas.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

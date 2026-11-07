@@ -38,17 +38,17 @@ Project ID: downtown-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 202
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Wikipedia gives the address as Qalaa Street, Erbil; 2013 launch reports (web-search summary) describe the site as between the Erbil Citadel and Erbil International Airport, i.e. central Erbil. No coordinates are published.
+Wikipedia gives the address as Qalaa Street, Erbil; 2013 launch reports (web-search summary) describe the site as between the Erbil Citadel and Erbil International Airport, i.e. central Erbil.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-داون تاونی هەولێر پڕۆژەیەکی خانووبەرەی فرەمەبەستە لە شاری هەولێر لە هەرێمی کوردستانی عێراق، کە کۆمپانیای ئیمار پەرەی پێدەدات. ئیمار لە ساڵی ٢٠١٣ پڕۆژەکەی ڕاگەیاند و دروستکردنی لە هەمان ساڵدا دەستی پێکرد. تێچووی ڕاگەیەنراوی پڕۆژەکە ٣ ملیار دۆلاری ئەمریکی بوو. پڕۆژەکە ڕووبەری ٥٤١٬٠٠٠ م² دەگرێتەوە و دوو تاوەری جمک، شوێنی نیشتەجێبوون و بازرگانی، هوتێل، مۆڵ و پارک لەخۆ دەگرێت. ناونیشانی تۆمارکراوی پڕۆژەکە شەقامی قەڵایە لە هەولێر. پەیکەری چەند ئافرەتێکی ناسراوی کورد لەناو پڕۆژەکەدا دانراون.
+داون تاونی هەولێر (Downtown Erbil)، کە بە هەولێر داون تاونیش ناسراوە، پڕۆژەیەکی فرەمەبەستە لە ناوەندی شاری هەولێر و ناونیشانەکەی لەسەر شەقامی قەڵایە. گەشەپێدەری پڕۆژەکە کۆمپانیای ئیعمارە، کە لە تشرینی یەکەمی ساڵی ٢٠١٣دا پڕۆژەکەی ڕاگەیاند. پڕۆژەکە ڕووبەری ٥٤١,٠٠٠ م² دەگرێتەوە. نەخشەی گشتیی پڕۆژەکە بەشی نیشتەجێبوون و بازرگانی پێکەوە کۆ دەکاتەوە و دوو تاوەری جووت لەنێو بیناکانیدان. هەروەها نەخشەکە هوتێل، مۆڵی بازاڕکردن و پارکیش لە تەنیشت ناوچە نیشتەجێبوون و بازرگانییەکان لەخۆ دەگرێت.
 
 ### 2. Arabic (العربية)
-داون تاون أربيل مشروع عقاري متعدد الاستخدامات في مدينة أربيل في إقليم كوردستان العراق، تطوّره شركة إعمار. أطلقت إعمار المشروع عام 2013، وبدأ البناء في العام نفسه. بلغت التكلفة المعلنة للمشروع 3 مليارات دولار أمريكي. يمتد المشروع على مساحة 541,000 م² ويضم برجين توأمين ومساحات سكنية وتجارية وفنادق ومراكز تسوق وحدائق. العنوان المدرج للمشروع هو شارع القلعة في أربيل. وتنتصب داخل المشروع تماثيل لعدد من النساء الكورديات المعروفات.
+داون تاون أربيل (Downtown Erbil)، ويُعرف أيضاً باسم أربيل داون تاون، مشروع متعدد الاستخدامات في وسط مدينة أربيل، ويقع عنوانه في شارع القلعة. الجهة المطوّرة للمشروع هي شركة إعمار، التي أطلقته في تشرين الأول/أكتوبر 2013. ويمتد المشروع على مساحة 541,000 م². ويجمع المخطط العام للمشروع بين المساحات السكنية والتجارية، ومن بين مبانيه برجان توأمان. كما يتضمن المخطط فنادق ومراكز تسوق وحدائق إلى جانب المناطق السكنية والتجارية.
 
 ### 3. English
-Downtown Erbil (Kurdish: داون تاونی هەولێر) is a mixed-use real estate project in Erbil, Kurdistan Region of Iraq, developed by Emaar. Emaar launched the project in 2013, and construction started the same year. The announced cost of the project was US$3 billion. The development covers 541,000 m² and combines twin towers, residential and commercial space, hotels, shopping malls and parks. Its listed address is Qalaa Street in Erbil. Statues of well-known Kurdish women stand inside the development.
+Downtown Erbil, also known as Erbil Downtown, is a mixed-use development in central Erbil, with its address on Qalaa Street. The developer is Emaar, which launched the project in October 2013. The development covers a site of 541,000 m². Its master plan brings together residential and commercial space, with twin towers among its buildings. The plan also includes hotels, shopping malls and parks alongside the residential and commercial areas.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -45,17 +45,17 @@ Project ID: smart-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11
 | Off-plan house 330 m2, 4 bed / 5 bath (homele listing) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/smart-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Smart City' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Smart City' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-سمارت ستی (Smart City) پڕۆژەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. هەموو ئەو خانووانەی لەوێ ڕیکلامیان بۆ کراوە لەسەر نەخشەن و چوار ژووری نووستنیان هەیە، و چەندانێکیان بە پارەی پێشەکی دەفرۆشرێن. ڕووبەرە ڕیکلامکراوەکان ٢٢٠، ٢٦٠، ٢٧٠، ٢٧٥ و ٣٣٠ م²ن. خانووی ٢٢٠ م² بە ١٧٦,٠٠٠ و ١٨٤,٨٠٠ دۆلاری ئەمریکی، خانووی ٢٦٠ م² بە ١٩٨,٠٠٠ و ٢٠٣,٥٠٠ دۆلار، خانوویەکی ٢٧٠ م² بە دوو چێشتخانە بە ٢٠٣,٥٠٠ دۆلار، خانوویەکی ٢٧٥ م² بە ١٧٥,٨٠٠ دۆلار، و خانوویەکی ٣٣٠ م² بە پێنج حەمام بە ٢٥٠,٠٠٠ دۆلار خراونەتە ڕوو. یەکێک لە ڕیکلامەکانی خانووی ٢٢٠ م² خانوویەکی باخچەدار دەخاتە ڕوو.
+سمارت سیتی (Smart City) پڕۆژەیەکی نیشتەجێبوونی خانووە لە هەولێر. خانووەکانی پڕۆژەکە چوار ژووری نووستنیان هەیە و بە ڕووبەرەکانی ٢٢٠، ٢٦٠، ٢٧٠، ٢٧٥ و ٣٣٠ م²ن. زۆربەی خانووەکان چوار حەمامیان هەیە، بەڵام خانووەکانی ٣٣٠ م² پێنج حەمامیان هەیە. خانووەکان پێش تەواوبوونی دروستکردن (ئۆف پلان) دەفرۆشرێن.
 
 ### 2. Arabic (العربية)
-سمارت سيتي (Smart City) مشروع سكني للبيوت في أربيل، مدرج بهذا الاسم على بوابة العقارات homele.com. وجميع البيوت المعلن عنها فيه على الخارطة وبأربع غرف نوم، ويُباع عدد منها بدفعة أولى. والمساحات المعلنة هي 220 و260 و270 و275 و330 م². وتُعرض بيوت بمساحة 220 م² بسعر 176,000 و184,800 دولار أمريكي، وبيوت بمساحة 260 م² بسعر 198,000 و203,500 دولار، وبيت بمساحة 270 م² بمطبخين بسعر 203,500 دولار، وبيت بمساحة 275 م² بسعر 175,800 دولار، وبيت بمساحة 330 م² بخمسة حمامات بسعر 250,000 دولار. ويعرض أحد إعلانات بيوت 220 م² بيتاً مع حديقة.
+سمارت سيتي (Smart City) مشروع سكني للبيوت في أربيل. تضم البيوت في المشروع أربع غرف نوم، وتأتي بمساحات ٢٢٠ و٢٦٠ و٢٧٠ و٢٧٥ و٣٣٠ م². ومعظم البيوت بأربعة حمامات، أما البيوت بمساحة ٣٣٠ م² فبخمسة حمامات. وتُباع البيوت على الخارطة قبل اكتمال البناء.
 
 ### 3. English
-Smart City is a residential housing project in Erbil, listed under this name on the homele.com property portal. All houses advertised there are off-plan units with four bedrooms, several of them sold with a down payment. Listed sizes are 220, 260, 270, 275 and 330 m². Houses of 220 m² are listed at USD 176,000 and USD 184,800, houses of 260 m² at USD 198,000 and USD 203,500, a 270 m² house with two kitchens at USD 203,500, a 275 m² house at USD 175,800, and a 330 m² house with five bathrooms at USD 250,000. One 220 m² listing offers a house with a garden.
+Smart City is a residential housing project in Erbil. Houses in the project have four bedrooms and come in sizes of 220, 260, 270, 275 and 330 m². Most houses have four bathrooms, while the 330 m² houses have five. The houses are sold off-plan.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

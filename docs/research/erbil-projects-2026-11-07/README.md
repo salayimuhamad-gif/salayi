@@ -32,10 +32,14 @@ English) profile per discovered project plus a single import-ready JSON array.
    (Google Maps marker). A pin is used only if it lies inside Erbil and is not shared with another project (placeholder
    check). Confidence: High = three pins within 1.5 km, Medium = two, Low = a single pin, Disputed = pins disagree
    (coordinates left null). See `coordinates_confidence` in the JSON.
-6. **QA.** Every file was checked for required keys, enum values, numeric types, source URLs, Sorani-specific letters in
-   `description_ku`, Arabic script leaking into `description_en`, and description length. Figures an agent calculated
-   from stated values (for example 28 buildings × 32 flats + 643 villas) are listed in `derived_fields`; figures
-   described as estimates are removed from the import data.
+6. **Public descriptions.** The Sorani, Arabic and English descriptions are written as Andaz's own neutral text:
+   they name no source website, use no listing or advertising language, contain no prices or payment terms (those
+   stay in the dated `prices` data), and leave out anything disputed or unverified. They state the same facts in all
+   three languages and are short where few facts are verified; nothing is padded.
+7. **QA.** Every file was checked for required keys, enum values, numeric types, source URLs, Sorani-specific letters in
+   `description_ku`, Arabic script leaking into `description_en`, and description length. Figures calculated from
+   stated values (for example 28 buildings × 32 flats + 643 villas) and approximations stated by a source are labelled in
+   `figure_notes`; figures the research itself estimated are removed from the import data.
 
 ## Scope decisions
 * "Erbil city" = the municipal urban area incl. its ring-road belt (60m/100m/120m/150m roads), Ankawa, New Erbil
@@ -44,6 +48,12 @@ English) profile per discovered project plus a single import-ready JSON array.
   "Chiwa Tower", Shaqlawa, was excluded at discovery).
 * Pure commercial projects found on the project directories (CBC, Avenue Square, AB Center, Ezma Business Tower,
   Voyage Mall, FM Plaza) are included and categorised `commercial`.
+
+## Publication flag
+Every record carries `publish_recommendation`:
+* `ready` — partially or fully verified, medium/high confidence, inside Erbil city.
+* `review` — unverified or low confidence: an editor should confirm the key facts before publishing.
+* `hold` — outside Erbil city, or too few verified facts for a meaningful public description (for example Bajgir City).
 
 ## Limitations (read before importing)
 * **Wider-web verification was limited.** The session's web-search budget (200 searches per turn, shared by all agents)

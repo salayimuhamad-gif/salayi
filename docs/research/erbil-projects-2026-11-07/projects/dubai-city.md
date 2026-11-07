@@ -40,17 +40,17 @@ Project ID: dubai-city | Tier: 1 | In Erbil city: Edge | Last researched: 2026-1
 | Villa 1,060 m2, 8 bed / 7 bath, ready - resale asking price (negotiable) | 1,250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy Shaqlawa places Dubai City on the Erbil–Koya road, which leaves Erbil towards the south-east (Kasnazan direction), and assigns it to its Koya Road branch. No neighbourhood, distance or landmark is given, so the project is classed as on the urban fringe ('edge').
+Baghy Shaqlawa places Dubai City on the Erbil–Koya road, which leaves Erbil towards the south-east (Kasnazan direction), and assigns it to its Koya Road branch. No neighbourhood, distance or landmark is given, so the project is classed as on the urban fringe ('edge'). Map position (low confidence, from agency map pins): 36.206496, 44.112794.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-دوبەی سیتی پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لەسەر ڕێگای هەولێر–کۆیە، لە دەروازەی باشووری ڕۆژهەڵاتی شاری هەولێر. پڕۆژەکە لە ڤێلا پێکدێت. ئەو خزمەتگوزارییانەی بۆ کۆمەڵگاکە ناوبراون بریتین لە کارەبای ٢٤ کاتژمێری، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی و سوپەرمارکێت. ڤێلای ئامادە لەم پڕۆژەیەدا لە بازاڕی خانووبەرەی هەولێردا پێشکەش دەکرێت؛ یەکێک لە ڤێلا ڕیکلامکراوەکان ڕووبەرەکەی ١٬٠٦٠ م²یە و هەشت ژووری نووستن و حەوت حەمامی هەیە. لقی ڕێگای کۆیەی نووسینگەی خانووبەرەی باخی شەقڵاوە لە هەولێر نزیکترین لقە بۆ ئەم پڕۆژەیە.
+دوبەی سیتی (Dubai City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر، لەسەر ڕێگای هەولێر – کۆیە، کە بەرەو باشووری ڕۆژهەڵات و ئاراستەی کەسنەزان لە شار دەردەچێت. پڕۆژەکە لە ڤێلا پێکدێت، و یەکێک لە ڤێلاکانی ڕووبەری 1,060 م²یە بە هەشت ژووری نووستن و حەوت حەمام. زانیاریی زیاتر، وەک ناوی کۆمپانیای گەشەپێدەر، ژمارەی ڤێلاکان، ڕووبەری ستانداردی ڤێلاکان، خزمەتگوزارییەکان و قۆناغی بنیاتنان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
 
 ### 2. Arabic (العربية)
-دبي سيتي مشروع سكني للفلل يقع على طريق أربيل–كويه، عند المدخل الجنوبي الشرقي لمدينة أربيل. يتكوّن المشروع من فلل سكنية. وتشمل الخدمات المذكورة للمجمع كهرباء على مدار 24 ساعة، وساحة ألعاب للأطفال، وحراسة أمنية، ومواقف للسيارات، ومساحات خضراء، وحديقة عامة، وسوبرماركت. وتُعرض فلل جاهزة في المشروع في سوق العقارات في أربيل؛ وتبلغ مساحة إحدى الفلل المعروضة 1,060 م² وتضم ثماني غرف نوم وسبعة حمّامات. ويُعدّ فرع طريق كويه التابع لمكتب باغي شقلاوة العقاري في أربيل أقرب فرع للمشروع.
+دبي سيتي (Dubai City) مشروع سكني للفلل في أربيل، يقع على طريق أربيل – كويه الذي يخرج من المدينة باتجاه الجنوب الشرقي نحو كسنزان. ويتكوّن المشروع من فلل سكنية، ومنها فيلا بمساحة 1,060 م² تضم ثماني غرف نوم وسبعة حمامات. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، ومنها اسم الشركة المطوّرة، وعدد الفلل، والمساحات القياسية للفلل، والمرافق والخدمات، وحالة الإنشاء.
 
 ### 3. English
-Dubai City is a residential villa project on the Erbil–Koya road, at the south-eastern approach to Erbil city. The project consists of villas. Services named for the community include 24-hour electricity, a children's playground, security, parking, green areas, a public garden and a supermarket. Ready villas in the project are offered on the Erbil property market; one advertised villa has an area of 1,060 m² with eight bedrooms and seven bathrooms. The Koya Road branch of the Baghy Shaqlawa real-estate office in Erbil is the nearest branch to the project.
+Dubai City, also spelled Dubay City, is a residential villa project in Erbil. It is located on the Erbil–Koya road, which leaves the city towards the south-east in the direction of Kasnazan. The project consists of villas; one villa in the project has an area of 1,060 m² with eight bedrooms and seven bathrooms. Further details, including the developer, the number of villas, standard villa sizes, facilities and the construction status, will be added to this profile when they become available.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

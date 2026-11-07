@@ -41,17 +41,17 @@ Project ID: kavar-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Ready modern house 350 m2, 4 bed / 4 bath - homele sale listing (negotiable) | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Kavar City is on the Erbil-Shaqlawa road beside the Russian consulate (Haji Salam). No distance from the ring roads or coordinates are published.
+Kavar City is on the Erbil-Shaqlawa road beside the Russian consulate (Haji Salam). No distance from the ring roads are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-کاڤار سیتی (Kavar City) پڕۆژەیەکی نیشتەجێبوونی خانووی دوو نهۆمییە لەسەر ڕێگای شەقڵاوە لە شاری هەولێر، لە تەنیشت کونسوڵخانەی ڕووسیا. بەپێی ماڵپەڕی نووسینگەی حاجی سەلامی خانووبەرە، پڕۆژەکە لە ١٥٠ خانوو پێکدێت، بە ڕووبەری ٢٥٠ م² تا ٣٠٠ م²، دوو نهۆم و سێ یان چوار ژووری نووستن. لە تشرینی دووەمی ٢٠٢٦دا، ماڵپەڕی هۆمێلێ خانووی مۆدێرنی ئامادەی لە کاڤار سیتی بۆ فرۆشتن نمایش کردووە: خانوویەکی ٣٢٠ م² بە چوار ژووری نووستن و دوو حەمام بە نرخی داواکراوی ٣١٠٬٠٠٠ دۆلاری ئەمریکی، و خانوویەکی ٣٥٠ م² بە چوار ژووری نووستن و چوار حەمام بە نرخی داواکراوی ٣٥٠٬٠٠٠ دۆلاری ئەمریکی و بە گفتوگۆ.
+کاڤار سیتی (Kavar City) پڕۆژەیەکی نیشتەجێبوونی خانووە لە هەولێر، لەسەر ڕێگای هەولێر–شەقڵاوە لە تەنیشت کونسوڵخانەی ڕووسیا. پڕۆژەکە لە ١٥٠ خانووی دوو نهۆمی پێکدێت بە ڕووبەری ٢٥٠ تا ٣٠٠ م²، و هەر خانوویەک سێ یان چوار ژووری نووستنی هەیە.
 
 ### 2. Arabic (العربية)
-كافار سيتي (Kavar City) مشروع سكني لمنازل من طابقين على طريق شقلاوة في مدينة أربيل، بجوار القنصلية الروسية. ووفقاً لمكتب الحاج سلام العقاري، يتكون المشروع من 150 منزلاً بمساحات من 250 م² إلى 300 م²، من طابقين وبثلاث أو أربع غرف نوم. وفي تشرين الثاني 2026 عرض موقع هوميلي للبيع منازل حديثة جاهزة في كافار سيتي: منزلاً بمساحة 320 م² بأربع غرف نوم وحمامين بسعر مطلوب قدره 310,000 دولار أمريكي، ومنزلاً بمساحة 350 م² بأربع غرف نوم وأربعة حمامات بسعر مطلوب قدره 350,000 دولار أمريكي قابل للتفاوض.
+كافار سيتي (Kavar City) مشروع سكني للمنازل في أربيل، على طريق أربيل–شقلاوة بجوار القنصلية الروسية. ويتكوّن من 150 منزلاً من طابقين بمساحات تتراوح بين 250 و300 م²، ولكل منزل ثلاث أو أربع غرف نوم.
 
 ### 3. English
-Kavar City is a residential project of two-floor houses on the Shaqlawa road in Erbil, beside the Russian consulate. According to Haji Salam Real Estate, the project consists of 150 houses with areas of 250 m² to 300 m², two floors and three or four bedrooms. In November 2026 Homele advertised ready modern houses in Kavar City for sale: a 320 m² house with four bedrooms and two bathrooms at an asking price of US$310,000, and a 350 m² house with four bedrooms and four bathrooms at an asking price of US$350,000, negotiable.
+Kavar City is a residential project of houses in Erbil, on the Erbil–Shaqlawa road beside the Russian consulate. It consists of 150 two-floor houses with areas of 250 to 300 m², each with three or four bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

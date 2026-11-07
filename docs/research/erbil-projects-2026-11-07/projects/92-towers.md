@@ -37,17 +37,17 @@ Project ID: 92-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-On the Erbil–Kirkuk road (Baghy Shaqlawa), a southern approach to the city within the study scope. Baghy assigns the project to its Cihan City branch. No coordinates or landmarks are published.
+On the Erbil–Kirkuk road (Baghy Shaqlawa), a southern approach to the city within the study scope. Baghy assigns the project to its Cihan City branch. No landmarks are published. Map position (low confidence, from agency map pins): 36.151071, 44.019006.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-٩٢ تاوەرز (92 Towers) پڕۆژەیەکی شوقەیە لەسەر ڕێگای هەولێر–کەرکووک لە هەولێر، کە لە ماڵپەڕی باغی شەقڵاوە تۆمار کراوە. پەڕەی پڕۆژەکە جۆری موڵکەکانی وەک شوقە دیاری کردووە. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە ناویان هاتووە بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، ئامێری فێنککەرەوەی پێشوەختە دامەزراو، بنکەیەکی کارگێڕی، پاسەوانی، پارکینگ لەگەڵ پارکینگی ژێرزەوی، ناوچەی سەوز، سوپەرمارکێت، و تۆڕەکانی ژێرخانی ئاوەڕۆ، بۆڕیکێشیی تەندروستی و کارەبا. باغی شەقڵاوە پڕۆژەکە لە ڕێگەی لقی جیهان ستی لە هەولێرەوە بەڕێوە دەبات.
+92 تاوەرز (92 Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر، پایتەختی هەرێمی کوردستان، و لەسەر ڕێگای هەولێر – کەرکووک لە دەروازەی باشووری شار هەڵکەوتووە. پڕۆژەکە لە شوقەی نیشتەجێبوون پێکدێت.
 
 ### 2. Arabic (العربية)
-92 تاورز (92 Towers) مشروع شقق سكنية على طريق أربيل–كركوك في أربيل، مدرج على موقع باغي شقلاوة العقاري. وتذكر صفحة المشروع أن نوع العقارات فيه شقق. والمزايا المدرجة للمشروع هي الكهرباء على مدار 24 ساعة، والإنترنت، وملعب للأطفال، وأجهزة التكييف المركبة مسبقاً، ومركز إداري، والحراسة، ومواقف السيارات بما فيها مرآب تحت الأرض، والمساحات الخضراء، وسوبرماركت، وشبكات البنية التحتية للصرف الصحي والتمديدات الصحية والكهرباء. ويتولى مكتب باغي شقلاوة المشروع عبر فرعه في جيهان سيتي بأربيل.
+92 تاورز (92 Towers) مشروع سكني للشقق في مدينة أربيل، عاصمة إقليم كردستان العراق، ويقع على طريق أربيل – كركوك عند المدخل الجنوبي للمدينة. ويتكوّن المشروع من شقق سكنية.
 
 ### 3. English
-92 Towers is an apartment project on the Erbil–Kirkuk road in Erbil, listed on the Baghy Shaqlawa real-estate website. The project page lists apartments as its property type. The features listed for the project are 24-hour electricity, internet, a children's playground, pre-installed air conditioners, an administrative centre, security, parking including an underground car park, green areas, a supermarket, and infrastructure networks for sewerage, sanitary plumbing and electricity. Baghy Shaqlawa handles the project through its Cihan City branch in Erbil.
+92 Towers is a residential apartment project in Erbil, the capital of the Kurdistan Region of Iraq. It is located on the Erbil–Kirkuk road, on the southern approach to the city. The project consists of apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

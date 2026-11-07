@@ -42,17 +42,17 @@ Project ID: aynda-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Ready modern house 216 m2, 5 bed / 4 bath - listing asking price (negotiable) | 155,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Aynda City 2' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Aynda City 2' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شاری ئایندە ٢ (ئایندە ستی ٢) ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمارکراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە خانووی ئامادەن بە ڕووبەری ٢١٦ م². خانووی دوو ژووری نووستن و دوو حەمام بە نەختە بە نرخی ٧٧,٥٠٠ و ٨٠,٠٠٠ دۆلاری ئەمریکی پێشکەش دەکرێن، و خانووی گەورەتر بە هەمان ڕووبەر بە ١٥٠,٠٠٠ دۆلار بۆ خانوویەکی چوار ژووری نووستن و پێنج حەمام و بە ١٥٥,٠٠٠ دۆلار بۆ خانوویەکی پێنج ژووری نووستن و چوار حەمام خراونەتە ڕوو؛ هەموو نرخەکان گفتوگۆیان لەسەر دەکرێت. ناوچەیەکی پەیوەندیدار بە ناوی شاری ئایندە ١ بە جیا لە هەمان پۆرتاڵدا تۆمارکراوە.
+ئایندە ستی ٢ (Aynda City 2) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. خانووەکانی ئایندە ستی ٢ ڕووبەریان ٢١٦ م²یە، و لە دوو تا پێنج ژووری نووستن و دوو تا پێنج حەمامیان هەیە.
 
 ### 2. Arabic (العربية)
-آينده سيتي 2 (مدينة آينده 2) منطقة سكنية للبيوت في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. العقارات المعلن عنها فيها بيوت جاهزة بمساحة 216 م². وتُعرض بيوت بغرفتي نوم وحمامين نقداً بسعر 77,500 و80,000 دولار أمريكي، كما تُعرض بيوت أكبر بالمساحة نفسها بسعر 150,000 دولار لبيت بأربع غرف نوم وخمسة حمامات، و155,000 دولار لبيت بخمس غرف نوم وأربعة حمامات؛ وجميع الأسعار قابلة للتفاوض. وتُدرج منطقة ذات صلة باسم آينده سيتي 1 بشكل منفصل على البوابة نفسها.
+آينده سيتي 2 (Aynda City 2) منطقة سكنية للبيوت في مدينة أربيل في إقليم كوردستان العراق. تبلغ مساحة البيوت في آينده سيتي 2 ما مقداره 216 م²، وتضم من غرفتي نوم إلى خمس غرف نوم ومن حمامين إلى خمسة حمامات.
 
 ### 3. English
-Aynda City 2 (Ayenda City 2) is a residential housing area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are ready houses of 216 m². Two-bedroom, two-bathroom houses are offered for cash at USD 77,500 and USD 80,000, and larger houses of the same size are offered at USD 150,000 with four bedrooms and five bathrooms and at USD 155,000 with five bedrooms and four bathrooms; all asking prices are negotiable. A related area named Aynda City 1 is listed separately on the same portal.
+Aynda City 2 is a residential area of houses in Erbil, in the Kurdistan Region of Iraq. Houses in Aynda City 2 have an area of 216 m², with two to five bedrooms and two to five bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

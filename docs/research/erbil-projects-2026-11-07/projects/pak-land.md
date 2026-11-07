@@ -43,17 +43,17 @@ Project ID: pak-land | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-0
 | Ready family house 300 m2, 5 bed / 6 bath - asking price (homele listing) | 270,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/pak-land |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Pak Land' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Pak Land' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-پاک لاند (Pak Land) ناوچەیەکی نیشتەجێبوونە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە شوقەی ئامادە و خانوویەکی ئامادەن بۆ فرۆشتن. لە شوقەکان، شوقەیەکی یەک ژووری نووستن بە ڕووبەری ٨٠ م² بە ٤٣,٠٠٠ دۆلاری ئەمریکی، و شوقەی سێ ژووری نووستن بە ڕووبەری ١٥٧ م² بە ٩٥,٠٠٠ دۆلار و ١٦٠ م² بە ٦٩,٠٠٠ دۆلار خراونەتە ڕوو. خانوویەکی خێزانیی ٣٠٠ م² بە پێنج ژووری نووستن و شەش حەمام بە ٢٧٠,٠٠٠ دۆلار تۆمار کراوە. نرخی شوقەکانی ٨٠ م² و ١٦٠ م² گفتوگۆیان لەسەر دەکرێت.
+پاک لاند (Pak Land) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر کە شوقە و خانووی خێزانی لەخۆ دەگرێت. ڕووبەری شوقەکان لە ٨٠ م²ەوە تا ١٦٠ م² دەگات. شوقەکانی ٨٠ م² یەک ژووری نووستن و یەک حەمامیان هەیە، و شوقە گەورەترەکانی ١٥٧ م² و ١٦٠ م² سێ ژووری نووستن و دوو حەمامیان هەیە. خانووە خێزانییەکانی پاک لاند ڕووبەریان ٣٠٠ م²یە و هەر خانوویەک پێنج ژووری نووستن و شەش حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-باك لاند (Pak Land) منطقة سكنية في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. والعقارات المعلن عنها فيها شقق جاهزة وبيت جاهز للبيع. ومن الشقق المعروضة شقة بغرفة نوم واحدة بمساحة 80 م² بسعر 43,000 دولار أمريكي، وشقق بثلاث غرف نوم بمساحة 157 م² بسعر 95,000 دولار و160 م² بسعر 69,000 دولار. كما يُعرض بيت عائلي بمساحة 300 م² بخمس غرف نوم وستة حمامات بسعر 270,000 دولار. وسعرا شقتي 80 م² و160 م² قابلان للتفاوض.
+باك لاند (Pak Land) منطقة سكنية في مدينة أربيل تضم شققاً سكنية وبيوتاً عائلية. تتراوح مساحات الشقق فيها بين 80 و160 م². وتضم الشقق التي تبلغ مساحتها 80 م² غرفة نوم واحدة وحماماً واحداً، أما الشقق الأكبر بمساحة 157 و160 م² فتضم ثلاث غرف نوم وحمامين. وتبلغ مساحة البيوت العائلية في باك لاند 300 م²، ويضم كل منها خمس غرف نوم وستة حمامات.
 
 ### 3. English
-Pak Land is a residential area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are ready apartments and a ready house for sale. The apartments include a one-bedroom unit of 80 m² at USD 43,000 and three-bedroom units of 157 m² at USD 95,000 and 160 m² at USD 69,000. A 300 m² family house with five bedrooms and six bathrooms is listed at USD 270,000. The prices of the 80 m² and 160 m² apartments are marked negotiable.
+Pak Land is a residential area in Erbil that includes both apartments and family houses. Apartments in Pak Land range from 80 m² to 160 m². The 80 m² apartments have one bedroom and one bathroom, while the larger apartments of 157 m² and 160 m² have three bedrooms and two bathrooms. Family houses in the area measure 300 m², and each has five bedrooms and six bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -45,17 +45,17 @@ Project ID: lalav-nova-towers | Tier: 1 | In Erbil city: Yes | Last researched: 
 | 2-bedroom apartment 122 m2, off-plan - homele sale listing | 40,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-nova-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Lalav Nova Towers is on Erbil's Bahrka road (Paya), the same corridor as Lalav Sun Towers; no closer location is given. No coordinates are published.
+Lalav Nova Towers is on Erbil's Bahrka road (Paya), the same corridor as Lalav Sun Towers; no closer location is given. Map position (low confidence, from agency map pins): 36.2838833, 44.0158702.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-لالاڤ نۆڤا تاوەرز پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لالاڤ گروپ لەسەر ڕێگای بەحرکە لە هەولێر دروستی دەکات. پڕۆژەکە لە شەش بینا پێکهاتووە کە ١٬٠٥٦ یەکە لەخۆ دەگرن. نهۆمی زەمینیی هەر بینایەک بازرگانییە، و سێ نهۆمی ژێرزەوی وەک پارکینگ بەکاردێن. پڕۆژەکە ٥٬٢١٨ م² شوێنی سەوزی تێدایە لەگەڵ فوارە، کورسیی دانیشتن و ڕێڕەوی پیاسەکردن، هەروەها سیستەمی پاسەوانی و چاودێری کە ستافی پاسەوانی بەڕێوەی دەبەن. ئەو شوقانەی لە پڕۆژەکەدا پێشکەش دەکرێن بریتین لە شوقەی یەک ژووری نووستن (1+1) بە ڕووبەری ٨١ و ٨٨ م² و شوقەی دوو ژووری نووستن بە ڕووبەری ١٢٢ م² بە دوو حەمام. یەکەکان پێش تەواوبوونی بیناسازی (ئۆف پلان) بۆ فرۆشتن پێشکەش دەکرێن.
+لالاڤ نۆڤا تاوەرز (Lalav Nova Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەی لالاڤ گرووپە لەسەر ڕێگای بەحرکە لە هەولێر، هەمان ڕێگا کە پڕۆژەی لالاڤ سەن تاوەرزی لەسەرە. پڕۆژەکە لە شەش باڵەخانە پێکدێت کە بە گشتی ١٬٠٥٦ یەکە لەخۆ دەگرن. شوقەکان بریتین لە شوقەی یەک ژووری نووستن (١+١) بە ڕووبەری ٨١ و ٨٨ م² و شوقەی دوو ژووری نووستن بە ڕووبەری ١٢٢ م² و دوو حەمام. ئاسانکارییە پلان بۆ دانراوەکان بریتین لە نهۆمی زەمینیی بازرگانی لە هەر باڵەخانەیەک، سێ نهۆمی گەراجی ژێرزەوی، ٥٬٢١٨ م² شوێنی سەوز لەگەڵ فوارە، کورسیی دانیشتن و ڕێڕەوی پیاسە، و سیستەمی پاسەوانی و چاودێری لەگەڵ ستافی پاسەوانی.
 
 ### 2. Arabic (العربية)
-لالاف نوفا تاورز مشروع سكني للشقق من تطوير مجموعة لالاف على طريق بحركة في أربيل. يتكوّن المشروع من ستة مبانٍ تضم 1,056 وحدة. الطابق الأرضي لكل مبنى تجاري، وتُستخدم ثلاثة طوابق تحت الأرض مواقفَ للسيارات. يضم المشروع مساحات خضراء بمساحة 5,218 م² مع نوافير ومقاعد جلوس وممرات للمشي، إضافة إلى نظام حراسة ومراقبة يديره موظفو أمن. تشمل الشقق المعروضة في المشروع شققاً بغرفة نوم واحدة (1+1) بمساحة 81 و88 م²، وشققاً بغرفتي نوم بمساحة 122 م² مع حمامين. تُعرض الوحدات للبيع على المخطط قبل اكتمال البناء.
+لالاف نوفا تاورز (Lalav Nova Towers) مشروع سكني للشقق لمجموعة لالاف على طريق بحركة في أربيل، وهو المحور نفسه الذي يقع عليه مشروع لالاف صن تاورز. يتكوّن المشروع من ستة مبانٍ تضم في مجموعها 1,056 وحدة. وتشمل الشقق شققاً بغرفة نوم واحدة (1+1) بمساحة 81 و88 م²، وشققاً بغرفتي نوم بمساحة 122 م² مع حمامين. وتشمل المرافق المخطط لها طابقاً أرضياً تجارياً في كل مبنى، وثلاثة طوابق مرآب تحت الأرض، ومساحات خضراء تبلغ 5,218 م² مع نوافير ومقاعد للجلوس ومسارات للمشي، ونظام حراسة ومراقبة مع موظفي أمن.
 
 ### 3. English
-Lalav Nova Towers is a residential apartment project by Lalav Group on the Bahrka road in Erbil. The project consists of six buildings containing 1,056 units. The ground floor of each building is commercial, and three underground floors are used as parking garages. The project includes 5,218 m² of green space with fountains, seating benches and walking tracks, and a security and surveillance system operated by security staff. Apartments offered in the project include one-bedroom (1+1) units of 81 and 88 m² and two-bedroom units of 122 m² with two bathrooms. Units are offered for sale off-plan.
+Lalav Nova Towers is a residential apartment project by Lalav Group (Lalav Projects) on the Bahrka road in Erbil, the same corridor as Lalav Sun Towers. The project consists of six buildings with a total of 1,056 units. Apartments include one-bedroom (1+1) units of 81 and 88 m² and two-bedroom units of 122 m² with two bathrooms. Planned features include a commercial ground floor in each building, three underground garage floors, 5,218 m² of green space with fountains, seating benches and walking tracks, and a security and surveillance system with security staff.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -50,7 +50,7 @@ Project ID: empire-diamond-towers | Tier: 1 | In Erbil city: Yes | Last research
 | Apartment 1 bed 110 m2 - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond |
 
 ## PART E — LOCATION & SURROUNDINGS
-Empire Diamond Towers stands on the 100-metre road on the western side of the Empire World development, about 1 km from Erbil International Airport and about 2 km from the centre of Erbil, according to Paya (the same wording appears on Paya's Empire Pearl page). Distances are as stated and are not re-estimated here.
+Empire Diamond Towers stands on the 100-metre road on the western side of the Empire World development, about 1 km from Erbil International Airport and about 2 km from the centre of Erbil, according to Paya (the same wording appears on Paya's Empire Pearl page). Distances are as stated and are not re-estimated here. Map position (low confidence, from agency map pins): 36.201114, 43.965876.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

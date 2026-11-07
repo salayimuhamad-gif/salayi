@@ -41,13 +41,13 @@ No source gives a location for Hiran City 2.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-هیران سیتی ٢ ناوی پڕۆژەیەکە لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق. هەمان ناوی هیران سیتی ١ی هەیە، کە پڕۆژەیەکی نیشتەجێبوونە لە هەولێر و خانووەکانی لە بازاڕی خانووبەرەی شاردا پێشکەش دەکرێن.
+هیران سیتی ٢ (Hiran City 2) ناوی پڕۆژەیەکە لە شاری هەولێر، پایتەختی هەرێمی کوردستانی عێراق. هەمان ناوی پڕۆژەی هیران سیتی ١ی هەیە، کە پڕۆژەیەکی نیشتەجێبوونە لە هەولێر.
 
 ### 2. Arabic (العربية)
-هيران سيتي 2 اسم مشروع في أربيل، عاصمة إقليم كوردستان العراق. ويحمل الاسم نفسه الذي يحمله مشروع هيران سيتي 1، وهو مشروع سكني في أربيل تُعرض منازله في سوق العقارات في المدينة.
+هيران سيتي 2 (Hiran City 2) اسم مشروع في مدينة أربيل، عاصمة إقليم كوردستان العراق. ويحمل الاسم نفسه الذي يحمله مشروع هيران سيتي 1، وهو مشروع سكني في أربيل.
 
 ### 3. English
-Hiran City 2 is a project name in Erbil, the capital of the Kurdistan Region of Iraq. It carries the same name as Hiran City 1, a residential project in Erbil whose houses are offered on the city's property market.
+Hiran City 2 is a project name in Erbil, the capital of the Kurdistan Region of Iraq. It shares its name with Hiran City 1, a residential project in Erbil.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

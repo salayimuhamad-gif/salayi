@@ -48,17 +48,17 @@ Project ID: hiwa-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Off-plan construction 236 m2, 5 bed - homele market listing | 147,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Hiwa City lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall; no coordinates are published.
+Hiwa City lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall. Map position (low confidence, from agency map pins): 36.203426, 44.094436.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-هیوا سیتی، کە بە Hewa City-ش دەنووسرێت، پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای هەولێر–کۆیە لە ناوچەی کەسنەزانی هەولێر، لە تەنیشت کۆمەڵگەی ماجیدی ڤیو. کۆمپانیای هیوا هۆڵدینگ پەرەی پێدەدات. پڕۆژەکە خانوو و ڤێلا لەگەڵ شوقە لەخۆدەگرێت. ئەو خانووانەی لە پڕۆژەکەدا پێشکەش دەکرێن چوار تا شەش ژووری نووستنیان هەیە و ڕووبەریان ١٨٤ م²، ٢٠٠ م²، ٢٢١ م²، ٢٢٥ م²، ٢٣٦ م²، ٢٨٥ م²، ٣٢٤ م²، ٣٥٤ م² و ٤٢٠ م²یە. هەندێک لە زۆنەکان خانووی تەواوبوویان تێدایە، لە کاتێکدا زۆنەکانی تر، وەک زۆنی H، وەک هەیکەل لەسەر نەخشە دەفرۆشرێن. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە دیاری کراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، ئێرکۆندیشنی پێشوەختە دامەزراو، پاسەوانی، ڕووبەری سەوز، باخچەی گشتی، ناوەندی کارگێڕی و تۆڕەکانی ئاوەڕۆ، ئاو و کارەبا.
+هیوا سیتی (Hiwa City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە لەسەر ڕێگای هەولێر–کۆیە لە ناوچەی کەسنەزان هەڵکەوتووە، لە تەنیشت کۆمەڵگەی ماجیدی ڤیو و نزیک ماجیدی مۆڵ. پڕۆژەکە زیاتر لە خانوو پێکدێت و ڤێلاشی تێدایە. خانووەکانی هیوا سیتی بە ڕووبەری ١٨٤، ٢٠٠، ٢٢١، ٢٢٥، ٢٣٦، ٢٨٥، ٣٢٤، ٣٥٤ و ٤٢٠ م² هەن. خانووەکان چوار تا شەش ژووری نووستن و چوار تا پێنج حەمامیان هەیە، و هەندێک لە خانووەکان دوو نهۆمین.
 
 ### 2. Arabic (العربية)
-هيوا سيتي، ويُكتب أيضاً Hewa City، مشروع سكني على طريق أربيل–كويه في منطقة كسنزان بأربيل، بجوار مجمع ماجدي فيو. تطوّره شركة هيوا القابضة. يضم المشروع منازل وفللاً إلى جانب شقق سكنية. تضم المنازل المعروضة في المشروع من أربع إلى ست غرف نوم، بمساحات 184 م² و200 م² و221 م² و225 م² و236 م² و285 م² و324 م² و354 م² و420 م². تضم بعض المناطق منازل مكتملة، بينما تُباع مناطق أخرى، مثل المنطقة H، كهياكل على المخطط. وتشمل الخدمات المذكورة للمشروع كهرباء على مدار 24 ساعة، والإنترنت، وملاعب للأطفال، ومكيفات مركّبة مسبقاً، وحراسة أمنية، ومساحات خضراء، وحديقة عامة، ومركزاً إدارياً، وشبكات للصرف الصحي والمياه والكهرباء.
+هيوا سيتي (Hiwa City) مشروع سكني في أربيل يقع على طريق أربيل–كويه في منطقة كسنزان، بجوار مجمع ماجدي فيو وقرب ماجدي مول. يتكون المشروع أساساً من بيوت، ويضم أيضاً فللاً سكنية. وتتوفر البيوت في هيوا سيتي بمساحات 184 و200 و221 و225 و236 و285 و324 و354 و420 م². وتضم البيوت من أربع إلى ست غرف نوم ومن أربعة إلى خمسة حمامات، وبعضها مبني على طابقين.
 
 ### 3. English
-Hiwa City, also written Hewa City, is a residential project on the Erbil–Koya road in the Kasnazan area of Erbil, next to the Majidi View complex. It is developed by Hewa Holding. The project contains houses and villas, together with apartments. Houses offered in the project have four to six bedrooms and sizes of 184 m², 200 m², 221 m², 225 m², 236 m², 285 m², 324 m², 354 m² and 420 m². Some zones contain completed houses, while others, such as Zone H, are sold as off-plan structures. The services listed for the project include 24-hour electricity, internet, playgrounds, pre-installed air-conditioners, security, green areas, a public garden, an administrative centre and sewerage, water and electrical networks.
+Hiwa City, also written Hewa City, is a residential project in Erbil. It lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall. The project consists mainly of houses and also includes villas. Houses in Hiwa City come in sizes of 184, 200, 221, 225, 236, 285, 324, 354 and 420 m². They have four to six bedrooms and four to five bathrooms, and some houses are built on two floors.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

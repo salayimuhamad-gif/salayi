@@ -48,13 +48,13 @@ homele lists Aram Commercial City as an area of Erbil city; no source gives its 
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شاری بازرگانیی ئارام پڕۆژەیەکی بازرگانییە لە شاری هەولێر لە هەرێمی کوردستانی عێراق کە لە یەکەی پێشانگا (شۆڕووم) پێکدێت. ئەو پێشانگایانەی لە پڕۆژەکەدا ڕیکلامیان بۆ کراوە یەکەی ئامادەن، لەوانە پێشانگایەکی دوو نهۆمی بە ڕووبەری ٢٠٠ م² و پێشانگای گەورەتر بە ڕووبەری ٦٠٠ و ٦٥٠ م². هەندێک لە یەکە گەورەکان پێشانگای گۆشەن یان ئۆفیس و ژووریان تێدایە. پێشانگاکانی شاری بازرگانیی ئارام هەم بۆ فرۆشتن و هەم بۆ کرێی مانگانە پێشکەش دەکرێن.
+شاری بازرگانیی ئارام (Aram Commercial City) پڕۆژەیەکی بازرگانیی پێشانگایە (شۆڕووم) لە هەولێر. پێشانگاکانی یەکەیەکی دوو نهۆمیی ٢٠٠ م² و یەکەی گەورەتری ٦٠٠ و ٦٥٠ م² لەخۆ دەگرن، لەوانە پێشانگایەکی سەر گۆشە و پێشانگایەک کە ئۆفیس و ژووری تێدایە.
 
 ### 2. Arabic (العربية)
-مدينة آرام التجارية مشروع تجاري في مدينة أربيل في إقليم كوردستان العراق يتكوّن من وحدات معارض تجارية. المعارض المعلن عنها في المشروع وحدات جاهزة، منها معرض من طابقين بمساحة 200 م² ومعارض أكبر بمساحة 600 و650 م². وبعض الوحدات الكبيرة معارض زاوية أو تضم مكاتب وغرفاً. وتُعرض معارض مدينة آرام التجارية للبيع وللإيجار الشهري.
+مدينة آرام التجارية (Aram Commercial City) مشروع تجاري للمعارض في أربيل. وتشمل معارضه وحدة من طابقين بمساحة 200 م² ووحدات أكبر بمساحة 600 و650 م²، منها معرض على زاوية ومعرض يضم مكاتب وغرفاً.
 
 ### 3. English
-Aram Commercial City is a commercial project in Erbil, Kurdistan Region of Iraq, made up of showroom units. Showrooms advertised in the project are ready units, including a two-floor showroom of 200 m² and larger showrooms of 600 and 650 m². Some of the larger units are corner showrooms or include offices and rooms. Showrooms in Aram Commercial City are offered both for sale and for monthly rent.
+Aram Commercial City is a commercial showroom project in Erbil. Its showrooms include a two-floor unit of 200 m² and larger units of 600 and 650 m², among them a corner showroom and a showroom with offices and rooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

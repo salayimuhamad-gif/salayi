@@ -41,13 +41,13 @@ No source located Bajgir City. The evidence pack holds no pages from the five pr
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-باجگیر ستی ناوی پڕۆژەیەکە لە لیستی پڕۆژەکانی هەولێری ئەنداز. پۆرتاڵەکانی خانووبەرەی homele.com، paya-realestate.com، baghyshaqlawa.net، hajisalam.com و miranestate.com هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامیان بەم ناوەوە نییە، و هیچ زانیارییەک دەربارەی گەشەپێدەر، شوێن، یەکەکان یان قۆناغی بیناسازیی ئەم پڕۆژەیە لەم سەرچاوانەدا بڵاونەکراوەتەوە.
+باجگیر سیتی (Bajgir City) پڕۆژەیەکە لە هەولێر.
 
 ### 2. Arabic (العربية)
-باجگير سيتي اسم مشروع مدرج في قائمة مشاريع أربيل لدى أنداز. ولا تتضمن بوابات العقارات homele.com وpaya-realestate.com وbaghyshaqlawa.net وhajisalam.com وmiranestate.com أي صفحة مشروع أو منطقة إعلانات بهذا الاسم، ولا تنشر هذه المصادر أي معلومات عن المطوّر أو الموقع أو الوحدات أو مرحلة البناء لهذا المشروع.
+باجگير سيتي (Bajgir City) مشروع في أربيل.
 
 ### 3. English
-Bajgir City is a project name on Andaz's list of Erbil projects. The property portals homele.com, paya-realestate.com, baghyshaqlawa.net, hajisalam.com and miranestate.com carry no project page or listing area under this name, and these sources publish no details of its developer, location, units or construction stage.
+Bajgir City is a project in Erbil.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

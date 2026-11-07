@@ -38,17 +38,17 @@ Project ID: mamostayan-city | Tier: 1 | In Erbil city: Yes | Last researched: 20
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-On Masif (Pirmam) Road at the 150 m ring road, Erbil (Baghy). No further address or coordinates published.
+On Masif (Pirmam) Road at the 150 m ring road, Erbil (Baghy). No further address published. Map position (low confidence, from agency map pins): 36.267608, 44.082291.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-مامۆستایان ستی پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای مەسیف لە شەقامی ١٥٠ مەتری لە هەولێر؛ ڕێگای مەسیف لە شارەوە بەرەو پیرمام دەڕوات و شەقامی ١٥٠ مەتری ڕێگای بازنەیی دەرەوەی شارە. پڕۆژەکە خانوو و شوقە لەخۆدەگرێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە کارەبای ٢٤ کاتژمێری، سەنتەری کارگێڕیی شار، پاسەوانی، پارکینگ، خزمەتگوزاریی چاککردنەوە، باخچەی گشتی و سوپەرمارکێت. کۆمپانیای خانووبەرەی باخی شەقڵاوە لقێکی بە ناوی لقی مامۆستایان ستی لە هەولێر هەیە.
+مامۆستایان سیتی (Mamostayan City) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. لەسەر ڕێگای مەسیف لە شەقامی ١٥٠ مەتری هەڵکەوتووە؛ ڕێگای مەسیف لە شارەوە بەرەو پیرمام دەڕوات، و شەقامی ١٥٠ مەتری ڕێگای بازنەیی دەرەوەی شارە. پڕۆژەکە خانوو و شوقەی تێدایە.
 
 ### 2. Arabic (العربية)
-ماموستايان سيتي مشروع سكني يقع على طريق مصيف عند شارع ١٥٠ متر في أربيل؛ ويمتد طريق مصيف من المدينة باتجاه بيرمام، بينما يمثل شارع ١٥٠ متر الطريق الدائري الخارجي للمدينة. يضم المشروع منازل وشققاً. تشمل الميزات المدرجة للمشروع كهرباء على مدار ٢٤ ساعة ومركزاً إدارياً للمدينة وحراسة أمنية ومواقف للسيارات وخدمات صيانة وحديقة عامة وسوبرماركت. ولدى شركة باغي شقلاوة العقارية فرع باسم فرع ماموستايان سيتي في أربيل.
+ماموستايان سيتي (Mamostayan City) مشروع سكني في مدينة أربيل في إقليم كوردستان العراق. يقع على طريق مصيف عند شارع 150 متر؛ ويمتد طريق مصيف من المدينة باتجاه بيرمام، وشارع 150 متر هو الطريق الدائري الخارجي للمدينة. ويضم المشروع منازل وشققاً.
 
 ### 3. English
-Mamostayan City is a residential project on Masif Road at the 150 m Street in Erbil; Masif Road leads from the city towards Pirmam, and the 150 m Street is the city's outer ring road. The project includes houses and apartments. Features listed for the project include 24-hour electricity, a city administrative centre, security, parking, maintenance services, a public garden and a supermarket. The real-estate company Baghy Shaqlawa operates a branch named Mamostayan City Branch in Erbil.
+Mamostayan City is a residential project in Erbil, in the Kurdistan Region of Iraq. It is located on Masif Road at the 150 m Street; Masif Road leads from the city towards Pirmam, and the 150 m Street is the city's outer ring road. The project includes houses and apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

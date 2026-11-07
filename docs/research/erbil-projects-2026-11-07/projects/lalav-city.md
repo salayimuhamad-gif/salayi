@@ -49,7 +49,7 @@ Project ID: lalav-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | 2-bedroom apartment 125 m2, furnished - homele rent listing (per month) | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Lalav City is on Erbil's 150 Meter Road next to Ganjan City (Baghy), on the Bahrka road side of the city (Paya mentions Bahirka road; b-arrow '150m Street'). Paya's text refers to '120m'; the 150m placement is supported by two sources. No coordinates are published.
+Lalav City is on Erbil's 150 Meter Road next to Ganjan City (Baghy), on the Bahrka road side of the city (Paya mentions Bahirka road; b-arrow '150m Street'). Paya's text refers to '120m'; the 150m placement is supported by two sources. Map position (low confidence, from agency map pins): 36.2906409, 44.0217115.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -38,17 +38,17 @@ Project ID: bafrin-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy gives the address as 'Erbil - Pirmam Road', the road north-east from Erbil towards Pirmam (Massif). Baghy's nearest branch to the project is its Italian City 2 branch in Erbil. No source gives a distance along the road, landmark or coordinates.
+Baghy gives the address as 'Erbil - Pirmam Road', the road north-east from Erbil towards Pirmam (Massif). Baghy's nearest branch to the project is its Italian City 2 branch in Erbil. No source gives a distance along the road or landmark. Map position (low confidence, from agency map pins): 36.293864, 44.117997.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-بەفرین ستی پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای پیرمام لە هەولێر، کە نووسینگەی خانووبەرەی باخی شەقڵاوە تۆماری کردووە و نزیکترین لقی ئەو نووسینگەیە بۆ پڕۆژەکە لقی ئیتاڵی ستی ٢ـە لە هەولێر. پڕۆژەکە خانوو و شوقە لەخۆدەگرێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان و ڕووبەری سەوز. نووسینگەی خانووبەرەی حاجی سەلامیش پەڕەیەکی تایبەتی بۆ بەفرین ستی هەیە.
+بەفرین ستی (Bafrin City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە لەسەر ڕێگای پیرمام هەڵکەوتووە، ئەو ڕێگایەی لە هەولێرەوە بەرەو باکووری ڕۆژهەڵات و بەرەو پیرمام (مەسیف) دەڕوات. پڕۆژەکە خانوو و شوقە لەخۆ دەگرێت.
 
 ### 2. Arabic (العربية)
-بفرين سيتي مشروع سكني على طريق بيرمام في أربيل، يدرجه مكتب باغي شقلاوة العقاري، وأقرب فروع المكتب إلى المشروع هو فرع إيتاليان سيتي 2 في أربيل. يضم المشروع بيوتاً وشققاً. وتشمل الميزات المدرجة للمشروع الكهرباء على مدار 24 ساعة والإنترنت وساحة ألعاب للأطفال ومساحات خضراء. كما يخصص مكتب حاجي سلام العقاري صفحة خاصة لبفرين سيتي.
+بفرين سيتي (Bafrin City) مشروع سكني في أربيل يقع على طريق بيرمام، وهو الطريق الممتد من أربيل نحو الشمال الشرقي باتجاه بيرمام (المصيف). ويضم المشروع بيوتاً وشققاً سكنية.
 
 ### 3. English
-Bafrin City is a residential project on the Pirmam Road in Erbil, listed by the Baghy Shaqlawa real estate office, whose nearest branch to the project is its Italian City 2 branch in Erbil. The project includes houses and apartments. The features listed for the project are 24-hour electricity, internet, a playground and green areas. The Haji Salam real estate office also maintains a dedicated page for Bafrin City.
+Bafrin City is a residential project in Erbil on the Pirmam Road, the road that runs north-east from Erbil towards Pirmam (Masif). The project includes houses and apartments.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -37,17 +37,17 @@ Project ID: dashty-bahasht | Tier: 1 | In Erbil city: Yes | Last researched: 202
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Dashty Bahasht is on Kasnazan Road in Erbil, according to the Haji Salam project page. No landmark, distance or coordinates are published.
+Dashty Bahasht is on Kasnazan Road in Erbil, according to the Haji Salam project page. No landmark or distance are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-دەشتی بەهەشت (Dashty Bahasht)، کە بە Dashti Bahashtیش دەنووسرێت، پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای کەسنەزان لە شاری هەولێر. بەپێی پەڕەی پڕۆژەکە لە ماڵپەڕی نووسینگەی حاجی سەلامی خانووبەرە، پڕۆژەکە خانوو، ڤێلا و شوقە لەخۆ دەگرێت و لە ٥٠٠ یەکە پێکدێت. ڕووبەری یەکەکان لە ٢١٦ م² تا ٣١٦ م² دیاری کراوە. یەکەکان دوو یان سێ نهۆمن و دوو، سێ یان پێنج ژووری نووستنیان هەیە. پەڕەکە پڕۆژەکە لە ڕیزی پڕۆژەکانی شاری هەولێر تۆمار دەکات.
+دەشتی بەهەشت (Dashty Bahasht) پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای کەسنەزان لە هەولێر. پڕۆژەکە خانوو، ڤێلا و شوقە لەخۆ دەگرێت و لە ٥٠٠ یەکە پێکدێت. ڕووبەری یەکەکان لە ٢١٦ م² تا ٣١٦ م²یە. یەکەکان دوو یان سێ نهۆمن و دوو، سێ یان پێنج ژووری نووستنیان هەیە.
 
 ### 2. Arabic (العربية)
-دشتي بهشت (Dashty Bahasht)، ويُكتب أيضاً Dashti Bahasht، مشروع سكني على طريق كسنزان في مدينة أربيل. ووفقاً لصفحة المشروع على موقع مكتب الحاج سلام العقاري، يضم المشروع منازل وفللاً وشققاً ويتكون من 500 وحدة. وتتراوح مساحات الوحدات المدرجة بين 216 م² و316 م². وتتألف الوحدات من طابقين أو ثلاثة طوابق، وتضم غرفتي نوم أو ثلاث أو خمس غرف نوم. وتدرج الصفحة المشروع ضمن مشاريع مدينة أربيل.
+دشتي بهشت (Dashty Bahasht) مشروع سكني على طريق كسنزان في أربيل. ويجمع المشروع بين المنازل والفلل والشقق، ويتكون من 500 وحدة. وتتراوح مساحات الوحدات بين 216 م² و316 م². وتتألف الوحدات من طابقين أو ثلاثة طوابق، وتضم غرفتي نوم أو ثلاث أو خمس غرف نوم.
 
 ### 3. English
-Dashty Bahasht, also written Dashti Bahasht, is a residential project on Kasnazan Road in the city of Erbil. According to its project page on the Haji Salam Real Estate website, the project includes houses, villas and apartments and consists of 500 units. Listed unit areas range from 216 m² to 316 m². Units have two or three floors and two, three or five bedrooms. The page lists the project among the projects of Erbil city.
+Dashty Bahasht is a residential project on Kasnazan Road in Erbil. The project combines houses, villas and apartments and consists of 500 units. Unit areas range from 216 m² to 316 m². The units have two or three floors and two, three or five bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

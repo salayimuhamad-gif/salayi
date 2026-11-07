@@ -41,17 +41,17 @@ Project ID: ara-tower | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-
 | Apartment 150 m2, 3 bed, 1 bath 'English Village (Ara Tower)' - rent per month (Baghy card) | 700 | USD | rent | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/english-village |
 
 ## PART E — LOCATION & SURROUNDINGS
-Ara Tower is inside the English Village compound on the 40m Road in western Erbil, per a Baghy Shaqlawa listing titled 'English Village (Ara Tower)'. No coordinates are published.
+Ara Tower is inside the English Village compound on the 40m Road in western Erbil, per a Baghy Shaqlawa listing titled 'English Village (Ara Tower)'.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئارا تاوەر تاوەرێکی نیشتەجێبوونی شوقەیە لەناو کۆمەڵگەی گوندی ئینگلیزی لەسەر شەقامی ٤٠ مەتری لە شاری هەولێر لە هەرێمی کوردستانی عێراق. ڕووبەری ئەو شوقانەی لە ئارا تاوەر ڕیکلامیان بۆ کراوە ١٥٠ و ١٥٥ م²یە، دوو یان سێ ژووری نووستن و یەک یان دوو حەمامیان هەیە. شوقەی مۆبیلیاتکراو لە تاوەرەکەدا وەک یەکەی ئامادە بۆ کرێی مانگانە پێشکەش دەکرێن. لە ڕیکلامەکاندا بیناکە هەم بە ناوی ئارا تاوەر و هەم وەک بەشێک لە گوندی ئینگلیزی ناوبراوە.
+ئارا تاوەر (Ara Tower) تاوەرێکی نیشتەجێبوونی شوقەیە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. تاوەرەکە لەناو کۆمەڵگەی گوندی ئینگلیزی لەسەر شەقامی ٤٠ مەتری لە بەشی ڕۆژئاوای شار هەڵکەوتووە و بەشێکە لە بەشی شوقەکانی کۆمەڵگەکە. تاوەرەکە تەواوبووە و شوقەکانی ئامادەی نیشتەجێبوونن، هەندێکیشیان مۆبیلیاتکراون. ڕووبەری شوقەکانی بیناکە ١٥٠ م² و ١٥٥ م²یە.
 
 ### 2. Arabic (العربية)
-آرا تاور برج سكني للشقق داخل مجمع القرية الإنكليزية على شارع 40 متري في مدينة أربيل في إقليم كوردستان العراق. تبلغ مساحات الشقق المعلن عنها في آرا تاور 150 و155 م²، وتضم غرفتي نوم أو ثلاث غرف وحمّاماً أو حمّامين. وتُعرض في البرج شقق مفروشة جاهزة للإيجار الشهري. وتذكر الإعلانات المبنى باسم آرا تاور وكجزء من القرية الإنكليزية في آن واحد.
+آرا تاور (Ara Tower) برج سكني للشقق في مدينة أربيل في إقليم كوردستان العراق. يقع البرج داخل مجمع القرية الإنكليزية على شارع 40 متر في الجزء الغربي من المدينة، ويُعدّ جزءاً من قسم الشقق في المجمع. البرج مكتمل البناء، وشققه جاهزة للسكن، وبعضها مفروش. تبلغ مساحات الشقق في المبنى 150 م² و155 م².
 
 ### 3. English
-Ara Tower is a residential apartment tower in the English Village compound on the 40m Road in Erbil, Kurdistan Region of Iraq. Apartments advertised in Ara Tower have areas of 150 and 155 m², with two or three bedrooms and one or two bathrooms. Furnished apartments in the tower are offered for monthly rent as ready units. Listings name the building both as Ara Tower and as part of English Village.
+Ara Tower is a residential apartment tower in Erbil, in the Kurdistan Region of Iraq. It stands inside the English Village compound on the 40m Road in the western part of the city and forms part of the compound's apartment section. The tower is completed and its apartments are ready for occupancy, some of them furnished. Apartments in the building have areas of 150 m² and 155 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

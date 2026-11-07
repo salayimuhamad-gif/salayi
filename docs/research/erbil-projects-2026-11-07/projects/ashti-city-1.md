@@ -46,17 +46,17 @@ Project ID: ashti-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Ready family home 250 m², 5 bed – Homele (negotiable) | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1 |
 
 ## PART E — LOCATION & SURROUNDINGS
-On Kasnazan Road, Erbil (Haji Salam, which adds 'lawan 2 side'). Ashti City 2 lies on the same road behind the Blue Sport Center. No coordinates or distances are published.
+On Kasnazan Road, Erbil (Haji Salam, which adds 'lawan 2 side'). Ashti City 2 lies on the same road behind the Blue Sport Center. No distances are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شاری ئاشتی ١ (Ashti City 1)، کە بە Ashty City 1یش دەنووسرێت، پڕۆژەیەکی خانووبەرەی تەواوکراوە لەسەر ڕێگای کەسنەزان لە هەولێر. بەشێکە لە شاری ئاشتی، کە پڕۆژەیەکی خانووبەرەیە لە هەولێر و کۆمپانیای ئیسکانی سەر بە گرووپی گەلاڵە (Galala) جێبەجێی کردووە، و جیا لە شاری ئاشتی ٢ تۆمار کراوە کە لەسەر هەمان ڕێگایە. بەپێی ماڵپەڕی حاجی سەلام، شاری ئاشتی ١ لە ١،٥٤٥ خانوو پێکدێت و خانووی ستانداردی پڕۆژەکە ٢٥٠ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. خانووەکانی پڕۆژەکە لە بازاڕی دووبارە فرۆشتندا دەفرۆشرێن؛ لە تشرینی دووەمی ٢٠٢٦ ماڵپەڕی هۆمێلێ خانووی ئامادەی بە ڕووبەری ١٨٣ تا ٢٥٠ م²، بە یەک یان دوو نهۆم و دوو تا پێنج ژووری نووستن، بە نرخی داواکراوی ٨٧،٠٠٠ تا ١٦٥،٠٠٠ دۆلاری ئەمریکی نمایش کردووە.
+شاری ئاشتی ١ (Ashti City 1) پڕۆژەیەکی نیشتەجێبوونی خانووە کە تەواو بووە و لەسەر ڕێگای کەسنەزان لە هەولێرە. پڕۆژەکە لە ١،٥٤٥ خانوو پێکدێت. خانووی ستانداردی پڕۆژەکە ڕووبەری ٢٥٠ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. شاری ئاشتی ١ پڕۆژەیەکی جیاوازە لە شاری ئاشتی ٢، کە لەسەر هەمان ڕێگا و لە پشت بلو سپۆرت سەنتەرەوەیە.
 
 ### 2. Arabic (العربية)
-آشتي سيتي 1 (Ashti City 1)، ويُكتب أيضاً Ashty City 1، مشروع إسكان مكتمل على طريق كسنزان في أربيل. وهو جزء من آشتي سيتي، وهو مشروع إسكاني في أربيل لشركة إسكان التابعة لمجموعة گلالة (Galala)، ويُدرج بشكل منفصل عن آشتي سيتي 2 الواقع على الطريق نفسه. ووفقاً لمكتب الحاج سلام العقاري، يضم آشتي سيتي 1 عدد 1,545 منزلاً، ومساحة المنزل القياسي فيه 250 م² من طابق واحد بغرفتي نوم. وتُباع منازل المشروع في سوق إعادة البيع؛ ففي تشرين الثاني 2026 عرض موقع هوميلي منازل جاهزة بمساحات من 183 إلى 250 م²، من طابق واحد أو طابقين وبغرفتين إلى خمس غرف نوم، بأسعار مطلوبة تتراوح بين 87,000 و165,000 دولار أمريكي.
+آشتي سيتي 1 (Ashti City 1) مشروع سكني مكتمل للمنازل يقع على طريق كسنزان في أربيل. يضم المشروع 1,545 منزلاً. وتبلغ مساحة المنزل القياسي في المشروع 250 م²، ويتألف من طابق واحد ويضم غرفتي نوم. ويُعد آشتي سيتي 1 مشروعاً منفصلاً عن آشتي سيتي 2، الذي يقع على الطريق نفسه خلف مركز بلو سبورت الرياضي.
 
 ### 3. English
-Ashti City 1, also written Ashty City 1, is a completed housing project on Kasnazan Road in Erbil. It belongs to Ashti City, a housing development in Erbil by the Eskan company of the Galala group, and is listed separately from Ashti City 2, which lies on the same road. According to Haji Salam Real Estate, Ashti City 1 comprises 1,545 houses, and its standard house is 250 m², on one floor, with two bedrooms. Houses in the project are sold on the resale market. In November 2026 Homele listed ready houses of 183 to 250 m², with one or two floors and two to five bedrooms, at asking prices from US$87,000 to US$165,000.
+Ashti City 1, also written Ashty City 1, is a completed residential house project on Kasnazan Road in Erbil. The project comprises 1,545 houses. Its standard house measures 250 m² and has one floor and two bedrooms. Ashti City 1 is a separate project from Ashti City 2, which lies on the same road behind the Blue Sport Center.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

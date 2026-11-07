@@ -39,17 +39,17 @@ Project ID: family-land | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Family Land is on the north-eastern road out of Erbil towards Pirmam/Masif Salahaddin and Shaqlawa (Bagh-y: 'Erbil – Masif Road (Pirmam)'; Hajisalam: 'Shaqlawa Road'). Neither source says how far the project is from the 120m/150m ring roads. No coordinates are stated.
+Family Land is on the north-eastern road out of Erbil towards Pirmam/Masif Salahaddin and Shaqlawa (Bagh-y: 'Erbil – Masif Road (Pirmam)'; Hajisalam: 'Shaqlawa Road'). Neither source says how far the project is from the 120m/150m ring roads. Map position (low confidence, from agency map pins): 36.315083, 44.154823.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-فامیلی لاند پڕۆژەیەکی نیشتەجێبوونە لە هەولێر لەسەر ڕێگای پیرمام (مەسیف)، کە ماڵپەڕی حاجی سەلام بە ڕێگای شەقڵاوە ناوی دەبات. پڕۆژەکە خانوو و شوقە پێکەوە لەخۆ دەگرێت. حاجی سەلام ١١٦ خانوو و ١٥٦ شوقە بۆ پڕۆژەکە دیاری دەکات. خانووەکان بە ڕووبەری ١٨٠، ٢٠٠، ٢٥٠ و ٥٠٠ م²ن و یەک یان دوو نهۆمین، و شوقەکان بە ڕووبەری ١١٣، ١٣٠ و ١٨٠ م² لە بینای ١٣ نهۆمیدان. یەکەکان دوو تا پێنج ژووری نووستنیان هەیە. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە لیست کراون بریتین لە کارەبای ٢٤ کاتژمێری، پاسەوانی، ناوچەی سەوز، باخچەی گشتی و سوپەرمارکێت.
+فامیلی لاند (Family Land) پڕۆژەیەکی نیشتەجێبوونە لەسەر ئەو ڕێگایەی لە باکووری ڕۆژهەڵاتی هەولێرەوە بەرەو پیرمام (مەسیفی سەلاحەدین) و شەقڵاوە دەچێت. پڕۆژەکە خانوو و شوقە پێکەوە لەخۆدەگرێت، بە کۆی گشتی ٢٧٢ یەکە: ١١٦ خانوو و ١٥٦ شوقە. ڕووبەری خانووەکان ١٨٠، ٢٠٠، ٢٥٠ و ٥٠٠ م²یە و یەک یان دوو نهۆمین. شوقەکان ڕووبەریان ١١٣، ١٣٠ و ١٨٠ م²یە و لە بینای ١٣ نهۆمیدان. یەکەکانی پڕۆژەکە لە دوو تا پێنج ژووری نووستنیان هەیە.
 
 ### 2. Arabic (العربية)
-فاميلي لاند مشروع سكني في أربيل على طريق بيرمام (مصيف صلاح الدين)، الذي يسمّيه موقع حاجي سلام طريق شقلاوة. يجمع المشروع بين المنازل والشقق. يذكر موقع حاجي سلام أن المشروع يضم 116 منزلاً و156 شقة. تبلغ مساحات المنازل 180 و200 و250 و500 م² وهي من طابق واحد أو طابقين، أما الشقق فبمساحات 113 و130 و180 م² في بنايات من 13 طابقاً. تضم الوحدات من غرفتي نوم إلى خمس غرف نوم. تشمل الميزات المدرجة للمشروع كهرباء على مدار 24 ساعة وحراسة ومساحات خضراء وحديقة عامة وسوبرماركت.
+فاميلي لاند (Family Land) مشروع سكني على الطريق الخارج من أربيل باتجاه بيرمام (مصيف صلاح الدين) وشقلاوة في شمال شرقي المدينة. يجمع المشروع بين البيوت والشقق، ويضم ٢٧٢ وحدة إجمالاً: ١١٦ بيتاً و١٥٦ شقة. تبلغ مساحات البيوت ١٨٠ و٢٠٠ و٢٥٠ و٥٠٠ م²، وهي من طابق واحد أو طابقين. أما الشقق فمساحاتها ١١٣ و١٣٠ و١٨٠ م²، وتقع في مبانٍ من ١٣ طابقاً. ويتراوح عدد غرف النوم في وحدات المشروع بين غرفتين وخمس غرف.
 
 ### 3. English
-Family Land is a residential project in Erbil on the Erbil–Pirmam (Masif) road, which Hajisalam refers to as the Shaqlawa Road. The project combines houses and apartments. Hajisalam lists 116 houses and 156 apartments. Houses have areas of 180, 200, 250 and 500 m² and one or two floors, and apartments of 113, 130 and 180 m² are in 13-floor buildings. Units have two to five bedrooms. Features listed for the project include 24-hour electricity, security, green areas, a public garden and a supermarket.
+Family Land is a residential project on the north-eastern road out of Erbil towards Pirmam (Masif Salahaddin) and Shaqlawa. The project combines houses and apartments, with 272 units in total: 116 houses and 156 apartments. Houses have areas of 180, 200, 250 and 500 m² and are built on one or two floors. Apartments have areas of 113, 130 and 180 m² and are located in 13-floor buildings. Units across the project have two to five bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -49,7 +49,7 @@ Project ID: global-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | House 300 m2, 3 bed, 1 bath, ready - homele market listing (asking) | 150,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/global-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Global City lies on Erbil's eastern approach next to Majidi Land; Paya places it on Kasnazan Road and Bagh-y Shaqlawa on the Erbil–Koya road. No coordinates are published.
+Global City lies on Erbil's eastern approach next to Majidi Land; Paya places it on Kasnazan Road and Bagh-y Shaqlawa on the Erbil–Koya road. Map position (medium confidence, from agency map pins): 36.212639, 44.131862.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

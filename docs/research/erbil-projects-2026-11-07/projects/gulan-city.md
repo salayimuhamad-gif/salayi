@@ -39,17 +39,17 @@ Project ID: gulan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 62,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Gulan City lies on the Bahrka Road side of Erbil: Baghy Shaqlawa places the Light City project on 'Bharka Road behind Gulan City'. No exact position, distance or coordinates are published.
+Gulan City lies on the Bahrka Road side of Erbil: Baghy Shaqlawa places the Light City project on 'Bharka Road behind Gulan City'. No exact position or distance are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گوڵان سیتی (Gulan City) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر، کە ماڵپەڕی نووسینگەی حاجی سەلامی خانووبەرە وەک پڕۆژەیەک و ماڵپەڕی هۆمێلێ وەک ناوچەیەکی موڵک تۆماریان کردووە. ماڵپەڕی باخی شەقڵاوە ناونیشانی پڕۆژەی دراوسێی لایت سیتی (Light City) بە «هەولێر، ڕێگای بەحرکە، پشت گوڵان سیتی» دیاری دەکات، کە گوڵان سیتی دەخاتە سەر ڕێگای بەحرکەی هەولێر. لە تشرینی دووەمی ٢٠٢٦دا، هۆمێلێ خانوویەکی ئامادەی یەک نهۆمی لە گوڵان سیتی بە ڕووبەری ٢٠٠ م²، دوو ژووری نووستن و دوو حەمام، بە نرخی داواکراوی ٦٢٬٠٠٠ دۆلاری ئەمریکی و بە گفتوگۆ بۆ فرۆشتن نمایش کردووە.
+گوڵان سیتی (Gulan City) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. ناوچەکە لە لای ڕێگای بەحرکەی شار هەڵکەوتووە، و پڕۆژەی دراوسێی لایت سیتی لەسەر ڕێگای بەحرکە ڕاستەوخۆ لە پشت گوڵان سیتی هەڵکەوتووە. ناوچەکە لە خانوو پێکدێت، لەوانە خانووی یەک نهۆمی بە ڕووبەری ٢٠٠ م² کە هەر یەکەیان دوو ژووری نووستن و دوو حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-گولان سيتي (Gulan City) منطقة سكنية في مدينة أربيل، يدرجها مكتب الحاج سلام العقاري مشروعاً ويدرجها موقع هوميلي منطقةً عقارية. ويذكر موقع باغي شقلاوة عنوان مشروع لايت سيتي (Light City) المجاور بأنه «أربيل، طريق بحركة، خلف گولان سيتي»، ما يضع گولان سيتي على طريق بحركة في أربيل. وفي تشرين الثاني 2026 عرض موقع هوميلي للبيع منزلاً جاهزاً من طابق واحد في گولان سيتي بمساحة 200 م² وغرفتي نوم وحمامين، بسعر مطلوب قدره 62,000 دولار أمريكي قابل للتفاوض.
+گولان سيتي (Gulan City) منطقة سكنية في مدينة أربيل في إقليم كوردستان العراق. تقع المنطقة على جانب طريق بحركة من المدينة، ويقع مشروع لايت سيتي المجاور على طريق بحركة خلف گولان سيتي مباشرةً. تتكون المنطقة من منازل، من بينها منازل من طابق واحد بمساحة 200 م² تضم كل منها غرفتي نوم وحمامين.
 
 ### 3. English
-Gulan City is a residential area in the city of Erbil that Haji Salam Real Estate lists as a project and Homele lists as a property area. Baghy Shaqlawa gives the address of the neighbouring Light City project as 'Erbil, Bahrka Road, behind Gulan City', which places Gulan City on the Bahrka Road in Erbil. In November 2026 Homele advertised for sale a ready one-floor house in Gulan City with an area of 200 m², two bedrooms and two bathrooms, at an asking price of US$62,000, negotiable.
+Gulan City is a residential area in Erbil, in the Kurdistan Region of Iraq. It lies on the Bahrka Road side of the city, and the neighbouring Light City project stands on Bahrka Road directly behind Gulan City. The area consists of houses, including single-storey houses of 200 m² with two bedrooms and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

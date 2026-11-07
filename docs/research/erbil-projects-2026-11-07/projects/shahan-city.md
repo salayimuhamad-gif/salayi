@@ -38,7 +38,7 @@ Project ID: shahan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam gives the address as Kasnazan Road, Erbil. No landmark, plot position or coordinates are published.
+Haji Salam gives the address as Kasnazan Road, Erbil. No landmark or plot position are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

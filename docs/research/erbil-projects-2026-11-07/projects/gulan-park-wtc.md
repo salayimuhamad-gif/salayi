@@ -48,7 +48,7 @@ Project ID: gulan-park-wtc | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Office 128 m2, high floor, ready - homele rental listing (per month) | 1,800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower |
 
 ## PART E — LOCATION & SURROUNDINGS
-Gulan Park – WTC Erbil stands on Gulan Street (the 40 m road) at the Ankawa junction in Erbil; no coordinates are published.
+Gulan Park – WTC Erbil stands on Gulan Street (the 40 m road) at the Ankawa junction in Erbil. Map position (high confidence, from agency map pins): 36.212682, 43.992212.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

@@ -37,7 +37,7 @@ Project ID: safiran-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-On Masif (Pirmam) Road in north-east Erbil, near Mamostayan City (Baghy address, branch and map pin).
+ Map position (low confidence, from agency map pins): 36.260826, 44.088285.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

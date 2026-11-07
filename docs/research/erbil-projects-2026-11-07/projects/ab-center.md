@@ -40,17 +40,17 @@ Project ID: ab-center | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Office 2,000 m² – listed price; period not stated (page addresses tenants) | 30,000 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ab-center-277 |
 
 ## PART E — LOCATION & SURROUNDINGS
-English Village area of western Erbil. Paya's structured data places the project at 36.1903055, 43.9749203. English Village is a compound of villas in western Erbil, most of which are used as company offices (Wikipedia).
+English Village area of western Erbil. Paya's structured data places the project at 36.1903055, 43.9749203. English Village is a compound of villas in western Erbil, most of which are used as company offices (Wikipedia). Map position (low confidence, from agency map pins): 36.1903055, 43.9749203.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئەی بی سەنتەر (AB Center) پڕۆژەیەکی ئۆفیسیی تەواوکراوە لە ناوچەی گوندی ئینگلیزی لە شاری هەولێر. پەڕەی پڕۆژەکە لە ماڵپەڕی پایا ڕیاڵ ئیستەیت کۆمپانیای ئەلبیت گروپ (Albit Group) وەک گەشەپێدەر ناو دەبات و پڕۆژەکە وەک بینایەکی بازرگانیی چەند نهۆمی دەناسێنێت کە شوێنی ئۆفیس، پارکینگ، سیستەمی پاراستن و شوێنی هاوبەشی تێدایە. دوو یەکەی ئۆفیس تۆمار کراون، بە ڕووبەری ١٠٥ م² و ٢،٠٠٠ م². ئەو خزمەتگوزارییانەی ناویان هاتووە بریتین لە پێشوازی، پاسەوانی، ئامێری فێنککەرەوە و پارکینگی داپۆشراو. گوندی ئینگلیزی، کە پڕۆژەکەی تێدایە، کۆمەڵگەیەکە لە ڕۆژئاوای هەولێر و زۆربەی ڤێلاکانی وەک ئۆفیسی کۆمپانیا بەکاردەهێنرێن.
+ئەی بی سەنتەر (AB Center) بینایەکی بازرگانیی ئۆفیسە کە تەواوبووە، لە ناوچەی گوندی ئینگلیزی لە ڕۆژئاوای هەولێر، و گرووپی ئەلبیت گەشەی پێداوە. بیناکە چەند نهۆمییە و شوێنی ئۆفیس دابین دەکات، لەوانە یەکەی ئۆفیسی ١٠٥ م² و ٢٬٠٠٠ م². خزمەتگوزارییەکان بریتین لە هۆڵی پێشوازی، پاسەوانی، ئێرکۆندیشن و پارکینگی داپۆشراو. گوندی ئینگلیزی، کە بیناکەی تێدایە، کۆمەڵگەیەکی ڤێلایە لە ڕۆژئاوای هەولێر کە زۆربەی ڤێلاکانی وەک ئۆفیسی کۆمپانیاکان بەکاردێن.
 
 ### 2. Arabic (العربية)
-مركز AB (AB Center) مشروع مكاتب مكتمل في منطقة القرية الإنكليزية بمدينة أربيل. تذكر صفحة المشروع على موقع بايا العقاري أن المطور هو مجموعة ألبيت (Albit Group)، وتصفه بأنه مبنى تجاري متعدد الطوابق يضم مساحات مكتبية ومواقف سيارات وأنظمة أمنية ومساحات مشتركة. وتُدرج الصفحة وحدتين مكتبيتين بمساحة 105 م² و2,000 م². والخدمات المذكورة هي الاستقبال والحراسة والتكييف ومواقف السيارات المسقوفة. والقرية الإنكليزية التي يقع فيها المشروع مجمع في غرب أربيل تُستخدم معظم فلله مكاتبَ للشركات.
+إيه بي سنتر (AB Center) مبنى مكاتب تجاري مكتمل في منطقة القرية الإنكليزية غرب أربيل، من تطوير مجموعة ألبيت. يوفر المبنى المتعدد الطوابق مساحات مكتبية، منها وحدات مكتبية بمساحتي ١٠٥ م² و٢٬٠٠٠ م². وتشمل المرافق صالة استقبال، وحراسة أمنية، وتكييف الهواء، ومواقف سيارات مسقوفة. والقرية الإنكليزية التي يقع فيها المبنى مجمع فلل في غرب أربيل يُستخدم معظمها مكاتبَ للشركات.
 
 ### 3. English
-AB Center is a completed office development in the English Village area of Erbil. Its page on Paya Real Estate names Albit Group as the developer and describes a multi-storey commercial building with office space, parking, security systems and common areas. Two office units are listed, measuring 105 m² and 2,000 m². The amenities listed are a reception, security, air conditioning and covered parking. English Village, where the project is located, is a compound in western Erbil in which most villas are used as company offices.
+AB Center is a completed commercial office building in the English Village area of western Erbil, developed by Albit Group. The multi-storey building provides office space, with office units of 105 m² and 2,000 m². Facilities include a reception, security, air conditioning and covered parking. English Village, where the building is located, is a compound of villas in western Erbil, most of which are used as company offices.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

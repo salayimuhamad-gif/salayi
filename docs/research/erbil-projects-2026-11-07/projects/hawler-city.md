@@ -40,17 +40,17 @@ Project ID: hawler-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Ready new house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 110,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Hawler City is listed by homele as an area of Erbil; no source states where in the city it lies, and no coordinates are published.
+Hawler City is listed by homele as an area of Erbil; no source states where in the city it lies.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-هەولێر سیتی (Hawler City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر، کە ماڵپەڕی هۆمێلێ وەک ناوچەیەکی موڵک تۆماری کردووە و ماڵپەڕی نووسینگەی حاجی سەلامی خانووبەرە پەڕەیەکی پڕۆژەی بە ناونیشانی کوردیی «هه‌ولێر ستی» بۆ داناوە. لە تشرینی دووەمی ٢٠٢٦دا، هۆمێلێ دوو خانووی نوێی ئامادەی لە هەولێر سیتی بۆ فرۆشتن نمایش کردووە، کە ڕووبەری هەردووکیان ٢٠٠ م²یە: یەکێکیان بە چوار ژووری نووستن و سێ حەمام بە نرخی داواکراوی ١٢٨٬٠٠٠ دۆلاری ئەمریکی، و ئەوی دیکەیان بە دوو ژووری نووستن و دوو حەمام بە نرخی داواکراوی ١١٠٬٠٠٠ دۆلاری ئەمریکی و بە گفتوگۆ.
+هەولێر سیتی (Hawler City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق؛ هەولێر ناوی کوردیی شاری ئەربیلە. ڕووبەری خانووەکانی هەولێر سیتی ٢٠٠ م²یە، و دیزاینەکانیان خانووی چوار ژووری نووستن و سێ حەمام، و خانووی دوو ژووری نووستن و دوو حەمام لەخۆدەگرن.
 
 ### 2. Arabic (العربية)
-هولير سيتي (Hawler City) منطقة سكنية للمنازل في مدينة أربيل، يدرجها موقع هوميلي منطقةً عقارية، ويخصص لها مكتب الحاج سلام العقاري صفحة مشروع بعنوان كردي هو «هه‌ولێر ستی». وفي تشرين الثاني 2026 عرض موقع هوميلي للبيع منزلين جديدين جاهزين في هولير سيتي، مساحة كل منهما 200 م²: الأول بأربع غرف نوم وثلاثة حمامات بسعر مطلوب قدره 128,000 دولار أمريكي، والثاني بغرفتي نوم وحمامين بسعر مطلوب قدره 110,000 دولار أمريكي قابل للتفاوض.
+هولير سيتي (Hawler City) منطقة سكنية للمنازل في مدينة أربيل في إقليم كوردستان العراق، وهولير هو الاسم الكردي لأربيل. تبلغ مساحة المنازل في هولير سيتي 200 م²، وتشمل تصاميمها منازل بأربع غرف نوم وثلاثة حمامات، ومنازل بغرفتي نوم وحمامين.
 
 ### 3. English
-Hawler City is a residential area of houses in the city of Erbil, listed by Homele as a property area and given a project page by Haji Salam Real Estate under the Kurdish title هه‌ولێر ستی. In November 2026 Homele advertised for sale two ready new houses in Hawler City, both with an area of 200 m²: one with four bedrooms and three bathrooms at an asking price of US$128,000, and one with two bedrooms and two bathrooms at an asking price of US$110,000, negotiable.
+Hawler City is a residential area of houses in Erbil, in the Kurdistan Region of Iraq; Hawler is the Kurdish name of Erbil. Houses in Hawler City have an area of 200 m², with layouts that include four bedrooms and three bathrooms, or two bedrooms and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

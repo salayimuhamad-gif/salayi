@@ -44,7 +44,7 @@ Project ID: aram-village-1 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Developer / official price | Not verified (paya shows "$0 – $0", i.e. no primary sales) | — | — | accessed 2026-11-07 | https://paya-realestate.com/en/projects/aram-village-157 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Aram Village 1 lies in the north-western urban belt of Erbil city on the 120 m ring road, near Italian Village 2 (paya). Aram Village 2 was built directly behind it, and the Aram Village 2 pages describe the location as between the 120 m and 150 m ring roads on roads leading towards Erbil International Airport (paya AV2 page; homele AV2 project page). No source in hand gives coordinates, a street address or verified distances for Aram Village 1 itself; the only distance statements (5 min to 120 m/150 m roads, 8 km to centre, 12 km to airport) are agency claims made for Aram Village 2, not for this project.
+Aram Village 1 lies in the north-western urban belt of Erbil city on the 120 m ring road, near Italian Village 2 (paya). Aram Village 2 was built directly behind it, and the Aram Village 2 pages describe the location as between the 120 m and 150 m ring roads on roads leading towards Erbil International Airport (paya AV2 page; homele AV2 project page). No source in h, a street address or verified distances for Aram Village 1 itself; the only distance statements (5 min to 120 m/150 m roads, 8 km to centre, 12 km to airport) are agency claims made for Aram Village 2 or not for this project. Map position (medium confidence, from agency map pins): 36.244737, 44.037278.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

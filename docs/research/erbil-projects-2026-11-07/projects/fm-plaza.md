@@ -37,17 +37,17 @@ Project ID: fm-plaza | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Bagh-y Shaqlawa gives the address only as 'Erbil – Koya Road' and assigns the project to its Koya Road branch. The distance from the city ring roads is not stated. No coordinates are given.
+Bagh-y Shaqlawa gives the address only as 'Erbil – Koya Road' and assigns the project to its Koya Road branch. The distance from the city ring roads is not stated. Map position (low confidence, from agency map pins): 36.204486, 44.117569.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئێف ئێم پلازا پڕۆژەیەکی نیشتەجێبوونە کە لە شوقە پێکدێت و لەسەر ڕێگای کۆیە لە شاری هەولێر لە هەرێمی کوردستان هەڵکەوتووە. پڕۆژەکە لە ماڵپەڕی باغی شەقڵاوە بە جۆری موڵکی «شوقە» لیست کراوە و لقی ڕێگای کۆیەی ئەو ئاژانسە لە هەولێر خزمەتی دەکات. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە لیست کراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، هۆڵی وەرزش و فیتنەس، سوپەرمارکێت و ڕیسێپشن.
+ئێف ئێم پلازا (FM Plaza) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر. پڕۆژەکە لەسەر ڕێگای کۆیە هەڵکەوتووە و لە یەکەی نیشتەجێبوونی جۆری شوقە پێکدێت.
 
 ### 2. Arabic (العربية)
-إف إم بلازا مشروع سكني يتكوّن من شقق، ويقع على طريق كويه في مدينة أربيل بإقليم كوردستان. يُدرج موقع باغي شقلاوة العقاري المشروع ضمن نوع العقار «شقة»، ويخدمه فرع الوكالة في طريق كويه بأربيل. تشمل الميزات المدرجة للمشروع كهرباء على مدار 24 ساعة وإنترنت وملعباً للأطفال وحراسة ومواقف سيارات ومساحات خضراء وصالة رياضية ومركز لياقة وسوبرماركت ومنطقة استقبال.
+إف إم بلازا (FM Plaza) مشروع سكني للشقق في مدينة أربيل. يقع المشروع على طريق كويه، ويتكون من وحدات سكنية من نوع الشقق.
 
 ### 3. English
-FM Plaza is a residential project made up of apartments, located on Koya Road in Erbil, Kurdistan Region. The project is listed by Bagh-y Shaqlawa real estate under the property type 'apartment' and is served by the agency's Koya Road branch in Erbil. Features listed for the project include 24-hour electricity, internet, a children's playground, security, parking, green areas, a gym and fitness centre, a supermarket and a reception area.
+FM Plaza is a residential apartment project in the city of Erbil. The project is located on Koya Road and consists of apartment units.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

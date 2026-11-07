@@ -44,7 +44,7 @@ Project ID: lalav-city-view | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | Restaurant space 50 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
 
 ## PART E — LOCATION & SURROUNDINGS
-Lalav City View stands on Erbil's 120 Meter Street close to Hawler Nwe / New Erbil (Paya, Baghy). Miran notes the ring-road position gives access to Erbil International Airport and the city centre. No coordinates are published.
+Lalav City View stands on Erbil's 120 Meter Street close to Hawler Nwe / New Erbil (Paya, Baghy). Miran notes the ring-road position gives access to Erbil International Airport and the city centre. Map position (medium confidence, from agency map pins): 36.218701, 44.064995.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

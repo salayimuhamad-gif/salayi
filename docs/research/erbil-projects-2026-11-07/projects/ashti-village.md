@@ -45,13 +45,13 @@ homele lists Ashti Village as an area of Erbil city; no source gives its road or
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گوندی ئاشتی پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق، کە وەک ناوچەیەکی جیا لە پلاتفۆرمی خانووبەرەی homele تۆمارکراوە. نیشتەجێبوون لە پڕۆژەکەدا خانوو و شوقە لەخۆ دەگرێت. لەو یەکانەی ڕیکلامیان بۆ کراوە، شوقەیەکی گۆشەی ئامادە بە ڕووبەری ٢٧٥ م²، پێنج ژووری نووستن و سێ حەمام، و خانوویەکی ئامادە بە ڕووبەری ٣٢٠ م²، چوار ژووری نووستن و سێ حەمام هەن. هەردووکیان بۆ فرۆشتن پێشکەش کراون.
+گوندی ئاشتی (Ashti Village) ناوچەیەکی نیشتەجێبوونە لە هەولێر کە خانوو و شوقە لەخۆدەگرێت. لە شوقەکانیدا شوقەیەکی سووچی ٢٧٥ م² هەیە بە پێنج ژووری نووستن و سێ حەمام، و لە خانووەکانیدا خانوویەکی ٣٢٠ م² هەیە بە چوار ژووری نووستن و سێ حەمام.
 
 ### 2. Arabic (العربية)
-قرية آشتي مشروع سكني في مدينة أربيل في إقليم كوردستان العراق، مدرج كمنطقة مستقلة على منصة homele العقارية. يشمل السكن في المشروع منازل وشققاً. ومن الوحدات المعلن عنها شقة زاوية جاهزة بمساحة 275 م² تضم خمس غرف نوم وثلاثة حمّامات، ومنزل جاهز بمساحة 320 م² يضم أربع غرف نوم وثلاثة حمّامات، وكلاهما معروض للبيع.
+قرية آشتي (Ashti Village) منطقة سكنية في أربيل تضم بيوتاً وشققاً. ومن الشقق فيها شقة زاوية بمساحة ٢٧٥ م² بخمس غرف نوم وثلاثة حمامات، ومن البيوت بيت بمساحة ٣٢٠ م² بأربع غرف نوم وثلاثة حمامات.
 
 ### 3. English
-Ashti Village is a residential project in Erbil, Kurdistan Region of Iraq, listed as a separate area on the homele property portal. Housing in the project includes houses and apartments. Homes advertised in Ashti Village include a ready corner apartment of 275 m² with five bedrooms and three bathrooms, and a ready house of 320 m² with four bedrooms and three bathrooms. Both homes are offered for sale.
+Ashti Village is a residential area in Erbil that includes both houses and apartments. Apartments in Ashti Village include a 275 m² corner apartment with five bedrooms and three bathrooms, and houses include a 320 m² house with four bedrooms and three bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

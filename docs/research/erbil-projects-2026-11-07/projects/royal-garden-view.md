@@ -46,17 +46,17 @@ Project ID: royal-garden-view | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Off-plan 4-bed house 200 m2 with garden - homele listing | 195,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/royal-garden |
 
 ## PART E — LOCATION & SURROUNDINGS
-No source gives a location for Royal Garden View beyond Erbil; one web search found nothing. homele's 'Royal Garden' area is matched by the identical 200 m2 / 4-bed / $165,000 house. No coordinates are published.
+No source gives a location for Royal Garden View beyond Erbil; one web search found nothing. homele's 'Royal Garden' area is matched by the identical 200 m2 / 4-bed / $165,000 house. Map position (low confidence, from agency map pins): 36.151044, 43.955494.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڕۆیاڵ گاردن ڤیو پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر، کە بە ناوی ڕۆیاڵ گاردنیش ڕیکلامی بۆ دەکرێت. پڕۆژەکە لە قۆناغی دروستکردندایە. ڤێلای مۆدێرن بە تەلارسازیی هاوچەرخ، ناوەوەی فراوان و نەخشەی گونجاو بۆ ژیانی خێزان پێشکەش دەکات. جۆرە ڕاگەیەندراوەکانی خانوو ٢٠٠ م²، ٢١٠ م² و ٢٥٠ م²ن، هەریەکەیان بە چوار ژووری نووستن. نرخەکان لە پەڕەی پڕۆژەکەدا ١٦٥٬٠٠٠ دۆلار بۆ ٢٠٠ م²، ٢٠٠٬٠٠٠ دۆلار بۆ ٢١٠ م² و ٢١٠٬٠٠٠ دۆلار بۆ ٢٥٠ م²ن. هەروەها خانووی ٢٠٠ م² لەسەر نەخشە بە نرخی ١٦٥٬٠٠٠ تا ١٩٥٬٠٠٠ دۆلار ڕیکلامیان بۆ کراوە. ئاسانکارییە ڕاگەیەندراوەکان بریتین لە پاسەوانی، کتێبخانە، جیم، جیم و ساڵۆنی ئافرەتان، شوێنی یاریی منداڵان و مزگەوت، و بەخێوکردنی ئاژەڵی ماڵی ڕێگەپێدراوە.
+رۆیاڵ گاردن ڤیو (Royal Garden View)، کە بە رۆیاڵ گاردنیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر. پڕۆژەکە لە ژێر دروستکردندایە. ڕووبەری ڤێلاکانی پڕۆژەکە لە ٢٠٠ تا ٣٢٠ م²یە، و خانووەکان بە ڕووبەری ٢٠٠، ٢١٠، ٢٥٠، ٢٧٠ و ٣٢٠ م² هەن. هەموو جۆرەکانی خانوو چوار ژووری نووستنیان هەیە. خانووی ٢١٠ م² چوار حەمامی هەیە، و خانووی ٢٥٠ م² پێنج حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-رويال كاردن فيو مشروع سكني للفلل في أربيل، يُعرض أيضاً باسم رويال كاردن. المشروع قيد الإنشاء. يوفر فللاً حديثة بتصميم معماري معاصر ومساحات داخلية واسعة ومخططات مناسبة للحياة العائلية. أنواع المنازل المعلنة بمساحات 200 م² و210 م² و250 م²، وكل منها بأربع غرف نوم. الأسعار في صفحة المشروع 165,000 دولار لمنزل 200 م²، و200,000 دولار لمنزل 210 م²، و210,000 دولار لمنزل 250 م². وتُعرض أيضاً منازل بمساحة 200 م² على الخارطة بأسعار بين 165,000 و195,000 دولار. تشمل الميزات المعلنة الحراسة، ومكتبة، وصالة رياضية، وصالة رياضية وصالوناً للنساء، ومنطقة ألعاب للأطفال، ومسجداً، ويُسمح باقتناء الحيوانات الأليفة.
+رويال كاردن فيو (Royal Garden View)، المعروف أيضاً باسم رويال كاردن، مشروع سكني للفلل في أربيل. والمشروع قيد الإنشاء. تتراوح مساحات الفلل في المشروع بين 200 و320 م²، وتتوفر المنازل بمساحات 200 و210 و250 و270 و320 م². وتضم جميع أنواع المنازل أربع غرف نوم. ويضم المنزل بمساحة 210 م² أربعة حمامات، فيما يضم المنزل بمساحة 250 م² خمسة حمامات.
 
 ### 3. English
-Royal Garden View is a villa residential project in Erbil, also listed as Royal Garden. The project is under construction. It offers modern villas with contemporary architecture, spacious interiors and layouts for family living. Listed house types are 200 m², 210 m² and 250 m², each with four bedrooms. Prices on the project page are $165,000 for 200 m², $200,000 for 210 m² and $210,000 for 250 m². Off-plan houses of 200 m² are also advertised at $165,000 to $195,000. The listed features are security, a library, a gym, a women's gym and salon, a children's play area and a mosque, and pets are allowed.
+Royal Garden View, also known as Royal Garden, is a residential villa project in Erbil. The project is under construction. Villas in the project range from 200 to 320 m², with house sizes of 200, 210, 250, 270 and 320 m². All house types have four bedrooms. The 210 m² house has four bathrooms, and the 250 m² house has five bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

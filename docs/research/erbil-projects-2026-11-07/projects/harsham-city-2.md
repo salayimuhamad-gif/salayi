@@ -40,17 +40,17 @@ Project ID: harsham-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 75,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Harsham City 2 is on the old Bahrka road in Erbil (Haji Salam), the same road as Harsham City 1 on the Ankawa side. No landmark, distance or coordinates are published.
+Harsham City 2 is on the old Bahrka road in Erbil (Haji Salam), the same road as Harsham City 1 on the Ankawa side. No landmark or distance are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-هەرشەم سیتی ٢ (Harsham City 2)، کە بە هەرشەم ٢یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووی یەک نهۆمییە لەسەر ڕێگای کۆنی بەحرکە لە شاری هەولێر. بەپێی ماڵپەڕی نووسینگەی حاجی سەلامی خانووبەرە، پڕۆژەکە لە ٥٥٠ خانوو پێکدێت، و هەر خانوویەک ڕووبەری ٢٠٠ م²، یەک نهۆم و دوو ژووری نووستنی هەیە. ئەم پڕۆژەیە قۆناغێکی جیاوازە لە هەرشەم سیتی ١، کە لەسەر هەمان ڕێگای کۆنی بەحرکەیە، و لە هەرشەم سیتی ٣، کە لەسەر ڕێگای نوێی بەحرکەیە. لە تشرینی دووەمی ٢٠٢٦دا، ماڵپەڕی هۆمێلێ خانوویەکی ئامادەی یەک نهۆمی لە هەرشەم سیتی ٢ بە ڕووبەری ٢٠٠ م²، دوو ژووری نووستن و دوو حەمام، بە نرخی داواکراوی ٧٥٬٠٠٠ دۆلاری ئەمریکی و بە گفتوگۆ بۆ فرۆشتن نمایش کردووە.
+هەرشەم سیتی ٢ (Harsham City 2)، کە بە هەرشەم ٢یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووی یەک نهۆمییە لەسەر ڕێگای کۆنی بەحرکە لە هەولێر. پڕۆژەکە لە ٥٥٠ خانوو پێکدێت. هەر خانوویەک ڕووبەری ٢٠٠ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. هەرشەم سیتی ٢ پڕۆژەیەکی جیایە لە هەرشەم سیتی ١، کە لەسەر هەمان ڕێگای کۆنی بەحرکە لە لای عەنکاوەیە، و لە هەرشەم سیتی ٣ کە لەسەر ڕێگای نوێی بەحرکەیە.
 
 ### 2. Arabic (العربية)
-هرشم سيتي 2 (Harsham City 2)، المعروف أيضاً باسم هرشم 2، مشروع سكني لمنازل من طابق واحد على طريق بحركة القديم في مدينة أربيل. ووفقاً لمكتب الحاج سلام العقاري، يتكون المشروع من 550 منزلاً، مساحة كل منها 200 م² من طابق واحد بغرفتي نوم. وهو مرحلة منفصلة عن هرشم سيتي 1 الواقع على طريق بحركة القديم نفسه، وعن هرشم سيتي 3 الواقع على طريق بحركة الجديد. وفي تشرين الثاني 2026 عرض موقع هوميلي للبيع منزلاً جاهزاً من طابق واحد في هرشم سيتي 2 بمساحة 200 م² وغرفتي نوم وحمامين، بسعر مطلوب قدره 75,000 دولار أمريكي قابل للتفاوض.
+هرشم سيتي ٢ (Harsham City 2)، ويُعرف أيضاً باسم هرشم ٢، مشروع سكني لبيوت من طابق واحد على طريق بحركة القديم في أربيل. يتكون المشروع من ٥٥٠ بيتاً، مساحة كل منها ٢٠٠ م²، من طابق واحد وبغرفتي نوم. وهرشم سيتي ٢ مشروع منفصل عن هرشم سيتي ١ الواقع على طريق بحركة القديم نفسه من جهة عنكاوا، وعن هرشم سيتي ٣ الواقع على طريق بحركة الجديد.
 
 ### 3. English
-Harsham City 2, also called Harsham 2, is a residential project of single-floor houses on the old Bahrka road in Erbil. According to Haji Salam Real Estate, the project consists of 550 houses, each with an area of 200 m², one floor and two bedrooms. It is a separate phase from Harsham City 1, which lies on the same old Bahrka road, and from Harsham City 3, which lies on the new Bahrka road. In November 2026 Homele advertised for sale a ready one-floor house in Harsham City 2 with an area of 200 m², two bedrooms and two bathrooms, at an asking price of US$75,000, negotiable.
+Harsham City 2, also called Harsham 2, is a residential project of single-floor houses on the old Bahrka road in Erbil. The project consists of 550 houses. Each house has an area of 200 m², one floor and two bedrooms. Harsham City 2 is a separate project from Harsham City 1, which lies on the same old Bahrka road on the Ankawa side, and from Harsham City 3 on the new Bahrka road.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

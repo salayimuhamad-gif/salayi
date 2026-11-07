@@ -38,17 +38,17 @@ Project ID: marina-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam gives the address as Kasnazan Road, Erbil. No landmark, plot position or coordinates are published.
+Haji Salam gives the address as Kasnazan Road, Erbil. No landmark or plot position are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-مارینا ٢ پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لەسەر ڕێگای کەسنەزان لە شاری هەولێر. ئەم پڕۆژەیە یەکێکە لە سێ پڕۆژەی جیاواز کە ناوی مارینایان هەیە و هەموویان لەسەر ڕێگای کەسنەزانن، لەگەڵ مارینا ١ و مارینا ٣. مارینا ٢ لە ١٤٠ ڤێلا پێکدێت. ڕووبەری هەر ڤێلایەک ٣٣٦ م²یە، لەسەر دوو نهۆم دروستکراوە و چوار ژووری نووستنی هەیە. پەڕەی پڕۆژەکە یەکەی ستاندارد وەک خانوویەکی دوو نهۆمی ٣٣٦ م² تۆمار دەکات، و خانوویەکی چوار ژووری نووستنی ٣٣٦ م² لەم پڕۆژەیەدا بۆ کرێ ڕیکلامی بۆ کراوە.
+مارینا ٢ (Marina 2) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لەسەر ڕێگای کەسنەزان لە شاری هەولێر لە هەرێمی کوردستانی عێراق. یەکێکە لەو سێ پڕۆژەیەی کە ناوی مارینایان هەیە و لەسەر ڕێگای کەسنەزانن، لەگەڵ مارینا ١ و مارینا ٣. پڕۆژەی مارینا ٢ لە ١٤٠ ڤێلا پێکدێت. ڕووبەری هەر ڤێلایەک ٣٣٦ م²یە، دوو نهۆمییە و چوار ژووری نووستنی هەیە.
 
 ### 2. Arabic (العربية)
-مارينا 2 مشروع سكني للفلل يقع على طريق كسنزان في مدينة أربيل. وهو واحد من ثلاثة مشاريع منفصلة تحمل اسم مارينا وتقع جميعها على طريق كسنزان، إلى جانب مارينا 1 ومارينا 3. يتكون مشروع مارينا 2 من ١٤٠ فيلا. تبلغ مساحة كل فيلا ٣٣٦ م²، وهي مبنية على طابقين وتضم أربع غرف نوم. وتسجل صفحة المشروع الوحدة القياسية على أنها منزل من طابقين بمساحة ٣٣٦ م²، وقد أُعلن عن منزل بمساحة ٣٣٦ م² وأربع غرف نوم في المشروع للإيجار.
+مارينا 2 (Marina 2) مشروع سكني للفلل على طريق كسنزان في مدينة أربيل في إقليم كوردستان العراق. وهو واحد من ثلاثة مشاريع تحمل اسم مارينا على طريق كسنزان، إلى جانب مارينا 1 ومارينا 3. يتكون مشروع مارينا 2 من 140 فيلا. تبلغ مساحة كل فيلا 336 م²، وهي مبنية من طابقين وتضم أربع غرف نوم.
 
 ### 3. English
-Marina 2 is a residential villa project on Kasnazan Road in the city of Erbil. It is one of three separate projects named Marina, all located on Kasnazan Road, alongside Marina 1 and Marina 3. Marina 2 consists of 140 villas. Each villa has an area of 336 m², is built on two floors and has four bedrooms. The project page records the standard unit as a two-storey house of 336 m², and a 336 m² four-bedroom house in the project has been advertised for rent.
+Marina 2 is a residential villa project on Kasnazan Road in Erbil, in the Kurdistan Region of Iraq. It is one of three projects named Marina on Kasnazan Road, alongside Marina 1 and Marina 3. Marina 2 consists of 140 villas. Each villa has an area of 336 m², is built on two floors and has four bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

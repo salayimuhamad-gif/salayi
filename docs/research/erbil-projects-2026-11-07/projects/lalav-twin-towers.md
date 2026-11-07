@@ -44,7 +44,7 @@ Project ID: lalav-twin-towers | Tier: 1 | In Erbil city: Yes | Last researched: 
 | 2-bedroom apartment 123 m2 - homele sale listing | 73,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-twin-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Lalav Twin Towers is in the Runaki quarter of central Erbil (Paya), with short trips to the Citadel, malls, restaurants and entertainment centres according to Paya. No street address or coordinates are published.
+Lalav Twin Towers is in the Runaki quarter of central Erbil (Paya), with short trips to the Citadel, malls, restaurants and entertainment centres according to Paya. No street address are published. Map position (low confidence, from agency map pins): 36.1653254, 44.0179707.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

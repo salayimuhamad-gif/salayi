@@ -41,17 +41,17 @@ Project ID: ozal-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Ready house 172 m2, 3 bed / 3 bath - listing asking price (negotiable) | 58,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Ozal City' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates.
+Homele lists 'Ozal City' as an area of Erbil. No source gives a street, ring-road position or landmark.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئۆزال سیتی ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمارکراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە خانووی ئامادەن بە ڕووبەری ١٧٢ و ١٧٣ م²، لەوانە خانووی دوو نهۆمی، بە سێ یان چوار ژووری نووستن و دوو یان سێ حەمام. دوو خانووی چوار ژووری نووستن هەر یەکەیان بە ٩٠٬٠٠٠ دۆلاری ئەمریکی خراونەتە ڕوو، کە نرخی یەکێکیان گفتوگۆی لەسەر دەکرێت، و خانوویەکی سێ ژووری نووستن بە ٥٨٬٥٠٠ دۆلار (بە گفتوگۆ) پێشکەش کراوە.
+ئۆزال سیتی (Ozal City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر. ڕووبەری خانووەکانی ١٧٢ و ١٧٣ م²یە. لەناویاندا خانوویەکی دوو نهۆمیی ١٧٢ م² هەیە بە چوار ژووری نووستن و دوو حەمام، خانوویەکی دوو نهۆمیی ١٧٣ م² بە چوار ژووری نووستن و سێ حەمام، و خانوویەکی ١٧٢ م² بە سێ ژووری نووستن و سێ حەمام.
 
 ### 2. Arabic (العربية)
-أوزال سيتي منطقة سكنية للبيوت في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. العقارات المعلن عنها فيها بيوت جاهزة بمساحة ١٧٢ و١٧٣ م²، منها بيوت من طابقين، بثلاث أو أربع غرف نوم وحمامين أو ثلاثة حمامات. ويُعرض بيتان بأربع غرف نوم بسعر ٩٠٬٠٠٠ دولار أمريكي لكل منهما، أحدهما بسعر قابل للتفاوض، كما يُعرض بيت بثلاث غرف نوم بسعر ٥٨٬٥٠٠ دولار (قابل للتفاوض).
+أوزال سيتي (Ozal City) منطقة سكنية للبيوت في مدينة أربيل. تبلغ مساحات البيوت فيها ١٧٢ و١٧٣ م². ومن بينها بيت من طابقين بمساحة ١٧٢ م² يضم أربع غرف نوم وحمامين، وبيت من طابقين بمساحة ١٧٣ م² يضم أربع غرف نوم وثلاثة حمامات، وبيت بمساحة ١٧٢ م² يضم ثلاث غرف نوم وثلاثة حمامات.
 
 ### 3. English
-Ozal City is a residential housing area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are ready houses of 172 and 173 m², including two-floor houses, with three or four bedrooms and two or three bathrooms. Two four-bedroom houses are offered at USD 90,000 each, one of them negotiable, and a three-bedroom house is offered at USD 58,500 (negotiable).
+Ozal City is a residential area of houses in Erbil. Houses in Ozal City have areas of 172 and 173 m². They include a two-floor house of 172 m² with four bedrooms and two bathrooms, a two-floor house of 173 m² with four bedrooms and three bathrooms, and a 172 m² house with three bedrooms and three bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

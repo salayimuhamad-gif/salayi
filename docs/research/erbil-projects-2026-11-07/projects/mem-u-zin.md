@@ -37,7 +37,7 @@ Project ID: mem-u-zin | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam gives the address as Mosul Road, Erbil, without a landmark or ring-road reference. No coordinates are published.
+Haji Salam gives the address as Mosul Road, Erbil, without a landmark or ring-road reference.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

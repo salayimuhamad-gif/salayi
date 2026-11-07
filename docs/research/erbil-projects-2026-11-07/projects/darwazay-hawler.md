@@ -37,17 +37,17 @@ Project ID: darwazay-hawler | Tier: 1 | In Erbil city: Edge | Last researched: 2
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy Shaqlawa places Darwazay Hawler on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east (Pirmam/Masif direction), and assigns it to its Ganjan City branch in Erbil. No neighbourhood, distance from the city or landmark is given, so the project is classed as on the urban fringe ('edge') rather than inside the city.
+Baghy Shaqlawa places Darwazay Hawler on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east (Pirmam/Masif direction), and assigns it to its Ganjan City branch in Erbil. No neighbourhood, distance from the city or landmark is given, so the project is classed as on the urban fringe ('edge') rather than inside the city. Map position (low confidence, from agency map pins): 36.264731, 44.088541.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-دەروازەی هەولێر، کە بە ئینگلیزی بە Erbil Gate ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای هەولێر–شەقڵاوە، لە دەروازەی باکووری ڕۆژهەڵاتی شاری هەولێر. پڕۆژەکە لە خانوو پێکدێت. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە ناوبراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، سەنتەری کارگێڕی، پاسەوانی، پارکینگ و ناوچەی سەوز. لە نووسینگەی خانووبەرەی باخی شەقڵاوە، لقی گەنجان سیتی لە هەولێر نزیکترین لقە بۆ ئەم پڕۆژەیە و خانووەکانی پێشکەش دەکات.
+دەروازەی هەولێر (Darwazay Hawler) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای هەولێر–شەقڵاوە، ئەو ڕێگایەی لە هەولێرەوە بەرەو باکووری ڕۆژهەڵات و بەرەو پیرمام و مەسیف دەڕوات. پڕۆژەکە لە قەراغی شاری هەولێردایە نەک لە ناو شار.
 
 ### 2. Arabic (العربية)
-دروازة هولير، المعروف بالإنجليزية باسم Erbil Gate، مشروع سكني للبيوت يقع على طريق أربيل–شقلاوة عند المدخل الشمالي الشرقي لمدينة أربيل. يتكوّن المشروع من بيوت سكنية. وتشمل الخدمات المذكورة للمشروع كهرباء على مدار 24 ساعة، وإنترنت، ومركزاً إدارياً، وحراسة أمنية، ومواقف للسيارات، ومساحات خضراء. ويُعدّ فرع كنجان ستي التابع لمكتب باغي شقلاوة العقاري في أربيل أقرب فرع للمشروع ويعرض بيوته.
+دروازة هولير (Darwazay Hawler)، ويعني اسمها بوابة أربيل، مشروع سكني يتكون من بيوت على طريق أربيل–شقلاوة، الذي يخرج من أربيل باتجاه الشمال الشرقي نحو بيرمام والمصيف. ويقع المشروع على الأطراف الحضرية لأربيل وليس داخل المدينة.
 
 ### 3. English
-Darwazay Hawler, known in English as Erbil Gate, is a residential housing project on the Erbil–Shaqlawa road, at the north-eastern approach to Erbil city. The project consists of houses. Services named for the project include 24-hour electricity, internet, an administrative centre, security, parking and green areas. The Ganjan City branch of the Baghy Shaqlawa real-estate office in Erbil is the nearest branch to the project and offers its houses.
+Darwazay Hawler, whose name means Erbil Gate, is a residential project of houses on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east in the direction of Pirmam and Masif. The project lies on the urban fringe of Erbil rather than inside the city.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

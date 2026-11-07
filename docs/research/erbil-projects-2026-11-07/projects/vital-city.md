@@ -37,17 +37,17 @@ Project ID: vital-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam gives only '100m street' (Erbil's 100 m ring road); the segment, nearest landmark and coordinates are not published.
+Haji Salam gives only '100m street' (Erbil's 100 m ring road); the segment and nearest landmark are not published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڤایتاڵ سیتی پڕۆژەیەکی ڤێلای نیشتەجێبوونە لە هەولێر کە لەسەر شەقامی ١٠٠ مەتری دەکەوێت. پڕۆژەکە ٥٨ ڤێلا لەخۆدەگرێت. ڕووبەری ڤێلاکان لە ٣٢٢ م² تا ٧٤٤ م² دەگۆڕێت، و ڤێلاکان لە دوو تا سێ نهۆم دروستکراون و چوار تا پێنج ژووری نووستنیان هەیە. پڕۆژەکە لەلایەن کۆمپانیای حاجی سەلامی خانووبەرە تۆمار کراوە، کە پەڕەی پڕۆژەکەی ناونیشان، ژمارەی یەکەکان، مەودای ڕووبەر، ژمارەی نهۆم و ژمارەی ژووری نووستن دیاری دەکات.
+ڤایتاڵ سیتی (Vital City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە شاری هەولێر، لەسەر شەقامی ١٠٠ مەتری هەڵکەوتووە، کە شەقامی بازنەیی ١٠٠ مەتریی شارەکەیە. پڕۆژەکە ٥٨ ڤێلای تێدایە. ڕووبەری ڤێلاکان لە ٣٢٢ م²ەوە تا ٧٤٤ م² دەگات، لەسەر دوو یان سێ نهۆم دروست کراون و هەر ڤێلایەک چوار یان پێنج ژووری نووستنی هەیە.
 
 ### 2. Arabic (العربية)
-فيتال سيتي مشروع فلل سكنية في أربيل يقع على شارع 100 متر. يضم المشروع 58 فيلا. تتراوح مساحات الفلل بين 322 م² و744 م²، وهي مبنية على طابقين إلى ثلاثة طوابق وتضم من أربع إلى خمس غرف نوم. المشروع مدرج لدى شركة حاجي سلام العقارية، التي تذكر صفحة المشروع لديها العنوان وعدد الوحدات ونطاق المساحات وعدد الطوابق وعدد غرف النوم.
+فايتال سيتي (Vital City) مشروع سكني للفلل في مدينة أربيل، يقع على شارع 100 متر، وهو الطريق الدائري 100 متر في المدينة. ويضم المشروع 58 فيلا. وتتراوح مساحات الفلل بين 322 و744 م²، وهي مبنية على طابقين أو ثلاثة طوابق، وتضم كل فيلا أربع أو خمس غرف نوم.
 
 ### 3. English
-Vital City is a residential villa project in Erbil, located on 100m Street. The project contains 58 villas. Villa areas range from 322 m² to 744 m², and the villas are built on two to three floors with four to five bedrooms. The project is listed by Haji Salam Real Estate, whose project page gives the address, the number of units, the area range, the number of floors and the number of bedrooms.
+Vital City is a residential villa project in Erbil, located on 100m Street, the city's 100 m ring road. The project contains 58 villas. The villas range in size from 322 m² to 744 m², are built on two or three floors and have four or five bedrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

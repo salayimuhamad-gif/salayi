@@ -41,17 +41,17 @@ Project ID: eden-park | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-
 | Off-plan home 220 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 210,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Eden Park' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Eden Park' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئیدن پارک (Eden Park) ناوچەیەکی نیشتەجێبوونی خانووە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. ئەو موڵکانەی لەوێ ڕیکلامیان بۆ کراوە سێ خانووی لەسەر نەخشەن بە چوار ژووری نووستن، کە بە پارەی پێشەکی دەفرۆشرێن. خانوویەکی ٢٠٠ م² بە پێنج حەمام بە ١٨٠,٠٠٠ دۆلاری ئەمریکی، خانوویەکی تری ٢٠٠ م² بە چوار حەمام بە ١٨٥,٠٠٠ دۆلار، و خانوویەکی ٢٢٠ م² بە چوار حەمام بە ٢١٠,٠٠٠ دۆلار خراونەتە ڕوو. ڕیکلامەکان لە ٧ی تشرینی دووەمی ٢٠٢٦ لەسەر پۆرتاڵەکە چالاک بوون.
+ئیدن پارک (Eden Park) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە خانووی خێزانی پێکدێت. ڕووبەری خانووەکانی ئیدن پارک ٢٠٠ م² و ٢٢٠ م²یە و هەر خانوویەک چوار ژووری نووستنی هەیە. خانووەکانی ٢٠٠ م² چوار یان پێنج حەمامیان هەیە، و خانووەکانی ٢٢٠ م² چوار حەمامیان هەیە.
 
 ### 2. Arabic (العربية)
-إيدن بارك (Eden Park) منطقة سكنية للبيوت في أربيل، مدرجة بهذا الاسم على بوابة العقارات homele.com. والعقارات المعلن عنها فيها ثلاثة بيوت على الخارطة بأربع غرف نوم، تُباع بدفعة أولى. إذ يُعرض بيت بمساحة 200 م² بخمسة حمامات بسعر 180,000 دولار أمريكي، وبيت آخر بمساحة 200 م² بأربعة حمامات بسعر 185,000 دولار، وبيت بمساحة 220 م² بأربعة حمامات بسعر 210,000 دولار. وكانت الإعلانات نشطة على البوابة في 7 تشرين الثاني 2026.
+إيدن بارك (Eden Park) منطقة سكنية في مدينة أربيل تتكون من بيوت عائلية. وتبلغ مساحات البيوت في إيدن بارك 200 و220 م²، ويضم كل بيت منها أربع غرف نوم. وتضم البيوت بمساحة 200 م² أربعة أو خمسة حمامات، أما البيوت بمساحة 220 م² فتضم أربعة حمامات.
 
 ### 3. English
-Eden Park is a residential housing area in Erbil, listed under this name on the homele.com property portal. The properties advertised there are three off-plan homes with four bedrooms, sold with a down payment. A 200 m² home with five bathrooms is listed at USD 180,000, another 200 m² home with four bathrooms at USD 185,000, and a 220 m² home with four bathrooms at USD 210,000. The listings were active on the portal on 7 November 2026.
+Eden Park is a residential area in Erbil made up of family houses. Houses in Eden Park measure 200 m² and 220 m², and each has four bedrooms. The 200 m² houses have four or five bathrooms, and the 220 m² houses have four bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

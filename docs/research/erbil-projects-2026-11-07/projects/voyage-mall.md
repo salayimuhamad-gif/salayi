@@ -37,17 +37,17 @@ Project ID: voyage-mall | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy Shaqlawa gives the address 'Erbil - Bahrka Road', on the Bahrka road approach north of central Erbil, inside the brief's scope; no landmark, distance or coordinates are published.
+Baghy Shaqlawa gives the address 'Erbil - Bahrka Road', on the Bahrka road approach north of central Erbil, inside the brief's scope; no landmark or distance are published. Map position (low confidence, from agency map pins): 36.277939, 44.016054.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڤۆیاج مۆڵ پڕۆژەیەکی بازرگانی مۆڵی بازاڕکردنە لەسەر ڕێگای بەحرکە لە هەولێر. مۆڵەکە بۆ چەند زۆنێکی تایبەت دابەشکراوە کە هەریەکەیان شار و کولتوورێک نیشان دەدات: زۆنی هەولێر، ئیستانبوڵ، یۆنان، بەلجیکا، پاریس و ڕۆما. پڕۆژەکە لە زنجیرەیەک یەکەی بازرگانی پێکدێت کە بەسەر سێ نهۆمدا دابەشکراون بە ڕووبەری ٦,٠٠٠ م²، و یەکەکان بۆ فرۆشتن خراونەتە ڕوو. کۆمپانیای باخی شەقڵاوەی خانووبەرە تاکە بریکاری فرۆشتنی مۆڵەکەیە و لقێکی بە ناوی ڤۆیاج مۆڵ هەیە. تایبەتمەندییە تۆمارکراوەکان بریتین لە پارکینگی ژێرزەمین، پارکینگ، پاسەوانی، ڕیسێپشن، سوپەرمارکێت، شوێنی یاری منداڵان و ڕووبەری سەوز.
+ڤۆیاج مۆڵ (Voyage Mall) پڕۆژەیەکی مۆڵی بازرگانییە لەسەر ڕێگای بەحرکە لە شاری هەولێر، لە باکووری ناوەندی شار. مۆڵەکە بۆ چەند ناوچەیەکی تایبەت دابەشکراوە کە هەر یەکەیان شارێک یان کولتوورێک نیشان دەدات: هەولێر، ئەستەنبوڵ، یۆنان، بەلجیکا، پاریس و ڕۆما. یەکە بازرگانییەکانی لەسەر سێ نهۆم دابەشکراون.
 
 ### 2. Arabic (العربية)
-فوياج مول مشروع مركز تسوق تجاري على طريق بحركة في أربيل. ينقسم المول إلى مناطق مخصصة تمثّل كل منها مدينة وثقافة: منطقة أربيل وإسطنبول واليونان وبلجيكا وباريس وروما. يتكوّن المشروع من سلسلة من الوحدات التجارية الموزعة على ثلاثة طوابق بمساحة 6,000 م²، وتُعرض الوحدات للبيع. شركة باغي شقلاوة العقارية هي الوكيل الحصري لبيع المول ولديها فرع باسم فوياج مول. تشمل الميزات المدرجة موقف سيارات تحت الأرض ومواقف سيارات وحراسة أمنية واستقبالاً وسوبرماركت ومنطقة ألعاب ومساحات خضراء.
+فوياج مول (Voyage Mall) مشروع مركز تسوق تجاري على طريق بحركة في مدينة أربيل، على مدخل طريق بحركة شمال مركز المدينة. يُقسَّم المول إلى مناطق ذات طابع خاص، تمثل كل منها مدينة أو ثقافة: أربيل وإسطنبول واليونان وبلجيكا وباريس وروما. وتتوزع وحداته التجارية على ثلاثة طوابق.
 
 ### 3. English
-Voyage Mall is a commercial shopping mall project on Bahrka Road in Erbil. The mall is organised into themed zones that each represent a city or culture: Erbil, Istanbul, Greece, Belgium, Paris and Rome. It consists of a series of commercial units divided over three floors with an area of 6,000 m², and the units are offered for sale. Baghy Shaqlawa Real Estate is the sole sales agent for the mall and has a branch named Voyage Mall. Listed features include an underground car park, parking, security, reception, a supermarket, a playground and green areas.
+Voyage Mall is a commercial shopping mall project on Bahrka Road in Erbil, on the Bahrka road approach to the north of the city centre. The mall is organised into themed zones, each representing a city or culture: Erbil, Istanbul, Greece, Belgium, Paris and Rome. Its commercial units are spread over three floors.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -42,17 +42,17 @@ Project ID: firdaws-city | Tier: 1 | In Erbil city: Yes (urban belt – Masif/Pi
 Developer prices and payment plans: Not verified.
 
 ## PART E — LOCATION & SURROUNDINGS
-The only location statement is the agency address "Erbil - Masif Road", i.e., the Erbil–Pirmam (Masif Salahaddin) corridor that forms part of Erbil's north-eastern urban belt. No source gives the position along the road, nearby landmarks, distances or coordinates. Because the Masif Road corridor extends from the city towards Pirmam, the project is treated as inside Erbil's urban belt pending confirmation of its exact position.
+The only location statement is the agency address "Erbil - Masif Road", i.e., the Erbil–Pirmam (Masif Salahaddin) corridor that forms part of Erbil's north-eastern urban belt. No source gives the position along the road, nearby landmarks or distances. Because the Masif Road corridor extends from the city towards Pirmam, the project is treated as inside Erbil's urban belt pending confirmation of its exact position. Map position (low confidence, from agency map pins): 36.267336, 44.09574.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-فردەوس ستی (هەروەها بە فێردەوس ستی دەنووسرێت) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای مەسیف لە شاری هەولێر. پڕۆژەکە لە خانوو پێکهاتووە، و پەڕەی نووسینگەی خانووبەرە بۆ پڕۆژەکە کارەبای ٢٤ کاتژمێر، پاسەوانی، یاریگای منداڵان، ناوچەی سەوز، باخچەی گشتی و سوپەرمارکێت وەک تایبەتمەندییەکانی دەژمێرێت؛ ئاژەڵی ماڵی ڕێگەپێدراوە. ئەو خانووانەی لە بازاڕی فرۆشتنەوە و کرێدا لە فردەوس ستی ڕیکلام کراون، خانووی ٤ و ٥ ژووری نووستن بە ڕووبەری نزیکەی ٣٠٠ م² و ٤٠٠ م² لەگەڵ ٤ یان ٥ حەمام لەخۆدەگرن. وەبەرهێنەر، کۆی ڕووبەری زەوی و ژمارەی خانووەکان لەلایەن سەرچاوە پشکنراوەکانەوە بڵاونەکراونەتەوە.
+فیردەوس ستی (Firdaws City) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای مەسیف لە هەولێر، لەسەر ئەو هێڵەی لە هەولێرەوە بەرەو پیرمام دەچێت. خانووەکانی پڕۆژەکە خانووی ٣٠٠ م² بە چوار ژووری نووستن و خانووی ٤٠٠ م² بە پێنج ژووری نووستن لەخۆ دەگرن، لەگەڵ چوار یان پێنج گەرماو.
 
 ### 2. Arabic (العربية)
-فردوس سيتي (Firdaws City، وتُكتب أيضاً Ferdaws City) مشروع سكني من المنازل يقع على طريق مصيف في مدينة أربيل. يتكوّن المشروع من منازل، وتذكر صفحة الوكالة العقارية الخاصة بالمشروع من بين مزاياه الكهرباء على مدار 24 ساعة والحراسة الأمنية وملعباً للأطفال ومساحات خضراء وحديقة عامة وسوبر ماركت، مع السماح بالحيوانات الأليفة. تشمل المنازل المعروضة في سوق إعادة البيع والإيجار في فردوس سيتي منازل بأربع وخمس غرف نوم بمساحات تقارب 300 م² و400 م² مع أربعة أو خمسة حمامات. لم تنشر المصادر التي جرى الاطلاع عليها اسم المطوّر ولا المساحة الإجمالية للأرض ولا عدد المنازل.
+فردوس سيتي (Firdaws City) مشروع سكني يتكون من بيوت على طريق المصيف في أربيل، ضمن المحور الممتد من أربيل نحو بيرمام. وتشمل بيوت المشروع منازل بمساحة 300 م² بأربع غرف نوم، ومنازل بمساحة 400 م² بخمس غرف نوم، مع أربعة أو خمسة حمامات.
 
 ### 3. English
-Firdaws City (also written Ferdaws City) is a residential housing project on Masif Road in Erbil. The project is made up of houses, and the agency page for the project lists 24-hour electricity, security, a playground, green areas, a public garden and a supermarket among its features; pets are allowed. Houses advertised on the resale and rental market in Firdaws City include four- and five-bedroom homes of about 300 m² and 400 m² with four or five bathrooms. The developer, total land area and number of houses are not published by the sources consulted.
+Firdaws City, also written Ferdaws City, is a residential project of houses on Masif Road in Erbil, along the corridor from Erbil towards Pirmam. Houses in the project include 300 m² homes with four bedrooms and 400 m² homes with five bedrooms, with four or five bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

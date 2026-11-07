@@ -40,17 +40,17 @@ Project ID: varsan | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
 | Ready new house 220 m2, 4 bed / 3 bath - market listing (negotiable) | 160,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy Shaqlawa gives the address as 'Erbil - new baharka two side road', on the Baharka (Bahrka) road approach north of central Erbil; Baghy also lists a 'Varsan branch'. No landmark, distance or coordinates are published.
+Baghy Shaqlawa gives the address as 'Erbil - new baharka two side road', on the Baharka (Bahrka) road approach north of central Erbil; Baghy also lists a 'Varsan branch'. No landmark or distance are published. Map position (low confidence, from agency map pins): 36.299251, 44.028976.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڤارسان پڕۆژەیەکی خانووی نیشتەجێبوونە لە هەولێر لەسەر ڕێگا دوو سایدەکەی نوێی بەحرکە. پڕۆژەکە لە خانوو پێکدێت و کۆمپانیای باخی شەقڵاوە لقێکی بە ناوی ڤارسان هەیە. تایبەتمەندییە تۆمارکراوەکان بریتین لە کارەبای ٢٤ کاتژمێری، شوێنی یاری منداڵان، پاسەوانی، پارکینگ، ڕووبەری سەوز و باخچەی گشتی، باخچەی منداڵان، قوتابخانە، مزگەوت، سوپەرمارکێت، چاککردنەوە، ڕیسێپشن، ژووری خزمەتکار و ڕێگەدان بە ئاژەڵی ماڵی. خانوویەکی نوێی ٢٢٠ م² بە چوار ژووری نووستن و سێ حەمام لە پڕۆژەکەدا وەک ئامادە بە ١٦٠,٠٠٠ دۆلاری ئەمریکی ڕیکلامی بۆ کراوە و نرخەکەی دانوستانی لەسەر دەکرێت.
+ڤارسان (Varsan)، کە بە پڕۆژەی ڤارسانیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای نوێی دوو سایدی بەحرکە هەڵکەوتووە، لەسەر ڕێگای بەحرکە لە باکووری ناوەندی شاری هەولێر.
 
 ### 2. Arabic (العربية)
-فارسان مشروع منازل سكنية في أربيل على طريق بحركة الجديد ذي الاتجاهين. يتكوّن المشروع من منازل، ولشركة باغي شقلاوة فرع باسم فارسان. تشمل الميزات المدرجة كهرباء على مدار 24 ساعة، ومنطقة ألعاب، وحراسة أمنية، ومواقف سيارات، ومساحات خضراء وحديقة عامة، وروضة أطفال، ومدرسة، ومسجداً، وسوبرماركت، وصيانة، واستقبالاً، وغرفة خادمة، والسماح بالحيوانات الأليفة. ويُعرض في المشروع منزل جديد جاهز بمساحة 220 م² بأربع غرف نوم وثلاثة حمامات بسعر 160,000 دولار أمريكي قابل للتفاوض.
+فارسان (Varsan)، ويُعرف أيضاً بمشروع فارسان، مشروع سكني للمنازل في مدينة أربيل في إقليم كوردستان العراق. يقع المشروع على طريق بحركة الجديد ذي الاتجاهين، على مدخل طريق بحركة شمال مركز مدينة أربيل.
 
 ### 3. English
-Varsan is a residential house project in Erbil on the new two-way Baharka road. The project consists of houses, and Baghy Shaqlawa Real Estate operates a branch named Varsan. Listed features include 24-hour electricity, a playground, security, parking, green areas and a public garden, a kindergarten, a school, a mosque, a supermarket, maintenance, reception, a maid's room and pets allowed. A new 220 m² house with four bedrooms and three bathrooms is advertised in the project as ready at USD 160,000, negotiable.
+Varsan, also known as Varsan Project, is a residential project of houses in Erbil, in the Kurdistan Region of Iraq. It is located on the new two-way Baharka road, on the Baharka road approach to the north of central Erbil.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -46,17 +46,17 @@ Project ID: saloor-tower | Tier: 2 | In Erbil city: Yes | Last researched: 2026-
 | Ready furnished apartment 165 m2, 2 bed / 2 bath - monthly rent (homele listing) | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/saloor-tower |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Saloor Tower' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Saloor Tower' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-سالۆر تاوەر (Saloor Tower) پڕۆژەیەکی شوقەیە لە هەولێر کە بەم ناوە لە پۆرتاڵی خانووبەرەی homele.com تۆمار کراوە. هەموو ئەو شوقانەی لەوێ ڕیکلامیان بۆ کراوە ئامادەن. شوقەی یەک ژووری نووستن بە ڕووبەری ٩٠ تا ٩٥ م² بۆ کرێی مانگانە بە ٣٠٠ تا ٥٠٠ دۆلاری ئەمریکی خراونەتە ڕوو، لەوانە شوقەی بە کەلوپەلەوە، و شوقەی دوو ژووری نووستن بە ڕووبەری ١٤٢ م² و ١٦٥ م² بە ٤٠٠ و ٨٠٠ دۆلار، کە دووەمیان بە کەلوپەلەوەیە. بۆ فرۆشتن، شوقەی یەک ژووری نووستن بە ڕووبەری ٩٥ م² بە ٤٩,٥٠٠ و ٦٧,٥٠٠ دۆلار، شوقەیەکی یەک ژووری نووستن بە ڕووبەری ١١٧ م² بە ٦٦,٠٠٠ دۆلار بە نەختی، و شوقەیەکی دوو ژووری نووستن بە ڕووبەری ١٤١ م² بە ٧٠,٠٠٠ دۆلار تۆمار کراون.
+سالۆر تاوەر (Saloor Tower) پڕۆژەیەکی شوقەی نیشتەجێبوونە لە شاری هەولێر. پڕۆژەکە شوقەی یەک ژووری نووستن و یەک گەرماو بە ڕووبەری ٩٠، ٩٥ و ١١٧ م² و شوقەی دوو ژووری نووستن و دوو گەرماو بە ڕووبەری ١٤١، ١٤٢ و ١٦٥ م² لەخۆ دەگرێت.
 
 ### 2. Arabic (العربية)
-سالور تاور (Saloor Tower) مشروع شقق في أربيل، مدرج بهذا الاسم على بوابة العقارات homele.com. وجميع الشقق المعلن عنها فيه جاهزة. وتُعرض شقق بغرفة نوم واحدة بمساحة 90 إلى 95 م² للإيجار الشهري بسعر 300 إلى 500 دولار أمريكي، منها شقق مفروشة، وشقق بغرفتي نوم بمساحة 142 م² و165 م² بسعر 400 و800 دولار، والثانية مفروشة. وللبيع تُعرض شقق بغرفة نوم واحدة بمساحة 95 م² بسعر 49,500 و67,500 دولار، وشقة بغرفة نوم واحدة بمساحة 117 م² بسعر 66,000 دولار نقداً، وشقة بغرفتي نوم بمساحة 141 م² بسعر 70,000 دولار.
+سالور تاور (Saloor Tower) مشروع سكني يتكون من شقق في مدينة أربيل. ويضم المشروع شققاً بغرفة نوم واحدة وحمام واحد بمساحات 90 و95 و117 م²، وشققاً بغرفتي نوم وحمامين بمساحات 141 و142 و165 م².
 
 ### 3. English
-Saloor Tower is an apartment project in Erbil, listed under this name on the homele.com property portal. All apartments advertised there are ready units. One-bedroom apartments of 90–95 m² are offered for monthly rent at USD 300–500, including furnished units, and two-bedroom apartments of 142 m² and 165 m² at USD 400 and USD 800, the latter furnished. For sale, one-bedroom apartments of 95 m² are listed at USD 49,500 and USD 67,500, a one-bedroom unit of 117 m² at USD 66,000 in cash, and a two-bedroom unit of 141 m² at USD 70,000.
+Saloor Tower is a residential apartment project in Erbil. The project offers one-bedroom apartments with one bathroom in sizes of 90, 95 and 117 m², and two-bedroom apartments with two bathrooms in sizes of 141, 142 and 165 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

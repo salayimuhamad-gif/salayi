@@ -43,17 +43,17 @@ Project ID: zerin-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | House 200 m2, 4 bed, 2 bath (two Baghy cards at the same price) | 105,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zerin-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Zerin City is on Erbil's 150m Road in the northern ring-road belt (Baghy Shaqlawa); Baghy's map marker is at 36.285784, 44.091212. Baghy's Golden Tower address ('Erbil-Shaqlawa Rd.-Zeren city') suggests the project also fronts the Erbil-Shaqlawa road.
+Baghy's Golden Tower address ('Erbil-Shaqlawa Rd.-Zeren city') suggests the project also fronts the Erbil-Shaqlawa road. Map position (low confidence, from agency map pins): 36.285784, 44.091212.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زێرین ستی، کە بە شێوەی Ziren City یش دەنووسرێت، پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق و لەسەر شەقامی ١٥٠ مەتری هەڵکەوتووە. پڕۆژەکە خانوو و شوقە بەیەکەوە کۆدەکاتەوە. پڕۆژەی شوقەی زێد سەنتەر تاوەرز لەناو زێرین ستیدا هەڵکەوتووە. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە کارەبای ٢٤ کاتژمێری، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت، مزگەوت و قوتابخانە، و ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی دەدرێت. خانووەکانی زێرین ستی بۆ فرۆشتنەوە ڕیکلامیان بۆ دەکرێت، لەوانە خانوویەکی ئامادەی یەک نهۆمی. ڕووبەری ئەو خانووانەی ڕیکلامیان بۆ کراوە ٢٠٠ م²یە، لە دوو تا پێنج ژووری نووستن و یەک یان دوو حەمامیان هەیە.
+زێرین ستی (Zerin City) پڕۆژەیەکی نیشتەجێبوونە لەسەر شەقامی ١٥٠ مەتری لە بەشی باکووری شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە خانوو و شوقە بەیەکەوە کۆدەکاتەوە. ڕووبەری خانووەکانی زێرین ستی ٢٠٠ م²یە، و لە دوو تا پێنج ژووری نووستن و یەک یان دوو حەمامیان هەیە. خزمەتگوزارییەکانی پڕۆژەکە بریتین لە کارەبای ٢٤ کاتژمێری، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت، مزگەوت و قوتابخانە. ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی لە پڕۆژەکەدا دەدرێت.
 
 ### 2. Arabic (العربية)
-زيرين ستي، وتُكتب أيضاً Ziren City، مشروع سكني في مدينة أربيل في إقليم كوردستان العراق يقع على شارع 150 متري. يجمع المشروع بين المنازل والشقق. ويقع مشروع شقق زد سنتر تاورز داخل زيرين ستي. تشمل المزايا المدرجة للمشروع كهرباء على مدار 24 ساعة وملاعب أطفال وحراسة ومواقف سيارات ومساحات خضراء وحديقة عامة وسوبرماركت ومسجداً ومدرسة، ويُسمح فيه بتربية الحيوانات الأليفة. تُعرض منازل زيرين ستي لإعادة البيع، ومنها منزل جاهز من طابق واحد. تبلغ مساحة المنازل المعلن عنها 200 م²، وتضم من غرفتي نوم إلى خمس غرف وحمّاماً أو حمّامين.
+زيرين ستي (Zerin City) مشروع سكني على شارع 150 متر في الجزء الشمالي من مدينة أربيل في إقليم كوردستان العراق. يجمع المشروع بين المنازل والشقق. تبلغ مساحة المنازل في زيرين ستي 200 م²، وتضم من غرفتي نوم إلى خمس غرف نوم وحماماً أو حمامين. تشمل الخدمات في المشروع كهرباء على مدار 24 ساعة وملاعب للأطفال وحراسة ومواقف سيارات ومساحات خضراء وحديقة عامة وسوبرماركت ومسجداً ومدرسة. ويُسمح بتربية الحيوانات الأليفة في المشروع.
 
 ### 3. English
-Zerin City, also written Ziren City, is a residential project in Erbil, Kurdistan Region of Iraq, located on the 150m Road. The project combines houses and apartments. The Z Center Towers apartment project is located inside Zerin City. The features listed for the project are 24-hour electricity, playgrounds, security, parking, green areas, a public garden, a supermarket, a mosque and a school, and pets are allowed. Houses in Zerin City are offered for resale, including a ready one-floor house. Advertised houses have an area of 200 m², with two to five bedrooms and one or two bathrooms.
+Zerin City, also written Ziren City, is a residential project on the 150m Road in the northern part of Erbil, in the Kurdistan Region of Iraq. The project combines houses and apartments. Houses in Zerin City have an area of 200 m², with two to five bedrooms and one or two bathrooms. Services in the project include 24-hour electricity, playgrounds, security, parking, green areas, a public garden, a supermarket, a mosque and a school. Pets are allowed in the project.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

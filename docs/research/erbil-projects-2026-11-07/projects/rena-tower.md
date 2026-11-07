@@ -41,17 +41,17 @@ Project ID: rena-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Ready 2-bed 138 m2 for sale - homele listings | 87,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Rena Tower is on the Kirkuk Road in Erbil (Baghy). No more precise address or coordinates are published.
+Rena Tower is on the Kirkuk Road in Erbil (Baghy). No more precise address are published. Map position (low confidence, from agency map pins): 36.148103, 44.019843.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ڕینا تاوەر، کە بە ناوی ڕینا تاوەرزیش ڕیکلامی بۆ دەکرێت، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر، لەسەر ڕێگای کەرکووک. شوقەی ئامادە لە پڕۆژەکەدا بۆ فرۆشتن ڕیکلامیان بۆ کراوە، لەوانە شوقەی یەک ژووری نووستنی ٧٧ م² بە یەک حەمام بە نرخی ٥٢٬٥٠٠ دۆلار، و شوقەی دوو ژووری نووستنی ١٣٨ م² بە نرخی ٨٧٬٥٠٠ دۆلار کە بە یەک یان دوو حەمام ڕاگەیەندراون. ئاسانکارییە ڕاگەیەندراوەکانی پڕۆژەکە بریتین لە کارەبای ٢٤ کاتژمێری، ناوچەی سەوز و سوپەرمارکێت.
+ڕینا تاوەر (Rena Tower)، کە بە ڕینا تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای کەرکووک لە هەولێر. شوقەکانی پڕۆژەکە شوقەی یەک ژووری نووستن و یەک گەرماو بە ڕووبەری ٧٧ م² و شوقەی دوو ژووری نووستن بە ڕووبەری ١٣٨ م² لەخۆ دەگرن.
 
 ### 2. Arabic (العربية)
-رينا تاور، المعروض أيضاً باسم رينا تاورز، مشروع سكني للشقق في أربيل، يقع على طريق كركوك. تُعرض في المشروع شقق جاهزة للبيع، منها شقق بغرفة نوم واحدة وحمام واحد بمساحة 77 م² بسعر 52,500 دولار، وشقق بغرفتي نوم بمساحة 138 م² بسعر 87,500 دولار، معروضة بحمام واحد أو حمامين. تشمل الميزات المعلنة للمشروع الكهرباء على مدار 24 ساعة والمساحات الخضراء والسوبرماركت.
+رينا تاور (Rena Tower)، المعروف أيضاً باسم رينا تاورز، مشروع سكني للشقق على طريق كركوك في أربيل. وتشمل الشقق في المشروع وحدات بغرفة نوم واحدة وحمام واحد بمساحة 77 م²، ووحدات بغرفتي نوم بمساحة 138 م².
 
 ### 3. English
-Rena Tower, also listed as Rena Towers, is a residential apartment project in Erbil, located on the Kirkuk Road. Ready apartments in the project are advertised for sale, including one-bedroom units of 77 m² with one bathroom at $52,500 and two-bedroom units of 138 m² at $87,500, listed with one or two bathrooms. The project's listed features are 24-hour electricity, green areas and a supermarket.
+Rena Tower, also known as Rena Towers, is a residential apartment project on the Kirkuk Road in Erbil. Apartments in the project include one-bedroom units of 77 m² with one bathroom and two-bedroom units of 138 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -37,17 +37,17 @@ Project ID: lalav-venus-tower | Tier: 1 | In Erbil city: Yes | Last researched: 
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Paya places the project on the 120m road in New Hawler (Hawler Nwe), an area also given for Lalav City View; no closer location is published. No coordinates are available.
+Paya places the project on the 120m road in New Hawler (Hawler Nwe), an area also given for Lalav City View; no closer location is published. Map position (low confidence, from agency map pins): 36.216607, 44.064268.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-لالاڤ ڤینۆس تاوەر، کە بە ڤینۆس تاوەرز یان ڤینوس تاوەر ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەی لالاڤ گروپە لەسەر شەقامی ١٢٠ مەتری لە هەولێری نوێ. پڕۆژەکە شەش بینا لەخۆ دەگرێت کە هەر یەکەیان ٣٠ نهۆمە. چوار نهۆمی ژێرزەوی وەک پارکینگ بەکاردێن و نهۆمی زەمینی بازرگانییە. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە دیاری کراون بریتین لە کارەبای ٢٤ کاتژمێری، پاسەوانیی ٢٤ کاتژمێری، سیستەمی کوژاندنەوەی ئاگر، سیستەمی ئاوی ٢٤ کاتژمێری، میتەری تایبەت بۆ شوقەکان و ئێرکۆندیشنی سپلیت بۆ هەموو شوقەکان.
+لالاڤ ڤینۆس تاوەر (Lalav Venus Tower)، کە بە ڤینۆس تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لالاڤ گرووپ گەشەی پێدەدات. پڕۆژەکە لەسەر شەقامی ١٢٠ مەتری لە هەولێری نوێ هەڵکەوتووە، لە هەمان ناوچەی پڕۆژەی لالاڤ سیتی ڤیو. پڕۆژەکە لە شەش باڵەخانە پێکدێت کە هەر یەکەیان ٣٠ نهۆمە. باڵەخانەکان شوقەی نیشتەجێبوون لەخۆ دەگرن، و نهۆمی زەمینی بۆ بەکارهێنانی بازرگانی تەرخان کراوە.
 
 ### 2. Arabic (العربية)
-لالاف فينوس تاور، المعروف أيضاً باسم فينوس تاورز، مشروع سكني للشقق تابع لمجموعة لالاف على شارع 120 متر في هولير الجديدة. يضم المشروع ستة مبانٍ بارتفاع 30 طابقاً لكل منها. تُستخدم أربعة طوابق تحت الأرض مواقفَ للسيارات، والطابق الأرضي تجاري. تشمل الخدمات المحددة للمشروع الكهرباء على مدار 24 ساعة، والحراسة على مدار 24 ساعة، ونظام إطفاء الحريق، ونظام مياه على مدار 24 ساعة، وعدادات خاصة للشقق، ومكيفات سبليت لجميع الشقق.
+لالاف فينوس تاور (Lalav Venus Tower)، المعروف أيضاً باسم فينوس تاورز، مشروع سكني للشقق تطوّره مجموعة لالاف. يقع المشروع على شارع 120 متر في هولير الجديدة، في المنطقة نفسها التي يقع فيها مشروع لالاف سيتي فيو. يتكوّن المشروع من ستة مبانٍ، يضم كل منها 30 طابقاً. وتضم المباني شققاً سكنية، فيما خُصص الطابق الأرضي للاستخدام التجاري.
 
 ### 3. English
-Lalav Venus Tower, also referred to as Venus Towers or Vinus Tower, is a residential apartment project of Lalav Group on 120 Meter Street in Hawler Nwe (New Erbil). The project contains six buildings of 30 floors each. Four underground floors are used as parking garages, and the ground floor is commercial. Services listed for the project include 24-hour electricity, 24-hour security, a fire suppression system, a 24-hour water system, individual meters for apartments and split air-conditioning units for all apartments.
+Lalav Venus Tower, also known as Venus Towers, is a residential apartment project developed by Lalav Group (Lalav Projects). It is located on 120 Meter Street in Hawler Nwe (New Erbil), the same area as the Lalav City View project. The project consists of six buildings, each with 30 floors. The buildings contain apartments, and the ground floor is designated for commercial use.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

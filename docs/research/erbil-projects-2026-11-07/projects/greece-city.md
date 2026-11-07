@@ -47,17 +47,17 @@ Project ID: greece-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Villa 220 m2 - homele market listing, off-plan with instalments (area label '(Down payment) Greece City'); long-term instalment | 159,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Greece City is in Erbil, but no source names its street, district or coordinates.
+Greece City is in Erbil, but no source names its street or district. Map position (low confidence, from agency map pins): 36.297019, 44.040291.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گریس سیتی (شاری یۆنانی) پڕۆژەیەکی نیشتەجێبوونە تەنها بۆ ڤێلا لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق. دیزاینەکەی لە شێوازی تەلارسازیی ئەوروپی وەرگیراوە و ڤێلاکان پلانی کراوە و تەواوکاریی هاوچەرخیان هەیە. پڕۆژەکە ڤێلای ٢٢٠ م² بە چوار ژووری نووستن و سێ حەمام پێشکەش دەکات، هەروەها ڤێلای ٢٢٠ م² و ٢٤٠ م² بە چوار ژووری نووستن و چوار حەمام لەسەر نەخشە و بە سیستەمی قیست دەفرۆشرێن. پڕۆژەکە ڕووبەری سەوز و ژێرخانی ڕێکخراوی هەیە، و ئەو خزمەتگوزارییانەی بۆی دیاری کراون بریتین لە تۆڕی ئاوەڕۆ، پارکینگ، چاککردنەوە، مزگەوت، هۆڵی وەرزش، شوێنی یاریی منداڵان، پاسەوانی، ئێرکۆندیشن، ئەی تی ئێم، سوپەرمارکێت و باخچەی گشتی.
+گریس ستی (Greece City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە تەنها لە ڤێلا پێکدێت. پڕۆژەکە ڤێلای چوار ژووری نووستن بە ڕووبەری ٢٢٠ م² و ٢٤٠ م² لەخۆ دەگرێت. پلان دانراوە کە پڕۆژەکە ناوچەی سەوز و ژێرخانێکی ڕێکخراوی هەبێت.
 
 ### 2. Arabic (العربية)
-المدينة اليونانية (غريس سيتي) مشروع سكني مخصص للفلل فقط في أربيل، عاصمة إقليم كوردستان العراق. يستلهم تصميمه الطراز المعماري الأوروبي، وتتميّز فلله بتصاميم مفتوحة وتشطيبات حديثة. يعرض المشروع فللاً بمساحة 220 م² تضم أربع غرف نوم وثلاثة حمامات، كما تُعرض فلل بمساحتي 220 م² و240 م² بأربع غرف نوم وأربعة حمامات على المخطط بنظام التقسيط. يضم المشروع مساحات خضراء وبنية تحتية منظمة، وتشمل الخدمات المذكورة له شبكة صرف صحي، ومواقف للسيارات، وخدمات صيانة، ومسجداً، وصالة رياضية، ومنطقة لعب للأطفال، وحراسة أمنية، وتكييفاً، وصرافاً آلياً، وسوبرماركت، وحديقة عامة.
+المدينة اليونانية (Greece City) مشروع سكني في أربيل يتكون من الفلل فقط. ويضم المشروع فللاً بأربع غرف نوم بمساحتي 220 م² و240 م². ومن المخطط أن يضم المشروع مساحات خضراء وبنية تحتية منظمة.
 
 ### 3. English
-Greece City is a villa-only residential project in Erbil, the capital of the Kurdistan Region of Iraq. Its design follows European architectural styles, and the villas have open layouts and contemporary finishes. The project offers four-bedroom villas of 220 m² with three bathrooms, and villas of 220 m² and 240 m² with four bedrooms and four bathrooms are offered off-plan with instalment payment plans. The project includes green areas and organised infrastructure, and the services listed for it include sewerage, car parking, maintenance, a mosque, a gym, a children's play area, security, air-conditioning, an ATM, a supermarket and a public garden.
+Greece City is a residential project in Erbil made up only of villas. The project offers four-bedroom villas of 220 m² and 240 m². Green areas and organised infrastructure are planned within the project.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

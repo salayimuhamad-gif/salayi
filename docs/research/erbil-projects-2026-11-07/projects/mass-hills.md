@@ -45,17 +45,17 @@ Project ID: mass-hills | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | House 400 m2, 4 beds, ready - market listing | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-hills |
 
 ## PART E — LOCATION & SURROUNDINGS
-On the Pirmam (Masif) Road out of Erbil (Baghy); exact distance from the 150 m ring road not stated.
+On the Pirmam (Masif) Road out of Erbil (Baghy); exact distance from the 150 m ring road not stated. Map position (low confidence, from agency map pins): 36.248758, 44.055948.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ماس هیڵز پڕۆژەیەکی نیشتەجێبوونی خانووبەرەی ماس گرووپە لەسەر ڕێگای پیرمام لە هەولێر و ئێستا لە قۆناغی دروستکردندایە. پڕۆژەکە لە خانوو پێکدێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە کارەبای ٢٤ کاتژمێری، دابەشکردنی غازی ناوەندی، ئیرکۆندیشنی پێشوەختە دامەزراو، سیستەمی گەرمکردنەوەی شۆفاژ، شوێنی یاریی منداڵان، پاسەوانی، ڕووبەری سەوز و ژێرخانی ئاوەڕۆ، ئاو و کارەبا. لە تشرینی دووەمی ٢٠٢٦دا، ڕیکلامەکانی بازاڕ خانووی ئامادەی ٢٤٠ م² بە چوار ژووری نووستن بە ٢٥٠٬٠٠٠ تا ٢٦٥٬٠٠٠ دۆلاری ئەمریکی، خانووی سەر نەخشەی ٣٢٠ م² بە ٣٣٠٬٠٠٠ تا ٣٥٠٬٠٠٠ دۆلار، خانووی سووچی سەر نەخشەی ٣٤٠ م² بە ٤٠٠٬٠٠٠ دۆلار و خانووی ئامادەی ٤٠٠ م² بە ٣٥٠٬٠٠٠ دۆلاریان پیشان دەدا.
+ماس هیڵز (Mass Hills) پڕۆژەیەکی نیشتەجێبوونی خانووە کە گرووپی ماس گەشەی پێدەدات، و لەسەر ڕێگای پیرمام (مەسیف) لە دەرەوەی هەولێر هەڵکەوتووە. پڕۆژەکە لە خانوو پێکدێت کە ڕووبەریان لە ٢٤٠ تا ٤٠٠ م²یە، بە ڕووبەرەکانی ٢٤٠، ٣٢٠، ٣٤٠ و ٤٠٠ م². خانووەکانی ٢٤٠ م² و ٤٠٠ م² چوار ژووری نووستنیان هەیە، و خانووەکانی ٣٢٠ م² چوار یان پێنج ژووری نووستنیان هەیە. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە پاسەوانی و ناوچەی سەوز. گرووپی ماس گەشەپێدەری پڕۆژەکانی ماس سیتی، ماس ڤیلەج و ماس دایمۆندیشە.
 
 ### 2. Arabic (العربية)
-ماس هيلز مشروع سكني للمنازل تابع لمجموعة ماس على طريق بيرمام في أربيل، وهو قيد الإنشاء حالياً. يتكون المشروع من منازل. تشمل الميزات المدرجة للمشروع كهرباء على مدار ٢٤ ساعة وتوزيع الغاز المركزي وأجهزة تكييف مركبة مسبقاً ونظام تدفئة شوفاج ومنطقة ألعاب للأطفال وحراسة أمنية ومساحات خضراء وبنية تحتية للصرف الصحي والمياه والكهرباء. في تشرين الثاني ٢٠٢٦، عرضت إعلانات السوق منازل جاهزة بمساحة ٢٤٠ م² وأربع غرف نوم بسعر ٢٥٠٬٠٠٠ إلى ٢٦٥٬٠٠٠ دولار أمريكي، ومنازل على الخارطة بمساحة ٣٢٠ م² بسعر ٣٣٠٬٠٠٠ إلى ٣٥٠٬٠٠٠ دولار، ومنزلاً زاوياً على الخارطة بمساحة ٣٤٠ م² بسعر ٤٠٠٬٠٠٠ دولار، ومنزلاً جاهزاً بمساحة ٤٠٠ م² بسعر ٣٥٠٬٠٠٠ دولار.
+ماس هيلز (Mass Hills) مشروع سكني للبيوت من تطوير مجموعة ماس، يقع على طريق بيرمام (مصيف) الخارج من أربيل. يتكون المشروع من بيوت تتراوح مساحاتها بين ٢٤٠ و٤٠٠ م²، بمساحات ٢٤٠ و٣٢٠ و٣٤٠ و٤٠٠ م². تضم البيوت بمساحة ٢٤٠ م² و٤٠٠ م² أربع غرف نوم، فيما تضم البيوت بمساحة ٣٢٠ م² أربع أو خمس غرف نوم. وتشمل المرافق المخطط لها الحراسة الأمنية والمساحات الخضراء. ومجموعة ماس هي أيضاً مطوّرة مشاريع ماس سيتي وماس فيليج وماس دايموند.
 
 ### 3. English
-Mass Hills is a residential housing project by Mass Group on the Pirmam Road in Erbil, currently under construction. The project consists of houses. Features listed for the project include 24-hour electricity, central gas distribution, preinstalled air conditioning, a Shofag heating system, a children's play area, security, green areas and infrastructure for sewerage, sanitation and electricity. In November 2026, market listings advertised ready 240 m² houses with four bedrooms at USD 250,000 to 265,000, off-plan 320 m² houses at USD 330,000 to 350,000, an off-plan 340 m² corner house at USD 400,000 and a ready 400 m² house at USD 350,000.
+Mass Hills is a residential housing project by Mass Group on the Pirmam (Masif) Road out of Erbil. The project consists of houses of 240 to 400 m², with sizes of 240, 320, 340 and 400 m². The 240 m² and 400 m² houses have four bedrooms, and the 320 m² houses have four or five bedrooms. Planned facilities include security and green spaces. Mass Group is also the developer of Mass City, Mass Village and Mass Diamond.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

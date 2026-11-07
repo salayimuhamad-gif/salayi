@@ -43,13 +43,13 @@ homele lists Alan City as an area of Erbil city; no source gives its road or dis
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئالان ستی (Alan City) پڕۆژەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. ئەم ناوە وەک ناوچەیەکی جیا لە پلاتفۆرمی خانووبەرەی homele و لە لیستی ناوچەکانی نووسینگەی خانووبەرەی حاجی سەلام تۆمارکراوە. خانووەکانی ئالان ستی خانووی یەک نهۆمی لەخۆ دەگرن. خانوویەکی ئامادەی یەک نهۆمی بە ڕووبەری ٢٠٠ م²، دوو ژووری نووستن و دوو حەمام لەم پڕۆژەیەدا بۆ فرۆشتن ڕیکلامی بۆ کراوە.
+ئالان ستی (Alan City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر، پایتەختی هەرێمی کوردستان. خانووەکانی ئالان ستی خانووی یەک نهۆمی لەخۆ دەگرن، لەوانە خانوویەکی 200 م² بە دوو ژووری نووستن و دوو حەمام.
 
 ### 2. Arabic (العربية)
-آلان ستي (Alan City) مشروع سكني للمنازل في مدينة أربيل في إقليم كوردستان العراق. يظهر الاسم كمنطقة مستقلة على منصة homele العقارية وفي قائمة مناطق مكتب حاجي سلام العقاري. تشمل منازل آلان ستي منازل من طابق واحد. ويُعرض للبيع في المشروع منزل جاهز من طابق واحد بمساحة 200 م² يضم غرفتي نوم وحمّامين.
+آلان ستي (Alan City) منطقة سكنية من المنازل في مدينة أربيل، عاصمة إقليم كردستان العراق. وتشمل المساكن فيها منازل من طابق واحد، ومنها منزل بمساحة 200 م² يضم غرفتي نوم وحمامين.
 
 ### 3. English
-Alan City (Kurdish: ئالان ستی) is a residential housing project in Erbil, Kurdistan Region of Iraq. It appears as a separate area on the homele property portal and in the area list of the Haji Salam real estate office. Housing in Alan City includes one-floor houses. A ready one-floor house of 200 m² with two bedrooms and two bathrooms is advertised for sale in the project.
+Alan City is a residential area of houses in Erbil, the capital of the Kurdistan Region of Iraq. Housing in Alan City includes one-floor houses; one such house has an area of 200 m² with two bedrooms and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

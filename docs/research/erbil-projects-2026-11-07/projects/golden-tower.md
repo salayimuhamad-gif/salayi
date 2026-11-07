@@ -37,17 +37,17 @@ Project ID: golden-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Golden Tower is listed on the Erbil–Shaqlawa road within Zeren City; no street detail or coordinates are published.
+Golden Tower is listed on the Erbil–Shaqlawa road within Zeren City; no street detail are published. Map position (low confidence, from agency map pins): 36.28853, 44.090876.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گۆڵدن تاوەر پڕۆژەیەکی شوقەی نیشتەجێبوونە لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای هەولێر بەرەو شەقڵاوە، لە ناوچەی زێرین سیتی هەڵکەوتووە. پڕۆژەکە لە شوقە پێکهاتووە. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە دیاری کراون بریتین لە کارەبای ٢٤ کاتژمێری، تۆڕی ناوەندیی دابەشکردنی گاز، ئینتەرنێت، ئێرکۆندیشنی پێشوەختە دامەزراو، پاسەوانی، ڕووبەری سەوز، باخچەی گشتی، یاریگای منداڵان، هۆڵی وەرزش و پارکینگی ژێرزەوی. ڕێگە بە دانیشتووان دەدرێت ئاژەڵی ماڵی ڕابگرن.
+گۆڵدن تاوەر (Golden Tower) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لەسەر ڕێگای نێوان هەولێر و شەقڵاوە، لە ناو ناوچەی زێرین سیتی هەڵکەوتووە.
 
 ### 2. Arabic (العربية)
-غولدن تاور مشروع شقق سكنية في أربيل، عاصمة إقليم كوردستان العراق. يقع على الطريق المؤدي من أربيل إلى شقلاوة، ضمن منطقة زيرين سيتي. يتكوّن المشروع من شقق سكنية. تشمل المزايا المذكورة للمشروع كهرباء على مدار 24 ساعة، وشبكة مركزية لتوزيع الغاز، وخدمة الإنترنت، ومكيفات مركّبة مسبقاً، وحراسة أمنية، ومساحات خضراء، وحديقة عامة، وملعباً للأطفال، وصالة رياضية، ومرآباً تحت الأرض. ويُسمح للسكان باقتناء الحيوانات الأليفة.
+غولدن تاور (Golden Tower) مشروع سكني للشقق في أربيل. ويقع المشروع على الطريق الواصل بين أربيل وشقلاوة، داخل منطقة زيرين سيتي.
 
 ### 3. English
-Golden Tower is a residential apartment project in Erbil, the capital of the Kurdistan Region of Iraq. It is located on the road from Erbil towards Shaqlawa, within the Zeren City area. The project consists of apartments. The features listed for the project include 24-hour electricity, a central gas distribution network, internet service, pre-installed air-conditioners, security, green areas, a public garden, a children's playground, a gym and an underground car park. Residents are allowed to keep pets.
+Golden Tower is a residential apartment project in Erbil. It is located on the Erbil–Shaqlawa road, within the Zeren City area.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

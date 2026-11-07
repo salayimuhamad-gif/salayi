@@ -51,7 +51,7 @@ Project ID: lalav-airport-view | Tier: 1 | In Erbil city: Yes | Last researched:
 | 2+1 apartment 125 m2 - homele rent listing (per month) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-airport-view |
 
 ## PART E — LOCATION & SURROUNDINGS
-Lalav Airport View stands on Erbil's 120 Meter Road directly opposite Erbil International Airport (Paya, Baghy, b-arrow, Miran). Miran describes quick access to the city's business areas via the 120m ring road. No neighbourhood name or coordinates are given by any source.
+Lalav Airport View stands on Erbil's 120 Meter Road directly opposite Erbil International Airport (Paya, Baghy, b-arrow, Miran). Miran describes quick access to the city's business areas via the 120m ring road. No neighbourhood name are given by any source. Map position (medium confidence, from agency map pins): 36.213706, 43.960223.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

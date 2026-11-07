@@ -49,29 +49,17 @@ Project ID: italian-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Ready house 240 m2, 4 bed - homele rental listing (per month) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Italian City 2 lies on Erbil's 120 m road at the Erbil–Shaqlawa road; no coordinates are published.
+Italian City 2 lies on Erbil's 120 m road at the Erbil–Shaqlawa road. Map position (low confidence, from agency map pins): 36.241466, 44.05029.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شاری ئیتالی ٢، کە بە گوندی ئیتالی ٢-یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە گرووپی هێمن دروستی کردووە، هەمان کۆمپانیا کە شاری ئیتالی ١-یشی دروست کردووە. پڕۆژەکە لەسەر شەقامی ١٢٠ مەتری لە ڕێگای هەولێر–شەقڵاوە هەڵکەوتووە. پڕۆژەکە لە زیاتر لە ١٬٥٠٠ خانووی دوو نهۆمی لە سێ جۆری سەرەکیدا پێکهاتووە.
-
-خانووەکانی ٢٠٠ م² سێ ژووری نووستن، چێشتخانە، هۆڵی دانیشتن، سێ حەمام و باخچەیان هەیە. خانووەکانی ٢٤٠ م² چوار ژووری نووستن، کە یەکێکیان ماستەرە، چێشتخانە، هۆڵی دانیشتن، سێ حەمام و باخچەیان هەیە. خانووەکانی ٣٢٠ م² چوار ژووری نووستن، کە دووانیان ماستەرن، چێشتخانە، هۆڵی دانیشتن، سێ حەمام و باخچەیان هەیە.
-
-ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە دیاری کراون بریتین لە ئینتەرنێت، ناوەندی کارگێڕی، پاسەوانی، پارکینگ، سوپەرمارکێت، بنکەی تەندروستی و مزگەوت. خانووەکانی پڕۆژەکە وەک ماڵی خێزانی و شوێنی بازرگانی بەکاردەهێنرێن و بۆ فرۆشتن و بە کرێدان پێشکەش دەکرێن.
+شاری ئیتالی ٢ (Italian City 2)، کە بە گوندی ئیتالی ٢یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووە لە هەولێر، لەسەر شەقامی ١٢٠ مەتری لە ڕێگای هەولێر–شەقڵاوە. گرووپی هێمن گەشەی پێداوە و پڕۆژەیەکی خوشکی شاری ئیتالی ١ـە کە لە شوێنێکی جیاوازدایە. پڕۆژەکە زیاتر لە ١،٥٠٠ خانووی دوو نهۆمی لەخۆ دەگرێت، و هەر خانوویەک چێشتخانە، هۆڵی دانیشتن و باخچەی تایبەتی هەیە. خانووەکانی ٢٠٠ م² سێ ژووری نووستن و سێ گەرماویان هەیە؛ خانووەکانی ٢٤٠ م² چوار ژووری نووستنیان هەیە کە یەکێکیان ماستەرە، لەگەڵ سێ گەرماو؛ و خانووەکانی ٣٢٠ م² چوار ژووری نووستنیان هەیە کە دووانیان ماستەرن، لەگەڵ سێ گەرماو.
 
 ### 2. Arabic (العربية)
-إيتاليان سيتي 2، المعروفة أيضاً بالقرية الإيطالية 2، مشروع إسكان في أربيل نفّذته مجموعة هيمن، وهي الشركة التي نفّذت أيضاً إيتاليان سيتي 1. يقع المشروع على شارع 120 متر عند طريق أربيل–شقلاوة. يتكوّن المشروع من أكثر من 1,500 منزل من طابقين ضمن ثلاثة أنواع رئيسية.
-
-تضم المنازل بمساحة 200 م² ثلاث غرف نوم ومطبخاً وصالة معيشة وثلاثة حمامات وحديقة. وتضم المنازل بمساحة 240 م² أربع غرف نوم، منها غرفة رئيسية واحدة، ومطبخاً وصالة معيشة وثلاثة حمامات وحديقة. أما المنازل بمساحة 320 م² فتضم أربع غرف نوم، منها غرفتان رئيسيتان، ومطبخاً وصالة معيشة وثلاثة حمامات وحديقة.
-
-تشمل الخدمات المذكورة للمشروع الإنترنت، ومركزاً إدارياً، وحراسة أمنية، ومواقف للسيارات، وسوبرماركت، ومركزاً صحياً، ومسجداً. وتُستخدم منازل المشروع مساكن عائلية ومقرات تجارية، وتُعرض للبيع وللإيجار.
+القرية الإيطالية 2 (Italian City 2)، وتُعرف أيضاً باسم المدينة الإيطالية 2، مشروع سكني يتكون من بيوت في أربيل، على شارع 120 م عند طريق أربيل–شقلاوة. تطوّره مجموعة هيمن، وهو مشروع شقيق للمدينة الإيطالية 1 التي تقع في موقع منفصل. ويضم المشروع أكثر من 1,500 بيت من طابقين، في كل منها مطبخ وصالة معيشة وحديقة خاصة. وتضم البيوت بمساحة 200 م² ثلاث غرف نوم وثلاثة حمامات، والبيوت بمساحة 240 م² أربع غرف نوم إحداها رئيسية وثلاثة حمامات، والبيوت بمساحة 320 م² أربع غرف نوم منها غرفتان رئيسيتان وثلاثة حمامات.
 
 ### 3. English
-Italian City 2, also called Italian Village 2, is a housing project in Erbil built by Hemn Group, the company that also built Italian City 1. It is located on the 120 m road at the Erbil–Shaqlawa road. The project consists of more than 1,500 two-floor houses in three main types.
-
-The 200 m² houses have three bedrooms, a kitchen, a living room, three bathrooms and a garden. The 240 m² houses have four bedrooms, one of them a master room, a kitchen, a living room, three bathrooms and a garden. The 320 m² houses have four bedrooms, two of them master rooms, a kitchen, a living room, three bathrooms and a garden.
-
-The services listed for the project include internet, an administrative centre, security, parking, a supermarket, a health centre and a mosque. Houses in the project are used as family homes and as commercial premises, and they are offered for sale and for rent.
+Italian City 2, also called Italian Village 2, is a residential project of houses in Erbil, on the 120 m road at the Erbil–Shaqlawa road. It is developed by Hemn Group and is a sister project of Italian City 1, which lies on a separate site. The project has more than 1,500 two-floor houses, each with a kitchen, a living room and a private garden. The 200 m² houses have three bedrooms and three bathrooms; the 240 m² houses have four bedrooms, one of them a master bedroom, and three bathrooms; and the 320 m² houses have four bedrooms, two of them master bedrooms, and three bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

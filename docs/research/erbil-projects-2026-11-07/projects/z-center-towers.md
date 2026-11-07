@@ -40,17 +40,17 @@ Project ID: z-center-towers | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | Apartment 80 m2, 1 bed, 1 bath - sale listing 'Apartment For Sale 80m in Z-Towers' (Baghy card) | 25,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/z-center-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy Shaqlawa places Z Center Towers on the 150m Road inside the Zerin City project, in the northern/north-eastern ring-road belt of Erbil. Its project-page map marker is at 36.285467, 44.114716.
+Baghy Shaqlawa places Z Center Towers on the 150m Road inside the Zerin City project, in the northern/north-eastern ring-road belt of Erbil. Map position (low confidence, from agency map pins): 36.285467, 44.114716.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زێد سەنتەر تاوەرز پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر شەقامی ١٥٠ مەتری و لەناو پڕۆژەی زێرین ستی هەڵکەوتووە. پڕۆژەکە لە چەند تاوەرێکی شوقە پێکدێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، یاریگای منداڵان، پاسەوانی و ناوچەی سەوز. لەو شوقانەی لە تاوەرەکاندا بۆ فرۆشتن ڕیکلامیان بۆ کراوە، شوقەیەکی ٨٠ م² هەیە بە یەک ژووری نووستن، یەک هۆڵی پێشوازی و یەک حەمام، و شوقەیەکی ١٠٨ م² بە دوو ژووری نووستن، یەک هۆڵی پێشوازی و یەک حەمام. لە ڕیکلامەکانی فرۆشتندا پڕۆژەکە بە ناوەکانی Z Tower و Z-Towers یش ناوبراوە.
+زێد سەنتەر تاوەرز (Z Center Towers)، کە بە زێد تاوەریش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لەسەر شەقامی 150 مەتری لەناو پڕۆژەی زێرین سیتی، لە پشتێنەی ڕێگا بازنەییەکانی باکووری ڕۆژهەڵاتی شار هەڵکەوتووە. پڕۆژەکە شوقەی یەک ژووری نووستن بە ڕووبەری 80 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 108 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام لەخۆ دەگرێت. زانیاریی زیاتر، وەک ناوی گەشەپێدەر، ژمارەی تاوەر و نهۆمەکان، خزمەتگوزارییەکان و قۆناغی بنیاتنان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
 
 ### 2. Arabic (العربية)
-زد سنتر تاورز مشروع سكني للشقق في مدينة أربيل في إقليم كوردستان العراق. يقع المشروع على شارع 150 متري داخل مشروع زيرين ستي. يتكوّن المشروع من أبراج للشقق السكنية. تشمل المزايا المدرجة للمشروع كهرباء على مدار 24 ساعة وإنترنت وملعب أطفال وحراسة ومساحات خضراء. ومن الشقق المعروضة للبيع في الأبراج شقة بمساحة 80 م² تضم غرفة نوم واحدة وصالة استقبال واحدة وحمّاماً واحداً، وشقة بمساحة 108 م² تضم غرفتي نوم وصالة استقبال واحدة وحمّاماً واحداً. وتشير إعلانات البيع إلى المشروع أيضاً باسمَي Z Tower وZ-Towers.
+زد سنتر تاورز (Z Center Towers)، المعروف أيضاً باسم زد تاور، مشروع سكني للشقق في أربيل. يقع المشروع على طريق 150 متر داخل مشروع زيرين سيتي، في الحزام الشمالي الشرقي للطرق الدائرية في المدينة. يضم المشروع شققاً بغرفة نوم واحدة بمساحة 80 م² مع صالة استقبال وحمام واحد، وشققاً بغرفتي نوم بمساحة 108 م² مع صالة استقبال وحمام واحد. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، منها اسم الشركة المطوّرة وعدد الأبراج والطوابق والمرافق وحالة الإنشاء.
 
 ### 3. English
-Z Center Towers is a residential apartment project in Erbil, Kurdistan Region of Iraq. The project is located on the 150m Road, inside the Zerin City project. It consists of apartment towers. The features listed for the project are 24-hour electricity, internet, a playground, security and green areas. Apartments advertised in the towers include an 80 m² unit with one bedroom, one reception room and one bathroom, and a 108 m² unit with two bedrooms, one reception room and one bathroom. Sale listings also refer to the project as Z Tower and Z-Towers.
+Z Center Towers, also known as Z Tower and Z-Towers, is a residential apartment project in Erbil. It is located on the 150m Road inside the Zerin City project, in the north-eastern ring-road belt of the city. The project includes one-bedroom apartments of 80 m² with one reception room and one bathroom, and two-bedroom apartments of 108 m² with one reception room and one bathroom. Further details, including the developer, the number of towers and floors, facilities and the construction status, will be added to this profile when they become available.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

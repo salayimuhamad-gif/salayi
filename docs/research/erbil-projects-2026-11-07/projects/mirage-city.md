@@ -42,17 +42,17 @@ Project ID: mirage-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Off-plan house 250 m2, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Mirage City lies in the northeast of Erbil city near the 150m Street ring road (Paya). No street address, landmark or coordinates are published.
+Mirage City lies in the northeast of Erbil city near the 150m Street ring road (Paya). No street address or landmark are published. Map position (low confidence, from agency map pins): 36.26465, 43.99396.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-میراج سیتی پڕۆژەیەکی نیشتەجێبوونی خانوو و ڤێلایە لە باکووری ڕۆژهەڵاتی شاری هەولێر، نزیک شەقامی ١٥٠ مەتری. بەپێی ماڵپەڕی پایا، ڕووبەری گشتیی پڕۆژەکە ١٤٥٬٧٢٨٫٥٢٢ م²یە، کە ٤٤٬٦٦٢ م²ی، واتە ٣٠٪ی، ناوچەی سەوزە. پڕۆژەکە لە ٢٧١ خانوو و ڤێلا پێکدێت بە ڕووبەرەکانی ٢٠٠، ٢٤٠ و ٣٠٠ م²، بە دیزاینی نیۆکلاسیکی. پایا خزمەتگوزارییەکانی وەک مزگەوت، هۆڵی وەرزش، هۆڵی وەرزشی ئافرەتان، سوپەرمارکێت، باخچەی گشتی، پاسەوانی، پارکینگ، مۆلیدەی کارەبا و تۆڕی ئاوەڕۆ ناو دەبات. لە ماڵپەڕی هۆمێلێ لە تشرینی دووەمی ٢٠٢٦دا، خانووی ٢٠٠ م² بە چوار ژووری نووستن و سێ حەمام، کە هێشتا تەواو نەکراون (ئۆف پلان)، بە نرخی ١٧٥٬٠٠٠ و ١٨٠٬٠٠٠ دۆلاری ئەمریکی ڕیکلامیان بۆ کرابوو، هەروەها خانوویەکی ئۆف پلانی ٢٥٠ م² بە نرخی ١٨٠٬٠٠٠ دۆلار.
+میراج سیتی (Mirage City) پڕۆژەیەکی نیشتەجێبوونی خانوو و ڤێلایە لە باکووری ڕۆژهەڵاتی شاری هەولێر، نزیک شەقامی بازنەیی ١٥٠ مەتری. کۆی ڕووبەری پڕۆژەکە نزیکەی ١٤٥٬٧٠٠ م²یە و لە ٢٧١ خانوو و ڤێلا بە دیزاینی نیۆکلاسیک پێکدێت، بە ڕووبەری ٢٠٠، ٢٤٠ و ٣٠٠ م². خانووەکانی ٢٠٠ م² چوار ژووری نووستن و سێ حەمامیان هەیە. پلان دانراوە کە ناوچەیەکی سەوز بە ڕووبەری ٤٤٬٦٦٢ م²، واتە نزیکەی ٣٠ لەسەدی ڕووبەری شوێنەکە، لە پڕۆژەکەدا هەبێت.
 
 ### 2. Arabic (العربية)
-ميراج سيتي مشروع سكني للمنازل والفلل في شمال شرق مدينة أربيل، قرب شارع 150 متر. وفقاً لموقع بايا للعقارات، تبلغ المساحة الإجمالية للمشروع 145,728.522 م²، منها 44,662 م² مساحات خضراء، أي 30 بالمئة. يتكون المشروع من 271 منزلاً وفيلا بمساحات 200 و240 و300 م² بتصميم نيوكلاسيكي. يذكر موقع بايا خدمات منها مسجد وصالة رياضية وصالة رياضية للنساء وسوبرماركت وحديقة عامة وحراسة ومواقف سيارات ومولدة كهرباء وشبكة صرف صحي. على موقع هوملي في تشرين الثاني 2026 عُرضت منازل على المخطط بمساحة 200 م² بأربع غرف نوم وثلاثة حمامات بسعر 175,000 و180,000 دولار أمريكي، ومنزل على المخطط بمساحة 250 م² بسعر 180,000 دولار.
+ميراج ستي (Mirage City) مشروع سكني للمنازل والفلل في شمال شرق مدينة أربيل، قرب الطريق الدائري شارع 150 متر. تبلغ المساحة الإجمالية للمشروع نحو 145,700 م²، ويتكون من 271 منزلاً وفيلا بتصميم كلاسيكي حديث، بمساحات 200 و240 و300 م². وتضم المنازل بمساحة 200 م² أربع غرف نوم وثلاثة حمامات. ومن المخطط أن يضم المشروع مساحة خضراء تبلغ 44,662 م²، أي نحو 30 بالمئة من مساحة الموقع.
 
 ### 3. English
-Mirage City is a residential project of houses and villas in the northeast of Erbil, near the 150m Street. According to Paya Real Estate, the total project area is 145,728.522 m2, of which 44,662 m2, or 30 percent, is green area. The project consists of 271 houses and villas in sizes of 200, 240 and 300 m2, designed in a neo-classical style. Paya lists services including a mosque, a gym, a women's gym, a supermarket, a public garden, security, parking, an electrical generator and a sewer network. On Homele in November 2026, off-plan houses of 200 m2 with four bedrooms and three bathrooms were advertised at 175,000 and 180,000 US dollars, and an off-plan house of 250 m2 was advertised at 180,000 US dollars.
+Mirage City is a residential project of houses and villas in the northeast of Erbil, near the 150m Street ring road. The project covers a total area of about 145,700 m² and consists of 271 houses and villas in a neo-classical design, with sizes of 200, 240 and 300 m². The 200 m² houses have four bedrooms and three bathrooms. A green area of 44,662 m², about 30 percent of the site, is planned within the project.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

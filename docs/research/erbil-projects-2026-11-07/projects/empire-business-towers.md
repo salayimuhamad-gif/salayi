@@ -48,7 +48,7 @@ Project ID: empire-business-towers | Tier: 1 | In Erbil city: Yes | Last researc
 | Empire Business Complex - furnished beauty centre 160 m2, asking price (negotiable) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-complex |
 
 ## PART E — LOCATION & SURROUNDINGS
-The five towers stand in the centre of the Empire World site in Erbil, with T2–T5 arranged in a circle around T1 (Bagh-y Shaqlawa, Hajisalam). The Empire Business Complex sits on both sides of the main gate at Empire World's north entrance. No street address or coordinates are given in the sources.
+The five towers stand in the centre of the Empire World site in Erbil, with T2–T5 arranged in a circle around T1 (Bagh-y Shaqlawa, Hajisalam). The Empire Business Complex sits on both sides of the main gate at Empire World's north entrance. No street address are given in the sources.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

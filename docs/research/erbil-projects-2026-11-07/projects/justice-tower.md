@@ -40,7 +40,7 @@ Project ID: justice-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Ready office 52 m2 - homele market listing (negotiable) | 23,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
 
 ## PART E — LOCATION & SURROUNDINGS
-Justice Tower stands on the Mosul road at Erbil's western approach, opposite Sami Abdulrahman Park and beside the Erbil Appellate Court presidency; no coordinates are published.
+Justice Tower stands on the Mosul road at Erbil's western approach, opposite Sami Abdulrahman Park and beside the Erbil Appellate Court presidency.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

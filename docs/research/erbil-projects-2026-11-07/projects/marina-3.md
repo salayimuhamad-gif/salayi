@@ -37,7 +37,7 @@ Project ID: marina-3 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Haji Salam gives the address as Kasnazan Road, Erbil; homele lists 'marina-3' as an Erbil area. No landmark, plot position or coordinates are published.
+Haji Salam gives the address as Kasnazan Road, Erbil; homele lists 'marina-3' as an Erbil area. No landmark or plot position are published.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

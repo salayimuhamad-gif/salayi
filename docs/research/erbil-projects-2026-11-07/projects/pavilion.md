@@ -40,7 +40,7 @@ Project ID: pavilion | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-On the 100 m Street in Erbil, next to Erbil International Airport (Baghy; Landscape Middle East).
+On the 100 m Street in Erbil, next to Erbil International Airport (Baghy; Landscape Middle East). Map position (low confidence, from agency map pins): 36.223704, 43.980216.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

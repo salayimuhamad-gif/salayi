@@ -40,17 +40,17 @@ Project ID: new-eskan | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Ready furnished apartment 70 m2, 1 bed / 1 bath - homele rent per month | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/new-eskan |
 
 ## PART E — LOCATION & SURROUNDINGS
-New Eskan is in the Eskan neighbourhood on Erbil's 60m ring road, in the central part of the city near the commercial Eskan road (Baghy). No coordinates are published.
+New Eskan is in the Eskan neighbourhood on Erbil's 60m ring road, in the central part of the city near the commercial Eskan road (Baghy). Map position (low confidence, from agency map pins): 36.176875, 44.022216.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-نیو ئیسکان پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر، کە دەکەوێتە ناوچەی ئیسکان لەسەر شەقامی ٦٠ مەتری لە ناوەندی شار، نزیک شەقامی ئیسکان کە دوکانی خواردەمەنی، کافتریا و مۆڵی بازاڕکردنی لێیە. باخی شەقڵاوە دەڵێت پڕۆژەکە لەلایەن کۆمپانیاکانی شاخە بارزە (Shaxa Barza) و ٩٩ دروست کراوە. پڕۆژەکە لە ١٦ باڵەخانە پێکدێت کە هەر یەکەیان ١٧ نهۆمە، لە هەر نهۆمێکدا چوار شوقە هەیە، و نهۆمی زەمینی بۆ پارکینگی ئۆتۆمبێل تەرخان کراوە. پڕۆژەکە ١٬٠٨٨ شوقەی هەیە کە هەموویان ڕووبەریان ١٥٠ م²یە، و هەر شوقەیەک دوو ژووری نووستن، هۆڵی دانیشتن، چێشتخانە و دوو حەمامی هەیە. خزمەتگوزارییە ناوهاتووەکان بریتین لە ئینتەرنێت، پاسەوانی، پارکینگ، سوپەرمارکێت، پێشوازی و سەنتەرێکی کارگێڕی.
+نیو ئیسکان (New Eskan) پڕۆژەیەکی نیشتەجێبوونی شوقەی تەواوبووە لە گەڕەکی ئیسکان لە شاری هەولێر، لەسەر شەقامی ٦٠ مەتری لە بەشی ناوەڕاستی شار و نزیک شەقامی بازرگانیی ئیسکان. پڕۆژەکە لە ١٦ باڵەخانە پێکدێت کە هەر یەکەیان ١٧ نهۆمە، لە هەر نهۆمێکدا چوار شوقە هەیە، و نهۆمە زەمینییەکان بۆ پارکینگی ئۆتۆمبێل تەرخان کراون. پڕۆژەکە ١٬٠٨٨ شوقەی تێدایە. هەموو شوقەکان یەک دیزاینیان هەیە بە ڕووبەری ١٥٠ م²، و هەر شوقەیەک دوو ژووری نووستن، هۆڵی دانیشتن، چێشتخانە و دوو حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-نيو إسكان مشروع سكني للشقق في مدينة أربيل، يقع في منطقة الإسكان على شارع 60 متر في مركز المدينة، قرب شارع الإسكان الذي يضم محلات المواد الغذائية والكافتيريات ومركز تسوق. يذكر موقع باغي شقلاوة أن المشروع نفذته شركتا شاخة بارزة (Shaxa Barza) و99. يتكون المشروع من 16 مبنى من 17 طابقاً لكل منها، في كل طابق أربع شقق، ويُخصص الطابق الأرضي لمواقف السيارات. يضم المشروع 1,088 شقة جميعها بمساحة 150 م²، وتتكون كل شقة من غرفتي نوم وصالة معيشة ومطبخ وحمامين. تشمل الخدمات المذكورة الإنترنت والحراسة ومواقف السيارات والسوبرماركت والاستقبال ومركزاً إدارياً.
+نيو إسكان (New Eskan) مشروع سكني مكتمل للشقق في حي الإسكان بمدينة أربيل، على شارع 60 متر في الجزء المركزي من المدينة وقرب شارع الإسكان التجاري. يتكون المشروع من 16 مبنى من 17 طابقاً لكل منها، في كل طابق أربع شقق، وتُخصص الطوابق الأرضية لمواقف السيارات. يضم المشروع 1,088 شقة. جميع الشقق بتصميم واحد بمساحة 150 م²، وتتكون كل شقة من غرفتي نوم وصالة معيشة ومطبخ وحمامين.
 
 ### 3. English
-New Eskan is a residential apartment project in Erbil, located in the Eskan area on the 60m road in the centre of the city, close to Eskan Road with its food shops, cafeterias and shopping mall. Baghy Shaqlawa states that it was constructed by the Shaxa Barza and 99 companies. The project consists of 16 buildings of 17 floors each, with four apartments per floor, and the ground floor is used for car parking. It has 1,088 apartments, all of 150 m2, each with two bedrooms, a living room, a kitchen and two bathrooms. Listed services include internet, security, parking, a supermarket, reception and an administrative centre.
+New Eskan is a completed residential apartment project in the Eskan neighbourhood of Erbil, on the 60m road in the central part of the city and close to the commercial Eskan Road. The project consists of 16 buildings of 17 floors each, with four apartments on every floor, and the ground floors are used for car parking. It contains 1,088 apartments. All apartments share the same layout of 150 m², with two bedrooms, a living room, a kitchen and two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -44,17 +44,17 @@ Project ID: zilan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | House 375 m2, 3 bed, 2 bath (Baghy card) | 210,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zilan-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Zilan City is on Erbil's eastern approaches: Baghy Shaqlawa lists it on Koya Road, Haji Salam on Kasnazan Road. Baghy's map marker is at 36.196476, 44.094018, east of the city centre.
+Zilan City is on Erbil's eastern approaches: Baghy Shaqlawa lists it on Koya Road, Haji Salam on Kasnazan Road. Map position (low confidence, from agency map pins): 36.196476, 44.094018.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زیلان ستی، کە بە شێوەی Zeelan City یش دەنووسرێت، پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگاکانی ڕۆژهەڵاتی شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە ٤٥٦ خانوو لەخۆ دەگرێت. ئەو جۆرە خانووەی بۆ پڕۆژەکە تۆمارکراوە ڕووبەرەکەی ١٦٧ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە ئینتەرنێت، یاریگای منداڵان، پارکینگ و ناوچەی سەوز. خانووەکانی زیلان ستی بۆ فرۆشتنەوە ڕیکلامیان بۆ دەکرێت، لەوانە خانوویەکی ئامادە. ڕووبەری ئەو خانووانەی ڕیکلامیان بۆ کراوە ٢٠٠، ٢٥٠ و ٣٧٥ م²یە، لە سێ تا پێنج ژووری نووستنیان هەیە.
+زیلان ستی (Zilan City) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگاکانی ڕۆژهەڵاتی شاری هەولێر. پڕۆژەکە ٤٥٦ خانوو لەخۆ دەگرێت. جۆری خانووی پڕۆژەکە ڕووبەرەکەی ١٦٧ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. خزمەتگوزارییەکان بریتین لە هێڵی ئینتەرنێت، یاریگای منداڵان، پارکینگ و ناوچەی سەوز.
 
 ### 2. Arabic (العربية)
-زيلان ستي، وتُكتب أيضاً Zeelan City، مشروع سكني للمنازل على المداخل الشرقية لمدينة أربيل في إقليم كوردستان العراق. يضم المشروع 456 منزلاً. تبلغ مساحة نموذج المنزل المدرج للمشروع 167 م²، ويتألف من طابق واحد وغرفتي نوم. تشمل المزايا المدرجة للمشروع الإنترنت وملاعب الأطفال ومواقف السيارات والمساحات الخضراء. تُعرض منازل زيلان ستي لإعادة البيع، ومنها منزل جاهز. تبلغ مساحات المنازل المعلن عنها 200 و250 و375 م²، وتضم من ثلاث إلى خمس غرف نوم.
+زيلان ستي (Zilan City) مشروع سكني للمنازل على المداخل الشرقية لمدينة أربيل. يضم المشروع 456 منزلاً. وتبلغ مساحة نموذج المنزل في المشروع 167 م²، ويتألف من طابق واحد وغرفتي نوم. وتشمل المرافق خدمة الإنترنت وملعباً للأطفال ومواقف للسيارات ومساحات خضراء.
 
 ### 3. English
-Zilan City, also written Zeelan City, is a residential house project on the eastern approaches of Erbil, Kurdistan Region of Iraq. The project comprises 456 houses. The house type listed for the project has an area of 167 m², one floor and two bedrooms. The features listed for the project are internet, playgrounds, parking and green areas. Houses in Zilan City are offered for resale, including a ready house. Advertised houses have areas of 200, 250 and 375 m², with three to five bedrooms.
+Zilan City, also written Zeelan City, is a residential house project on the eastern approaches of Erbil. The project comprises 456 houses. Its house type has an area of 167 m², one floor and two bedrooms. Facilities include internet service, a children's playground, parking and green areas.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -41,17 +41,17 @@ Project ID: light-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | House 450 m2, 5 beds, tagged Ready ('VIP house', 'new price') - market listing, negotiable | 380,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-On the Bahrka Road in Erbil, behind Gulan City (Baghy). No further address or coordinates published.
+On the Bahrka Road in Erbil, behind Gulan City (Baghy). No further address published. Map position (low confidence, from agency map pins): 36.314025, 44.033777.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-لایت ستی پڕۆژەیەکی نیشتەجێبوونی خانووبەرەیە لەسەر ڕێگای بەحرکە لە هەولێر، لە پشت گوڵان ستی. پڕۆژەکە لە خانوو و ڤێلا پێکدێت. ئەو تایبەتمەندییانەی بۆ پڕۆژەکە تۆمارکراون بریتین لە ئینتەرنێت، شوێنی یاریی منداڵان، پارکینگ و ڕووبەری سەوز. لە تشرینی دووەمی ٢٠٢٦دا، دوو ڤێلای ٤٥٠ م² بە پێنج ژووری نووستن لەم پڕۆژەیەدا بۆ فرۆشتن ڕیکلامیان بۆ کرابوو: یەکێکیان بە ١٧٠٬٠٠٠ دۆلاری ئەمریکی و ئەوی تریان، کە وەک ئامادە وەسف کرابوو، بە ٣٨٠٬٠٠٠ دۆلار، هەردووکیان بە نرخی قابیلی گفتوگۆ.
+لایت ستی (Light City) پڕۆژەیەکی نیشتەجێبوونی خانووبەرەیە لە شاری هەولێر کە لەسەر ڕێگای بەحرکە، لە پشت گوڵان سیتی هەڵکەوتووە. پڕۆژەکە لە خانوو و ڤێلا پێکدێت. ڕووبەری ڤێلاکان ٤٥٠ م²یە و هەر ڤێلایەک پێنج ژووری نووستن و پێنج یان شەش حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-لايت سيتي مشروع سكني للمنازل يقع على طريق بحركة في أربيل، خلف مشروع كولان سيتي. يتكون المشروع من منازل وفلل. تشمل الميزات المدرجة للمشروع خدمة الإنترنت ومنطقة ألعاب للأطفال ومواقف للسيارات ومساحات خضراء. في تشرين الثاني ٢٠٢٦، عُرضت للبيع في المشروع فيلتان بمساحة ٤٥٠ م² وخمس غرف نوم: إحداهما بسعر ١٧٠٬٠٠٠ دولار أمريكي، والأخرى الموصوفة بأنها جاهزة بسعر ٣٨٠٬٠٠٠ دولار، والسعران قابلان للتفاوض.
+لايت سيتي (Light City) مشروع سكني للبيوت في مدينة أربيل، يقع على طريق بحركة خلف كولان سيتي. ويتكون المشروع من بيوت وفلل سكنية. وتبلغ مساحة الفلل 450 م²، وتضم كل فيلا خمس غرف نوم وخمسة أو ستة حمامات.
 
 ### 3. English
-Light City is a residential housing project on the Bahrka Road in Erbil, located behind Gulan City. The project consists of houses and villas. Features listed for the project include internet service, a children's play area, parking and green areas. In November 2026, two 450 m² villas with five bedrooms were advertised for sale in the project: one at USD 170,000 and one, described as ready, at USD 380,000, both at negotiable prices.
+Light City is a residential housing project in Erbil, located on the Bahrka Road behind Gulan City. The project is made up of houses and villas. The villas measure 450 m² and have five bedrooms and five or six bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

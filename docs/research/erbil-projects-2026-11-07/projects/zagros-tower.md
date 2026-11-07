@@ -46,17 +46,17 @@ Project ID: zagros-tower | Tier: 2 | In Erbil city: Yes | Last researched: 2026-
 | Off-plan apartment 290 m2, 3 bed / 2 bath, cash, negotiable (homele listing) | 145,543 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Zagros Towers' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Zagros Towers' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زاگرۆس تاوەر (Zagros Tower)، کە لە پۆرتاڵی خانووبەرەی homele.com بە ناوی زاگرۆس تاوەرز (Zagros Towers) تۆمار کراوە، پڕۆژەیەکی شوقەیە لە هەولێر و ڕیکلامەکانی دوو لاپەڕەی ئەنجام پڕ دەکەنەوە. هەموو ئەو شوقانەی لە لاپەڕەی یەکەمدا ڕیکلامیان بۆ کراوە لەسەر نەخشەن، و بە نەختی یان بە پارەی پێشەکی و قیست دەفرۆشرێن. ڕووبەرە ڕیکلامکراوەکان لە ٨٠ م² تا ٢٩٠ م² دەگۆڕێن. لە نرخەکان: ٤٨,٥١٤ دۆلاری ئەمریکی بۆ یەکەیەکی ٨٠ م² بە نەختی، ٨٤,٩٠٠ دۆلار بۆ شوقەیەکی یەک ژووری نووستنی ١٤٠ م²، ٩٠,٩٦٥ دۆلار بۆ شوقەیەکی دوو ژووری نووستنی ١٥٠ م² بە نەختی، ١٠٠,٠٦١ دۆلار بۆ شوقەیەکی دوو ژووری نووستنی ١٦٥ م²، ١٠٠,٠٠٠ دۆلار بۆ شوقەیەکی یەک ژووری نووستنی ١٤٣ م²، و ١٤٥,٥٤٣ دۆلار بۆ شوقەیەکی سێ ژووری نووستنی ٢٩٠ م² بە نەختی. ڕیکلامەکانی قیست بۆ یەکەکانی ١٤٠، ١٥٠ و ١٦٥ م² بە ١٠١,٨٨٠، ١٠٥,٥١٩ و ١٠٩,٧٦٤ دۆلار نرخ دانراون.
+زاگرۆس تاوەر (Zagros Tower)، کە بە زاگرۆس تاوەرزیش ناسراوە، پڕۆژەیەکی شوقەی نیشتەجێبوونە لە هەولێر. ڕووبەری شوقەکانی پڕۆژەکە لە ٨٠ م² تا ٢٩٠ م² دەگۆڕێت. شوقەی یەک ژووری نووستن و یەک گەرماو بە ڕووبەری ١٤٠ و ١٤٣ م²، شوقەی دوو ژووری نووستن و دوو گەرماو بە ڕووبەری ١٥٠ و ١٦٥ م²، و شوقەی سێ ژووری نووستن و دوو گەرماو بە ڕووبەری ٢٩٠ م² لە پڕۆژەکەدا هەن.
 
 ### 2. Arabic (العربية)
-زاغروس تاور (Zagros Tower)، المدرج على بوابة العقارات homele.com باسم زاغروس تاورز (Zagros Towers)، مشروع شقق في أربيل تملأ إعلاناته صفحتين من النتائج. وجميع الشقق المعلن عنها في الصفحة الأولى على الخارطة، وتُباع نقداً أو بدفعة أولى وأقساط. وتتراوح المساحات المعلنة بين 80 م² و290 م². ومن الأسعار: 48,514 دولاراً أمريكياً لوحدة بمساحة 80 م² نقداً، و84,900 دولار لشقة بغرفة نوم واحدة بمساحة 140 م²، و90,965 دولاراً لشقة بغرفتي نوم بمساحة 150 م² نقداً، و100,061 دولاراً لشقة بغرفتي نوم بمساحة 165 م²، و100,000 دولار لشقة بغرفة نوم واحدة بمساحة 143 م²، و145,543 دولاراً لشقة بثلاث غرف نوم بمساحة 290 م² نقداً. أما إعلانات التقسيط لوحدات 140 و150 و165 م² فأسعارها 101,880 و105,519 و109,764 دولاراً.
+زاغروس تاور (Zagros Tower)، ويُعرف أيضاً باسم زاغروس تاورز، مشروع شقق سكنية في أربيل. وتتراوح مساحات الشقق فيه بين 80 م² و290 م². وتبلغ مساحة الشقق ذات غرفة النوم الواحدة والحمام الواحد 140 و143 م²، والشقق ذات غرفتي النوم والحمامين 150 و165 م²، والشقق ذات ثلاث غرف النوم والحمامين 290 م².
 
 ### 3. English
-Zagros Tower, shown as Zagros Towers on the homele.com property portal, is an apartment project in Erbil whose listings fill two result pages. All apartments advertised on the first page are off-plan units, sold in cash or with a down payment and instalments. Listed sizes range from 80 m² to 290 m². Prices include USD 48,514 for an 80 m² unit in cash, USD 84,900 for a one-bedroom unit of 140 m², USD 90,965 for a two-bedroom unit of 150 m² in cash, USD 100,061 for a two-bedroom unit of 165 m², USD 100,000 for a one-bedroom unit of 143 m² and USD 145,543 for a three-bedroom unit of 290 m² in cash. Instalment listings for 140, 150 and 165 m² units are priced at USD 101,880, USD 105,519 and USD 109,764.
+Zagros Tower, also known as Zagros Towers, is a residential apartment project in Erbil. Apartments in the project range from 80 m² to 290 m². One-bedroom apartments with one bathroom measure 140 and 143 m², two-bedroom apartments with two bathrooms measure 150 and 165 m², and three-bedroom apartments with two bathrooms measure 290 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

@@ -39,17 +39,17 @@ Project ID: sheraton-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026
 | Commercial plot 200 m2 - asking price (homele listing) | 285,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/sheraton-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Homele lists 'Sheraton City' as an area of Erbil. No source gives a street, ring-road position, landmark or coordinates for it.
+Homele lists 'Sheraton City' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-شێراتۆن ستی (Sheraton City) ناوی ناوچەیەکە لە هەولێر لەسەر پۆرتاڵی خانووبەرەی homele.com، کە ڕیکلامی موڵکەکان بەپێی پڕۆژە و گەڕەک پۆلێن دەکات. تاکە موڵکێک کە بەم ناوە ڕیکلامی بۆ کراوە پارچە زەوییەکی بازرگانییە بە ڕووبەری ٢٠٠ م²، کە بە ٢٨٥,٠٠٠ دۆلاری ئەمریکی بۆ فرۆشتن خراوەتە ڕوو. ڕیکلامەکە لە ژێر هەولێردا تۆمار کراوە و لە ٧ی تشرینی دووەمی ٢٠٢٦ لەسەر پۆرتاڵەکە چالاک بوو. ڕووبەری ٢٠٠ م² ڕووبەری ئەم تاکە پارچە زەوییە ڕیکلامکراوەیە.
+شێراتۆن سیتی (Sheraton City) ناوچەیەکە بەم ناوە لە شاری هەولێر. زەوییەکانی شێراتۆن سیتی پارچە زەویی بازرگانی لەخۆ دەگرن، لەوانە پارچە زەوییەکی بازرگانی بە ڕووبەری ٢٠٠ م².
 
 ### 2. Arabic (العربية)
-شيراتون سيتي (Sheraton City) اسم منطقة في أربيل على بوابة العقارات homele.com، التي تصنّف إعلانات العقارات حسب المشروع والحي. والعقار الوحيد المعلن عنه تحت هذا الاسم قطعة أرض تجارية بمساحة 200 م² معروضة للبيع بسعر 285,000 دولار أمريكي. والإعلان مدرج ضمن أربيل وكان نشطاً على البوابة في 7 تشرين الثاني 2026. ومساحة 200 م² هي مساحة هذه القطعة المعلن عنها وحدها.
+شيراتون سيتي (Sheraton City) منطقة تحمل هذا الاسم في مدينة أربيل. وتشمل الأراضي في شيراتون سيتي قطعاً تجارية، منها قطعة أرض تجارية بمساحة 200 م².
 
 ### 3. English
-Sheraton City is an area name in Erbil on the homele.com property portal, which groups property listings by project and neighbourhood. The one property advertised under this name is a commercial plot of 200 m², offered for sale at USD 285,000. The listing is filed under Erbil and was active on the portal on 7 November 2026. The 200 m² figure is the size of this single advertised plot.
+Sheraton City is a named area in the city of Erbil. Land in Sheraton City includes commercial plots, among them a commercial plot of 200 m².
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

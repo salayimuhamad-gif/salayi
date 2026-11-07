@@ -40,7 +40,7 @@ Project ID: aura-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 Not verified — no dated price evidence found.
 
 ## PART E — LOCATION & SURROUNDINGS
-Aura Erbil is in Erbil's Shoresh district on the Massif–Salaheddine road (Wikipedia), on the north-eastern Pirmam/Massif approach of the city. No coordinates are published.
+Aura Erbil is in Erbil's Shoresh district on the Massif–Salaheddine road (Wikipedia), on the north-eastern Pirmam/Massif approach of the city.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)

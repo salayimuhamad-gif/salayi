@@ -39,17 +39,17 @@ Project ID: minara-village | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Ready house 200 m2, 5 bed / 3 bath - homele sale listing (Minara City 1) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
 
 ## PART E — LOCATION & SURROUNDINGS
-Minara Village is on Koya Road in eastern Erbil, before (city-side of) Majidi Mall, per Baghy Shaqlawa. An Erbil Governorate news item (search snippet) mentions a street project between 'Minara' and Hana City in the Hawlery Nwe area. No coordinates are published.
+Minara Village is on Koya Road in eastern Erbil, before (city-side of) Majidi Mall, per Baghy Shaqlawa. An Erbil Governorate news item (search snippet) mentions a street project between 'Minara' and Hana City in the Hawlery Nwe area. Map position (low confidence, from agency map pins): 36.185015, 44.063368.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-گوندی منارە پڕۆژەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر. ماڵپەڕی باخی شەقڵاوە بە ناوی Mnara Village تۆماری کردووە، ناونیشانەکەی ڕێگای کۆیە، پێش مۆڵی مەجیدییە، و جۆری موڵکەکانی خانووە. ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە ناویان هاتووە بریتین لە ئینتەرنێت، ناوچەی سەوز، سوپەرمارکێت و مزگەوت. لە ماڵپەڕی هۆمێلێ، پەڕەی ئەم ناوچەیە بە ناوی Minara City 1 ناونراوە. لە ٧ی تشرینی دووەمی ٢٠٢٦دا، خانوویەکی ئامادە بە ڕووبەری ٢٠٠ م²، پێنج ژووری نووستن و سێ حەمام بە نرخی ٢٥٠٬٠٠٠ دۆلاری ئەمریکی بۆ فرۆشتن لەو پەڕەیەدا ڕیکلامی بۆ کرابوو.
+گوندی منارە (Minara Village) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای کۆیە لە ڕۆژهەڵاتی هەولێر، پێش ماجیدی مۆڵ لە لای شارەوە. پڕۆژەکە بە ناوی منارە ستی ١یش ناسراوە. خانووەکانی پڕۆژەکە خانووی ٢٠٠ م² لەخۆ دەگرن کە پێنج ژووری نووستن و سێ گەرماویان هەیە.
 
 ### 2. Arabic (العربية)
-قرية منارة مشروع سكني للمنازل في مدينة أربيل. يدرجه موقع باغي شقلاوة باسم Mnara Village، وعنوانه طريق كويه قبل ماجدي مول، ونوع العقارات فيه منازل. الخدمات المذكورة للمشروع هي الإنترنت والمساحات الخضراء والسوبرماركت والمسجد. على موقع هوملي تحمل صفحة المنطقة اسم Minara City 1. وفي 7 تشرين الثاني 2026 عُرض في تلك الصفحة منزل جاهز بمساحة 200 م² يضم خمس غرف نوم وثلاثة حمامات للبيع بسعر 250,000 دولار أمريكي.
+مجمع منارة (Minara Village) مشروع سكني يتكون من بيوت على طريق كويه في شرق أربيل، قبل مول ماجدي من جهة المدينة. ويُعرف المشروع أيضاً باسم منارة سيتي 1. وتشمل بيوت المشروع منازل بمساحة 200 م² تضم خمس غرف نوم وثلاثة حمامات.
 
 ### 3. English
-Minara Village is a residential project of houses in Erbil. Baghy Shaqlawa lists it under the name Mnara Village, with its address on Koya Road, before Majidi Mall, and with houses as its property type. The services listed for the project are internet, green areas, a supermarket and a mosque. On Homele, the area page is titled Minara City 1. On 7 November 2026 that page showed a ready house of 200 m2 with five bedrooms and three bathrooms advertised for sale at 250,000 US dollars.
+Minara Village is a residential project of houses on Koya Road in eastern Erbil, on the city side of Majidi Mall. The project is also known as Mnara Village and Minara City 1. Houses in the project include 200 m² homes with five bedrooms and three bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
