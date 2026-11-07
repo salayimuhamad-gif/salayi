@@ -1,0 +1,88 @@
+# Aram Village 2 — ئارام ڤیلەج ٢ (گوندی ئارام ٢) — قرية ارام 2
+Project ID: aram-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+
+## PART A — PROJECT DATA SHEET
+| Field | Verified Information | Confidence (High/Medium/Low + why) | Source URL(s) |
+|---|---|---|---|
+| Project Name | Aram Village 2 | High – used by paya, baghyshaqlawa and homele (project page + listings) | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://baghyshaqlawa.net/en/projects/aram-village-2 ; https://homele.com/projects/aram-village2-383 |
+| Alternative names | "Aram Village2" (homele project page), "Aram Village Project 2" (paya text), "Aram 2 village" (paya text), Arabic "قرية ارام 2" (paya). Kurdish form ئارام ڤیلەج ٢ is a transliteration (not sourced) | High for EN/AR variants | as above |
+| City | Erbil | High | all three primary sites |
+| District / Area | North-west Erbil, on the 120 m road, directly behind Aram Village 1; between the 120 m and 150 m ring roads on roads leading to Erbil International Airport | High – paya, homele project page and baghyshaqlawa ("Erbil – 120m Street") agree | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://homele.com/projects/aram-village2-383 ; https://baghyshaqlawa.net/en/projects/aram-village-2 |
+| Developer | Not verified. homele listing is "Provided by Aram Village 2 Project Sales Center"; paya "developer" field ("5 Units Aram Village 2") is a scraping artefact, not a company. Aram Garden's agency page describes Aram Garden as built "on the success of Aram Village 2" by the same vision (same developer implied); miran names Aram Garden's developer "Dutch Flower Company" – not confirmed for AV2 | Low | https://homele.com/projects/aram-village2-383 ; https://paya-realestate.com/en/projects/aram-garden-374 ; https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7 |
+| Project Category | Residential (two-floor villas) | High | paya, homele, baghyshaqlawa ("House Villa") |
+| Total Land Area | DISPUTED: 645,000 m² (homele project page "Area: 645,000m²") vs 345,745 m² (roya-iq.com search snippet for the Aram Village villa project on the 120 m street, attribution to AV2 uncertain) | Low – single primary source for 645,000 m²; roya figure unverifiable this session | https://homele.com/projects/aram-village2-383 ; https://roya-iq.com/?p=9082 |
+| Number of Buildings / Towers | ≈900 villas: paya "contains 900 villas"; homele project page "908 two-floor villa"; roya snippet "662 villas with 7 different types" (planned) | Medium – two primary sites agree on ~900; roya 662 may be an earlier planning figure or refer to another phase | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://homele.com/projects/aram-village2-383 ; https://roya-iq.com/?p=9082 |
+| Total Residential Units | ≈900–908 villas (disputed with 662, see above) | Medium | as above |
+| Floors per building | 2 floors (two-floor villas) | High – homele project page "two-floor villa"; listing "Two Floor House" | https://homele.com/projects/aram-village2-383 ; https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
+| Construction Status | Completed (paya "Completed"; homele project page "Project Status: Completed", posted 2025-08-04). Note: several homele listings for 550 m² and 1,100 m² villas are tagged "Off Plan", so some large plots/villas appear still to be under construction or unbuilt | High for overall status; Medium for the off-plan remainder | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://homele.com/projects/aram-village2-383 ; https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
+| Launch Date | Not verified | — | — |
+| Completion Date | Not verified (completed before 2025-08-04 per homele posting) | Low | https://homele.com/projects/aram-village2-383 |
+| Development Phases | Second phase of the Aram Village villa projects (Aram Village 1 in front of it); Aram Garden (under construction) is marketed as the next project "building on the success of Aram Village 2". Aram Towers and Aram Commercial City are different projects sharing only the brand name | High for AV1/AV2 relation; Medium for Aram Garden | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://paya-realestate.com/en/projects/aram-garden-374 |
+| Coordinates | 36.247552, 44.043387 | High – 3 agency map pins agree within 1.5 km (paya-realestate.com, homele.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://homele.com/projects/aram-village2-383 ; https://baghyshaqlawa.net/en/projects/aram-village-2 |
+
+## PART B — PROPERTY TYPES & AREA OPTIONS
+| Property Type | Verified Sizes (m²) | Bedrooms | Other Specifications | Evidence Type (official / agency project page / market listing) | Source |
+|---|---|---|---|---|---|
+| Villa, two floors (core type list) | 242, 276, 345, 550, 1100 | 4–6 | "908 two-floor villa of various area: (242, 276, 345, 550, 1100) m²" | agency project page (sales-center listing on homele) | https://homele.com/projects/aram-village2-383 |
+| Villa – cash-payment size menu | 242, 264, 276, 288, 345, 617, 1100 | — | sizes shown under "Cash Payment" on the same page | agency project page | https://homele.com/projects/aram-village2-383 |
+| Villa Type A | 1100 | 6 | 7 bathrooms | agency project page | https://homele.com/projects/aram-village2-383 |
+| Villa Type B | 550 | 6 | 6 bathrooms | agency project page | https://homele.com/projects/aram-village2-383 |
+| Villa (paya unit table) | 242 (4 bed/4 bath), 276 (4/4), 345 (5/5), 617 (5/6), 1100 (5/6) | 4–5 | bathroom counts per paya; beds for 1100 m² differ from homele Type A (6) | agency project page | https://paya-realestate.com/en/projects/aram-village-2-266 |
+| House / Villa (listings) | 242, 276, 345, 550, 1100 | 4–6 | "Ready" for 242/276/345/1100; "Off Plan" for 550 and one 1100 ("Structure Opposite Garden") | market listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
+| House / Villa | not stated | — | property types "House, Villa"; "Project Map" and "Baghy Shaqlawa Catalogue" files offered | agency project page | https://baghyshaqlawa.net/en/projects/aram-village-2 |
+
+## PART C — FACILITIES & INFRASTRUCTURE
+**Confirmed existing (completed project; listed on ≥2 agency pages):** school (paya, baghyshaqlawa), mosque (paya, baghyshaqlawa), supermarket & shops (paya, baghyshaqlawa), children's playgrounds in the parks (paya, baghyshaqlawa), gym (paya), public garden / green areas (baghyshaqlawa, homele overview "greenery"), security / security staff (baghyshaqlawa, homele), parking (paya "Car Parking", baghyshaqlawa), 24 hr electricity / electricity generator (baghyshaqlawa, homele), sewers (paya).
+**Confirmed planned:** none identified (project completed).
+**Unverified claims:** outdoor swimming pool, women's gym, AC (paya tags only); balcony, central heating, double-glazed windows, CCTV security (homele amenity tags only); pets allowed (baghyshaqlawa tag). Distances "5 min from 120 m / 150 m highways, 8 km from city centre, 12 km from airport" are agency claims (paya) not independently checked.
+
+## PART D — PRICES & PAYMENT (evidence-dated)
+| Item | Value | Currency | Type: developer/resale/rent | Date/accessed | Source |
+|---|---|---|---|---|---|
+| Project price range (sales-center listing) | 250,000 – 1,500,000 | USD | developer/sales-center asking range (via agency page) | posted 2025-08-04, accessed 2026-11-07 | https://homele.com/projects/aram-village2-383 |
+| "Normal House" (cash payment, smallest) | 250,000 | USD | developer/sales-center asking | posted 2025-08-04 | https://homele.com/projects/aram-village2-383 |
+| Agency price list: 242 m² 4/4 | 285,000 | USD | agency price list (not confirmed as developer price) | accessed 2026-11-07 | https://paya-realestate.com/en/projects/aram-village-2-266 |
+| Agency price list: 276 m² 4/4 | 285,000 | USD | agency price list | accessed 2026-11-07 | same |
+| Agency price list: 345 m² 5/5 | 362,250 | USD | agency price list | accessed 2026-11-07 | same |
+| Agency price list: 617 m² 5/6 | 850,000 | USD | agency price list | accessed 2026-11-07 | same |
+| Agency price list: 1100 m² 5/6 | 2,000,000 | USD | agency price list | accessed 2026-11-07 | same |
+| 276 m² ready house 4/4 | 275,000 – 280,000 (3 listings) | USD | resale listing | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
+| 242 m² ready house 4/3 | 285,000 | USD | resale listing | accessed 2026-11-07 | same |
+| 345 m² ready house 5/5 | 420,000 | USD | resale listing | accessed 2026-11-07 | same |
+| 550 m² off-plan house 5–6 bed | 469,000 – 470,000 (negotiable) | USD | resale/off-plan listing | accessed 2026-11-07 | same |
+| 1100 m² ready corner house 6/6 | 1,100,000 (negotiable) | USD | resale listing | accessed 2026-11-07 | same |
+| 1100 m² off-plan structure opposite garden 6/6 | 1,200,000 (negotiable) | USD | off-plan listing | accessed 2026-11-07 | same |
+| 345 m² two-floor house 5/4, monthly rent | 1,500 | USD | rent | accessed 2026-11-07 | same |
+| Payment method | Cash | — | developer/sales-center (via homele project page) | posted 2025-08-04 | https://homele.com/projects/aram-village2-383 |
+
+## PART E — LOCATION & SURROUNDINGS
+Aram Village 2 is in the north-western urban belt of Erbil city, on the 120 m ring road directly behind Aram Village 1 (paya; homele project page; baghyshaqlawa address "Erbil – 120m Street"). The paya page places it "on 120M-150M" and on "several public streets leading to Erbil International Airport", and claims 5 minutes to the 120 m and 150 m highways, 8 km to the city centre and 12 km to the airport; these distances are agency statements and were not independently verified. The homele project page lists nearby categories (restaurants, schools, shopping malls, transportation, gym, hospital, mosque) but names no specific landmarks. No coordinates are available from any source in hand.
+
+## PART F — FINAL PROJECT DESCRIPTIONS
+### 1. Sorani Kurdish (کوردیی سۆرانی)
+ئارام ڤیلەج ٢ پڕۆژەیەکی نیشتەجێبوونی تەواوبووی ڤێلایە لە باکووری ڕۆژئاوای شاری هەولێر، لەسەر ڕێگای ١٢٠ مەتری و ڕاستەوخۆ لە پشت ئارام ڤیلەج ١، لەسەر ئەو ڕێگا گشتییانەی بەرەو فڕۆکەخانەی نێودەوڵەتی هەولێر دەڕۆن. پڕۆژەکە نزیکەی ٩٠٠ ڤێلای دوو نهۆمی لەخۆدەگرێت بە ڕووبەری جیاواز؛ جۆرە سەرەکییەکان ٢٤٢، ٢٧٦، ٣٤٥، ٥٥٠، ٦١٧ و ١,١٠٠ م²ـن و چوار بۆ شەش ژووری نووستنیان هەیە. گەورەترین ڤێلا، جۆری A بە ڕووبەری ١,١٠٠ م²، شەش ژووری نووستن و حەوت حەمامی هەیە، و ڤێلای جۆری B بە ڕووبەری ٥٥٠ م² شەش ژووری نووستن و شەش حەمامی هەیە. خزمەتگوزارییەکانی پڕۆژەکە قوتابخانە، مزگەوت، سوپەرمارکێت و دوکان، هۆڵی وەرزش، باخچەی گشتی و یاریگای منداڵان لە پارکەکاندا لەخۆدەگرن، لەگەڵ کارەبای ٢٤ کاتژمێر، پاسەوانی، کامێرای چاودێری و پارکینگ. ڤێلاکان بالکۆن، سیستەمی گەرمکردنەوەی ناوەندی و پەنجەرەی دوو چینی شووشەیان هەیە. فرۆشتنی یەکەکان لە ڕێگەی سەنتەری فرۆشتنی پڕۆژەکەوە بە پارەی کاش ئەنجام دەدرێت، و یەکەی ئامادە بۆ فرۆشتنەوە و کرێ لە ڕێگەی ئۆفیسە خانووبەرەییەکانەوە پێشکەش دەکرێن. ئارام ڤیلەج ٢ قۆناغی دووەمی پڕۆژەکانی ئارام ڤیلەجە و پڕۆژەیەکی سەربەخۆیە لە ئارام ڤیلەج ١.
+
+### 2. Arabic (العربية)
+قرية ارام 2 (Aram Village 2) مشروع سكني مكتمل من الفلل يقع في شمال غرب مدينة أربيل، على طريق 120 متر خلف قرية ارام 1 مباشرة، وعلى الشوارع العامة المؤدية إلى مطار أربيل الدولي. يضم المشروع نحو 900 فيلا من طابقين بمساحات متنوعة؛ الأنواع الرئيسية هي 242 و276 و345 و550 و617 و1,100 م²، بعدد غرف نوم يتراوح بين أربع وست غرف. أكبر الفلل، النوع A بمساحة 1,100 م²، تحتوي على ست غرف نوم وسبعة حمامات، فيما تحتوي فيلا النوع B بمساحة 550 م² على ست غرف نوم وستة حمامات. تشمل مرافق المشروع مدرسة ومسجداً وسوبر ماركت ومحلات تجارية وصالة رياضية وحديقة عامة وملاعب للأطفال داخل الحدائق، مع كهرباء على مدار 24 ساعة وحراسة وكاميرات مراقبة ومواقف سيارات. تتميز الفلل بشرفات ونظام تدفئة مركزية ونوافذ بزجاج مزدوج. يتم بيع الوحدات نقداً عبر مركز مبيعات المشروع، كما تُعرض وحدات جاهزة لإعادة البيع وللإيجار عبر المكاتب العقارية. قرية ارام 2 هي المرحلة الثانية من مشاريع قرية ارام وتُعد مشروعاً مستقلاً عن قرية ارام 1.
+
+### 3. English
+Aram Village 2 is a completed villa project in the north-west of Erbil city, on the 120-metre road directly behind Aram Village 1 and on the public roads leading towards Erbil International Airport. The project consists of around 900 two-floor villas in a range of sizes; the main types are 242, 276, 345, 550, 617 and 1,100 m², with four to six bedrooms. The largest villa, Type A at 1,100 m², has six bedrooms and seven bathrooms, and the Type B villa at 550 m² has six bedrooms and six bathrooms. Community facilities include a school, a mosque, a supermarket and shops, a gym, a public garden and children's playgrounds within the parks, together with 24-hour electricity, security staff, CCTV and parking. The villas feature balconies, central heating and double-glazed windows. Units are sold on a cash basis through the project's sales centre, and ready villas are also offered for resale and rent through local agencies. Aram Village 2 is the second phase of the Aram Village projects and is a separate development from Aram Village 1.
+
+## PART G — SOURCES AND RESEARCH LOG
+| Website | URL | Information obtained | Published/updated | Accessed | Reliability |
+|---|---|---|---|---|---|
+| paya-realestate.com | https://paya-realestate.com/en/projects/aram-village-2-266 | Name (EN/AR), status Completed, location NW Erbil on 120M-150M behind Aram Village, 900 villas, facilities, agency distances, unit table 242/276/345/617/1100 m² with prices $285,000–2,000,000 | not stated | 2026-11-07 | medium (agency project page) |
+| homele.com | https://homele.com/projects/aram-village2-383 | Project page by "Aram Village 2 Project Sales Center": Completed, area 645,000 m², 908 two-floor villas, sizes, Type A/B details, price $250,000–1,500,000, cash payment, amenities | posted 2025-08-04 | 2026-11-07 | medium-high (sales-center page on agency site) |
+| homele.com | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 | 6 pages of listings; first page: sale $275,000–1,200,000, rent $1,500/month; ready vs off-plan tags | current | 2026-11-07 | medium (market listings) |
+| baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/aram-village-2 | Address "Erbil – 120m Street", types House/Villa, features list, project map & catalogue files | not stated | 2026-11-07 | medium (agency project page) |
+| hajisalam.com | — | No project page / no relevant listing found in evidence pack | — | 2026-11-07 | n/a |
+| miranestate.com | — | No project page / no relevant listing found in evidence pack (only Aram Garden page, which references AV2 indirectly) | — | 2026-11-07 | n/a |
+Additional public sources: roya-iq.com Roya Branch pages (https://roya-iq.com/?p=9082 ; https://roya-iq.com/?p=9081) – search snippets: "Aram Village 2" sample units 550 m² and 276 m² (276 m²: 4 bedrooms, 2 living rooms, 3 bathrooms, garage, 2 kitchens); an Aram Village plan of 662 villas, 7 types, 345,745 m² site on the 120 m street (site unreachable; attribution to AV2 vs combined project unclear). posta.com.tr (https://www.posta.com.tr/is-insani-murat-baysal-irakta-yeni-projesini-hayata-gecirdi-2280919) – snippet: Murat Baysal credited with an "Aram Village" project in Iraq (phase unspecified). Searches run: "\"Aram Village 2\" Erbil 908 villas"; Arabic/Kurdish-name queries not executed (search budget exhausted).
+
+## PART H — DATA VERIFICATION REPORT
+1. Fully verified (≥2 independent sources): name; city; location on the 120 m road behind Aram Village 1 (paya, homele, baghyshaqlawa); completed status (paya, homele); villa count ≈900 (paya 900, homele 908); two-floor villas (homele page + listing); sizes 242, 276, 345, 1100 m² (paya + homele page + listings); 617 m² (paya + homele cash menu); 550 m² (homele page + listings); facilities school, mosque, supermarket, playground, parking, security (paya + baghyshaqlawa).
+2. Single-source information: land area 645,000 m² (homele project page); sizes 264 and 288 m² (homele cash menu only); Type A/B bed-bath counts (homele page); cash-only payment (homele page); agency distances (paya); amenity tags balcony/central heating/double glazing/CCTV (homele); outdoor pool, women's gym (paya tags).
+3. Conflicting information: (a) villa count 900 (paya) vs 908 (homele) vs 662 (roya snippet) – resolution: ≈900–908 adopted, 662 flagged; (b) land area 645,000 m² (homele) vs 345,745 m² (roya snippet) – Disputed, no final value; (c) bedrooms for 1,100 m² villa: 5 (paya) vs 6 (homele Type A) vs 6 (listings) – 6 more likely; (d) price range $285,000–2,000,000 (paya) vs $250,000–1,500,000 (homele sales-center) – both are asking ranges on different dates, not official prices.
+4. Missing information requiring confirmation: developer company name; launch/completion dates; exact land area; whether 550 m² and 1,100 m² off-plan villas are still being built; coordinates (homele map widget not captured).
+5. Potentially outdated information: homele project page posted 2025-08-04; paya price table undated; roya planning figures (662 villas) may predate construction.
+6. Unresolved questions: Who is the developer behind the Aram Village projects (Sakar Group per AV1 paya page? Baysal? the "Dutch Flower Company" named for Aram Garden?) Does the roya 662/345,745 m² plan describe AV2? Research limits: WebFetch failed (DNS) for every host this session; WebSearch budget exhausted after one query for this project. Wider-web verification (search engines, developer sites outside the allowed hosts) was not performed in this pass because the session's web-search budget was exhausted; a second pass is recommended.
