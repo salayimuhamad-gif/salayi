@@ -3,40 +3,60 @@
 Project ID: asco-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
 
 ## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL(s) |
+| Field | Verified Information | Confidence | Source URL |
 |---|---|---|---|
-| Project Name | ASCO Village | High – Paya, Miran, Homele | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip; https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
-| Alternative names | Asco Village; اسكو فلج; قریة ئاسکو; گوندی ئاسکۆ | Medium – Paya label; Miran AR/KU names | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| City | Erbil | High – Paya and Miran | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| District / Area | Diamond Zone (Almas), opposite Grand Majidi Mall | High – Miran neighbourhood and text; Paya coordinates consistent | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip; https://paya-realestate.com/en/projects/asco-village-327 |
+| Project Name | ASCO Village | High – Paya, Miran, Homele | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip ; https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
+| City | Erbil | High – Paya and Miran | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| District / Area | Diamond Zone (Almas), opposite Grand Majidi Mall | High – Miran neighbourhood and text; Paya coordinates consistent | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip ; https://paya-realestate.com/en/projects/asco-village-327 |
 | Developer | Aree Group | Medium – Miran only; Paya shows a sales profile named 'Asco Village' | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| Project Category | Residential (villas) | High – Paya and Miran | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| Total Land Area | Not verified | — – Not stated | — |
-| Number of Buildings / Towers | Not verified | — – Not applicable (villa compound) | — |
-| Total Residential Units | Not verified | — – Not stated; Miran '9 units' counts published listings only | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| Floors per building | Not verified | — – Not stated | — |
-| Construction Status | Under construction | High – Paya 'Constructing'; Miran 'Under Construction'; Homele 'Off Plan' | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip; https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
-| Launch Date | Not verified | — – Not stated | — |
-| Completion Date | Not verified | — – Not stated | — |
-| Development Phases | Not verified | — – None stated; distinct from ASCO International City | — |
-| Coordinates | 36.25617763, 44.07726377 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/asco-village-327 |
+| Project Category | Residential (villas) | High – Paya and Miran | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| Total Land Area | Not verified | Low – Not stated | — |
+| Number of Buildings / Towers | Not verified | Low – Not applicable (villa compound) | — |
+| Total Residential Units | Not verified | Low – Not stated; Miran '9 units' counts published listings only | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| Construction Status | Under construction | High – Paya 'Constructing'; Miran 'Under Construction'; Homele 'Off Plan' | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip ; https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
+| Completion Date | Not verified | Low – Not stated | — |
+| Coordinates | 36.25617763, 44.07726377 — Google Maps: https://www.google.com/maps?q=36.25617763,44.07726377 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/asco-village-327 |
+| Alternative names | Asco Village; اسكو فلج; قریة ئاسکو; گوندی ئاسکۆ | Medium – Paya label; Miran AR/KU names | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| Project Owner | Not verified | Low – not stated by any source found | — |
+| Floors per building | Not verified | Low – Not stated | — |
+| Launch Date | Not verified | Low – Not stated | — |
+| Development Phases | Not verified | Low – None stated; distinct from ASCO International City | — |
+
+### Land area and development scale
+| Item | Value | Note | Source URL |
+|---|---|---|---|
+| Total project land area (m²) | Not verified | Not stated | — |
+| Total project land area (dunams) | Not verified | — | — |
+| Plots or parcels | Not verified | — | — |
+| Total housing units | Not verified | Not stated; Miran '9 units' counts published listings only | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| Villas / houses | Not verified | — | — |
+| Apartments | Not verified | — | — |
+| Commercial units | Not verified | — | — |
+| Towers / apartment buildings | Not verified | Not applicable (villa compound) | — |
+| Floors per building | Not verified | Not stated | — |
+| Green space, parks, landscaped area | Not verified | — | — |
+| Development phases | Distinct from ASCO International City (apartments) in the same Diamond Zone; corporate link not verified | None stated; distinct from ASCO International City | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
-|---|---|---|---|---|---|
-| villa | 230 | 4 | 4 bath; Type A; Pumice (Bonza) block, chauffage heating, pre-installed AC ducts, parquet, Moroccan-style ceiling; solar and smart system optional (Paya) | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| villa | 275 | 4 | 4 bath; Type B | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
-| villa | 394 | 5 | 4 bath; Type C | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+|---|---|---|---|---|---|---|---|
+| villa | 230 | 230 | 230 | 4 | 4 bathrooms; Type A; Pumice (Bonza) block, chauffage heating, pre-installed AC ducts, parquet, Moroccan-style ceiling; solar and smart system optional (Paya) | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| villa | 275 | 275 | 275 | 4 | 4 bathrooms; Type B | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+| villa | 394 | 394 | 394 | 5 | 4 bathrooms; Type C | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
+
+**Layouts and floor plans:** Not verified
+
+_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
 ## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None confirmed
+**Confirmed existing:** None
 
 **Confirmed planned:** Power station / electrical generator (Paya text and tag, Miran); 24/7 security with surveillance cameras (Paya text, Miran); Parking (Paya, Miran); Children's play area / playground (Paya, Miran); Solar system, optional (Paya text, Miran); Smart system, optional (Paya text, Miran); Green landscaped areas / garden (Paya text, Miran); Pedestrian-friendly layout, unified villa façades (Paya text)
 
 **Unverified claims:** Kindergarten (Paya tag); School (Miran tag); Sports court (Miran tag); Swimming pool (Miran tag); Pharmacy (Miran tag); Shopping centre (Miran tag); Parklet floor (Miran tag); Fibre internet, BMS, waste management, water treatment, backup generator, CCTV, maintenance workshop (Miran 'building facilities' block)
 
-## PART D — PRICES & PAYMENT (evidence-dated)
-| Item | Value | Currency | Type | Date / accessed | Source |
+### Prices and payment information (dated evidence, not official price lists)
+| Item | Value | Currency | Type | Date | Source |
 |---|---|---|---|---|---|
 | Villa Type A 230 m², 4 bed – list price | 253,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/asco-village-327 |
 | Villa Type B 275 m², 4 bed – list price | 330,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/asco-village-327 |
@@ -44,11 +64,13 @@ Project ID: asco-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Price per m² (plan: 5 × 20%, every 6 months) | 1,100 | USD | developer | page updated 2026-08-23 | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
 | Villa 230 m² – Homele off-plan listing (advertised) | 273,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
 | Villa 239 m² – Homele off-plan listing (advertised) | 261,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
+- **Maintenance or service charges:** Not verified
+- **Purchasing or rental arrangements:** Not verified
 
-## PART E — LOCATION & SURROUNDINGS
-Diamond Zone (Almas area), north-east Erbil, opposite Grand Majidi Mall near the resort-road junction, with the 120 m road on one side and the 150 m road on the other; Miran cites about 10 minutes to the city centre and to Erbil International Airport. Paya's structured data places it at 36.25617763, 44.07726377, about 9 km north-east of the citadel. Map position (low confidence, from agency map pins): 36.25617763, 44.07726377.
+### Location and surroundings
+Diamond Zone (Almas area), north-east Erbil, opposite Grand Majidi Mall near the resort-road junction, with the 120 m road on one side and the 150 m road on the other; Miran cites about 10 minutes to the city centre and to Erbil International Airport. Paya's structured data places it at 36.25617763, 44.07726377, about 9 km north-east of the citadel. Map position (low confidence, from agency map pins): 36.25617763, 44.07726377. Google Maps: https://www.google.com/maps?q=36.25617763,44.07726377
 
-## PART F — FINAL PROJECT DESCRIPTIONS
+## PART D — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
 گوندی ئاسکۆ (ASCO Village) پڕۆژەیەکی ڤێلایە لە ناوچەی دایمۆند زۆن (ناوچەی ئەڵماس) لە باکووری ڕۆژهەڵاتی هەولێر کە لە قۆناغی دروستکردندایە، بەرامبەر گراند ماجیدی مۆڵ و نزیک یەکتربڕی ڕێگای هاوینەهەوارەکان، لە نێوان شەقامی ١٢٠ مەتری و ١٥٠ مەتری، و نزیکەی ١٠ خولەک لە ناوەندی شار و فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە. گرووپی ئاری گەشەی پێدەدات و پڕۆژەیەکی جیاوازە لە شاری نێودەوڵەتیی ئاسکۆ لە هەمان ناوچەدا. پڕۆژەکە سێ جۆر ڤێلا لەخۆ دەگرێت: ڤێلای ٢٣٠ م² و ٢٧٥ م² بە چوار ژووری نووستن، و ڤێلای ٣٩٤ م² بە پێنج ژووری نووستن. ڤێلاکان بە بلۆکی پوومێس (بۆنزا) دروست دەکرێن و سیستەمی گەرمکردنەوەی شۆفاج، بۆریی فێنککەرەوەی پێشوەختە دامەزراو، زەویی پارکێ و بنمیچی شێوازی مەغریبییان هەیە، لەگەڵ سیستەمی وزەی خۆر و سیستەمی زیرەکی ئارەزوومەندانە. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە وێستگەی کارەبا، پاسەوانیی ٢٤ کاتژمێری لەگەڵ کامێرای چاودێری، پارکینگ، شوێنی یاریی منداڵان و ناوچەی سەوزی ڕازاوە، لە نەخشەیەکی گونجاو بۆ پیادەڕۆیشتن و ڕووکاری یەکگرتووی ڤێلاکان.
 
@@ -58,17 +80,24 @@ Diamond Zone (Almas area), north-east Erbil, opposite Grand Majidi Mall near the
 ### 3. English
 ASCO Village is a villa project under construction in the Diamond Zone (Almas area) of north-east Erbil, opposite Grand Majidi Mall near the resort-road junction, between the 120 m and 150 m roads, about 10 minutes from the city centre and from Erbil International Airport. It is developed by Aree Group and is separate from ASCO International City in the same zone. The project offers three villa types: 230 m² and 275 m² villas with four bedrooms, and 394 m² villas with five bedrooms. The villas are built with pumice (Bonza) blocks and have chauffage central heating, pre-installed air-conditioning ducts, parquet flooring and Moroccan-style ceilings, with optional solar and smart-home systems. Planned facilities include a power station, 24-hour security with surveillance cameras, parking, a children's play area and landscaped green areas, in a pedestrian-friendly layout with unified villa façades.
 
-## PART G — SOURCES AND RESEARCH LOG
-| Website | URL | Information obtained | Published/updated | Accessed | Reliability |
-|---|---|---|---|---|---|
-| paya-realestate.com | https://paya-realestate.com/en/projects/asco-village-327 | Name EN/AR, Constructing, villa specification list, amenity tags, 3 villa types with beds/baths and list prices, map coordinates | — | 2026-11-07 | medium |
-| miranestate.com | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip | Developer Aree Group, names AR/KU, Diamond Zone, location text (opposite Grand Majidi Mall, between 120 m and 150 m roads), Under Construction (updated Aug 23, 2026), Types A/B/C 230/275/394 m², US$1,100/m², 5×20% plan, feature tags, 9 published listings | 2026-08-23 | 2026-11-07 | medium |
-| homele.com | https://homele.com/properties/for-sale-and-rent/erbil/asco-village | Area page (6 pages): off-plan and ready-tagged villas 230–239 m², US$253,000–273,000 | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
-| hajisalam.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
+## PART E — SOURCES AND RESEARCH LOG
+### Primary websites
+| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+|---|---|---|---|---|---|---|---|
+| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/asco-village | Area page (6 pages): off-plan and ready-tagged villas 230–239 m², US$253,000–273,000 | — | 2026-11-07 | medium |
+| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/asco-village-327 | Name EN/AR, Constructing, villa specification list, amenity tags, 3 villa types with beds/baths and list prices, map coordinates | — | 2026-11-07 | medium |
+| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip | Developer Aree Group, names AR/KU, Diamond Zone, location text (opposite Grand Majidi Mall, between 120 m and 150 m roads), Under Construction (updated Aug 23, 2026), Types A/B/C 230/275/394 m², US$1,100/m², 5×20% plan, feature tags, 9 published listings | 2026-08-23 | 2026-11-07 | medium |
 
-## PART H — DATA VERIFICATION REPORT
-1. **Fully verified information (≥2 independent sources):**
+### Additional public sources
+None used for this project.
+
+### Web search log
+First-pass research only (at most one web search for this project).
+
+## PART F — DATA VERIFICATION REPORT
+1. **Fully verified information:**
    - Name, villa category, under-construction status, Diamond Zone/Pirmam-road location, villa sizes 230/275/394 m², 230 m² price US$253,000 (Paya, Miran, Homele)
 2. **Information supported by only one source:**
    - Developer Aree Group (Miran)
@@ -86,4 +115,240 @@ ASCO Village is a villa project under construction in the Diamond Zone (Almas ar
    - None
 6. **Important unresolved questions:**
    - One Homele listing tagged 'Ready' while all sources give under construction
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+
+## PART G — ANDAZ IMPORT-READY DATA
+```json
+{
+ "project_id": "asco-village",
+ "project_name": "ASCO Village",
+ "project_name_ku": "گوندی ئاسکۆ",
+ "project_name_ar": "قرية ئاسكو",
+ "alternative_names": [
+  "Asco Village",
+  "اسكو فلج",
+  "قریة ئاسکو"
+ ],
+ "city": "Erbil",
+ "in_erbil_city": true,
+ "district": "Diamond Zone (Almas area)",
+ "location": "North-east Erbil, opposite Grand Majidi Mall near the resort-road junction, between the 120 m and 150 m roads (Miran text)",
+ "latitude": 36.25617763,
+ "longitude": 44.07726377,
+ "coordinates_confidence": "low",
+ "developer": "Aree Group",
+ "project_owner": null,
+ "project_category": "residential",
+ "project_total_area_m2": null,
+ "project_total_area_source": null,
+ "number_of_buildings": null,
+ "floors_per_building": null,
+ "total_units": null,
+ "construction_status": "under_construction",
+ "launch_date": null,
+ "completion_date": null,
+ "development_phases": [
+  "Distinct from ASCO International City (apartments) in the same Diamond Zone; corporate link not verified"
+ ],
+ "unit_types": [
+  {
+   "type": "villa",
+   "sizes_m2": [
+    230
+   ],
+   "bedrooms": 4,
+   "bathrooms": 4,
+   "floors": null,
+   "notes": "Type A; Pumice (Bonza) block, chauffage heating, pre-installed AC ducts, parquet, Moroccan-style ceiling; solar and smart system optional (Paya)",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://paya-realestate.com/en/projects/asco-village-327",
+    "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+   ]
+  },
+  {
+   "type": "villa",
+   "sizes_m2": [
+    275
+   ],
+   "bedrooms": 4,
+   "bathrooms": 4,
+   "floors": null,
+   "notes": "Type B",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://paya-realestate.com/en/projects/asco-village-327",
+    "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+   ]
+  },
+  {
+   "type": "villa",
+   "sizes_m2": [
+    394
+   ],
+   "bedrooms": 5,
+   "bathrooms": 4,
+   "floors": null,
+   "notes": "Type C",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://paya-realestate.com/en/projects/asco-village-327",
+    "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+   ]
+  }
+ ],
+ "available_unit_sizes_m2": [
+  {
+   "size_m2": 230,
+   "type": "villa",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "size_m2": 275,
+   "type": "villa",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "size_m2": 394,
+   "type": "villa",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "size_m2": 239,
+   "type": "villa",
+   "evidence_type": "market_listing",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/asco-village"
+  }
+ ],
+ "verified_facilities": [],
+ "planned_facilities": [
+  "Power station / electrical generator (Paya text and tag, Miran)",
+  "24/7 security with surveillance cameras (Paya text, Miran)",
+  "Parking (Paya, Miran)",
+  "Children's play area / playground (Paya, Miran)",
+  "Solar system, optional (Paya text, Miran)",
+  "Smart system, optional (Paya text, Miran)",
+  "Green landscaped areas / garden (Paya text, Miran)",
+  "Pedestrian-friendly layout, unified villa façades (Paya text)"
+ ],
+ "unverified_facilities": [
+  "Kindergarten (Paya tag)",
+  "School (Miran tag)",
+  "Sports court (Miran tag)",
+  "Swimming pool (Miran tag)",
+  "Pharmacy (Miran tag)",
+  "Shopping centre (Miran tag)",
+  "Parklet floor (Miran tag)",
+  "Fibre internet, BMS, waste management, water treatment, backup generator, CCTV, maintenance workshop (Miran 'building facilities' block)"
+ ],
+ "prices": [
+  {
+   "item": "Villa Type A 230 m², 4 bed – list price",
+   "value": 253000,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "item": "Villa Type B 275 m², 4 bed – list price",
+   "value": 330000,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "item": "Villa Type C 394 m², 5 bed – list price",
+   "value": 472800,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  {
+   "item": "Price per m² (plan: 5 × 20%, every 6 months)",
+   "value": 1100,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "page updated 2026-08-23",
+   "source_url": "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+  },
+  {
+   "item": "Villa 230 m² – Homele off-plan listing (advertised)",
+   "value": 273000,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/asco-village"
+  },
+  {
+   "item": "Villa 239 m² – Homele off-plan listing (advertised)",
+   "value": 261000,
+   "currency": "USD",
+   "price_type": "developer",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/asco-village"
+  }
+ ],
+ "description_ku": "گوندی ئاسکۆ (ASCO Village) پڕۆژەیەکی ڤێلایە لە ناوچەی دایمۆند زۆن (ناوچەی ئەڵماس) لە باکووری ڕۆژهەڵاتی هەولێر کە لە قۆناغی دروستکردندایە، بەرامبەر گراند ماجیدی مۆڵ و نزیک یەکتربڕی ڕێگای هاوینەهەوارەکان، لە نێوان شەقامی ١٢٠ مەتری و ١٥٠ مەتری، و نزیکەی ١٠ خولەک لە ناوەندی شار و فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە. گرووپی ئاری گەشەی پێدەدات و پڕۆژەیەکی جیاوازە لە شاری نێودەوڵەتیی ئاسکۆ لە هەمان ناوچەدا. پڕۆژەکە سێ جۆر ڤێلا لەخۆ دەگرێت: ڤێلای ٢٣٠ م² و ٢٧٥ م² بە چوار ژووری نووستن، و ڤێلای ٣٩٤ م² بە پێنج ژووری نووستن. ڤێلاکان بە بلۆکی پوومێس (بۆنزا) دروست دەکرێن و سیستەمی گەرمکردنەوەی شۆفاج، بۆریی فێنککەرەوەی پێشوەختە دامەزراو، زەویی پارکێ و بنمیچی شێوازی مەغریبییان هەیە، لەگەڵ سیستەمی وزەی خۆر و سیستەمی زیرەکی ئارەزوومەندانە. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە وێستگەی کارەبا، پاسەوانیی ٢٤ کاتژمێری لەگەڵ کامێرای چاودێری، پارکینگ، شوێنی یاریی منداڵان و ناوچەی سەوزی ڕازاوە، لە نەخشەیەکی گونجاو بۆ پیادەڕۆیشتن و ڕووکاری یەکگرتووی ڤێلاکان.",
+ "description_ar": "قرية ئاسكو (ASCO Village) مشروع فلل قيد الإنشاء في منطقة دايموند زون (منطقة ألماس) شمال شرق أربيل، مقابل مول ماجدي الكبير قرب تقاطع طريق المصايف، بين الطريقين 120 م و150 م، وعلى بُعد نحو 10 دقائق من مركز المدينة ومن مطار أربيل الدولي. تطوّره مجموعة آري، وهو مشروع منفصل عن مدينة ئاسكو الدولية في المنطقة نفسها. ويضم المشروع ثلاثة أنواع من الفلل: فلل بمساحة 230 م² و275 م² بأربع غرف نوم، وفلل بمساحة 394 م² بخمس غرف نوم. وتُبنى الفلل بطابوق الخفان (البونزا)، وتتضمن تدفئة مركزية (شوفاج)، وقنوات تكييف مركبة مسبقاً، وأرضيات باركيه، وأسقفاً على الطراز المغربي، مع نظام طاقة شمسية ونظام ذكي اختياريين. وتشمل المرافق المخطط لها محطة كهرباء، وحراسة على مدار 24 ساعة مع كاميرات مراقبة، ومواقف للسيارات، ومنطقة ألعاب للأطفال، ومساحات خضراء منسقة، ضمن تخطيط مناسب للمشاة وواجهات موحدة للفلل.",
+ "description_en": "ASCO Village is a villa project under construction in the Diamond Zone (Almas area) of north-east Erbil, opposite Grand Majidi Mall near the resort-road junction, between the 120 m and 150 m roads, about 10 minutes from the city centre and from Erbil International Airport. It is developed by Aree Group and is separate from ASCO International City in the same zone. The project offers three villa types: 230 m² and 275 m² villas with four bedrooms, and 394 m² villas with five bedrooms. The villas are built with pumice (Bonza) blocks and have chauffage central heating, pre-installed air-conditioning ducts, parquet flooring and Moroccan-style ceilings, with optional solar and smart-home systems. Planned facilities include a power station, 24-hour security with surveillance cameras, parking, a children's play area and landscaped green areas, in a pedestrian-friendly layout with unified villa façades.",
+ "sources": [
+  {
+   "site": "paya-realestate.com",
+   "url": "https://paya-realestate.com/en/projects/asco-village-327",
+   "info": "Name EN/AR, Constructing, villa specification list, amenity tags, 3 villa types with beds/baths and list prices, map coordinates",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  },
+  {
+   "site": "miranestate.com",
+   "url": "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip",
+   "info": "Developer Aree Group, names AR/KU, Diamond Zone, location text (opposite Grand Majidi Mall, between 120 m and 150 m roads), Under Construction (updated Aug 23, 2026), Types A/B/C 230/275/394 m², US$1,100/m², 5×20% plan, feature tags, 9 published listings",
+   "published": "2026-08-23",
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  },
+  {
+   "site": "homele.com",
+   "url": "https://homele.com/properties/for-sale-and-rent/erbil/asco-village",
+   "info": "Area page (6 pages): off-plan and ready-tagged villas 230–239 m², US$253,000–273,000",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "bathrooms (230 m² villa)",
+   "values": [
+    {
+     "value": "4 bed, 4 bath",
+     "source": "https://paya-realestate.com/en/projects/asco-village-327"
+    },
+    {
+     "value": "4 bed, 5 bath (listings)",
+     "source": "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+    }
+   ],
+   "resolution": "Paya project table kept; Miran figure from listing cards"
+  }
+ ],
+ "verification_status": "verified",
+ "confidence_overall": "high",
+ "last_researched_at": "2026-11-07",
+ "tier": 1,
+ "parent_project_id": null,
+ "figure_notes": [],
+ "land_area_dunams": null,
+ "land_area_dunams_basis": null,
+ "scale_details": {},
+ "google_maps_url": "https://www.google.com/maps?q=36.25617763,44.07726377",
+ "publish_recommendation": "ready"
+}
+```

@@ -3,41 +3,61 @@
 Project ID: mrf-quattro-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
 
 ## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL(s) |
+| Field | Verified Information | Confidence | Source URL |
 |---|---|---|---|
-| Project Name | MRF Quattro Towers | High – Miran, Baghy, Hajisalam, homele, B-Arrow (spelling variants) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://baghyshaqlawa.net/en/projects/quattro-towers; https://hajisalam.com/en/mrf-quatro-tower/; https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
-| Alternative names | Quattro Towers; Quatro Towers; MRF Quatro Tower; MRF Quattro | High – Spellings used across sources | https://baghyshaqlawa.net/en/projects/quattro-towers; https://hajisalam.com/en/mrf-quatro-tower/; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
-| City | Erbil | High – All sources | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://baghyshaqlawa.net/en/projects/quattro-towers |
-| District / Area | Gulan Street (40m road), opposite Sofi Mall | High – Miran, Baghy, B-Arrow (Gulan/40m); Hajisalam (opposite Sofi Mall) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://baghyshaqlawa.net/en/projects/quattro-towers; https://hajisalam.com/en/mrf-quatro-tower/; https://b-arrow.com/w/index.php/en/224/quattro_towers |
-| Developer | MRF Group (Miran: Lalav Group) | Medium – Sources disagree; see conflicts | https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
-| Project Category | Residential (apartments) | High – All sources | https://baghyshaqlawa.net/en/projects/quattro-towers; https://hajisalam.com/en/mrf-quatro-tower/ |
-| Total Land Area | Not verified | — – No source states it | — |
-| Number of Buildings / Towers | 4 | High – Miran, Baghy, B-Arrow agree | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers |
-| Total Residential Units | 1392 | Medium – Miran stats only | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
-| Floors per building | 29 | High – Miran, Baghy, B-Arrow (Hajisalam: 30) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers |
-| Construction Status | Completed | High – Miran 'Completed'; homele ready units; Hajisalam listings ~6 years old | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers; https://hajisalam.com/en/mrf-quatro-tower/ |
-| Launch Date | Not verified | — – No source states it | — |
-| Completion Date | Not verified | — – No source states it (Hajisalam listings about 6 years old imply occupancy by ~2020) | https://hajisalam.com/en/mrf-quatro-tower/ |
+| Project Name | MRF Quattro Towers | High – Miran, Baghy, Hajisalam, homele, B-Arrow (spelling variants) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://hajisalam.com/en/mrf-quatro-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
+| City | Erbil | High – All sources | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers |
+| District / Area | Gulan Street (40m road), opposite Sofi Mall | High – Miran, Baghy, B-Arrow (Gulan/40m); Hajisalam (opposite Sofi Mall) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://hajisalam.com/en/mrf-quatro-tower/ ; https://b-arrow.com/w/index.php/en/224/quattro_towers |
+| Developer | MRF Group (Miran: Lalav Group) | Medium – Sources disagree; see conflicts | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers ; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| Project Category | Residential (apartments) | High – All sources | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://hajisalam.com/en/mrf-quatro-tower/ |
+| Total Land Area | Not verified | Low – No source states it | — |
+| Number of Buildings / Towers | 4 | High – Miran, Baghy, B-Arrow agree | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers |
+| Total Residential Units | 1,392 | Medium – Miran stats only | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| Construction Status | Completed | High – Miran 'Completed'; homele ready units; Hajisalam listings ~6 years old | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers ; https://hajisalam.com/en/mrf-quatro-tower/ |
+| Completion Date | Not verified | Low – No source states it (Hajisalam listings about 6 years old imply occupancy by ~2020) | https://hajisalam.com/en/mrf-quatro-tower/ |
+| Coordinates | 36.215992, 44.002593 — Google Maps: https://www.google.com/maps?q=36.215992,44.002593 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/quattro-towers |
+| Alternative names | Quattro Towers; Quatro Towers; MRF Quatro Tower; MRF Quattro | High – Spellings used across sources | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://hajisalam.com/en/mrf-quatro-tower/ ; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| Project Owner | Not verified | Low – not stated by any source found | — |
+| Floors per building | 29 | High – Miran, Baghy, B-Arrow (Hajisalam: 30) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers |
+| Launch Date | Not verified | Low – No source states it | — |
 | Development Phases | Single complex of four towers | Medium – No phases mentioned | — |
-| Coordinates | 36.215992, 44.002593 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/quattro-towers |
+
+### Land area and development scale
+| Item | Value | Note | Source URL |
+|---|---|---|---|
+| Total project land area (m²) | Not verified | No source states it | — |
+| Total project land area (dunams) | Not verified | — | — |
+| Plots or parcels | Not verified | — | — |
+| Total housing units | 1,392 | Miran stats only | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| Villas / houses | Not verified | — | — |
+| Apartments | Not verified | — | — |
+| Commercial units | Not verified | — | — |
+| Towers / apartment buildings | 4 | Miran, Baghy, B-Arrow agree | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers |
+| Floors per building | 29 | Miran, Baghy, B-Arrow (Hajisalam: 30) | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers |
+| Green space, parks, landscaped area | Not verified | — | — |
+| Development phases | Single complex of four towers | No phases mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
-|---|---|---|---|---|---|
-| apartment | 81, 82, 83, 84, 85, 86, 87, 90 | 1 | 1 bath; 1+1, 8 types (Baghy): one bedroom, combined living room and kitchen, 1 bathroom, balcony; service fee USD 100 (period not stated). Miran lists 81/83/84/87/90; Hajisalam adds 88 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc; https://b-arrow.com/w/index.php/en/224/quattro_towers; https://hajisalam.com/en/mrf-quatro-tower/ |
-| apartment | 91, 123, 132 | 2 | 2 bath; 2+1, 3 types: two bedrooms, combined living room and kitchen, 2 bathrooms. Miran gives 130 instead of 132 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
-| apartment | 182, 184, 200, 202, 207, 209 | 3 | 3 bath; 3+1, 6 types: three bedrooms (one suite with dressing room), living room, kitchen, 3 bathrooms | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers; https://hajisalam.com/en/mrf-quatro-tower/ |
-| apartment | 271, 309 | 4 | 3 bath; 4+1, 2 types: four bedrooms (one suite with dressing room), living room, kitchen, storage, 3 bathrooms; Hajisalam and Miran give the top of the range as 310 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers; https://b-arrow.com/w/index.php/en/224/quattro_towers; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+|---|---|---|---|---|---|---|---|
+| apartment | 81, 82, 83, 84, 85, 86, 87, 90 | 81 | 90 | 1 | 1 bathrooms; 1+1, 8 types (Baghy): one bedroom, combined living room and kitchen, 1 bathroom, balcony; service fee USD 100 (period not stated). Miran lists 81/83/84/87/90; Hajisalam adds 88 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc ; https://b-arrow.com/w/index.php/en/224/quattro_towers ; https://hajisalam.com/en/mrf-quatro-tower/ |
+| apartment | 91, 123, 132 | 91 | 132 | 2 | 2 bathrooms; 2+1, 3 types: two bedrooms, combined living room and kitchen, 2 bathrooms. Miran gives 130 instead of 132 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers ; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+| apartment | 182, 184, 200, 202, 207, 209 | 182 | 209 | 3 | 3 bathrooms; 3+1, 6 types: three bedrooms (one suite with dressing room), living room, kitchen, 3 bathrooms | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers ; https://hajisalam.com/en/mrf-quatro-tower/ |
+| apartment | 271, 309 | 271 | 309 | 4 | 3 bathrooms; 4+1, 2 types: four bedrooms (one suite with dressing room), living room, kitchen, storage, 3 bathrooms; Hajisalam and Miran give the top of the range as 310 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/quattro-towers ; https://b-arrow.com/w/index.php/en/224/quattro_towers ; https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc |
+
+**Layouts and floor plans:** Not verified
+
+_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
 ## PART C — FACILITIES & INFRASTRUCTURE
 **Confirmed existing:** 24-hour electricity (Miran description; Baghy tag); Internet (Miran description 'high-speed internet'; Baghy tag); Underground parking (Miran description; Baghy 'Parking' tag); Supermarket (Miran description; Baghy tag); Gym (Miran description)
 
-**Confirmed planned:** None identified
+**Confirmed planned:** None
 
 **Unverified claims:** Security (Baghy tag); Mosque (Baghy tag); City administrative center (Baghy tag)
 
-## PART D — PRICES & PAYMENT (evidence-dated)
-| Item | Value | Currency | Type | Date / accessed | Source |
+### Prices and payment information (dated evidence, not official price lists)
+| Item | Value | Currency | Type | Date | Source |
 |---|---|---|---|---|---|
 | Ready apartment 81 m2, 1 bed / 1 bath, internal view - homele sale listing | 76,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
 | Ready apartment 309 m2, 4 bed / 3 bath - homele sale listing (negotiable) | 190,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
@@ -47,11 +67,13 @@ Project ID: mrf-quattro-towers | Tier: 1 | In Erbil city: Yes | Last researched:
 | Ready furnished apartment 123 m2, 2 bed / 2 bath - homele rent per month | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
 | Ready apartment 210 m2, 3 bed / 3 bath - homele rent per month | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
 | Ready furnished apartment 209 m2, 3 bed / 3 bath - homele rent per month | 850 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
+- **Maintenance or service charges:** Not verified
+- **Purchasing or rental arrangements:** Not verified
 
-## PART E — LOCATION & SURROUNDINGS
-MRF Quattro Towers stands on Gulan Street (the 40m ring road) opposite Sofi Mall (Hajisalam), about 2 km from Erbil's centre, roughly 5 minutes from Erbil International Airport and near Bakhtiyari street (Baghy). Map position (low confidence, from agency map pins): 36.215992, 44.002593.
+### Location and surroundings
+MRF Quattro Towers stands on Gulan Street (the 40m ring road) opposite Sofi Mall (Hajisalam), about 2 km from Erbil's centre, roughly 5 minutes from Erbil International Airport and near Bakhtiyari street (Baghy). Map position (low confidence, from agency map pins): 36.215992, 44.002593. Google Maps: https://www.google.com/maps?q=36.215992,44.002593
 
-## PART F — FINAL PROJECT DESCRIPTIONS
+## PART D — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
 تاوەرەکانی کواترۆی MRF کۆمەڵگەیەکی نیشتەجێبوونی تەواوبووە لە چوار تاوەری شوقە لەسەر شەقامی گوڵان (شەقامی ٤٠ مەتری) لە هەولێر، بەرامبەر سۆفی مۆڵ. نزیکەی ٢ کیلۆمەتر لە ناوەندی شار دوورە، نزیکەی پێنج خولەک لە فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە و نزیکی شەقامی بەختیارییە. هەر تاوەرێک ٢٩ نهۆمە، و کۆمەڵگەکە ١٬٣٩٢ شوقە لەخۆ دەگرێت. ڕووبەری شوقەی یەک ژووری نووستن لە ٨١ تا ٩٠ م²یە، و هۆڵی دانیشتن و مەتبەخی یەکگرتوو، یەک حەمام و بالکۆنیان هەیە. شوقەی دوو ژووری نووستن بە ڕووبەری ٩١، ١٢٣ و ١٣٢ م² هۆڵی دانیشتن و مەتبەخی یەکگرتوو و دوو حەمامیان هەیە. ڕووبەری شوقەی سێ ژووری نووستن لە ١٨٢ تا ٢٠٩ م²یە، و سویتێک بە ژووری جلوبەرگ، هۆڵی دانیشتن، مەتبەخ و سێ حەمامیان هەیە. شوقەی چوار ژووری نووستن بە ڕووبەری ٢٧١ و ٣٠٩ م² سویتێک بە ژووری جلوبەرگ، هۆڵی دانیشتن، مەتبەخ، ژووری کۆگا و سێ حەمامیان هەیە. خزمەتگوزارییەکانی کۆمەڵگەکە بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، پارکینگی ژێرزەوی، سوپەرمارکێت و هۆڵی وەرزش.
 
@@ -61,18 +83,26 @@ MRF Quattro Towers stands on Gulan Street (the 40m ring road) opposite Sofi Mall
 ### 3. English
 MRF Quattro Towers is a completed residential complex of four apartment towers on Gulan Street (the 40 m road) in Erbil, opposite Sofi Mall. It is about 2 km from the city centre, about five minutes from Erbil International Airport and close to Bakhtiyari Street. Each tower has 29 floors, and the complex contains 1,392 apartments. One-bedroom apartments range from 81 to 90 m² and have a combined living room and kitchen, one bathroom and a balcony. Two-bedroom apartments of 91, 123 and 132 m² have a combined living room and kitchen and two bathrooms. Three-bedroom apartments range from 182 to 209 m² and include a suite with a dressing room, a living room, a kitchen and three bathrooms. Four-bedroom apartments of 271 and 309 m² include a suite with a dressing room, a living room, a kitchen, a storage room and three bathrooms. Services in the complex include 24-hour electricity, internet, underground parking, a supermarket and a gym.
 
-## PART G — SOURCES AND RESEARCH LOG
-| Website | URL | Information obtained | Published/updated | Accessed | Reliability |
-|---|---|---|---|---|---|
-| miranestate.com | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc | MRF Quattro (updated 2026-08-20): Lalav Group; Completed; 4 buildings, 29 floors, 1,392 units; unit types 81-271 m2 (description 81-310 m2); 24-hr electricity, high-speed internet, underground parking, supermarket, gym; Gulan Street | updated 2026-08-20 | 2026-11-07 | high |
-| baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/quattro-towers | Quattro Towers: construction started by MRF group; Gulan street (40m), 2 km from centre, 5 min to airport, near Bakhtiyari street; 4 towers x 29 floors; full unit schedule 1+1 (8 types 81-90), 2+1 (91/123/132), 3+1 (182-209), 4+1 (271/309) with room composition; 1+1 service fee USD 100; facility tags | — | 2026-11-07 | high |
-| hajisalam.com | https://hajisalam.com/en/mrf-quatro-tower/ | MRF Quatro Tower: Gulan Road opposite Sofi Mall on street 40; apartments 81-310 m2 (size list 81-309); 30 floors; 1-4 bedrooms; old (6-year) listings | — | 2026-11-07 | medium |
-| homele.com | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers | Area listing page (4 pages; first read): ready apartments 81-309 m2; sale USD 76,000 (81 m2) and USD 190,000 (309 m2); rents USD 350-850/month | — | 2026-11-07 | medium |
-| b-arrow.com | https://b-arrow.com/w/index.php/en/224/quattro_towers | Quattro Towers: implemented by MRF group; 40m Street (Gulan); 4 buildings x 29 floors; unit schedule matching Baghy (1+1 81-87, 2+1 91/123/132, 3+1 184-209, 4+1 271/309) | — | 2026-11-07 | medium |
-| paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
+## PART E — SOURCES AND RESEARCH LOG
+### Primary websites
+| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+|---|---|---|---|---|---|---|---|
+| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers | Area listing page (4 pages; first read): ready apartments 81-309 m2; sale USD 76,000 (81 m2) and USD 190,000 (309 m2); rents USD 350-850/month | — | 2026-11-07 | medium |
+| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/quattro-towers | Quattro Towers: construction started by MRF group; Gulan street (40m), 2 km from centre, 5 min to airport, near Bakhtiyari street; 4 towers x 29 floors; full unit schedule 1+1 (8 types 81-90), 2+1 (91/123/132), 3+1 (182-209), 4+1 (271/309) with room composition; 1+1 service fee USD 100; facility tags | — | 2026-11-07 | high |
+| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/mrf-quatro-tower/ | MRF Quatro Tower: Gulan Road opposite Sofi Mall on street 40; apartments 81-310 m2 (size list 81-309); 30 floors; 1-4 bedrooms; old (6-year) listings | — | 2026-11-07 | medium |
+| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc | MRF Quattro (updated 2026-08-20): Lalav Group; Completed; 4 buildings, 29 floors, 1,392 units; unit types 81-271 m2 (description 81-310 m2); 24-hr electricity, high-speed internet, underground parking, supermarket, gym; Gulan Street | updated 2026-08-20 | 2026-11-07 | high |
 
-## PART H — DATA VERIFICATION REPORT
-1. **Fully verified information (≥2 independent sources):**
+### Additional public sources
+| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+|---|---|---|---|---|---|
+| b-arrow.com | https://b-arrow.com/w/index.php/en/224/quattro_towers | Quattro Towers: implemented by MRF group; 40m Street (Gulan); 4 buildings x 29 floors; unit schedule matching Baghy (1+1 81-87, 2+1 91/123/132, 3+1 184-209, 4+1 271/309) | — | 2026-11-07 | medium |
+
+### Web search log
+First-pass research only (at most one web search for this project).
+
+## PART F — DATA VERIFICATION REPORT
+1. **Fully verified information:**
    - Name, Gulan Street location, apartment category (Miran, Baghy, Hajisalam, B-Arrow)
    - 4 towers x 29 floors (Miran, Baghy, B-Arrow)
    - Unit schedule 81-309 m2, 1-4 bedrooms (Baghy, B-Arrow, Hajisalam, Miran)
@@ -101,4 +131,401 @@ MRF Quattro Towers is a completed residential complex of four apartment towers o
    - None
 6. **Important unresolved questions:**
    - Relationship between MRF Group and Lalav Group
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+
+## PART G — ANDAZ IMPORT-READY DATA
+```json
+{
+ "project_id": "mrf-quattro-towers",
+ "project_name": "MRF Quattro Towers",
+ "project_name_ku": "شوقەکانی کواترۆ",
+ "project_name_ar": "أبراج كواترو MRF",
+ "alternative_names": [
+  "Quattro Towers",
+  "Quatro Towers",
+  "MRF Quatro Tower",
+  "MRF Quattro",
+  "Quattro"
+ ],
+ "city": "Erbil",
+ "in_erbil_city": true,
+ "district": "Gulan Street (40m road), opposite Sofi Mall",
+ "location": "Gulan Street / 40m road, opposite Sofi Mall (Hajisalam); about 2 km from the city centre, about 5 minutes from Erbil International Airport, close to Bakhtiyari street (Baghy)",
+ "latitude": 36.215992,
+ "longitude": 44.002593,
+ "coordinates_confidence": "low",
+ "developer": "MRF Group (Miran lists Lalav Group)",
+ "project_owner": null,
+ "project_category": "residential",
+ "project_total_area_m2": null,
+ "project_total_area_source": null,
+ "number_of_buildings": 4,
+ "floors_per_building": 29,
+ "total_units": 1392,
+ "construction_status": "completed",
+ "launch_date": null,
+ "completion_date": null,
+ "development_phases": [
+  "Single complex of four towers; related MRF projects: MRF Towers 2/4/5 (entry mrf-towers)"
+ ],
+ "unit_types": [
+  {
+   "type": "apartment",
+   "sizes_m2": [
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    90
+   ],
+   "bedrooms": 1,
+   "bathrooms": 1,
+   "floors": null,
+   "notes": "1+1, 8 types (Baghy): one bedroom, combined living room and kitchen, 1 bathroom, balcony; service fee USD 100 (period not stated). Miran lists 81/83/84/87/90; Hajisalam adds 88 m2",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://baghyshaqlawa.net/en/projects/quattro-towers",
+    "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc",
+    "https://b-arrow.com/w/index.php/en/224/quattro_towers",
+    "https://hajisalam.com/en/mrf-quatro-tower/"
+   ]
+  },
+  {
+   "type": "apartment",
+   "sizes_m2": [
+    91,
+    123,
+    132
+   ],
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "floors": null,
+   "notes": "2+1, 3 types: two bedrooms, combined living room and kitchen, 2 bathrooms. Miran gives 130 instead of 132 m2",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://baghyshaqlawa.net/en/projects/quattro-towers",
+    "https://b-arrow.com/w/index.php/en/224/quattro_towers",
+    "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+   ]
+  },
+  {
+   "type": "apartment",
+   "sizes_m2": [
+    182,
+    184,
+    200,
+    202,
+    207,
+    209
+   ],
+   "bedrooms": 3,
+   "bathrooms": 3,
+   "floors": null,
+   "notes": "3+1, 6 types: three bedrooms (one suite with dressing room), living room, kitchen, 3 bathrooms",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://baghyshaqlawa.net/en/projects/quattro-towers",
+    "https://b-arrow.com/w/index.php/en/224/quattro_towers",
+    "https://hajisalam.com/en/mrf-quatro-tower/"
+   ]
+  },
+  {
+   "type": "apartment",
+   "sizes_m2": [
+    271,
+    309
+   ],
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "floors": null,
+   "notes": "4+1, 2 types: four bedrooms (one suite with dressing room), living room, kitchen, storage, 3 bathrooms; Hajisalam and Miran give the top of the range as 310 m2",
+   "evidence_type": "agency_project_page",
+   "source_urls": [
+    "https://baghyshaqlawa.net/en/projects/quattro-towers",
+    "https://b-arrow.com/w/index.php/en/224/quattro_towers",
+    "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+   ]
+  }
+ ],
+ "available_unit_sizes_m2": [
+  {
+   "size_m2": 81,
+   "type": "apartment 1+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 90,
+   "type": "apartment 1+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 91,
+   "type": "apartment 2+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 123,
+   "type": "apartment 2+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 132,
+   "type": "apartment 2+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 184,
+   "type": "apartment 3+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+  },
+  {
+   "size_m2": 209,
+   "type": "apartment 3+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 271,
+   "type": "apartment 4+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+  },
+  {
+   "size_m2": 309,
+   "type": "apartment 4+1",
+   "evidence_type": "agency_project_page",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  {
+   "size_m2": 210,
+   "type": "apartment 3 bed",
+   "evidence_type": "market_listing",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  }
+ ],
+ "verified_facilities": [
+  "24-hour electricity (Miran description; Baghy tag)",
+  "Internet (Miran description 'high-speed internet'; Baghy tag)",
+  "Underground parking (Miran description; Baghy 'Parking' tag)",
+  "Supermarket (Miran description; Baghy tag)",
+  "Gym (Miran description)"
+ ],
+ "planned_facilities": [],
+ "unverified_facilities": [
+  "Security (Baghy tag)",
+  "Mosque (Baghy tag)",
+  "City administrative center (Baghy tag)"
+ ],
+ "prices": [
+  {
+   "item": "Ready apartment 81 m2, 1 bed / 1 bath, internal view - homele sale listing",
+   "value": 76000,
+   "currency": "USD",
+   "price_type": "resale",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready apartment 309 m2, 4 bed / 3 bath - homele sale listing (negotiable)",
+   "value": 190000,
+   "currency": "USD",
+   "price_type": "resale",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready apartment 91 m2, internal view - homele rent per month",
+   "value": 350,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready furnished apartment 85 m2, 1 bed - homele rent per month",
+   "value": 400,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready furnished apartment 83 m2, 1 bed - homele rent per month",
+   "value": 450,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready furnished apartment 123 m2, 2 bed / 2 bath - homele rent per month",
+   "value": 600,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready apartment 210 m2, 3 bed / 3 bath - homele rent per month",
+   "value": 800,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  },
+  {
+   "item": "Ready furnished apartment 209 m2, 3 bed / 3 bath - homele rent per month",
+   "value": 850,
+   "currency": "USD",
+   "price_type": "rent",
+   "date": "accessed 2026-11-07",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+  }
+ ],
+ "description_ku": "تاوەرەکانی کواترۆی MRF کۆمەڵگەیەکی نیشتەجێبوونی تەواوبووە لە چوار تاوەری شوقە لەسەر شەقامی گوڵان (شەقامی ٤٠ مەتری) لە هەولێر، بەرامبەر سۆفی مۆڵ. نزیکەی ٢ کیلۆمەتر لە ناوەندی شار دوورە، نزیکەی پێنج خولەک لە فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە و نزیکی شەقامی بەختیارییە. هەر تاوەرێک ٢٩ نهۆمە، و کۆمەڵگەکە ١٬٣٩٢ شوقە لەخۆ دەگرێت. ڕووبەری شوقەی یەک ژووری نووستن لە ٨١ تا ٩٠ م²یە، و هۆڵی دانیشتن و مەتبەخی یەکگرتوو، یەک حەمام و بالکۆنیان هەیە. شوقەی دوو ژووری نووستن بە ڕووبەری ٩١، ١٢٣ و ١٣٢ م² هۆڵی دانیشتن و مەتبەخی یەکگرتوو و دوو حەمامیان هەیە. ڕووبەری شوقەی سێ ژووری نووستن لە ١٨٢ تا ٢٠٩ م²یە، و سویتێک بە ژووری جلوبەرگ، هۆڵی دانیشتن، مەتبەخ و سێ حەمامیان هەیە. شوقەی چوار ژووری نووستن بە ڕووبەری ٢٧١ و ٣٠٩ م² سویتێک بە ژووری جلوبەرگ، هۆڵی دانیشتن، مەتبەخ، ژووری کۆگا و سێ حەمامیان هەیە. خزمەتگوزارییەکانی کۆمەڵگەکە بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، پارکینگی ژێرزەوی، سوپەرمارکێت و هۆڵی وەرزش.",
+ "description_ar": "أبراج كواترو MRF مجمع سكني مكتمل يضم أربعة أبراج للشقق على شارع كولان (شارع 40 متر) في أربيل، مقابل صوفي مول. يبعد نحو 2 كم عن مركز المدينة ونحو خمس دقائق عن مطار أربيل الدولي، ويقع قرب شارع بختياري. يتكوّن كل برج من 29 طابقاً، ويضم المجمع 1,392 شقة. تتراوح مساحات الشقق بغرفة نوم واحدة بين 81 و90 م²، وتضم صالة معيشة ومطبخاً مدمجين وحماماً واحداً وشرفة. وتضم الشقق بغرفتي نوم بمساحات 91 و123 و132 م² صالة معيشة ومطبخاً مدمجين وحمامين. وتتراوح مساحات الشقق بثلاث غرف نوم بين 182 و209 م²، وتضم جناحاً مع غرفة ملابس وصالة معيشة ومطبخاً وثلاثة حمامات. أما الشقق بأربع غرف نوم بمساحتي 271 و309 م² فتضم جناحاً مع غرفة ملابس وصالة معيشة ومطبخاً وغرفة تخزين وثلاثة حمامات. وتشمل الخدمات في المجمع الكهرباء على مدار 24 ساعة والإنترنت ومواقف سيارات تحت الأرض وسوبرماركت وصالة رياضية.",
+ "description_en": "MRF Quattro Towers is a completed residential complex of four apartment towers on Gulan Street (the 40 m road) in Erbil, opposite Sofi Mall. It is about 2 km from the city centre, about five minutes from Erbil International Airport and close to Bakhtiyari Street. Each tower has 29 floors, and the complex contains 1,392 apartments. One-bedroom apartments range from 81 to 90 m² and have a combined living room and kitchen, one bathroom and a balcony. Two-bedroom apartments of 91, 123 and 132 m² have a combined living room and kitchen and two bathrooms. Three-bedroom apartments range from 182 to 209 m² and include a suite with a dressing room, a living room, a kitchen and three bathrooms. Four-bedroom apartments of 271 and 309 m² include a suite with a dressing room, a living room, a kitchen, a storage room and three bathrooms. Services in the complex include 24-hour electricity, internet, underground parking, a supermarket and a gym.",
+ "sources": [
+  {
+   "site": "miranestate.com",
+   "url": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc",
+   "info": "MRF Quattro (updated 2026-08-20): Lalav Group; Completed; 4 buildings, 29 floors, 1,392 units; unit types 81-271 m2 (description 81-310 m2); 24-hr electricity, high-speed internet, underground parking, supermarket, gym; Gulan Street",
+   "published": "updated 2026-08-20",
+   "accessed": "2026-11-07",
+   "reliability": "high"
+  },
+  {
+   "site": "baghyshaqlawa.net",
+   "url": "https://baghyshaqlawa.net/en/projects/quattro-towers",
+   "info": "Quattro Towers: construction started by MRF group; Gulan street (40m), 2 km from centre, 5 min to airport, near Bakhtiyari street; 4 towers x 29 floors; full unit schedule 1+1 (8 types 81-90), 2+1 (91/123/132), 3+1 (182-209), 4+1 (271/309) with room composition; 1+1 service fee USD 100; facility tags",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "high"
+  },
+  {
+   "site": "hajisalam.com",
+   "url": "https://hajisalam.com/en/mrf-quatro-tower/",
+   "info": "MRF Quatro Tower: Gulan Road opposite Sofi Mall on street 40; apartments 81-310 m2 (size list 81-309); 30 floors; 1-4 bedrooms; old (6-year) listings",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  },
+  {
+   "site": "homele.com",
+   "url": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers",
+   "info": "Area listing page (4 pages; first read): ready apartments 81-309 m2; sale USD 76,000 (81 m2) and USD 190,000 (309 m2); rents USD 350-850/month",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  },
+  {
+   "site": "b-arrow.com",
+   "url": "https://b-arrow.com/w/index.php/en/224/quattro_towers",
+   "info": "Quattro Towers: implemented by MRF group; 40m Street (Gulan); 4 buildings x 29 floors; unit schedule matching Baghy (1+1 81-87, 2+1 91/123/132, 3+1 184-209, 4+1 271/309)",
+   "published": null,
+   "accessed": "2026-11-07",
+   "reliability": "medium"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "developer",
+   "values": [
+    {
+     "value": "MRF Group",
+     "source": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+    },
+    {
+     "value": "MRF group",
+     "source": "https://b-arrow.com/w/index.php/en/224/quattro_towers"
+    },
+    {
+     "value": "Lalav Group",
+     "source": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+    }
+   ],
+   "resolution": "MRF Group kept as builder (two sources and project name); Miran 2026 attribution to Lalav Group recorded. Relationship not stated in sources."
+  },
+  {
+   "field": "floors per tower",
+   "values": [
+    {
+     "value": "29",
+     "source": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+    },
+    {
+     "value": "29",
+     "source": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+    },
+    {
+     "value": "30",
+     "source": "https://hajisalam.com/en/mrf-quatro-tower/"
+    }
+   ],
+   "resolution": "29 adopted (three sources); Hajisalam's 30 may count ground/podium."
+  },
+  {
+   "field": "largest 2+1 size",
+   "values": [
+    {
+     "value": "132 m2",
+     "source": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+    },
+    {
+     "value": "130 m2",
+     "source": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+    }
+   ],
+   "resolution": "132 m2 adopted (Baghy, B-Arrow, Hajisalam)."
+  },
+  {
+   "field": "largest 4+1 size",
+   "values": [
+    {
+     "value": "309 m2",
+     "source": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+    },
+    {
+     "value": "310 m2",
+     "source": "https://hajisalam.com/en/mrf-quatro-tower/"
+    }
+   ],
+   "resolution": "309 m2 adopted (Baghy, B-Arrow, homele listing); 310 treated as rounding."
+  },
+  {
+   "field": "91 m2 layout",
+   "values": [
+    {
+     "value": "2+1",
+     "source": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+    },
+    {
+     "value": "1 bed / 1 bath listings",
+     "source": "https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers"
+    }
+   ],
+   "resolution": "2+1 adopted from project pages."
+  }
+ ],
+ "verification_status": "verified",
+ "confidence_overall": "high",
+ "last_researched_at": "2026-11-07",
+ "tier": 1,
+ "parent_project_id": null,
+ "figure_notes": [],
+ "land_area_dunams": null,
+ "land_area_dunams_basis": null,
+ "scale_details": {},
+ "google_maps_url": "https://www.google.com/maps?q=36.215992,44.002593",
+ "publish_recommendation": "ready"
+}
+```

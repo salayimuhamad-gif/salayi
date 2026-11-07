@@ -193,6 +193,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -271,6 +275,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.151071,44.019006",
   "publish_recommendation": "review"
  },
  {
@@ -385,6 +393,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1903055,43.9749203",
   "publish_recommendation": "review"
  },
  {
@@ -568,6 +580,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 115.7,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.264622,43.99391",
   "publish_recommendation": "ready"
  },
  {
@@ -663,6 +679,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -989,6 +1009,10 @@
     "explanation": "Miran stats and text only"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.183348,43.946552",
   "publish_recommendation": "ready"
  },
  {
@@ -1357,6 +1381,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.238649,44.010108",
   "publish_recommendation": "ready"
  },
  {
@@ -1492,6 +1520,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -1632,6 +1664,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -1941,6 +1977,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.257407,44.047359",
   "publish_recommendation": "ready"
  },
  {
@@ -2321,6 +2361,10 @@
     "explanation": "Paya and Miran texts; Miran stats say 900 (see conflicts)"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.230009,44.011402",
   "publish_recommendation": "ready"
  },
  {
@@ -2642,6 +2686,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.244737,44.037278",
   "publish_recommendation": "ready"
  },
  {
@@ -3138,6 +3186,10 @@
     "explanation": "two primary sites agree on ~900; roya 662 may be an earlier planning figure or refer to another phase"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.247552,44.043387",
   "publish_recommendation": "ready"
  },
  {
@@ -3457,6 +3509,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.253582,44.077763",
   "publish_recommendation": "ready"
  },
  {
@@ -3685,6 +3741,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.25617763,44.07726377",
   "publish_recommendation": "ready"
  },
  {
@@ -3911,6 +3971,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -4156,6 +4220,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.213258,44.122411",
   "publish_recommendation": "ready"
  },
  {
@@ -4270,6 +4338,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -4439,6 +4511,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.108702,44.024204",
   "publish_recommendation": "review"
  },
  {
@@ -4574,6 +4650,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 80.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -4869,6 +4949,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.233042,44.011093",
   "publish_recommendation": "ready"
  },
  {
@@ -4956,6 +5040,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -5066,6 +5154,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -5159,6 +5251,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.293864,44.117997",
   "publish_recommendation": "review"
  },
  {
@@ -5203,6 +5299,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "hold"
  },
  {
@@ -5575,6 +5675,10 @@
     "explanation": "Low — single agency source, approximate wording"
    }
   ],
+  "land_area_dunams": 2.8,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.203145,44.000022",
   "publish_recommendation": "ready"
  },
  {
@@ -5674,6 +5778,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -5966,6 +6074,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.214071,43.966152",
   "publish_recommendation": "ready"
  },
  {
@@ -6170,6 +6282,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -6525,6 +6641,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.188816,43.97441",
   "publish_recommendation": "ready"
  },
  {
@@ -6909,6 +7029,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 1.9,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.206351,43.985105",
   "publish_recommendation": "ready"
  },
  {
@@ -7303,6 +7427,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 1.3,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.213047,43.977273",
   "publish_recommendation": "review"
  },
  {
@@ -7531,6 +7659,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 16.4,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1655977,44.0210725",
   "publish_recommendation": "review"
  },
  {
@@ -7846,6 +7978,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 2.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.206172,43.961078",
   "publish_recommendation": "review"
  },
  {
@@ -8175,6 +8311,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.137046,44.014998",
   "publish_recommendation": "ready"
  },
  {
@@ -8291,6 +8431,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -8534,6 +8678,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.286995,44.023759",
   "publish_recommendation": "ready"
  },
  {
@@ -8812,6 +8960,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 19.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.223219,44.069144",
   "publish_recommendation": "ready"
  },
  {
@@ -9172,6 +9324,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -9480,6 +9636,10 @@
     "explanation": "Single agency source (Paya)"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1611718,43.9174803",
   "publish_recommendation": "ready"
  },
  {
@@ -9670,6 +9830,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 216.4,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -9961,6 +10125,10 @@
     "explanation": "Baghy and b-arrow share the same text (not independent)"
    }
   ],
+  "land_area_dunams": 400.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.20567,43.976855",
   "publish_recommendation": "ready"
  },
  {
@@ -10068,6 +10236,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -10316,6 +10488,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -10660,6 +10836,10 @@
     "explanation": "5 towers: Bagh-y + Hajisalam + Roya (search summary); 6 complex buildings: Bagh-y + Roya (search summary, about 25 m high each)"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -11050,6 +11230,10 @@
   "tier": 1,
   "parent_project_id": "empire-world",
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.201114,43.965876",
   "publish_recommendation": "ready"
  },
  {
@@ -11426,6 +11610,10 @@
     "explanation": "Miran states it; matches Paya's per-floor figures (7 x 21 x 12 + 21 x 2 = 1,806)"
    }
   ],
+  "land_area_dunams": 93.6,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.198395,43.9645091",
   "publish_recommendation": "ready"
  },
  {
@@ -11780,6 +11968,10 @@
   "tier": 1,
   "parent_project_id": "empire-world",
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -12234,6 +12426,10 @@
   "tier": 1,
   "parent_project_id": "empire-world",
   "figure_notes": [],
+  "land_area_dunams": 67.4,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2037639,43.9674921",
   "publish_recommendation": "ready"
  },
  {
@@ -12843,6 +13039,10 @@
   "tier": 1,
   "parent_project_id": "empire-world",
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2011705,43.9693437",
   "publish_recommendation": "ready"
  },
  {
@@ -13390,6 +13590,10 @@
     "explanation": "Not on any primary site; seen via WebSearch summary of news pages"
    }
   ],
+  "land_area_dunams": 300.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.199026,43.970393",
   "publish_recommendation": "ready"
  },
  {
@@ -13806,6 +14010,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.193123,43.967479",
   "publish_recommendation": "ready"
  },
  {
@@ -14165,6 +14373,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.192702,43.971569",
   "publish_recommendation": "ready"
  },
  {
@@ -14517,6 +14729,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1807004,43.9618505",
   "publish_recommendation": "review"
  },
  {
@@ -14743,6 +14959,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 25.1,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2188027,44.0406309",
   "publish_recommendation": "ready"
  },
  {
@@ -15075,6 +15295,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.174711,44.006884",
   "publish_recommendation": "ready"
  },
  {
@@ -15472,6 +15696,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.179312,44.024869",
   "publish_recommendation": "ready"
  },
  {
@@ -15712,6 +15940,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2104288,43.97833999",
   "publish_recommendation": "ready"
  },
  {
@@ -15889,6 +16121,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.315083,44.154823",
   "publish_recommendation": "review"
  },
  {
@@ -16073,6 +16309,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.267336,44.09574",
   "publish_recommendation": "review"
  },
  {
@@ -16545,6 +16785,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2201269,44.0089174",
   "publish_recommendation": "ready"
  },
  {
@@ -17038,6 +17282,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.201832,44.106989",
   "publish_recommendation": "ready"
  },
  {
@@ -17106,6 +17354,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.204486,44.117569",
   "publish_recommendation": "review"
  },
  {
@@ -17401,6 +17653,10 @@
     "explanation": "Single source; consistent with 9,000 m2 garden = ~60% of total"
    }
   ],
+  "land_area_dunams": 6.1,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.245319,44.063926",
   "publish_recommendation": "ready"
  },
  {
@@ -17618,6 +17874,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -17960,6 +18220,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.291408,44.041212",
   "publish_recommendation": "ready"
  },
  {
@@ -18151,6 +18415,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.288085,44.043963",
   "publish_recommendation": "review"
  },
  {
@@ -18479,6 +18747,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.212639,44.131862",
   "publish_recommendation": "ready"
  },
  {
@@ -18561,6 +18833,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.28853,44.090876",
   "publish_recommendation": "review"
  },
  {
@@ -18768,6 +19044,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.297019,44.040291",
   "publish_recommendation": "review"
  },
  {
@@ -19258,6 +19538,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 44.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.211805,43.970275",
   "publish_recommendation": "ready"
  },
  {
@@ -19358,6 +19642,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -19705,6 +19993,10 @@
     "explanation": "Derived from homele floor split and Paya text ('WTC building and the residences')"
    }
   ],
+  "land_area_dunams": 100.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.212682,43.992212",
   "publish_recommendation": "ready"
  },
  {
@@ -19792,6 +20084,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.195614,44.061462",
   "publish_recommendation": "review"
  },
  {
@@ -20020,6 +20316,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.260447,43.99495",
   "publish_recommendation": "ready"
  },
  {
@@ -20144,6 +20444,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -20231,6 +20535,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -20333,6 +20641,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -20429,6 +20741,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -20475,6 +20791,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -20736,6 +21056,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.203426,44.094436",
   "publish_recommendation": "ready"
  },
  {
@@ -21160,6 +21484,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.188236,43.969943",
   "publish_recommendation": "ready"
  },
  {
@@ -21438,6 +21766,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.241466,44.05029",
   "publish_recommendation": "ready"
  },
  {
@@ -21592,6 +21924,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -21691,6 +22027,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -21922,6 +22262,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.262024,43.986609",
   "publish_recommendation": "ready"
  },
  {
@@ -22311,6 +22655,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2775954,44.0169265",
   "publish_recommendation": "ready"
  },
  {
@@ -22460,6 +22808,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -22685,6 +23037,10 @@
     "explanation": "408 houses/villas + 364 apartments, both figures stated by Baghy and Haji Salam; the total is their sum"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.293981,44.059918",
   "publish_recommendation": "ready"
  },
  {
@@ -23176,6 +23532,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 4.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.213706,43.960223",
   "publish_recommendation": "ready"
  },
  {
@@ -23510,6 +23870,10 @@
     "explanation": "Baghy breakdown 1,008 + 480 + 192; b-arrow says 1,795"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2906409,44.0217115",
   "publish_recommendation": "ready"
  },
  {
@@ -23772,6 +24136,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.218701,44.064995",
   "publish_recommendation": "ready"
  },
  {
@@ -23941,6 +24309,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2838833,44.0158702",
   "publish_recommendation": "review"
  },
  {
@@ -24304,6 +24676,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.181253,43.970565",
   "publish_recommendation": "ready"
  },
  {
@@ -24574,6 +24950,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.267307,44.014457",
   "publish_recommendation": "ready"
  },
  {
@@ -24752,6 +25132,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1653254,44.0179707",
   "publish_recommendation": "ready"
  },
  {
@@ -24829,6 +25213,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.216607,44.064268",
   "publish_recommendation": "review"
  },
  {
@@ -25043,6 +25431,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.3010182,44.06251419",
   "publish_recommendation": "ready"
  },
  {
@@ -25460,6 +25852,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 3.1,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.129246,44.024083",
   "publish_recommendation": "ready"
  },
  {
@@ -25777,6 +26173,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.18821403,44.12359018",
   "publish_recommendation": "ready"
  },
  {
@@ -26291,6 +26691,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.25972,44.012861",
   "publish_recommendation": "ready"
  },
  {
@@ -26670,6 +27074,10 @@
     "explanation": "Sum of two figures stated by Paya"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.180041,43.949789",
   "publish_recommendation": "ready"
  },
  {
@@ -26962,6 +27370,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -27096,6 +27508,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.314025,44.033777",
   "publish_recommendation": "review"
  },
  {
@@ -27525,6 +27941,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 2.9,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.20372,43.983032",
   "publish_recommendation": "ready"
  },
  {
@@ -27804,6 +28224,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.204262,44.092099",
   "publish_recommendation": "ready"
  },
  {
@@ -27898,6 +28322,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.267608,44.082291",
   "publish_recommendation": "review"
  },
  {
@@ -28195,6 +28623,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 19.2,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2172129,44.0631386",
   "publish_recommendation": "ready"
  },
  {
@@ -28314,6 +28746,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -28413,6 +28849,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -28498,6 +28938,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -28831,6 +29275,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.239133,44.068067",
   "publish_recommendation": "ready"
  },
  {
@@ -29034,6 +29482,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -29236,6 +29688,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.248758,44.055948",
   "publish_recommendation": "ready"
  },
  {
@@ -29488,6 +29944,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.229119,44.064284",
   "publish_recommendation": "ready"
  },
  {
@@ -29594,6 +30054,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -29720,6 +30184,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.185015,44.063368",
   "publish_recommendation": "review"
  },
  {
@@ -29943,6 +30411,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 4.2,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.219239,44.064827",
   "publish_recommendation": "review"
  },
  {
@@ -30119,6 +30591,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 58.3,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.26465,43.99396",
   "publish_recommendation": "ready"
  },
  {
@@ -30451,6 +30927,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.20491,43.983547",
   "publish_recommendation": "ready"
  },
  {
@@ -30690,6 +31170,10 @@
     "explanation": "Paya (approx.) and Baghy agree"
    }
   ],
+  "land_area_dunams": 70.3,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.225333,44.076901",
   "publish_recommendation": "ready"
  },
  {
@@ -31079,6 +31563,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.215992,44.002593",
   "publish_recommendation": "ready"
  },
  {
@@ -31395,6 +31883,10 @@
     "explanation": "Baghy and Hajisalam '11 towers'; Miran 2 + 4 + 5"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.194881,43.966536",
   "publish_recommendation": "ready"
  },
  {
@@ -31523,6 +32015,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.181373,44.068956",
   "publish_recommendation": "review"
  },
  {
@@ -31828,6 +32324,10 @@
     "explanation": "Baghy text; consistent with its 7 x 11 + 7 x 14 storeys x 4 flats layout"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.210352,43.987364",
   "publish_recommendation": "ready"
  },
  {
@@ -32101,6 +32601,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 306.5,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.247912,44.016465",
   "publish_recommendation": "ready"
  },
  {
@@ -32236,6 +32740,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -32402,6 +32910,10 @@
     "explanation": "Baghy only (= 16 x 17 x 4)"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.176875,44.022216",
   "publish_recommendation": "ready"
  },
  {
@@ -32650,6 +33162,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2408384,44.0576064",
   "publish_recommendation": "ready"
  },
  {
@@ -32882,6 +33398,10 @@
   "tier": 1,
   "parent_project_id": "noble-city",
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2537662,43.9999248",
   "publish_recommendation": "ready"
  },
  {
@@ -33138,6 +33658,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -33377,6 +33901,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.207774,43.963793",
   "publish_recommendation": "ready"
  },
  {
@@ -33690,6 +34218,10 @@
     "explanation": "Miran text only; breakdown sums to 459"
    }
   ],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.257375,44.103577",
   "publish_recommendation": "ready"
  },
  {
@@ -33934,6 +34466,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.298784,44.055124",
   "publish_recommendation": "ready"
  },
  {
@@ -34044,6 +34580,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -34186,6 +34726,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -34462,6 +35006,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.26089,43.98983",
   "publish_recommendation": "ready"
  },
  {
@@ -34923,6 +35471,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.208994,43.983425",
   "publish_recommendation": "ready"
  },
  {
@@ -35210,6 +35762,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 2.6,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.204765,44.114938",
   "publish_recommendation": "ready"
  },
  {
@@ -35423,6 +35979,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 680.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.223704,43.980216",
   "publish_recommendation": "ready"
  },
  {
@@ -35762,6 +36322,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.282622,44.082791",
   "publish_recommendation": "ready"
  },
  {
@@ -36099,6 +36663,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.199212,43.98406",
   "publish_recommendation": "ready"
  },
  {
@@ -36214,6 +36782,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.20481,44.120751",
   "publish_recommendation": "review"
  },
  {
@@ -36621,6 +37193,10 @@
     "explanation": "Three descriptions vs Miran statistic"
    }
   ],
+  "land_area_dunams": 58.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.25109,44.07495",
   "publish_recommendation": "ready"
  },
  {
@@ -36935,6 +37511,10 @@
     "explanation": "Paya 'nearly 4,000'; homele 'about 4000'"
    }
   ],
+  "land_area_dunams": 24.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.268606,44.017648",
   "publish_recommendation": "ready"
  },
  {
@@ -37267,6 +37847,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.2139,43.990932",
   "publish_recommendation": "ready"
  },
  {
@@ -37649,6 +38233,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.190818,43.968466",
   "publish_recommendation": "ready"
  },
  {
@@ -37802,6 +38390,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -38071,6 +38663,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 184.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.283417,44.10646",
   "publish_recommendation": "ready"
  },
  {
@@ -38212,6 +38808,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.148103,44.019843",
   "publish_recommendation": "review"
  },
  {
@@ -38450,6 +39050,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 3.2,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.1482821,44.0187248",
   "publish_recommendation": "ready"
  },
  {
@@ -38669,6 +39273,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.3055075,44.0436465",
   "publish_recommendation": "ready"
  },
  {
@@ -38764,6 +39372,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.205164,44.123055",
   "publish_recommendation": "review"
  },
  {
@@ -39117,6 +39729,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.191922,43.968033",
   "publish_recommendation": "ready"
  },
  {
@@ -39344,6 +39960,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.151044,43.955494",
   "publish_recommendation": "review"
  },
  {
@@ -39558,6 +40178,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.21909,44.003512",
   "publish_recommendation": "ready"
  },
  {
@@ -39628,6 +40252,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.260826,44.088285",
   "publish_recommendation": "review"
  },
  {
@@ -39915,6 +40543,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.216791,43.990494",
   "publish_recommendation": "ready"
  },
  {
@@ -40095,6 +40727,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -40192,6 +40828,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -40295,6 +40935,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -40379,6 +41023,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -40703,6 +41351,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -41127,6 +41779,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.224536,44.009508",
   "publish_recommendation": "ready"
  },
  {
@@ -41484,6 +42140,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.272094,44.089713",
   "publish_recommendation": "ready"
  },
  {
@@ -41646,6 +42306,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -41972,6 +42636,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.279824,44.069417",
   "publish_recommendation": "ready"
  },
  {
@@ -42203,6 +42871,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -42287,6 +42959,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -42711,6 +43387,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -43188,6 +43868,10 @@
     "explanation": "Paya, Miran and b-arrow agree"
    }
   ],
+  "land_area_dunams": 21.2,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.213556,43.991397",
   "publish_recommendation": "ready"
  },
  {
@@ -43277,6 +43961,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.283192,44.014454",
   "publish_recommendation": "review"
  },
  {
@@ -43791,6 +44479,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.200802,43.981425",
   "publish_recommendation": "ready"
  },
  {
@@ -44130,6 +44822,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.243794,44.066959",
   "publish_recommendation": "review"
  },
  {
@@ -44489,6 +45185,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 6.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.209912,43.959933",
   "publish_recommendation": "ready"
  },
  {
@@ -44609,6 +45309,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.299251,44.028976",
   "publish_recommendation": "review"
  },
  {
@@ -45079,6 +45783,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 5.2,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.216731,43.993221",
   "publish_recommendation": "ready"
  },
  {
@@ -45163,6 +45871,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -45238,6 +45950,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.277939,44.016054",
   "publish_recommendation": "review"
  },
  {
@@ -45644,6 +46360,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 3.9,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.196782,43.964124",
   "publish_recommendation": "ready"
  },
  {
@@ -45894,6 +46614,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.188068,43.969141",
   "publish_recommendation": "review"
  },
  {
@@ -46210,6 +46934,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 3.1,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.209281,43.958524",
   "publish_recommendation": "ready"
  },
  {
@@ -46569,6 +47297,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.172493,43.962047",
   "publish_recommendation": "ready"
  },
  {
@@ -46687,6 +47419,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.285467,44.114716",
   "publish_recommendation": "review"
  },
  {
@@ -46879,6 +47615,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -47030,6 +47770,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -47346,6 +48090,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.134663,44.067892",
   "publish_recommendation": "ready"
  },
  {
@@ -47531,6 +48279,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.297326,44.041255",
   "publish_recommendation": "ready"
  },
  {
@@ -47664,6 +48416,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.138633,44.028042",
   "publish_recommendation": "ready"
  },
  {
@@ -47925,6 +48681,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.174717,44.010722",
   "publish_recommendation": "ready"
  },
  {
@@ -48153,6 +48913,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.285784,44.091212",
   "publish_recommendation": "ready"
  },
  {
@@ -48295,6 +49059,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -48508,6 +49276,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.196476,44.094018",
   "publish_recommendation": "review"
  },
  {
@@ -48727,6 +49499,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.25239,44.062743",
   "publish_recommendation": "ready"
  },
  {
@@ -48930,6 +49706,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.314579,44.160955",
   "publish_recommendation": "ready"
  },
  {
@@ -49006,6 +49786,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.264731,44.088541",
   "publish_recommendation": "review"
  },
  {
@@ -49120,6 +49904,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.206496,44.112794",
   "publish_recommendation": "review"
  },
  {
@@ -49596,6 +50384,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": 500.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.312415,44.16918",
   "publish_recommendation": "ready"
  },
  {
@@ -49731,6 +50523,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -50073,6 +50869,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.220751,44.145889",
   "publish_recommendation": "ready"
  },
  {
@@ -50150,6 +50950,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -50363,6 +51167,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.214394,44.114083",
   "publish_recommendation": "review"
  },
  {
@@ -50758,6 +51566,10 @@
     "explanation": "Arithmetic from homele figures; no stated total"
    }
   ],
+  "land_area_dunams": 144.0,
+  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
+  "scale_details": {},
+  "google_maps_url": "https://www.google.com/maps?q=36.216158,44.150676",
   "publish_recommendation": "ready"
  },
  {
@@ -51038,6 +51850,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "ready"
  },
  {
@@ -51127,6 +51943,10 @@
   "tier": 1,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "review"
  },
  {
@@ -51242,6 +52062,10 @@
   "tier": 2,
   "parent_project_id": null,
   "figure_notes": [],
+  "land_area_dunams": null,
+  "land_area_dunams_basis": null,
+  "scale_details": {},
+  "google_maps_url": null,
   "publish_recommendation": "hold"
  }
 ]
