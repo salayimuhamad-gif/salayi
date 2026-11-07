@@ -1,104 +1,107 @@
 <!-- rendered -->
 # Dubai City — دوبەی سیتی — دبي سيتي
-Project ID: dubai-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: dubai-city | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Dubai City | Medium – Baghy project page and Homele area label agree | https://baghyshaqlawa.net/en/projects/dubai-city ; https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
-| City | Erbil (urban fringe) | Medium – Erbil–Koya road address; exact position unknown | https://baghyshaqlawa.net/en/projects/dubai-city |
-| District / Area | Erbil–Koya Road | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/dubai-city |
-| Developer | Not verified | Low – No source names one; one WebSearch found nothing | — |
-| Project Category | Residential (villas) | Medium – Baghy property type Villa; Homele villa listing | https://baghyshaqlawa.net/en/projects/dubai-city ; https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Not verified (at least one villa advertised as ready) | Low – No project-level status; single 'Ready' listing | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.206496, 44.112794 — Google Maps: https://www.google.com/maps?q=36.206496,44.112794 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/dubai-city |
-| Alternative names | Dubay City (spelling variant) | Low – From canonical project list | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None reported | Low – — – No source | — |
+| ناوی پڕۆژە | Dubai City | مامناوەند – Baghy project page and Homele area label agree | https://baghyshaqlawa.net/en/projects/dubai-city ; https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
+| شار | Erbil (urban fringe) | مامناوەند – Erbil–Koya road address; exact position unknown | https://baghyshaqlawa.net/en/projects/dubai-city |
+| ناوچە / گەڕەک | Erbil–Koya Road | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/dubai-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | مامناوەند – Baghy property type Villa; Homele villa listing | https://baghyshaqlawa.net/en/projects/dubai-city ; https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – No project-level status; single 'Ready' listing | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.206496, 44.112794 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.206496,44.112794 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/dubai-city |
+| ناوە جێگرەوەکان | Dubay City (spelling variant) | نزم – From canonical project list | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | 50 | Haji Salam: 'Number Of Unit: 50' (Project Type: Villa; area 1000 m; 2 floors; address Kasnazan Road) | https://hajisalam.com/en/dubai-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | 50 | Haji Salam: 'Number Of Unit: 50' (Project Type: Villa; area 1000 m; 2 floors; address Kasnazan Road) | https://hajisalam.com/en/dubai-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | Not verified | — | — | — | Baghy lists property type 'Villa' only; no sizes given. | agency_project_page | https://baghyshaqlawa.net/en/projects/dubai-city |
-| villa | 1,060 | 1,060 | 1,060 | 8 | 7 bathrooms; One ready villa advertised; listing does not say whether 1,060 m2 is plot or built area. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
+| ڤێلا | پشتڕاست نەکراوەتەوە | — | — | — | Baghy lists property type 'Villa' only; no sizes given. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/dubai-city |
+| ڤێلا | 1,060 | 1,060 | 1,060 | 8 | 7 حەمام؛ One ready villa advertised; listing does not say whether 1,060 m2 is plot or built area. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag only); Playground (Baghy tag only); Security (Baghy tag only); Parking (Baghy tag only); Green areas (Baghy tag only); Public garden (Baghy tag only); Supermarket (Baghy tag only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag only); Playground (Baghy tag only); Security (Baghy tag only); Parking (Baghy tag only); Green areas (Baghy tag only); Public garden (Baghy tag only); Supermarket (Baghy tag only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Villa 1,060 m2, 8 bed / 7 bath, ready - resale asking price (negotiable) | 1,250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Villa 1,060 m2, 8 bed / 7 bath, ready - resale asking price (negotiable) | 1,250,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Baghy Shaqlawa places Dubai City on the Erbil–Koya road, which leaves Erbil towards the south-east (Kasnazan direction), and assigns it to its Koya Road branch. No neighbourhood, distance or landmark is given, so the project is classed as on the urban fringe ('edge'). Map position (low confidence, from agency map pins): 36.206496, 44.112794. Google Maps: https://www.google.com/maps?q=36.206496,44.112794
+### شوێن و دەوروبەر
+Baghy Shaqlawa places Dubai City on the Erbil–Koya road, which leaves Erbil towards the south-east (Kasnazan direction), and assigns it to its Koya Road branch. No neighbourhood, distance or landmark is given, so the project is classed as on the urban fringe ('edge').
+شوێن لەسەر نەخشە: 36.206496, 44.112794 (متمانە: نزم) — https://www.google.com/maps?q=36.206496,44.112794
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 دوبەی سیتی (Dubai City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر، لەسەر ڕێگای هەولێر – کۆیە، کە بەرەو باشووری ڕۆژهەڵات و ئاراستەی کەسنەزان لە شار دەردەچێت. پڕۆژەکە لە ڤێلا پێکدێت، و یەکێک لە ڤێلاکانی ڕووبەری 1,060 م²یە بە هەشت ژووری نووستن و حەوت حەمام.
 
-### 2. Arabic (العربية)
+### 2. العربية
 دبي سيتي (Dubai City) مشروع سكني للفلل في أربيل، يقع على طريق أربيل – كويه الذي يخرج من المدينة باتجاه الجنوب الشرقي نحو كسنزان. ويتكوّن المشروع من فلل سكنية، ومنها فيلا بمساحة 1,060 م² تضم ثماني غرف نوم وسبعة حمامات.
 
 ### 3. English
 Dubai City, also spelled Dubay City, is a residential villa project in Erbil. It is located on the Erbil–Koya road, which leaves the city towards the south-east in the direction of Kasnazan. The project consists of villas; one villa in the project has an area of 1,060 m² with eight bedrooms and seven bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city | Area listing page: 1 ready villa, 1,060 m2, 8 bed / 7 bath, 1,250,000 USD negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/dubai-city | Project page: address 'Erbil - Koya Road'; property type Villa; feature tags (24 hr electricity, playground, security, parking, green areas, public garden, super market); nearest branch Koya Road Branch Erbil; no description | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/dubai-city/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/dubai-city | Area listing page: 1 ready villa, 1,060 m2, 8 bed / 7 bath, 1,250,000 USD negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/dubai-city | Project page: address 'Erbil - Koya Road'; property type Villa; feature tags (24 hr electricity, playground, security, parking, green areas, public garden, super market); nearest branch Koya Road Branch Erbil; no description | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/dubai-city/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Dubai City" Erbil Koya road villas project”; “"دوبەی سیتی" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Dubai City" Erbil Koya road villas project»؛ «"دوبەی سیتی" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Project name in Erbil (Baghy + Homele area label)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Erbil–Koya road address, villa type and feature tags (Baghy)
    - 1,060 m2 8-bed villa at 1,250,000 USD (one Homele listing)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Number of villas
@@ -106,15 +109,15 @@ Second verification pass 2026-11-07: queries “"Dubai City" Erbil Koya road vil
    - Total land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy page undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact location on the Koya road: within the Kasnazan / ring-road belt or further out? Set to 'edge' pending confirmation
    - Developer and status unknown; one WebSearch returned only unrelated Dubai projects
-   - Second verification pass (2026-11-07): no new evidence. No page names a Dubai City villa project; results only show other Koya-road projects (Hiwa City, Davos City) and Emaar's Downtown Erbil, so developer, villa count and status are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names a Dubai City villa project; results only show other Koya-road projects (Hiwa City, Davos City) and Emaar's Downtown Erbil, so developer, villa count and status are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "dubai-city",

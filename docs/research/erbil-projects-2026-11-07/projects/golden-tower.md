@@ -1,100 +1,103 @@
 <!-- rendered -->
 # Golden Tower — گۆڵدن تاوەر — غولدن تاور
-Project ID: golden-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: golden-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Golden Tower | Medium – Single primary site (Bagh-y Shaqlawa) | https://baghyshaqlawa.net/en/projects/golden-tower |
-| City | Erbil | Medium – Bagh-y Shaqlawa address | https://baghyshaqlawa.net/en/projects/golden-tower |
-| District / Area | Erbil–Shaqlawa road, Zeren City | Medium – Bagh-y Shaqlawa address only | https://baghyshaqlawa.net/en/projects/golden-tower |
-| Developer | Not verified | Low – No source names a developer; one web search found nothing | — |
-| Project Category | Residential (apartments) | Medium – Bagh-y Shaqlawa property type | https://baghyshaqlawa.net/en/projects/golden-tower |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – No source states it | — |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Not verified | Low – No source states status | — |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.28853, 44.090876 — Google Maps: https://www.google.com/maps?q=36.28853,44.090876 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/golden-tower |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Within Zeren City per address; no phases stated | Low – Address text only | https://baghyshaqlawa.net/en/projects/golden-tower |
+| ناوی پڕۆژە | Golden Tower | مامناوەند – Single primary site (Bagh-y Shaqlawa) | https://baghyshaqlawa.net/en/projects/golden-tower |
+| شار | هەولێر | مامناوەند – Bagh-y Shaqlawa address | https://baghyshaqlawa.net/en/projects/golden-tower |
+| ناوچە / گەڕەک | Erbil–Shaqlawa road, Zeren City | مامناوەند – Bagh-y Shaqlawa address only | https://baghyshaqlawa.net/en/projects/golden-tower |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | مامناوەند – Bagh-y Shaqlawa property type | https://baghyshaqlawa.net/en/projects/golden-tower |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – No source states status | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.28853, 44.090876 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.28853,44.090876 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/golden-tower |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | Within Zeren City per address; no phases stated | نزم – Address text only | https://baghyshaqlawa.net/en/projects/golden-tower |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source states it | — |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Within Zeren City per address; no phases stated | Address text only | https://baghyshaqlawa.net/en/projects/golden-tower |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Within Zeren City per address; no phases stated | Address text only | https://baghyshaqlawa.net/en/projects/golden-tower |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | Property type 'Apartment' only; no sizes published | agency_project_page | https://baghyshaqlawa.net/en/projects/golden-tower |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Property type 'Apartment' only; no sizes published | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/golden-tower |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24 hr electricity (Bagh-y Shaqlawa feature list only; status unknown); Central gas distribution (Bagh-y Shaqlawa feature list only; status unknown); Internet (Bagh-y Shaqlawa feature list only; status unknown); Playground (Bagh-y Shaqlawa feature list only; status unknown); Pre-installed ACs (Bagh-y Shaqlawa feature list only; status unknown); Security (Bagh-y Shaqlawa feature list only; status unknown); Green areas (Bagh-y Shaqlawa feature list only; status unknown); Gym (Bagh-y Shaqlawa feature list only; status unknown); Underground car park (Bagh-y Shaqlawa feature list only; status unknown); Public garden (Bagh-y Shaqlawa feature list only; status unknown); Pets allowed (Bagh-y Shaqlawa feature list only; status unknown)
+**بانگەشەی پشتڕاست نەکراوە:** 24 hr electricity (Bagh-y Shaqlawa feature list only; status unknown); Central gas distribution (Bagh-y Shaqlawa feature list only; status unknown); Internet (Bagh-y Shaqlawa feature list only; status unknown); Playground (Bagh-y Shaqlawa feature list only; status unknown); Pre-installed ACs (Bagh-y Shaqlawa feature list only; status unknown); Security (Bagh-y Shaqlawa feature list only; status unknown); Green areas (Bagh-y Shaqlawa feature list only; status unknown); Gym (Bagh-y Shaqlawa feature list only; status unknown); Underground car park (Bagh-y Shaqlawa feature list only; status unknown); Public garden (Bagh-y Shaqlawa feature list only; status unknown); Pets allowed (Bagh-y Shaqlawa feature list only; status unknown)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Golden Tower is listed on the Erbil–Shaqlawa road within Zeren City; no street detail are published. Map position (low confidence, from agency map pins): 36.28853, 44.090876. Google Maps: https://www.google.com/maps?q=36.28853,44.090876
+### شوێن و دەوروبەر
+Golden Tower is listed on the Erbil–Shaqlawa road within Zeren City; no street detail are published.
+شوێن لەسەر نەخشە: 36.28853, 44.090876 (متمانە: نزم) — https://www.google.com/maps?q=36.28853,44.090876
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گۆڵدن تاوەر (Golden Tower) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لەسەر ڕێگای نێوان هەولێر و شەقڵاوە، لە ناو ناوچەی زێرین سیتی هەڵکەوتووە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 غولدن تاور (Golden Tower) مشروع سكني للشقق في أربيل. ويقع المشروع على الطريق الواصل بين أربيل وشقلاوة، داخل منطقة زيرين سيتي.
 
 ### 3. English
 Golden Tower is a residential apartment project in Erbil. It is located on the Erbil–Shaqlawa road, within the Zeren City area.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/golden-tower | Name, address Erbil–Shaqlawa Rd., Zeren City; property type apartment; feature list | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/golden-tower | Name, address Erbil–Shaqlawa Rd., Zeren City; property type apartment; feature list | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Golden Tower" Erbil Shaqlawa road Zeren City apartments”; “"Zeren City" Erbil "Golden Tower"” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Golden Tower" Erbil Shaqlawa road Zeren City apartments»؛ «"Zeren City" Erbil "Golden Tower"» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Name, address (Erbil–Shaqlawa Rd., Zeren City), apartment type and feature list (Bagh-y Shaqlawa)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status
    - Floors, unit count, unit sizes
@@ -102,17 +105,17 @@ Second verification pass 2026-11-07: queries “"Golden Tower" Erbil Shaqlawa ro
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Not found on Paya, Hajisalam, homele or Miran packs; one web search (Golden Tower Zeren City) returned nothing relevant
    - Exact position on the Shaqlawa road not stated; kept in Erbil city scope (Erbil–Shaqlawa/Pirmam approach) but could be on the urban fringe
    - Relationship to Zeren City (sub-project or neighbourhood) not described
    - Second pass: 'Golden Towers 1–4' on the Wikipedia list of tallest buildings are in Baghdad and unrelated
-   - Second verification pass (2026-11-07): no new evidence. No page names a Golden Tower or Zeren City in Erbil; the only namesake found is Golden Towers 1–4 in Baghdad (unrelated), so the profile stays single-source.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names a Golden Tower or Zeren City in Erbil; the only namesake found is Golden Towers 1–4 in Baghdad (unrelated), so the profile stays single-source.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "golden-tower",

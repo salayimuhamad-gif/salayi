@@ -1,132 +1,135 @@
 <!-- rendered -->
 # Majidi View — مەجیدی ڤیو — مجيدي فيو
-Project ID: majidi-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: majidi-view | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Majidi View | High – Baghy, roya; 'Majdi View' on homele | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/majidi-view |
-| District / Area | Koya Road, next to Hiwa City, between 120 m and 150 m roads | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Developer | Hiwa Holding Company (roya: Majidi Group) | Medium – Baghy text; roya differs | https://baghyshaqlawa.net/en/projects/majidi-view ; https://roya-iq.com/projects/majidiview |
-| Project Category | Residential (apartments) | High – Baghy, homele | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 11 blocks | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Under construction (off-plan) | High – Baghy 'being built'; homele Off Plan; roya off-plan | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view ; https://roya-iq.com/projects/majidiview |
-| Completion Date | Not verified (roya date field 2026-09-30, unclear) | Low – Low-reliability listing card | https://roya-iq.com/projects/majidiview |
-| Coordinates | 36.204262, 44.092099 — Google Maps: https://www.google.com/maps?q=36.204262,44.092099 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Alternative names | Majdi View | High – homele spelling | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 25 | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated; adjacent to Hiwa City | Low – — – Baghy | https://baghyshaqlawa.net/en/projects/majidi-view |
+| ناوی پڕۆژە | Majidi View | بەرز – Baghy, roya; 'Majdi View' on homele | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| شار | هەولێر | بەرز – All sources | https://baghyshaqlawa.net/en/projects/majidi-view |
+| ناوچە / گەڕەک | Koya Road, next to Hiwa City, between 120 m and 150 m roads | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
+| گەشەپێدەر (کۆمپانیا) | Hiwa Holding Company (roya: Majidi Group) | مامناوەند – Baghy text; roya differs | https://baghyshaqlawa.net/en/projects/majidi-view ; https://roya-iq.com/projects/majidiview |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | بەرز – Baghy, homele | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 11 blocks | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (off-plan) | بەرز – Baghy 'being built'; homele Off Plan; roya off-plan | https://baghyshaqlawa.net/en/projects/majidi-view ; https://homele.com/properties/for-sale-and-rent/erbil/majdi-view ; https://roya-iq.com/projects/majidiview |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە — (roya date field 2026-09-30, unclear) | نزم – Low-reliability listing card | https://roya-iq.com/projects/majidiview |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.204262, 44.092099 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.204262,44.092099 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/majidi-view |
+| ناوە جێگرەوەکان | Majdi View | بەرز – homele spelling | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 25 | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated; adjacent to Hiwa City | نزم – Baghy | https://baghyshaqlawa.net/en/projects/majidi-view |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 11 blocks | Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Floors per building | 25 | Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated; adjacent to Hiwa City | Baghy | https://baghyshaqlawa.net/en/projects/majidi-view |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 11 blocks | Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 25 | Baghy only | https://baghyshaqlawa.net/en/projects/majidi-view |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated; adjacent to Hiwa City | Baghy | https://baghyshaqlawa.net/en/projects/majidi-view |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 108, 115, 153 | 108 | 153 | 2 | 2+1 | agency_project_page | https://baghyshaqlawa.net/en/projects/majidi-view |
-| apartment | 156, 167 | 156 | 167 | 3 | 3+1 | agency_project_page | https://baghyshaqlawa.net/en/projects/majidi-view |
-| apartment | 85, 153, 156, 163, 167, 182 | 85 | 182 | — | Off-plan market listings (2–3 beds); 85, 163 and 182 m² are not in Baghy's size list | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| شوقە | 108, 115, 153 | 108 | 153 | 2 | 2+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/majidi-view |
+| شوقە | 156, 167 | 156 | 167 | 3 | 3+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/majidi-view |
+| شوقە | 85, 153, 156, 163, 167, 182 | 85 | 182 | — | Off-plan market listings (2–3 beds); 85, 163 and 182 m² are not in Baghy's size list | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** green spaces (Baghy text)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** green spaces (Baghy text)
 
-**Unverified claims:** 24-hour electricity; internet; playground; security; parking; fitness center; kindergarten; public garden; supermarket; reception; mosque; school; pets allowed; private garden
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity; internet; playground; security; parking; fitness center; kindergarten; public garden; supermarket; reception; mosque; school; pets allowed; private garden
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 85 m2, 2 beds - off-plan market listing (cash) | 57,800 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Apartment 153 m2, 2 beds - off-plan market listing (cash) | 104,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Apartment 3+1 156 m2 - off-plan market listing | 106,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Apartment 163 m2, 3 beds - off-plan market listing (cash) | 110,800 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Apartment 3+1 167 m2 - off-plan market listing | 113,500 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-| Apartment 182 m2, 3 beds - off-plan market listing (cash) | 123,700 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Baghy payment method: advance payment 18%, after structure completion 22%, delivered 30%, remaining amount divided into 36 months; homele lists off-plan apartments for sale ('Apartment in Cash') (https://baghyshaqlawa.net/en/projects/majidi-view)
+| Apartment 85 m2, 2 beds - off-plan market listing (cash) | 57,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| Apartment 153 m2, 2 beds - off-plan market listing (cash) | 104,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| Apartment 3+1 156 m2 - off-plan market listing | 106,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| Apartment 163 m2, 3 beds - off-plan market listing (cash) | 110,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| Apartment 3+1 167 m2 - off-plan market listing | 113,500 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+| Apartment 182 m2, 3 beds - off-plan market listing (cash) | 123,700 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Baghy payment method: advance payment 18%, after structure completion 22%, delivered 30%, remaining amount divided into 36 months; homele lists off-plan apartments for sale ('Apartment in Cash') (https://baghyshaqlawa.net/en/projects/majidi-view)
 
-### Location and surroundings
-On Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m ring roads (Baghy). Map position (low confidence, from agency map pins): 36.204262, 44.092099. Google Maps: https://www.google.com/maps?q=36.204262,44.092099
+### شوێن و دەوروبەر
+On Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m ring roads (Baghy).
+شوێن لەسەر نەخشە: 36.204262, 44.092099 (متمانە: نزم) — https://www.google.com/maps?q=36.204262,44.092099
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 مەجیدی ڤیو (Majidi View) پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لە قۆناغی دروستکردندایە لەسەر ڕێگای کۆیە لە هەولێر، لە تەنیشت هیوا ستی و لە نێوان شەقامی ١٢٠ مەتری و ١٥٠ مەتری. پڕۆژەکە لە ١١ بلۆک پێکدێت کە هەر یەکەیان ٢٥ نهۆمە، و ڕووبەری سەوز بە دەوریاندا پلانی بۆ دانراوە. شوقەکان بە دوو جۆرن: شوقەی دوو ژووری نووستن بە ڕووبەری ١٠٨، ١١٥ و ١٥٣ م²، و شوقەی سێ ژووری نووستن بە ڕووبەری ١٥٦ و ١٦٧ م².
 
-### 2. Arabic (العربية)
+### 2. العربية
 مجيدي فيو (Majidi View) مشروع سكني للشقق قيد الإنشاء على طريق كويه في أربيل، بجوار هيوا سيتي وبين شارعي ١٢٠ متر و١٥٠ متر. يتكون المشروع من ١١ بلوكاً بارتفاع ٢٥ طابقاً لكل منها، مع مساحات خضراء مخطط لها حولها. تتوفر الشقق بنمطين: شقق بغرفتي نوم بمساحات ١٠٨ و١١٥ و١٥٣ م²، وشقق بثلاث غرف نوم بمساحتي ١٥٦ و١٦٧ م².
 
 ### 3. English
 Majidi View is a residential apartment project under construction on Koya Road in Erbil, next to Hiwa City and between the 120 m and 150 m roads. The project consists of 11 blocks of 25 floors each, with green spaces planned around them. Apartments come in two layouts: two-bedroom units of 108, 115 and 153 m², and three-bedroom units of 156 and 167 m².
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view | Area listing page 'Majdi View': 6 off-plan listings 85–182 m² at USD 57,800–123,700. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/majidi-view | Project page: Koya Road next to Hiwa City between 120 m and 150 m roads; built by Hiwa Holding Company (Hiwa City, Majidi Land, Majidi Mall, Grand Majidi); 11 blocks × 25 floors; 2+1 108/115/153 m², 3+1 156/167 m²; payment 18/22/30% + 36 months; feature tags. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view | Area listing page 'Majdi View': 6 off-plan listings 85–182 m² at USD 57,800–123,700. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/majidi-view | Project page: Koya Road next to Hiwa City between 120 m and 150 m roads; built by Hiwa Holding Company (Hiwa City, Majidi Land, Majidi Mall, Grand Majidi); 11 blocks × 25 floors; 2+1 108/115/153 m², 3+1 156/167 m²; payment 18/22/30% + 36 months; feature tags. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/projects/majidiview | Listing card: off-plan; developer Majidi Group; price range USD 175K–550K; date field 2026-09-30. | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/projects/majidiview | Listing card: off-plan; developer Majidi Group; price range USD 175K–550K; date field 2026-09-30. | — | 2026-11-07 | نزم |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Baghy, homele, roya)
    - Category apartments (Baghy, homele)
    - Status off-plan / under construction (Baghy, homele, roya)
    - Sizes 153, 156, 167 m² (Baghy, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Location Koya Road next to Hiwa City (Baghy)
    - 11 blocks × 25 floors (Baghy)
    - Payment plan (Baghy)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Developer: Hiwa Holding Company (Baghy) vs Majidi Group (roya)
    - Price range: homele USD 57.8K–123.7K vs roya USD 175K–550K
    - developer: Hiwa Holding Company (https://baghyshaqlawa.net/en/projects/majidi-view); Majidi Group (https://roya-iq.com/projects/majidiview) → Hiwa Holding Company kept (primary site, detailed text); Baghy links it to the Majidi-branded projects, so both names may refer to one business group. Not confirmed.
    - price range: USD 57,800–123,700 (85–182 m² listings) (https://homele.com/properties/for-sale-and-rent/erbil/majdi-view); USD 175K–550K (https://roya-iq.com/projects/majidiview) → Unit-level homele listings used; roya range unsupported by unit data.
    - completion_date: 2026-09-30 (roya date field, meaning unclear) (https://roya-iq.com/projects/majidiview) → Not used: low-reliability field, date has passed while project is still off-plan.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Unit count
    - Launch and completion dates
    - Coordinates
    - Paya/Miran pages
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - roya date 2026-09-30 already passed
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether Hiwa Holding and Majidi Group are the same entity
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "majidi-view",

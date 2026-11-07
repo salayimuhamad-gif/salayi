@@ -1,131 +1,134 @@
 <!-- rendered -->
 # DC Towers — دی سی تاوەرز — دي سي تاور
-Project ID: dc-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: dc-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | DC Towers | High – Paya, Homele project page and Miran ('DC Tower') agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 |
-| District / Area | New Erbil (Hawler Nwe), 120m Street, next to Barzani Charity Foundation | High – Homele project page and Miran agree on New Erbil / 120m road; Paya confirms 120m road | https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://paya-realestate.com/en/projects/dc-towers-372 |
-| Developer | Darin Group | High – Paya text and Miran agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| Project Category | Residential (with commercial floors) | High – Homele 'Residential Building'; Paya/Miran residential towers with commercial area | https://homele.com/projects/dc-towers-408 ; https://paya-realestate.com/en/projects/dc-towers-372 |
-| Total Land Area | 47,500 m² | High – Paya, Miran and Homele project page agree (likely common developer copy) | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Number of Buildings / Towers | 10 residential towers (C1–C6, D1–D4) | High – Paya, Miran, Homele agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Total Residential Units | 1,680 apartments | Medium – Miran only | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| Construction Status | Under construction | High – Paya 'Constructing', Miran 'Under Construction', Homele 'Ongoing' | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Completion Date | 31/12/2027 (Miran; label not captured, read as expected delivery). Handover 24 months after down payment (Homele plan) | Low – Single source, ambiguous field | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Coordinates | 36.223219, 44.069144 — Google Maps: https://www.google.com/maps?q=36.223219,44.069144 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, homele.com); mean position | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 |
-| Alternative names | DC Tower (Miran); دي سي تاور (Paya); 'Dee C Towers' (news usage per coordinator note, no URL captured) | Medium – Spelling variants | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://paya-realestate.com/en/projects/dc-towers-372 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 21 floors (incl. 1–2 commercial floors; 5 parking floors per tower per Homele) | Medium – 21 from Miran only; floor composition from Homele | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Launch Date | Not verified (Homele project listing posted 2026-08-10) | Low – Posting date is not a launch date | https://homele.com/projects/dc-towers-408 |
-| Development Phases | None reported | Low – — – No phases stated | — |
+| ناوی پڕۆژە | DC Towers | بەرز – Paya, Homele project page and Miran ('DC Tower') agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 |
+| ناوچە / گەڕەک | New Erbil (Hawler Nwe), 120m Street, next to Barzani Charity Foundation | بەرز – Homele project page and Miran agree on New Erbil / 120m road; Paya confirms 120m road | https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://paya-realestate.com/en/projects/dc-towers-372 |
+| گەشەپێدەر (کۆمپانیا) | Darin Group | بەرز – Paya text and Miran agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (with commercial floors) | بەرز – Homele 'Residential Building'; Paya/Miran residential towers with commercial area | https://homele.com/projects/dc-towers-408 ; https://paya-realestate.com/en/projects/dc-towers-372 |
+| کۆی ڕووبەری زەوی | 47,500 m² | بەرز – Paya, Miran and Homele project page agree (likely common developer copy) | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| ژمارەی باڵەخانە / تاوەر | 10 residential towers (C1–C6, D1–D4) | بەرز – Paya, Miran, Homele agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| کۆی یەکە نیشتەجێبوونەکان | 1,680 apartments | مامناوەند – Miran only | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | بەرز – Paya 'Constructing', Miran 'Under Construction', Homele 'Ongoing' | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| بەرواری تەواوبوون | 31/12/2027 (Miran; label not captured, read as expected delivery). Handover 24 months after down payment (Homele plan) | نزم – Single source, ambiguous field | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.223219, 44.069144 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.223219,44.069144 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, homele.com); mean position | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 |
+| ناوە جێگرەوەکان | DC Tower (Miran); دي سي تاور (Paya); 'Dee C Towers' (news usage per coordinator note, no URL captured) | مامناوەند – Spelling variants | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://paya-realestate.com/en/projects/dc-towers-372 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 21 floors (incl. 1–2 commercial floors; 5 parking floors per tower per Homele) | مامناوەند – 21 from Miran only; floor composition from Homele | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە — (Homele project listing posted 2026-08-10) | نزم – Posting date is not a launch date | https://homele.com/projects/dc-towers-408 |
+| قۆناغەکانی پڕۆژە | None reported | نزم – No phases stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 47,500 m² | Paya, Miran and Homele project page agree (likely common developer copy) | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Total project land area (dunams) | 19.0 | converted from 47,500 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,680 apartments | Miran only | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| Villas / houses | Not verified | — | — |
-| Apartments | 1,680 | 10 residential towers, each rising 21 floors, offering a total of 1,680 apartment units (Miran stats: Units 1,680) | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 10 residential towers (C1–C6, D1–D4) | Paya, Miran, Homele agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Floors per building | 21 floors (incl. 1–2 commercial floors; 5 parking floors per tower per Homele) | 21 from Miran only; floor composition from Homele | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Green space, parks, landscaped area | Green spaces comprise 60% of the project area (project spans 47,500 m²) (Paya; Miran also states 60%) | — | https://paya-realestate.com/en/projects/dc-towers-372 |
-| Development phases | None reported | No phases stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 47,500 m² | Paya, Miran and Homele project page agree (likely common developer copy) | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 19.0 | گۆڕدراوە لە 47,500 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,680 apartments | Miran only | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 1,680 | 10 residential towers, each rising 21 floors, offering a total of 1,680 apartment units (Miran stats: Units 1,680) | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 10 residential towers (C1–C6, D1–D4) | Paya, Miran, Homele agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 21 floors (incl. 1–2 commercial floors; 5 parking floors per tower per Homele) | 21 from Miran only; floor composition from Homele | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| ڕووبەری سەوزایی، پارک و باخچە | Green spaces comprise 60% of the project area (project spans 47,500 m²) (Paya; Miran also states 60%) | — | https://paya-realestate.com/en/projects/dc-towers-372 |
+| قۆناغەکانی پڕۆژە | None reported | No phases stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 88 | 88 | 88 | 1 | 1 bathrooms; 1+1. Paya, Miran and Homele agree. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| apartment | 131 | 131 | 131 | 2 | 2 bathrooms; 2+1. Paya, Miran and Homele agree. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| apartment | 145 | 145 | 145 | 2 | 2 bathrooms; 2+1. Paya, Miran and Homele listings agree. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| apartment | 188, 191 | 188 | 191 | 3 | 3 bathrooms; 3+1. 188 m2 on Paya and Homele (project page + listings); 191 m2 on Miran. Same price (141,940 USD) on all, so likely the same unit type. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| شوقە | 88 | 88 | 88 | 1 | 1 حەمام؛ 1+1. Paya, Miran and Homele agree. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| شوقە | 131 | 131 | 131 | 2 | 2 حەمام؛ 2+1. Paya, Miran and Homele agree. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
+| شوقە | 145 | 145 | 145 | 2 | 2 حەمام؛ 2+1. Paya, Miran and Homele listings agree. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| شوقە | 188, 191 | 188 | 191 | 3 | 3 حەمام؛ 3+1. 188 m2 on Paya and Homele (project page + listings); 191 m2 on Miran. Same price (141,940 USD) on all, so likely the same unit type. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 
-**Layouts and floor plans:** Floor plans/blueprints published for 1+1 88 m², 2+1 131 and 145 m², 3+1 188 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans') (https://paya-realestate.com/en/projects/dc-towers-372)
+**نەخشە و پلانی نهۆمەکان:** Floor plans/blueprints published for 1+1 88 m², 2+1 131 and 145 m², 3+1 188 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans') (https://paya-realestate.com/en/projects/dc-towers-372)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Green spaces on about 60% of the project area, walking paths, family recreation zones (Paya text; Miran text); Commercial area / 1-2 commercial floors per tower, commercial strip with cafes and markets (Paya; Homele; Miran); Parking: 5 parking floors per tower (Homele); over 3,000 underground parking spaces (Miran); Swimming pool (Miran text; Homele tag); Gym (Miran text; Paya tag); Spa (Miran text); 24-hour security (Miran text; Paya tag); VRF cooling system and red-brick insulation (Miran text); Accessibility features for disabled and visually impaired residents (Miran text); Backup electricity generator (Paya tag; Homele tag; Miran building facilities)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Green spaces on about 60% of the project area, walking paths, family recreation zones (Paya text; Miran text); Commercial area / 1-2 commercial floors per tower, commercial strip with cafes and markets (Paya; Homele; Miran); Parking: 5 parking floors per tower (Homele); over 3,000 underground parking spaces (Miran); Swimming pool (Miran text; Homele tag); Gym (Miran text; Paya tag); Spa (Miran text); 24-hour security (Miran text; Paya tag); VRF cooling system and red-brick insulation (Miran text); Accessibility features for disabled and visually impaired residents (Miran text); Backup electricity generator (Paya tag; Homele tag; Miran building facilities)
 
-**Unverified claims:** Barber, pets, women's gym, women's salon, laundry, mosque, kids play area (Paya tags only); Pharmacy (Paya tag; Miran feature list); Sauna, double-glazed windows (Homele tags only); Hospital, school, cycling track, sports court, parklet (Miran feature list; may refer to surroundings); Fire safety, CCTV, building management, water treatment systems (Miran generic building-facilities list)
+**بانگەشەی پشتڕاست نەکراوە:** Barber, pets, women's gym, women's salon, laundry, mosque, kids play area (Paya tags only); Pharmacy (Paya tag; Miran feature list); Sauna, double-glazed windows (Homele tags only); Hospital, school, cycling track, sports court, parklet (Miran feature list; may refer to surroundings); Fire safety, CCTV, building management, water treatment systems (Miran generic building-facilities list)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 88 m2, 1 bed - developer list price (sales-centre listing on Homele; same on Paya) | 67,760 | USD | developer | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
-| Apartment 131 m2, 2 bed - developer list price | 99,560 | USD | developer | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
-| Apartment 145 m2, 2 bed - developer list price | 110,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/dc-towers-372 |
-| Apartment 188 m2 (Miran: 191 m2), 3 bed - developer list price | 141,940 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/dc-towers-372 |
-| Price per m2 (Miran) | 760 | USD | developer | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
-| Down payment 13% on 88 m2 unit (plan: 13% booking; 10% at 6, 12, 18 months; 17% at handover after 24 months; 40% monthly over 60 months) | 8,809 | USD | developer | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'. Homele plan (88 m², total $67,760): 13% down payment; 10% after 6, 12 and 18 months; 17% at key handover (after 24 months); remaining 40% in monthly installments for 60 months (https://homele.com/projects/dc-towers-408)
+| Apartment 88 m2, 1 bed - developer list price (sales-centre listing on Homele; same on Paya) | 67,760 | USD | نرخی گەشەپێدەر | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
+| Apartment 131 m2, 2 bed - developer list price | 99,560 | USD | نرخی گەشەپێدەر | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
+| Apartment 145 m2, 2 bed - developer list price | 110,200 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/dc-towers-372 |
+| Apartment 188 m2 (Miran: 191 m2), 3 bed - developer list price | 141,940 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/dc-towers-372 |
+| Price per m2 (Miran) | 760 | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
+| Down payment 13% on 88 m2 unit (plan: 13% booking; 10% at 6, 12, 18 months; 17% at handover after 24 months; 40% monthly over 60 months) | 8,809 | USD | نرخی گەشەپێدەر | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Miran: 'Cash Installment Payment Plans'. Homele plan (88 m², total $67,760): 13% down payment; 10% after 6, 12 and 18 months; 17% at key handover (after 24 months); remaining 40% in monthly installments for 60 months (https://homele.com/projects/dc-towers-408)
 
-### Location and surroundings
-DC Towers stands on the 120-metre street in the New Erbil (Hawler Nwe) district, next to the Barzani Charity Foundation (Homele project page). Homele and Miran add that the towers rise along the New Erbil Corniche. Paya describes the area as close to international schools, hospitals and malls without naming them; no distances are given or estimated. Map position (medium confidence, from agency map pins): 36.223219, 44.069144. Google Maps: https://www.google.com/maps?q=36.223219,44.069144
+### شوێن و دەوروبەر
+DC Towers stands on the 120-metre street in the New Erbil (Hawler Nwe) district, next to the Barzani Charity Foundation (Homele project page). Homele and Miran add that the towers rise along the New Erbil Corniche. Paya describes the area as close to international schools, hospitals and malls without naming them; no distances are given or estimated.
+شوێن لەسەر نەخشە: 36.223219, 44.069144 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.223219,44.069144
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 دی سی تاوەرز پڕۆژەیەکی نیشتەجێبوونی تاوەرە کە لە شاری هەولێر لە قۆناغی دروستکردندایە و کۆمپانیای دارین گرووپ جێبەجێی دەکات. پڕۆژەکە لەسەر شەقامی ١٢٠ مەتری لە ناوچەی هەولێری نوێ هەڵکەوتووە، لە تەنیشت دامەزراوەی خێرخوازیی بارزانی و بە درێژایی کۆرنیشی هەولێری نوێ. ڕووبەری گشتیی پڕۆژەکە ٤٧٬٥٠٠ م²یە، و نزیکەی ٦٠٪ی بۆ ناوچەی سەوز، ڕێگای پیاسەکردن و شوێنی حەسانەوەی خێزان تەرخان کراوە. پڕۆژەکە لە ١٠ تاوەری نیشتەجێبوون پێکدێت بە ناوەکانی C1 تا C6 و D1 تا D4، هەر تاوەرێک ٢١ نهۆمە و یەک تا دوو نهۆمی بازرگانی و پێنج نهۆمی پارکینگی تێدایە، و کۆی گشتی ١٬٦٨٠ شوقە لەخۆدەگرێت. جۆرەکانی شوقە بریتین لە: ٨٨ م² بە یەک ژووری نووستن و یەک حەمام، ١٣١ م² و ١٤٥ م² بە دوو ژووری نووستن و دوو حەمام، و ١٨٨ م² بە سێ ژووری نووستن و سێ حەمام. خزمەتگوزارییە پلاندانراوەکان بریتین لە پارکینگی ژێرزەوی، شریتێکی بازرگانی بە کافێ و مارکێت، هۆڵی وەرزش، سپا، مەلەوانگە، پاسەوانیی ٢٤ کاتژمێری، سیستەمی فێنککەرەوەی VRF و مۆلیدەی یەدەگ. شوقەکان لەسەر نەخشە لەلایەن سەنتەری فرۆشتنی پڕۆژەکەوە دەفرۆشرێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 دي سي تاور مشروع أبراج سكنية قيد الإنشاء في مدينة أربيل، تطوّره مجموعة دارين. يقع المشروع على شارع 120 متر في منطقة أربيل الجديدة، بجوار مؤسسة البارزاني الخيرية وعلى امتداد كورنيش أربيل الجديد. تبلغ المساحة الإجمالية للمشروع 47,500 م²، خُصّص نحو 60٪ منها للمساحات الخضراء وممرات المشي ومناطق الترفيه العائلي. يتكوّن المشروع من 10 أبراج سكنية تحمل الأسماء C1 إلى C6 وD1 إلى D4، يرتفع كل برج 21 طابقاً ويضم طابقاً إلى طابقين تجاريين وخمسة طوابق لمواقف السيارات، بإجمالي 1,680 شقة. وتشمل أنواع الشقق: 88 م² بغرفة نوم واحدة وحمّام واحد، و131 م² و145 م² بغرفتي نوم وحمّامين، و188 م² بثلاث غرف نوم وثلاثة حمّامات. وتشمل الخدمات المخطّطة مواقف سيارات تحت الأرض، وشريطاً تجارياً يضم مقاهي وأسواقاً، وصالة رياضية، وسبا، ومسبحاً، وحراسة أمنية على مدار 24 ساعة، ونظام تبريد VRF، ومولّدات كهرباء احتياطية. تُباع الشقق على الخريطة من مركز مبيعات المشروع.
 
 ### 3. English
 DC Towers is a residential tower project under construction in Erbil, developed by Darin Group. It is located on the 120-metre street in the New Erbil (Hawler Nwe) district, next to the Barzani Charity Foundation and along the New Erbil Corniche. The project covers a total area of 47,500 m², with about 60 percent allocated to green spaces, walking paths and family recreation areas. It comprises 10 residential towers, named C1 to C6 and D1 to D4, each rising 21 floors and including one to two commercial floors and five parking floors, with a total of 1,680 apartments. Apartment types are 88 m² with one bedroom and one bathroom, 131 m² and 145 m² with two bedrooms and two bathrooms, and 188 m² with three bedrooms and three bathrooms. Planned services include underground parking, a commercial strip with cafés and markets, a gym, a spa, a swimming pool, 24-hour security, a VRF cooling system and backup power generators. Apartments are sold off-plan by the project sales centre.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/projects/dc-towers-408 | Project page provided by 'DC Towers Project Sales Center': posted 2026-08-10; Ongoing; area 47,500 m2; 120m Street, Hawler Nwe, next to Barzani Charity Foundation; towers C1-C6, D1-D4 with 1-2 commercial and 5 parking floors; New Erbil Kornish; payment plan with amounts | 2026-08-10 | 2026-11-07 | high |
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/dc-towers | Area listing page: 10 off-plan sale listings at the same list prices (88/131/145/188 m2; 67,760-141,940 USD) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/dc-towers-372 | Project page: status Constructing; 47,500 m2; 10 residential towers + commercial area; 60% green; developer Darin Group (text); 120 m road; 4 unit types 88/131/145/188 m2 with prices 67,760-141,940 USD; amenity tags | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e | Project page 'DC Tower' by Darin Group, Under Construction; date 31/12/2027; 10 buildings, 21 floors, 1,680 units; unit types 88/131/145/191 m2; 47,500 m2, 60% green; New Erbil district, 120 m road; 3,000+ underground parking; payment plan; 760 USD/m2 | 2026-08-20 (updated) | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/projects/dc-towers-408 | Project page provided by 'DC Towers Project Sales Center': posted 2026-08-10; Ongoing; area 47,500 m2; 120m Street, Hawler Nwe, next to Barzani Charity Foundation; towers C1-C6, D1-D4 with 1-2 commercial and 5 parking floors; New Erbil Kornish; payment plan with amounts | 2026-08-10 | 2026-11-07 | بەرز |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/dc-towers | Area listing page: 10 off-plan sale listings at the same list prices (88/131/145/188 m2; 67,760-141,940 USD) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/dc-towers-372 | Project page: status Constructing; 47,500 m2; 10 residential towers + commercial area; 60% green; developer Darin Group (text); 120 m road; 4 unit types 88/131/145/188 m2 with prices 67,760-141,940 USD; amenity tags | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e | Project page 'DC Tower' by Darin Group, Under Construction; date 31/12/2027; 10 buildings, 21 floors, 1,680 units; unit types 88/131/145/191 m2; 47,500 m2, 60% green; New Erbil district, 120 m road; 3,000+ underground parking; payment plan; 760 USD/m2 | 2026-08-20 (updated) | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, 120m Street location, developer Darin Group, residential category, under-construction status (Paya + Miran + Homele)
    - Total area 47,500 m2; 10 towers; 60% green space (Paya + Miran + Homele)
    - Unit types 88/131/145 m2 and list prices 67,760-141,940 USD (Paya + Homele + Miran)
    - Payment plan 13/10/10/10/17/40% (Homele + Miran)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 1,680 units and 21 floors (Miran)
    - Completion date 31/12/2027 (Miran)
    - 3,000+ underground parking spaces, spa, VRF cooling (Miran)
    - Tower names C1-C6, D1-D4; next to Barzani Charity Foundation (Homele)
    - 760 USD/m2 (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - 3-bedroom unit size: 188 m2 (https://paya-realestate.com/en/projects/dc-towers-372); 188 m2 (https://homele.com/projects/dc-towers-408); 191 m2 (https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e) → 188 m2 used in descriptions (two sources incl. sales-centre listing); 191 m2 recorded as Miran variant (possibly gross vs net area).
    - 3-bedroom bathrooms: 3 (https://paya-realestate.com/en/projects/dc-towers-372); 2 (one Homele listing) (https://homele.com/properties/for-sale-and-rent/erbil/dc-towers) → 3 kept (Paya, Miran, other Homele listing).
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Launch date
    - Coordinates
    - Number of floors confirmed by a second source
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Prices dated Aug 2026 (Homele posted 2026-08-10; Miran updated 2026-08-20); may change
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Is the 3-bed unit 188 m2 or 191 m2?
    - Paya states 150 m between towers - unusually large spacing, not confirmed elsewhere
    - News name 'Dee C Towers' (coordinator note) not checked against a URL in this pass
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "dc-towers",

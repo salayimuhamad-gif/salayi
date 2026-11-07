@@ -1,126 +1,129 @@
 <!-- rendered -->
 # Zaner City — زانەر ستی — زانر ستي
-Project ID: zaner-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: zaner-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Zaner City | Medium – Same name on Baghy and homele (and Roya slugs) | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| City | Erbil | High – Baghy and homele | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| District / Area | 150m Road, behind Ganjan City | Medium – Baghy address; marker consistent with northern 150m Road belt | https://baghyshaqlawa.net/en/projects/zaner-city |
-| Developer | Not verified | Low – Not named on any primary site | — |
-| Project Category | Residential (villas / houses) | Medium – Baghy type Villa; homele house listings | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated (villa compound) | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed (inferred) | Medium – Five homele resale listings tagged 'Ready'; no explicit project status on any site | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.297326, 44.041255 — Google Maps: https://www.google.com/maps?q=36.297326,44.041255 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zaner-city |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Zaner City | مامناوەند – Same name on Baghy and homele (and Roya slugs) | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| شار | هەولێر | بەرز – Baghy and homele | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| ناوچە / گەڕەک | 150m Road, behind Ganjan City | مامناوەند – Baghy address; marker consistent with northern 150m Road belt | https://baghyshaqlawa.net/en/projects/zaner-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named on any primary site | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas / houses) | مامناوەند – Baghy type Villa; homele house listings | https://baghyshaqlawa.net/en/projects/zaner-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated (villa compound) | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | مامناوەند – Five homele resale listings tagged 'Ready'; no explicit project status on any site | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.297326, 44.041255 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.297326,44.041255 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zaner-city |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated (villa compound) | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated (villa compound) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 200, 230, 240 | 200 | 240 | — | Baghy lists type 'Villa'; listings call them houses: 200 m2 (4-5 bed), 230 m2 (4 bed), 240 m2 (4 bed); bathrooms 1-4 as advertised; several corner / garden-facing | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city ; https://baghyshaqlawa.net/en/projects/zaner-city |
+| ڤێلا | 200, 230, 240 | 200 | 240 | — | Baghy lists type 'Villa'; listings call them houses: 200 m2 (4-5 bed), 230 m2 (4 bed), 240 m2 (4 bed); bathrooms 1-4 as advertised; several corner / garden-facing | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city ; https://baghyshaqlawa.net/en/projects/zaner-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** 24-hour electricity (Baghy); Internet (Baghy); Playground (Baghy); Security (Baghy); Parking (Baghy); Green areas (Baghy); Shofag (central) heating system (Baghy); Kindergarten (Baghy); Health center (Baghy); Infrastructure: sewerage, sanitary and electrical systems (Baghy); Mosque (Baghy); School (Baghy); Kitchen appliances (Baghy)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** 24-hour electricity (Baghy); Internet (Baghy); Playground (Baghy); Security (Baghy); Parking (Baghy); Green areas (Baghy); Shofag (central) heating system (Baghy); Kindergarten (Baghy); Health center (Baghy); Infrastructure: sewerage, sanitary and electrical systems (Baghy); Mosque (Baghy); School (Baghy); Kitchen appliances (Baghy)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready modern house 200 m2, 4 bed, 3 bath - sale | 157,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| Ready house 230 m2, 4 bed, 3 bath - negotiable | 175,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| Corner house opposite garden 230 m2, 4 bed, 4 bath - 'new price', negotiable | 200,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| Ready house opposite garden 240 m2, 4 bed, 3 bath - negotiable | 265,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
-| House 200 m2, 4 bed, 3 bath (Baghy card) | 185,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
-| House 200 m2, 5 bed, 1 bath (Baghy card) | 245,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
-| House 230 m2, 4 bed, 1 bath (Baghy card) | 190,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
-| House 240 m2, 4 bed, 3 bath (Baghy card) | 250,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready modern house 200 m2, 4 bed, 3 bath - sale | 157,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| Ready house 230 m2, 4 bed, 3 bath - negotiable | 175,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| Corner house opposite garden 230 m2, 4 bed, 4 bath - 'new price', negotiable | 200,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| Ready house opposite garden 240 m2, 4 bed, 3 bath - negotiable | 265,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city |
+| House 200 m2, 4 bed, 3 bath (Baghy card) | 185,000 | USD | فرۆشتنەوە | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
+| House 200 m2, 5 bed, 1 bath (Baghy card) | 245,000 | USD | فرۆشتنەوە | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
+| House 230 m2, 4 bed, 1 bath (Baghy card) | 190,000 | USD | فرۆشتنەوە | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
+| House 240 m2, 4 bed, 3 bath (Baghy card) | 250,000 | USD | فرۆشتنەوە | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zaner-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Zaner City lies on Erbil's 150m Road, behind Ganjan City, in the northern ring-road belt (Baghy Shaqlawa). Map position (low confidence, from agency map pins): 36.297326, 44.041255. Google Maps: https://www.google.com/maps?q=36.297326,44.041255
+### شوێن و دەوروبەر
+Zaner City lies on Erbil's 150m Road, behind Ganjan City, in the northern ring-road belt (Baghy Shaqlawa).
+شوێن لەسەر نەخشە: 36.297326, 44.041255 (متمانە: نزم) — https://www.google.com/maps?q=36.297326,44.041255
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 زانەر ستی (Zaner City) پڕۆژەیەکی ڤێلای نیشتەجێبوونە لەسەر شەقامی ١٥٠ مەتری لە هەولێر، لە پشت گەنجان ستی، لە پشتێنەی باکووریی شەقامە ئەڵقەییەکانی شار. پڕۆژەکە لە ڤێلای ٢٠٠، ٢٣٠ و ٢٤٠ م² پێکدێت کە زۆربەیان چوار ژووری نووستنیان هەیە، و هەندێکیان ڤێلای سووچن یان ڕوویان لە باخچەیە. خزمەتگوزارییەکان بریتین لە کارەبای ٢٤ کاتژمێری، سیستەمی گەرمکردنەوەی ناوەندی (شۆفاج)، ئینتەرنێت، پاسەوانی، پارکینگ، یاریگای منداڵان، ناوچەی سەوز، باخچەی ساوایان، بنکەی تەندروستی، مزگەوت، قوتابخانە، ئامێرەکانی چێشتخانە، و ژێرخانی ئاوەڕۆ، بۆڕیکێشیی تەندروستی و کارەبا.
 
-### 2. Arabic (العربية)
+### 2. العربية
 زانر ستي (Zaner City) مشروع فلل سكنية على شارع 150 م في أربيل، خلف كنجان سيتي، ضمن الحزام الشمالي للطرق الدائرية في المدينة. ويتكون المشروع من فلل بمساحات 200 و230 و240 م²، معظمها بأربع غرف نوم، وبعضها فلل زاوية أو مطلة على حديقة. وتشمل المرافق الكهرباء على مدار 24 ساعة، ونظام تدفئة مركزية (شوفاج)، والإنترنت، والحراسة، ومواقف السيارات، وملعباً للأطفال، ومساحات خضراء، وروضة أطفال، ومركزاً صحياً، ومسجداً، ومدرسة، وأجهزة مطبخ، وبنية تحتية للصرف الصحي والتمديدات الصحية والكهربائية.
 
 ### 3. English
 Zaner City is a residential villa project on the 150 m Road in Erbil, behind Ganjan City, in the northern ring-road belt of the city. The project consists of villas of 200, 230 and 240 m², most with four bedrooms, and some are corner villas or face a garden. Facilities include 24-hour electricity, a central (shofag) heating system, internet, security, parking, a playground, green areas, a kindergarten, a health centre, a mosque, a school, kitchen appliances, and sewerage, sanitary and electrical infrastructure.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city | Area listing page (1 page): 5 'Ready' house listings 200-240 m2, 4 bed, USD 157,500-265,000 (sale/negotiable); one card labelled '(Down payment)' | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/zaner-city | Project page (last updated 2023-10-04): address '150m Road behind of Ganjan City'; type Villa; 13 feature tags incl. Shofag heating, kindergarten, health center, mosque, school; Baghy branch named 'Zaner City Branch'; map marker 36.297326, 44.041255; 4 undated sale cards 200-240 m2, USD 185,000-250,000 | 2023-10-04 | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/zaner-city | Area listing page (1 page): 5 'Ready' house listings 200-240 m2, 4 bed, USD 157,500-265,000 (sale/negotiable); one card labelled '(Down payment)' | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/zaner-city | Project page (last updated 2023-10-04): address '150m Road behind of Ganjan City'; type Villa; 13 feature tags incl. Shofag heating, kindergarten, health center, mosque, school; Baghy branch named 'Zaner City Branch'; map marker 36.297326, 44.041255; 4 undated sale cards 200-240 m2, USD 185,000-250,000 | 2023-10-04 | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://royaiq.com/areas/zanercitymodern | Roya sitemap only (pages not fetched): area 'zanercitymodern' and listing slugs 'house sale 230m/240m/250m zaner city' | — | 2026-11-07 | low |
+| roya-iq.com | https://royaiq.com/areas/zanercitymodern | Roya sitemap only (pages not fetched): area 'zanercitymodern' and listing slugs 'house sale 230m/240m/250m zaner city' | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Zaner City" Erbil”; “"زانەر سیتی" OR "زانەر ستی" OR "زانر سيتي" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Zaner City" Erbil»؛ «"زانەر سیتی" OR "زانەر ستی" OR "زانر سيتي" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and Erbil location (Baghy, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Address '150m Road behind Ganjan City', villa type and 13 feature tags (Baghy)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Explicit construction status
    - Land area
    - Unit count
    - Dates
    - Official prices
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy sale cards undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Status inferred from 'Ready' resale listings only
    - homele card labelled '(Down payment)' (USD 197,000) may be an instalment offer - excluded from prices
-   - Second verification pass (2026-11-07): no new evidence. No independent page about Zaner City was found in English or Kurdish/Arabic; developer, explicit status, unit count and land area remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page about Zaner City was found in English or Kurdish/Arabic; developer, explicit status, unit count and land area remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "zaner-city",

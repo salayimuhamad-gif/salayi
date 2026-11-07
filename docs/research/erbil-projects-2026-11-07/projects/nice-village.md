@@ -1,127 +1,130 @@
 <!-- rendered -->
 # Nice Village — نایس ڤیلج — نايس فلج
-Project ID: nice-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: nice-village | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Nice Village | High – Paya, Miran, homele | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey ; https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| District / Area | Pirmam Road, ~1 km from the 120m street | High – Paya and Miran agree on Pirmam Road; distances from Miran | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Developer | North Light Group | Medium – Miran only (Paya field repeats project name) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Project Category | Residential (villas) | High – Paya, Miran, homele | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Total Land Area | Not verified | Low – Not stated; 40,441 m2 is green space, not total site area | — |
-| Number of Buildings / Towers | 151 | Medium – 151 villas (Miran only) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Total Residential Units | 151 | Medium – Miran only | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Construction Status | Completed | Medium – Miran 'Completed' (May 2026) and homele ready villas vs Paya 'Constructing' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey ; https://homele.com/properties/for-sale-and-rent/erbil/nice-village ; https://paya-realestate.com/en/projects/nice-village-278 |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.2408384, 44.0576064 — Google Maps: https://www.google.com/maps?q=36.2408384,44.0576064 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/nice-village-278 |
-| Alternative names | نايس فلج | Medium – Paya Arabic label | https://paya-realestate.com/en/projects/nice-village-278 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None named; neighbourhoods of 7 villas | Medium – Paya description | https://paya-realestate.com/en/projects/nice-village-278 |
+| ناوی پڕۆژە | Nice Village | بەرز – Paya, Miran, homele | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey ; https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| ناوچە / گەڕەک | Pirmam Road, ~1 km from the 120m street | بەرز – Paya and Miran agree on Pirmam Road; distances from Miran | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| گەشەپێدەر (کۆمپانیا) | North Light Group | مامناوەند – Miran only (Paya field repeats project name) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Paya, Miran, homele | https://paya-realestate.com/en/projects/nice-village-278 ; https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated; 40,441 m2 is green space, not total site area | — |
+| ژمارەی باڵەخانە / تاوەر | 151 | مامناوەند – 151 villas (Miran only) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| کۆی یەکە نیشتەجێبوونەکان | 151 | مامناوەند – Miran only | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Miran 'Completed' (May 2026) and homele ready villas vs Paya 'Constructing' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey ; https://homele.com/properties/for-sale-and-rent/erbil/nice-village ; https://paya-realestate.com/en/projects/nice-village-278 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.2408384, 44.0576064 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.2408384,44.0576064 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/nice-village-278 |
+| ناوە جێگرەوەکان | نايس فلج | مامناوەند – Paya Arabic label | https://paya-realestate.com/en/projects/nice-village-278 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None named; neighbourhoods of 7 villas | مامناوەند – Paya description | https://paya-realestate.com/en/projects/nice-village-278 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated; 40,441 m2 is green space, not total site area | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 151 | Miran only | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Villas / houses | 151 | Miran: 'a premium residential community of 151 exclusive villas' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 151 | 151 villas (Miran only) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | 40,441 | Miran: 151 villas 'set within 40,441 m² of lush green space' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Development phases | None named; neighbourhoods of 7 villas | Paya description | https://paya-realestate.com/en/projects/nice-village-278 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated; 40,441 m2 is green space, not total site area | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 151 | Miran only | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| ڤێلا / خانوو | 151 | Miran: 'a premium residential community of 151 exclusive villas' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 151 | 151 villas (Miran only) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | 40,441 | Miran: 151 villas 'set within 40,441 m² of lush green space' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| قۆناغەکانی پڕۆژە | None named; neighbourhoods of 7 villas | Paya description | https://paya-realestate.com/en/projects/nice-village-278 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 561 | 561 | 561 | — | Multiple living areas, hot and cold kitchens, 4+ bedrooms with suite bathrooms, master suites with balconies, Turkish bath, maid quarters; elevator and high ceiling tags (Miran) | agency_project_page | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| villa | 500, 504, 505, 570, 650 | 500 | 650 | 5 | Ready villas (one off-plan 500 m2 corner villa with 6 bedrooms); 4-6 bathrooms | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| ڤێلا | 561 | 561 | 561 | — | Multiple living areas, hot and cold kitchens, 4+ bedrooms with suite bathrooms, master suites with balconies, Turkish bath, maid quarters; elevator and high ceiling tags (Miran) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
+| ڤێلا | 500, 504, 505, 570, 650 | 500 | 650 | 5 | Ready villas (one off-plan 500 m2 corner villa with 6 bedrooms); 4-6 bathrooms | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Green space of 40,441 m2 inside and around the villas (Miran description; Paya description of green areas inside and outside the villas)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Green space of 40,441 m2 inside and around the villas (Miran description; Paya description of green areas inside and outside the villas)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Sewers, car parking, reception, maintenance, kids play area, security, AC, supermarket, public garden (Paya tags only); Garden (Miran tag); Fire safety, high-speed internet, waste management, backup generator (Miran generic building-facilities list); Views of Gulan Mall, 100M Street and Erbil Citadel (Miran 'Available Views' tags; appear generic for a Pirmam Road site)
+**بانگەشەی پشتڕاست نەکراوە:** Sewers, car parking, reception, maintenance, kids play area, security, AC, supermarket, public garden (Paya tags only); Garden (Miran tag); Fire safety, high-speed internet, waste management, backup generator (Miran generic building-facilities list); Views of Gulan Mall, 100M Street and Erbil Citadel (Miran 'Available Views' tags; appear generic for a Pirmam Road site)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready villa 504 m2, 5 bed / 5 bath - homele sale listing | 680,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready villa 505 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 580,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready villa 505 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 590,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready furnished villa 505 m2, 5 bed / 6 bath - homele sale listing (negotiable) | 670,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready villa 570 m2, 5 bed / 4 bath - homele sale listing (negotiable) | 610,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready corner villa 650 m2, 5 bed / 6 bath - homele sale listing (negotiable) | 570,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Ready corner villa 650 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 750,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-| Off-plan corner villa 500 m2, 6 bed / 4 bath - homele sale listing (negotiable) | 500,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele lists ready villas for sale (mostly negotiable) and one off-plan corner house (https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey)
+| Ready villa 504 m2, 5 bed / 5 bath - homele sale listing | 680,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready villa 505 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 580,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready villa 505 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 590,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready furnished villa 505 m2, 5 bed / 6 bath - homele sale listing (negotiable) | 670,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready villa 570 m2, 5 bed / 4 bath - homele sale listing (negotiable) | 610,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready corner villa 650 m2, 5 bed / 6 bath - homele sale listing (negotiable) | 570,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Ready corner villa 650 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 750,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+| Off-plan corner villa 500 m2, 6 bed / 4 bath - homele sale listing (negotiable) | 500,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Miran: payment 'Cash'; homele lists ready villas for sale (mostly negotiable) and one off-plan corner house (https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey)
 
-### Location and surroundings
-Nice Village is on Pirmam Road north of Erbil, about 1 km outside the 120m ring road, roughly 7 km from the city centre and 13 km from Erbil International Airport (Miran; Paya confirms Pirmam road). It sits on the Pirmam approach within the study scope. Map position (low confidence, from agency map pins): 36.2408384, 44.0576064. Google Maps: https://www.google.com/maps?q=36.2408384,44.0576064
+### شوێن و دەوروبەر
+Nice Village is on Pirmam Road north of Erbil, about 1 km outside the 120m ring road, roughly 7 km from the city centre and 13 km from Erbil International Airport (Miran; Paya confirms Pirmam road). It sits on the Pirmam approach within the study scope.
+شوێن لەسەر نەخشە: 36.2408384, 44.0576064 (متمانە: نزم) — https://www.google.com/maps?q=36.2408384,44.0576064
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 نایس ڤیلج (Nice Village) پڕۆژەیەکی ڤێلای تەواوکراوە لەسەر ڕێگای پیرمام لە هەولێر، نزیکەی ١ کم لە دەرەوەی شەقامی ١٢٠ مەتری، و نزیکەی ٧ کم لە ناوەندی شار و ١٣ کم لە فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە. گرووپی نۆرث لایت گەشەی پێداوە و ١٥١ ڤێلا لەخۆ دەگرێت کە لە گەڕەکی حەوت ڤێلاییدا ڕێکخراون. ناوچەی سەوز بە ڕووبەری ٤٠،٤٤١ م² لە ناو و دەوروبەری ڤێلاکاندا هەیە. یەکێک لە جۆرەکانی ڤێلا ڕووبەری ٥٦١ م²یە و چەند هۆڵێکی دانیشتن، چێشتخانەی گەرم و ساردی جیا، چوار ژووری نووستن یان زیاتر بە گەرماوی تایبەت، ژووری ماستەر بە بالکۆن، حەمامی تورکی و ژووری خزمەتکار لەخۆ دەگرێت. ڤێلاکانی تری پڕۆژەکە ڕووبەریان لە ٥٠٠ تا ٦٥٠ م²یە و پێنج یان شەش ژووری نووستنیان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 نايس فلج (Nice Village) مشروع فلل مكتمل على طريق بيرمام في أربيل، على بُعد نحو 1 كم خارج الطريق الدائري 120 م، ونحو 7 كم من مركز المدينة و13 كم من مطار أربيل الدولي. تطوّره مجموعة نورث لايت، ويضم 151 فيلا موزعة في أحياء صغيرة يضم كل منها سبع فلل. وتمتد مساحات خضراء تبلغ 40,441 م² داخل الفلل وحولها. ويبلغ أحد أنواع الفلل 561 م²، ويضم عدة صالات معيشة، ومطبخين منفصلين للطهي الساخن والبارد، وأربع غرف نوم أو أكثر بحمامات داخلية، وأجنحة رئيسية بشرفات، وحماماً تركياً، وغرفاً للخدم. أما الفلل الأخرى في المشروع فتتراوح مساحاتها بين 500 و650 م² وتضم خمس أو ست غرف نوم.
 
 ### 3. English
 Nice Village is a completed villa project on Pirmam Road in Erbil, about 1 km outside the 120 m ring road, roughly 7 km from the city centre and 13 km from Erbil International Airport. It is developed by North Light Group and comprises 151 villas, grouped in neighbourhoods of seven villas each. Green space of 40,441 m² extends inside and around the villas. One villa type measures 561 m² and has several living areas, separate hot and cold kitchens, four or more bedrooms with en-suite bathrooms, master suites with balconies, a Turkish bath and maid's quarters. Other villas in the project measure 500 to 650 m² and have five or six bedrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/nice-village | Area listing page (1 page): ready villas 504-650 m2, 5 bed, USD 570,000-750,000; one off-plan 500 m2 corner villa USD 500,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/nice-village-278 | Project page: status Constructing; Pirmam road; large green area inside and outside villas; neighbourhoods of 7 villas; post-modern facades with arches and columns; amenity tags; developer field repeats project name | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey | Project page (updated 2026-05-02): North Light Group; Completed; Pirmam Road; 151 villas within 40,441 m2 of green space; 1 km from 120m street, 7 km from centre, 13 km from airport; villa 561 m2 and its features | updated 2026-05-02 | 2026-11-07 | high |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/nice-village | Area listing page (1 page): ready villas 504-650 m2, 5 bed, USD 570,000-750,000; one off-plan 500 m2 corner villa USD 500,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/nice-village-278 | Project page: status Constructing; Pirmam road; large green area inside and outside villas; neighbourhoods of 7 villas; post-modern facades with arches and columns; amenity tags; developer field repeats project name | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey | Project page (updated 2026-05-02): North Light Group; Completed; Pirmam Road; 151 villas within 40,441 m2 of green space; 1 km from 120m street, 7 km from centre, 13 km from airport; villa 561 m2 and its features | updated 2026-05-02 | 2026-11-07 | بەرز |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Pirmam Road location, villa project (Paya, Miran, homele)
    - Extensive green areas (Paya, Miran)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer North Light Group, 151 villas, 40,441 m2 green space, 561 m2 villa, distances (Miran)
    - Neighbourhoods of 7 villas, post-modern facades (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: Paya 'Constructing' vs Miran 'Completed'
    - Villa size 561 m2 vs 500-650 m2 listings
    - construction_status: Constructing (https://paya-realestate.com/en/projects/nice-village-278); Completed (page updated 2026-05-02) (https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey); 7 ready villas and 1 off-plan villa listed (Nov 2026) (https://homele.com/properties/for-sale-and-rent/erbil/nice-village) → Completed adopted (dated Miran page plus ready villas on homele); Paya status treated as outdated; one off-plan listing noted.
    - villa size: 561 m2 (https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey); 500-650 m2 listings (https://homele.com/properties/for-sale-and-rent/erbil/nice-village) → 561 m2 recorded as the agency-page type; listings may quote plot or built-up areas.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total land area
    - Launch and completion dates
    - Developer prices
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya 'Constructing' status
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether some villas remain off-plan (one homele off-plan listing)
    - Miran view tags (Gulan Mall, Citadel) look like template data
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "nice-village",

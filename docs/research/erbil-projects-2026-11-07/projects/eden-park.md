@@ -1,104 +1,106 @@
 <!-- rendered -->
 # Eden Park — — — —
-Project ID: eden-park | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: eden-park | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Eden Park | Low – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| City | Erbil | Medium – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| District / Area | Not verified | Low – No street or landmark published | — |
-| Developer | Not verified | Low – No source names one | — |
-| Project Category | Residential (houses) | Low – Based on three house listings | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Under construction (inferred: all listings 'Off Plan') | Low – No project-level status; off-plan sales only show the homes are not finished | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None mentioned | — |
+| ناوی پڕۆژە | Eden Park | نزم – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| شار | هەولێر | مامناوەند – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No street or landmark published | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Based on three house listings | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (inferred: all listings 'Off Plan') | نزم – No project-level status; off-plan sales only show the homes are not finished | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200, 220 | 200 | 220 | 4 | Three 'Off Plan' listings, all labelled '(Down payment)': 200 m2 4 bed/5 bath; 200 m2 4 bed/4 bath ('residence'); 220 m2 4 bed/4 bath. Plot vs built area not stated. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| خانوو | 200, 220 | 200 | 220 | 4 | Three 'Off Plan' listings, all labelled '(Down payment)': 200 m2 4 bed/5 bath; 200 m2 4 bed/4 bath ('residence'); 220 m2 4 bed/4 bath. Plot vs built area not stated. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Off-plan house 200 m2, 4 bed / 5 bath, down-payment listing (homele market listing) | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| Off-plan residence 200 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 185,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-| Off-plan home 220 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 210,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Off-plan 4-bed houses (200–220 m², $180,000–210,000) listed for sale on homele, labelled '(Down payment)' per profile (https://homele.com/properties/for-sale-and-rent/erbil/eden-park)
+| Off-plan house 200 m2, 4 bed / 5 bath, down-payment listing (homele market listing) | 180,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| Off-plan residence 200 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 185,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+| Off-plan home 220 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 210,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Off-plan 4-bed houses (200–220 m², $180,000–210,000) listed for sale on homele, labelled '(Down payment)' per profile (https://homele.com/properties/for-sale-and-rent/erbil/eden-park)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Homele lists 'Eden Park' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئیدن پارک (Eden Park) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە خانووی خێزانی پێکدێت. ڕووبەری خانووەکانی ئیدن پارک ٢٠٠ م² و ٢٢٠ م²یە و هەر خانوویەک چوار ژووری نووستنی هەیە. خانووەکانی ٢٠٠ م² چوار یان پێنج حەمامیان هەیە، و خانووەکانی ٢٢٠ م² چوار حەمامیان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 إيدن بارك (Eden Park) منطقة سكنية في مدينة أربيل تتكون من بيوت عائلية. وتبلغ مساحات البيوت في إيدن بارك 200 و220 م²، ويضم كل بيت منها أربع غرف نوم. وتضم البيوت بمساحة 200 م² أربعة أو خمسة حمامات، أما البيوت بمساحة 220 م² فتضم أربعة حمامات.
 
 ### 3. English
 Eden Park is a residential area in Erbil made up of family houses. Houses in Eden Park measure 200 m² and 220 m², and each has four bedrooms. The 200 m² houses have four or five bathrooms, and the 220 m² houses have four bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/eden-park | Area page 'Eden Park, Erbil' (1 result page): three Off Plan 4-bed homes of 200-220 m2, USD 180,000-210,000, labelled '(Down payment)' | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/eden-park | Area page 'Eden Park, Erbil' (1 result page): three Off Plan 4-bed homes of 200-220 m2, USD 180,000-210,000, labelled '(Down payment)' | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence of an 'Eden Park' area in Erbil and three off-plan 4-bed homes of 200-220 m2 at USD 180,000-210,000 (homele listings)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Exact location
    - Land area
@@ -107,15 +109,15 @@ First-pass research only (at most one web search for this project).
    - Facilities
    - Payment-plan terms
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No project page on Paya, Miran, Baghy Shaqlawa or Haji Salam in the evidence pack; no WebSearch run (shared budget; Tier-2 searches in this batch returned nothing relevant)
    - Whether the '(Down payment)' label means the shown price is the total price or only the first instalment is not explained on the listing page
    - Status is inferred from 'Off Plan' tags only; could be planned rather than under construction
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "eden-park",

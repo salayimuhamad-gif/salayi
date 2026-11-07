@@ -1,101 +1,103 @@
 <!-- rendered -->
 # Kamarani City — شاری کامەرانی — كامراني سيتي
-Project ID: kamarani-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: kamarani-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Kamarani City (Haji Salam: 'Kamarany City') | Low – Single project page | https://hajisalam.com/en/kamarany-city/ |
-| City | Erbil | Medium – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| District / Area | Kasnazan Road, behind Majdi Mall | Low – Haji Salam only | https://hajisalam.com/en/kamarany-city/ |
-| Developer | Not verified | Low – Not named; one web search found nothing | — |
-| Project Category | Residential (houses and apartments) | Low – Haji Salam 'House- Apartment' | https://hajisalam.com/en/kamarany-city/ |
-| Total Land Area | Not verified | Low – Not stated ('207 m' is the house size) | — |
-| Number of Buildings / Towers | 7 apartment buildings (plus 201 houses) | Low – Haji Salam 'house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
-| Total Residential Units | 201 houses + apartments (count not stated) | Low – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| Construction Status | Unknown | Low – — – No status on Haji Salam; no other source | — |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Kamarany City; کامرانی; Shari Kamarani | Low – Haji Salam spelling; homele area slug | https://hajisalam.com/en/kamarany-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/shari-kamarani |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Houses 1.5 floors; apartment buildings not stated | Low – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Kamarani City (Haji Salam: 'Kamarany City') | نزم – Single project page | https://hajisalam.com/en/kamarany-city/ |
+| شار | هەولێر | مامناوەند – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
+| ناوچە / گەڕەک | Kasnazan Road, behind Majdi Mall | نزم – Haji Salam only | https://hajisalam.com/en/kamarany-city/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and apartments) | نزم – Haji Salam 'House- Apartment' | https://hajisalam.com/en/kamarany-city/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated ('207 m' is the house size) | — |
+| ژمارەی باڵەخانە / تاوەر | 7 apartment buildings (plus 201 houses) | نزم – Haji Salam 'house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
+| کۆی یەکە نیشتەجێبوونەکان | 201 houses + apartments (count not stated) | نزم – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – No status on Haji Salam; no other source | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Kamarany City; کامرانی; Shari Kamarani | نزم – Haji Salam spelling; homele area slug | https://hajisalam.com/en/kamarany-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/shari-kamarani |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Houses 1.5 floors; apartment buildings not stated | نزم – Haji Salam | https://hajisalam.com/en/kamarany-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated ('207 m' is the house size) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 201 houses + apartments (count not stated) | Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| Villas / houses | 201 | Haji Salam: Project Type 'House- Apartment'; 'Number Of Unit: house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 7 apartment buildings (plus 201 houses) | Haji Salam 'house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
-| Floors per building | Houses 1.5 floors; apartment buildings not stated | Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated ('207 m' is the house size) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 201 houses + apartments (count not stated) | Haji Salam | https://hajisalam.com/en/kamarany-city/ |
+| ڤێلا / خانوو | 201 | Haji Salam: Project Type 'House- Apartment'; 'Number Of Unit: house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 7 apartment buildings (plus 201 houses) | Haji Salam 'house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Houses 1.5 floors; apartment buildings not stated | Haji Salam | https://hajisalam.com/en/kamarany-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 207 | 207 | 207 | — | 1.5 floors; 201 houses; 1.5 floors; 3-4 bedrooms (Haji Salam) | agency_project_page | https://hajisalam.com/en/kamarany-city/ |
-| apartment | Not verified | — | — | — | Apartments in 7 buildings; sizes and count not stated | agency_project_page | https://hajisalam.com/en/kamarany-city/ |
+| خانوو | 207 | 207 | 207 | — | 1.5 نهۆم؛ 201 houses; 1.5 floors; 3-4 bedrooms (Haji Salam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/kamarany-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Apartments in 7 buildings; sizes and count not stated | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/kamarany-city/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam places Kamarany City on Kasnazan Road behind Majdi Mall, in the Kasnazan approach of Erbil.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 شاری کامەرانی (کامەرانی سیتی) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر. پڕۆژەکە لەسەر ڕێگای کەسنەزان و لە پشت مەجدی مۆڵ هەڵکەوتووە. پڕۆژەکە دوو جۆر نیشتەجێبوون کۆدەکاتەوە، خانوو و شوقە، و ٢٠١ خانوو لەگەڵ ٧ بینای شوقە لەخۆ دەگرێت. ڕووبەری هەر خانوویەک ٢٠٧ م²یە، لەسەر یەک نهۆم و نیو دروستکراوە و سێ یان چوار ژووری نووستنی هەیە. بیناکانی شوقە بەشێکی جیای پڕۆژەکەن لە تەنیشت خانووەکان.
 
-### 2. Arabic (العربية)
+### 2. العربية
 كامراني سيتي، ويُكتب أيضاً كاماراني سيتي، مشروع سكني في أربيل. يقع المشروع على طريق كسنزان خلف مجدي مول. يجمع المشروع بين نوعين من السكن، المنازل والشقق، ويضم 201 منزلاً إلى جانب 7 عمارات سكنية. تبلغ مساحة كل منزل 207 م²، ويتألف من طابق ونصف، ويحتوي على ثلاث أو أربع غرف نوم. وتشكّل العمارات السكنية جزءاً مستقلاً من المشروع إلى جانب المنازل.
 
 ### 3. English
 Kamarany City, also written Kamarani City, is a residential project in Erbil. It is located on Kasnazan Road, behind Majdi Mall. The project combines two housing types, houses and apartments, and includes 201 houses together with 7 apartment buildings. Each house has an area of 207 m², is built on one and a half floors, and contains three or four bedrooms. The apartment buildings form a separate part of the project alongside the houses.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/shari-kamarani | Erbil area index lists slug 'shari-kamarani' (Kamarani City); area page not crawled - alias only | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/kamarany-city/ | Project page 'Kamarany City': address Kasnazan Road behind Majdi Mall; type House-Apartment; 'house 201 - buildings 7'; area 207 m (house); 1.5 floors; 3-4 bedrooms; no listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/shari-kamarani | Erbil area index lists slug 'shari-kamarani' (Kamarani City); area page not crawled - alias only | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/kamarany-city/ | Project page 'Kamarany City': address Kasnazan Road behind Majdi Mall; type House-Apartment; 'house 201 - buildings 7'; area 207 m (house); 1.5 floors; 3-4 bedrooms; no listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Kamarany City" OR "Kamarani City" Erbil Kasnazan”; “"شاری کامەرانی" OR "كامراني سيتي" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Kamarany City" OR "Kamarani City" Erbil Kasnazan»؛ «"شاری کامەرانی" OR "كامراني سيتي" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All project data: location, 201 houses, 7 apartment buildings, 207 m2 houses of 1.5 floors with 3-4 bedrooms (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Apartment count and sizes
@@ -104,15 +106,15 @@ Second verification pass 2026-11-07: queries “"Kamarany City" OR "Kamarani Cit
    - Facilities
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether homele area 'shari-kamarani' is this project (page not crawled)
    - Construction status and developer
-   - Second verification pass (2026-11-07): no new evidence. No page mentions Kamarany/Kamarani City; developer, status, apartment details and land area remain unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page mentions Kamarany/Kamarani City; developer, status, apartment details and land area remain unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "kamarani-city",

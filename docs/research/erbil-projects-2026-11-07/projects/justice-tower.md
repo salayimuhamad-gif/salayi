@@ -1,123 +1,125 @@
 <!-- rendered -->
 # Justice Tower — جەستیس تاوەر — جستس تاور
-Project ID: justice-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: justice-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Justice Tower | High – Hajisalam, homele, round-city.com, Wikipedia | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| City | Erbil | High – All sources | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
-| District / Area | Mosul road, opposite Sami Abdulrahman Park | Medium – Hajisalam; round-city.com places it on the Mosul approach | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
-| Developer | Nasri Group | Low – round-city.com only (via search summary) | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
-| Project Category | Commercial (offices) | High – Hajisalam, homele, round-city.com | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 1 tower | High – All sources describe a single tower | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Total Residential Units | None residential; 1,000 office units | Medium – Hajisalam only | https://hajisalam.com/en/justice-tower/ |
-| Construction Status | Completed | Medium – Wikipedia list year 2016; round-city describes it as constructed; ready office listed on homele | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
-| Completion Date | 2016 | Medium – Wikipedia list via search summary only | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 40 (Hajisalam: 35) | Medium – round-city.com and Wikipedia list 40; Hajisalam 35 | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://hajisalam.com/en/justice-tower/ |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Not verified | Low – Single tower | — |
+| ناوی پڕۆژە | Justice Tower | بەرز – Hajisalam, homele, round-city.com, Wikipedia | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| شار | هەولێر | بەرز – All sources | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
+| ناوچە / گەڕەک | Mosul road, opposite Sami Abdulrahman Park | مامناوەند – Hajisalam; round-city.com places it on the Mosul approach | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
+| گەشەپێدەر (کۆمپانیا) | Nasri Group | نزم – round-city.com only (via search summary) | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
+| جۆری پڕۆژە | بازرگانی — Commercial (offices) | بەرز – Hajisalam, homele, round-city.com | https://hajisalam.com/en/justice-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 1 tower | بەرز – All sources describe a single tower | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| کۆی یەکە نیشتەجێبوونەکان | None residential; 1,000 office units | مامناوەند – Hajisalam only | https://hajisalam.com/en/justice-tower/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Wikipedia list year 2016; round-city describes it as constructed; ready office listed on homele | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
+| بەرواری تەواوبوون | 2016 | مامناوەند – Wikipedia list via search summary only | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 40 (Hajisalam: 35) | مامناوەند – round-city.com and Wikipedia list 40; Hajisalam 35 | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://hajisalam.com/en/justice-tower/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – Single tower | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | None residential; 1,000 office units | Hajisalam only | https://hajisalam.com/en/justice-tower/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | 1,000 | Haji Salam: 'Project Type: Office', 'Number Of Unit: 1000' | https://hajisalam.com/en/justice-tower/ |
-| Towers / apartment buildings | 1 tower | All sources describe a single tower | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Floors per building | 40 (Hajisalam: 35) | round-city.com and Wikipedia list 40; Hajisalam 35 | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://hajisalam.com/en/justice-tower/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | Single tower | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | None residential; 1,000 office units | Hajisalam only | https://hajisalam.com/en/justice-tower/ |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | 1,000 | Haji Salam: 'Project Type: Office', 'Number Of Unit: 1000' | https://hajisalam.com/en/justice-tower/ |
+| تاوەر / باڵەخانەی شوقە | 1 tower | All sources describe a single tower | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 40 (Hajisalam: 35) | round-city.com and Wikipedia list 40; Hajisalam 35 | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://hajisalam.com/en/justice-tower/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | Single tower | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| office | 55, 110 | 55 | 110 | — | Office units 55-110 m2; 1,000 units (Hajisalam project page) | agency_project_page | https://hajisalam.com/en/justice-tower/ |
-| office | 52 | 52 | 52 | — | Ready office advertised for sale (homele) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
+| ئۆفیس | 55, 110 | 55 | 110 | — | Office units 55-110 m2; 1,000 units (Hajisalam project page) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/justice-tower/ |
+| ئۆفیس | 52 | 52 | 52 | — | Ready office advertised for sale (homele) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready office 52 m2 - homele market listing (negotiable) | 23,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready office 52 m2 - homele market listing (negotiable) | 23,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Justice Tower stands on the Mosul road at Erbil's western approach, opposite Sami Abdulrahman Park and beside the Erbil Appellate Court presidency.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 جەستیس تاوەر تاوەرێکی ئۆفیسە لەسەر ڕێگای مووسڵ لە هەولێر، بەرامبەر پارکی سامی عەبدولڕەحمان و لە تەنیشت سەرۆکایەتیی دادگای تێهەڵچوونەوەی هەولێر، لە دەروازەی ڕۆژئاوای شار. گرووپی نەسری پەرەی بە بیناکە داوە، بەرزییەکەی ١٣٠ مەترە و لە ساڵی ٢٠١٦ تەواو بووە. تاوەرەکە ١٬٠٠٠ یەکەی ئۆفیسی بە ڕووبەری ٥٥ م² تا ١١٠ م² لەخۆدەگرێت، و یەکەی ئۆفیس، لەوانە ئۆفیسێکی ئامادەی ٥٢ م²، لە بازاڕی خانووبەرەی هەولێردا بۆ فرۆشتن پێشکەش دەکرێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 جستس تاور برج مكاتب على طريق الموصل في أربيل، مقابل متنزه سامي عبد الرحمن وبجوار رئاسة محكمة استئناف أربيل، عند المدخل الغربي للمدينة. طوّرت المبنى مجموعة نصري، ويبلغ ارتفاعه 130 متراً، واكتمل في عام 2016. يضم البرج 1,000 وحدة مكتبية تتراوح مساحاتها بين 55 م² و110 م²، وتُعرض وحدات مكتبية للبيع في سوق العقارات في أربيل، منها مكتب جاهز بمساحة 52 م².
 
 ### 3. English
 Justice Tower is an office tower on the Mosul road in Erbil, opposite Sami Abdulrahman Park and beside the Presidency of the Erbil Appellate Court, on the western approach to the city. The building was developed by Nasri Group, rises 130 m and was completed in 2016. The tower contains 1,000 office units with sizes from 55 m² to 110 m², and office units, including a ready 52 m² office, are offered for sale on the Erbil property market.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower | Ready 52 m2 office listed at $23,000 (negotiable) | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/justice-tower/ | Mosul road opposite Sami Abdulrahman Park; office project; 1,000 units; 55-110 m2; 35 floors | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/justice-tower | Ready 52 m2 office listed at $23,000 (negotiable) | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/justice-tower/ | Mosul road opposite Sami Abdulrahman Park; office project; 1,000 units; 55-110 m2; 35 floors | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| round-city.com | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ | 40-storey office building developed by Nasri Group; western approach from Mosul; beside Presidency of Appellate Court of Erbil (seen via web-search summary) | — | 2026-11-07 | medium |
-| en.wikipedia.org | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq | Listed as 40 floors, 130 m, 2016 (seen via web-search summary) | — | 2026-11-07 | medium |
+| round-city.com | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ | 40-storey office building developed by Nasri Group; western approach from Mosul; beside Presidency of Appellate Court of Erbil (seen via web-search summary) | — | 2026-11-07 | مامناوەند |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq | Listed as 40 floors, 130 m, 2016 (seen via web-search summary) | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and office use (Hajisalam, homele, round-city.com)
    - Location on Mosul road (Hajisalam, round-city.com)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 1,000 units, 55-110 m2 (Hajisalam)
    - Developer Nasri Group (round-city.com)
    - Height 130 m and year 2016 (Wikipedia list)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Floors: 35 (Hajisalam) vs 40 (round-city.com, Wikipedia)
    - floors_per_building: 35 (https://hajisalam.com/en/justice-tower/); 40 (https://round-city.com/erbils-justice-tower-an-ironic-landmark/); 40 (https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq) → 40 adopted: two independent sources agree; Hajisalam's 35 recorded.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer prices
    - Land area
    - Launch date
    - Coordinates
    - Facilities
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - round-city.com and Wikipedia facts taken from web-search summaries, not from fetched pages
    - Only one primary site (Hajisalam) has a project page
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "justice-tower",

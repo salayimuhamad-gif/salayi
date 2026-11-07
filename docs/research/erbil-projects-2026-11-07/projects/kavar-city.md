@@ -1,120 +1,122 @@
 <!-- rendered -->
 # Kavar City — کاڤار سیتی — كافار سيتي
-Project ID: kavar-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: kavar-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Kavar City | High – Haji Salam and homele use the same name | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-| City | Erbil | High – Haji Salam and homele | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-| District / Area | Shaqlawa road, beside the Russian consulate | Medium – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
-| Developer | Not verified | Low – Not stated; one web search found nothing | — |
-| Project Category | Residential (houses) | High – Haji Salam and homele | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | 150 | Low – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
-| Construction Status | Completed | Low – Inferred from homele ready listings; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 2 floors (houses) | Low – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Kavar City | بەرز – Haji Salam and homele use the same name | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| شار | هەولێر | بەرز – Haji Salam and homele | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| ناوچە / گەڕەک | Shaqlawa road, beside the Russian consulate | مامناوەند – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | بەرز – Haji Salam and homele | https://hajisalam.com/en/kavar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 150 | نزم – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | نزم – Inferred from homele ready listings; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 floors (houses) | نزم – Haji Salam only | https://hajisalam.com/en/kavar-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 150 | Haji Salam only | https://hajisalam.com/en/kavar-city/ |
-| Villas / houses | 150 | Haji Salam: 'Project Type: House', 'Number Of Unit: 150' | https://hajisalam.com/en/kavar-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | 2 floors (houses) | Haji Salam only | https://hajisalam.com/en/kavar-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 150 | Haji Salam only | https://hajisalam.com/en/kavar-city/ |
+| ڤێلا / خانوو | 150 | Haji Salam: 'Project Type: House', 'Number Of Unit: 150' | https://hajisalam.com/en/kavar-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 floors (houses) | Haji Salam only | https://hajisalam.com/en/kavar-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 250, 300 | 250 | 300 | — | 2 floors; Haji Salam: houses of 250-300 m2, 2 floors, 3-4 bedrooms; 150 units | agency_project_page | https://hajisalam.com/en/kavar-city/ |
-| house | 320, 350 | 320 | 350 | 4 | Ready modern houses advertised for sale: 320 m2 4 bed / 2 bath; 350 m2 4 bed / 4 bath (homele) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| خانوو | 250, 300 | 250 | 300 | — | 2 نهۆم؛ Haji Salam: houses of 250-300 m2, 2 floors, 3-4 bedrooms; 150 units | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/kavar-city/ |
+| خانوو | 320, 350 | 320 | 350 | 4 | Ready modern houses advertised for sale: 320 m2 4 bed / 2 bath; 350 m2 4 bed / 4 bath (homele) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready modern house 320 m2, 4 bed / 2 bath - homele sale listing | 310,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-| Ready modern house 350 m2, 4 bed / 4 bath - homele sale listing (negotiable) | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready modern house 320 m2, 4 bed / 2 bath - homele sale listing | 310,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+| Ready modern house 350 m2, 4 bed / 4 bath - homele sale listing (negotiable) | 350,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Kavar City is on the Erbil-Shaqlawa road beside the Russian consulate (Haji Salam). No distance from the ring roads are published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 کاڤار سیتی (Kavar City) پڕۆژەیەکی نیشتەجێبوونی خانووە لە هەولێر، لەسەر ڕێگای هەولێر–شەقڵاوە لە تەنیشت کونسوڵخانەی ڕووسیا. پڕۆژەکە لە ١٥٠ خانووی دوو نهۆمی پێکدێت بە ڕووبەری ٢٥٠ تا ٣٠٠ م²، و هەر خانوویەک سێ یان چوار ژووری نووستنی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 كافار سيتي (Kavar City) مشروع سكني للمنازل في أربيل، على طريق أربيل–شقلاوة بجوار القنصلية الروسية. ويتكوّن من 150 منزلاً من طابقين بمساحات تتراوح بين 250 و300 م²، ولكل منزل ثلاث أو أربع غرف نوم.
 
 ### 3. English
 Kavar City is a residential project of houses in Erbil, on the Erbil–Shaqlawa road beside the Russian consulate. It consists of 150 two-floor houses with areas of 250 to 300 m², each with three or four bedrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city | Area listing page 'Kavar City' (1 page): ready modern houses 320 m2 4 bed / 2 bath USD 310,000; 350 m2 4 bed / 4 bath USD 350,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/kavar-city/ | Project page 'Kavar City': Shaqlawa Road beside the 'Consultant of Russia'; House; 150 units; 250-300 m2; 2 floors; 3-4 bedrooms; no listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/kavar-city | Area listing page 'Kavar City' (1 page): ready modern houses 320 m2 4 bed / 2 bath USD 310,000; 350 m2 4 bed / 4 bath USD 350,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/kavar-city/ | Project page 'Kavar City': Shaqlawa Road beside the 'Consultant of Russia'; House; 150 units; 250-300 m2; 2 floors; 3-4 bedrooms; no listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Kavar City" Erbil Shaqlawa road houses”; “"کاڤار سیتی" OR "Kavar" هەولێر شەقڵاوە” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Kavar City" Erbil Shaqlawa road houses»؛ «"کاڤار سیتی" OR "Kavar" هەولێر شەقڵاوە» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and house category (Haji Salam, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Shaqlawa road / Russian consulate location, 150 units, 250-300 m2, 2 floors, 3-4 bedrooms (Haji Salam)
    - Ready status and asking prices (homele)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - House sizes 250-300 m2 (Haji) vs advertised 320/350 m2 (homele)
    - house sizes: 250-300 m2 (https://hajisalam.com/en/kavar-city/); 320 m2 and 350 m2 advertised (https://homele.com/properties/for-sale-and-rent/erbil/kavar-city) → Haji Salam range kept as the project figure; homele sizes recorded as advertised listing sizes only (basis of measurement not stated)
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Dates
    - Land area
    - Facilities
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam page undated (site copyright 2019)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact position on the Shaqlawa road and distance from the 120m/150m roads not stated; kept in scope as a Pirmam/Shaqlawa approach
    - Status inferred from listings only
-   - Second verification pass (2026-11-07): no new evidence. No page names Kavar City; developer, dates, land area and exact position on the Shaqlawa road remain unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names Kavar City; developer, dates, land area and exact position on the Shaqlawa road remain unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "kavar-city",

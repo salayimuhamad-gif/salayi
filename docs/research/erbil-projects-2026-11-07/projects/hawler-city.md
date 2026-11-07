@@ -1,119 +1,121 @@
 <!-- rendered -->
 # Hawler City — هەولێر سیتی — هولير سيتي
-Project ID: hawler-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: hawler-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Hawler City | Medium – homele area name; Haji Salam page slug 'hawler-city' with Kurdish title | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city ; https://hajisalam.com/en/hawler-city/ |
-| City | Erbil | Medium – homele lists it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
-| District / Area | Not verified | Low – No source states the location within Erbil | — |
-| Developer | Not verified | Low – Not stated; one web search found no project page | — |
-| Project Category | Residential (houses) | Low – homele house listings only | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed (at least in part) | Low – homele 'Ready New House' listings only | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | هه‌ولێر ستی | Medium – Haji Salam page title | https://hajisalam.com/en/hawler-city/ |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Hawler City | مامناوەند – homele area name; Haji Salam page slug 'hawler-city' with Kurdish title | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city ; https://hajisalam.com/en/hawler-city/ |
+| شار | هەولێر | مامناوەند – homele lists it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No source states the location within Erbil | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated; one web search found no project page | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – homele house listings only | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (at least in part) | نزم – homele 'Ready New House' listings only | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | هه‌ولێر ستی | مامناوەند – Haji Salam page title | https://hajisalam.com/en/hawler-city/ |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | — | Two ready new houses advertised for sale: 4 bed / 3 bath and 2 bed / 2 bath (homele) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+| خانوو | 200 | 200 | 200 | — | Two ready new houses advertised for sale: 4 bed / 3 bath and 2 bed / 2 bath (homele) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready new house 200 m2, 4 bed / 3 bath - homele sale listing | 128,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
-| Ready new house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 110,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready new house 200 m2, 4 bed / 3 bath - homele sale listing | 128,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+| Ready new house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 110,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Hawler City is listed by homele as an area of Erbil; no source states where in the city it lies.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 هەولێر سیتی (Hawler City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق؛ هەولێر ناوی کوردیی شاری ئەربیلە. ڕووبەری خانووەکانی هەولێر سیتی ٢٠٠ م²یە، و دیزاینەکانیان خانووی چوار ژووری نووستن و سێ حەمام، و خانووی دوو ژووری نووستن و دوو حەمام لەخۆدەگرن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 هولير سيتي (Hawler City) منطقة سكنية للمنازل في مدينة أربيل في إقليم كوردستان العراق، وهولير هو الاسم الكردي لأربيل. تبلغ مساحة المنازل في هولير سيتي 200 م²، وتشمل تصاميمها منازل بأربع غرف نوم وثلاثة حمامات، ومنازل بغرفتي نوم وحمامين.
 
 ### 3. English
 Hawler City is a residential area of houses in Erbil, in the Kurdistan Region of Iraq; Hawler is the Kurdish name of Erbil. Houses in Hawler City have an area of 200 m², with layouts that include four bedrooms and three bathrooms, or two bedrooms and two bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city | Area listing page 'Hawler City, Erbil' (1 page): ready new houses 200 m2 - 4 bed / 3 bath USD 128,000; 2 bed / 2 bath USD 110,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/hawler-city/ | Project page titled 'هه‌ولێر ستی' with no data fields or listings | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/hawler-city | Area listing page 'Hawler City, Erbil' (1 page): ready new houses 200 m2 - 4 bed / 3 bath USD 128,000; 2 bed / 2 bath USD 110,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/hawler-city/ | Project page titled 'هه‌ولێر ستی' with no data fields or listings | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Hawler City" Erbil houses project location”; “"هەولێر سیتی" خانوو” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Hawler City" Erbil houses project location»؛ «"هەولێر سیتی" خانوو» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Ready 200 m2 houses and asking prices (homele)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Location within Erbil
    - Developer
    - Unit count
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Location unknown, so in_erbil_city rests only on homele's Erbil listing
    - 'Hawler' is the Kurdish name of Erbil; the label may be confused with other 'Hawler' projects (e.g. the Hawler Housing Project consortium behind English Village, seen in search results - not linked)
    - Haji Salam page carries only a title; one web search found no project page
-   - Second verification pass (2026-11-07): no new evidence. Results concerned Erbil (Hawler) in general and the Hawler Housing Project behind English Village; the project's location, developer and size remain unknown.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Results concerned Erbil (Hawler) in general and the Hawler Housing Project behind English Village; the project's location, developer and size remain unknown.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "hawler-city",

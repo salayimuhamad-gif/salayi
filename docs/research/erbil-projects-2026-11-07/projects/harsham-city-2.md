@@ -1,122 +1,124 @@
 <!-- rendered -->
 # Harsham City 2 — هەرشەم سیتی ٢ — هرشم سيتي 2
-Project ID: harsham-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: harsham-city-2 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Harsham City 2 | High – Haji Salam and homele use the same name | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| City | Erbil | High – Haji Salam and homele; UNHCR Erbil map lists Harsham_2 among the city's residential areas (search summary) | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 ; https://data.unhcr.org/en/documents/download/100611 |
-| District / Area | Old Bahrka road | Medium – Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
-| Developer | Not verified | Low – Not stated; Baghy names Kamel Ahmed Agha Company for Harsham City 1 only, not extended here; one web search found nothing | — |
-| Project Category | Residential (houses) | High – Haji Salam and homele | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | 550 | Low – Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
-| Construction Status | Completed | Low – Inferred from a homele ready resale listing; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Harsham 2 | Medium – Pack alias; a UNHCR Erbil map labels a residential area 'Harsham_2' (search summary, page not opened) | https://data.unhcr.org/en/documents/download/100611 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 floor (houses) | Medium – Haji Salam; homele one-floor listing | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Phase 2 of the Harsham City series; separate from Harsham City 1 and 3 | Medium – Separate Haji Salam pages per phase | https://hajisalam.com/en/harsham-city-2/ ; https://hajisalam.com/en/harsham-1/ ; https://hajisalam.com/en/harsham-city-3/ |
+| ناوی پڕۆژە | Harsham City 2 | بەرز – Haji Salam and homele use the same name | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| شار | هەولێر | بەرز – Haji Salam and homele; UNHCR Erbil map lists Harsham_2 among the city's residential areas (search summary) | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 ; https://data.unhcr.org/en/documents/download/100611 |
+| ناوچە / گەڕەک | Old Bahrka road | مامناوەند – Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated; Baghy names Kamel Ahmed Agha Company for Harsham City 1 only, not extended here; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | بەرز – Haji Salam and homele | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 550 | نزم – Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | نزم – Inferred from a homele ready resale listing; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Harsham 2 | مامناوەند – Pack alias; a UNHCR Erbil map labels a residential area 'Harsham_2' (search summary, page not opened) | https://data.unhcr.org/en/documents/download/100611 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 floor (houses) | مامناوەند – Haji Salam; homele one-floor listing | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | Phase 2 of the Harsham City series; separate from Harsham City 1 and 3 | مامناوەند – Separate Haji Salam pages per phase | https://hajisalam.com/en/harsham-city-2/ ; https://hajisalam.com/en/harsham-1/ ; https://hajisalam.com/en/harsham-city-3/ |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 550 | Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
-| Villas / houses | 550 | Haji Salam: 'Project Type: House', 'Number Of Unit: 550' | https://hajisalam.com/en/harsham-city-2/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | 1 floor (houses) | Haji Salam; homele one-floor listing | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Phase 2 of the Harsham City series; separate from Harsham City 1 and 3 | Separate Haji Salam pages per phase | https://hajisalam.com/en/harsham-city-2/ ; https://hajisalam.com/en/harsham-1/ ; https://hajisalam.com/en/harsham-city-3/ |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 550 | Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
+| ڤێلا / خانوو | 550 | Haji Salam: 'Project Type: House', 'Number Of Unit: 550' | https://hajisalam.com/en/harsham-city-2/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 floor (houses) | Haji Salam; homele one-floor listing | https://hajisalam.com/en/harsham-city-2/ ; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Phase 2 of the Harsham City series; separate from Harsham City 1 and 3 | Separate Haji Salam pages per phase | https://hajisalam.com/en/harsham-city-2/ ; https://hajisalam.com/en/harsham-1/ ; https://hajisalam.com/en/harsham-city-3/ |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 1 floors; Haji Salam: houses of 200 m2, 1 floor, 2 bedrooms; 550 units | agency_project_page | https://hajisalam.com/en/harsham-city-2/ |
-| house | 200 | 200 | 200 | 2 | 2 bathrooms; 1 floors; Ready one-floor house advertised for sale (homele) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| خانوو | 200 | 200 | 200 | 2 | 1 نهۆم؛ Haji Salam: houses of 200 m2, 1 floor, 2 bedrooms; 550 units | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/harsham-city-2/ |
+| خانوو | 200 | 200 | 200 | 2 | 2 حەمام؛ 1 نهۆم؛ Ready one-floor house advertised for sale (homele) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 75,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 75,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Harsham City 2 is on the old Bahrka road in Erbil (Haji Salam), the same road as Harsham City 1 on the Ankawa side. No landmark or distance are published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 هەرشەم سیتی ٢ (Harsham City 2)، کە بە هەرشەم ٢یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووی یەک نهۆمییە لەسەر ڕێگای کۆنی بەحرکە لە هەولێر. پڕۆژەکە لە ٥٥٠ خانوو پێکدێت. هەر خانوویەک ڕووبەری ٢٠٠ م²یە، یەک نهۆمە و دوو ژووری نووستنی هەیە. هەرشەم سیتی ٢ پڕۆژەیەکی جیایە لە هەرشەم سیتی ١، کە لەسەر هەمان ڕێگای کۆنی بەحرکە لە لای عەنکاوەیە، و لە هەرشەم سیتی ٣ کە لەسەر ڕێگای نوێی بەحرکەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 هرشم سيتي ٢ (Harsham City 2)، ويُعرف أيضاً باسم هرشم ٢، مشروع سكني لبيوت من طابق واحد على طريق بحركة القديم في أربيل. يتكون المشروع من ٥٥٠ بيتاً، مساحة كل منها ٢٠٠ م²، من طابق واحد وبغرفتي نوم. وهرشم سيتي ٢ مشروع منفصل عن هرشم سيتي ١ الواقع على طريق بحركة القديم نفسه من جهة عنكاوا، وعن هرشم سيتي ٣ الواقع على طريق بحركة الجديد.
 
 ### 3. English
 Harsham City 2, also called Harsham 2, is a residential project of single-floor houses on the old Bahrka road in Erbil. The project consists of 550 houses. Each house has an area of 200 m², one floor and two bedrooms. Harsham City 2 is a separate project from Harsham City 1, which lies on the same old Bahrka road on the Ankawa side, and from Harsham City 3 on the new Bahrka road.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 | Area listing page 'Harsham City 2' (1 page): ready one-floor house 200 m2, 2 bed / 2 bath, USD 75,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/harsham-city-2/ | Project page 'Harsham City 2': Bahirka old Road; House; 550 units; 200 m2; 1 floor; 2 bedrooms; no listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 | Area listing page 'Harsham City 2' (1 page): ready one-floor house 200 m2, 2 bed / 2 bath, USD 75,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/harsham-city-2/ | Project page 'Harsham City 2': Bahirka old Road; House; 550 units; 200 m2; 1 floor; 2 bedrooms; no listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR-linked Erbil map lists Harsham_1, Harsham_2 and Harsham_3 among residential areas (search summary, page not opened; undated; no house counts or road) | — | 2026-11-07 | low |
+| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR-linked Erbil map lists Harsham_1, Harsham_2 and Harsham_3 among residential areas (search summary, page not opened; undated; no house counts or road) | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Harsham City" Erbil Bahrka road houses 550”; “"هەرشەم ٢" OR "هەرشەم سیتی" هەولێر خانوو” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Harsham City" Erbil Bahrka road houses 550»؛ «"هەرشەم ٢" OR "هەرشەم سیتی" هەولێر خانوو» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and house category (Haji Salam, homele)
    - 200 m2 one-floor houses (Haji Salam, homele listing)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Old Bahrka road location, 550 units, 2 bedrooms (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Dates
    - Land area
    - Facilities
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam page undated (site copyright 2019)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Status inferred from one ready listing
    - Developer of phase 2 not stated (phase 1 builder not assumed)
    - Second pass: a UNHCR-linked Erbil map lists Harsham_2 among residential areas (search summary only); it supports the name, not the road, unit count or status
    - Most web results for 'Harsham' concern the Harsham IDP camp in Erbil, a different site
-   - Second verification pass (2026-11-07): new evidence. A UNHCR-linked Erbil map (search summary only) lists Harsham_2 as a residential area, weakly supporting the name; developer, dates and road position remain unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. A UNHCR-linked Erbil map (search summary only) lists Harsham_2 as a residential area, weakly supporting the name; developer, dates and road position remain unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "harsham-city-2",

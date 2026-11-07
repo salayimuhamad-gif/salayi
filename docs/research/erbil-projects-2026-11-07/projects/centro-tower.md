@@ -1,115 +1,118 @@
 <!-- rendered -->
 # Centro Tower — سینترو تاور — —
-Project ID: centro-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: centro-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Centro Tower | High – Paya project page and homele listings area use this name | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| City | Erbil | High – Paya and homele | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| District / Area | Not verified ('in the best location in Erbil' only) | Low – No street or district named | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Developer | Not verified | Low – Paya developer field only repeats 'Centro Tower' | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Project Category | Mixed-use: residential apartments + two floors of business offices | Medium – Single descriptive source | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Total Land Area | 5,000 m² ('designed on 5000 SQM') | Low – Single agency source | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Number of Buildings / Towers | 1 tower | Medium – Single source, explicit | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Total Residential Units | 172 | Low – Single source | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Construction Status | Completed | Medium – Paya 'Completed'; homele listings 'Ready' | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.206172, 43.961078 — Google Maps: https://www.google.com/maps?q=36.206172,43.961078 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Alternative names | سینترو تاور; 'Centro Towers' (plural in Paya text) | Medium – Paya label and text | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified (two office floors; underground parking) | Low | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported (single tower) | Medium | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ناوی پڕۆژە | Centro Tower | بەرز – Paya project page and homele listings area use this name | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| شار | هەولێر | بەرز – Paya and homele | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە — ('in the best location in Erbil' only) | نزم – No street or district named | https://paya-realestate.com/en/projects/centro-tower-274 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya developer field only repeats 'Centro Tower' | https://paya-realestate.com/en/projects/centro-tower-274 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use: residential apartments + two floors of business offices | مامناوەند – Single descriptive source | https://paya-realestate.com/en/projects/centro-tower-274 |
+| کۆی ڕووبەری زەوی | 5,000 m² ('designed on 5000 SQM') | نزم – Single agency source | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ژمارەی باڵەخانە / تاوەر | 1 tower | مامناوەند – Single source, explicit | https://paya-realestate.com/en/projects/centro-tower-274 |
+| کۆی یەکە نیشتەجێبوونەکان | 172 | نزم – Single source | https://paya-realestate.com/en/projects/centro-tower-274 |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya 'Completed'; homele listings 'Ready' | https://paya-realestate.com/en/projects/centro-tower-274 ; https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.206172, 43.961078 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.206172,43.961078 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ناوە جێگرەوەکان | سینترو تاور; 'Centro Towers' (plural in Paya text) | مامناوەند – Paya label and text | https://paya-realestate.com/en/projects/centro-tower-274 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (two office floors; underground parking) | نزم | https://paya-realestate.com/en/projects/centro-tower-274 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported (single tower) | مامناوەند | https://paya-realestate.com/en/projects/centro-tower-274 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 5,000 m² ('designed on 5000 SQM') | Single agency source | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Total project land area (dunams) | 2.0 | converted from 5,000 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 172 | Single source | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Villas / houses | Not verified | — | — |
-| Apartments | 172 | 172 Residential units (one tower of housing units plus two floors of business offices) | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 1 tower | Single source, explicit | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Floors per building | Not verified (two office floors; underground parking) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Green space, parks, landscaped area | 1,600 | 1600 Square meters from garden & green space | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Development phases | None reported (single tower) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 5,000 m² ('designed on 5000 SQM') | Single agency source | https://paya-realestate.com/en/projects/centro-tower-274 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 2.0 | گۆڕدراوە لە 5,000 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 172 | Single source | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 172 | 172 Residential units (one tower of housing units plus two floors of business offices) | https://paya-realestate.com/en/projects/centro-tower-274 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 1 tower | Single source, explicit | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (two office floors; underground parking) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ڕووبەری سەوزایی، پارک و باخچە | 1,600 | 1600 Square meters from garden & green space | https://paya-realestate.com/en/projects/centro-tower-274 |
+| قۆناغەکانی پڕۆژە | None reported (single tower) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 47.8, 49.45, 55.1 | 47.8 | 55.1 | 0 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/centro-tower-274 |
-| apartment | 86, 86.15, 87.5, 88.2, 91.8, 92.6, 92.75, 102.5 | 86 | 102.5 | 1 | 1 bathrooms; 1+1 | agency_project_page | https://paya-realestate.com/en/projects/centro-tower-274 |
-| apartment | 107, 112, 125 | 107 | 125 | 2 | 2 bathrooms; 2+1 | agency_project_page | https://paya-realestate.com/en/projects/centro-tower-274 |
-| apartment | 55, 85, 107 | 55 | 107 | — | Ready units for sale: 55 m2 studio, 85 m2 1 bed / 1 bath, 107 m2 2 bed / 1 bath. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| office | Not verified | — | — | — | 2 floors; Two floors of business offices; no unit sizes published. | agency_project_page | https://paya-realestate.com/en/projects/centro-tower-274 |
+| ستۆدیۆ | 47.8, 49.45, 55.1 | 47.8 | 55.1 | 0 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/centro-tower-274 |
+| شوقە | 86, 86.15, 87.5, 88.2, 91.8, 92.6, 92.75, 102.5 | 86 | 102.5 | 1 | 1 حەمام؛ 1+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/centro-tower-274 |
+| شوقە | 107, 112, 125 | 107 | 125 | 2 | 2 حەمام؛ 2+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/centro-tower-274 |
+| شوقە | 55, 85, 107 | 55 | 107 | — | Ready units for sale: 55 m2 studio, 85 m2 1 bed / 1 bath, 107 m2 2 bed / 1 bath. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| ئۆفیس | پشتڕاست نەکراوەتەوە | — | — | — | 2 نهۆم؛ Two floors of business offices; no unit sizes published. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/centro-tower-274 |
 
-**Layouts and floor plans:** Blueprints published ('View Blueprint') for 14 units: studios 47.8–55.1 m², 1+1 86–102.5 m², 2+1 107–125 m² (https://paya-realestate.com/en/projects/centro-tower-274)
+**نەخشە و پلانی نهۆمەکان:** Blueprints published ('View Blueprint') for 14 units: studios 47.8–55.1 m², 1+1 86–102.5 m², 2+1 107–125 m² (https://paya-realestate.com/en/projects/centro-tower-274)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Underground parking with direct interior access (Paya text); Garden and green space, 1,600 m2 (Paya text; public garden tag); Car parking (Paya); Reception (Paya); Maintenance (Paya); Gym (Paya); Indoor swimming pool (Paya); AC (Paya); Sewer connection (Paya)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Underground parking with direct interior access (Paya text); Garden and green space, 1,600 m2 (Paya text; public garden tag); Car parking (Paya); Reception (Paya); Maintenance (Paya); Gym (Paya); Indoor swimming pool (Paya); AC (Paya); Sewer connection (Paya)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Compliance with earthquake regulations (Paya marketing text); Landscaping 'in different concepts' (Paya marketing text)
+**بانگەشەی پشتڕاست نەکراوە:** Compliance with earthquake regulations (Paya marketing text); Landscaping 'in different concepts' (Paya marketing text)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 47.8 m2 - agency project-page asking price (not a confirmed developer price) | 44,215 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Studio 55.1 m2 - agency project-page asking price | 50,968 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
-| 1 bed 86 m2 - agency project-page asking price | 79,550 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
-| 2 bed 107 m2 - agency project-page asking price | 98,975 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
-| 2 bed 125 m2 - agency project-page asking price | 115,625 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Ready 2 bed 107 m2 - listing asking price (negotiable) | 89,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| Ready 1 bed 85 m2 - listing asking price | 70,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-| Ready studio 55 m2 - listing asking price (negotiable) | 36,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Studio 47.8 m2 - agency project-page asking price (not a confirmed developer price) | 44,215 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
+| Studio 55.1 m2 - agency project-page asking price | 50,968 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
+| 1 bed 86 m2 - agency project-page asking price | 79,550 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
+| 2 bed 107 m2 - agency project-page asking price | 98,975 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
+| 2 bed 125 m2 - agency project-page asking price | 115,625 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/centro-tower-274 |
+| Ready 2 bed 107 m2 - listing asking price (negotiable) | 89,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| Ready 1 bed 85 m2 - listing asking price | 70,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+| Ready studio 55 m2 - listing asking price (negotiable) | 36,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-No source names the street or district; Paya says only that the tower is 'in the best location in Erbil'. The homele listings confirm the tower is in Erbil and that units are ready, but give no address. No landmarks or distances are evidenced. Map position (low confidence, from agency map pins): 36.206172, 43.961078. Google Maps: https://www.google.com/maps?q=36.206172,43.961078
+### شوێن و دەوروبەر
+No source names the street or district; Paya says only that the tower is 'in the best location in Erbil'. The homele listings confirm the tower is in Erbil and that units are ready, but give no address. No landmarks or distances are evidenced.
+شوێن لەسەر نەخشە: 36.206172, 43.961078 (متمانە: نزم) — https://www.google.com/maps?q=36.206172,43.961078
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 سینترو تاور (Centro Tower) تاوەرێکی فرەبەکارهێنانی تەواوبووە لە شاری هەولێر کە شوقەی نیشتەجێبوون و ئۆفیسی بازرگانی کۆدەکاتەوە. پڕۆژەکە لەسەر زەوییەکی ٥,٠٠٠ م² هەڵکەوتووە و ١٧٢ یەکەی نیشتەجێبوون لەخۆدەگرێت، لەگەڵ دوو نهۆم کە بۆ ئۆفیسی بازرگانی تەرخان کراون. نزیکەی ١,٦٠٠ م² لە ڕووبەری پڕۆژەکە بۆ باخچە و ناوچەی سەوز تەرخان کراوە، و پارکینگی ژێرزەمین بە دەرچەی ڕاستەوخۆ بۆ ناو بیناکە خزمەتی دانیشتووان دەکات. شوقەکان لە ستۆدیۆوە تا شوقەی دوو ژووری نووستن دەگۆڕێن: ستۆدیۆ بە ڕووبەری ٤٧.٨ تا ٥٥.١ م² لەگەڵ یەک حەمام، شوقەی یەک ژووری نووستن بە ڕووبەری ٨٦ تا ١٠٢.٥ م² لەگەڵ یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری ١٠٧، ١١٢ و ١٢٥ م² لەگەڵ دوو حەمام. خزمەتگوزارییەکان بریتین لە پارکینگی ئۆتۆمبێل، پێشوازی، خزمەتگوزاریی چاککردنەوە، هۆڵی وەرزش، مەلەوانگەی داخراو، فێنککەرەوە، باخچەی گشتی و پەیوەندی بە تۆڕی ئاوەڕۆوە. شوقەکان ئامادەی نیشتەجێبوونن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 سنترو تاور (Centro Tower) برج مكتمل متعدد الاستخدامات في مدينة أربيل يجمع بين الشقق السكنية والمكاتب التجارية. يقع المشروع على أرض بمساحة 5,000 م² ويضم 172 وحدة سكنية، إضافة إلى طابقين مخصصين للمكاتب التجارية. وتُخصص نحو 1,600 م² من الموقع للحدائق والمساحات الخضراء، ويخدم السكان موقف سيارات تحت الأرض بمدخل مباشر إلى داخل المبنى. تتراوح الشقق بين الاستوديو والشقق بغرفتي نوم: استوديوهات بمساحة 47.8 إلى 55.1 م² مع حمام واحد، وشقق بغرفة نوم واحدة بمساحة 86 إلى 102.5 م² مع حمام واحد، وشقق بغرفتي نوم بمساحة 107 و112 و125 م² مع حمامين. تشمل المرافق مواقف السيارات والاستقبال وخدمات الصيانة وصالة رياضية ومسبحاً داخلياً والتكييف وحديقة عامة وربطاً بشبكة الصرف الصحي. والشقق جاهزة للسكن.
 
 ### 3. English
 Centro Tower is a completed mixed-use tower in Erbil that combines residential apartments with business offices. The project occupies a site of 5,000 m² and contains 172 residential units, with two floors dedicated to business offices. About 1,600 m² of the site is given to gardens and green space, and underground parking with direct access into the building serves residents. Apartments range from studios to two-bedroom units: studios of 47.8 to 55.1 m² with one bathroom, one-bedroom apartments of 86 to 102.5 m² with one bathroom, and two-bedroom apartments of 107, 112 and 125 m² with two bathrooms. Facilities include car parking, a reception, maintenance services, a gym, an indoor swimming pool, air conditioning, a public garden and a connection to the sewer network. The apartments are ready for occupancy.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower | 3 'Ready' sale listings: 107 m2 2 bed USD 89,000; 85 m2 1 bed USD 70,000; 55 m2 studio USD 36,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/centro-tower-274 | Name and Kurdish label; status Completed; 5,000 m2 site; 1 tower; 172 residential units; 2 office floors; 1,600 m2 green space; underground parking; amenity tags; 14 unit sizes with prices USD 44,215-115,625 | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower | 3 'Ready' sale listings: 107 m2 2 bed USD 89,000; 85 m2 1 bed USD 70,000; 55 m2 studio USD 36,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/centro-tower-274 | Name and Kurdish label; status Completed; 5,000 m2 site; 1 tower; 172 residential units; 2 office floors; 1,600 m2 green space; underground parking; amenity tags; 14 unit sizes with prices USD 44,215-115,625 | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Centro Tower" Erbil”; “"سینترو تاور" OR "Centro Towers" Erbil apartments 172 units” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Centro Tower" Erbil»؛ «"سینترو تاور" OR "Centro Towers" Erbil apartments 172 units» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Project name and city (Paya + homele)
    - Completed/ready status (Paya status + homele 'Ready' listings)
    - Studio, 1-bed and 2-bed units around 55/85/107 m2 (Paya 55.1/86/107 vs homele 55/85/107)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 5,000 m2 site, 172 residential units, two office floors, 1,600 m2 green space, underground parking, amenity list, 14 exact unit sizes and prices (Paya)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Street/district
    - Number of floors
@@ -118,16 +121,16 @@ Second verification pass 2026-11-07: queries “"Centro Tower" Erbil”; “"س�
    - Coordinates
    - Arabic name
    - Payment plan
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya unit prices are undated and may reflect the original sales period
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Who developed Centro Tower and where exactly it stands
    - Whether 'Centro Towers' (plural in Paya text) implies a second tower
    - Converted from an earlier agent's Markdown; its four WebSearch queries returned no relevant page
-   - Second verification pass (2026-11-07): no new evidence. No independent page found for Centro Tower; location, developer, floors and completion year are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page found for Centro Tower; location, developer, floors and completion year are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "centro-tower",

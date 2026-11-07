@@ -1,129 +1,132 @@
 <!-- rendered -->
 # Four Season Park — فۆر سیزن پارک — فور سيزن بارك
-Project ID: four-season-park | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: four-season-park | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Four Season Park | High – Paya, Bagh-y, homele | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park ; https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/four-season-park-215 |
-| District / Area | Erbil–Pirmam (Masif) road, near 120m/150m ring roads, next to Hiror restaurant | High – Paya + Bagh-y agree on road | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
-| Developer | Not verified | Low – Not in pack; one web search found nothing | — |
-| Project Category | Residential (apartments) | High – Paya + Bagh-y | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
-| Total Land Area | 15,270 m2 | Medium – Single source; consistent with 9,000 m2 garden = ~60% of total | https://paya-realestate.com/en/projects/four-season-park-215 |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Under construction | Medium – Paya Constructing; homele mixed Ready/Off-plan tags | https://paya-realestate.com/en/projects/four-season-park-215 ; https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.245319, 44.063926 — Google Maps: https://www.google.com/maps?q=36.245319,44.063926 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
-| Alternative names | 4 Season Park; 4 Seasons Park; فور سيزن تاور | Medium – Paya text and area label | https://paya-realestate.com/en/projects/four-season-park-215 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Not verified | Low – No source | — |
+| ناوی پڕۆژە | Four Season Park | بەرز – Paya, Bagh-y, homele | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park ; https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/four-season-park-215 |
+| ناوچە / گەڕەک | Erbil–Pirmam (Masif) road, near 120m/150m ring roads, next to Hiror restaurant | بەرز – Paya + Bagh-y agree on road | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not in pack; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | بەرز – Paya + Bagh-y | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
+| کۆی ڕووبەری زەوی | 15,270 m2 | مامناوەند – Single source; consistent with 9,000 m2 garden = ~60% of total | https://paya-realestate.com/en/projects/four-season-park-215 |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | مامناوەند – Paya Constructing; homele mixed Ready/Off-plan tags | https://paya-realestate.com/en/projects/four-season-park-215 ; https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.245319, 44.063926 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.245319,44.063926 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/four-season-park-215 ; https://baghyshaqlawa.net/en/projects/four-season-park |
+| ناوە جێگرەوەکان | 4 Season Park; 4 Seasons Park; فور سيزن تاور | مامناوەند – Paya text and area label | https://paya-realestate.com/en/projects/four-season-park-215 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 15,270 m2 | Single source; consistent with 9,000 m2 garden = ~60% of total | https://paya-realestate.com/en/projects/four-season-park-215 |
-| Total project land area (dunams) | 6.1 | converted from 15,270 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/four-season-park-215 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | 9,000 | 9,000 square meter of landscaped garden; green area comprises 60% of the total area; 70% open area (15,270 m² development) | https://paya-realestate.com/en/projects/four-season-park-215 |
-| Development phases | Not verified | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 15,270 m2 | Single source; consistent with 9,000 m2 garden = ~60% of total | https://paya-realestate.com/en/projects/four-season-park-215 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 6.1 | گۆڕدراوە لە 15,270 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/four-season-park-215 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | 9,000 | 9,000 square meter of landscaped garden; green area comprises 60% of the total area; 70% open area (15,270 m² development) | https://paya-realestate.com/en/projects/four-season-park-215 |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 58 | 58 | 58 | 0 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/four-season-park-215 |
-| apartment | 87, 89, 90 | 87 | 90 | 1 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/four-season-park-215 |
-| apartment | 124, 134 | 124 | 134 | 2 | 2 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/four-season-park-215 |
-| apartment | 171 | 171 | 171 | 3 | 3 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/four-season-park-215 |
-| apartment | 89, 125 | 89 | 125 | — | Advertised 1BR 89 m2 (off-plan and 'ready' instalment) and 2BR 125 m2 ('ready') | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
+| ستۆدیۆ | 58 | 58 | 58 | 0 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/four-season-park-215 |
+| شوقە | 87, 89, 90 | 87 | 90 | 1 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/four-season-park-215 |
+| شوقە | 124, 134 | 124 | 134 | 2 | 2 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/four-season-park-215 |
+| شوقە | 171 | 171 | 171 | 3 | 3 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/four-season-park-215 |
+| شوقە | 89, 125 | 89 | 125 | — | Advertised 1BR 89 m2 (off-plan and 'ready' instalment) and 2BR 125 m2 ('ready') | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
 
-**Layouts and floor plans:** Blueprints published ('View Blueprint') for 7 units 58–171 m² (https://paya-realestate.com/en/projects/four-season-park-215)
+**نەخشە و پلانی نهۆمەکان:** Blueprints published ('View Blueprint') for 7 units 58–171 m² (https://paya-realestate.com/en/projects/four-season-park-215)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Underground car parking with direct interior access (Paya text; Bagh-y parking tag); Security surveillance across the complex (Paya text; Bagh-y security tag); Landscaped garden 9,000 m2 / green areas (Paya text; Bagh-y green areas tag); Supermarket (Paya tag; Bagh-y tag); 24-hour maintenance and cleaning (Paya text); Video intercom, fire-fighting and automatic fire alarm systems, emergency stairs (Paya text); Smart home system, energy-saving heating/cooling, gas system (Paya text)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Underground car parking with direct interior access (Paya text; Bagh-y parking tag); Security surveillance across the complex (Paya text; Bagh-y security tag); Landscaped garden 9,000 m2 / green areas (Paya text; Bagh-y green areas tag); Supermarket (Paya tag; Bagh-y tag); 24-hour maintenance and cleaning (Paya text); Video intercom, fire-fighting and automatic fire alarm systems, emergency stairs (Paya text); Smart home system, energy-saving heating/cooling, gas system (Paya text)
 
-**Unverified claims:** Mosque, kids play area, electrical generator (Paya tags); 24 hr electricity, reception, pets allowed (Bagh-y tags); '680 m2 of residential, business and multipurpose retail shopping space' (garbled Paya text)
+**بانگەشەی پشتڕاست نەکراوە:** Mosque, kids play area, electrical generator (Paya tags); 24 hr electricity, reception, pets allowed (Bagh-y tags); '680 m2 of residential, business and multipurpose retail shopping space' (garbled Paya text)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 58 m2 - Paya project-page price (~USD 768/m2; agency page, not an official price list) | 44,536 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 1BR 87 m2 - Paya project-page price | 66,728 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 1BR 90 m2 - Paya project-page price | 69,008 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 2BR 124 m2 - Paya project-page price | 94,544 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 2BR 134 m2 - Paya project-page price | 101,992 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 3BR 171 m2 - Paya project-page price | 130,644 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
-| 1BR 89 m2 off-plan - homele listing asking price (labelled down-payment/instalment offer) | 66,649 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
-| 2BR 125 m2 'ready' - homele listing asking price (labelled down-payment offer) | 92,800 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: 'Ready Apartment in Installment' (89 m², $58,000); off-plan and ready units for sale (https://homele.com/properties/for-sale-and-rent/erbil/four-season-park)
+| Studio 58 m2 - Paya project-page price (~USD 768/m2; agency page, not an official price list) | 44,536 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 1BR 87 m2 - Paya project-page price | 66,728 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 1BR 90 m2 - Paya project-page price | 69,008 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 2BR 124 m2 - Paya project-page price | 94,544 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 2BR 134 m2 - Paya project-page price | 101,992 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 3BR 171 m2 - Paya project-page price | 130,644 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/four-season-park-215 |
+| 1BR 89 m2 off-plan - homele listing asking price (labelled down-payment/instalment offer) | 66,649 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
+| 2BR 125 m2 'ready' - homele listing asking price (labelled down-payment offer) | 92,800 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: 'Ready Apartment in Installment' (89 m², $58,000); off-plan and ready units for sale (https://homele.com/properties/for-sale-and-rent/erbil/four-season-park)
 
-### Location and surroundings
-Four Season Park is on the main Erbil–Pirmam (Masif Salahaddin) road, with access to the 120m and 150m ring roads, next to the Hiror restaurant and near Zin City (Paya). Bagh-y Shaqlawa gives 'Erbil – Masif Road (Pirmam)'. This places it within the ring-road belt on Erbil's north-eastern side. Map position (medium confidence, from agency map pins): 36.245319, 44.063926. Google Maps: https://www.google.com/maps?q=36.245319,44.063926
+### شوێن و دەوروبەر
+Four Season Park is on the main Erbil–Pirmam (Masif Salahaddin) road, with access to the 120m and 150m ring roads, next to the Hiror restaurant and near Zin City (Paya). Bagh-y Shaqlawa gives 'Erbil – Masif Road (Pirmam)'. This places it within the ring-road belt on Erbil's north-eastern side.
+شوێن لەسەر نەخشە: 36.245319, 44.063926 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.245319,44.063926
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 فۆر سیزن پارک (Four Season Park) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای سەرەکیی هەولێر–پیرمام (مەسیفی سەلاحەدین) لە هەولێر، کە دەگاتە شەقامی ١٢٠ مەتری و ١٥٠ مەتری. لە تەنیشت چێشتخانەی هیرۆر و نزیک زین سیتی هەڵکەوتووە. ڕووبەری پڕۆژەکە ١٥٬٢٧٠ م²یە و لە ژێر دروستکردندایە. پڕۆژەکە ستۆدیۆ و شوقەی یەک تا سێ ژووری نووستن لەخۆ دەگرێت. ڕووبەری ستۆدیۆ ٥٨ م²یە بە یەک حەمام؛ شوقەی یەک ژووری نووستن ٨٧، ٨٩ و ٩٠ م²ن بە یەک حەمام؛ شوقەی دوو ژووری نووستن ١٢٤ و ١٣٤ م²ن بە دوو حەمام؛ و شوقەی سێ ژووری نووستن ١٧١ م²یە بە سێ حەمام. ئاسانکارییە پلان بۆ دانراوەکان بریتین لە باخچەیەکی ڕازاوەی ٩٬٠٠٠ م²، پارکینگی ژێرزەوی بە دەستگەیشتنی ڕاستەوخۆ بۆ ناو باڵەخانەکان، چاودێریی ئەمنی لە سەرتاسەری پڕۆژەکە، سوپەرمارکێت، چاککردنەوە و پاککردنەوەی ٢٤ کاتژمێری، ئینتەرکۆمی ڤیدیۆیی، سیستەمی کوژاندنەوە و ئاگادارکردنەوەی ئۆتۆماتیکیی ئاگر، پلیکانەی فریاکەوتن، سیستەمی ماڵی زیرەک، سیستەمی گەرمکردنەوە و ساردکردنەوەی کەمخەرجی وزە و سیستەمی غاز.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فور سيزن بارك (Four Season Park) مشروع سكني للشقق على طريق أربيل–بيرمام الرئيسي (مصيف صلاح الدين) في أربيل، ويتصل بالطريقين الدائريين 120 متر و150 متر. ويقع بجوار مطعم هيرور وقرب زين سيتي. تبلغ مساحة المشروع 15,270 م²، وهو قيد الإنشاء. ويضم استوديو وشققاً من غرفة نوم واحدة إلى ثلاث غرف نوم. تبلغ مساحة الاستوديو 58 م² مع حمام واحد، ومساحات الشقق بغرفة نوم واحدة 87 و89 و90 م² مع حمام واحد، والشقق بغرفتي نوم 124 و134 م² مع حمامين، أما الشقة بثلاث غرف نوم فمساحتها 171 م² مع ثلاثة حمامات. وتشمل المرافق المخطط لها حديقة منسّقة بمساحة 9,000 م²، ومواقف سيارات تحت الأرض مع مدخل مباشر إلى المباني، ومراقبة أمنية في كامل المجمع، وسوبرماركت، وصيانة وتنظيفاً على مدار 24 ساعة، وإنتركم مرئياً، وأنظمة إطفاء وإنذار حريق آلية، وسلالم طوارئ، ونظام منزل ذكي، ونظام تدفئة وتبريد موفّراً للطاقة، ونظام غاز.
 
 ### 3. English
 Four Season Park is a residential apartment project on the main Erbil–Pirmam (Masif Salahaddin) road in Erbil, with access to the 120 m and 150 m ring roads. It is next to the Hiror restaurant and near Zin City. The project covers 15,270 m² and is under construction. It offers a studio and apartments with one to three bedrooms. The studio measures 58 m² with one bathroom; one-bedroom apartments measure 87, 89 and 90 m² with one bathroom; two-bedroom apartments measure 124 and 134 m² with two bathrooms; and the three-bedroom apartment measures 171 m² with three bathrooms. Planned facilities include a 9,000 m² landscaped garden, underground car parking with direct access to the buildings, security surveillance across the complex, a supermarket, 24-hour maintenance and cleaning, video intercoms, fire-fighting and automatic fire alarm systems, emergency stairs, a smart home system, energy-saving heating and cooling, and a gas system.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park | 3 listings: off-plan 1BR 89 m2 (66,649), 'ready' 2BR 125 m2 (92,800), 'ready' instalment 1BR 89 m2 (58,000) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/four-season-park-215 | Status Constructing; Erbil–Pirmam road near 120m/150m ring roads, next to Hiror restaurant, near Zin City; 15,270 m2 development, 9,000 m2 garden, 60% green / 70% open; services list; underground parking; 7 units 58–171 m2 with prices | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/four-season-park | Address Erbil – Masif Road (Pirmam); apartments; feature tags | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park | 3 listings: off-plan 1BR 89 m2 (66,649), 'ready' 2BR 125 m2 (92,800), 'ready' instalment 1BR 89 m2 (58,000) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/four-season-park-215 | Status Constructing; Erbil–Pirmam road near 120m/150m ring roads, next to Hiror restaurant, near Zin City; 15,270 m2 development, 9,000 m2 garden, 60% green / 70% open; services list; underground parking; 7 units 58–171 m2 with prices | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/four-season-park | Address Erbil – Masif Road (Pirmam); apartments; feature tags | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Four Season Park" Erbil Pirmam road apartments developer”; “"فور سيزن بارك" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Four Season Park" Erbil Pirmam road apartments developer»؛ «"فور سيزن بارك" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Pirmam/Masif road location, apartment project (Paya, Bagh-y)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 15,270 m2 area, 9,000 m2 garden, 60%/70% green/open shares (Paya)
    - Unit sizes and prices (Paya)
    - Services list (Paya)
    - Status Constructing (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Construction status: Constructing (paya-realestate.com); 2 of 3 listings tagged 'Ready' (1 Off Plan) (homele.com listings) → Under construction adopted (project page); 'Ready' listing tags may indicate partial handover – unconfirmed.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Number of buildings, floors, total units
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether some units are already handed over (homele 'Ready' tags)
    - Arabic alias 'فور سيزن تاور' suggests tower form – building count/height not stated
-   - Second verification pass (2026-11-07): no new evidence. No independent page names Four Season Park; developer, building count, floors and dates remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names Four Season Park; developer, building count, floors and dates remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "four-season-park",

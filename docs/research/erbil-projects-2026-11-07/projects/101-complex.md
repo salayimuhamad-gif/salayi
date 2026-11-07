@@ -1,126 +1,128 @@
 <!-- rendered -->
 # 101 Complex — — — 101 كومبليكس
-Project ID: 101-complex | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: 101-complex | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | 101 Complex | High – Same name on Paya project page and Homele area page | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
-| City | Erbil | Medium – City field on Paya; Homele area under Erbil | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
-| District / Area | Not verified | Low – No district or street stated; Paya area field repeats the project name | https://paya-realestate.com/en/projects/101-complex-343 |
-| Developer | Not verified | Low – Paya shows only a sales profile named '101 Complex'; no company name | https://paya-realestate.com/en/projects/101-complex-343 |
-| Project Category | Mixed-use (residential and commercial) | Low – Paya text says residential and commercial; only apartments listed | https://paya-realestate.com/en/projects/101-complex-343 |
-| Total Land Area | Not verified | Low – Not stated by any source | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | Not verified | Low – Not stated; '4 Units' on Paya counts unit types, not homes | https://paya-realestate.com/en/projects/101-complex-343 |
-| Construction Status | Under construction | Medium – Paya status 'Constructing'; Homele listing tagged 'Off Plan' | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | 101 كومبليكس | Medium – Arabic label on Paya | https://paya-realestate.com/en/projects/101-complex-343 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – No phases mentioned | — |
+| ناوی پڕۆژە | 101 Complex | بەرز – Same name on Paya project page and Homele area page | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
+| شار | هەولێر | مامناوەند – City field on Paya; Homele area under Erbil | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No district or street stated; Paya area field repeats the project name | https://paya-realestate.com/en/projects/101-complex-343 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya shows only a sales profile named '101 Complex'; no company name | https://paya-realestate.com/en/projects/101-complex-343 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (residential and commercial) | نزم – Paya text says residential and commercial; only apartments listed | https://paya-realestate.com/en/projects/101-complex-343 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated; '4 Units' on Paya counts unit types, not homes | https://paya-realestate.com/en/projects/101-complex-343 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | مامناوەند – Paya status 'Constructing'; Homele listing tagged 'Off Plan' | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | 101 كومبليكس | مامناوەند – Arabic label on Paya | https://paya-realestate.com/en/projects/101-complex-343 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated by any source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated; '4 Units' on Paya counts unit types, not homes | https://paya-realestate.com/en/projects/101-complex-343 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated; '4 Units' on Paya counts unit types, not homes | https://paya-realestate.com/en/projects/101-complex-343 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 47 | 47 | 47 | 0 | 1 bathrooms; Studio apartment; Paya list price US$42,300 | agency_project_page | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
-| apartment | 94 | 94 | 94 | 1 | 1 bathrooms; 1-bedroom; Paya list price US$77,080 | agency_project_page | https://paya-realestate.com/en/projects/101-complex-343 |
-| apartment | 143, 144 | 143 | 144 | 2 | 2 bathrooms; 2-bedroom; Paya list prices US$114,400 / US$115,200 | agency_project_page | https://paya-realestate.com/en/projects/101-complex-343 |
+| ستۆدیۆ | 47 | 47 | 47 | 0 | 1 حەمام؛ Studio apartment; Paya list price US$42,300 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/101-complex-343 ; https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
+| شوقە | 94 | 94 | 94 | 1 | 1 حەمام؛ 1-bedroom; Paya list price US$77,080 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/101-complex-343 |
+| شوقە | 143, 144 | 143 | 144 | 2 | 2 حەمام؛ 2-bedroom; Paya list prices US$114,400 / US$115,200 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/101-complex-343 |
 
-**Layouts and floor plans:** Paya lists 4 unit types (studio 47 m², 1-bed 94 m², 2-bed 143 m² and 144 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/101-complex-343)
+**نەخشە و پلانی نهۆمەکان:** Paya lists 4 unit types (studio 47 m², 1-bed 94 m², 2-bed 143 m² and 144 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/101-complex-343)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Gym (Paya tag); Women's gym (Paya tag); Women's salon (Paya tag); Barber (Paya tag); Bakery (Paya tag); Cafeteria (Paya tag); Currency exchange (Paya tag); Reception (Paya tag); Covered parking (Paya tag); Car parking (Paya tag); Kids play area (Paya tag); Security (Paya tag); Air conditioning (Paya tag); Pets allowed (Paya tag); Green spaces (Paya generic 'about' text)
+**بانگەشەی پشتڕاست نەکراوە:** Gym (Paya tag); Women's gym (Paya tag); Women's salon (Paya tag); Barber (Paya tag); Bakery (Paya tag); Cafeteria (Paya tag); Currency exchange (Paya tag); Reception (Paya tag); Covered parking (Paya tag); Car parking (Paya tag); Kids play area (Paya tag); Security (Paya tag); Air conditioning (Paya tag); Pets allowed (Paya tag); Green spaces (Paya generic 'about' text)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 47 m² – list price | 42,300 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
-| 1-bedroom 94 m² – list price | 77,080 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
-| 2-bedroom 143 m² – list price | 114,400 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
-| 2-bedroom 144 m² – list price | 115,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
-| Studio 47 m² – Homele listing (advertised, off-plan, instalment) | 42,300 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listing: off-plan studio 47 m² for sale at $42,300, tagged 'Installment' (https://homele.com/properties/for-sale-and-rent/erbil/101-complex)
+| Studio 47 m² – list price | 42,300 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
+| 1-bedroom 94 m² – list price | 77,080 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
+| 2-bedroom 143 m² – list price | 114,400 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
+| 2-bedroom 144 m² – list price | 115,200 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
+| Studio 47 m² – Homele listing (advertised, off-plan, instalment) | 42,300 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listing: off-plan studio 47 m² for sale at $42,300, tagged 'Installment' (https://homele.com/properties/for-sale-and-rent/erbil/101-complex)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Erbil. One web search returned no page describing the project's location.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 101 کۆمپلێکس (101 Complex) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە قۆناغی بنیاتناندایە. پڕۆژەکە چوار جۆر شوقە پێشکەش دەکات: ستۆدیۆی 47 م² بە یەک حەمام، شوقەی یەک ژووری نووستن بە ڕووبەری 94 م² و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 143 م² و 144 م² کە هەریەکەیان دوو حەمامی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 101 كومبليكس (101 Complex) مشروع سكني قيد الإنشاء في مدينة أربيل. يضم المشروع أربعة أنواع من الشقق: استوديو بمساحة 47 م² مع حمام واحد، وشقة بغرفة نوم واحدة بمساحة 94 م² مع حمام واحد، وشقتين بغرفتي نوم بمساحتي 143 م² و144 م² مع حمامين لكل منهما.
 
 ### 3. English
 101 Complex is a residential project in Erbil that is under construction. The project offers four apartment types: a 47 m² studio with one bathroom, a 94 m² one-bedroom apartment with one bathroom, and two-bedroom apartments of 143 m² and 144 m², each with two bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/101-complex | Area page '101 Complex, Erbil': one off-plan instalment studio 47 m², US$42,300 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/101-complex-343 | Name EN/AR, city Erbil, status Constructing, 'residential and commercial' description, amenity tags, 4 unit types with sizes, beds, baths, list prices; map coordinates are 0,0 (placeholder) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/101-complex | Area page '101 Complex, Erbil': one off-plan instalment studio 47 m², US$42,300 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/101-complex-343 | Name EN/AR, city Erbil, status Constructing, 'residential and commercial' description, amenity tags, 4 unit types with sizes, beds, baths, list prices; map coordinates are 0,0 (placeholder) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"101 Complex" Erbil”; “"101 كومبليكس" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"101 Complex" Erbil»؛ «"101 كومبليكس" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name '101 Complex' and a 47 m² studio at US$42,300 (Paya and Homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Unit types 94, 143, 144 m² and their prices (Paya)
    - Mixed residential/commercial character (Paya generic text)
    - Amenity tags (Paya)
    - Status 'Constructing' (Paya; Homele 'Off Plan' tag consistent)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - District / street address
    - Developer company
    - Land area, buildings, floors, total units
    - Launch and completion dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Location inside Erbil not stated anywhere; in_erbil_city=true rests only on Paya/Homele city field
    - Paya 'about' text is generic marketing copy; residential/commercial mix not confirmed
    - Second pass 2026-11-07: two more web searches ("101 Complex" Erbil / "101 كومبليكس" أربيل) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. No independent page names 101 Complex in Erbil (the only '101' compound found is an unrelated project in Mostakbal City, Egypt); developer, district and dates are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names 101 Complex in Erbil (the only '101' compound found is an unrelated project in Mostakbal City, Egypt); developer, district and dates are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "101-complex",

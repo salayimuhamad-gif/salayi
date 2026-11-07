@@ -1,103 +1,106 @@
 <!-- rendered -->
 # Mamostayan City — مامۆستایان ستی — ماموستايان سيتي
-Project ID: mamostayan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mamostayan-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mamostayan City | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| City | Erbil | Medium – Baghy | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| District / Area | Masif Road, 150 m Street | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| Developer | Not verified | Low – No source; one WebSearch found nothing | — |
-| Project Category | Residential (houses and apartments) | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Not verified | Low – No source | — |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.267608, 44.082291 — Google Maps: https://www.google.com/maps?q=36.267608,44.082291 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| Alternative names | None found | Low – — – No variants in sources | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No source | — |
+| ناوی پڕۆژە | Mamostayan City | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| شار | هەولێر | مامناوەند – Baghy | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| ناوچە / گەڕەک | Masif Road, 150 m Street | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and apartments) | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – No source | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.267608, 44.082291 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.267608,44.082291 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| ناوە جێگرەوەکان | None found | نزم – No variants in sources | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Property type listed by Baghy; no sizes | agency_project_page | https://baghyshaqlawa.net/en/projects/mamostayan-city |
-| apartment | Not verified | — | — | — | Property type listed by Baghy; no sizes | agency_project_page | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Property type listed by Baghy; no sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/mamostayan-city |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Property type listed by Baghy; no sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/mamostayan-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity; city administrative center; security; parking; maintenance; public garden; supermarket
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity; city administrative center; security; parking; maintenance; public garden; supermarket
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-On Masif (Pirmam) Road at the 150 m ring road, Erbil (Baghy). No further address published. Map position (low confidence, from agency map pins): 36.267608, 44.082291. Google Maps: https://www.google.com/maps?q=36.267608,44.082291
+### شوێن و دەوروبەر
+On Masif (Pirmam) Road at the 150 m ring road, Erbil (Baghy). No further address published.
+شوێن لەسەر نەخشە: 36.267608, 44.082291 (متمانە: نزم) — https://www.google.com/maps?q=36.267608,44.082291
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 مامۆستایان سیتی (Mamostayan City) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. لەسەر ڕێگای مەسیف لە شەقامی ١٥٠ مەتری هەڵکەوتووە؛ ڕێگای مەسیف لە شارەوە بەرەو پیرمام دەڕوات، و شەقامی ١٥٠ مەتری ڕێگای بازنەیی دەرەوەی شارە. پڕۆژەکە خانوو و شوقەی تێدایە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ماموستايان سيتي (Mamostayan City) مشروع سكني في مدينة أربيل في إقليم كوردستان العراق. يقع على طريق مصيف عند شارع 150 متر؛ ويمتد طريق مصيف من المدينة باتجاه بيرمام، وشارع 150 متر هو الطريق الدائري الخارجي للمدينة. ويضم المشروع منازل وشققاً.
 
 ### 3. English
 Mamostayan City is a residential project in Erbil, in the Kurdistan Region of Iraq. It is located on Masif Road at the 150 m Street; Masif Road leads from the city towards Pirmam, and the 150 m Street is the city's outer ring road. The project includes houses and apartments.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/mamostayan-city | Project page: address 'Masif Road, 150m Street'; property types House, Apartment; tags 24 hr electricity, city administrative center, security, parking, maintenance, public garden, supermarket; 'Mamostayan city Branch Erbil'. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/mamostayan-city | Project page: address 'Masif Road, 150m Street'; property types House, Apartment; tags 24 hr electricity, city administrative center, security, parking, maintenance, public garden, supermarket; 'Mamostayan city Branch Erbil'. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| repository.impact-initiatives.org (REACH Erbil City reference map, Nov 2017) | https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf | Search summary, page not opened: the REACH Erbil city reference map (data as of October 2017) carries a place label 'MAMOSTAYAN' among Erbil city neighbourhood names. It does not describe a project, and its position relative to Masif Road / 150 m Street was not checked. | 2017-11-15 | 2026-11-07 | low |
+| repository.impact-initiatives.org (REACH Erbil City reference map, Nov 2017) | https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf | Search summary, page not opened: the REACH Erbil city reference map (data as of October 2017) carries a place label 'MAMOSTAYAN' among Erbil city neighbourhood names. It does not describe a project, and its position relative to Masif Road / 150 m Street was not checked. | 2017-11-15 | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Mamostayan City" Erbil”; “"مامۆستایان ستی" OR "مامۆستایان سیتی" OR "ماموستايان سيتي" هەولێر” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Mamostayan City" Erbil»؛ «"مامۆستایان ستی" OR "مامۆستایان سیتی" OR "ماموستايان سيتي" هەولێر» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Name, location (Masif Road, 150 m Street), house/apartment types and facility tags (Baghy)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Land area
@@ -106,15 +109,15 @@ Second verification pass 2026-11-07: queries “"Mamostayan City" Erbil”; “"
    - Dates
    - Coordinates
    - Paya/Miran/homele/Haji Salam pages
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer and status not identified (one WebSearch, no result)
    - A 2017 REACH Erbil city map has a 'MAMOSTAYAN' place label (search summary, page not opened); whether it marks this project or an older teachers' quarter elsewhere in the city is not established.
-   - Second verification pass (2026-11-07): new evidence. Only a weak lead was found: a 2017 REACH Erbil city reference map carries a 'MAMOSTAYAN' place label, which does not confirm this project's identity, location, developer or status.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. Only a weak lead was found: a 2017 REACH Erbil city reference map carries a 'MAMOSTAYAN' place label, which does not confirm this project's identity, location, developer or status.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mamostayan-city",

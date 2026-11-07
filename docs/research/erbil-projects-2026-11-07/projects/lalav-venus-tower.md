@@ -1,101 +1,104 @@
 <!-- rendered -->
 # Lalav Venus Tower — لالاڤ ڤینۆس تاوەر — لالاف فينوس تاور
-Project ID: lalav-venus-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: lalav-venus-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Lalav Venus Tower (Paya: 'Lalav Vinus Tower' / 'Venus Towers') | Low – Single primary source | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| City | Erbil | Medium – Paya city field | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| District / Area | 120 Meter Street, Hawler Nwe (New Erbil) | Low – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Developer | Lalav Group (Lalav Projects) | Low – Paya developer field | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Project Category | Residential (apartments) with commercial ground floor | Low – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 6 | Low – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Unknown | Low – — – Paya status empty; no other source; one web search found nothing | — |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.216607, 44.064268 — Google Maps: https://www.google.com/maps?q=36.216607,44.064268 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Alternative names | Lalav Vinus Tower; Venus Towers; فينوس تاور | Low – Paya title, text and Arabic label | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 30 | Low – Paya only ('6 Buildings with 30 floors') | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Lalav Venus Tower (Paya: 'Lalav Vinus Tower' / 'Venus Towers') | نزم – Single primary source | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| شار | هەولێر | مامناوەند – Paya city field | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| ناوچە / گەڕەک | 120 Meter Street, Hawler Nwe (New Erbil) | نزم – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| گەشەپێدەر (کۆمپانیا) | Lalav Group (Lalav Projects) | نزم – Paya developer field | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) with commercial ground floor | نزم – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 6 | نزم – Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – Paya status empty; no other source; one web search found nothing | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.216607, 44.064268 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.216607,44.064268 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| ناوە جێگرەوەکان | Lalav Vinus Tower; Venus Towers; فينوس تاور | نزم – Paya title, text and Arabic label | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 30 | نزم – Paya only ('6 Buildings with 30 floors') | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 6 | Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Floors per building | 30 | Paya only ('6 Buildings with 30 floors') | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 6 | Paya only | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 30 | Paya only ('6 Buildings with 30 floors') | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| — | Not verified | — | — | — | No unit-level evidence found | — | — |
+| — | پشتڕاست نەکراوەتەوە | — | — | — | هیچ بەڵگەیەک بۆ یەکەکان نەدۆزرایەوە | — | — |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity, 24-hour security, fire suppression system, 24-hour water system, apartment meters, split AC units for all apartments (Paya services text; status unknown); Commercial ground floor; four underground garage floors (Paya text); Women's salon, exchange office, reception, kindergarten, nursery, medical centre, mosque, church, gym, kids play area, school, security, covered parking, public garden (Paya tags only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity, 24-hour security, fire suppression system, 24-hour water system, apartment meters, split AC units for all apartments (Paya services text; status unknown); Commercial ground floor; four underground garage floors (Paya text); Women's salon, exchange office, reception, kindergarten, nursery, medical centre, mosque, church, gym, kids play area, school, security, covered parking, public garden (Paya tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Paya places the project on the 120m road in New Hawler (Hawler Nwe), an area also given for Lalav City View; no closer location is published. Map position (low confidence, from agency map pins): 36.216607, 44.064268. Google Maps: https://www.google.com/maps?q=36.216607,44.064268
+### شوێن و دەوروبەر
+Paya places the project on the 120m road in New Hawler (Hawler Nwe), an area also given for Lalav City View; no closer location is published.
+شوێن لەسەر نەخشە: 36.216607, 44.064268 (متمانە: نزم) — https://www.google.com/maps?q=36.216607,44.064268
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لالاڤ ڤینۆس تاوەر (Lalav Venus Tower)، کە بە ڤینۆس تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لالاڤ گرووپ گەشەی پێدەدات. پڕۆژەکە لەسەر شەقامی ١٢٠ مەتری لە هەولێری نوێ هەڵکەوتووە، لە هەمان ناوچەی پڕۆژەی لالاڤ سیتی ڤیو. پڕۆژەکە لە شەش باڵەخانە پێکدێت کە هەر یەکەیان ٣٠ نهۆمە. باڵەخانەکان شوقەی نیشتەجێبوون لەخۆ دەگرن، و نهۆمی زەمینی بۆ بەکارهێنانی بازرگانی تەرخان کراوە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 لالاف فينوس تاور (Lalav Venus Tower)، المعروف أيضاً باسم فينوس تاورز، مشروع سكني للشقق تطوّره مجموعة لالاف. يقع المشروع على شارع 120 متر في هولير الجديدة، في المنطقة نفسها التي يقع فيها مشروع لالاف سيتي فيو. يتكوّن المشروع من ستة مبانٍ، يضم كل منها 30 طابقاً. وتضم المباني شققاً سكنية، فيما خُصص الطابق الأرضي للاستخدام التجاري.
 
 ### 3. English
 Lalav Venus Tower, also known as Venus Towers, is a residential apartment project developed by Lalav Group (Lalav Projects). It is located on 120 Meter Street in Hawler Nwe (New Erbil), the same area as the Lalav City View project. The project consists of six buildings, each with 30 floors. The buildings contain apartments, and the ground floor is designated for commercial use.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 | 'Lalav Vinus Tower' (area label 'Venus Towers'); developer Lalav Projects; residential; 120m New Hawler; 6 buildings x 30 floors; 4 basement garage floors; commercial ground floor; services list; amenity tags; no status, no prices | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/lalav-vinus-tower-225 | 'Lalav Vinus Tower' (area label 'Venus Towers'); developer Lalav Projects; residential; 120m New Hawler; 6 buildings x 30 floors; 4 basement garage floors; commercial ground floor; services list; amenity tags; no status, no prices | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “Lalav "Venus" tower Erbil 120 meter”; “"لالاف" فينوس تاور أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «Lalav "Venus" tower Erbil 120 meter»؛ «"لالاف" فينوس تاور أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All data: name, developer, 120m New Hawler location, 6 buildings x 30 floors, 4 basement levels, services (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Singular 'Tower' name vs 6-building 'Venus Towers' description (Paya)
    - project_name / number_of_buildings: 'Lalav Vinus Tower' (singular, page title) (https://paya-realestate.com/en/projects/lalav-vinus-tower-225); 'Venus Towers' with 6 buildings (area label and text) (https://paya-realestate.com/en/projects/lalav-vinus-tower-225) → Recorded as one project of 6 buildings per Paya text; singular name kept as catalogue name.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Construction status
    - Unit types and sizes
    - Total units
@@ -104,15 +107,15 @@ Second verification pass 2026-11-07: queries “Lalav "Venus" tower Erbil 120 me
    - Dates
    - Coordinates
    - Any listing on homele, Baghy, Haji Salam or Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether the project has been built, is under construction or is only planned
    - Relationship to Lalav City View, which Paya also places on 120m road near New Hawler
-   - Second verification pass (2026-11-07): no new evidence. No independent page mentions a Lalav Venus/Vinus tower project (English and Arabic searches returned only other Erbil towers and unrelated listings); all data still rest on the single Paya page.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page mentions a Lalav Venus/Vinus tower project (English and Arabic searches returned only other Erbil towers and unrelated listings); all data still rest on the single Paya page.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "lalav-venus-tower",

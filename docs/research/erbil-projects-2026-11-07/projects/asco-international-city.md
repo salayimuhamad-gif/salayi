@@ -1,130 +1,133 @@
 <!-- rendered -->
 # ASCO International City — ئاسکۆی نێودەوڵەتی — اسکو دولي
-Project ID: asco-international-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: asco-international-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | ASCO International City | High – Miran text and Homele area name; Baghy/Miran title 'ASCO International' | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city ; https://baghyshaqlawa.net/en/projects/asco-international |
-| City | Erbil | High – Miran, Baghy, Homele | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| District / Area | Diamond Zone, Massif–Pirmam road opposite Grand Majidi Mall | High – Miran neighbourhood/text; Baghy 'Pirmam Road' | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
-| Developer | Not verified | Low – Not stated on Miran or Baghy; one web search found nothing | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
-| Project Category | Residential (apartments) | High – Miran, Baghy, Homele | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | 5 | Medium – Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Total Residential Units | Disputed: 1,390 vs ~2,390 | Low – Two different figures on the same Miran page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Construction Status | Under construction (ready units on resale market) | Medium – Miran status; Homele 'Ready' listings | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.253582, 44.077763 — Google Maps: https://www.google.com/maps?q=36.253582,44.077763 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/asco-international |
-| Alternative names | ASCO International; اسکو دولي; ئاسکۆی نێودەوڵەتی | Medium – Miran title and AR/KU names; Baghy | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 18 | Medium – Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – No phases stated; distinct from ASCO Village | — |
+| ناوی پڕۆژە | ASCO International City | بەرز – Miran text and Homele area name; Baghy/Miran title 'ASCO International' | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city ; https://baghyshaqlawa.net/en/projects/asco-international |
+| شار | هەولێر | بەرز – Miran, Baghy, Homele | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| ناوچە / گەڕەک | Diamond Zone, Massif–Pirmam road opposite Grand Majidi Mall | بەرز – Miran neighbourhood/text; Baghy 'Pirmam Road' | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated on Miran or Baghy; one web search found nothing | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | بەرز – Miran, Baghy, Homele | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | 5 | مامناوەند – Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 1,390 vs ~2,390 | نزم – Two different figures on the same Miran page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (ready units on resale market) | مامناوەند – Miran status; Homele 'Ready' listings | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.253582, 44.077763 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.253582,44.077763 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/asco-international |
+| ناوە جێگرەوەکان | ASCO International; اسکو دولي; ئاسکۆی نێودەوڵەتی | مامناوەند – Miran title and AR/KU names; Baghy | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://baghyshaqlawa.net/en/projects/asco-international |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 18 | مامناوەند – Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – No phases stated; distinct from ASCO Village | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Disputed: 1,390 vs ~2,390 | Two different figures on the same Miran page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Villas / houses | Not verified | — | — |
-| Apartments | miranestate project statistics: 'Units 1,390'; miranestate description: 'offering around 2,390 apartments' | — | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 5 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Floors per building | 18 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Distinct from ASCO Village (villas, Aree Group per Miran) in the same Diamond Zone opposite Grand Majidi Mall; corporate link not verified | No phases stated; distinct from ASCO Village | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 1,390 vs ~2,390 | Two different figures on the same Miran page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | miranestate project statistics: 'Units 1,390'; miranestate description: 'offering around 2,390 apartments' | — | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 5 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 18 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Distinct from ASCO Village (villas, Aree Group per Miran) in the same Diamond Zone opposite Grand Majidi Mall; corporate link not verified | No phases stated; distinct from ASCO Village | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 93, 94, 96 | 93 | 96 | 1 | 1 bathrooms; 1+1 | agency_project_page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| apartment | 129, 134, 138, 140 | 129 | 140 | 2 | 2 bathrooms; 2+1 | agency_project_page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| apartment | 181, 186, 191 | 181 | 191 | 3 | 2 bathrooms; 3+1 (bathrooms from Homele listings) | agency_project_page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| apartment | 276 | 276 | 276 | 4 | 4+1 | agency_project_page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| شوقە | 93, 94, 96 | 93 | 96 | 1 | 1 حەمام؛ 1+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| شوقە | 129, 134, 138, 140 | 129 | 140 | 2 | 2 حەمام؛ 2+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| شوقە | 181, 186, 191 | 181 | 191 | 3 | 2 حەمام؛ 3+1 (bathrooms from Homele listings) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq ; https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| شوقە | 276 | 276 | 276 | 4 | 4+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Security (Miran, Baghy); Parking (Miran, Baghy)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Security (Miran, Baghy); Parking (Miran, Baghy)
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Swimming pool (Miran tag); Gym (Miran tag); Garden (Miran tag); Playground (Miran tag); Shopping centre (Miran tag); Elevators (Miran tag); Balconies, central air-conditioning, leisure facilities (Miran text); BMS, water treatment, backup generator, CCTV, maintenance workshop, fire safety, fibre internet, waste management (Miran 'building facilities' block)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Swimming pool (Miran tag); Gym (Miran tag); Garden (Miran tag); Playground (Miran tag); Shopping centre (Miran tag); Elevators (Miran tag); Balconies, central air-conditioning, leisure facilities (Miran text); BMS, water treatment, backup generator, CCTV, maintenance workshop, fire safety, fibre internet, waste management (Miran 'building facilities' block)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Price per m² (plan: 18% down, 22% tower completion, 25% keys, 35% monthly over 60 months) | 830 | USD | developer | page updated 2026-08-22 | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
-| Ready 1-bed 93 m² – Homele sale listing | 50,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Ready 1-bed 94 m² – Homele sale listing (cash) | 55,400 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Off-plan 2-bed 134 m² – Homele listing (down payment) | 82,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Ready 2-bed 138 m² – Homele sale listing (cash) | 72,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Ready 3-bed 181 m² – Homele sale listing | 101,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Ready 3-bed 191 m² – Homele sale listing | 120,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-| Ready penthouse 320 m², 3 bed – Homele rent, per month | 1,400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 18% down payment, 22% at tower completion, 25% at key handover, 35% monthly payment over 60 months; price per meter $830. Homele listings: 'Apartment in Cash', a 'Down payment' offer, units for sale and for rent ($1,400 Monthly) (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq)
+| Price per m² (plan: 18% down, 22% tower completion, 25% keys, 35% monthly over 60 months) | 830 | USD | نرخی گەشەپێدەر | page updated 2026-08-22 | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
+| Ready 1-bed 93 m² – Homele sale listing | 50,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Ready 1-bed 94 m² – Homele sale listing (cash) | 55,400 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Off-plan 2-bed 134 m² – Homele listing (down payment) | 82,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Ready 2-bed 138 m² – Homele sale listing (cash) | 72,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Ready 3-bed 181 m² – Homele sale listing | 101,300 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Ready 3-bed 191 m² – Homele sale listing | 120,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+| Ready penthouse 320 m², 3 bed – Homele rent, per month | 1,400 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 18% down payment, 22% at tower completion, 25% at key handover, 35% monthly payment over 60 months; price per meter $830. Homele listings: 'Apartment in Cash', a 'Down payment' offer, units for sale and for rent ($1,400 Monthly) (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq)
 
-### Location and surroundings
-Diamond Zone on the Massif–Pirmam road, opposite Grand Majidi Mall, north-east Erbil (Miran); Baghy gives 'Erbil – Pirmam Road'. Map position (low confidence, from agency map pins): 36.253582, 44.077763. Google Maps: https://www.google.com/maps?q=36.253582,44.077763
+### شوێن و دەوروبەر
+Diamond Zone on the Massif–Pirmam road, opposite Grand Majidi Mall, north-east Erbil (Miran); Baghy gives 'Erbil – Pirmam Road'.
+شوێن لەسەر نەخشە: 36.253582, 44.077763 (متمانە: نزم) — https://www.google.com/maps?q=36.253582,44.077763
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئاسکۆ ئینتەرناشناڵ سیتی (ASCO International City)، کە بە ئاسکۆی نێودەوڵەتیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە ناوچەی دایمۆند زۆن لە باکووری ڕۆژهەڵاتی هەولێر، لەسەر ڕێگای مەسیف–پیرمام بەرامبەر گراند مەجیدی مۆڵ. پڕۆژەکە جیاوازە لە ئاسکۆ ڤیلەج. پڕۆژەکە لە پێنج باڵەخانە پێکدێت کە هەر یەکەیان ١٨ نهۆمە. کاری دروستکردن بەردەوامە، و هەندێک لە شوقەکان تەواو بوون. پڕۆژەکە شوقەی یەک تا چوار ژووری نووستن لەخۆ دەگرێت: شوقەی یەک ژووری نووستن (١+١) بە ڕووبەری ٩٣، ٩٤ و ٩٦ م² و یەک حەمام؛ شوقەی دوو ژووری نووستن (٢+١) بە ڕووبەری ١٢٩، ١٣٤، ١٣٨ و ١٤٠ م² و دوو حەمام؛ شوقەی سێ ژووری نووستن (٣+١) بە ڕووبەری ١٨١، ١٨٦ و ١٩١ م² و دوو حەمام؛ و شوقەی چوار ژووری نووستن (٤+١) بە ڕووبەری ٢٧٦ م². ئاسانکارییە پلان بۆ دانراوەکان بریتین لە پاسەوانی و پارکینگ.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آسكو إنترناشونال سيتي (ASCO International City)، المعروف أيضاً باسم آسكو إنترناشونال، مشروع سكني للشقق في منطقة دايموند زون شمال شرقي أربيل، على طريق مصيف–بيرمام مقابل مول ماجدي الكبير. وهو مشروع منفصل عن آسكو فيليج. يتكوّن المشروع من خمسة مبانٍ يضم كل منها 18 طابقاً. والبناء جارٍ، وبعض الشقق مكتملة بالفعل. ويضم المشروع شققاً من غرفة نوم واحدة إلى أربع غرف نوم. تبلغ مساحات الشقق بغرفة نوم واحدة (1+1) 93 و94 و96 م² مع حمام واحد، والشقق بغرفتي نوم (2+1) 129 و134 و138 و140 م² مع حمامين، والشقق بثلاث غرف نوم (3+1) 181 و186 و191 م² مع حمامين، أما الشقق بأربع غرف نوم (4+1) فمساحتها 276 م². وتشمل المرافق المخطط لها الحراسة ومواقف السيارات.
 
 ### 3. English
 ASCO International City, also known as ASCO International, is a residential apartment project in the Diamond Zone of north-east Erbil, on the Massif–Pirmam road opposite Grand Majidi Mall. It is a separate project from ASCO Village. The project consists of five buildings of 18 floors each. Construction is ongoing, and some apartments are already complete. The project offers apartments with one to four bedrooms. One-bedroom (1+1) apartments measure 93, 94 and 96 m² with one bathroom; two-bedroom (2+1) apartments measure 129, 134, 138 and 140 m² with two bathrooms; three-bedroom (3+1) apartments measure 181, 186 and 191 m² with two bathrooms; and four-bedroom (4+1) apartments measure 276 m². Planned facilities include security and parking.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city | Area page: 8 sale listings 93–191 m² (mostly 'Ready'), US$50,000–120,000; 320 m² penthouse rent US$1,400/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/asco-international | 'Asco International': Erbil – Pirmam Road, apartments, 24 hr electricity, security, parking | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq | Names EN/AR/KU, Diamond Zone, Massif–Pirmam road opposite Grand Majidi Mall, Under Construction (updated Aug 22, 2026), 5 buildings, 18 floors, 1,390 units (stats) vs ~2,390 apartments (text), 11 unit sizes, US$830/m², 60-month plan, feature tags, views | 2026-08-22 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city | Area page: 8 sale listings 93–191 m² (mostly 'Ready'), US$50,000–120,000; 320 m² penthouse rent US$1,400/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/asco-international | 'Asco International': Erbil – Pirmam Road, apartments, 24 hr electricity, security, parking | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq | Names EN/AR/KU, Diamond Zone, Massif–Pirmam road opposite Grand Majidi Mall, Under Construction (updated Aug 22, 2026), 5 buildings, 18 floors, 1,390 units (stats) vs ~2,390 apartments (text), 11 unit sizes, US$830/m², 60-month plan, feature tags, views | 2026-08-22 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"ASCO International City" Erbil”; “"ASCO International" Erbil Pirmam towers project” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"ASCO International City" Erbil»؛ «"ASCO International" Erbil Pirmam towers project» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Pirmam road location and apartment category (Miran and Baghy)
    - Unit sizes 93–191 m² (Miran unit table matched by Homele listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Under-construction status, 5 buildings, 18 floors, US$830/m² and 60-month plan (Miran)
    - Mountain/street views (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - total_units: 1,390 units (project statistics) (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq); around 2,390 apartments (project text) (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq) → Disputed – both figures on the same Miran page; total_units left null
    - construction_status: Under Construction; payment graphic marks tower-completion instalment as passed (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq); Most listings tagged 'Ready' (https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city) → under_construction kept per Miran; Homele indicates some buildings already handed over
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Site area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Total units 1,390 vs 2,390 on the same Miran page
    - Extent of completion: Miran 'Under Construction' while Homele lists mostly ready units
    - No Paya page found
    - Second pass 2026-11-07: two more web searches ("ASCO International City" Erbil / "ASCO International" Erbil Pirmam towers project) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. Results concern an unrelated ASCO oncology conference and other Pirmam-road developments; no independent page confirms the project, its developer or tower count.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Results concern an unrelated ASCO oncology conference and other Pirmam-road developments; no independent page confirms the project, its developer or tower count.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "asco-international-city",

@@ -1,133 +1,136 @@
 <!-- rendered -->
 # Hiwa City — هیوا سیتی — هيوا سيتي
-Project ID: hiwa-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: hiwa-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Hiwa City (Hewa City) | High – Bagh-y Shaqlawa and homele (URL slug 'hewa-city') | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| City | Erbil | High – Bagh-y Shaqlawa, homele | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| District / Area | Kasnazan area, Erbil–Koya road | Medium – Bagh-y Shaqlawa (Koya road) + Roya (Kasnazan, Koya road) | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://roya-iq.com/hiwa-city |
-| Developer | Hewa Holding | Low – Only a Roya page (Majidi View) seen via search summary credits Hewa Holding with 'Hewa City Real Estate' | https://roya-iq.com/?p=9096 |
-| Project Category | Residential (houses, villas; apartments per Roya) | Medium – Bagh-y Shaqlawa types; homele listings; Roya | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city ; https://roya-iq.com/hiwa-city |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – No source states it | — |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Under construction (partly completed) | Low – No stated status; homele shows both ready houses and off-plan structures (e.g. Zone H) | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.203426, 44.094436 — Google Maps: https://www.google.com/maps?q=36.203426,44.094436 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/hiwa-city |
-| Alternative names | Hewa City; هیوا ستی | Medium – homele slug; Roya | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city ; https://roya-iq.com/?p=9096 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Zones (Zone H named); no phase list | Low – One homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| ناوی پڕۆژە | Hiwa City (Hewa City) | بەرز – Bagh-y Shaqlawa and homele (URL slug 'hewa-city') | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| شار | هەولێر | بەرز – Bagh-y Shaqlawa, homele | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| ناوچە / گەڕەک | Kasnazan area, Erbil–Koya road | مامناوەند – Bagh-y Shaqlawa (Koya road) + Roya (Kasnazan, Koya road) | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://roya-iq.com/hiwa-city |
+| گەشەپێدەر (کۆمپانیا) | Hewa Holding | نزم – Only a Roya page (Majidi View) seen via search summary credits Hewa Holding with 'Hewa City Real Estate' | https://roya-iq.com/?p=9096 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses, villas; apartments per Roya) | مامناوەند – Bagh-y Shaqlawa types; homele listings; Roya | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://homele.com/properties/for-sale-and-rent/erbil/hewa-city ; https://roya-iq.com/hiwa-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (partly completed) | نزم – No stated status; homele shows both ready houses and off-plan structures (e.g. Zone H) | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.203426, 44.094436 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.203426,44.094436 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/hiwa-city |
+| ناوە جێگرەوەکان | Hewa City; هیوا ستی | مامناوەند – homele slug; Roya | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city ; https://roya-iq.com/?p=9096 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | Zones (Zone H named); no phase list | نزم – One homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Haji Salam: Project Type 'House-Villa'; field reads 'Number Of Unit: 400 House 200 - Villa' (Area House 200 m, Villa 450 m); split between houses and villas not unambiguous, no total given | — | https://hajisalam.com/en/hiwa-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source states it | — |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Zones (Zone H named); no phase list | One homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | Haji Salam: Project Type 'House-Villa'; field reads 'Number Of Unit: 400 House 200 - Villa' (Area House 200 m, Villa 450 m); split between houses and villas not unambiguous, no total given | — | https://hajisalam.com/en/hiwa-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Zones (Zone H named); no phase list | One homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 184, 200, 221, 225, 236, 285, 324, 354, 420 | 184 | 420 | — | 10 listings on homele first page (of ~8 pages): ready houses 184/200/225/285/420 m2 and off-plan structures 221/236/324/354 m2; 4-6 bedrooms, 4-5 bathrooms; some described as two-floor | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| villa | Not verified | — | — | — | Villa listed as a property type (Bagh-y Shaqlawa; Roya); no sizes | agency_project_page | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://roya-iq.com/hiwa-city |
-| apartment | Not verified | — | — | — | Apartments mentioned by Roya (via web-search summary only); no sizes | agency_project_page | https://roya-iq.com/hiwa-city |
+| خانوو | 184, 200, 221, 225, 236, 285, 324, 354, 420 | 184 | 420 | — | 10 listings on homele first page (of ~8 pages): ready houses 184/200/225/285/420 m2 and off-plan structures 221/236/324/354 m2; 4-6 bedrooms, 4-5 bathrooms; some described as two-floor | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| ڤێلا | پشتڕاست نەکراوەتەوە | — | — | — | Villa listed as a property type (Bagh-y Shaqlawa; Roya); no sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/hiwa-city ; https://roya-iq.com/hiwa-city |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Apartments mentioned by Roya (via web-search summary only); no sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://roya-iq.com/hiwa-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24 hr electricity (Bagh-y Shaqlawa feature list only); Internet (Bagh-y Shaqlawa feature list only); Playground (Bagh-y Shaqlawa feature list only); Pre-installed ACs (Bagh-y Shaqlawa feature list only); City administrative center (Bagh-y Shaqlawa feature list only); Security (Bagh-y Shaqlawa feature list only); Green areas (Bagh-y Shaqlawa feature list only); Public garden (Bagh-y Shaqlawa feature list only); Infrastructure (sewerage, sanitary & electrical systems) (Bagh-y Shaqlawa feature list only)
+**بانگەشەی پشتڕاست نەکراوە:** 24 hr electricity (Bagh-y Shaqlawa feature list only); Internet (Bagh-y Shaqlawa feature list only); Playground (Bagh-y Shaqlawa feature list only); Pre-installed ACs (Bagh-y Shaqlawa feature list only); City administrative center (Bagh-y Shaqlawa feature list only); Security (Bagh-y Shaqlawa feature list only); Green areas (Bagh-y Shaqlawa feature list only); Public garden (Bagh-y Shaqlawa feature list only); Infrastructure (sewerage, sanitary & electrical systems) (Bagh-y Shaqlawa feature list only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready new house 225 m2, 5 bed, 4 bath - homele market listing (negotiable) | 254,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Ready modern house 184 m2, 4 bed - homele market listing | 234,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Ready house 285 m2, 4 bed - homele market listing | 340,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Ready two-floor house 420 m2, 5 bed - homele market listing | 290,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Ready two-floor house 200 m2, 5 bed - homele market listing | 170,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Off-plan house 354 m2, 6 bed - homele market listing (negotiable) | 164,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Off-plan structure 221 m2, 5 bed, Zone H - homele market listing (negotiable) | 148,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-| Off-plan construction 236 m2, 5 bed - homele market listing | 147,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready new house 225 m2, 5 bed, 4 bath - homele market listing (negotiable) | 254,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Ready modern house 184 m2, 4 bed - homele market listing | 234,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Ready house 285 m2, 4 bed - homele market listing | 340,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Ready two-floor house 420 m2, 5 bed - homele market listing | 290,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Ready two-floor house 200 m2, 5 bed - homele market listing | 170,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Off-plan house 354 m2, 6 bed - homele market listing (negotiable) | 164,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Off-plan structure 221 m2, 5 bed, Zone H - homele market listing (negotiable) | 148,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+| Off-plan construction 236 m2, 5 bed - homele market listing | 147,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Hiwa City lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall. Map position (low confidence, from agency map pins): 36.203426, 44.094436. Google Maps: https://www.google.com/maps?q=36.203426,44.094436
+### شوێن و دەوروبەر
+Hiwa City lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall.
+شوێن لەسەر نەخشە: 36.203426, 44.094436 (متمانە: نزم) — https://www.google.com/maps?q=36.203426,44.094436
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 هیوا سیتی (Hiwa City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە لەسەر ڕێگای هەولێر–کۆیە لە ناوچەی کەسنەزان هەڵکەوتووە، لە تەنیشت کۆمەڵگەی ماجیدی ڤیو و نزیک ماجیدی مۆڵ. پڕۆژەکە زیاتر لە خانوو پێکدێت و ڤێلاشی تێدایە. خانووەکانی هیوا سیتی بە ڕووبەری ١٨٤، ٢٠٠، ٢٢١، ٢٢٥، ٢٣٦، ٢٨٥، ٣٢٤، ٣٥٤ و ٤٢٠ م² هەن. خانووەکان چوار تا شەش ژووری نووستن و چوار تا پێنج حەمامیان هەیە، و هەندێک لە خانووەکان دوو نهۆمین.
 
-### 2. Arabic (العربية)
+### 2. العربية
 هيوا سيتي (Hiwa City) مشروع سكني في أربيل يقع على طريق أربيل–كويه في منطقة كسنزان، بجوار مجمع ماجدي فيو وقرب ماجدي مول. يتكون المشروع أساساً من بيوت، ويضم أيضاً فللاً سكنية. وتتوفر البيوت في هيوا سيتي بمساحات 184 و200 و221 و225 و236 و285 و324 و354 و420 م². وتضم البيوت من أربع إلى ست غرف نوم ومن أربعة إلى خمسة حمامات، وبعضها مبني على طابقين.
 
 ### 3. English
 Hiwa City, also written Hewa City, is a residential project in Erbil. It lies on the Erbil–Koya road in the Kasnazan area, next to the Majidi View complex near Majidi Mall. The project consists mainly of houses and also includes villas. Houses in Hiwa City come in sizes of 184, 200, 221, 225, 236, 285, 324, 354 and 420 m². They have four to six bedrooms and four to five bathrooms, and some houses are built on two floors.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city | Area 'Hiwa City' (~8 listing pages); 10 first-page listings: ready and off-plan houses 184-420 m2, $147,000-$340,000; 'Zone H' | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/hiwa-city | Hiwa City on Erbil–Koya road; house and villa types; feature list; nearest branch Majidi View | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/hiwa-city/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/hewa-city | Area 'Hiwa City' (~8 listing pages); 10 first-page listings: ready and off-plan houses 184-420 m2, $147,000-$340,000; 'Zone H' | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/hiwa-city | Hiwa City on Erbil–Koya road; house and villa types; feature list; nearest branch Majidi View | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/hiwa-city/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/hiwa-city | Hiwa City in Kasnazan area on Koya road; villas, houses and apartments (seen via web-search summary only) | — | 2026-11-07 | low |
-| roya-iq.com | https://roya-iq.com/?p=9096 | Majidi View page: next to Hewa City on Koya Street; Hewa Holding credited with Hewa City Real Estate and Majidi Mall (seen via web-search summary only) | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/hiwa-city | Hiwa City in Kasnazan area on Koya road; villas, houses and apartments (seen via web-search summary only) | — | 2026-11-07 | نزم |
+| roya-iq.com | https://roya-iq.com/?p=9096 | Majidi View page: next to Hewa City on Koya Street; Hewa Holding credited with Hewa City Real Estate and Majidi Mall (seen via web-search summary only) | — | 2026-11-07 | نزم |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name Hiwa/Hewa City (Bagh-y Shaqlawa, homele)
    - Location on Erbil–Koya road (Bagh-y Shaqlawa; Roya)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Hewa Holding (Roya via search summary)
    - Kasnazan area and apartments (Roya via search summary)
    - Unit sizes and prices (homele market listings only)
    - Feature list (Bagh-y Shaqlawa)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Official developer page
    - Project-level status
    - Unit count, land area
    - Developer prices
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Status inferred from mix of ready and off-plan listings, not stated by any source
    - Roya pages not in pack; facts taken from web-search summaries
    - Zone structure (e.g. Zone H) not documented
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "hiwa-city",

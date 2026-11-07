@@ -1,105 +1,107 @@
 <!-- rendered -->
 # Aynda City 2 — — — —
-Project ID: aynda-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: aynda-city-2 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Aynda City 2 | Low – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| City | Erbil | Medium – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| District / Area | Not verified | Low – No street or landmark published | — |
-| Developer | Not verified | Low – No source names one | — |
-| Project Category | Residential (houses) | Low – Based on four house listings | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Not verified (all four listings are 'Ready' houses) | Low – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Ayenda City 2 | Low – Project-list alias; not seen on a source page | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Not verified (a separate 'Aynda City 1' area exists on homele) | Low – Name pattern only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
+| ناوی پڕۆژە | Aynda City 2 | نزم – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| شار | هەولێر | مامناوەند – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No street or landmark published | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Based on four house listings | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Ayenda City 2 | نزم – Project-list alias; not seen on a source page | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (a separate 'Aynda City 1' area exists on homele) | نزم – Name pattern only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | 489 | 'Number Of Unit: 489', Project Type: House (hajisalam) | https://hajisalam.com/en/aynda-city-2/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified (a separate 'Aynda City 1' area exists on homele) | Name pattern only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | 489 | 'Number Of Unit: 489', Project Type: House (hajisalam) | https://hajisalam.com/en/aynda-city-2/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (a separate 'Aynda City 1' area exists on homele) | Name pattern only | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 216 | 216 | 216 | — | Four 'Ready' house listings, all 216 m2: 2 bed/2 bath (x2), 4 bed/5 bath, 5 bed/4 bath. Whether 216 m2 is plot or built area is not stated. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| خانوو | 216 | 216 | 216 | — | Four 'Ready' house listings, all 216 m2: 2 bed/2 bath (x2), 4 bed/5 bath, 5 bed/4 bath. Whether 216 m2 is plot or built area is not stated. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready house 216 m2, 2 bed / 2 bath, cash - listing asking price (negotiable) | 77,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| Ready house 216 m2, 2 bed / 2 bath, cash - listing asking price (negotiable) | 80,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| Ready 'VIP' house 216 m2, 4 bed / 5 bath - listing asking price (negotiable) | 150,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-| Ready modern house 216 m2, 5 bed / 4 bath - listing asking price (negotiable) | 155,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: ready houses for sale incl. 'House in Cash', prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2)
+| Ready house 216 m2, 2 bed / 2 bath, cash - listing asking price (negotiable) | 77,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| Ready house 216 m2, 2 bed / 2 bath, cash - listing asking price (negotiable) | 80,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| Ready 'VIP' house 216 m2, 4 bed / 5 bath - listing asking price (negotiable) | 150,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+| Ready modern house 216 m2, 5 bed / 4 bath - listing asking price (negotiable) | 155,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: ready houses for sale incl. 'House in Cash', prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Homele lists 'Aynda City 2' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئایندە ستی ٢ (Aynda City 2) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. خانووەکانی ئایندە ستی ٢ ڕووبەریان ٢١٦ م²یە، و لە دوو تا پێنج ژووری نووستن و دوو تا پێنج حەمامیان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آينده سيتي 2 (Aynda City 2) منطقة سكنية للبيوت في مدينة أربيل في إقليم كوردستان العراق. تبلغ مساحة البيوت في آينده سيتي 2 ما مقداره 216 م²، وتضم من غرفتي نوم إلى خمس غرف نوم ومن حمامين إلى خمسة حمامات.
 
 ### 3. English
 Aynda City 2 is a residential area of houses in Erbil, in the Kurdistan Region of Iraq. Houses in Aynda City 2 have an area of 216 m², with two to five bedrooms and two to five bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 | Area page 'Aynda City 2, Erbil' (1 result page): four Ready houses of 216 m2, USD 77,500-155,000 negotiable | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/aynda-city-2/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 | Area page 'Aynda City 2, Erbil' (1 result page): four Ready houses of 216 m2, USD 77,500-155,000 negotiable | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/aynda-city-2/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Aynda City" OR "Ayenda City" Erbil”; “"Ayenda City 2" OR "Aynda City 2" Erbil houses” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Aynda City" OR "Ayenda City" Erbil»؛ «"Ayenda City 2" OR "Aynda City 2" Erbil houses» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence of an 'Aynda City 2' area in Erbil and four ready 216 m2 houses listed at USD 77,500-155,000 (homele listings)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Exact location
    - Land area
@@ -107,17 +109,17 @@ Second verification pass 2026-11-07: queries “"Aynda City" OR "Ayenda City" Er
    - Status and dates
    - Facilities
    - Official house types and sizes
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No project page on Paya, Baghy, Haji Salam or Miran; the WebSearch run for Aynda City 1 (covering 'Aynda City' / 'Ayenda City') returned no relevant page
    - Whether Aynda City 1 and 2 are phases of one development
    - Why 216 m2 houses are listed at both ~USD 78-80k (2 bed) and USD 150-155k (4-5 bed); plot vs built area not stated
    - Second pass 2026-11-07: two more web searches ("Aynda City" OR "Ayenda City" Erbil / "Ayenda City 2" OR "Aynda City 2" Erbil houses) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. No independent page names Aynda/Ayenda City 2; location, developer and status are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names Aynda/Ayenda City 2; location, developer and status are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "aynda-city-2",

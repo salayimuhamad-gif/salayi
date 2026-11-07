@@ -1,115 +1,118 @@
 <!-- rendered -->
 # 92 Towers — — — —
-Project ID: 92-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: 92-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | 92 Towers | Low – Baghy Shaqlawa only; one web search found no other source | https://baghyshaqlawa.net/en/projects/92-towers |
-| City | Erbil | Medium – Baghy address | https://baghyshaqlawa.net/en/projects/92-towers |
-| District / Area | Erbil–Kirkuk road | Low – Baghy address only | https://baghyshaqlawa.net/en/projects/92-towers |
-| Developer | Not verified | Low – Not stated | — |
-| Project Category | Residential (apartments) | Low – Baghy property type only | https://baghyshaqlawa.net/en/projects/92-towers |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated (name does not establish a count) | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Not verified | Low – Not stated | — |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.151071, 44.019006 — Google Maps: https://www.google.com/maps?q=36.151071,44.019006 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/92-towers |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None mentioned | — |
+| ناوی پڕۆژە | 92 Towers | نزم – Baghy Shaqlawa only; one web search found no other source | https://baghyshaqlawa.net/en/projects/92-towers |
+| شار | هەولێر | مامناوەند – Baghy address | https://baghyshaqlawa.net/en/projects/92-towers |
+| ناوچە / گەڕەک | Erbil–Kirkuk road | نزم – Baghy address only | https://baghyshaqlawa.net/en/projects/92-towers |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | نزم – Baghy property type only | https://baghyshaqlawa.net/en/projects/92-towers |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated (name does not establish a count) | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Not stated | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.151071, 44.019006 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.151071,44.019006 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/92-towers |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated (name does not establish a count) | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated (name does not establish a count) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | Property type 'Apartment'; no sizes published | agency_project_page | https://baghyshaqlawa.net/en/projects/92-towers |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Property type 'Apartment'; no sizes published | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/92-towers |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Pre-installed ACs (Baghy tag); Administrative centre (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Underground car park (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag); Sewerage, sanitary and electrical infrastructure (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Pre-installed ACs (Baghy tag); Administrative centre (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Underground car park (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag); Sewerage, sanitary and electrical infrastructure (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-On the Erbil–Kirkuk road (Baghy Shaqlawa), a southern approach to the city within the study scope. Baghy assigns the project to its Cihan City branch. No landmarks are published. Map position (low confidence, from agency map pins): 36.151071, 44.019006. Google Maps: https://www.google.com/maps?q=36.151071,44.019006
+### شوێن و دەوروبەر
+On the Erbil–Kirkuk road (Baghy Shaqlawa), a southern approach to the city within the study scope. Baghy assigns the project to its Cihan City branch. No landmarks are published.
+شوێن لەسەر نەخشە: 36.151071, 44.019006 (متمانە: نزم) — https://www.google.com/maps?q=36.151071,44.019006
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 92 تاوەرز (92 Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر، پایتەختی هەرێمی کوردستان، و لەسەر ڕێگای هەولێر – کەرکووک لە دەروازەی باشووری شار هەڵکەوتووە. پڕۆژەکە لە شوقەی نیشتەجێبوون پێکدێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 92 تاورز (92 Towers) مشروع سكني للشقق في مدينة أربيل، عاصمة إقليم كردستان العراق، ويقع على طريق أربيل – كركوك عند المدخل الجنوبي للمدينة. ويتكوّن المشروع من شقق سكنية.
 
 ### 3. English
 92 Towers is a residential apartment project in Erbil, the capital of the Kurdistan Region of Iraq. It is located on the Erbil–Kirkuk road, on the southern approach to the city. The project consists of apartments.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/92-towers | Name, address Erbil – Kirkuk road, property type Apartment, feature tags, nearest branch Cihan City | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/92-towers | Name, address Erbil – Kirkuk road, property type Apartment, feature tags, nearest branch Cihan City | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"92 Towers" Erbil”; “"92 Towers" Kirkuk road Erbil apartments” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"92 Towers" Erbil»؛ «"92 Towers" Kirkuk road Erbil apartments» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence, name, Kirkuk-road address, apartment type and feature tags (Baghy Shaqlawa only)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status
    - Number of towers, floors, units
    - Unit sizes and prices
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Not found on Paya, Miran, Haji Salam or Homele; one web search returned nothing; may be a local or alternative name of another Kirkuk-road project
    - Second pass 2026-11-07: two more web searches ("92 Towers" Erbil / "92 Towers" Kirkuk road Erbil apartments) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. No independent page names 92 Towers; other Kirkuk-road tower projects found (e.g. Lavender Skyline Towers) carry different names and were not linked; developer, status and size are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names 92 Towers; other Kirkuk-road tower projects found (e.g. Lavender Skyline Towers) carry different names and were not linked; developer, status and size are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "92-towers",

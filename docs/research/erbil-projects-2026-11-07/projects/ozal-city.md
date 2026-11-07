@@ -1,104 +1,106 @@
 <!-- rendered -->
 # Ozal City — ئۆزال سیتی — أوزال سيتي
-Project ID: ozal-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: ozal-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Ozal City | Low – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| City | Erbil | Medium – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| District / Area | Not verified | Low – No street or landmark published; one WebSearch found nothing | — |
-| Developer | Not verified | Low – No source names one; one WebSearch found nothing | — |
-| Project Category | Residential (houses) | Low – Based on three house listings | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Not verified (all three listings are 'Ready' houses) | Low – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Ozall | Low – Project-list alias; not seen on a source page | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified (two listings are two-floor houses) | Low – Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Not verified | Low – not stated by any source found | — |
+| ناوی پڕۆژە | Ozal City | نزم – Only a homele area label | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| شار | هەولێر | مامناوەند – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No street or landmark published; one WebSearch found nothing | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Based on three house listings | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Ozall | نزم – Project-list alias; not seen on a source page | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (two listings are two-floor houses) | نزم – Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | 780 | Project Type: House; Number Of Unit: 780 | https://hajisalam.com/en/ozal/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified (two listings are two-floor houses) | Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | 780 | Project Type: House; Number Of Unit: 780 | https://hajisalam.com/en/ozal/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (two listings are two-floor houses) | Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 172, 173 | 172 | 173 | — | Three 'Ready' house listings: 172 m2 two-floor 4 bed/2 bath; 173 m2 two-floor 4 bed/3 bath; 172 m2 3 bed/3 bath. Plot vs built area not stated | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| خانوو | 172, 173 | 172 | 173 | — | Three 'Ready' house listings: 172 m2 two-floor 4 bed/2 bath; 173 m2 two-floor 4 bed/3 bath; 172 m2 3 bed/3 bath. Plot vs built area not stated | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready two-floor house 172 m2, 4 bed / 2 bath - listing asking price (negotiable) | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Ready two-floor house 173 m2, 4 bed / 3 bath - listing asking price | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-| Ready house 172 m2, 3 bed / 3 bath - listing asking price (negotiable) | 58,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready two-floor house 172 m2, 4 bed / 2 bath - listing asking price (negotiable) | 90,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| Ready two-floor house 173 m2, 4 bed / 3 bath - listing asking price | 90,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+| Ready house 172 m2, 3 bed / 3 bath - listing asking price (negotiable) | 58,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Homele lists 'Ozal City' as an area of Erbil. No source gives a street, ring-road position or landmark.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئۆزال سیتی (Ozal City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر. ڕووبەری خانووەکانی ١٧٢ و ١٧٣ م²یە. لەناویاندا خانوویەکی دوو نهۆمیی ١٧٢ م² هەیە بە چوار ژووری نووستن و دوو حەمام، خانوویەکی دوو نهۆمیی ١٧٣ م² بە چوار ژووری نووستن و سێ حەمام، و خانوویەکی ١٧٢ م² بە سێ ژووری نووستن و سێ حەمام.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أوزال سيتي (Ozal City) منطقة سكنية للبيوت في مدينة أربيل. تبلغ مساحات البيوت فيها ١٧٢ و١٧٣ م². ومن بينها بيت من طابقين بمساحة ١٧٢ م² يضم أربع غرف نوم وحمامين، وبيت من طابقين بمساحة ١٧٣ م² يضم أربع غرف نوم وثلاثة حمامات، وبيت بمساحة ١٧٢ م² يضم ثلاث غرف نوم وثلاثة حمامات.
 
 ### 3. English
 Ozal City is a residential area of houses in Erbil. Houses in Ozal City have areas of 172 and 173 m². They include a two-floor house of 172 m² with four bedrooms and two bathrooms, a two-floor house of 173 m² with four bedrooms and three bathrooms, and a 172 m² house with three bedrooms and three bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city | Area page 'Ozal City, Erbil' (1 result page): three Ready houses 172-173 m2, 3-4 bed, USD 58,500-90,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/ozal/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/ozal-city | Area page 'Ozal City, Erbil' (1 result page): three Ready houses 172-173 m2, 3-4 bed, USD 58,500-90,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/ozal/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Ozal City" Erbil”; “"ئۆزال ستی" OR "ئۆزال سیتی" OR "اوزال سيتي" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Ozal City" Erbil»؛ «"ئۆزال ستی" OR "ئۆزال سیتی" OR "اوزال سيتي" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence of an 'Ozal City' area in Erbil with three ready 172-173 m2 houses at USD 58,500-90,000 (homele listings)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Exact location
    - Land area
@@ -106,16 +108,16 @@ Second verification pass 2026-11-07: queries “"Ozal City" Erbil”; “"ئۆز
    - Status and dates
    - Facilities
    - Official house types
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No project page on Paya, Baghy, Haji Salam or Miran; one WebSearch ('Ozal City Erbil housing project') returned nothing relevant
    - Location within Erbil city not confirmed (in_erbil_city kept true on homele's Erbil filing only)
    - Pack marks it Tier 1 but evidence is listing-only
-   - Second verification pass (2026-11-07): no new evidence. No source beyond the homele area listings mentions Ozal City; exact location, developer and size remain unknown.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No source beyond the homele area listings mentions Ozal City; exact location, developer and size remain unknown.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "ozal-city",

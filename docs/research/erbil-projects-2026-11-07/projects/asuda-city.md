@@ -1,114 +1,117 @@
 <!-- rendered -->
 # Asuda City — — — —
-Project ID: asuda-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: asuda-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Asuda City | Low – — – High — same name on two primary sites and on Erbil Governorate news | https://baghyshaqlawa.net/en/projects/asuda-city ; https://homele.com/properties/for-sale-and-rent/erbil/asuda-city ; https://www.erbil.gov.krd/app/en/node/6216 |
-| City | Erbil | Low – — – High — agency page, portal area page, governorate | — |
-| District / Area | Erbil – Kirkuk Road | Low – — – Medium — single agency source for the road | https://baghyshaqlawa.net/en/projects/asuda-city |
-| Developer | Not verified | Low – not stated by any source found | — |
-| Project Category | Residential — agency page lists "Apartment"; the only market listing is a 200 m² residential plot | Low – — – Medium — sources disagree on typology (see Part H) | https://baghyshaqlawa.net/en/projects/asuda-city ; https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Not verified for housing. Public infrastructure (internal street paving and sewage network) was under execution by Erbil Governorate in May 2023 | Low – Medium — official governorate news via search snippet | https://www.erbil.gov.krd/app/en/node/6216 ; https://www.hawlergov.org/app/en/node/6216 |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.108702, 44.024204 — Google Maps: https://www.google.com/maps?q=36.108702,44.024204 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/asuda-city |
-| Alternative names | None found | Low – — | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Not verified | Low – not stated by any source found | — |
+| ناوی پڕۆژە | Asuda City | نزم – High — same name on two primary sites and on Erbil Governorate news | https://baghyshaqlawa.net/en/projects/asuda-city ; https://homele.com/properties/for-sale-and-rent/erbil/asuda-city ; https://www.erbil.gov.krd/app/en/node/6216 |
+| شار | هەولێر | نزم – High — agency page, portal area page, governorate | — |
+| ناوچە / گەڕەک | Erbil – Kirkuk Road | نزم – Medium — single agency source for the road | https://baghyshaqlawa.net/en/projects/asuda-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential — agency page lists "Apartment"; the only market listing is a 200 m² residential plot | نزم – Medium — sources disagree on typology (see Part H) | https://baghyshaqlawa.net/en/projects/asuda-city ; https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Medium — official governorate news via search snippet | https://www.erbil.gov.krd/app/en/node/6216 ; https://www.hawlergov.org/app/en/node/6216 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.108702, 44.024204 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.108702,44.024204 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/asuda-city |
+| ناوە جێگرەوەکان | None found | نزم | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | Listed as the project's property type; sizes not verified | agency_project_page | https://baghyshaqlawa.net/en/projects/asuda-city |
-| plot | 200 | 200 | 200 | — | One residential plot advertised for sale (negotiable) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Listed as the project's property type; sizes not verified | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/asuda-city |
+| پارچە زەوی | 200 | 200 | 200 | — | One residential plot advertised for sale (negotiable) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Internal street paving (21 streets, 4,575 m) - governorate works under execution May 2023; Sewage network (approx. 4,560 m) - governorate works under execution May 2023
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Internal street paving (21 streets, 4,575 m) - governorate works under execution May 2023; Sewage network (approx. 4,560 m) - governorate works under execution May 2023
 
-**Unverified claims:** 24-hour electricity; Playground; Security; Parking; Green areas; Public garden; Supermarket; Pets allowed
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity; Playground; Security; Parking; Green areas; Public garden; Supermarket; Pets allowed
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Residential plot 200 m² (negotiable) | 152,500 | USD | resale | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listing: residential plot (200 m²) for sale, $152,500 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city)
+| Residential plot 200 m² (negotiable) | 152,500 | USD | فرۆشتنەوە | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listing: residential plot (200 m²) for sale, $152,500 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city)
 
-### Location and surroundings
-The agency project page gives the address as "Erbil – Kirkuk Road" (https://baghyshaqlawa.net/en/projects/asuda-city), i.e. the southern corridor of Erbil toward Kirkuk, which is within the Andaz city scope. Homele lists Asuda City as an area of Erbil (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city). Erbil Governorate treats Asuda City as a neighbourhood receiving public street-paving and sewage works from the governorate development budget (2023). The agency names its "Cihan City Branch Erbil" as the nearest branch, which suggests proximity to Cihan City, but no distance is given. No verified landmarks or distances are available. Map position (low confidence, from agency map pins): 36.108702, 44.024204. Google Maps: https://www.google.com/maps?q=36.108702,44.024204
+### شوێن و دەوروبەر
+The agency project page gives the address as "Erbil – Kirkuk Road" (https://baghyshaqlawa.net/en/projects/asuda-city), i.e. the southern corridor of Erbil toward Kirkuk, which is within the Andaz city scope. Homele lists Asuda City as an area of Erbil (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city). Erbil Governorate treats Asuda City as a neighbourhood receiving public street-paving and sewage works from the governorate development budget (2023). The agency names its "Cihan City Branch Erbil" as the nearest branch, which suggests proximity to Cihan City, but no distance is given. No verified landmarks or distances are available.
+شوێن لەسەر نەخشە: 36.108702, 44.024204 (متمانە: نزم) — https://www.google.com/maps?q=36.108702,44.024204
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئاسوودە سیتی (Asuda City) ناوچەیەکی نیشتەجێبوونە لە هەولێر، لەسەر ڕێگای کەرکووک. لە مانگی ئایاری ٢٠٢٣دا پارێزگای هەولێر کاری ژێرخانی لە ناوچەکەدا جێبەجێ دەکرد کە لە بودجەی گەشەپێدانی پارێزگاوە پارەی بۆ دابین کرابوو. کارەکان بریتین لە قیرتاوکردنی ٢١ شەقامی ناوخۆیی بە درێژیی گشتی ٤٬٥٧٥ مەتر و ڕاکێشانی تۆڕی ئاوەڕۆ بە درێژیی نزیکەی ٤٬٥٦٠ مەتر.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آسودا سيتي (Asuda City) منطقة سكنية في أربيل تقع على طريق كركوك. في أيار ٢٠٢٣ كانت محافظة أربيل تنفذ أعمال بنى تحتية في المنطقة بتمويل من ميزانية التنمية في المحافظة، تشمل تبليط ٢١ شارعاً داخلياً بطول إجمالي يبلغ ٤٬٥٧٥ متراً، ومد شبكة للصرف الصحي بطول نحو ٤٬٥٦٠ متراً.
 
 ### 3. English
 Asuda City is a residential area in Erbil, located on the Kirkuk Road. In May 2023 the Erbil Governorate was carrying out infrastructure works in Asuda City, funded from the governorate's development budget. The works cover the paving of 21 internal streets with a total length of 4,575 m and the installation of a sewage network of about 4,560 m.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city | Area listing page; one residential plot 200 m² at USD 152,500 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/asuda-city | Address Erbil - Kirkuk Road; property type Apartment; facility list; nearest branch Cihan City | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city | Area listing page; one residential plot 200 m² at USD 152,500 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/asuda-city | Address Erbil - Kirkuk Road; property type Apartment; facility list; nearest branch Cihan City | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| erbil.gov.krd | https://www.erbil.gov.krd/app/en/node/6216 | Governor inspected internal street paving and sewage network works in Asuda City; approx. 1.765 billion IQD; governorate development budget (search snippet) | 2023-05 | 2026-11-07 | high |
-| hawlergov.org | https://www.hawlergov.org/app/en/node/6216 | Mirror of the governorate news item above (search snippet) | 2023-05 | 2026-11-07 | high |
-| hawlergov.org | https://www.hawlergov.org/app/en/node/3556 | Scope: approx. 4,560 m sewage lines; 21 streets paved over 4,575 m; cost more than 1.5 billion IQD (search snippet) | 2023 | 2026-11-07 | high |
+| erbil.gov.krd | https://www.erbil.gov.krd/app/en/node/6216 | Governor inspected internal street paving and sewage network works in Asuda City; approx. 1.765 billion IQD; governorate development budget (search snippet) | 2023-05 | 2026-11-07 | بەرز |
+| hawlergov.org | https://www.hawlergov.org/app/en/node/6216 | Mirror of the governorate news item above (search snippet) | 2023-05 | 2026-11-07 | بەرز |
+| hawlergov.org | https://www.hawlergov.org/app/en/node/3556 | Scope: approx. 4,560 m sewage lines; 21 streets paved over 4,575 m; cost more than 1.5 billion IQD (search snippet) | 2023 | 2026-11-07 | بەرز |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Asuda City" Erbil”; “"Asuda City" Kirkuk road housing project Erbil developer” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Asuda City" Erbil»؛ «"Asuda City" Kirkuk road housing project Erbil developer» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Project name and existence as an Erbil residential area (baghyshaqlawa, homele, Erbil Governorate)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Kirkuk Road address (baghyshaqlawa)
    - facility list (baghyshaqlawa)
    - 200 m² plot price (homele listing)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - (a) Typology — "Apartment" (baghyshaqlawa) vs 200 m² residential plot advertised (homele)
    - unresolved, both recorded. (b) Infrastructure contract cost — approx. 1.765 billion IQD (node/6216, May 2023) vs "more than 1.5 billion" IQD (node/3556)
    - both official, possibly different reporting dates
    - marked Disputed
    - property_typology: Apartment (https://baghyshaqlawa.net/en/projects/asuda-city); Residential plot 200 m² advertised (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city) → Unresolved; both recorded
    - infrastructure_contract_cost_iqd: approx. 1.765 billion IQD (May 2023) (https://www.erbil.gov.krd/app/en/node/6216); more than 1.5 billion IQD (https://www.hawlergov.org/app/en/node/3556) → Disputed; both official figures recorded, possibly different reporting dates
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer/owner
    - total land area
    - number of units/buildings/floors
@@ -116,17 +119,17 @@ Second verification pass 2026-11-07: queries “"Asuda City" Erbil”; “"Asuda
    - construction status and dates
    - coordinates
    - official Kurdish/Arabic spelling
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Governorate infrastructure status is from 2023
    - current completion of the street/sewage works is not verified
    - Second pass found no governorate or news item on Asuda City after May 2023
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Is Asuda City a developer-built apartment project or a plot-based (land distribution) neighbourhood served by the governorate? Who is the developer/owner?
    - Second pass 2026-11-07: two more web searches ("Asuda City" Erbil / "Asuda City" Kirkuk road housing project Erbil developer) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. Searches returned only the Erbil Governorate street-paving and sewage items already recorded; no developer, no independent Kirkuk-road confirmation and no housing status were found.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Searches returned only the Erbil Governorate street-paving and sewage items already recorded; no developer, no independent Kirkuk-road confirmation and no housing status were found.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "asuda-city",

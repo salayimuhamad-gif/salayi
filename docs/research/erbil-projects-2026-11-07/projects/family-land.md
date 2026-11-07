@@ -1,118 +1,121 @@
 <!-- rendered -->
 # Family Land — فامیلی لاند — فاميلي لاند
-Project ID: family-land | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: family-land | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Family Land | High – Bagh-y + Hajisalam | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
-| City | Erbil | High – Both sources | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
-| District / Area | Erbil–Pirmam (Masif) / Shaqlawa road | Medium – Two sites name the same road corridor; exact position unknown | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
-| Developer | Not verified | Low – Not in pack; one web search found nothing | — |
-| Project Category | Residential (houses + apartments) | High – Bagh-y + Hajisalam | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | 272 (116 houses + 156 apartments) | Low – Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
-| Construction Status | Not verified | Low – No status stated; a ~6-year-old resale listing suggests some units existed by ~2020 | https://hajisalam.com/en/family-land/ |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.315083, 44.154823 — Google Maps: https://www.google.com/maps?q=36.315083,44.154823 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/family-land |
-| Alternative names | فاملی لاند | Low – Pack alias only | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Apartments 13; houses 1–2 | Low – Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Not verified | Low – No source | — |
+| ناوی پڕۆژە | Family Land | بەرز – Bagh-y + Hajisalam | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
+| شار | هەولێر | بەرز – Both sources | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
+| ناوچە / گەڕەک | Erbil–Pirmam (Masif) / Shaqlawa road | مامناوەند – Two sites name the same road corridor; exact position unknown | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not in pack; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses + apartments) | بەرز – Bagh-y + Hajisalam | https://baghyshaqlawa.net/en/projects/family-land ; https://hajisalam.com/en/family-land/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | 272 (116 houses + 156 apartments) | نزم – Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
+| دۆخی دروستکردن | نەزانراوە | نزم – No status stated; a ~6-year-old resale listing suggests some units existed by ~2020 | https://hajisalam.com/en/family-land/ |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.315083, 44.154823 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.315083,44.154823 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/family-land |
+| ناوە جێگرەوەکان | فاملی لاند | نزم – Pack alias only | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Apartments 13; houses 1–2 | نزم – Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 272 (116 houses + 156 apartments) | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
-| Villas / houses | 116 | Number Of Unit: 'house 116 - apartment 156' | https://hajisalam.com/en/family-land/ |
-| Apartments | 156 | Number Of Unit: 'house 116 - apartment 156' (apartments 13 floors) | https://hajisalam.com/en/family-land/ |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Apartments 13; houses 1–2 | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 272 (116 houses + 156 apartments) | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
+| ڤێلا / خانوو | 116 | Number Of Unit: 'house 116 - apartment 156' | https://hajisalam.com/en/family-land/ |
+| شوقە | 156 | Number Of Unit: 'house 116 - apartment 156' (apartments 13 floors) | https://hajisalam.com/en/family-land/ |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Apartments 13; houses 1–2 | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 180, 200, 250, 500 | 180 | 500 | — | 116 houses; 1–2 floors; 2–5 bedrooms across the project (Hajisalam) | agency_project_page | https://hajisalam.com/en/family-land/ |
-| apartment | 113, 130, 180 | 113 | 180 | — | 13 floors; 156 apartments in 13-floor buildings (Hajisalam) | agency_project_page | https://hajisalam.com/en/family-land/ |
-| apartment | 112 | 112 | 112 | 2 | Apartment advertised for sale ~6 years ago (no price shown) | market_listing | https://hajisalam.com/en/family-land/ |
+| خانوو | 180, 200, 250, 500 | 180 | 500 | — | 116 houses; 1–2 floors; 2–5 bedrooms across the project (Hajisalam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/family-land/ |
+| شوقە | 113, 130, 180 | 113 | 180 | — | 13 نهۆم؛ 156 apartments in 13-floor buildings (Hajisalam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/family-land/ |
+| شوقە | 112 | 112 | 112 | 2 | Apartment advertised for sale ~6 years ago (no price shown) | ڕیکلامی یەکەیەکی دیاریکراو | https://hajisalam.com/en/family-land/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24 hr electricity, security, green areas, public garden, supermarket, pets allowed (Bagh-y tags only; status unknown)
+**بانگەشەی پشتڕاست نەکراوە:** 24 hr electricity, security, green areas, public garden, supermarket, pets allowed (Bagh-y tags only; status unknown)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Family Land is on the north-eastern road out of Erbil towards Pirmam/Masif Salahaddin and Shaqlawa (Bagh-y: 'Erbil – Masif Road (Pirmam)'; Hajisalam: 'Shaqlawa Road'). Neither source says how far the project is from the 120m/150m ring roads. Map position (low confidence, from agency map pins): 36.315083, 44.154823. Google Maps: https://www.google.com/maps?q=36.315083,44.154823
+### شوێن و دەوروبەر
+Family Land is on the north-eastern road out of Erbil towards Pirmam/Masif Salahaddin and Shaqlawa (Bagh-y: 'Erbil – Masif Road (Pirmam)'; Hajisalam: 'Shaqlawa Road'). Neither source says how far the project is from the 120m/150m ring roads.
+شوێن لەسەر نەخشە: 36.315083, 44.154823 (متمانە: نزم) — https://www.google.com/maps?q=36.315083,44.154823
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 فامیلی لاند (Family Land) پڕۆژەیەکی نیشتەجێبوونە لەسەر ئەو ڕێگایەی لە باکووری ڕۆژهەڵاتی هەولێرەوە بەرەو پیرمام (مەسیفی سەلاحەدین) و شەقڵاوە دەچێت. پڕۆژەکە خانوو و شوقە پێکەوە لەخۆدەگرێت، بە کۆی گشتی ٢٧٢ یەکە: ١١٦ خانوو و ١٥٦ شوقە. ڕووبەری خانووەکان ١٨٠، ٢٠٠، ٢٥٠ و ٥٠٠ م²یە و یەک یان دوو نهۆمین. شوقەکان ڕووبەریان ١١٣، ١٣٠ و ١٨٠ م²یە و لە بینای ١٣ نهۆمیدان. یەکەکانی پڕۆژەکە لە دوو تا پێنج ژووری نووستنیان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فاميلي لاند (Family Land) مشروع سكني على الطريق الخارج من أربيل باتجاه بيرمام (مصيف صلاح الدين) وشقلاوة في شمال شرقي المدينة. يجمع المشروع بين البيوت والشقق، ويضم ٢٧٢ وحدة إجمالاً: ١١٦ بيتاً و١٥٦ شقة. تبلغ مساحات البيوت ١٨٠ و٢٠٠ و٢٥٠ و٥٠٠ م²، وهي من طابق واحد أو طابقين. أما الشقق فمساحاتها ١١٣ و١٣٠ و١٨٠ م²، وتقع في مبانٍ من ١٣ طابقاً. ويتراوح عدد غرف النوم في وحدات المشروع بين غرفتين وخمس غرف.
 
 ### 3. English
 Family Land is a residential project on the north-eastern road out of Erbil towards Pirmam (Masif Salahaddin) and Shaqlawa. The project combines houses and apartments, with 272 units in total: 116 houses and 156 apartments. Houses have areas of 180, 200, 250 and 500 m² and are built on one or two floors. Apartments have areas of 113, 130 and 180 m² and are located in 13-floor buildings. Units across the project have two to five bedrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/family-land | Address Erbil – Masif Road (Pirmam); house + apartment; feature tags | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/family-land/ | Shaqlawa Road; villa + apartment; 116 houses, 156 apartments; house areas 180/200/250/500 m2, apartment areas 113/130/180 m2; apartments 13 floors, villas 1–2 floors; 2–5 bedrooms; old 112 m2 sale listing | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/family-land | Address Erbil – Masif Road (Pirmam); house + apartment; feature tags | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/family-land/ | Shaqlawa Road; villa + apartment; 116 houses, 156 apartments; house areas 180/200/250/500 m2, apartment areas 113/130/180 m2; apartments 13 floors, villas 1–2 floors; 2–5 bedrooms; old 112 m2 sale listing | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Family Land" Erbil houses apartments project Pirmam Shaqlawa road”; “"فاميلي لاند" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Family Land" Erbil houses apartments project Pirmam Shaqlawa road»؛ «"فاميلي لاند" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location on Masif/Shaqlawa road, houses + apartments (Bagh-y, Hajisalam)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 116 houses / 156 apartments, unit sizes, floors and bedroom range (Hajisalam)
    - Feature tags (Bagh-y)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Road name: Masif Road (Pirmam) (baghyshaqlawa.net); Shaqlawa Road (hajisalam.com) → Consistent: the Erbil–Pirmam (Masif) road is the road towards Shaqlawa.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Land area
    - Prices
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Hajisalam sale listing ~6 years old
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact position on the Pirmam road – whether inside the 150m ring-road belt or further out (in scope either way as Pirmam/Massif approach)
    - One web search (Family Land Erbil Masif/Pirmam) returned no matching project
-   - Second verification pass (2026-11-07): no new evidence. No page names a Family Land housing project; Arabic results point only to the unrelated Family Mall, so developer, status and unit split stay single-source.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names a Family Land housing project; Arabic results point only to the unrelated Family Mall, so developer, status and unit split stay single-source.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "family-land",

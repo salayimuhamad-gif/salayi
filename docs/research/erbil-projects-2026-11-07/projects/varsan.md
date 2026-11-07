@@ -1,104 +1,107 @@
 <!-- rendered -->
 # Varsan — — — —
-Project ID: varsan | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: varsan | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Varsan | Medium – Baghy project page; homele area name | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
-| City | Erbil | High – Baghy, homele | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
-| District / Area | New Baharka (two-way) road | Low – Baghy only | https://baghyshaqlawa.net/en/projects/varsan-project |
-| Developer | Not verified | Low – No source names one; one WebSearch found nothing | — |
-| Project Category | Residential houses | Medium – Baghy type 'House'; homele house listing | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Unknown (a 'Ready' new house is advertised) | Low – No project status stated | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.299251, 44.028976 — Google Maps: https://www.google.com/maps?q=36.299251,44.028976 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/varsan-project |
-| Alternative names | Varsan Project | Medium – Baghy title | https://baghyshaqlawa.net/en/projects/varsan-project |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Varsan | مامناوەند – Baghy project page; homele area name | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+| شار | هەولێر | بەرز – Baghy, homele | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+| ناوچە / گەڕەک | New Baharka (two-way) road | نزم – Baghy only | https://baghyshaqlawa.net/en/projects/varsan-project |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential houses | مامناوەند – Baghy type 'House'; homele house listing | https://baghyshaqlawa.net/en/projects/varsan-project ; https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە — Unknown (a 'Ready' new house is advertised) | نزم – No project status stated | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.299251, 44.028976 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.299251,44.028976 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/varsan-project |
+| ناوە جێگرەوەکان | Varsan Project | مامناوەند – Baghy title | https://baghyshaqlawa.net/en/projects/varsan-project |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Property type 'House'; no sizes published | agency_project_page | https://baghyshaqlawa.net/en/projects/varsan-project |
-| house | 220 | 220 | 220 | 4 | 3 bathrooms; 'Ready New House', price negotiable | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Property type 'House'; no sizes published | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/varsan-project |
+| خانوو | 220 | 220 | 220 | 4 | 3 حەمام؛ 'Ready New House', price negotiable | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Playground (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Green areas / public garden (Baghy tags); Kindergarten (Baghy tag); School (Baghy tag); Mosque (Baghy tag); Supermarket (Baghy tag); Maintenance (Baghy tag); Reception (Baghy tag); Maid's room (Baghy tag); Pets allowed (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Playground (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Green areas / public garden (Baghy tags); Kindergarten (Baghy tag); School (Baghy tag); Mosque (Baghy tag); Supermarket (Baghy tag); Maintenance (Baghy tag); Reception (Baghy tag); Maid's room (Baghy tag); Pets allowed (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready new house 220 m2, 4 bed / 3 bath - market listing (negotiable) | 160,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready new house 220 m2, 4 bed / 3 bath - market listing (negotiable) | 160,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/varsan |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Baghy Shaqlawa gives the address as 'Erbil - new baharka two side road', on the Baharka (Bahrka) road approach north of central Erbil; Baghy also lists a 'Varsan branch'. No landmark or distance are published. Map position (low confidence, from agency map pins): 36.299251, 44.028976. Google Maps: https://www.google.com/maps?q=36.299251,44.028976
+### شوێن و دەوروبەر
+Baghy Shaqlawa gives the address as 'Erbil - new baharka two side road', on the Baharka (Bahrka) road approach north of central Erbil; Baghy also lists a 'Varsan branch'. No landmark or distance are published.
+شوێن لەسەر نەخشە: 36.299251, 44.028976 (متمانە: نزم) — https://www.google.com/maps?q=36.299251,44.028976
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڤارسان (Varsan)، کە بە پڕۆژەی ڤارسانیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە لەسەر ڕێگای نوێی دوو سایدی بەحرکە هەڵکەوتووە، لەسەر ڕێگای بەحرکە لە باکووری ناوەندی شاری هەولێر.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فارسان (Varsan)، ويُعرف أيضاً بمشروع فارسان، مشروع سكني للمنازل في مدينة أربيل في إقليم كوردستان العراق. يقع المشروع على طريق بحركة الجديد ذي الاتجاهين، على مدخل طريق بحركة شمال مركز مدينة أربيل.
 
 ### 3. English
 Varsan, also known as Varsan Project, is a residential project of houses in Erbil, in the Kurdistan Region of Iraq. It is located on the new two-way Baharka road, on the Baharka road approach to the north of central Erbil.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/varsan | 1 listing: ready new house 220 m2, 4 bed / 3 bath, USD 160,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/varsan-project | Name 'varsan project'; address Erbil - new Baharka two side road; property type House; feature tags; nearest branch 'Varsan branch Erbil' | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/varsan | 1 listing: ready new house 220 m2, 4 bed / 3 bath, USD 160,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/varsan-project | Name 'varsan project'; address Erbil - new Baharka two side road; property type House; feature tags; nearest branch 'Varsan branch Erbil' | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Varsan" Erbil project Baharka road”; “ڤارسان پڕۆژە هەولێر بەحرکە” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Varsan" Erbil project Baharka road»؛ «ڤارسان پڕۆژە هەولێر بەحرکە» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Baharka road location, house category and feature tags (Baghy)
    - 220 m2 ready house at USD 160,000 (homele listing)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status
    - Unit count
@@ -107,15 +110,15 @@ Second verification pass 2026-11-07: queries “"Varsan" Erbil project Baharka r
    - Dates
    - Coordinates
    - Kurdish/Arabic names
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer and status unknown; one WebSearch ('Varsan project Erbil Baharka road houses developer') returned nothing relevant
    - Whether the homele 'Varsan' area page refers to the same project or to a neighbourhood of that name
-   - Second verification pass (2026-11-07): no new evidence. No page names Varsan; developer, status and whether it is a project or a neighbourhood remain unresolved.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names Varsan; developer, status and whether it is a project or a neighbourhood remain unresolved.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "varsan",

@@ -1,115 +1,118 @@
 <!-- rendered -->
 # True Star — ترو ستار — ترو ستار
-Project ID: true-star | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: true-star | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | True Star | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
-| City | Erbil | High – Baghy address; map pin on Bahrka Road | https://baghyshaqlawa.net/en/projects/true-star |
-| District / Area | Bahrka Road, near 150 m ring road | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
-| Developer | Not verified | Low – No source; one web search found nothing | — |
-| Project Category | Residential (apartment towers) | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 3 towers | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Under construction | Low – Baghy 'is being built'; page undated, may be outdated | https://baghyshaqlawa.net/en/projects/true-star |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.283192, 44.014454 — Google Maps: https://www.google.com/maps?q=36.283192,44.014454 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/true-star |
-| Alternative names | None found | Low – — – No source | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No source | — |
+| ناوی پڕۆژە | True Star | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
+| شار | هەولێر | بەرز – Baghy address; map pin on Bahrka Road | https://baghyshaqlawa.net/en/projects/true-star |
+| ناوچە / گەڕەک | Bahrka Road, near 150 m ring road | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers) | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 3 towers | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | نزم – Baghy 'is being built'; page undated, may be outdated | https://baghyshaqlawa.net/en/projects/true-star |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.283192, 44.014454 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.283192,44.014454 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/true-star |
+| ناوە جێگرەوەکان | None found | نزم – No source | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 3 towers | Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 3 towers | Baghy only | https://baghyshaqlawa.net/en/projects/true-star |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | One-, two- and three-bedroom apartments; no sizes stated | agency_project_page | https://baghyshaqlawa.net/en/projects/true-star |
-| duplex | Not verified | — | — | — | Duplex type listed; no size stated | agency_project_page | https://baghyshaqlawa.net/en/projects/true-star |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | One-, two- and three-bedroom apartments; no sizes stated | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/true-star |
+| دوبلێکس | پشتڕاست نەکراوەتەوە | — | — | — | Duplex type listed; no size stated | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/true-star |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity, internet, playground, security, parking, green areas, fitness center, kindergarten, public garden, supermarket, kitchen appliances (Baghy tags only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity, internet, playground, security, parking, green areas, fitness center, kindergarten, public garden, supermarket, kitchen appliances (Baghy tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Payment plan: 18% advance, 20% after structure completion, 22% on delivery, 40% over 5 years (no prices given) | — | USD | developer | accessed 2026-11-07 (page undated) | https://baghyshaqlawa.net/en/projects/true-star |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment method: 18% advance payment, 20% after structure completion, 22% on delivery, remaining 40% over 5 years (baghyshaqlawa.net) (https://baghyshaqlawa.net/en/projects/true-star)
+| Payment plan: 18% advance, 20% after structure completion, 22% on delivery, 40% over 5 years (no prices given) | — | USD | نرخی گەشەپێدەر | accessed 2026-11-07 (page undated) | https://baghyshaqlawa.net/en/projects/true-star |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment method: 18% advance payment, 20% after structure completion, 22% on delivery, remaining 40% over 5 years (baghyshaqlawa.net) (https://baghyshaqlawa.net/en/projects/true-star)
 
-### Location and surroundings
- Map position (low confidence, from agency map pins): 36.283192, 44.014454. Google Maps: https://www.google.com/maps?q=36.283192,44.014454
+### شوێن و دەوروبەر
+پشتڕاست نەکراوەتەوە
+شوێن لەسەر نەخشە: 36.283192, 44.014454 (متمانە: نزم) — https://www.google.com/maps?q=36.283192,44.014454
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ترو ستار پڕۆژەیەکی شوقەی نیشتەجێبوونە کە لە هەولێر لە ژێر بیناکردندایە و لەسەر ڕێگای بەحرکە، لە نزیک شەقامی ١٥٠ مەتری هەڵکەوتووە. پڕۆژەکە لە سێ تاوەری نیشتەجێبوون پێکدێت. جۆرەکانی شوقە بریتین لە شوقەی یەک ژووری نووستن، دوو ژووری نووستن و سێ ژووری نووستن، لەگەڵ شوقەی دووبلێکس.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ترو ستار (True Star) مشروع شقق سكنية قيد الإنشاء في أربيل، يقع على طريق بحركة بالقرب من شارع ١٥٠ متر. يتكون المشروع من ثلاثة أبراج سكنية. تشمل أنواع الشقق شققاً بغرفة نوم واحدة وغرفتين وثلاث غرف نوم، إضافة إلى شقق دوبلكس.
 
 ### 3. English
 True Star is a residential apartment project under construction in Erbil, located on Bahrka Road near the 150 m ring road. The project consists of three residential towers. Apartment types include one-bedroom, two-bedroom and three-bedroom apartments, as well as duplexes.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/true-star | Project page (undated): 'A new project is being built ... on Baharka Road, near a 150-meter street'; 3 residential towers; payment 18/20/22/40% (40% over 5 years); 1-3 bed apartments and duplex; feature tags; nearest branch Sun Tower; map pin 36.2831923, 44.0144539. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/true-star | Project page (undated): 'A new project is being built ... on Baharka Road, near a 150-meter street'; 3 residential towers; payment 18/20/22/40% (40% over 5 years); 1-3 bed apartments and duplex; feature tags; nearest branch Sun Tower; map pin 36.2831923, 44.0144539. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"True Star" Erbil project Bahrka”; “ترو ستار أربيل مشروع بحركة” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"True Star" Erbil project Bahrka»؛ «ترو ستار أربيل مشروع بحركة» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All data (Baghy): Bahrka Road near 150 m Road, 3 towers, unit types, payment plan, tags, coordinates
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Floors, units, sizes, prices
    - Land area
    - Dates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Under-construction status from an undated Baghy page
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No Paya, Miran, Haji or homele page found; web search found nothing
-   - Second verification pass (2026-11-07): no new evidence. No independent page names True Star; all data still rest on one agency page.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names True Star; all data still rest on one agency page.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "true-star",

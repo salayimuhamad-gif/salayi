@@ -1,129 +1,132 @@
 <!-- rendered -->
 # Mini Slava — مینی سلاڤا — ميني سلافا
-Project ID: mini-slava | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mini-slava | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mini Slava | High – Baghy, homele, Roya | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava ; https://roya-iq.com/developers |
-| City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| District / Area | 120m Street (near Family Mall per Roya) | Medium – Baghy address; Roya snippet agrees on 120 Street | https://baghyshaqlawa.net/en/projects/mini-slava ; https://roya-iq.com/?p=9094 |
-| Developer | Slava Group | Low – Roya developer page via search summary only | https://roya-iq.com/developers |
-| Project Category | Residential (apartments) with some commercial units | High – Baghy 'Apartment'; homele apartments and a salon unit | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Total Land Area | 10,390 | Low – Roya listing via search summary; page not fetched | https://roya-iq.com/?p=9094 |
-| Number of Buildings / Towers | 4 | Low – Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Total Residential Units | 592 | Low – Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Construction Status | Completed | Medium – homele ready/furnished/rented units (Nov 2026); Roya 'under construction' undated | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava ; https://roya-iq.com/?p=9094 |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.219239, 44.064827 — Google Maps: https://www.google.com/maps?q=36.219239,44.064827 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mini-slava |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 20 | Low – Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned; Slava City is a separate project | — |
+| ناوی پڕۆژە | Mini Slava | بەرز – Baghy, homele, Roya | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava ; https://roya-iq.com/developers |
+| شار | هەولێر | بەرز – All sources | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| ناوچە / گەڕەک | 120m Street (near Family Mall per Roya) | مامناوەند – Baghy address; Roya snippet agrees on 120 Street | https://baghyshaqlawa.net/en/projects/mini-slava ; https://roya-iq.com/?p=9094 |
+| گەشەپێدەر (کۆمپانیا) | Slava Group | نزم – Roya developer page via search summary only | https://roya-iq.com/developers |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) with some commercial units | بەرز – Baghy 'Apartment'; homele apartments and a salon unit | https://baghyshaqlawa.net/en/projects/mini-slava ; https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| کۆی ڕووبەری زەوی | 10,390 | نزم – Roya listing via search summary; page not fetched | https://roya-iq.com/?p=9094 |
+| ژمارەی باڵەخانە / تاوەر | 4 | نزم – Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| کۆی یەکە نیشتەجێبوونەکان | 592 | نزم – Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – homele ready/furnished/rented units (Nov 2026); Roya 'under construction' undated | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava ; https://roya-iq.com/?p=9094 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.219239, 44.064827 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.219239,44.064827 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mini-slava |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 20 | نزم – Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned; Slava City is a separate project | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 10,390 | Roya listing via search summary; page not fetched | https://roya-iq.com/?p=9094 |
-| Total project land area (dunams) | 4.2 | converted from 10,390 m² at 1 Iraqi dunam = 2,500 m² | https://roya-iq.com/?p=9094 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 592 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Villas / houses | Not verified | — | — |
-| Apartments | 592 | Roya listing (seen only as a web-search summary, page not fetched): four 20-storey residential towers, 592 units | https://roya-iq.com/?p=9094 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 4 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Floors per building | 20 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned; Slava City is a separate project | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 10,390 | Roya listing via search summary; page not fetched | https://roya-iq.com/?p=9094 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 4.2 | گۆڕدراوە لە 10,390 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://roya-iq.com/?p=9094 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 592 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 592 | Roya listing (seen only as a web-search summary, page not fetched): four 20-storey residential towers, 592 units | https://roya-iq.com/?p=9094 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 4 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 20 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned; Slava City is a separate project | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 115 | 115 | 115 | — | 1 bathrooms; Ready apartments advertised as 1 bed/1 bath and as 2 bed/1 bath (furnished); one instalment listing | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| apartment | 155 | 155 | 155 | 2 | 2 bathrooms; Ready 2+1 apartments; one listing title says '115 M2 1 Beds' while its data fields say 155 m2, 2 bed/2 bath | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| other | 115 | 115 | 115 | — | Commercial unit (beauty salon) offered for monthly rent | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| شوقە | 115 | 115 | 115 | — | 1 حەمام؛ Ready apartments advertised as 1 bed/1 bath and as 2 bed/1 bath (furnished); one instalment listing | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| شوقە | 155 | 155 | 155 | 2 | 2 حەمام؛ Ready 2+1 apartments; one listing title says '115 M2 1 Beds' while its data fields say 155 m2, 2 bed/2 bath | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| جۆری تر | 115 | 115 | 115 | — | Commercial unit (beauty salon) offered for monthly rent | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Supermarket (Baghy tag); Pets allowed (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Supermarket (Baghy tag); Pets allowed (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready furnished apartment 115 m2, 2 bed / 1 bath - homele sale listing | 69,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Ready furnished apartment 115 m2, 1 bed / 1 bath, instalment (tagged 'Down payment') - homele listing | 96,100 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Ready apartment 2+1, 155 m2, 2 bath - homele listing (negotiable) | 95,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Ready apartment 155 m2, 2 bed / 2 bath (tagged 'Down payment') - homele listing | 110,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Ready furnished apartment 155 m2, 2 bed / 2 bath - homele listing (negotiable) | 117,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-| Ready commercial unit (beauty salon) 115 m2 - homele rent per month | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele market listings: ready apartments for sale (some negotiable, one 'Installment'); a 115 m² beauty salon for rent at $500 monthly (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava)
+| Ready furnished apartment 115 m2, 2 bed / 1 bath - homele sale listing | 69,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| Ready furnished apartment 115 m2, 1 bed / 1 bath, instalment (tagged 'Down payment') - homele listing | 96,100 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| Ready apartment 2+1, 155 m2, 2 bath - homele listing (negotiable) | 95,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| Ready apartment 155 m2, 2 bed / 2 bath (tagged 'Down payment') - homele listing | 110,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| Ready furnished apartment 155 m2, 2 bed / 2 bath - homele listing (negotiable) | 117,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+| Ready commercial unit (beauty salon) 115 m2 - homele rent per month | 500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele market listings: ready apartments for sale (some negotiable, one 'Installment'); a 115 m² beauty salon for rent at $500 monthly (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava)
 
-### Location and surroundings
-Mini Slava is on Erbil's 120m Street ring road (Baghy Shaqlawa); a Roya International listing places it on the 120 Street near Family Mall. Baghy uses it as a branch location ('Mini Slava Erbil'). It is distinct from Slava City by the same developer. Map position (low confidence, from agency map pins): 36.219239, 44.064827. Google Maps: https://www.google.com/maps?q=36.219239,44.064827
+### شوێن و دەوروبەر
+Mini Slava is on Erbil's 120m Street ring road (Baghy Shaqlawa); a Roya International listing places it on the 120 Street near Family Mall. Baghy uses it as a branch location ('Mini Slava Erbil'). It is distinct from Slava City by the same developer.
+شوێن لەسەر نەخشە: 36.219239, 44.064827 (متمانە: نزم) — https://www.google.com/maps?q=36.219239,44.064827
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 مینی سلاڤا (Mini Slava) پڕۆژەیەکی نیشتەجێبوونی شوقەی تەواوبووە لەسەر شەقامی بازنەیی ١٢٠ مەتری لە شاری هەولێر لە هەرێمی کوردستانی عێراق. گرووپی سلاڤا گەشەی پێداوە، و پڕۆژەیەکی جیاوازە لە سلاڤا سیتی کە هی هەمان گەشەپێدەرە. پڕۆژەکە بە شێوەیەکی سەرەکی لە شوقە پێکدێت و هەندێک یەکەی بازرگانیشی تێدایە. شوقەکان بە ڕووبەری ١١٥ م² و ١٥٥ م²ن، و شوقەکانی ١٥٥ م² دوو ژووری نووستن و دوو حەمامیان هەیە. یەکە بازرگانییەکانی پڕۆژەکە شوێنی ١١٥ م² لەخۆدەگرن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ميني سلافا (Mini Slava) مشروع سكني مكتمل للشقق على الطريق الدائري شارع 120 متر في مدينة أربيل في إقليم كوردستان العراق. طوّرته مجموعة سلافا، وهو مشروع منفصل عن مشروع سلافا سيتي التابع للمطوّر نفسه. يتكون المشروع أساساً من شقق، ويضم أيضاً عدداً من الوحدات التجارية. تتوفر الشقق بمساحتي 115 م² و155 م²، وتضم الشقق ذات مساحة 155 م² غرفتي نوم وحمامين. ومن الوحدات التجارية في المشروع محلات بمساحة 115 م².
 
 ### 3. English
 Mini Slava is a completed residential apartment project on the 120m Street ring road in Erbil, in the Kurdistan Region of Iraq. It was developed by Slava Group and is a separate project from Slava City by the same developer. The project consists mainly of apartments and also includes some commercial units. Apartments come in sizes of 115 m² and 155 m², and the 155 m² apartments have two bedrooms and two bathrooms. Commercial units in the project include spaces of 115 m².
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava | Area listing page (1 page): ready apartments 115 m2 (1-2 bed) and 155 m2 (2 bed/2 bath) for sale USD 69,000-117,500; 115 m2 beauty salon for rent USD 500/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/mini-slava | Project page: address Erbil - 120m Street; property type Apartment; tags 24 hr electricity, security, parking, supermarket, pets allowed; catalogue and map files referenced; no developer, size or status | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava | Area listing page (1 page): ready apartments 115 m2 (1-2 bed) and 155 m2 (2 bed/2 bath) for sale USD 69,000-117,500; 115 m2 beauty salon for rent USD 500/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/mini-slava | Project page: address Erbil - 120m Street; property type Apartment; tags 24 hr electricity, security, parking, supermarket, pets allowed; catalogue and map files referenced; no developer, size or status | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/?p=9094 | Web-search summary only (page not fetched; exact page attribution from search result order): Roya listing - '120 Street near Family Mall', site 10,390 m2, four 20-storey residential towers, 592 units, described as under construction | — | 2026-11-07 | low |
-| roya-iq.com | https://roya-iq.com/developers | Web-search summary only (page not fetched): Roya developer-partners page names Slava Group as developer of Slava City and Mini Slava | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/?p=9094 | Web-search summary only (page not fetched; exact page attribution from search result order): Roya listing - '120 Street near Family Mall', site 10,390 m2, four 20-storey residential towers, 592 units, described as under construction | — | 2026-11-07 | نزم |
+| roya-iq.com | https://roya-iq.com/developers | Web-search summary only (page not fetched): Roya developer-partners page names Slava Group as developer of Slava City and Mini Slava | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Mini Slava" Erbil Slava Group towers”; “"ميني سلافا" OR "مینی سلاڤا" أربيل هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Mini Slava" Erbil Slava Group towers»؛ «"ميني سلافا" OR "مینی سلاڤا" أربيل هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil, apartment project on the 120m Street (Baghy; Roya snippet; homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Slava Group (Roya, via search summary)
    - Site area 10,390 m2, 4 towers x 20 floors, 592 units (Roya listing, via search summary; page not fetched)
    - Facility tags (Baghy)
    - Unit sizes 115/155 m2 and prices (homele listings only)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: Roya 'under construction' vs homele ready units
    - 115 m2 layout advertised as 1 bed and as 2 bed
    - construction_status: Under construction (undated Roya listing) (https://roya-iq.com/?p=9094); Ready apartments for sale and a commercial unit for rent (Nov 2026) (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava) → Completed adopted: current homele listings show ready, furnished and rented units; Roya status treated as outdated.
    - bedrooms (115 m2 apartment): 1 bed / 1 bath (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava); 2 bed / 1 bath (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava) → Both layouts advertised; no project page gives the official layout.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Official unit-size schedule
    - Launch and completion dates
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Roya 'under construction' status (undated)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Roya figures (area, towers, units) need a direct page check; URL attribution came from search-result order
-   - Second verification pass (2026-11-07): no new evidence. Only the already-cited Roya developer-partners summary (Slava Group: Slava City and Mini Slava) was found; tower count, units and status still lack an independent opened source.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Only the already-cited Roya developer-partners summary (Slava Group: Slava City and Mini Slava) was found; tower count, units and status still lack an independent opened source.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mini-slava",

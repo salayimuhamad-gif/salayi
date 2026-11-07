@@ -1,128 +1,131 @@
 <!-- rendered -->
 # Greece City — گریس سیتی — المدينة اليونانية
-Project ID: greece-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: greece-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Greece City (المدينة اليونانية) | Medium – Same name on Paya and homele | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| City | Erbil | Medium – Paya and homele | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| District / Area | Not verified | Low – No street or district in any source; one web search found nothing | — |
-| Developer | Not verified | Low – Paya developer field shows only '1 Units Greece City'; no developer named | — |
-| Project Category | Residential (villas only) | Medium – Paya text; homele listings are houses/villas | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – No source states it | — |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Under construction (inferred: units sold off-plan) | Low – No project-level status; all homele listings tagged 'Off Plan' with instalments | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.297019, 44.040291 — Google Maps: https://www.google.com/maps?q=36.297019,44.040291 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/greece-city-320 |
-| Alternative names | المدينة اليونانية | Medium – Paya Arabic area label | https://paya-realestate.com/en/projects/greece-city-320 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Greece City (المدينة اليونانية) | مامناوەند – Same name on Paya and homele | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| شار | هەولێر | مامناوەند – Paya and homele | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No street or district in any source; one web search found nothing | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya developer field shows only '1 Units Greece City'; no developer named | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas only) | مامناوەند – Paya text; homele listings are houses/villas | https://paya-realestate.com/en/projects/greece-city-320 ; https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (inferred: units sold off-plan) | نزم – No project-level status; all homele listings tagged 'Off Plan' with instalments | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.297019, 44.040291 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.297019,44.040291 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/greece-city-320 |
+| ناوە جێگرەوەکان | المدينة اليونانية | مامناوەند – Paya Arabic area label | https://paya-realestate.com/en/projects/greece-city-320 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source states it | — |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 220 | 220 | 220 | 4 | 3 bathrooms; Paya unit 'House 220 m2', 4 beds, 3 baths, $157,000; project described as villa-only | agency_project_page | https://paya-realestate.com/en/projects/greece-city-320 |
-| villa | 220, 240 | 220 | 240 | 4 | 4 bathrooms; 7 off-plan instalment listings on homele first page (220 m2 x3, 240 m2 x4); one title says '3 Beds 3 Baths' while fields show 4/4 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| ڤێلا | 220 | 220 | 220 | 4 | 3 حەمام؛ Paya unit 'House 220 m2', 4 beds, 3 baths, $157,000; project described as villa-only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/greece-city-320 |
+| ڤێلا | 220, 240 | 220 | 240 | 4 | 4 حەمام؛ 7 off-plan instalment listings on homele first page (220 m2 x3, 240 m2 x4); one title says '3 Beds 3 Baths' while fields show 4/4 | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
 
-**Layouts and floor plans:** Paya: blueprint offered ('View Blueprint') for House 220 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/greece-city-320)
+**نەخشە و پلانی نهۆمەکان:** Paya: blueprint offered ('View Blueprint') for House 220 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/greece-city-320)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Green areas and organised infrastructure (Paya text; project off-plan)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Green areas and organised infrastructure (Paya text; project off-plan)
 
-**Unverified claims:** Sewers (Paya tag only); Car parking (Paya tag only); Maintenance (Paya tag only); Mosque (Paya tag only); Gym (Paya tag only); Kids play area (Paya tag only); Security (Paya tag only); AC (Paya tag only); ATM (Paya tag only); Supermarket (Paya tag only); Public garden (Paya tag only)
+**بانگەشەی پشتڕاست نەکراوە:** Sewers (Paya tag only); Car parking (Paya tag only); Maintenance (Paya tag only); Mosque (Paya tag only); Gym (Paya tag only); Kids play area (Paya tag only); Security (Paya tag only); AC (Paya tag only); ATM (Paya tag only); Supermarket (Paya tag only); Public garden (Paya tag only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Villa 220 m2, 4 bed, 3 bath - Paya project-page unit price (developer not named; not confirmed on a developer site) | 157,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/greece-city-320 |
-| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 185,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 175,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 170,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 220 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 170,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 220 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-| Villa 220 m2 - homele market listing, off-plan with instalments (area label '(Down payment) Greece City'); long-term instalment | 159,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele listings tagged 'Installment' / 'Off Plan', e.g. 'Off Plan House in Installment', 'Long Term Installment' (villas 220–240 m² for sale) (https://homele.com/properties/for-sale-and-rent/erbil/greece-city)
+| Villa 220 m2, 4 bed, 3 bath - Paya project-page unit price (developer not named; not confirmed on a developer site) | 157,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/greece-city-320 |
+| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 185,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 180,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 175,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 240 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 170,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 220 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 170,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 220 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 165,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+| Villa 220 m2 - homele market listing, off-plan with instalments (area label '(Down payment) Greece City'); long-term instalment | 159,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele listings tagged 'Installment' / 'Off Plan', e.g. 'Off Plan House in Installment', 'Long Term Installment' (villas 220–240 m² for sale) (https://homele.com/properties/for-sale-and-rent/erbil/greece-city)
 
-### Location and surroundings
-Greece City is in Erbil, but no source names its street or district. Map position (low confidence, from agency map pins): 36.297019, 44.040291. Google Maps: https://www.google.com/maps?q=36.297019,44.040291
+### شوێن و دەوروبەر
+Greece City is in Erbil, but no source names its street or district.
+شوێن لەسەر نەخشە: 36.297019, 44.040291 (متمانە: نزم) — https://www.google.com/maps?q=36.297019,44.040291
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گریس ستی (Greece City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە تەنها لە ڤێلا پێکدێت. پڕۆژەکە ڤێلای چوار ژووری نووستن بە ڕووبەری ٢٢٠ م² و ٢٤٠ م² لەخۆ دەگرێت. پلان دانراوە کە پڕۆژەکە ناوچەی سەوز و ژێرخانێکی ڕێکخراوی هەبێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 المدينة اليونانية (Greece City) مشروع سكني في أربيل يتكون من الفلل فقط. ويضم المشروع فللاً بأربع غرف نوم بمساحتي 220 م² و240 م². ومن المخطط أن يضم المشروع مساحات خضراء وبنية تحتية منظمة.
 
 ### 3. English
 Greece City is a residential project in Erbil made up only of villas. The project offers four-bedroom villas of 220 m² and 240 m². Green areas and organised infrastructure are planned within the project.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/greece-city | Area 'Greece City' with ~3 listing pages; 7 off-plan instalment villa listings 220/240 m2, $159,000-$185,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/greece-city-320 | Villa-only project in Erbil; European-style design; unit 220 m2, 4 bed, 3 bath, $157,000; amenity tags; no status, no developer | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/greece-city | Area 'Greece City' with ~3 listing pages; 7 off-plan instalment villa listings 220/240 m2, $159,000-$185,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/greece-city-320 | Villa-only project in Erbil; European-style design; unit 220 m2, 4 bed, 3 bath, $157,000; amenity tags; no status, no developer | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Greece City" Erbil villas project”; “"المدينة اليونانية" أربيل فلل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Greece City" Erbil villas project»؛ «"المدينة اليونانية" أربيل فلل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Villa-only concept, European-style design, 220 m2 4-bed unit at $157,000 (Paya)
    - Off-plan instalment sales of 220/240 m2 villas (homele listings)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Bathrooms in 220 m2 villa: 3 (Paya) vs 4 (homele listings)
    - bathrooms in 220 m2 villa: 3 baths (https://paya-realestate.com/en/projects/greece-city-320); 4 baths (homele listing fields) (https://homele.com/properties/for-sale-and-rent/erbil/greece-city) → Unresolved; may reflect different layouts.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Location/district
    - Developer
    - Project-level status
    - Unit count, land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Only one primary site (Paya) has a project page; homele gives market listings only
    - Status inferred from off-plan listings, not stated by any source
    - homele area label '(Down payment) Greece City' - unclear whether listed figures are full prices; recorded as asking prices
-   - Second verification pass (2026-11-07): no new evidence. No page names Greece City; location, developer and status are still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names Greece City; location, developer and status are still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "greece-city",

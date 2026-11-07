@@ -1,119 +1,121 @@
 <!-- rendered -->
 # Diplomati Safiran — — — ديبلومات السفراء
-Project ID: diplomati-safiran | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: diplomati-safiran | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Diplomati Safiran (agency pages also write "Safiran Diplomatic Project" / "Diplomatic Safiran") | Low – — – High — same name on three independent agency sites | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| City | Erbil | High | — |
-| District / Area | Shorsh neighbourhood, next to Dar Al-Ziyafa, "between 100m and 120m streets" (Paya); "Pirmam Road" (Baghy Shaqlawa); "Massif Road / Pirmam Street" (Homele listing, via search snippet) — i.e. the Pirmam/Massif Road corridor in north-east Erbil | Low – — – Medium — three agency sources agree on the Shorsh–Pirmam Road corridor; exact plot not verified | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran ; https://homele.com/properties/spacious-house-with-multiple-rooms-89173 |
-| Developer | Not verified (Paya "developer" field shows the garbled text "4 Units Diplomati Safiran"; a sales phone number 07507000020 is given but no company name) | Low | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Project Category | Residential — villa-only compound; "does not include buildings"; all villas residential, conversion to commercial use not permitted | Low – — – Medium — single agency source for the restriction, consistent with villa-only listings | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | No apartment buildings (villa-only project) | Low – — – Medium — single source (Paya text) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Total Residential Units | 282 villas | Low – — – Medium — single agency source (Paya project page; repeated on Paya's "manage" mirror, same origin) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd |
-| Construction Status | Completed (Paya status "Completed"; Homele listings all marked "Ready") | Low – — – Medium — agency status fields only; Paya text still carries a stage-based installment plan written for the sales period | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Disputed – pins: 36.227754, 44.044663; 36.250006, 44.04485 | Low – agency map pins disagree (up to 2.5 km apart) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran |
-| Alternative names | Diplomatic Safiran; Safiran Diplomatic Project; Arabic: ديبلومات السفراء. Kurdish name: Not verified | Low – — – Medium — Arabic form appears on Paya project page; no Kurdish rendering found | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/properties/villa-sale-300m-diplomatic-safiran |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Diplomati Safiran (agency pages also write "Safiran Diplomatic Project" / "Diplomatic Safiran") | نزم – High — same name on three independent agency sites | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| شار | هەولێر | بەرز | — |
+| ناوچە / گەڕەک | Shorsh neighbourhood, next to Dar Al-Ziyafa, "between 100m and 120m streets" (Paya); "Pirmam Road" (Baghy Shaqlawa); "Massif Road / Pirmam Street" (Homele listing, via search snippet) — i.e. the Pirmam/Massif Road corridor in north-east Erbil | نزم – Medium — three agency sources agree on the Shorsh–Pirmam Road corridor; exact plot not verified | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran ; https://homele.com/properties/spacious-house-with-multiple-rooms-89173 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە — (Paya "developer" field shows the garbled text "4 Units Diplomati Safiran"; a sales phone number 07507000020 is given but no company name) | نزم | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential — villa-only compound; "does not include buildings"; all villas residential, conversion to commercial use not permitted | نزم – Medium — single agency source for the restriction, consistent with villa-only listings | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | No apartment buildings (villa-only project) | نزم – Medium — single source (Paya text) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| کۆی یەکە نیشتەجێبوونەکان | 282 villas | نزم – Medium — single agency source (Paya project page; repeated on Paya's "manage" mirror, same origin) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd |
+| دۆخی دروستکردن | تەواوبووە — Completed (Paya status "Completed"; Homele listings all marked "Ready") | نزم – Medium — agency status fields only; Paya text still carries a stage-based installment plan written for the sales period | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | ناکۆکی لەسەرە — pins: 36.227754, 44.044663; 36.250006, 44.04485 | نزم – agency map pins disagree (up to 2.5 km apart) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/projects/diplomati-safiran |
+| ناوە جێگرەوەکان | Diplomatic Safiran; Safiran Diplomatic Project; Arabic: ديبلومات السفراء. Kurdish name: Not verified | نزم – Medium — Arabic form appears on Paya project page; no Kurdish rendering found | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://baghyshaqlawa.net/en/properties/villa-sale-300m-diplomatic-safiran |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 282 villas | Medium — single agency source (Paya project page; repeated on Paya's "manage" mirror, same origin) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd |
-| Villas / houses | 282 | Residential project consisting of 282 villas (240, 300, 500, 1000 m²) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | No apartment buildings (villa-only project) | Medium — single source (Paya text) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 282 villas | Medium — single agency source (Paya project page; repeated on Paya's "manage" mirror, same origin) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd |
+| ڤێلا / خانوو | 282 | Residential project consisting of 282 villas (240, 300, 500, 1000 m²) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | No apartment buildings (villa-only project) | Medium — single source (Paya text) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 240 | 240 | 240 | 4 | 4 bathrooms; Paya project text and Homele listings give 240 m²; Paya unit table lists this type as 264 m² with 6 baths under the label 'Villa 240 meter square' (conflict 240 vs 264) | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| villa | 300 | 300 | 300 | 4 | 7 bathrooms; Paya: 4 beds / 7 baths; Homele resale listings: 4–5 beds, 4–6 baths | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| villa | 500 | 500 | 500 | 5 | 6 bathrooms; Paya: 5 beds / 6 baths; Homele listings: 5 beds / 5 baths | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| villa | 1,000 | 1,000 | 1,000 | 6 | 7 bathrooms; Paya only | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| ڤێلا | 240 | 240 | 240 | 4 | 4 حەمام؛ Paya project text and Homele listings give 240 m²; Paya unit table lists this type as 264 m² with 6 baths under the label 'Villa 240 meter square' (conflict 240 vs 264) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| ڤێلا | 300 | 300 | 300 | 4 | 7 حەمام؛ Paya: 4 beds / 7 baths; Homele resale listings: 4–5 beds, 4–6 baths | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| ڤێلا | 500 | 500 | 500 | 5 | 6 حەمام؛ Paya: 5 beds / 6 baths; Homele listings: 5 beds / 5 baths | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| ڤێلا | 1,000 | 1,000 | 1,000 | 6 | 7 حەمام؛ Paya only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
 
-**Layouts and floor plans:** Blueprints published ('View Blueprint') for houses 264 m² (labelled 'Villa 240 meter square'), 300, 500 and 1000 m² (https://paya-realestate.com/en/projects/diplomati-safiran-253)
+**نەخشە و پلانی نهۆمەکان:** Blueprints published ('View Blueprint') for houses 264 m² (labelled 'Villa 240 meter square'), 300, 500 and 1000 m² (https://paya-realestate.com/en/projects/diplomati-safiran-253)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** 24-hour security; gated / controlled entrance (delivery motorcycles not admitted); centralised gas system; car parking; 24-hour electricity; internet; children's playground; green areas / public garden
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** 24-hour security; gated / controlled entrance (delivery motorcycles not admitted); centralised gas system; car parking; 24-hour electricity; internet; children's playground; green areas / public garden
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** women's gym; reception; medical centre; mosque; supermarket; pharmacy
+**بانگەشەی پشتڕاست نەکراوە:** women's gym; reception; medical centre; mosque; supermarket; pharmacy
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 264 m² (type '240'), 4 bed — price list on agency project page | 276,860 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| House 300 m², 4 bed — price list on agency project page | 409,500 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| House 500 m², 5 bed — price list on agency project page | 724,710 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| House 1000 m², 6 bed — price list on agency project page | 2,600,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| Payment plan: 20% contract / 20% structure / 20% interior / 20% exterior / 15% doors & windows / 10% keys; 8% cash discount | — | — | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
-| 240 m² 4-bed house, resale (3 listings 265,000–300,000) | 265,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| 300 m² 4–5-bed house, resale (6 listings 305,000–320,000) | 305,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| 500 m² 5-bed house, resale (2 listings 540,000–620,000) | 540,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
-| 240 m² house, resale (search snippet) | 247,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/modern-house-63864 |
-| 500 m² 5-bed house, resale, negotiable (listing dated 2026 per snippet) | 690,000 | USD | resale | 2026 (accessed 2026-11-07) | https://homele.com/properties/modern-5-br-house-for-sale-82584 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Installments: contract 20%, finishing structure 20%, finishing interior 20%, finishing outside 20%, finishing doors and windows 15%, receiving keys 10%; cash payment takes 8% discount on total price (https://paya-realestate.com/en/projects/diplomati-safiran-253)
+| House 264 m² (type '240'), 4 bed — price list on agency project page | 276,860 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| House 300 m², 4 bed — price list on agency project page | 409,500 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| House 500 m², 5 bed — price list on agency project page | 724,710 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| House 1000 m², 6 bed — price list on agency project page | 2,600,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| Payment plan: 20% contract / 20% structure / 20% interior / 20% exterior / 15% doors & windows / 10% keys; 8% cash discount | — | — | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
+| 240 m² 4-bed house, resale (3 listings 265,000–300,000) | 265,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| 300 m² 4–5-bed house, resale (6 listings 305,000–320,000) | 305,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| 500 m² 5-bed house, resale (2 listings 540,000–620,000) | 540,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
+| 240 m² house, resale (search snippet) | 247,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/modern-house-63864 |
+| 500 m² 5-bed house, resale, negotiable (listing dated 2026 per snippet) | 690,000 | USD | فرۆشتنەوە | 2026 (accessed 2026-11-07) | https://homele.com/properties/modern-5-br-house-for-sale-82584 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Installments: contract 20%, finishing structure 20%, finishing interior 20%, finishing outside 20%, finishing doors and windows 15%, receiving keys 10%; cash payment takes 8% discount on total price (https://paya-realestate.com/en/projects/diplomati-safiran-253)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Diplomati Safiran lies in north-east Erbil on the Shorsh / Pirmam (Massif) Road corridor. Paya places it in the Shorsh neighbourhood next to Dar Al-Ziyafa and states that it sits between the 100-metre and 120-metre ring roads; Baghy Shaqlawa gives the address simply as "Pirmam Road", and a Homele listing describes it as "Massif Road, Pirmam Street". Baghy Shaqlawa's nearest branch is its Italian City 2 branch, which is consistent with the Pirmam Road area. No distances to landmarks, schools or shopping are given by any source and none are estimated here. Published map pins for this project disagree, so no position is given.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 دیپلۆماتی سەفیران پڕۆژەیەکی نیشتەجێبوونی تەواوبووی ڤێلایە لە ناوچەی شۆڕش / ڕێگای پیرمام لە باکووری ڕۆژهەڵاتی شاری هەولێر، لەسەر هێڵی نێوان ڕێگای ١٠٠ مەتری و ڕێگای ١٢٠ مەتری، لە تەنیشت دار الضیافە. پڕۆژەکە لە ٢٨٢ ڤێلا پێکهاتووە و هیچ باڵەخانەیەکی شوقەی تێدا نییە؛ هەموو یەکەکان تەنها بۆ نیشتەجێبوونن و ڕێگە نادرێت بگۆڕدرێن بۆ بەکارهێنانی بازرگانی. ڤێلاکان بە چوار ڕووبەر پێشکەش کراون: ٢٤٠ م²، ٣٠٠ م²، ٥٠٠ م² و ١٠٠٠ م²، بە چوار تا شەش ژووری نووستن بەپێی ڕووبەرەکە. مەجمەعەکە دەروازەدارە و پاسەوانی ٢٤ کاتژمێری هەیە، دەروازەیەکی کۆنترۆڵکراو کە ماتۆڕی گەیاندنی تێدا ڕێپێنەدراوە، سیستەمی غازی ناوەندی، کارەبای ٢٤ کاتژمێر، ئینتەرنێت، پارکینگی ئۆتۆمبێل، ناوچەی سەوز و باخچەی گشتی و یاریگای منداڵان.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ديبلومات السفراء مشروع سكني مكتمل من الفلل في منطقة شورش / طريق بيرمام شمال شرق مدينة أربيل، على المحور الواقع بين شارع 100 متر وشارع 120 متر، بجوار دار الضيافة. يتكوّن المشروع من 282 فيلا ولا يضم أي مبانٍ للشقق؛ وجميع الوحدات مخصصة للسكن فقط ولا يُسمح بتحويلها إلى استخدام تجاري. تُطرح الفلل بأربع مساحات: 240 م² و300 م² و500 م² و1000 م²، وتضم من أربع إلى ست غرف نوم بحسب المساحة. المجمع مسوّر ومزوّد بحراسة على مدار 24 ساعة، وبوابة مراقَبة لا يُسمح فيها بدخول دراجات التوصيل، ونظام غاز مركزي، وكهرباء على مدار 24 ساعة، وإنترنت، ومواقف للسيارات، ومساحات خضراء وحديقة عامة، وملعب للأطفال.
 
 ### 3. English
 Diplomati Safiran is a completed residential villa project in the Shorsh / Pirmam Road area of north-east Erbil, on the corridor between the 100-metre and 120-metre ring roads, next to Dar Al-Ziyafa. The project consists of 282 villas and contains no apartment buildings; all units are designated for residential use only and may not be converted to commercial use. Villas are offered in four sizes: 240 m², 300 m², 500 m² and 1,000 m², with four to six bedrooms depending on the size. The compound is gated with 24-hour security, a controlled entrance where delivery motorcycles are not admitted, a centralised gas system, 24-hour electricity, internet, car parking, green areas with a public garden, and a children's playground.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran | Area listing page (2 pages): 10 resale listings 240/300/500 m², 265,000–620,000 USD, all Ready | — | 2026-11-07 | medium |
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/spacious-house-with-multiple-rooms-89173 | Listing text 'Diplomati Safiran Massif Road Pirmam Street Project Erbil' (search snippet) | — | 2026-11-07 | medium |
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/modern-5-br-house-for-sale-82584 | 500 m² 5-bed house 690,000 USD negotiable, posted 2026 (search snippet) | 2026 | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/diplomati-safiran-253 | Project page: 282 villas; 240/300/500/1000 m²; Shorsh next to Dar Al-Ziyafa between 100m & 120m streets; Completed; price list 276,860–2,600,000 USD; payment plan; amenities; residential-only rule; central gas | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd | Paya mirror page via search snippet: 282 villas, 240–1,000 m², villas not allowed to become commercial | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/diplomati-safiran | Project page: address Pirmam Road; House/Villa; 24hr electricity, internet, playground, security, parking, green areas | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/properties/villa-sale-300m-diplomatic-safiran | 300 m² villa listing; spelling 'Diplomatic Safiran' (search snippet) | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran | Area listing page (2 pages): 10 resale listings 240/300/500 m², 265,000–620,000 USD, all Ready | — | 2026-11-07 | مامناوەند |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/spacious-house-with-multiple-rooms-89173 | Listing text 'Diplomati Safiran Massif Road Pirmam Street Project Erbil' (search snippet) | — | 2026-11-07 | مامناوەند |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/modern-5-br-house-for-sale-82584 | 500 m² 5-bed house 690,000 USD negotiable, posted 2026 (search snippet) | 2026 | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/diplomati-safiran-253 | Project page: 282 villas; 240/300/500/1000 m²; Shorsh next to Dar Al-Ziyafa between 100m & 120m streets; Completed; price list 276,860–2,600,000 USD; payment plan; amenities; residential-only rule; central gas | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd | Paya mirror page via search snippet: 282 villas, 240–1,000 m², villas not allowed to become commercial | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/diplomati-safiran | Project page: address Pirmam Road; House/Villa; 24hr electricity, internet, playground, security, parking, green areas | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/properties/villa-sale-300m-diplomatic-safiran | 300 m² villa listing; spelling 'Diplomatic Safiran' (search snippet) | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Diplomati Safiran" OR "Diplomatic Safiran" Erbil villas”; “"سەفیران" OR "السفراء" دیپلۆماتی ڤێلا هەولێر پیرمام” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Diplomati Safiran" OR "Diplomatic Safiran" Erbil villas»؛ «"سەفیران" OR "السفراء" دیپلۆماتی ڤێلا هەولێر پیرمام» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - project name and existence in Erbil
    - location on the Shorsh / Pirmam (Massif) Road corridor (Paya, Baghy Shaqlawa, Homele)
    - villa sizes 240, 300 and 500 m² (Paya + Homele listings)
    - 4–5 bedroom configurations
    - 24-hour security, parking, playground, green areas (Paya + Baghy Shaqlawa)
    - ready/completed status (Paya status + Homele "Ready" listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 282 villas
    - 1,000 m² villa type
    - villa-only / residential-only restriction
@@ -122,27 +124,27 @@ Second verification pass 2026-11-07: queries “"Diplomati Safiran" OR "Diplomat
    - "between 100m and 120m streets"
    - price list and payment plan
    - women's gym, medical centre, mosque, supermarket, pharmacy, reception (all Paya only)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - smallest type size — 240 m² (Paya text, Homele listings, Paya label "Villa 240 meter square") vs 264 m² (Paya unit table)
    - possibly plot vs built-up area, unresolved. Bathrooms per type differ between Paya table (6–7) and Homele listings (4–6)
    - smallest villa size: 240 m² (https://paya-realestate.com/en/projects/diplomati-safiran-253 (project text) and https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran); 264 m² (https://paya-realestate.com/en/projects/diplomati-safiran-253 (unit table)) → Disputed; 240 m² used as the marketed type name, 264 m² possibly built-up area — not resolved
    - location wording: Shorsh neighbourhood next to Dar Al-Ziyafa, between 100m and 120m streets (https://paya-realestate.com/en/projects/diplomati-safiran-253); Pirmam Road (https://baghyshaqlawa.net/en/projects/diplomati-safiran); Massif Road, Pirmam Street (https://homele.com/properties/spacious-house-with-multiple-rooms-89173) → Consistent corridor (Shorsh / Pirmam–Massif Road, NE Erbil); exact plot not verified
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - developer/owner company
    - total land area
    - floors per villa
    - launch and completion years
    - exact coordinates
    - whether all 282 villas are delivered
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya's stage-based payment plan and developer price list (written for the sales phase; page undated)
    - Homele asking prices (market snapshot of 2026-11-07)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Is "Dar Al-Ziyafa" the Erbil government guest house on Pirmam Road (would fix the location more precisely)? Is 264 m² the built area of the 240 m² plot type? Who developed the project (the name "Safiran" suggests a company or brand not identified in any source)? Research-coverage note: four WebSearch queries (English/Arabic) were completed before the session's search budget ran out, and WebFetch could not resolve any allowed host in this session (pack extracts used as-is)
-   - Second verification pass (2026-11-07): no new evidence. No independent page found in English, Arabic or Sorani; developer, land area and completion year remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page found in English, Arabic or Sorani; developer, land area and completion year remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "diplomati-safiran",

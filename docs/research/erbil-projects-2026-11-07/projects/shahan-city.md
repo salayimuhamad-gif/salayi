@@ -1,103 +1,105 @@
 <!-- rendered -->
 # Shahan City — شاهان سیتی — شاهان سيتي
-Project ID: shahan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: shahan-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Shahan City | Medium – Haji Salam project page; name independently shown as a mapped area on a UNHCR Erbil map (search summary) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
-| City | Erbil | High – Haji Salam; UNHCR Erbil-area map (search summary) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
-| District / Area | Kasnazan Road | Low – Haji Salam address; UNHCR map shows the name with the Kasnazan label and nearby Heran City and Zheyan (search summary, placement not inspected) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
-| Developer | Not verified | Low – Not named; one web search found nothing; no link to Shahan Group is stated | — |
-| Project Category | Residential (houses and apartments) | Low – Haji Salam 'House- Apartment' | https://hajisalam.com/en/shahan-city/ |
-| Total Land Area | Not verified | Low – Not stated (200 m and 160 m are unit sizes) | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | 696 (houses and apartments; split not stated) | Low – Haji Salam only | https://hajisalam.com/en/shahan-city/ |
-| Construction Status | Unknown | Low – — – Not stated; no listings | — |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | None found | Low – — – No other name in sources | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 (unit type not specified) | Low – Haji Salam only | https://hajisalam.com/en/shahan-city/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Shahan City | مامناوەند – Haji Salam project page; name independently shown as a mapped area on a UNHCR Erbil map (search summary) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
+| شار | هەولێر | بەرز – Haji Salam; UNHCR Erbil-area map (search summary) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
+| ناوچە / گەڕەک | Kasnazan Road | نزم – Haji Salam address; UNHCR map shows the name with the Kasnazan label and nearby Heran City and Zheyan (search summary, placement not inspected) | https://hajisalam.com/en/shahan-city/ ; https://data.unhcr.org/en/documents/download/100611 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing; no link to Shahan Group is stated | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and apartments) | نزم – Haji Salam 'House- Apartment' | https://hajisalam.com/en/shahan-city/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated (200 m and 160 m are unit sizes) | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 696 (houses and apartments; split not stated) | نزم – Haji Salam only | https://hajisalam.com/en/shahan-city/ |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – Not stated; no listings | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | None found | نزم – No other name in sources | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (unit type not specified) | نزم – Haji Salam only | https://hajisalam.com/en/shahan-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated (200 m and 160 m are unit sizes) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 696 (houses and apartments; split not stated) | Haji Salam only | https://hajisalam.com/en/shahan-city/ |
-| Villas / houses | Project Type: House- Apartment; Number Of Unit: 696 (combined, not split between houses (200 m) and apartments (160 m)) | — | https://hajisalam.com/en/shahan-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | 1 (unit type not specified) | Haji Salam only | https://hajisalam.com/en/shahan-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated (200 m and 160 m are unit sizes) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 696 (houses and apartments; split not stated) | Haji Salam only | https://hajisalam.com/en/shahan-city/ |
+| ڤێلا / خانوو | Project Type: House- Apartment; Number Of Unit: 696 (combined, not split between houses (200 m) and apartments (160 m)) | — | https://hajisalam.com/en/shahan-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (unit type not specified) | Haji Salam only | https://hajisalam.com/en/shahan-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | — | Area(House) 200 m; part of 696 units (split not stated); page gives 1 floor and 2 bedrooms without naming the unit type | agency_project_page | https://hajisalam.com/en/shahan-city/ |
-| apartment | 160 | 160 | 160 | — | Area(Apartment) 160 m; part of 696 units (split not stated) | agency_project_page | https://hajisalam.com/en/shahan-city/ |
+| خانوو | 200 | 200 | 200 | — | Area(House) 200 m; part of 696 units (split not stated); page gives 1 floor and 2 bedrooms without naming the unit type | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/shahan-city/ |
+| شوقە | 160 | 160 | 160 | — | Area(Apartment) 160 m; part of 696 units (split not stated) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/shahan-city/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam gives the address as Kasnazan Road, Erbil. No landmark or plot position are published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 شاهان سیتی پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای کەسنەزان لە شاری هەولێر. پڕۆژەکە دوو جۆر نیشتەجێبوون کۆدەکاتەوە، خانوو و شوقە، و کۆی یەکەکانی ٦٩٦ یەکەیە. ڕووبەری خانووەکان ٢٠٠ م² و ڕووبەری شوقەکان ١٦٠ م²یە. پەڕەی پڕۆژەکە یەک نهۆم و دوو ژووری نووستن بۆ یەکەکان تۆمار دەکات. خانووەکان و شوقەکان بەشێکی هەمان پڕۆژەن لەسەر ڕێگای کەسنەزان.
 
-### 2. Arabic (العربية)
+### 2. العربية
 شاهان سيتي مشروع سكني يقع على طريق كسنزان في مدينة أربيل. يجمع المشروع بين نوعين من السكن، المنازل والشقق، ويبلغ مجموع وحداته ٦٩٦ وحدة. تبلغ مساحة المنازل ٢٠٠ م² ومساحة الشقق ١٦٠ م². وتسجل صفحة المشروع طابقاً واحداً وغرفتي نوم للوحدات. وتشكّل المنازل والشقق جزءاً من المشروع نفسه على طريق كسنزان.
 
 ### 3. English
 Shahan City is a residential project on Kasnazan Road in the city of Erbil. The project combines two housing types, houses and apartments, with a total of 696 units. The houses measure 200 m² and the apartments measure 160 m². The project page records one floor and two bedrooms for its units. The houses and apartments form parts of the same project on Kasnazan Road.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/shahan-city/ | Project page 'Shahan City': address Kasnazan Road; type House- Apartment; 696 units; Area(House) 200 m; Area(Apartment) 160 m; 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/shahan-city/ | Project page 'Shahan City': address Kasnazan Road; type House- Apartment; 696 units; Area(House) 200 m; Area(Apartment) 160 m; 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR map document of the Erbil area (search summary, page not opened): labels 'Shahan City' among mapped residential areas, alongside Heran City and Zheyan, on a map that also labels Kasnazan; gives no developer, status or size | — | 2026-11-07 | low |
+| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR map document of the Erbil area (search summary, page not opened): labels 'Shahan City' among mapped residential areas, alongside Heran City and Zheyan, on a map that also labels Kasnazan; gives no developer, status or size | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Shahan City" Erbil Kasnazan”; “شاهان سيتي أربيل كسنزان” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Shahan City" Erbil Kasnazan»؛ «شاهان سيتي أربيل كسنزان» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and Erbil location, Kasnazan side (Haji Salam + UNHCR map label, search summary)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Kasnazan Road address, 696 units, houses 200 m2, apartments 160 m2, 1 floor, 2 bedrooms (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - House/apartment split
@@ -108,15 +110,15 @@ Second verification pass 2026-11-07: queries “"Shahan City" Erbil Kasnazan”;
    - Facilities
    - Coordinates
    - Pages on homele, Paya, Baghy, Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether the '1 floor / 2 bedrooms' fields refer to the houses, the apartments or both
    - No source links the project to Shahan Group (Cavalli Tower, Veloria); name similarity only - not merged
-   - Second verification pass (2026-11-07): new evidence. A UNHCR map of the Erbil area labels Shahan City among residential areas mapped with Kasnazan, Heran City and Zheyan, independently confirming the name and the Kasnazan-side location; developer, status and unit details remain single-source.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. A UNHCR map of the Erbil area labels Shahan City among residential areas mapped with Kasnazan, Heran City and Zheyan, independently confirming the name and the Kasnazan-side location; developer, status and unit details remain single-source.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "shahan-city",

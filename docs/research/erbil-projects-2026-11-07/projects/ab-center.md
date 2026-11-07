@@ -1,119 +1,122 @@
 <!-- rendered -->
 # AB Center — — — —
-Project ID: ab-center | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: ab-center | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | AB Center | Medium – Paya project page only | https://paya-realestate.com/en/projects/ab-center-277 |
-| City | Erbil | Medium – Paya city field | https://paya-realestate.com/en/projects/ab-center-277 |
-| District / Area | English Village | Medium – Paya area field; coordinates fall in western Erbil | https://paya-realestate.com/en/projects/ab-center-277 ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
-| Developer | Albit Group | Medium – Paya developer profile (single source) | https://paya-realestate.com/en/projects/ab-center-277 |
-| Project Category | Commercial (offices) | Medium – Paya describes an office development | https://paya-realestate.com/en/projects/ab-center-277 |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Paya says 'multi-story commercial complex'; count not stated | https://paya-realestate.com/en/projects/ab-center-277 |
-| Total Residential Units | Not verified | Low – Not applicable (offices); total office count not stated | — |
-| Construction Status | Completed | Medium – Paya status 'Completed' (single source) | https://paya-realestate.com/en/projects/ab-center-277 |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.1903055, 43.9749203 — Google Maps: https://www.google.com/maps?q=36.1903055,43.9749203 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/ab-center-277 |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None mentioned | — |
+| ناوی پڕۆژە | AB Center | مامناوەند – Paya project page only | https://paya-realestate.com/en/projects/ab-center-277 |
+| شار | هەولێر | مامناوەند – Paya city field | https://paya-realestate.com/en/projects/ab-center-277 |
+| ناوچە / گەڕەک | English Village | مامناوەند – Paya area field; coordinates fall in western Erbil | https://paya-realestate.com/en/projects/ab-center-277 ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
+| گەشەپێدەر (کۆمپانیا) | Albit Group | مامناوەند – Paya developer profile (single source) | https://paya-realestate.com/en/projects/ab-center-277 |
+| جۆری پڕۆژە | بازرگانی — Commercial (offices) | مامناوەند – Paya describes an office development | https://paya-realestate.com/en/projects/ab-center-277 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Paya says 'multi-story commercial complex'; count not stated | https://paya-realestate.com/en/projects/ab-center-277 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not applicable (offices); total office count not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya status 'Completed' (single source) | https://paya-realestate.com/en/projects/ab-center-277 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.1903055, 43.9749203 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.1903055,43.9749203 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/ab-center-277 |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not applicable (offices); total office count not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Paya says 'multi-story commercial complex'; count not stated | https://paya-realestate.com/en/projects/ab-center-277 |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not applicable (offices); total office count not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Paya says 'multi-story commercial complex'; count not stated | https://paya-realestate.com/en/projects/ab-center-277 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| office | 105, 2,000 | 105 | 2,000 | — | Two office units listed (105 m² and 2,000 m²); multi-storey office building | agency_project_page | https://paya-realestate.com/en/projects/ab-center-277 |
+| ئۆفیس | 105, 2,000 | 105 | 2,000 | — | Two office units listed (105 m² and 2,000 m²); multi-storey office building | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/ab-center-277 |
 
-**Layouts and floor plans:** Paya lists 2 office unit types (105 m² and 2000 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/ab-center-277)
+**نەخشە و پلانی نهۆمەکان:** Paya lists 2 office unit types (105 m² and 2000 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/ab-center-277)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Reception (Paya); Security (Paya); Air conditioning (Paya); Covered parking (Paya)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Reception (Paya); Security (Paya); Air conditioning (Paya); Covered parking (Paya)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Common areas (Paya descriptive text)
+**بانگەشەی پشتڕاست نەکراوە:** Common areas (Paya descriptive text)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Office 105 m² – listed price; period not stated (page addresses tenants) | 1,050 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ab-center-277 |
-| Office 2,000 m² – listed price; period not stated (page addresses tenants) | 30,000 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ab-center-277 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Office 105 m² – listed price; period not stated (page addresses tenants) | 1,050 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ab-center-277 |
+| Office 2,000 m² – listed price; period not stated (page addresses tenants) | 30,000 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ab-center-277 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-English Village area of western Erbil. Paya's structured data places the project at 36.1903055, 43.9749203. English Village is a compound of villas in western Erbil, most of which are used as company offices (Wikipedia). Map position (low confidence, from agency map pins): 36.1903055, 43.9749203. Google Maps: https://www.google.com/maps?q=36.1903055,43.9749203
+### شوێن و دەوروبەر
+English Village area of western Erbil. Paya's structured data places the project at 36.1903055, 43.9749203. English Village is a compound of villas in western Erbil, most of which are used as company offices (Wikipedia).
+شوێن لەسەر نەخشە: 36.1903055, 43.9749203 (متمانە: نزم) — https://www.google.com/maps?q=36.1903055,43.9749203
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئەی بی سەنتەر (AB Center) بینایەکی بازرگانیی ئۆفیسە کە تەواوبووە، لە ناوچەی گوندی ئینگلیزی لە ڕۆژئاوای هەولێر، و گرووپی ئەلبیت گەشەی پێداوە. بیناکە چەند نهۆمییە و شوێنی ئۆفیس دابین دەکات، لەوانە یەکەی ئۆفیسی ١٠٥ م² و ٢٬٠٠٠ م². خزمەتگوزارییەکان بریتین لە هۆڵی پێشوازی، پاسەوانی، ئێرکۆندیشن و پارکینگی داپۆشراو. گوندی ئینگلیزی، کە بیناکەی تێدایە، کۆمەڵگەیەکی ڤێلایە لە ڕۆژئاوای هەولێر کە زۆربەی ڤێلاکانی وەک ئۆفیسی کۆمپانیاکان بەکاردێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 إيه بي سنتر (AB Center) مبنى مكاتب تجاري مكتمل في منطقة القرية الإنكليزية غرب أربيل، من تطوير مجموعة ألبيت. يوفر المبنى المتعدد الطوابق مساحات مكتبية، منها وحدات مكتبية بمساحتي ١٠٥ م² و٢٬٠٠٠ م². وتشمل المرافق صالة استقبال، وحراسة أمنية، وتكييف الهواء، ومواقف سيارات مسقوفة. والقرية الإنكليزية التي يقع فيها المبنى مجمع فلل في غرب أربيل يُستخدم معظمها مكاتبَ للشركات.
 
 ### 3. English
 AB Center is a completed commercial office building in the English Village area of western Erbil, developed by Albit Group. The multi-storey building provides office space, with office units of 105 m² and 2,000 m². Facilities include a reception, security, air conditioning and covered parking. English Village, where the building is located, is a compound of villas in western Erbil, most of which are used as company offices.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/ab-center-277 | Name, area English Village, status Completed, developer Albit Group, office description, amenity tags, 2 office units with sizes and prices, map coordinates (schema.org geo) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/ab-center-277 | Name, area English Village, status Completed, developer Albit Group, office description, amenity tags, 2 office units with sizes and prices, map coordinates (schema.org geo) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village is a compound in western Erbil whose villas are mostly used as company offices (area context only) | — | 2026-11-07 | medium |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village is a compound in western Erbil whose villas are mostly used as company offices (area context only) | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"AB Center" Erbil Albit”; “"AB Center" "English Village" Erbil” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"AB Center" Erbil Albit»؛ «"AB Center" "English Village" Erbil» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All project facts (name, developer Albit Group, English Village, completed, 105 m² and 2,000 m² office units, amenities, coordinates) come from Paya only
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Number of floors and buildings
    - Total office units / gross floor area
    - Completion date
    - Independent confirmation from a second primary site
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Price type inferred: Paya shows US$1,050 (105 m²) and US$30,000 (2,000 m²) with no period; values (≈US$10–15/m²) and the 'tenants' wording indicate monthly rent
    - No page on homele, baghyshaqlawa, hajisalam or miranestate
    - Second pass 2026-11-07: two more web searches ("AB Center" Erbil Albit / "AB Center" "English Village" Erbil) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. No independent page names AB Center or Albit Group; results only describe English Village itself, so developer and status still rest on Paya alone.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names AB Center or Albit Group; results only describe English Village itself, so developer and status still rest on Paya alone.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "ab-center",

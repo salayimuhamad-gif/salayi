@@ -1,126 +1,129 @@
 <!-- rendered -->
 # Mountain View — ماونتن ڤیو — ماونتن فيو
-Project ID: mountain-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mountain-view | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mountain View | High – Paya, Baghy, homele | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view ; https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| District / Area | Hawleri Nwe (New Erbil) | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Developer | GreenPoint | Medium – Paya description only | https://paya-realestate.com/en/projects/mountain-view-287 |
-| Project Category | Residential (villas) | High – Paya, Baghy, homele | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Total Land Area | 175,750 | High – Paya (approx.) and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Number of Buildings / Towers | 309 | High – 309 villas (Paya, Baghy) | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Total Residential Units | 309 | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Construction Status | Disputed (Paya/Baghy under construction; homele ready houses) | Low – Project pages undated; listings current | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view ; https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.225333, 44.076901 — Google Maps: https://www.google.com/maps?q=36.225333,44.076901 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Alternative names | ماونتن فيو | Medium – Paya Arabic label | https://paya-realestate.com/en/projects/mountain-view-287 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Mountain View | بەرز – Paya, Baghy, homele | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view ; https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ناوچە / گەڕەک | Hawleri Nwe (New Erbil) | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| گەشەپێدەر (کۆمپانیا) | GreenPoint | مامناوەند – Paya description only | https://paya-realestate.com/en/projects/mountain-view-287 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Paya, Baghy, homele | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| کۆی ڕووبەری زەوی | 175,750 | بەرز – Paya (approx.) and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ژمارەی باڵەخانە / تاوەر | 309 | بەرز – 309 villas (Paya, Baghy) | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| کۆی یەکە نیشتەجێبوونەکان | 309 | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| دۆخی دروستکردن | ناکۆکی لەسەرە — Disputed (Paya/Baghy under construction; homele ready houses) | نزم – Project pages undated; listings current | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view ; https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.225333, 44.076901 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.225333,44.076901 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ناوە جێگرەوەکان | ماونتن فيو | مامناوەند – Paya Arabic label | https://paya-realestate.com/en/projects/mountain-view-287 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 175,750 | Paya (approx.) and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Total project land area (dunams) | 70.3 | converted from 175,750 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 309 | Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Villas / houses | 309 | Paya: 'it will feature 309 villas available in 240 m² and 300 m² layouts'; Baghy: 'It consists of 309 villas' | https://paya-realestate.com/en/projects/mountain-view-287 |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 309 | 309 villas (Paya, Baghy) | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 175,750 | Paya (approx.) and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 70.3 | گۆڕدراوە لە 175,750 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 309 | Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ڤێلا / خانوو | 309 | Paya: 'it will feature 309 villas available in 240 m² and 300 m² layouts'; Baghy: 'It consists of 309 villas' | https://paya-realestate.com/en/projects/mountain-view-287 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 309 | 309 villas (Paya, Baghy) | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 240 | 240 | 240 | — | One of two villa sizes (Paya, Baghy); homele ready listings show 4 bed / 4-5 bath | agency_project_page | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| villa | 300 | 300 | 300 | 6 | 5 bathrooms; Paya unit list: House 300 m2, 6 beds, 5 baths; homele listings show 4 bed / 4 bath and 6 bed / 6 bath variants | agency_project_page | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| house | 240, 300 | 240 | 300 | 4 | 4 bathrooms; Ready houses for sale and rent; some corner and furnished units | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| ڤێلا | 240 | 240 | 240 | — | One of two villa sizes (Paya, Baghy); homele ready listings show 4 bed / 4-5 bath | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| ڤێلا | 300 | 300 | 300 | 6 | 5 حەمام؛ Paya unit list: House 300 m2, 6 beds, 5 baths; homele listings show 4 bed / 4 bath and 6 bed / 6 bath variants | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
+| خانوو | 240, 300 | 240 | 300 | 4 | 4 حەمام؛ Ready houses for sale and rent; some corner and furnished units | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
 
-**Layouts and floor plans:** Paya shows 'View Blueprint' for the listed House 300 m², 6 beds / 5 baths (https://paya-realestate.com/en/projects/mountain-view-287)
+**نەخشە و پلانی نهۆمەکان:** Paya shows 'View Blueprint' for the listed House 300 m², 6 beds / 5 baths (https://paya-realestate.com/en/projects/mountain-view-287)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** 24-hour electricity (Paya description; Baghy tag); Central gas distribution (Paya description; Baghy tag); Gym / fitness center (Paya description and tag; Baghy tags); Playground / kids play area (Paya description and tag; Baghy tag); Green spaces and public garden (Paya description and tag; Baghy tags); Mosque (Paya description and tag; Baghy tag); School (Paya description; Baghy tag); Supermarket (Paya description and tag; Baghy tag); Security (Paya description and tag; Baghy tag)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** 24-hour electricity (Paya description; Baghy tag); Central gas distribution (Paya description; Baghy tag); Gym / fitness center (Paya description and tag; Baghy tags); Playground / kids play area (Paya description and tag; Baghy tag); Green spaces and public garden (Paya description and tag; Baghy tags); Mosque (Paya description and tag; Baghy tag); School (Paya description; Baghy tag); Supermarket (Paya description and tag; Baghy tag); Security (Paya description and tag; Baghy tag)
 
-**Unverified claims:** Central A/C, kitchen appliances (Baghy tags only); Nursery, medical center, library, cafeteria, reception, women's salon, women's gym, currency exchange, electrical generator, sewers, AC, pets (Paya tags only)
+**بانگەشەی پشتڕاست نەکراوە:** Central A/C, kitchen appliances (Baghy tags only); Nursery, medical center, library, cafeteria, reception, women's salon, women's gym, currency exchange, electrical generator, sewers, AC, pets (Paya tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 300 m2, 6 bed / 5 bath - Paya project-page unit price | 320,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mountain-view-287 |
-| Ready house 240 m2, 4 bed / 4 bath - homele sale listing | 235,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Ready house 240 m2, 4 bed / 4 bath - homele sale listing (several at this price) | 265,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Ready house 240 m2, 4 bed / 5 bath, cash - homele listing (negotiable) | 280,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Ready new corner house 300 m2, 6 bed / 6 bath - homele sale listing | 325,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Ready corner house 300 m2, 4 bed / 4 bath - homele sale listing | 360,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-| Ready corner house 300 m2, 4 bed / 4 bath - homele rent per month | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Paya: flexible payment plan tied to construction milestones; Baghy payment method: advance payment, after structure completion, after completion of the water and electricity system, after completion of the exterior design, on delivery (no percentages); homele lists ready houses for sale ('House in Cash') and a corner house for rent at $1,100 monthly (https://baghyshaqlawa.net/en/projects/mountain-view)
+| House 300 m2, 6 bed / 5 bath - Paya project-page unit price | 320,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mountain-view-287 |
+| Ready house 240 m2, 4 bed / 4 bath - homele sale listing | 235,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| Ready house 240 m2, 4 bed / 4 bath - homele sale listing (several at this price) | 265,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| Ready house 240 m2, 4 bed / 5 bath, cash - homele listing (negotiable) | 280,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| Ready new corner house 300 m2, 6 bed / 6 bath - homele sale listing | 325,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| Ready corner house 300 m2, 4 bed / 4 bath - homele sale listing | 360,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+| Ready corner house 300 m2, 4 bed / 4 bath - homele rent per month | 1,100 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Paya: flexible payment plan tied to construction milestones; Baghy payment method: advance payment, after structure completion, after completion of the water and electricity system, after completion of the exterior design, on delivery (no percentages); homele lists ready houses for sale ('House in Cash') and a corner house for rent at $1,100 monthly (https://baghyshaqlawa.net/en/projects/mountain-view)
 
-### Location and surroundings
-Mountain View is in the Hawleri Nwe (New Erbil) district of Erbil (Paya, Baghy); Baghy serves it from its Mini Slava branch. No street address are published. Map position (medium confidence, from agency map pins): 36.225333, 44.076901. Google Maps: https://www.google.com/maps?q=36.225333,44.076901
+### شوێن و دەوروبەر
+Mountain View is in the Hawleri Nwe (New Erbil) district of Erbil (Paya, Baghy); Baghy serves it from its Mini Slava branch. No street address are published.
+شوێن لەسەر نەخشە: 36.225333, 44.076901 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.225333,44.076901
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ماونتن ڤیو (Mountain View) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە ناوچەی هەولێری نوێی شاری هەولێر، کە کۆمپانیای گرین پۆینت گەشەی پێدەدات. ڕووبەری زەویی پڕۆژەکە ١٧٥٬٧٥٠ م²یە و لە ٣٠٩ ڤێلا پێکدێت بە دوو ڕووبەر: ٢٤٠ م² و ٣٠٠ م². ئەو خزمەتگوزارییانەی بۆ پڕۆژەکە پلانیان بۆ دانراوە بریتین لە کارەبای ٢٤ کاتژمێری، دابەشکردنی گازی ناوەندی، هۆڵی وەرزش، یاریگای منداڵان، ناوچەی سەوز و باخچەی گشتی، مزگەوت، قوتابخانە، سوپەرمارکێت و پاسەوانی.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ماونتن فيو (Mountain View) مشروع سكني للفلل في منطقة أربيل الجديدة (هولير نوي) بمدينة أربيل، من تطوير شركة غرين بوينت. يمتد المشروع على أرض مساحتها ١٧٥٬٧٥٠ م²، ويضم ٣٠٩ فلل بمساحتين: ٢٤٠ م² و٣٠٠ م². وتشمل الخدمات المخطط لها في المشروع الكهرباء على مدار ٢٤ ساعة، وتوزيع الغاز المركزي، وصالة رياضية، وملعباً للأطفال، ومساحات خضراء وحديقة عامة، ومسجداً، ومدرسة، وسوبرماركت، وحراسة أمنية.
 
 ### 3. English
 Mountain View is a residential villa project in the Hawleri Nwe (New Erbil) district of Erbil, developed by GreenPoint. The project covers a site of 175,750 m² and consists of 309 villas in two sizes, 240 m² and 300 m². Planned services for the project include 24-hour electricity, central gas distribution, a gym, a children's playground, green spaces and a public garden, a mosque, a school, a supermarket and security.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view | Area listing page (2 pages; first read): ready houses 240 m2 USD 235,000-280,000 and 300 m2 USD 325,000-360,000 for sale; 300 m2 corner house USD 1,100/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/mountain-view-287 | Project page: status Constructing; Hawleri Nwe; approx. 175,750 m2; 309 villas of 240/300 m2; developed by GreenPoint; amenities; milestone payment plan; unit: House 300 m2, 6 bed / 5 bath, USD 320,000 | — | 2026-11-07 | high |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/mountain-view | Project page: Erbil - Hawleri Nwe; 'will be built' on 175,750 m2; 309 villas of 240 m and 300 m; payment stages (advance, structure, water/electricity, exterior, delivery); facility tags | — | 2026-11-07 | high |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view | Area listing page (2 pages; first read): ready houses 240 m2 USD 235,000-280,000 and 300 m2 USD 325,000-360,000 for sale; 300 m2 corner house USD 1,100/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/mountain-view-287 | Project page: status Constructing; Hawleri Nwe; approx. 175,750 m2; 309 villas of 240/300 m2; developed by GreenPoint; amenities; milestone payment plan; unit: House 300 m2, 6 bed / 5 bath, USD 320,000 | — | 2026-11-07 | بەرز |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/mountain-view | Project page: Erbil - Hawleri Nwe; 'will be built' on 175,750 m2; 309 villas of 240 m and 300 m; payment stages (advance, structure, water/electricity, exterior, delivery); facility tags | — | 2026-11-07 | بەرز |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Hawleri Nwe location, villa project (Paya, Baghy)
    - 175,750 m2 site, 309 villas, sizes 240 and 300 m2 (Paya, Baghy)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer GreenPoint (Paya)
    - 300 m2 villa 6 bed / 5 bath at USD 320,000 (Paya)
    - Payment stages (Baghy; Paya mentions milestone plan)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: under construction (Paya, Baghy) vs ready houses (homele)
    - 300 m2 villa layout
    - construction_status: Constructing (https://paya-realestate.com/en/projects/mountain-view-287); 'will be built' (future tense) (https://baghyshaqlawa.net/en/projects/mountain-view); Ready houses for sale and rent (Nov 2026) (https://homele.com/properties/for-sale-and-rent/erbil/mountain-view) → Disputed: project pages say under construction; current listings show delivered and occupied houses. Possibly partly delivered; not confirmed.
    - 300 m2 villa layout: 6 bed / 5 bath (https://paya-realestate.com/en/projects/mountain-view-287); 4 bed / 4 bath and 6 bed / 6 bath listings (https://homele.com/properties/for-sale-and-rent/erbil/mountain-view) → Paya layout recorded as the project-page value; listings show variants.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Launch and completion dates
    - Payment-plan percentages
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya 'Constructing' and Baghy 'will be built' may predate delivery of houses now listed as ready
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Current construction/delivery status of the 309 villas
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mountain-view",

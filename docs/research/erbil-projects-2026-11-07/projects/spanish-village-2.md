@@ -1,129 +1,131 @@
 <!-- rendered -->
 # Spanish Village 2 — گوندی ئیسپانی ٢ — القرية الإسبانية 2
-Project ID: spanish-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: spanish-village-2 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Spanish Village 2 | High – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| City | Erbil | High – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
-| District / Area | 150 m Ring Road | Medium – Miran only | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
-| Developer | Chukar Group | Medium – Miran only | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
-| Project Category | Residential (villas) | High – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| Total Land Area | Not verified | Low – No source (15,000 m2 is the park) | — |
-| Number of Buildings / Towers | Not verified | Low – No villa count stated | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Disputed: under construction (Miran) vs ready houses for sale and rent (homele) | Low – Project-level status vs market listings | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | None found | Low – — – No source | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Separate project from Spanish Village (1) | Medium – Separate Miran pages, different developers | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
+| ناوی پڕۆژە | Spanish Village 2 | بەرز – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| شار | هەولێر | بەرز – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
+| ناوچە / گەڕەک | 150 m Ring Road | مامناوەند – Miran only | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
+| گەشەپێدەر (کۆمپانیا) | Chukar Group | مامناوەند – Miran only | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Miran, homele | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source (15,000 m2 is the park) | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No villa count stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | ناکۆکی لەسەرە — Disputed: under construction (Miran) vs ready houses for sale and rent (homele) | نزم – Project-level status vs market listings | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | None found | نزم – No source | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | Separate project from Spanish Village (1) | مامناوەند – Separate Miran pages, different developers | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source (15,000 m2 is the park) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No villa count stated | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | 15,000 | 15,000 m² central park; approx. 110 m² outdoor space per villa for private greenery and parking (Miran) | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
-| Development phases | Separate project from Spanish Village (1) | Separate Miran pages, different developers | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source (15,000 m2 is the park) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No villa count stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | 15,000 | 15,000 m² central park; approx. 110 m² outdoor space per villa for private greenery and parking (Miran) | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
+| قۆناغەکانی پڕۆژە | Separate project from Spanish Village (1) | Separate Miran pages, different developers | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 384, 600 | 384 | 600 | 4 | Independent villas, types A 384 m2 and C 600 m2; ~110 m2 outdoor space for greenery and parking (Miran) | agency_project_page | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
-| villa | 320, 384, 400, 500 | 320 | 500 | — | homele house listings (4-5 beds), mostly tagged Ready, one Off Plan; first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| ڤێلا | 384, 600 | 384 | 600 | 4 | Independent villas, types A 384 m2 and C 600 m2; ~110 m2 outdoor space for greenery and parking (Miran) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
+| ڤێلا | 320, 384, 400, 500 | 320 | 500 | — | homele house listings (4-5 beds), mostly tagged Ready, one Off Plan; first page only | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** 15,000 m2 central park (Miran text); Swimming pool (Miran text); Gym (Miran text and tag); Walking and jogging tracks (Miran text); Children's playgrounds (Miran text and tag); Picnic lawns with BBQ zones (Miran text and tag); Private greenery and parking, ~110 m2 per villa (Miran text)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** 15,000 m2 central park (Miran text); Swimming pool (Miran text); Gym (Miran text and tag); Walking and jogging tracks (Miran text); Children's playgrounds (Miran text and tag); Picnic lawns with BBQ zones (Miran text and tag); Private greenery and parking, ~110 m2 per villa (Miran text)
 
-**Unverified claims:** Mosque, hospital, school, pharmacy, nursery & kindergarten, shopping center, security, parklet, high ceilings, garden, outdoor play area (Miran tags)
+**بانگەشەی پشتڕاست نەکراوە:** Mosque, hospital, school, pharmacy, nursery & kindergarten, shopping center, security, parklet, high ceilings, garden, outdoor play area (Miran tags)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 384 m2, 4 bed, ready - market listing (negotiable) | 340,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 384 m2, 4 bed, ready - market listing (negotiable) | 325,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 320 m2, 4 bed, opposite garden, ready - market listing | 415,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 320 m2, 4 bed, ready - market listing | 335,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 320 m2, 4 bed, tagged off-plan - market listing | 345,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 500 m2, 5 bed, ready - market listing | 670,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 384 m2, 4 bed, opposite garden - monthly rent | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-| House 400 m2, 4 bed - monthly rent | 1,200 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele market listings show houses for sale (negotiable) and for monthly rent (USD 1,100-1,200/month) (https://miranestate.com/projects/cmnyplqes023so30frta9f67u)
+| House 384 m2, 4 bed, ready - market listing (negotiable) | 340,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 384 m2, 4 bed, ready - market listing (negotiable) | 325,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 320 m2, 4 bed, opposite garden, ready - market listing | 415,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 320 m2, 4 bed, ready - market listing | 335,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 320 m2, 4 bed, tagged off-plan - market listing | 345,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 500 m2, 5 bed, ready - market listing | 670,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 384 m2, 4 bed, opposite garden - monthly rent | 1,100 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+| House 400 m2, 4 bed - monthly rent | 1,200 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: Cash (Miran); homele market listings show houses for sale (negotiable) and for monthly rent (USD 1,100-1,200/month) (https://miranestate.com/projects/cmnyplqes023so30frta9f67u)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 On the 150 m ring road in Erbil, about 20 minutes from the airport (Miran); exact position relative to Spanish Village not published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی ئیسپانی ٢ (Spanish Village 2) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لەسەر ڕێگای بازنەیی ١٥٠ مەتری لە هەولێر، کە گرووپی چوکار گەشەی پێدەدات. ئەم پڕۆژەیە جیایە لە پڕۆژەی گوندی ئیسپانی. پڕۆژەکە لە ڤێلای سەربەخۆی چوار ژووری نووستن پێکدێت بە دوو ڕووبەر: ٣٨٤ م² و ٦٠٠ م². بۆ هەر ڤێلایەک شوێنێکی دەرەکیی تایبەت بۆ سەوزایی و پارکینگ پلانی بۆ دانراوە. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە پارکێکی ناوەندی، مەلەوانگە، هۆڵی وەرزش، ڕێڕەوی پیاسە و ڕاکردن، یاریگای منداڵان و چیمەنی گەشت لەگەڵ شوێنی برژاندن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 القرية الإسبانية ٢ (Spanish Village 2) مشروع سكني للفلل على طريق الـ١٥٠ متر الدائري في أربيل، من تطوير مجموعة جوكار. وهو مشروع منفصل عن مشروع القرية الإسبانية. يتكون المشروع من فلل مستقلة بأربع غرف نوم بمساحتين: ٣٨٤ م² و٦٠٠ م². ومن المخطط أن تتوفر لكل فيلا مساحة خارجية خاصة للمساحات الخضراء ومواقف السيارات. وتشمل المرافق المخطط لها حديقة مركزية، ومسبحاً، وصالة رياضية، ومسارات للمشي والركض، وملاعب للأطفال، ومروجاً للنزهات مع مناطق للشواء.
 
 ### 3. English
 Spanish Village 2 is a residential villa project on the 150 m Ring Road in Erbil, developed by Chukar Group. It is a separate project from Spanish Village. The project consists of independent four-bedroom villas in two sizes, 384 m² and 600 m². Each villa is planned with private outdoor space for greenery and parking. Planned facilities include a central park, a swimming pool, a gym, walking and jogging tracks, children's playgrounds and picnic lawns with barbecue areas.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 | Area listing page (8 pages; first read): houses 320-500 m2, 9 of 10 tagged Ready; sale USD 325,000-670,000; rent USD 1,100-1,200/month. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmnyplqes023so30frta9f67u | Project page (updated Aug 20, 2026): Chukar Group; Under Construction; cash; 150-meter Ring Road, 20 min to airport; 15,000 m2 central park, pool, gym, tracks, playgrounds, BBQ lawns; independent 4-bed villas 384 and 600 m2 (types A/C), ~110 m2 outdoor space; feature tags. | 2026-08-20 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 | Area listing page (8 pages; first read): houses 320-500 m2, 9 of 10 tagged Ready; sale USD 325,000-670,000; rent USD 1,100-1,200/month. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmnyplqes023so30frta9f67u | Project page (updated Aug 20, 2026): Chukar Group; Under Construction; cash; 150-meter Ring Road, 20 min to airport; 15,000 m2 central park, pool, gym, tracks, playgrounds, BBQ lawns; independent 4-bed villas 384 and 600 m2 (types A/C), ~110 m2 outdoor space; feature tags. | 2026-08-20 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Miran, homele)
    - Villas with 384 m2 type (Miran, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Chukar Group (Miran)
    - 150 m Ring Road location (Miran)
    - 600 m2 type, park, pool, gym, tracks (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: Miran under construction vs homele ready listings
    - homele sizes 320/400/500 m2 vs Miran 384/600 m2
    - construction_status: Under Construction (https://miranestate.com/projects/cmnyplqes023so30frta9f67u); Ready houses for sale and rent (9 of 10 first-page listings) (https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2) → Disputed: likely partly delivered while construction continues; not confirmed.
    - villa sizes: 384 and 600 m2 (https://miranestate.com/projects/cmnyplqes023so30frta9f67u); Listings of 320, 400 and 500 m2 labelled Spanish Village 2 (https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2) → Both recorded; 320/500 m2 match Spanish Village (1) types, so some homele labels may be mixed.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Villa count
    - Land area
    - Dates
    - Coordinates
    - Developer price list
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Miran description reuses Spanish Village figures (15,000 m2 park, ~110 m2 outdoor, 20 min to airport); not independently confirmed for phase 2
    - No Paya, Baghy or Haji page found
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "spanish-village-2",

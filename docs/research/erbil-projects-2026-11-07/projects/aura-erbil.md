@@ -1,127 +1,129 @@
 <!-- rendered -->
 # Aura Erbil — ئاورا هەولێر — أورا أربيل
-Project ID: aura-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: aura-erbil | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Aura Erbil | Medium – Wikipedia; SOMA project 'Aura' | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
-| City | Erbil | High – Wikipedia and SOMA | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
-| District / Area | Shoresh district, Massif–Salaheddine road | Medium – Wikipedia text and infobox | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Developer | Zardman | Medium – Wikipedia infobox; 2013 report (search summary) | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
-| Project Category | Mixed-use (hotel, residential, retail, offices) | Medium – Wikipedia; SOMA 'Mixed-use' | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
-| Total Land Area | 200,000 m2 | Medium – Wikipedia text and infobox ('Size') | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Number of Buildings / Towers | 16 buildings incl. three office towers and a five-star hotel (2013 report); architect's page: 12 residential buildings | Low – 2013 report and SOMA page seen as search summaries only; the figures are consistent (12 residential + 3 office towers + hotel = 16) but the total is single-source | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg ; https://soma.us/aura |
-| Total Residential Units | 269 flats (planned) | Medium – Wikipedia | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Construction Status | Under construction (as of 2013-2015 sources) | Low – Wikipedia 'Under development'; SOMA and 2015 showcase 'under construction'; no recent confirmation; second pass: SOMA page still says 'currently under construction' but is undated | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura ; https://www10.aeccafe.com/blogs/arch-showcase/2015/07/01/aura-in-erbil-iraq-by-soma-architects |
-| Completion Date | Not verified | Low – Wikipedia: opening date unknown | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Aura | Medium – Architect's project title | https://soma.us/aura |
-| Project Owner | Zardman and partners (2013 report, web-search summary) | Medium | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | 2013 | Medium – Wikipedia infobox 'Construction started 2013'; May 2013 launch report | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Aura Erbil | مامناوەند – Wikipedia; SOMA project 'Aura' | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
+| شار | هەولێر | بەرز – Wikipedia and SOMA | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
+| ناوچە / گەڕەک | Shoresh district, Massif–Salaheddine road | مامناوەند – Wikipedia text and infobox | https://en.wikipedia.org/wiki/Aura_Erbil |
+| گەشەپێدەر (کۆمپانیا) | Zardman | مامناوەند – Wikipedia infobox; 2013 report (search summary) | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (hotel, residential, retail, offices) | مامناوەند – Wikipedia; SOMA 'Mixed-use' | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura |
+| کۆی ڕووبەری زەوی | 200,000 m2 | مامناوەند – Wikipedia text and infobox ('Size') | https://en.wikipedia.org/wiki/Aura_Erbil |
+| ژمارەی باڵەخانە / تاوەر | 16 buildings incl. three office towers and a five-star hotel (2013 report); architect's page: 12 residential buildings | نزم – 2013 report and SOMA page seen as search summaries only; the figures are consistent (12 residential + 3 office towers + hotel = 16) but the total is single-source | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg ; https://soma.us/aura |
+| کۆی یەکە نیشتەجێبوونەکان | 269 flats (planned) | مامناوەند – Wikipedia | https://en.wikipedia.org/wiki/Aura_Erbil |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (as of 2013-2015 sources) | نزم – Wikipedia 'Under development'; SOMA and 2015 showcase 'under construction'; no recent confirmation; second pass: SOMA page still says 'currently under construction' but is undated | https://en.wikipedia.org/wiki/Aura_Erbil ; https://soma.us/aura ; https://www10.aeccafe.com/blogs/arch-showcase/2015/07/01/aura-in-erbil-iraq-by-soma-architects |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Wikipedia: opening date unknown | https://en.wikipedia.org/wiki/Aura_Erbil |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Aura | مامناوەند – Architect's project title | https://soma.us/aura |
+| خاوەنی پڕۆژە | Zardman and partners (2013 report, web-search summary) | مامناوەند | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | 2013 | مامناوەند – Wikipedia infobox 'Construction started 2013'; May 2013 launch report | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 200,000 m2 | Wikipedia text and infobox ('Size') | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Total project land area (dunams) | 80.0 | converted from 200,000 m² at 1 Iraqi dunam = 2,500 m² | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 269 flats (planned) | Wikipedia | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Villas / houses | Not verified | — | — |
-| Apartments | 269 | plans to offer '269 luxury flats' (Wikipedia) | https://en.wikipedia.org/wiki/Aura_Erbil |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 16 buildings incl. three office towers and a five-star hotel (2013 report); architect's page: 12 residential buildings | 2013 report and SOMA page seen as search summaries only; the figures are consistent (12 residential + 3 office towers + hotel = 16) but the total is single-source | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg ; https://soma.us/aura |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 200,000 m2 | Wikipedia text and infobox ('Size') | https://en.wikipedia.org/wiki/Aura_Erbil |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 80.0 | گۆڕدراوە لە 200,000 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://en.wikipedia.org/wiki/Aura_Erbil |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 269 flats (planned) | Wikipedia | https://en.wikipedia.org/wiki/Aura_Erbil |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 269 | plans to offer '269 luxury flats' (Wikipedia) | https://en.wikipedia.org/wiki/Aura_Erbil |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 16 buildings incl. three office towers and a five-star hotel (2013 report); architect's page: 12 residential buildings | 2013 report and SOMA page seen as search summaries only; the figures are consistent (12 residential + 3 office towers + hotel = 16) but the total is single-source | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg ; https://soma.us/aura |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | 269 flats planned (Wikipedia); no sizes. Evidence is Wikipedia, not an agency page | agency_project_page | https://en.wikipedia.org/wiki/Aura_Erbil |
-| office | Not verified | — | — | — | Office blocks planned (Wikipedia); three office towers per 2013 report (web-search summary) | agency_project_page | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
-| shop | Not verified | — | — | — | 40,000 m2 of shopping and a central entertainment mall with ground-floor retail planned (Wikipedia) - total retail area, not a unit size | agency_project_page | https://en.wikipedia.org/wiki/Aura_Erbil |
-| other | Not verified | — | — | — | Five-star hotel planned (Wikipedia) | agency_project_page | https://en.wikipedia.org/wiki/Aura_Erbil |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | 269 flats planned (Wikipedia); no sizes. Evidence is Wikipedia, not an agency page | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://en.wikipedia.org/wiki/Aura_Erbil |
+| ئۆفیس | پشتڕاست نەکراوەتەوە | — | — | — | Office blocks planned (Wikipedia); three office towers per 2013 report (web-search summary) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://en.wikipedia.org/wiki/Aura_Erbil ; https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg |
+| دوکان | پشتڕاست نەکراوەتەوە | — | — | — | 40,000 m2 of shopping and a central entertainment mall with ground-floor retail planned (Wikipedia) - total retail area, not a unit size | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://en.wikipedia.org/wiki/Aura_Erbil |
+| جۆری تر | پشتڕاست نەکراوەتەوە | — | — | — | Five-star hotel planned (Wikipedia) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://en.wikipedia.org/wiki/Aura_Erbil |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Five-star hotel (Wikipedia); Movie theaters (Wikipedia); Central entertainment mall with ground-floor retail (Wikipedia); 40,000 m2 shopping (Wikipedia; SOMA); Greenery and landscaped circulation (Wikipedia)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Five-star hotel (Wikipedia); Movie theaters (Wikipedia); Central entertainment mall with ground-floor retail (Wikipedia); 40,000 m2 shopping (Wikipedia; SOMA); Greenery and landscaped circulation (Wikipedia)
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Aura Erbil is in Erbil's Shoresh district on the Massif–Salaheddine road (Wikipedia), on the north-eastern Pirmam/Massif approach of the city.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئاورا هەولێر پڕۆژەیەکی خانووبەرەی فرەمەبەستە لە شاری هەولێر لە هەرێمی کوردستانی عێراق، کە کۆمپانیای زەردمان پەرەی پێدەدات و نووسینگەی ئەندازیاریی SOMA دیزاینی کردووە. پڕۆژەکە لە گەڕەکی شۆڕش و لەسەر ڕێگای مەسیف–سەلاحەدین هەڵکەوتووە. ڕووبەری پڕۆژەکە ٢٠٠٬٠٠٠ م²یە. نەخشەی پڕۆژەکە هوتێلێکی پێنج ئەستێرە، ٢٦٩ شوقە، ٤٠٬٠٠٠ م² شوێنی بازاڕکردن، سینەما، بینای ئۆفیس و مۆڵێکی ناوەندیی کاتبەسەربردن کە نهۆمی زەوییەکەی دوکانی تێدایە، لەگەڵ ناوچەی سەوز و ڕێڕەوی ڕازاوە لەخۆ دەگرێت. دروستکردنی پڕۆژەکە لە ساڵی ٢٠١٣ دەستی پێکرد.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أورا أربيل مشروع عقاري متعدد الاستخدامات في مدينة أربيل في إقليم كوردستان العراق، تطوّره شركة زردمان وصمّمه مكتب العمارة SOMA. يقع المشروع في حي شورش على طريق مصيف–صلاح الدين. تبلغ مساحة المشروع 200,000 م². يتضمن مخطط المشروع فندقاً من فئة خمس نجوم و269 شقة و40,000 م² من مساحات التسوق ودور سينما ومباني مكاتب ومركز ترفيه مركزياً تشغل محلات البيع بالتجزئة طابقه الأرضي، إلى جانب مساحات خضراء وممرات منسّقة. بدأ بناء المشروع عام 2013.
 
 ### 3. English
 Aura Erbil is a mixed-use real estate project in Erbil, Kurdistan Region of Iraq, developed by Zardman and designed by the architecture firm SOMA. It is located in the Shoresh district on the Massif–Salaheddine road. The project covers 200,000 m². Its plan includes a five-star hotel, 269 apartments, 40,000 m² of shopping space, cinemas, office blocks and a central entertainment mall with retail outlets on the ground floor, together with green spaces and landscaped walkways. Construction of the project started in 2013.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| en.wikipedia.org | https://en.wikipedia.org/wiki/Aura_Erbil | Article: 200,000 m2 project in Shoresh District on the Massif-Salaheddine road; plans five-star hotel, 269 flats, 40,000 m2 shopping, cinemas, offices, entertainment mall. Infobox: construction started 2013, opening unknown, status 'Under development', developer Zardman, architect SOMA, address Salaheddine Road | — | 2026-11-07 | medium |
-| soma.us | https://soma.us/aura | Architect's project page 'AURA \| Mixed-use \| Erbil' (web-search result, page not fetched): described as under construction; second pass 2026-11-07 (search summary, page not opened): comprises 12 residential buildings and 40,000 m² of high-end shopping and entertainment; 'currently under construction' (page undated) | — | 2026-11-07 | low |
-| aeccafe.com | https://www10.aeccafe.com/blogs/arch-showcase/2015/07/01/aura-in-erbil-iraq-by-soma-architects | 2015 architecture showcase of Aura by SOMA (web-search result, page not fetched): status 'In Construction' | 2015-07-01 | 2026-11-07 | low |
-| businessnews.com.lb | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg | 2013 report 'Zardman launches major project in Erbil' (web-search summary, page not fetched): USD 110 million investment, 16 buildings incl. three office towers, a five-star hotel, residential and retail; owned by Zardman and partners | 2013-05-10 | 2026-11-07 | low |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/Aura_Erbil | Article: 200,000 m2 project in Shoresh District on the Massif-Salaheddine road; plans five-star hotel, 269 flats, 40,000 m2 shopping, cinemas, offices, entertainment mall. Infobox: construction started 2013, opening unknown, status 'Under development', developer Zardman, architect SOMA, address Salaheddine Road | — | 2026-11-07 | مامناوەند |
+| soma.us | https://soma.us/aura | Architect's project page 'AURA \| Mixed-use \| Erbil' (web-search result, page not fetched): described as under construction; second pass 2026-11-07 (search summary, page not opened): comprises 12 residential buildings and 40,000 m² of high-end shopping and entertainment; 'currently under construction' (page undated) | — | 2026-11-07 | نزم |
+| aeccafe.com | https://www10.aeccafe.com/blogs/arch-showcase/2015/07/01/aura-in-erbil-iraq-by-soma-architects | 2015 architecture showcase of Aura by SOMA (web-search result, page not fetched): status 'In Construction' | 2015-07-01 | 2026-11-07 | نزم |
+| businessnews.com.lb | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg | 2013 report 'Zardman launches major project in Erbil' (web-search summary, page not fetched): USD 110 million investment, 16 buildings incl. three office towers, a five-star hotel, residential and retail; owned by Zardman and partners | 2013-05-10 | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Aura Erbil" Zardman units completion”; “"أورا أربيل" زردمان” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Aura Erbil" Zardman units completion»؛ «"أورا أربيل" زردمان» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location, developer Zardman, architect SOMA, mixed-use category (Wikipedia + SOMA/2013 report via search)
    - 40,000 m2 of shopping/entertainment space (Wikipedia + SOMA page, search summary)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 16 buildings, three office towers, USD 110 million (2013 report, search summary)
    - 200,000 m2 and 269 flats (Wikipedia)
    - 12 residential buildings (SOMA page, search summary)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Any page on homele, Paya, Baghy, Haji Salam or Miran
    - Unit sizes
    - Floors
    - Completion date
    - Prices
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Status evidence dates from 2013-2015 (Wikipedia 'Under development', SOMA/2015 'in construction')
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Current construction status (could be stalled or completed) - no source after 2015
    - Not listed on any of the five primary sites (found via wider web)
    - Second pass 2026-11-07: no source after 2015 on current status; results for 'Aura' completions concern an unrelated Azizi tower in Dubai
-   - Second verification pass (2026-11-07): new evidence. The architect's page (search summary) confirms 40,000 m² of shopping and entertainment and adds 12 residential buildings, consistent with the 2013 total of 16 buildings; no source after 2015 confirms current status.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. The architect's page (search summary) confirms 40,000 m² of shopping and entertainment and adds 12 residential buildings, consistent with the 2013 total of 16 buildings; no source after 2015 confirms current status.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "aura-erbil",

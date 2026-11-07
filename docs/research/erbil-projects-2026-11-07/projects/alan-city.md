@@ -1,102 +1,104 @@
 <!-- rendered -->
 # Alan City — ئالان ستی — آلان ستي
-Project ID: alan-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: alan-city | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Alan City | Low – homele area name; Haji Salam area list | https://homele.com/properties/for-sale-and-rent/erbil/alan-city ; https://hajisalam.com/projects/alan-city/ |
-| City | Erbil | Medium – homele Erbil area page | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-| District / Area | Not verified | Low – Not stated | — |
-| Developer | Not verified | Low – Not stated | — |
-| Project Category | Residential (houses) | Low – Single house listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-| Total Land Area | Not verified | Low – Not stated by any source | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated by any source | — |
-| Total Residential Units | Not verified | Low – Not stated by any source | — |
-| Construction Status | Completed (inferred) | Low – One homele resale listing tagged 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-| Completion Date | Not verified | Low – Not stated by any source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | ئالان ستی; الان ستي | Low – Haji Salam area list | https://hajisalam.com/projects/alan-city/ |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 (advertised house) | Low – One listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-| Launch Date | Not verified | Low – Not stated by any source | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Alan City | نزم – homele area name; Haji Salam area list | https://homele.com/properties/for-sale-and-rent/erbil/alan-city ; https://hajisalam.com/projects/alan-city/ |
+| شار | هەولێر | مامناوەند – homele Erbil area page | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Single house listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | نزم – One homele resale listing tagged 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | ئالان ستی; الان ستي | نزم – Haji Salam area list | https://hajisalam.com/projects/alan-city/ |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (advertised house) | نزم – One listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated by any source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated by any source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated by any source | — |
-| Floors per building | 1 (advertised house) | One listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (advertised house) | One listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 2 bathrooms; 1 floors; One advertised ready one-floor house | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+| خانوو | 200 | 200 | 200 | 2 | 2 حەمام؛ 1 نهۆم؛ One advertised ready one-floor house | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready one-floor house 200 m2, 2 bed, 2 bath - negotiable | 93,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listing: ready one-floor house for sale, $93,000 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/alan-city)
+| Ready one-floor house 200 m2, 2 bed, 2 bath - negotiable | 93,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listing: ready one-floor house for sale, $93,000 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/alan-city)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 homele lists Alan City as an area of Erbil city; no source gives its road or district.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئالان ستی (Alan City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر، پایتەختی هەرێمی کوردستان. خانووەکانی ئالان ستی خانووی یەک نهۆمی لەخۆ دەگرن، لەوانە خانوویەکی 200 م² بە دوو ژووری نووستن و دوو حەمام.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آلان ستي (Alan City) منطقة سكنية من المنازل في مدينة أربيل، عاصمة إقليم كردستان العراق. وتشمل المساكن فيها منازل من طابق واحد، ومنها منزل بمساحة 200 م² يضم غرفتي نوم وحمامين.
 
 ### 3. English
 Alan City is a residential area of houses in Erbil, the capital of the Kurdistan Region of Iraq. Housing in Alan City includes one-floor houses; one such house has an area of 200 m² with two bedrooms and two bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/alan-city | Area listing page (1 page): 1 'Ready' one-floor house 200 m2, 2 bed, 2 bath, USD 93,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/projects/alan-city/ | Sitemap lists project page 'alan-city' (2019; not fetched); home-page area list gives 'Alan City' / 'ئالان ستی' / 'الان ستي' | 2019-10-01 | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/alan-city | Area listing page (1 page): 1 'Ready' one-floor house 200 m2, 2 bed, 2 bath, USD 93,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/projects/alan-city/ | Sitemap lists project page 'alan-city' (2019; not fetched); home-page area list gives 'Alan City' / 'ئالان ستی' / 'الان ستي' | 2019-10-01 | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 200 m2 one-floor 2-bed house and price (one homele listing)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Location within Erbil
    - Developer
    - Status
@@ -105,14 +107,14 @@ First-pass research only (at most one web search for this project).
    - Facilities
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Haji Salam project page /projects/alan-city/ exists in its sitemap but was not fetched
    - Whether Alan City is a planned project or a neighbourhood name
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "alan-city",

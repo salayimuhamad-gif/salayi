@@ -1,112 +1,115 @@
 <!-- rendered -->
 # Roya Towers — ڕۆیا تاوەرز — رويا تاورز
-Project ID: roya-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: roya-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Roya Towers | High – Baghy 'Roya Towers'; Hajisalam 'MRF Roya Tower'; homele 'Roya Tower' | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| District / Area | Golden square near Gulan (40m) and 100m roads; between English Village and Italian City 1 | High – Baghy and Hajisalam descriptions are consistent | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Developer | New Krmanj company | Medium – Baghy only; Hajisalam brands it 'MRF' | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Project Category | Residential (apartments) with commercial ground floor | High – Baghy, Hajisalam, homele | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 5 | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Total Residential Units | Disputed: 1,180 (Baghy) vs 1,230 (Hajisalam) | Low – Two sources disagree | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Construction Status | Completed | High – Baghy (finished late 2017); homele ready units; Hajisalam old listings | https://baghyshaqlawa.net/en/projects/roya-towers ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Completion Date | Late 2017 | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Coordinates | 36.191922, 43.968033 — Google Maps: https://www.google.com/maps?q=36.191922,43.968033 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Alternative names | MRF Roya Tower; Roya Tower; ڕۆیا تاوەر | High – Hajisalam and homele titles | https://hajisalam.com/en/roy-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 29 | Medium – Baghy 29 + 3 parking floors; Hajisalam 32 total | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Launch Date | 2014 (construction start) | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Development Phases | None identified | Low – — – Single complex of five towers | — |
+| ناوی پڕۆژە | Roya Towers | بەرز – Baghy 'Roya Towers'; Hajisalam 'MRF Roya Tower'; homele 'Roya Tower' | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| شار | هەولێر | بەرز – All sources | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| ناوچە / گەڕەک | Golden square near Gulan (40m) and 100m roads; between English Village and Italian City 1 | بەرز – Baghy and Hajisalam descriptions are consistent | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| گەشەپێدەر (کۆمپانیا) | New Krmanj company | مامناوەند – Baghy only; Hajisalam brands it 'MRF' | https://baghyshaqlawa.net/en/projects/roya-towers |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) with commercial ground floor | بەرز – Baghy, Hajisalam, homele | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 5 | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 1,180 (Baghy) vs 1,230 (Hajisalam) | نزم – Two sources disagree | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | بەرز – Baghy (finished late 2017); homele ready units; Hajisalam old listings | https://baghyshaqlawa.net/en/projects/roya-towers ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| بەرواری تەواوبوون | Late 2017 | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.191922, 43.968033 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.191922,43.968033 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/roya-towers |
+| ناوە جێگرەوەکان | MRF Roya Tower; Roya Tower; ڕۆیا تاوەر | بەرز – Hajisalam and homele titles | https://hajisalam.com/en/roy-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 29 | مامناوەند – Baghy 29 + 3 parking floors; Hajisalam 32 total | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| بەرواری دەستپێکردن | 2014 (construction start) | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
+| قۆناغەکانی پڕۆژە | None identified | نزم – Single complex of five towers | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Disputed: 1,180 (Baghy) vs 1,230 (Hajisalam) | Two sources disagree | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Sources differ: baghyshaqlawa.net 'The Total Apartments is 1180' (five towers) (https://baghyshaqlawa.net/en/projects/roya-towers); hajisalam.com 'Number Of Unit: 1230', Project Type Apartment (https://hajisalam.com/en/roy-tower/) | — | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 5 | Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
-| Floors per building | 29 | Baghy 29 + 3 parking floors; Hajisalam 32 total | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | Single complex of five towers | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 1,180 (Baghy) vs 1,230 (Hajisalam) | Two sources disagree | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | Sources differ: baghyshaqlawa.net 'The Total Apartments is 1180' (five towers) (https://baghyshaqlawa.net/en/projects/roya-towers); hajisalam.com 'Number Of Unit: 1230', Project Type Apartment (https://hajisalam.com/en/roy-tower/) | — | https://baghyshaqlawa.net/en/projects/roya-towers |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 5 | Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 29 | Baghy 29 + 3 parking floors; Hajisalam 32 total | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | Single complex of five towers | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 75, 85, 90 | 75 | 90 | 1 | 2 bathrooms; 1+1, 3 types: one bedroom, combined living room and kitchen, 2 bathrooms, balcony | agency_project_page | https://baghyshaqlawa.net/en/projects/roya-towers |
-| apartment | 140, 150, 160, 170, 200 | 140 | 200 | 2 | 2 bathrooms; 2+1: two bedrooms, combined living room and kitchen, 2 bathrooms; 200 m2 type is two-sided | agency_project_page | https://baghyshaqlawa.net/en/projects/roya-towers |
-| apartment | 200, 220 | 200 | 220 | 3 | 3 bathrooms; 3+1: three bedrooms, living room, kitchen, 3 bathrooms | agency_project_page | https://baghyshaqlawa.net/en/projects/roya-towers |
-| apartment | 260, 320 | 260 | 320 | 4 | 3 bathrooms; 4+1: four bedrooms, living room, kitchen, 3 bathrooms, storage room; Hajisalam gives the area range as 75-310 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
-| apartment | 85, 88, 150, 200, 220 | 85 | 220 | — | Advertised ready units: 85-88 m2 (1 bed), 150 m2 (2 bed), 200-220 m2 (3 bed) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| شوقە | 75, 85, 90 | 75 | 90 | 1 | 2 حەمام؛ 1+1, 3 types: one bedroom, combined living room and kitchen, 2 bathrooms, balcony | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/roya-towers |
+| شوقە | 140, 150, 160, 170, 200 | 140 | 200 | 2 | 2 حەمام؛ 2+1: two bedrooms, combined living room and kitchen, 2 bathrooms; 200 m2 type is two-sided | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/roya-towers |
+| شوقە | 200, 220 | 200 | 220 | 3 | 3 حەمام؛ 3+1: three bedrooms, living room, kitchen, 3 bathrooms | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/roya-towers |
+| شوقە | 260, 320 | 260 | 320 | 4 | 3 حەمام؛ 4+1: four bedrooms, living room, kitchen, 3 bathrooms, storage room; Hajisalam gives the area range as 75-310 m2 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
+| شوقە | 85, 88, 150, 200, 220 | 85 | 220 | — | Advertised ready units: 85-88 m2 (1 bed), 150 m2 (2 bed), 200-220 m2 (3 bed) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Three car-parking floors per tower (Baghy description); Ground floor for commerce/trading (Baghy description)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Three car-parking floors per tower (Baghy description); Ground floor for commerce/trading (Baghy description)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Internet (Baghy tag); City administrative center (Baghy tag); Security (Baghy tag); Supermarket (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Internet (Baghy tag); City administrative center (Baghy tag); Security (Baghy tag); Supermarket (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready apartment 150 m2, 2 bed / 2 bath, 13th floor - homele sale listing | 82,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready apartment 220 m2, 3 bed / 3 bath - homele sale listing | 115,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready apartment 85 m2, 1 bed - homele rent per month | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready furnished apartment 85 m2, 1 bed / 2 bath - homele rent per month | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready furnished apartment 88 m2, 1 bed - homele rent per month | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready apartment 220 m2, 3 bed / 3 bath - homele rent per month | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-| Ready external-view apartment 200 m2, 3 bed / 2 bath - homele rent per month | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$700 Monthly) and sales (https://homele.com/properties/for-sale-and-rent/erbil/roya-tower)
+| Ready apartment 150 m2, 2 bed / 2 bath, 13th floor - homele sale listing | 82,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready apartment 220 m2, 3 bed / 3 bath - homele sale listing | 115,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready apartment 85 m2, 1 bed - homele rent per month | 350 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready furnished apartment 85 m2, 1 bed / 2 bath - homele rent per month | 450 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready furnished apartment 88 m2, 1 bed - homele rent per month | 450 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready apartment 220 m2, 3 bed / 3 bath - homele rent per month | 650 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+| Ready external-view apartment 200 m2, 3 bed / 2 bath - homele rent per month | 700 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele listings: monthly rentals ($350-$700 Monthly) and sales (https://homele.com/properties/for-sale-and-rent/erbil/roya-tower)
 
-### Location and surroundings
-Roya Towers stands in Erbil's 'golden square' near Gulan Street (40m) and the 100m ring road, about 5 minutes from Erbil International Airport and close to Sami Abdulrahman Park, the Saad Abdullah Palace conference centre and the Divan and Rotana hotels (Baghy); Hajisalam places it between the English Village and Italian City 1. Map position (low confidence, from agency map pins): 36.191922, 43.968033. Google Maps: https://www.google.com/maps?q=36.191922,43.968033
+### شوێن و دەوروبەر
+Roya Towers stands in Erbil's 'golden square' near Gulan Street (40m) and the 100m ring road, about 5 minutes from Erbil International Airport and close to Sami Abdulrahman Park, the Saad Abdullah Palace conference centre and the Divan and Rotana hotels (Baghy); Hajisalam places it between the English Village and Italian City 1.
+شوێن لەسەر نەخشە: 36.191922, 43.968033 (متمانە: نزم) — https://www.google.com/maps?q=36.191922,43.968033
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڕۆیا تاوەرز پڕۆژەیەکی نیشتەجێبوونی تەواوکراوە لە هەولێر کە لە پێنج تاوەری شوقە پێکدێت و کۆمپانیای نیو کرمانج دروستی کردووە. کاری دروستکردن لە ساڵی ٢٠١٤ دەستی پێکرد و لە کۆتایی ساڵی ٢٠١٧دا تەواو بوو. تاوەرەکان لەو ناوچەیەدان کە بە چوارگۆشەی زێڕین ناسراوە، نزیک شەقامی گوڵان (شەقامی ٤٠ مەتری) و شەقامی ١٠٠ مەتری، لە نێوان گوندی ئینگلیزی و شاری ئیتاڵی ١. شوێنەکە نزیکەی پێنج خولەک لە فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە و نزیکە لە پارکی سامی عەبدولڕەحمان، کۆشکی سەعد عەبدوڵڵا بۆ کۆنفرانس و هوتێلەکانی دیوان و ڕۆتانا. هەر تاوەرێک ٢٩ نهۆمی نیشتەجێبوونی هەیە، لەگەڵ سێ نهۆمی پارکینگ و نهۆمێکی زەمینی بۆ بازرگانی. شوقەکانی یەک ژووری نووستن بە ڕووبەری ٧٥، ٨٥ و ٩٠ م² هۆڵی دانیشتن و چێشتخانەی تێکەڵ، دوو حەمام و بالکۆنیان هەیە. شوقەکانی دوو ژووری نووستن بە ڕووبەری ١٤٠، ١٥٠، ١٦٠، ١٧٠ و ٢٠٠ م² هۆڵی دانیشتن و چێشتخانەی تێکەڵ و دوو حەمامیان هەیە، و شوقەی ٢٠٠ م² دوو ڕووی هەیە. شوقەکانی سێ ژووری نووستن بە ڕووبەری ٢٠٠ و ٢٢٠ م² هۆڵی دانیشتن، چێشتخانە و سێ حەمامیان هەیە، و شوقەکانی چوار ژووری نووستن بە ڕووبەری ٢٦٠ و ٣٢٠ م² سێ حەمام و ژوورێکی کۆگایان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 رويا تاورز مجمع سكني مكتمل يتكون من خمسة أبراج للشقق في أربيل، شيّدته شركة نيو كرمانج. بدأ البناء في عام 2014 واكتمل في أواخر عام 2017. تقع الأبراج في المنطقة المعروفة بالمربع الذهبي، قرب شارع كولان (شارع 40 متر) وشارع 100 متر، بين القرية الإنجليزية والمدينة الإيطالية 1. ويبعد الموقع نحو خمس دقائق عن مطار أربيل الدولي، وهو قريب من متنزه سامي عبد الرحمن وقصر سعد عبد الله للمؤتمرات وفندقي ديوان وروتانا. يضم كل برج 29 طابقاً سكنياً، إضافة إلى ثلاثة طوابق لمواقف السيارات وطابق أرضي تجاري. وتضم الشقق بغرفة نوم واحدة بمساحات 75 و85 و90 م² صالة معيشة ومطبخاً مفتوحين على بعضهما وحمامين وشرفة. وتضم الشقق بغرفتي نوم بمساحات 140 و150 و160 و170 و200 م² صالة معيشة ومطبخاً مفتوحين وحمامين، والشقة بمساحة 200 م² منها بواجهتين. أما الشقق بثلاث غرف نوم بمساحتي 200 و220 م² فتضم صالة معيشة ومطبخاً وثلاثة حمامات، وتضم الشقق بأربع غرف نوم بمساحتي 260 و320 م² ثلاثة حمامات وغرفة تخزين.
 
 ### 3. English
 Roya Towers is a completed residential complex of five apartment towers in Erbil, built by New Krmanj company. Construction started in 2014 and was finished in late 2017. The towers stand in the area known as the golden square, near Gulan Street (the 40m road) and the 100m road, between the English Village and Italian City 1. The site is about five minutes from Erbil International Airport and close to Sami Abdulrahman Park, the Saad Abdullah Palace conference centre and the Divan and Rotana hotels. Each tower has 29 residential floors, plus three car-parking floors and a ground floor for commerce. One-bedroom apartments of 75, 85 and 90 m² have a combined living room and kitchen, two bathrooms and a balcony. Two-bedroom apartments of 140, 150, 160, 170 and 200 m² have a combined living room and kitchen and two bathrooms, and the 200 m² type faces two sides. Three-bedroom apartments of 200 and 220 m² have a living room, a kitchen and three bathrooms, and four-bedroom apartments of 260 and 320 m² have three bathrooms and a storage room.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower | Area listing page 'Roya Tower' (5 pages; first read): ready apartments 85-220 m2; sale USD 82,500 (150 m2) and USD 115,000 (220 m2); rents USD 350-700/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/roya-towers | Roya Towers: built by New Krmanj company 2014 - late 2017; golden square near Gulan (40m) and 100m roads, 5 min to airport, landmarks; 5 towers x 29 floors + 3 parking floors + commercial ground floor; 1,180 apartments; unit schedule 1+1 75/85/90, 2+1 140-200, 3+1 200/220, 4+1 260/320 with room composition; facility tags | — | 2026-11-07 | high |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/roy-tower/ | MRF Roya Tower: between English Village and Italian City 1; 1,230 units; 75-310 m2; 32 floors; 1-4 bedrooms; one old listing card labelled 'Zanyari' (119 m2) | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower | Area listing page 'Roya Tower' (5 pages; first read): ready apartments 85-220 m2; sale USD 82,500 (150 m2) and USD 115,000 (220 m2); rents USD 350-700/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/roya-towers | Roya Towers: built by New Krmanj company 2014 - late 2017; golden square near Gulan (40m) and 100m roads, 5 min to airport, landmarks; 5 towers x 29 floors + 3 parking floors + commercial ground floor; 1,180 apartments; unit schedule 1+1 75/85/90, 2+1 140-200, 3+1 200/220, 4+1 260/320 with room composition; facility tags | — | 2026-11-07 | بەرز |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/roy-tower/ | MRF Roya Tower: between English Village and Italian City 1; 1,230 units; 75-310 m2; 32 floors; 1-4 bedrooms; one old listing card labelled 'Zanyari' (119 m2) | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, golden-square location, apartment category (Baghy, Hajisalam, homele)
    - Completed status (Baghy; homele ready units)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - New Krmanj company, 2014 start, late-2017 completion (Baghy)
    - 5 towers, 29 floors + 3 parking floors, unit schedule (Baghy)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Units 1,180 vs 1,230
    - Floors 29 (+3 parking) vs 32
    - Developer New Krmanj vs 'MRF' branding
@@ -115,18 +118,18 @@ First-pass research only (at most one web search for this project).
    - floors: 29 floors + 3 parking floors + commercial ground floor (https://baghyshaqlawa.net/en/projects/roya-towers); 32 floors (https://hajisalam.com/en/roy-tower/) → 29 residential floors adopted; 32 is consistent with 29 + 3 parking floors.
    - developer / branding: New Krmanj company (https://baghyshaqlawa.net/en/projects/roya-towers); 'MRF Roya Tower' (no developer field) (https://hajisalam.com/en/roy-tower/) → New Krmanj kept as the named builder; link to MRF Group not explained by any source.
    - largest 4+1 size: 320 m2 (https://baghyshaqlawa.net/en/projects/roya-towers); range up to 310 m2 (https://hajisalam.com/en/roy-tower/) → Baghy's detailed schedule adopted.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Developer prices
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether MRF Group had a role (Hajisalam name only)
    - Hajisalam listing card labelled 'Zanyari' appears unrelated to the project
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "roya-towers",

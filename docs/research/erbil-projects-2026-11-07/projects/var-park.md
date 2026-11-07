@@ -1,131 +1,133 @@
 <!-- rendered -->
 # Var Park — — — —
-Project ID: var-park | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: var-park | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Var Park | High – Paya, Baghy, homele | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| City | Erbil (urban fringe, Pirmam road) | High – Paya, Baghy | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
-| District / Area | Masyaf/Pirmam Road near Shaways, behind Future City | Medium – Paya and Baghy name the same road with different landmarks | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
-| Developer | Golden Pelf Company | Medium – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
-| Project Category | Residential apartments (shops/restaurant units in listings) | Medium – Paya, Baghy; homele listings | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| Total Land Area | Not verified (Paya: 'built-up area 33,535.93 m2', 'building area 15,672 m2') | Low – Labels ambiguous; not stated as land area | https://paya-realestate.com/en/projects/var-park-153 |
-| Number of Buildings / Towers | 8 | Low – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Under construction | Medium – Paya 'Constructing'; homele off-plan listings (one shop listed 'Ready') | https://paya-realestate.com/en/projects/var-park-153 ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Disputed – pins: 36.2465313, 44.0534375; 36.247984, 44.076921 | Low – agency map pins disagree (up to 2.1 km apart) | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
-| Alternative names | None found | Low – — | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Up to 40 | Low – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low | — |
+| ناوی پڕۆژە | Var Park | بەرز – Paya, Baghy, homele | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| شار | Erbil (urban fringe, Pirmam road) | بەرز – Paya, Baghy | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
+| ناوچە / گەڕەک | Masyaf/Pirmam Road near Shaways, behind Future City | مامناوەند – Paya and Baghy name the same road with different landmarks | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
+| گەشەپێدەر (کۆمپانیا) | Golden Pelf Company | مامناوەند – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential apartments (shops/restaurant units in listings) | مامناوەند – Paya, Baghy; homele listings | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە — (Paya: 'built-up area 33,535.93 m2', 'building area 15,672 m2') | نزم – Labels ambiguous; not stated as land area | https://paya-realestate.com/en/projects/var-park-153 |
+| ژمارەی باڵەخانە / تاوەر | 8 | نزم – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | مامناوەند – Paya 'Constructing'; homele off-plan listings (one shop listed 'Ready') | https://paya-realestate.com/en/projects/var-park-153 ; https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | ناکۆکی لەسەرە — pins: 36.2465313, 44.0534375; 36.247984, 44.076921 | نزم – agency map pins disagree (up to 2.1 km apart) | https://paya-realestate.com/en/projects/var-park-153 ; https://baghyshaqlawa.net/en/projects/var-park |
+| ناوە جێگرەوەکان | None found | نزم | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Up to 40 | نزم – Paya only | https://paya-realestate.com/en/projects/var-park-153 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified (Paya: 'built-up area 33,535.93 m2', 'building area 15,672 m2') | Labels ambiguous; not stated as land area | https://paya-realestate.com/en/projects/var-park-153 |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 8 | Paya only | https://paya-realestate.com/en/projects/var-park-153 |
-| Floors per building | Up to 40 | Paya only | https://paya-realestate.com/en/projects/var-park-153 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە — (Paya: 'built-up area 33,535.93 m2', 'building area 15,672 m2') | Labels ambiguous; not stated as land area | https://paya-realestate.com/en/projects/var-park-153 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 8 | Paya only | https://paya-realestate.com/en/projects/var-park-153 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | Up to 40 | Paya only | https://paya-realestate.com/en/projects/var-park-153 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 44.92 | 44.92 | 44.92 | 0 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/var-park-153 |
-| apartment | 82.73, 84.5 | 82.73 | 84.5 | 1 | 1 bathrooms; 1+1 | agency_project_page | https://paya-realestate.com/en/projects/var-park-153 |
-| apartment | 129.36, 134.86 | 129.36 | 134.86 | 2 | 2 bathrooms; 2+1 | agency_project_page | https://paya-realestate.com/en/projects/var-park-153 |
-| apartment | 163.42 | 163.42 | 163.42 | 3 | 3 bathrooms; 3+1 | agency_project_page | https://paya-realestate.com/en/projects/var-park-153 |
-| apartment | 129 | 129 | 129 | 2 | 2 bathrooms; Off-plan, long-term instalments | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| shop | 94, 189 | 94 | 189 | — | 94 m2 shop listed 'Ready'; 189 m2 restaurant unit off-plan | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| ستۆدیۆ | 44.92 | 44.92 | 44.92 | 0 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/var-park-153 |
+| شوقە | 82.73, 84.5 | 82.73 | 84.5 | 1 | 1 حەمام؛ 1+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/var-park-153 |
+| شوقە | 129.36, 134.86 | 129.36 | 134.86 | 2 | 2 حەمام؛ 2+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/var-park-153 |
+| شوقە | 163.42 | 163.42 | 163.42 | 3 | 3 حەمام؛ 3+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/var-park-153 |
+| شوقە | 129 | 129 | 129 | 2 | 2 حەمام؛ Off-plan, long-term instalments | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| دوکان | 94, 189 | 94 | 189 | — | 94 m2 shop listed 'Ready'; 189 m2 restaurant unit off-plan | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
 
-**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 6 units, studio 44.92 m² to 163.42 m² (Paya) (https://paya-realestate.com/en/projects/var-park-153)
+**نەخشە و پلانی نهۆمەکان:** Blueprints listed ('View Blueprint') for 6 units, studio 44.92 m² to 163.42 m² (Paya) (https://paya-realestate.com/en/projects/var-park-153)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Outdoor swimming pool (Paya); Gym (Paya); Kids play area / playground (Paya, Baghy); Mosque (Paya); Supermarket (Paya); Cafeteria and restaurant (Paya); Public garden / green areas (Paya, Baghy); Car parking and covered parking (Paya, Baghy); Electrical generator / 24-hour electricity (Paya, Baghy); Pre-installed kitchens (Paya); Maintenance (Paya); Security (Paya, Baghy); Sewer connection (Paya); Pets allowed (Paya)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Outdoor swimming pool (Paya); Gym (Paya); Kids play area / playground (Paya, Baghy); Mosque (Paya); Supermarket (Paya); Cafeteria and restaurant (Paya); Public garden / green areas (Paya, Baghy); Car parking and covered parking (Paya, Baghy); Electrical generator / 24-hour electricity (Paya, Baghy); Pre-installed kitchens (Paya); Maintenance (Paya); Security (Paya, Baghy); Sewer connection (Paya); Pets allowed (Paya)
 
-**Unverified claims:** 'Second tallest tower project in Iraq' (Paya marketing claim)
+**بانگەشەی پشتڕاست نەکراوە:** 'Second tallest tower project in Iraq' (Paya marketing claim)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 44.92 m2 - agency project-page off-plan price | 36,385 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
-| 1 bed 82.73 m2 - agency project-page off-plan price | 65,357 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
-| 2 bed 129.36 m2 - agency project-page off-plan price | 99,607 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
-| 3 bed 163.42 m2 - agency project-page off-plan price | 122,565 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
-| 2 bed 129 m2 - off-plan market listing, long-term instalments | 91,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| Shop 94 m2 'Ready' - market listing | 290,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-| Restaurant unit 189 m2 off-plan - market listing | 495,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele off-plan listing tagged 'Installment': 'Long Term Installment' (https://homele.com/properties/for-sale-and-rent/erbil/var-park)
+| Studio 44.92 m2 - agency project-page off-plan price | 36,385 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
+| 1 bed 82.73 m2 - agency project-page off-plan price | 65,357 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
+| 2 bed 129.36 m2 - agency project-page off-plan price | 99,607 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
+| 3 bed 163.42 m2 - agency project-page off-plan price | 122,565 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/var-park-153 |
+| 2 bed 129 m2 - off-plan market listing, long-term instalments | 91,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| Shop 94 m2 'Ready' - market listing | 290,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+| Restaurant unit 189 m2 off-plan - market listing | 495,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele off-plan listing tagged 'Installment': 'Long Term Installment' (https://homele.com/properties/for-sale-and-rent/erbil/var-park)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Var Park is on Masyaf (Massif/Pirmam) Road near Shaways, north-east of central Erbil (Paya); Baghy Shaqlawa places it on Pirmam Road behind Future City. Paya gives travel times of about 20 minutes to the Erbil Citadel and 18 minutes to Erbil International Airport. Published map pins for this project disagree, so no position is given.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڤار پارک (Var Park) پڕۆژەیەکی شوقەی نیشتەجێبوونە کە لە قۆناغی دروستکردندایە لەسەر ڕێگای مەسیف (پیرمام) لە نزیک شەوەیس لە هەولێر، لە پشت فیوچەر سیتی. گەشەپێدەری پڕۆژەکە کۆمپانیای گۆڵدن پێلفە. پڕۆژەکە لە هەشت باڵەخانە پێکدێت کە بەرزییان تا ٤٠ نهۆم دەگات. شوێنەکە نزیکەی ٢٠ خولەک لە قەڵای هەولێر و ١٨ خولەک لە فڕۆکەخانەی نێودەوڵەتیی هەولێرەوە دوورە. جۆرەکانی یەکە بریتین لە ستۆدیۆیەکی ٤٤.٩٢ م² بە یەک گەرماو، شوقەی یەک ژووری نووستن و یەک گەرماو بە ڕووبەری ٨٢.٧٣ و ٨٤.٥ م²، شوقەی دوو ژووری نووستن و دوو گەرماو بە ڕووبەری ١٢٩.٣٦ و ١٣٤.٨٦ م² و شوقەیەکی سێ ژووری نووستن و سێ گەرماو بە ڕووبەری ١٦٣.٤٢ م². پڕۆژەکە یەکەی بازرگانیشی تێدایە، لەوانە دوکانێکی ٩٤ م² و یەکەیەکی چێشتخانەی ١٨٩ م². خزمەتگوزارییە پلاندانراوەکان بریتین لە مەلەوانگەی ئاشکرا، هۆڵی وەرزش، شوێنی یاری منداڵان، مزگەوت، سوپەرمارکێت، کافتریا و چێشتخانە، باخچەی گشتی و شوێنی سەوز، پارکینگی داپۆشراو، مۆلیدەی کارەبا بۆ کارەبای ٢٤ کاتژمێری، مەتبەخی ئامادەکراو، چاککردنەوە، پاسەوانی و هێڵی ئاوەڕۆ.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فار بارك (Var Park) مشروع شقق سكنية قيد الإنشاء على طريق مصيف (پيرمام) قرب شاويس في أربيل، خلف فيوچر سيتي. المطوّر هو شركة گولدن پيلف. يتكوّن المشروع من ثمانية مبانٍ يصل ارتفاعها إلى 40 طابقاً. يبعد الموقع نحو 20 دقيقة عن قلعة أربيل و18 دقيقة عن مطار أربيل الدولي. تشمل أنواع الوحدات استوديو بمساحة 44.92 م² بحمام واحد، وشققاً بغرفة نوم واحدة وحمام واحد بمساحة 82.73 و84.5 م²، وشققاً بغرفتي نوم وحمامين بمساحة 129.36 و134.86 م²، وشقة بثلاث غرف نوم وثلاثة حمامات بمساحة 163.42 م². ويضم المشروع أيضاً وحدات تجارية، منها محل بمساحة 94 م² ووحدة مطعم بمساحة 189 م². وتشمل المرافق المخطط لها مسبحاً خارجياً وصالة رياضية ومنطقة ألعاب للأطفال ومسجداً وسوبرماركت وكافتيريا ومطعماً وحديقة عامة ومساحات خضراء ومواقف مغطاة للسيارات ومولداً كهربائياً لتوفير الكهرباء على مدار 24 ساعة ومطابخ مجهزة مسبقاً والصيانة والحراسة وربطاً بشبكة الصرف الصحي.
 
 ### 3. English
 Var Park is a residential apartment project under construction on Masyaf (Pirmam) Road near Shaways in Erbil, behind Future City. The developer is Golden Pelf Company. The project consists of eight buildings rising up to 40 floors. The site is about 20 minutes from Erbil Citadel and 18 minutes from Erbil International Airport. Unit types include a 44.92 m² studio with one bathroom, one-bedroom apartments of 82.73 and 84.5 m² with one bathroom, two-bedroom apartments of 129.36 and 134.86 m² with two bathrooms, and a three-bedroom apartment of 163.42 m² with three bathrooms. The project also includes commercial units, among them a 94 m² shop and a 189 m² restaurant unit. Planned facilities include an outdoor swimming pool, a gym, a children's play area, a mosque, a supermarket, a cafeteria and restaurant, a public garden and green areas, covered parking, an electrical generator for 24-hour electricity, pre-installed kitchens, maintenance, security and a sewer connection.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/var-park | 3 listings: off-plan 129 m2 2 bed USD 91,000; ready 94 m2 shop USD 290,000; off-plan 189 m2 restaurant USD 495,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/var-park-153 | Status Constructing; developer Golden Pelf Company; Masyaf Road near Shaways; built-up area 33,535.93 m2, building area 15,672 m2; 8 buildings up to 40 floors; 6 unit sizes 44.92-163.42 m2 with prices USD 36,385-122,565; amenity tags | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/var-park | Address Pirmam Road behind Future City; apartments; features | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/var-park | 3 listings: off-plan 129 m2 2 bed USD 91,000; ready 94 m2 shop USD 290,000; off-plan 189 m2 restaurant USD 495,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/var-park-153 | Status Constructing; developer Golden Pelf Company; Masyaf Road near Shaways; built-up area 33,535.93 m2, building area 15,672 m2; 8 buildings up to 40 floors; 6 unit sizes 44.92-163.42 m2 with prices USD 36,385-122,565; amenity tags | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/var-park | Address Pirmam Road behind Future City; apartments; features | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Pirmam/Masyaf road location and apartment category (Paya + Baghy)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Golden Pelf Company (Paya)
    - 8 buildings up to 40 floors (Paya)
    - Built-up 33,535.93 m2 / building 15,672 m2 (Paya)
    - Status Constructing (Paya; homele off-plan listings consistent)
    - Unit sizes and prices (Paya)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total units
    - Land area (clearly labelled)
    - Dates
    - Coordinates
    - Kurdish/Arabic names
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya prices undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - in_erbil_city='edge': Pirmam/Masyaf road near Shaways, about 20 min from the Citadel - urban fringe within the brief's Pirmam/Massif approach
    - Whether 33,535.93 m2 is the plot area (Paya labels it 'built-up area')
    - A 94 m2 shop is advertised as 'Ready' while the project is under construction - possibly a completed first building
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "var-park",

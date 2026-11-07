@@ -1,105 +1,108 @@
 <!-- rendered -->
 # Plus Life — پلاس لایف — بلس لايف
-Project ID: plus-life | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: plus-life | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Plus Life | Medium – Baghy project page; named as 'Plus Life Apartments' on Paya Parosh page; 'plus life' towers in a classified ad (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
-| City | Erbil | High – Baghy, Paya, OpenSooq ad | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
-| District / Area | Koya Road / Kasnazan Road (opposite Parosh Twin Towers) | Medium – Baghy 'Koya Road'; Paya Parosh page 'Kasnazan Road - Opposite Plus Life Apartments'; classified ad mentions a Koya Road view (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
-| Developer | Not verified | Low – Not named; first-pass and second-pass web searches found no developer | — |
-| Project Category | Residential (apartments) | Medium – Baghy property type; Paya 'Apartments'; classified ad for an apartment (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – Count not stated; a classified ad (search summary) refers to 'Plus Life towers' | https://iq.opensooq.com/ar/search/281486950 |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Not verified | Low – No source states status | — |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.20481, 44.120751 — Google Maps: https://www.google.com/maps?q=36.20481,44.120751 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/plus-life |
-| Alternative names | پلاس لایف; Plus Life Apartments | Medium – Canonical alias; Paya Parosh page | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Plus Life | مامناوەند – Baghy project page; named as 'Plus Life Apartments' on Paya Parosh page; 'plus life' towers in a classified ad (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
+| شار | هەولێر | بەرز – Baghy, Paya, OpenSooq ad | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
+| ناوچە / گەڕەک | Koya Road / Kasnazan Road (opposite Parosh Twin Towers) | مامناوەند – Baghy 'Koya Road'; Paya Parosh page 'Kasnazan Road - Opposite Plus Life Apartments'; classified ad mentions a Koya Road view (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; first-pass and second-pass web searches found no developer | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | مامناوەند – Baghy property type; Paya 'Apartments'; classified ad for an apartment (search summary) | https://baghyshaqlawa.net/en/projects/plus-life ; https://paya-realestate.com/en/projects/parosh-twin-towers-167 ; https://iq.opensooq.com/ar/search/281486950 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Count not stated; a classified ad (search summary) refers to 'Plus Life towers' | https://iq.opensooq.com/ar/search/281486950 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – No source states status | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.20481, 44.120751 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.20481,44.120751 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/plus-life |
+| ناوە جێگرەوەکان | پلاس لایف; Plus Life Apartments | مامناوەند – Canonical alias; Paya Parosh page | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Count not stated; a classified ad (search summary) refers to 'Plus Life towers' | https://iq.opensooq.com/ar/search/281486950 |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Count not stated; a classified ad (search summary) refers to 'Plus Life towers' | https://iq.opensooq.com/ar/search/281486950 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | Not verified | — | — | — | Baghy property type 'Apartment'; no sizes published | agency_project_page | https://baghyshaqlawa.net/en/projects/plus-life |
-| apartment | 192 | 192 | 192 | 3 | 3+1 apartment with Koya Road view in a classified ad (search summary, page not opened) | market_listing | https://iq.opensooq.com/ar/search/281486950 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Baghy property type 'Apartment'; no sizes published | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/plus-life |
+| شوقە | 192 | 192 | 192 | 3 | 3+1 apartment with Koya Road view in a classified ad (search summary, page not opened) | ڕیکلامی یەکەیەکی دیاریکراو | https://iq.opensooq.com/ar/search/281486950 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Green areas (Baghy tag); Gym / fitness center (Baghy tags); Public garden (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Security (Baghy tag); Parking (Baghy tag); Green areas (Baghy tag); Gym / fitness center (Baghy tags); Public garden (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Plus Life lies on the Koya Road side of Erbil (Baghy). Paya's Parosh Twin Towers page places that project on Kasnazan Road opposite 'Plus Life Apartments', so Plus Life fronts the Kasnazan Road approach. A classified ad (search summary) describes an apartment in the Plus Life towers with a view of Koya Road. Map position (low confidence, from agency map pins): 36.20481, 44.120751. Google Maps: https://www.google.com/maps?q=36.20481,44.120751
+### شوێن و دەوروبەر
+Plus Life lies on the Koya Road side of Erbil (Baghy). Paya's Parosh Twin Towers page places that project on Kasnazan Road opposite 'Plus Life Apartments', so Plus Life fronts the Kasnazan Road approach. A classified ad (search summary) describes an apartment in the Plus Life towers with a view of Koya Road.
+شوێن لەسەر نەخشە: 36.20481, 44.120751 (متمانە: نزم) — https://www.google.com/maps?q=36.20481,44.120751
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 پلاس لایف (Plus Life)، کە بە پلاس لایف ئەپارتمێنتسیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لە لای ڕێگای کۆیەی شار هەڵکەوتووە، و پڕۆژەی پارۆش توین تاوەرز لەسەر ڕێگای کەسنەزان بەرامبەری دەکەوێت. پڕۆژەکە لە شوقەی نیشتەجێبوون پێکدێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 بلس لايف (Plus Life)، المعروف أيضاً باسم بلس لايف للشقق، مشروع سكني للشقق في أربيل. يقع المشروع على جانب طريق كويه من المدينة، ويقع مقابله مشروع باروش توين تاورز على طريق كسنزان. ويتكوّن المشروع من شقق سكنية.
 
 ### 3. English
 Plus Life, also known as Plus Life Apartments, is a residential apartment project in Erbil. It is located on the Koya Road side of the city, and the Parosh Twin Towers project on Kasnazan Road stands opposite it. The project consists of apartments.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/parosh-twin-towers-167 | Parosh Twin Towers page (different project): area field 'Kasnazan Road - Opposite Plus Life Apartments' - only a location reference for Plus Life | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/plus-life | Project page: address Koya Road; property type Apartment; feature tags; nearest branch Koya Road Branch; no description, sizes or status | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/parosh-twin-towers-167 | Parosh Twin Towers page (different project): area field 'Kasnazan Road - Opposite Plus Life Apartments' - only a location reference for Plus Life | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/plus-life | Project page: address Koya Road; property type Apartment; feature tags; nearest branch Koya Road Branch; no description, sizes or status | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| iq.opensooq.com | https://iq.opensooq.com/ar/search/281486950 | Search summary, page not opened: classified ad for a 3+1 apartment of 192 m2 in the 'plus life' towers with a Koya Road view, posted by an Erbil real-estate office; no developer, unit count, status or completion date | — | 2026-11-07 | low |
+| iq.opensooq.com | https://iq.opensooq.com/ar/search/281486950 | Search summary, page not opened: classified ad for a 3+1 apartment of 192 m2 in the 'plus life' towers with a Koya Road view, posted by an Erbil real-estate office; no developer, unit count, status or completion date | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Plus Life" Erbil apartments Koya Road”; “"پلاس لایف" OR "بلس لايف" هەولێر أربيل” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Plus Life" Erbil apartments Koya Road»؛ «"پلاس لایف" OR "بلس لايف" هەولێر أربيل» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil, apartment category and Koya Road location (Baghy project page; Paya Parosh page reference; OpenSooq classified ad, search summary)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Project existence, Koya Road address, apartment type and feature tags (Baghy only)
    - 'Plus Life Apartments' opposite Parosh Twin Towers on Kasnazan Road (Paya, Parosh page)
    - 192 m2 3+1 apartment with Koya Road view in 'Plus Life towers' (OpenSooq ad, search summary, page not opened)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status
    - Buildings, floors, units
@@ -107,15 +110,15 @@ Second verification pass 2026-11-07: queries “"Plus Life" Erbil apartments Koy
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No Paya, Miran, Hajisalam or homele project page found; first-pass search returned nothing; second pass found only one classified ad
    - Koya Road (Baghy) vs Kasnazan Road (Paya reference) - likely the same corridor, not stated by sources
-   - Second verification pass (2026-11-07): new evidence. A classified ad (search summary) describes a 192 m2 3+1 apartment in the 'Plus Life towers' with a Koya Road view, independently confirming the project's identity and Koya Road location; developer, status and size still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. A classified ad (search summary) describes a 192 m2 3+1 apartment in the 'Plus Life towers' with a Koya Road view, independently confirming the project's identity and Koya Road location; developer, status and size still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "plus-life",

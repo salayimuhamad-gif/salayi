@@ -1,108 +1,110 @@
 <!-- rendered -->
 # Rasan Towers — — — —
-Project ID: rasan-towers | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: rasan-towers | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Rasan Towers | Low – Only a homele area label; one web search found nothing | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| City | Erbil | Medium – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| District / Area | Not verified | Low – No street or landmark published | — |
-| Developer | Not verified | Low – No source names one; one web search found none | — |
-| Project Category | Residential (apartments) | Low – Based on apartment listings | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Name says 'Towers'; no count stated | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Not verified (all first-page listings 'Ready', many for rent) | Low – Market listings only; shows at least part is built and occupied | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None mentioned | — |
+| ناوی پڕۆژە | Rasan Towers | نزم – Only a homele area label; one web search found nothing | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| شار | هەولێر | مامناوەند – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No street or landmark published | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one web search found none | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | نزم – Based on apartment listings | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Name says 'Towers'; no count stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Market listings only; shows at least part is built and occupied | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Name says 'Towers'; no count stated | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Name says 'Towers'; no count stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 74, 110, 115, 150 | 74 | 150 | — | All first-page listings 'Ready': 74 m2 1 bed/1 bath; 110 m2 1 bed/1 bath and 2 bed/2 bath; 115 m2 2 bed/1-2 bath (one furnished); 150 m2 3 bed/2 bath ('3+1') | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| شوقە | 74, 110, 115, 150 | 74 | 150 | — | All first-page listings 'Ready': 74 m2 1 bed/1 bath; 110 m2 1 bed/1 bath and 2 bed/2 bath; 115 m2 2 bed/1-2 bath (one furnished); 150 m2 3 bed/2 bath ('3+1') | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready apartment 150 m2, 3 bed / 2 bath - asking price (homele listing) | 66,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 150 m2 (3+1) - asking price (homele listing) | 67,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 110 m2, 2 bed / 2 bath, instalment listing labelled '(Down payment)' (homele listing) | 68,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 74 m2, 1 bed / 1 bath - monthly rent (homele listing) | 250 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 115 m2, 2 bed - monthly rent (homele listings: USD 350 x2, USD 400 x2 incl. furnished) | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 110 m2, 1 bed / 1 bath - monthly rent (homele listing) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-| Ready apartment 150 m2 (3+1) - monthly rent (homele listing) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$500 Monthly) and a sale labelled 'Apartment in Installment' (https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers)
+| Ready apartment 150 m2, 3 bed / 2 bath - asking price (homele listing) | 66,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 150 m2 (3+1) - asking price (homele listing) | 67,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 110 m2, 2 bed / 2 bath, instalment listing labelled '(Down payment)' (homele listing) | 68,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 74 m2, 1 bed / 1 bath - monthly rent (homele listing) | 250 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 115 m2, 2 bed - monthly rent (homele listings: USD 350 x2, USD 400 x2 incl. furnished) | 350 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 110 m2, 1 bed / 1 bath - monthly rent (homele listing) | 400 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+| Ready apartment 150 m2 (3+1) - monthly rent (homele listing) | 500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele listings: monthly rentals ($350-$500 Monthly) and a sale labelled 'Apartment in Installment' (https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Homele lists 'Rasan Towers' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڕاسان تاوەرز (Rasan Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر. ڕووبەری شوقەکانی پڕۆژەکە لە ٧٤ م²ەوە تا ١٥٠ م² دەگات. شوقەکانی ٧٤ م² یەک ژووری نووستن و یەک حەمامیان هەیە. شوقەکانی ١١٠ م² یان یەک ژووری نووستن و یەک حەمامیان هەیە یان دوو ژووری نووستن و دوو حەمام، و شوقەکانی ١١٥ م² دوو ژووری نووستنیان هەیە. شوقەکانی ١٥٠ م² سێ ژووری نووستن و دوو حەمامیان هەیە. هەندێک لە شوقەکانی ڕاسان تاوەرز بە کەلوپەلەوەن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 راسان تاورز (Rasan Towers) مشروع سكني للشقق في مدينة أربيل. تتراوح مساحات الشقق في المشروع بين 74 و150 م². وتضم الشقق بمساحة 74 م² غرفة نوم واحدة وحماماً واحداً. أما الشقق بمساحة 110 م² فتضم إما غرفة نوم واحدة وحماماً واحداً أو غرفتي نوم وحمامين، وتضم الشقق بمساحة 115 م² غرفتي نوم. وتضم الشقق بمساحة 150 م² ثلاث غرف نوم وحمامين. وبعض الشقق في راسان تاورز مفروشة.
 
 ### 3. English
 Rasan Towers is a residential apartment project in Erbil. Apartments in the project range from 74 m² to 150 m². The 74 m² apartments have one bedroom and one bathroom. Apartments of 110 m² have either one bedroom and one bathroom or two bedrooms and two bathrooms, and apartments of 115 m² have two bedrooms. Apartments of 150 m² have three bedrooms and two bathrooms. Some apartments in Rasan Towers are furnished.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers | Area page 'Rasan Towers, Erbil' (6 result pages; first page read): ten Ready apartments 74-150 m2; rents USD 250-500/month; sale USD 66,500-68,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers | Area page 'Rasan Towers, Erbil' (6 result pages; first page read): ten Ready apartments 74-150 m2; rents USD 250-500/month; sale USD 66,500-68,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence of 'Rasan Towers' in Erbil; ready apartments 74-150 m2, rents USD 250-500/month, sale USD 66,500-68,000 (homele first page of 6)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Exact location
    - Land area
@@ -111,14 +113,14 @@ First-pass research only (at most one web search for this project).
    - Facilities
    - Official unit types and sizes
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - No project page on Paya, Miran, Baghy Shaqlawa or Haji Salam in the evidence pack; one WebSearch ('"Rasan Towers" Erbil') returned nothing about the project
    - Only the first of six homele result pages was captured; other sizes and prices may exist
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "rasan-towers",

@@ -1,117 +1,120 @@
 <!-- rendered -->
 # Lana City — لانە سیتی — لانه سيتي
-Project ID: lana-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: lana-city | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Lana City | High – Paya, Baghy, Haji Salam, homele | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city ; https://hajisalam.com/en/lana-city/ |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city |
-| District / Area | Koya Road, behind Atlantic City / Majdi Land | Medium – Paya and Baghy agree; Haji Salam says Kasnazan Road | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city ; https://hajisalam.com/en/lana-city/ |
-| Developer | Not verified | Low – No primary page names one; a Roya search snippet links Lana City's builder to Remas City (Artima) - not confirmed | https://roya-iq.com/remas-city |
-| Project Category | Residential (houses, villas, apartments) | High – Paya, Baghy, Haji Salam | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 5 apartment buildings (plus houses and villas) | Low – Paya only | https://paya-realestate.com/en/projects/lana-city-294 |
-| Total Residential Units | 519 houses/villas (464 + 55) + about 200 apartments (about 719; total not stated) | Medium – Paya (464 + 55, ~200) and Haji Salam (519 / 200) agree | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Construction Status | Completed | Medium – Paya status Completed; homele ready house; Haji Salam sale listing ~5 years old; Paya text says 'developing' | https://paya-realestate.com/en/projects/lana-city-294 ; https://homele.com/properties/for-sale-and-rent/erbil/lana-city ; https://hajisalam.com/en/lana-city/ |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.220751, 44.145889 — Google Maps: https://www.google.com/maps?q=36.220751,44.145889 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city |
-| Alternative names | لانە ستی; لانه ستي | Medium – Paya area label (Arabic script) | https://paya-realestate.com/en/projects/lana-city-294 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 10 (apartment buildings); houses 1-2 floors | Low – Paya (10 floors) and Haji Salam (1-2 floors) | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Lana City | بەرز – Paya, Baghy, Haji Salam, homele | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city ; https://hajisalam.com/en/lana-city/ |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city |
+| ناوچە / گەڕەک | Koya Road, behind Atlantic City / Majdi Land | مامناوەند – Paya and Baghy agree; Haji Salam says Kasnazan Road | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city ; https://hajisalam.com/en/lana-city/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No primary page names one; a Roya search snippet links Lana City's builder to Remas City (Artima) - not confirmed | https://roya-iq.com/remas-city |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses, villas, apartments) | بەرز – Paya, Baghy, Haji Salam | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 5 apartment buildings (plus houses and villas) | نزم – Paya only | https://paya-realestate.com/en/projects/lana-city-294 |
+| کۆی یەکە نیشتەجێبوونەکان | 519 houses/villas (464 + 55) + about 200 apartments (about 719; total not stated) | مامناوەند – Paya (464 + 55, ~200) and Haji Salam (519 / 200) agree | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya status Completed; homele ready house; Haji Salam sale listing ~5 years old; Paya text says 'developing' | https://paya-realestate.com/en/projects/lana-city-294 ; https://homele.com/properties/for-sale-and-rent/erbil/lana-city ; https://hajisalam.com/en/lana-city/ |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.220751, 44.145889 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.220751,44.145889 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/lana-city-294 ; https://baghyshaqlawa.net/en/projects/lana-city |
+| ناوە جێگرەوەکان | لانە ستی; لانه ستي | مامناوەند – Paya area label (Arabic script) | https://paya-realestate.com/en/projects/lana-city-294 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 10 (apartment buildings); houses 1-2 floors | نزم – Paya (10 floors) and Haji Salam (1-2 floors) | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 519 houses/villas (464 + 55) + about 200 apartments (about 719; total not stated) | Paya (464 + 55, ~200) and Haji Salam (519 / 200) agree | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Villas / houses | Paya: '464 standalone houses and 55 larger villas'; Haji Salam field reads 'Number Of Unit: 200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
-| Apartments | Paya: 'five 10-floor apartment buildings offering around 200 modern units'; Haji Salam field reads '200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 5 apartment buildings (plus houses and villas) | Paya only | https://paya-realestate.com/en/projects/lana-city-294 |
-| Floors per building | 10 (apartment buildings); houses 1-2 floors | Paya (10 floors) and Haji Salam (1-2 floors) | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 519 houses/villas (464 + 55) + about 200 apartments (about 719; total not stated) | Paya (464 + 55, ~200) and Haji Salam (519 / 200) agree | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
+| ڤێلا / خانوو | Paya: '464 standalone houses and 55 larger villas'; Haji Salam field reads 'Number Of Unit: 200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
+| شوقە | Paya: 'five 10-floor apartment buildings offering around 200 modern units'; Haji Salam field reads '200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 5 apartment buildings (plus houses and villas) | Paya only | https://paya-realestate.com/en/projects/lana-city-294 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 10 (apartment buildings); houses 1-2 floors | Paya (10 floors) and Haji Salam (1-2 floors) | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 190, 200 | 190 | 200 | — | 464 standalone houses (Paya text); Paya unit cards: 190 m2 (3-4 bed, 2-3 bath) and 200 m2 (2-4 bed, 1-2 bath) | agency_project_page | https://paya-realestate.com/en/projects/lana-city-294 |
-| villa | Not verified | — | — | — | 55 larger villas; size not stated (Paya text) | agency_project_page | https://paya-realestate.com/en/projects/lana-city-294 |
-| apartment | 135 | 135 | 135 | 2 | 2 bathrooms; About 200 apartments in five 10-floor buildings; Paya unit card 135 m2 | agency_project_page | https://paya-realestate.com/en/projects/lana-city-294 |
-| house | 200, 300 | 200 | 300 | — | Haji Salam: 519 houses of 200 m2 and 300 m2; 1-2 floors; bedrooms 2-4 (project-wide) | agency_project_page | https://hajisalam.com/en/lana-city/ |
-| apartment | 190 | 190 | 190 | — | Haji Salam: 200 apartments, area 190 m2 | agency_project_page | https://hajisalam.com/en/lana-city/ |
-| house | 200 | 200 | 200 | 4 | 2 bathrooms; 2 floors; Ready two-floor house for sale (homele); Haji Salam old sale listing 200 m2, 4 bedrooms, posted about 5 years before access | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lana-city ; https://hajisalam.com/en/lana-city/ |
+| خانوو | 190, 200 | 190 | 200 | — | 464 standalone houses (Paya text); Paya unit cards: 190 m2 (3-4 bed, 2-3 bath) and 200 m2 (2-4 bed, 1-2 bath) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lana-city-294 |
+| ڤێلا | پشتڕاست نەکراوەتەوە | — | — | — | 55 larger villas; size not stated (Paya text) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lana-city-294 |
+| شوقە | 135 | 135 | 135 | 2 | 2 حەمام؛ About 200 apartments in five 10-floor buildings; Paya unit card 135 m2 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lana-city-294 |
+| خانوو | 200, 300 | 200 | 300 | — | Haji Salam: 519 houses of 200 m2 and 300 m2; 1-2 floors; bedrooms 2-4 (project-wide) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/lana-city/ |
+| شوقە | 190 | 190 | 190 | — | Haji Salam: 200 apartments, area 190 m2 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/lana-city/ |
+| خانوو | 200 | 200 | 200 | 4 | 2 حەمام؛ 2 نهۆم؛ Ready two-floor house for sale (homele); Haji Salam old sale listing 200 m2, 4 bedrooms, posted about 5 years before access | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/lana-city ; https://hajisalam.com/en/lana-city/ |
 
-**Layouts and floor plans:** Paya: 'View Blueprint' for all 5 listed units – apartment 135 m², houses 190 m² (3 and 4 beds) and 200 m² (2 and 4 beds) (https://paya-realestate.com/en/projects/lana-city-294)
+**نەخشە و پلانی نهۆمەکان:** Paya: 'View Blueprint' for all 5 listed units – apartment 135 m², houses 190 m² (3 and 4 beds) and 200 m² (2 and 4 beds) (https://paya-realestate.com/en/projects/lana-city-294)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** 24-hour electricity (Paya text; Baghy tag); Internet (Paya text; Baghy tag); Water network (Paya text); Paved roads (Paya text); Sewage system (Paya text and tag); Green spaces (Paya text; Baghy tag); Mosques (Paya text and tag); School (Paya text); Kindergarten (Paya text and tag); Retail shops (Paya text); Playgrounds (Paya text; Baghy tag); Security (Paya and Baghy tags); Parking (Paya and Baghy tags); Supermarket (Paya and Baghy tags)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** 24-hour electricity (Paya text; Baghy tag); Internet (Paya text; Baghy tag); Water network (Paya text); Paved roads (Paya text); Sewage system (Paya text and tag); Green spaces (Paya text; Baghy tag); Mosques (Paya text and tag); School (Paya text); Kindergarten (Paya text and tag); Retail shops (Paya text); Playgrounds (Paya text; Baghy tag); Security (Paya and Baghy tags); Parking (Paya and Baghy tags); Supermarket (Paya and Baghy tags)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Gym (Baghy tag only); Barber (Paya tag); Reception (Paya tag); Maintenance (Paya tag); Earthquake-resistant design (Paya description claim)
+**بانگەشەی پشتڕاست نەکراوە:** Gym (Baghy tag only); Barber (Paya tag); Reception (Paya tag); Maintenance (Paya tag); Earthquake-resistant design (Paya description claim)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 135 m2, 2 bed / 2 bath - Paya project-page unit card (agency, not developer price) | 65,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
-| House 190 m2, 3 bed / 2 bath - Paya unit card | 90,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
-| House 190 m2, 4 bed / 3 bath - Paya unit card | 190,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
-| House 200 m2, 2 bed / 1 bath - Paya unit card | 120,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
-| House 200 m2, 4 bed / 2 bath - Paya unit card | 140,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
-| Ready two-floor house 200 m2, 4 bed / 2 bath - homele sale listing | 140,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lana-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Apartment 135 m2, 2 bed / 2 bath - Paya project-page unit card (agency, not developer price) | 65,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
+| House 190 m2, 3 bed / 2 bath - Paya unit card | 90,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
+| House 190 m2, 4 bed / 3 bath - Paya unit card | 190,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
+| House 200 m2, 2 bed / 1 bath - Paya unit card | 120,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
+| House 200 m2, 4 bed / 2 bath - Paya unit card | 140,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lana-city-294 |
+| Ready two-floor house 200 m2, 4 bed / 2 bath - homele sale listing | 140,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lana-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Lana City is on Koya Road behind the Majdi Land / Atlantic City amusement park in Erbil (Paya, Baghy); Haji Salam labels the road Kasnazan Road. Map position (medium confidence, from agency map pins): 36.220751, 44.145889. Google Maps: https://www.google.com/maps?q=36.220751,44.145889
+### شوێن و دەوروبەر
+Lana City is on Koya Road behind the Majdi Land / Atlantic City amusement park in Erbil (Paya, Baghy); Haji Salam labels the road Kasnazan Road.
+شوێن لەسەر نەخشە: 36.220751, 44.145889 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.220751,44.145889
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لانە سیتی (Lana City) پڕۆژەیەکی نیشتەجێبوونی تەواوبووە لەسەر ڕێگای کۆیە لە شاری هەولێر، لە پشت پارکی یاریی مەجدی لاند / ئەتلانتیک سیتی. پڕۆژەکە ٥١٩ خانوو و ڤێلا لەخۆ دەگرێت، کە ٤٦٤ خانووی سەربەخۆ و ٥٥ ڤێلای گەورەترن، لەگەڵ نزیکەی ٢٠٠ شوقە لە پێنج باڵەخانەی نیشتەجێبوونی ١٠ نهۆمیدا. ڕووبەری خانووەکان ١٩٠، ٢٠٠ و ٣٠٠ م²ـە، یەک یان دوو نهۆمن و دوو تا چوار ژووری نووستنیان هەیە. پڕۆژەکە ژێرخانێکی تەواوی هەیە کە کارەبای ٢٤ کاتژمێری، تۆڕی ئاو، شەقامی قیرتاوکراو، سیستەمی ئاوەڕۆ و ئینتەرنێت لەخۆ دەگرێت. خزمەتگوزارییە گشتییەکان بریتین لە ناوچەی سەوز، مزگەوت، قوتابخانە، باخچەی ساوایان، دوکان، سوپەرمارکێت، یاریگای منداڵان، پارکینگ و پاسەوانی.
 
-### 2. Arabic (العربية)
+### 2. العربية
 لانه سيتي (Lana City) مشروع سكني مكتمل على طريق كويه في مدينة أربيل، خلف مدينة الألعاب مجدي لاند / أتلانتك سيتي. يضم المشروع 519 منزلاً وفيلا، منها 464 منزلاً مستقلاً و55 فيلا أكبر مساحة، إلى جانب نحو 200 شقة في خمسة مبانٍ سكنية من عشرة طوابق لكل منها. وتبلغ مساحات المنازل 190 و200 و300 م²، وتتألف من طابق واحد أو طابقين وتضم من غرفتين إلى أربع غرف نوم. ويتمتع المشروع ببنية تحتية كاملة تشمل الكهرباء على مدار 24 ساعة وشبكة المياه والطرق المعبدة وشبكة الصرف الصحي والإنترنت. وتشمل المرافق المجتمعية مساحات خضراء ومساجد ومدرسة وروضة أطفال ومحلات تجارية وسوبرماركت وملاعب للأطفال ومواقف للسيارات وحراسة أمنية.
 
 ### 3. English
 Lana City is a completed residential project on Koya Road in Erbil, behind the Majdi Land / Atlantic City amusement park. The project combines 519 houses and villas, made up of 464 standalone houses and 55 larger villas, with about 200 apartments in five apartment buildings of ten floors each. The houses measure 190, 200 and 300 m², with one or two floors and two to four bedrooms. The project has full infrastructure, including 24-hour electricity, a water network, paved roads, a sewage system and internet. Community facilities include green spaces, mosques, a school, a kindergarten, retail shops, a supermarket, playgrounds, parking and security.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/lana-city | Area listing page 'Lana City' (1 page): ready two-floor house 200 m2, 4 bed / 2 bath, USD 140,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/lana-city-294 | Project page 'Lana City': status Completed (text calls it 'developing'); Koya Road behind Majdi Land/Atlantic City; 464 houses, 55 villas, five 10-floor apartment buildings (~200 units); infrastructure and community facilities; 5 unit cards (135 m2 apartment USD 65,000; houses 190-200 m2 USD 90,000-190,000); developer field reads '5 Units Lana City' (parsing artefact) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/lana-city | Project page 'Lana City': address Koya Road behind Atlantic City; House; tags 24h electricity, internet, playground, security, parking, green areas, gym, supermarket | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/lana-city/ | Project page 'Lana City': Kasnazan Road; House - Apartment; units 'House 519 - Apartment 200' (garbled field); house 200 m2 and 300 m2, apartment 190 m2; 1-2 floors; 2-4 bedrooms; one old sale listing 200 m2 4 bed ('5 years ago') | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/lana-city | Area listing page 'Lana City' (1 page): ready two-floor house 200 m2, 4 bed / 2 bath, USD 140,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/lana-city-294 | Project page 'Lana City': status Completed (text calls it 'developing'); Koya Road behind Majdi Land/Atlantic City; 464 houses, 55 villas, five 10-floor apartment buildings (~200 units); infrastructure and community facilities; 5 unit cards (135 m2 apartment USD 65,000; houses 190-200 m2 USD 90,000-190,000); developer field reads '5 Units Lana City' (parsing artefact) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/lana-city | Project page 'Lana City': address Koya Road behind Atlantic City; House; tags 24h electricity, internet, playground, security, parking, green areas, gym, supermarket | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/lana-city/ | Project page 'Lana City': Kasnazan Road; House - Apartment; units 'House 519 - Apartment 200' (garbled field); house 200 m2 and 300 m2, apartment 190 m2; 1-2 floors; 2-4 bedrooms; one old sale listing 200 m2 4 bed ('5 years ago') | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/remas-city | Web-search result summary only (page not fetched): Remas City is built by the same company and staff as Lana City; Artima named as Remas construction company - not used as Lana City's developer | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/remas-city | Web-search result summary only (page not fetched): Remas City is built by the same company and staff as Lana City; Artima named as Remas construction company - not used as Lana City's developer | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Lana City" Erbil Koya road”; “"لانە سیتی" OR "لانه سيتي" هەولێر أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Lana City" Erbil Koya road»؛ «"لانە سیتی" OR "لانه سيتي" هەولێر أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and residential category (Paya, Baghy, Haji Salam, homele)
    - Location behind Atlantic City on Koya Road (Paya, Baghy)
    - 519 houses/villas and about 200 apartments (Paya, Haji Salam)
    - Completed status (Paya; homele ready listing; old Haji Salam listing)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Five 10-floor apartment buildings (Paya)
    - Unit-card prices (Paya)
    - Most community facilities (Paya text)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Location label Koya Road vs Kasnazan Road
    - Apartment size 135 vs 190 m2
    - House sizes 190/200 vs 200/300 m2
@@ -120,21 +123,21 @@ Second verification pass 2026-11-07: queries “"Lana City" Erbil Koya road”; 
    - construction_status: Completed (status field) (https://paya-realestate.com/en/projects/lana-city-294); 'a developing residential complex' (description text) (https://paya-realestate.com/en/projects/lana-city-294) → Completed adopted: homele ready house and an old Haji Salam sale listing; completion of the apartment buildings not separately confirmed
    - apartment size: 135 m2 (https://paya-realestate.com/en/projects/lana-city-294); 190 m2 (https://hajisalam.com/en/lana-city/) → Disputed
    - house sizes: 190 m2 and 200 m2 (https://paya-realestate.com/en/projects/lana-city-294); 200 m2 and 300 m2 (https://hajisalam.com/en/lana-city/) → Both recorded; 200 m2 confirmed by Paya, Haji Salam and homele
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam listing dated '5 years ago' (about 2021)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - in_erbil_city set to 'edge': behind Atlantic City at the eastern urban edge (neighbouring Atlantic City record also 'edge'); distance from the 150m road not stated
    - Developer: Roya Remas City snippet says same company as Lana City; not confirmed by any Lana City page
    - Whether all five apartment buildings are complete
-   - Second verification pass (2026-11-07): no new evidence. No independent page found; the only project-level hit was the already recorded Roya Remas City snippet linking Remas City to the Lana City company, so the developer, land area and dates remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page found; the only project-level hit was the already recorded Roya Remas City snippet linking Remas City to the Lana City company, so the developer, land area and dates remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "lana-city",

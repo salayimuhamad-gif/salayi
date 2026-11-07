@@ -1,104 +1,107 @@
 <!-- rendered -->
 # Nawroz City — نەورۆز سیتی — نوروز سيتي
-Project ID: nawroz-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: nawroz-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Nawroz City | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| City | Erbil | High – Baghy address | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| District / Area | 120m road behind Majidi Mall, Koya Road | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Developer | BC Group | Medium – Baghy ('constructed by BC Group') | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Project Category | Residential (rental apartments) | Medium – Baghy | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 8 | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed | Low – No explicit status; Baghy offers apartments for rent with a monthly service charge (operating project); one web search found nothing | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.181373, 44.068956 — Google Maps: https://www.google.com/maps?q=36.181373,44.068956 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 4 buildings x 9 floors; 4 buildings x 8 floors | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Nawroz City | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| شار | هەولێر | بەرز – Baghy address | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| ناوچە / گەڕەک | 120m road behind Majidi Mall, Koya Road | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| گەشەپێدەر (کۆمپانیا) | BC Group | مامناوەند – Baghy ('constructed by BC Group') | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (rental apartments) | مامناوەند – Baghy | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 8 | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | نزم – No explicit status; Baghy offers apartments for rent with a monthly service charge (operating project); one web search found nothing | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.181373, 44.068956 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.181373,44.068956 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 4 buildings x 9 floors; 4 buildings x 8 floors | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 8 | Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Floors per building | 4 buildings x 9 floors; 4 buildings x 8 floors | Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 8 | Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 4 buildings x 9 floors; 4 buildings x 8 floors | Baghy only | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 130 | 130 | 130 | 2 | 2 bathrooms; Two bedrooms, living room, kitchen, 2 bathrooms, parking; rent only; service charge USD 50/month excluding electricity | agency_project_page | https://baghyshaqlawa.net/en/projects/nawroz-city |
-| apartment | 165 | 165 | 165 | 3 | 2 bathrooms; Three bedrooms, living room, kitchen, 2 bathrooms, balcony; rent only | agency_project_page | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| شوقە | 130 | 130 | 130 | 2 | 2 حەمام؛ Two bedrooms, living room, kitchen, 2 bathrooms, parking; rent only; service charge USD 50/month excluding electricity | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/nawroz-city |
+| شوقە | 165 | 165 | 165 | 3 | 2 حەمام؛ Three bedrooms, living room, kitchen, 2 bathrooms, balcony; rent only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/nawroz-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Security (Baghy tag); Parking (Baghy tag and unit description); City administrative center (Baghy tag); Green areas (Baghy tag); Health center (Baghy tag); Internet (Baghy tag); Reception (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Security (Baghy tag); Parking (Baghy tag and unit description); City administrative center (Baghy tag); Green areas (Baghy tag); Health center (Baghy tag); Internet (Baghy tag); Reception (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Monthly service charge paid by tenants (electricity excluded) - not the rent itself | 50 | USD | developer | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/nawroz-city |
-- **Maintenance or service charges:** Baghy: 'Cost Of Services (50$) Per Month' – electricity fees are not included in the service (stated under the 130 m² apartment) (https://baghyshaqlawa.net/en/projects/nawroz-city)
-- **Purchasing or rental arrangements:** Baghy: 'These Apartments Are Only For RENT' (https://baghyshaqlawa.net/en/projects/nawroz-city)
+| Monthly service charge paid by tenants (electricity excluded) - not the rent itself | 50 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/nawroz-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** Baghy: 'Cost Of Services (50$) Per Month' – electricity fees are not included in the service (stated under the 130 m² apartment) (https://baghyshaqlawa.net/en/projects/nawroz-city)
+- **شێوازی کڕین یان بەکرێدان:** Baghy: 'These Apartments Are Only For RENT' (https://baghyshaqlawa.net/en/projects/nawroz-city)
 
-### Location and surroundings
-Nawroz City is on Erbil's 120m ring road directly behind Majidi Mall on Koya Road, on the eastern side of the city (Baghy). Map position (low confidence, from agency map pins): 36.181373, 44.068956. Google Maps: https://www.google.com/maps?q=36.181373,44.068956
+### شوێن و دەوروبەر
+Nawroz City is on Erbil's 120m ring road directly behind Majidi Mall on Koya Road, on the eastern side of the city (Baghy).
+شوێن لەسەر نەخشە: 36.181373, 44.068956 (متمانە: نزم) — https://www.google.com/maps?q=36.181373,44.068956
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 نەورۆز سیتی (Nawroz City) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر، کە دەکەوێتە سەر ڕێگای بازنەیی ١٢٠ مەتری، ڕاستەوخۆ لە پشت مۆڵی مەجیدی لەسەر ڕێگای کۆیە، لە لای ڕۆژهەڵاتی شار. پڕۆژەکە لەلایەن گرووپی بی سی دروست کراوە. پڕۆژەکە لە هەشت باڵەخانە پێکدێت: چواریان ٩ نهۆمین و چواریان ٨ نهۆمین. شوقەکانی پڕۆژەکە بە کرێ دەدرێن و نافرۆشرێن. شوقەی ١٣٠ م² دوو ژووری نووستن، هۆڵی دانیشتن، چێشتخانە، دوو گەرماو و پارکینگی هەیە، و شوقەی ١٦٥ م² سێ ژووری نووستن، هۆڵی دانیشتن، چێشتخانە، دوو گەرماو و باڵکۆنی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 نوروز سيتي (Nawroz City) مشروع سكني للشقق في مدينة أربيل، يقع على الطريق الدائري 120 متر خلف ماجدي مول مباشرة على طريق كويه، في الجهة الشرقية من المدينة. ونفذت المشروع مجموعة بي سي. يتكون المشروع من ثمانية مبانٍ: أربعة منها من 9 طوابق وأربعة من 8 طوابق. وتُؤجَّر شقق المشروع للمستأجرين ولا تُباع. تضم الشقق بمساحة 130 م² غرفتي نوم وصالة معيشة ومطبخاً وحمامين وموقفاً للسيارة، وتضم الشقق بمساحة 165 م² ثلاث غرف نوم وصالة معيشة ومطبخاً وحمامين وشرفة.
 
 ### 3. English
 Nawroz City is a residential apartment project in Erbil, located on the 120m ring road directly behind Majidi Mall on Koya Road, on the eastern side of the city. It was built by BC Group. The project consists of eight buildings: four with nine floors and four with eight floors. Its apartments are let to tenants rather than sold. The 130 m² apartments have two bedrooms, a living room, a kitchen, two bathrooms and parking, and the 165 m² apartments have three bedrooms, a living room, a kitchen, two bathrooms and a balcony.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/nawroz-city | Project page: constructed by BC Group (also credited with Empire World, New Eskan, Minare Mall); 120m highway behind Majidi Mall on Koya Road; 8 buildings (4 x 9 floors, 4 x 8 floors); apartments for rent only: 130 m2 2+1 and 165 m2 3+1; service charge USD 50/month excl. electricity; facility tags | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/nawroz-city | Project page: constructed by BC Group (also credited with Empire World, New Eskan, Minare Mall); 120m highway behind Majidi Mall on Koya Road; 8 buildings (4 x 9 floors, 4 x 8 floors); apartments for rent only: 130 m2 2+1 and 165 m2 3+1; service charge USD 50/month excl. electricity; facility tags | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Nawroz City" Erbil BC Group apartments”; “"نەورۆز سیتی" OR "نوروز سيتي" هەولێر أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Nawroz City" Erbil BC Group apartments»؛ «"نەورۆز سیتی" OR "نوروز سيتي" هەولێر أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All project facts: BC Group, location, 8 buildings (4 x 9 and 4 x 8 floors), rent-only 130/165 m2 apartments, USD 50/month service charge, facility tags (Baghy)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - BC Group's claimed credit for New Eskan vs New Eskan page naming Shaxa Barza and 99 companies
    - builder credits (cross-project): BC Group built Empire World and New Eskan (https://baghyshaqlawa.net/en/projects/nawroz-city); New Eskan constructed by Shaxa Barza and 99 companies (https://baghyshaqlawa.net/en/projects/new-eskan) → Not resolved; BC Group may have been a construction contractor rather than developer for those projects. Nawroz City's own builder (BC Group) is not contradicted.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Second independent source
    - Total units
    - Land area
@@ -106,15 +109,15 @@ Second verification pass 2026-11-07: queries “"Nawroz City" Erbil BC Group apa
    - Explicit construction status
    - Launch and completion dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Construction status inferred from rental operation only
    - No homele/Paya/Miran/Hajisalam page found in the evidence pack
-   - Second verification pass (2026-11-07): no new evidence. No wider-web source mentions Nawroz City or links it to BC Group; all facts still rest on one project page.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No wider-web source mentions Nawroz City or links it to BC Group; all facts still rest on one project page.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "nawroz-city",

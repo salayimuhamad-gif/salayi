@@ -1,118 +1,120 @@
 <!-- rendered -->
 # Ara Tower — ئارا تاوەر — آرا تاور
-Project ID: ara-tower | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: ara-tower | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Ara Tower | Low – homele area name; Baghy listing title | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
-| City | Erbil | Medium – homele and Baghy | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
-| District / Area | English Village, 40m Road | Low – Baghy listing on the English Village project page | https://baghyshaqlawa.net/en/projects/english-village |
-| Developer | Not verified | Low – Not stated | — |
-| Project Category | Residential (apartments) | Medium – All listings are apartments | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
-| Total Land Area | Not verified | Low – Not stated by any source | — |
-| Number of Buildings / Towers | 1 tower (name) | Low – Name only | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
-| Total Residential Units | Not verified | Low – Not stated by any source | — |
-| Construction Status | Completed (inferred) | Medium – Ready furnished rentals on homele and Baghy | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
-| Completion Date | Not verified | Low – Not stated by any source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | English Village (Ara Tower) | Low – Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated by any source | — |
-| Launch Date | Not verified | Low – Not stated by any source | — |
-| Development Phases | Part of English Village (apartment section) | Low – Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
+| ناوی پڕۆژە | Ara Tower | نزم – homele area name; Baghy listing title | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
+| شار | هەولێر | مامناوەند – homele and Baghy | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
+| ناوچە / گەڕەک | English Village, 40m Road | نزم – Baghy listing on the English Village project page | https://baghyshaqlawa.net/en/projects/english-village |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | مامناوەند – All listings are apartments | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| ژمارەی باڵەخانە / تاوەر | 1 tower (name) | نزم – Name only | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | مامناوەند – Ready furnished rentals on homele and Baghy | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | English Village (Ara Tower) | نزم – Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| قۆناغەکانی پڕۆژە | Part of English Village (apartment section) | نزم – Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated by any source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated by any source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 1 tower (name) | Name only | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
-| Floors per building | Not verified | Not stated by any source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Part of English Village (apartment section) | Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 1 tower (name) | Name only | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Part of English Village (apartment section) | Baghy listing title | https://baghyshaqlawa.net/en/projects/english-village |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 150, 155 | 150 | 155 | — | Furnished rentals: 150 and 155 m2, 2 bed / 2 bath (homele); 150 m2, 3 bed / 1 bath (Baghy card on English Village page) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
+| شوقە | 150, 155 | 150 | 155 | — | Furnished rentals: 150 and 155 m2, 2 bed / 2 bath (homele); 150 m2, 3 bed / 1 bath (Baghy card on English Village page) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower ; https://baghyshaqlawa.net/en/projects/english-village |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready furnished apartment 150 m2, 2 bed, 2 bath - rent per month | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
-| Ready furnished apartment 155 m2, 2 bed, 2 bath - rent per month | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
-| Apartment 150 m2, 3 bed, 1 bath 'English Village (Ara Tower)' - rent per month (Baghy card) | 700 | USD | rent | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/english-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: furnished apartments for rent at $750 Monthly (https://homele.com/properties/for-sale-and-rent/erbil/ara-tower)
+| Ready furnished apartment 150 m2, 2 bed, 2 bath - rent per month | 750 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
+| Ready furnished apartment 155 m2, 2 bed, 2 bath - rent per month | 750 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
+| Apartment 150 m2, 3 bed, 1 bath 'English Village (Ara Tower)' - rent per month (Baghy card) | 700 | USD | کرێ | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/english-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: furnished apartments for rent at $750 Monthly (https://homele.com/properties/for-sale-and-rent/erbil/ara-tower)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Ara Tower is inside the English Village compound on the 40m Road in western Erbil, per a Baghy Shaqlawa listing titled 'English Village (Ara Tower)'.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئارا تاوەر (Ara Tower) تاوەرێکی نیشتەجێبوونی شوقەیە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. تاوەرەکە لەناو کۆمەڵگەی گوندی ئینگلیزی لەسەر شەقامی ٤٠ مەتری لە بەشی ڕۆژئاوای شار هەڵکەوتووە و بەشێکە لە بەشی شوقەکانی کۆمەڵگەکە. تاوەرەکە تەواوبووە و شوقەکانی ئامادەی نیشتەجێبوونن، هەندێکیشیان مۆبیلیاتکراون. ڕووبەری شوقەکانی بیناکە ١٥٠ م² و ١٥٥ م²یە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آرا تاور (Ara Tower) برج سكني للشقق في مدينة أربيل في إقليم كوردستان العراق. يقع البرج داخل مجمع القرية الإنكليزية على شارع 40 متر في الجزء الغربي من المدينة، ويُعدّ جزءاً من قسم الشقق في المجمع. البرج مكتمل البناء، وشققه جاهزة للسكن، وبعضها مفروش. تبلغ مساحات الشقق في المبنى 150 م² و155 م².
 
 ### 3. English
 Ara Tower is a residential apartment tower in Erbil, in the Kurdistan Region of Iraq. It stands inside the English Village compound on the 40m Road in the western part of the city and forms part of the compound's apartment section. The tower is completed and its apartments are ready for occupancy, some of them furnished. Apartments in the building have areas of 150 m² and 155 m².
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower | Area listing page (1 page): 2 'Ready' furnished apartments for rent, 150 and 155 m2, 2 bed, 2 bath, USD 750/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/english-village | English Village project page (address 'Erbil - 40m Road'): card 'Apartment 150m for Rent in English Village(Ara Tower)', 3 bed, 1 bath, USD 700 (undated) | 2023-09-16 | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower | Area listing page (1 page): 2 'Ready' furnished apartments for rent, 150 and 155 m2, 2 bed, 2 bath, USD 750/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/english-village | English Village project page (address 'Erbil - 40m Road'): card 'Apartment 150m for Rent in English Village(Ara Tower)', 3 bed, 1 bath, USD 700 (undated) | 2023-09-16 | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Location inside English Village (one Baghy listing card)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Bedrooms for 150 m2 apartment: 2 (homele) vs 3 (Baghy card)
    - bedrooms (150 m2 apartment): 2 (https://homele.com/properties/for-sale-and-rent/erbil/ara-tower); 3 (https://baghyshaqlawa.net/en/projects/english-village) → Both kept as advertised; listing-level detail only.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Floors
    - Unit count
    - Dates
    - Coordinates
    - Facilities
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy card undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether Ara Tower is one of English Village's three 11-floor apartment buildings (150 m2 units match) - possible duplicate of the English Village apartment component
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "ara-tower",

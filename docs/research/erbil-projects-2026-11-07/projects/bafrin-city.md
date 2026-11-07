@@ -1,118 +1,121 @@
 <!-- rendered -->
 # Bafrin City — بەفرین ستی — —
-Project ID: bafrin-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: bafrin-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Bafrin City | Medium – Baghy and Haji Salam both have a page under this name | https://baghyshaqlawa.net/en/projects/bafrin-city ; https://hajisalam.com/en/bafrin-city/ |
-| City | Erbil | Medium – Baghy address | https://baghyshaqlawa.net/en/projects/bafrin-city |
-| District / Area | Pirmam Road | Low – Single source; no distance along the road | https://baghyshaqlawa.net/en/projects/bafrin-city |
-| Developer | Not verified | Low – No source names one | — |
-| Project Category | Residential (houses and apartments) | Low – Baghy property types only | https://baghyshaqlawa.net/en/projects/bafrin-city |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Not verified | Low – No source states status | — |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.293864, 44.117997 — Google Maps: https://www.google.com/maps?q=36.293864,44.117997 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/bafrin-city |
-| Alternative names | بەفرین ستی | Low – Project-list alias | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Bafrin City | مامناوەند – Baghy and Haji Salam both have a page under this name | https://baghyshaqlawa.net/en/projects/bafrin-city ; https://hajisalam.com/en/bafrin-city/ |
+| شار | هەولێر | مامناوەند – Baghy address | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| ناوچە / گەڕەک | Pirmam Road | نزم – Single source; no distance along the road | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and apartments) | نزم – Baghy property types only | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – No source states status | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.293864, 44.117997 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.293864,44.117997 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| ناوە جێگرەوەکان | بەفرین ستی | نزم – Project-list alias | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Property type listed by Baghy; no sizes published. | agency_project_page | https://baghyshaqlawa.net/en/projects/bafrin-city |
-| apartment | Not verified | — | — | — | Property type listed by Baghy; no sizes published. | agency_project_page | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Property type listed by Baghy; no sizes published. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/bafrin-city |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Property type listed by Baghy; no sizes published. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/bafrin-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24 hr electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Green areas (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24 hr electricity (Baghy tag); Internet (Baghy tag); Playground (Baghy tag); Green areas (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Baghy gives the address as 'Erbil - Pirmam Road', the road north-east from Erbil towards Pirmam (Massif). Baghy's nearest branch to the project is its Italian City 2 branch in Erbil. No source gives a distance along the road or landmark. Map position (low confidence, from agency map pins): 36.293864, 44.117997. Google Maps: https://www.google.com/maps?q=36.293864,44.117997
+### شوێن و دەوروبەر
+Baghy gives the address as 'Erbil - Pirmam Road', the road north-east from Erbil towards Pirmam (Massif). Baghy's nearest branch to the project is its Italian City 2 branch in Erbil. No source gives a distance along the road or landmark.
+شوێن لەسەر نەخشە: 36.293864, 44.117997 (متمانە: نزم) — https://www.google.com/maps?q=36.293864,44.117997
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 بەفرین ستی (Bafrin City) پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە لەسەر ڕێگای پیرمام هەڵکەوتووە، ئەو ڕێگایەی لە هەولێرەوە بەرەو باکووری ڕۆژهەڵات و بەرەو پیرمام (مەسیف) دەڕوات. پڕۆژەکە خانوو و شوقە لەخۆ دەگرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 بفرين سيتي (Bafrin City) مشروع سكني في أربيل يقع على طريق بيرمام، وهو الطريق الممتد من أربيل نحو الشمال الشرقي باتجاه بيرمام (المصيف). ويضم المشروع بيوتاً وشققاً سكنية.
 
 ### 3. English
 Bafrin City is a residential project in Erbil on the Pirmam Road, the road that runs north-east from Erbil towards Pirmam (Masif). The project includes houses and apartments.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/bafrin-city | Name; address 'Erbil - Pirmam Road'; property types house and apartment; feature tags; nearest branch Italian City 2 | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/bafrin-city/ | Project page titled 'bafrin city' exists; no fields or listings | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/bafrin-city | Name; address 'Erbil - Pirmam Road'; property types house and apartment; feature tags; nearest branch Italian City 2 | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/bafrin-city/ | Project page titled 'bafrin city' exists; no fields or listings | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Bafrin City" Erbil”; “"بەفرین ستی" OR "بەفرین سیتی" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Bafrin City" Erbil»؛ «"بەفرین ستی" OR "بەفرین سیتی" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Pirmam Road address, house and apartment types, feature tags (Baghy)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status and dates
    - Land area
    - Number of units and buildings
    - Unit sizes
    - Prices
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact position on the Pirmam Road; in_erbil_city set true per scope rule for Pirmam road approaches, but distance from the city is not stated
    - Haji Salam page is empty, so it only confirms the name
    - One WebSearch ('Bafrin City' Erbil) returned no relevant page
    - Second pass 2026-11-07: two more web searches ("Bafrin City" Erbil / "بەفرین ستی" OR "بەفرین سیتی" هەولێر) found no independent page for this project
-   - Second verification pass (2026-11-07): no new evidence. No independent page names Bafrin City in English or Sorani (only unrelated 'Bafrzon' old-city neighbourhoods and a news item about a person named Befrin); developer, status and distance along Pirmam Road still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names Bafrin City in English or Sorani (only unrelated 'Bafrzon' old-city neighbourhoods and a news item about a person named Befrin); developer, status and distance along Pirmam Road still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "bafrin-city",

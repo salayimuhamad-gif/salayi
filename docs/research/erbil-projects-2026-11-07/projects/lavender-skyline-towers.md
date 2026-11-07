@@ -1,139 +1,142 @@
 <!-- rendered -->
 # Lavender Skyline Towers — لاڤێندەر سکای لاین تاوەرز — لافيندر سكاي لاين تاورز
-Project ID: lavender-skyline-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: lavender-skyline-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Lavender Skyline Towers | High – Same name on Paya, Miran ('Lavender Skyline') and homele | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| District / Area | Erbil–Kirkuk Road | High – Paya and Miran agree | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Developer | Not verified | Low – No source names a developer; Paya developer field is a scrape artifact; one WebSearch found none | — |
-| Project Category | Residential (apartments) | High – Paya and Miran | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Total Land Area | 7,700 m² | Low – Single agency project page, seen only via search snippet | https://homele.com/projects/lavender-skyline-towers-400 |
-| Number of Buildings / Towers | 3 | Medium – Miran stats (3 buildings) and homele project page (search snippet: '3 L-shaped towers') agree; Paya text speaks of 'a 32-story tower' | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/projects/lavender-skyline-towers-400 |
-| Total Residential Units | 960 | Low – Miran stats only | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Construction Status | Under construction | High – Paya 'Constructing', Miran 'Under Construction', homele 'Off Plan' | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.129246, 44.024083 — Google Maps: https://www.google.com/maps?q=36.129246,44.024083 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Alternative names | Lavender Skyline; Lavender Skyline Tower; لافيندر سكاي لاين تاورز | High – Names used on Miran, homele, Paya | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 32 | Medium – Paya and Miran agree on 32; homele project page (search snippet) says 30 floors per tower - see conflicts | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Lavender Skyline Towers | بەرز – Same name on Paya, Miran ('Lavender Skyline') and homele | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| ناوچە / گەڕەک | Erbil–Kirkuk Road | بەرز – Paya and Miran agree | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer; Paya developer field is a scrape artifact; one WebSearch found none | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | بەرز – Paya and Miran | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| کۆی ڕووبەری زەوی | 7,700 m² | نزم – Single agency project page, seen only via search snippet | https://homele.com/projects/lavender-skyline-towers-400 |
+| ژمارەی باڵەخانە / تاوەر | 3 | مامناوەند – Miran stats (3 buildings) and homele project page (search snippet: '3 L-shaped towers') agree; Paya text speaks of 'a 32-story tower' | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/projects/lavender-skyline-towers-400 |
+| کۆی یەکە نیشتەجێبوونەکان | 960 | نزم – Miran stats only | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | بەرز – Paya 'Constructing', Miran 'Under Construction', homele 'Off Plan' | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.129246, 44.024083 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.129246,44.024083 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| ناوە جێگرەوەکان | Lavender Skyline; Lavender Skyline Tower; لافيندر سكاي لاين تاورز | بەرز – Names used on Miran, homele, Paya | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 32 | مامناوەند – Paya and Miran agree on 32; homele project page (search snippet) says 30 floors per tower - see conflicts | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 7,700 m² | Single agency project page, seen only via search snippet | https://homele.com/projects/lavender-skyline-towers-400 |
-| Total project land area (dunams) | 3.1 | converted from 7,700 m² at 1 Iraqi dunam = 2,500 m² | https://homele.com/projects/lavender-skyline-towers-400 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 960 | Miran stats only | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 3 | Miran stats (3 buildings) and homele project page (search snippet: '3 L-shaped towers') agree; Paya text speaks of 'a 32-story tower' | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/projects/lavender-skyline-towers-400 |
-| Floors per building | 32 | Paya and Miran agree on 32; homele project page (search snippet) says 30 floors per tower - see conflicts | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 7,700 m² | Single agency project page, seen only via search snippet | https://homele.com/projects/lavender-skyline-towers-400 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 3.1 | گۆڕدراوە لە 7,700 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://homele.com/projects/lavender-skyline-towers-400 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 960 | Miran stats only | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 3 | Miran stats (3 buildings) and homele project page (search snippet: '3 L-shaped towers') agree; Paya text speaks of 'a 32-story tower' | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 ; https://homele.com/projects/lavender-skyline-towers-400 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 32 | Paya and Miran agree on 32; homele project page (search snippet) says 30 floors per tower - see conflicts | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 ; https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 88, 90, 93, 94, 99 | 88 | 99 | 1 | 1 bathrooms; 1+1; Paya price list (5 units) | agency_project_page | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| apartment | 128, 129, 155 | 128 | 155 | 2 | 2 bathrooms; 2+1; Paya price list | agency_project_page | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| apartment | 180, 190 | 180 | 190 | 3 | 3 bathrooms; 3+1; Paya price list | agency_project_page | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| apartment | 88, 90, 92, 93, 94, 98 | 88 | 98 | 1 | 1+1 unit-type table on Miran | agency_project_page | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| apartment | 118, 127, 128, 147, 148, 155 | 118 | 155 | 2 | 2+1 unit-type table on Miran | agency_project_page | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
-| apartment | 168, 180, 190 | 168 | 190 | 3 | 3+1 unit-type table on Miran | agency_project_page | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| شوقە | 88, 90, 93, 94, 99 | 88 | 99 | 1 | 1 حەمام؛ 1+1; Paya price list (5 units) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| شوقە | 128, 129, 155 | 128 | 155 | 2 | 2 حەمام؛ 2+1; Paya price list | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| شوقە | 180, 190 | 180 | 190 | 3 | 3 حەمام؛ 3+1; Paya price list | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| شوقە | 88, 90, 92, 93, 94, 98 | 88 | 98 | 1 | 1+1 unit-type table on Miran | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| شوقە | 118, 127, 128, 147, 148, 155 | 118 | 155 | 2 | 2+1 unit-type table on Miran | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
+| شوقە | 168, 180, 190 | 168 | 190 | 3 | 3+1 unit-type table on Miran | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
 
-**Layouts and floor plans:** Paya shows 'View Blueprint' for all 10 listed apartments (88–190 m², 1–3 beds) (https://paya-realestate.com/en/projects/lavender-skyline-towers-384)
+**نەخشە و پلانی نهۆمەکان:** Paya shows 'View Blueprint' for all 10 listed apartments (88–190 m², 1–3 beds) (https://paya-realestate.com/en/projects/lavender-skyline-towers-384)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** gym (Paya 'Womens Gym', Miran 'Gym'); children's play area / playground (Paya, Miran); security (Paya, Miran); air conditioning (Paya 'AC', Miran central AC)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** gym (Paya 'Womens Gym', Miran 'Gym'); children's play area / playground (Paya, Miran); security (Paya, Miran); air conditioning (Paya 'AC', Miran central AC)
 
-**Unverified claims:** fire station; reception; pets allowed; bakery; mosque; currency exchange; women's salon; parking; elevators; shopping center; garden; pharmacy; parklet floor; fibre internet, fire safety system, building management system, waste management, water treatment, backup generator (Miran generic 'Building Facilities' block)
+**بانگەشەی پشتڕاست نەکراوە:** fire station; reception; pets allowed; bakery; mosque; currency exchange; women's salon; parking; elevators; shopping center; garden; pharmacy; parklet floor; fibre internet, fire safety system, building management system, waste management, water treatment, backup generator (Miran generic 'Building Facilities' block)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 88 m2, 1 bed - project-page price list (relayed by agency) | 59,840 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 99 m2, 1 bed - project-page price list | 67,320 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 128 m2, 2 beds - project-page price list | 87,040 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 155 m2, 2 beds - project-page price list | 105,400 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 180 m2, 3 beds - project-page price list | 122,400 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 190 m2, 3 beds - project-page price list | 129,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
-| Apartment 88 m2, 1 bed - off-plan market listing (down-payment label) | 59,840 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; plan: 15% down payment, 20% tower completion, 20% key receipt, 45% monthly over 5 years; homele lists off-plan apartments for sale (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1)
+| Apartment 88 m2, 1 bed - project-page price list (relayed by agency) | 59,840 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 99 m2, 1 bed - project-page price list | 67,320 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 128 m2, 2 beds - project-page price list | 87,040 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 155 m2, 2 beds - project-page price list | 105,400 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 180 m2, 3 beds - project-page price list | 122,400 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 190 m2, 3 beds - project-page price list | 129,200 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
+| Apartment 88 m2, 1 bed - off-plan market listing (down-payment label) | 59,840 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Miran: 'Cash Installment Payment Plans'; plan: 15% down payment, 20% tower completion, 20% key receipt, 45% monthly over 5 years; homele lists off-plan apartments for sale (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1)
 
-### Location and surroundings
-On the Erbil–Kirkuk Road in Erbil; homele's project page (search snippet) places it near the 120 m ring road. No exact address published. Map position (low confidence, from agency map pins): 36.129246, 44.024083. Google Maps: https://www.google.com/maps?q=36.129246,44.024083
+### شوێن و دەوروبەر
+On the Erbil–Kirkuk Road in Erbil; homele's project page (search snippet) places it near the 120 m ring road. No exact address published.
+شوێن لەسەر نەخشە: 36.129246, 44.024083 (متمانە: نزم) — https://www.google.com/maps?q=36.129246,44.024083
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لاڤێندەر سکای لاین تاوەرز (Lavender Skyline Towers) پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای هەولێر–کەرکووک لە شاری هەولێر و لە قۆناغی دروستکردندایە. پڕۆژەکە لە سێ تاوەری ٣٢ نهۆمی پێکدێت و ٩٦٠ یەکەی نیشتەجێبوونی تێدایە. شوقەکان بە سێ جۆرن: شوقەی یەک ژووری نووستن بە ڕووبەری نزیکەی ٨٨ تا ٩٩ م² و یەک حەمام، شوقەی دوو ژووری نووستن بە ڕووبەری نزیکەی ١١٨ تا ١٥٥ م² و دوو حەمام، و شوقەی سێ ژووری نووستن بە ڕووبەری نزیکەی ١٦٨ تا ١٩٠ م² و سێ حەمام. خزمەتگوزارییە پلاندانراوەکانی پڕۆژەکە هۆڵی وەرزش، شوێنی یاریی منداڵان، پاسەوانی و سیستەمی ئیرکۆندیشن لەخۆدەگرن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 لافيندر سكاي لاين تاورز (Lavender Skyline Towers) مشروع سكني للشقق قيد الإنشاء على طريق أربيل–كركوك في مدينة أربيل. يتألف المشروع من ثلاثة أبراج بارتفاع ٣٢ طابقاً، ويضم ٩٦٠ وحدة سكنية. تتوفر الشقق بثلاثة أنماط: شقق بغرفة نوم واحدة بمساحات تقارب ٨٨ إلى ٩٩ م² مع حمام واحد، وشقق بغرفتي نوم بمساحات تقارب ١١٨ إلى ١٥٥ م² مع حمامين، وشقق بثلاث غرف نوم بمساحات تقارب ١٦٨ إلى ١٩٠ م² مع ثلاثة حمامات. تشمل المرافق المخطط لها في المشروع صالة رياضية ومنطقة ألعاب للأطفال وحراسة أمنية ونظام تكييف للهواء.
 
 ### 3. English
 Lavender Skyline Towers is a residential apartment project under construction on the Erbil–Kirkuk Road in Erbil. The project consists of three towers of 32 floors and contains 960 residential units. Apartments come in three layouts: one-bedroom units of about 88 to 99 m² with one bathroom, two-bedroom units of about 118 to 155 m² with two bathrooms, and three-bedroom units of about 168 to 190 m² with three bathrooms. Planned facilities include a gym, a children's play area, security and air conditioning.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower | Area listing page: 2 off-plan market listings, 88 m² 1-bed at USD 59,840 (down-payment label). | — | 2026-11-07 | medium |
-| homele.com | mandatory | Relevant project information found | https://homele.com/projects/lavender-skyline-towers-400 | Project page seen only as search-result snippet: Erbil–Kirkuk Road near the 120 m highway; registered land of 7,700 m²; prices USD 59,840–129,200; no developer named. Second pass 2026-11-07 (search summary, page not opened): '3 L-shaped towers, each with 30 floors', parking, commercial space on the ground floor with residential units above; 15% down payment and monthly instalments over 60 months; still no developer named. | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 | Project page: status Constructing; Erbil–Kirkuk Road; 'a striking 32-story tower'; 10 apartment units 88–190 m² with prices USD 59,840–129,200; amenity tags. Developer field is a scrape artifact ('10 Units Lavender Skyline Towers'). | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 | Project page (updated Aug 15, 2026): Under Construction; Erbil–Kirkuk Road; stats 3 buildings / 32 floors / 960 units; unit-type table 88–190 m²; payment plan 15/20/20/45% over 5 years; feature tags. No developer named. | 2026-08-15 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower | Area listing page: 2 off-plan market listings, 88 m² 1-bed at USD 59,840 (down-payment label). | — | 2026-11-07 | مامناوەند |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/projects/lavender-skyline-towers-400 | Project page seen only as search-result snippet: Erbil–Kirkuk Road near the 120 m highway; registered land of 7,700 m²; prices USD 59,840–129,200; no developer named. Second pass 2026-11-07 (search summary, page not opened): '3 L-shaped towers, each with 30 floors', parking, commercial space on the ground floor with residential units above; 15% down payment and monthly instalments over 60 months; still no developer named. | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 | Project page: status Constructing; Erbil–Kirkuk Road; 'a striking 32-story tower'; 10 apartment units 88–190 m² with prices USD 59,840–129,200; amenity tags. Developer field is a scrape artifact ('10 Units Lavender Skyline Towers'). | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 | Project page (updated Aug 15, 2026): Under Construction; Erbil–Kirkuk Road; stats 3 buildings / 32 floors / 960 units; unit-type table 88–190 m²; payment plan 15/20/20/45% over 5 years; feature tags. No developer named. | 2026-08-15 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Lavender Skyline" Erbil Kirkuk road towers developer”; “"لافيندر سكاي لاين" OR "لاڤێندەر سکای لاین" أربيل طريق كركوك” → new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Lavender Skyline" Erbil Kirkuk road towers developer»؛ «"لافيندر سكاي لاين" OR "لاڤێندەر سکای لاین" أربيل طريق كركوك» ← ئەنجام: بەڵگەی نوێ دۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name
    - Location: Erbil–Kirkuk Road (Paya, Miran)
    - Status: under construction (Paya, Miran, homele)
    - Category: residential apartments
    - 32 floors (Paya, Miran)
    - 3 towers (Miran stats; homele project page via search snippet)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 960 units (Miran)
    - 7,700 m² land (homele project page via search snippet)
    - Payment plan 15/20/20/45% over 5 years (Miran)
    - L-shaped tower plan, ground-floor commercial space and parking (homele project page, search snippet)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Building count: 3 (Miran, homele snippet) vs singular 'a 32-story tower' (Paya) - resolved to 3
    - Minor size differences 98/99 m², 127/128/129 m²
    - Floors: 32 (Paya, Miran) vs 30 (homele project page snippet)
    - number_of_buildings: 3 buildings (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1); 'a striking 32-story tower' (singular wording) (https://paya-realestate.com/en/projects/lavender-skyline-towers-384); '3 L-shaped towers' (search snippet) (https://homele.com/projects/lavender-skyline-towers-400) → 3 adopted with medium confidence: Miran stats and homele project page (search snippet) agree, and the name is plural; Paya's singular wording likely describes one of the towers. Not confirmed by the developer.
    - unit sizes: 1+1 99 m²; 2+1 128/129 m² (https://paya-realestate.com/en/projects/lavender-skyline-towers-384); 1+1 98 m²; 2+1 127/128 m² (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1) → Minor rounding differences; both sets recorded.
    - floors_per_building: 32 floors (https://paya-realestate.com/en/projects/lavender-skyline-towers-384); 32 floors (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1); 30 floors per tower (search snippet, page not opened) (https://homele.com/projects/lavender-skyline-towers-400) → 32 adopted: two project pages agree; the 30-floor figure comes from a search-result summary only.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Launch date
    - Completion date
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer not identified (one WebSearch, no result)
-   - Second verification pass (2026-11-07): new evidence. The homele project page (search summary) adds a second source for three towers plus ground-floor commercial space, but gives 30 floors against 32 on two project pages; no non-portal source and no developer were found, so status stays partially verified.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ دۆزرایەوە. The homele project page (search summary) adds a second source for three towers plus ground-floor commercial space, but gives 30 floors against 32 on two project pages; no non-portal source and no developer were found, so status stays partially verified.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "lavender-skyline-towers",

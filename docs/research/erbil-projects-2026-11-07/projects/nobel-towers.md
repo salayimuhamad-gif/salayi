@@ -1,124 +1,127 @@
 <!-- rendered -->
 # Nobel Towers — نۆبڵ تاوەرز — أبراج نوبل
-Project ID: nobel-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07 | Parent project: noble-city
+ناسنامەی پڕۆژە: nobel-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07 | پڕۆژەی سەرەکی: noble-city
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Nobel Towers | High – Paya project page and homele area page | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
-| City | Erbil | High – Paya and homele | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
-| District / Area | Ankawa – New Bahirka road, opposite the Lebanese Village (Nobel City area) | Medium – Paya only | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Developer | Domus Company | Medium – Paya developer field only ('2 Units' prefix counts listed unit types) | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Project Category | Residential (apartment towers with two commercial floors) | High – Paya text; homele apartment listing | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 2 (A and B) | Medium – Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Total Residential Units | Not verified | Low – Paya gives 12 apartments per floor but no total | — |
-| Construction Status | Completed | Medium – Paya status; homele 'Ready' rental listing | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.2537662, 43.9999248 — Google Maps: https://www.google.com/maps?q=36.2537662,43.9999248 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Alternative names | Nuba Tower (once in Paya text, likely a typo) | Low – Single occurrence in Paya text | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 23 (incl. 3 parking and 2 commercial floors) | Medium – Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Linked to Nobel City (Paya area label); not a stated phase | Low – Paya area label and text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| ناوی پڕۆژە | Nobel Towers | بەرز – Paya project page and homele area page | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
+| شار | هەولێر | بەرز – Paya and homele | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
+| ناوچە / گەڕەک | Ankawa – New Bahirka road, opposite the Lebanese Village (Nobel City area) | مامناوەند – Paya only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| گەشەپێدەر (کۆمپانیا) | Domus Company | مامناوەند – Paya developer field only ('2 Units' prefix counts listed unit types) | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers with two commercial floors) | بەرز – Paya text; homele apartment listing | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 2 (A and B) | مامناوەند – Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Paya gives 12 apartments per floor but no total | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya status; homele 'Ready' rental listing | https://paya-realestate.com/en/projects/nobel-towers-150 ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.2537662, 43.9999248 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.2537662,43.9999248 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| ناوە جێگرەوەکان | Nuba Tower (once in Paya text, likely a typo) | نزم – Single occurrence in Paya text | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 23 (incl. 3 parking and 2 commercial floors) | مامناوەند – Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | Linked to Nobel City (Paya area label); not a stated phase | نزم – Paya area label and text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Paya gives 12 apartments per floor but no total | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 2 (A and B) | Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Floors per building | 23 (incl. 3 parking and 2 commercial floors) | Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Linked to Nobel City (Paya area label); not a stated phase | Paya area label and text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Paya gives 12 apartments per floor but no total | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 2 (A and B) | Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 23 (incl. 3 parking and 2 commercial floors) | Paya text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Linked to Nobel City (Paya area label); not a stated phase | Paya area label and text only | https://paya-realestate.com/en/projects/nobel-towers-150 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 69, 83, 84 | 69 | 84 | 1 | 1 bathrooms; 1+1: bedroom, living room, kitchen, bathroom, balcony (Paya text) | agency_project_page | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| apartment | 117, 118 | 117 | 118 | 2 | 2 bathrooms; 2+1: two bedrooms (1 master), living room, kitchen, two bathrooms, balcony (Paya text) | agency_project_page | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| apartment | 81, 117 | 81 | 117 | — | Paya unit table: 81 m2 1 bed/1 bath; 117 m2 2 bed/2 bath (81 m2 not in the text size list) | agency_project_page | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| apartment | 83 | 83 | 83 | 1 | 1 bathrooms; One 'Ready' rental listing | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
+| شوقە | 69, 83, 84 | 69 | 84 | 1 | 1 حەمام؛ 1+1: bedroom, living room, kitchen, bathroom, balcony (Paya text) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| شوقە | 117, 118 | 117 | 118 | 2 | 2 حەمام؛ 2+1: two bedrooms (1 master), living room, kitchen, two bathrooms, balcony (Paya text) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| شوقە | 81, 117 | 81 | 117 | — | Paya unit table: 81 m2 1 bed/1 bath; 117 m2 2 bed/2 bath (81 m2 not in the text size list) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| شوقە | 83 | 83 | 83 | 1 | 1 حەمام؛ One 'Ready' rental listing | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
 
-**Layouts and floor plans:** Paya shows 'View Blueprint' for the 2 listed apartments (81 m² 1 bed; 117 m² 2 beds) (https://paya-realestate.com/en/projects/nobel-towers-150)
+**نەخشە و پلانی نهۆمەکان:** Paya shows 'View Blueprint' for the 2 listed apartments (81 m² 1 bed; 117 m² 2 beds) (https://paya-realestate.com/en/projects/nobel-towers-150)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** 3 parking floors / private parking (Paya text; tags); 2 commercial floors (Paya text); 24-hour electricity (Paya text); gym (Paya text and tag); sauna room (Paya text); children's play facilities (Paya text 'toys'; tag Kids Play Area); fitted kitchens (Paya text; tag Preinstalled Kitchens); installed air conditioners (Paya text; tag AC); landscaped gardens (Paya text)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** 3 parking floors / private parking (Paya text; tags); 2 commercial floors (Paya text); 24-hour electricity (Paya text); gym (Paya text and tag); sauna room (Paya text); children's play facilities (Paya text 'toys'; tag Kids Play Area); fitted kitchens (Paya text; tag Preinstalled Kitchens); installed air conditioners (Paya text; tag AC); landscaped gardens (Paya text)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** mosque; public garden; supermarket; restaurant; security; kindergarten; maintenance; reception; cafeteria; electrical generator; sewers; pets allowed (all Paya tag list only)
+**بانگەشەی پشتڕاست نەکراوە:** mosque; public garden; supermarket; restaurant; security; kindergarten; maintenance; reception; cafeteria; electrical generator; sewers; pets allowed (all Paya tag list only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 81 m2, 1 bed / 1 bath - Paya project-page asking price (agency page, not an official price list) | 62,800 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Apartment 117 m2, 2 bed / 2 bath - Paya project-page asking price | 102,375 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Ready apartment 83 m2, 1 bed / 1 bath - monthly rent (listing) | 300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Paya lists apartments with sale prices ($62,800 and $102,375); homele lists one ready apartment for rent at $300 monthly (https://paya-realestate.com/en/projects/nobel-towers-150)
+| Apartment 81 m2, 1 bed / 1 bath - Paya project-page asking price (agency page, not an official price list) | 62,800 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| Apartment 117 m2, 2 bed / 2 bath - Paya project-page asking price | 102,375 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/nobel-towers-150 |
+| Ready apartment 83 m2, 1 bed / 1 bath - monthly rent (listing) | 300 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Paya lists apartments with sale prices ($62,800 and $102,375); homele lists one ready apartment for rent at $300 monthly (https://paya-realestate.com/en/projects/nobel-towers-150)
 
-### Location and surroundings
-On the Ankawa – New Bahirka road in Erbil, opposite the Lebanese Village; Paya files it under the Nobel City area and says the towers overlook the old city and Nobel City. Map position (low confidence, from agency map pins): 36.2537662, 43.9999248. Google Maps: https://www.google.com/maps?q=36.2537662,43.9999248
+### شوێن و دەوروبەر
+On the Ankawa – New Bahirka road in Erbil, opposite the Lebanese Village; Paya files it under the Nobel City area and says the towers overlook the old city and Nobel City.
+شوێن لەسەر نەخشە: 36.2537662, 43.9999248 (متمانە: نزم) — https://www.google.com/maps?q=36.2537662,43.9999248
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 نۆبڵ تاوەرز (Nobel Towers) پڕۆژەیەکی نیشتەجێبوونی تەواوبووە لە شاری هەولێر، لەسەر ڕێگای عەنکاوە – بەحرکەی نوێ بەرامبەر گوندی لوبنانی، لە تەنیشت نۆبڵ سیتی. گەشەپێدەری پڕۆژەکە کۆمپانیای دۆمۆسە. پڕۆژەکە لە دوو تاوەر پێکدێت، هەر تاوەرێک ٢٣ نهۆمە، کە سێ نهۆمیان بۆ پارکینگ و دوو نهۆمیان بۆ بازرگانی تەرخان کراون. هەر نهۆمێکی نیشتەجێبوون ١٢ شوقەی تێدایە. ڕووبەری شوقەکانی یەک ژووری نووستن (1+1) لە ٦٩ تا ٨٤ م²یە و ژوورێکی نووستن، هۆڵی دانیشتن، چێشتخانە، حەمام و باڵکۆنیان هەیە. شوقەکانی دوو ژووری نووستن (2+1) بە ڕووبەری ١١٧ و ١١٨ م² دوو ژووری نووستن کە یەکێکیان ژووری سەرەکییە، هۆڵی دانیشتن، چێشتخانە، دوو حەمام و باڵکۆنیان هەیە. تاوەرەکان لە لایەکەوە دەڕواننە سەر شاری کۆنی هەولێر و لە لایەکی ترەوە دەڕواننە سەر نۆبڵ سیتی. خزمەتگوزارییەکان بریتین لە کارەبای ٢٤ کاتژمێری، پارکینگی تایبەت لە سێ نهۆمدا، دوو نهۆمی بازرگانی، هۆڵی وەرزش، ژووری ساونا، شوێنی یاریی منداڵان، چێشتخانەی ئامادەکراو، ئەیرکۆندیشنی دامەزراو و باخچەی ڕازاوە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أبراج نوبل (Nobel Towers) مشروع سكني مكتمل في مدينة أربيل، يقع على طريق عنكاوا – بحركة الجديد مقابل القرية اللبنانية، بجوار نوبل سيتي. الجهة المطوّرة هي شركة دوموس. يتكون المشروع من برجين، يضم كل منهما 23 طابقاً، منها ثلاثة طوابق لمواقف السيارات وطابقان تجاريان. ويضم كل طابق سكني 12 شقة. تتراوح مساحة الشقق بغرفة نوم واحدة (1+1) بين 69 و84 م²، وتضم غرفة نوم وصالة معيشة ومطبخاً وحماماً وشرفة. أما الشقق بغرفتي نوم (2+1) بمساحتي 117 و118 م² فتضم غرفتي نوم إحداهما رئيسية، وصالة معيشة ومطبخاً وحمامين وشرفة. وتطل الأبراج على مدينة أربيل القديمة من جهة وعلى نوبل سيتي من الجهة الأخرى. وتشمل المرافق كهرباء على مدار 24 ساعة، ومواقف سيارات خاصة في ثلاثة طوابق، وطابقين تجاريين، وصالة رياضية، وغرفة ساونا، ومنطقة لعب للأطفال، ومطابخ مجهزة، ومكيفات مركبة، وحدائق منسقة.
 
 ### 3. English
 Nobel Towers is a completed residential project in Erbil, located on the Ankawa – New Bahirka road opposite the Lebanese Village, next to Nobel City. The developer is Domus Company. The project consists of two towers, each with 23 floors, of which three are parking floors and two are commercial floors. Each residential floor has 12 apartments. One-bedroom (1+1) apartments range from 69 to 84 m² and include a bedroom, a living room, a kitchen, a bathroom and a balcony. Two-bedroom (2+1) apartments of 117 and 118 m² include two bedrooms, one of them a master bedroom, a living room, a kitchen, two bathrooms and a balcony. The towers overlook the old city of Erbil on one side and Nobel City on the other. Facilities include 24-hour electricity, private parking on three floors, two commercial floors, a gym, a sauna room, a children's play area, fitted kitchens, installed air conditioners and landscaped gardens.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers | Area page 'Nobel Towers, Erbil': one Ready 83 m2 1-bed apartment for rent at USD 300/month | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/nobel-towers-150 | Project page: status Completed; developer field 'Domus Company'; location Ankawa – New Bahirka Road opposite the Lebanese Village; 2 buildings (A, B) x 23 floors incl. 3 parking and 2 commercial floors; 12 apartments per floor; 1+1 69/83/84 m2, 2+1 117/118 m2; unit table 81 m2 USD 62,800 and 117 m2 USD 102,375; features list | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers | Area page 'Nobel Towers, Erbil': one Ready 83 m2 1-bed apartment for rent at USD 300/month | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/nobel-towers-150 | Project page: status Completed; developer field 'Domus Company'; location Ankawa – New Bahirka Road opposite the Lebanese Village; 2 buildings (A, B) x 23 floors incl. 3 parking and 2 commercial floors; 12 apartments per floor; 1+1 69/83/84 m2, 2+1 117/118 m2; unit table 81 m2 USD 62,800 and 117 m2 USD 102,375; features list | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and Erbil location (Paya, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Domus Company (Paya field)
    - 2 buildings x 23 floors, 12 apartments per floor (Paya)
    - Apartment sizes 69-118 m2 and features (Paya)
    - Status Completed (Paya; supported by homele 'Ready' listing)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - 1+1 sizes 69/83/84 m2 in text vs 81 m2 in unit table (same Paya page)
    - 1+1 apartment sizes: 69, 83, 84 m2 (text) (https://paya-realestate.com/en/projects/nobel-towers-150); 81 m2 (unit table) (https://paya-realestate.com/en/projects/nobel-towers-150) → All recorded; both from the same Paya page, no other source
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total apartments
    - Land area
    - Launch and completion dates
    - Coordinates
    - Pages on Baghy, Haji Salam, Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether Nobel Towers is formally part of Noble/Nobel City or only adjacent to it
    - Total units not stated (12 per floor x residential floors would need an assumption)
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "nobel-towers",

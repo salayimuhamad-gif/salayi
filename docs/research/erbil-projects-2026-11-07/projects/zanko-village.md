@@ -1,123 +1,126 @@
 <!-- rendered -->
 # Zanko Village — گوندی زانکۆ — قرية زانكو
-Project ID: zanko-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: zanko-village | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Zanko Village | Medium – Same name on Baghy and homele | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| City | Erbil | High – Baghy and homele | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| District / Area | Kirkuk Road, opposite 18 Shubat girls' dormitory | Medium – Baghy address; marker south of centre on Kirkuk road approach | https://baghyshaqlawa.net/en/projects/zanko-village |
-| Developer | Not verified | Low – Not named on any primary site | — |
-| Project Category | Residential (houses) | Medium – Baghy type House; homele house listings | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated (house compound) | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed (inferred) | Medium – Three homele resale listings tagged 'Ready'; no explicit status | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.138633, 44.028042 — Google Maps: https://www.google.com/maps?q=36.138633,44.028042 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zanko-village |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated; one listing is a two-floor house | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – Haji Salam 'Zanko City' not linked to this project | — |
+| ناوی پڕۆژە | Zanko Village | مامناوەند – Same name on Baghy and homele | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| شار | هەولێر | بەرز – Baghy and homele | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| ناوچە / گەڕەک | Kirkuk Road, opposite 18 Shubat girls' dormitory | مامناوەند – Baghy address; marker south of centre on Kirkuk road approach | https://baghyshaqlawa.net/en/projects/zanko-village |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named on any primary site | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | مامناوەند – Baghy type House; homele house listings | https://baghyshaqlawa.net/en/projects/zanko-village ; https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated (house compound) | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | مامناوەند – Three homele resale listings tagged 'Ready'; no explicit status | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.138633, 44.028042 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.138633,44.028042 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zanko-village |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated; one listing is a two-floor house | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – Haji Salam 'Zanko City' not linked to this project | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated (house compound) | — |
-| Floors per building | Not verified | Not stated; one listing is a two-floor house | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | Haji Salam 'Zanko City' not linked to this project | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated (house compound) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated; one listing is a two-floor house | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | Haji Salam 'Zanko City' not linked to this project | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 250 | 250 | 250 | — | All advertised houses 250 m2: 2 bed/2 bath (x2), 3 bed/3 bath two-floor house (homele); 5 bed/4 bath (Baghy card) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village ; https://baghyshaqlawa.net/en/projects/zanko-village |
+| خانوو | 250 | 250 | 250 | — | All advertised houses 250 m2: 2 bed/2 bath (x2), 3 bed/3 bath two-floor house (homele); 5 bed/4 bath (Baghy card) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village ; https://baghyshaqlawa.net/en/projects/zanko-village |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Internet (Baghy); Playground (Baghy); Security (Baghy); Parking (Baghy); Green areas (Baghy)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Internet (Baghy); Playground (Baghy); Security (Baghy); Parking (Baghy); Green areas (Baghy)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready house 250 m2, 2 bed, 2 bath - negotiable | 235,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| Ready modern house 250 m2, 2 bed, 2 bath - negotiable | 220,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| Ready two-floor house 250 m2, 3 bed, 3 bath - negotiable | 225,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
-| House 250 m2, 5 bed, 4 bath (Baghy card) | 215,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zanko-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready house 250 m2, 2 bed, 2 bath - negotiable | 235,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| Ready modern house 250 m2, 2 bed, 2 bath - negotiable | 220,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| Ready two-floor house 250 m2, 3 bed, 3 bath - negotiable | 225,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village |
+| House 250 m2, 5 bed, 4 bath (Baghy card) | 215,000 | USD | فرۆشتنەوە | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zanko-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Zanko Village is on the Kirkuk Road in southern Erbil, opposite the 18 Shubat dormitory for girls (Baghy Shaqlawa). Map position (low confidence, from agency map pins): 36.138633, 44.028042. Google Maps: https://www.google.com/maps?q=36.138633,44.028042
+### شوێن و دەوروبەر
+Zanko Village is on the Kirkuk Road in southern Erbil, opposite the 18 Shubat dormitory for girls (Baghy Shaqlawa).
+شوێن لەسەر نەخشە: 36.138633, 44.028042 (متمانە: نزم) — https://www.google.com/maps?q=36.138633,44.028042
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی زانکۆ (Zanko Village) پڕۆژەیەکی نیشتەجێبوونی خانووە لە باشووری هەولێر. پڕۆژەکە لەسەر ڕێگای کەرکووک، بەرامبەر بەشی ناوخۆیی کچانی ١٨ی شوبات هەڵکەوتووە. پڕۆژەکە لە خانووی ٢٥٠ م² پێکدێت. خانووەکانی گوندی زانکۆ دوو تا پێنج ژووری نووستن و دوو تا چوار حەمامیان هەیە، و هەندێکیان دوو نهۆمین. خزمەتگوزارییەکانی پڕۆژەکە بریتین لە پاسەوانی، پارکینگ، ئینتەرنێت، یاریگای منداڵان و ڕووبەری سەوز.
 
-### 2. Arabic (العربية)
+### 2. العربية
 قرية زانكو (Zanko Village) مشروع سكني للبيوت في جنوب أربيل. يقع المشروع على طريق كركوك، مقابل القسم الداخلي للطالبات 18 شباط. ويتكون المشروع من بيوت بمساحة 250 م². وتضم البيوت في قرية زانكو من غرفتي نوم إلى خمس غرف نوم ومن حمامين إلى أربعة حمامات، وبعضها مبني على طابقين. وتشمل مرافق المشروع الحراسة الأمنية ومواقف السيارات وخدمة الإنترنت وملعباً للأطفال ومساحات خضراء.
 
 ### 3. English
 Zanko Village is a residential housing project in southern Erbil. It is located on the Kirkuk Road, opposite the 18 Shubat dormitory for girls. The project consists of houses of 250 m². Houses in Zanko Village have two to five bedrooms and two to four bathrooms, and some are built on two floors. Facilities in the project include security, parking, internet service, a playground and green areas.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village | Area listing page (1 page): 3 'Ready' houses, all 250 m2, 2-3 bed, USD 220,000-235,000 (negotiable) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/zanko-village | Project page (last updated 2022-02-21): address 'Karkuk Road, Opposite of 18 Shobat Dormitory for Girls'; type House; tags internet, playground, security, parking, green areas; map marker 36.138633, 44.028042; 1 undated sale card: house 250 m2, 5 bed, USD 215,000 | 2022-02-21 | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/zanko-village | Area listing page (1 page): 3 'Ready' houses, all 250 m2, 2-3 bed, USD 220,000-235,000 (negotiable) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/zanko-village | Project page (last updated 2022-02-21): address 'Karkuk Road, Opposite of 18 Shobat Dormitory for Girls'; type House; tags internet, playground, security, parking, green areas; map marker 36.138633, 44.028042; 1 undated sale card: house 250 m2, 5 bed, USD 215,000 | 2022-02-21 | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://royaiq.com/areas/zankozone | Roya sitemap only (pages not fetched): area 'zankozone' and listing slug 'house for sale 250m in zanko village' | — | 2026-11-07 | low |
+| roya-iq.com | https://royaiq.com/areas/zankozone | Roya sitemap only (pages not fetched): area 'zankozone' and listing slug 'house for sale 250m in zanko village' | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Zanko Village" Erbil Kirkuk road”; “"گوندی زانکۆ" OR "قرية زانكو" OR "Zanko village" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Zanko Village" Erbil Kirkuk road»؛ «"گوندی زانکۆ" OR "قرية زانكو" OR "Zanko village" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location and house type (Baghy, homele)
    - 250 m2 house size (homele x3, Baghy card)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Address on Kirkuk Road and feature tags (Baghy)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Explicit construction status
    - Land area
    - Unit count
    - Dates
    - Official prices
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy page last updated 2022-02-21; sale card undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Relation to Haji Salam's 'Zanko City' / 'Zanko 1-2' areas
    - Status inferred from 'Ready' resale listings only
-   - Second verification pass (2026-11-07): no new evidence. No independent page about the Zanko Village housing project was found (Kurdish results only concern universities, 'zanko' meaning university); developer, status, unit count and its relation to the Zanko City areas remain unresolved.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page about the Zanko Village housing project was found (Kurdish results only concern universities, 'zanko' meaning university); developer, status, unit count and its relation to the Zanko City areas remain unresolved.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "zanko-village",

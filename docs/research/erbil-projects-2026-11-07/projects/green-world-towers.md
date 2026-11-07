@@ -1,128 +1,131 @@
 <!-- rendered -->
 # Green World Towers — — — كرين ورلد تاور
-Project ID: green-world-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: green-world-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Green World Towers | Low – — – High — developer website (Şua İnşaat) and two agency project pages (Paya, Baghy Shaqlawa) use the name | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world |
-| City | Erbil | High | — |
-| District / Area | "Golden Zone", between the 100m and 120m roads, near Erbil International Airport, Dream City, UN offices and Empire World (Paya); "Erbil – 100m Street" (Baghy Shaqlawa); OpenSooq ad: "golden square, opposite the Empire building" | Low – — – Medium — two agency pages and one market ad agree on 100m Street / Empire World vicinity; no official address | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world ; https://iq.opensooq.com/ar/search/281916426 |
-| Developer | Şua İnşaat (Turkish construction company; project listed under its "Sua Global" portfolio) | Low – — – High — developer's own site + Paya | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Project Category | Residential towers with commercial floors (predominantly residential; developer calls it a "housing and commercial project") | High | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Total Land Area | 110,000 m² | Low – — – High — stated by developer site and Paya project page (same figure) | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Number of Buildings / Towers | 5 towers | Low – — – Medium — Paya project page only (single source) | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Disputed: Paya project page = "Constructing" and Paya unit listings = "UnderConstruction" (accessed 2026-11-07); developer site says construction started 2023; Homele shows ~8 pages of "Ready" rental listings in "Green World" (accessed 2026-11-07), indicating at least part of the project is occupied | Low – — – Medium — likely phased delivery, but no source states which towers are delivered | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd ; https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-| Completion Date | Not verified (sales-centre Facebook page reportedly mentions a "six-month handover"; no date verified) | Low | https://www.facebook.com/GreenWorldTowers1 |
-| Coordinates | 36.211805, 43.970275 — Google Maps: https://www.google.com/maps?q=36.211805,43.970275 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world |
-| Alternative names | "Green World" (Baghy Shaqlawa, Homele area label); كرين ورلد تاور (Paya Arabic); "Crown World Towers" (misspelling in an OpenSooq rental ad) | Medium | https://baghyshaqlawa.net/en/projects/green-world ; https://homele.com/properties/for-sale-and-rent/erbil/green-world ; https://iq.opensooq.com/ar/search/281916426 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 22 residential floors + 2 commercial floors + 3 underground parking levels (per tower) | Medium – Low — Paya project page only | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Launch Date | Construction start 2023 (developer site) | Low – — – Medium — from developer page as surfaced in search results; page not fetched directly | https://suainsaat.com.tr/en/sua-global/green-world-towers.php |
-| Development Phases | Not verified (5 towers; no phase documentation found) | Low – not stated by any source found | — |
+| ناوی پڕۆژە | Green World Towers | نزم – High — developer website (Şua İnşaat) and two agency project pages (Paya, Baghy Shaqlawa) use the name | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world |
+| شار | هەولێر | بەرز | — |
+| ناوچە / گەڕەک | "Golden Zone", between the 100m and 120m roads, near Erbil International Airport, Dream City, UN offices and Empire World (Paya); "Erbil – 100m Street" (Baghy Shaqlawa); OpenSooq ad: "golden square, opposite the Empire building" | نزم – Medium — two agency pages and one market ad agree on 100m Street / Empire World vicinity; no official address | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world ; https://iq.opensooq.com/ar/search/281916426 |
+| گەشەپێدەر (کۆمپانیا) | Şua İnşaat (Turkish construction company; project listed under its "Sua Global" portfolio) | نزم – High — developer's own site + Paya | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential towers with commercial floors (predominantly residential; developer calls it a "housing and commercial project") | بەرز | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
+| کۆی ڕووبەری زەوی | 110,000 m² | نزم – High — stated by developer site and Paya project page (same figure) | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
+| ژمارەی باڵەخانە / تاوەر | 5 towers | نزم – Medium — Paya project page only (single source) | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | ناکۆکی لەسەرە — Disputed: Paya project page = "Constructing" and Paya unit listings = "UnderConstruction" (accessed 2026-11-07); developer site says construction started 2023; Homele shows ~8 pages of "Ready" rental listings in "Green World" (accessed 2026-11-07), indicating at least part of the project is occupied | نزم – Medium — likely phased delivery, but no source states which towers are delivered | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd ; https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە — (sales-centre Facebook page reportedly mentions a "six-month handover"; no date verified) | نزم | https://www.facebook.com/GreenWorldTowers1 |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.211805, 43.970275 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.211805,43.970275 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/green-world-towers-281 ; https://baghyshaqlawa.net/en/projects/green-world |
+| ناوە جێگرەوەکان | "Green World" (Baghy Shaqlawa, Homele area label); كرين ورلد تاور (Paya Arabic); "Crown World Towers" (misspelling in an OpenSooq rental ad) | مامناوەند | https://baghyshaqlawa.net/en/projects/green-world ; https://homele.com/properties/for-sale-and-rent/erbil/green-world ; https://iq.opensooq.com/ar/search/281916426 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 22 residential floors + 2 commercial floors + 3 underground parking levels (per tower) | مامناوەند – Low — Paya project page only | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| بەرواری دەستپێکردن | Construction start 2023 (developer site) | نزم – Medium — from developer page as surfaced in search results; page not fetched directly | https://suainsaat.com.tr/en/sua-global/green-world-towers.php |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (5 towers; no phase documentation found) | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 110,000 m² | High — stated by developer site and Paya project page (same figure) | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Total project land area (dunams) | 44.0 | converted from 110,000 m² at 1 Iraqi dunam = 2,500 m² | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 5 towers | Medium — Paya project page only (single source) | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Floors per building | 22 residential floors + 2 commercial floors + 3 underground parking levels (per tower) | Low — Paya project page only | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified (5 towers; no phase documentation found) | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 110,000 m² | High — stated by developer site and Paya project page (same figure) | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 44.0 | گۆڕدراوە لە 110,000 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://suainsaat.com.tr/en/sua-global/green-world-towers.php ; https://paya-realestate.com/en/projects/green-world-towers-281 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 5 towers | Medium — Paya project page only (single source) | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 22 residential floors + 2 commercial floors + 3 underground parking levels (per tower) | Low — Paya project page only | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (5 towers; no phase documentation found) | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 52.9, 64.35 | 52.9 | 64.35 | 0 | 1 bathrooms; Studio units on Paya project page | agency_project_page | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| apartment | 84, 86.6, 89.67 | 84 | 89.67 | 1 | 1 bathrooms; 1+1 apartments | agency_project_page | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| apartment | 138, 143, 151.25, 162 | 138 | 162 | 2 | 2 bathrooms; 2+1 apartments | agency_project_page | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| apartment | 50, 100, 130 | 50 | 130 | — | Individual Paya listings (studio 50 m², 1BHK 100 m², 2BHK 130 m²), status UnderConstruction | market_listing | https://www.paya-realestate.com/en/apartment-sale-50-m-green-world-towers-erbil/ysw9xii/prd ; https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd ; https://www.paya-realestate.com/en/apartment-sale-130-m-green-world-towers-erbil/9vpq3va/prd |
-| apartment | 51, 64, 68, 84, 95, 142, 162 | 51 | 162 | — | Ready rental listings (studio to 2-bed) on Homele area page | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| ستۆدیۆ | 52.9, 64.35 | 52.9 | 64.35 | 0 | 1 حەمام؛ Studio units on Paya project page | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| شوقە | 84, 86.6, 89.67 | 84 | 89.67 | 1 | 1 حەمام؛ 1+1 apartments | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| شوقە | 138, 143, 151.25, 162 | 138 | 162 | 2 | 2 حەمام؛ 2+1 apartments | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| شوقە | 50, 100, 130 | 50 | 130 | — | Individual Paya listings (studio 50 m², 1BHK 100 m², 2BHK 130 m²), status UnderConstruction | ڕیکلامی یەکەیەکی دیاریکراو | https://www.paya-realestate.com/en/apartment-sale-50-m-green-world-towers-erbil/ysw9xii/prd ; https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd ; https://www.paya-realestate.com/en/apartment-sale-130-m-green-world-towers-erbil/9vpq3va/prd |
+| شوقە | 51, 64, 68, 84, 95, 142, 162 | 51 | 162 | — | Ready rental listings (studio to 2-bed) on Homele area page | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
 
-**Layouts and floor plans:** Paya: 'View Blueprint' for all 9 listed units – studios 52.9 and 64.35 m², 1-bed 84, 86.6 and 89.67 m², 2-bed 138, 143, 151.25 and 162 m² (https://paya-realestate.com/en/projects/green-world-towers-281)
+**نەخشە و پلانی نهۆمەکان:** Paya: 'View Blueprint' for all 9 listed units – studios 52.9 and 64.35 m², 1-bed 84, 86.6 and 89.67 m², 2-bed 138, 143, 151.25 and 162 m² (https://paya-realestate.com/en/projects/green-world-towers-281)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** 24-hour electricity; security; car parking; gym / fitness centre; children's playground; green areas / public garden; supermarket; reception; commercial floors; covered parking (Paya only); women's gym (Paya only); women's salon (Paya only); restaurant (Paya only); ATM (Paya only); pharmacy (Paya only); air-conditioning (Paya only); sewers (Paya only); maintenance service (Baghy only)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** 24-hour electricity; security; car parking; gym / fitness centre; children's playground; green areas / public garden; supermarket; reception; commercial floors; covered parking (Paya only); women's gym (Paya only); women's salon (Paya only); restaurant (Paya only); ATM (Paya only); pharmacy (Paya only); air-conditioning (Paya only); sewers (Paya only); maintenance service (Baghy only)
 
-**Unverified claims:** operating gym, children's play area, restaurants and 24-hour market (OpenSooq rental ad); six-month handover (Facebook sales page, via search snippet)
+**بانگەشەی پشتڕاست نەکراوە:** operating gym, children's play area, restaurants and 24-hour market (OpenSooq rental ad); six-month handover (Facebook sales page, via search snippet)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 52.9 m² (developer price quoted on agency project page) | 41,791 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Studio 64.35 m² | 50,837 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 84 m² 1+1 | 66,281 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 86.6 m² 1+1 | 68,730 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 89.67 m² 1+1 | 71,100 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 138 m² 2+1 | 109,020 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 143 m² 2+1 | 112,970 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 151.25 m² 2+1 | 119,488 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Apartment 162 m² 2+1 | 127,980 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Indicative price per m² | 790 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Payment plan: 20% down payment, instalments up to 10 years | — | — | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
-| Rent, 84 m² 1-bed apartment (monthly) | 300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-| Rent, studios 51–68 m² (monthly, range) | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-| Rent, 95 m² furnished 1-bed (monthly) | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-| Rent, 142 m² 2-bed (monthly) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-| Rent, 162 m² 2-bed (monthly, range 500–600) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Paya: 'flexible payment plan with up to 10 years of installments, starting with a 20% down payment'; homele: ready apartments for rent ('$300 Monthly' to '$600 Monthly') (https://paya-realestate.com/en/projects/green-world-towers-281)
+| Studio 52.9 m² (developer price quoted on agency project page) | 41,791 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Studio 64.35 m² | 50,837 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 84 m² 1+1 | 66,281 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 86.6 m² 1+1 | 68,730 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 89.67 m² 1+1 | 71,100 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 138 m² 2+1 | 109,020 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 143 m² 2+1 | 112,970 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 151.25 m² 2+1 | 119,488 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Apartment 162 m² 2+1 | 127,980 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Indicative price per m² | 790 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Payment plan: 20% down payment, instalments up to 10 years | — | — | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/green-world-towers-281 |
+| Rent, 84 m² 1-bed apartment (monthly) | 300 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| Rent, studios 51–68 m² (monthly, range) | 350 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| Rent, 95 m² furnished 1-bed (monthly) | 450 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| Rent, 142 m² 2-bed (monthly) | 550 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+| Rent, 162 m² 2-bed (monthly, range 500–600) | 600 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Paya: 'flexible payment plan with up to 10 years of installments, starting with a 20% down payment'; homele: ready apartments for rent ('$300 Monthly' to '$600 Monthly') (https://paya-realestate.com/en/projects/green-world-towers-281)
 
-### Location and surroundings
-Green World Towers is in Erbil's south-western "Golden Zone", between the 100m and 120m ring roads (Paya) and addressed to the 100m Street by Baghy Shaqlawa. Paya places it near Erbil International Airport, Dream City, the UN offices and Empire World; a market rental ad independently describes the towers as "opposite the Empire building". Baghy Shaqlawa's nearest branch is its White Tower branch in Erbil. No verified distances or exact street address are available. Map position (medium confidence, from agency map pins): 36.211805, 43.970275. Google Maps: https://www.google.com/maps?q=36.211805,43.970275
+### شوێن و دەوروبەر
+Green World Towers is in Erbil's south-western "Golden Zone", between the 100m and 120m ring roads (Paya) and addressed to the 100m Street by Baghy Shaqlawa. Paya places it near Erbil International Airport, Dream City, the UN offices and Empire World; a market rental ad independently describes the towers as "opposite the Empire building". Baghy Shaqlawa's nearest branch is its White Tower branch in Erbil. No verified distances or exact street address are available.
+شوێن لەسەر نەخشە: 36.211805, 43.970275 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.211805,43.970275
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گرین وۆرڵد تاوەرز (Green World Towers) پڕۆژەیەکی نیشتەجێبوونی تاوەری بەرزە لە شاری هەولێر، لە نێوان شەقامە بازنەییەکانی ١٠٠ مەتری و ١٢٠ مەتری لەو ناوچەیەی بە ناوچەی زێڕین ناسراوە، نزیک فڕۆکەخانەی نێودەوڵەتیی هەولێر، دریم سیتی، نووسینگەکانی نەتەوە یەکگرتووەکان و ئیمپایەر وۆرڵد. کۆمپانیای تورکیی شوا ئینشائات گەشە بە پڕۆژەکە دەدات، و کاری بیناسازی لە ساڵی ٢٠٢٣ دەستی پێکردووە. ڕووبەری زەویی پڕۆژەکە ١١٠٬٠٠٠ م²یە و لە پێنج تاوەر پێکدێت، هەر تاوەرێک ٢٢ نهۆمی نیشتەجێبوون، دوو نهۆمی بازرگانی و سێ نهۆمی پارکینگی ژێرزەمینی هەیە. شوقەکان سێ جۆرن: ستۆدیۆ بە ڕووبەری ٥٢٫٩ و ٦٤٫٣٥ م²، شوقەی یەک ژووری نووستن (1+1) بە ڕووبەری ٨٤ تا ٨٩٫٦٧ م² لەگەڵ یەک حەمام، و شوقەی دوو ژووری نووستن (2+1) بە ڕووبەری ١٣٨ تا ١٦٢ م² لەگەڵ دوو حەمام. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە کارەبای ٢٤ کاتژمێری، پاسەوانی، پارکینگی کراوە و داپۆشراو، هۆڵی وەرزش، هۆڵی وەرزش و ساڵۆنی ئافرەتان، یاریگای منداڵان، ناوچەی سەوز و باخچەی گشتی، سوپەرمارکێت، ڕێستۆرانت، دەرمانخانە، مەکینەی ڕاکێشانی پارە، ڕیسێپشن، خزمەتگوزاریی چاککردنەوە و نهۆمی بازرگانی.
 
-### 2. Arabic (العربية)
+### 2. العربية
 كرين ورلد تاور (Green World Towers) مشروع سكني من الأبراج العالية في مدينة أربيل، يقع بين الطريقين الدائريين 100 متر و120 متر في المنطقة المعروفة بالمنطقة الذهبية، بالقرب من مطار أربيل الدولي ودريم سيتي ومكاتب الأمم المتحدة وإمباير وورلد. تطوّر المشروع شركة شوا إنشاءات التركية، وبدأ البناء فيه عام 2023. تبلغ مساحة أرض المشروع 110,000 م²، ويتكون من خمسة أبراج، يضم كل منها 22 طابقاً سكنياً وطابقين تجاريين وثلاثة طوابق لمواقف السيارات تحت الأرض. تتوفر الشقق بثلاثة أنواع: استوديوهات بمساحة 52.9 و64.35 م²، وشقق بغرفة نوم واحدة (1+1) بمساحة 84 إلى 89.67 م² مع حمام واحد، وشقق بغرفتي نوم (2+1) بمساحة 138 إلى 162 م² مع حمامين. وتشمل المرافق المخطط لها كهرباء على مدار 24 ساعة، والحراسة الأمنية، ومواقف سيارات مكشوفة ومسقوفة، وصالة رياضية، وصالة رياضية وصالون للنساء، وملعباً للأطفال، ومساحات خضراء وحديقة عامة، وسوبرماركت، ومطعماً، وصيدلية، وصرافاً آلياً، واستقبالاً، وخدمة صيانة، وطوابق تجارية.
 
 ### 3. English
 Green World Towers is a high-rise residential project in Erbil, located between the 100m and 120m ring roads in the area known as the Golden Zone, close to Erbil International Airport, Dream City, the UN offices and Empire World. The project is developed by the Turkish company Şua İnşaat, and construction began in 2023. It covers a land area of 110,000 m² and consists of five towers, each with 22 residential floors, two commercial floors and three underground parking levels. Apartments come in three types: studios of 52.9 and 64.35 m², one-bedroom (1+1) apartments of 84 to 89.67 m² with one bathroom, and two-bedroom (2+1) apartments of 138 to 162 m² with two bathrooms. Planned facilities include 24-hour electricity, security, open and covered car parking, a gym, a women's gym and a women's salon, a children's playground, green areas and a public garden, a supermarket, a restaurant, a pharmacy, an ATM, reception, a maintenance service and commercial floors.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/green-world | Area listing page: Ready rental apartments 51–162 m², USD 300–600/month (8 pages) | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/green-world-towers-281 | Project page: location, developer Şua İnşaat, 5 towers, 22+2+3 floors, 110,000 m², unit sizes/prices, payment plan, amenities, status Constructing | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd | Individual unit listings (50/100/130 m²) marked UnderConstruction | — | 2026-11-07 | low |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/green-world | Project 'Green World', Erbil - 100m Street, apartments, feature list, nearest branch White Tower | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/green-world | Area listing page: Ready rental apartments 51–162 m², USD 300–600/month (8 pages) | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/green-world-towers-281 | Project page: location, developer Şua İnşaat, 5 towers, 22+2+3 floors, 110,000 m², unit sizes/prices, payment plan, amenities, status Constructing | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd | Individual unit listings (50/100/130 m²) marked UnderConstruction | — | 2026-11-07 | نزم |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/green-world | Project 'Green World', Erbil - 100m Street, apartments, feature list, nearest branch White Tower | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| suainsaat.com.tr | https://suainsaat.com.tr/en/sua-global/green-world-towers.php | Developer page: housing and commercial project on 110,000 m² in Erbil, construction start 2023 (via search snippet) | — | 2026-11-07 | high |
-| facebook.com | https://www.facebook.com/GreenWorldTowers1 | Sales-centre page (not fetched); search snippet mentions family residential project and six-month handover | — | 2026-11-07 | low |
-| mapcarta.com | https://mapcarta.com/N7080100862 | Map node 'Green World Towers' near airport checkpoint, classified as park; no coordinates captured | — | 2026-11-07 | low |
-| iq.opensooq.com | https://iq.opensooq.com/ar/search/281916426 | Rental ad 'Crown World Towers' in golden square opposite Empire; claims gym, play area, restaurants, 24h market | — | 2026-11-07 | low |
+| suainsaat.com.tr | https://suainsaat.com.tr/en/sua-global/green-world-towers.php | Developer page: housing and commercial project on 110,000 m² in Erbil, construction start 2023 (via search snippet) | — | 2026-11-07 | بەرز |
+| facebook.com | https://www.facebook.com/GreenWorldTowers1 | Sales-centre page (not fetched); search snippet mentions family residential project and six-month handover | — | 2026-11-07 | نزم |
+| mapcarta.com | https://mapcarta.com/N7080100862 | Map node 'Green World Towers' near airport checkpoint, classified as park; no coordinates captured | — | 2026-11-07 | نزم |
+| iq.opensooq.com | https://iq.opensooq.com/ar/search/281916426 | Rental ad 'Crown World Towers' in golden square opposite Empire; claims gym, play area, restaurants, 24h market | — | 2026-11-07 | نزم |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - project name
    - developer Şua İnşaat
    - total land area 110,000 m² (developer + Paya)
    - location on/near 100m Street in the Golden Zone near Empire World (Paya + Baghy + market ad)
    - apartment-only product mix
    - core amenity set (24h electricity, security, parking, gym, playground, green areas, supermarket, reception) listed by both agencies
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 5 towers
    - 22 residential + 2 commercial + 3 basement floors
    - unit sizes and prices
@@ -130,27 +133,27 @@ First-pass research only (at most one web search for this project).
    - 20% / 10-year payment plan (all Paya)
    - construction start 2023 (developer site snippet)
    - women's gym/salon, restaurant, ATM, pharmacy (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - construction status — Paya "Constructing"/"UnderConstruction" (2026-11-07) vs. Homele "Ready" rental listings (2026-11-07) vs. Facebook "six-month handover" (undated). Resolution: marked Disputed
    - most consistent reading is phased delivery with some towers occupied and others still under construction, but no source states this
    - construction_status: Constructing / UnderConstruction (https://paya-realestate.com/en/projects/green-world-towers-281); Ready (multiple rental listings) (https://homele.com/properties/for-sale-and-rent/erbil/green-world); construction started 2023 (https://suainsaat.com.tr/en/sua-global/green-world-towers.php) → Disputed; likely phased delivery with some towers occupied — needs confirmation of which towers are delivered
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - total unit count
    - which towers are delivered
    - completion date
    - official address and coordinates
    - Kurdish name
    - whether the 110,000 m² is land area or total built-up area (developer says "on an area of 110,000 m²")
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya prices and status (page date unknown)
    - Facebook handover statement
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - relationship between "Green World Towers" marketing and Mapcarta's "park" node
    - whether the towers have a 2-floor commercial podium per tower or shared
    - number of parking spaces
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "green-world-towers",

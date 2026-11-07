@@ -1,135 +1,138 @@
 <!-- rendered -->
 # Erbil One Tower — ئەربیل وەن تاوەر — أربيل ون تاور
-Project ID: erbil-one-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: erbil-one-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Erbil One Tower | High – Baghy, homele, Roya ('erbilonetower'); Paya 'One Tower' | https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower ; https://paya-realestate.com/en/projects/one-tower-280 |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
-| District / Area | 60 m Street (beside Zanyari) | High – Paya and Baghy agree on 60 m Street | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
-| Developer | Kirmanj Group (Kirmanj Construction) | Medium – Paya developer field and text only | https://paya-realestate.com/en/projects/one-tower-280 |
-| Project Category | Mixed-use (apartments, offices, retail, leisure) | High – Paya text; Wikipedia 'multi-use' (search result) | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 1 tower | High – Paya, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
-| Total Residential Units | Not verified | Low – Paya '7 Units' counts listed unit types | — |
-| Construction Status | Completed | High – Paya, Roya 'ready', homele 'Ready' listings, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://roya-iq.com/projects/erbilonetower ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-| Completion Date | 2023 (early 2020s) | Low – Roya card date field; Paya 'early 2020s' | https://roya-iq.com/projects/erbilonetower ; https://paya-realestate.com/en/projects/one-tower-280 |
-| Coordinates | 36.174711, 44.006884 — Google Maps: https://www.google.com/maps?q=36.174711,44.006884 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
-| Alternative names | One Tower; Erbil One Tower Zanyari; E1 Tower | Medium – Paya and Baghy titles; Wikipedia title in search results | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari ; https://en.wikipedia.org/wiki/E1_Tower |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 48 | High – Paya and Wikipedia (search result) agree | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None (single tower) | Medium – No phases mentioned | — |
+| ناوی پڕۆژە | Erbil One Tower | بەرز – Baghy, homele, Roya ('erbilonetower'); Paya 'One Tower' | https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower ; https://paya-realestate.com/en/projects/one-tower-280 |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
+| ناوچە / گەڕەک | 60 m Street (beside Zanyari) | بەرز – Paya and Baghy agree on 60 m Street | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
+| گەشەپێدەر (کۆمپانیا) | Kirmanj Group (Kirmanj Construction) | مامناوەند – Paya developer field and text only | https://paya-realestate.com/en/projects/one-tower-280 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (apartments, offices, retail, leisure) | بەرز – Paya text; Wikipedia 'multi-use' (search result) | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 1 tower | بەرز – Paya, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Paya '7 Units' counts listed unit types | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | بەرز – Paya, Roya 'ready', homele 'Ready' listings, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://roya-iq.com/projects/erbilonetower ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| بەرواری تەواوبوون | 2023 (early 2020s) | نزم – Roya card date field; Paya 'early 2020s' | https://roya-iq.com/projects/erbilonetower ; https://paya-realestate.com/en/projects/one-tower-280 |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.174711, 44.006884 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.174711,44.006884 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
+| ناوە جێگرەوەکان | One Tower; Erbil One Tower Zanyari; E1 Tower | مامناوەند – Paya and Baghy titles; Wikipedia title in search results | https://paya-realestate.com/en/projects/one-tower-280 ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari ; https://en.wikipedia.org/wiki/E1_Tower |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 48 | بەرز – Paya and Wikipedia (search result) agree | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None (single tower) | مامناوەند – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Paya '7 Units' counts listed unit types | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 1 tower | Paya, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
-| Floors per building | 48 | Paya and Wikipedia (search result) agree | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None (single tower) | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Paya '7 Units' counts listed unit types | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 1 tower | Paya, Wikipedia | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 48 | Paya and Wikipedia (search result) agree | https://paya-realestate.com/en/projects/one-tower-280 ; https://en.wikipedia.org/wiki/E1_Tower |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None (single tower) | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 88, 89, 97, 119 | 88 | 119 | 1 | 1 bathrooms; Paya unit table | agency_project_page | https://paya-realestate.com/en/projects/one-tower-280 |
-| apartment | 122, 126, 168 | 122 | 168 | 2 | 2 bathrooms; Paya unit table; all seven Paya prices equal USD 900 per m2 (calculated) | agency_project_page | https://paya-realestate.com/en/projects/one-tower-280 |
-| office | Not verified | — | — | — | Office spaces and retail outlets mentioned in Paya text; no sizes | agency_project_page | https://paya-realestate.com/en/projects/one-tower-280 |
-| apartment | 85, 93, 126, 130 | 85 | 130 | — | 'Ready' listings: 85 and 93 m2 1+1 for sale; 85, 126, 130 m2 for rent | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| شوقە | 88, 89, 97, 119 | 88 | 119 | 1 | 1 حەمام؛ Paya unit table | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/one-tower-280 |
+| شوقە | 122, 126, 168 | 122 | 168 | 2 | 2 حەمام؛ Paya unit table; all seven Paya prices equal USD 900 per m2 (calculated) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/one-tower-280 |
+| ئۆفیس | پشتڕاست نەکراوەتەوە | — | — | — | Office spaces and retail outlets mentioned in Paya text; no sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/one-tower-280 |
+| شوقە | 85, 93, 126, 130 | 85 | 130 | — | 'Ready' listings: 85 and 93 m2 1+1 for sale; 85, 126, 130 m2 for rent | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
 
-**Layouts and floor plans:** Blueprints published ('View Blueprint') for 7 apartment units 88–168 m² (https://paya-realestate.com/en/projects/one-tower-280)
+**نەخشە و پلانی نهۆمەکان:** Blueprints published ('View Blueprint') for 7 apartment units 88–168 m² (https://paya-realestate.com/en/projects/one-tower-280)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** fitness center / gym (Paya text and tag); swimming pool (Paya text); restaurants (Paya text and tag); underground parking (Paya text; Paya and Baghy parking tags); office spaces and retail outlets (Paya text); security (Paya and Baghy tags); seismic-resistant construction (Paya text)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** fitness center / gym (Paya text and tag); swimming pool (Paya text); restaurants (Paya text and tag); underground parking (Paya text; Paya and Baghy parking tags); office spaces and retail outlets (Paya text); security (Paya and Baghy tags); seismic-resistant construction (Paya text)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** sewers; women's gym; cafeteria; bakery (Paya tags only); 24 hr electricity; internet; playground; green areas; supermarket; health center; private garden (Baghy tags only)
+**بانگەشەی پشتڕاست نەکراوە:** sewers; women's gym; cafeteria; bakery (Paya tags only); 24 hr electricity; internet; playground; green areas; supermarket; health center; private garden (Baghy tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 88 m2, 1 bed - Paya project-page price under developer profile Kirmanj Group (agency page, not an official price list) | 79,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
-| Apartment 126 m2, 2 bed - Paya project-page price | 113,400 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
-| Apartment 168 m2, 2 bed - Paya project-page price | 151,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
-| Ready apartment 85 m2 (1+1) - listing asking price (negotiable) | 68,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-| Ready apartment 93 m2, 1 bed - listing asking price (negotiable) | 69,100 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-| Ready apartment 85 m2, 1 bed - listing asking price (negotiable; highest on page) | 75,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-| Ready apartment 85 m2, 1 bed - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-| Ready furnished apartment 126 m2, 2 bed - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: ready apartments for monthly rent (85–130 m², $400–750) and for sale (85–93 m², $68,500–69,100 negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower)
+| Apartment 88 m2, 1 bed - Paya project-page price under developer profile Kirmanj Group (agency page, not an official price list) | 79,200 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
+| Apartment 126 m2, 2 bed - Paya project-page price | 113,400 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
+| Apartment 168 m2, 2 bed - Paya project-page price | 151,200 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/one-tower-280 |
+| Ready apartment 85 m2 (1+1) - listing asking price (negotiable) | 68,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| Ready apartment 93 m2, 1 bed - listing asking price (negotiable) | 69,100 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| Ready apartment 85 m2, 1 bed - listing asking price (negotiable; highest on page) | 75,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| Ready apartment 85 m2, 1 bed - monthly rent | 400 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+| Ready furnished apartment 126 m2, 2 bed - monthly rent | 600 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: ready apartments for monthly rent (85–130 m², $400–750) and for sale (85–93 m², $68,500–69,100 negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower)
 
-### Location and surroundings
-On 60 m Street in Erbil, beside the Zanyari Tower according to Baghy. Map position (medium confidence, from agency map pins): 36.174711, 44.006884. Google Maps: https://www.google.com/maps?q=36.174711,44.006884
+### شوێن و دەوروبەر
+On 60 m Street in Erbil, beside the Zanyari Tower according to Baghy.
+شوێن لەسەر نەخشە: 36.174711, 44.006884 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.174711,44.006884
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئەربیل وەن تاوەر (Erbil One Tower)، کە بە وەن تاوەریش ناسراوە، تاوەرێکی فرەمەبەستی تەواوکراوە لەسەر شەقامی ٦٠ مەتری لە هەولێر. کۆمەڵەی کرمانج (کۆمپانیای بیناسازیی کرمانج) دروستی کردووە و لە سەرەتای ساڵانی ٢٠٢٠دا تەواو بووە. پڕۆژەکە یەک تاوەری ٤٨ نهۆمییە کە شوقەی نیشتەجێبوون، نووسینگە و دووکانی بازرگانی پێکەوە کۆ دەکاتەوە. شوقەی یەک ژووری نووستن و یەک حەمام بە ڕووبەری ٨٨، ٨٩، ٩٧ و ١١٩ م² هەن، و شوقەی دوو ژووری نووستن و دوو حەمام بە ڕووبەری ١٢٢، ١٢٦ و ١٦٨ م². هەروەها شوقەی بچووکتری یەک ژووری نووستن بە ڕووبەری ٨٥ و ٩٣ م² لە تاوەرەکەدا هەن. خزمەتگوزارییەکانی تاوەرەکە بریتین لە هۆڵی وەرزش، مەلەوانگە، ڕێستۆرانت، پارکینگی ژێرزەوی و پاسەوانی. تاوەرەکە بە پێکهاتەیەکی بەرگەگری بوومەلەرزە دروست کراوە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أربيل ون تاور (Erbil One Tower)، ويُعرف أيضاً باسم ون تاور، برج متعدد الاستخدامات مكتمل البناء على شارع 60 متر في أربيل. طوّرته مجموعة كرمانج (شركة كرمانج للإنشاءات)، واكتمل بناؤه في مطلع عشرينيات القرن الحادي والعشرين. يتكون المشروع من برج واحد من 48 طابقاً يجمع بين الشقق السكنية والمساحات المكتبية والمحال التجارية. تتوفر شقق بغرفة نوم واحدة وحمام واحد بمساحات 88 و89 و97 و119 م²، وشقق بغرفتي نوم وحمامين بمساحات 122 و126 و168 م². كما يضم البرج شققاً أصغر بغرفة نوم واحدة بمساحة 85 و93 م². وتشمل مرافق البرج مركزاً للياقة البدنية ومسبحاً ومطاعم ومواقف سيارات تحت الأرض وحراسة أمنية. وقد شُيّد البرج بهيكل مقاوم للزلازل.
 
 ### 3. English
 Erbil One Tower, also known as One Tower and E1 Tower, is a completed mixed-use high-rise on 60 m Street in Erbil. It was developed by Kirmanj Group (Kirmanj Construction) and was completed in the early 2020s. The project is a single tower of 48 floors that combines apartments with office spaces and retail outlets. One-bedroom apartments measure 88, 89, 97 and 119 m² and have one bathroom, and two-bedroom apartments measure 122, 126 and 168 m² and have two bathrooms. The tower also has smaller one-bedroom units of 85 m² and 93 m². Facilities in the building include a fitness centre, a swimming pool, restaurants, underground parking and security. The tower was built with a seismic-resistant structure.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower | Area page 'Erbil One Tower': Ready 1-bed 85-93 m2 for sale USD 68,000-75,000; rentals 85 m2 USD 400, 126 m2 USD 600, 130 m2 USD 750 per month | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/one-tower-280 | Project page 'One Tower': Completed; developer field Kirmanj Group, text 'developed by Kirmanj Construction'; 60 Meter Street; 48-storey mixed-use tower (apartments, offices, retail, gym, pool, restaurants, underground parking); completed early 2020s; 7 apartment types 88-168 m2 at USD 79,200-151,200 | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari | Project page 'Erbil One Tower Zanyari': address 60m Street beside the Zanyari Tower; Apartment; feature tags | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower | Area page 'Erbil One Tower': Ready 1-bed 85-93 m2 for sale USD 68,000-75,000; rentals 85 m2 USD 400, 126 m2 USD 600, 130 m2 USD 750 per month | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/one-tower-280 | Project page 'One Tower': Completed; developer field Kirmanj Group, text 'developed by Kirmanj Construction'; 60 Meter Street; 48-storey mixed-use tower (apartments, offices, retail, gym, pool, restaurants, underground parking); completed early 2020s; 7 apartment types 88-168 m2 at USD 79,200-151,200 | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari | Project page 'Erbil One Tower Zanyari': address 60m Street beside the Zanyari Tower; Apartment; feature tags | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/projects/erbilonetower | Listing card: status ready (ئامادە); price range USD 220K-720K; date field 2023-01-01 | — | 2026-11-07 | low |
-| en.wikipedia.org | https://en.wikipedia.org/wiki/E1_Tower | Article 'E1 Tower' seen in WebSearch results only (not fetched): 48-storey, 180 m multi-use skyscraper on 60m Street, status Completed | — | 2026-11-07 | medium |
+| roya-iq.com | https://roya-iq.com/projects/erbilonetower | Listing card: status ready (ئامادە); price range USD 220K-720K; date field 2023-01-01 | — | 2026-11-07 | نزم |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/E1_Tower | Article 'E1 Tower' seen in WebSearch results only (not fetched): 48-storey, 180 m multi-use skyscraper on 60m Street, status Completed | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, 60 m Street location, apartment/mixed-use category (Paya, Baghy)
    - Status completed (Paya, homele, Roya)
    - 48 floors (Paya; Wikipedia search result)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Kirmanj Group / Kirmanj Construction (Paya)
    - Pool, gym, restaurants, underground parking, offices, retail (Paya text)
    - Apartment sizes 88-168 m2 and prices (Paya)
    - Height 180 m (Wikipedia via search result)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Price ranges: Paya USD 79k-151k, homele USD 68k-75k sales, Roya USD 220k-720k
    - price range: USD 79,200-151,200 (unit table) (https://paya-realestate.com/en/projects/one-tower-280); USD 68,000-75,000 (sale listings) (https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower); USD 220K-720K (card range) (https://roya-iq.com/projects/erbilonetower) → All recorded; Roya range may cover larger units or offices not shown elsewhere – unresolved
    - completion date: early 2020s (https://paya-realestate.com/en/projects/one-tower-280); 2023-01-01 (date field) (https://roya-iq.com/projects/erbilonetower) → Compatible; 2023 kept with low confidence
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total apartments and offices
    - Land area
    - Launch date
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 'Zanyari Tower' in Baghy's address is a neighbouring building or another name for this tower
    - Paya calls it the tallest building in Erbil and Iraq – not verified, omitted from descriptions
    - Wikipedia details come from a search-result summary; page not fetched
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "erbil-one-tower",

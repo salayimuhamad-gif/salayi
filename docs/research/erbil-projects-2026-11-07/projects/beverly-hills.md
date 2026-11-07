@@ -1,127 +1,130 @@
 <!-- rendered -->
 # Beverly Hills Erbil — — — بفرلي هيلس
-Project ID: beverly-hills | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: beverly-hills | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Beverly Hills Erbil | High – Paya, Miran and homele use the name | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz ; https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| District / Area | Golden Square, 120m Road, opposite Erbil International Airport | Medium – Paya text; Miran listing label 'Golden Zone' consistent | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Developer | North Light Group | Medium – Miran only; Paya developer field repeats the project name | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Project Category | Residential (villas) | High – Paya and Miran agree | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 386 villas | Medium – Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Total Residential Units | 386 villas | Medium – Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Construction Status | Under construction (off-plan sales) | Medium – Miran 'Under Construction' and homele off-plan listings; Paya status blank | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz ; https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.214071, 43.966152 — Google Maps: https://www.google.com/maps?q=36.214071,43.966152 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Alternative names | Beverly Hills; بفرلي هيلس | Medium – Paya Arabic label | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Beverly Hills Erbil | بەرز – Paya, Miran and homele use the name | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz ; https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| ناوچە / گەڕەک | Golden Square, 120m Road, opposite Erbil International Airport | مامناوەند – Paya text; Miran listing label 'Golden Zone' consistent | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| گەشەپێدەر (کۆمپانیا) | North Light Group | مامناوەند – Miran only; Paya developer field repeats the project name | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Paya and Miran agree | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 386 villas | مامناوەند – Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| کۆی یەکە نیشتەجێبوونەکان | 386 villas | مامناوەند – Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (off-plan sales) | مامناوەند – Miran 'Under Construction' and homele off-plan listings; Paya status blank | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz ; https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.214071, 43.966152 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.214071,43.966152 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| ناوە جێگرەوەکان | Beverly Hills; بفرلي هيلس | مامناوەند – Paya Arabic label | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Villas / houses | 386 | 'This exclusive development consists of 386 modern villas' (Paya) | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| ڤێلا / خانوو | 386 | 'This exclusive development consists of 386 modern villas' (Paya) | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 270, 320, 485, 650, 1,050 | 270 | 1,050 | — | Plot areas per Paya ('plot areas of 270, 320, 485, 650 and 1050 m2'); Miran types A 270, B 320, C 485, D 650, E 1050 (2-3 floor-plan variants each). | agency_project_page | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| villa | 308 | 308 | 308 | 4 | 2 bathrooms; 'Type (308m)' on Miran unit-type table; one listing at USD 550,000. | agency_project_page | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| villa | 270, 307, 320, 485, 640, 685, 1,089 | 270 | 1,089 | — | Off-plan listings: 270 m2 4 bed; 307 and 320 m2 5 bed; 485 m2 5 bed; 640, 685, 1089 m2 6 bed (homele, 4 result pages). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| ڤێلا | 270, 320, 485, 650, 1,050 | 270 | 1,050 | — | Plot areas per Paya ('plot areas of 270, 320, 485, 650 and 1050 m2'); Miran types A 270, B 320, C 485, D 650, E 1050 (2-3 floor-plan variants each). | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/beverly-hills-298 ; https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| ڤێلا | 308 | 308 | 308 | 4 | 2 حەمام؛ 'Type (308m)' on Miran unit-type table; one listing at USD 550,000. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| ڤێلا | 270, 307, 320, 485, 640, 685, 1,089 | 270 | 1,089 | — | Off-plan listings: 270 m2 4 bed; 307 and 320 m2 5 bed; 485 m2 5 bed; 640, 685, 1089 m2 6 bed (homele, 4 result pages). | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
 
-**Layouts and floor plans:** miranestate 'Unit Types' table with a 'Floor plan' column: Type A 270 m² – 2, Type B 320 m² – 3, Type C 485 m² – 3, Type D 650 m² – 3, Type E 1050 m² – 3 (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
+**نەخشە و پلانی نهۆمەکان:** miranestate 'Unit Types' table with a 'Floor plan' column: Type A 270 m² – 2, Type B 320 m² – 3, Type C 485 m² – 3, Type D 650 m² – 3, Type E 1050 m² – 3 (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Gym (Paya, Miran); Car parking (Paya, Miran); Kindergarten / nursery (Paya, Miran); Kids play area / playground (Paya, Miran); Public garden / garden (Paya, Miran); Supermarket / shopping center (Paya, Miran); Gated community with security (Miran description and tag)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Gym (Paya, Miran); Car parking (Paya, Miran); Kindergarten / nursery (Paya, Miran); Kids play area / playground (Paya, Miran); Public garden / garden (Paya, Miran); Supermarket / shopping center (Paya, Miran); Gated community with security (Miran description and tag)
 
-**Unverified claims:** Sewers (Paya tag); Cafeteria (Paya tag); Reception (Paya tag); Maintenance (Paya tag); Medical center (Paya tag); Laundry (Paya tag); AC (Paya tag); Restaurant (Paya tag); ATM (Paya tag); Pharmacy (Paya tag); BBQ area (Miran tag); Cycling track (Miran tag); Power station (Miran tag); High ceilings (Miran tag); Sports facilities (Miran description); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator
+**بانگەشەی پشتڕاست نەکراوە:** Sewers (Paya tag); Cafeteria (Paya tag); Reception (Paya tag); Maintenance (Paya tag); Medical center (Paya tag); Laundry (Paya tag); AC (Paya tag); Restaurant (Paya tag); ATM (Paya tag); Pharmacy (Paya tag); BBQ area (Miran tag); Cycling track (Miran tag); Power station (Miran tag); High ceilings (Miran tag); Sports facilities (Miran description); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Project price per m2 (Miran project page, agency-relayed) | 1,500 | USD | developer | Miran page updated 2026-08-23 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Payment plan: 20% down payment, 20% first, 20% second, 20% third payment, 20% on key handover; cash also accepted | — | USD | developer | Miran page updated 2026-08-23 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Villa 308 m2, 4 bed / 2 bath - Miran listing asking price | 550,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
-| Off-plan villa 270 m2, 4 bed - listing asking price | 405,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| Off-plan villa 320 m2, 5 bed - listing asking price | 508,200 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| Off-plan villa 485 m2, 5 bed - listing asking price | 879,516 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| Off-plan villa 640 m2, 6 bed - listing asking price | 1,156,662 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-| Off-plan villa 1089 m2, 6 bed - listing asking price | 2,141,419 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% at key handover; price per meter $1,500. Homele listings: off-plan villas for sale, tagged 'Installment' or offered with down payment (e.g. 'Villa with %20 Downpayment') (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
+| Project price per m2 (Miran project page, agency-relayed) | 1,500 | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-23 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| Payment plan: 20% down payment, 20% first, 20% second, 20% third payment, 20% on key handover; cash also accepted | — | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-23 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| Villa 308 m2, 4 bed / 2 bath - Miran listing asking price | 550,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
+| Off-plan villa 270 m2, 4 bed - listing asking price | 405,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| Off-plan villa 320 m2, 5 bed - listing asking price | 508,200 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| Off-plan villa 485 m2, 5 bed - listing asking price | 879,516 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| Off-plan villa 640 m2, 6 bed - listing asking price | 1,156,662 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+| Off-plan villa 1089 m2, 6 bed - listing asking price | 2,141,419 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% at key handover; price per meter $1,500. Homele listings: off-plan villas for sale, tagged 'Installment' or offered with down payment (e.g. 'Villa with %20 Downpayment') (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
 
-### Location and surroundings
-Beverly Hills is in Erbil's Golden Square area on the 120-metre ring road, directly opposite Erbil International Airport (Paya). Miran's sale listing is labelled 'Golden Zone'. No source gives a cross-street. Map position (low confidence, from agency map pins): 36.214071, 43.966152. Google Maps: https://www.google.com/maps?q=36.214071,43.966152
+### شوێن و دەوروبەر
+Beverly Hills is in Erbil's Golden Square area on the 120-metre ring road, directly opposite Erbil International Airport (Paya). Miran's sale listing is labelled 'Golden Zone'. No source gives a cross-street.
+شوێن لەسەر نەخشە: 36.214071, 43.966152 (متمانە: نزم) — https://www.google.com/maps?q=36.214071,43.966152
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 بێڤەرلی هیڵز هەولێر (Beverly Hills Erbil) پڕۆژەیەکی ڤێلای داخراوە لە ناوچەی چوارگۆشەی زێڕینی هەولێر کە لە قۆناغی دروستکردندایە، لەسەر شەقامی ١٢٠ مەتری و ڕاستەوخۆ بەرامبەر فڕۆکەخانەی نێودەوڵەتیی هەولێر. گرووپی نۆرث لایت گەشەی پێدەدات و پڕۆژەکە ٣٨٦ ڤێلا لەخۆ دەگرێت. ڤێلاکان پێنج جۆرن بە ڕووبەری زەویی ٢٧٠، ٣٢٠، ٤٨٥، ٦٥٠ و ١،٠٥٠ م²، و هەر جۆرێک دوو یان سێ نەخشەی ناوەوەی جیاوازی هەیە. جۆرێکی تری ڤێلا بە ڕووبەری ٣٠٨ م² و چوار ژووری نووستن و دوو گەرماویش هەیە. ئەو خزمەتگوزارییانەی پلانیان بۆ دانراوە بریتین لە هۆڵی وەرزش، پارکینگ، باخچەی ساوایان، شوێنی یاریی منداڵان، باخچە، سوپەرمارکێت و شوێنی بازاڕکردن، و پاسەوانی بۆ کۆمەڵگە داخراوەکە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 بفرلي هيلس أربيل (Beverly Hills Erbil) مشروع فلل مسوّر قيد الإنشاء في منطقة المربع الذهبي بأربيل، على الطريق الدائري 120 م مقابل مطار أربيل الدولي مباشرة. تطوّره مجموعة نورث لايت، ويضم 386 فيلا. وتأتي الفلل بخمسة أنواع بمساحات أراضٍ تبلغ 270 و320 و485 و650 و1,050 م²، ولكل نوع مخططان أو ثلاثة مخططات داخلية. كما يتوفر نوع من الفلل بمساحة 308 م² بأربع غرف نوم وحمامين. وتشمل المرافق المخطط لها صالة رياضية، ومواقف للسيارات، وروضة أطفال، ومناطق ألعاب للأطفال، وحدائق، وسوبرماركت ومرافق تسوق، وحراسة للمجمع المسوّر.
 
 ### 3. English
 Beverly Hills Erbil is a gated villa project under construction in the Golden Square area of Erbil, on the 120 m ring road directly opposite Erbil International Airport. It is developed by North Light Group and comprises 386 villas. The villas come in five types with plot areas of 270, 320, 485, 650 and 1,050 m², each with two or three floor-plan variants. A 308 m² villa type with four bedrooms and two bathrooms is also offered. Planned facilities include a gym, car parking, a kindergarten, children's play areas, gardens, a supermarket and shopping facilities, and security for the gated community.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills | 4 result pages; first page: 7 off-plan villas 270-1089 m2, USD 405,000-2,141,419 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/beverly-hills-298 | Villa project in Golden Square on 120m road opposite Erbil International Airport; 386 villas; plot areas 270/320/485/650/1050 m2; amenity tags; status blank; developer field repeats project name | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz | Developer North Light Group; Under Construction; types A-E and 308 m2; USD 1,500/m2; 5 x 20% payment plan; 308 m2 villa USD 550,000 (Golden Zone); gated community; feature tags | 2026-08-23 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills | 4 result pages; first page: 7 off-plan villas 270-1089 m2, USD 405,000-2,141,419 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/beverly-hills-298 | Villa project in Golden Square on 120m road opposite Erbil International Airport; 386 villas; plot areas 270/320/485/650/1050 m2; amenity tags; status blank; developer field repeats project name | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz | Developer North Light Group; Under Construction; types A-E and 308 m2; USD 1,500/m2; 5 x 20% payment plan; 308 m2 villa USD 550,000 (Golden Zone); gated community; feature tags | 2026-08-23 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil Golden Square/Golden Zone location and villa category (Paya + Miran)
    - Villa type sizes 270, 320, 485, 650, 1050 m2 (Paya + Miran)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 386 villas (Paya)
    - Developer North Light Group (Miran)
    - USD 1,500/m2 and 5 x 20% payment plan (Miran)
    - Under-construction status (Miran; supported by homele off-plan listings)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Villa sizes: Types 270, 320, 485, 650, 1050 m2 (plus 308 m2 on Miran) (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz); Listings at 307, 640, 685 and 1089 m2 (https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills) → Official type sizes taken from Paya/Miran; listing sizes recorded as advertised only (may be built area or adjusted plots).
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Launch and completion dates
    - Coordinates
    - Bedroom counts per official villa type
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 270-1050 m2 are plot areas (Paya says so) and what built areas correspond
    - Why listing sizes 307/640/685/1089 m2 differ from type sizes
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "beverly-hills",

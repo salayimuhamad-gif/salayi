@@ -1,121 +1,123 @@
 <!-- rendered -->
 # Aram Commercial City — شاری بازرگانیی ئارام — مدينة آرام التجارية
-Project ID: aram-commercial-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: aram-commercial-city | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Aram Commercial City | Low – homele area name only | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| City | Erbil | Medium – homele Erbil area page | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| District / Area | Not verified | Low – Not stated | — |
-| Developer | Not verified | Low – Not stated | — |
-| Project Category | Commercial (showrooms) | Medium – All nine listings are showrooms | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Total Land Area | Not verified | Low – Not stated by any source | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated by any source | — |
-| Total Residential Units | Not verified | Low – Commercial project; not stated | — |
-| Construction Status | Completed (inferred) | Medium – Nine homele listings tagged 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Completion Date | Not verified | Low – Not stated by any source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 2 (one advertised showroom) | Low – One listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Launch Date | Not verified | Low – Not stated by any source | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Aram Commercial City | نزم – homele area name only | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| شار | هەولێر | مامناوەند – homele Erbil area page | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| جۆری پڕۆژە | بازرگانی — Commercial (showrooms) | مامناوەند – All nine listings are showrooms | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Commercial project; not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | مامناوەند – Nine homele listings tagged 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 (one advertised showroom) | نزم – One listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated by any source | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated by any source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Commercial project; not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated by any source | — |
-| Floors per building | 2 (one advertised showroom) | One listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Commercial project; not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated by any source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 (one advertised showroom) | One listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| showroom | 200, 600, 650 | 200 | 650 | — | Ready showrooms: 200 m2 two-floor; 600 m2 (one corner unit; one with offices and rooms); 650 m2 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| پێشانگا | 200, 600, 650 | 200 | 650 | — | Ready showrooms: 200 m2 two-floor; 600 m2 (one corner unit; one with offices and rooms); 650 m2 | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready two-floor showroom 200 m2 - rent per month | 1,900 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Ready modern showroom 600 m2 - rent per month | 4,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Ready showroom 650 m2 - rent per month (highest of three 650 m2 rentals; others USD 4,500) | 5,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Ready showroom 650 m2 - sale, negotiable | 750,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Ready corner showroom 600 m2 - sale, negotiable | 790,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-| Ready showroom 600 m2 with offices and rooms - sale | 800,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: ready showrooms for rent ($1,900, $4,500, $5,000 Monthly) and one for sale ($750,000 'Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city)
+| Ready two-floor showroom 200 m2 - rent per month | 1,900 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| Ready modern showroom 600 m2 - rent per month | 4,500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| Ready showroom 650 m2 - rent per month (highest of three 650 m2 rentals; others USD 4,500) | 5,000 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| Ready showroom 650 m2 - sale, negotiable | 750,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| Ready corner showroom 600 m2 - sale, negotiable | 790,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+| Ready showroom 600 m2 with offices and rooms - sale | 800,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: ready showrooms for rent ($1,900, $4,500, $5,000 Monthly) and one for sale ($750,000 'Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 homele lists Aram Commercial City as an area of Erbil city; no source gives its road or district.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 شاری بازرگانیی ئارام (Aram Commercial City) پڕۆژەیەکی بازرگانیی پێشانگایە (شۆڕووم) لە هەولێر. پێشانگاکانی یەکەیەکی دوو نهۆمیی ٢٠٠ م² و یەکەی گەورەتری ٦٠٠ و ٦٥٠ م² لەخۆ دەگرن، لەوانە پێشانگایەکی سەر گۆشە و پێشانگایەک کە ئۆفیس و ژووری تێدایە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 مدينة آرام التجارية (Aram Commercial City) مشروع تجاري للمعارض في أربيل. وتشمل معارضه وحدة من طابقين بمساحة 200 م² ووحدات أكبر بمساحة 600 و650 م²، منها معرض على زاوية ومعرض يضم مكاتب وغرفاً.
 
 ### 3. English
 Aram Commercial City is a commercial showroom project in Erbil. Its showrooms include a two-floor unit of 200 m² and larger units of 600 and 650 m², among them a corner showroom and a showroom with offices and rooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city | Area listing page (1 page): 9 'Ready' showroom listings - 200 m2 two-floor (USD 1,900/month), 600-650 m2 (rent USD 4,500-5,000/month; sale USD 750,000-800,000) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city | Area listing page (1 page): 9 'Ready' showroom listings - 200 m2 two-floor (USD 1,900/month), 600-650 m2 (rent USD 4,500-5,000/month; sale USD 750,000-800,000) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All data: showroom sizes 200/600/650 m2 and prices (homele listings)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Location within Erbil
    - Developer
    - Number of units/buildings
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Not on Paya, Baghy, Haji Salam or Miran
    - Relation to other 'Aram'-branded projects
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "aram-commercial-city",

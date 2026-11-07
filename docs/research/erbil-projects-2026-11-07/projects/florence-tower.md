@@ -1,131 +1,134 @@
 <!-- rendered -->
 # Florence Tower — — — —
-Project ID: florence-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: florence-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Florence Tower | High – same name on Paya project page and homele area page | https://paya-realestate.com/en/projects/florence-tower-156 ; https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| City | Erbil | High – both primary sites | — |
-| District / Area | 40 Meter Street (Paya: "40 Street - Near Quattro Towers"; text: "Erbil - 40 Meter Street - near the Quattro Tower complex") | Medium – Paya only; homele gives no address | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Developer | Kayar Group ("implemented under the guarantee of Kayar Group") | Medium – Paya only (developer field "14 Units Kayar Group" – the "14 Units" prefix is the unit count) | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Project Category | Residential – apartment towers | High | — |
-| Total Land Area | Not verified | Low – – | — |
-| Number of Buildings / Towers | 2 towers (A & B) | Medium – Paya text only | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Total Residential Units | Not verified (Paya shows 14 unit types/listings, not the project total) | Low – – | — |
-| Construction Status | Completed per Paya status field; 5 of 6 homele listings "Ready", 1 "Off Plan"; Paya's own narrative uses future tense ("will be implemented") | Medium – see conflicts | — |
-| Completion Date | Not verified | Low – – | — |
-| Coordinates | 36.2201269, 44.0089174 — Google Maps: https://www.google.com/maps?q=36.2201269,44.0089174 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Alternative names | None found | Low – — – – | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – – | — |
-| Launch Date | Not verified | Low – – | — |
-| Development Phases | Towers A and B (no separate phase data) | Medium | https://paya-realestate.com/en/projects/florence-tower-156 |
+| ناوی پڕۆژە | Florence Tower | بەرز – same name on Paya project page and homele area page | https://paya-realestate.com/en/projects/florence-tower-156 ; https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| شار | هەولێر | بەرز – both primary sites | — |
+| ناوچە / گەڕەک | 40 Meter Street (Paya: "40 Street - Near Quattro Towers"; text: "Erbil - 40 Meter Street - near the Quattro Tower complex") | مامناوەند – Paya only; homele gives no address | https://paya-realestate.com/en/projects/florence-tower-156 |
+| گەشەپێدەر (کۆمپانیا) | Kayar Group ("implemented under the guarantee of Kayar Group") | مامناوەند – Paya only (developer field "14 Units Kayar Group" – the "14 Units" prefix is the unit count) | https://paya-realestate.com/en/projects/florence-tower-156 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential – apartment towers | بەرز | — |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – – | — |
+| ژمارەی باڵەخانە / تاوەر | 2 towers (A & B) | مامناوەند – Paya text only | https://paya-realestate.com/en/projects/florence-tower-156 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە — (Paya shows 14 unit types/listings, not the project total) | نزم – – | — |
+| دۆخی دروستکردن | تەواوبووە — Completed per Paya status field; 5 of 6 homele listings "Ready", 1 "Off Plan"; Paya's own narrative uses future tense ("will be implemented") | مامناوەند – see conflicts | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – – | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.2201269, 44.0089174 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.2201269,44.0089174 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/florence-tower-156 |
+| ناوە جێگرەوەکان | None found | نزم – – | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – – | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – – | — |
+| قۆناغەکانی پڕۆژە | Towers A and B (no separate phase data) | مامناوەند | https://paya-realestate.com/en/projects/florence-tower-156 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | – | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified (Paya shows 14 unit types/listings, not the project total) | – | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 2 towers (A & B) | Paya text only | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Floors per building | Not verified | – | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Towers A and B (no separate phase data) | — | https://paya-realestate.com/en/projects/florence-tower-156 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | – | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە — (Paya shows 14 unit types/listings, not the project total) | – | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 2 towers (A & B) | Paya text only | https://paya-realestate.com/en/projects/florence-tower-156 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | – | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Towers A and B (no separate phase data) | — | https://paya-realestate.com/en/projects/florence-tower-156 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 50, 69, 72 | 50 | 72 | 0 | 1 bathrooms; Pre-installed kitchens | agency_project_page | https://paya-realestate.com/en/projects/florence-tower-156 |
-| apartment | 77, 79, 80, 92, 104 | 77 | 104 | 1 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/florence-tower-156 |
-| apartment | 97, 98, 120, 122, 139, 147 | 97 | 147 | 2 | 2 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/florence-tower-156 |
-| apartment | 72, 80, 104, 122, 139 | 72 | 139 | — | Market listings: 72 m² studio, 80 and 104 m² 1-bed, 122 and 139 m² 2-bed; mostly Ready, one 122 m² Off Plan | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| ستۆدیۆ | 50, 69, 72 | 50 | 72 | 0 | 1 حەمام؛ Pre-installed kitchens | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/florence-tower-156 |
+| شوقە | 77, 79, 80, 92, 104 | 77 | 104 | 1 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/florence-tower-156 |
+| شوقە | 97, 98, 120, 122, 139, 147 | 97 | 147 | 2 | 2 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/florence-tower-156 |
+| شوقە | 72, 80, 104, 122, 139 | 72 | 139 | — | Market listings: 72 m² studio, 80 and 104 m² 1-bed, 122 and 139 m² 2-bed; mostly Ready, one 122 m² Off Plan | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
 
-**Layouts and floor plans:** Blueprints published ('View Blueprint') for 14 units: studios 50–72 m², 1-bed 77–104 m², 2-bed 97–147 m² (https://paya-realestate.com/en/projects/florence-tower-156)
+**نەخشە و پلانی نهۆمەکان:** Blueprints published ('View Blueprint') for 14 units: studios 50–72 m², 1-bed 77–104 m², 2-bed 97–147 m² (https://paya-realestate.com/en/projects/florence-tower-156)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Car parking; Electrical generator; Reception; Security; Gym; Kids play area; Cafeteria; Restaurant; Supermarket; Mosque; Public garden; Pre-installed kitchens; Sewer connection; Pets allowed
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Car parking; Electrical generator; Reception; Security; Gym; Kids play area; Cafeteria; Restaurant; Supermarket; Mosque; Public garden; Pre-installed kitchens; Sewer connection; Pets allowed
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Large green spaces
+**بانگەشەی پشتڕاست نەکراوە:** Large green spaces
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 50 m² | 45,500 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Studio 69 m² | 60,720 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| Studio 72 m² | 62,640 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 1-bed 77 m² | 66,990 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 1-bed 79 m² | 71,495 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 1-bed 80 m² | 68,800 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 1-bed 92 m² | 80,960 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 97 m² | 83,420 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 98 m² | 84,280 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 1-bed 104 m² | 89,440 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 120 m² | 105,600 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 122 m² | 107,360 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 139 m² | 116,760 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 147 m² | 124,215 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
-| 2-bed 122 m² Ready (negotiable) | 77,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| 2-bed 122 m² Off Plan (negotiable) | 75,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| 1-bed 80 m² Ready (negotiable) | 50,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| Studio 72 m² Ready (negotiable) | 45,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| 2-bed 139 m² Ready (negotiable) | 84,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-| 1-bed 104 m² Ready (negotiable) | 62,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Studio 50 m² | 45,500 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| Studio 69 m² | 60,720 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| Studio 72 m² | 62,640 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 1-bed 77 m² | 66,990 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 1-bed 79 m² | 71,495 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 1-bed 80 m² | 68,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 1-bed 92 m² | 80,960 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 97 m² | 83,420 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 98 m² | 84,280 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 1-bed 104 m² | 89,440 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 120 m² | 105,600 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 122 m² | 107,360 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 139 m² | 116,760 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 147 m² | 124,215 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/florence-tower-156 |
+| 2-bed 122 m² Ready (negotiable) | 77,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| 2-bed 122 m² Off Plan (negotiable) | 75,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| 1-bed 80 m² Ready (negotiable) | 50,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| Studio 72 m² Ready (negotiable) | 45,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| 2-bed 139 m² Ready (negotiable) | 84,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+| 1-bed 104 m² Ready (negotiable) | 62,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Paya locates Florence Tower on Erbil's 40 Meter Street, near the Quattro Towers complex. A roya-iq.com page surfaced in search describes 40 Metre Street (also called Gulan Street) as running between the east of English Village and Sami Abdulrahman Park, which places the project in central-western Erbil, inside the city. No distances or further landmarks are documented. Map position (low confidence, from agency map pins): 36.2201269, 44.0089174. Google Maps: https://www.google.com/maps?q=36.2201269,44.0089174
+### شوێن و دەوروبەر
+Paya locates Florence Tower on Erbil's 40 Meter Street, near the Quattro Towers complex. A roya-iq.com page surfaced in search describes 40 Metre Street (also called Gulan Street) as running between the east of English Village and Sami Abdulrahman Park, which places the project in central-western Erbil, inside the city. No distances or further landmarks are documented.
+شوێن لەسەر نەخشە: 36.2201269, 44.0089174 (متمانە: نزم) — https://www.google.com/maps?q=36.2201269,44.0089174
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 فلۆرێنس تاوەر (Florence Tower) پڕۆژەیەکی نیشتەجێبوونی کایار گرووپە لەسەر شەقامی ٤٠ مەتری لە هەولێر، لە ناوچەی شەقامی گوڵان نزیک کۆمەڵگەی کواترۆ تاوەرز. پڕۆژەکە لە دوو تاوەر پێکدێت، تاوەری A و تاوەری B، و تەواو بووە. پڕۆژەکە ستۆدیۆ و شوقەی یەک ژوور و دوو ژووری نووستن لەخۆ دەگرێت. ڕووبەری ستۆدیۆکان ٥٠، ٦٩ و ٧٢ م²یە بە یەک حەمام. ڕووبەری شوقەی یەک ژووری نووستن ٧٧، ٧٩، ٨٠، ٩٢ و ١٠٤ م²یە بە یەک حەمام، و ڕووبەری شوقەی دوو ژووری نووستن ٩٧، ٩٨، ١٢٠، ١٢٢، ١٣٩ و ١٤٧ م²یە بە دوو حەمام. مەتبەخەکان پێشوەخت دامەزرێنراون. ئاسانکارییەکانی پڕۆژەکە بریتین لە پارکینگ، مۆلیدەی کارەبا، ڕیسێپشن، پاسەوانی، هۆڵی وەرزش، یاریگای منداڵان، کافتریا، ڕێستۆرانت، سوپەرمارکێت، مزگەوت، باخچەی گشتی و هێڵی ئاوەڕۆ. ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی دەدرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 برج فلورنس (Florence Tower) مشروع سكني لمجموعة كايار على شارع 40 متر في أربيل، في منطقة شارع كولان قرب مجمع أبراج كواترو. يتكوّن المشروع من برجين، البرج A والبرج B، وهو مكتمل. ويضم استوديوهات وشققاً بغرفة نوم واحدة وبغرفتي نوم. تبلغ مساحات الاستوديوهات 50 و69 و72 م² مع حمام واحد. وتبلغ مساحات الشقق بغرفة نوم واحدة 77 و79 و80 و92 و104 م² مع حمام واحد، ومساحات الشقق بغرفتي نوم 97 و98 و120 و122 و139 و147 م² مع حمامين. المطابخ مركّبة مسبقاً. وتشمل المرافق في المشروع مواقف السيارات ومولّد كهرباء واستقبالاً وحراسة وصالة رياضية ومنطقة لعب للأطفال وكافتيريا ومطعماً وسوبرماركت ومسجداً وحديقة عامة وشبكة صرف صحي. ويُسمح باقتناء الحيوانات الأليفة.
 
 ### 3. English
 Florence Tower is a residential project by Kayar Group on 40 Meter Street in Erbil, in the Gulan Street area near the Quattro Towers complex. The project consists of two towers, Tower A and Tower B, and is completed. It offers studios and one- and two-bedroom apartments. Studios have areas of 50, 69 and 72 m² with one bathroom. One-bedroom apartments measure 77, 79, 80, 92 and 104 m² with one bathroom, and two-bedroom apartments measure 97, 98, 120, 122, 139 and 147 m² with two bathrooms. Kitchens are pre-installed. Facilities in the project include car parking, an electrical generator, a reception, security, a gym, a children's play area, a cafeteria, a restaurant, a supermarket, a mosque, a public garden and a sewer connection. Pets are allowed.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower | 6 market listings, 72–139 m², USD 45,000–84,000, 5 Ready and 1 Off Plan | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/florence-tower-156 | Name, 40 Meter Street near Quattro Towers, Kayar Group, two towers A & B, status Completed, amenities, 14 unit types with sizes and prices | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| hajisalam.com | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower | 6 market listings, 72–139 m², USD 45,000–84,000, 5 Ready and 1 Off Plan | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/florence-tower-156 | Name, 40 Meter Street near Quattro Towers, Kayar Group, two towers A & B, status Completed, amenities, 14 unit types with sizes and prices | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/?p=9115 | Context from search snippet: 40 Metre Street (Gulan Street) runs between east of English Village and Sami Abdulrahman Park | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/?p=9115 | Context from search snippet: 40 Metre Street (Gulan Street) runs between east of English Village and Sami Abdulrahman Park | — | 2026-11-07 | نزم |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Project exists in Erbil as an apartment tower project named Florence Tower
    - unit sizes 72, 80, 104, 122 and 139 m² appear on both Paya and homele
    - studio/1-bed/2-bed mix
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 40 Meter Street location near Quattro Towers
    - Kayar Group as developer/guarantor
    - two towers A & B
    - amenities list
    - the other unit sizes (50, 69, 77, 79, 92, 97, 98, 120, 147 m²)
    - all agency prices
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - (a) Status – Paya status field "Completed" vs Paya narrative "will be implemented" (future tense) and one homele listing "Off Plan" (122 m²) vs five "Ready". Resolution: treated as completed (Medium) because the explicit status field and most market listings agree
    - the narrative is likely legacy marketing text. (b) Prices – Paya price list vs homele resale: 122 m² USD 107,360 (Paya) vs USD 75,000–77,000 (homele)
    - 80 m² 68,800 vs 50,000
@@ -135,7 +138,7 @@ First-pass research only (at most one web search for this project).
    - both recorded
    - construction_status: Completed (status field) (https://paya-realestate.com/en/projects/florence-tower-156); 'will be implemented' (narrative, future tense) (https://paya-realestate.com/en/projects/florence-tower-156); 5 listings Ready, 1 listing Off Plan (https://homele.com/properties/for-sale-and-rent/erbil/florence-tower) → Treated as completed (medium confidence): explicit status field and most market listings agree; narrative appears to be legacy marketing text.
    - prices: 122 m² 2-bed USD 107,360 (agency list) (https://paya-realestate.com/en/projects/florence-tower-156); 122 m² 2-bed USD 75,000–77,000 (resale) (https://homele.com/properties/for-sale-and-rent/erbil/florence-tower) → Different price types (agency list vs resale ask); both recorded, neither treated as official developer price.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Floors per tower
    - total unit count
    - land area
@@ -144,15 +147,15 @@ First-pass research only (at most one web search for this project).
    - payment plans
    - coordinates
    - Kurdish/Arabic names
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya price list and narrative (future tense suggests the page predates completion)
    - homele asks undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether both towers A and B are complete and handed over
    - whether the Paya price list is a developer price or an agency ask
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "florence-tower",

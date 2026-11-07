@@ -1,128 +1,131 @@
 <!-- rendered -->
 # Avenue Square — — — أفينيو سكوير
-Project ID: avenue-square | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: avenue-square | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Avenue Square | High – Paya, Miran and homele use the same name | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| District / Area | Bahrka Road; Erbil Avenue masterplan | Medium – Masterplan named on Paya and Miran; road only in Miran listing labels | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
-| Developer | Alcove Co. | High – Miran developer field and Paya text ('Alcove's latest commercial project') | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
-| Project Category | Commercial (offices with ground-floor retail and F&B) | High – Paya and Miran agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 3 office buildings | High – Paya text and Miran stats agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Total Residential Units | None (commercial); 252 office units | Medium – Miran 252; Paya 'more than 250 office spaces' | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
-| Construction Status | Under construction (off-plan sales) | High – Paya 'Constructing', Miran 'Under Construction', homele off-plan listings | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Completion Date | 11/12/2027 (Miran header date, likely expected handover) | Low – Single source; field not labelled | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Coordinates | 36.233042, 44.011093 — Google Maps: https://www.google.com/maps?q=36.233042,44.011093 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/avenue-square-380 |
-| Alternative names | أفينيو سكوير | Medium – Paya Arabic label | https://paya-realestate.com/en/projects/avenue-square-380 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 9 | High – Paya 'nine-story' and Miran 9 floors | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Sub-project of Alcove's Erbil Avenue masterplan | Medium – Paya and Miran text | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| ناوی پڕۆژە | Avenue Square | بەرز – Paya, Miran and homele use the same name | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| ناوچە / گەڕەک | Bahrka Road; Erbil Avenue masterplan | مامناوەند – Masterplan named on Paya and Miran; road only in Miran listing labels | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
+| گەشەپێدەر (کۆمپانیا) | Alcove Co. | بەرز – Miran developer field and Paya text ('Alcove's latest commercial project') | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
+| جۆری پڕۆژە | بازرگانی — Commercial (offices with ground-floor retail and F&B) | بەرز – Paya and Miran agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 3 office buildings | بەرز – Paya text and Miran stats agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| کۆی یەکە نیشتەجێبوونەکان | None (commercial); 252 office units | مامناوەند – Miran 252; Paya 'more than 250 office spaces' | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (off-plan sales) | بەرز – Paya 'Constructing', Miran 'Under Construction', homele off-plan listings | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| بەرواری تەواوبوون | 11/12/2027 (Miran header date, likely expected handover) | نزم – Single source; field not labelled | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.233042, 44.011093 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.233042,44.011093 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/avenue-square-380 |
+| ناوە جێگرەوەکان | أفينيو سكوير | مامناوەند – Paya Arabic label | https://paya-realestate.com/en/projects/avenue-square-380 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 9 | بەرز – Paya 'nine-story' and Miran 9 floors | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | Sub-project of Alcove's Erbil Avenue masterplan | مامناوەند – Paya and Miran text | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | None (commercial); 252 office units | Miran 252; Paya 'more than 250 office spaces' | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Paya and miranestate description: 'three nine-story office buildings with more than 250 office spaces' plus ground-floor shops, cafés and restaurants; miranestate statistics: 'Units 252' | — | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Towers / apartment buildings | 3 office buildings | Paya text and Miran stats agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Floors per building | 9 | Paya 'nine-story' and Miran 9 floors | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Sub-project of Alcove's Erbil Avenue masterplan | Paya and Miran text | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | None (commercial); 252 office units | Miran 252; Paya 'more than 250 office spaces' | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | Paya and miranestate description: 'three nine-story office buildings with more than 250 office spaces' plus ground-floor shops, cafés and restaurants; miranestate statistics: 'Units 252' | — | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| تاوەر / باڵەخانەی شوقە | 3 office buildings | Paya text and Miran stats agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 9 | Paya 'nine-story' and Miran 9 floors | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Sub-project of Alcove's Erbil Avenue masterplan | Paya and Miran text | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| office | Not verified | — | — | — | 9 floors; 252 office units in 3 nine-storey buildings (Miran); 'more than 250 office spaces' (Paya). Floor-plan groups: ground, first, 2nd/5th/8th, 3rd/6th, 4th/7th, 9th (Miran). Ground floor: shops, cafés, restaurants. | agency_project_page | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
-| office | 139 | 139 | 139 | — | Two 139 m2 offices listed at USD 132,000 (Bahrka Road). | market_listing | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| office | 93, 96, 97, 118, 123, 134, 156, 161, 169 | 93 | 169 | — | Off-plan office listings (homele area page, 3 result pages; first page only). 93 m2 listing shows 1 bathroom. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| shop | Not verified | — | — | — | Shops, cafés and restaurants on the ground floor; sizes not published. | agency_project_page | https://paya-realestate.com/en/projects/avenue-square-380 |
+| ئۆفیس | پشتڕاست نەکراوەتەوە | — | — | — | 9 نهۆم؛ 252 office units in 3 nine-storey buildings (Miran); 'more than 250 office spaces' (Paya). Floor-plan groups: ground, first, 2nd/5th/8th, 3rd/6th, 4th/7th, 9th (Miran). Ground floor: shops, cafés, restaurants. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
+| ئۆفیس | 139 | 139 | 139 | — | Two 139 m2 offices listed at USD 132,000 (Bahrka Road). | ڕیکلامی یەکەیەکی دیاریکراو | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| ئۆفیس | 93, 96, 97, 118, 123, 134, 156, 161, 169 | 93 | 169 | — | Off-plan office listings (homele area page, 3 result pages; first page only). 93 m2 listing shows 1 bathroom. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| دوکان | پشتڕاست نەکراوەتەوە | — | — | — | Shops, cafés and restaurants on the ground floor; sizes not published. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/avenue-square-380 |
 
-**Layouts and floor plans:** miranestate 'Unit Types' table lists floor layouts (Ground Floor, First Floor, Floors 2nd/5th/8th, 3rd/6th, 4th/7th, 9th Floor) with 'Floor plan' entries (2 each) (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
+**نەخشە و پلانی نهۆمەکان:** miranestate 'Unit Types' table lists floor layouts (Ground Floor, First Floor, Floors 2nd/5th/8th, 3rd/6th, 4th/7th, 9th Floor) with 'Floor plan' entries (2 each) (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Ground-floor shops, cafés and restaurants (developer text on Paya and Miran); Security (Paya and Miran tags)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Ground-floor shops, cafés and restaurants (developer text on Paya and Miran); Security (Paya and Miran tags)
 
-**Unverified claims:** Covered parking (Paya tag); Reception (Paya tag); Pharmacy (Paya tag); Currency exchange (Paya tag); Air conditioning (Paya tag); Library (Paya tag); Fire station (Paya tag); Gym (Miran tag); Elevators (Miran tag); Shopping center (Miran tag); Garden (Miran tag); Sports court (Miran tag); Smart building system (Miran tag); High ceilings (Miran tag); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV
+**بانگەشەی پشتڕاست نەکراوە:** Covered parking (Paya tag); Reception (Paya tag); Pharmacy (Paya tag); Currency exchange (Paya tag); Air conditioning (Paya tag); Library (Paya tag); Fire station (Paya tag); Gym (Miran tag); Elevators (Miran tag); Shopping center (Miran tag); Garden (Miran tag); Sports court (Miran tag); Smart building system (Miran tag); High ceilings (Miran tag); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Project price per m2 (Miran project page, agency-relayed; payment: cash) | 850 | USD | developer | Miran page updated 2026-07-15 | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Office 139 m2 - Miran listing asking price (two listings) | 132,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
-| Off-plan office 93 m2 - listing asking price | 79,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Off-plan office 97 m2 - listing asking price | 82,450 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Off-plan office 123 m2 - listing asking price | 110,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Off-plan office 134 m2 - listing asking price | 120,600 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Off-plan office 161 m2 - listing asking price | 144,900 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-| Off-plan office 169 m2 - listing asking price | 152,100 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: 'Cash' (miranestate); price per meter $850. Homele listings: off-plan offices for sale (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
+| Project price per m2 (Miran project page, agency-relayed; payment: cash) | 850 | USD | نرخی گەشەپێدەر | Miran page updated 2026-07-15 | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| Office 139 m2 - Miran listing asking price (two listings) | 132,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
+| Off-plan office 93 m2 - listing asking price | 79,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| Off-plan office 97 m2 - listing asking price | 82,450 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| Off-plan office 123 m2 - listing asking price | 110,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| Off-plan office 134 m2 - listing asking price | 120,600 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| Off-plan office 161 m2 - listing asking price | 144,900 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+| Off-plan office 169 m2 - listing asking price | 152,100 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: 'Cash' (miranestate); price per meter $850. Homele listings: off-plan offices for sale (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
 
-### Location and surroundings
-Avenue Square is part of Alcove's Erbil Avenue masterplan (Paya, Miran). Miran's sale listings for the project carry the location label 'Bahrka Road', which places it on the Bahrka road approach in northern Erbil. No source names a cross-street or landmark. Map position (low confidence, from agency map pins): 36.233042, 44.011093. Google Maps: https://www.google.com/maps?q=36.233042,44.011093
+### شوێن و دەوروبەر
+Avenue Square is part of Alcove's Erbil Avenue masterplan (Paya, Miran). Miran's sale listings for the project carry the location label 'Bahrka Road', which places it on the Bahrka road approach in northern Erbil. No source names a cross-street or landmark.
+شوێن لەسەر نەخشە: 36.233042, 44.011093 (متمانە: نزم) — https://www.google.com/maps?q=36.233042,44.011093
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئەڤینیو سکوێر (Avenue Square) پڕۆژەیەکی بازرگانیی ئۆفیسە کە کۆمپانیای ئەلکۆڤ لەناو ماستەرپلانی ئەربیل ئەڤینیو لەسەر ڕێگای بەحرکە لە باکووری هەولێر جێبەجێی دەکات. پڕۆژەکە لە سێ بینای ئۆفیس پێکدێت کە هەر یەکەیان ٩ نهۆمە، بە کۆی ٢٥٢ یەکەی ئۆفیس. پلان وایە نهۆمی زەمینی بۆ دوکان، کافێ و چێشتخانە تەرخان بکرێت و پاسەوانی بۆ بیناکان دابین بکرێت. پڕۆژەکە لە قۆناغی بیناسازیدایە و یەکەکانی لەسەر نەخشە دەفرۆشرێن. ڕووبەری ئۆفیسەکانی پڕۆژەکە لە ٩٣ تا ١٦٩ م²ـە، لەوانە یەکەی ٩٦، ٩٧، ١١٨، ١٢٣، ١٣٤، ١٣٩، ١٥٦ و ١٦١ م².
 
-### 2. Arabic (العربية)
+### 2. العربية
 أفينيو سكوير (Avenue Square) مشروع تجاري مكتبي تنفّذه شركة ألكوف ضمن مخططها العام «أربيل أفينيو» على طريق بحركة شمالي أربيل. يتألف المشروع من ثلاث بنايات مكتبية من تسعة طوابق لكل منها، تضم 252 وحدة مكتبية. ومن المخطط تخصيص الطابق الأرضي للمحلات والمقاهي والمطاعم، كما يُخطَّط لتوفير الحراسة للبنايات. المشروع قيد الإنشاء وتُباع وحداته على المخطط. تتراوح مساحات المكاتب في المشروع بين 93 و169 م²، ومنها وحدات بمساحات 96 و97 و118 و123 و134 و139 و156 و161 م².
 
 ### 3. English
 Avenue Square is a commercial office project by Alcove within the company's Erbil Avenue masterplan on the Bahrka Road in northern Erbil. The development consists of three office buildings of nine storeys each, with 252 office units in total. The ground floor is planned for shops, cafés and restaurants, and security is planned for the buildings. The project is under construction and its units are sold off-plan. Offices in the project range from 93 to 169 m², with units of 96, 97, 118, 123, 134, 139, 156 and 161 m² in between.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square | 3 result pages; first page: 9 off-plan office listings 93-169 m2, USD 79,000-152,100 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/avenue-square-380 | Alcove's commercial project in Erbil Avenue masterplan; 3 nine-storey office buildings; >250 office spaces; ground-floor shops/cafés/restaurants; status Constructing; amenity tags | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 | Developer Alcove Co.; Under Construction; 3 buildings, 9 floors, 252 units; price per m2 USD 850; cash; floor-plan groups; 2 listings 139 m2 USD 132,000 (Bahrka Road); header date 11/12/2027 | 2026-07-15 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square | 3 result pages; first page: 9 off-plan office listings 93-169 m2, USD 79,000-152,100 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/avenue-square-380 | Alcove's commercial project in Erbil Avenue masterplan; 3 nine-storey office buildings; >250 office spaces; ground-floor shops/cafés/restaurants; status Constructing; amenity tags | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 | Developer Alcove Co.; Under Construction; 3 buildings, 9 floors, 252 units; price per m2 USD 850; cash; floor-plan groups; 2 listings 139 m2 USD 132,000 (Bahrka Road); header date 11/12/2027 | 2026-07-15 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, developer Alcove, commercial office category, 3 buildings, 9 floors, under-construction status (Paya + Miran)
    - About 250 office units (Paya >250, Miran 252)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Bahrka Road location (Miran listing labels)
    - Price per m2 USD 850 and cash payment (Miran)
    - Header date 11/12/2027 (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Number of office units: 252 (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1); more than 250 office spaces (https://paya-realestate.com/en/projects/avenue-square-380) → Consistent; 252 used.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Launch date
    - Coordinates
    - Official office size range from the developer
    - Payment plan details
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 11/12/2027 on Miran is the contractual handover date and its day/month order
    - Exact plot within the Erbil Avenue masterplan; other Erbil Avenue sub-projects not covered here
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "avenue-square",

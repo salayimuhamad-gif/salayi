@@ -1,119 +1,121 @@
 <!-- rendered -->
 # Gulan City — گوڵان سیتی — گولان سيتي
-Project ID: gulan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: gulan-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Gulan City | Medium – Haji Salam page title and homele area name agree | https://hajisalam.com/en/gulan-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
-| City | Erbil | Medium – homele and Haji Salam list it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city ; https://hajisalam.com/en/gulan-city/ |
-| District / Area | Bahrka Road | Low – Indirect: Baghy's Light City address 'Bharka Road behind Gulan City' | https://baghyshaqlawa.net/en/projects/light-city |
-| Developer | Not verified | Low – No source names a developer; one web search found nothing | — |
-| Project Category | Residential (houses) | Low – Only one house listing (homele) | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed (at least in part) | Low – homele ready resale house only; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Not verified | Low – None found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated (one listed house has 1 floor) | — |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Gulan City | مامناوەند – Haji Salam page title and homele area name agree | https://hajisalam.com/en/gulan-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
+| شار | هەولێر | مامناوەند – homele and Haji Salam list it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city ; https://hajisalam.com/en/gulan-city/ |
+| ناوچە / گەڕەک | Bahrka Road | نزم – Indirect: Baghy's Light City address 'Bharka Road behind Gulan City' | https://baghyshaqlawa.net/en/projects/light-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Only one house listing (homele) | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (at least in part) | نزم – homele ready resale house only; no project page states status | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – None found | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated (one listed house has 1 floor) | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | Not verified | Not stated (one listed house has 1 floor) | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated (one listed house has 1 floor) | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 2 bathrooms; 1 floors; One ready one-floor house advertised for sale (homele, first listing page) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
+| خانوو | 200 | 200 | 200 | 2 | 2 حەمام؛ 1 نهۆم؛ One ready one-floor house advertised for sale (homele, first listing page) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 62,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready one-floor house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 62,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Gulan City lies on the Bahrka Road side of Erbil: Baghy Shaqlawa places the Light City project on 'Bharka Road behind Gulan City'. No exact position or distance are published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوڵان سیتی (Gulan City) ناوچەیەکی نیشتەجێبوونە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. ناوچەکە لە لای ڕێگای بەحرکەی شار هەڵکەوتووە، و پڕۆژەی دراوسێی لایت سیتی لەسەر ڕێگای بەحرکە ڕاستەوخۆ لە پشت گوڵان سیتی هەڵکەوتووە. ناوچەکە لە خانوو پێکدێت، لەوانە خانووی یەک نهۆمی بە ڕووبەری ٢٠٠ م² کە هەر یەکەیان دوو ژووری نووستن و دوو حەمامی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 گولان سيتي (Gulan City) منطقة سكنية في مدينة أربيل في إقليم كوردستان العراق. تقع المنطقة على جانب طريق بحركة من المدينة، ويقع مشروع لايت سيتي المجاور على طريق بحركة خلف گولان سيتي مباشرةً. تتكون المنطقة من منازل، من بينها منازل من طابق واحد بمساحة 200 م² تضم كل منها غرفتي نوم وحمامين.
 
 ### 3. English
 Gulan City is a residential area in Erbil, in the Kurdistan Region of Iraq. It lies on the Bahrka Road side of the city, and the neighbouring Light City project stands on Bahrka Road directly behind Gulan City. The area consists of houses, including single-storey houses of 200 m² with two bedrooms and two bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city | Area listing page 'Gulan City, Erbil' (1 page): one ready one-floor house 200 m2, 2 bed / 2 bath, USD 62,000 negotiable | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/light-city | Light City project page gives its address as 'Erbil, Bharka Road behind Gulan City' - used only as a location reference for Gulan City | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/gulan-city/ | Project page titled 'gulan city' exists but carries no project data (comment form and footer only) | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/gulan-city | Area listing page 'Gulan City, Erbil' (1 page): one ready one-floor house 200 m2, 2 bed / 2 bath, USD 62,000 negotiable | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/light-city | Light City project page gives its address as 'Erbil, Bharka Road behind Gulan City' - used only as a location reference for Gulan City | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/gulan-city/ | Project page titled 'gulan city' exists but carries no project data (comment form and footer only) | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Gulan City" Erbil Bahrka houses project”; “"گوڵان سیتی" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Gulan City" Erbil Bahrka houses project»؛ «"گوڵان سیتی" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name 'Gulan City' as an Erbil area/project (homele, Haji Salam page title)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Ready 200 m2 one-floor house at USD 62,000 (homele)
    - Bahrka Road location (indirect, Baghy Light City page)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Unit count
    - Land area
    - Unit types and sizes from a project page
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Haji Salam page is empty; one web search found no project page
    - Not to be confused with Gulan Street (40m road) or Gulan Park; a search result about a planned project on the Erbil-Duhok road (Gulan Media) does not match this area and was not used
    - Status inferred from a single ready listing
-   - Second verification pass (2026-11-07): no new evidence. Results concerned Gulan Street, Gulan Towers and a planned employee city on the Erbil-Duhok road, none matching this Bahrka Road area; developer, size and dates still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Results concerned Gulan Street, Gulan Towers and a planned employee city on the Erbil-Duhok road, none matching this Bahrka Road area; developer, size and dates still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "gulan-city",

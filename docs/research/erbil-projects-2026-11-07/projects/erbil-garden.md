@@ -1,124 +1,127 @@
 <!-- rendered -->
 # Erbil Garden — ئەربیل گاردن — أربيل گاردن
-Project ID: erbil-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: erbil-garden | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Erbil Garden | High – Paya, Miran, homele | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/erbil-garden-286 |
-| District / Area | 100m Road, right next to Pirmam Road | High – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Developer | North Light Group (with NorthLight Living) | Medium – Single site (Miran) | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Project Category | Residential (villas) | High – Paya + Miran | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Total Land Area | 62,702 m2 | High – Paya + Miran agree (land area) | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Number of Buildings / Towers | 68 villas | High – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Total Residential Units | 68 | High – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Construction Status | Completed | Medium – Miran Completed (Aug 2026) + homele Ready; Paya says Constructing | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden ; https://paya-realestate.com/en/projects/erbil-garden-286 |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.2188027, 44.0406309 — Google Maps: https://www.google.com/maps?q=36.2188027,44.0406309 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/erbil-garden-286 |
-| Alternative names | اربيل گاردن | Medium – Paya area label | https://paya-realestate.com/en/projects/erbil-garden-286 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified (Miran table shows '3' per villa type, label unclear) | Low – Column meaning unclear | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Not verified | Low – No phase information | — |
+| ناوی پڕۆژە | Erbil Garden | بەرز – Paya, Miran, homele | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/erbil-garden-286 |
+| ناوچە / گەڕەک | 100m Road, right next to Pirmam Road | بەرز – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| گەشەپێدەر (کۆمپانیا) | North Light Group (with NorthLight Living) | مامناوەند – Single site (Miran) | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Paya + Miran | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| کۆی ڕووبەری زەوی | 62,702 m2 | بەرز – Paya + Miran agree (land area) | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| ژمارەی باڵەخانە / تاوەر | 68 villas | بەرز – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| کۆی یەکە نیشتەجێبوونەکان | 68 | بەرز – Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Miran Completed (Aug 2026) + homele Ready; Paya says Constructing | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden ; https://paya-realestate.com/en/projects/erbil-garden-286 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.2188027, 44.0406309 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.2188027,44.0406309 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/erbil-garden-286 |
+| ناوە جێگرەوەکان | اربيل گاردن | مامناوەند – Paya area label | https://paya-realestate.com/en/projects/erbil-garden-286 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (Miran table shows '3' per villa type, label unclear) | نزم – Column meaning unclear | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – No phase information | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 62,702 m2 | Paya + Miran agree (land area) | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Total project land area (dunams) | 25.1 | converted from 62,702 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 68 | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Villas / houses | 68 | 68 housing units with two different types (Paya); 68 high-end housing units in villa configurations Type A, B1, B2 (Miran) | https://paya-realestate.com/en/projects/erbil-garden-286 |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 68 villas | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Floors per building | Not verified (Miran table shows '3' per villa type, label unclear) | Column meaning unclear | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | No phase information | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 62,702 m2 | Paya + Miran agree (land area) | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 25.1 | گۆڕدراوە لە 62,702 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 68 | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| ڤێلا / خانوو | 68 | 68 housing units with two different types (Paya); 68 high-end housing units in villa configurations Type A, B1, B2 (Miran) | https://paya-realestate.com/en/projects/erbil-garden-286 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 68 villas | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (Miran table shows '3' per villa type, label unclear) | Column meaning unclear | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | No phase information | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 455, 525, 708 | 455 | 708 | — | Villa Type B1 455 m2, Type B2 525 m2, Type A 708 m2 (Miran; Miran's table shows '3' in the floor-plan column). Paya: 'two different types'; 455 m2 house with 5 bed / 5 bath. | agency_project_page | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://paya-realestate.com/en/projects/erbil-garden-286 |
-| villa | 455, 525, 708 | 455 | 708 | 6 | Advertised 6-bedroom villas (Miran listings: 7 bathrooms; homele 455 m2: 5 bathrooms) | market_listing | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
+| ڤێلا | 455, 525, 708 | 455 | 708 | — | Villa Type B1 455 m2, Type B2 525 m2, Type A 708 m2 (Miran; Miran's table shows '3' in the floor-plan column). Paya: 'two different types'; 455 m2 house with 5 bed / 5 bath. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://paya-realestate.com/en/projects/erbil-garden-286 |
+| ڤێلا | 455, 525, 708 | 455 | 708 | 6 | Advertised 6-bedroom villas (Miran listings: 7 bathrooms; homele 455 m2: 5 bathrooms) | ڕیکلامی یەکەیەکی دیاریکراو | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
 
-**Layouts and floor plans:** Paya: 'No Blueprints' for the 455 m² house; Miran unit-type table shows '3' in the Floor plan column for Villa Types B1 455 m², B2 525 m², A 708 m² (https://paya-realestate.com/en/projects/erbil-garden-286)
+**نەخشە و پلانی نهۆمەکان:** Paya: 'No Blueprints' for the 455 m² house; Miran unit-type table shows '3' in the Floor plan column for Villa Types B1 455 m², B2 525 m², A 708 m² (https://paya-realestate.com/en/projects/erbil-garden-286)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Shopping centre (Paya text, Miran tag + description); Sports centre with gym and swimming pool (Paya text, Miran tags + description); Pharmacy (Paya tag, Miran tag); Security (Paya tag, Miran tag + 'advanced security surveillance'); Parking (Paya tags, Miran tag)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Shopping centre (Paya text, Miran tag + description); Sports centre with gym and swimming pool (Paya text, Miran tags + description); Pharmacy (Paya tag, Miran tag); Security (Paya tag, Miran tag + 'advanced security surveillance'); Parking (Paya tags, Miran tag)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour maintenance, smart home systems with EV charging spots (Miran description only); BBQ area, playground, outdoor play area, power station, high ceiling, smart building system (Miran tags); Mosque, women's gym, women's salon, reception, supermarket, sewers, pets (Paya tags); Central A/C, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV (Miran generic 'Building Facilities' block)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour maintenance, smart home systems with EV charging spots (Miran description only); BBQ area, playground, outdoor play area, power station, high ceiling, smart building system (Miran tags); Mosque, women's gym, women's salon, reception, supermarket, sewers, pets (Paya tags); Central A/C, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV (Miran generic 'Building Facilities' block)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 455 m2 5BR - Paya project-page price (agency page, not an official price list) | 900,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/erbil-garden-286 |
-| Villa Type B1 455 m2 6BR - Miran listing asking price | 930,000 | USD | resale | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Villa 455 m2 6BR - homele listing asking price (negotiable) | 950,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
-| Villa Type B2 525 m2 6BR - Miran listing asking price | 1,500,000 | USD | resale | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Villa Type A 708 m2 6BR - Miran listing asking price | 1,800,000 | USD | resale | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: Cash (Miran) (https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk)
+| House 455 m2 5BR - Paya project-page price (agency page, not an official price list) | 900,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/erbil-garden-286 |
+| Villa Type B1 455 m2 6BR - Miran listing asking price | 930,000 | USD | فرۆشتنەوە | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| Villa 455 m2 6BR - homele listing asking price (negotiable) | 950,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
+| Villa Type B2 525 m2 6BR - Miran listing asking price | 1,500,000 | USD | فرۆشتنەوە | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+| Villa Type A 708 m2 6BR - Miran listing asking price | 1,800,000 | USD | فرۆشتنەوە | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: Cash (Miran) (https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk)
 
-### Location and surroundings
-Erbil Garden is on the 100m Road right next to Pirmam Road, described by both Paya and Miran as in the middle/heart of the city. This places it inside the 100m ring-road belt at the start of the north-eastern Pirmam road. Map position (low confidence, from agency map pins): 36.2188027, 44.0406309. Google Maps: https://www.google.com/maps?q=36.2188027,44.0406309
+### شوێن و دەوروبەر
+Erbil Garden is on the 100m Road right next to Pirmam Road, described by both Paya and Miran as in the middle/heart of the city. This places it inside the 100m ring-road belt at the start of the north-eastern Pirmam road.
+شوێن لەسەر نەخشە: 36.2188027, 44.0406309 (متمانە: نزم) — https://www.google.com/maps?q=36.2188027,44.0406309
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئەربیل گاردن (Erbil Garden) پڕۆژەیەکی ڤێلای تەواوکراوە لە هەولێر، لەسەر شەقامی ١٠٠ مەتری و ڕاست لە تەنیشت ڕێگای پیرمام، لە ناو ئەڵقەی شەقامی ١٠٠ مەتری و لە سەرەتای ڕێگای پیرمام. گرووپی نۆرث لایت بە هاوکاری لەگەڵ نۆرث لایت لیڤینگ گەشەی پێداوە. ڕووبەری زەویی پڕۆژەکە ٦٢،٧٠٢ م²یە و ٦٨ ڤێلا بە ڕووبەری ٤٥٥، ٥٢٥ و ٧٠٨ م² لەخۆ دەگرێت. خزمەتگوزارییەکان بریتین لە سەنتەری بازاڕکردن، سەنتەرێکی وەرزشی کە هۆڵی وەرزش و مەلەوانگەی تێدایە، دەرمانخانە، پاسەوانی و پارکینگ.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أربيل گاردن (Erbil Garden) مشروع فلل مكتمل في أربيل، على شارع 100 م بجوار طريق بيرمام مباشرة، داخل حزام الطريق الدائري 100 م عند بداية الطريق المؤدي إلى بيرمام. تطوّره مجموعة نورث لايت بالتعاون مع نورث لايت ليفينغ. ويمتد المشروع على أرض مساحتها 62,702 م²، ويضم 68 فيلا بمساحات 455 و525 و708 م². وتشمل المرافق مركز تسوق، ومركزاً رياضياً فيه صالة رياضية ومسبح، وصيدلية، وحراسة، ومواقف للسيارات.
 
 ### 3. English
 Erbil Garden is a completed villa project in Erbil, on the 100 m Road right next to Pirmam Road, inside the 100 m ring-road belt at the start of the road to Pirmam. It is developed by North Light Group with NorthLight Living. The project covers a land area of 62,702 m² and comprises 68 villas in sizes of 455, 525 and 708 m². Facilities include a shopping centre, a sports centre with a gym and a swimming pool, a pharmacy, security and parking.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden | One listing: ready 455 m2 6BR villa, 950,000 USD (negotiable) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/erbil-garden-286 | Status Constructing; 68 units in two types; land area 62,702 m2; sport centre, swimming, gym, shopping centre; 100m road next to Pirmam Road; one 455 m2 5BR house at 900,000 USD; amenity tags | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk | Developer North Light Group (with NorthLight Living); Completed; 68 units; 62,702 m2; Villa B1 455, B2 525, A 708 m2; listings 930,000 / 1,500,000 / 1,800,000 USD; features and description | updated Aug 20, 2026 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden | One listing: ready 455 m2 6BR villa, 950,000 USD (negotiable) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/erbil-garden-286 | Status Constructing; 68 units in two types; land area 62,702 m2; sport centre, swimming, gym, shopping centre; 100m road next to Pirmam Road; one 455 m2 5BR house at 900,000 USD; amenity tags | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk | Developer North Light Group (with NorthLight Living); Completed; 68 units; 62,702 m2; Villa B1 455, B2 525, A 708 m2; listings 930,000 / 1,500,000 / 1,800,000 USD; features and description | updated Aug 20, 2026 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, 100m Road/Pirmam Road location, residential villas (Paya, Miran)
    - Land area 62,702 m2 (Paya, Miran)
    - 68 units (Paya, Miran)
    - Shopping centre, gym, swimming pool, pharmacy, security, parking (Paya, Miran)
    - 455 m2 villa size (Paya, Miran, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer North Light Group / NorthLight Living (Miran)
    - Villa types A 708 m2, B2 525 m2 (Miran)
    - Smart home, EV charging, 24-hour maintenance (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Construction status: Constructing (paya-realestate.com); Completed (miranestate.com (updated Aug 20, 2026)); Ready (listing tag) (homele.com) → Completed adopted (Miran, more recently updated, + homele Ready listing); Paya status probably not updated.
    - Bedrooms in 455 m2 villa: 5 (5 baths) (paya-realestate.com); 6 (7 baths) (miranestate.com listing); 6 (5 baths) (homele.com listing) → Disputed; may reflect different layouts.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Launch/completion dates
    - Villa floors
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya 'Constructing' status likely outdated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether all 68 villas are finished (Paya still says Constructing)
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "erbil-garden",

@@ -1,100 +1,102 @@
 <!-- rendered -->
 # Vital City — — — —
-Project ID: vital-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: vital-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Vital City | Low – Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| City | Erbil | Medium – Haji Salam breadcrumb 'Erbil' | https://hajisalam.com/en/vital-city/ |
-| District / Area | 100m Street | Low – Single source; no segment or landmark | https://hajisalam.com/en/vital-city/ |
-| Developer | Not verified | Low – No source names one; one WebSearch found nothing | — |
-| Project Category | Residential villas | Low – Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | 58 villas | Low – Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Total Residential Units | 58 | Low – Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Construction Status | Unknown | Low – — – Not stated | — |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Vital | Low – Pack alias; Baghy Shaqlawa has a 'Vital Branch Erbil' | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 2-3 | Low – Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Vital City | نزم – Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| شار | هەولێر | مامناوەند – Haji Salam breadcrumb 'Erbil' | https://hajisalam.com/en/vital-city/ |
+| ناوچە / گەڕەک | 100m Street | نزم – Single source; no segment or landmark | https://hajisalam.com/en/vital-city/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential villas | نزم – Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | 58 villas | نزم – Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| کۆی یەکە نیشتەجێبوونەکان | 58 | نزم – Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – Not stated | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Vital | نزم – Pack alias; Baghy Shaqlawa has a 'Vital Branch Erbil' | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2-3 | نزم – Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 58 | Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Villas / houses | 58 | Project type Villa; Number Of Unit 58 (hajisalam.com) | https://hajisalam.com/en/vital-city/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 58 villas | Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Floors per building | 2-3 | Haji Salam only | https://hajisalam.com/en/vital-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 58 | Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| ڤێلا / خانوو | 58 | Project type Villa; Number Of Unit 58 (hajisalam.com) | https://hajisalam.com/en/vital-city/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 58 villas | Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2-3 | Haji Salam only | https://hajisalam.com/en/vital-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 322, 744 | 322 | 744 | — | Range 322-744 m2 (plot or built area not stated); 2-3 floors; 4-5 bedrooms | agency_project_page | https://hajisalam.com/en/vital-city/ |
+| ڤێلا | 322, 744 | 322 | 744 | — | Range 322-744 m2 (plot or built area not stated); 2-3 floors; 4-5 bedrooms | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/vital-city/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam gives only '100m street' (Erbil's 100 m ring road); the segment and nearest landmark are not published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڤایتاڵ سیتی (Vital City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە شاری هەولێر، لەسەر شەقامی ١٠٠ مەتری هەڵکەوتووە، کە شەقامی بازنەیی ١٠٠ مەتریی شارەکەیە. پڕۆژەکە ٥٨ ڤێلای تێدایە. ڕووبەری ڤێلاکان لە ٣٢٢ م²ەوە تا ٧٤٤ م² دەگات، لەسەر دوو یان سێ نهۆم دروست کراون و هەر ڤێلایەک چوار یان پێنج ژووری نووستنی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فايتال سيتي (Vital City) مشروع سكني للفلل في مدينة أربيل، يقع على شارع 100 متر، وهو الطريق الدائري 100 متر في المدينة. ويضم المشروع 58 فيلا. وتتراوح مساحات الفلل بين 322 و744 م²، وهي مبنية على طابقين أو ثلاثة طوابق، وتضم كل فيلا أربع أو خمس غرف نوم.
 
 ### 3. English
 Vital City is a residential villa project in Erbil, located on 100m Street, the city's 100 m ring road. The project contains 58 villas. The villas range in size from 322 m² to 744 m², are built on two or three floors and have four or five bedrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/vital-city/ | Address 100m street; type Villa; 58 units; area 322-744 m2; 2-3 floors; 4-5 bedrooms | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/vital-city/ | Address 100m street; type Villa; 58 units; area 322-744 m2; 2-3 floors; 4-5 bedrooms | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Vital City" Erbil”; “"Vital Village" Erbil villas” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Vital City" Erbil»؛ «"Vital Village" Erbil villas» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All data (Haji Salam): 100m street, 58 villas, 322-744 m2, 2-3 floors, 4-5 bedrooms
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Status
    - Prices
@@ -103,17 +105,17 @@ Second verification pass 2026-11-07: queries “"Vital City" Erbil”; “"Vital
    - Dates
    - Coordinates
    - Kurdish/Arabic names
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - One WebSearch ('"Vital City" Erbil villas 100m street') found no page for Vital City; it surfaced a 'Vital Village' named among projects around English Village (40m street) - possible same or related project, not confirmed
    - Baghy Shaqlawa lists a 'Vital Branch Erbil' (seen on its Tulip Tower page) - may be in this project; not confirmed
    - Whether 322-744 m2 are plot or built areas
    - Second pass: the 'Vital Village' mention is on Roya's English Village page (roya-iq.com/?p=6611, search summary, page not opened), which lists it among projects around English Village on the 40 m street; Vital City is given on the 100m Street, so not merged
-   - Second verification pass (2026-11-07): no new evidence. No page names Vital City; a Roya page only names a Vital Village near English Village on the 40 m street, which is not confirmed as the same project.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page names Vital City; a Roya page only names a Vital Village near English Village on the 40 m street, which is not confirmed as the same project.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "vital-city",

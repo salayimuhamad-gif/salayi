@@ -1,100 +1,103 @@
 <!-- rendered -->
 # Darwazay Hawler — دەروازەی هەولێر — —
-Project ID: darwazay-hawler | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: darwazay-hawler | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Darwazay Hawler | Medium – Baghy project page only | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
-| City | Erbil (urban fringe) | Medium – Baghy address on the Erbil–Shaqlawa road | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
-| District / Area | Erbil–Shaqlawa Road | Medium – Baghy only; exact position not stated | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
-| Developer | Not verified | Low – No source names one; one WebSearch found nothing | — |
-| Project Category | Residential (houses) | Medium – Baghy property type 'House' | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Not verified (unknown) | Low – Baghy gives no status; no listings found | — |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.264731, 44.088541 — Google Maps: https://www.google.com/maps?q=36.264731,44.088541 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
-| Alternative names | Erbil Gate (English rendering); دەروازەی هەولێر (Kurdish-script rendering of the transliterated name, not attested on a source) | Low – Translations/renderings of the name, not found on any page | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None reported | Low – — – No source | — |
+| ناوی پڕۆژە | Darwazay Hawler | مامناوەند – Baghy project page only | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| شار | Erbil (urban fringe) | مامناوەند – Baghy address on the Erbil–Shaqlawa road | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| ناوچە / گەڕەک | Erbil–Shaqlawa Road | مامناوەند – Baghy only; exact position not stated | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | مامناوەند – Baghy property type 'House' | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Baghy gives no status; no listings found | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.264731, 44.088541 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.264731,44.088541 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| ناوە جێگرەوەکان | Erbil Gate (English rendering); دەروازەی هەولێر (Kurdish-script rendering of the transliterated name, not attested on a source) | نزم – Translations/renderings of the name, not found on any page | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Baghy lists property type 'House' only; no sizes, room counts or prices given. | agency_project_page | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Baghy lists property type 'House' only; no sizes, room counts or prices given. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/darwazay-hawler |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag only); Internet (Baghy tag only); City administrative centre (Baghy tag only); Security (Baghy tag only); Parking (Baghy tag only); Green areas (Baghy tag only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag only); Internet (Baghy tag only); City administrative centre (Baghy tag only); Security (Baghy tag only); Parking (Baghy tag only); Green areas (Baghy tag only)
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Baghy Shaqlawa places Darwazay Hawler on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east (Pirmam/Masif direction), and assigns it to its Ganjan City branch in Erbil. No neighbourhood, distance from the city or landmark is given, so the project is classed as on the urban fringe ('edge') rather than inside the city. Map position (low confidence, from agency map pins): 36.264731, 44.088541. Google Maps: https://www.google.com/maps?q=36.264731,44.088541
+### شوێن و دەوروبەر
+Baghy Shaqlawa places Darwazay Hawler on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east (Pirmam/Masif direction), and assigns it to its Ganjan City branch in Erbil. No neighbourhood, distance from the city or landmark is given, so the project is classed as on the urban fringe ('edge') rather than inside the city.
+شوێن لەسەر نەخشە: 36.264731, 44.088541 (متمانە: نزم) — https://www.google.com/maps?q=36.264731,44.088541
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 دەروازەی هەولێر (Darwazay Hawler) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای هەولێر–شەقڵاوە، ئەو ڕێگایەی لە هەولێرەوە بەرەو باکووری ڕۆژهەڵات و بەرەو پیرمام و مەسیف دەڕوات. پڕۆژەکە لە قەراغی شاری هەولێردایە نەک لە ناو شار.
 
-### 2. Arabic (العربية)
+### 2. العربية
 دروازة هولير (Darwazay Hawler)، ويعني اسمها بوابة أربيل، مشروع سكني يتكون من بيوت على طريق أربيل–شقلاوة، الذي يخرج من أربيل باتجاه الشمال الشرقي نحو بيرمام والمصيف. ويقع المشروع على الأطراف الحضرية لأربيل وليس داخل المدينة.
 
 ### 3. English
 Darwazay Hawler, whose name means Erbil Gate, is a residential project of houses on the Erbil–Shaqlawa road, which leaves Erbil towards the north-east in the direction of Pirmam and Masif. The project lies on the urban fringe of Erbil rather than inside the city.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/darwazay-hawler | Project page: address 'ERbil - Shaqlawa Road'; property type House; feature tags (24 hr electricity, internet, city administrative center, security, parking, green areas); nearest branch Ganjan City Branch Erbil; no description | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/darwazay-hawler | Project page: address 'ERbil - Shaqlawa Road'; property type House; feature tags (24 hr electricity, internet, city administrative center, security, parking, green areas); nearest branch Ganjan City Branch Erbil; no description | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Darwazay Hawler" OR "دەروازەی هەولێر" پڕۆژە”; “"Erbil Gate" OR "Darwaza" residential houses project Erbil Shaqlawa road” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Darwazay Hawler" OR "دەروازەی هەولێر" پڕۆژە»؛ «"Erbil Gate" OR "Darwaza" residential houses project Erbil Shaqlawa road» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Name, Erbil–Shaqlawa road address, house property type and feature tags (Baghy only)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - House sizes, unit count, prices
@@ -102,15 +105,15 @@ Second verification pass 2026-11-07: queries “"Darwazay Hawler" OR "دەروا
    - Dates
    - Coordinates
    - Homele area page (darwazay-hawler) had no captured listings
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy page undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact location along the Erbil–Shaqlawa road: within the Erbil ring-road belt / Pirmam approach or further out? Set to 'edge' pending confirmation
    - Developer and status unknown; one WebSearch (English + Kurdish name) returned only unrelated road projects
-   - Second verification pass (2026-11-07): no new evidence. No page on the housing project; results only concerned government road works (a new gateway on the Erbil-Koya road and an 'Erbil Darwaza-Banaslawa' road), so developer, status and scale remain unknown and the project stays at the urban edge.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No page on the housing project; results only concerned government road works (a new gateway on the Erbil-Koya road and an 'Erbil Darwaza-Banaslawa' road), so developer, status and scale remain unknown and the project stays at the urban edge.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "darwazay-hawler",

@@ -1,124 +1,126 @@
 <!-- rendered -->
 # British Village — — — —
-Project ID: british-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: british-village | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | British Village | High – Miran project page and homele area page | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| City | Erbil | High – Miran and homele | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| District / Area | 60m (Peshmarga) Road with access from 150m Road, between Spanish Village and Ganjan City | Medium – Miran only (description and '150m Road' listing labels) | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Developer | Cambridge View | Medium – Miran only | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Project Category | Residential (villas) | High – Miran and homele house listings | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – Villa count not published | — |
-| Total Residential Units | Not verified | Low – Miran 'units 3' is published listings, not project units | — |
-| Construction Status | Under construction (off-plan sales) | Medium – Miran status; homele off-plan listings | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | None verified ('Cambridge View' in the project list is the developer name on Miran) | Low | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | British Village | بەرز – Miran project page and homele area page | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| شار | هەولێر | بەرز – Miran and homele | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| ناوچە / گەڕەک | 60m (Peshmarga) Road with access from 150m Road, between Spanish Village and Ganjan City | مامناوەند – Miran only (description and '150m Road' listing labels) | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| گەشەپێدەر (کۆمپانیا) | Cambridge View | مامناوەند – Miran only | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Miran and homele house listings | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Villa count not published | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Miran 'units 3' is published listings, not project units | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (off-plan sales) | مامناوەند – Miran status; homele off-plan listings | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae ; https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | None verified ('Cambridge View' in the project list is the developer name on Miran) | نزم | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Miran 'units 3' is published listings, not project units | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Villa count not published | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Miran 'units 3' is published listings, not project units | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Villa count not published | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 231, 300, 370, 500 | 231 | 500 | — | Types 1-4 (231/300/370/500 m2), 2 floor-plan variants each; whether plot or built area is not stated. Listed 231 and 300 m2 villas are 4 bed / 5 bath. | agency_project_page | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| villa | 231, 300, 370 | 231 | 370 | 4 | 4 bathrooms; Off-plan house listings (homele, 6 result pages; first page only). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| ڤێلا | 231, 300, 370, 500 | 231 | 500 | — | Types 1-4 (231/300/370/500 m2), 2 floor-plan variants each; whether plot or built area is not stated. Listed 231 and 300 m2 villas are 4 bed / 5 bath. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| ڤێلا | 231, 300, 370 | 231 | 370 | 4 | 4 حەمام؛ Off-plan house listings (homele, 6 result pages; first page only). | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
 
-**Layouts and floor plans:** miranestate 'Unit Types' table with a 'Floor plan' column: Type 1 231 m², Type 2 300 m², Type 3 370 m², Type 4 500 m² – 2 each (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
+**نەخشە و پلانی نهۆمەکان:** miranestate 'Unit Types' table with a 'Floor plan' column: Type 1 231 m², Type 2 300 m², Type 3 370 m², Type 4 500 m² – 2 each (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Gated, secure environment (Miran description; security tag); Landscaped green areas with oak-inspired trees (Miran description; garden tag); Grand central fountain (Miran description); 2 km cycling route (Miran description); Schools, cafés and markets on site (Miran description)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Gated, secure environment (Miran description; security tag); Landscaped green areas with oak-inspired trees (Miran description; garden tag); Grand central fountain (Miran description); 2 km cycling route (Miran description); Schools, cafés and markets on site (Miran description)
 
-**Unverified claims:** Gym (Miran tag); Parking (Miran tag); Shopping center (Miran tag); Restaurant (Miran tag); Pharmacy (Miran tag); Hospital (Miran tag); Nursery & kindergarten (Miran tag); Outdoor play area (Miran tag); Parklet (Miran tag); Power station (Miran tag); High ceilings (Miran tag); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV
+**بانگەشەی پشتڕاست نەکراوە:** Gym (Miran tag); Parking (Miran tag); Shopping center (Miran tag); Restaurant (Miran tag); Pharmacy (Miran tag); Hospital (Miran tag); Nursery & kindergarten (Miran tag); Outdoor play area (Miran tag); Parklet (Miran tag); Power station (Miran tag); High ceilings (Miran tag); Miran template building facilities: central AC, fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Project price per m2 (Miran project page, agency-relayed) | 790 | USD | developer | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Payment plan: 20% down payment, 20% first, 20% second, 20% third payment, final 20% in monthly payments; cash also accepted | — | USD | developer | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Villa Type 1, 231 m2, 4 bed - Miran listing asking price (second listing USD 187,500) | 182,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Villa Type 2, 300 m2, 4 bed - Miran listing asking price | 237,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
-| Off-plan house 231 m2, 4 bed - listing asking price | 190,200 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| Off-plan house 300 m2, 4 bed - listing asking price (most common on first page) | 242,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| Off-plan house 300 m2, 4 bed - listing asking price (negotiable) | 248,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-| Off-plan house 370 m2 opposite garden, 4 bed - listing asking price | 292,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% monthly payment; price per meter $790. Homele listings: off-plan houses for sale (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
+| Project price per m2 (Miran project page, agency-relayed) | 790 | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| Payment plan: 20% down payment, 20% first, 20% second, 20% third payment, final 20% in monthly payments; cash also accepted | — | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| Villa Type 1, 231 m2, 4 bed - Miran listing asking price (second listing USD 187,500) | 182,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| Villa Type 2, 300 m2, 4 bed - Miran listing asking price | 237,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
+| Off-plan house 231 m2, 4 bed - listing asking price | 190,200 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| Off-plan house 300 m2, 4 bed - listing asking price (most common on first page) | 242,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| Off-plan house 300 m2, 4 bed - listing asking price (negotiable) | 248,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+| Off-plan house 370 m2 opposite garden, 4 bed - listing asking price | 292,300 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% monthly payment; price per meter $790. Homele listings: off-plan houses for sale (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Miran places British Village on the 60 Meter Road (Peshmarga) with direct access from the 150 Meter ring road, between Spanish Village and Ganjan City, on Erbil's ring-road belt. Its listings are labelled '150m Road'.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 بریتیش ڤیلج (British Village) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر کە کۆمپانیای کەیمبریج ڤیو گەشەی پێدەدات. پڕۆژەکە لەسەر شەقامی ٦٠ مەتری (شەقامی پێشمەرگە) هەڵکەوتووە و ڕاستەوخۆ لە شەقامی ١٥٠ مەترییەوە دەچێتە ناوی، لە نێوان گوندی ئیسپانی و گەنجان سیتی، لەسەر پشتێنەی شەقامە بازنەییەکانی شار. ڤێلاکان بە شێوازی تەلارسازیی کلاسیکی ئینگلیزی دیزاین کراون. پڕۆژەکە لە قۆناغی دروستکردندایە و ڤێلاکان لەسەر نەخشە دەفرۆشرێن. ڤێلاکان چوار جۆرن: جۆری ١ بە ڕووبەری ٢٣١ م²، جۆری ٢ بە ٣٠٠ م²، جۆری ٣ بە ٣٧٠ م² و جۆری ٤ بە ٥٠٠ م²، و هەر جۆرێک دوو نەخشەی ناوەوەی جیاوازی هەیە. ڤێلاکانی ٢٣١، ٣٠٠ و ٣٧٠ م² چوار ژووری نووستنیان هەیە. پلان دانراوە پڕۆژەکە کۆمەڵگەیەکی داخراو و پارێزراو بێت، لەگەڵ ڕووبەری سەوزی ڕێکخراو و دار، فوارەیەکی ناوەندی و ڕێڕەوێکی پایسکیل بە درێژیی ٢ کیلۆمەتر. هەروەها قوتابخانە، کافێ و بازاڕ لەناو پڕۆژەکەدا پلانیان بۆ دانراوە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 بريتش فيليج (British Village) مجمع سكني للفلل في أربيل تطوّره شركة كامبريدج فيو. يقع المشروع على شارع 60 متر (شارع البيشمركة) مع مدخل مباشر من شارع 150 متر، بين القرية الإسبانية وكنجان سيتي، ضمن حزام الطرق الدائرية في المدينة. وصُمّمت الفلل على الطراز المعماري الإنجليزي الكلاسيكي. المشروع قيد الإنشاء، وتُباع الفلل على المخطط. تتوفر الفلل بأربعة أنواع: النوع 1 بمساحة 231 م²، والنوع 2 بمساحة 300 م²، والنوع 3 بمساحة 370 م²، والنوع 4 بمساحة 500 م²، ولكل نوع تصميمان مختلفان للمخطط الداخلي. وتضم فلل 231 و300 و370 م² أربع غرف نوم. ويُخطَّط للمشروع أن يكون مجمعاً مسوّراً وآمناً، مع مساحات خضراء منسّقة وأشجار ونافورة مركزية ومسار للدراجات بطول 2 كم، كما يُخطَّط لإنشاء مدارس ومقاهٍ وأسواق داخل المشروع.
 
 ### 3. English
 British Village is a residential villa community in Erbil developed by Cambridge View. It lies on the 60 Meter Road (Peshmarga Road) with direct access from the 150 Meter Road, between Spanish Village and Ganjan City, on the city's ring-road belt. The villas follow a classic English architectural style. The project is under construction, and the villas are sold off-plan. Villas come in four types: Type 1 of 231 m², Type 2 of 300 m², Type 3 of 370 m² and Type 4 of 500 m², each with two floor-plan variants. The 231 m², 300 m² and 370 m² villas have four bedrooms. The project is planned as a gated, secure community with landscaped green areas and trees, a central fountain and a 2 km cycling route. Schools, cafés and markets are also planned within the project.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/british-village | 6 result pages; first page: off-plan 4-bed houses 231 m2 (USD 190,200), 300 m2 (USD 242,000-248,000), 370 m2 (USD 292,300) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae | Developer Cambridge View; Under Construction; location 60m (Peshmarga) Road / 150m access between Spanish Village and Ganjan City; English-style design; types 231/300/370/500 m2; USD 790/m2; 5 x 20% plan; 3 listings USD 182,000-237,000; facility description and tags | 2026-08-20 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/british-village | 6 result pages; first page: off-plan 4-bed houses 231 m2 (USD 190,200), 300 m2 (USD 242,000-248,000), 370 m2 (USD 292,300) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae | Developer Cambridge View; Under Construction; location 60m (Peshmarga) Road / 150m access between Spanish Village and Ganjan City; English-style design; types 231/300/370/500 m2; USD 790/m2; 5 x 20% plan; 3 listings USD 182,000-237,000; facility description and tags | 2026-08-20 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location, villa category and off-plan status (Miran project page + homele listings)
    - Villa sizes 231/300/370 m2 (Miran types + homele listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Cambridge View, exact road location, 500 m2 type, English-style design, planned facilities, USD 790/m2 and payment plan (Miran)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Number of villas
    - Launch and completion dates
    - Coordinates
    - Whether villa sizes are plot or built areas
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Miran text says 'on the 60 Meter Road with direct access from the 150 Meter Highway' while listings say '150m Road'; exact frontage not confirmed
    - No page on Paya, Baghy or Haji Salam
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "british-village",

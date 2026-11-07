@@ -1,106 +1,109 @@
 <!-- rendered -->
 # Minara Village — گوندی منارە — مجمع منارة
-Project ID: minara-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: minara-village | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Minara Village | Medium – Baghy 'Mnara Village'; homele area 'Minara City 1' | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-| City | Erbil | High – Baghy and homele | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-| District / Area | Koya Road, before Majidi Mall | Medium – Baghy address only; municipal news snippet places 'Minara' near Hana City in Hawlery Nwe | https://baghyshaqlawa.net/en/projects/mnara-village ; https://www.hawlergov.org/app/en/node/4077 |
-| Developer | Not verified | Low – Not named by any source; one web search found nothing | — |
-| Project Category | Residential (houses) | Medium – Baghy 'House Building'; homele house listing | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – Number of houses not stated | — |
-| Total Residential Units | Not verified | Low – Not stated | — |
-| Construction Status | Completed | Low – No explicit status; inferred from a 'Ready' house for sale on homele | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.185015, 44.063368 — Google Maps: https://www.google.com/maps?q=36.185015,44.063368 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mnara-village |
-| Alternative names | Mnara Village; Minara City 1; Minara Village 1 & 2; گوندی منارە; مجمع منارة | Low – Spellings from Baghy and homele; Kurdish/Arabic forms from the project list | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Minara City 1 (homele label); phase 2 not evidenced | Low – Only homele area label carries a phase number | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| ناوی پڕۆژە | Minara Village | مامناوەند – Baghy 'Mnara Village'; homele area 'Minara City 1' | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| شار | هەولێر | بەرز – Baghy and homele | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| ناوچە / گەڕەک | Koya Road, before Majidi Mall | مامناوەند – Baghy address only; municipal news snippet places 'Minara' near Hana City in Hawlery Nwe | https://baghyshaqlawa.net/en/projects/mnara-village ; https://www.hawlergov.org/app/en/node/4077 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named by any source; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | مامناوەند – Baghy 'House Building'; homele house listing | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Number of houses not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | نزم – No explicit status; inferred from a 'Ready' house for sale on homele | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.185015, 44.063368 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.185015,44.063368 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/mnara-village |
+| ناوە جێگرەوەکان | Mnara Village; Minara City 1; Minara Village 1 & 2; گوندی منارە; مجمع منارة | نزم – Spellings from Baghy and homele; Kurdish/Arabic forms from the project list | https://baghyshaqlawa.net/en/projects/mnara-village ; https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | Minara City 1 (homele label); phase 2 not evidenced | نزم – Only homele area label carries a phase number | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Not stated | — |
-| Villas / houses | 1,426 | Haji Salam 'Minara Village 1&2': Project Type House; Number Of Unit 1426 | https://hajisalam.com/en/minara-village/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Number of houses not stated | — |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Minara City 1 (homele label); phase 2 not evidenced | Only homele area label carries a phase number | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڤێلا / خانوو | 1,426 | Haji Salam 'Minara Village 1&2': Project Type House; Number Of Unit 1426 | https://hajisalam.com/en/minara-village/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Number of houses not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Minara City 1 (homele label); phase 2 not evidenced | Only homele area label carries a phase number | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 5 | 3 bathrooms; Single ready house advertised for sale in 'Minara City 1'; Baghy gives property type 'House Building' without sizes | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+| خانوو | 200 | 200 | 200 | 5 | 3 حەمام؛ Single ready house advertised for sale in 'Minara City 1'; Baghy gives property type 'House Building' without sizes | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Internet (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag); Mosque (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** Internet (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag); Mosque (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready house 200 m2, 5 bed / 3 bath - homele sale listing (Minara City 1) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele market listing ('Minara City 1'): one ready house for sale (https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1)
+| Ready house 200 m2, 5 bed / 3 bath - homele sale listing (Minara City 1) | 250,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele market listing ('Minara City 1'): one ready house for sale (https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1)
 
-### Location and surroundings
-Minara Village is on Koya Road in eastern Erbil, before (city-side of) Majidi Mall, per Baghy Shaqlawa. An Erbil Governorate news item (search snippet) mentions a street project between 'Minara' and Hana City in the Hawlery Nwe area. Map position (low confidence, from agency map pins): 36.185015, 44.063368. Google Maps: https://www.google.com/maps?q=36.185015,44.063368
+### شوێن و دەوروبەر
+Minara Village is on Koya Road in eastern Erbil, before (city-side of) Majidi Mall, per Baghy Shaqlawa. An Erbil Governorate news item (search snippet) mentions a street project between 'Minara' and Hana City in the Hawlery Nwe area.
+شوێن لەسەر نەخشە: 36.185015, 44.063368 (متمانە: نزم) — https://www.google.com/maps?q=36.185015,44.063368
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی منارە (Minara Village) پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای کۆیە لە ڕۆژهەڵاتی هەولێر، پێش ماجیدی مۆڵ لە لای شارەوە. پڕۆژەکە بە ناوی منارە ستی ١یش ناسراوە. خانووەکانی پڕۆژەکە خانووی ٢٠٠ م² لەخۆ دەگرن کە پێنج ژووری نووستن و سێ گەرماویان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 مجمع منارة (Minara Village) مشروع سكني يتكون من بيوت على طريق كويه في شرق أربيل، قبل مول ماجدي من جهة المدينة. ويُعرف المشروع أيضاً باسم منارة سيتي 1. وتشمل بيوت المشروع منازل بمساحة 200 م² تضم خمس غرف نوم وثلاثة حمامات.
 
 ### 3. English
 Minara Village is a residential project of houses on Koya Road in eastern Erbil, on the city side of Majidi Mall. The project is also known as Mnara Village and Minara City 1. Houses in the project include 200 m² homes with five bedrooms and three bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 | Area listing page 'Minara City 1' (1 page): one ready house 200 m2, 5 bed / 3 bath, USD 250,000 for sale | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/mnara-village | Project page 'Mnara Village': address Koya Road before Majidi Mall; property type House Building; tags internet, green areas, supermarket, mosque; no developer, size, unit count or status | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/minara-village/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 | Area listing page 'Minara City 1' (1 page): one ready house 200 m2, 5 bed / 3 bath, USD 250,000 for sale | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/mnara-village | Project page 'Mnara Village': address Koya Road before Majidi Mall; property type House Building; tags internet, green areas, supermarket, mosque; no developer, size, unit count or status | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/minara-village/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| hawlergov.org | https://www.hawlergov.org/app/en/node/4077 | Web-search result summary only (page not fetched): Erbil Governorate notice (January 2023 per second-pass summary) on paving a 30 m road between Hana City and Minara City in the Hawlery Nwe area; refers to Minara City as a place, no project data | 2023-01 | 2026-11-07 | low |
+| hawlergov.org | https://www.hawlergov.org/app/en/node/4077 | Web-search result summary only (page not fetched): Erbil Governorate notice (January 2023 per second-pass summary) on paving a 30 m road between Hana City and Minara City in the Hawlery Nwe area; refers to Minara City as a place, no project data | 2023-01 | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Minara Village" OR "Minara City" Erbil Koya Road”; “"منارە سیتی" OR "منارة سيتي" هەولێر أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Minara Village" OR "Minara City" Erbil Koya Road»؛ «"منارە سیتی" OR "منارة سيتي" هەولێر أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and Erbil location (Baghy project page; homele area page)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Koya Road address and facility tags (Baghy)
    - 200 m2 ready house at USD 250,000 (homele listing)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Naming: 'Mnara Village' (Baghy) vs 'Minara City 1' (homele)
    - project name / identity: Mnara Village (https://baghyshaqlawa.net/en/projects/mnara-village); Minara City 1 (https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1) → Treated as the same development (coordinator mapping); homele label suggests phase numbering, not confirmed by a project page.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Land area
    - Number of houses
@@ -108,15 +111,15 @@ Second verification pass 2026-11-07: queries “"Minara Village" OR "Minara City
    - Launch and completion dates
    - Construction status (explicit)
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 'Minara City 1' and 'Mnara Village' are the same development and whether a Minara 2 exists
    - Developer identity (not linked to BC Group's Minare Mall in any source)
-   - Second verification pass (2026-11-07): no new evidence. Searches only re-found the Erbil Governorate road notice (now dated January 2023: a road between Hana City and Minara City); developer, size, unit count and status remain unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Searches only re-found the Erbil Governorate road notice (now dated January 2023: a road between Hana City and Minara City); developer, size, unit count and status remain unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "minara-village",

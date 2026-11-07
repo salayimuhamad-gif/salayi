@@ -1,127 +1,130 @@
 <!-- rendered -->
 # Zanyari Towers — زانیاری تاوەرز — أبراج زانياري
-Project ID: zanyari-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: zanyari-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Zanyari Towers | High – Baghy 'Zanyari Towers', Haji Salam 'Zanyari Tower', homele 'Zaniary Towers' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
-| City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
-| District / Area | 60m Street, opposite Franso Hariri Stadium | High – Baghy and Haji Salam agree | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
-| Developer | Kirmanj Construction Company | Medium – Baghy text only ('built by'); Paya names Kirmanj for the adjacent Erbil One Tower | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Project Category | Residential (apartment towers) | High – Baghy, Haji Salam, homele | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 3 | Medium – Baghy text only | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Total Residential Units | Not verified (Haji Salam: 800, scope unclear) | Low – Haji page may include the 48/49-floor Erbil One Tower | https://hajisalam.com/en/zanyari-tower/ |
-| Construction Status | Completed | Medium – Baghy 'built by'; homele 'Ready' listing; Baghy rental listings; Haji resale listing c.2020 | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
-| Completion Date | Not verified (units on the resale market c.2020) | Low – Haji Salam listing dated '6 years ago' | https://hajisalam.com/en/zanyari-tower/ |
-| Coordinates | 36.174717, 44.010722 — Google Maps: https://www.google.com/maps?q=36.174717,44.010722 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Alternative names | Zanyari Tower; Zaniary Towers | Medium – Haji Salam and homele spellings; Wikipedia uses 'Zaniary Tower' as a former name of E1 Tower | https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 25 | Medium – Baghy text; Haji gives 25-49 (see conflicts) | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None; adjacent Erbil One Tower (E1) is a separate entry | Medium – Baghy lists 'Erbil One Tower Zanyari' as a separate project 'beside the Zanyari Tower' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
+| ناوی پڕۆژە | Zanyari Towers | بەرز – Baghy 'Zanyari Towers', Haji Salam 'Zanyari Tower', homele 'Zaniary Towers' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
+| شار | هەولێر | بەرز – All sources | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
+| ناوچە / گەڕەک | 60m Street, opposite Franso Hariri Stadium | بەرز – Baghy and Haji Salam agree | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
+| گەشەپێدەر (کۆمپانیا) | Kirmanj Construction Company | مامناوەند – Baghy text only ('built by'); Paya names Kirmanj for the adjacent Erbil One Tower | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers) | بەرز – Baghy, Haji Salam, homele | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 3 | مامناوەند – Baghy text only | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە — (Haji Salam: 800, scope unclear) | نزم – Haji page may include the 48/49-floor Erbil One Tower | https://hajisalam.com/en/zanyari-tower/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Baghy 'built by'; homele 'Ready' listing; Baghy rental listings; Haji resale listing c.2020 | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە — (units on the resale market c.2020) | نزم – Haji Salam listing dated '6 years ago' | https://hajisalam.com/en/zanyari-tower/ |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.174717, 44.010722 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.174717,44.010722 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| ناوە جێگرەوەکان | Zanyari Tower; Zaniary Towers | مامناوەند – Haji Salam and homele spellings; Wikipedia uses 'Zaniary Tower' as a former name of E1 Tower | https://hajisalam.com/en/zanyari-tower/ ; https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 25 | مامناوەند – Baghy text; Haji gives 25-49 (see conflicts) | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None; adjacent Erbil One Tower (E1) is a separate entry | مامناوەند – Baghy lists 'Erbil One Tower Zanyari' as a separate project 'beside the Zanyari Tower' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified (Haji Salam: 800, scope unclear) | Haji page may include the 48/49-floor Erbil One Tower | https://hajisalam.com/en/zanyari-tower/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | 800 | Apartment project, Number Of Units 800 (hajisalam.com 'Zanyari Tower'; floors listed as 25-49) | https://hajisalam.com/en/zanyari-tower/ |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 3 | Baghy text only | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Floors per building | 25 | Baghy text; Haji gives 25-49 (see conflicts) | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None; adjacent Erbil One Tower (E1) is a separate entry | Baghy lists 'Erbil One Tower Zanyari' as a separate project 'beside the Zanyari Tower' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە — (Haji Salam: 800, scope unclear) | Haji page may include the 48/49-floor Erbil One Tower | https://hajisalam.com/en/zanyari-tower/ |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 800 | Apartment project, Number Of Units 800 (hajisalam.com 'Zanyari Tower'; floors listed as 25-49) | https://hajisalam.com/en/zanyari-tower/ |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 3 | Baghy text only | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 25 | Baghy text; Haji gives 25-49 (see conflicts) | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None; adjacent Erbil One Tower (E1) is a separate entry | Baghy lists 'Erbil One Tower Zanyari' as a separate project 'beside the Zanyari Tower' | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://baghyshaqlawa.net/en/projects/erbil-one-tower-zanyari |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 85 | 85 | 85 | 1 | 1 bathrooms; 1+1: living room and kitchen, 1 bedroom, 1 bathroom (total area) | agency_project_page | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| apartment | 119 | 119 | 119 | 2 | 1 bathrooms; 2+1: living room and kitchen, two bedrooms, bathroom (total area) | agency_project_page | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| apartment | 204 | 204 | 204 | 3 | Type-C 3+1: living room and kitchen, bathroom, three bedrooms (one suite) (total area) | agency_project_page | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| apartment | 85, 204 | 85 | 204 | — | Haji Salam range 85-204 m, 1-3 bedrooms | agency_project_page | https://hajisalam.com/en/zanyari-tower/ |
-| apartment | 85, 119 | 85 | 119 | — | Listings: 119 m2 2 bed Ready for sale (homele); 85 m2 for rent/sale and 119 m2 for sale (Baghy); 85 m2 1 bed for sale c.2020 (Haji Salam) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers ; https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
+| شوقە | 85 | 85 | 85 | 1 | 1 حەمام؛ 1+1: living room and kitchen, 1 bedroom, 1 bathroom (total area) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| شوقە | 119 | 119 | 119 | 2 | 1 حەمام؛ 2+1: living room and kitchen, two bedrooms, bathroom (total area) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| شوقە | 204 | 204 | 204 | 3 | Type-C 3+1: living room and kitchen, bathroom, three bedrooms (one suite) (total area) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| شوقە | 85, 204 | 85 | 204 | — | Haji Salam range 85-204 m, 1-3 bedrooms | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/zanyari-tower/ |
+| شوقە | 85, 119 | 85 | 119 | — | Listings: 119 m2 2 bed Ready for sale (homele); 85 m2 for rent/sale and 119 m2 for sale (Baghy); 85 m2 1 bed for sale c.2020 (Haji Salam) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers ; https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity; internet; playground; preinstalled ACs; administrative centre; security; parking; underground car park; green areas; gym / fitness centre; supermarket; pets allowed; private pool (all Baghy feature tags only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity; internet; playground; preinstalled ACs; administrative centre; security; parking; underground car park; green areas; gym / fitness centre; supermarket; pets allowed; private pool (all Baghy feature tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready apartment (2+1) 119 m2, 2 bed / 2 bath - sale listing | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
-| Apartment 119 m2, 2 bed - sale listing | 110,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Apartment 85 m2, 1 bed - monthly rent | 550 | USD | rent | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-| Apartment 85 m2, 1 bed - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready apartment (2+1) 119 m2, 2 bed / 2 bath - sale listing | 90,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers |
+| Apartment 119 m2, 2 bed - sale listing | 110,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| Apartment 85 m2, 1 bed - monthly rent | 550 | USD | کرێ | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+| Apartment 85 m2, 1 bed - monthly rent | 600 | USD | کرێ | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/zanyari-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-On 60m Street in Erbil, opposite Franso Hariri Stadium (Baghy and Haji Salam agree), next to Erbil One Tower. Map position (low confidence, from agency map pins): 36.174717, 44.010722. Google Maps: https://www.google.com/maps?q=36.174717,44.010722
+### شوێن و دەوروبەر
+On 60m Street in Erbil, opposite Franso Hariri Stadium (Baghy and Haji Salam agree), next to Erbil One Tower.
+شوێن لەسەر نەخشە: 36.174717, 44.010722 (متمانە: نزم) — https://www.google.com/maps?q=36.174717,44.010722
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 زانیاری تاوەرز (Zanyari Towers) کۆمەڵگەیەکی نیشتەجێبوونی تەواوبووە لەسەر شەقامی ٦٠ مەتری لە هەولێر، بەرامبەر یاریگای فرانسۆ هەریری و لە تەنیشت تاوەری ئەربیل وەن، کە پڕۆژەیەکی جیاوازە. کۆمەڵگەکە کۆمپانیای بیناسازیی کرمانج دروستی کردووە و لە سێ تاوەری شوقە پێکدێت کە هەر یەکەیان ٢٥ نهۆمە. ڕووبەری شوقەکان لە ٨٥ تا ٢٠٤ م²یە و یەک تا سێ ژووری نووستنیان هەیە. شوقەی جۆری ١+١ ڕووبەری گشتیی ٨٥ م²یە، بە هۆڵ و مەتبەخ، یەک ژووری نووستن و یەک حەمام. شوقەی جۆری ٢+١ ڕووبەری گشتیی ١١٩ م²یە، بە هۆڵ و مەتبەخ، دوو ژووری نووستن و حەمامێک. شوقەی جۆری C (٣+١) ڕووبەری گشتیی ٢٠٤ م²یە، بە هۆڵ و مەتبەخ، حەمامێک و سێ ژووری نووستن کە یەکێکیان سویتە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أبراج زانياري (Zanyari Towers) مجمع سكني مكتمل على شارع 60 متر في أربيل، مقابل ملعب فرانسو حريري وبجوار برج أربيل ون، وهو مشروع منفصل. شيّدت المجمعَ شركة كرمانج للإنشاءات، ويتكوّن من ثلاثة أبراج للشقق يضم كل منها 25 طابقاً. تتراوح مساحات الشقق بين 85 و204 م²، وتضم من غرفة نوم واحدة إلى ثلاث غرف نوم. الشقة من نوع 1+1 مساحتها الإجمالية 85 م²، وتضم صالة ومطبخاً وغرفة نوم واحدة وحماماً واحداً. والشقة من نوع 2+1 مساحتها الإجمالية 119 م²، وتضم صالة ومطبخاً وغرفتي نوم وحماماً. أما الشقة من النوع C ذات التصميم 3+1 فمساحتها الإجمالية 204 م²، وتضم صالة ومطبخاً وحماماً وثلاث غرف نوم إحداها جناح.
 
 ### 3. English
 Zanyari Towers is a completed residential complex on 60m Street in Erbil, opposite Franso Hariri Stadium and next to Erbil One Tower, which is a separate project. The complex was built by Kirmanj Construction Company and consists of three apartment towers of 25 floors each. Apartments range from 85 to 204 m² and have one to three bedrooms. The 1+1 apartment has a total area of 85 m² with a living room and kitchen, one bedroom and one bathroom. The 2+1 apartment has a total area of 119 m² with a living room and kitchen, two bedrooms and a bathroom. The Type C 3+1 apartment has a total area of 204 m² with a living room and kitchen, a bathroom and three bedrooms, one of which is a suite.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers | Area page 'Zaniary Towers': one Ready 2+1 apartment 119 m2, 2 bed / 2 bath, for sale USD 90,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/zanyari-towers | Project page: 60m street opposite Frenso Hariri stadium; built by Kirmanj construction company; three towers x 25 floors; 1+1 85 m2, 2+1 119 m2, Type-C 3+1 204 m2; feature tags; related listings (85 m2 rent USD 550 and 600/month; 119 m2 sale USD 110,000); map pin | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/zanyari-tower/ | Project page 'Zanyari Tower': 60m road opposite Franso Hariri stadium; Apartment; 800 units; 85-204 m; floors '25 - 49'; 1-3 bedrooms; 1 related listing dated '6 years ago' (85 m2 1 bed for sale, price on call) | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/zanyari-towers | Area page 'Zaniary Towers': one Ready 2+1 apartment 119 m2, 2 bed / 2 bath, for sale USD 90,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/zanyari-towers | Project page: 60m street opposite Frenso Hariri stadium; built by Kirmanj construction company; three towers x 25 floors; 1+1 85 m2, 2+1 119 m2, Type-C 3+1 204 m2; feature tags; related listings (85 m2 rent USD 550 and 600/month; 119 m2 sale USD 110,000); map pin | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/zanyari-tower/ | Project page 'Zanyari Tower': 60m road opposite Franso Hariri stadium; Apartment; 800 units; 85-204 m; floors '25 - 49'; 1-3 bedrooms; 1 related listing dated '6 years ago' (85 m2 1 bed for sale, price on call) | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| en.wikipedia.org | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq | List entry: E1 Tower, 180 m, 48 floors, 2023, Erbil - 'Formerly known as Zaniary Tower' (context for the 49-floor figure on Haji Salam) | — | 2026-11-07 | medium |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq | List entry: E1 Tower, 180 m, 48 floors, 2023, Erbil - 'Formerly known as Zaniary Tower' (context for the 49-floor figure on Haji Salam) | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil, 60m Street location opposite Franso Hariri Stadium and apartment category (Baghy, Haji Salam)
    - Unit range 85-204 m2 (Baghy types; Haji range)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Kirmanj Construction Company (Baghy)
    - 3 towers x 25 floors (Baghy)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Floors 25 (Baghy) vs 25-49 (Haji Salam)
    - Units 800 (Haji Salam) - scope may include Erbil One Tower
    - floors: 25 (three towers) (https://baghyshaqlawa.net/en/projects/zanyari-towers); 25 - 49 (https://hajisalam.com/en/zanyari-tower/) → 25 kept for the three Zanyari Towers; the 49 upper figure most likely covers the adjacent tall tower (E1 / Erbil One, 48 floors, 'formerly known as Zaniary Tower'), which is a separate entry
    - total units: 800 (https://hajisalam.com/en/zanyari-tower/) → Not used: the Haji page's 25-49 floor range suggests the figure may include Erbil One Tower; left Not verified
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total units for the three towers
    - Land area
    - Launch and completion dates
    - Pages on Paya and Miran
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam listing dated '6 years ago' (c.2020), price on call
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Exact relation between 'Zanyari Tower' (Haji), 'Zaniary Tower' (Wikipedia's former name of E1 Tower) and the three 25-floor Zanyari Towers; E1 / Erbil One kept as separate entry erbil-one-tower
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "zanyari-towers",

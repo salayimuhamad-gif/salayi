@@ -1,129 +1,131 @@
 <!-- rendered -->
 # Noble City — نۆبڵ سیتی — نوبل سيتي
-Project ID: noble-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: noble-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Noble City (also Nobel City) | High – Baghy and Haji Salam 'Noble City'; homele and Paya area label 'Nobel City' | https://baghyshaqlawa.net/en/projects/noble-city ; https://hajisalam.com/en/noble-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-city |
-| City | Erbil | High – All sources | https://hajisalam.com/en/noble-city/ ; https://baghyshaqlawa.net/en/projects/noble-city |
-| District / Area | Old Bahirka road (Ankawa - Bahirka area) | Medium – Haji Salam address; Paya places the Nobel City area by the Ankawa - New Bahirka road; Baghy gives no address | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Developer | Not verified | Low – No source names the developer of the house project; Domus Company is named only for Nobel Towers; one web search found nothing | — |
-| Project Category | Residential (houses and apartments) | Medium – Haji Salam 'House - Apartment'; Baghy 'House' | https://hajisalam.com/en/noble-city/ ; https://baghyshaqlawa.net/en/projects/noble-city |
-| Total Land Area | Not verified | Low – Not stated ('200 m' is the house size) | — |
-| Number of Buildings / Towers | Not verified | Low – Number of apartment buildings not stated (Nobel Towers' 2 towers are a separate entry) | — |
-| Total Residential Units | 450 houses + 465 apartments (no total stated) | Low – Haji Salam only | https://hajisalam.com/en/noble-city/ |
-| Construction Status | Completed (houses) | Medium – Inferred: homele 'Ready' house listing and Baghy resale listings matching the 200 m2 2-bed house type; apartment status not stated | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://baghyshaqlawa.net/en/projects/noble-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified – published pin rejected | Low – Baghy Shaqlawa pin lies 0.3 km from the citadel, contradicting the stated old-Bahirka-road location; pin not used | https://baghyshaqlawa.net/en/projects/noble-city |
-| Alternative names | Nobel City; نوبل ستي | Medium – homele area name; Paya area label | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://paya-realestate.com/en/projects/nobel-towers-150 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 (houses); apartment buildings not stated | Low – Haji Salam only | https://hajisalam.com/en/noble-city/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Houses and apartments; Nobel Towers is a separate sub-project entry | Low – Haji Salam unit split; Paya area label for Nobel Towers | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
+| ناوی پڕۆژە | Noble City (also Nobel City) | بەرز – Baghy and Haji Salam 'Noble City'; homele and Paya area label 'Nobel City' | https://baghyshaqlawa.net/en/projects/noble-city ; https://hajisalam.com/en/noble-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/nobel-city |
+| شار | هەولێر | بەرز – All sources | https://hajisalam.com/en/noble-city/ ; https://baghyshaqlawa.net/en/projects/noble-city |
+| ناوچە / گەڕەک | Old Bahirka road (Ankawa - Bahirka area) | مامناوەند – Haji Salam address; Paya places the Nobel City area by the Ankawa - New Bahirka road; Baghy gives no address | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names the developer of the house project; Domus Company is named only for Nobel Towers; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and apartments) | مامناوەند – Haji Salam 'House - Apartment'; Baghy 'House' | https://hajisalam.com/en/noble-city/ ; https://baghyshaqlawa.net/en/projects/noble-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated ('200 m' is the house size) | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Number of apartment buildings not stated (Nobel Towers' 2 towers are a separate entry) | — |
+| کۆی یەکە نیشتەجێبوونەکان | 450 houses + 465 apartments (no total stated) | نزم – Haji Salam only | https://hajisalam.com/en/noble-city/ |
+| دۆخی دروستکردن | تەواوبووە — Completed (houses) | مامناوەند – Inferred: homele 'Ready' house listing and Baghy resale listings matching the 200 m2 2-bed house type; apartment status not stated | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://baghyshaqlawa.net/en/projects/noble-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە — published pin rejected | نزم – Baghy Shaqlawa pin lies 0.3 km from the citadel, contradicting the stated old-Bahirka-road location; pin not used | https://baghyshaqlawa.net/en/projects/noble-city |
+| ناوە جێگرەوەکان | Nobel City; نوبل ستي | مامناوەند – homele area name; Paya area label | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://paya-realestate.com/en/projects/nobel-towers-150 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (houses); apartment buildings not stated | نزم – Haji Salam only | https://hajisalam.com/en/noble-city/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | Houses and apartments; Nobel Towers is a separate sub-project entry | نزم – Haji Salam unit split; Paya area label for Nobel Towers | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated ('200 m' is the house size) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 450 houses + 465 apartments (no total stated) | Haji Salam only | https://hajisalam.com/en/noble-city/ |
-| Villas / houses | 450 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
-| Apartments | 465 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Number of apartment buildings not stated (Nobel Towers' 2 towers are a separate entry) | — |
-| Floors per building | 1 (houses); apartment buildings not stated | Haji Salam only | https://hajisalam.com/en/noble-city/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Houses and apartments; Nobel Towers is a separate sub-project entry | Haji Salam unit split; Paya area label for Nobel Towers | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated ('200 m' is the house size) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 450 houses + 465 apartments (no total stated) | Haji Salam only | https://hajisalam.com/en/noble-city/ |
+| ڤێلا / خانوو | 450 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
+| شوقە | 465 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Number of apartment buildings not stated (Nobel Towers' 2 towers are a separate entry) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (houses); apartment buildings not stated | Haji Salam only | https://hajisalam.com/en/noble-city/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Houses and apartments; Nobel Towers is a separate sub-project entry | Haji Salam unit split; Paya area label for Nobel Towers | https://hajisalam.com/en/noble-city/ ; https://paya-realestate.com/en/projects/nobel-towers-150 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 1 floors; 450 houses (Haji Salam) | agency_project_page | https://hajisalam.com/en/noble-city/ |
-| apartment | 67 | 67 | 67 | 1 | 1+1; part of 465 apartments (Haji Salam) | agency_project_page | https://hajisalam.com/en/noble-city/ |
-| apartment | 100 | 100 | 100 | 2 | 2+1; part of 465 apartments (Haji Salam) | agency_project_page | https://hajisalam.com/en/noble-city/ |
-| house | 200 | 200 | 200 | 2 | 1 bathrooms; Ready furnished house for sale (homele); three houses for sale on Baghy | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://baghyshaqlawa.net/en/projects/noble-city |
-| apartment | 83 | 83 | 83 | 1 | Baghy listing 'Apartment 83m for Rent in Noble city' (no price shown); size matches a Nobel Towers 1+1 type | market_listing | https://baghyshaqlawa.net/en/projects/noble-city |
+| خانوو | 200 | 200 | 200 | 2 | 1 نهۆم؛ 450 houses (Haji Salam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/noble-city/ |
+| شوقە | 67 | 67 | 67 | 1 | 1+1; part of 465 apartments (Haji Salam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/noble-city/ |
+| شوقە | 100 | 100 | 100 | 2 | 2+1; part of 465 apartments (Haji Salam) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/noble-city/ |
+| خانوو | 200 | 200 | 200 | 2 | 1 حەمام؛ Ready furnished house for sale (homele); three houses for sale on Baghy | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city ; https://baghyshaqlawa.net/en/projects/noble-city |
+| شوقە | 83 | 83 | 83 | 1 | Baghy listing 'Apartment 83m for Rent in Noble city' (no price shown); size matches a Nobel Towers 1+1 type | ڕیکلامی یەکەیەکی دیاریکراو | https://baghyshaqlawa.net/en/projects/noble-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity; internet; administrative centre; security; parking; green areas (all Baghy feature tags only)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity; internet; administrative centre; security; parking; green areas (all Baghy feature tags only)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready furnished house 200 m2, 2 bed / 1 bath - sale listing | 150,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city |
-| House 200 m2, 2 bed - sale listing | 120,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
-| House 200 m2, 2 bed - sale listing | 140,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
-| House 200 m2, 2 bed - sale listing | 160,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele lists one ready furnished house for sale; Baghy related listings show houses for sale and an 83 m² apartment for rent (https://homele.com/properties/for-sale-and-rent/erbil/nobel-city)
+| Ready furnished house 200 m2, 2 bed / 1 bath - sale listing | 150,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city |
+| House 200 m2, 2 bed - sale listing | 120,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
+| House 200 m2, 2 bed - sale listing | 140,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
+| House 200 m2, 2 bed - sale listing | 160,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele lists one ready furnished house for sale; Baghy related listings show houses for sale and an 83 m² apartment for rent (https://homele.com/properties/for-sale-and-rent/erbil/nobel-city)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam places Noble City on the old Bahirka road, the area north of Ankawa; Paya files the neighbouring Nobel Towers (Ankawa - New Bahirka Road, opposite the Lebanese Village) under the 'Nobel City' area. The map pin published for this project was not used because it contradicts the stated location.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 نۆبڵ سیتی (Noble City)، کە بە شێوەی نۆبێل سیتیش دەنووسرێت، پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر لەسەر ڕێگای کۆنی بەحرکە، لە ناوچەی باکووری عەنکاوە. پڕۆژەکە خانوو و شوقە بەیەکەوە دەگرێتەوە و ٤٥٠ خانوو و ٤٦٥ شوقەی تێدایە. ڕووبەری هەر خانوویەک ٢٠٠ م²یە، یەک نهۆمییە و دوو ژووری نووستنی هەیە، و خانووەکان تەواوبوون. شوقەکان دوو جۆرن: شوقەی یەک ژووری نووستن (1+1) و شوقەی دوو ژووری نووستن (2+1). لە تەنیشت پڕۆژەکە، لەسەر ڕێگای عەنکاوە – بەحرکەی نوێ بەرامبەر گوندی لوبنانی، دوو تاوەری نۆبڵ تاوەرز هەن کە کۆمپانیای دۆمۆس دروستی کردوون، هەر یەکەیان ٢٣ نهۆمە و دەڕواننە سەر نۆبڵ سیتی.
 
-### 2. Arabic (العربية)
+### 2. العربية
 نوبل سيتي (Noble City)، ويُكتب اسمه أيضاً نوبل ستي، مشروع سكني في مدينة أربيل على طريق بحركة القديم، في المنطقة الواقعة شمال عنكاوا. يجمع المشروع بين المنازل والشقق، ويضم 450 منزلاً و465 شقة. تبلغ مساحة كل منزل 200 م²، وهو مبني من طابق واحد ويضم غرفتي نوم، والمنازل مكتملة البناء. وتتوفر الشقق بتصميمين: شقق بغرفة نوم واحدة (1+1) وشقق بغرفتي نوم (2+1). وبجوار المشروع، على طريق عنكاوا – بحركة الجديد مقابل القرية اللبنانية، يقع برجا نوبل تاورز اللذان بنتهما شركة دوموس، ويتألف كل منهما من 23 طابقاً، ويطلان على نوبل سيتي.
 
 ### 3. English
 Noble City, also written Nobel City, is a residential project in Erbil on the old Bahirka road, in the area north of Ankawa. The project combines houses and apartments and includes 450 houses and 465 apartments. Each house has an area of 200 m², is built on one floor and has two bedrooms, and the houses are completed. The apartments come in two layouts: one-bedroom (1+1) and two-bedroom (2+1) units. Next to the project, on the Ankawa – New Bahirka road opposite the Lebanese Village, stand the two 23-floor Nobel Towers built by Domus Company, which overlook Noble City.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city | Area page 'Nobel City': one Ready furnished house 200 m2, 2 bed / 1 bath, for sale USD 150,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/nobel-towers-150 | Nobel Towers page (context): area label 'Nobel City (نوبل ستي)'; towers on Ankawa - New Bahirka Road opposite the Lebanese Village, with a view of Nobel City; developer Domus Company | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/noble-city | Project page 'Noble City': no address; type House; feature tags; nearest branch Harsham City; related listings: houses 200 m2 2 bed for sale USD 120,000 / 140,000 / 160,000; apartment 83 m2 for rent (no price); map pin at 36.1893, 44.0113 (city centre) | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/noble-city/ | Project page 'Noble City': address Bahirka old Road; type House - Apartment; house 450 - apartment 465; house 200 m, apartment 67 m (1+1) - 100 m (2+1); 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/nobel-city | Area page 'Nobel City': one Ready furnished house 200 m2, 2 bed / 1 bath, for sale USD 150,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/nobel-towers-150 | Nobel Towers page (context): area label 'Nobel City (نوبل ستي)'; towers on Ankawa - New Bahirka Road opposite the Lebanese Village, with a view of Nobel City; developer Domus Company | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/noble-city | Project page 'Noble City': no address; type House; feature tags; nearest branch Harsham City; related listings: houses 200 m2 2 bed for sale USD 120,000 / 140,000 / 160,000; apartment 83 m2 for rent (no price); map pin at 36.1893, 44.0113 (city centre) | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/noble-city/ | Project page 'Noble City': address Bahirka old Road; type House - Apartment; house 450 - apartment 465; house 200 m, apartment 67 m (1+1) - 100 m (2+1); 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Noble City" OR "Nobel City" Erbil Bahirka houses”; “"نوبل ستي" OR "نوبل سيتي" OR "نۆبڵ سیتی" أربيل هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Noble City" OR "Nobel City" Erbil Bahirka houses»؛ «"نوبل ستي" OR "نوبل سيتي" OR "نۆبڵ سیتی" أربيل هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and Erbil (Baghy, Haji Salam, homele)
    - 200 m2 two-bedroom houses (Haji Salam; homele and Baghy listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Address Bahirka old Road (Haji Salam)
    - 450 houses, 465 apartments, apartment sizes 67/100 m2 (Haji Salam)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Baghy map pin vs Bahirka-road address (pin rejected)
    - Haji apartment sizes 67/100 m2 vs Nobel Towers 69-118 m2
    - coordinates: 36.189319, 44.011288 (Baghy map pin) (https://baghyshaqlawa.net/en/projects/noble-city); Bahirka old Road (address, north of Ankawa) (https://hajisalam.com/en/noble-city/) → Pin rejected: it sits in central Erbil near the citadel, far from the Bahirka-road address; treated as a map default
    - apartment sizes: 67 m2 (1+1), 100 m2 (2+1) (https://hajisalam.com/en/noble-city/); Nobel Towers 69/81/83/84 m2 (1+1), 117/118 m2 (2+1) (https://paya-realestate.com/en/projects/nobel-towers-150) → Kept separate: Haji's 465 apartments are not stated to be Nobel Towers; unresolved
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Land area
    - Number of apartment buildings
    - Dates
    - Pages on Paya (project itself) and Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether Haji's 465 apartments are Nobel Towers or a separate apartment component
    - Old Bahirka road (Haji) vs Ankawa - New Bahirka road (Paya, for Nobel Towers): both may bound the same area; not stated
    - Apartment status not stated
-   - Second verification pass (2026-11-07): no new evidence. No wider-web page mentions Noble/Nobel City; developer, land area and dates remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No wider-web page mentions Noble/Nobel City; developer, land area and dates remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "noble-city",

@@ -1,129 +1,132 @@
 <!-- rendered -->
 # Kani Almany Village (German Village) — گوندی کانی ئەڵمانی — قرية كاني ألماني
-Project ID: kani-almany-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: kani-almany-village | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Kani Almany Village (German Village) | High – Paya, Haji Salam and homele use Kani Almany/Almani; Paya gives 'German Village' | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ ; https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ |
-| District / Area | New Bahrka road | Medium – Haji Salam address; Paya only says outskirts of Erbil near major roads | https://hajisalam.com/en/kany-almany/ ; https://paya-realestate.com/en/projects/kani-almany-282 |
-| Developer | Not verified | Low – No company named; Paya developer field is a parsing artefact; one web search found nothing | — |
-| Project Category | Residential (houses; apartment buildings per Paya) | High – Paya, Haji Salam, homele | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ |
-| Total Land Area | Not verified | Low – Not stated; 306 m2 is the house size | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | 315 | Low – Haji Salam only (houses) | https://hajisalam.com/en/kany-almany/ |
-| Construction Status | Completed | Medium – Paya 'Completed'; homele ready furnished house; one homele card tagged off-plan | https://paya-realestate.com/en/projects/kani-almany-282 ; https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.262024, 43.986609 — Google Maps: https://www.google.com/maps?q=36.262024,43.986609 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/kani-almany-282 |
-| Alternative names | German Village; Kani Almani; Kany Almany; کانی ئەڵمانی | High – Paya, Haji Salam, homele titles; Wikipedia 'German Village' | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 2 floors (houses) | Medium – Haji Salam | https://hajisalam.com/en/kany-almany/ |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None stated | — |
+| ناوی پڕۆژە | Kani Almany Village (German Village) | بەرز – Paya, Haji Salam and homele use Kani Almany/Almani; Paya gives 'German Village' | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ ; https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ |
+| ناوچە / گەڕەک | New Bahrka road | مامناوەند – Haji Salam address; Paya only says outskirts of Erbil near major roads | https://hajisalam.com/en/kany-almany/ ; https://paya-realestate.com/en/projects/kani-almany-282 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No company named; Paya developer field is a parsing artefact; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses; apartment buildings per Paya) | بەرز – Paya, Haji Salam, homele | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated; 306 m2 is the house size | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 315 | نزم – Haji Salam only (houses) | https://hajisalam.com/en/kany-almany/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya 'Completed'; homele ready furnished house; one homele card tagged off-plan | https://paya-realestate.com/en/projects/kani-almany-282 ; https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.262024, 43.986609 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.262024,43.986609 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/kani-almany-282 |
+| ناوە جێگرەوەکان | German Village; Kani Almani; Kany Almany; کانی ئەڵمانی | بەرز – Paya, Haji Salam, homele titles; Wikipedia 'German Village' | https://paya-realestate.com/en/projects/kani-almany-282 ; https://hajisalam.com/en/kany-almany/ ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 floors (houses) | مامناوەند – Haji Salam | https://hajisalam.com/en/kany-almany/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None stated | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated; 306 m2 is the house size | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 315 | Haji Salam only (houses) | https://hajisalam.com/en/kany-almany/ |
-| Villas / houses | 315 | Haji Salam: 'Project Type: House Number Of Units 315' | https://hajisalam.com/en/kany-almany/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | 2 floors (houses) | Haji Salam | https://hajisalam.com/en/kany-almany/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated; 306 m2 is the house size | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 315 | Haji Salam only (houses) | https://hajisalam.com/en/kany-almany/ |
+| ڤێلا / خانوو | 315 | Haji Salam: 'Project Type: House Number Of Units 315' | https://hajisalam.com/en/kany-almany/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 floors (houses) | Haji Salam | https://hajisalam.com/en/kany-almany/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None stated | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 306 | 306 | 306 | 4 | 2 floors; Haji Salam: houses of 306 m2, 2 floors, 4 bedrooms; 315 units | agency_project_page | https://hajisalam.com/en/kany-almany/ |
-| house | 306 | 306 | 306 | 4 | 3 bathrooms; Paya unit card: house 306 m2, 4 bed / 3 bath, USD 200,000, blueprint offered | agency_project_page | https://paya-realestate.com/en/projects/kani-almany-282 |
-| apartment | Not verified | — | — | — | Paya description mentions 'contemporary apartment buildings'; no count or sizes | agency_project_page | https://paya-realestate.com/en/projects/kani-almany-282 |
-| house | 306 | 306 | 306 | — | homele: house tagged 'Off Plan' 4 bed / 5 bath (USD 165,000) and ready furnished house 5 bed / 4 bath (USD 220,000) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
+| خانوو | 306 | 306 | 306 | 4 | 2 نهۆم؛ Haji Salam: houses of 306 m2, 2 floors, 4 bedrooms; 315 units | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/kany-almany/ |
+| خانوو | 306 | 306 | 306 | 4 | 3 حەمام؛ Paya unit card: house 306 m2, 4 bed / 3 bath, USD 200,000, blueprint offered | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/kani-almany-282 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — | — | Paya description mentions 'contemporary apartment buildings'; no count or sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/kani-almany-282 |
+| خانوو | 306 | 306 | 306 | — | homele: house tagged 'Off Plan' 4 bed / 5 bath (USD 165,000) and ready furnished house 5 bed / 4 bath (USD 220,000) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
 
-**Layouts and floor plans:** Paya: blueprint offered ('View Blueprint') for House 306 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/kani-almany-282)
+**نەخشە و پلانی نهۆمەکان:** Paya: blueprint offered ('View Blueprint') for House 306 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/kani-almany-282)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Private parking (Paya description); 24/7 electricity (Paya description); Secure gated entrances (Paya description); Playgrounds (Paya description); Green communal areas (Paya description)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Private parking (Paya description); 24/7 electricity (Paya description); Secure gated entrances (Paya description); Playgrounds (Paya description); Green communal areas (Paya description)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Laundry (Paya tag); Pharmacy (Paya tag); Restaurant (Paya tag); Gym (Paya tag); Bakery (Paya tag); Mosque (Paya tag); Cafeteria (Paya tag); Exchange (Paya tag); Barber (Paya tag); Maintenance (Paya tag); Reception (Paya tag); Covered parking (Paya tag); Sewers (Paya tag)
+**بانگەشەی پشتڕاست نەکراوە:** Laundry (Paya tag); Pharmacy (Paya tag); Restaurant (Paya tag); Gym (Paya tag); Bakery (Paya tag); Mosque (Paya tag); Cafeteria (Paya tag); Exchange (Paya tag); Barber (Paya tag); Maintenance (Paya tag); Reception (Paya tag); Covered parking (Paya tag); Sewers (Paya tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 306 m2, 4 bed / 3 bath - Paya project-page unit card (agency, not developer price) | 200,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/kani-almany-282 |
-| House 306 m2, 4 bed / 5 bath, tagged 'Off Plan' - homele sale listing (negotiable) | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
-| Ready furnished house 306 m2, 5 bed / 4 bath - homele sale listing | 220,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| House 306 m2, 4 bed / 3 bath - Paya project-page unit card (agency, not developer price) | 200,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/kani-almany-282 |
+| House 306 m2, 4 bed / 5 bath, tagged 'Off Plan' - homele sale listing (negotiable) | 165,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
+| Ready furnished house 306 m2, 5 bed / 4 bath - homele sale listing | 220,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Kani Almany Village is on the new Bahrka road (Haji Salam); Paya places it on the outskirts of Erbil near major roads, a short drive from the city centre. Map position (low confidence, from agency map pins): 36.262024, 43.986609. Google Maps: https://www.google.com/maps?q=36.262024,43.986609
+### شوێن و دەوروبەر
+Kani Almany Village is on the new Bahrka road (Haji Salam); Paya places it on the outskirts of Erbil near major roads, a short drive from the city centre.
+شوێن لەسەر نەخشە: 36.262024, 43.986609 (متمانە: نزم) — https://www.google.com/maps?q=36.262024,43.986609
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی کانی ئەڵمانی (Kani Almany Village)، کە بە گوندی ئەڵمانیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی تەواوکراوە لەسەر ڕێگای نوێی بەحرکە لە دەوروبەری هەولێر، بە ماوەیەکی کەمی ئۆتۆمبێل لە ناوەندی شارەوە. پڕۆژەکە لە ٣١٥ خانووی ٣٠٦ م² پێکدێت. هەر خانوویەک دوو نهۆمە و چوار ژووری نووستنی هەیە. کۆمەڵگەکە دەروازەی داخراو و پارێزراو، پارکینگی تایبەت، کارەبای ٢٤ کاتژمێری، یاریگای منداڵان و ڕووبەری سەوزی گشتیی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 قرية كاني ألماني (Kani Almany Village)، المعروفة أيضاً بالقرية الألمانية، مشروع سكني مكتمل على طريق بحركة الجديد في أطراف أربيل، على مسافة قصيرة بالسيارة من مركز المدينة. يتكون المشروع من 315 بيتاً بمساحة 306 م². ويتألف كل بيت من طابقين ويضم أربع غرف نوم. ويضم المجمع مداخل مسوّرة ومؤمّنة ومواقف سيارات خاصة وكهرباء على مدار 24 ساعة وملاعب للأطفال ومساحات خضراء مشتركة.
 
 ### 3. English
 Kani Almany Village, also known as German Village, Kani Almani and Kany Almany, is a completed residential project on the new Bahrka road on the outskirts of Erbil, a short drive from the city centre. The project consists of 315 houses of 306 m². Each house is built on two floors and has four bedrooms. The community has secure gated entrances, private parking, 24-hour electricity, playgrounds and green communal areas.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany | Area listing page 'Kani Almani' (1 page): 306 m2 houses - 'Off Plan' 4 bed / 5 bath USD 165,000 negotiable; ready furnished 5 bed / 4 bath USD 220,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/kani-almany-282 | Project page 'Kani Almany': area Kani Almani (کانی ئەڵمانی), Erbil; status Completed; aka 'German Village'; red-roofed villas and apartment buildings; amenities text and tags; 1 unit card: house 306 m2, 4 bed / 3 bath, USD 200,000. Developer field reads '1 Units Kani Almany Village' (page parsing artefact, no company) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/kany-almany/ | Project page 'Kany Almany': New Bahirka Road; House; 315 units; 306 m2; 2 floors; 4 bedrooms; no listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany | Area listing page 'Kani Almani' (1 page): 306 m2 houses - 'Off Plan' 4 bed / 5 bath USD 165,000 negotiable; ready furnished 5 bed / 4 bath USD 220,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/kani-almany-282 | Project page 'Kani Almany': area Kani Almani (کانی ئەڵمانی), Erbil; status Completed; aka 'German Village'; red-roofed villas and apartment buildings; amenities text and tags; 1 unit card: house 306 m2, 4 bed / 3 bath, USD 200,000. Developer field reads '1 Units Kani Almany Village' (page parsing artefact, no company) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/kany-almany/ | Project page 'Kany Almany': New Bahirka Road; House; 315 units; 306 m2; 2 floors; 4 bedrooms; no listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village article lists German Village among Erbil compounds named after Western countries (with American and Italian Village) | — | 2026-11-07 | medium |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village article lists German Village among Erbil compounds named after Western countries (with American and Italian Village) | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Kani Almany" OR "German Village" Erbil Bahrka houses developer”; “"کانی ئەڵمانی" هەولێر” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Kani Almany" OR "German Village" Erbil Bahrka houses developer»؛ «"کانی ئەڵمانی" هەولێر» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name and house category (Paya, Haji Salam, homele)
    - 306 m2 house size (Paya, Haji Salam, homele)
    - Completed status (Paya; homele ready listing)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - New Bahrka road location, 315 units, 2 floors (Haji Salam)
    - Apartment buildings and facility list (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: Paya Completed vs one homele 'Off Plan' tag
    - Unit mix: houses only (Haji) vs villas + apartments (Paya text)
    - construction_status: Completed (https://paya-realestate.com/en/projects/kani-almany-282); One listing tagged 'Off Plan' (another ready furnished) (https://homele.com/properties/for-sale-and-rent/erbil/kanealmany) → Completed adopted (Paya status; ready listing); off-plan tag on a single listing left unexplained
    - unit mix: Villas and apartment buildings (https://paya-realestate.com/en/projects/kani-almany-282); House only, 315 units (https://hajisalam.com/en/kany-almany/) → Houses confirmed by three sites; apartment buildings single-source (Paya text)
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Land area
    - Number of buildings
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam page undated (site copyright 2019)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer not named anywhere; one web search found nothing
    - Paya describes the site as 'outskirts of Erbil'; kept in scope as a Bahrka road approach
-   - Second verification pass (2026-11-07): no new evidence. Results only repeated the German Village mention already cited from the English Village article; developer, land area and dates remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Results only repeated the German Village mention already cited from the English Village article; developer, land area and dates remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "kani-almany-village",

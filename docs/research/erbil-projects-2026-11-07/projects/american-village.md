@@ -1,122 +1,125 @@
 <!-- rendered -->
 # American Village — گوندی ئەمریکی — القرية الامريكية
-Project ID: american-village | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: american-village | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | American Village | High – Paya, Baghy, Haji Salam, Homele, Wikipedia mention | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/american-village ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
-| District / Area | Shaqlawa Road | High – Paya, Baghy and Haji Salam agree | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
-| Developer | Sigma International | Medium – Paya only | https://paya-realestate.com/en/projects/american-village-270 |
-| Project Category | Residential (villas) | High – Paya, Baghy, Haji Salam | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not applicable (villa compound) | — |
-| Total Residential Units | 398 villas | Medium – Haji Salam only | https://hajisalam.com/en/american-village/ |
-| Construction Status | Completed | High – Paya 'Completed'; Homele 'Ready' resale villas; Haji Salam listings 6 years old | https://paya-realestate.com/en/projects/american-village-270 ; https://homele.com/properties/for-sale-and-rent/erbil/american-village ; https://hajisalam.com/en/american-village/ |
-| Completion Date | Not verified | Low – Not stated | — |
-| Coordinates | 36.314579, 44.160955 — Google Maps: https://www.google.com/maps?q=36.314579,44.160955 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village |
-| Alternative names | القرية الامريكية; گوندی ئەمریکی | Medium – Arabic label on Paya; Kurdish name from pack aliases | https://paya-realestate.com/en/projects/american-village-270 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 2 (most villas) | High – Paya ('most villas are two-story') and Haji Salam (2 floors) | https://paya-realestate.com/en/projects/american-village-270 ; https://hajisalam.com/en/american-village/ |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Not verified | Low – None mentioned | — |
+| ناوی پڕۆژە | American Village | بەرز – Paya, Baghy, Haji Salam, Homele, Wikipedia mention | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/american-village ; https://en.wikipedia.org/wiki/English_Village,_Erbil |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
+| ناوچە / گەڕەک | Shaqlawa Road | بەرز – Paya, Baghy and Haji Salam agree | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
+| گەشەپێدەر (کۆمپانیا) | Sigma International | مامناوەند – Paya only | https://paya-realestate.com/en/projects/american-village-270 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (villas) | بەرز – Paya, Baghy, Haji Salam | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village ; https://hajisalam.com/en/american-village/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not applicable (villa compound) | — |
+| کۆی یەکە نیشتەجێبوونەکان | 398 villas | مامناوەند – Haji Salam only | https://hajisalam.com/en/american-village/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | بەرز – Paya 'Completed'; Homele 'Ready' resale villas; Haji Salam listings 6 years old | https://paya-realestate.com/en/projects/american-village-270 ; https://homele.com/properties/for-sale-and-rent/erbil/american-village ; https://hajisalam.com/en/american-village/ |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.314579, 44.160955 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.314579,44.160955 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/american-village-270 ; https://baghyshaqlawa.net/en/projects/american-village |
+| ناوە جێگرەوەکان | القرية الامريكية; گوندی ئەمریکی | مامناوەند – Arabic label on Paya; Kurdish name from pack aliases | https://paya-realestate.com/en/projects/american-village-270 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 (most villas) | بەرز – Paya ('most villas are two-story') and Haji Salam (2 floors) | https://paya-realestate.com/en/projects/american-village-270 ; https://hajisalam.com/en/american-village/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – None mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 398 villas | Haji Salam only | https://hajisalam.com/en/american-village/ |
-| Villas / houses | 398 | 'Number Of Unit: 398', Project Type: Villa (hajisalam) | https://hajisalam.com/en/american-village/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not applicable (villa compound) | — |
-| Floors per building | 2 (most villas) | Paya ('most villas are two-story') and Haji Salam (2 floors) | https://paya-realestate.com/en/projects/american-village-270 ; https://hajisalam.com/en/american-village/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified | None mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 398 villas | Haji Salam only | https://hajisalam.com/en/american-village/ |
+| ڤێلا / خانوو | 398 | 'Number Of Unit: 398', Project Type: Villa (hajisalam) | https://hajisalam.com/en/american-village/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not applicable (villa compound) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 (most villas) | Paya ('most villas are two-story') and Haji Salam (2 floors) | https://paya-realestate.com/en/projects/american-village-270 ; https://hajisalam.com/en/american-village/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە | None mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 400, 500, 600, 900 | 400 | 900 | — | 2 floors; 4, 5 and 6 bedrooms; Paya: 400–900 m², 'most villas are two-story' | agency_project_page | https://hajisalam.com/en/american-village/ ; https://paya-realestate.com/en/projects/american-village-270 |
+| ڤێلا | 400, 500, 600, 900 | 400 | 900 | — | 2 نهۆم؛ 4, 5 and 6 bedrooms; Paya: 400–900 m², 'most villas are two-story' | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/american-village/ ; https://paya-realestate.com/en/projects/american-village-270 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Security (Paya, Baghy); Car parking (Paya, Baghy); Public garden (Paya, Baghy); Supermarket (Paya, Baghy); Green areas (Baghy); 24-hour electricity (Baghy); Internet (Baghy); Pre-installed ACs (Baghy); Administrative centre (Baghy); Kids play area (Paya); Restaurant (Paya); Cafeteria (Paya); Women's salon (Paya)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Security (Paya, Baghy); Car parking (Paya, Baghy); Public garden (Paya, Baghy); Supermarket (Paya, Baghy); Green areas (Baghy); 24-hour electricity (Baghy); Internet (Baghy); Pre-installed ACs (Baghy); Administrative centre (Baghy); Kids play area (Paya); Restaurant (Paya); Cafeteria (Paya); Women's salon (Paya)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready villa 450 m², 5 bed / 4 bath – Homele listing | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
-| Ready villa 480 m², 6 bed / 5 bath – Homele listing | 550,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
-| Ready villa 490 m², 7 bed / 8 bath – Homele listing | 650,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
-| Ready villa 1,350 m², 5 bed / 5 bath – Homele listing | 390,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: ready villas/houses for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/american-village)
+| Ready villa 450 m², 5 bed / 4 bath – Homele listing | 350,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
+| Ready villa 480 m², 6 bed / 5 bath – Homele listing | 550,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
+| Ready villa 490 m², 7 bed / 8 bath – Homele listing | 650,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
+| Ready villa 1,350 m², 5 bed / 5 bath – Homele listing | 390,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: ready villas/houses for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/american-village)
 
-### Location and surroundings
-On the Erbil–Shaqlawa road north-east of Erbil (Paya, Baghy, Haji Salam). Paya's structured data places the compound at 36.3144475, 44.1606133, about 19 km north-east of the citadel and outside the 150 m ring road, on the Shaqlawa (Pirmam/Massif) road approach. Map position (medium confidence, from agency map pins): 36.314579, 44.160955. Google Maps: https://www.google.com/maps?q=36.314579,44.160955
+### شوێن و دەوروبەر
+On the Erbil–Shaqlawa road north-east of Erbil (Paya, Baghy, Haji Salam). Paya's structured data places the compound at 36.3144475, 44.1606133, about 19 km north-east of the citadel and outside the 150 m ring road, on the Shaqlawa (Pirmam/Massif) road approach.
+شوێن لەسەر نەخشە: 36.314579, 44.160955 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.314579,44.160955
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی ئەمریکی (American Village) کۆمەڵگەیەکی ڤێلای تەواوبووە لەسەر ڕێگای هەولێر–شەقڵاوە لە باکووری ڕۆژهەڵاتی هەولێر، کە کۆمپانیای سیگما ئینتەرناشناڵ گەشەی پێداوە. کۆمەڵگەکە لە ٣٩٨ ڤێلا پێکدێت. ڕووبەری ڤێلاکان ٤٠٠، ٥٠٠، ٦٠٠ و ٩٠٠ م²ن، و زۆربەی ڤێلاکان دوو نهۆمین و چوار، پێنج یان شەش ژووری نووستنیان هەیە. خزمەتگوزارییەکانی کۆمەڵگەکە بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، ئامێری فێنککەرەوەی دامەزراو، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت، چێشتخانە، کافتریا، ئارایشتگای ئافرەتان، یاریگای منداڵان و بنکەیەکی کارگێڕی.
 
-### 2. Arabic (العربية)
+### 2. العربية
 القرية الأمريكية (American Village) مجمع فلل مكتمل على طريق أربيل–شقلاوة شمال شرق أربيل، طوّرته شركة سيغما إنترناشونال. يضم المجمع 398 فيلا. تبلغ مساحات الفلل 400 و500 و600 و900 م²، ومعظم الفلل من طابقين وتضم أربع أو خمس أو ست غرف نوم. تشمل الخدمات في المجمع الكهرباء على مدار 24 ساعة، والإنترنت، وأجهزة التكييف المركبة مسبقاً، والحراسة، ومواقف السيارات، والمساحات الخضراء، وحديقة عامة، وسوبرماركت، ومطعماً، وكافتيريا، وصالوناً نسائياً، وملعباً للأطفال، ومركزاً إدارياً.
 
 ### 3. English
 American Village is a completed villa compound on the Erbil–Shaqlawa road, north-east of Erbil, developed by Sigma International. The compound comprises 398 villas. Villa sizes are 400, 500, 600 and 900 m², and most villas have two floors with four, five or six bedrooms. Services in the compound include 24-hour electricity, internet, pre-installed air conditioners, security, car parking, green areas, a public garden, a supermarket, a restaurant, a cafeteria, a women's salon, a children's play area and an administrative centre.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/american-village | Area page: four ready villas 450–1,350 m², US$350,000–650,000 (negotiable) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/american-village-270 | Name EN/AR, Shaqlawa Road, Completed, developer Sigma International, villas 400–900 m², 4/5/6 bedrooms, mostly 2 floors, amenity tags, map coordinates | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/american-village | Address Erbil – Shaqlawa Road, type Villa, features list | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/american-village/ | Address Shaqlawa road, type Villa, 398 units, sizes 400/500/600/900 m², 2 floors, 4-5-6 bedrooms; three old (6-year) sale listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/american-village | Area page: four ready villas 450–1,350 m², US$350,000–650,000 (negotiable) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/american-village-270 | Name EN/AR, Shaqlawa Road, Completed, developer Sigma International, villas 400–900 m², 4/5/6 bedrooms, mostly 2 floors, amenity tags, map coordinates | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/american-village | Address Erbil – Shaqlawa Road, type Villa, features list | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/american-village/ | Address Shaqlawa road, type Villa, 398 units, sizes 400/500/600/900 m², 2 floors, 4-5-6 bedrooms; three old (6-year) sale listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village article names American Village among Erbil compounds named after Western countries | — | 2026-11-07 | medium |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/English_Village,_Erbil | English Village article names American Village among Erbil compounds named after Western countries | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Shaqlawa Road location, villa category (Paya, Baghy, Haji Salam)
    - Villa sizes 400–900 m², 2 floors, 4–6 bedrooms (Paya, Haji Salam)
    - Completed status (Paya; Homele ready resale listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Sigma International (Paya)
    - 398 units (Haji Salam)
    - Coordinates (Paya)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Site area
    - Launch and completion dates
    - Developer prices
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam sale listings are about 6 years old
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - in_erbil_city='edge': Paya coordinates put it ~19 km NE of the citadel on the Shaqlawa/Pirmam road, beyond the 150 m ring road (within the brief's Pirmam/Massif approach)
    - Homele lists a 1,350 m² villa, above the 900 m² maximum given by Paya/Haji Salam (merged plots or gross area not explained)
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "american-village",

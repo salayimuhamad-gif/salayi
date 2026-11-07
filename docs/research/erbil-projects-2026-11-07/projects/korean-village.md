@@ -1,122 +1,124 @@
 <!-- rendered -->
 # Korean Village (Kory Village) — گوندی کۆری — القرية الكورية
-Project ID: korean-village | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: korean-village | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Korean Village (Kory Village) | Medium – homele 'Korean Village' (slug kori-village); Haji Salam 'Kory Village' | https://homele.com/properties/for-sale-and-rent/erbil/kori-village ; https://hajisalam.com/en/kory-village/ |
-| City | Erbil (urban fringe, Shaqlawa road) | Medium – Both sites list it under Erbil; road location only | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| District / Area | Shaqlawa road | Low – Haji Salam only | https://hajisalam.com/en/kory-village/ |
-| Developer | Not verified | Low – Not named; one web search found nothing | — |
-| Project Category | Residential (houses) | High – Haji Salam, homele | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| Total Land Area | Not verified | Low – Not stated ('Area 200 m' is the house size) | — |
-| Number of Buildings / Towers | Not verified | Low – Not applicable / not stated | — |
-| Total Residential Units | 5,000 | Low – Haji Salam only | https://hajisalam.com/en/kory-village/ |
-| Construction Status | Completed | Medium – Inferred: homele 'Ready' houses for sale/rent and a Haji Salam resale listing dated '6 years ago'; no explicit status field | https://homele.com/properties/for-sale-and-rent/erbil/kori-village ; https://hajisalam.com/en/kory-village/ |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Kory Village; Kori Village; گوندی کۆری; قریة الکوریة | Low – Site spellings; Kurdish/Arabic forms from catalogue, not from sources | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 | Medium – Haji Salam '1 floor'; homele single-house listings consistent | https://hajisalam.com/en/kory-village/ |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Korean Village (Kory Village) | مامناوەند – homele 'Korean Village' (slug kori-village); Haji Salam 'Kory Village' | https://homele.com/properties/for-sale-and-rent/erbil/kori-village ; https://hajisalam.com/en/kory-village/ |
+| شار | Erbil (urban fringe, Shaqlawa road) | مامناوەند – Both sites list it under Erbil; road location only | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| ناوچە / گەڕەک | Shaqlawa road | نزم – Haji Salam only | https://hajisalam.com/en/kory-village/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | بەرز – Haji Salam, homele | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated ('Area 200 m' is the house size) | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not applicable / not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 5,000 | نزم – Haji Salam only | https://hajisalam.com/en/kory-village/ |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Inferred: homele 'Ready' houses for sale/rent and a Haji Salam resale listing dated '6 years ago'; no explicit status field | https://homele.com/properties/for-sale-and-rent/erbil/kori-village ; https://hajisalam.com/en/kory-village/ |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Kory Village; Kori Village; گوندی کۆری; قریة الکوریة | نزم – Site spellings; Kurdish/Arabic forms from catalogue, not from sources | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 | مامناوەند – Haji Salam '1 floor'; homele single-house listings consistent | https://hajisalam.com/en/kory-village/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated ('Area 200 m' is the house size) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 5,000 | Haji Salam only | https://hajisalam.com/en/kory-village/ |
-| Villas / houses | 5,000 | Haji Salam (Kory Village): 'Project Type: House', 'Number Of Unit: 5000' | https://hajisalam.com/en/kory-village/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not applicable / not stated | — |
-| Floors per building | 1 | Haji Salam '1 floor'; homele single-house listings consistent | https://hajisalam.com/en/kory-village/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated ('Area 200 m' is the house size) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 5,000 | Haji Salam only | https://hajisalam.com/en/kory-village/ |
+| ڤێلا / خانوو | 5,000 | Haji Salam (Kory Village): 'Project Type: House', 'Number Of Unit: 5000' | https://hajisalam.com/en/kory-village/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not applicable / not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 | Haji Salam '1 floor'; homele single-house listings consistent | https://hajisalam.com/en/kory-village/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 1 bathrooms; 1 floors; Haji Salam project page: house 200 m2, 1 floor, 2 bedrooms; homele listings: 200 m2, 2 bed, 1 bath | agency_project_page | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| house | 230 | 230 | 230 | 3 | One Haji Salam sale listing ('6 years ago') | market_listing | https://hajisalam.com/en/kory-village/ |
+| خانوو | 200 | 200 | 200 | 2 | 1 حەمام؛ 1 نهۆم؛ Haji Salam project page: house 200 m2, 1 floor, 2 bedrooms; homele listings: 200 m2, 2 bed, 1 bath | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/kory-village/ ; https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| خانوو | 230 | 230 | 230 | 3 | One Haji Salam sale listing ('6 years ago') | ڕیکلامی یەکەیەکی دیاریکراو | https://hajisalam.com/en/kory-village/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 200 m2, 2 bed, furnished - homele sale listing | 85,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| House 200 m2, 2 bed - homele sale listing | 81,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-| House 200 m2, 2 bed - homele rent listing (per month) | 303 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele: ready 200 m² houses for sale ('$81,500 sale', '$85,000 sale') and for rent ('$303 Monthly') (https://homele.com/properties/for-sale-and-rent/erbil/kori-village)
+| House 200 m2, 2 bed, furnished - homele sale listing | 85,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| House 200 m2, 2 bed - homele sale listing | 81,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+| House 200 m2, 2 bed - homele rent listing (per month) | 303 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele: ready 200 m² houses for sale ('$81,500 sale', '$85,000 sale') and for rent ('$303 Monthly') (https://homele.com/properties/for-sale-and-rent/erbil/kori-village)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam places Kory Village on the Shaqlawa road out of Erbil; homele lists 'Korean Village' as an Erbil area. Neither source gives the distance from the city or a map position.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 گوندی کۆری، کە بە کۆری ڤیلج و کۆریان ڤیلج ناسراوە، پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای شەقڵاوە لە هەولێر. پڕۆژەکە لە درێژایی ئەو ڕێگایەدایە کە لە هەولێرەوە بەرەو شەقڵاوە دەچێت. پڕۆژەکە لە خانووی یەک نهۆمی پێکهاتووە و ٥٬٠٠٠ یەکەی نیشتەجێبوون لەخۆ دەگرێت. ڕووبەری خانووەکانی پڕۆژەکە ٢٠٠ م²یە و دوو ژووری نووستن و یەک حەمامیان هەیە، هەروەها خانوویەکی ٢٣٠ م² بە سێ ژووری نووستنیش بۆ فرۆشتن خراوەتە ڕوو. خانووە تەواوبووەکانی پڕۆژەکە بۆ فرۆشتن و بە کرێدان پێشکەش دەکرێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 القرية الكورية، المعروفة أيضاً باسم كوري فيلج، مشروع سكني للمنازل يقع على طريق شقلاوة في أربيل، على امتداد الطريق المتجه من أربيل نحو شقلاوة. يتألف المشروع من منازل بطابق واحد ويضم 5,000 وحدة سكنية. تبلغ مساحة المنازل في المشروع 200 م² وتحتوي على غرفتي نوم وحمام واحد، كما عُرض منزل بمساحة 230 م² بثلاث غرف نوم للبيع. وتُعرض المنازل المكتملة في المشروع للبيع والإيجار.
 
 ### 3. English
 Korean Village, also known as Kory Village or Kori Village, is a residential house project on the Shaqlawa road in Erbil. The project lies along the road that leads from Erbil towards Shaqlawa. The project consists of single-storey houses and includes 5,000 housing units. Houses in the project have an area of 200 m² with two bedrooms and one bathroom, and a 230 m² house with three bedrooms has also been offered for sale. Completed houses in the project are offered for sale and for rent.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/kori-village | Area 'Korean Village' (slug kori-village; 1 page): ready 200 m2, 2-bed, 1-bath houses for sale ($81,500-$85,000) and rent ($303/month) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/kory-village/ | Project page 'Kory Village': address Shaqlawa road; type House; 5,000 units; 200 m2; 1 floor; 2 bedrooms; one sale listing of a 230 m2, 3-bedroom house ('6 years ago') | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/kori-village | Area 'Korean Village' (slug kori-village; 1 page): ready 200 m2, 2-bed, 1-bath houses for sale ($81,500-$85,000) and rent ($303/month) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/kory-village/ | Project page 'Kory Village': address Shaqlawa road; type House; 5,000 units; 200 m2; 1 floor; 2 bedrooms; one sale listing of a 230 m2, 3-bedroom house ('6 years ago') | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Korean Village" Erbil Shaqlawa road houses”; “"کۆری ڤیلج" OR "گوندی کۆری" هەولێر شەقڵاوە” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Korean Village" Erbil Shaqlawa road houses»؛ «"کۆری ڤیلج" OR "گوندی کۆری" هەولێر شەقڵاوە» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Residential house project in the Erbil market (Haji Salam, homele)
    - 200 m2 two-bedroom houses (Haji Salam, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Shaqlawa road location, 5,000 units, single-storey houses (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Explicit construction status
    - Land area
    - Dates
    - Coordinates
    - Facilities
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Haji Salam 230 m2 listing is about six years old
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Position on Shaqlawa road relative to the city edge - set to 'edge' pending a map check
    - Origin of the name: 'Kory/Kori' may refer to the Kore (Korre) locality on the Erbil-Shaqlawa road (see https://www.kurdistan24.net/en/story/937355) rather than to Korea; unconfirmed
    - 5,000-unit total needs a second source
-   - Second verification pass (2026-11-07): no new evidence. No developer, news or government page mentions the project; the Sorani search surfaced only an unrelated village (Qoritan), so developer, status, unit total and exact road position remain unconfirmed outside the two portals.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No developer, news or government page mentions the project; the Sorani search surfaced only an unrelated village (Qoritan), so developer, status, unit total and exact road position remain unconfirmed outside the two portals.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "korean-village",

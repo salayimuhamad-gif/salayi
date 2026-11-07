@@ -1,100 +1,102 @@
 <!-- rendered -->
 # New Bahirka — بەحرکەی نوێ — بحركة الجديدة
-Project ID: new-bahirka | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: new-bahirka | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | New Bahirka (URL slug 'bahirka-new') | Low – Single project page | https://hajisalam.com/en/bahirka-new/ |
-| City | Erbil (urban fringe) | Low – Haji Salam lists it under Erbil; Bahirka Road leads to the Bahirka sub-district north of the city | https://hajisalam.com/en/bahirka-new/ |
-| District / Area | Bahirka Road | Low – Haji Salam only; position along the road not stated | https://hajisalam.com/en/bahirka-new/ |
-| Developer | Not verified | Low – Not named; one web search found nothing | — |
-| Project Category | Residential (houses) | Low – Haji Salam 'House' | https://hajisalam.com/en/bahirka-new/ |
-| Total Land Area | Not verified | Low – Not stated ('200 m' is the house size) | — |
-| Number of Buildings / Towers | Not applicable (house compound) | Low – — – No apartment buildings mentioned | — |
-| Total Residential Units | 224 houses | Low – Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
-| Construction Status | Unknown | Low – — – Not stated; no listings | — |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Bahirka New | Low – Haji Salam URL slug | https://hajisalam.com/en/bahirka-new/ |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1 (houses) | Low – Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | New Bahirka (URL slug 'bahirka-new') | نزم – Single project page | https://hajisalam.com/en/bahirka-new/ |
+| شار | Erbil (urban fringe) | نزم – Haji Salam lists it under Erbil; Bahirka Road leads to the Bahirka sub-district north of the city | https://hajisalam.com/en/bahirka-new/ |
+| ناوچە / گەڕەک | Bahirka Road | نزم – Haji Salam only; position along the road not stated | https://hajisalam.com/en/bahirka-new/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Haji Salam 'House' | https://hajisalam.com/en/bahirka-new/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated ('200 m' is the house size) | — |
+| ژمارەی باڵەخانە / تاوەر | Not applicable (house compound) | نزم – No apartment buildings mentioned | — |
+| کۆی یەکە نیشتەجێبوونەکان | 224 houses | نزم – Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – Not stated; no listings | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Bahirka New | نزم – Haji Salam URL slug | https://hajisalam.com/en/bahirka-new/ |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (houses) | نزم – Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated ('200 m' is the house size) | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 224 houses | Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
-| Villas / houses | 224 | Haji Salam: Project Type House; Number Of Unit 224 | https://hajisalam.com/en/bahirka-new/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not applicable (house compound) | No apartment buildings mentioned | — |
-| Floors per building | 1 (houses) | Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated ('200 m' is the house size) | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 224 houses | Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
+| ڤێلا / خانوو | 224 | Haji Salam: Project Type House; Number Of Unit 224 | https://hajisalam.com/en/bahirka-new/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | Not applicable (house compound) | No apartment buildings mentioned | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1 (houses) | Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 2 | 1 floors; 224 houses; whether 200 m2 is plot or built-up area is not stated | agency_project_page | https://hajisalam.com/en/bahirka-new/ |
+| خانوو | 200 | 200 | 200 | 2 | 1 نهۆم؛ 224 houses; whether 200 m2 is plot or built-up area is not stated | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/bahirka-new/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam gives the address only as Bahirka Road. The road runs north from Erbil towards the Bahirka sub-district; the project's position along it (inside the 150m ring road or near Bahirka town) is not published.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 بەحرکەی نوێ پڕۆژەیەکی نیشتەجێبوونی خانووە لەسەر ڕێگای بەحرکە لە پارێزگای هەولێر. پڕۆژەکە ٢٢٤ خانوو لەخۆ دەگرێت. ڕووبەری هەر خانوویەک ٢٠٠ م²یە، لەسەر یەک نهۆم دروستکراوە و دوو ژووری نووستنی هەیە. پەڕەی پڕۆژەکە تەنها یەک جۆر خانوو تۆمار دەکات، کە خانووی یەک نهۆمی دوو ژووری نووستنە. ڕێگای بەحرکە ڕێگایەکە کە هەولێر بە ناحیەی بەحرکەوە دەبەستێتەوە لە باکووری شار.
 
-### 2. Arabic (العربية)
+### 2. العربية
 بحركة الجديدة مشروع سكني للمنازل يقع على طريق بحركة في محافظة أربيل. يضم المشروع ٢٢٤ منزلاً. تبلغ مساحة كل منزل ٢٠٠ م²، وهو مبني على طابق واحد ويضم غرفتي نوم. وتسجل صفحة المشروع نوعاً واحداً من المنازل، هو المنزل ذو الطابق الواحد وغرفتي النوم. وطريق بحركة هو الطريق الذي يربط أربيل بناحية بحركة شمال المدينة.
 
 ### 3. English
 New Bahirka is a residential housing project on Bahirka Road in Erbil Governorate. The project contains 224 houses. Each house has an area of 200 m², is built on one floor and has two bedrooms. The project page lists a single house type: a one-floor house with two bedrooms. Bahirka Road is the road that links Erbil with the Bahirka sub-district to the north of the city.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/bahirka-new/ | Project page 'New Bahirka': address Bahirka Road; type House; 224 units; area 200 m; 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/bahirka-new/ | Project page 'New Bahirka': address Bahirka Road; type House; 224 units; area 200 m; 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"New Bahirka" Erbil houses project”; “"بحركة الجديدة" OR "بەحرکەی نوێ" أربيل مشروع سكني” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"New Bahirka" Erbil houses project»؛ «"بحركة الجديدة" OR "بەحرکەی نوێ" أربيل مشروع سكني» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All project data: Bahirka Road, 224 houses, 200 m2, 1 floor, 2 bedrooms (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Land area
@@ -103,16 +105,16 @@ Second verification pass 2026-11-07: queries “"New Bahirka" Erbil houses proje
    - Facilities
    - Coordinates
    - Pages on homele, Paya, Baghy, Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - in_erbil_city set to 'edge': Bahirka Road is a listed approach, but the name suggests a site near Bahirka sub-district (north of Erbil) and no position is stated
    - Not the same as the 'New Bahirka Road' address used by other projects (e.g. Lebanese Village, Kany Almany, Harsham City 3 on Haji Salam)
    - One web search found no page; Roya's New Azadi (Bahrka Road) has a similar 200 m2 one-floor 2-bed house type, but no link is stated
-   - Second verification pass (2026-11-07): no new evidence. No source names a 'New Bahirka' project; the only Bahirka-road housing match is New Azadi City, with no stated link, so all data still rest on one project page.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No source names a 'New Bahirka' project; the only Bahirka-road housing match is New Azadi City, with no stated link, so all data still rest on one project page.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "new-bahirka",

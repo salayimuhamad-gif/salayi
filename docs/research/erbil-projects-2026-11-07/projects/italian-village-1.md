@@ -1,91 +1,94 @@
 <!-- rendered -->
 # Italian City 1 — شاری ئیتالی ١ — القرية الإيطالية 1
-Project ID: italian-village-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: italian-village-1 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Italian City 1 (Italian Village 1) | High – Bagh-y Shaqlawa and Hajisalam: Italian City 1; homele: Italian Village 1 | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| District / Area | Between 100m and 40m roads, near/behind Sami Abdulrahman Park | High – Bagh-y Shaqlawa and Hajisalam agree; Roya corroborates | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://roya-iq.com/italian-city-1/ |
-| Developer | Hemn Company for Reconstruction & Fast Building (Hemn Group) | Medium – Bagh-y Shaqlawa; Roya also names Hemn Group | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://roya-iq.com/italian-city-1/ |
-| Project Category | Mixed-use (houses and villas with office units) | High – Bagh-y Shaqlawa and Hajisalam both list house/villa/office | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not applicable (house compound) | Low – — – Unit counts given instead of building counts | https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Total Residential Units | Disputed: 740 total units (Hajisalam) vs 624 houses + 81 offices = 705 (Bagh-y Shaqlawa type counts) | Medium – Two primary sites disagree | https://hajisalam.com/en/italian-city1/ ; https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Construction Status | Completed (inferred) | Medium – No source states status; houses/offices advertised as ready for sale and rent on homele and rentals posted ~2020 on Hajisalam | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 ; https://hajisalam.com/en/italian-city1/ |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.188236, 43.969943 — Google Maps: https://www.google.com/maps?q=36.188236,43.969943 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Alternative names | Italian Village 1; شاری ئیتالی 1; القرية الايطالية 1 | Medium – homele label; index aliases | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Project Owner | Hemn Group | Medium | — |
-| Floors per building | 2 | Medium – Hajisalam | https://hajisalam.com/en/italian-city1/ |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | Single project; sister project Italian City 2 is separate | Medium – Bagh-y Shaqlawa Italian City 2 page names IC1 as an earlier Hemn project | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| ناوی پڕۆژە | Italian City 1 (Italian Village 1) | بەرز – Bagh-y Shaqlawa and Hajisalam: Italian City 1; homele: Italian Village 1 | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| شار | هەولێر | بەرز – All sources | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| ناوچە / گەڕەک | Between 100m and 40m roads, near/behind Sami Abdulrahman Park | بەرز – Bagh-y Shaqlawa and Hajisalam agree; Roya corroborates | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ ; https://roya-iq.com/italian-city-1/ |
+| گەشەپێدەر (کۆمپانیا) | Hemn Company for Reconstruction & Fast Building (Hemn Group) | مامناوەند – Bagh-y Shaqlawa; Roya also names Hemn Group | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://roya-iq.com/italian-city-1/ |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (houses and villas with office units) | بەرز – Bagh-y Shaqlawa and Hajisalam both list house/villa/office | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | Not applicable (house compound) | نزم – Unit counts given instead of building counts | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 740 total units (Hajisalam) vs 624 houses + 81 offices = 705 (Bagh-y Shaqlawa type counts) | مامناوەند – Two primary sites disagree | https://hajisalam.com/en/italian-city1/ ; https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | مامناوەند – No source states status; houses/offices advertised as ready for sale and rent on homele and rentals posted ~2020 on Hajisalam | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 ; https://hajisalam.com/en/italian-city1/ |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.188236, 43.969943 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.188236,43.969943 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| ناوە جێگرەوەکان | Italian Village 1; شاری ئیتالی 1; القرية الايطالية 1 | مامناوەند – homele label; index aliases | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| خاوەنی پڕۆژە | Hemn Group | مامناوەند | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 | مامناوەند – Hajisalam | https://hajisalam.com/en/italian-city1/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | Single project; sister project Italian City 2 is separate | مامناوەند – Bagh-y Shaqlawa Italian City 2 page names IC1 as an earlier Hemn project | https://baghyshaqlawa.net/en/projects/italian-city-1 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Disputed: 740 total units (Hajisalam) vs 624 houses + 81 offices = 705 (Bagh-y Shaqlawa type counts) | Two primary sites disagree | https://hajisalam.com/en/italian-city1/ ; https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Villas / houses | Baghy Shaqlawa: Houses Type A 212 (320 m), Type B 160 (240 m), Type C 39 (140 m), Type D 196 (200 m), Private Houses 17 (600 m); no total stated. Haji Salam: 'Number Of Unit: 740' for the whole villa/office/house project | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Apartments | Not verified | — | — |
-| Commercial units | Baghy Shaqlawa: 'Office Type A: They Are 45 office and each of them 113 meter'; 'Office Type B: They Are 36 office and each of them 260 meter'; no total stated | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Towers / apartment buildings | Not applicable (house compound) | Unit counts given instead of building counts | https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Floors per building | 2 | Hajisalam | https://hajisalam.com/en/italian-city1/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Single project; sister project Italian City 2 is separate | Bagh-y Shaqlawa Italian City 2 page names IC1 as an earlier Hemn project | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 740 total units (Hajisalam) vs 624 houses + 81 offices = 705 (Bagh-y Shaqlawa type counts) | Two primary sites disagree | https://hajisalam.com/en/italian-city1/ ; https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| ڤێلا / خانوو | Baghy Shaqlawa: Houses Type A 212 (320 m), Type B 160 (240 m), Type C 39 (140 m), Type D 196 (200 m), Private Houses 17 (600 m); no total stated. Haji Salam: 'Number Of Unit: 740' for the whole villa/office/house project | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | Baghy Shaqlawa: 'Office Type A: They Are 45 office and each of them 113 meter'; 'Office Type B: They Are 36 office and each of them 260 meter'; no total stated | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| تاوەر / باڵەخانەی شوقە | Not applicable (house compound) | Unit counts given instead of building counts | https://baghyshaqlawa.net/en/projects/italian-city-1 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 2 | Hajisalam | https://hajisalam.com/en/italian-city1/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Single project; sister project Italian City 2 is separate | Bagh-y Shaqlawa Italian City 2 page names IC1 as an earlier Hemn project | https://baghyshaqlawa.net/en/projects/italian-city-1 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 320 | 320 | 320 | 4 | 3 bathrooms; 2 floors; Type A: 212 houses; 4 bedrooms (2 master), kitchen, living room, garden | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| house | 240 | 240 | 240 | 4 | 3 bathrooms; 2 floors; Type B: 160 houses; 4 bedrooms (1 master), kitchen, living room, garden | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| house | 200 | 200 | 200 | 3 | 3 bathrooms; 2 floors; 196 houses (labelled Type D in unit list, Type C in detail); 3 bedrooms (1 master), garden and parking | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| house | 140 | 140 | 140 | — | 2 floors; Type C: 39 houses (Bagh-y Shaqlawa list); 140 m2 also on Hajisalam | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| villa | 600 | 600 | 600 | 6 | 2 floors; 17 private houses of 600 m2 (Bagh-y Shaqlawa); Hajisalam: villa 600 m2, 6 bedrooms | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| office | 113, 260 | 113 | 260 | — | 2 floors; Bagh-y Shaqlawa: Office Type A 45 x 113 m2, Type B 36 x 260 m2; Hajisalam: office 140 m2 and 263 m2, 4-6 rooms | agency_project_page | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
-| house | 200, 217, 240, 250, 310, 600 | 200 | 600 | — | homele first page: ready houses for sale/rent, several marketed as commercial houses; 4-5 bedrooms | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| office | 220 | 220 | 220 | — | 3 bathrooms; Ready office for rent (homele) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| خانوو | 320 | 320 | 320 | 4 | 3 حەمام؛ 2 نهۆم؛ Type A: 212 houses; 4 bedrooms (2 master), kitchen, living room, garden | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| خانوو | 240 | 240 | 240 | 4 | 3 حەمام؛ 2 نهۆم؛ Type B: 160 houses; 4 bedrooms (1 master), kitchen, living room, garden | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| خانوو | 200 | 200 | 200 | 3 | 3 حەمام؛ 2 نهۆم؛ 196 houses (labelled Type D in unit list, Type C in detail); 3 bedrooms (1 master), garden and parking | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| خانوو | 140 | 140 | 140 | — | 2 نهۆم؛ Type C: 39 houses (Bagh-y Shaqlawa list); 140 m2 also on Hajisalam | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| ڤێلا | 600 | 600 | 600 | 6 | 2 نهۆم؛ 17 private houses of 600 m2 (Bagh-y Shaqlawa); Hajisalam: villa 600 m2, 6 bedrooms | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| ئۆفیس | 113, 260 | 113 | 260 | — | 2 نهۆم؛ Bagh-y Shaqlawa: Office Type A 45 x 113 m2, Type B 36 x 260 m2; Hajisalam: office 140 m2 and 263 m2, 4-6 rooms | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/italian-city-1 ; https://hajisalam.com/en/italian-city1/ |
+| خانوو | 200, 217, 240, 250, 310, 600 | 200 | 600 | — | homele first page: ready houses for sale/rent, several marketed as commercial houses; 4-5 bedrooms | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| ئۆفیس | 220 | 220 | 220 | — | 3 حەمام؛ Ready office for rent (homele) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Private garden per house (Bagh-y Shaqlawa unit descriptions and feature list); Parking for 200 m2 houses (Bagh-y Shaqlawa unit description; parking in feature list)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Private garden per house (Bagh-y Shaqlawa unit descriptions and feature list); Parking for 200 m2 houses (Bagh-y Shaqlawa unit description; parking in feature list)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24 hr electricity (Bagh-y Shaqlawa feature list only); Internet (Bagh-y Shaqlawa feature list only); City administrative center (Bagh-y Shaqlawa feature list only); Security (Bagh-y Shaqlawa feature list only); Green areas (Bagh-y Shaqlawa feature list only); Public garden (Bagh-y Shaqlawa feature list only); Supermarket (Bagh-y Shaqlawa feature list only); Infrastructure (sewerage, sanitary & electrical systems) (Bagh-y Shaqlawa feature list only); Mosque (Bagh-y Shaqlawa feature list only); 'Services and utilities & facilities' (Bagh-y Shaqlawa text; unspecified)
+**بانگەشەی پشتڕاست نەکراوە:** 24 hr electricity (Bagh-y Shaqlawa feature list only); Internet (Bagh-y Shaqlawa feature list only); City administrative center (Bagh-y Shaqlawa feature list only); Security (Bagh-y Shaqlawa feature list only); Green areas (Bagh-y Shaqlawa feature list only); Public garden (Bagh-y Shaqlawa feature list only); Supermarket (Bagh-y Shaqlawa feature list only); Infrastructure (sewerage, sanitary & electrical systems) (Bagh-y Shaqlawa feature list only); Mosque (Bagh-y Shaqlawa feature list only); 'Services and utilities & facilities' (Bagh-y Shaqlawa text; unspecified)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready two-floor house 240 m2, 4 bed - homele market listing (negotiable) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready villa 200 m2, 4 bed - homele market listing | 255,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready commercial house 200 m2 - homele market listing (negotiable) | 275,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready furnished commercial house 250 m2 - homele market listing (negotiable) | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready commercial house 600 m2 - homele rental listing (per month) | 4,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready residence 310 m2 - homele rental listing (per month) | 1,600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready office 220 m2 - homele rental listing (per month) | 1,400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-| Ready house 200 m2, 4 bed - homele rental listing (per month) | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele: ready houses and offices for rent (e.g. '$1,100 Monthly', '$1,400 Monthly', '$4,000 Monthly') and for sale ('$250,000 Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1)
+| Ready two-floor house 240 m2, 4 bed - homele market listing (negotiable) | 250,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready villa 200 m2, 4 bed - homele market listing | 255,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready commercial house 200 m2 - homele market listing (negotiable) | 275,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready furnished commercial house 250 m2 - homele market listing (negotiable) | 350,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready commercial house 600 m2 - homele rental listing (per month) | 4,000 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready residence 310 m2 - homele rental listing (per month) | 1,600 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready office 220 m2 - homele rental listing (per month) | 1,400 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+| Ready house 200 m2, 4 bed - homele rental listing (per month) | 1,100 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele: ready houses and offices for rent (e.g. '$1,100 Monthly', '$1,400 Monthly', '$4,000 Monthly') and for sale ('$250,000 Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1)
 
-### Location and surroundings
-Italian City 1 lies between Erbil's 100 m and 40 m roads, beside Sami Abdulrahman Park. Map position (low confidence, from agency map pins): 36.188236, 43.969943. Google Maps: https://www.google.com/maps?q=36.188236,43.969943
+### شوێن و دەوروبەر
+Italian City 1 lies between Erbil's 100 m and 40 m roads, beside Sami Abdulrahman Park.
+شوێن لەسەر نەخشە: 36.188236, 43.969943 (متمانە: نزم) — https://www.google.com/maps?q=36.188236,43.969943
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 شاری ئیتالی ١، کە بە گوندی ئیتالی ١-یش ناسراوە، پڕۆژەیەکی نیشتەجێبوونە لە هەولێر کە کۆمپانیای هێمن بۆ ئاوەدانکردنەوە و بیناسازیی خێرا، یەکێک لە کۆمپانیاکانی گرووپی هێمن، بە تەختەی EPS دروستی کردووە. پڕۆژەکە لە نێوان شەقامی ١٠٠ مەتری و شەقامی ٤٠ مەتری، لە تەنیشت پارکی سامی عەبدولڕەحمان هەڵکەوتووە. پڕۆژەکە خانوو، ڤێلای تایبەت، یەکەی ئۆفیس، خزمەتگوزاری و دامەزراوەکان پێکەوە کۆدەکاتەوە، و بیناکانی دوو نهۆمین.
 
 جۆرەکانی خانوو بریتین لە: جۆری A، ٢١٢ خانووی ٣٢٠ م² بە چوار ژووری نووستن (دووانیان ماستەر)، چێشتخانە، هۆڵی دانیشتن، سێ حەمام و باخچە؛ جۆری B، ١٦٠ خانووی ٢٤٠ م² بە چوار ژووری نووستن (یەکێکیان ماستەر)، چێشتخانە، هۆڵی دانیشتن، سێ حەمام و باخچە؛ ١٩٦ خانووی ٢٠٠ م² بە سێ ژووری نووستن، سێ حەمام، باخچە و پارکینگ؛ و ٣٩ خانووی ١٤٠ م². هەروەها ١٧ ڤێلای تایبەتی ٦٠٠ م² بە شەش ژووری نووستن هەیە. پڕۆژەکە ٨١ یەکەی ئۆفیسی لە دوو جۆردا هەیە، ٤٥ یەکەی جۆری A و ٣٦ یەکەی جۆری B.
 
 خانووەکانی پڕۆژەکە هەم وەک ماڵی خێزانی و هەم وەک شوێنی بازرگانی بەکاردەهێنرێن، و خانوو و ئۆفیسەکان بۆ فرۆشتن و بە کرێدان پێشکەش دەکرێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 إيتاليان سيتي 1، المعروفة أيضاً بالقرية الإيطالية 1، مشروع إسكان في أربيل نفّذته شركة هيمن للإعمار والبناء السريع، إحدى شركات مجموعة هيمن، باستخدام ألواح EPS. يقع المشروع بين شارع 100 متر وشارع 40 متر، بجوار متنزه سامي عبد الرحمن. يجمع المشروع بين المنازل والفلل الخاصة والوحدات المكتبية والخدمات والمرافق، وتتألف مبانيه من طابقين.
 
 أنواع المنازل هي: النوع A، ويضم 212 منزلاً بمساحة 320 م² بأربع غرف نوم (منها غرفتان رئيسيتان) ومطبخ وصالة معيشة وثلاثة حمامات وحديقة؛ والنوع B، ويضم 160 منزلاً بمساحة 240 م² بأربع غرف نوم (منها غرفة رئيسية واحدة) ومطبخ وصالة معيشة وثلاثة حمامات وحديقة؛ و196 منزلاً بمساحة 200 م² بثلاث غرف نوم وثلاثة حمامات وحديقة وموقف سيارات؛ و39 منزلاً بمساحة 140 م². كما يضم المشروع 17 فيلا خاصة بمساحة 600 م² بست غرف نوم، و81 وحدة مكتبية من نوعين، 45 من النوع A و36 من النوع B.
@@ -99,54 +102,54 @@ The house types are: Type A, 212 houses of 320 m² with four bedrooms (two of th
 
 Houses in the project are used both as family homes and as commercial premises, and houses and offices are offered for sale and for rent.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 | Area 'Italian Village 1': ready houses/offices for sale and rent, 200-600 m2 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/italian-city-1 | Developer Hemn Company (Hemn Group, EPS panels); between 100m and 40m roads near Sami Abdulrahman Park; house/villa/office types with counts and sizes; feature list | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/italian-city1/ | Behind Sami Abdul Rahman Park; villa/office/house; 740 units; house 140/200/240/320 m2, office 140/263 m2, villa 600 m2; 2 floors; bedrooms; rental listings ~6 years old | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 | Area 'Italian Village 1': ready houses/offices for sale and rent, 200-600 m2 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/italian-city-1 | Developer Hemn Company (Hemn Group, EPS panels); between 100m and 40m roads near Sami Abdulrahman Park; house/villa/office types with counts and sizes; feature list | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/italian-city1/ | Behind Sami Abdul Rahman Park; villa/office/house; 740 units; house 140/200/240/320 m2, office 140/263 m2, villa 600 m2; 2 floors; bedrooms; rental listings ~6 years old | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| roya-iq.com | https://roya-iq.com/italian-city-1/ | Corroborates location (between 100m and 40m roads, near Sami Abdulrahman Park), Hemn Group and type A-D / 17 private houses breakdown (seen via web-search summary only) | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/italian-city-1/ | Corroborates location (between 100m and 40m roads, near Sami Abdulrahman Park), Hemn Group and type A-D / 17 private houses breakdown (seen via web-search summary only) | — | 2026-11-07 | نزم |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name Italian City 1 (Bagh-y Shaqlawa, Hajisalam; homele 'Italian Village 1')
    - Location near Sami Abdulrahman Park (Bagh-y Shaqlawa, Hajisalam)
    - Unit mix house/villa/office; house sizes 140/200/240/320 m2; villa 600 m2 (Bagh-y Shaqlawa, Hajisalam)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Hemn Company / Hemn Group (Bagh-y Shaqlawa; Roya via search)
    - Per-type unit counts (Bagh-y Shaqlawa)
    - 2 floors and bedroom ranges (Hajisalam)
    - Feature list (Bagh-y Shaqlawa)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Total units 740 (Hajisalam) vs 705 (Bagh-y Shaqlawa sum)
    - Office sizes 113/260 vs 140/263 m2
    - total_units: 740 units (https://hajisalam.com/en/italian-city1/); 705 = 624 houses (212+160+39+196+17) + 81 offices (45+36), summed from type counts (https://baghyshaqlawa.net/en/projects/italian-city-1) → Disputed; no final value.
    - office sizes: 113 m2 (Type A) and 260 m2 (Type B) (https://baghyshaqlawa.net/en/projects/italian-city-1); 140 m2 and 263 m2 (https://hajisalam.com/en/italian-city1/) → Unresolved; both recorded.
    - type label of 200 m2 houses: Type D (196 houses) in unit list; Type C (196 houses) in detail section (https://baghyshaqlawa.net/en/projects/italian-city-1) → Internal inconsistency on Bagh-y Shaqlawa; count and size consistent.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Launch and completion dates
    - Developer prices
    - Coordinates
    - Explicit construction status
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Hajisalam rental listings dated '6 years ago'
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Status inferred from ready/rental listings
    - Hajisalam page also shows apartment and 375/425 m2 listing cards not described as project unit types - not used
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "italian-village-1",

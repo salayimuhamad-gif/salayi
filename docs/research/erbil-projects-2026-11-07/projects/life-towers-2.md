@@ -1,131 +1,133 @@
 <!-- rendered -->
 # Life Towers 2 — لایف تاوەرز ٢ — أبراج لايف ٢
-Project ID: life-towers-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: life-towers-2 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Life Towers 2 | High – Miran and homele | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 ; https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
-| City | Erbil | High – Miran, homele | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| District / Area | 32 Park, on the 120 m road | Medium – Miran description and listing labels; single site | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Developer | Tanj Group | Medium – Miran; same developer as Life Towers (Paya) | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Project Category | Mixed-use (residential towers, villas, commercial) | Medium – Miran: 'residential and commercial investment project' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 3 | Low – Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Total Residential Units | 894 (869 apartments + 25 villas); stats box says 33 | Low – Single source with internal conflict | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Construction Status | Under construction | High – Miran 'Under Construction'; homele 'Off Plan' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 ; https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | None found | Low – — – No variants in sources | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 27 | Low – Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Vertical section (towers, 869 apartments) and horizontal section (25 villas) | Low – Miran description only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ناوی پڕۆژە | Life Towers 2 | بەرز – Miran and homele | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 ; https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
+| شار | هەولێر | بەرز – Miran, homele | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ناوچە / گەڕەک | 32 Park, on the 120 m road | مامناوەند – Miran description and listing labels; single site | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| گەشەپێدەر (کۆمپانیا) | Tanj Group | مامناوەند – Miran; same developer as Life Towers (Paya) | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (residential towers, villas, commercial) | مامناوەند – Miran: 'residential and commercial investment project' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 3 | نزم – Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| کۆی یەکە نیشتەجێبوونەکان | 894 (869 apartments + 25 villas); stats box says 33 | نزم – Single source with internal conflict | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | بەرز – Miran 'Under Construction'; homele 'Off Plan' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 ; https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | None found | نزم – No variants in sources | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 27 | نزم – Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | Vertical section (towers, 869 apartments) and horizontal section (25 villas) | نزم – Miran description only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 894 (869 apartments + 25 villas); stats box says 33 | Single source with internal conflict | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Villas / houses | 25 | Miran: horizontal section featuring 25 two-story modern villas (210 m²) | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Apartments | 869 | Miran: vertical residential towers comprising 869 apartments (0+1 studio, 1+1, 2+1, 3+1); the page's statistics box separately shows 'Units 33' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 3 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Floors per building | 27 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Vertical section (towers, 869 apartments) and horizontal section (25 villas) | Miran description only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 894 (869 apartments + 25 villas); stats box says 33 | Single source with internal conflict | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ڤێلا / خانوو | 25 | Miran: horizontal section featuring 25 two-story modern villas (210 m²) | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| شوقە | 869 | Miran: vertical residential towers comprising 869 apartments (0+1 studio, 1+1, 2+1, 3+1); the page's statistics box separately shows 'Units 33' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 3 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 27 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Vertical section (towers, 869 apartments) and horizontal section (25 villas) | Miran description only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 63 | 63 | 63 | 0 | 1 bathrooms; 0+1 | agency_project_page | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| apartment | 89 | 89 | 89 | 1 | 1 bathrooms; 1+1 | agency_project_page | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| apartment | 129 | 129 | 129 | 2 | 2 bathrooms; 2+1 | agency_project_page | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| apartment | 195 | 195 | 195 | 3 | 3 bathrooms; 3+1 (homele listings show 2 bathrooms) | agency_project_page | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| villa | 210 | 210 | 210 | — | 2 floors; 25 two-storey villas in the horizontal section | agency_project_page | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ستۆدیۆ | 63 | 63 | 63 | 0 | 1 حەمام؛ 0+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| شوقە | 89 | 89 | 89 | 1 | 1 حەمام؛ 1+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| شوقە | 129 | 129 | 129 | 2 | 2 حەمام؛ 2+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| شوقە | 195 | 195 | 195 | 3 | 3 حەمام؛ 3+1 (homele listings show 2 bathrooms) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| ڤێلا | 210 | 210 | 210 | — | 2 نهۆم؛ 25 two-storey villas in the horizontal section | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** hypermarket; commercial centres; smart-home systems; central cooling and heating; 24/7 security; swimming pool; fitness centres; restaurants; nursery; landscaped green areas with fountains; 4-floor underground parking
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** hypermarket; commercial centres; smart-home systems; central cooling and heating; 24/7 security; swimming pool; fitness centres; restaurants; nursery; landscaped green areas with fountains; 4-floor underground parking
 
-**Unverified claims:** elevators; high ceilings; hospital; school; pharmacy; playground / outdoor play area; parklet floor; power station; shopping center; fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV, access control, maintenance workshop (Miran generic 'Building Facilities' block)
+**بانگەشەی پشتڕاست نەکراوە:** elevators; high ceilings; hospital; school; pharmacy; playground / outdoor play area; parklet floor; power station; shopping center; fire safety, fibre internet, BMS, waste management, water treatment, backup generator, CCTV, access control, maintenance workshop (Miran generic 'Building Facilities' block)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 63 m2 - project-page price (relayed by agency) | 44,730 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Apartment 1+1 89 m2 - project-page price | 60,520 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Apartment 2+1 129 m2 - project-page price | 83,850 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Apartment 3+1 195 m2 - project-page price | 121,875 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Published price per m2 ('Price Per Meter') | 625 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Apartment 3+1 195 m2 - off-plan market listing (instalment) | 121,800 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; $625/m; plan: 20% down payment, 24% tower completion, 27% key receipt, 29% monthly payment; homele lists off-plan units for sale in installment ('Long Term Installment') (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08)
+| Studio 63 m2 - project-page price (relayed by agency) | 44,730 | USD | نرخی گەشەپێدەر | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Apartment 1+1 89 m2 - project-page price | 60,520 | USD | نرخی گەشەپێدەر | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Apartment 2+1 129 m2 - project-page price | 83,850 | USD | نرخی گەشەپێدەر | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Apartment 3+1 195 m2 - project-page price | 121,875 | USD | نرخی گەشەپێدەر | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Published price per m2 ('Price Per Meter') | 625 | USD | نرخی گەشەپێدەر | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Apartment 3+1 195 m2 - off-plan market listing (instalment) | 121,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Miran: 'Cash Installment Payment Plans'; $625/m; plan: 20% down payment, 24% tower completion, 27% key receipt, 29% monthly payment; homele lists off-plan units for sale in installment ('Long Term Installment') (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08)
 
-### Location and surroundings
+### شوێن و دەوروبەر
 32 Park neighbourhood of Erbil, directly on the 120 m ring road, near Erbil International Airport and Sami Abdulrahman Park; same area as Life Towers (King and Queen).
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لایف تاوەرز ٢ پڕۆژەیەکی نیشتەجێبوون و بازرگانیی تانج گرووپە لە گەڕەکی پارکی ٣٢ لە هەولێر، ڕاستەوخۆ لەسەر شەقامی ١٢٠ مەتری، نزیک لە فڕۆکەخانەی نێودەوڵەتیی هەولێر و پارکی سامی عەبدولڕەحمان. پڕۆژەکە لە قۆناغی دروستکردندایە و نووسینگەی ڕاوێژکاریی ئەلمیعمار دیزاینی کردووە. بەشی ستوونی پڕۆژەکە تاوەری نیشتەجێبوونە بە ٨٦٩ شوقە بە جۆرەکانی ستۆدیۆ (0+1)، یەک ژووری نووستن (1+1)، دوو ژووری نووستن (2+1) و سێ ژووری نووستن (3+1)، کە لەسەر پۆدیۆمێک و چوار نهۆمی پارکینگی ژێرزەوی دروست دەکرێن. ئامارەکانی پڕۆژە سێ بینا بە ٢٧ نهۆم دیاری دەکەن. بەشی ئاسۆیی ٢٥ ڤێلای دوو نهۆمی بە ڕووبەری ٢١٠ م² لەخۆدەگرێت. یەکە بڵاوکراوەکان ستۆدیۆی ٦٣ م²، شوقەی یەک ژووری ٨٩ م²، شوقەی دوو ژووری ١٢٩ م² و شوقەی سێ ژووری ١٩٥ م² لەخۆدەگرن. خزمەتگوزارییە پلاندانراوەکان هایپەرمارکێت، سەنتەری بازرگانی، سیستەمی ماڵی زیرەک، ساردکردنەوە و گەرمکردنەوەی ناوەندی، پاسەوانیی ٢٤ کاتژمێری، مەلەوانگە، هۆڵی وەرزش، چێشتخانە، دایەنگە و ڕووبەری سەوزی ڕازاوە بە فوارە لەخۆدەگرن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أبراج لايف ٢ مشروع سكني وتجاري تابع لمجموعة تانج (Tanj Group) في حي بارك ٣٢ بأربيل، يقع مباشرة على شارع ١٢٠ متر بالقرب من مطار أربيل الدولي ومتنزه سامي عبد الرحمن. المشروع قيد الإنشاء، وقد صممه مكتب المعمار الاستشاري. يتألف القسم العمودي من أبراج سكنية تضم ٨٦٩ شقة بأنماط استوديو (0+1) وغرفة نوم واحدة (1+1) وغرفتي نوم (2+1) وثلاث غرف نوم (3+1)، مبنية فوق قاعدة (بوديوم) وأربعة طوابق مواقف تحت الأرض. وتذكر إحصاءات المشروع ثلاثة مبانٍ بارتفاع ٢٧ طابقاً. ويضم القسم الأفقي ٢٥ فيلا من طابقين بمساحة ٢١٠ م². تشمل الوحدات المنشورة استوديو بمساحة ٦٣ م² وشقة بغرفة نوم واحدة بمساحة ٨٩ م² وشقة بغرفتي نوم بمساحة ١٢٩ م² وشقة بثلاث غرف نوم بمساحة ١٩٥ م². تشمل المرافق المخطط لها هايبرماركت ومراكز تجارية وأنظمة المنزل الذكي وتبريداً وتدفئة مركزيين وحراسة على مدار ٢٤ ساعة ومسبحاً وصالات رياضية ومطاعم وحضانة ومساحات خضراء منسقة مع نوافير.
 
 ### 3. English
 Life Towers 2 is a residential and commercial project by Tanj Group in the 32 Park neighbourhood of Erbil, directly on the 120 m road, near Erbil International Airport and Sami Abdulrahman Park. The project is under construction and was designed by Al-Memar Consultant Office. Its vertical section comprises residential towers with 869 apartments in studio (0+1), one-bedroom (1+1), two-bedroom (2+1) and three-bedroom (3+1) layouts, built over a podium and four underground parking floors. The project statistics list three buildings of 27 floors. The horizontal section contains 25 two-storey villas of 210 m². Published units include a 63 m² studio, an 89 m² one-bedroom apartment, a 129 m² two-bedroom apartment and a 195 m² three-bedroom apartment. Planned facilities include a hypermarket, commercial centres, smart-home systems, central cooling and heating, 24-hour security, a swimming pool, fitness centres, restaurants, a nursery and landscaped green areas with fountains.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 | Area listing page (3 pages): off-plan instalment listings 63, 89, 129, 195 m² at USD 44,730–121,875, matching Miran prices. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 | Project page (updated Sep 6, 2026): developer Tanj Group; Under Construction; 32 Park on 120 m road; designer Al-Memar Consultant Office; 869 apartments + 25 villas (210 m²); stats 3 buildings / 27 floors / 33 units; unit types 63–210 m² with prices; USD 625/m²; payment plan 20/24/27/29%; facilities text. | 2026-09-06 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 | Area listing page (3 pages): off-plan instalment listings 63, 89, 129, 195 m² at USD 44,730–121,875, matching Miran prices. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 | Project page (updated Sep 6, 2026): developer Tanj Group; Under Construction; 32 Park on 120 m road; designer Al-Memar Consultant Office; 869 apartments + 25 villas (210 m²); stats 3 buildings / 27 floors / 33 units; unit types 63–210 m² with prices; USD 625/m²; payment plan 20/24/27/29%; facilities text. | 2026-09-06 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Miran, homele)
    - Status: under construction / off-plan (Miran, homele)
    - Unit sizes 63/89/129/195 m² and prices (Miran, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Tanj Group (Miran)
    - Location 32 Park / 120 m road (Miran)
    - 869 apartments + 25 villas, 3 buildings, 27 floors (Miran)
    - Designer Al-Memar Consultant Office (Miran)
    - Payment plan and USD 625/m² (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Total units: 869 + 25 (description) vs 33 (stats box), both Miran
    - 3+1 bathrooms: 3 (Miran) vs 2 (homele)
    - total_units: 869 apartments + 25 villas (= 894) in project description (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08); Units 33 in statistics box (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08) → 894 used (sum of description figures); '33' is not plausible for 3 buildings of 27 floors. Single source, low confidence.
    - 3+1 bathrooms: 3 bathrooms (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08); 2 bathrooms (https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2) → Miran project page value kept; unresolved.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Launch and completion dates
    - Coordinates
    - Paya/Baghy/Haji Salam pages
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Not found on Paya, Baghy, Haji Salam; most facts rest on one agency page
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "life-towers-2",

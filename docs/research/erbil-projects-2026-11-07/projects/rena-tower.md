@@ -1,120 +1,123 @@
 <!-- rendered -->
 # Rena Tower — ڕینا تاوەر — رينا تاور
-Project ID: rena-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: rena-tower | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Rena Tower | Medium – Baghy 'Rena Tower'; homele 'Rena Towers' | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| City | Erbil | High – Baghy, homele | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| District / Area | Kirkuk Road | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/rena-tower |
-| Developer | Not verified | Low – Not named; one web search found nothing | — |
-| Project Category | Residential (apartments) | Medium – Baghy type; homele listings | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated (name used in singular and plural) | — |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Completed | Low – Only inferred from homele listings marked 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.148103, 44.019843 — Google Maps: https://www.google.com/maps?q=36.148103,44.019843 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/rena-tower |
-| Alternative names | Rena Towers | Medium – homele area name | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Rena Tower | مامناوەند – Baghy 'Rena Tower'; homele 'Rena Towers' | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| شار | هەولێر | بەرز – Baghy, homele | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| ناوچە / گەڕەک | Kirkuk Road | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/rena-tower |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | مامناوەند – Baghy type; homele listings | https://baghyshaqlawa.net/en/projects/rena-tower ; https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated (name used in singular and plural) | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | تەواوبووە — Completed | نزم – Only inferred from homele listings marked 'Ready' | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.148103, 44.019843 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.148103,44.019843 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/rena-tower |
+| ناوە جێگرەوەکان | Rena Towers | مامناوەند – homele area name | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated (name used in singular and plural) | — |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated (name used in singular and plural) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 77 | 77 | 77 | 1 | 1 bathrooms; Ready one-bedroom units, $52,500 (several listings) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| apartment | 138 | 138 | 138 | 2 | Ready 2+1 units, $87,500; listings show 1 or 2 bathrooms | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| شوقە | 77 | 77 | 77 | 1 | 1 حەمام؛ Ready one-bedroom units, $52,500 (several listings) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| شوقە | 138 | 138 | 138 | 2 | Ready 2+1 units, $87,500; listings show 1 or 2 bathrooms | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Green areas (Baghy tag); Supermarket (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready 1-bed 77 m2 for sale - homele listings | 52,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-| Ready 2-bed 138 m2 for sale - homele listings | 87,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready 1-bed 77 m2 for sale - homele listings | 52,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+| Ready 2-bed 138 m2 for sale - homele listings | 87,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Rena Tower is on the Kirkuk Road in Erbil (Baghy). No more precise address are published. Map position (low confidence, from agency map pins): 36.148103, 44.019843. Google Maps: https://www.google.com/maps?q=36.148103,44.019843
+### شوێن و دەوروبەر
+Rena Tower is on the Kirkuk Road in Erbil (Baghy). No more precise address are published.
+شوێن لەسەر نەخشە: 36.148103, 44.019843 (متمانە: نزم) — https://www.google.com/maps?q=36.148103,44.019843
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڕینا تاوەر (Rena Tower)، کە بە ڕینا تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای کەرکووک لە هەولێر. شوقەکانی پڕۆژەکە شوقەی یەک ژووری نووستن و یەک گەرماو بە ڕووبەری ٧٧ م² و شوقەی دوو ژووری نووستن بە ڕووبەری ١٣٨ م² لەخۆ دەگرن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 رينا تاور (Rena Tower)، المعروف أيضاً باسم رينا تاورز، مشروع سكني للشقق على طريق كركوك في أربيل. وتشمل الشقق في المشروع وحدات بغرفة نوم واحدة وحمام واحد بمساحة 77 م²، ووحدات بغرفتي نوم بمساحة 138 م².
 
 ### 3. English
 Rena Tower, also known as Rena Towers, is a residential apartment project on the Kirkuk Road in Erbil. Apartments in the project include one-bedroom units of 77 m² with one bathroom and two-bedroom units of 138 m².
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers | Area 'Rena Towers' listing page (1 page): ready apartments 77 m2 ($52,500) and 138 m2 ($87,500) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/rena-tower | Project page: address Erbil - Karkuk Road; property type Apartment; tags 24 hr electricity, green areas, supermarket; nearest branch Zanyari Tower | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/rena-towers | Area 'Rena Towers' listing page (1 page): ready apartments 77 m2 ($52,500) and 138 m2 ($87,500) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/rena-tower | Project page: address Erbil - Karkuk Road; property type Apartment; tags 24 hr electricity, green areas, supermarket; nearest branch Zanyari Tower | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Rena Tower" Erbil”; “رينا تاور أربيل طريق كركوك” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Rena Tower" Erbil»؛ «رينا تاور أربيل طريق كركوك» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Kirkuk Road address and feature tags (Baghy)
    - Ready status, unit sizes and asking prices (homele listings)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - 138 m2 bathroom count across listings
    - Bathrooms in 138 m2 units: 1 bathroom in one listing (https://homele.com/properties/for-sale-and-rent/erbil/rena-towers); 2 bathrooms in other listings (https://homele.com/properties/for-sale-and-rent/erbil/rena-towers) → Disputed; both recorded.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Buildings, floors, units
    - Land area
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Distinct from Rona Tower/Towers (also Kirkuk Road, same nearest Baghy branch): homele has separate areas with different sizes (Rena 77/138 m2 vs Rona 79/127 m2), so kept separate - not confirmed by a source
    - No Paya/Miran/Hajisalam page; one web search found nothing
-   - Second verification pass (2026-11-07): no new evidence. No independent page names Rena Tower; developer, size, status and the Rena/Rona distinction remain unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names Rena Tower; developer, size, status and the Rena/Rona distinction remain unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "rena-tower",

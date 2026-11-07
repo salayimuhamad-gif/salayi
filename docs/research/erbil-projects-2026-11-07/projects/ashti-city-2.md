@@ -1,113 +1,116 @@
 <!-- rendered -->
 # Ashti City 2 — — — —
-Project ID: ashti-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: ashti-city-2 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Ashti City 2 | High – Baghy Shaqlawa ('Ashti City 2') and Haji Salam ('Ashty City 2') | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://hajisalam.com/en/ashty-city-2/ |
-| City | Erbil | High – Baghy Shaqlawa and Haji Salam | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://hajisalam.com/en/ashty-city-2/ |
-| District / Area | Kasnazan Road (behind Blue Sport Center per Baghy) | High – Road stated by both primary pages; 'behind Blue Sport Center' Baghy only | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Developer | Eskan company | Low – Baghy text block (headed 'Global City') and c.2011 article at Ashti City brand level; Haji Salam names no developer | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://anba.com.br/en/erbil-in-construction/ |
-| Project Category | Residential (houses and villas; plus land, shop, school and market plots) | High – Haji Salam 'House-Villa'; Baghy property types | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Total Land Area | Not verified | Low – Not stated | — |
-| Number of Buildings / Towers | Not verified | Low – Not applicable (house/villa compound) | — |
-| Total Residential Units | 1,235 (345 houses + 890 villas); Baghy text states 1,700 | Low – Haji Salam itemised figure preferred; conflicting Baghy figure sits in a 'Global City'-headed block | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Construction Status | Not verified | Low – Neither primary page states status; Haji shows no related listings | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Completion Date | Not verified | Low – Not stated (c.2011 article covers Ashti City in general) | https://anba.com.br/en/erbil-in-construction/ |
-| Coordinates | 36.213258, 44.122411 — Google Maps: https://www.google.com/maps?q=36.213258,44.122411 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Alternative names | Ashty City 2 | Medium – Haji Salam spelling; Baghy branch 'Ashty City Branch' | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 1–2 | Medium – Haji Salam only | https://hajisalam.com/en/ashty-city-2/ |
-| Launch Date | Not verified | Low – Not stated | — |
-| Development Phases | Ashti City 2; Ashti City 1 is a separate project | Medium – Separate Haji Salam pages for Ashty City 1 and 2; Baghy page | https://hajisalam.com/en/ashty-city-2/ ; https://hajisalam.com/en/ashty-city-1/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| ناوی پڕۆژە | Ashti City 2 | بەرز – Baghy Shaqlawa ('Ashti City 2') and Haji Salam ('Ashty City 2') | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://hajisalam.com/en/ashty-city-2/ |
+| شار | هەولێر | بەرز – Baghy Shaqlawa and Haji Salam | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://hajisalam.com/en/ashty-city-2/ |
+| ناوچە / گەڕەک | Kasnazan Road (behind Blue Sport Center per Baghy) | بەرز – Road stated by both primary pages; 'behind Blue Sport Center' Baghy only | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| گەشەپێدەر (کۆمپانیا) | Eskan company | نزم – Baghy text block (headed 'Global City') and c.2011 article at Ashti City brand level; Haji Salam names no developer | https://baghyshaqlawa.net/en/projects/ashti-city-2 ; https://anba.com.br/en/erbil-in-construction/ |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and villas; plus land, shop, school and market plots) | بەرز – Haji Salam 'House-Villa'; Baghy property types | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not applicable (house/villa compound) | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,235 (345 houses + 890 villas); Baghy text states 1,700 | نزم – Haji Salam itemised figure preferred; conflicting Baghy figure sits in a 'Global City'-headed block | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| دۆخی دروستکردن | نەزانراوە | نزم – Neither primary page states status; Haji shows no related listings | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – Not stated (c.2011 article covers Ashti City in general) | https://anba.com.br/en/erbil-in-construction/ |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.213258, 44.122411 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.213258,44.122411 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| ناوە جێگرەوەکان | Ashty City 2 | مامناوەند – Haji Salam spelling; Baghy branch 'Ashty City Branch' | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1–2 | مامناوەند – Haji Salam only | https://hajisalam.com/en/ashty-city-2/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| قۆناغەکانی پڕۆژە | Ashti City 2; Ashti City 1 is a separate project | مامناوەند – Separate Haji Salam pages for Ashty City 1 and 2; Baghy page | https://hajisalam.com/en/ashty-city-2/ ; https://hajisalam.com/en/ashty-city-1/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | Not stated | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,235 (345 houses + 890 villas); Baghy text states 1,700 | Haji Salam itemised figure preferred; conflicting Baghy figure sits in a 'Global City'-headed block | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Villas / houses | hajisalam: 'Number Of Unit: 345 House 890 - Villa'; baghyshaqlawa (text block headed 'Global City'): 'The project consists of 1700 residential units with different types of Villa's' | — | https://hajisalam.com/en/ashty-city-2/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not applicable (house/villa compound) | — |
-| Floors per building | 1–2 | Haji Salam only | https://hajisalam.com/en/ashty-city-2/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Ashti City 2; Ashti City 1 is a separate project | Separate Haji Salam pages for Ashty City 1 and 2; Baghy page | https://hajisalam.com/en/ashty-city-2/ ; https://hajisalam.com/en/ashty-city-1/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | Not stated | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,235 (345 houses + 890 villas); Baghy text states 1,700 | Haji Salam itemised figure preferred; conflicting Baghy figure sits in a 'Global City'-headed block | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| ڤێلا / خانوو | hajisalam: 'Number Of Unit: 345 House 890 - Villa'; baghyshaqlawa (text block headed 'Global City'): 'The project consists of 1700 residential units with different types of Villa's' | — | https://hajisalam.com/en/ashty-city-2/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not applicable (house/villa compound) | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 1–2 | Haji Salam only | https://hajisalam.com/en/ashty-city-2/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Ashti City 2; Ashti City 1 is a separate project | Separate Haji Salam pages for Ashty City 1 and 2; Baghy page | https://hajisalam.com/en/ashty-city-2/ ; https://hajisalam.com/en/ashty-city-1/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200, 250 | 200 | 250 | 2-5 | 1-2 floors; 345 houses (Haji Salam); floors and bedrooms are project-wide ranges; Baghy also lists 'House' as a property type | agency_project_page | https://hajisalam.com/en/ashty-city-2/ |
-| villa | 250, 300, 400, 500 | 250 | 500 | 2-5 | 1-2 floors; 890 villas (Haji Salam); floors and bedrooms are project-wide ranges | agency_project_page | https://hajisalam.com/en/ashty-city-2/ |
-| villa | Not verified | — | — | — | Villa categories Bronze, Silver, Zumrud, Gold named in a Baghy text block headed 'Global City'; attribution to Ashti City 2 unconfirmed | agency_project_page | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| plot | Not verified | — | — | — | Residential land listed as property type | agency_project_page | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| shop | Not verified | — | — | — | Listed as property type | agency_project_page | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| other | Not verified | — | — | — | School and market plots listed as property types | agency_project_page | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| خانوو | 200, 250 | 200 | 250 | 2-5 | 1-2 نهۆم؛ 345 houses (Haji Salam); floors and bedrooms are project-wide ranges; Baghy also lists 'House' as a property type | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/ashty-city-2/ |
+| ڤێلا | 250, 300, 400, 500 | 250 | 500 | 2-5 | 1-2 نهۆم؛ 890 villas (Haji Salam); floors and bedrooms are project-wide ranges | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/ashty-city-2/ |
+| ڤێلا | پشتڕاست نەکراوەتەوە | — | — | — | Villa categories Bronze, Silver, Zumrud, Gold named in a Baghy text block headed 'Global City'; attribution to Ashti City 2 unconfirmed | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — | — | Residential land listed as property type | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| دوکان | پشتڕاست نەکراوەتەوە | — | — | — | Listed as property type | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
+| جۆری تر | پشتڕاست نەکراوەتەوە | — | — | — | School and market plots listed as property types | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/ashti-city-2 |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Internet; Playground; Security; Green areas; Kindergarten; Supermarket; Health center; Mosque; School; Private garden
+**بانگەشەی پشتڕاست نەکراوە:** Internet; Playground; Security; Green areas; Kindergarten; Supermarket; Health center; Mosque; School; Private garden
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
-Haji Salam and Baghy Shaqlawa both place Ashti City 2 on Kasnazan Road, Erbil; Baghy adds 'behind Blue Sport Center'. Kasnazan Road leads toward Kasnazan town, 12 km from Erbil (Wikipedia). Ashti City 1 is listed on the same road. Baghy names its 'Ashty City Branch Erbil' as the nearest office. No distances are published. Map position (low confidence, from agency map pins): 36.213258, 44.122411. Google Maps: https://www.google.com/maps?q=36.213258,44.122411
+### شوێن و دەوروبەر
+Haji Salam and Baghy Shaqlawa both place Ashti City 2 on Kasnazan Road, Erbil; Baghy adds 'behind Blue Sport Center'. Kasnazan Road leads toward Kasnazan town, 12 km from Erbil (Wikipedia). Ashti City 1 is listed on the same road. Baghy names its 'Ashty City Branch Erbil' as the nearest office. No distances are published.
+شوێن لەسەر نەخشە: 36.213258, 44.122411 (متمانە: نزم) — https://www.google.com/maps?q=36.213258,44.122411
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ئاشتی ستی ٢ (Ashti City 2) پڕۆژەیەکی نیشتەجێبوونی خانوو و ڤێلایە لەسەر ڕێگای کەسنەزان لە هەولێر، لە پشت سەنتەری وەرزشی بلو. پڕۆژەکە جیاوازە لە ئاشتی ستی ١ کە لەسەر هەمان ڕێگایە. ڕووبەری خانووەکانی پڕۆژەکە ٢٠٠ و ٢٥٠ م²یە، و ڕووبەری ڤێلاکان ٢٥٠، ٣٠٠، ٤٠٠ و ٥٠٠ م²یە. یەکەکان یەک یان دوو نهۆمن و دوو تا پێنج ژووری نووستنیان هەیە. جگە لە خانوو و ڤێلا، پڕۆژەکە زەویی نیشتەجێبوون، دوکان و پارچە زەوی بۆ قوتابخانە و بازاڕیش لەخۆ دەگرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 آشتي سيتي 2 (Ashti City 2) مشروع سكني من البيوت والفلل على طريق كسنزان في أربيل، خلف مركز بلو الرياضي. وهو مشروع منفصل عن آشتي سيتي 1 الواقع على الطريق نفسه. تبلغ مساحات البيوت في المشروع 200 و250 م²، ومساحات الفلل 250 و300 و400 و500 م². وتتكون الوحدات من طابق واحد أو طابقين، وتضم من غرفتي نوم إلى خمس غرف نوم. وإلى جانب البيوت والفلل، يضم المشروع أراضيَ سكنية ومحلات تجارية وقطع أراضٍ مخصصة لمدرسة وسوق.
 
 ### 3. English
 Ashti City 2, also written Ashty City 2, is a residential project of houses and villas on Kasnazan Road in Erbil, behind the Blue Sport Center. It is a separate project from Ashti City 1, which lies on the same road. Houses in the project have areas of 200 and 250 m², and villas have areas of 250, 300, 400 and 500 m². The units have one or two floors and two to five bedrooms. Besides houses and villas, the project includes residential plots, shops, and plots designated for a school and a market.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/global-city-97 | Context only (Global City page, not Ashti City 2): Eskan's Global City on Kasnazan Road, 1,350 villas, villa types incl. Bronze, Silver, Gold, Emerald – used to assess Baghy's 'Global City' text block | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/ashti-city-2 | Address (Kasnazan Road, behind Blue Sport Center), property types, facility list, branch 'Ashty City Branch Erbil'; text block headed 'Global City' with 1,700 units, villa categories Bronze/Silver/Zumrud/Gold and Eskan text (deliveries to 1/8/2013) | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/ashty-city-2/ | Project page 'Ashty City 2': address Kasnazan Road; type House-Villa; 345 houses + 890 villas; areas house 200/250 m², villa 250/300/400/500 m²; 1–2 floors; 2–5 bedrooms; no related listings | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/ashty-city-1/ | Context: separate 'Ashty City 1' project page (Kasnazan Road), showing Ashti City 2 is listed as a distinct project | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/global-city-97 | Context only (Global City page, not Ashti City 2): Eskan's Global City on Kasnazan Road, 1,350 villas, villa types incl. Bronze, Silver, Gold, Emerald – used to assess Baghy's 'Global City' text block | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/ashti-city-2 | Address (Kasnazan Road, behind Blue Sport Center), property types, facility list, branch 'Ashty City Branch Erbil'; text block headed 'Global City' with 1,700 units, villa categories Bronze/Silver/Zumrud/Gold and Eskan text (deliveries to 1/8/2013) | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/ashty-city-2/ | Project page 'Ashty City 2': address Kasnazan Road; type House-Villa; 345 houses + 890 villas; areas house 200/250 m², villa 250/300/400/500 m²; 1–2 floors; 2–5 bedrooms; no related listings | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/ashty-city-1/ | Context: separate 'Ashty City 1' project page (Kasnazan Road), showing Ashti City 2 is listed as a distinct project | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| anba.com.br | https://anba.com.br/en/erbil-in-construction/ | Eskan (Galala group) developing Ashti City; 5,000 houses planned, 2,000 sold, completion expected June 2011 (search snippet) | c. 2010–2011 | 2026-11-07 | medium |
-| en.wikipedia.org | https://en.wikipedia.org/wiki/Kasnazan,_Iraq | Kasnazan town 12 km from Erbil (search snippet) | — | 2026-11-07 | medium |
+| anba.com.br | https://anba.com.br/en/erbil-in-construction/ | Eskan (Galala group) developing Ashti City; 5,000 houses planned, 2,000 sold, completion expected June 2011 (search snippet) | c. 2010–2011 | 2026-11-07 | مامناوەند |
+| en.wikipedia.org | https://en.wikipedia.org/wiki/Kasnazan,_Iraq | Kasnazan town 12 km from Erbil (search snippet) | — | 2026-11-07 | مامناوەند |
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name Ashti/Ashty City 2 (Baghy Shaqlawa, Haji Salam)
    - Location on Kasnazan Road, Erbil (Baghy Shaqlawa, Haji Salam)
    - Category houses and villas (Baghy Shaqlawa, Haji Salam)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 345 houses + 890 villas; house areas 200/250 m², villa areas 250/300/400/500 m²; 1–2 floors; 2–5 bedrooms (Haji Salam)
    - 'Behind Blue Sport Center', land/shop/school/market plots and facility list (Baghy Shaqlawa)
    - Developer Eskan (Baghy text block; c.2011 article at brand level)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - total_units: 1,235 (345 houses + 890 villas) (https://hajisalam.com/en/ashty-city-2/); 1,700 residential units (text block headed 'Global City' on the Ashti City 2 page) (https://baghyshaqlawa.net/en/projects/ashti-city-2); 5,000 houses (Ashti City overall, c. 2011) (https://anba.com.br/en/erbil-in-construction/) → 1,235 adopted (itemised, project-specific Haji Salam fields); Baghy's 1,700 sits under a 'Global City' heading whose villa names match Global City types on Paya; 5,000 is brand-level and outdated. Low confidence.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Construction status
    - Total land area
    - Launch and completion dates
@@ -116,17 +119,17 @@ First-pass research only (at most one web search for this project).
    - Official Kurdish/Arabic names
    - Developer's own project page
    - Floors/bedrooms split by unit type
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy text cites Eskan deliveries 'up until 1/8/2013'
    - anba.com.br article c.2010–2011 (5,000 houses, completion June 2011)
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Baghy's 1,700-unit text and Bronze/Silver/Zumrud/Gold names sit under a 'Global City' heading; Paya lists Bronze, Silver, Gold, Emerald types for Eskan's Global City – the text may belong to Global City
    - Is the project completed and occupied? No status on either primary page
    - Whether Haji Salam areas are plot or built areas
    - Relation to the c.2011 Ashti City plan (5,000 houses)
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "ashti-city-2",

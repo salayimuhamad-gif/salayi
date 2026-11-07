@@ -1,104 +1,106 @@
 <!-- rendered -->
 # Hiran City 1 — هیران سیتی ١ — هيران سيتي 1
-Project ID: hiran-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: hiran-city-1 | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Hiran City 1 (homele: 'Hiran City') | Low – Only homele area label, without the '1' | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-| City | Erbil | Low – homele lists it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-| District / Area | Not verified | Low – No address in any source | — |
-| Developer | Not verified | Low – No source names a developer; two web searches found nothing | — |
-| Project Category | Residential (houses) | Low – Single house listing | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Not verified | Low – No source states it | — |
-| Total Residential Units | Not verified | Low – No source states it | — |
-| Construction Status | Unknown (one 'Ready' house listing) | Low – A ready listing shows only that some houses exist | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Hiran City | Low – homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source states it | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | No phase split found; homele has one 'Hiran City' area | Low – homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| ناوی پڕۆژە | Hiran City 1 (homele: 'Hiran City') | نزم – Only homele area label, without the '1' | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| شار | هەولێر | نزم – homele lists it under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| ناوچە / گەڕەک | پشتڕاست نەکراوەتەوە | نزم – No address in any source | — |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer; two web searches found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Single house listing | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| دۆخی دروستکردن | نەزانراوە — Unknown (one 'Ready' house listing) | نزم – A ready listing shows only that some houses exist | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Hiran City | نزم – homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | No phase split found; homele has one 'Hiran City' area | نزم – homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source states it | — |
-| Villas / houses | 588 | Haji Salam: 'Project Type: House', 'Number Of Unit: 588' | https://hajisalam.com/en/hiran-city-1/ |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source states it | — |
-| Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | No phase split found; homele has one 'Hiran City' area | homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڤێلا / خانوو | 588 | Haji Salam: 'Project Type: House', 'Number Of Unit: 588' | https://hajisalam.com/en/hiran-city-1/ |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source states it | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | No phase split found; homele has one 'Hiran City' area | homele area label | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200 | 200 | 200 | 5 | 3 bathrooms; Ready house 'opposite garden' advertised for sale (homele, first page; 1 listing) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+| خانوو | 200 | 200 | 200 | 5 | 3 حەمام؛ Ready house 'opposite garden' advertised for sale (homele, first page; 1 listing) | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 200 m2, 5 bed, 3 bath, ready, opposite garden - homele market listing (negotiable) | 135,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| House 200 m2, 5 bed, 3 bath, ready, opposite garden - homele market listing (negotiable) | 135,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 No source gives an address for Hiran City 1; homele lists 'Hiran City' as an area of Erbil.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 هیران سیتی ١ پڕۆژەیەکی نیشتەجێبوونە لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق، و لە بازاڕی خانووبەرەدا بە ناوی هیران سیتی-ش ناسراوە. پڕۆژەکە خانووی خێزانی لەخۆدەگرێت. خانوویەکی ئامادەی ٢٠٠ م² لە پڕۆژەکەدا، بە پێنج ژووری نووستن و سێ حەمام و ڕووەو باخچە، لە بازاڕی خانووبەرەی هەولێردا بۆ فرۆشتن پێشکەش دەکرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 هيران سيتي 1 مشروع سكني في أربيل، عاصمة إقليم كوردستان العراق، ويُعرف في سوق العقارات أيضاً باسم هيران سيتي. يضم المشروع منازل عائلية. ويُعرض للبيع في سوق العقارات في أربيل منزل جاهز في المشروع بمساحة 200 م² يضم خمس غرف نوم وثلاثة حمامات ويطل على حديقة.
 
 ### 3. English
 Hiran City 1 is a residential project in Erbil, the capital of the Kurdistan Region of Iraq, also known on the property market simply as Hiran City. The project contains family houses. A ready 200 m² house in the project, with five bedrooms and three bathrooms and facing a garden, is offered for sale on the Erbil property market.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city | Area 'Hiran City' in Erbil; one ready house listing 200 m2, 5 bed, 3 bath, $135,000 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Project page found; no facts beyond those from other sources | https://hajisalam.com/en/hiran-city-1/ | — | — | 2026-11-07 | — |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/hiran-city | Area 'Hiran City' in Erbil; one ready house listing 200 m2, 5 bed, 3 bath, $135,000 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | پەڕەی پڕۆژەکە دۆزرایەوە؛ زانیاریی زیادەی تێدا نەبوو | https://hajisalam.com/en/hiran-city-1/ | — | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-| Source | URL | Information obtained | Published / updated | Accessed | Reliability |
+### سەرچاوە گشتییە زیادەکان
+| سەرچاوە | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|
-| citypopulation.de | https://citypopulation.de/en/iraq/mun/admin/arbīl/17044__hīrān | Context only: 'Hīrān' is also a subdistrict name in Erbil governorate (found via web search); no link to the project | — | 2026-11-07 | low |
+| citypopulation.de | https://citypopulation.de/en/iraq/mun/admin/arbīl/17044__hīrān | Context only: 'Hīrān' is also a subdistrict name in Erbil governorate (found via web search); no link to the project | — | 2026-11-07 | نزم |
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Hiran City" Erbil houses”; “"هیران سیتی" OR "هيران سيتي" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Hiran City" Erbil houses»؛ «"هیران سیتی" OR "هيران سيتي" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Existence of 'Hiran City' area and one 200 m2 house listing (homele)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Location
    - Developer
    - Status
@@ -107,16 +109,16 @@ Second verification pass 2026-11-07: queries “"Hiran City" Erbil houses”; �
    - Dates
    - Coordinates
    - Facilities
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Not found on Paya, Bagh-y Shaqlawa, Hajisalam or Miran packs; web searches in English and Sorani returned nothing on the project
    - Location unknown; kept as in Erbil city per homele. 'Hīrān' is also a subdistrict of Erbil governorate outside the city (citypopulation.de) - no source links the project to it
    - Possible duplicate/overlap with hiran-city-2: no source distinguishes Hiran City 1 from Hiran City 2
-   - Second verification pass (2026-11-07): no new evidence. Only the Hiran sub-district of Shaqlawa district (outside Erbil city) was found, with no link to this project; location, developer and status remain unknown.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. Only the Hiran sub-district of Shaqlawa district (outside Erbil city) was found, with no link to this project; location, developer and status remain unknown.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "hiran-city-1",

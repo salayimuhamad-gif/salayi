@@ -1,136 +1,139 @@
 <!-- rendered -->
 # Mass City — ماس سیتی — ماس ستي
-Project ID: mass-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mass-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mass City | High – Paya, Baghy, Haji Salam, homele | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city ; https://hajisalam.com/en/mass-city/ |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/mass-city-168 |
-| District / Area | 120 m Street along Masif Road | High – Paya and Baghy agree on Masif Road | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
-| Developer | Mass Holding Group (Mass Group) | Medium – Paya text; Mass Group named on Miran for its sub-projects | https://paya-realestate.com/en/projects/mass-city-168 |
-| Project Category | Mixed-use (villas with commercial spaces) | High – Paya text; Baghy 'Commercial Property' | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
-| Total Land Area | > 1,000,000 m² (lower bound stated) | Low – Paya text only, no exact figure | https://paya-realestate.com/en/projects/mass-city-168 |
-| Number of Buildings / Towers | Not verified | Low – No villa count published | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Completed (some listings tagged off-plan/structure) | Medium – Paya 'Completed'; homele 'Ready' listings and rentals | https://paya-realestate.com/en/projects/mass-city-168 ; https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.239133, 44.068067 — Google Maps: https://www.google.com/maps?q=36.239133,44.068067 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
-| Alternative names | ماس سیتی; ماس ستي | High – Haji Salam, pack alias | https://hajisalam.com/en/mass-city/ |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | Mass Diamond; Mass Palace; Mass Jumeira (Jumairah) | Medium – Paya text; Baghy zone labels | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| ناوی پڕۆژە | Mass City | بەرز – Paya, Baghy, Haji Salam, homele | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city ; https://hajisalam.com/en/mass-city/ |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/mass-city-168 |
+| ناوچە / گەڕەک | 120 m Street along Masif Road | بەرز – Paya and Baghy agree on Masif Road | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| گەشەپێدەر (کۆمپانیا) | Mass Holding Group (Mass Group) | مامناوەند – Paya text; Mass Group named on Miran for its sub-projects | https://paya-realestate.com/en/projects/mass-city-168 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use (villas with commercial spaces) | بەرز – Paya text; Baghy 'Commercial Property' | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| کۆی ڕووبەری زەوی | > 1,000,000 m² (lower bound stated) | نزم – Paya text only, no exact figure | https://paya-realestate.com/en/projects/mass-city-168 |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No villa count published | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (some listings tagged off-plan/structure) | مامناوەند – Paya 'Completed'; homele 'Ready' listings and rentals | https://paya-realestate.com/en/projects/mass-city-168 ; https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.239133, 44.068067 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.239133,44.068067 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| ناوە جێگرەوەکان | ماس سیتی; ماس ستي | بەرز – Haji Salam, pack alias | https://hajisalam.com/en/mass-city/ |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | Mass Diamond; Mass Palace; Mass Jumeira (Jumairah) | مامناوەند – Paya text; Baghy zone labels | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | > 1,000,000 m² (lower bound stated) | Paya text only, no exact figure | https://paya-realestate.com/en/projects/mass-city-168 |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No villa count published | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Vast green areas, landscapes and gardens make up more than one-third of the total land area (hilly site exceeding one million m²) | — | https://paya-realestate.com/en/projects/mass-city-168 |
-| Development phases | Mass Diamond; Mass Palace; Mass Jumeira (Jumairah) | Paya text; Baghy zone labels | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | > 1,000,000 m² (lower bound stated) | Paya text only, no exact figure | https://paya-realestate.com/en/projects/mass-city-168 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No villa count published | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | Vast green areas, landscapes and gardens make up more than one-third of the total land area (hilly site exceeding one million m²) | — | https://paya-realestate.com/en/projects/mass-city-168 |
+| قۆناغەکانی پڕۆژە | Mass Diamond; Mass Palace; Mass Jumeira (Jumairah) | Paya text; Baghy zone labels | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 240, 320, 600 | 240 | 600 | — | Mass Diamond section | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 |
-| villa | 600, 1,000 | 600 | 1,000 | — | Mass Palace section, classic and modern styles | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 |
-| villa | 320 | 320 | 320 | — | Mass Jumeira section, types T3 to T12 | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 |
-| house | 240, 320, 600 | 240 | 600 | — | 15 houses on Paya price list: 240 m² 4 bed/4 bath; 320 m² 4–5 bed; 600 m² 5–6 bed, 5–7 bath | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 |
-| house | 240, 300, 320, 350, 600 | 240 | 600 | — | homele market listings (ready and off-plan/structure); 300 and 350 m² not in Paya list | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
-| other | Not verified | — | — | — | Commercial spaces / commercial property (no sizes) | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
+| ڤێلا | 240, 320, 600 | 240 | 600 | — | Mass Diamond section | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mass-city-168 |
+| ڤێلا | 600, 1,000 | 600 | 1,000 | — | Mass Palace section, classic and modern styles | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mass-city-168 |
+| ڤێلا | 320 | 320 | 320 | — | Mass Jumeira section, types T3 to T12 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mass-city-168 |
+| خانوو | 240, 320, 600 | 240 | 600 | — | 15 houses on Paya price list: 240 m² 4 bed/4 bath; 320 m² 4–5 bed; 600 m² 5–6 bed, 5–7 bath | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mass-city-168 |
+| خانوو | 240, 300, 320, 350, 600 | 240 | 600 | — | homele market listings (ready and off-plan/structure); 300 and 350 m² not in Paya list | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
+| جۆری تر | پشتڕاست نەکراوەتەوە | — | — | — | Commercial spaces / commercial property (no sizes) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
 
-**Layouts and floor plans:** Paya shows 'View Blueprint' for all 15 listed houses (240, 320 and 600 m²) (https://paya-realestate.com/en/projects/mass-city-168)
+**نەخشە و پلانی نهۆمەکان:** Paya shows 'View Blueprint' for all 15 listed houses (240, 320 and 600 m²) (https://paya-realestate.com/en/projects/mass-city-168)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** green areas, landscapes and gardens / public garden (Paya text; Baghy tags); commercial spaces (Paya text; Baghy 'Commercial Property'); mosque (Paya, Baghy); supermarket (Paya, Baghy); children's play area / playground (Paya, Baghy); security (Paya, Baghy); reception (Paya, Baghy); parking (Paya, Baghy); pets allowed (Paya, Baghy)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** green areas, landscapes and gardens / public garden (Paya text; Baghy tags); commercial spaces (Paya text; Baghy 'Commercial Property'); mosque (Paya, Baghy); supermarket (Paya, Baghy); children's play area / playground (Paya, Baghy); security (Paya, Baghy); reception (Paya, Baghy); parking (Paya, Baghy); pets allowed (Paya, Baghy)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** outdoor swimming pool (Paya tag); gym (Paya tag); restaurant; cafeteria; electrical generator; sewers; 24-hour electricity (Baghy); city administrative center (Baghy); kindergarten (Baghy); maintenance (Baghy); health center (Baghy); school (Baghy)
+**بانگەشەی پشتڕاست نەکراوە:** outdoor swimming pool (Paya tag); gym (Paya tag); restaurant; cafeteria; electrical generator; sewers; 24-hour electricity (Baghy); city administrative center (Baghy); kindergarten (Baghy); maintenance (Baghy); health center (Baghy); school (Baghy)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| House 240 m2, 4 beds - agency project-page price | 220,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 240 m2, 4 beds - agency project-page price | 260,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 320 m2, 4 beds - agency project-page price | 330,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 320 m2, 4 beds - agency project-page price (highest 320 m² row) | 423,150 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 600 m2, 5 beds - agency project-page price | 815,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 600 m2, 5 beds - agency project-page price | 875,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
-| House 320 m2, 4 beds, ready - market listing for sale | 360,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
-| House 240 m2, 4 beds, furnished - monthly rent | 1,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Paya: payment plan in four equal stages – on contract signing, on completion of the external structure, after interior finishing, and on key handover; homele lists ready houses for sale (negotiable) and for rent ($1,000 monthly) and off-plan/structure houses for sale (https://paya-realestate.com/en/projects/mass-city-168)
+| House 240 m2, 4 beds - agency project-page price | 220,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 240 m2, 4 beds - agency project-page price | 260,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 320 m2, 4 beds - agency project-page price | 330,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 320 m2, 4 beds - agency project-page price (highest 320 m² row) | 423,150 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 600 m2, 5 beds - agency project-page price | 815,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 600 m2, 5 beds - agency project-page price | 875,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/mass-city-168 |
+| House 320 m2, 4 beds, ready - market listing for sale | 360,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
+| House 240 m2, 4 beds, furnished - monthly rent | 1,000 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Paya: payment plan in four equal stages – on contract signing, on completion of the external structure, after interior finishing, and on key handover; homele lists ready houses for sale (negotiable) and for rent ($1,000 monthly) and off-plan/structure houses for sale (https://paya-realestate.com/en/projects/mass-city-168)
 
-### Location and surroundings
-On the 120 m ring road along Masif (Salahaddin/Pirmam) Road in Erbil, on a hilly site (Paya, Baghy). Map position (medium confidence, from agency map pins): 36.239133, 44.068067. Google Maps: https://www.google.com/maps?q=36.239133,44.068067
+### شوێن و دەوروبەر
+On the 120 m ring road along Masif (Salahaddin/Pirmam) Road in Erbil, on a hilly site (Paya, Baghy).
+شوێن لەسەر نەخشە: 36.239133, 44.068067 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.239133,44.068067
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ماس سیتی (Mass City) کۆمەڵگەیەکی نیشتەجێبوونی تەواوبووی ڤێلایە لەگەڵ شوێنی بازرگانی لە هەولێر، کە گرووپی ماس هۆڵدینگ (ماس گرووپ) گەشەی پێداوە. پڕۆژەکە لەسەر شەقامی 120 مەتری بە درێژایی ڕێگای مەسیف، لەسەر زەوییەکی گردۆڵکەیی بە ڕووبەری زیاتر لە یەک ملیۆن مەتر دووجا هەڵکەوتووە، و ناوچەی سەوز و باخچەکان زیاتر لە سێیەکی زەوییەکە دەگرنەوە. پڕۆژەکە دابەشی چەند بەشێک کراوە بە جۆری جیاوازی ڤێلا. بەشی ماس دایمۆند ڤێلای 240، 320 و 600 م² لەخۆ دەگرێت. بەشی ماس پالاس ڤێلای 600 و 1,000 م² بە شێوازی کلاسیک و مۆدێرن لەخۆ دەگرێت. بەشی ماس جومێرا ڤێلای 320 م² بە جۆرەکانی T3 تا T12 لەخۆ دەگرێت. خانووەکانی پڕۆژەکە بە ڕووبەری 240 م² بە چوار ژووری نووستن و چوار حەمام، 320 م² بە چوار یان پێنج ژووری نووستن، و 600 م² بە پێنج یان شەش ژووری نووستنن. خزمەتگوزارییەکان بریتین لە ناوچەی سەوز و باخچەی گشتی، شوێنی بازرگانی، مزگەوت، سوپەرمارکێت، یاریگای منداڵان، پاسەوانی، ڕیسێپشن و پارکینگ، و ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی دەدرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ماس سيتي (Mass City) مجمع سكني مكتمل من الفلل مع مساحات تجارية في أربيل، طوّرته مجموعة ماس القابضة (ماس غروب). يقع المشروع على شارع 120 متر على امتداد طريق مصيف، على موقع تلّي تزيد مساحته على مليون متر مربع، وتغطي المساحات الخضراء والتنسيق الطبيعي والحدائق أكثر من ثلث الأرض. ينقسم المشروع إلى أقسام تضم أنواعاً مختلفة من الفلل. يضم قسم ماس دايموند فللاً بمساحات 240 و320 و600 م². ويضم قسم ماس بالاس فللاً بمساحتي 600 و1,000 م² بطرازين كلاسيكي وحديث. ويضم قسم ماس جميرا فللاً بمساحة 320 م² بأنواع من T3 إلى T12. وتأتي المنازل في المشروع بمساحة 240 م² مع أربع غرف نوم وأربعة حمامات، و320 م² مع أربع أو خمس غرف نوم، و600 م² مع خمس أو ست غرف نوم. وتشمل المرافق مساحات خضراء وحدائق عامة، ومساحات تجارية، ومسجداً، وسوبرماركت، ومنطقة ألعاب للأطفال، وحراسة، واستقبالاً، ومواقف للسيارات، كما يُسمح باقتناء الحيوانات الأليفة.
 
 ### 3. English
 Mass City is a completed residential villa complex with commercial spaces in Erbil, developed by Mass Holding Group (Mass Group). It is located on the 120 m Street along Masif Road, on a hilly site of more than one million square metres, where green areas, landscaping and gardens cover more than one third of the land. The project is divided into sections with different villa types. The Mass Diamond section includes villas of 240, 320 and 600 m². The Mass Palace section includes villas of 600 and 1,000 m² in classic and modern styles. The Mass Jumeira section includes 320 m² villas in types T3 to T12. Houses in the project come in sizes of 240 m² with four bedrooms and four bathrooms, 320 m² with four or five bedrooms, and 600 m² with five or six bedrooms. Facilities include green areas and public gardens, commercial spaces, a mosque, a supermarket, a children's play area, security, a reception and parking, and pets are allowed in the community.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/mass-city | Area listing page (2 pages): ready and off-plan/structure houses 240–600 m², sale USD 240,000–520,000; rent USD 1,000/month. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/mass-city-168 | Project page: Completed; developer Mass Holding Group; 120 Meter Street along Masyaf Road; hilly site > 1,000,000 m², green areas > 1/3; sections Mass Diamond (240/320/600), Mass Palace (600/1000), Mass Jumeira (320, T3–T12); payment 4 equal stages; 15 houses 240–600 m² at USD 166,450–875,000; amenity tags. | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/mass-city | Project page: Masif Road; house, commercial property, villa; zones 'Mass Jumairah Zone' and 'Mass Diamond'; facility tags; Italian City 2 branch. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/mass-city/ | Project page exists under Kurdish name 'ماس سیتی'; no fields or listings extracted. | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/mass-city | Area listing page (2 pages): ready and off-plan/structure houses 240–600 m², sale USD 240,000–520,000; rent USD 1,000/month. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/mass-city-168 | Project page: Completed; developer Mass Holding Group; 120 Meter Street along Masyaf Road; hilly site > 1,000,000 m², green areas > 1/3; sections Mass Diamond (240/320/600), Mass Palace (600/1000), Mass Jumeira (320, T3–T12); payment 4 equal stages; 15 houses 240–600 m² at USD 166,450–875,000; amenity tags. | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/mass-city | Project page: Masif Road; house, commercial property, villa; zones 'Mass Jumairah Zone' and 'Mass Diamond'; facility tags; Italian City 2 branch. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/mass-city/ | Project page exists under Kurdish name 'ماس سیتی'; no fields or listings extracted. | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Paya, Baghy, Haji Salam, homele)
    - Location Masif Road (Paya, Baghy)
    - Category villas + commercial (Paya, Baghy)
    - Sections Mass Diamond and Mass Jumeira (Paya, Baghy)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Developer Mass Holding Group (Paya)
    - Site > 1,000,000 m² (Paya)
    - Mass Palace section 600/1000 m² (Paya)
    - Payment plan (Paya)
    - Status Completed (Paya; supported by homele 'Ready' listings)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Status: Completed vs some off-plan/structure listings
    - Outlier USD 166,450 for a 320 m² house
    - construction_status: Completed (https://paya-realestate.com/en/projects/mass-city-168); Some homele listings tagged 'Off Plan' / 'Structure' (600 m², 350 m² corner, 320 m²) (https://homele.com/properties/for-sale-and-rent/erbil/mass-city) → Completed kept for the project; off-plan/structure listings may be later sections or unfinished shell houses. Not resolved.
    - price (320 m² house): USD 166,450 (one row) (https://paya-realestate.com/en/projects/mass-city-168); USD 330,000–423,150 (other 320 m² rows) (https://paya-realestate.com/en/projects/mass-city-168) → USD 166,450 treated as an outlier (possibly a partial/down-payment figure); not used.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Exact land area
    - Villa count
    - Dates
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether Mass Village and Mass Hills are sections of Mass City
    - Haji Salam page content not extracted
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mass-city",

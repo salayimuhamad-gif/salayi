@@ -1,131 +1,134 @@
 <!-- rendered -->
 # Candle Residence — — — —
-Project ID: candle-residence | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: candle-residence | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Candle Residence | High – Paya project page and homele area page | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-| City | Erbil | High – Paya and homele | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-| District / Area | Golden Square: between Italian Village 1 and English Village, opposite Sami Abdulrahman Park, next to Rotana Hotel | Medium – Paya only, but landmark-specific | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Developer | Not verified | Low – Paya developer field repeats the project name; one WebSearch found nothing | — |
-| Project Category | Residential towers with commercial floors | Medium – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | 4 residential buildings | Low – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Total Residential Units | Not verified | Low – Paya '13 units' is its listed inventory, not the project total | — |
-| Construction Status | Under construction (off-plan sales) | Medium – Paya 'Constructing'; homele off-plan listings | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.188816, 43.97441 — Google Maps: https://www.google.com/maps?q=36.188816,43.97441 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Alternative names | Not verified | Low – not stated by any source found | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 48 floors (plus/including 2 commercial and 4 garage floors; wording unclear) | Low – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | Candle Residence | بەرز – Paya project page and homele area page | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+| شار | هەولێر | بەرز – Paya and homele | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+| ناوچە / گەڕەک | Golden Square: between Italian Village 1 and English Village, opposite Sami Abdulrahman Park, next to Rotana Hotel | مامناوەند – Paya only, but landmark-specific | https://paya-realestate.com/en/projects/candle-residence-176 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya developer field repeats the project name; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential towers with commercial floors | مامناوەند – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | 4 residential buildings | نزم – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – Paya '13 units' is its listed inventory, not the project total | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (off-plan sales) | مامناوەند – Paya 'Constructing'; homele off-plan listings | https://paya-realestate.com/en/projects/candle-residence-176 ; https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.188816, 43.97441 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.188816,43.97441 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/candle-residence-176 |
+| ناوە جێگرەوەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 48 floors (plus/including 2 commercial and 4 garage floors; wording unclear) | نزم – Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | Paya '13 units' is its listed inventory, not the project total | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 4 residential buildings | Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Floors per building | 48 floors (plus/including 2 commercial and 4 garage floors; wording unclear) | Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | Paya '13 units' is its listed inventory, not the project total | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 4 residential buildings | Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 48 floors (plus/including 2 commercial and 4 garage floors; wording unclear) | Paya only | https://paya-realestate.com/en/projects/candle-residence-176 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| studio | 65, 68 | 65 | 68 | 0 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
-| apartment | 83, 88, 91 | 83 | 91 | 1 | 1 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
-| apartment | 139, 140, 145, 147, 150 | 139 | 150 | 2 | 2 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
-| apartment | 267, 277 | 267 | 277 | 4 | 4 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
-| apartment | 318 | 318 | 318 | 5 | 5 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
-| apartment | 65, 148 | 65 | 148 | — | Off-plan listings: 148 m2 2 bed / 2 bath; 65 m2 studio (card title mentions 83 m2, 1 bed). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-| shop | Not verified | — | — | — | Two commercial floors per building; no unit sizes published. | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
+| ستۆدیۆ | 65, 68 | 65 | 68 | 0 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
+| شوقە | 83, 88, 91 | 83 | 91 | 1 | 1 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
+| شوقە | 139, 140, 145, 147, 150 | 139 | 150 | 2 | 2 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
+| شوقە | 267, 277 | 267 | 277 | 4 | 4 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
+| شوقە | 318 | 318 | 318 | 5 | 5 حەمام | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
+| شوقە | 65, 148 | 65 | 148 | — | Off-plan listings: 148 m2 2 bed / 2 bath; 65 m2 studio (card title mentions 83 m2, 1 bed). | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+| دوکان | پشتڕاست نەکراوەتەوە | — | — | — | Two commercial floors per building; no unit sizes published. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/candle-residence-176 |
 
-**Layouts and floor plans:** Paya lists 13 apartment types (studio 65 m² to 5-bed 318 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/candle-residence-176)
+**نەخشە و پلانی نهۆمەکان:** Paya lists 13 apartment types (studio 65 m² to 5-bed 318 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/candle-residence-176)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Four floors of car garages per building (Paya text; covered parking and car parking tags); Two commercial floors per building (Paya text)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Four floors of car garages per building (Paya text; covered parking and car parking tags); Two commercial floors per building (Paya text)
 
-**Unverified claims:** Gym (Paya tag); Public garden (Paya tag); Pharmacy (Paya tag); Indoor swimming pool (Paya tag); Supermarket (Paya tag); ATM (Paya tag); Restaurant (Paya tag); AC (Paya tag); Security (Paya tag); Kids play area (Paya tag); Laundry (Paya tag); Medical center (Paya tag); Maintenance (Paya tag); Kindergarten (Paya tag); Reception (Paya tag); Cafeteria (Paya tag); Electrical generator (Paya tag); Currency exchange (Paya tag); Women's salon (Paya tag)
+**بانگەشەی پشتڕاست نەکراوە:** Gym (Paya tag); Public garden (Paya tag); Pharmacy (Paya tag); Indoor swimming pool (Paya tag); Supermarket (Paya tag); ATM (Paya tag); Restaurant (Paya tag); AC (Paya tag); Security (Paya tag); Kids play area (Paya tag); Laundry (Paya tag); Medical center (Paya tag); Maintenance (Paya tag); Kindergarten (Paya tag); Reception (Paya tag); Cafeteria (Paya tag); Electrical generator (Paya tag); Currency exchange (Paya tag); Women's salon (Paya tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Studio 65 m2 - agency project-page price (all 13 Paya units equal USD 1,100/m2) | 71,500 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| 1 bed 83 m2 - agency project-page price | 91,300 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| 2 bed 139 m2 - agency project-page price | 152,900 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| 2 bed 150 m2 - agency project-page price | 165,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| 4 bed 267 m2 - agency project-page price | 293,700 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| 5 bed 318 m2 - agency project-page price | 349,800 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
-| Off-plan 2 bed 148 m2 - listing asking price (negotiable) | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-| Off-plan studio 65 m2 - listing asking price, 'new price' (negotiable) | 53,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele listings: off-plan units for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/candle-residence)
+| Studio 65 m2 - agency project-page price (all 13 Paya units equal USD 1,100/m2) | 71,500 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| 1 bed 83 m2 - agency project-page price | 91,300 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| 2 bed 139 m2 - agency project-page price | 152,900 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| 2 bed 150 m2 - agency project-page price | 165,000 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| 4 bed 267 m2 - agency project-page price | 293,700 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| 5 bed 318 m2 - agency project-page price | 349,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/candle-residence-176 |
+| Off-plan 2 bed 148 m2 - listing asking price (negotiable) | 165,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+| Off-plan studio 65 m2 - listing asking price, 'new price' (negotiable) | 53,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele listings: off-plan units for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/candle-residence)
 
-### Location and surroundings
-Candle Residence is in Erbil's Golden Square, between Italian Village 1 and the English Village, opposite Sami Abdulrahman Park and next to the Rotana Hotel (Paya). Map position (low confidence, from agency map pins): 36.188816, 43.97441. Google Maps: https://www.google.com/maps?q=36.188816,43.97441
+### شوێن و دەوروبەر
+Candle Residence is in Erbil's Golden Square, between Italian Village 1 and the English Village, opposite Sami Abdulrahman Park and next to the Rotana Hotel (Paya).
+شوێن لەسەر نەخشە: 36.188816, 43.97441 (متمانە: نزم) — https://www.google.com/maps?q=36.188816,43.97441
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 کاندڵ ڕێزیدێنس (Candle Residence) پڕۆژەیەکی تاوەری نیشتەجێبوونە لە ناوچەی چوارگۆشەی زێڕینی هەولێر کە لە قۆناغی دروستکردندایە، لە نێوان گوندی ئیتاڵی ١ و گوندی ئینگلیزی، بەرامبەر پارکی سامی عەبدولڕەحمان و لە تەنیشت هوتێلی ڕۆتانا. پڕۆژەکە لە چوار بینای نیشتەجێبوونی ٤٨ نهۆمی پێکدێت، و هەر بینایەک دوو نهۆمی بازرگانی و چوار نهۆمی گەراجی ئۆتۆمبێلی هەیە. یەکەکان لە ستۆدیۆوە تا شوقەی پێنج ژووری نووستن دەگۆڕێن: ستۆدیۆی ٦٥ و ٦٨ م² بە یەک گەرماو، شوقەی یەک ژووری نووستن بە ڕووبەری ٨٣، ٨٨ و ٩١ م² بە یەک گەرماو، شوقەی دوو ژووری نووستن بە ڕووبەری ١٣٩ تا ١٥٠ م² بە دوو گەرماو، شوقەی چوار ژووری نووستن بە ڕووبەری ٢٦٧ و ٢٧٧ م² بە چوار گەرماو، و شوقەیەکی پێنج ژووری نووستن بە ڕووبەری ٣١٨ م² بە پێنج گەرماو. شوقەکان لەسەر نەخشە دەفرۆشرێن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 كاندل ريزيدنس (Candle Residence) مشروع أبراج سكنية قيد الإنشاء في منطقة المربع الذهبي بأربيل، بين القرية الإيطالية 1 والقرية الإنجليزية، مقابل منتزه سامي عبد الرحمن وبجوار فندق روتانا. ويتألف المشروع من أربعة مبانٍ سكنية من 48 طابقاً، ويضم كل مبنى طابقين تجاريين وأربعة طوابق لمرائب السيارات. وتتنوع الوحدات بين الاستوديوهات والشقق ذات خمس غرف النوم: استوديوهات بمساحة 65 و68 م² مع حمام واحد، وشقق بغرفة نوم واحدة بمساحة 83 و88 و91 م² مع حمام واحد، وشقق بغرفتي نوم بمساحات بين 139 و150 م² مع حمامين، وشقق بأربع غرف نوم بمساحة 267 و277 م² مع أربعة حمامات، وشقة بخمس غرف نوم بمساحة 318 م² مع خمسة حمامات. وتُباع الشقق على الخارطة.
 
 ### 3. English
 Candle Residence is a residential tower project under construction in the Golden Square area of Erbil, between Italian Village 1 and the English Village, opposite Sami Abdulrahman Park and next to the Rotana Hotel. The project consists of four residential buildings of 48 floors, and each building has two commercial floors and four floors of car garages. Units range from studios to five-bedroom apartments: studios of 65 and 68 m² with one bathroom; one-bedroom apartments of 83, 88 and 91 m² with one bathroom; two-bedroom apartments of 139 to 150 m² with two bathrooms; four-bedroom apartments of 267 and 277 m² with four bathrooms; and a five-bedroom apartment of 318 m² with five bathrooms. Apartments are sold off-plan.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence | 2 off-plan listings: 148 m2 2 bed USD 165,000; 65 m2 studio USD 53,000 (both negotiable) | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/candle-residence-176 | Golden Square location between Italian Village 1 and English Village, opposite Sami Abdulrahman Park, next to Rotana; status Constructing; 4 buildings x 48 floors + 2 commercial + 4 garage floors; 13 units 65-318 m2 with prices USD 71,500-349,800; amenity tags; developer field repeats project name | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence | 2 off-plan listings: 148 m2 2 bed USD 165,000; 65 m2 studio USD 53,000 (both negotiable) | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/candle-residence-176 | Golden Square location between Italian Village 1 and English Village, opposite Sami Abdulrahman Park, next to Rotana; status Constructing; 4 buildings x 48 floors + 2 commercial + 4 garage floors; 13 units 65-318 m2 with prices USD 71,500-349,800; amenity tags; developer field repeats project name | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Candle Residence" Erbil towers”; “"Candle Residence" OR "Candle Towers" Erbil Golden Square Rotana” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Candle Residence" Erbil towers»؛ «"Candle Residence" OR "Candle Towers" Erbil Golden Square Rotana» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location and off-plan status (Paya + homele listings)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Golden Square location and landmarks, 4 buildings x 48 floors, 2 commercial and 4 garage floors, unit table and prices (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Studio listing size: 65 m2 (card size field) (https://homele.com/properties/for-sale-and-rent/erbil/candle-residence); 83 m2, 1 bed (same card title) (https://homele.com/properties/for-sale-and-rent/erbil/candle-residence) → 65 m2 studio used (matches Paya studio size); title text likely from another card.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Total units
    - Land area
    - Launch and completion dates
    - Coordinates
    - Payment plan
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Paya prices are undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 48 floors includes the commercial and garage floors
    - Developer identity; one WebSearch ('Candle Residence' Erbil developer Golden Square) returned no relevant page
    - No page on Baghy, Haji Salam or Miran
-   - Second verification pass (2026-11-07): no new evidence. No independent page found; results only confirmed the Erbil Rotana landmark on Gulan Street in the Golden Zone, not the project; developer, unit total and dates still missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page found; results only confirmed the Erbil Rotana landmark on Gulan Street in the Golden Zone, not the project; developer, unit total and dates still missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "candle-residence",

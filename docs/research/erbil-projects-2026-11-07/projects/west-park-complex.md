@@ -1,110 +1,113 @@
 <!-- rendered -->
 # West Park Complex — — — —
-Project ID: west-park-complex | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: west-park-complex | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | West Park Complex | Low – Paya only | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| City | Erbil | Medium – Paya address 'Erbil, near Sami Abdulrahman Park' | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| District / Area | Italian Village 1 area; near Sami Abdulrahman Park, opposite English Village | Low – Single source | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Developer | Not verified | Low – Paya developer field repeats the project name | — |
-| Project Category | Commercial: offices and shops, rent only | Medium – Paya text and unit list | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | None (commercial); 21 offices + 9 shops | Low – Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Construction Status | Completed (units for rent) | Low – Paya only | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | 36.188068, 43.969141 — Google Maps: https://www.google.com/maps?q=36.188068,43.969141 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Alternative names | Westpark Complex; West Park | Low – Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – not stated by any source found | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported | Low – — | — |
+| ناوی پڕۆژە | West Park Complex | نزم – Paya only | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| شار | هەولێر | مامناوەند – Paya address 'Erbil, near Sami Abdulrahman Park' | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| ناوچە / گەڕەک | Italian Village 1 area; near Sami Abdulrahman Park, opposite English Village | نزم – Single source | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya developer field repeats the project name | — |
+| جۆری پڕۆژە | بازرگانی — Commercial: offices and shops, rent only | مامناوەند – Paya text and unit list | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | None (commercial); 21 offices + 9 shops | نزم – Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| دۆخی دروستکردن | تەواوبووە — Completed (units for rent) | نزم – Paya only | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.188068, 43.969141 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.188068,43.969141 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| ناوە جێگرەوەکان | Westpark Complex; West Park | نزم – Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | None (commercial); 21 offices + 9 shops | Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | 21 offices (100-640 m²) and 9 commercial shops (70-400 m²) (Paya) | — | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | None (commercial); 21 offices + 9 shops | Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | 21 offices (100-640 m²) and 9 commercial shops (70-400 m²) (Paya) | — | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | — | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | — | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| office | 108, 114, 121, 122, 123, 135, 165, 222, 238, 246, 251, 267.8, 400, 640 | 108 | 640 | — | Text: 21 offices of 100-640 m2 (elsewhere 108-600 m2); for rent only | agency_project_page | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| shop | 70, 83, 113, 118, 128, 136, 245, 268, 1,384, 1,500 | 70 | 1,500 | — | Text: 9 commercial shops of 70-400 m2; unit list also shows 1,384 and 1,500 m2 commercial entries; for rent only | agency_project_page | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| ئۆفیس | 108, 114, 121, 122, 123, 135, 165, 222, 238, 246, 251, 267.8, 400, 640 | 108 | 640 | — | Text: 21 offices of 100-640 m2 (elsewhere 108-600 m2); for rent only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| دوکان | 70, 83, 113, 118, 128, 136, 245, 268, 1,384, 1,500 | 70 | 1,500 | — | Text: 9 commercial shops of 70-400 m2; unit list also shows 1,384 and 1,500 m2 commercial entries; for rent only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/west-park-complex-265 |
 
-**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 24 office and commercial units, 70-1,500 m² (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
+**نەخشە و پلانی نهۆمەکان:** Blueprints listed ('View Blueprint') for 24 office and commercial units, 70-1,500 m² (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** 24-hour electricity (Paya); 24-hour security (Paya); Private car parking (Paya); Central cooling and heating (Paya); High-speed internet (Paya); Cafeteria (Paya tag); Reception (Paya tag); Currency exchange (Paya tag); Sewer connection (Paya tag)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** 24-hour electricity (Paya); 24-hour security (Paya); Private car parking (Paya); Central cooling and heating (Paya); High-speed internet (Paya); Cafeteria (Paya tag); Reception (Paya tag); Currency exchange (Paya tag); Sewer connection (Paya tag)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Office rent per m2 (text: USD 6-8 per metre; period not stated) - lower bound | 6 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Service charge per m2 | 1 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Office 108 m2 - rent (period not stated) | 648 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Office 640 m2 - rent | 3,840 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Shop 70 m2 - rent | 1,400 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Shop 245 m2 - rent | 4,900 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-| Commercial space 1,384 m2 - rent | 27,680 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-- **Maintenance or service charges:** 'Only $1 for service' (offices priced at $6 to $8 per metre) (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
-- **Purchasing or rental arrangements:** 'This Project Is Only For Rent'; offices at $6 to $8 per metre (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
+| Office rent per m2 (text: USD 6-8 per metre; period not stated) - lower bound | 6 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Service charge per m2 | 1 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Office 108 m2 - rent (period not stated) | 648 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Office 640 m2 - rent | 3,840 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Shop 70 m2 - rent | 1,400 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Shop 245 m2 - rent | 4,900 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+| Commercial space 1,384 m2 - rent | 27,680 | USD | کرێ | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** 'Only $1 for service' (offices priced at $6 to $8 per metre) (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
+- **شێوازی کڕین یان بەکرێدان:** 'This Project Is Only For Rent'; offices at $6 to $8 per metre (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
 
-### Location and surroundings
-Paya places West Park Complex near Sami Abdulrahman Park, opposite English Village and near the Italian City (Italian Village 1), between the 100 m and 40 m streets in western Erbil. Map position (low confidence, from agency map pins): 36.188068, 43.969141. Google Maps: https://www.google.com/maps?q=36.188068,43.969141
+### شوێن و دەوروبەر
+Paya places West Park Complex near Sami Abdulrahman Park, opposite English Village and near the Italian City (Italian Village 1), between the 100 m and 40 m streets in western Erbil.
+شوێن لەسەر نەخشە: 36.188068, 43.969141 (متمانە: نزم) — https://www.google.com/maps?q=36.188068,43.969141
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 وێست پارک کۆمپلێکس (West Park Complex) کۆمپلێکسێکی بازرگانیی تەواوبووی نووسینگە و دووکانە لە ڕۆژئاوای شاری هەولێر. نزیک پارکی سامی عەبدولڕەحمان، بەرامبەر گوندی ئینگلیزی و نزیک گوندی ئیتاڵی ١ هەڵکەوتووە، لە نێوان شەقامەکانی ١٠٠ مەتری و ٤٠ مەتری. کۆمپلێکسەکە ٢١ نووسینگەی تێدایە بە ڕووبەری ١٠٠ تا ٦٤٠ م² و نۆ دووکانی بازرگانی بە ڕووبەری ٧٠ تا ٤٠٠ م². یەکەکانی کۆمپلێکسەکە تەنها بۆ کرێن. خزمەتگوزارییەکان بریتین لە کارەبا و پاسەوانیی ٢٤ کاتژمێری، پارکینگی تایبەتی ئۆتۆمبێل، سیستەمی ناوەندیی فێنککردنەوە و گەرمکردنەوە، ئینتەرنێتی خێرا، کافتریا، ڕیسێپشن، نووسینگەی ئاڵوگۆڕی دراو و پەیوەستبوون بە تۆڕی ئاوەڕۆ.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ويست بارك كومبلكس (West Park Complex) مجمع تجاري مكتمل للمكاتب والمحلات في غرب مدينة أربيل. يقع قرب متنزه سامي عبد الرحمن، مقابل القرية الإنكليزية وقرب القرية الإيطالية 1، بين شارعي 100 متر و40 متر. يضم المجمع 21 مكتباً تتراوح مساحاتها بين 100 و640 م²، وتسعة محلات تجارية بمساحة 70 إلى 400 م². وحدات المجمع مخصصة للإيجار فقط. وتشمل المرافق كهرباء وحراسة أمنية على مدار 24 ساعة، ومواقف سيارات خاصة، وتبريداً وتدفئة مركزيين، وإنترنت عالي السرعة، وكافتيريا، واستقبالاً، ومكتب صرافة، وربطاً بشبكة الصرف الصحي.
 
 ### 3. English
 West Park Complex, also known as Westpark Complex, is a completed commercial complex of offices and shops in western Erbil. It is located near Sami Abdulrahman Park, opposite English Village and near the Italian City (Italian Village 1), between the 100 m and 40 m streets. The complex contains 21 offices ranging from 100 to 640 m² and nine commercial shops of 70 to 400 m². Units in the complex are for rent only. Facilities include 24-hour electricity and security, private car parking, central cooling and heating, high-speed internet, a cafeteria, reception, a currency exchange office and a sewer connection.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/west-park-complex-265 | Area Italian Village 1; Completed; 21 offices 100-640 m2 at USD 6-8/m2 + USD 1 service; 9 shops 70-400 m2; rent only; near Sami Abdulrahman Park opposite English Village, between 100 m and 40 m streets; 24 unit entries with rents USD 648-27,680; features | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/west-park-complex-265 | Area Italian Village 1; Completed; 21 offices 100-640 m2 at USD 6-8/m2 + USD 1 service; 9 shops 70-400 m2; rent only; near Sami Abdulrahman Park opposite English Village, between 100 m and 40 m streets; 24 unit entries with rents USD 648-27,680; features | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All data (Paya): location, commercial rent-only category, 21 offices + 9 shops, rents, features
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Text unit counts/size ranges vs the 24-entry unit list (incl. 1,384 and 1,500 m2 commercial entries)
    - unit counts/sizes: 21 offices (100-640 m2) + 9 shops (70-400 m2) (https://paya-realestate.com/en/projects/west-park-complex-265); unit list: 14 office and 10 commercial entries (offices 108-640 m2; commercial 70-1,500 m2) (https://paya-realestate.com/en/projects/west-park-complex-265) → Text counts kept for description; unit list may show only units currently offered
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Building/floor count
    - Land area
@@ -112,15 +115,15 @@ First-pass research only (at most one web search for this project).
    - Coordinates
    - Kurdish/Arabic names
    - Rent period
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Rents undated
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Identity: a rent-only office/shop complex, not a residential project; in Erbil city
    - 1,500 m2 commercial entry priced USD 1,500 (USD 1/m2) looks like a data-entry error
    - Not listed on homele, Miran, Baghy Shaqlawa or Haji Salam in the evidence pack; no WebSearch spent
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "west-park-complex",

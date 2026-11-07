@@ -1,127 +1,130 @@
 <!-- rendered -->
 # Talar City — تالار سیتی — تالار ستي
-Project ID: talar-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: talar-city | پلە: 1 | لە کەناری شار | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Talar City | High – Baghy, Haji, homele | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| City | Erbil (eastern fringe) | Medium – Baghy address and pin ~9 km east of the citadel | https://baghyshaqlawa.net/en/projects/talar-city-0 |
-| District / Area | Koya Road | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/talar-city-0 |
-| Developer | Not verified | Low – No source | — |
-| Project Category | Residential (houses; apartments in listings) | Medium – Baghy and Haji 'House'; homele listings include apartments | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Completed (inferred) | Low – No project status stated; all homele listings tagged Ready | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.214394, 44.114083 — Google Maps: https://www.google.com/maps?q=36.214394,44.114083 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/talar-city-0 |
-| Alternative names | None found | Low – — – No source | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified (houses listed as one-floor) | Low – homele listings only | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No source | — |
+| ناوی پڕۆژە | Talar City | بەرز – Baghy, Haji, homele | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| شار | Erbil (eastern fringe) | مامناوەند – Baghy address and pin ~9 km east of the citadel | https://baghyshaqlawa.net/en/projects/talar-city-0 |
+| ناوچە / گەڕەک | Koya Road | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/talar-city-0 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses; apartments in listings) | مامناوەند – Baghy and Haji 'House'; homele listings include apartments | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ ; https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | تەواوبووە — Completed (inferred) | نزم – No project status stated; all homele listings tagged Ready | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.214394, 44.114083 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.214394,44.114083 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/talar-city-0 |
+| ناوە جێگرەوەکان | None found | نزم – No source | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (houses listed as one-floor) | نزم – homele listings only | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified (houses listed as one-floor) | homele listings only | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (houses listed as one-floor) | homele listings only | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Property type 'House' (Baghy; Haji project index 'HOUSE'); no sizes stated | agency_project_page | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ |
-| house | 200, 204, 230, 262 | 200 | 262 | 2 | 1 floors; homele ready one-floor houses, 2 beds, 1-2 baths; first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| apartment | 120, 133 | 120 | 133 | 2 | homele ready apartments, 2 beds | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Property type 'House' (Baghy; Haji project index 'HOUSE'); no sizes stated | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/talar-city-0 ; https://hajisalam.com/en/talar-city/ |
+| خانوو | 200, 204, 230, 262 | 200 | 262 | 2 | 1 نهۆم؛ homele ready one-floor houses, 2 beds, 1-2 baths; first page only | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| شوقە | 120, 133 | 120 | 133 | 2 | homele ready apartments, 2 beds | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** 24-hour electricity (Baghy tag); Playground (Baghy tag); Green areas (Baghy tag)
+**بانگەشەی پشتڕاست نەکراوە:** 24-hour electricity (Baghy tag); Playground (Baghy tag); Green areas (Baghy tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| One-floor house 262 m2, 2 bed - market listing (negotiable) | 137,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| House 230 m2, 2 bed, opposite garden - market listing (negotiable) | 135,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Corner house 230 m2, 2 bed - market listing (negotiable) | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| One-floor house 204 m2, 2 bed - market listing (other 204 m2 asks USD 80,000-82,500) | 85,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| One-floor house 200 m2, 2 bed - market listing (negotiable) | 77,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Apartment 120 m2, 2 bed - market listing (negotiable) | 50,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-| Apartment 133 m2, 2 bed - market listing (negotiable) | 45,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| One-floor house 262 m2, 2 bed - market listing (negotiable) | 137,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| House 230 m2, 2 bed, opposite garden - market listing (negotiable) | 135,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| Corner house 230 m2, 2 bed - market listing (negotiable) | 90,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| One-floor house 204 m2, 2 bed - market listing (other 204 m2 asks USD 80,000-82,500) | 85,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| One-floor house 200 m2, 2 bed - market listing (negotiable) | 77,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| Apartment 120 m2, 2 bed - market listing (negotiable) | 50,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+| Apartment 133 m2, 2 bed - market listing (negotiable) | 45,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/talar-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
- Map position (low confidence, from agency map pins): 36.214394, 44.114083. Google Maps: https://www.google.com/maps?q=36.214394,44.114083
+### شوێن و دەوروبەر
+پشتڕاست نەکراوەتەوە
+شوێن لەسەر نەخشە: 36.214394, 44.114083 (متمانە: نزم) — https://www.google.com/maps?q=36.214394,44.114083
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 تالار سیتی (Talar City) پڕۆژەیەکی نیشتەجێبوونە لەسەر ڕێگای کۆیە لە لێواری ڕۆژهەڵاتی شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە بە شێوەیەکی سەرەکی لە خانوو پێکدێت و شوقەشی تێدایە. خانووەکانی تالار سیتی خانووی یەک نهۆمیی ٢٠٠ تا ٢٦٢ م² لەخۆدەگرن کە دوو ژووری نووستنیان هەیە، و شوقەکانی پڕۆژەکە ڕووبەریان ١٢٠ و ١٣٣ م²یە و دوو ژووری نووستنیان هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 تالار ستي (Talar City) مشروع سكني على طريق كويه عند الطرف الشرقي لمدينة أربيل في إقليم كوردستان العراق. يتكون المشروع أساساً من منازل، ويضم أيضاً شققاً. وتشمل المنازل في تالار ستي منازل من طابق واحد بمساحات تتراوح بين 200 و262 م² تضم غرفتي نوم، أما الشقق في المشروع فمساحتها 120 و133 م² وتضم غرفتي نوم.
 
 ### 3. English
 Talar City is a residential project on Koya Road on the eastern edge of Erbil, in the Kurdistan Region of Iraq. The project consists mainly of houses and also includes apartments. Houses in Talar City include single-storey homes of 200 to 262 m² with two bedrooms, and apartments in the project have areas of 120 and 133 m² with two bedrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/talar-city | Area listing page (3 pages; first read): all ready; one-floor houses 200-262 m2 USD 77,500-137,500; apartments 120-133 m2 USD 45,000-50,000. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/talar-city-0 | Project page: 'Erbil - Koya Road'; property type House; tags 24 hr electricity, playground, green areas; nearest branch Koya Road; map pin 36.2143935, 44.1140826. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/talar-city/ | Project page exists (listed in Haji project index as 'TALAR CITY - HOUSE'); page body not extracted. | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/talar-city | Area listing page (3 pages; first read): all ready; one-floor houses 200-262 m2 USD 77,500-137,500; apartments 120-133 m2 USD 45,000-50,000. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/talar-city-0 | Project page: 'Erbil - Koya Road'; property type House; tags 24 hr electricity, playground, green areas; nearest branch Koya Road; map pin 36.2143935, 44.1140826. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/talar-city/ | Project page exists (listed in Haji project index as 'TALAR CITY - HOUSE'); page body not extracted. | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Talar City" Erbil”; “تالار سيتي أربيل طريق كويه” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Talar City" Erbil»؛ «تالار سيتي أربيل طريق كويه» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Baghy, Haji, homele)
    - Houses (Baghy, Haji, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Koya Road location and coordinates (Baghy)
    - Facility tags (Baghy)
    - Apartments (homele listings only)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Explicit status
    - Units, land area
    - Dates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Koya Road is not one of the listed approach roads; pin lies on the eastern urban fringe, so in_erbil_city set to 'edge'
    - Status inferred only from homele 'Ready' tags
    - Haji page content not captured
-   - Second verification pass (2026-11-07): no new evidence. No independent page names Talar City; developer, size and status confirmation remain missing.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page names Talar City; developer, size and status confirmation remain missing.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "talar-city",

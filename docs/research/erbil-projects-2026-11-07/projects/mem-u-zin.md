@@ -1,100 +1,102 @@
 <!-- rendered -->
 # Mem u Zin — مەم و زین — مم و زين
-Project ID: mem-u-zin | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mem-u-zin | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mem u Zin (Haji Salam: 'Mem U Zin') | Low – Single project page | https://hajisalam.com/en/mem-u-zin/ |
-| City | Erbil | Medium – Haji Salam | https://hajisalam.com/en/mem-u-zin/ |
-| District / Area | Mosul Road | Low – Haji Salam only; position along the road not stated | https://hajisalam.com/en/mem-u-zin/ |
-| Developer | Not verified | Low – Not named; one web search found nothing | — |
-| Project Category | Residential (apartments) | Low – Haji Salam 'Apartment' | https://hajisalam.com/en/mem-u-zin/ |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – Not stated | — |
-| Total Residential Units | 600 apartments | Low – Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
-| Construction Status | Unknown | Low – — – Not stated; no listings | — |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Mam u Zin | Low – Transliteration variant; not found on any source page | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 20 | Low – Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Mem u Zin (Haji Salam: 'Mem U Zin') | نزم – Single project page | https://hajisalam.com/en/mem-u-zin/ |
+| شار | هەولێر | مامناوەند – Haji Salam | https://hajisalam.com/en/mem-u-zin/ |
+| ناوچە / گەڕەک | Mosul Road | نزم – Haji Salam only; position along the road not stated | https://hajisalam.com/en/mem-u-zin/ |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Not named; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) | نزم – Haji Salam 'Apartment' | https://hajisalam.com/en/mem-u-zin/ |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| کۆی یەکە نیشتەجێبوونەکان | 600 apartments | نزم – Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
+| دۆخی دروستکردن | نەزانراوە — Unknown | نزم – Not stated; no listings | — |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Mam u Zin | نزم – Transliteration variant; not found on any source page | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 20 | نزم – Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 600 apartments | Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | 600 | Haji Salam: Project Type Apartment; Number Of Unit 600 | https://hajisalam.com/en/mem-u-zin/ |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | Not stated | — |
-| Floors per building | 20 | Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 600 apartments | Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 600 | Haji Salam: Project Type Apartment; Number Of Unit 600 | https://hajisalam.com/en/mem-u-zin/ |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 20 | Haji Salam only | https://hajisalam.com/en/mem-u-zin/ |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 41, 51, 71, 81, 91 | 41 | 91 | — | 600 apartments; bedrooms given as 1-2-3-4 without mapping to sizes | agency_project_page | https://hajisalam.com/en/mem-u-zin/ |
+| شوقە | 41, 51, 71, 81, 91 | 41 | 91 | — | 600 apartments; bedrooms given as 1-2-3-4 without mapping to sizes | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://hajisalam.com/en/mem-u-zin/ |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-Prices: Not verified.
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+نرخ: پشتڕاست نەکراوەتەوە.
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Haji Salam gives the address as Mosul Road, Erbil, without a landmark or ring-road reference.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 مەم و زین پڕۆژەیەکی نیشتەجێبوونی شوقەیە لەسەر ڕێگای مووسڵ لە شاری هەولێر. پڕۆژەکە ٦٠٠ شوقە لەخۆ دەگرێت و بیناکانی ٢٠ نهۆمن. شوقەکان پێنج ڕووبەری جیاوازیان هەیە: ٤١، ٥١، ٧١، ٨١ و ٩١ م². ژمارەی ژووری نووستن لە شوقەکاندا لە یەک تا چوار ژوور دەگۆڕێت. پڕۆژەکە تەنها شوقە لەخۆ دەگرێت؛ بچووکترین شوقە ٤١ م² و گەورەترینیان ٩١ م²یە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 مم و زين مشروع سكني للشقق يقع على طريق الموصل في مدينة أربيل. يضم المشروع ٦٠٠ شقة، وتتألف مبانيه من ٢٠ طابقاً. تتوفر الشقق بخمس مساحات مختلفة: ٤١ و٥١ و٧١ و٨١ و٩١ م². ويتراوح عدد غرف النوم في الشقق بين غرفة واحدة وأربع غرف. ويقتصر المشروع على الشقق، إذ تبلغ مساحة أصغر شقة ٤١ م² وأكبرها ٩١ م².
 
 ### 3. English
 Mem u Zin is a residential apartment project on Mosul Road in the city of Erbil. The project contains 600 apartments, and its buildings have 20 floors. The apartments come in five sizes: 41, 51, 71, 81 and 91 m². The number of bedrooms in the apartments ranges from one to four. The project consists of apartments only; the smallest unit measures 41 m² and the largest 91 m².
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/mem-u-zin/ | Project page 'Mem U Zin': address Mosul Road; type Apartment; 600 units; areas 41-51-71-81-91 m; 20 floors; bedrooms 1-2-3-4; no related listings | — | 2026-11-07 | medium |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/mem-u-zin/ | Project page 'Mem U Zin': address Mosul Road; type Apartment; 600 units; areas 41-51-71-81-91 m; 20 floors; bedrooms 1-2-3-4; no related listings | — | 2026-11-07 | مامناوەند |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Mem u Zin" OR "Mem û Zîn" Erbil residential towers Mosul road”; “پڕۆژەی "مەم و زین" هەولێر شوقە ڕێگای مووسڵ” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Mem u Zin" OR "Mem û Zîn" Erbil residential towers Mosul road»؛ «پڕۆژەی "مەم و زین" هەولێر شوقە ڕێگای مووسڵ» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - All project data: Mosul Road, 600 apartments, 20 floors, 41-91 m2, 1-4 bedrooms (Haji Salam)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Number of buildings
@@ -104,15 +106,15 @@ Second verification pass 2026-11-07: queries “"Mem u Zin" OR "Mem û Zîn" Erb
    - Facilities
    - Coordinates
    - Pages on homele, Paya, Baghy, Miran
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Position along Mosul Road (inside or outside the 120m/150m ring roads) not stated; kept in Erbil city on the address alone
    - Bedroom range 1-4 for units of 41-91 m2 is not mapped to sizes
-   - Second verification pass (2026-11-07): no new evidence. English and Sorani searches found no page about a Mem u Zin residential project; all data still rest on the single Haji Salam page and the position along Mosul Road is unconfirmed.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. English and Sorani searches found no page about a Mem u Zin residential project; all data still rest on the single Haji Salam page and the position along Mosul Road is unconfirmed.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mem-u-zin",

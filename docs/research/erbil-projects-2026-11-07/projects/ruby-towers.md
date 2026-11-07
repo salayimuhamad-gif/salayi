@@ -1,127 +1,130 @@
 <!-- rendered -->
 # Ruby Towers — ڕووبی تاوەرز — روبي تاور
-Project ID: ruby-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: ruby-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Ruby Towers | High – Paya, Baghy, homele | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| District / Area | 40 m Road, opposite Quattro, next to the Kurdistan Region Presidency | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
-| Developer | Not verified | Low – No source names a developer (Paya 'developer' field is the project name); one web search found nothing | — |
-| Project Category | Residential (apartment towers with 2 commercial-service floors) | High – Paya text; Baghy apartments | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | 6 towers | Medium – Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Total Residential Units | 1,640 | Medium – Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Construction Status | Completed | Medium – Paya 'Completed'; homele ready rentals; Baghy gives no status | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.21909, 44.003512 — Google Maps: https://www.google.com/maps?q=36.21909,44.003512 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
-| Alternative names | روبي تاور; Ruby Tower | Medium – Paya Arabic label | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 32 residential floors (+2 commercial floors, +4 basements) | Low – Paya only; text does not say whether 32 is per tower | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No source | — |
+| ناوی پڕۆژە | Ruby Towers | بەرز – Paya, Baghy, homele | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| ناوچە / گەڕەک | 40 m Road, opposite Quattro, next to the Kurdistan Region Presidency | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer (Paya 'developer' field is the project name); one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers with 2 commercial-service floors) | بەرز – Paya text; Baghy apartments | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | 6 towers | مامناوەند – Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| کۆی یەکە نیشتەجێبوونەکان | 1,640 | مامناوەند – Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya 'Completed'; homele ready rentals; Baghy gives no status | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.21909, 44.003512 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.21909,44.003512 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/ruby-towers-258 ; https://baghyshaqlawa.net/en/projects/ruby-towers |
+| ناوە جێگرەوەکان | روبي تاور; Ruby Tower | مامناوەند – Paya Arabic label | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 32 residential floors (+2 commercial floors, +4 basements) | نزم – Paya only; text does not say whether 32 is per tower | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,640 | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Villas / houses | Not verified | — | — |
-| Apartments | 1,640 | Six towers with 32 residential floors and 1640 units | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 6 towers | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Floors per building | 32 residential floors (+2 commercial floors, +4 basements) | Paya only; text does not say whether 32 is per tower | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Green space, parks, landscaped area | 40% devoted to greenery | — | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Development phases | None stated | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,640 | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 1,640 | Six towers with 32 residential floors and 1640 units | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 6 towers | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 32 residential floors (+2 commercial floors, +4 basements) | Paya only; text does not say whether 32 is per tower | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| ڕووبەری سەوزایی، پارک و باخچە | 40% devoted to greenery | — | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| قۆناغەکانی پڕۆژە | None stated | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 88, 93, 127, 210 | 88 | 210 | — | 88 and 93 m2: 1 bed/1 bath; 127 m2: 2 bed/2 bath; 210 m2: 3 bed/3 bath (Paya unit table) | agency_project_page | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| apartment | 88, 93, 127 | 88 | 127 | — | homele rental listings (1-2 beds), first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+| شوقە | 88, 93, 127, 210 | 88 | 210 | — | 88 and 93 m2: 1 bed/1 bath; 127 m2: 2 bed/2 bath; 210 m2: 3 bed/3 bath (Paya unit table) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| شوقە | 88, 93, 127 | 88 | 127 | — | homele rental listings (1-2 beds), first page only | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
 
-**Layouts and floor plans:** 'View Blueprint' published for each of the 4 listed apartments (88-210 m²) (https://paya-realestate.com/en/projects/ruby-towers-258)
+**نەخشە و پلانی نهۆمەکان:** 'View Blueprint' published for each of the 4 listed apartments (88-210 m²) (https://paya-realestate.com/en/projects/ruby-towers-258)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Parking: 4 basement parking floors (Paya text; Paya and Baghy parking tags); Commercial services on 2 floors (Paya text); Green areas, 40% of project (Paya text; Paya public garden tag; Baghy green areas tag); Security (Paya tag, Baghy tag); Kids play area / playground (Paya tag, Baghy tag); Supermarket (Paya tag, Baghy tag); 24-hour electricity / generator (Baghy tag; Paya generator tag)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Parking: 4 basement parking floors (Paya text; Paya and Baghy parking tags); Commercial services on 2 floors (Paya text); Green areas, 40% of project (Paya text; Paya public garden tag; Baghy green areas tag); Security (Paya tag, Baghy tag); Kids play area / playground (Paya tag, Baghy tag); Supermarket (Paya tag, Baghy tag); 24-hour electricity / generator (Baghy tag; Paya generator tag)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Gym and women's gym (Paya tags); Mosque (Paya tag); Reception (Paya tag); Restaurant (Paya tag); Air conditioning (Paya tag); Covered parking (Paya tag); Internet (Baghy tag); Pets allowed (Baghy tag); 'Smart vehicle suspension' (Paya text, meaning unclear)
+**بانگەشەی پشتڕاست نەکراوە:** Gym and women's gym (Paya tags); Mosque (Paya tag); Reception (Paya tag); Restaurant (Paya tag); Air conditioning (Paya tag); Covered parking (Paya tag); Internet (Baghy tag); Pets allowed (Baghy tag); 'Smart vehicle suspension' (Paya text, meaning unclear)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 88 m2, 1 bed - agency project-page price | 82,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Apartment 93 m2, 1 bed - agency project-page price | 86,500 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Apartment 127 m2, 2 bed - agency project-page price | 118,200 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Apartment 210 m2, 3 bed - agency project-page price | 195,000 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Apartment 88 m2, 1 bed - monthly rent (market listing, lowest) | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
-| Apartment 88 m2, 1 bed, furnished - monthly rent (market listing) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
-| Apartment 127 m2, 2 bed - monthly rent (market listings USD 450-550) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
-| Apartment 127 m2, 2 bed, furnished - monthly rent (market listing) | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$550 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers)
+| Apartment 88 m2, 1 bed - agency project-page price | 82,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| Apartment 93 m2, 1 bed - agency project-page price | 86,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| Apartment 127 m2, 2 bed - agency project-page price | 118,200 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| Apartment 210 m2, 3 bed - agency project-page price | 195,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://paya-realestate.com/en/projects/ruby-towers-258 |
+| Apartment 88 m2, 1 bed - monthly rent (market listing, lowest) | 350 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+| Apartment 88 m2, 1 bed, furnished - monthly rent (market listing) | 550 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+| Apartment 127 m2, 2 bed - monthly rent (market listings USD 450-550) | 500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+| Apartment 127 m2, 2 bed, furnished - monthly rent (market listing) | 750 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele listings: monthly rentals ($350-$550 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers)
 
-### Location and surroundings
-On the 40 m Road in central-west Erbil, opposite the Quattro towers and beside the Presidency of the Kurdistan Region (Paya, Baghy). Map position (medium confidence, from agency map pins): 36.21909, 44.003512. Google Maps: https://www.google.com/maps?q=36.21909,44.003512
+### شوێن و دەوروبەر
+On the 40 m Road in central-west Erbil, opposite the Quattro towers and beside the Presidency of the Kurdistan Region (Paya, Baghy).
+شوێن لەسەر نەخشە: 36.21909, 44.003512 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.21909,44.003512
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڕووبی تاوەرز (Ruby Towers) پڕۆژەیەکی نیشتەجێبوونی تەواوکراوە لەسەر شەقامی ٤٠ مەتری لە ناوەڕاست و ڕۆژئاوای هەولێر، بەرامبەر تاوەرەکانی کواترۆ و لە تەنیشت سەرۆکایەتیی هەرێمی کوردستان. پڕۆژەکە لە شەش تاوەر پێکدێت کە ١،٦٤٠ شوقەیان تێدایە، لەگەڵ چوار نهۆمی ژێرزەوی بۆ پارکینگ و دوو نهۆم بۆ خزمەتگوزاریی بازرگانی، و ناوچەی سەوز ٤٠٪ی ڕووبەری پڕۆژەکە دەگرێتەوە. شوقەی یەک ژووری نووستن و یەک گەرماو ڕووبەریان ٨٨ و ٩٣ م²یە، شوقەی دوو ژووری نووستن و دوو گەرماو ١٢٧ م²ن، و شوقەی سێ ژووری نووستن و سێ گەرماو ٢١٠ م²ن. خزمەتگوزارییەکان بریتین لە پاسەوانی، شوێنی یاریی منداڵان، سوپەرمارکێت، پارکینگ، باخچەی گشتی و کارەبای ٢٤ کاتژمێری لە ڕێگەی مۆلیدەوە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 روبي تاور (Ruby Towers) مشروع سكني مكتمل على شارع 40 م في وسط غرب أربيل، مقابل أبراج كواترو وبجوار رئاسة إقليم كوردستان. ويتألف المشروع من ستة أبراج تضم 1,640 شقة، مع أربعة طوابق سفلية لمواقف السيارات وطابقين للخدمات التجارية، وتغطي المساحات الخضراء 40% من مساحة المشروع. وتبلغ مساحة الشقق ذات غرفة النوم الواحدة والحمام الواحد 88 و93 م²، والشقق ذات غرفتي النوم والحمامين 127 م²، والشقق ذات ثلاث غرف النوم وثلاثة حمامات 210 م². وتشمل المرافق الحراسة، ومنطقة ألعاب للأطفال، وسوبرماركت، ومواقف للسيارات، وحدائق عامة، وكهرباء على مدار 24 ساعة من المولدات.
 
 ### 3. English
 Ruby Towers, also known as Ruby Tower, is a completed residential project on the 40 m Road in central-west Erbil, opposite the Quattro towers and beside the Presidency of the Kurdistan Region. The project consists of six towers with 1,640 apartments, four basement parking floors and two floors of commercial services, and green areas cover 40% of the project. One-bedroom apartments with one bathroom measure 88 and 93 m², two-bedroom apartments with two bathrooms measure 127 m², and three-bedroom apartments with three bathrooms measure 210 m². Facilities include security, a children's play area, a supermarket, parking, public gardens and 24-hour electricity from generators.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers | Area listing page (8 pages; first page read): ready apartments for rent 88-127 m2, USD 350-750/month. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/ruby-towers-258 | Project page: Completed; near 40m Road opposite Quatro, next to the Presidency; 6 towers, 32 residential floors, 1,640 units, 4 basement parking floors, 2 commercial floors, 40% greenery; 4 units 88-210 m2 at USD 82,000-195,000; tags; schema.org coordinates 36.219036, 44.003497. | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/ruby-towers | Project page: '40m St, beside of Presidency of the Kurdistan Region'; apartments; tags (24 hr electricity, internet, playground, security, parking, green areas, supermarket, pets allowed); map pin 36.219143, 44.003527. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers | Area listing page (8 pages; first page read): ready apartments for rent 88-127 m2, USD 350-750/month. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/ruby-towers-258 | Project page: Completed; near 40m Road opposite Quatro, next to the Presidency; 6 towers, 32 residential floors, 1,640 units, 4 basement parking floors, 2 commercial floors, 40% greenery; 4 units 88-210 m2 at USD 82,000-195,000; tags; schema.org coordinates 36.219036, 44.003497. | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/ruby-towers | Project page: '40m St, beside of Presidency of the Kurdistan Region'; apartments; tags (24 hr electricity, internet, playground, security, parking, green areas, supermarket, pets allowed); map pin 36.219143, 44.003527. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Ruby Towers" Erbil”; “روبي تاور أربيل شارع 40 مشروع” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Ruby Towers" Erbil»؛ «روبي تاور أربيل شارع 40 مشروع» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Paya, Baghy, homele)
    - Location 40 m Road beside the Presidency (Paya, Baghy)
    - Category apartments (Paya, Baghy, homele)
    - Coordinates (Paya and Baghy pins agree; mean used)
    - Unit sizes 88/93/127 m2 (Paya, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Completed status (Paya; homele ready rentals only)
    - 6 towers, 32 residential floors, 1,640 units, 4 basements, 2 commercial floors, 40% greenery (Paya)
    - 210 m2 unit (Paya)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Land area
    - Launch and completion dates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Whether 32 residential floors applies to each of the 6 towers
-   - Second verification pass (2026-11-07): no new evidence. No news, developer or government page names Ruby Towers; tower, floor and unit figures still rest on agency pages.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No news, developer or government page names Ruby Towers; tower, floor and unit figures still rest on agency pages.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "ruby-towers",

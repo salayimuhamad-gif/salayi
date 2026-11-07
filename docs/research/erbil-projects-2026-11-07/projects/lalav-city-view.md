@@ -1,124 +1,127 @@
 <!-- rendered -->
 # Lalav City View — لالاڤ سیتی ڤیو — لالاف سيتي فيو
-Project ID: lalav-city-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: lalav-city-view | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Lalav City View | High – Paya, Miran, Baghy, homele | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://baghyshaqlawa.net/en/projects/lalav-city-view ; https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://baghyshaqlawa.net/en/projects/lalav-city-view |
-| District / Area | 120 Meter Street, near Hawler Nwe (New Erbil) | High – Paya, Baghy, Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://baghyshaqlawa.net/en/projects/lalav-city-view ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Developer | Lalav Group | High – Miran; Paya ('Lalav Company' / 'Lalav View Group') | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://paya-realestate.com/en/projects/lalav-city-view-114 |
-| Project Category | Residential (apartments) with commercial ground floor | High – Paya, Miran | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | 5 | High – Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Total Residential Units | 1,795 | Low – Miran stats only; same figure b-arrow gives for Lalav City | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Construction Status | Completed | High – Paya and Miran both 'Completed'; homele 'Ready' listings | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.218701, 44.064995 — Google Maps: https://www.google.com/maps?q=36.218701,44.064995 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://baghyshaqlawa.net/en/projects/lalav-city-view |
-| Alternative names | لالاف ستي فيو; Lalaf City View | Medium – Paya Arabic label and text spelling | https://paya-realestate.com/en/projects/lalav-city-view-114 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | 24 | High – Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Lalav City View | بەرز – Paya, Miran, Baghy, homele | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://baghyshaqlawa.net/en/projects/lalav-city-view ; https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://baghyshaqlawa.net/en/projects/lalav-city-view |
+| ناوچە / گەڕەک | 120 Meter Street, near Hawler Nwe (New Erbil) | بەرز – Paya, Baghy, Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://baghyshaqlawa.net/en/projects/lalav-city-view ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| گەشەپێدەر (کۆمپانیا) | Lalav Group | بەرز – Miran; Paya ('Lalav Company' / 'Lalav View Group') | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://paya-realestate.com/en/projects/lalav-city-view-114 |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartments) with commercial ground floor | بەرز – Paya, Miran | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | 5 | بەرز – Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| کۆی یەکە نیشتەجێبوونەکان | 1,795 | نزم – Miran stats only; same figure b-arrow gives for Lalav City | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| دۆخی دروستکردن | تەواوبووە — Completed | بەرز – Paya and Miran both 'Completed'; homele 'Ready' listings | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 ; https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.218701, 44.064995 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.218701,44.064995 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://baghyshaqlawa.net/en/projects/lalav-city-view |
+| ناوە جێگرەوەکان | لالاف ستي فيو; Lalaf City View | مامناوەند – Paya Arabic label and text spelling | https://paya-realestate.com/en/projects/lalav-city-view-114 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 24 | بەرز – Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,795 | Miran stats only; same figure b-arrow gives for Lalav City | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Villas / houses | Not verified | — | — |
-| Apartments | 1,795 | Miran: stats 'Units 1,795'; description 'approximately 1,795 apartments' | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 5 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Floors per building | 24 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,795 | Miran stats only; same figure b-arrow gives for Lalav City | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 1,795 | Miran: stats 'Units 1,795'; description 'approximately 1,795 apartments' | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 5 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | 24 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 104 | 104 | 104 | 1 | 1 bathrooms; 1+1: bedroom, reception room, kitchen, bathroom, balcony | agency_project_page | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| apartment | 135, 145 | 135 | 145 | 2 | 2 bathrooms; 2+1: two bedrooms, reception room, two bathrooms, passage; some with balcony | agency_project_page | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| apartment | 155, 167, 186, 194, 198 | 155 | 198 | 3 | 3 bathrooms; 3+1: three bedrooms, reception, kitchen, three bathrooms; some with store room, one or two balconies | agency_project_page | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
-| shop | 50 | 50 | 50 | — | Ground-floor restaurant space advertised for rent on homele | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+| شوقە | 104 | 104 | 104 | 1 | 1 حەمام؛ 1+1: bedroom, reception room, kitchen, bathroom, balcony | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| شوقە | 135, 145 | 135 | 145 | 2 | 2 حەمام؛ 2+1: two bedrooms, reception room, two bathrooms, passage; some with balcony | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| شوقە | 155, 167, 186, 194, 198 | 155 | 198 | 3 | 3 حەمام؛ 3+1: three bedrooms, reception, kitchen, three bathrooms; some with store room, one or two balconies | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
+| دوکان | 50 | 50 | 50 | — | Ground-floor restaurant space advertised for rent on homele | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
 
-**Layouts and floor plans:** Miran unit-type table has a 'Floor plan' column for 1+1 104 m², 2+1 135 and 145 m², 3+1 155, 167, 186, 194 and 198 m² (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
+**نەخشە و پلانی نهۆمەکان:** Miran unit-type table has a 'Floor plan' column for 1+1 104 m², 2+1 135 and 145 m², 3+1 155, 167, 186, 194 and 198 m² (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Underground parking - three basement levels (Paya text; Miran description; Baghy 'Underground Car Park'); Commercial ground floor (Paya text; Miran 'integrated commercial spaces'); 24-hour electricity (Paya text; Baghy; Miran description); Internet (Paya text; Baghy); Security gate / security (Paya text; Baghy; Miran); Sewerage system (Paya text and tag); Garden (Paya text; Baghy; Miran); Supermarket (Paya text; Baghy); Installed air conditioners (Paya text; Baghy 'Preinstalled ACs'); Pre-installed kitchens (Paya text and tag); Children's play area (Paya text; Baghy and Miran 'Playground'); Car parking and reception (Paya text; Baghy)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Underground parking - three basement levels (Paya text; Miran description; Baghy 'Underground Car Park'); Commercial ground floor (Paya text; Miran 'integrated commercial spaces'); 24-hour electricity (Paya text; Baghy; Miran description); Internet (Paya text; Baghy); Security gate / security (Paya text; Baghy; Miran); Sewerage system (Paya text and tag); Garden (Paya text; Baghy; Miran); Supermarket (Paya text; Baghy); Installed air conditioners (Paya text; Baghy 'Preinstalled ACs'); Pre-installed kitchens (Paya text and tag); Children's play area (Paya text; Baghy and Miran 'Playground'); Car parking and reception (Paya text; Baghy)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Swimming pool, gym, elevators, shopping centre (Miran tags only); Kindergarten, maintenance, pets allowed, maid's room (Baghy tags only); Cafeteria, restaurant, electrical generator (Paya tags only); Central AC, fire safety, building management, water treatment, waste management (Miran generic building-facilities list)
+**بانگەشەی پشتڕاست نەکراوە:** Swimming pool, gym, elevators, shopping centre (Miran tags only); Kindergarten, maintenance, pets allowed, maid's room (Baghy tags only); Cafeteria, restaurant, electrical generator (Paya tags only); Central AC, fire safety, building management, water treatment, waste management (Miran generic building-facilities list)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| 2+1 apartment 135 m2 - homele sale listing | 73,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
-| 3-bedroom apartment 198 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
-| Restaurant space 50 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele: 2+1 135 m² for sale ('$73,000 sale'), 3-bed 198 m² and 50 m² restaurant space for rent ('$500 Monthly') (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
+| 2+1 apartment 135 m2 - homele sale listing | 73,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+| 3-bedroom apartment 198 m2 - homele rent listing (per month) | 500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+| Restaurant space 50 m2 - homele rent listing (per month) | 500 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Miran: payment 'Cash'; homele: 2+1 135 m² for sale ('$73,000 sale'), 3-bed 198 m² and 50 m² restaurant space for rent ('$500 Monthly') (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
 
-### Location and surroundings
-Lalav City View stands on Erbil's 120 Meter Street close to Hawler Nwe / New Erbil (Paya, Baghy). Miran notes the ring-road position gives access to Erbil International Airport and the city centre. Map position (medium confidence, from agency map pins): 36.218701, 44.064995. Google Maps: https://www.google.com/maps?q=36.218701,44.064995
+### شوێن و دەوروبەر
+Lalav City View stands on Erbil's 120 Meter Street close to Hawler Nwe / New Erbil (Paya, Baghy). Miran notes the ring-road position gives access to Erbil International Airport and the city centre.
+شوێن لەسەر نەخشە: 36.218701, 44.064995 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.218701,44.064995
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لالاڤ سیتی ڤیو پڕۆژەیەکی نیشتەجێبوونی شوقەیە کە لالاڤ گروپ لە هەولێر دروستی کردووە، و لەسەر شەقامی ١٢٠ مەتری نزیک هەولێری نوێ هەڵکەوتووە. پڕۆژەکە لە پێنج تاوەری نیشتەجێبوون پێکهاتووە کە هەر یەکەیان ٢٤ نهۆمە، لەگەڵ سێ نهۆمی پارکینگی ژێرزەوی و شوێنی بازرگانی لە نهۆمی زەمینی. ڕووبەری شوقەی یەک ژووری نووستن (1+1) ١٠٤ م²یە و ژووری نووستن، هۆڵی پێشوازی، چێشتخانە، حەمام و باڵکۆنی تێدایە. ڕووبەری شوقەی دوو ژووری نووستن (2+1) ١٣٥ تا ١٤٥ م²یە بە هۆڵی پێشوازی و دوو حەمام. ڕووبەری شوقەی سێ ژووری نووستن (3+1) ١٥٥، ١٦٧، ١٨٦، ١٩٤ یان ١٩٨ م²یە بە هۆڵی پێشوازی، چێشتخانە و سێ حەمام؛ هەندێکیان کۆگا و یەک یان دوو باڵکۆنیان هەیە. پڕۆژەکە تەواو بووە و شوقەکان بۆ فرۆشتن و بە کرێدان پێشکەش دەکرێن. ئەو خزمەتگوزارییانەی بۆ دانیشتوان دابین کراون بریتین لە کارەبای ٢٤ کاتژمێری، ئینتەرنێت، دەروازەی پاسەوانی، سیستەمی ئاوەڕۆ، باخچە، سوپەرمارکێت، ئێرکۆندیشنی دامەزراو، چێشتخانەی ئامادەکراو، یاریگای منداڵان، پارکینگ و ڕیسێپشن.
 
-### 2. Arabic (العربية)
+### 2. العربية
 لالاف سيتي فيو مشروع سكني للشقق من تطوير مجموعة لالاف في أربيل، يقع على شارع 120 متر بالقرب من هولير الجديدة. يتكوّن المشروع من خمسة أبراج سكنية بارتفاع 24 طابقاً لكل منها، مع ثلاثة طوابق لمواقف السيارات تحت الأرض ومساحات تجارية في الطابق الأرضي. تبلغ مساحة الشقة بغرفة نوم واحدة (1+1) 104 م² وتضم غرفة نوم وصالة استقبال ومطبخاً وحماماً وشرفة. وتبلغ مساحة الشقة بغرفتي نوم (2+1) من 135 إلى 145 م² مع صالة استقبال وحمامين. أما الشقق بثلاث غرف نوم (3+1) فمساحاتها 155 أو 167 أو 186 أو 194 أو 198 م² مع صالة استقبال ومطبخ وثلاثة حمامات، وبعضها يضم مخزناً وشرفة واحدة أو شرفتين. المشروع مكتمل، وتُعرض الشقق للبيع والإيجار. وتشمل الخدمات المقدمة للسكان الكهرباء على مدار 24 ساعة، والإنترنت، وبوابة أمنية، وشبكة صرف صحي، وحديقة، وسوبرماركت، ومكيفات مركّبة، ومطابخ جاهزة، ومنطقة ألعاب للأطفال، ومواقف سيارات، واستقبالاً.
 
 ### 3. English
 Lalav City View is a residential apartment project by Lalav Group in Erbil, located on 120 Meter Street close to Hawler Nwe (New Erbil). The project consists of five residential towers of 24 floors each, with three underground parking levels and commercial space on the ground floor. One-bedroom (1+1) apartments measure 104 m² and include a bedroom, a reception room, a kitchen, a bathroom and a balcony. Two-bedroom (2+1) apartments measure 135 to 145 m² with a reception room and two bathrooms. Three-bedroom (3+1) apartments measure 155, 167, 186, 194 or 198 m² with a reception room, a kitchen and three bathrooms; some include a store room and one or two balconies. The project is completed, and apartments are offered for sale and for rent. Services provided to residents include 24-hour electricity, internet, a security gate, sewerage systems, a garden, a supermarket, installed air conditioners, pre-installed kitchens, a children's play area, car parking and a reception.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view | Area listing page (1 page): 2+1 135 m2 for sale $73,000; 198 m2 3-bed rent $500/month; 50 m2 restaurant space rent $500/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/lalav-city-view-114 | Status Completed; developer field 'Lalav View Group', text 'implemented by Lalav Company'; 120m street close to Hawler Nwe; 5 buildings x 24 floors, 3 basement garage floors, commercial ground floor; unit types 104 / 135-145 / 155-198 m2; services list | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/lalav-city-view | Address 'Erbil - New hawler 120m street'; Apartment; feature tags (24 hr electricity, internet, preinstalled ACs, underground car park, kindergarten, supermarket, reception) | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 | Lalav Group, status Completed, payment Cash; stats 5 buildings / 24 floors / 1,795 units; unit-type table 104-198 m2; description (120-meter road, 3 underground parking levels, commercial spaces) | updated 2026-05-02 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view | Area listing page (1 page): 2+1 135 m2 for sale $73,000; 198 m2 3-bed rent $500/month; 50 m2 restaurant space rent $500/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/lalav-city-view-114 | Status Completed; developer field 'Lalav View Group', text 'implemented by Lalav Company'; 120m street close to Hawler Nwe; 5 buildings x 24 floors, 3 basement garage floors, commercial ground floor; unit types 104 / 135-145 / 155-198 m2; services list | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/lalav-city-view | Address 'Erbil - New hawler 120m street'; Apartment; feature tags (24 hr electricity, internet, preinstalled ACs, underground car park, kindergarten, supermarket, reception) | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 | Lalav Group, status Completed, payment Cash; stats 5 buildings / 24 floors / 1,795 units; unit-type table 104-198 m2; description (120-meter road, 3 underground parking levels, commercial spaces) | updated 2026-05-02 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, developer Lalav, residential category (Paya, Miran, Baghy)
    - Location 120m Street near New Hawler (Paya, Baghy, Miran)
    - 5 buildings x 24 floors (Paya, Miran)
    - Completed (Paya, Miran)
    - Unit sizes 104 / 135-145 / 155-198 m2 (Paya, Miran)
    - Three underground parking levels (Paya, Miran)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Total units 1,795 (Miran only)
    - Room layouts per unit type (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - developer: Lalav View Group (developer field) (https://paya-realestate.com/en/projects/lalav-city-view-114); Lalav Company (Paya text) (https://paya-realestate.com/en/projects/lalav-city-view-114); Lalav Group (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3) → Lalav Group adopted; the Paya labels refer to the same company.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Land area
    - Launch and completion dates
    - Coordinates
    - Prices from developer or agency project pages
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Total unit count: Miran's 1,795 is identical to b-arrow's figure for the separate Lalav City project
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "lalav-city-view",

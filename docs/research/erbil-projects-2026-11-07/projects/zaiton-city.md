@@ -1,109 +1,111 @@
 <!-- rendered -->
 # Zaiton City — زەیتوون سیتی — زيتون سيتي
-Project ID: zaiton-city | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: zaiton-city | پلە: 2 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Zaiton City | Low – homele area label; named in Paya Olive City text | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city ; https://paya-realestate.com/en/projects/olive-city-204 |
-| City | Erbil | Medium – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| District / Area | Near 120 m Street (indirect) | Low – Paya says Olive City on 120 m St is next to Zaiton City | https://paya-realestate.com/en/projects/olive-city-204 |
-| Developer | Not verified | Low – No source names one | — |
-| Project Category | Residential (houses) | Low – Based on seven house listings | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Total Land Area | Not verified | Low – not stated by any source found | — |
-| Number of Buildings / Towers | Not verified | Low – not stated by any source found | — |
-| Total Residential Units | Not verified | Low – not stated by any source found | — |
-| Construction Status | Not verified (all seven listings are 'Ready' houses) | Low – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Completion Date | Not verified | Low – not stated by any source found | — |
-| Coordinates | Not verified | Low – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
-| Alternative names | Zaytoon City | Low – Spelling used in the Baghy address of the adjoining Zaytoon Plus City (no own Baghy page) | — |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified (listings include one- and two-floor houses) | Low – Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Not verified (Zaiton Plus City is a separate adjoining project) | Low – Paya and Baghy references | https://paya-realestate.com/en/projects/olive-city-204 |
+| ناوی پڕۆژە | Zaiton City | نزم – homele area label; named in Paya Olive City text | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city ; https://paya-realestate.com/en/projects/olive-city-204 |
+| شار | هەولێر | مامناوەند – homele files the area under Erbil | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| ناوچە / گەڕەک | Near 120 m Street (indirect) | نزم – Paya says Olive City on 120 m St is next to Zaiton City | https://paya-realestate.com/en/projects/olive-city-204 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names one | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses) | نزم – Based on seven house listings | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| دۆخی دروستکردن | نەزانراوە | نزم – Market listings only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | پشتڕاست نەکراوەتەوە | نزم – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
+| ناوە جێگرەوەکان | Zaytoon City | نزم – Spelling used in the Baghy address of the adjoining Zaytoon Plus City (no own Baghy page) | — |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (listings include one- and two-floor houses) | نزم – Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (Zaiton Plus City is a separate adjoining project) | نزم – Paya and Baghy references | https://paya-realestate.com/en/projects/olive-city-204 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | — | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | — | — |
-| Floors per building | Not verified (listings include one- and two-floor houses) | Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Not verified (Zaiton Plus City is a separate adjoining project) | Paya and Baghy references | https://paya-realestate.com/en/projects/olive-city-204 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | — | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە — (listings include one- and two-floor houses) | Listing titles only | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | پشتڕاست نەکراوەتەوە — (Zaiton Plus City is a separate adjoining project) | Paya and Baghy references | https://paya-realestate.com/en/projects/olive-city-204 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | 200, 300 | 200 | 300 | — | Seven 'Ready' house listings: six of 200 m2 (2-4 bed, 1-4 bath; one 'two floor', one 'one floor'), one of 300 m2 (5 bed/2 bath); plot vs built area not stated | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| خانوو | 200, 300 | 200 | 300 | — | Seven 'Ready' house listings: six of 200 m2 (2-4 bed, 1-4 bath; one 'two floor', one 'one floor'), one of 300 m2 (5 bed/2 bath); plot vs built area not stated | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** None
+**بانگەشەی پشتڕاست نەکراوە:** هیچ
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Ready two-floor house 200 m2, 4 bed / 4 bath - listing asking price (negotiable) | 82,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready 'VIP' house 200 m2, 4 bed / 2 bath - listing asking price | 108,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready house 200 m2, 3 bed / 1 bath - listing asking price | 119,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready one-floor house 200 m2, 2 bed / 1 bath - listing asking price (negotiable) | 120,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready house 200 m2, 4 bed / 4 bath - listing asking price | 125,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready house 200 m2, 4 bed / 4 bath - listing asking price (negotiable) | 137,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-| Ready house 300 m2, 5 bed / 2 bath - listing asking price (negotiable) | 125,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+| Ready two-floor house 200 m2, 4 bed / 4 bath - listing asking price (negotiable) | 82,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready 'VIP' house 200 m2, 4 bed / 2 bath - listing asking price | 108,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready house 200 m2, 3 bed / 1 bath - listing asking price | 119,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready one-floor house 200 m2, 2 bed / 1 bath - listing asking price (negotiable) | 120,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready house 200 m2, 4 bed / 4 bath - listing asking price | 125,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready house 200 m2, 4 bed / 4 bath - listing asking price (negotiable) | 137,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+| Ready house 300 m2, 5 bed / 2 bath - listing asking price (negotiable) | 125,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** پشتڕاست نەکراوەتەوە
 
-### Location and surroundings
+### شوێن و دەوروبەر
 Homele lists 'Zaiton City' as an Erbil area; Paya's Olive City page places Olive City on 120 m Street next to Zaiton City.
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 زەیتوون سیتی (Zaiton City) ناوچەیەکی نیشتەجێبوونی خانووە لە شاری هەولێر لە هەرێمی کوردستانی عێراق. لە تەنیشت پڕۆژەی ئۆلیڤ سیتی لەسەر شەقامی ١٢٠ مەتری هەڵکەوتووە. خانووەکانی زەیتوون سیتی خانووی یەک نهۆمی و دوو نهۆمیی ٢٠٠ م² لەخۆدەگرن کە دوو تا چوار ژووری نووستنیان هەیە، هەروەها خانووی ٣٠٠ م² بە پێنج ژووری نووستن. زەیتوون پلەس سیتی، کە ئۆلیڤ سیتی لەخۆدەگرێت، پڕۆژەیەکی جیاوازە و دراوسێی زەیتوون سیتییە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 زيتون سيتي (Zaiton City) منطقة سكنية للمنازل في مدينة أربيل في إقليم كوردستان العراق. تقع بجوار مشروع أوليف سيتي على شارع 120 متر. وتشمل المنازل في زيتون سيتي منازل من طابق واحد ومن طابقين بمساحة 200 م² تضم من غرفتي نوم إلى أربع غرف، ومنازل بمساحة 300 م² تضم خمس غرف نوم. أما زيتون بلس سيتي، الذي يضم أوليف سيتي، فهو مشروع منفصل مجاور لزيتون سيتي.
 
 ### 3. English
 Zaiton City, also spelled Zaytoon City, is a residential area of houses in Erbil, in the Kurdistan Region of Iraq. It lies next to the Olive City project on 120 m Street. Houses in Zaiton City include one-floor and two-floor homes of 200 m² with two to four bedrooms, and houses of 300 m² with five bedrooms. Zaiton Plus City, which includes Olive City, is a separate project adjoining Zaiton City.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city | Area page 'Zaiton City, Erbil' (1 result page): seven Ready houses, 200 m2 (x6) and 300 m2, USD 82,500-137,500 | — | 2026-11-07 | low |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/olive-city-204 | Olive City page: 'Located in Erbil - 120m st, next to zaiton city' (indirect location of Zaiton City) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-city | Area page 'Zaiton City, Erbil' (1 result page): seven Ready houses, 200 m2 (x6) and 300 m2, USD 82,500-137,500 | — | 2026-11-07 | نزم |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/olive-city-204 | Olive City page: 'Located in Erbil - 120m st, next to zaiton city' (indirect location of Zaiton City) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
-   - None
-2. **Information supported by only one source:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
+   - هیچ
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Seven ready houses of 200 and 300 m2 at USD 82,500-137,500 (homele listings)
    - Location next to Olive City on 120 m Street (Paya, indirect)
-3. **Conflicting information:**
-   - None
-4. **Missing information requiring confirmation:**
+3. **زانیاریی ناکۆک:**
+   - هیچ
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Exact location
    - Land area
@@ -111,14 +113,14 @@ First-pass research only (at most one web search for this project).
    - Status and dates
    - Facilities
    - Official house types
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Tier 2: no project page on Paya, Baghy, Haji Salam or Miran; no WebSearch run
    - Whether Zaiton City is a planned project or a neighbourhood name
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "zaiton-city",

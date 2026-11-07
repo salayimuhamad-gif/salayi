@@ -1,132 +1,135 @@
 <!-- rendered -->
 # Cihan City — جیهان سیتی — جيهان ستي
-Project ID: cihan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: cihan-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Cihan City | High – Same name on Paya, Baghy, Haji Salam and Homele | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city ; https://hajisalam.com/en/cihan-city/ |
-| City | Erbil | High – All sources | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| District / Area | 120m Street at the Erbil–Kirkuk Road | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Developer | Cihan Group | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Project Category | Residential (apartment towers) | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Total Land Area | Not verified | Low – No source states it | — |
-| Number of Buildings / Towers | Disputed: 16 (Paya) vs 14 (Baghy) | Low – Two agency pages disagree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Total Residential Units | 1,404 apartments | Low – Baghy only; Paya gives no total | https://baghyshaqlawa.net/en/projects/cihan-city |
-| Construction Status | Completed | Medium – Paya status field + Homele ready listings; Baghy undated text says 8 of 14 finished | https://paya-realestate.com/en/projects/cihan-city-93 ; https://homele.com/properties/for-sale-and-rent/erbil/cihan-city ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.137046, 44.014998 — Google Maps: https://www.google.com/maps?q=36.137046,44.014998 | Medium – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Alternative names | Jihan City; جيهان ستي (Paya); جیهان ستی | Medium – Arabic name from Paya; others are spelling variants | https://paya-realestate.com/en/projects/cihan-city-93 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Disputed: 23 (Paya) vs 16–23 (Baghy) | Low – Agree only on 23-floor maximum | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None reported | Low – — – No phases named | — |
+| ناوی پڕۆژە | Cihan City | بەرز – Same name on Paya, Baghy, Haji Salam and Homele | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city ; https://hajisalam.com/en/cihan-city/ |
+| شار | هەولێر | بەرز – All sources | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| ناوچە / گەڕەک | 120m Street at the Erbil–Kirkuk Road | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| گەشەپێدەر (کۆمپانیا) | Cihan Group | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers) | بەرز – Paya and Baghy agree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| ژمارەی باڵەخانە / تاوەر | ناکۆکی لەسەرە — 16 (Paya) vs 14 (Baghy) | نزم – Two agency pages disagree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| کۆی یەکە نیشتەجێبوونەکان | 1,404 apartments | نزم – Baghy only; Paya gives no total | https://baghyshaqlawa.net/en/projects/cihan-city |
+| دۆخی دروستکردن | تەواوبووە — Completed | مامناوەند – Paya status field + Homele ready listings; Baghy undated text says 8 of 14 finished | https://paya-realestate.com/en/projects/cihan-city-93 ; https://homele.com/properties/for-sale-and-rent/erbil/cihan-city ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.137046, 44.014998 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.137046,44.014998 | مامناوەند – 2 agency map pins agree within 1.5 km (paya-realestate.com, baghyshaqlawa.net); mean position | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| ناوە جێگرەوەکان | Jihan City; جيهان ستي (Paya); جیهان ستی | مامناوەند – Arabic name from Paya; others are spelling variants | https://paya-realestate.com/en/projects/cihan-city-93 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | ناکۆکی لەسەرە — 23 (Paya) vs 16–23 (Baghy) | نزم – Agree only on 23-floor maximum | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None reported | نزم – No phases named | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source states it | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,404 apartments | Baghy only; Paya gives no total | https://baghyshaqlawa.net/en/projects/cihan-city |
-| Villas / houses | Not verified | — | — |
-| Apartments | 1,404 | Baghy: 'The project Consist of 1404 appartments from 14 Buildings in which 8 of them are finished'. Paya gives only 16 buildings x 23 floors x 4 apartments per floor (no total) | https://baghyshaqlawa.net/en/projects/cihan-city |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Disputed: 16 (Paya) vs 14 (Baghy) | Two agency pages disagree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Floors per building | Disputed: 23 (Paya) vs 16–23 (Baghy) | Agree only on 23-floor maximum | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None reported | No phases named | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source states it | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,404 apartments | Baghy only; Paya gives no total | https://baghyshaqlawa.net/en/projects/cihan-city |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 1,404 | Baghy: 'The project Consist of 1404 appartments from 14 Buildings in which 8 of them are finished'. Paya gives only 16 buildings x 23 floors x 4 apartments per floor (no total) | https://baghyshaqlawa.net/en/projects/cihan-city |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | ناکۆکی لەسەرە — 16 (Paya) vs 14 (Baghy) | Two agency pages disagree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | ناکۆکی لەسەرە — 23 (Paya) vs 16–23 (Baghy) | Agree only on 23-floor maximum | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None reported | No phases named | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 167 | 167 | 167 | 2 | 3 bathrooms; 2+1: two bedrooms, living/reception room, kitchen, three bathrooms, balcony (Paya and Baghy agree). | agency_project_page | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| apartment | 205 | 205 | 205 | 3 | 3 bathrooms; 3+1: three bedrooms, living/reception room, kitchen, three bathrooms; Baghy adds two balconies. | agency_project_page | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| apartment | 260 | 260 | 260 | 4 | 3 bathrooms; 4+1: four bedrooms, living/reception room, kitchen, three bathrooms, storage room, two balconies (Paya and Baghy agree). | agency_project_page | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
-| apartment | 38, 130, 168, 204, 268 | 38 | 268 | — | Sizes advertised in Homele listings under the 'Cihan city' area label (38 m2 studio and 130 m2 2-bed for rent; 168/204/268 m2 for sale). 38 and 130 m2 do not match any project-page type. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| شوقە | 167 | 167 | 167 | 2 | 3 حەمام؛ 2+1: two bedrooms, living/reception room, kitchen, three bathrooms, balcony (Paya and Baghy agree). | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| شوقە | 205 | 205 | 205 | 3 | 3 حەمام؛ 3+1: three bedrooms, living/reception room, kitchen, three bathrooms; Baghy adds two balconies. | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| شوقە | 260 | 260 | 260 | 4 | 3 حەمام؛ 4+1: four bedrooms, living/reception room, kitchen, three bathrooms, storage room, two balconies (Paya and Baghy agree). | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
+| شوقە | 38, 130, 168, 204, 268 | 38 | 268 | — | Sizes advertised in Homele listings under the 'Cihan city' area label (38 m2 studio and 130 m2 2-bed for rent; 168/204/268 m2 for sale). 38 and 130 m2 do not match any project-page type. | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** Public gardens (Paya text; Baghy text 'gardens'); Outdoor swimming pool (Paya text; Baghy text 'swimming pools'); Children's play area / playgrounds (Paya text; Baghy text); Football and basketball courts (Baghy text); Sports equipment for the complex (Paya text); Central air-conditioning (Paya text; Baghy tag); Internet (Paya text; Baghy tag); Security gate (Paya text; Baghy tag 'Security'); Reception (Paya text); Pre-installed kitchens and wall cabinets (Paya text; Baghy tags 'Kitchen Appliances', 'Built in Wardrobes'); Supermarket (Paya tag; Baghy tag)
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** Public gardens (Paya text; Baghy text 'gardens'); Outdoor swimming pool (Paya text; Baghy text 'swimming pools'); Children's play area / playgrounds (Paya text; Baghy text); Football and basketball courts (Baghy text); Sports equipment for the complex (Paya text); Central air-conditioning (Paya text; Baghy tag); Internet (Paya text; Baghy tag); Security gate (Paya text; Baghy tag 'Security'); Reception (Paya text); Pre-installed kitchens and wall cabinets (Paya text; Baghy tags 'Kitchen Appliances', 'Built in Wardrobes'); Supermarket (Paya tag; Baghy tag)
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** Cafeteria (Paya tag only); Restaurant (Paya tag only); 24-hour electricity (Baghy tag only); Parking (Baghy tag only); Gym (Baghy tag only); Maintenance (Baghy tag only); Concierge (Baghy tag only); Maid's room (Baghy tag only; not in unit descriptions)
+**بانگەشەی پشتڕاست نەکراوە:** Cafeteria (Paya tag only); Restaurant (Paya tag only); 24-hour electricity (Baghy tag only); Parking (Baghy tag only); Gym (Baghy tag only); Maintenance (Baghy tag only); Concierge (Baghy tag only); Maid's room (Baghy tag only; not in unit descriptions)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Apartment 205 m2, 3 bed / 3 bath - resale asking price (negotiable) | 130,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Apartment 204 m2, 3 bed / 2 bath, furnished - resale asking price | 142,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Apartment 168 m2, 2 bed / 2 bath - resale asking price (negotiable) | 110,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Apartment 268 m2, 4 bed / 3 bath - resale asking price ('quick sale') | 168,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Apartment 205 m2, 3 bed, furnished - monthly rent | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Apartment 130 m2, 2 bed, furnished - monthly rent (other 130 m2 listing: 500) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-| Studio 38 m2 - monthly rent | 200 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Homele market listings: ready apartments for monthly rent (38–205 m², $200–700/month) and for sale (e.g. 168 m² $110,000, 205 m² $130,000, negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/cihan-city)
+| Apartment 205 m2, 3 bed / 3 bath - resale asking price (negotiable) | 130,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Apartment 204 m2, 3 bed / 2 bath, furnished - resale asking price | 142,500 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Apartment 168 m2, 2 bed / 2 bath - resale asking price (negotiable) | 110,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Apartment 268 m2, 4 bed / 3 bath - resale asking price ('quick sale') | 168,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Apartment 205 m2, 3 bed, furnished - monthly rent | 700 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Apartment 130 m2, 2 bed, furnished - monthly rent (other 130 m2 listing: 500) | 600 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+| Studio 38 m2 - monthly rent | 200 | USD | کرێ | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Homele market listings: ready apartments for monthly rent (38–205 m², $200–700/month) and for sale (e.g. 168 m² $110,000, 205 m² $130,000, negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/cihan-city)
 
-### Location and surroundings
-Cihan City lies on Erbil's 120-metre ring street at its junction with the road to Kirkuk (Paya: '120 meters street and on the road to Kirkuk'; Baghy: 'Erbil-Kirkuk Road -120m'). No neighbourhood name, nearby landmarks or distances are given by the sources, and none are estimated here. Map position (medium confidence, from agency map pins): 36.137046, 44.014998. Google Maps: https://www.google.com/maps?q=36.137046,44.014998
+### شوێن و دەوروبەر
+Cihan City lies on Erbil's 120-metre ring street at its junction with the road to Kirkuk (Paya: '120 meters street and on the road to Kirkuk'; Baghy: 'Erbil-Kirkuk Road -120m'). No neighbourhood name, nearby landmarks or distances are given by the sources, and none are estimated here.
+شوێن لەسەر نەخشە: 36.137046, 44.014998 (متمانە: مامناوەند) — https://www.google.com/maps?q=36.137046,44.014998
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 جیهان سیتی پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە شاری هەولێر، کە لەلایەن کۆمپانیای جیهان گرووپەوە جێبەجێ کراوە. پڕۆژەکە لەسەر شەقامی ١٢٠ مەتری و لە ڕێگای هەولێر–کەرکووک هەڵکەوتووە. پڕۆژەکە لە چەند تاوەرێکی بەرزی نیشتەجێبوون پێکدێت کە بەرزییان دەگاتە ٢٣ نهۆم، و لە هەر نهۆمێکدا چەند شوقەیەک هەیە. سێ جۆری سەرەکیی شوقە پێشکەش دەکرێت: شوقەی ١٦٧ م² بە دوو ژووری نووستن، هۆڵی پێشوازی، چێشتخانە، سێ حەمام و بالکۆنێک؛ شوقەی ٢٠٥ م² بە سێ ژووری نووستن، هۆڵی پێشوازی، چێشتخانە و سێ حەمام؛ و شوقەی ٢٦٠ م² بە چوار ژووری نووستن، هۆڵی پێشوازی، چێشتخانە، سێ حەمام، کۆگا و دوو بالکۆن. شوقەکان سیستەمی فێنککەرەوەی ناوەندی، ئینتەرنێت، دۆڵابی دیواری و چێشتخانەی ئامادەکراویان هەیە. خزمەتگوزارییە هاوبەشەکانی ناو کۆمەڵگاکە بریتین لە باخچەی گشتی، مەلەوانگەی کراوە، شوێنی یاریی منداڵان، ئامێری وەرزشی، یاریگا و یاریگای تۆپی پێ و تۆپی سەبەتە. کۆمەڵگاکە دەروازەی پاسەوانی و خزمەتگوزاریی پێشوازیی هەیە. شوقەکانی جیهان سیتی وەک یەکەی ئامادە بۆ فرۆشتن و کرێ لە بازاڕی خانووبەرەی هەولێردا پێشکەش دەکرێن، لەوانە شوقەی بە کەلوپەل.
 
-### 2. Arabic (العربية)
+### 2. العربية
 جيهان ستي مشروع سكني للشقق في مدينة أربيل، نفّذته مجموعة جيهان. يقع المشروع على شارع 120 متر عند طريق أربيل–كركوك. يتكوّن المشروع من أبراج سكنية مرتفعة يصل ارتفاعها إلى 23 طابقاً، وتضم عدة شقق في كل طابق. ويوفّر المشروع ثلاثة أنواع رئيسية من الشقق: شقة بمساحة 167 م² تضم غرفتي نوم وصالة استقبال ومطبخاً وثلاثة حمّامات وشرفة؛ وشقة بمساحة 205 م² تضم ثلاث غرف نوم وصالة استقبال ومطبخاً وثلاثة حمّامات؛ وشقة بمساحة 260 م² تضم أربع غرف نوم وصالة استقبال ومطبخاً وثلاثة حمّامات وغرفة تخزين وشرفتين. وتأتي الشقق مزوّدة بتكييف مركزي وإنترنت وخزائن جدارية ومطابخ مركّبة مسبقاً. وتشمل المرافق المشتركة داخل المجمع حدائق عامة ومسبحاً خارجياً ومنطقة ألعاب للأطفال ومعدات رياضية وساحات لعب وملاعب لكرة القدم وكرة السلة. ويضم المجمع بوابة أمنية وخدمة استقبال. وتُعرض شقق جيهان ستي جاهزةً للبيع والإيجار في سوق العقارات في أربيل، ومنها شقق مفروشة.
 
 ### 3. English
 Cihan City is a residential apartment project in Erbil, built by Cihan Group. It is located on the 120-metre street at the Erbil–Kirkuk road. The project consists of high-rise residential towers of up to 23 floors, with several apartments on each floor. Three main apartment types are offered. The 167 m² apartment has two bedrooms, a living room, a kitchen, three bathrooms and a balcony. The 205 m² apartment has three bedrooms, a living room, a kitchen and three bathrooms. The 260 m² apartment has four bedrooms, a living room, a kitchen, three bathrooms, a storage room and two balconies. Apartments come with central air-conditioning, internet, wall cabinets and pre-installed kitchens. Shared facilities within the compound include public gardens, an outdoor swimming pool, a children's play area, sports equipment, playgrounds, and courts for football and basketball. The complex has a security gate and a reception service. Apartments in Cihan City are offered as ready units for sale and for rent on the Erbil property market, including furnished apartments.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city | Area listing page (1 page): 8 ready listings - sale 168-268 m2 at 110,000-168,000 USD; rent 38-205 m2 at 200-700 USD/month | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/cihan-city-93 | Project page: developer Cihan Group; 120 m street / Kirkuk road; 16 buildings x 23 floors x 4 apts/floor; unit types 167/205/260 m2 with room breakdown; facilities text and tags; status Completed; no prices ($0 - $0) | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/cihan-city | Project page: Erbil-Kirkuk Road 120m; built by Cihan Group; 1,404 apartments in 14 buildings, 8 finished (undated); 16-23 floors, 4-6 apts/floor; unit types 167/205/260 m2; gardens, pools, playgrounds, football and basketball courts; feature tags | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | Relevant project information found | https://hajisalam.com/en/cihan-city/ | Project page exists (title 'CIHAN CITY'); no data fields or listings captured - confirms name only | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city | Area listing page (1 page): 8 ready listings - sale 168-268 m2 at 110,000-168,000 USD; rent 38-205 m2 at 200-700 USD/month | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/cihan-city-93 | Project page: developer Cihan Group; 120 m street / Kirkuk road; 16 buildings x 23 floors x 4 apts/floor; unit types 167/205/260 m2 with room breakdown; facilities text and tags; status Completed; no prices ($0 - $0) | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/cihan-city | Project page: Erbil-Kirkuk Road 120m; built by Cihan Group; 1,404 apartments in 14 buildings, 8 finished (undated); 16-23 floors, 4-6 apts/floor; unit types 167/205/260 m2; gardens, pools, playgrounds, football and basketball courts; feature tags | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://hajisalam.com/en/cihan-city/ | Project page exists (title 'CIHAN CITY'); no data fields or listings captured - confirms name only | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil location on 120m Street / Kirkuk Road, developer Cihan Group (Paya + Baghy)
    - Unit types 167 m2 (2 bed), 205 m2 (3 bed), 260 m2 (4 bed), each with 3 bathrooms (Paya + Baghy)
    - Gardens, swimming pool, playgrounds, central A/C, internet (Paya + Baghy)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - 1,404 apartments (Baghy)
    - Football and basketball courts (Baghy)
    - Reception, security gate, wall cabinets (Paya text)
    - Market sizes 38 m2 and 130 m2 (Homele listings only)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - number_of_buildings: 16 (https://paya-realestate.com/en/projects/cihan-city-93); 14 (https://baghyshaqlawa.net/en/projects/cihan-city) → Disputed; field left null.
    - floors_per_building: 23 (every building) (https://paya-realestate.com/en/projects/cihan-city-93); 16 to 23 (https://baghyshaqlawa.net/en/projects/cihan-city) → Disputed; both agree on a maximum of 23 floors.
    - apartments per floor: 4 (https://paya-realestate.com/en/projects/cihan-city-93); 4 to 6 (https://baghyshaqlawa.net/en/projects/cihan-city) → Disputed.
    - construction_status: Completed (https://paya-realestate.com/en/projects/cihan-city-93); 8 of 14 buildings finished (undated text) (https://baghyshaqlawa.net/en/projects/cihan-city) → completed adopted: Paya's status field plus Homele ready-unit listings; Baghy's undated text treated as potentially outdated.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Total land area
    - Launch and completion dates
    - Coordinates
    - Number of buildings (disputed)
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Baghy text '8 of 14 buildings finished' is undated and likely predates completion
    - Homele asking prices are a 2026-11-07 snapshot
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Is the true building count 14 or 16, and do some towers have fewer than 23 floors?
    - Do 38 m2 and 130 m2 listings belong to Cihan City or to nearby buildings using the area label?
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "cihan-city",

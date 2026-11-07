@@ -1,122 +1,125 @@
 <!-- rendered -->
 # Mirage City — میراج سیتی — ميراج ستي
-Project ID: mirage-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: mirage-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Mirage City | High – Paya and homele | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| City | Erbil | High – Paya and homele | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| District / Area | Northeast Erbil, near the 150m Street | Medium – Paya description only | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Developer | Not verified | Low – Paya developer field repeats the project name; one web search found nothing | — |
-| Project Category | Residential (houses and villas) | High – Paya description; homele house listings | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| Total Land Area | 145,728.522 | Medium – Paya description (green area 44,662 m2 stated as 30% of it, consistent) | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Number of Buildings / Towers | 271 | Medium – 271 houses and villas (Paya) | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Total Residential Units | 271 | Medium – Paya description | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Construction Status | Under construction | Low – Paya status blank; all homele listings are 'Off Plan' | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| Completion Date | Not verified | Low – No source states it | — |
-| Coordinates | 36.26465, 43.99396 — Google Maps: https://www.google.com/maps?q=36.26465,43.99396 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Alternative names | ميراج ستي; Mirag City | Medium – Paya Arabic label; homele listing spelling | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – Not stated | — |
-| Launch Date | Not verified | Low – No source states it | — |
-| Development Phases | None identified | Low – — – No phases mentioned | — |
+| ناوی پڕۆژە | Mirage City | بەرز – Paya and homele | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| شار | هەولێر | بەرز – Paya and homele | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| ناوچە / گەڕەک | Northeast Erbil, near the 150m Street | مامناوەند – Paya description only | https://paya-realestate.com/en/projects/mirage-city-296 |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – Paya developer field repeats the project name; one web search found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses and villas) | بەرز – Paya description; homele house listings | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| کۆی ڕووبەری زەوی | 145,728.522 | مامناوەند – Paya description (green area 44,662 m2 stated as 30% of it, consistent) | https://paya-realestate.com/en/projects/mirage-city-296 |
+| ژمارەی باڵەخانە / تاوەر | 271 | مامناوەند – 271 houses and villas (Paya) | https://paya-realestate.com/en/projects/mirage-city-296 |
+| کۆی یەکە نیشتەجێبوونەکان | 271 | مامناوەند – Paya description | https://paya-realestate.com/en/projects/mirage-city-296 |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | نزم – Paya status blank; all homele listings are 'Off Plan' | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.26465, 43.99396 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.26465,43.99396 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/mirage-city-296 |
+| ناوە جێگرەوەکان | ميراج ستي; Mirag City | مامناوەند – Paya Arabic label; homele listing spelling | https://paya-realestate.com/en/projects/mirage-city-296 ; https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – Not stated | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source states it | — |
+| قۆناغەکانی پڕۆژە | None identified | نزم – No phases mentioned | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 145,728.522 | Paya description (green area 44,662 m2 stated as 30% of it, consistent) | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Total project land area (dunams) | 58.3 | converted from 145,729 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 271 | Paya description | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Villas / houses | 271 | Paya: 'It consists of a total of 271 houses and villas of various sizes (200, 240, and 300 square meters)' | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 271 | 271 houses and villas (Paya) | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | 44,662 | Paya: green area of 44,662 square meters, covering 30% of the total area (total 145,728.522 m²) | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Development phases | None identified | No phases mentioned | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 145,728.522 | Paya description (green area 44,662 m2 stated as 30% of it, consistent) | https://paya-realestate.com/en/projects/mirage-city-296 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 58.3 | گۆڕدراوە لە 145,729 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/mirage-city-296 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 271 | Paya description | https://paya-realestate.com/en/projects/mirage-city-296 |
+| ڤێلا / خانوو | 271 | Paya: 'It consists of a total of 271 houses and villas of various sizes (200, 240, and 300 square meters)' | https://paya-realestate.com/en/projects/mirage-city-296 |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 271 | 271 houses and villas (Paya) | https://paya-realestate.com/en/projects/mirage-city-296 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | Not stated | — |
+| ڕووبەری سەوزایی، پارک و باخچە | 44,662 | Paya: green area of 44,662 square meters, covering 30% of the total area (total 145,728.522 m²) | https://paya-realestate.com/en/projects/mirage-city-296 |
+| قۆناغەکانی پڕۆژە | None identified | No phases mentioned | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| villa | 200, 240, 300 | 200 | 300 | — | 271 houses and villas of various sizes, neo-classical design (Paya description) | agency_project_page | https://paya-realestate.com/en/projects/mirage-city-296 |
-| house | 200, 250 | 200 | 250 | 4 | 3 bathrooms; Off-plan houses advertised on homele; 250 m2 is not among Paya's stated sizes | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| ڤێلا | 200, 240, 300 | 200 | 300 | — | 271 houses and villas of various sizes, neo-classical design (Paya description) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/mirage-city-296 |
+| خانوو | 200, 250 | 200 | 250 | 4 | 3 حەمام؛ Off-plan houses advertised on homele; 250 m2 is not among Paya's stated sizes | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Green area of 44,662 m2, 30% of the site (Paya description)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Green area of 44,662 m2, 30% of the site (Paya description)
 
-**Unverified claims:** Sewers (Paya tag); Car parking (Paya tag); Women's gym (Paya tag); Currency exchange (Paya tag); Electrical generator (Paya tag); Reception (Paya tag); Mosque (Paya tag); Gym (Paya tag); Security (Paya tag); AC (Paya tag); Supermarket (Paya tag); Public garden (Paya tag)
+**بانگەشەی پشتڕاست نەکراوە:** Sewers (Paya tag); Car parking (Paya tag); Women's gym (Paya tag); Currency exchange (Paya tag); Electrical generator (Paya tag); Reception (Paya tag); Mosque (Paya tag); Gym (Paya tag); Security (Paya tag); AC (Paya tag); Supermarket (Paya tag); Public garden (Paya tag)
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Off-plan house 200 m2, 4 bed / 3 bath - homele listing (negotiable) | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| Off-plan house 200 m2 opposite garden, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 175,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-| Off-plan house 250 m2, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele market listings: off-plan houses for sale (one negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/mirage-city)
+| Off-plan house 200 m2, 4 bed / 3 bath - homele listing (negotiable) | 180,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| Off-plan house 200 m2 opposite garden, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 175,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+| Off-plan house 250 m2, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 180,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele market listings: off-plan houses for sale (one negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/mirage-city)
 
-### Location and surroundings
-Mirage City lies in the northeast of Erbil city near the 150m Street ring road (Paya). No street address or landmark are published. Map position (low confidence, from agency map pins): 36.26465, 43.99396. Google Maps: https://www.google.com/maps?q=36.26465,43.99396
+### شوێن و دەوروبەر
+Mirage City lies in the northeast of Erbil city near the 150m Street ring road (Paya). No street address or landmark are published.
+شوێن لەسەر نەخشە: 36.26465, 43.99396 (متمانە: نزم) — https://www.google.com/maps?q=36.26465,43.99396
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 میراج سیتی (Mirage City) پڕۆژەیەکی نیشتەجێبوونی خانوو و ڤێلایە لە باکووری ڕۆژهەڵاتی شاری هەولێر، نزیک شەقامی بازنەیی ١٥٠ مەتری. کۆی ڕووبەری پڕۆژەکە نزیکەی ١٤٥٬٧٠٠ م²یە و لە ٢٧١ خانوو و ڤێلا بە دیزاینی نیۆکلاسیک پێکدێت، بە ڕووبەری ٢٠٠، ٢٤٠ و ٣٠٠ م². خانووەکانی ٢٠٠ م² چوار ژووری نووستن و سێ حەمامیان هەیە. پلان دانراوە کە ناوچەیەکی سەوز بە ڕووبەری ٤٤٬٦٦٢ م²، واتە نزیکەی ٣٠ لەسەدی ڕووبەری شوێنەکە، لە پڕۆژەکەدا هەبێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 ميراج ستي (Mirage City) مشروع سكني للمنازل والفلل في شمال شرق مدينة أربيل، قرب الطريق الدائري شارع 150 متر. تبلغ المساحة الإجمالية للمشروع نحو 145,700 م²، ويتكون من 271 منزلاً وفيلا بتصميم كلاسيكي حديث، بمساحات 200 و240 و300 م². وتضم المنازل بمساحة 200 م² أربع غرف نوم وثلاثة حمامات. ومن المخطط أن يضم المشروع مساحة خضراء تبلغ 44,662 م²، أي نحو 30 بالمئة من مساحة الموقع.
 
 ### 3. English
 Mirage City is a residential project of houses and villas in the northeast of Erbil, near the 150m Street ring road. The project covers a total area of about 145,700 m² and consists of 271 houses and villas in a neo-classical design, with sizes of 200, 240 and 300 m². The 200 m² houses have four bedrooms and three bathrooms. A green area of 44,662 m², about 30 percent of the site, is planned within the project.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city | Area listing page (1 page): three off-plan houses 200-250 m2, 4 bed / 3 bath, USD 175,000-180,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/mirage-city-296 | Project page: northeast Erbil near 150m Street; total area 145,728.522 m2; green area 44,662 m2 (30%); 271 houses and villas of 200/240/300 m2, neo-classical; amenity tags; status and price not populated; developer field repeats project name | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city | Area listing page (1 page): three off-plan houses 200-250 m2, 4 bed / 3 bath, USD 175,000-180,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/mirage-city-296 | Project page: northeast Erbil near 150m Street; total area 145,728.522 m2; green area 44,662 m2 (30%); 271 houses and villas of 200/240/300 m2, neo-classical; amenity tags; status and price not populated; developer field repeats project name | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Mirage City" Erbil villas”; “"ميراج ستي" أربيل” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Mirage City" Erbil villas»؛ «"ميراج ستي" أربيل» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, Erbil, house/villa project (Paya; homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Total area 145,728.522 m2, green area 44,662 m2, 271 units, sizes 200/240/300 m2, location near 150m Street (Paya)
    - Off-plan status and prices (homele listings)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - 250 m2 house advertised on homele vs Paya sizes 200/240/300 m2
    - unit sizes: 200, 240, 300 m2 (https://paya-realestate.com/en/projects/mirage-city-296); 250 m2 house listed (https://homele.com/properties/for-sale-and-rent/erbil/mirage-city) → Paya sizes adopted as project schedule; 250 m2 recorded as an advertised size only.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Explicit construction status
    - Floors
    - Launch and completion dates
    - Developer prices
    - Coordinates
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer identity
    - Construction status (inferred from off-plan listings only)
-   - Second verification pass (2026-11-07): no new evidence. All 'Mirage City' results refer to a compound in New Cairo, Egypt; no independent Erbil source for developer, status or dates was found.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. All 'Mirage City' results refer to a compound in New Cairo, Egypt; no independent Erbil source for developer, status or dates was found.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "mirage-city",

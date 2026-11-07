@@ -1,109 +1,112 @@
 <!-- rendered -->
 # Vana Towers — ڤانە تاوەرس — —
-Project ID: vana-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: vana-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Vana Towers | Low – — – High — identical on Paya, Miran Estate and Homele | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle ; https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
-| City | Erbil | Low – — – High — all three sources | — |
-| District / Area | On the 120 m Road near Rashkin Road (Paya). Miran listings tag the area as "Golden Zone"; Miran "Available Views" mention 100M Street views | Low – — – Medium — location statement is single-source (Paya); "Golden Zone" is an agency area tag | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| Developer | Redan Group Company | Low – — – Medium — stated only by Miran Estate; Paya gives no developer (its "developer" field reads "10 Units Vana Towers", a page artefact) | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| Project Category | Residential (apartment towers) with one commercial floor per tower | Low – — – High — Paya text; Miran lists "Shopping Center" among features | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Total Land Area | 15,000 m² total project area, of which 6,000 m² (40%) is building footprint and 60% greenery/services | Low – — – Medium — single source (Paya agency project page) | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Number of Buildings / Towers | 6 towers | Low – — – High — Paya ("six towers") and Miran ("Buildings 6") agree | — |
-| Total Residential Units | Disputed: 600 (Paya) vs 546 (Miran) | Low – — – Low — two agency pages conflict; no developer figure | — |
-| Construction Status | Under construction (Paya "Constructing"; Miran "Under Construction"; Homele listings "Off Plan") | Low – — – High — three sources agree, accessed 2026-11-07 | — |
-| Completion Date | Expected 31/12/2026 (date shown on Miran project header) | Low – — – Low — single source, agency page; not confirmed by developer | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| Coordinates | 36.209912, 43.959933 — Google Maps: https://www.google.com/maps?q=36.209912,43.959933 | Low – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Alternative names | ڤانە تاوەرس (Paya area label); spelling variants "Vane Towers" / "Van Towers" in Paya text | Low – — – Medium — Kurdish label from one agency page; variants are typos in the same text | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Disputed: Paya = 15 residential floors + 1 commercial floor + 2 garage floors (18 levels); Miran = "Floors 14" | Low – — – Low — conflict; Miran figure may count residential floors only | — |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | None reported (single phase) | Low – — – Medium — no source mentions phases | — |
+| ناوی پڕۆژە | Vana Towers | نزم – High — identical on Paya, Miran Estate and Homele | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle ; https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
+| شار | هەولێر | نزم – High — all three sources | — |
+| ناوچە / گەڕەک | On the 120 m Road near Rashkin Road (Paya). Miran listings tag the area as "Golden Zone"; Miran "Available Views" mention 100M Street views | نزم – Medium — location statement is single-source (Paya); "Golden Zone" is an agency area tag | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| گەشەپێدەر (کۆمپانیا) | Redan Group Company | نزم – Medium — stated only by Miran Estate; Paya gives no developer (its "developer" field reads "10 Units Vana Towers", a page artefact) | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (apartment towers) with one commercial floor per tower | نزم – High — Paya text; Miran lists "Shopping Center" among features | https://paya-realestate.com/en/projects/vana-towers-301 |
+| کۆی ڕووبەری زەوی | 15,000 m² total project area, of which 6,000 m² (40%) is building footprint and 60% greenery/services | نزم – Medium — single source (Paya agency project page) | https://paya-realestate.com/en/projects/vana-towers-301 |
+| ژمارەی باڵەخانە / تاوەر | 6 towers | نزم – High — Paya ("six towers") and Miran ("Buildings 6") agree | — |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 600 (Paya) vs 546 (Miran) | نزم – Low — two agency pages conflict; no developer figure | — |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction (Paya "Constructing"; Miran "Under Construction"; Homele listings "Off Plan") | نزم – High — three sources agree, accessed 2026-11-07 | — |
+| بەرواری تەواوبوون | Expected 31/12/2026 (date shown on Miran project header) | نزم – Low — single source, agency page; not confirmed by developer | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.209912, 43.959933 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.209912,43.959933 | نزم – single agency map pin (paya-realestate.com); not independently confirmed | https://paya-realestate.com/en/projects/vana-towers-301 |
+| ناوە جێگرەوەکان | ڤانە تاوەرس (Paya area label); spelling variants "Vane Towers" / "Van Towers" in Paya text | نزم – Medium — Kurdish label from one agency page; variants are typos in the same text | https://paya-realestate.com/en/projects/vana-towers-301 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | ناکۆکی لەسەرە — Paya = 15 residential floors + 1 commercial floor + 2 garage floors (18 levels); Miran = "Floors 14" | نزم – Low — conflict; Miran figure may count residential floors only | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | None reported (single phase) | نزم – Medium — no source mentions phases | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 15,000 m² total project area, of which 6,000 m² (40%) is building footprint and 60% greenery/services | Medium — single source (Paya agency project page) | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Total project land area (dunams) | 6.0 | converted from 15,000 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Disputed: 600 (Paya) vs 546 (Miran) | Low — two agency pages conflict; no developer figure | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | 600 residential units (Paya) vs Units 546 (Miran project statistics) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 6 towers | High — Paya ("six towers") and Miran ("Buildings 6") agree | — |
-| Floors per building | Disputed: Paya = 15 residential floors + 1 commercial floor + 2 garage floors (18 levels); Miran = "Floors 14" | Low — conflict; Miran figure may count residential floors only | — |
-| Green space, parks, landscaped area | Total project area 15,000 m², of which 6,000 m² (40%) for the towers and 60% of the project consists of greenery and other services (Paya) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Development phases | None reported (single phase) | Medium — no source mentions phases | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 15,000 m² total project area, of which 6,000 m² (40%) is building footprint and 60% greenery/services | Medium — single source (Paya agency project page) | https://paya-realestate.com/en/projects/vana-towers-301 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 6.0 | گۆڕدراوە لە 15,000 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://paya-realestate.com/en/projects/vana-towers-301 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | ناکۆکی لەسەرە — 600 (Paya) vs 546 (Miran) | Low — two agency pages conflict; no developer figure | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 600 residential units (Paya) vs Units 546 (Miran project statistics) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 6 towers | High — Paya ("six towers") and Miran ("Buildings 6") agree | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | ناکۆکی لەسەرە — Paya = 15 residential floors + 1 commercial floor + 2 garage floors (18 levels); Miran = "Floors 14" | Low — conflict; Miran figure may count residential floors only | — |
+| ڕووبەری سەوزایی، پارک و باخچە | Total project area 15,000 m², of which 6,000 m² (40%) for the towers and 60% of the project consists of greenery and other services (Paya) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
+| قۆناغەکانی پڕۆژە | None reported (single phase) | Medium — no source mentions phases | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 104 | 104 | 104 | 1 | 2 bathrooms; 1+1; Paya lists 2 baths, Homele listings show 1 bath; includes kitchen cupboards, dressing room, 5 electric kitchen appliances (Paya) | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| apartment | 167, 169, 180, 207 | 167 | 207 | 2 | 2+1; 167/169 m² with 2 baths and 180 m² with 3 baths per Paya; 207 m² listed by Miran only | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| apartment | 212 | 212 | 212 | 3 | 3 bathrooms; 3+1 | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| apartment | 227 | 227 | 227 | 4 | 3 bathrooms; 4+1 | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| شوقە | 104 | 104 | 104 | 1 | 2 حەمام؛ 1+1; Paya lists 2 baths, Homele listings show 1 bath; includes kitchen cupboards, dressing room, 5 electric kitchen appliances (Paya) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| شوقە | 167, 169, 180, 207 | 167 | 207 | 2 | 2+1; 167/169 m² with 2 baths and 180 m² with 3 baths per Paya; 207 m² listed by Miran only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| شوقە | 212 | 212 | 212 | 3 | 3 حەمام؛ 3+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| شوقە | 227 | 227 | 227 | 4 | 3 حەمام؛ 4+1 | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
 
-**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 10 apartment units, 104-227 m² (Paya) (https://paya-realestate.com/en/projects/vana-towers-301)
+**نەخشە و پلانی نهۆمەکان:** Blueprints listed ('View Blueprint') for 10 apartment units, 104-227 m² (Paya) (https://paya-realestate.com/en/projects/vana-towers-301)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** car parking; gym; kids play area / playground; security (24/7); supermarket / shopping centre; public garden; women's gym; women's salon; exchange office; reception; laundry; air conditioning; restaurant; ATM; sewers; swimming pool; elevators; central air conditioning; fire-safety system; fibre internet; building management system; water treatment system; waste management; backup power generator; maintenance workshop; CCTV surveillance; commercial floor in each tower
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** car parking; gym; kids play area / playground; security (24/7); supermarket / shopping centre; public garden; women's gym; women's salon; exchange office; reception; laundry; air conditioning; restaurant; ATM; sewers; swimming pool; elevators; central air conditioning; fire-safety system; fibre internet; building management system; water treatment system; waste management; backup power generator; maintenance workshop; CCTV surveillance; commercial floor in each tower
 
-**Unverified claims:** 60% of project area as greenery and services; 100M Street / downtown / park views
+**بانگەشەی پشتڕاست نەکراوە:** 60% of project area as greenery and services; 100M Street / downtown / park views
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| 1+1 apartment 104 m² (agency project-page price range) | 78,520 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| 2+1 apartment 167 m² | 125,250 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| 2+1 apartment 169 m² | 128,440 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| 2+1 apartment 180 m² (range 135,000–136,800) | 136,800 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| 3+1 apartment 212 m² (range 156,880–159,000) | 156,880 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| 4+1 apartment 227 m² (range 167,980–170,250) | 167,980 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
-| Price per m² (agency page, off-plan) | 755 | USD | developer | updated 2026-08-22; accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| Homele off-plan listing: 180 m² 2-bed | 144,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
-| Homele off-plan listing: 167 m² 2-bed (129,425–137,775) | 129,425 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
-| Miran listing: 4+1 227 m² | 167,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-| Payment plan: 25% with contract, 20% tower completion, 15% apartment completion, 15% key receipt, remainder over 36 months (as published by Miran) | — | — | developer | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Cash, Installment, Payment Plans (Miran); plan steps listed: With Contract 25%, Tower Completion 20%, Apartment Completion 15%, Key Recievement 15%, Down Payment 25% / 36 Months; price per meter $755. homele listings tagged 'Installment' (https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle)
+| 1+1 apartment 104 m² (agency project-page price range) | 78,520 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| 2+1 apartment 167 m² | 125,250 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| 2+1 apartment 169 m² | 128,440 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| 2+1 apartment 180 m² (range 135,000–136,800) | 136,800 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| 3+1 apartment 212 m² (range 156,880–159,000) | 156,880 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| 4+1 apartment 227 m² (range 167,980–170,250) | 167,980 | USD | نرخی گەشەپێدەر | accessed 2026-11-07 | https://paya-realestate.com/en/projects/vana-towers-301 |
+| Price per m² (agency page, off-plan) | 755 | USD | نرخی گەشەپێدەر | updated 2026-08-22; accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| Homele off-plan listing: 180 m² 2-bed | 144,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
+| Homele off-plan listing: 167 m² 2-bed (129,425–137,775) | 129,425 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers |
+| Miran listing: 4+1 227 m² | 167,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+| Payment plan: 25% with contract, 20% tower completion, 15% apartment completion, 15% key receipt, remainder over 36 months (as published by Miran) | — | — | نرخی گەشەپێدەر | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Cash, Installment, Payment Plans (Miran); plan steps listed: With Contract 25%, Tower Completion 20%, Apartment Completion 15%, Key Recievement 15%, Down Payment 25% / 36 Months; price per meter $755. homele listings tagged 'Installment' (https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle)
 
-### Location and surroundings
-Vana Towers is in Erbil city on the 120 Metre (ring) Road, near Rashkin Road, according to the Paya project page. Miran Estate listings tag the location as "Golden Zone" and its view tags mention 100 Metre Street, downtown and park views, which is consistent with a site in the belt between the 100 m and 120 m roads, but no source gives a precise address or landmark distances. No nearby services are documented beyond the on-site facilities listed in Part C. Map position (low confidence, from agency map pins): 36.209912, 43.959933. Google Maps: https://www.google.com/maps?q=36.209912,43.959933
+### شوێن و دەوروبەر
+Vana Towers is in Erbil city on the 120 Metre (ring) Road, near Rashkin Road, according to the Paya project page. Miran Estate listings tag the location as "Golden Zone" and its view tags mention 100 Metre Street, downtown and park views, which is consistent with a site in the belt between the 100 m and 120 m roads, but no source gives a precise address or landmark distances. No nearby services are documented beyond the on-site facilities listed in Part C.
+شوێن لەسەر نەخشە: 36.209912, 43.959933 (متمانە: نزم) — https://www.google.com/maps?q=36.209912,43.959933
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڤانە تاوەرس (Vana Towers) پڕۆژەیەکی نیشتەجێبوونی تاوەری بەرزە لە هەولێر، لەسەر ڕێگای 120 مەتری و نزیک ڕێگای ڕەشکین. کۆمپانیای ڕێدان گرووپ پڕۆژەکە جێبەجێ دەکات و ئێستا لە قۆناغی بنیاتناندایە، و بڕیارە تا کۆتایی ساڵی 2026 تەواو بکرێت. ڕووبەری زەویی پڕۆژەکە 15,000 م²یە و لە شەش تاوەر پێکدێت. شوقەکان چوار جۆرن: شوقەی یەک ژووری نووستن بە ڕووبەری 104 م²، شوقەی دوو ژووری نووستن بە ڕووبەری 167، 169 و 180 م²، شوقەی سێ ژووری نووستن بە ڕووبەری 212 م² و شوقەی چوار ژووری نووستن بە ڕووبەری 227 م². شوقەکان لەگەڵ دۆڵابی چێشتخانە، ژووری جلوبەرگ و پێنج ئامێری کارەبایی چێشتخانە ڕادەست دەکرێن. خزمەتگوزارییە پلانبۆدانراوەکان بریتین لە نهۆمێکی بازرگانی لە هەر تاوەرێک، مەسعەد، فێنککەرەوەی ناوەندی، پارکینگ، هۆڵی وەرزش و هۆڵی وەرزشی ئافرەتان، یاریگای منداڵان، مەلەوانگە، سوپەرمارکێت، ڕێستۆرانت، باخچەی گشتی، پاسەوانی 24 کاتژمێری لەگەڵ کامێرای چاودێری، سیستەمی سەلامەتی لە ئاگر، ئینتەرنێتی فایبەر، مۆلیدەی یەدەگ، سیستەمی پاڵاوتنی ئاو و سیستەمی بەڕێوەبردنی باڵەخانە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 فانا تاورز (Vana Towers) مشروع سكني من الأبراج العالية في أربيل، يقع على طريق 120 متر بالقرب من طريق رشكين. تتولى شركة ريدان غروب تطوير المشروع، وهو قيد الإنشاء، ومن المقرر إنجازه بحلول نهاية عام 2026. تبلغ مساحة أرض المشروع 15,000 م²، ويتكوّن من ستة أبراج. تتوزع الشقق على أربعة أنواع: شقق بغرفة نوم واحدة بمساحة 104 م²، وشقق بغرفتي نوم بمساحات 167 و169 و180 م²، وشقق بثلاث غرف نوم بمساحة 212 م²، وشقق بأربع غرف نوم بمساحة 227 م². وتُسلَّم الشقق مع خزائن مطبخ وغرفة ملابس وخمسة أجهزة مطبخ كهربائية. وتشمل المرافق المخطط لها طابقاً تجارياً في كل برج، ومصاعد، وتكييفاً مركزياً، ومواقف للسيارات، وصالة رياضية وصالة رياضية للنساء، ومنطقة ألعاب للأطفال، ومسبحاً، وسوبرماركت، ومطعماً، وحديقة عامة، وحراسة على مدار الساعة مع كاميرات مراقبة، ونظاماً للسلامة من الحرائق، وإنترنت بالألياف الضوئية، ومولداً احتياطياً للكهرباء، ونظاماً لمعالجة المياه، ونظاماً لإدارة المبنى.
 
 ### 3. English
 Vana Towers is a residential high-rise project in Erbil, located on the 120 Metre Road near Rashkin Road. The project is being developed by Redan Group Company, is under construction and is scheduled for completion by the end of 2026. It occupies a site of 15,000 m² and consists of six towers. Apartments come in four types: one-bedroom units of 104 m², two-bedroom units of 167, 169 and 180 m², three-bedroom units of 212 m² and four-bedroom units of 227 m². Apartments are delivered with kitchen cabinets, a dressing room and five electric kitchen appliances. Planned facilities include a commercial floor in each tower, elevators, central air conditioning, car parking, a gym and a women's gym, a children's play area, a swimming pool, a supermarket, a restaurant, a public garden, 24-hour security with CCTV, a fire-safety system, fibre internet, a backup power generator, a water treatment system and a building management system.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers | 9 pages of off-plan installment listings; sizes 104–227 m²; prices $78,520–$167,980 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | Relevant project information found | https://paya-realestate.com/en/projects/vana-towers-301 | Location, 15,000 m² land / 6,000 m² footprint, 6 towers, 15 residential + 1 commercial + 2 garage floors, 600 units, unit sizes/beds/baths/prices, amenities, fit-out | — | 2026-11-07 | medium |
-| baghyshaqlawa.net | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| hajisalam.com | mandatory | Relevant project information found | — | No project page / no relevant listing found | — | 2026-11-07 | low |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle | Developer Redan Group Company; 6 buildings / 14 floors / 546 units; unit types incl. 207 m²; $755/m²; payment plan; expected completion 31/12/2026; features; listings | 2026-08-22 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/vana-towers | 9 pages of off-plan installment listings; sizes 104–227 m²; prices $78,520–$167,980 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://paya-realestate.com/en/projects/vana-towers-301 | Location, 15,000 m² land / 6,000 m² footprint, 6 towers, 15 residential + 1 commercial + 2 garage floors, 600 units, unit sizes/beds/baths/prices, amenities, fit-out | — | 2026-11-07 | مامناوەند |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | — | No project page / no relevant listing found | — | 2026-11-07 | نزم |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle | Developer Redan Group Company; 6 buildings / 14 floors / 546 units; unit types incl. 207 m²; $755/m²; payment plan; expected completion 31/12/2026; features; listings | 2026-08-22 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - project name
    - city (Erbil)
    - under-construction status
@@ -111,7 +114,7 @@ First-pass research only (at most one web search for this project).
    - unit sizes 104/167/169/180/212/227 m² with 1/2/2/2/3/4 bedrooms
    - cash and installment sales
    - parking, gym, play area, security, supermarket and garden among planned facilities
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - developer Redan Group Company (Miran)
    - 15,000 m² land / 6,000 m² footprint (Paya)
    - location on 120 m Road near Rashkin Road (Paya)
@@ -119,7 +122,7 @@ First-pass research only (at most one web search for this project).
    - $755/m² and the payment schedule (Miran)
    - expected completion 31/12/2026 (Miran)
    - fit-out items (Paya)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - total units 600 (Paya) vs 546 (Miran)
    - floors 15 residential + 1 commercial + 2 garage (Paya) vs 14 (Miran)
    - bathrooms for 104 m² unit: 2 (Paya) vs 1 (Homele listings). Resolution: left as Disputed
@@ -127,21 +130,21 @@ First-pass research only (at most one web search for this project).
    - total_units: 600 (https://paya-realestate.com/en/projects/vana-towers-301); 546 (https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle) → Disputed — two agency pages, no developer figure; left null
    - floors_per_building: 15 residential + 1 commercial + 2 garage floors (https://paya-realestate.com/en/projects/vana-towers-301); 14 (https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle) → Disputed — Miran may count residential floors only; left null
    - bathrooms (104 m² unit): 2 (https://paya-realestate.com/en/projects/vana-towers-301); 1 (https://homele.com/properties/for-sale-and-rent/erbil/vana-towers) → Agency project page (2) preferred over listing data; noted
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - official developer confirmation and website
    - launch date
    - exact address and coordinates
    - Arabic official name
    - whether the 207 m² type exists
    - current sales progress
-5. **Potentially outdated information:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
    - Miran's "31/12/2026" completion date and "Paid 45% / Remaining 55%" progress (page updated Aug 2026)
    - listing prices change frequently
-6. **Important unresolved questions:**
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Is the project on the 120 m Road or between the 100 m and 120 m roads ("Golden Zone", "100M Street views")? Which unit count (546 or 600) is correct? Does Redan Group Company have an official project page?
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "vana-towers",

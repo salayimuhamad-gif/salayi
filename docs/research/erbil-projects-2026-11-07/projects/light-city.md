@@ -1,108 +1,111 @@
 <!-- rendered -->
 # Light City — لایت ستی — لايت سيتي
-Project ID: light-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: light-city | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Light City | Medium – Baghy and homele | https://baghyshaqlawa.net/en/projects/light-city ; https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-| City | Erbil | High – Baghy, homele | https://baghyshaqlawa.net/en/projects/light-city |
-| District / Area | Bahrka Road, behind Gulan City | Medium – Baghy only | https://baghyshaqlawa.net/en/projects/light-city |
-| Developer | Not verified | Low – No source names a developer; one WebSearch found nothing | — |
-| Project Category | Residential (houses / villas) | Medium – Baghy 'House'; homele villa listings | https://baghyshaqlawa.net/en/projects/light-city ; https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-| Total Land Area | Not verified | Low – No source | — |
-| Number of Buildings / Towers | Not verified | Low – No source | — |
-| Total Residential Units | Not verified | Low – No source | — |
-| Construction Status | Unknown (listings tagged both Ready and Off Plan) | Low – Only market-listing tags | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-| Completion Date | Not verified | Low – No source | — |
-| Coordinates | 36.314025, 44.033777 — Google Maps: https://www.google.com/maps?q=36.314025,44.033777 | Low – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/light-city |
-| Alternative names | لایت ستی | Medium – Kurdish name in homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | Not verified | Low – No source | — |
-| Launch Date | Not verified | Low – No source | — |
-| Development Phases | None stated | Low – — – No source | — |
+| ناوی پڕۆژە | Light City | مامناوەند – Baghy and homele | https://baghyshaqlawa.net/en/projects/light-city ; https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| شار | هەولێر | بەرز – Baghy, homele | https://baghyshaqlawa.net/en/projects/light-city |
+| ناوچە / گەڕەک | Bahrka Road, behind Gulan City | مامناوەند – Baghy only | https://baghyshaqlawa.net/en/projects/light-city |
+| گەشەپێدەر (کۆمپانیا) | پشتڕاست نەکراوەتەوە | نزم – No source names a developer; one WebSearch found nothing | — |
+| جۆری پڕۆژە | نیشتەجێبوون — Residential (houses / villas) | مامناوەند – Baghy 'House'; homele villa listings | https://baghyshaqlawa.net/en/projects/light-city ; https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| کۆی ڕووبەری زەوی | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| ژمارەی باڵەخانە / تاوەر | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| دۆخی دروستکردن | نەزانراوە — Unknown (listings tagged both Ready and Off Plan) | نزم – Only market-listing tags | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| بەرواری تەواوبوون | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.314025, 44.033777 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.314025,44.033777 | نزم – single agency map pin (baghyshaqlawa.net); not independently confirmed | https://baghyshaqlawa.net/en/projects/light-city |
+| ناوە جێگرەوەکان | لایت ستی | مامناوەند – Kurdish name in homele listing title | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – No source | — |
+| قۆناغەکانی پڕۆژە | None stated | نزم – No source | — |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | Not verified | No source | — |
-| Total project land area (dunams) | Not verified | — | — |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | Not verified | No source | — |
-| Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | None stated | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | پشتڕاست نەکراوەتەوە | No source | — |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | پشتڕاست نەکراوەتەوە | — | — |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | پشتڕاست نەکراوەتەوە | No source | — |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | پشتڕاست نەکراوەتەوە | — | — |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | پشتڕاست نەکراوەتەوە | No source | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | پشتڕاست نەکراوەتەوە | No source | — |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | None stated | No source | — |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| house | Not verified | — | — | — | Baghy property type 'House'; no sizes given | agency_project_page | https://baghyshaqlawa.net/en/projects/light-city |
-| villa | 450 | 450 | 450 | 5 | Two 450 m² villas advertised (5 beds; 5 or 6 baths); one tagged Off Plan, one Ready | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| خانوو | پشتڕاست نەکراوەتەوە | — | — | — | Baghy property type 'House'; no sizes given | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://baghyshaqlawa.net/en/projects/light-city |
+| ڤێلا | 450 | 450 | 450 | 5 | Two 450 m² villas advertised (5 beds; 5 or 6 baths); one tagged Off Plan, one Ready | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
 
-**Layouts and floor plans:** Not verified
+**نەخشە و پلانی نهۆمەکان:** پشتڕاست نەکراوەتەوە
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** None
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** هیچ
 
-**Unverified claims:** internet; playground; parking; green areas
+**بانگەشەی پشتڕاست نەکراوە:** internet; playground; parking; green areas
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Villa 450 m2, 5 beds, tagged Off Plan ('quick sale') - market listing, negotiable | 170,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-| House 450 m2, 5 beds, tagged Ready ('VIP house', 'new price') - market listing, negotiable | 380,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** homele market listings: 450 m² villas for sale (one Off Plan, one Ready), prices negotiable (https://homele.com/properties/for-sale-and-rent/erbil/light-city)
+| Villa 450 m2, 5 beds, tagged Off Plan ('quick sale') - market listing, negotiable | 170,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+| House 450 m2, 5 beds, tagged Ready ('VIP house', 'new price') - market listing, negotiable | 380,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** homele market listings: 450 m² villas for sale (one Off Plan, one Ready), prices negotiable (https://homele.com/properties/for-sale-and-rent/erbil/light-city)
 
-### Location and surroundings
-On the Bahrka Road in Erbil, behind Gulan City (Baghy). No further address published. Map position (low confidence, from agency map pins): 36.314025, 44.033777. Google Maps: https://www.google.com/maps?q=36.314025,44.033777
+### شوێن و دەوروبەر
+On the Bahrka Road in Erbil, behind Gulan City (Baghy). No further address published.
+شوێن لەسەر نەخشە: 36.314025, 44.033777 (متمانە: نزم) — https://www.google.com/maps?q=36.314025,44.033777
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 لایت ستی (Light City) پڕۆژەیەکی نیشتەجێبوونی خانووبەرەیە لە شاری هەولێر کە لەسەر ڕێگای بەحرکە، لە پشت گوڵان سیتی هەڵکەوتووە. پڕۆژەکە لە خانوو و ڤێلا پێکدێت. ڕووبەری ڤێلاکان ٤٥٠ م²یە و هەر ڤێلایەک پێنج ژووری نووستن و پێنج یان شەش حەمامی هەیە.
 
-### 2. Arabic (العربية)
+### 2. العربية
 لايت سيتي (Light City) مشروع سكني للبيوت في مدينة أربيل، يقع على طريق بحركة خلف كولان سيتي. ويتكون المشروع من بيوت وفلل سكنية. وتبلغ مساحة الفلل 450 م²، وتضم كل فيلا خمس غرف نوم وخمسة أو ستة حمامات.
 
 ### 3. English
 Light City is a residential housing project in Erbil, located on the Bahrka Road behind Gulan City. The project is made up of houses and villas. The villas measure 450 m² and have five bedrooms and five or six bathrooms.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/light-city | Area listing page: 2 market listings, 450 m² 5-bed villas at USD 170,000 (Off Plan) and USD 380,000 (Ready), both negotiable; Kurdish title names the project 'لایت ستی'. | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | Relevant project information found | https://baghyshaqlawa.net/en/projects/light-city | Project page: address 'Erbil, Bharka Road behind Gulan City'; property type House; tags internet, playground, parking, green areas. No developer or status. | — | 2026-11-07 | medium |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/light-city | Area listing page: 2 market listings, 450 m² 5-bed villas at USD 170,000 (Off Plan) and USD 380,000 (Ready), both negotiable; Kurdish title names the project 'لایت ستی'. | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://baghyshaqlawa.net/en/projects/light-city | Project page: address 'Erbil, Bharka Road behind Gulan City'; property type House; tags internet, playground, parking, green areas. No developer or status. | — | 2026-11-07 | مامناوەند |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-Second verification pass 2026-11-07: queries “"Light City" Erbil Bahrka road Gulan City villas”; “"لایت ستی" OR "لایت سیتی" OR "لايت سيتي" هەولێر بەحرکە” → no new evidence.
+### تۆماری گەڕانی ئینتەرنێت
+قۆناغی دووەمی پشتڕاستکردنەوە 2026-11-07 — گەڕانەکان: «"Light City" Erbil Bahrka road Gulan City villas»؛ «"لایت ستی" OR "لایت سیتی" OR "لايت سيتي" هەولێر بەحرکە» ← ئەنجام: بەڵگەی نوێ نەدۆزرایەوە.
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name (Baghy, homele)
    - Residential houses/villas (Baghy, homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Location: Bahrka Road behind Gulan City (Baghy)
    - Facility tags (Baghy)
    - 450 m² villa listings (homele)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Listing status tags: Off Plan vs Ready
    - construction_status: Off Plan (villa listing) (https://homele.com/properties/for-sale-and-rent/erbil/light-city); Ready (house listing) (https://homele.com/properties/for-sale-and-rent/erbil/light-city) → Status left 'unknown'; listing tags suggest some units ready and some not, but no project-level status is published.
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Developer
    - Construction status
    - Land area
@@ -110,14 +113,14 @@ Second verification pass 2026-11-07: queries “"Light City" Erbil Bahrka road G
    - Dates
    - Coordinates
    - Paya/Miran/Haji Salam pages
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Developer and project status not identified (one WebSearch, no result)
-   - Second verification pass (2026-11-07): no new evidence. No independent page mentions Light City on the Bahrka road; developer, project status and unit count remain unknown.
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - قۆناغی دووەمی پشتڕاستکردنەوە (2026-11-07): بەڵگەی نوێ نەدۆزرایەوە. No independent page mentions Light City on the Bahrka road; developer, project status and unit count remain unknown.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "light-city",

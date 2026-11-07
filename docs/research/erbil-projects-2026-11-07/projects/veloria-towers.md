@@ -1,119 +1,122 @@
 <!-- rendered -->
 # Veloria Towers — — — —
-Project ID: veloria-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-07
+ناسنامەی پڕۆژە: veloria-towers | پلە: 1 | لەناو شاری هەولێر | بەرواری سەردانکردن: 2026-11-07
 
-## PART A — PROJECT DATA SHEET
-| Field | Verified Information | Confidence | Source URL |
+> تێبینی: وەسفەکان بە سێ زمانن؛ وردەکاریی بەڵگەکان (هۆکاری ئاستی متمانە، زانیاریی سەرچاوەکان، تێبینییەکانی پشتڕاستکردنەوە) بە ئینگلیزی ماونەتەوە بۆ ئەوەی ژمارە، ناو و بەستەرەکان وەک خۆیان لە سەرچاوەکاندا بمێننەوە.
+
+## بەشی A — کارتی زانیاریی پڕۆژە
+| خانە | زانیاریی پشتڕاستکراوە | ئاستی متمانە | بەستەری سەرچاوە |
 |---|---|---|---|
-| Project Name | Veloria Towers | High – Miran and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| City | Erbil | High – Both sources | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| District / Area | Ankawa Street (Kuran / Ankawa area) | Medium – homele street; Miran listing tag 'Kuran Ankawa' and Kuran Park landmark | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Developer | Shahan Group | High – Miran developer field; homele listing by Shahan sales centre | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| Project Category | Mixed-use: residential, hotel, commercial | High – homele programme; Miran residential + shopping | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Total Land Area | 13,079 m² | Medium – Explicit 'Total land area' in sales-centre listing; single source | https://homele.com/projects/veloria-towers-409 |
-| Number of Buildings / Towers | 3 towers (X, Y, Z) | High – Miran stats and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| Total Residential Units | 1,088 | Low – Miran stats only | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Construction Status | Under construction | High – Miran 'Under Construction'; homele 'Ongoing' | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| Completion Date | Q2 2029 (Miran: 31/05/2028) | Medium – Sales-centre listing; Miran differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Coordinates | 36.216731, 43.993221 — Google Maps: https://www.google.com/maps?q=36.216731,43.993221 | Low – single agency map pin (homele.com); not independently confirmed | https://homele.com/projects/veloria-towers-409 |
-| Alternative names | Veloria by Shahan; X Quarter / Y House / Z House (towers) | High – Both sources | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| Project Owner | Not verified | Low – not stated by any source found | — |
-| Floors per building | X: G-31st; Y/Z: G, UG, 1st-36th; 4 basements (Miran: 40) | Medium – homele breakdown; Miran stat differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Launch Date | Not verified | Low – not stated by any source found | — |
-| Development Phases | Single phase; three towers X Quarter, Y House, Z House | Medium – homele programme | https://homele.com/projects/veloria-towers-409 |
+| ناوی پڕۆژە | Veloria Towers | بەرز – Miran and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| شار | هەولێر | بەرز – Both sources | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| ناوچە / گەڕەک | Ankawa Street (Kuran / Ankawa area) | مامناوەند – homele street; Miran listing tag 'Kuran Ankawa' and Kuran Park landmark | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| گەشەپێدەر (کۆمپانیا) | Shahan Group | بەرز – Miran developer field; homele listing by Shahan sales centre | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| جۆری پڕۆژە | فرەمەبەست (نیشتەجێبوون و بازرگانی) — Mixed-use: residential, hotel, commercial | بەرز – homele programme; Miran residential + shopping | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| کۆی ڕووبەری زەوی | 13,079 m² | مامناوەند – Explicit 'Total land area' in sales-centre listing; single source | https://homele.com/projects/veloria-towers-409 |
+| ژمارەی باڵەخانە / تاوەر | 3 towers (X, Y, Z) | بەرز – Miran stats and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| کۆی یەکە نیشتەجێبوونەکان | 1,088 | نزم – Miran stats only | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| دۆخی دروستکردن | لە قۆناغی دروستکردندایە — Under construction | بەرز – Miran 'Under Construction'; homele 'Ongoing' | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| بەرواری تەواوبوون | Q2 2029 (Miran: 31/05/2028) | مامناوەند – Sales-centre listing; Miran differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| شوێن لەسەر نەخشە (کۆئۆردینات) | 36.216731, 43.993221 — کردنەوە لە نەخشەی گووگڵ: https://www.google.com/maps?q=36.216731,43.993221 | نزم – single agency map pin (homele.com); not independently confirmed | https://homele.com/projects/veloria-towers-409 |
+| ناوە جێگرەوەکان | Veloria by Shahan; X Quarter / Y House / Z House (towers) | بەرز – Both sources | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| خاوەنی پڕۆژە | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | X: G-31st; Y/Z: G, UG, 1st-36th; 4 basements (Miran: 40) | مامناوەند – homele breakdown; Miran stat differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| بەرواری دەستپێکردن | پشتڕاست نەکراوەتەوە | نزم – هیچ سەرچاوەیەک ئەم زانیارییەی نەداوە | — |
+| قۆناغەکانی پڕۆژە | Single phase; three towers X Quarter, Y House, Z House | مامناوەند – homele programme | https://homele.com/projects/veloria-towers-409 |
 
-### Land area and development scale
-| Item | Value | Note | Source URL |
+### ڕووبەری زەوی و قەبارەی پڕۆژە
+| بابەت | بەها | تێبینی | بەستەری سەرچاوە |
 |---|---|---|---|
-| Total project land area (m²) | 13,079 m² | Explicit 'Total land area' in sales-centre listing; single source | https://homele.com/projects/veloria-towers-409 |
-| Total project land area (dunams) | 5.2 | converted from 13,079 m² at 1 Iraqi dunam = 2,500 m² | https://homele.com/projects/veloria-towers-409 |
-| Plots or parcels | Not verified | — | — |
-| Total housing units | 1,088 | Miran stats only | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Villas / houses | Not verified | — | — |
-| Apartments | 1,088 | Units 1,088 (Miran project statistics) | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Commercial units | Not verified | — | — |
-| Towers / apartment buildings | 3 towers (X, Y, Z) | Miran stats and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| Floors per building | X: G-31st; Y/Z: G, UG, 1st-36th; 4 basements (Miran: 40) | homele breakdown; Miran stat differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Green space, parks, landscaped area | Not verified | — | — |
-| Development phases | Single phase; three towers X Quarter, Y House, Z House | homele programme | https://homele.com/projects/veloria-towers-409 |
+| کۆی ڕووبەری زەویی پڕۆژە (م²) | 13,079 m² | Explicit 'Total land area' in sales-centre listing; single source | https://homele.com/projects/veloria-towers-409 |
+| کۆی ڕووبەری زەویی پڕۆژە (دۆنم) | 5.2 | گۆڕدراوە لە 13,079 م² بە پێوەری ١ دۆنمی عێراقی = 2,500 م² | https://homele.com/projects/veloria-towers-409 |
+| ژمارەی پارچە زەوی | پشتڕاست نەکراوەتەوە | — | — |
+| کۆی یەکە نیشتەجێبوونەکان | 1,088 | Miran stats only | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| ڤێلا / خانوو | پشتڕاست نەکراوەتەوە | — | — |
+| شوقە | 1,088 | Units 1,088 (Miran project statistics) | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| یەکەی بازرگانی | پشتڕاست نەکراوەتەوە | — | — |
+| تاوەر / باڵەخانەی شوقە | 3 towers (X, Y, Z) | Miran stats and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| ژمارەی نهۆمی هەر باڵەخانەیەک | X: G-31st; Y/Z: G, UG, 1st-36th; 4 basements (Miran: 40) | homele breakdown; Miran stat differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| ڕووبەری سەوزایی، پارک و باخچە | پشتڕاست نەکراوەتەوە | — | — |
+| قۆناغەکانی پڕۆژە | Single phase; three towers X Quarter, Y House, Z House | homele programme | https://homele.com/projects/veloria-towers-409 |
 
-## PART B — PROPERTY TYPES & AREA OPTIONS
-| Property Type | Verified Sizes (m²) | Min (m²) | Max (m²) | Bedrooms | Other Specifications | Evidence Type | Source |
+## بەشی B — جۆرەکانی موڵک و ڕووبەرەکان
+| جۆری موڵک | ڕووبەرە پشتڕاستکراوەکان (م²) | کەمترین (م²) | زۆرترین (م²) | ژووری نووستن | تایبەتمەندییەکانی تر | جۆری بەڵگە | سەرچاوە |
 |---|---|---|---|---|---|---|---|
-| apartment | 95, 104, 105, 109, 114, 118 | 95 | 118 | 1 | 1+1; X: 95/105/114/118; Y,Z: 104/109/114/118; 114 m2 (Y/Z) 1 bath, 118 m2 (X) 2 baths | agency_project_page | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| apartment | 144, 149, 154, 159, 164, 169 | 144 | 169 | 2 | 2+1; 144-159 in Tower X only | agency_project_page | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| apartment | 210, 218, 223, 234, 243, 248 | 210 | 248 | 3 | 3+1 per Miran (223 also listed as 2+1); 234/243/248 in X, 210/218/223 in Y,Z | agency_project_page | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
-| duplex | Not verified | — | — | — | 2 floors; Duplex Sky Villas in Tower X; sizes not published | agency_project_page | https://homele.com/projects/veloria-towers-409 |
-| other | Not verified | — | — | — | Garden Villas with terraces on floors 1-2 of Towers Y and Z; hotel accommodation floors 6-13 of Tower X | agency_project_page | https://homele.com/projects/veloria-towers-409 |
-| shop | Not verified | — | — | — | Commercial spaces G-5th (X) and G + upper ground (Y, Z) | agency_project_page | https://homele.com/projects/veloria-towers-409 |
-| apartment | 109, 114, 118, 164, 169, 218, 223, 525, 617 | 109 | 617 | — | Off-plan instalment listings; 525 and 617 m2 3-bed units not on any unit-type list | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
+| شوقە | 95, 104, 105, 109, 114, 118 | 95 | 118 | 1 | 1+1; X: 95/105/114/118; Y,Z: 104/109/114/118; 114 m2 (Y/Z) 1 bath, 118 m2 (X) 2 baths | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| شوقە | 144, 149, 154, 159, 164, 169 | 144 | 169 | 2 | 2+1; 144-159 in Tower X only | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| شوقە | 210, 218, 223, 234, 243, 248 | 210 | 248 | 3 | 3+1 per Miran (223 also listed as 2+1); 234/243/248 in X, 210/218/223 in Y,Z | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
+| دوبلێکس | پشتڕاست نەکراوەتەوە | — | — | — | 2 نهۆم؛ Duplex Sky Villas in Tower X; sizes not published | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://homele.com/projects/veloria-towers-409 |
+| جۆری تر | پشتڕاست نەکراوەتەوە | — | — | — | Garden Villas with terraces on floors 1-2 of Towers Y and Z; hotel accommodation floors 6-13 of Tower X | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://homele.com/projects/veloria-towers-409 |
+| دوکان | پشتڕاست نەکراوەتەوە | — | — | — | Commercial spaces G-5th (X) and G + upper ground (Y, Z) | پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە | https://homele.com/projects/veloria-towers-409 |
+| شوقە | 109, 114, 118, 164, 169, 218, 223, 525, 617 | 109 | 617 | — | Off-plan instalment listings; 525 and 617 m2 3-bed units not on any unit-type list | ڕیکلامی یەکەیەکی دیاریکراو | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
 
-**Layouts and floor plans:** homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (e.g. 114 m² 1-bed Y/Z tower, 118 m² 1-bed X tower) (https://homele.com/projects/veloria-towers-409)
+**نەخشە و پلانی نهۆمەکان:** homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (e.g. 114 m² 1-bed Y/Z tower, 118 m² 1-bed X tower) (https://homele.com/projects/veloria-towers-409)
 
-_Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
+_جۆرەکانی بەڵگە: فەرمی = پەڕەی گەشەپێدەر یان سەنتەری فرۆشتن؛ پەڕەی پڕۆژە لە ماڵپەڕی خانووبەرە = پەڕەی پڕۆژەکە لە ماڵپەڕێکی خانووبەرە؛ ڕیکلامی یەکەیەکی دیاریکراو = تەنها ئەوە دەسەلمێنێت کە ئەو ڕووبەرە ڕیکلامی بۆ کراوە، نەک هەموو ڕووبەرەکانی پڕۆژە._
 
-## PART C — FACILITIES & INFRASTRUCTURE
-**Confirmed existing:** None
+## بەشی C — خزمەتگوزاری و ژێرخان
+**بەردەستە و پشتڕاستکراوە:** هیچ
 
-**Confirmed planned:** Four underground parking levels (homele); Shared garden (homele; Miran 'Garden'); Swimming pool (Miran, homele); Hotel accommodation, Tower X floors 6-13 (homele); Commercial spaces / shopping centre (homele, Miran); Elevators: 8 in Tower X (4 hotel, 4 residents); 4 + 1 service in Y and Z (homele); Gym (Miran); Playground / outdoor play area (Miran); Nursery & kindergarten (Miran); Restaurant (Miran); Parklet floor (Miran); Smart building system (Miran); CCTV and security staff (homele, Miran); Central heating; double-glazed windows (homele)
+**پلانی بۆ دانراوە (پشتڕاستکراوە):** Four underground parking levels (homele); Shared garden (homele; Miran 'Garden'); Swimming pool (Miran, homele); Hotel accommodation, Tower X floors 6-13 (homele); Commercial spaces / shopping centre (homele, Miran); Elevators: 8 in Tower X (4 hotel, 4 residents); 4 + 1 service in Y and Z (homele); Gym (Miran); Playground / outdoor play area (Miran); Nursery & kindergarten (Miran); Restaurant (Miran); Parklet floor (Miran); Smart building system (Miran); CCTV and security staff (homele, Miran); Central heating; double-glazed windows (homele)
 
-**Unverified claims:** Hospital and pharmacy (Miran feature tags only); Miran generic building-facility block: generator, access control, BMS, fibre internet, water treatment, waste management, maintenance workshop
+**بانگەشەی پشتڕاست نەکراوە:** Hospital and pharmacy (Miran feature tags only); Miran generic building-facility block: generator, access control, BMS, fibre internet, water treatment, waste management, maintenance workshop
 
-### Prices and payment information (dated evidence, not official price lists)
-| Item | Value | Currency | Type | Date | Source |
+### نرخ و زانیاریی پارەدان (بەڵگەی بەروارداری بازاڕ، نەک لیستی نرخی فەرمی)
+| بابەت | بەها | دراو | جۆر | بەروار | سەرچاوە |
 |---|---|---|---|---|---|
-| Price per m2 (Miran project page) | 1,050 | USD | developer | Miran page updated 2026-08-19 | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
-| Tower Y / Z payment plan from 104 m2 - total price (homele, listed by Shahan sales centre) | 114,400 | USD | developer | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
-| Tower X payment plan from 95 m2 - total price (homele, sales centre) | 128,250 | USD | developer | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
-| Project price range upper end (homele project page) | 334,800 | USD | developer | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
-| 1 bed 114 m2 - off-plan instalment listing (also on Miran) | 125,400 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
-| 2 bed 169 m2 - off-plan instalment listing | 185,900 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
-| 3 bed 223 m2 - off-plan instalment listing | 245,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
-| 3 bed 525 m2 'luxurious tower apartment' - off-plan instalment listing | 840,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Cash, Installment, Payment Plans (Miran): 25% down payment, 10% after 6 months, 15% at structure completion, 10% after 6 months, 20% on completion, 20% installments over 24 months; price per meter $1,050. homele lists the same plan per tower (X Quarter, Y House, Z House), with 20% at key handover and 20% monthly installments for 24 months (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag)
+| Price per m2 (Miran project page) | 1,050 | USD | نرخی گەشەپێدەر | Miran page updated 2026-08-19 | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
+| Tower Y / Z payment plan from 104 m2 - total price (homele, listed by Shahan sales centre) | 114,400 | USD | نرخی گەشەپێدەر | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
+| Tower X payment plan from 95 m2 - total price (homele, sales centre) | 128,250 | USD | نرخی گەشەپێدەر | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
+| Project price range upper end (homele project page) | 334,800 | USD | نرخی گەشەپێدەر | posted 2026-08-15 | https://homele.com/projects/veloria-towers-409 |
+| 1 bed 114 m2 - off-plan instalment listing (also on Miran) | 125,400 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
+| 2 bed 169 m2 - off-plan instalment listing | 185,900 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
+| 3 bed 223 m2 - off-plan instalment listing | 245,300 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
+| 3 bed 525 m2 'luxurious tower apartment' - off-plan instalment listing | 840,000 | USD | فرۆشتنەوە | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
+- **کرێی چاککردنەوە و خزمەتگوزاری:** پشتڕاست نەکراوەتەوە
+- **شێوازی کڕین یان بەکرێدان:** Cash, Installment, Payment Plans (Miran): 25% down payment, 10% after 6 months, 15% at structure completion, 10% after 6 months, 20% on completion, 20% installments over 24 months; price per meter $1,050. homele lists the same plan per tower (X Quarter, Y House, Z House), with 20% at key handover and 20% monthly installments for 24 months (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag)
 
-### Location and surroundings
-Veloria Towers stands on Ankawa Street in Erbil (homele, Shahan sales-centre listing); Miran tags its listing 'Kuran Ankawa' and names Erbil International Airport, the Erbil Citadel, Pepula Park and Kuran Park as nearby landmarks. Map position (low confidence, from agency map pins): 36.216731, 43.993221. Google Maps: https://www.google.com/maps?q=36.216731,43.993221
+### شوێن و دەوروبەر
+Veloria Towers stands on Ankawa Street in Erbil (homele, Shahan sales-centre listing); Miran tags its listing 'Kuran Ankawa' and names Erbil International Airport, the Erbil Citadel, Pepula Park and Kuran Park as nearby landmarks.
+شوێن لەسەر نەخشە: 36.216731, 43.993221 (متمانە: نزم) — https://www.google.com/maps?q=36.216731,43.993221
 
-## PART D — FINAL PROJECT DESCRIPTIONS
-### 1. Sorani Kurdish (کوردیی سۆرانی)
+## بەشی D — وەسفی کۆتایی پڕۆژە
+### 1. کوردیی سۆرانی
 ڤێلۆریا تاوەرز، کە بە ناوی ڤێلۆریا بای شاهان دەناسرێت، پڕۆژەیەکی فرەبەکارهێنانە کە لە ژێر دروستکردندایە لەسەر شەقامی عەنکاوە لە هەولێر و گەشەپێدەرەکەی شاهان گرووپە. پڕۆژەکە شوقەی نیشتەجێبوون، شوێنی مانەوەی هوتێل و ڕووبەری بازرگانی لەسەر زەوییەکی ١٣,٠٧٩ م² کۆدەکاتەوە، لەگەڵ چوار نهۆمی پارکینگی ژێرزەمین و باخچەیەکی هاوبەش. پڕۆژەکە لە سێ تاوەر پێکدێت و کۆی گشتی ١,٠٨٨ یەکە لەخۆدەگرێت. تاوەری X (ئێکس کوارتەر) ڕووبەری بازرگانی لە نهۆمی زەوییەوە تا نهۆمی پێنجەم، هوتێل لە نهۆمی شەشەم تا سێزدەیەم، شوقە لە نهۆمی چواردەیەم تا سی و یەکەم و سکای ڤێلای دوبلێکسی تێدایە. تاوەرەکانی Y (وای هاوس) و Z (زێد هاوس) هەریەکەیان ڕووبەری بازرگانی لە نهۆمی زەوی و نهۆمی سەرووی زەوی، گاردن ڤێلای تێراسدار لە نهۆمی یەکەم و دووەم و شوقە لە نهۆمی سێیەم تا سی و شەشەمیان تێدایە. شوقەکان بریتین لە یەکەی یەک ژووری نووستن بە ڕووبەری ٩٥ تا ١١٨ م²، یەکەی دوو ژووری نووستن بە ڕووبەری ١٤٤ تا ١٦٩ م² و یەکەی گەورەتر بە ڕووبەری ٢١٠ تا ٢٤٨ م² تا سێ ژووری نووستن. خزمەتگوزارییە پلاندانراوەکان بریتین لە مەلەوانگە، هۆڵی وەرزش، شوێنی یاری منداڵان، چێشتخانە، ناوەندی بازاڕکردن، دایەنگە، کامێرای چاودێری، ستافی پاسەوانی، گەرمکەرەوەی ناوەندی و پەنجەرەی دووچین. تەواوبوونی پڕۆژەکە بۆ چارەکی دووەمی ٢٠٢٩ چاوەڕوان دەکرێت.
 
-### 2. Arabic (العربية)
+### 2. العربية
 أبراج فيلوريا، المعروفة باسم فيلوريا باي شاهان، مشروع متعدد الاستخدامات قيد الإنشاء على شارع عنكاوا في أربيل، من تطوير مجموعة شاهان. يجمع المشروع بين الشقق السكنية والإقامة الفندقية والمساحات التجارية على أرض بمساحة 13,079 م²، مع أربعة طوابق مواقف تحت الأرض وحديقة مشتركة. يتكوّن المشروع من ثلاثة أبراج تضم ما مجموعه 1,088 وحدة. يضم البرج X (إكس كوارتر) مساحات تجارية من الطابق الأرضي حتى الطابق الخامس، وإقامة فندقية من الطابق السادس حتى الثالث عشر، وشققاً من الطابق الرابع عشر حتى الحادي والثلاثين، وفلل سماوية دوبلكس. ويضم كل من البرجين Y (واي هاوس) وZ (زد هاوس) مساحات تجارية في الطابق الأرضي والطابق الأرضي العلوي، وفلل حدائق مع تراسات في الطابقين الأول والثاني، وشققاً من الطابق الثالث حتى السادس والثلاثين. تُعرض الشقق بغرفة نوم واحدة بمساحات من 95 إلى 118 م²، وبغرفتي نوم بمساحات من 144 إلى 169 م²، ووحدات أكبر بمساحات من 210 إلى 248 م² بما يصل إلى ثلاث غرف نوم. تشمل المرافق المخطط لها مسبحاً وصالة رياضية ومنطقة ألعاب ومطعماً ومنطقة تسوق وحضانة وكاميرات مراقبة وطاقم حراسة وتدفئة مركزية ونوافذ بزجاج مزدوج. ومن المتوقع إنجاز المشروع في الربع الثاني من عام 2029.
 
 ### 3. English
 Veloria Towers, marketed as Veloria by Shahan, is a mixed-use development under construction on Ankawa Street in Erbil, developed by Shahan Group. It combines residential apartments, hotel accommodation and commercial space on a land area of 13,079 m², with four underground parking levels and a shared garden. The project consists of three towers with a total of 1,088 units. Tower X (X Quarter) has commercial space from the ground to the fifth floor, hotel accommodation on the sixth to thirteenth floors, apartments on the fourteenth to thirty-first floors and duplex sky villas. Towers Y (Y House) and Z (Z House) each have commercial space on the ground and upper-ground floors, garden villas with terraces on the first and second floors and apartments on the third to thirty-sixth floors. Apartments are offered as one-bedroom units of 95 to 118 m², two-bedroom units of 144 to 169 m² and larger units of 210 to 248 m² with up to three bedrooms. Planned facilities include a swimming pool, gym, playground, restaurant, shopping area, nursery, CCTV, security staff, central heating and double-glazed windows. Completion is expected in the second quarter of 2029.
 
-## PART E — SOURCES AND RESEARCH LOG
-### Primary websites
-| Website | Role | Search outcome | URL | Information obtained | Published / updated | Accessed | Reliability |
+## بەشی E — سەرچاوەکان و تۆماری لێکۆڵینەوە
+### ماڵپەڕە سەرەکییەکان
+| ماڵپەڕ | ڕۆڵ | ئەنجامی گەڕان | URL | زانیاریی وەرگیراو | بەرواری بڵاوکردنەوە / نوێکردنەوە | بەرواری سەردانکردن | ئاستی متمانەپێکراوی |
 |---|---|---|---|---|---|---|---|
-| homele.com | mandatory | Relevant project information found | https://homele.com/projects/veloria-towers-409 | Listed by 'Veloria Project By Shahan Sales Center': mixed-use on Ankawa street; total land area 13,079 m2; completion 2029-06-01 / Q2 2029; 4 underground parking levels; three towers X/Y/Z with floor-by-floor programme; units 95-248 m2; payment plans from USD 114,400 (Y/Z) and USD 128,250 (X); price range USD 114,400-334,800 | 2026-08-15 | 2026-11-07 | high |
-| homele.com | mandatory | Relevant project information found | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers | 10 off-plan instalment listings 109-617 m2, USD 119,700-840,000 | — | 2026-11-07 | medium |
-| paya-realestate.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| baghyshaqlawa.net | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| hajisalam.com | mandatory | No project page or project-specific listing area found | — | Matched against the site's full Erbil project directory and listing-area crawl (English, Arabic and Kurdish names and aliases) | — | 2026-11-07 | n/a |
-| miranestate.com | additional primary source (original brief) | Relevant project information found | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag | Developer Shahan Group; Under Construction; stats 3 buildings / 40 floors / 1,088 units; 31 unit-type entries 95-248 m2; USD 1,050/m2; payment schedule; date 31/05/2028; feature tags; listing 114 m2 USD 125,400 'Kuran Ankawa' | updated 2026-08-19 | 2026-11-07 | medium |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/projects/veloria-towers-409 | Listed by 'Veloria Project By Shahan Sales Center': mixed-use on Ankawa street; total land area 13,079 m2; completion 2029-06-01 / Q2 2029; 4 underground parking levels; three towers X/Y/Z with floor-by-floor programme; units 95-248 m2; payment plans from USD 114,400 (Y/Z) and USD 128,250 (X); price range USD 114,400-334,800 | 2026-08-15 | 2026-11-07 | بەرز |
+| homele.com | سەرچاوەی سەرەکیی پێویست | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers | 10 off-plan instalment listings 109-617 m2, USD 119,700-840,000 | — | 2026-11-07 | مامناوەند |
+| paya-realestate.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| baghyshaqlawa.net | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| hajisalam.com | سەرچاوەی سەرەکیی پێویست | هیچ پەڕەیەکی پڕۆژە یان ناوچەیەکی ڕیکلامی تایبەت نەدۆزرایەوە | — | بەراورد کرا لەگەڵ تەواوی لیستی پڕۆژەکانی هەولێر لەم ماڵپەڕەدا (بە ناوی ئینگلیزی، عەرەبی، کوردی و ناوە جێگرەوەکان) | — | 2026-11-07 | — |
+| miranestate.com | سەرچاوەی سەرەکیی زیادە (لە ڕێنماییی یەکەمدا) | زانیاریی پەیوەندیدار بە پڕۆژەکە دۆزرایەوە | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag | Developer Shahan Group; Under Construction; stats 3 buildings / 40 floors / 1,088 units; 31 unit-type entries 95-248 m2; USD 1,050/m2; payment schedule; date 31/05/2028; feature tags; listing 114 m2 USD 125,400 'Kuran Ankawa' | updated 2026-08-19 | 2026-11-07 | مامناوەند |
 
-### Additional public sources
-None used for this project.
+### سەرچاوە گشتییە زیادەکان
+هیچ سەرچاوەیەکی زیادە بۆ ئەم پڕۆژەیە بەکارنەهاتووە.
 
-### Web search log
-First-pass research only (at most one web search for this project).
+### تۆماری گەڕانی ئینتەرنێت
+تەنها لێکۆڵینەوەی قۆناغی یەکەم (زۆرترین یەک گەڕان بۆ ئەم پڕۆژەیە).
 
-## PART F — DATA VERIFICATION REPORT
-1. **Fully verified information:**
+## بەشی F — ڕاپۆرتی پشتڕاستکردنەوەی زانیاری
+1. **زانیاریی تەواو پشتڕاستکراوە (لانیکەم دوو سەرچاوەی سەربەخۆ):**
    - Name, developer Shahan Group, Erbil/Ankawa-area location, under-construction status (Miran + homele)
    - 3 towers (Miran + homele)
    - Unit size range 95-248 m2 and 1+1/2+1/3+1 mix (Miran + homele)
    - Payment schedule 25/10/15/10/20/20 over 24 months (Miran + homele)
-2. **Information supported by only one source:**
+2. **زانیاری کە تەنها یەک سەرچاوە پشتگیری دەکات:**
    - Land area 13,079 m2, tower floor programme, hotel floors, 4 basements (homele)
    - 1,088 units (Miran)
    - USD 1,050/m2 (Miran)
-3. **Conflicting information:**
+3. **زانیاریی ناکۆک:**
    - Floors 40 (Miran) vs X 31 / Y,Z 36 numbered floors (homele)
    - Completion 31/05/2028 (Miran) vs Q2 2029 (homele)
    - Price per m2 vs homele plan totals
@@ -122,21 +125,21 @@ First-pass research only (at most one web search for this project).
    - completion_date: 31/05/2028 (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag); 2029-06-01 / Q2 2029 (https://homele.com/projects/veloria-towers-409) → Q2 2029 used: explicit in the developer sales-centre listing
    - price per m2: USD 1,050/m2 (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag); plan totals USD 114,400 from 104 m2 (Y/Z) and USD 128,250 from 95 m2 (X) (https://homele.com/projects/veloria-towers-409) → Disputed; homele totals imply higher per-m2 rates than Miran's figure
    - 223 m2 bedrooms: 3+1 and 2+1 (two entries) (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag); 3 bed listing (https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers) → 3 bedrooms used
-4. **Missing information requiring confirmation:**
+4. **زانیاریی ونبوو کە پێویستی بە پشتڕاستکردنەوەیە:**
    - Launch date
    - Coordinates
    - Kurdish/Arabic names
    - Sky-villa and garden-villa sizes
    - Hotel key count
-5. **Potentially outdated information:**
-   - None
-6. **Important unresolved questions:**
+5. **زانیاری کە لەوانەیە کۆن بووبێت:**
+   - هیچ
+6. **پرسیارە گرنگە چارەسەرنەکراوەکان:**
    - Marked partially_verified: Miran calls it a residential development while homele lists it as mixed-use (hotel + commercial); Miran gives landmarks, not a street
    - Miran's 1,088 units cannot be cross-checked; homele gives no total
    - 525 m2 and 617 m2 three-bed listings exceed all published unit types (possibly sky villas)
-   - Developer websites could not be opened in this session; facts taken from search-result summaries are marked as such.
+   - ماڵپەڕی کۆمپانیا گەشەپێدەرەکان لەم ژینگەیەدا نەکرانەوە؛ ئەو زانیاریانەی لە پوختەی ئەنجامی گەڕانەوە وەرگیراون بەو شێوەیە نیشانە کراون.
 
-## PART G — ANDAZ IMPORT-READY DATA
+## بەشی G — داتای ئامادە بۆ هاوردەکردن لە ئەنداز (JSON)
 ```json
 {
  "project_id": "veloria-towers",
