@@ -88,4 +88,4 @@ North Holland is a residential apartment project under construction in Erbil, lo
    - None
 6. **Important unresolved questions:**
    - Developer not named on any source; one WebSearch ('North Holland' Erbil) returned nothing relevant
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page on North Holland was found; developer, total units and dates remain missing. Queries: “"North Holland" Erbil towers Mosul Road”; “"نورث هولند" أربيل OR هەولێر مشروع أبراج”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

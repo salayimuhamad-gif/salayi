@@ -82,4 +82,4 @@ Kavar City is a residential project of houses in Erbil, on the Erbil–Shaqlawa 
 6. **Important unresolved questions:**
    - Exact position on the Shaqlawa road and distance from the 120m/150m roads not stated; kept in scope as a Pirmam/Shaqlawa approach
    - Status inferred from listings only
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names Kavar City; developer, dates, land area and exact position on the Shaqlawa road remain unconfirmed. Queries: “"Kavar City" Erbil Shaqlawa road houses”; “"کاڤار سیتی" OR "Kavar" هەولێر شەقڵاوە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -51,13 +51,13 @@ Both sources place Edition Tower in Erbil (homele area page; Roya card 'Erbil').
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-ئێدیشن تاوەر (Edition Tower)، کە بە ئێدیشن تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوون و بازرگانییە لە هەولێر کە شوقە و دوکان لەخۆ دەگرێت. شوقەکان بریتین لە شوقەی دوو ژووری نووستن بە ڕووبەری 110، 116 و 121 م² بە یەک حەمام، و شوقەیەکی سێ ژووری نووستن بە ڕووبەری 194 م² بە دوو حەمام. ڕووبەری دوکانەکان لە 32 م² تا 300 م²یە، لەوانە دوکانێکی سووچی 83 م² و دوکانێکی نهۆمی زەوی 205 م². زانیاریی زیاتر، وەک ناوی گەشەپێدەر، شوێنی ورد، ژمارەی نهۆمەکان، خزمەتگوزارییەکان و خشتەی کاتیی بنیاتنان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
+ئێدیشن تاوەر (Edition Tower)، کە بە ئێدیشن تاوەرزیش ناسراوە، پڕۆژەیەکی نیشتەجێبوون و بازرگانییە لە هەولێر کە شوقە و دوکان لەخۆ دەگرێت. شوقەکان بریتین لە شوقەی دوو ژووری نووستن بە ڕووبەری 110، 116 و 121 م² بە یەک حەمام، و شوقەیەکی سێ ژووری نووستن بە ڕووبەری 194 م² بە دوو حەمام. ڕووبەری دوکانەکان لە 32 م² تا 300 م²یە، لەوانە دوکانێکی سووچی 83 م² و دوکانێکی نهۆمی زەوی 205 م².
 
 ### 2. Arabic (العربية)
-إديشن تاور (Edition Tower)، المعروف أيضاً باسم إديشن تاورز، مشروع سكني وتجاري في أربيل يضم شققاً ومحلات تجارية. تشمل الشقق وحدات بغرفتي نوم بمساحات 110 و116 و121 م² مع حمام واحد، ووحدة بثلاث غرف نوم بمساحة 194 م² مع حمامين. وتتراوح مساحات المحلات التجارية بين 32 م² و300 م²، ومنها محل على زاوية بمساحة 83 م² ومحل في الطابق الأرضي بمساحة 205 م². وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، منها اسم الشركة المطوّرة والموقع الدقيق وعدد الطوابق والمرافق والجدول الزمني للإنشاء.
+إديشن تاور (Edition Tower)، المعروف أيضاً باسم إديشن تاورز، مشروع سكني وتجاري في أربيل يضم شققاً ومحلات تجارية. تشمل الشقق وحدات بغرفتي نوم بمساحات 110 و116 و121 م² مع حمام واحد، ووحدة بثلاث غرف نوم بمساحة 194 م² مع حمامين. وتتراوح مساحات المحلات التجارية بين 32 م² و300 م²، ومنها محل على زاوية بمساحة 83 م² ومحل في الطابق الأرضي بمساحة 205 م².
 
 ### 3. English
-Edition Tower, also known as Edition Towers, is a residential and commercial project in Erbil with apartments and shops. The apartments include two-bedroom units of 110, 116 and 121 m² with one bathroom, and a three-bedroom unit of 194 m² with two bathrooms. Shops in the project range from 32 m² to 300 m², including an 83 m² corner shop and a 205 m² ground-floor shop. Further details, including the developer, the exact location, the number of floors, facilities and the construction timeline, will be added to this profile when they become available.
+Edition Tower, also known as Edition Towers, is a residential and commercial project in Erbil with apartments and shops. The apartments include two-bedroom units of 110, 116 and 121 m² with one bathroom, and a three-bedroom unit of 194 m² with two bathrooms. Shops in the project range from 32 m² to 300 m², including an 83 m² corner shop and a 205 m² ground-floor shop.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |

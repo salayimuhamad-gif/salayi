@@ -95,4 +95,4 @@ Phoenix Tower is a completed mixed-use tower in central Erbil, located opposite 
 6. **Important unresolved questions:**
    - Developer identity
    - Actual mix of apartments vs offices; Paya prices for 85 m2 ($110,747) exceed those for 87-90 m2, unexplained
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page links a Phoenix Tower to Sami Abdulrahman Park or Raha Architects (Raha appears only for other Iraqi projects); developer and dates remain missing. Queries: “"Phoenix Tower" Erbil Sami Abdulrahman Park”; “"Phoenix Tower" Erbil Raha Architects”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

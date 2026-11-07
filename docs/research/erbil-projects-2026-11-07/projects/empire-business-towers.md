@@ -9,16 +9,16 @@ Project ID: empire-business-towers | Tier: 1 | In Erbil city: Yes | Last researc
 | Alternative names | Empire Business Tower (T1); Empire Towers; Empire Business Complex (separate low-rise component) | Medium – Wikipedia / homele listing titles; Business Complex is a distinct component at the north gate | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq; https://homele.com/properties/for-sale-and-rent/erbil/empire-business-complex |
 | City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/empire-world |
 | District / Area | Empire World – centre of the project site | High – Bagh-y and Hajisalam agree | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/ |
-| Developer | Not verified | — – Not stated on primary sites; Wikipedia cites a BCM Holding A.S. completed-projects page (role unclear) | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| Developer | Empire World (low confidence; disputed) | Low – SkyscraperPage entry for Empire Business Tower B4 and the Roya agency page name Empire World (search summaries, pages not opened); a news summary links Empire World to Falcon Group; Wikipedia cites a BCM Holding A.S. completed-projects page whose role is not stated | https://skyscraperpage.com/b35416; https://roya-iq.com/empire-world; https://marcopolis.net/?p=1943; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
 | Project Category | Commercial (offices) | High – Bagh-y, Hajisalam, homele office listings | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/ |
 | Total Land Area | Not verified for T1–T5; Business Complex plot 24,000 m2 | Low – Only construction areas given for the towers; Business Complex figure single source | https://baghyshaqlawa.net/en/projects/empire-world |
-| Number of Buildings / Towers | 5 towers (T1–T5) + 6 Business Complex buildings | High – 5 towers: Bagh-y + Hajisalam; 6 complex buildings: Bagh-y only | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/ |
+| Number of Buildings / Towers | 5 towers (T1–T5) + 6 Business Complex buildings | High – 5 towers: Bagh-y + Hajisalam + Roya (search summary); 6 complex buildings: Bagh-y + Roya (search summary, about 25 m high each) | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/; https://roya-iq.com/empire-world |
 | Total Residential Units | Not applicable (offices); total office count not stated | — – Commercial project | — |
-| Floors per building | T1: 27; T2–T5: 23 each; Business Complex: 6 | Medium – Bagh-y + Hajisalam agree; Wikipedia gives 33 for T1 | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Construction Status | Completed | Medium – homele listings tagged Ready; Wikipedia lists T1 completed 2011 | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
+| Floors per building | T1: 27; T2–T5: 23 each; Business Complex: 6 | Medium – Bagh-y + Hajisalam agree; Roya page (search summary) also gives 27 and 23; Wikipedia gives 33 for T1 | https://baghyshaqlawa.net/en/projects/empire-world; https://hajisalam.com/en/empire-world/; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq; https://roya-iq.com/empire-world |
+| Construction Status | Completed | High – homele Ready listings; Wikipedia lists T1 completed 2011; SkyscraperPage lists tower B4 completed 2019 (search summary); news summary reports towers leased to oil and telecom firms | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq; https://skyscraperpage.com/b35416; https://marcopolis.net/?p=1943 |
 | Launch Date | Not verified | — – No source | — |
-| Completion Date | 2011 (T1) | Low – Single secondary source (Wikipedia list) | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
-| Development Phases | Towers T1–T5; Empire Business Complex at north gate; parent Empire World | Medium – Bagh-y description | https://baghyshaqlawa.net/en/projects/empire-world |
+| Completion Date | 2011 (T1); 2019 (tower B4) | Low – Wikipedia list (T1); SkyscraperPage search summary (B4: construction 2012, completion 2019); which of T2–T5 is B4 is not stated | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq; https://skyscraperpage.com/b35416 |
+| Development Phases | Towers T1–T5; Empire Business Complex at north gate; parent Empire World (2014 news: overall completion targeted for 2017) | Medium – Bagh-y description | https://baghyshaqlawa.net/en/projects/empire-world; https://www.iraq-businessnews.com/2014/04/15/empire-world-on-track-for-2017-completion/; https://www.meed.com/empire-world-targets-2017-completion-2/ |
 | Coordinates | Not verified | — – No usable map pin: none published, a placeholder (0,0), or a pin shared by several projects | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -68,6 +68,13 @@ Empire Business Towers is the office sub-project of the Empire World development
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers | Market listings (first page of ~4): ready offices 123/148 m2, rent 450–850 USD/month, one sale at 125,000 USD | — | 2026-11-07 | medium |
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-complex | One listing: furnished beauty centre 160 m2, 250,000 USD (negotiable) | — | 2026-11-07 | medium |
 | en.wikipedia.org | https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq | Empire Business Tower: 130 m, 33 floors, completed 2011, Erbil; tallest building in Iraq 2011–2013 (cites a BCM Holding A.S. completed-projects page) | — | 2026-11-07 | medium |
+| skyscraperpage.com | https://skyscraperpage.com/b35416 | Search summary, page not opened: building entry 'Empire Business Tower B4', Erbil; construction 2012, completion 2019; developer: Empire World. Which of T2–T5 'B4' is, is not stated. | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/empire-world | Search summary, page not opened: agency Empire World page; Empire World named as the developer whose projects include Empire Business Towers and the Business Complex; T1 27 floors with 24,000 m2 construction area, surrounded in a circle by T2–T5 of 23 floors and 21,000 m2 each; Business Complex of 6 towers about 25 m high each. | — | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/developers/empire-group | Search summary, page not opened: developer page titled 'Empire Group', described as one of the leading developers in Erbil. | — | 2026-11-07 | low |
+| meed.com | https://www.meed.com/empire-world-targets-2017-completion-2/ | Search summary, page not opened: news that the parent Empire World development targeted completion in 2017. | — | 2026-11-07 | low |
+| iraq-businessnews.com | https://www.iraq-businessnews.com/2014/04/15/empire-world-on-track-for-2017-completion/ | Search summary, page not opened: 'Empire World on track for 2017 completion' (parent project). | 2014-04-15 | 2026-11-07 | low |
+| marcopolis.net | https://marcopolis.net/?p=2956 | Search summary, page not opened: Erbil's Empire World development reported over 70% complete and on track for 2017 completion (parent project). | — | 2026-11-07 | low |
+| marcopolis.net | https://marcopolis.net/?p=1943 | Search summary, page not opened (statements summarised across this and related results, attribution to a single page not shown): Empire World plan of 88 towers and 300 villas on 750,000 m2; business towers leased to firms including Chevron, Total, Hunt Oil, Taqa, Repsol, DNO and Ericsson; Empire World linked to Falcon Group (chairman Peshraw Majid Agha). | — | 2026-11-07 | low |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 
@@ -76,21 +83,29 @@ Empire Business Towers is the office sub-project of the Empire World development
    - Name, location in centre of Empire World, office use (Bagh-y, Hajisalam)
    - 5 towers; T1 27 floors, T2–T5 23 floors (Bagh-y, Hajisalam)
    - Office sizes 123/148 m2 (Bagh-y, Hajisalam, homele listings) and ~215 m2 in T1 (Bagh-y, Hajisalam)
+   - Construction status completed (homele Ready listings, Wikipedia 2011, SkyscraperPage 2019 entry for tower B4, news summary of leased towers)
+   - Empire Business Complex has 6 buildings (Bagh-y; Roya search summary, about 25 m each)
 2. **Information supported by only one source:**
    - Construction areas 24,000 m2 (T1) and 21,000 m2 (T2–T5) (Bagh-y)
    - Office layout per floor and parking counts (Bagh-y)
-   - Business Complex plot 24,000 m2 / 30,600 m2 built / 6 buildings (Bagh-y)
+   - Business Complex plot 24,000 m2 / 30,600 m2 built (Bagh-y)
    - 130 m height, completion 2011, tallest in Iraq 2011–2013 (Wikipedia)
+   - Tower B4 construction 2012–2019 (SkyscraperPage, search summary)
+   - Tenants incl. Chevron, Total, Hunt Oil, Taqa, Repsol, DNO, Ericsson (news search summary)
+   - Parent Empire World targeted overall completion in 2017 (2014 news)
 3. **Conflicting information:**
-   - Floors of central tower T1: 27 (baghyshaqlawa.net / hajisalam.com); 33 (en.wikipedia.org (List of tallest buildings in Iraq)) → 27 adopted (two primary sites agree); Wikipedia's 33 may count basement/technical levels – unconfirmed.
+   - T1 floors: 27 (Bagh-y, Hajisalam, Roya) vs 33 (Wikipedia)
+   - Developer: Empire World (SkyscraperPage, Roya) vs BCM Holding A.S. cited by Wikipedia (role not stated)
+   - Floors of central tower T1: 27 (baghyshaqlawa.net / hajisalam.com / roya-iq.com (search summary)); 33 (en.wikipedia.org (List of tallest buildings in Iraq)) → 27 adopted (three agency pages agree); Wikipedia's 33 may count basement/technical levels – unconfirmed.
+   - Developer: Empire World (skyscraperpage.com (B4 entry) / roya-iq.com – search summaries); BCM Holding A.S. (cited page; role not stated) (en.wikipedia.org (List of tallest buildings in Iraq)) → Disputed: Empire World recorded in the developer field at low confidence because two independent pages name it; BCM Holding's role is not stated.
 4. **Missing information requiring confirmation:**
-   - Developer / owner
+   - Owner (news summary links Empire World to Falcon Group; unconfirmed)
    - Land area of towers site
    - Total number of offices
    - Coordinates
 5. **Potentially outdated information:**
    - None
 6. **Important unresolved questions:**
-   - Status 'completed' rests on homele Ready listings and Wikipedia; no primary project page states status
-   - Wikipedia cites BCM Holding A.S. for the tower; Miran names B.C. Group for Empire Royal – relationship to Empire World's master developer unconfirmed
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Developer: Empire World (SkyscraperPage, Roya) vs BCM Holding A.S. cited by Wikipedia; Falcon Group link (news summary) and Miran's B.C. Group for Empire Royal unconfirmed
+   - Which of T2–T5 SkyscraperPage's 'Empire Business Tower B4' corresponds to
+   - Second verification pass (2026-11-07): new evidence. SkyscraperPage, a Roya agency page and news summaries confirm the towers and Business Complex, their completed and leased status (tower B4 finished 2019) and name Empire World as developer, which conflicts with Wikipedia's BCM Holding citation. Queries: “"Empire Business Towers" Erbil developer floors”; “"Empire World" Erbil developer company business towers completion”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

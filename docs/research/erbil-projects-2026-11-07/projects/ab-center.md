@@ -79,4 +79,5 @@ AB Center is a completed commercial office building in the English Village area 
 6. **Important unresolved questions:**
    - Price type inferred: Paya shows US$1,050 (105 m²) and US$30,000 (2,000 m²) with no period; values (≈US$10–15/m²) and the 'tenants' wording indicate monthly rent
    - No page on homele, baghyshaqlawa, hajisalam or miranestate
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("AB Center" Erbil Albit / "AB Center" "English Village" Erbil) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names AB Center or Albit Group; results only describe English Village itself, so developer and status still rest on Paya alone. Queries: “"AB Center" Erbil Albit”; “"AB Center" "English Village" Erbil”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

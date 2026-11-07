@@ -89,4 +89,4 @@ Ruby Towers, also known as Ruby Tower, is a completed residential project on the
    - None
 6. **Important unresolved questions:**
    - Whether 32 residential floors applies to each of the 6 towers
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No news, developer or government page names Ruby Towers; tower, floor and unit figures still rest on agency pages. Queries: “"Ruby Towers" Erbil”; “روبي تاور أربيل شارع 40 مشروع”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

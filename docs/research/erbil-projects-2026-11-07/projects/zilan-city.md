@@ -5,9 +5,9 @@ Project ID: zilan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 ## PART A — PROJECT DATA SHEET
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
-| Project Name | Zilan City | Medium – Baghy and Haji Salam; homele spells 'Zeelan City' | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/; https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city |
+| Project Name | Zilan City | Medium – Baghy and Haji Salam; homele spells 'Zeelan City'; an October 2017 REACH reference map of Erbil City also labels 'Zilan City' | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/; https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city; https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf |
 | Alternative names | Zeelan City; زیلان ستی; زیلان ستي | Medium – homele area name; Haji Salam Kurdish/Arabic names | https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city; https://hajisalam.com/en/zilan-city/ |
-| City | Erbil | High – Baghy, Haji Salam, homele | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/; https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city |
+| City | Erbil | High – Baghy, Haji Salam, homele; REACH Erbil City reference map (Oct 2017) includes the label | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/; https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city; https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf |
 | District / Area | Disputed: Koya Road (Baghy) vs Kasnazan Road (Haji Salam) | Low – Two primary sites give different approach roads | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/ |
 | Developer | Not verified | — – Not named on any primary site | — |
 | Project Category | Residential (houses) | Medium – Baghy and Haji Salam type House | https://baghyshaqlawa.net/en/projects/zilan-city; https://hajisalam.com/en/zilan-city/ |
@@ -15,7 +15,7 @@ Project ID: zilan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Number of Buildings / Towers | 456 houses | Low – Haji Salam 'Number Of Unit 456' | https://hajisalam.com/en/zilan-city/ |
 | Total Residential Units | 456 | Low – Haji Salam only | https://hajisalam.com/en/zilan-city/ |
 | Floors per building | 1 (house type) | Low – Haji Salam 'Num. of floors 1' | https://hajisalam.com/en/zilan-city/ |
-| Construction Status | Completed (inferred) | Low – One homele 'Ready' resale listing plus four Baghy resale cards | https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city; https://baghyshaqlawa.net/en/projects/zilan-city |
+| Construction Status | Completed (inferred) | Low – One homele 'Ready' resale listing plus four Baghy resale cards; the area was already a named place on an October 2017 REACH map of Erbil City (search summary), consistent with an established area | https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city; https://baghyshaqlawa.net/en/projects/zilan-city; https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf |
 | Launch Date | Not verified | — – No source states it | — |
 | Completion Date | Not verified | — – No source states it | — |
 | Development Phases | None identified | — – No phases mentioned | — |
@@ -62,16 +62,18 @@ Zilan City, also written Zeelan City, is a residential house project on the east
 | hajisalam.com | https://hajisalam.com/en/zilan-city/ | Project page 'Zilan City': address Kasnazan Road; type House; Number Of Unit 456; area 167 m; 1 floor; 2 bedrooms; no listings. Home-page area list gives 'زیلان ستی' / 'زیلان ستي' | — | 2026-11-07 | medium |
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/zilan-city | Project page (last updated 2022-07-20): address 'Koya Road Zilan City'; type House; tags internet, playground, parking, green areas; nearest branch 'Koya Road Branch'; map marker 36.196476, 44.094018; 4 undated sale cards 200-375 m2, USD 105,000-210,000 | 2022-07-20 | 2026-11-07 | medium |
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/zeelan-city | Area listing page 'Zeelan City' (1 page): 1 'Ready' house 200 m2, 4 bed, 3 bath, USD 207,500 negotiable | — | 2026-11-07 | medium |
+| repository.impact-initiatives.org (REACH) | https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf | REACH/IMPACT reference map 'IRAQ - Erbil Governorate - Erbil City, as of October 2017' (dated 15 Nov 2017) includes the place label 'Zilan City'; position on the map and any other detail not given in the summary (search summary, page not opened) | 2017-11-15 | 2026-11-07 | low |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 
 ## PART H — DATA VERIFICATION REPORT
 1. **Fully verified information (≥2 independent sources):**
-   - Name and Erbil location (Baghy, Haji Salam, homele)
+   - Name and Erbil location (Baghy, Haji Salam, homele; independent REACH Erbil City reference map, Oct 2017)
    - House-type category (Baghy, Haji Salam)
 2. **Information supported by only one source:**
    - 456 units, 167 m2 one-floor 2-bedroom house type (Haji Salam)
    - Feature tags (Baghy)
+   - Existence as a named area of Erbil City by October 2017 (REACH map, search summary only)
 3. **Conflicting information:**
    - Approach road: Koya Road (Baghy) vs Kasnazan Road (Haji Salam)
    - House size 167 m2 (Haji) vs 200-375 m2 advertised (listings)
@@ -88,4 +90,4 @@ Zilan City, also written Zeelan City, is a residential house project on the east
 6. **Important unresolved questions:**
    - Which approach road is correct; marker lies east of centre within the ring-road belt (kept in scope)
    - Status inferred from listings only
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): new evidence. An independent REACH/IMPACT reference map of Erbil City (October 2017) labels 'Zilan City', confirming the name as an established area of Erbil city; the Koya Road vs Kasnazan Road address, developer, status and house sizes remain unresolved. Queries: “"Zilan City" Erbil”; “"زیلان ستی" OR "زیلان سیتی" OR "زيلان سيتي" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

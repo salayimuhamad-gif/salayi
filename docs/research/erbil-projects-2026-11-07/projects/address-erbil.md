@@ -81,4 +81,5 @@ Address Erbil, also known as Adress City, is a residential villa project in the 
 6. **Important unresolved questions:**
    - Whether 240–1,335 m² are plot or built-up areas: Miran calls them plot sizes, Paya calls them house/villa sizes
    - Paya and Miran texts are near-identical (likely one developer brochure), so independence is limited
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("Address Erbil" project developer Bahrka road / "أدرس أربيل" OR "ئەدرێس هەولێر" مشروع) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Address Erbil under its English, Arabic or Sorani name; developer and dates are still missing. Queries: “"Address Erbil" project developer Bahrka road”; “"أدرس أربيل" OR "ئەدرێس هەولێر" مشروع”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

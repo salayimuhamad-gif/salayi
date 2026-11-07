@@ -5,10 +5,10 @@ Project ID: shahan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 ## PART A — PROJECT DATA SHEET
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
-| Project Name | Shahan City | Low – Single project page | https://hajisalam.com/en/shahan-city/ |
+| Project Name | Shahan City | Medium – Haji Salam project page; name independently shown as a mapped area on a UNHCR Erbil map (search summary) | https://hajisalam.com/en/shahan-city/; https://data.unhcr.org/en/documents/download/100611 |
 | Alternative names | None found | — – No other name in sources | — |
-| City | Erbil | Medium – Haji Salam | https://hajisalam.com/en/shahan-city/ |
-| District / Area | Kasnazan Road | Low – Haji Salam only | https://hajisalam.com/en/shahan-city/ |
+| City | Erbil | High – Haji Salam; UNHCR Erbil-area map (search summary) | https://hajisalam.com/en/shahan-city/; https://data.unhcr.org/en/documents/download/100611 |
+| District / Area | Kasnazan Road | Low – Haji Salam address; UNHCR map shows the name with the Kasnazan label and nearby Heran City and Zheyan (search summary, placement not inspected) | https://hajisalam.com/en/shahan-city/; https://data.unhcr.org/en/documents/download/100611 |
 | Developer | Not verified | — – Not named; one web search found nothing; no link to Shahan Group is stated | — |
 | Project Category | Residential (houses and apartments) | Low – Haji Salam 'House- Apartment' | https://hajisalam.com/en/shahan-city/ |
 | Total Land Area | Not verified | — – Not stated (200 m and 160 m are unit sizes) | — |
@@ -54,6 +54,7 @@ Shahan City is a residential project on Kasnazan Road in the city of Erbil. The 
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
 |---|---|---|---|---|---|
 | hajisalam.com | https://hajisalam.com/en/shahan-city/ | Project page 'Shahan City': address Kasnazan Road; type House- Apartment; 696 units; Area(House) 200 m; Area(Apartment) 160 m; 1 floor; 2 bedrooms; no related listings | — | 2026-11-07 | medium |
+| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR map document of the Erbil area (search summary, page not opened): labels 'Shahan City' among mapped residential areas, alongside Heran City and Zheyan, on a map that also labels Kasnazan; gives no developer, status or size | — | 2026-11-07 | low |
 | homele.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | baghyshaqlawa.net | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -61,9 +62,9 @@ Shahan City is a residential project on Kasnazan Road in the city of Erbil. The 
 
 ## PART H — DATA VERIFICATION REPORT
 1. **Fully verified information (≥2 independent sources):**
-   - None
+   - Name and Erbil location, Kasnazan side (Haji Salam + UNHCR map label, search summary)
 2. **Information supported by only one source:**
-   - All project data: Kasnazan Road, 696 units, houses 200 m2, apartments 160 m2, 1 floor, 2 bedrooms (Haji Salam)
+   - Kasnazan Road address, 696 units, houses 200 m2, apartments 160 m2, 1 floor, 2 bedrooms (Haji Salam)
 3. **Conflicting information:**
    - None
 4. **Missing information requiring confirmation:**
@@ -82,4 +83,4 @@ Shahan City is a residential project on Kasnazan Road in the city of Erbil. The 
 6. **Important unresolved questions:**
    - Whether the '1 floor / 2 bedrooms' fields refer to the houses, the apartments or both
    - No source links the project to Shahan Group (Cavalli Tower, Veloria); name similarity only - not merged
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): new evidence. A UNHCR map of the Erbil area labels Shahan City among residential areas mapped with Kasnazan, Heran City and Zheyan, independently confirming the name and the Kasnazan-side location; developer, status and unit details remain single-source. Queries: “"Shahan City" Erbil Kasnazan”; “شاهان سيتي أربيل كسنزان”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

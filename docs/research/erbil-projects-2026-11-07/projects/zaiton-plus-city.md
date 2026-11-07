@@ -98,4 +98,4 @@ Zaiton Plus City, also written Zaytoon Plus City, is a residential house project
    - Whether 'Zaiton Plus VIP' is a separate phase or another name for Olive City / Olive City 2
    - Status of Olive City 2
    - Developer not searched (search budget kept for other projects)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page about Zaiton/Zaytoon Plus City or its Olive City phases was found in English or Arabic; developer, land area and total house count remain missing. Queries: “"Zaiton Plus" OR "Zaytoon Plus" Erbil project”; “"زيتون سيتي" أربيل مشروع سكني”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

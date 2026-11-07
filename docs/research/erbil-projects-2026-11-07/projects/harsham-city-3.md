@@ -6,8 +6,8 @@ Project ID: harsham-city-3 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
 | Project Name | Harsham City 3 | Medium – Haji Salam page title only | https://hajisalam.com/en/harsham-city-3/ |
-| Alternative names | Harsham 3 | Low – Pack alias; no page uses it | — |
-| City | Erbil | Medium – Haji Salam lists it under Erbil | https://hajisalam.com/en/harsham-city-3/ |
+| Alternative names | Harsham 3 | Low – Pack alias; a UNHCR Erbil map labels a residential area 'Harsham_3' (search summary only, not reproduced by a second query) | https://data.unhcr.org/en/documents/download/100611 |
+| City | Erbil | Medium – Haji Salam lists it under Erbil; UNHCR Erbil map lists Harsham_3 among residential areas (search summary) | https://hajisalam.com/en/harsham-city-3/; https://data.unhcr.org/en/documents/download/100611 |
 | District / Area | New Bahrka road | Medium – Haji Salam address field only | https://hajisalam.com/en/harsham-city-3/ |
 | Developer | Not verified | — – Not stated | — |
 | Project Category | Residential (houses) | Medium – Haji Salam project type | https://hajisalam.com/en/harsham-city-3/ |
@@ -53,6 +53,7 @@ Harsham City 3 is a residential house project on the new Bahrka road in Erbil. T
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
 |---|---|---|---|---|---|
 | hajisalam.com | https://hajisalam.com/en/harsham-city-3/ | Project page 'Harsham City 3': Bahirka new Road; House; 500 units; 200 m2; 1.5 floors; 3 bedrooms; no listings | — | 2026-11-07 | medium |
+| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR-linked Erbil map lists Harsham_1, Harsham_2 and Harsham_3 among residential areas (search summary, page not opened; undated; no house counts or road) | — | 2026-11-07 | low |
 | homele.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | baghyshaqlawa.net | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -77,4 +78,6 @@ Harsham City 3 is a residential house project on the new Bahrka road in Erbil. T
 6. **Important unresolved questions:**
    - No homele area page found for 'Harsham City 3'; the unnumbered homele 'Harsham City' area is attributed to phase 1
    - No other primary site has a page for this phase
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass: one search summary says a UNHCR-linked Erbil map lists Harsham_3 among residential areas; a follow-up search found only Harsham IDP camp maps, so status kept unverified until that map is checked
+   - Most web results for 'Harsham' concern the Harsham IDP camp in Erbil, a different site
+   - Second verification pass (2026-11-07): new evidence. Only a search summary of a UNHCR Erbil map naming Harsham_3 as a residential area was found (not reproduced); location on the new Bahrka road, 500 houses, status and developer remain single-source or missing. Queries: “"Harsham 3" OR "Harsham City 3" Erbil”; “"Harsham_3" OR "Harsham_2" Erbil residential areas map”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

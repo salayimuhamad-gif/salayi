@@ -49,13 +49,13 @@ Erbil. One web search returned no page describing the project's location.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-101 کۆمپلێکس (101 Complex) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە قۆناغی بنیاتناندایە. پڕۆژەکە چوار جۆر شوقە پێشکەش دەکات: ستۆدیۆی 47 م² بە یەک حەمام، شوقەی یەک ژووری نووستن بە ڕووبەری 94 م² و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 143 م² و 144 م² کە هەریەکەیان دوو حەمامی هەیە. زانیاریی زیاتر، وەک ناوی گەشەپێدەر، شوێنی ورد، ژمارەی باڵەخانەکان و خزمەتگوزارییەکان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
+101 کۆمپلێکس (101 Complex) پڕۆژەیەکی نیشتەجێبوونە لە شاری هەولێر کە لە قۆناغی بنیاتناندایە. پڕۆژەکە چوار جۆر شوقە پێشکەش دەکات: ستۆدیۆی 47 م² بە یەک حەمام، شوقەی یەک ژووری نووستن بە ڕووبەری 94 م² و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 143 م² و 144 م² کە هەریەکەیان دوو حەمامی هەیە.
 
 ### 2. Arabic (العربية)
-101 كومبليكس (101 Complex) مشروع سكني قيد الإنشاء في مدينة أربيل. يضم المشروع أربعة أنواع من الشقق: استوديو بمساحة 47 م² مع حمام واحد، وشقة بغرفة نوم واحدة بمساحة 94 م² مع حمام واحد، وشقتين بغرفتي نوم بمساحتي 143 م² و144 م² مع حمامين لكل منهما. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، منها اسم الشركة المطوّرة والموقع الدقيق وعدد المباني والمرافق.
+101 كومبليكس (101 Complex) مشروع سكني قيد الإنشاء في مدينة أربيل. يضم المشروع أربعة أنواع من الشقق: استوديو بمساحة 47 م² مع حمام واحد، وشقة بغرفة نوم واحدة بمساحة 94 م² مع حمام واحد، وشقتين بغرفتي نوم بمساحتي 143 م² و144 م² مع حمامين لكل منهما.
 
 ### 3. English
-101 Complex is a residential project in Erbil that is under construction. The project offers four apartment types: a 47 m² studio with one bathroom, a 94 m² one-bedroom apartment with one bathroom, and two-bedroom apartments of 143 m² and 144 m², each with two bathrooms. Further details, including the developer, the exact location, the number of buildings and the facilities, will be added to this profile when they become available.
+101 Complex is a residential project in Erbil that is under construction. The project offers four apartment types: a 47 m² studio with one bathroom, a 94 m² one-bedroom apartment with one bathroom, and two-bedroom apartments of 143 m² and 144 m², each with two bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -87,4 +87,5 @@ Erbil. One web search returned no page describing the project's location.
 6. **Important unresolved questions:**
    - Location inside Erbil not stated anywhere; in_erbil_city=true rests only on Paya/Homele city field
    - Paya 'about' text is generic marketing copy; residential/commercial mix not confirmed
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("101 Complex" Erbil / "101 كومبليكس" أربيل) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names 101 Complex in Erbil (the only '101' compound found is an unrelated project in Mostakbal City, Egypt); developer, district and dates are still missing. Queries: “"101 Complex" Erbil”; “"101 كومبليكس" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

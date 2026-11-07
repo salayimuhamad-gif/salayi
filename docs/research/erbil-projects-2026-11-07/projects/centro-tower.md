@@ -95,4 +95,4 @@ Centro Tower is a completed mixed-use tower in Erbil that combines residential a
    - Who developed Centro Tower and where exactly it stands
    - Whether 'Centro Towers' (plural in Paya text) implies a second tower
    - Converted from an earlier agent's Markdown; its four WebSearch queries returned no relevant page
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page found for Centro Tower; location, developer, floors and completion year are still missing. Queries: “"Centro Tower" Erbil”; “"سینترو تاور" OR "Centro Towers" Erbil apartments 172 units”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

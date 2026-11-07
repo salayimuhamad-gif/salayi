@@ -82,4 +82,4 @@ Nawroz City is a residential apartment project in Erbil, located on the 120m rin
 6. **Important unresolved questions:**
    - Construction status inferred from rental operation only
    - No homele/Paya/Miran/Hajisalam page found in the evidence pack
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No wider-web source mentions Nawroz City or links it to BC Group; all facts still rest on one project page. Queries: “"Nawroz City" Erbil BC Group apartments”; “"نەورۆز سیتی" OR "نوروز سيتي" هەولێر أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

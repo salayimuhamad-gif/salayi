@@ -80,4 +80,5 @@ Vital City is a residential villa project in Erbil, located on 100m Street, the 
    - One WebSearch ('"Vital City" Erbil villas 100m street') found no page for Vital City; it surfaced a 'Vital Village' named among projects around English Village (40m street) - possible same or related project, not confirmed
    - Baghy Shaqlawa lists a 'Vital Branch Erbil' (seen on its Tulip Tower page) - may be in this project; not confirmed
    - Whether 322-744 m2 are plot or built areas
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass: the 'Vital Village' mention is on Roya's English Village page (roya-iq.com/?p=6611, search summary, page not opened), which lists it among projects around English Village on the 40 m street; Vital City is given on the 100m Street, so not merged
+   - Second verification pass (2026-11-07): no new evidence. No page names Vital City; a Roya page only names a Vital Village near English Village on the 40 m street, which is not confirmed as the same project. Queries: “"Vital City" Erbil”; “"Vital Village" Erbil villas”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

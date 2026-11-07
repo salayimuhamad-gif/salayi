@@ -90,4 +90,4 @@ Mini Slava is a completed residential apartment project on the 120m Street ring 
    - Roya 'under construction' status (undated)
 6. **Important unresolved questions:**
    - Roya figures (area, towers, units) need a direct page check; URL attribution came from search-result order
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Only the already-cited Roya developer-partners summary (Slava Group: Slava City and Mini Slava) was found; tower count, units and status still lack an independent opened source. Queries: “"Mini Slava" Erbil Slava Group towers”; “"ميني سلافا" OR "مینی سلاڤا" أربيل هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

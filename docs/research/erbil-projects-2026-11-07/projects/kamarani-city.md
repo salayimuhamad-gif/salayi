@@ -80,4 +80,4 @@ Kamarany City, also written Kamarani City, is a residential project in Erbil. It
 6. **Important unresolved questions:**
    - Whether homele area 'shari-kamarani' is this project (page not crawled)
    - Construction status and developer
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page mentions Kamarany/Kamarani City; developer, status, apartment details and land area remain unconfirmed. Queries: “"Kamarany City" OR "Kamarani City" Erbil Kasnazan”; “"شاری کامەرانی" OR "كامراني سيتي" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

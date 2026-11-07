@@ -41,13 +41,13 @@ No source located Bajgir City. The evidence pack holds no pages from the five pr
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-باجگیر سیتی (Bajgir City) پڕۆژەیەکە لە هەولێر.
+باجگیر سیتی (Bajgir City) ناوی پڕۆژەیەکە لە هەولێر، پایتەختی هەرێمی کوردستانی عێراق.
 
 ### 2. Arabic (العربية)
-باجگير سيتي (Bajgir City) مشروع في أربيل.
+باجگير سيتي (Bajgir City) اسم مشروع في أربيل، عاصمة إقليم كوردستان العراق.
 
 ### 3. English
-Bajgir City is a project in Erbil.
+Bajgir City is a project name in Erbil, the capital of the Kurdistan Region of Iraq.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -73,4 +73,6 @@ Bajgir City is a project in Erbil.
    - Whether 'Bajgir City' exists under another spelling (e.g. Bajger, Bajgr, باجگیر) on local portals
    - One WebSearch ('Bajgir City Erbil housing project') returned only unrelated Erbil housing news
    - in_erbil_city left true from the project list; no evidence either way
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("Bajgir City" Erbil / باجگیر سیتی هەولێر پڕۆژە) found no independent page for this project
+   - Name similarity only: gazetteer place 'Bajêr', Erbil Governorate (bamwor.com, about 36.69 N, 44.50 E, roughly 70 km north-east of Erbil city). Not linked to this project; if 'Bajgir City' meant that place it would lie outside Erbil city
+   - Second verification pass (2026-11-07): no new evidence. No page names Bajgir City; a gazetteer lists a place 'Bajêr' in Erbil Governorate (about 36.69 N, 44.50 E, far outside Erbil city), but nothing links it to this project; all fields still missing. Queries: “"Bajgir City" Erbil”; “باجگیر سیتی هەولێر پڕۆژە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

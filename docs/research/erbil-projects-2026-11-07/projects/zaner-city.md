@@ -87,4 +87,4 @@ Zaner City is a residential villa project on the 150 m Road in Erbil, behind Gan
 6. **Important unresolved questions:**
    - Status inferred from 'Ready' resale listings only
    - homele card labelled '(Down payment)' (USD 197,000) may be an instalment offer - excluded from prices
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page about Zaner City was found in English or Kurdish/Arabic; developer, explicit status, unit count and land area remain missing. Queries: “"Zaner City" Erbil”; “"زانەر سیتی" OR "زانەر ستی" OR "زانر سيتي" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

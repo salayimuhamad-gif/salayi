@@ -44,13 +44,13 @@ Baghy Shaqlawa places Z Center Towers on the 150m Road inside the Zerin City pro
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زێد سەنتەر تاوەرز (Z Center Towers)، کە بە زێد تاوەریش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لەسەر شەقامی 150 مەتری لەناو پڕۆژەی زێرین سیتی، لە پشتێنەی ڕێگا بازنەییەکانی باکووری ڕۆژهەڵاتی شار هەڵکەوتووە. پڕۆژەکە شوقەی یەک ژووری نووستن بە ڕووبەری 80 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 108 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام لەخۆ دەگرێت. زانیاریی زیاتر، وەک ناوی گەشەپێدەر، ژمارەی تاوەر و نهۆمەکان، خزمەتگوزارییەکان و قۆناغی بنیاتنان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
+زێد سەنتەر تاوەرز (Z Center Towers)، کە بە زێد تاوەریش ناسراوە، پڕۆژەیەکی نیشتەجێبوونی شوقەیە لە هەولێر. پڕۆژەکە لەسەر شەقامی 150 مەتری لەناو پڕۆژەی زێرین سیتی، لە پشتێنەی ڕێگا بازنەییەکانی باکووری ڕۆژهەڵاتی شار هەڵکەوتووە. پڕۆژەکە شوقەی یەک ژووری نووستن بە ڕووبەری 80 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام، و شوقەی دوو ژووری نووستن بە ڕووبەری 108 م² لەگەڵ هۆڵێکی پێشوازی و یەک حەمام لەخۆ دەگرێت.
 
 ### 2. Arabic (العربية)
-زد سنتر تاورز (Z Center Towers)، المعروف أيضاً باسم زد تاور، مشروع سكني للشقق في أربيل. يقع المشروع على طريق 150 متر داخل مشروع زيرين سيتي، في الحزام الشمالي الشرقي للطرق الدائرية في المدينة. يضم المشروع شققاً بغرفة نوم واحدة بمساحة 80 م² مع صالة استقبال وحمام واحد، وشققاً بغرفتي نوم بمساحة 108 م² مع صالة استقبال وحمام واحد. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، منها اسم الشركة المطوّرة وعدد الأبراج والطوابق والمرافق وحالة الإنشاء.
+زد سنتر تاورز (Z Center Towers)، المعروف أيضاً باسم زد تاور، مشروع سكني للشقق في أربيل. يقع المشروع على طريق 150 متر داخل مشروع زيرين سيتي، في الحزام الشمالي الشرقي للطرق الدائرية في المدينة. يضم المشروع شققاً بغرفة نوم واحدة بمساحة 80 م² مع صالة استقبال وحمام واحد، وشققاً بغرفتي نوم بمساحة 108 م² مع صالة استقبال وحمام واحد.
 
 ### 3. English
-Z Center Towers, also known as Z Tower and Z-Towers, is a residential apartment project in Erbil. It is located on the 150m Road inside the Zerin City project, in the north-eastern ring-road belt of the city. The project includes one-bedroom apartments of 80 m² with one reception room and one bathroom, and two-bedroom apartments of 108 m² with one reception room and one bathroom. Further details, including the developer, the number of towers and floors, facilities and the construction status, will be added to this profile when they become available.
+Z Center Towers, also known as Z Tower and Z-Towers, is a residential apartment project in Erbil. It is located on the 150m Road inside the Zerin City project, in the north-eastern ring-road belt of the city. The project includes one-bedroom apartments of 80 m² with one reception room and one bathroom, and two-bedroom apartments of 108 m² with one reception room and one bathroom.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -82,4 +82,4 @@ Z Center Towers, also known as Z Tower and Z-Towers, is a residential apartment 
 6. **Important unresolved questions:**
    - Not found on homele, Paya, Haji Salam or Miran
    - Map marker is ~2.1 km east of the Zerin City marker although the address says 'inside Zerin City'
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page about Z Center Towers was found (the only 'Z Towers' hit is an unrelated project in Sheikh Zayed, Egypt); developer, tower count, floors and status remain missing. Independent news confirms the parent Zerin City compound, but not this sub-project. Queries: “"Z Center" towers Erbil Zerin City”; “"Z Tower" OR "Z Towers" Erbil 150m road apartments”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

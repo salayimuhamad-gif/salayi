@@ -90,4 +90,4 @@ Kani Almany Village, also known as German Village, Kani Almani and Kany Almany, 
 6. **Important unresolved questions:**
    - Developer not named anywhere; one web search found nothing
    - Paya describes the site as 'outskirts of Erbil'; kept in scope as a Bahrka road approach
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Results only repeated the German Village mention already cited from the English Village article; developer, land area and dates remain missing. Queries: “"Kani Almany" OR "German Village" Erbil Bahrka houses developer”; “"کانی ئەڵمانی" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

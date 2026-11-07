@@ -78,4 +78,4 @@ Darwazay Hawler, whose name means Erbil Gate, is a residential project of houses
 6. **Important unresolved questions:**
    - Exact location along the Erbil–Shaqlawa road: within the Erbil ring-road belt / Pirmam approach or further out? Set to 'edge' pending confirmation
    - Developer and status unknown; one WebSearch (English + Kurdish name) returned only unrelated road projects
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page on the housing project; results only concerned government road works (a new gateway on the Erbil-Koya road and an 'Erbil Darwaza-Banaslawa' road), so developer, status and scale remain unknown and the project stays at the urban edge. Queries: “"Darwazay Hawler" OR "دەروازەی هەولێر" پڕۆژە”; “"Erbil Gate" OR "Darwaza" residential houses project Erbil Shaqlawa road”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -81,4 +81,4 @@ Gulan City is a residential area in Erbil, in the Kurdistan Region of Iraq. It l
    - Haji Salam page is empty; one web search found no project page
    - Not to be confused with Gulan Street (40m road) or Gulan Park; a search result about a planned project on the Erbil-Duhok road (Gulan Media) does not match this area and was not used
    - Status inferred from a single ready listing
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Results concerned Gulan Street, Gulan Towers and a planned employee city on the Erbil-Duhok road, none matching this Bahrka Road area; developer, size and dates still missing. Queries: “"Gulan City" Erbil Bahrka houses project”; “"گوڵان سیتی" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

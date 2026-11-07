@@ -5,17 +5,17 @@ Project ID: zerin-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 ## PART A — PROJECT DATA SHEET
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
-| Project Name | Zerin City | Medium – Baghy and homele use 'Zerin City' | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city |
+| Project Name | Zerin City | High – Baghy and homele use 'Zerin City'; independent 2021 news (Kurdistan24, Rudaw, Esta) and a 2023 academic study use the same name | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city; https://www.kurdistan24.net/en/story/386083; https://rudaw.net/english/kurdistan/311020211-amp; https://esta.krd/en/104830; https://doaj.org/article/64366186926d4a83a947be858a437f62 |
 | Alternative names | Ziren City; Zeren City; زێرین ستی; زیرین ستي | Low – Roya slug 'ziren city'; Baghy Golden Tower address 'Zeren city' (marker adjacent); Haji Salam area list | https://royaiq.com/areas/zirencitymodern; https://baghyshaqlawa.net/en/projects/golden-tower; https://hajisalam.com/ |
-| City | Erbil | High – Baghy and homele | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city |
-| District / Area | 150m Road | Medium – Baghy address; Z Center Towers page also places Zerin City on the 150m Road | https://baghyshaqlawa.net/en/projects/zerin-city; https://baghyshaqlawa.net/en/projects/z-center-towers |
-| Developer | Not verified | — – Not named on any primary site | — |
-| Project Category | Residential (houses and apartments) | Medium – Baghy types Apartment, House; homele house listing | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city |
+| City | Erbil | High – Baghy and homele; 2021 flood news (governor: 'the city's Zerin City area') and 2023 flood study | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city; https://www.kurdistan24.net/en/story/386083; https://doaj.org/article/64366186926d4a83a947be858a437f62 |
+| District / Area | 150m Road, northern Erbil | Medium – Baghy address (150m Street); 2021 flood news and 2023 study place the compound in the north of Erbil; Rudaw summary gives about 17 km from central Erbil (likely road distance) | https://baghyshaqlawa.net/en/projects/zerin-city; https://baghyshaqlawa.net/en/projects/z-center-towers; https://rudaw.net/english/kurdistan/311020211-amp; https://doaj.org/article/64366186926d4a83a947be858a437f62 |
+| Developer | Not verified | — – Not named on any primary site; 2021 news mentions the project's owner / contracted company (detained after the October 2021 flood) but the search summaries do not give its name | https://esta.krd/en/104830; https://rudaw.net/english/kurdistan/311020211-amp |
+| Project Category | Residential (houses and apartments) | Medium – Baghy types Apartment, House; homele house listing; 2021 news calls it a housing compound with many homes | https://baghyshaqlawa.net/en/projects/zerin-city; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city; https://rudaw.net/english/kurdistan/311020211-amp; https://www.kurdistan24.net/en/story/386083 |
 | Total Land Area | Not verified | — – Not stated | — |
 | Number of Buildings / Towers | Not verified | — – Not stated | — |
 | Total Residential Units | Not verified | — – Not stated | — |
 | Floors per building | Not verified | — – Not stated; one listed house has one floor | — |
-| Construction Status | Completed (inferred) | Low – One homele resale listing tagged 'Ready' plus four undated Baghy resale cards | https://homele.com/properties/for-sale-and-rent/erbil/zerin-city; https://baghyshaqlawa.net/en/projects/zerin-city |
+| Construction Status | Completed and inhabited (houses occupied by October 2021); further residential building reported in 2021 | Medium – 2021 flood news reports hundreds of occupied homes damaged in Zerin City; governor said the company was building more residential buildings; homele 'Ready' resale listing | https://www.kurdistan24.net/en/story/386083; https://rudaw.net/english/kurdistan/311020211-amp; https://esta.krd/en/104830; https://homele.com/properties/for-sale-and-rent/erbil/zerin-city |
 | Launch Date | Not verified | — – No source states it | — |
 | Completion Date | Not verified | — – No source states it | — |
 | Development Phases | Contains Z Center Towers; Golden Tower probably inside | Low – Baghy addresses and map markers | https://baghyshaqlawa.net/en/projects/z-center-towers; https://baghyshaqlawa.net/en/projects/golden-tower |
@@ -43,17 +43,17 @@ Project ID: zerin-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | House 200 m2, 4 bed, 2 bath (two Baghy cards at the same price) | 105,000 | USD | resale | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/zerin-city |
 
 ## PART E — LOCATION & SURROUNDINGS
-Baghy's Golden Tower address ('Erbil-Shaqlawa Rd.-Zeren city') suggests the project also fronts the Erbil-Shaqlawa road. Map position (low confidence, from agency map pins): 36.285784, 44.091212.
+Zerin City lies on the 150m Road in the north of Erbil (Baghy address); 2021 flood news and a 2023 flood study also place the compound north of the city, and one 2021 news report describes it as about 17 km from central Erbil (search summary, page not opened). Baghy's Golden Tower address ('Erbil-Shaqlawa Rd.-Zeren city') suggests the project also fronts the Erbil-Shaqlawa road. Map position (low confidence, from agency map pins): 36.285784, 44.091212.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-زێرین ستی (Zerin City) پڕۆژەیەکی نیشتەجێبوونە لەسەر شەقامی ١٥٠ مەتری لە بەشی باکووری شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە خانوو و شوقە بەیەکەوە کۆدەکاتەوە. ڕووبەری خانووەکانی زێرین ستی ٢٠٠ م²یە، و لە دوو تا پێنج ژووری نووستن و یەک یان دوو حەمامیان هەیە. خزمەتگوزارییەکانی پڕۆژەکە بریتین لە کارەبای ٢٤ کاتژمێری، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت، مزگەوت و قوتابخانە. ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی لە پڕۆژەکەدا دەدرێت.
+زێرین ستی (Zerin City) کۆمەڵگەیەکی نیشتەجێبوونە لەسەر شەقامی ١٥٠ مەتری لە باکووری شاری هەولێر لە هەرێمی کوردستانی عێراق. پڕۆژەکە خانوو و شوقە بەیەکەوە کۆدەکاتەوە، و خانووەکانی لە ساڵی ٢٠٢١دا ئاوەدان بوون و خەڵکیان تێدا دەژیا. ڕووبەری خانووەکانی زێرین ستی ٢٠٠ م²یە، و لە دوو تا پێنج ژووری نووستن و یەک یان دوو حەمامیان هەیە. خزمەتگوزارییەکانی پڕۆژەکە بریتین لە کارەبای ٢٤ کاتژمێری، یاریگای منداڵان، پاسەوانی، پارکینگ، ناوچەی سەوز، باخچەی گشتی، سوپەرمارکێت، مزگەوت و قوتابخانە. ڕێگە بە ڕاگرتنی ئاژەڵی ماڵی لە پڕۆژەکەدا دەدرێت. لە تشرینی یەکەمی ٢٠٢١دا لافاو بەهۆی بارانی بەخوڕەوە زیانی بە ژمارەیەک خانووی کۆمەڵگەکە گەیاند.
 
 ### 2. Arabic (العربية)
-زيرين ستي (Zerin City) مشروع سكني على شارع 150 متر في الجزء الشمالي من مدينة أربيل في إقليم كوردستان العراق. يجمع المشروع بين المنازل والشقق. تبلغ مساحة المنازل في زيرين ستي 200 م²، وتضم من غرفتي نوم إلى خمس غرف نوم وحماماً أو حمامين. تشمل الخدمات في المشروع كهرباء على مدار 24 ساعة وملاعب للأطفال وحراسة ومواقف سيارات ومساحات خضراء وحديقة عامة وسوبرماركت ومسجداً ومدرسة. ويُسمح بتربية الحيوانات الأليفة في المشروع.
+زيرين ستي (Zerin City) مجمّع سكني على شارع 150 متر في شمال مدينة أربيل في إقليم كوردستان العراق. يجمع المشروع بين المنازل والشقق، وكانت منازله مأهولة بالسكان في عام 2021. تبلغ مساحة المنازل في زيرين ستي 200 م²، وتضم من غرفتي نوم إلى خمس غرف نوم وحماماً أو حمامين. تشمل الخدمات في المشروع كهرباء على مدار 24 ساعة وملاعب للأطفال وحراسة ومواقف سيارات ومساحات خضراء وحديقة عامة وسوبرماركت ومسجداً ومدرسة. ويُسمح بتربية الحيوانات الأليفة في المشروع. وفي تشرين الأول/أكتوبر 2021 تسببت سيول أعقبت أمطاراً غزيرة في أضرار لعدد من المنازل في المجمّع.
 
 ### 3. English
-Zerin City, also written Ziren City, is a residential project on the 150m Road in the northern part of Erbil, in the Kurdistan Region of Iraq. The project combines houses and apartments. Houses in Zerin City have an area of 200 m², with two to five bedrooms and one or two bathrooms. Services in the project include 24-hour electricity, playgrounds, security, parking, green areas, a public garden, a supermarket, a mosque and a school. Pets are allowed in the project.
+Zerin City, also written Ziren City, is a residential compound on the 150m Road in the north of Erbil, in the Kurdistan Region of Iraq. The project combines houses and apartments, and its houses were already inhabited in 2021. Houses in Zerin City have an area of 200 m², with two to five bedrooms and one or two bathrooms. Services in the project include 24-hour electricity, playgrounds, security, parking, green areas, a public garden, a supermarket, a mosque and a school. Pets are allowed in the project. In October 2021, flash flooding after heavy rain damaged a number of houses in the compound.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -64,29 +64,38 @@ Zerin City, also written Ziren City, is a residential project on the 150m Road i
 | roya-iq.com | https://royaiq.com/areas/zirencitymodern | Roya sitemap only (pages not fetched): area 'zirencitymodern' and listing slugs 'house sale 200m ziren city' - alias Ziren City | — | 2026-11-07 | low |
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/z-center-towers | Z Center Towers page: address '150m Road, inside the Zerin City Project' (sub-project) | 2022-07-20 | 2026-11-07 | medium |
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/golden-tower | Golden Tower page: address 'Erbil-Shaqlawa Rd.-Zeren city'; map marker 36.288530, 44.090876 (~0.3 km from Zerin City marker) | — | 2026-11-07 | low |
+| kurdistan24.net | https://www.kurdistan24.net/en/story/386083 | News 'Heavy rainfall in Kurdistan's Erbil leads to flash floods' (flood of 30 Oct 2021): Erbil governor Umed Khoshnaw said multiple homes collapsed in the city's Zerin City area and water entered other homes (search summary, page not opened) | — | 2026-11-07 | medium |
+| kurdistan24.net | https://www.kurdistan24.net/en/story/386094 | News 'Kurdistan PM visits homes damaged by flash floods in Erbil': PM Masrour Barzani visited flood-hit Zerin City and Korean Village (search summary, page not opened) | — | 2026-11-07 | medium |
+| rudaw.net | https://rudaw.net/english/kurdistan/311020211-amp | News 'With houses and streets inundated, many left homeless by Erbil flood': Rudaw coverage describes Zerin as a housing compound about 17 km from central Erbil, home to many lower-income families; the governor said the contracted company had filled a waterway to build more residential buildings (search summary, page not opened; the summary does not say which Rudaw article carries each statement) | 2021-10-31 | 2026-11-07 | medium |
+| rudaw.net | https://rudaw.net/english/kurdistan/011120213-amp | News 'Hundreds of homes damaged in Erbil flood: governor's office': governor told Rudaw about 150-200 houses were affected; the governor's office later gave more than 500 homes across the governorate (search summary, page not opened) | 2021-11-01 | 2026-11-07 | medium |
+| esta.krd | https://esta.krd/en/104830 | News 'Kurdish forces detain owner of Zerin City after flash flooding in Erbil': about 200 houses and a number of vehicles damaged in Zerin City; the project owner was detained over the sewage/drainage failure; owner not named in the summary (search summary, page not opened) | — | 2026-11-07 | medium |
+| Iraqi Geological Journal (via doaj.org) | https://doaj.org/article/64366186926d4a83a947be858a437f62 | Academic article (May 2023): hydrologic flood-risk modelling of Zerin City, Erbil, as a case study of the 2021-2022 flood season (curve number 79, 50-year storm) (search summary, page not opened) | 2023-05 | 2026-11-07 | medium |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 
 ## PART H — DATA VERIFICATION REPORT
 1. **Fully verified information (≥2 independent sources):**
-   - Name and Erbil location (Baghy, homele)
+   - Name and Erbil location (Baghy, homele, Kurdistan24, Rudaw, Esta, Iraqi Geological Journal)
+   - Residential housing compound in northern Erbil, built and inhabited by October 2021 (Kurdistan24, Rudaw, Esta; consistent with Baghy and homele)
    - 200 m2 house size (homele and Baghy cards)
+   - October 2021 flash flood damaged homes in the compound (Kurdistan24, Rudaw, Esta, 2023 study)
 2. **Information supported by only one source:**
    - Address '150m Street', apartment type and 10 feature tags (Baghy)
+   - About 17 km from central Erbil and further residential building by the contracted company in 2021 (Rudaw, search summary)
+   - Owner detained over drainage failure (Esta, search summary)
 3. **Conflicting information:**
    - None
 4. **Missing information requiring confirmation:**
-   - Developer
-   - Explicit construction status
+   - Developer name (owner/company mentioned in 2021 news but not named in summaries)
    - Land area
    - Unit and building counts
    - Apartment sizes
-   - Dates
+   - Launch and completion dates
    - Official prices
 5. **Potentially outdated information:**
    - Baghy sale cards undated (USD 70,000-105,000)
 6. **Important unresolved questions:**
    - Whether 'Zeren City' (Golden Tower address) is the same project - markers ~0.3 km apart suggest yes
    - Z Center Towers marker is ~2.1 km east of the Zerin City marker
-   - Status inferred from listings only
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Number of houses damaged in October 2021: about 150-200 (governor to Rudaw) or about 200 (Esta); the >500 figure covers the whole governorate
+   - Second verification pass (2026-11-07): new evidence. Independent 2021 news (Kurdistan24, Rudaw, Esta) and a 2023 academic flood study confirm Zerin City as an inhabited housing compound in northern Erbil, damaged by the October 2021 flood; the developer is mentioned but not named, and unit counts, land area and dates are still missing. Queries: “"Zerin City" OR "Ziren City" Erbil”; “"Zerin City" Erbil flood 2021 residential”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

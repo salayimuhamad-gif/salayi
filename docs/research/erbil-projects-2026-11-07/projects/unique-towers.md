@@ -8,13 +8,13 @@ Project ID: unique-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Project Name | Unique Towers | High – Paya project page and homele area page | https://paya-realestate.com/en/projects/unique-towers-275; https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 | Alternative names | يونيك تاور | Medium – Paya label | https://paya-realestate.com/en/projects/unique-towers-275 |
 | City | Erbil | High – Paya, homele | https://paya-realestate.com/en/projects/unique-towers-275; https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
-| District / Area | Diamond Zone (Shaqlawa road per unconfirmed Roya summary) | Low – Single primary source; no street | https://paya-realestate.com/en/projects/unique-towers-275; https://roya-iq.com/?p=9741 |
+| District / Area | Diamond Zone, on the Shaqlawa road (road per Roya only) | Medium – Paya 'Diamond Zone'; Roya listing also gives a 'diamond' location and names the Shaqlawa road (search summary, page not opened) | https://paya-realestate.com/en/projects/unique-towers-275; https://roya-iq.com/?p=9741 |
 | Developer | Unique Developers (unconfirmed) | Low – Roya directory only; Paya developer field shows 'Unique Towers Project' | https://roya-iq.com/developers |
 | Project Category | Residential apartments | Medium – Paya units all apartments; homele listings | https://paya-realestate.com/en/projects/unique-towers-275; https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 | Total Land Area | Not verified | — | — |
-| Number of Buildings / Towers | Not verified (Roya summary: 6 towers) | Low – Only an unopened search-summary source | https://roya-iq.com/?p=9741 |
-| Total Residential Units | Not verified (Roya summary: 2,580) | Low – Only an unopened search-summary source | https://roya-iq.com/?p=9741 |
-| Floors per building | Not verified (Roya summary: 39) | Low – Only an unopened search-summary source | https://roya-iq.com/?p=9741 |
+| Number of Buildings / Towers | Not verified (Roya summary: 6 towers) | Low – Single agency listing (Roya), search summary only; URL confirmed in second pass but page not opened | https://roya-iq.com/?p=9741 |
+| Total Residential Units | Not verified (Roya summary: 2,580) | Low – Single agency listing (Roya), search summary only; URL confirmed in second pass but page not opened | https://roya-iq.com/?p=9741 |
+| Floors per building | Not verified (Roya summary: 39) | Low – Single agency listing (Roya), search summary only; URL confirmed in second pass but page not opened | https://roya-iq.com/?p=9741 |
 | Construction Status | Under construction | Medium – Paya 'Constructing'; homele off-plan listings | https://paya-realestate.com/en/projects/unique-towers-275; https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 | Launch Date | Not verified | — | — |
 | Completion Date | Not verified | — | — |
@@ -29,13 +29,14 @@ Project ID: unique-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 183.2 | 3 | 3 bath; 3+1 | agency_project_page | https://paya-realestate.com/en/projects/unique-towers-275 |
 | apartment | 186.4 | 4 | 3 bath; 4+1 | agency_project_page | https://paya-realestate.com/en/projects/unique-towers-275 |
 | apartment | 84, 131, 147, 183 | — | Off-plan sale listings (homele first page) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
+| penthouse | Not verified | 4 | Four-bedroom penthouses with rooftop terraces (Roya listing, search summary, page not opened) | market_listing | https://roya-iq.com/?p=9741 |
 
 ## PART C — FACILITIES & INFRASTRUCTURE
 **Confirmed existing:** None confirmed
 
 **Confirmed planned:** Car parking (Paya); Reception (Paya); Maintenance (Paya); Laundry (Paya); Gym (Paya); Kids play area (Paya); Security (Paya); Supermarket (Paya); Public garden (Paya); Sewer connection (Paya)
 
-**Unverified claims:** None
+**Unverified claims:** About 60% of the site as gardens (Roya listing, search summary)
 
 ## PART D — PRICES & PAYMENT (evidence-dated)
 | Item | Value | Currency | Type | Date / accessed | Source |
@@ -50,7 +51,7 @@ Project ID: unique-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | 3 bed 183 m2 - off-plan market listing (down payment) | 152,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 
 ## PART E — LOCATION & SURROUNDINGS
-Paya places Unique Towers in the 'Diamond Zone' of Erbil, in an area surrounded by commercial, educational and residential projects; no street, landmark or distance is given. A WebSearch summary of a Roya listing puts it on the Shaqlawa road, but that page was not opened. Map position (low confidence, from agency map pins): 36.243794, 44.066959.
+Paya places Unique Towers in the 'Diamond Zone' of Erbil, in an area surrounded by commercial, educational and residential projects; no street, landmark or distance is given. A Roya listing also gives a 'diamond' location and places it on the Shaqlawa road (search summary; page not opened). Map position (low confidence, from agency map pins): 36.243794, 44.066959.
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
@@ -68,7 +69,7 @@ Unique Towers is a residential apartment project under construction in the Diamo
 | paya-realestate.com | https://paya-realestate.com/en/projects/unique-towers-275 | Name and Arabic label; status Constructing; Diamond Zone; family project; 22 unit entries 83.9-186.4 m2 with prices USD 67,120-152,056; amenity tags | — | 2026-11-07 | medium |
 | homele.com (area listings) | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers | 4 off-plan sale listings 84-183 m2, USD 69,637-152,000 | — | 2026-11-07 | medium |
 | roya-iq.com | https://roya-iq.com/developers | Developer directory entry 'Unique Developers - Developer of Unique Towers' (0 projects listed) | — | 2026-11-07 | low |
-| roya-iq.com (WebSearch summary) | https://roya-iq.com/?p=9741 | WebSearch summary of a Roya listing: Unique Towers on Shaqlawa road, 6 towers, 2,580 apartments, 39 floors; page not opened and URL attribution probable only | — | 2026-11-07 | low |
+| roya-iq.com (WebSearch summary) | https://roya-iq.com/?p=9741 | Roya listing (search summary, page not opened; URL confirmed in second pass): Unique Towers at a 'diamond' location on the Shaqlawa road, Erbil; 6 towers, 2,580 apartments, 39 floors, about 60% garden; four-bedroom penthouses with rooftop terraces | — | 2026-11-07 | low |
 | baghyshaqlawa.net | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | hajisalam.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -77,14 +78,15 @@ Unique Towers is a residential apartment project under construction in the Diamo
 1. **Fully verified information (≥2 independent sources):**
    - Name, Erbil and off-plan/under-construction status (Paya + homele listings)
    - Unit sizes around 84/131/147/183 m2 (Paya + homele listings)
+   - Diamond Zone location (Paya + Roya listing, search summary)
 2. **Information supported by only one source:**
-   - Diamond Zone location, 22 unit entries and prices, amenity list (Paya)
    - Developer 'Unique Developers' (Roya directory)
+   - 22 unit entries and prices, amenity list (Paya)
+   - Shaqlawa road, 6 towers, 2,580 apartments, 39 floors, 60% gardens, four-bedroom penthouses (Roya listing, search summary)
 3. **Conflicting information:**
-   - location: Diamond Zone of Erbil (https://paya-realestate.com/en/projects/unique-towers-275); 'diamond' location on Shaqlawa road (WebSearch summary) (https://roya-iq.com/?p=9741) → Not a contradiction if the Diamond Zone lies on the Shaqlawa road; unconfirmed
+   - location: Diamond Zone of Erbil (https://paya-realestate.com/en/projects/unique-towers-275); 'diamond' location on Shaqlawa road (WebSearch summary) (https://roya-iq.com/?p=9741) → Consistent: the Roya listing itself puts its 'diamond' location on the Shaqlawa road; road named by Roya only (search summary)
 4. **Missing information requiring confirmation:**
    - Developer confirmation
-   - Street/district
    - Tower count, floors, total units
    - Land area
    - Dates
@@ -93,7 +95,7 @@ Unique Towers is a residential apartment project under construction in the Diamo
 5. **Potentially outdated information:**
    - Paya prices undated
 6. **Important unresolved questions:**
-   - Roya listing (WebSearch summary only, probable URL roya-iq.com/?p=9741) reports 6 towers, 2,580 apartments, 39 floors on Shaqlawa road - not used as final values
    - Paya quotes two price levels for each size (about 3.75% apart), basis not stated
    - One 131 m2 unit labelled 'Studio' on Paya appears mislabelled
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Roya's 6 towers, 2,580 apartments and 39 floors (URL confirmed in second pass) still come from one agency listing seen only as a search summary - not used as final values
+   - Second verification pass (2026-11-07): new evidence. The search now returns the Roya listing (roya-iq.com/?p=9741) directly, confirming its attribution: it places the project at a diamond location on the Shaqlawa road (consistent with Paya's Diamond Zone) and adds 60% garden space and four-bedroom penthouses; tower, floor and unit counts still rest on that one agency listing. Queries: “"Unique Towers" Erbil Shaqlawa road”; “يونيك تاورز أربيل مشروع شقق”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

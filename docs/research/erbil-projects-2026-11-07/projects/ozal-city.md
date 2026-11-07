@@ -83,4 +83,4 @@ Ozal City is a residential area of houses in Erbil. Houses in Ozal City have are
    - No project page on Paya, Baghy, Haji Salam or Miran; one WebSearch ('Ozal City Erbil housing project') returned nothing relevant
    - Location within Erbil city not confirmed (in_erbil_city kept true on homele's Erbil filing only)
    - Pack marks it Tier 1 but evidence is listing-only
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No source beyond the homele area listings mentions Ozal City; exact location, developer and size remain unknown. Queries: “"Ozal City" Erbil”; “"ئۆزال ستی" OR "ئۆزال سیتی" OR "اوزال سيتي" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

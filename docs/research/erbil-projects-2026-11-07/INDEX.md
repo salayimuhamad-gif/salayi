@@ -1,6 +1,6 @@
 # Andaz – Erbil City Project Profiles: Index
 
-Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unknown': 46, 'completed': 99, 'disputed': 10} · verification {'partially_verified': 101, 'unverified': 58, 'verified': 47} · in Erbil city {'Yes': 194, 'Edge': 11, 'No': 1} · publish {'review': 81, 'ready': 123, 'hold': 2}
+Researched 2026-11-07 · 206 profiles · status {'under_construction': 52, 'unknown': 45, 'completed': 99, 'disputed': 10} · verification {'partially_verified': 103, 'unverified': 54, 'verified': 49} · in Erbil city {'Yes': 194, 'Edge': 11, 'No': 1} · publish {'review': 79, 'ready': 125, 'hold': 2}
 
 | Project | Kurdish | Arabic | Developer | Category | Status | Confidence / Verification | In Erbil city | Publish |
 |---|---|---|---|---|---|---|---|---|
@@ -39,7 +39,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Central Park](projects/central-park.md) | — | سنترال بارك | Dyar Real-Estate (as shown in Paya developer field; unverified) | residential | disputed | low / unverified | Yes | review |
 | [Centro Tower](projects/centro-tower.md) | سینترو تاور | — | — | mixed-use | completed | low / partially_verified | Yes | review |
 | [Cihan City](projects/cihan-city.md) | جیهان سیتی | جيهان ستي | Cihan Group | residential | completed | medium / partially_verified | Yes | ready |
-| [Dashty Bahasht](projects/dashty-bahasht.md) | دەشتی بەهەشت | دشتي بهشت | — | residential | unknown | low / unverified | Yes | review |
+| [Dashty Bahasht](projects/dashty-bahasht.md) | دەشتی بەهەشت | دشتي بهشت | — | residential | under_construction | medium / partially_verified | Yes | ready |
 | [Davos City](projects/davos-city.md) | داڤۆس سیتی | دافوس سيتي | — | residential | under_construction | medium / partially_verified | Yes | ready |
 | [DC Towers](projects/dc-towers.md) | دی سی تاوەرز | دي سي تاور | Darin Group | residential | under_construction | high / verified | Yes | ready |
 | [Diplomati Safiran](projects/diplomati-safiran.md) | — | ديبلومات السفراء | — | residential | completed | medium / partially_verified | Yes | ready |
@@ -48,7 +48,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Dream City](projects/dream-city.md) | دریم سیتی | دريم ستي | Nasri Group of Companies LTD (NGC) | residential | completed | medium / verified | Yes | ready |
 | [Eden Park](projects/eden-park.md) | — | — | — | residential | under_construction | low / unverified | Yes | review |
 | [Edition Tower](projects/edition-tower.md) | — | — | — | mixed-use | disputed | low / partially_verified | Yes | review |
-| [Empire Business Towers](projects/empire-business-towers.md) | ئێمپایەر بیزنس تاوەرز | أبراج إمباير للأعمال | — | commercial | completed | medium / partially_verified | Yes | ready |
+| [Empire Business Towers](projects/empire-business-towers.md) | ئێمپایەر بیزنس تاوەرز | أبراج إمباير للأعمال | Empire World | commercial | completed | medium / verified | Yes | ready |
 | [Empire Diamond Towers](projects/empire-diamond-towers.md) | ئیمپایەر دایمۆند تاوەرز | أبراج امباير دايموند | Empire Company | residential | completed | medium / partially_verified | Yes | ready |
 | [Empire Pearl Towers](projects/empire-pearl-towers.md) | ئیمپایەر پێرڵ تاوەرز | أبراج امباير بيرل | BC Group | residential | completed | high / verified | Yes | ready |
 | [Empire Royal (Royal Apartments & Royal Villas)](projects/empire-royal.md) | ئێمپایەر ڕۆیاڵ | إمباير رويال | B.C. Group (Miran Estate; single source) | residential | completed | medium / verified | Yes | ready |
@@ -77,7 +77,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Green World Towers](projects/green-world-towers.md) | — | كرين ورلد تاور | Şua İnşaat (Turkey) | residential | disputed | medium / partially_verified | Yes | ready |
 | [Gulan City](projects/gulan-city.md) | گوڵان سیتی | گولان سيتي | — | residential | completed | low / unverified | Yes | review |
 | [Gulan Park – World Trade Center Erbil](projects/gulan-park-wtc.md) | گوڵان پارک – سەنتەری بازرگانیی جیهانیی هەولێر | غولان بارك – مركز التجارة العالمي أربيل | Gulan Park Real Estate | mixed-use | completed | high / verified | Yes | ready |
-| [Hana City](projects/hana-city.md) | هانا سیتی | هانا سيتي | — | residential | unknown | low / unverified | Yes | review |
+| [Hana City](projects/hana-city.md) | هانا سیتی | هانا سيتي | — | residential | unknown | low / partially_verified | Yes | review |
 | [Harsham City 1](projects/harsham-city-1.md) | هەرشەم سیتی ١ | هرشم سيتي 1 | Kamel Ahmed Agha Company | residential | completed | medium / partially_verified | Yes | ready |
 | [Harsham City 2](projects/harsham-city-2.md) | هەرشەم سیتی ٢ | هرشم سيتي 2 | — | residential | completed | low / partially_verified | Yes | review |
 | [Harsham City 3](projects/harsham-city-3.md) | هەرشەم سیتی ٣ | هرشم سيتي 3 | — | residential | unknown | low / unverified | Yes | review |
@@ -146,7 +146,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Pavilion Erbil](projects/pavilion.md) | پاڤیلیۆن هەولێر | بافيليون أربيل | Disputed: Lalav Group (named owner) / RAMS ('Pavilion by RAMS') | mixed-use | under_construction | medium / partially_verified | Yes | ready |
 | [Peshang Towers](projects/peshang-towers.md) | پێشەنگ تاوەرز | بيشنك تاورز | R.V. Company | residential | completed | medium / partially_verified | Yes | ready |
 | [Phoenix Tower](projects/phoenix-tower.md) | فینکس تاوەر | فينكس تاور | — | mixed-use | completed | medium / partially_verified | Yes | ready |
-| [Plus Life](projects/plus-life.md) | پلاس لایف | بلس لايف | — | residential | unknown | low / unverified | Yes | review |
+| [Plus Life](projects/plus-life.md) | پلاس لایف | بلس لايف | — | residential | unknown | low / partially_verified | Yes | review |
 | [Qaiwan Mirador](projects/qaiwan-mirador.md) | قەیوان میرادۆر | قيوان ميرادور | Qaiwan Group | mixed-use | under_construction | medium / verified | Yes | ready |
 | [Quartier Français](projects/quartier-francais.md) | کوارتێر فرانسێ | كوارتير فرنسيس | 99 Group of Companies | mixed-use | under_construction | medium / verified | Yes | ready |
 | [Queen Tower](projects/queen-tower.md) | کوین تاوەر | كوين تاور | — | residential | completed | medium / verified | Yes | ready |
@@ -164,7 +164,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Salam Residences](projects/salam-residences.md) | سەلام ڕێزیدێنسز | سلام ريزيدنس | FARZAD GROUP Corporate Holdings, in collaboration with Jabal Sara | mixed-use | under_construction | medium / partially_verified | Yes | ready |
 | [Saloor Tower](projects/saloor-tower.md) | — | — | — | residential | unknown | low / unverified | Yes | review |
 | [Sari Blind](projects/sari-blind.md) | — | — | — | residential | unknown | low / unverified | Yes | review |
-| [Shahan City](projects/shahan-city.md) | شاهان سیتی | شاهان سيتي | — | residential | unknown | low / unverified | Yes | review |
+| [Shahan City](projects/shahan-city.md) | شاهان سیتی | شاهان سيتي | — | residential | unknown | low / partially_verified | Yes | review |
 | [Sheraton City](projects/sheraton-city.md) | — | — | — | other | unknown | low / unverified | Yes | review |
 | [Siraj Towers](projects/siraj-towers.md) | سیراج تاوەرز | سراج تاورز | Lazgin Company | residential | under_construction | medium / partially_verified | Yes | ready |
 | [Sky Towers](projects/sky-towers.md) | سکای تاوەرز | سكاي تاورز | Galiawa Group | mixed-use | completed | medium / verified | Yes | ready |
@@ -194,7 +194,7 @@ Researched 2026-11-07 · 206 profiles · status {'under_construction': 51, 'unkn
 | [Zaner City](projects/zaner-city.md) | زانەر ستی | زانر ستي | — | residential | completed | medium / partially_verified | Yes | ready |
 | [Zanko Village](projects/zanko-village.md) | گوندی زانکۆ | قرية زانكو | — | residential | completed | medium / partially_verified | Yes | ready |
 | [Zanyari Towers](projects/zanyari-towers.md) | زانیاری تاوەرز | أبراج زانياري | Kirmanj Construction Company | residential | completed | medium / partially_verified | Yes | ready |
-| [Zerin City](projects/zerin-city.md) | زێرین ستی | زيرين ستي | — | residential | completed | low / partially_verified | Yes | review |
+| [Zerin City](projects/zerin-city.md) | زێرین ستی | زيرين ستي | — | residential | completed | medium / verified | Yes | ready |
 | [Zhyan City](projects/zhyan-city.md) | — | — | — | residential | unknown | low / unverified | Yes | review |
 | [Zilan City](projects/zilan-city.md) | زیلان ستی | زيلان ستي | — | residential | completed | low / partially_verified | Yes | review |
 | [Zin City](projects/zin-city.md) | زین ستی | زين ستي | — | residential | completed | medium / partially_verified | Yes | ready |

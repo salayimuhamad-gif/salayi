@@ -91,4 +91,4 @@ Noble City, also written Nobel City, is a residential project in Erbil on the ol
    - Whether Haji's 465 apartments are Nobel Towers or a separate apartment component
    - Old Bahirka road (Haji) vs Ankawa - New Bahirka road (Paya, for Nobel Towers): both may bound the same area; not stated
    - Apartment status not stated
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No wider-web page mentions Noble/Nobel City; developer, land area and dates remain missing. Queries: “"Noble City" OR "Nobel City" Erbil Bahirka houses”; “"نوبل ستي" OR "نوبل سيتي" OR "نۆبڵ سیتی" أربيل هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

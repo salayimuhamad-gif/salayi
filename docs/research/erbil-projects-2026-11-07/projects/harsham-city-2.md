@@ -6,8 +6,8 @@ Project ID: harsham-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
 | Project Name | Harsham City 2 | High – Haji Salam and homele use the same name | https://hajisalam.com/en/harsham-city-2/; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
-| Alternative names | Harsham 2 | Low – Pack alias; pages use 'Harsham City 2' | — |
-| City | Erbil | High – Haji Salam and homele | https://hajisalam.com/en/harsham-city-2/; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
+| Alternative names | Harsham 2 | Medium – Pack alias; a UNHCR Erbil map labels a residential area 'Harsham_2' (search summary, page not opened) | https://data.unhcr.org/en/documents/download/100611 |
+| City | Erbil | High – Haji Salam and homele; UNHCR Erbil map lists Harsham_2 among the city's residential areas (search summary) | https://hajisalam.com/en/harsham-city-2/; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2; https://data.unhcr.org/en/documents/download/100611 |
 | District / Area | Old Bahrka road | Medium – Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
 | Developer | Not verified | — – Not stated; Baghy names Kamel Ahmed Agha Company for Harsham City 1 only, not extended here; one web search found nothing | — |
 | Project Category | Residential (houses) | High – Haji Salam and homele | https://hajisalam.com/en/harsham-city-2/; https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 |
@@ -57,6 +57,7 @@ Harsham City 2, also called Harsham 2, is a residential project of single-floor 
 |---|---|---|---|---|---|
 | hajisalam.com | https://hajisalam.com/en/harsham-city-2/ | Project page 'Harsham City 2': Bahirka old Road; House; 550 units; 200 m2; 1 floor; 2 bedrooms; no listings | — | 2026-11-07 | medium |
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city-2 | Area listing page 'Harsham City 2' (1 page): ready one-floor house 200 m2, 2 bed / 2 bath, USD 75,000 negotiable | — | 2026-11-07 | medium |
+| data.unhcr.org | https://data.unhcr.org/en/documents/download/100611 | UNHCR-linked Erbil map lists Harsham_1, Harsham_2 and Harsham_3 among residential areas (search summary, page not opened; undated; no house counts or road) | — | 2026-11-07 | low |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | baghyshaqlawa.net | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -80,4 +81,6 @@ Harsham City 2, also called Harsham 2, is a residential project of single-floor 
 6. **Important unresolved questions:**
    - Status inferred from one ready listing
    - Developer of phase 2 not stated (phase 1 builder not assumed)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass: a UNHCR-linked Erbil map lists Harsham_2 among residential areas (search summary only); it supports the name, not the road, unit count or status
+   - Most web results for 'Harsham' concern the Harsham IDP camp in Erbil, a different site
+   - Second verification pass (2026-11-07): new evidence. A UNHCR-linked Erbil map (search summary only) lists Harsham_2 as a residential area, weakly supporting the name; developer, dates and road position remain unconfirmed. Queries: “"Harsham City" Erbil Bahrka road houses 550”; “"هەرشەم ٢" OR "هەرشەم سیتی" هەولێر خانوو”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

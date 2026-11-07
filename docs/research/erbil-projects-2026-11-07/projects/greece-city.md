@@ -90,4 +90,4 @@ Greece City is a residential project in Erbil made up only of villas. The projec
    - Only one primary site (Paya) has a project page; homele gives market listings only
    - Status inferred from off-plan listings, not stated by any source
    - homele area label '(Down payment) Greece City' - unclear whether listed figures are full prices; recorded as asking prices
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names Greece City; location, developer and status are still missing. Queries: “"Greece City" Erbil villas project”; “"المدينة اليونانية" أربيل فلل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

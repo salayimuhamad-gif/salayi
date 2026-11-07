@@ -80,4 +80,4 @@ Mem u Zin is a residential apartment project on Mosul Road in the city of Erbil.
 6. **Important unresolved questions:**
    - Position along Mosul Road (inside or outside the 120m/150m ring roads) not stated; kept in Erbil city on the address alone
    - Bedroom range 1-4 for units of 41-91 m2 is not mapped to sizes
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. English and Sorani searches found no page about a Mem u Zin residential project; all data still rest on the single Haji Salam page and the position along Mosul Road is unconfirmed. Queries: “"Mem u Zin" OR "Mem û Zîn" Erbil residential towers Mosul road”; “پڕۆژەی "مەم و زین" هەولێر شوقە ڕێگای مووسڵ”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

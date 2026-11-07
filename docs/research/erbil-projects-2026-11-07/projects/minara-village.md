@@ -56,7 +56,7 @@ Minara Village is a residential project of houses on Koya Road in eastern Erbil,
 |---|---|---|---|---|---|
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/mnara-village | Project page 'Mnara Village': address Koya Road before Majidi Mall; property type House Building; tags internet, green areas, supermarket, mosque; no developer, size, unit count or status | — | 2026-11-07 | medium |
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 | Area listing page 'Minara City 1' (1 page): one ready house 200 m2, 5 bed / 3 bath, USD 250,000 for sale | — | 2026-11-07 | medium |
-| hawlergov.org | https://www.hawlergov.org/app/en/node/4077 | Web-search result summary only (page not fetched): Erbil Governorate notice on a road/street project between Minara and Hana City in the Hawlery Nwe area; refers to Minara as a place, no project data | — | 2026-11-07 | low |
+| hawlergov.org | https://www.hawlergov.org/app/en/node/4077 | Web-search result summary only (page not fetched): Erbil Governorate notice (January 2023 per second-pass summary) on paving a 30 m road between Hana City and Minara City in the Hawlery Nwe area; refers to Minara City as a place, no project data | 2023-01 | 2026-11-07 | low |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | hajisalam.com | https://hajisalam.com/en/minara-village/ | Page crawled; no additional information beyond the sources above | — | 2026-11-07 | — |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -83,4 +83,4 @@ Minara Village is a residential project of houses on Koya Road in eastern Erbil,
 6. **Important unresolved questions:**
    - Whether 'Minara City 1' and 'Mnara Village' are the same development and whether a Minara 2 exists
    - Developer identity (not linked to BC Group's Minare Mall in any source)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Searches only re-found the Erbil Governorate road notice (now dated January 2023: a road between Hana City and Minara City); developer, size, unit count and status remain unconfirmed. Queries: “"Minara Village" OR "Minara City" Erbil Koya Road”; “"منارە سیتی" OR "منارة سيتي" هەولێر أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

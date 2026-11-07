@@ -84,4 +84,4 @@ Korean Village, also known as Kory Village or Kori Village, is a residential hou
    - Position on Shaqlawa road relative to the city edge - set to 'edge' pending a map check
    - Origin of the name: 'Kory/Kori' may refer to the Kore (Korre) locality on the Erbil-Shaqlawa road (see https://www.kurdistan24.net/en/story/937355) rather than to Korea; unconfirmed
    - 5,000-unit total needs a second source
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No developer, news or government page mentions the project; the Sorani search surfaced only an unrelated village (Qoritan), so developer, status, unit total and exact road position remain unconfirmed outside the two portals. Queries: “"Korean Village" Erbil Shaqlawa road houses”; “"کۆری ڤیلج" OR "گوندی کۆری" هەولێر شەقڵاوە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

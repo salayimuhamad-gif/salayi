@@ -80,4 +80,5 @@ Aynda City 1, also written Ayenda City 1, is a residential area of houses in Erb
 6. **Important unresolved questions:**
    - No project page on Paya, Baghy, Haji Salam or Miran; one WebSearch ('Aynda City' / 'Ayenda City' Erbil) returned no relevant page
    - Whether Aynda City 1 and Aynda City 2 are phases of one development
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("Aynda City" OR "Ayenda City" Erbil / "شاری ئایندە" هەولێر) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Aynda/Ayenda City 1 in English or Sorani; location, developer and status are still missing. Queries: “"Aynda City" OR "Ayenda City" Erbil”; “"شاری ئایندە" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

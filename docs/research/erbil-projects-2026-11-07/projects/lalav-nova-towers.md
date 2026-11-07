@@ -86,4 +86,4 @@ Lalav Nova Towers is a residential apartment project by Lalav Group (Lalav Proje
 6. **Important unresolved questions:**
    - Current construction stage (homele listings are all off-plan)
    - Floor count (a homele listing refers to a 20th-floor unit)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Searches confirm only that Lalav Group is an active Erbil developer (owner of the Pavilion Erbil project, Landscape Middle East via search summary); no independent page names Nova Towers, so its developer link, status, floors and unit count remain portal-only. Queries: “"Lalav Nova" Erbil towers”; “"Lalav Group" Erbil projects Nova Towers Bahrka”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

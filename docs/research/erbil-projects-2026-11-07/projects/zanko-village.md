@@ -84,4 +84,4 @@ Zanko Village is a residential housing project in southern Erbil. It is located 
 6. **Important unresolved questions:**
    - Relation to Haji Salam's 'Zanko City' / 'Zanko 1-2' areas
    - Status inferred from 'Ready' resale listings only
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page about the Zanko Village housing project was found (Kurdish results only concern universities, 'zanko' meaning university); developer, status, unit count and its relation to the Zanko City areas remain unresolved. Queries: “"Zanko Village" Erbil Kirkuk road”; “"گوندی زانکۆ" OR "قرية زانكو" OR "Zanko village" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -77,4 +77,4 @@ True Star is a residential apartment project under construction in Erbil, locate
    - Under-construction status from an undated Baghy page
 6. **Important unresolved questions:**
    - No Paya, Miran, Haji or homele page found; web search found nothing
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names True Star; all data still rest on one agency page. Queries: “"True Star" Erbil project Bahrka”; “ترو ستار أربيل مشروع بحركة”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

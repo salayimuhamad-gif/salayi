@@ -91,4 +91,5 @@ ASCO International City, also known as ASCO International, is a residential apar
    - Total units 1,390 vs 2,390 on the same Miran page
    - Extent of completion: Miran 'Under Construction' while Homele lists mostly ready units
    - No Paya page found
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("ASCO International City" Erbil / "ASCO International" Erbil Pirmam towers project) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. Results concern an unrelated ASCO oncology conference and other Pirmam-road developments; no independent page confirms the project, its developer or tower count. Queries: “"ASCO International City" Erbil”; “"ASCO International" Erbil Pirmam towers project”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

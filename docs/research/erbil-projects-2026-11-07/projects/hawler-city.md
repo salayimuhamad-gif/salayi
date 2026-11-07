@@ -81,4 +81,4 @@ Hawler City is a residential area of houses in Erbil, in the Kurdistan Region of
    - Location unknown, so in_erbil_city rests only on homele's Erbil listing
    - 'Hawler' is the Kurdish name of Erbil; the label may be confused with other 'Hawler' projects (e.g. the Hawler Housing Project consortium behind English Village, seen in search results - not linked)
    - Haji Salam page carries only a title; one web search found no project page
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Results concerned Erbil (Hawler) in general and the Hawler Housing Project behind English Village; the project's location, developer and size remain unknown. Queries: “"Hawler City" Erbil houses project location”; “"هەولێر سیتی" خانوو”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

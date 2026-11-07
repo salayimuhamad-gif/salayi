@@ -83,4 +83,4 @@ Hiran City 1 is a residential project in Erbil, the capital of the Kurdistan Reg
    - Not found on Paya, Bagh-y Shaqlawa, Hajisalam or Miran packs; web searches in English and Sorani returned nothing on the project
    - Location unknown; kept as in Erbil city per homele. 'Hīrān' is also a subdistrict of Erbil governorate outside the city (citypopulation.de) - no source links the project to it
    - Possible duplicate/overlap with hiran-city-2: no source distinguishes Hiran City 1 from Hiran City 2
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Only the Hiran sub-district of Shaqlawa district (outside Erbil city) was found, with no link to this project; location, developer and status remain unknown. Queries: “"Hiran City" Erbil houses”; “"هیران سیتی" OR "هيران سيتي" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

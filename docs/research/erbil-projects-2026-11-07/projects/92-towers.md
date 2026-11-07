@@ -76,4 +76,5 @@ On the Erbil–Kirkuk road (Baghy Shaqlawa), a southern approach to the city wit
    - None
 6. **Important unresolved questions:**
    - Not found on Paya, Miran, Haji Salam or Homele; one web search returned nothing; may be a local or alternative name of another Kirkuk-road project
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("92 Towers" Erbil / "92 Towers" Kirkuk road Erbil apartments) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names 92 Towers; other Kirkuk-road tower projects found (e.g. Lavender Skyline Towers) carry different names and were not linked; developer, status and size are still missing. Queries: “"92 Towers" Erbil”; “"92 Towers" Kirkuk road Erbil apartments”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

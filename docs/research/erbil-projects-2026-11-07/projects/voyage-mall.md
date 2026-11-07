@@ -80,4 +80,4 @@ Voyage Mall is a commercial shopping mall project on Bahrka Road in Erbil, on th
    - Erbil location rests on Baghy only ('Erbil - Bahrka Road'); one WebSearch ('Voyage Mall Erbil Bahrka Road developer') found no other page
    - Baghy claims 'first mall to be built in Erbil with several different cultures' and a guaranteed lease for buyers - marketing claims, not used in descriptions
    - Whether 6,000 m2 is total leasable area or per floor
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Voyage Mall; its Erbil location and size still rest on one agency page. Queries: “"Voyage Mall" Erbil”; “فوياج مول أربيل طريق بحركة”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -5,17 +5,17 @@ Project ID: naz-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 ## PART A — PROJECT DATA SHEET
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
-| Project Name | Naz City | High – Baghy, homele and Haji Salam | https://baghyshaqlawa.net/en/projects/naz-city; https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments; https://hajisalam.com/en/naz-city/ |
+| Project Name | Naz City | High – Baghy, homele and Haji Salam; also named on Roya developer-partners page (search summary) | https://baghyshaqlawa.net/en/projects/naz-city; https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments; https://hajisalam.com/en/naz-city/; https://roya-iq.com/developers |
 | Alternative names | Zakaria Apartments; ناز ستی (زەکەریا) | Medium – homele area label and Haji Salam post title | https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments; https://hajisalam.com/en/naz-city/ |
 | City | Erbil | High – All sources | https://baghyshaqlawa.net/en/projects/naz-city; https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments |
 | District / Area | Gulan Road | Medium – Baghy address; Roya search snippet places a project on Gulan Street across Naz City | https://baghyshaqlawa.net/en/projects/naz-city; https://roya-iq.com/?p=9098 |
-| Developer | Not verified (possible lead: Eskan, Galala group) | Low – No primary page names a developer; one undated article summary mentions Naz City in an Eskan context | https://anba.com.br/en/erbil-in-construction/ |
-| Project Category | Residential (apartments) | High – Baghy, homele, Haji Salam | https://baghyshaqlawa.net/en/projects/naz-city; https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments |
+| Developer | Not verified (possible lead: Eskan, Galala group) | Low – No primary page names a developer; one undated article summary mentions Naz City in an Eskan context; second-pass searches and Roya developer-partners entry name no company | https://anba.com.br/en/erbil-in-construction/ |
+| Project Category | Residential (apartments) | High – Baghy, homele, Haji Salam; ANBA article (2-4 bedroom apartments); Roya blurb says mixed-use (see conflicts) | https://baghyshaqlawa.net/en/projects/naz-city; https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments |
 | Total Land Area | Not verified | — – Baghy gives total construction (built-up) area 181,000 m2, not land area | https://baghyshaqlawa.net/en/projects/naz-city |
 | Number of Buildings / Towers | 14 | Medium – Baghy text only | https://baghyshaqlawa.net/en/projects/naz-city |
 | Total Residential Units | 700 apartments | Medium – Baghy text; consistent with its 7 x 11 + 7 x 14 storeys x 4 flats layout | https://baghyshaqlawa.net/en/projects/naz-city |
 | Floors per building | 11 (7 buildings) and 14 (7 buildings) | Medium – Baghy text only | https://baghyshaqlawa.net/en/projects/naz-city |
-| Construction Status | Completed | Medium – Inferred: all homele listings 'Ready'; Baghy resale and rental listings; Haji Salam resale post 2020 | https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments; https://baghyshaqlawa.net/en/projects/naz-city; https://hajisalam.com/en/naz-city/ |
+| Construction Status | Completed | Medium – Inferred: all homele listings 'Ready'; Baghy resale and rental listings; Haji Salam resale post 2020; ANBA article (search summary) says the apartments were occupied mainly by foreigners | https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments; https://baghyshaqlawa.net/en/projects/naz-city; https://hajisalam.com/en/naz-city/; https://anba.com.br/en/erbil-in-construction/ |
 | Launch Date | Not verified | — – No source | — |
 | Completion Date | Not verified (resale activity by October 2020) | Low – Haji Salam resale post dated 2020-10-08 | https://hajisalam.com/en/naz-city/ |
 | Development Phases | Two groups of 7 buildings (11 and 14 storeys); no named phases | Low – Baghy text | https://baghyshaqlawa.net/en/projects/naz-city |
@@ -67,21 +67,26 @@ Naz City, also known as Zakaria Apartments, is a completed residential apartment
 | homele.com (area listings) | https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments | Area page 'Naz City(Zakaria Apartments)': 10 'Ready' listings on page 1 (of 2): sale 225-267 m2 USD 140,000-195,000; rent 230 m2 USD 600-650/month; 3-4 bed, 3 bath | — | 2026-11-07 | low |
 | hajisalam.com | https://hajisalam.com/en/naz-city/ | Post 'naz city' dated 2020-10-08 (Kurdish): apartment for sale in Naz City (Zakaria) apartments; no project fields | 2020-10-08 | 2026-11-07 | low |
 | roya-iq.com | https://roya-iq.com/?p=9098 | WebSearch result summary only (page not fetched): an 'Edition' project on Gulan Street 'across Naz City' | — | 2026-11-07 | low |
-| anba.com.br | https://anba.com.br/en/erbil-in-construction/ | WebSearch result summary only (page not fetched): article on Eskan (Galala group) mentions Naz City as one of the newest projects with 2-4 bedroom apartments; developer link not explicit | c. 2010-2011 | 2026-11-07 | low |
+| anba.com.br | https://anba.com.br/en/erbil-in-construction/ | WebSearch result summary only (page not fetched): article on Eskan (Galala group) mentions Naz City as one of the newest projects, with 2-4 bedroom apartments occupied mainly by foreigners (second-pass summary); developer link not explicit | c. 2010-2011 | 2026-11-07 | low |
+| roya-iq.com | https://roya-iq.com/developers | Search summary, page not opened: Roya 'Our Developer Partners' page lists Naz City and describes it as a mixed-use development in Erbil combining residential, commercial and retail space; no developer company named | — | 2026-11-07 | low |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 
 ## PART H — DATA VERIFICATION REPORT
 1. **Fully verified information (≥2 independent sources):**
    - Name, Erbil and apartment category (Baghy, homele, Haji Salam)
+   - Completed, occupied apartment project: ready listings (homele, Baghy) and ANBA article summary (apartments occupied mainly by foreigners)
 2. **Information supported by only one source:**
    - Gulan Road address (Baghy; Roya search snippet only)
    - 14 buildings, 11/14 storeys, 700 apartments, 181,000 m2 construction area, 225 m2 layout (Baghy)
+   - Mixed-use description (Roya developer-partners page, search summary only)
 3. **Conflicting information:**
    - Status wording: Baghy future tense vs ready listings (resolved: completed)
    - Unit size 225 m2 (text) vs 220-267 m2 (listings)
+   - Category: residential apartments (Baghy, homele, ANBA) vs 'mixed-use' (Roya developer-partners blurb, search summary)
    - construction status wording: 'there will be (700) luxury flats' (future tense, undated text) (https://baghyshaqlawa.net/en/projects/naz-city); All listings 'Ready'; resale and rentals (https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments) → Completed - Baghy text is older marketing copy; ready resale/rental listings on homele and Baghy and a 2020 resale post on Haji Salam
    - apartment size: 225 m2 (project text) (https://baghyshaqlawa.net/en/projects/naz-city); 220-267 m2 (listings) (https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments) → 225 m2 kept as the stated type; listing sizes recorded as market evidence only
+   - project category: Residential apartments (project page property type; ready apartment listings; ANBA article) (https://baghyshaqlawa.net/en/projects/naz-city); Mixed-use (residential, commercial, retail) - generic developer-partner blurb (https://roya-iq.com/developers) → Kept residential: three sources describe apartments only; Roya wording is an unopened search summary
 4. **Missing information requiring confirmation:**
    - Developer
    - Land area
@@ -93,4 +98,4 @@ Naz City, also known as Zakaria Apartments, is a completed residential apartment
 6. **Important unresolved questions:**
    - Developer: possible Eskan (Galala group) link from an undated article summary - not confirmed
    - Only page 1 of 2 of homele listings was captured
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): new evidence. Added Roya's developer-partners entry naming Naz City (described as mixed-use, search summary) and the ANBA article detail that its 2-4 bedroom apartments were occupied mainly by foreigners; developer still unnamed. Queries: “"Naz City" Erbil Gulan apartments developer”; “"ناز سيتي" OR "ناز ستی" أربيل كولان شقق”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

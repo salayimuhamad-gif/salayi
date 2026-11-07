@@ -79,4 +79,4 @@ FM Plaza is a residential apartment project in the city of Erbil. The project is
 6. **Important unresolved questions:**
    - Project not found on homele, Paya, Hajisalam or Miran; one web search (FM Plaza Erbil Koya road) returned no match
    - Exact position on Koya Road (inside or outside the 150m ring-road belt)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names FM Plaza; the project still rests on a single agency page (Koya Road, apartments) with no developer, size or status. Queries: “"FM Plaza" Erbil apartments”; “"اف ام بلازا" اربيل طريق كويه”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

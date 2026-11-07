@@ -82,4 +82,4 @@ Marina 2 is a residential villa project on Kasnazan Road in Erbil, in the Kurdis
    - Marina 1 and Marina 2 pages carry identical figures (140 units, 336 m2, 2 floors, 4 bedrooms) - possible template copy; kept as separate projects
    - Whether Marina 1-3 share a developer or masterplan
    - Whether 336 m2 is plot or built-up area
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Four searches shared by Marina 1-3 (English, Sorani, Arabic) returned only Egyptian Marina developments and Kasnazan road works; no developer, masterplan or status evidence was found for the Erbil Marina projects. Queries: “"Marina" villas Erbil Kasnazan road project”; “پڕۆژەی مارینا هەولێر ڤێلا کەسنەزان”; “"Marina 3" OR "Marina 2" Erbil villa 4 bedrooms Kasnazan”; “مشروع "مارينا" فلل أربيل طريق كسنزان”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

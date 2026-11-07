@@ -315,15 +315,16 @@
 ## 6. Final verification outcome
 
 * Profiles written: 206 of 206 canonical entries.
-* Verification status: {'unverified': 58, 'partially_verified': 101, 'verified': 47}.
-* Overall confidence: {'low': 83, 'medium': 106, 'high': 17}.
-* Construction status: {'unknown': 46, 'under_construction': 51, 'disputed': 10, 'completed': 99}.
+* Verification status: {'unverified': 54, 'partially_verified': 103, 'verified': 49}.
+* Overall confidence: {'low': 81, 'medium': 108, 'high': 17}.
+* Construction status: {'unknown': 45, 'under_construction': 52, 'disputed': 10, 'completed': 99}.
 * Coordinates confidence: {None: 55, 'low': 100, 'medium': 43, 'high': 5, 'disputed': 3} (None = no usable map pin).
 * Not plainly inside Erbil city: American Village (edge); Darwazay Hawler (edge); Dubai City (edge); Green Land (edge); Korean Village (Kory Village) (edge); Lana City (edge); New Bahirka (edge); Talar City (edge); The Atlantic (Atlantic City) (edge); VIP Class (outside); Var Park (edge); Warin City (edge)
+* Second verification pass: 92 projects re-checked with up to two web searches each (181 searches in total); results {'new evidence': 18, 'no new evidence': 74}.
 
-## 7. Recommended second-pass list
+## 7. Projects still needing developer or on-site confirmation
 
-Tier 1 projects whose profile is `unverified` or low confidence (most value from a developer-site or on-site check):
+Tier 1 projects that remain `unverified` or low confidence after both passes. The next step for these is a developer call, a developer-site check or a site visit:
 
 * 101 Complex (101-complex) — partially_verified, low confidence
 * 92 Towers (92-towers) — unverified, low confidence
@@ -339,7 +340,6 @@ Tier 1 projects whose profile is `unverified` or low confidence (most value from
 * Central Park (central-park) — unverified, low confidence
 * Centro Tower (centro-tower) — partially_verified, low confidence
 * Darwazay Hawler (darwazay-hawler) — unverified, low confidence
-* Dashty Bahasht (dashty-bahasht) — unverified, low confidence
 * Downtown Erbil (downtown-erbil) — partially_verified, low confidence
 * Dubai City (dubai-city) — unverified, low confidence
 * Family Land (family-land) — partially_verified, low confidence
@@ -350,7 +350,7 @@ Tier 1 projects whose profile is `unverified` or low confidence (most value from
 * Golden Tower (golden-tower) — unverified, low confidence
 * Greece City (greece-city) — unverified, low confidence
 * Gulan City (gulan-city) — unverified, low confidence
-* Hana City (hana-city) — unverified, low confidence
+* Hana City (hana-city) — partially_verified, low confidence
 * Harsham City 2 (harsham-city-2) — partially_verified, low confidence
 * Harsham City 3 (harsham-city-3) — unverified, low confidence
 * Hawler City (hawler-city) — unverified, low confidence
@@ -372,12 +372,12 @@ Tier 1 projects whose profile is `unverified` or low confidence (most value from
 * Nawroz City (nawroz-city) — unverified, low confidence
 * New Bahirka (new-bahirka) — unverified, low confidence
 * Ozal City (ozal-city) — unverified, low confidence
-* Plus Life (plus-life) — unverified, low confidence
+* Plus Life (plus-life) — partially_verified, low confidence
 * Rena Tower (rena-tower) — partially_verified, low confidence
 * Rose Tower (rose-tower) — unverified, low confidence
 * Royal Garden View (royal-garden-view) — partially_verified, low confidence
 * Safiran City (safiran-city) — unverified, low confidence
-* Shahan City (shahan-city) — unverified, low confidence
+* Shahan City (shahan-city) — partially_verified, low confidence
 * Talar City (talar-city) — partially_verified, low confidence
 * True Star (true-star) — unverified, low confidence
 * Unique Towers (unique-towers) — partially_verified, low confidence
@@ -386,7 +386,6 @@ Tier 1 projects whose profile is `unverified` or low confidence (most value from
 * Voyage Mall (voyage-mall) — unverified, low confidence
 * Warin City (warin-city) — unverified, low confidence
 * Z Center Towers (z-center-towers) — unverified, low confidence
-* Zerin City (zerin-city) — partially_verified, low confidence
 * Zilan City (zilan-city) — partially_verified, low confidence
 
 ## 8. Cross-project findings reported by the research agents
@@ -507,6 +506,28 @@ Possible duplicates, phase relationships and conflicts noticed while researching
 - "Lawan 2" mentioned on Haji pages of nearby projects — relation to Lawan City unresolved.
 - Lebanese Village: area 240,000 / 225,000 / 300,000 m²; units 3,400 vs 3,480; developer HARCO from a search summary (low); Baghy Zones B and E may describe the same G+24 tower.
 - Paya "developer" field for Kani Almany and Lana City is a parsing artefact → null.
+### Second verification pass (2026-11-07)
+#### S5
+- 22 searches; 2/12 gained evidence. Lavender Skyline: homele (search summary) confirms 3 towers (now Medium); its 30 floors conflict with 32 on two pages (32 kept). Mamostayan City: weak lead (2017 REACH map label "MAMOSTAYAN"). Lalav Nova / Venus: only confirms Lalav Group is a real developer.
+#### S7
+- 24 searches; 2/12 gained evidence. shahan-city: UNHCR Erbil map lists "Shahan City" near Kasnazan, Heran City, Zheyan → partially_verified (low). unique-towers: Roya listing (roya-iq.com/?p=9741) confirms Diamond Zone, Shaqlawa Road; 6 towers / 2,580 units / 39 floors single-listing only (not in typed fields).
+- Rose Tower still a probable duplicate of Floria City's Rose Garden Tower; "Vital Village" not confirmed as Vital City.
+#### S6
+- 24 searches; 2/12 gained evidence. naz-city: Roya developer-partners page calls it "mixed-use" (category conflict logged, residential kept); ANBA article: apartments occupied mainly by foreigners. plus-life: OpenSooq ad (192 m², 3 bedrooms, Koya Road view) → partially_verified (low).
+- minara-village: Erbil Governorate road notice dated January 2023 (road between Hana City and Minara City). Mirage City searches return an unrelated compound in New Cairo, Egypt.
+#### S1
+- 24 searches; 2/12 gained evidence. aram-village-2: an agency developer page names Falcon Group for the Aram Village projects → disputed with Sakar Group (Paya, AV1) and Dutch Flower Co. (Aram Garden); developer left empty. Another page suggests the 662-villa / 345,745 m² plan is Aram Village 1. aura-erbil: architect page confirms 40,000 m² shopping and 12 residential buildings.
+- bajgir-city: possible lead to gazetteer place "Bajêr" (~70 km NE of Erbil), unlinked.
+#### S4
+- 23 searches; 3/12 gained evidence (summaries). hana-city → partially_verified (2023 governorate road notice, 2017 REACH map). harsham-city-2/-3: UNHCR map summary lists Harsham_2/_3 (not reproduced); harsham-city-3 kept unverified.
+- hiran-city-1/-2 may relate to Hiran sub-district of Shaqlawa (~36.28N, 44.49E), unlinked; hiran-city-2 still a likely duplicate. "Harsham" results mostly about the displaced-persons camp (different site).
+#### S8
+- 16 searches; 2/8 gained evidence. zerin-city → verified (2021 flood coverage by Kurdistan24, Rudaw, Esta; 2023 Iraqi Geological Journal study); ~17 km from centre but described by the governor as part of the city. zilan-city: 2017 REACH/IMPACT Erbil City map lists it; road still disputed.
+#### S3
+- 24 searches; 2/12 gained evidence. empire-business-towers → verified: SkyscraperPage (tower B4 finished 2019, developer Empire World), Roya page (27/23 floors, 6 buildings), news on leasing (snippets); developer "Empire World" (low) disputed vs Wikipedia's BCM Holding citation. ganjan-life: OpenSooq ads confirm name/apartments, add Building L (16th-floor 158.48 m²); bedrooms 2 vs 3 logged as conflict.
+- Same-name Baghdad projects exist for Future City (Modon/Al Handal) and Golden Tower (Golden Towers 1–4) — noted to avoid confusion.
+#### S2
+- 24 searches; 3/12 gained evidence. dashty-bahasht → partially_verified (medium): Rudaw Sorani news (summaries) — eastern Erbil, houses/villas/apartments, licensed 2010, due 2013, left unfinished by its investor, restart with a new investor announced January 2026; 427 villas + 1,122 apartments vs agency 500 units (conflict, units null). davos-city: extra Roya page (low). downtown-erbil: 2013 launch coverage confirms Emaar, 541,000 m², twin towers, three-stage plan; no later progress found → status still disputed; NGC = Nasri Group of Companies.
 
 
 ## 9. Access & compliance notes

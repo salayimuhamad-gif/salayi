@@ -79,4 +79,5 @@ Golden Tower is a residential apartment project in Erbil. It is located on the E
    - Not found on Paya, Hajisalam, homele or Miran packs; one web search (Golden Tower Zeren City) returned nothing relevant
    - Exact position on the Shaqlawa road not stated; kept in Erbil city scope (Erbil–Shaqlawa/Pirmam approach) but could be on the urban fringe
    - Relationship to Zeren City (sub-project or neighbourhood) not described
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass: 'Golden Towers 1–4' on the Wikipedia list of tallest buildings are in Baghdad and unrelated
+   - Second verification pass (2026-11-07): no new evidence. No page names a Golden Tower or Zeren City in Erbil; the only namesake found is Golden Towers 1–4 in Baghdad (unrelated), so the profile stays single-source. Queries: “"Golden Tower" Erbil Shaqlawa road Zeren City apartments”; “"Zeren City" Erbil "Golden Tower"”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

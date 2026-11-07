@@ -72,4 +72,4 @@ Hiran City 2 is a project name in Erbil, the capital of the Kurdistan Region of 
 6. **Important unresolved questions:**
    - Existence as a distinct project unconfirmed; homele has only one 'Hiran City' area - may duplicate hiran-city-1
    - Category set to 'other' because no source states it
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names Hiran City 2; only the Hiran sub-district gazetteer entry appeared, so the project's existence as distinct from Hiran City 1 is still unconfirmed. Queries: “"Hiran City 2" OR "Hiran 2" Erbil”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

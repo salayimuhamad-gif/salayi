@@ -85,4 +85,4 @@ Light City is a residential housing project in Erbil, located on the Bahrka Road
    - None
 6. **Important unresolved questions:**
    - Developer and project status not identified (one WebSearch, no result)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page mentions Light City on the Bahrka road; developer, project status and unit count remain unknown. Queries: “"Light City" Erbil Bahrka road Gulan City villas”; “"لایت ستی" OR "لایت سیتی" OR "لايت سيتي" هەولێر بەحرکە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

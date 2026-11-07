@@ -87,4 +87,4 @@ Lavender City is a residential villa community under construction in Erbil. It l
    - Developer identity
    - Total villa count and site area
    - Not to be merged with Lavender Skyline Towers (Kirkuk road tower project on Paya/Miran)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No new page names Lavender City or its developer (results covered other Erbil villa projects and Lavender Skyline Towers); developer, villa count and site area remain missing. Queries: “"Lavender City" Erbil villas developer”; “"لاڤێندەر سیتی" OR "لافندر سيتي" OR "لافيندر سيتي" هەولێر أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

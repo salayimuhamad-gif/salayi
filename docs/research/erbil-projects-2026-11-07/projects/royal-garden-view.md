@@ -90,4 +90,4 @@ Royal Garden View, also known as Royal Garden, is a residential villa project in
 6. **Important unresolved questions:**
    - Location unknown, so in-scope status (Erbil city) is assumed from 'Erbil' only
    - Price basis of low homele listings
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Royal Garden View; location, developer and size remain missing. Queries: “"Royal Garden View" Erbil”; “رويال كاردن فيو أربيل مشروع”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

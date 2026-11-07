@@ -88,4 +88,4 @@ Zin City is a residential project of detached houses and apartments on the Erbil
 6. **Important unresolved questions:**
    - Status inferred from 'Ready' listings only
    - 1,000 m2 'house' listing may be a plot or combined property
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page naming Zin City was found (results only describe the Erbil-Pirmam road and the 120m-150m ring-road link); developer, explicit status, unit counts and land area remain missing. Queries: “"Zin City" Erbil Pirmam road”; “"زین ستی" OR "زین سیتی" OR "زين سيتي" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

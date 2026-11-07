@@ -101,4 +101,4 @@ Lana City is a completed residential project on Koya Road in Erbil, behind the M
    - in_erbil_city set to 'edge': behind Atlantic City at the eastern urban edge (neighbouring Atlantic City record also 'edge'); distance from the 150m road not stated
    - Developer: Roya Remas City snippet says same company as Lana City; not confirmed by any Lana City page
    - Whether all five apartment buildings are complete
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page found; the only project-level hit was the already recorded Roya Remas City snippet linking Remas City to the Lana City company, so the developer, land area and dates remain missing. Queries: “"Lana City" Erbil Koya road”; “"لانە سیتی" OR "لانه سيتي" هەولێر أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

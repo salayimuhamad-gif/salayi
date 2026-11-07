@@ -91,4 +91,4 @@ Four Season Park is a residential apartment project on the main Erbil–Pirmam (
 6. **Important unresolved questions:**
    - Whether some units are already handed over (homele 'Ready' tags)
    - Arabic alias 'فور سيزن تاور' suggests tower form – building count/height not stated
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Four Season Park; developer, building count, floors and dates remain missing. Queries: “"Four Season Park" Erbil Pirmam road apartments developer”; “"فور سيزن بارك" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

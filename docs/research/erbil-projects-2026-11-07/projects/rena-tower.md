@@ -82,4 +82,4 @@ Rena Tower, also known as Rena Towers, is a residential apartment project on the
 6. **Important unresolved questions:**
    - Distinct from Rona Tower/Towers (also Kirkuk Road, same nearest Baghy branch): homele has separate areas with different sizes (Rena 77/138 m2 vs Rona 79/127 m2), so kept separate - not confirmed by a source
    - No Paya/Miran/Hajisalam page; one web search found nothing
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Rena Tower; developer, size, status and the Rena/Rona distinction remain unconfirmed. Queries: “"Rena Tower" Erbil”; “رينا تاور أربيل طريق كركوك”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

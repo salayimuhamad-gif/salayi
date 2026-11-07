@@ -97,4 +97,4 @@ Kany Kasa is a residential apartment project in Erbil, located between 120 Meter
 6. **Important unresolved questions:**
    - Developer identity
    - Whether the project is phased, with some blocks already completed
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names Kany Kasa outside the portals; developer, building count, units and status remain unconfirmed. Queries: “"Kany Kasa" OR "Kani Kasa" Erbil apartments project”; “"كاني كاسا" OR "کانی کاسا" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -80,4 +80,4 @@ Warin City is a residential project on the Shaqlawa road in Erbil Governorate. T
 6. **Important unresolved questions:**
    - in_erbil_city set to 'edge': Shaqlawa road address with no distance or landmark
    - Sizes 250-500 m2 not mapped to houses or apartments (may be plot sizes)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. Neither the English nor the Kurdish/Arabic search returned any page about the project; all data (Shaqlawa road, 70 units, 250/400/500 m2) still rests on a single project page, and developer, status and exact position remain missing. Queries: “"Warin City" Erbil”; “"وارین سیتی" OR "وارين سيتي" هەولێر شەقڵاوە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

@@ -89,4 +89,4 @@ Talar City is a residential project on Koya Road on the eastern edge of Erbil, i
    - Koya Road is not one of the listed approach roads; pin lies on the eastern urban fringe, so in_erbil_city set to 'edge'
    - Status inferred only from homele 'Ready' tags
    - Haji page content not captured
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Talar City; developer, size and status confirmation remain missing. Queries: “"Talar City" Erbil”; “تالار سيتي أربيل طريق كويه”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

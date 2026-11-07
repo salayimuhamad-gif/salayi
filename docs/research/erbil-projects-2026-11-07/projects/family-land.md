@@ -80,4 +80,4 @@ Family Land is a residential project on the north-eastern road out of Erbil towa
 6. **Important unresolved questions:**
    - Exact position on the Pirmam road – whether inside the 150m ring-road belt or further out (in scope either way as Pirmam/Massif approach)
    - One web search (Family Land Erbil Masif/Pirmam) returned no matching project
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names a Family Land housing project; Arabic results point only to the unrelated Family Mall, so developer, status and unit split stay single-source. Queries: “"Family Land" Erbil houses apartments project Pirmam Shaqlawa road”; “"فاميلي لاند" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

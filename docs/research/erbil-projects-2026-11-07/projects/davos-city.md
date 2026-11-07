@@ -5,12 +5,12 @@ Project ID: davos-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 ## PART A — PROJECT DATA SHEET
 | Field | Verified Information | Confidence | Source URL(s) |
 |---|---|---|---|
-| Project Name | Davos City | High – Paya, Baghy and Homele agree | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city; https://homele.com/properties/for-sale-and-rent/erbil/davos-city |
+| Project Name | Davos City | High – Paya, Baghy and Homele agree; also a Roya agency page (search summary) | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city; https://homele.com/properties/for-sale-and-rent/erbil/davos-city; https://roya-iq.com/?p=9109 |
 | Alternative names | داڤۆس سیتی (Paya) | Medium – Kurdish name from Paya area field | https://paya-realestate.com/en/projects/davos-city-256 |
 | City | Erbil | High – All sources | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city |
-| District / Area | 150m Ring Road | High – Paya and Baghy agree | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city |
+| District / Area | 150m Ring Road | High – Paya and Baghy agree; Roya agency page (search summary) also says 150 m highway | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city; https://roya-iq.com/?p=9109 |
 | Developer | Not verified | — – Paya developer field garbled; one WebSearch found no named developer | — |
-| Project Category | Residential (villas/houses) | High – Paya units are houses; Baghy House/Villa; Paya text also says 'residential and commercial' | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city |
+| Project Category | Residential (villas/houses) | High – Paya units are houses; Baghy House/Villa; Paya text also says 'residential and commercial'; Roya page (search summary) lists villa-type properties | https://paya-realestate.com/en/projects/davos-city-256; https://baghyshaqlawa.net/en/projects/davos-city; https://roya-iq.com/?p=9109 |
 | Total Land Area | Not verified | — – No source | — |
 | Number of Buildings / Towers | Not verified (villa community; 4 areas per Baghy) | — – No villa count given | https://baghyshaqlawa.net/en/projects/davos-city |
 | Total Residential Units | Not verified | — – No source | — |
@@ -32,7 +32,7 @@ Project ID: davos-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 
 **Confirmed planned:** Large green areas (Paya text; Baghy tag 'Green Areas'); Kindergarten (Paya tag; Baghy tag); School (Paya tag; Baghy tag); Mosque (Paya tag; Baghy tag); Supermarket (Paya tag; Baghy tag); Gym (Paya tag; Baghy tags 'GYM', 'Fitness Center'); Public garden (Paya tag; Baghy tag); Children's play area / playground (Paya tag; Baghy tag); Security (Paya tag; Baghy tag); Parking (Paya tag 'Covered Parking'; Baghy tag 'Parking')
 
-**Unverified claims:** Women's gym (Paya tag only); Cafeteria (Paya tag only); Nursery (Paya tag only); Maintenance (Paya tag only); Medical centre (Paya tag only); Restaurant (Paya tag only); Pharmacy (Paya tag only); 24-hour electricity (Baghy tag only); Internet (Baghy tag only); Shofag heating system (Baghy tag only); Central A/C (Baghy tag only); Private garden (Baghy tag only); Commercial component ('residential and commercial development', Paya marketing text; no commercial units listed)
+**Unverified claims:** Women's gym (Paya tag only); Cafeteria (Paya tag only); Nursery (Paya tag only); Maintenance (Paya tag only); Medical centre (Paya tag only); Restaurant (Paya tag only); Pharmacy (Paya tag only); 24-hour electricity (Baghy tag only); Internet (Baghy tag only); Shofag heating system (Baghy tag only); Central A/C (Baghy tag only); Private garden (Baghy tag only); Commercial component ('residential and commercial development', Paya marketing text; no commercial units listed); Underground car park (Roya page, search summary only)
 
 ## PART D — PRICES & PAYMENT (evidence-dated)
 | Item | Value | Currency | Type | Date / accessed | Source |
@@ -65,12 +65,13 @@ Davos City is a residential villa project in Erbil, located on the 150-metre rin
 | paya-realestate.com | https://paya-realestate.com/en/projects/davos-city-256 | Project page: status Constructing; 150m ring street; Swiss-design villas, large green areas; 2 unit types (house 200 m2 and 240 m2, 4 bed / 5 bath, 200,000 and 240,000 USD); 5 x 20% instalments; amenity tags; developer field garbled ('2 Units Davos City') | — | 2026-11-07 | medium |
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/davos-city | Project page: Erbil - 150m Highway; House/Villa; villas divided into 4 areas; feature tags | — | 2026-11-07 | medium |
 | homele.com | https://homele.com/properties/for-sale-and-rent/erbil/davos-city | Area listing page (3 pages; first page captured): 7 houses for sale, 200 m2 at 200,000-204,000 USD and 240 m2 at 225,000-240,000 USD, mix of off-plan and ready | — | 2026-11-07 | medium |
+| roya-iq.com | https://roya-iq.com/?p=9109 | Agency page on Davos City (search summary, page not opened; the exact roya-iq.com page is attributed from the summary): located on the 150 m highway away from the congested city, focus on greenery and gardens, villa-type properties; features 24-hour electricity, security and an underground car park. The summary notes the text refers to the construction company behind Remas City, so it may be copied from another project page. | — | 2026-11-07 | low |
 | hajisalam.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | miranestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 
 ## PART H — DATA VERIFICATION REPORT
 1. **Fully verified information (≥2 independent sources):**
-   - Name, 150m ring road location, villa/house category (Paya + Baghy)
+   - Name, 150m ring road location, villa/house category (Paya + Baghy; also a Roya agency page, search summary only)
    - House sizes 200 m2 and 240 m2 with 4 bedrooms (Paya + Homele)
    - Kindergarten, school, mosque, supermarket, gym, public garden, play area, security, parking tags (Paya + Baghy)
 2. **Information supported by only one source:**
@@ -92,4 +93,5 @@ Davos City is a residential villa project in Erbil, located on the 150-metre rin
 6. **Important unresolved questions:**
    - Who is the developer? (Paya field garbled; WebSearch found none)
    - Which of the 4 areas are completed vs under construction, given 'Ready' listings on Homele?
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Roya page text (search summary) mentions the construction company behind Remas City - possibly copied text; no developer link confirmed
+   - Second verification pass (2026-11-07): new evidence. A further agency page (Roya, search summary only and possibly copied text) confirms the name, 150 m highway location and villa category; developer, villa count, land area, dates and the status of the four areas remain unconfirmed. Queries: “"Davos City" Erbil villas”; “"داڤۆس سیتی" OR "دافوس سيتي" أربيل هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

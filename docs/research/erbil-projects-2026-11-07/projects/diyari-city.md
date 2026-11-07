@@ -52,13 +52,13 @@ According to Paya, Diyari City lies in Erbil between the Mosul Road (Erbil–Mos
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-دیاری سیتی مەجمەعێکی نیشتەجێبوونی دەروازەداری ڤێلایە لە شاری هەولێر، لە نێوان ڕێگای مووسڵ و ڕێگای ١٢٠ مەتری و نزیک شەقامی گوڵان. پڕۆژەکە نزیکەی ٢٥٦ ڤێلا لەخۆدەگرێت کە بە دوو جۆری ستاندارد دروستکراون: خانووی ٢٠٠ م² بە چوار ژووری نووستن و خانووی ٢٥٠ م² بە پێنج ژووری نووستن. نزیکەی ١٤٪ی زەوی پڕۆژەکە بۆ ناوچەی سەوز تەرخانکراوە. دانیشتووان کارەبای ٢٤ کاتژمێر، دەروازەی پاسەوانی، خزمەتگوزاری ئینتەرنێت و پارکینگی ئۆتۆمبێلیان هەیە، و سوپەرمارکێت و قوتابخانە و مزگەوت لە دەوروبەری مەجمەعەکە بەردەستن. خانووی ئامادە لە هەردوو ڕووبەرەکە لە بازاڕی فرۆشتنەوەی هەولێر لە ڕێگەی ئۆفیسەکانی خانووبەرەوە پێشکەش دەکرێن.
+دیاری سیتی مەجمەعێکی نیشتەجێبوونی دەروازەداری ڤێلایە لە شاری هەولێر، لە نێوان ڕێگای مووسڵ و ڕێگای ١٢٠ مەتری و نزیک شەقامی گوڵان. پڕۆژەکە نزیکەی ٢٥٦ ڤێلا لەخۆدەگرێت کە بە دوو جۆری ستاندارد دروستکراون: خانووی ٢٠٠ م² بە چوار ژووری نووستن و خانووی ٢٥٠ م² بە پێنج ژووری نووستن. نزیکەی ١٤٪ی زەوی پڕۆژەکە بۆ ناوچەی سەوز تەرخانکراوە. دانیشتووان کارەبای ٢٤ کاتژمێر، دەروازەی پاسەوانی، خزمەتگوزاری ئینتەرنێت و پارکینگی ئۆتۆمبێلیان هەیە.
 
 ### 2. Arabic (العربية)
-دياري ستي مجمع سكني مسوّر من الفلل في مدينة أربيل، يقع بين طريق الموصل وشارع 120 متر بالقرب من شارع كولان. يضم المشروع نحو 256 فيلا مبنية على طرازين قياسيين: بيوت بمساحة 200 م² بأربع غرف نوم، وبيوت بمساحة 250 م² بخمس غرف نوم. وتُخصَّص نحو 14٪ من أرض المشروع للمساحات الخضراء. يتوفر للسكان كهرباء على مدار 24 ساعة، وبوابات أمنية، وخدمة إنترنت، ومواقف للسيارات، فيما تتوفر الأسواق والمدارس ومسجد في محيط المجمع. وتُعرض بيوت جاهزة من كلتا المساحتين في سوق إعادة البيع بأربيل عبر مكاتب العقارات.
+دياري ستي مجمع سكني مسوّر من الفلل في مدينة أربيل، يقع بين طريق الموصل وشارع 120 متر بالقرب من شارع كولان. يضم المشروع نحو 256 فيلا مبنية على طرازين قياسيين: بيوت بمساحة 200 م² بأربع غرف نوم، وبيوت بمساحة 250 م² بخمس غرف نوم. وتُخصَّص نحو 14٪ من أرض المشروع للمساحات الخضراء. يتوفر للسكان كهرباء على مدار 24 ساعة، وبوابات أمنية، وخدمة إنترنت، ومواقف للسيارات.
 
 ### 3. English
-Diyari City is a gated residential villa community in Erbil, located between the Mosul Road and the 120-metre ring road, near Gulan Street. The project comprises approximately 256 villas built to two standard types: 200 m² houses with four bedrooms and 250 m² houses with five bedrooms. About 14 percent of the project's land is allocated to green space. Residents have 24-hour electricity, security gates, internet service and car parking, with supermarkets, schools and a mosque available in the surrounding area. Ready houses of both sizes are offered on the Erbil resale market through real-estate agencies.
+Diyari City is a gated residential villa community in Erbil, located between the Mosul Road and the 120-metre ring road, near Gulan Street. The project comprises approximately 256 villas built to two standard types: 200 m² houses with four bedrooms and 250 m² houses with five bedrooms. About 14 percent of the project's land is allocated to green space. Residents have 24-hour electricity, security gates, internet service and car parking.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -103,4 +103,4 @@ Diyari City is a gated residential villa community in Erbil, located between the
    - Is 'Diyari Towers' part of this development?
    - Why are some Paya units still labelled under construction?
    - Converted from an earlier agent's Markdown; that agent's three WebSearch queries found no news coverage, developer site or Wikipedia entry
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page found in English, Arabic or Sorani; developer, land area, dates and the link to 'Diyari Towers' remain unresolved. Queries: “"Diyari City" Erbil”; “"دیاری سیتی" OR "دياري ستي" OR "Diyari City" villas Mosul Road Erbil”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

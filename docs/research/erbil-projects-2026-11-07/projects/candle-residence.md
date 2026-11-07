@@ -93,4 +93,4 @@ Candle Residence is a residential tower project under construction in the Golden
    - Whether 48 floors includes the commercial and garage floors
    - Developer identity; one WebSearch ('Candle Residence' Erbil developer Golden Square) returned no relevant page
    - No page on Baghy, Haji Salam or Miran
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No independent page found; results only confirmed the Erbil Rotana landmark on Gulan Street in the Golden Zone, not the project; developer, unit total and dates still missing. Queries: “"Candle Residence" Erbil towers”; “"Candle Residence" OR "Candle Towers" Erbil Golden Square Rotana”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

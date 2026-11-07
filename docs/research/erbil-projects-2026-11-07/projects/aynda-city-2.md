@@ -84,4 +84,5 @@ Aynda City 2 is a residential area of houses in Erbil, in the Kurdistan Region o
    - No project page on Paya, Baghy, Haji Salam or Miran; the WebSearch run for Aynda City 1 (covering 'Aynda City' / 'Ayenda City') returned no relevant page
    - Whether Aynda City 1 and 2 are phases of one development
    - Why 216 m2 houses are listed at both ~USD 78-80k (2 bed) and USD 150-155k (4-5 bed); plot vs built area not stated
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("Aynda City" OR "Ayenda City" Erbil / "Ayenda City 2" OR "Aynda City 2" Erbil houses) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Aynda/Ayenda City 2; location, developer and status are still missing. Queries: “"Aynda City" OR "Ayenda City" Erbil”; “"Ayenda City 2" OR "Aynda City 2" Erbil houses”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

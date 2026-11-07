@@ -83,4 +83,4 @@ Varsan, also known as Varsan Project, is a residential project of houses in Erbi
 6. **Important unresolved questions:**
    - Developer and status unknown; one WebSearch ('Varsan project Erbil Baharka road houses developer') returned nothing relevant
    - Whether the homele 'Varsan' area page refers to the same project or to a neighbourhood of that name
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names Varsan; developer, status and whether it is a project or a neighbourhood remain unresolved. Queries: “"Varsan" Erbil project Baharka road”; “ڤارسان پڕۆژە هەولێر بەحرکە”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

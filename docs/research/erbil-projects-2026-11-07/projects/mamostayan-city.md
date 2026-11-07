@@ -54,6 +54,7 @@ Mamostayan City is a residential project in Erbil, in the Kurdistan Region of Ir
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
 |---|---|---|---|---|---|
 | baghyshaqlawa.net | https://baghyshaqlawa.net/en/projects/mamostayan-city | Project page: address 'Masif Road, 150m Street'; property types House, Apartment; tags 24 hr electricity, city administrative center, security, parking, maintenance, public garden, supermarket; 'Mamostayan city Branch Erbil'. | — | 2026-11-07 | medium |
+| repository.impact-initiatives.org (REACH Erbil City reference map, Nov 2017) | https://repository.impact-initiatives.org/document/impact/788d72e0/reach_irq_map_erbil_city_reference_15nov2017.pdf | Search summary, page not opened: the REACH Erbil city reference map (data as of October 2017) carries a place label 'MAMOSTAYAN' among Erbil city neighbourhood names. It does not describe a project, and its position relative to Masif Road / 150 m Street was not checked. | 2017-11-15 | 2026-11-07 | low |
 | homele.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | paya-realestate.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
 | hajisalam.com | — | No project page or project-specific listing area found in the crawl of this site | — | 2026-11-07 | n/a |
@@ -79,4 +80,5 @@ Mamostayan City is a residential project in Erbil, in the Kurdistan Region of Ir
    - None
 6. **Important unresolved questions:**
    - Developer and status not identified (one WebSearch, no result)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - A 2017 REACH Erbil city map has a 'MAMOSTAYAN' place label (search summary, page not opened); whether it marks this project or an older teachers' quarter elsewhere in the city is not established.
+   - Second verification pass (2026-11-07): new evidence. Only a weak lead was found: a 2017 REACH Erbil city reference map carries a 'MAMOSTAYAN' place label, which does not confirm this project's identity, location, developer or status. Queries: “"Mamostayan City" Erbil”; “"مامۆستایان ستی" OR "مامۆستایان سیتی" OR "ماموستايان سيتي" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

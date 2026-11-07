@@ -1,11 +1,13 @@
 # Andaz — Erbil City Real-Estate Project Research (2026-11-07)
 
 This folder is the complete delivery of the **Andaz AI Real Estate Project Research & Verification** run for
-Erbil city (Hawler), Kurdistan Region, Iraq. It contains one verified, trilingual (Sorani Kurdish / Arabic /
-English) profile per discovered project plus a single import-ready JSON array.
+Erbil city (Hawler), Kurdistan Region, Iraq. It contains one trilingual (Sorani Kurdish / Arabic / English)
+profile per discovered project, an Excel workbook, a one-file HTML report and a single import-ready JSON array.
 
 | File | Content |
 |---|---|
+| `Andaz_Erbil_Projects_2026-11-07.xlsx` | Excel workbook: Summary, Projects, Descriptions, Unit Types, Unit Sizes, Facilities, Prices, Sources, Data Sheet, Conflicts, Verification |
+| `Andaz_Erbil_Projects_2026-11-07.html` | One-file report with every profile, readable in any browser, with a searchable index |
 | `INDEX.md` | Table of every profile with Kurdish/Arabic names, developer, category, status, confidence and city-scope flag |
 | `projects/<project-id>.md` | Full profile per project: Parts A–H (data sheet, unit types & sizes, facilities, prices, location, trilingual descriptions, research log, verification report) |
 | `andaz_erbil_projects.json` | One JSON array; one object per project (Part G schema) — import-ready for the Andaz Projects module |
@@ -36,7 +38,11 @@ English) profile per discovered project plus a single import-ready JSON array.
    they name no source website, use no listing or advertising language, contain no prices or payment terms (those
    stay in the dated `prices` data), and leave out anything disputed or unverified. They state the same facts in all
    three languages and are short where few facts are verified; nothing is padded.
-7. **QA.** Every file was checked for required keys, enum values, numeric types, source URLs, Sorani-specific letters in
+7. **Second verification pass.** The 92 weakest Tier 1 profiles (unverified, low confidence, or no developer) were
+   re-checked with up to two web searches each in English, Arabic or Sorani (181 searches). New independent evidence
+   (news, government notices, architecture databases, humanitarian maps, other agencies) was added with its source and
+   reliability; every re-checked profile carries a `second_pass` record, shown in Part H of its report.
+8. **QA.** Every file was checked for required keys, enum values, numeric types, source URLs, Sorani-specific letters in
    `description_ku`, Arabic script leaking into `description_en`, and description length. Figures calculated from
    stated values (for example 28 buildings × 32 flats + 643 villas) and approximations stated by a source are labelled in
    `figure_notes`; figures the research itself estimated are removed from the import data.
@@ -56,11 +62,11 @@ Every record carries `publish_recommendation`:
 * `hold` — outside Erbil city, or too few verified facts for a meaningful public description (for example Bajgir City).
 
 ## Limitations (read before importing)
-* **Wider-web verification was limited.** The session's web-search budget (200 searches per turn, shared by all agents)
-  ran out during the first research pass, and the page-fetch tool could not reach hosts outside the five primary sites.
-  In the final pass each agent used at most one search per project. Every profile states this in Part H item 6, and
-  `verification_status` is `verified` only where two independent primary sites agree on name, location, category and
-  status. A second pass on the projects listed in `RESEARCH_LOG.md` is recommended.
+* **Wider-web verification is search-based.** Web searches were used for discovery and for the second pass, but the
+  page-fetch tool could not reach hosts outside the five primary sites, so developer websites and news pages were read
+  through search-result summaries. Such facts are marked "search summary, page not opened". `verification_status` is
+  `verified` only where two independent sources agree on name, location, category and status. Projects that still need
+  a developer or on-site check are listed in `RESEARCH_LOG.md` section 7.
 * **Agency data, not developer documents.** No developer website could be opened. Facts labelled developer/sales-centre
   come from sales-centre listings on the primary sites; news and search-result facts are marked as such.
 * **Status inferred from listings.** Where no project page states a status, agents inferred it from listing tags

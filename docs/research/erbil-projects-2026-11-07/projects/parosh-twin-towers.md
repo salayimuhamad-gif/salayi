@@ -91,4 +91,4 @@ Parosh Twin Towers, also known as Parosh Tower, is a completed residential and c
 6. **Important unresolved questions:**
    - Total apartments (102 per tower or in total)
    - Developer not named
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No wider-web page mentions Parosh; developer, total apartments and dates remain unconfirmed. Queries: “"Parosh" Twin Towers Erbil Kasnazan”; “"پارۆش" OR "باروش" تاوەر هەولێر أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

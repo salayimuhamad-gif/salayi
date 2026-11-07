@@ -44,13 +44,13 @@ Baghy Shaqlawa places Dubai City on the Erbil–Koya road, which leaves Erbil to
 
 ## PART F — FINAL PROJECT DESCRIPTIONS
 ### 1. Sorani Kurdish (کوردیی سۆرانی)
-دوبەی سیتی (Dubai City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر، لەسەر ڕێگای هەولێر – کۆیە، کە بەرەو باشووری ڕۆژهەڵات و ئاراستەی کەسنەزان لە شار دەردەچێت. پڕۆژەکە لە ڤێلا پێکدێت، و یەکێک لە ڤێلاکانی ڕووبەری 1,060 م²یە بە هەشت ژووری نووستن و حەوت حەمام. زانیاریی زیاتر، وەک ناوی کۆمپانیای گەشەپێدەر، ژمارەی ڤێلاکان، ڕووبەری ستانداردی ڤێلاکان، خزمەتگوزارییەکان و قۆناغی بنیاتنان، کاتێک بەردەست بوون لەم پرۆفایلەدا زیاد دەکرێن.
+دوبەی سیتی (Dubai City) پڕۆژەیەکی نیشتەجێبوونی ڤێلایە لە هەولێر، لەسەر ڕێگای هەولێر – کۆیە، کە بەرەو باشووری ڕۆژهەڵات و ئاراستەی کەسنەزان لە شار دەردەچێت. پڕۆژەکە لە ڤێلا پێکدێت، و یەکێک لە ڤێلاکانی ڕووبەری 1,060 م²یە بە هەشت ژووری نووستن و حەوت حەمام.
 
 ### 2. Arabic (العربية)
-دبي سيتي (Dubai City) مشروع سكني للفلل في أربيل، يقع على طريق أربيل – كويه الذي يخرج من المدينة باتجاه الجنوب الشرقي نحو كسنزان. ويتكوّن المشروع من فلل سكنية، ومنها فيلا بمساحة 1,060 م² تضم ثماني غرف نوم وسبعة حمامات. وستُضاف إلى هذا الملف تفاصيل أخرى عند توفّرها، ومنها اسم الشركة المطوّرة، وعدد الفلل، والمساحات القياسية للفلل، والمرافق والخدمات، وحالة الإنشاء.
+دبي سيتي (Dubai City) مشروع سكني للفلل في أربيل، يقع على طريق أربيل – كويه الذي يخرج من المدينة باتجاه الجنوب الشرقي نحو كسنزان. ويتكوّن المشروع من فلل سكنية، ومنها فيلا بمساحة 1,060 م² تضم ثماني غرف نوم وسبعة حمامات.
 
 ### 3. English
-Dubai City, also spelled Dubay City, is a residential villa project in Erbil. It is located on the Erbil–Koya road, which leaves the city towards the south-east in the direction of Kasnazan. The project consists of villas; one villa in the project has an area of 1,060 m² with eight bedrooms and seven bathrooms. Further details, including the developer, the number of villas, standard villa sizes, facilities and the construction status, will be added to this profile when they become available.
+Dubai City, also spelled Dubay City, is a residential villa project in Erbil. It is located on the Erbil–Koya road, which leaves the city towards the south-east in the direction of Kasnazan. The project consists of villas; one villa in the project has an area of 1,060 m² with eight bedrooms and seven bathrooms.
 
 ## PART G — SOURCES AND RESEARCH LOG
 | Website | URL | Information obtained | Published/updated | Accessed | Reliability |
@@ -82,4 +82,4 @@ Dubai City, also spelled Dubay City, is a residential villa project in Erbil. It
 6. **Important unresolved questions:**
    - Exact location on the Koya road: within the Kasnazan / ring-road belt or further out? Set to 'edge' pending confirmation
    - Developer and status unknown; one WebSearch returned only unrelated Dubai projects
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. No page names a Dubai City villa project; results only show other Koya-road projects (Hiwa City, Davos City) and Emaar's Downtown Erbil, so developer, villa count and status are still missing. Queries: “"Dubai City" Erbil Koya road villas project”; “"دوبەی سیتی" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

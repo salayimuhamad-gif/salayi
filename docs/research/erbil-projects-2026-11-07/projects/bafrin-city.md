@@ -79,4 +79,5 @@ Bafrin City is a residential project in Erbil on the Pirmam Road, the road that 
    - Exact position on the Pirmam Road; in_erbil_city set true per scope rule for Pirmam road approaches, but distance from the city is not stated
    - Haji Salam page is empty, so it only confirms the name
    - One WebSearch ('Bafrin City' Erbil) returned no relevant page
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second pass 2026-11-07: two more web searches ("Bafrin City" Erbil / "بەفرین ستی" OR "بەفرین سیتی" هەولێر) found no independent page for this project
+   - Second verification pass (2026-11-07): no new evidence. No independent page names Bafrin City in English or Sorani (only unrelated 'Bafrzon' old-city neighbourhoods and a news item about a person named Befrin); developer, status and distance along Pirmam Road still missing. Queries: “"Bafrin City" Erbil”; “"بەفرین ستی" OR "بەفرین سیتی" هەولێر”. Developer websites could not be opened in this session; facts from search summaries are marked as such.

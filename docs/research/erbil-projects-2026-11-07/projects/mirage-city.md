@@ -84,4 +84,4 @@ Mirage City is a residential project of houses and villas in the northeast of Er
 6. **Important unresolved questions:**
    - Developer identity
    - Construction status (inferred from off-plan listings only)
-   - Wider-web verification in this pass was limited: WebFetch could not reach hosts outside the five primary sites and the session's shared web-search budget allowed at most one search per project; a second verification pass is recommended.
+   - Second verification pass (2026-11-07): no new evidence. All 'Mirage City' results refer to a compound in New Cairo, Egypt; no independent Erbil source for developer, status or dates was found. Queries: “"Mirage City" Erbil villas”; “"ميراج ستي" أربيل”. Developer websites could not be opened in this session; facts from search summaries are marked as such.
