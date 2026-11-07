@@ -46,7 +46,7 @@ Project ID: london-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | duplex | Not verified | — | — | — | Two duplex floors within the 41 residential floors per tower; sizes not given | agency_project_page | https://homele.com/projects/london-towers-365 |
 | showroom | Not verified | — | — | — | 3 commercial floors per tower, 2 of them belonging to Land Rover and Jaguar (homele) | agency_project_page | https://homele.com/projects/london-towers-365 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for all 14 listed apartments (118–340 m², 1+1, 3+1, 4+1); homele project page has a 'Unit Details & Floor Plans' section (https://homele.com/projects/london-towers-365) (https://paya-realestate.com/en/projects/london-towers-254)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 4+1 340 m2 - project-page price list | 329,800 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/london-towers-254 |
 | Published price per m2 ('Price Per Meter') | 990 | USD | developer | Miran page updated 2026-08-22; accessed 2026-11-07 | https://miranestate.com/projects/cmk5ge1rt019iqn0fyetnkx4i |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya installments: first payment 25%, structure 25%, finishing 25%, receive keys 25%; homele payment plans per building (A & C, C floors 3-17, B1, B2): 25% contract signing, 25% structure completion, 25% apartment completion, 25% key handover; Miran: 'Cash Installment Payment Plans', $990/m (https://paya-realestate.com/en/projects/london-towers-254)
 
 ### Location and surroundings
 Waziran (the 'Golden Zone') of Erbil, on Gulan Street (40 m street) opposite Dream City, about 800 m from Sami Abdulrahman Park and about 3 km from Erbil International Airport. Map position (high confidence, from agency map pins): 36.20372, 43.983032. Google Maps: https://www.google.com/maps?q=36.20372,43.983032
@@ -567,7 +567,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 2.9,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for all 14 listed apartments (118–340 m², 1+1, 3+1, 4+1); homele project page has a 'Unit Details & Floor Plans' section (https://homele.com/projects/london-towers-365)",
+   "source_url": "https://paya-realestate.com/en/projects/london-towers-254"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya installments: first payment 25%, structure 25%, finishing 25%, receive keys 25%; homele payment plans per building (A & C, C floors 3-17, B1, B2): 25% contract signing, 25% structure completion, 25% apartment completion, 25% key handover; Miran: 'Cash Installment Payment Plans', $990/m",
+   "source_url": "https://paya-realestate.com/en/projects/london-towers-254"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.20372,43.983032",
  "publish_recommendation": "ready"
 }

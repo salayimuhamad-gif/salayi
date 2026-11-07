@@ -29,12 +29,12 @@ Project ID: oakland-villas | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 459 villas (99 x 200 m2, 278 x 250 m2, 66 x 320 m2, 16 x 600 m2) | Miran text only; breakdown sums to 459 | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 459 | 459 villas in total: 200 m² (99 units), 250 m² (278 units), 320 m² (66 units), 600 m² (16 units) | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 459 villas (see units) | Miran text only | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
 | Floors per building | Not verified (Miran 'Floor plan' column shows 2/2/2/3 by type) | Column meaning not labelled | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Over 30% of the project area is dedicated to green space, including a 10-dunum central park | — | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: oakland-villas | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | villa | 200, 250, 320 | 200 | 320 | 4 | 3 Miran listings (Types A, B, C): 4 bath for 200 m2, 5 bath for 250/320 m2 | market_listing | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
 | house | 200, 250, 600 | 200 | 600 | — | Off-plan homele listings: 200 and 250 m2 4 bed/4 bath; 600 m2 6 bed/5 bath | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/oakland-villas |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for each of 17 listed houses (200, 250, 320 m²); Miran: unit-types table with a floor-plan column for Types A-D (200-600 m²) (https://paya-realestate.com/en/projects/oakland-422)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House Type C 320 m2, 4 bed / 5 bath - market listing on Miran | 320,000 | USD | resale | Miran page updated 2026-08-23; accessed 2026-11-07 | https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz |
 | Off-plan house 600 m2, 6 bed / 5 bath - long-term instalment listing | 1,200,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/oakland-villas |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran payment: Cash; homele listings labelled 'Down payment', 'Installment' and 'Long Term Installment' (https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz)
 
 ### Location and surroundings
 Erbil, on the 150 m Ring Road, near the Pirmam Interchange (Paya and Miran). Map position (low confidence, from agency map pins): 36.257375, 44.103577. Google Maps: https://www.google.com/maps?q=36.257375,44.103577
@@ -438,7 +438,32 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 459,
+   "text": "459 villas in total: 200 m² (99 units), 250 m² (278 units), 320 m² (66 units), 600 m² (16 units)",
+   "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Over 30% of the project area is dedicated to green space, including a 10-dunum central park",
+   "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for each of 17 listed houses (200, 250, 320 m²); Miran: unit-types table with a floor-plan column for Types A-D (200-600 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/oakland-422"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran payment: Cash; homele listings labelled 'Down payment', 'Installment' and 'Long Term Installment'",
+   "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.257375,44.103577",
  "publish_recommendation": "ready"
 }

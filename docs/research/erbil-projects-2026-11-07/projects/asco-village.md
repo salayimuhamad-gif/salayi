@@ -44,7 +44,7 @@ Project ID: asco-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | villa | 275 | 275 | 275 | 4 | 4 bathrooms; Type B | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
 | villa | 394 | 394 | 394 | 5 | 4 bathrooms; Type C | agency_project_page | https://paya-realestate.com/en/projects/asco-village-327 ; https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 3 house types (230, 275, 394 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/asco-village-327)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa 230 m² – Homele off-plan listing (advertised) | 273,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
 | Villa 239 m² – Homele off-plan listing (advertised) | 261,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, then four further 20% payments each 'After 6 Months'; price per meter $1,100. Homele listings: 'House in Installment', 'Down payment' offer (https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip)
 
 ### Location and surroundings
 Diamond Zone (Almas area), north-east Erbil, opposite Grand Majidi Mall near the resort-road junction, with the 120 m road on one side and the 150 m road on the other; Miran cites about 10 minutes to the city centre and to Erbil International Airport. Paya's structured data places it at 36.25617763, 44.07726377, about 9 km north-east of the citadel. Map position (low confidence, from agency map pins): 36.25617763, 44.07726377. Google Maps: https://www.google.com/maps?q=36.25617763,44.07726377
@@ -347,7 +347,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 3 house types (230, 275, 394 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, then four further 20% payments each 'After 6 Months'; price per meter $1,100. Homele listings: 'House in Installment', 'Down payment' offer",
+   "source_url": "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.25617763,44.07726377",
  "publish_recommendation": "ready"
 }

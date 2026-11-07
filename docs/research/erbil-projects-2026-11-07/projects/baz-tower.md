@@ -42,7 +42,7 @@ Project ID: baz-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 |---|---|---|---|---|---|---|---|
 | office | 54, 57, 63, 64, 66, 83, 91, 93, 99, 101, 110, 113, 114, 121, 152, 156 | 54 | 156 | — | 16 office units listed by Paya (open-plan 'Studio' layout); 64 m2 and 93 m2 units listed with 1 bathroom. Paya describes the complex as mixed-use with offices, retail stores and restaurants (all commercial); no residential units listed. | agency_project_page | https://paya-realestate.com/en/projects/erbil-baz-tower-283 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists office unit types (54–156 m²) with 'View Blueprint'; one type (114 m²) marked 'No Blueprints' (https://paya-realestate.com/en/projects/erbil-baz-tower-283)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -483,7 +483,20 @@ Second verification pass 2026-11-07: queries “"Baz Tower" Erbil 100 Meter Stre
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists office unit types (54–156 m²) with 'View Blueprint'; one type (114 m²) marked 'No Blueprints'",
+   "source_url": "https://paya-realestate.com/en/projects/erbil-baz-tower-283"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.1807004,43.9618505",
  "publish_recommendation": "review"
 }

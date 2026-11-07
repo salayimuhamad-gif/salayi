@@ -29,8 +29,8 @@ Project ID: lana-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last rese
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 519 houses/villas (464 + 55) + about 200 apartments (about 719; total not stated) | Paya (464 + 55, ~200) and Haji Salam (519 / 200) agree | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | Paya: '464 standalone houses and 55 larger villas'; Haji Salam field reads 'Number Of Unit: 200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
+| Apartments | Paya: 'five 10-floor apartment buildings offering around 200 modern units'; Haji Salam field reads '200 House 519 - Apartment' | — | https://paya-realestate.com/en/projects/lana-city-294 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 5 apartment buildings (plus houses and villas) | Paya only | https://paya-realestate.com/en/projects/lana-city-294 |
 | Floors per building | 10 (apartment buildings); houses 1-2 floors | Paya (10 floors) and Haji Salam (1-2 floors) | https://paya-realestate.com/en/projects/lana-city-294 ; https://hajisalam.com/en/lana-city/ |
@@ -47,7 +47,7 @@ Project ID: lana-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last rese
 | apartment | 190 | 190 | 190 | — | Haji Salam: 200 apartments, area 190 m2 | agency_project_page | https://hajisalam.com/en/lana-city/ |
 | house | 200 | 200 | 200 | 4 | 2 bathrooms; 2 floors; Ready two-floor house for sale (homele); Haji Salam old sale listing 200 m2, 4 bedrooms, posted about 5 years before access | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lana-city ; https://hajisalam.com/en/lana-city/ |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for all 5 listed units – apartment 135 m², houses 190 m² (3 and 4 beds) and 200 m² (2 and 4 beds) (https://paya-realestate.com/en/projects/lana-city-294)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -478,7 +478,28 @@ Second verification pass 2026-11-07: queries “"Lana City" Erbil Koya road”; 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Paya: '464 standalone houses and 55 larger villas'; Haji Salam field reads 'Number Of Unit: 200 House 519 - Apartment'",
+   "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Paya: 'five 10-floor apartment buildings offering around 200 modern units'; Haji Salam field reads '200 House 519 - Apartment'",
+   "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for all 5 listed units – apartment 135 m², houses 190 m² (3 and 4 beds) and 200 m² (2 and 4 beds)",
+   "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.220751,44.145889",
  "publish_recommendation": "ready"
 }

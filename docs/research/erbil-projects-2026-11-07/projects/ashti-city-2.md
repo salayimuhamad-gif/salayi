@@ -29,7 +29,7 @@ Project ID: ashti-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,235 (345 houses + 890 villas); Baghy text states 1,700 | Haji Salam itemised figure preferred; conflicting Baghy figure sits in a 'Global City'-headed block | https://hajisalam.com/en/ashty-city-2/ ; https://baghyshaqlawa.net/en/projects/ashti-city-2 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | hajisalam: 'Number Of Unit: 345 House 890 - Villa'; baghyshaqlawa (text block headed 'Global City'): 'The project consists of 1700 residential units with different types of Villa's' | — | https://hajisalam.com/en/ashty-city-2/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (house/villa compound) | — |
@@ -373,7 +373,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "hajisalam: 'Number Of Unit: 345 House 890 - Villa'; baghyshaqlawa (text block headed 'Global City'): 'The project consists of 1700 residential units with different types of Villa's'",
+   "source_url": "https://hajisalam.com/en/ashty-city-2/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.213258,44.122411",
  "publish_recommendation": "ready"
 }

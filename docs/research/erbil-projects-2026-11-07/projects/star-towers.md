@@ -30,7 +30,7 @@ Project ID: star-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 602 (Haji: 608) | Paya, Miran, Baghy, b-arrow agree | https://paya-realestate.com/en/projects/star-towers-90 ; https://miranestate.com/projects/cmjfqi91u005amw0fiemcbchd ; https://baghyshaqlawa.net/en/projects/star-towers ; https://hajisalam.com/en/star-tower/ |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 602 apartments (Paya, baghyshaqlawa.net, b-arrow.com; Miran: Units 602) vs 'Number Of Units 608' (hajisalam.com) | — | https://paya-realestate.com/en/projects/star-towers-90 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 | Paya, Miran, Baghy, b-arrow | https://paya-realestate.com/en/projects/star-towers-90 ; https://miranestate.com/projects/cmjfqi91u005amw0fiemcbchd ; https://baghyshaqlawa.net/en/projects/star-towers |
 | Floors per building | 14 (+3 basement floors) | All project sources; basements from Paya and b-arrow | https://paya-realestate.com/en/projects/star-towers-90 ; https://hajisalam.com/en/star-tower/ ; https://b-arrow.com/w/index.php/en/223/star_towers |
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 112 m2, 2 bed - monthly rent (listings USD 400-450) | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/star-towers |
 | Apartment 158 m2, 3 bed - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/star-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); resale and rental listings (Miran: 7 for sale, 43 for rent from USD 300/month; homele rentals USD 350-600/month) (https://miranestate.com/projects/cmjfqi91u005amw0fiemcbchd)
 
 ### Location and surroundings
 On Gulan Street (40 m Road) in Erbil's Golden Square, opposite Dream City and beside Waziran, about 5 km from the airport (Paya, Miran, Baghy, Haji, b-arrow). Published map pins for this project disagree, so no position is given.
@@ -559,7 +559,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "602 apartments (Paya, baghyshaqlawa.net, b-arrow.com; Miran: Units 602) vs 'Number Of Units 608' (hajisalam.com)",
+   "source_url": "https://paya-realestate.com/en/projects/star-towers-90"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); resale and rental listings (Miran: 7 for sale, 43 for rent from USD 300/month; homele rentals USD 350-600/month)",
+   "source_url": "https://miranestate.com/projects/cmjfqi91u005amw0fiemcbchd"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

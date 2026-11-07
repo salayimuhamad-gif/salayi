@@ -29,8 +29,8 @@ Project ID: english-village | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 410 villas (+ apartments: 3 x 11 floors x 4 per floor per Bagh-y; total not stated) | Villas agreed by two primary sites; apartment total not stated | https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2 ; https://baghyshaqlawa.net/en/projects/english-village |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 410 villas (Miran; Baghy); 420 villas (Wikipedia); Haji Salam unit field reads '120 Villa 406- Apartment' | — | https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2 |
+| Apartments | Baghy: 3 buildings of 11 floors with 4 apartments (150 m²) per floor, total not stated; Haji Salam unit field reads '120 Villa 406- Apartment' | — | https://baghyshaqlawa.net/en/projects/english-village |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 410 villas + 3 apartment buildings | 410: Miran + Bagh-y (Wikipedia 420); apartment buildings: Bagh-y only | https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2 ; https://baghyshaqlawa.net/en/projects/english-village |
 | Floors per building | Villas 2; apartment buildings 11 | Villas: Hajisalam + Wikipedia; apartments: Bagh-y | https://hajisalam.com/en/english-village/ ; https://en.wikipedia.org/wiki/English_Village,_Erbil ; https://baghyshaqlawa.net/en/projects/english-village |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa price in 2011 (Wikipedia, historical) | 500,000 | USD | resale | 2011 | https://en.wikipedia.org/wiki/English_Village,_Erbil |
 | Villa monthly rent in 2011 (approx., Wikipedia, historical) | 3,400 | USD | rent | 2011 | https://en.wikipedia.org/wiki/English_Village,_Erbil |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele listings: ready houses for monthly rent ($1,300–1,400) and for sale ($500,000) (https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2)
 
 ### Location and surroundings
 English Village lies in western Erbil in the area marketed as the Golden Zone, between the 40m and 100m streets, behind Sami Abdulrahman Park and near the Divan and Rotana hotels (Bagh-y Shaqlawa); Hajisalam places it between Empire World and Italian City. Bagh-y gives the address as Erbil – 40m Road. English Tower (King Insaat) is being built inside the village. Wikipedia notes that most villas are used as company offices. Map position (low confidence, from agency map pins): 36.192702, 43.971569. Google Maps: https://www.google.com/maps?q=36.192702,43.971569
@@ -495,7 +495,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "410 villas (Miran; Baghy); 420 villas (Wikipedia); Haji Salam unit field reads '120 Villa 406- Apartment'",
+   "source_url": "https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Baghy: 3 buildings of 11 floors with 4 apartments (150 m²) per floor, total not stated; Haji Salam unit field reads '120 Villa 406- Apartment'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/english-village"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele listings: ready houses for monthly rent ($1,300–1,400) and for sale ($500,000)",
+   "source_url": "https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.192702,43.971569",
  "publish_recommendation": "ready"
 }

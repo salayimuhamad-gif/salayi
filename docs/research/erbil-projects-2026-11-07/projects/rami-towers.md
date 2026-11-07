@@ -30,7 +30,7 @@ Project ID: rami-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 2,976 | Miran statistics only | https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 2,976 | Project statistics: Buildings 10, Floors 31, Units 2,976 | https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 10 | Paya, Miran, Baghy agree | https://paya-realestate.com/en/projects/rami-towers-151 ; https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 ; https://baghyshaqlawa.net/en/projects/rami-towers |
 | Floors per building | 31 | Paya and Miran agree | https://paya-realestate.com/en/projects/rami-towers-151 ; https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
@@ -46,7 +46,7 @@ Project ID: rami-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 210, 225 | 210 | 225 | 3 | 3 bathrooms; 3+1: three bedrooms (one en-suite), living room, kitchen, 3 bathrooms, 2 balconies | agency_project_page | https://paya-realestate.com/en/projects/rami-towers-151 ; https://baghyshaqlawa.net/en/projects/rami-towers ; https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
 | apartment | 80, 105, 165, 170, 225 | 80 | 225 | — | Ready units for sale and rent on homele; Miran sale/rent listings 80, 95, 170 m2 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rami-towers ; https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of 13 listed apartments (70-225 m²); text says 'Please see the apartment plans'; Miran unit-types table has a 'Floor plan' column (https://paya-realestate.com/en/projects/rami-towers-151)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready 2+1 170 m2 for sale - homele listing | 128,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rami-towers |
 | Studio 80 m2 rent per month - Miran listing (other studio rents $450) | 350 | USD | rent | accessed 2026-11-07 | https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran payment: Cash (price per meter $750); Miran lists units for sale and for rent ($350-$450); homele listings include monthly rentals ($450-$1,200 Monthly) and sales (https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94)
 
 ### Location and surroundings
 Rami Towers is in Erbil's Golden Square (Miran: 'Golden Zone') between Italian Village 1 and Roya Tower, about 750 m from Sami Abdulrahman Park (Paya, Miran, Baghy). Map position (medium confidence, from agency map pins): 36.190818, 43.968466. Google Maps: https://www.google.com/maps?q=36.190818,43.968466
@@ -509,7 +509,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 2976,
+   "text": "Project statistics: Buildings 10, Floors 31, Units 2,976",
+   "source_url": "https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of 13 listed apartments (70-225 m²); text says 'Please see the apartment plans'; Miran unit-types table has a 'Floor plan' column",
+   "source_url": "https://paya-realestate.com/en/projects/rami-towers-151"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran payment: Cash (price per meter $750); Miran lists units for sale and for rent ($350-$450); homele listings include monthly rentals ($450-$1,200 Monthly) and sales",
+   "source_url": "https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.190818,43.968466",
  "publish_recommendation": "ready"
 }

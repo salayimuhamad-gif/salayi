@@ -45,7 +45,7 @@ Project ID: nobel-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | apartment | 81, 117 | 81 | 117 | — | Paya unit table: 81 m2 1 bed/1 bath; 117 m2 2 bed/2 bath (81 m2 not in the text size list) | agency_project_page | https://paya-realestate.com/en/projects/nobel-towers-150 |
 | apartment | 83 | 83 | 83 | 1 | 1 bathrooms; One 'Ready' rental listing | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for the 2 listed apartments (81 m² 1 bed; 117 m² 2 beds) (https://paya-realestate.com/en/projects/nobel-towers-150)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 117 m2, 2 bed / 2 bath - Paya project-page asking price | 102,375 | USD | resale | accessed 2026-11-07 | https://paya-realestate.com/en/projects/nobel-towers-150 |
 | Ready apartment 83 m2, 1 bed / 1 bath - monthly rent (listing) | 300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nobel-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya lists apartments with sale prices ($62,800 and $102,375); homele lists one ready apartment for rent at $300 monthly (https://paya-realestate.com/en/projects/nobel-towers-150)
 
 ### Location and surroundings
 On the Ankawa – New Bahirka road in Erbil, opposite the Lebanese Village; Paya files it under the Nobel City area and says the towers overlook the old city and Nobel City. Map position (low confidence, from agency map pins): 36.2537662, 43.9999248. Google Maps: https://www.google.com/maps?q=36.2537662,43.9999248
@@ -352,7 +352,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for the 2 listed apartments (81 m² 1 bed; 117 m² 2 beds)",
+   "source_url": "https://paya-realestate.com/en/projects/nobel-towers-150"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya lists apartments with sale prices ($62,800 and $102,375); homele lists one ready apartment for rent at $300 monthly",
+   "source_url": "https://paya-realestate.com/en/projects/nobel-towers-150"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2537662,43.9999248",
  "publish_recommendation": "ready"
 }

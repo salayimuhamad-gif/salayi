@@ -30,7 +30,7 @@ Project ID: zanyari-towers | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified (Haji Salam: 800, scope unclear) | Haji page may include the 48/49-floor Erbil One Tower | https://hajisalam.com/en/zanyari-tower/ |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 800 | Apartment project, Number Of Units 800 (hajisalam.com 'Zanyari Tower'; floors listed as 25-49) | https://hajisalam.com/en/zanyari-tower/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 3 | Baghy text only | https://baghyshaqlawa.net/en/projects/zanyari-towers |
 | Floors per building | 25 | Baghy text; Haji gives 25-49 (see conflicts) | https://baghyshaqlawa.net/en/projects/zanyari-towers ; https://hajisalam.com/en/zanyari-tower/ |
@@ -384,7 +384,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 800,
+   "text": "Apartment project, Number Of Units 800 (hajisalam.com 'Zanyari Tower'; floors listed as 25-49)",
+   "source_url": "https://hajisalam.com/en/zanyari-tower/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.174717,44.010722",
  "publish_recommendation": "ready"
 }

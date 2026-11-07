@@ -31,7 +31,7 @@ Project ID: west-park-complex | Tier: 2 | In Erbil city: Yes | Last researched: 
 | Total housing units | None (commercial); 21 offices + 9 shops | Paya text | https://paya-realestate.com/en/projects/west-park-complex-265 |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | 21 offices (100-640 m²) and 9 commercial shops (70-400 m²) (Paya) | — | https://paya-realestate.com/en/projects/west-park-complex-265 |
 | Towers / apartment buildings | Not verified | — | — |
 | Floors per building | Not verified | — | — |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -43,7 +43,7 @@ Project ID: west-park-complex | Tier: 2 | In Erbil city: Yes | Last researched: 
 | office | 108, 114, 121, 122, 123, 135, 165, 222, 238, 246, 251, 267.8, 400, 640 | 108 | 640 | — | Text: 21 offices of 100-640 m2 (elsewhere 108-600 m2); for rent only | agency_project_page | https://paya-realestate.com/en/projects/west-park-complex-265 |
 | shop | 70, 83, 113, 118, 128, 136, 245, 268, 1,384, 1,500 | 70 | 1,500 | — | Text: 9 commercial shops of 70-400 m2; unit list also shows 1,384 and 1,500 m2 commercial entries; for rent only | agency_project_page | https://paya-realestate.com/en/projects/west-park-complex-265 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 24 office and commercial units, 70-1,500 m² (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -64,8 +64,8 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Shop 70 m2 - rent | 1,400 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
 | Shop 245 m2 - rent | 4,900 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
 | Commercial space 1,384 m2 - rent | 27,680 | USD | rent | accessed 2026-11-07 | https://paya-realestate.com/en/projects/west-park-complex-265 |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Maintenance or service charges:** 'Only $1 for service' (offices priced at $6 to $8 per metre) (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
+- **Purchasing or rental arrangements:** 'This Project Is Only For Rent'; offices at $6 to $8 per metre (Paya) (https://paya-realestate.com/en/projects/west-park-complex-265)
 
 ### Location and surroundings
 Paya places West Park Complex near Sami Abdulrahman Park, opposite English Village and near the Italian City (Italian Village 1), between the 100 m and 40 m streets in western Erbil. Map position (low confidence, from agency map pins): 36.188068, 43.969141. Google Maps: https://www.google.com/maps?q=36.188068,43.969141
@@ -372,7 +372,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": null,
+   "text": "21 offices (100-640 m²) and 9 commercial shops (70-400 m²) (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+  },
+  "green_space": null,
+  "maintenance_charges": {
+   "value": 1,
+   "text": "'Only $1 for service' (offices priced at $6 to $8 per metre) (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+  },
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 24 office and commercial units, 70-1,500 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "'This Project Is Only For Rent'; offices at $6 to $8 per metre (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.188068,43.969141",
  "publish_recommendation": "review"
 }

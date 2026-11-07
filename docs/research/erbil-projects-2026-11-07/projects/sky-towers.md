@@ -30,11 +30,11 @@ Project ID: sky-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,860 | Miran only | https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,860 | Project statistics: Buildings 5, Floors 33, Units 1,860 | https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 5 towers A-E (Miran) vs 3 blocks (Baghy) | Two sources disagree | https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u ; https://baghyshaqlawa.net/en/projects/sky-towers |
 | Floors per building | 33 above ground + 4 basements | Miran 33; Baghy floor breakdown agrees | https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u ; https://baghyshaqlawa.net/en/projects/sky-towers |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Large green spaces: one in the front with an area of 4,500 square meters and another in the background with an area of 9,500 square meters | — | https://paya-realestate.com/en/projects/sky-towers-152 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -47,7 +47,7 @@ Project ID: sky-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | duplex | Not verified | — | — | — | 2 floors; VIP duplexes on floors 32-33, 4 per floor (Baghy); 'luxury duplex apartments' (Miran) | agency_project_page | https://baghyshaqlawa.net/en/projects/sky-towers ; https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u |
 | apartment | 100, 103, 135, 178, 191, 260 | 100 | 260 | — | homele sale and rent listings (1-4 beds), first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/sky-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for each of 9 listed apartments (89-180 m²); Miran unit-types table has a 'Floor plan' column (1+1 to 4+1, 89-259 m²) (https://paya-realestate.com/en/projects/sky-towers-152)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 135 m2, 2 bed, furnished - monthly rent (market listing) | 900 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/sky-towers |
 | Apartment 260 m2, 4 bed, furnished - monthly rent (market listing) | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/sky-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran payment: Cash; homele listings include monthly rentals ($400-$900 Monthly) and sales (https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u)
 
 ### Location and surroundings
 On the 100 m (Qazi Muhammad) ring road in north Erbil, beside the Arjaan by Rotana hotel and near Kebab Yassin (Paya, Miran, Baghy). Map position (medium confidence, from agency map pins): 36.224536, 44.009508. Google Maps: https://www.google.com/maps?q=36.224536,44.009508
@@ -560,7 +560,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1860,
+   "text": "Project statistics: Buildings 5, Floors 33, Units 1,860",
+   "source_url": "https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Large green spaces: one in the front with an area of 4,500 square meters and another in the background with an area of 9,500 square meters",
+   "source_url": "https://paya-realestate.com/en/projects/sky-towers-152"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for each of 9 listed apartments (89-180 m²); Miran unit-types table has a 'Floor plan' column (1+1 to 4+1, 89-259 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/sky-towers-152"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran payment: Cash; homele listings include monthly rentals ($400-$900 Monthly) and sales",
+   "source_url": "https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.224536,44.009508",
  "publish_recommendation": "ready"
 }

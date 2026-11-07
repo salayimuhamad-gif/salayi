@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Residential plot 1,000 m2 - homele market listing asking price (negotiable) | 2,000,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/future-city |
 | Apartment 2BR 144 m2 - monthly rent (homele listing) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/future-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: houses, a plot and an off-plan structure for sale (negotiable); 2-bed apartment for monthly rent ($550) (https://homele.com/properties/for-sale-and-rent/erbil/future-city)
 
 ### Location and surroundings
 Bagh-y Shaqlawa places Future City on the Erbil–Shaqlawa road (the Pirmam/Masif corridor north-east of the city) and assigns it to its Italian City 2 branch, suggesting proximity to Italian City 2. The architects' press places the proposed towers 'at the main entrance of the Future City complex in Erbil' without an address.
@@ -344,7 +344,20 @@ Second verification pass 2026-11-07: queries “"Future City" Erbil Shaqlawa roa
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: houses, a plot and an off-plan structure for sale (negotiable); 2-bed apartment for monthly rent ($550)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/future-city"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

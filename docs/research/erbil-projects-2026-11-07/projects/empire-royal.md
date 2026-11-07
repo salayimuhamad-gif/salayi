@@ -29,8 +29,8 @@ Project ID: empire-royal | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: apartments 804 (Bagh-y) vs 320 (Miran); villas 300 | Apartment counts conflict | https://baghyshaqlawa.net/en/projects/empire-world ; https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 300 | Royal Villas: 'the 300 villas ... span a plot area of 565,000m2' (Haji Salam also lists 300 units) | https://baghyshaqlawa.net/en/projects/empire-world |
+| Apartments | Royal Apartments: 'Total apartments: 804' in 32 towers (Baghy) vs 'Units 320' in 32 buildings (Miran) | — | https://baghyshaqlawa.net/en/projects/empire-world |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 32 apartment buildings + 300 villas | 32 buildings: Miran + Bagh-y agree; 300 villas: Bagh-y + Hajisalam agree | https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1 ; https://baghyshaqlawa.net/en/projects/empire-world ; https://hajisalam.com/en/empire-world/ |
 | Floors per building | Disputed: 9 (Miran), 9–11 (Hajisalam), 10–12 (Bagh-y); villas 2 floors | Three different values | https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1 ; https://hajisalam.com/en/empire-world/ ; https://baghyshaqlawa.net/en/projects/empire-world |
@@ -45,7 +45,7 @@ Project ID: empire-royal | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | apartment | 170, 173, 175, 273 | 170 | 273 | 3 | Advertised resale/rental apartments (2–3 bathrooms). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/empire-royal-apartment |
 | villa | 320, 340, 371, 380 | 320 | 380 | — | Advertised villas with 4–6 bedrooms, 3–5 bathrooms. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/empire-royal-villa |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table shows '—' in the Floor plan column for 3+1 175, 273 and 350 m² (https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Royal Villa 4BR 340 m2 - homele market listing asking price (another 340 m2 5BR listed at 1,100,000) | 980,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-royal-villa |
 | Royal Villa 5BR 380 m2 - homele market listing asking price (negotiable) | 1,000,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-royal-villa |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele listings: 3-bed apartments for sale and monthly rent, villas for sale (https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1)
 
 ### Location and surroundings
 Empire Royal lies inside the Empire World development in Erbil. Royal Apartments occupy the south-west of the Empire project and Royal Villas the south-east corner (Bagh-y Shaqlawa, Hajisalam; Miran confirms the south-west location of the apartments). No street address or neighbourhood name are stated in the sources for this sub-project.
@@ -488,7 +488,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 300,
+   "text": "Royal Villas: 'the 300 villas ... span a plot area of 565,000m2' (Haji Salam also lists 300 units)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Royal Apartments: 'Total apartments: 804' in 32 towers (Baghy) vs 'Units 320' in 32 buildings (Miran)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table shows '—' in the Floor plan column for 3+1 175, 273 and 350 m²",
+   "source_url": "https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele listings: 3-bed apartments for sale and monthly rent, villas for sale",
+   "source_url": "https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

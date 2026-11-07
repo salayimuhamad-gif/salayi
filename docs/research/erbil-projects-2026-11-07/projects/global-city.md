@@ -29,7 +29,7 @@ Project ID: global-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,350 villas | Paya only | https://paya-realestate.com/en/projects/global-city-97 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 1,350 | Paya: 'includes 1,350 unique villas' | https://paya-realestate.com/en/projects/global-city-97 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (villa compound); 1,350 villas | Paya gives villa count, no building count | https://paya-realestate.com/en/projects/global-city-97 |
@@ -470,7 +470,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 1350,
+   "text": "Paya: 'includes 1,350 unique villas'",
+   "source_url": "https://paya-realestate.com/en/projects/global-city-97"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.212639,44.131862",
  "publish_recommendation": "ready"
 }

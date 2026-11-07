@@ -29,7 +29,7 @@ Project ID: minara-village | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | Not stated | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 1,426 | Haji Salam 'Minara Village 1&2': Project Type House; Number Of Unit 1426 | https://hajisalam.com/en/minara-village/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Number of houses not stated | — |
@@ -58,7 +58,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Ready house 200 m2, 5 bed / 3 bath - homele sale listing (Minara City 1) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listing ('Minara City 1'): one ready house for sale (https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1)
 
 ### Location and surroundings
 Minara Village is on Koya Road in eastern Erbil, before (city-side of) Majidi Mall, per Baghy Shaqlawa. An Erbil Governorate news item (search snippet) mentions a street project between 'Minara' and Hana City in the Hawlery Nwe area. Map position (low confidence, from agency map pins): 36.185015, 44.063368. Google Maps: https://www.google.com/maps?q=36.185015,44.063368
@@ -244,7 +244,24 @@ Second verification pass 2026-11-07: queries “"Minara Village" OR "Minara City
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 1426,
+   "text": "Haji Salam 'Minara Village 1&2': Project Type House; Number Of Unit 1426",
+   "source_url": "https://hajisalam.com/en/minara-village/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listing ('Minara City 1'): one ready house for sale",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.185015,44.063368",
  "publish_recommendation": "review"
 }

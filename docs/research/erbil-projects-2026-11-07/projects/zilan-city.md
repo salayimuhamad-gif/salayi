@@ -29,7 +29,7 @@ Project ID: zilan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 456 | Haji Salam only | https://hajisalam.com/en/zilan-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 456 | Project type House; Number Of Unit 456 (hajisalam.com) | https://hajisalam.com/en/zilan-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 456 houses | Haji Salam 'Number Of Unit 456' | https://hajisalam.com/en/zilan-city/ |
@@ -338,7 +338,20 @@ Second verification pass 2026-11-07: queries “"Zilan City" Erbil”; “"زی�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 456,
+   "text": "Project type House; Number Of Unit 456 (hajisalam.com)",
+   "source_url": "https://hajisalam.com/en/zilan-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.196476,44.094018",
  "publish_recommendation": "review"
 }

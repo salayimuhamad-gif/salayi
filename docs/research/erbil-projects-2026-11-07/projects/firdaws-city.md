@@ -62,7 +62,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Corner house 300 m², 4 bed, 5 bath – monthly rent | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ferdaws-city |
 | House 400 m², 5 bed, 5 bath – sale | 360,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ferdaws-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready houses for monthly rent ($700–800) and for sale ($240,000–360,000) (https://homele.com/properties/for-sale-and-rent/erbil/ferdaws-city)
 
 ### Location and surroundings
 The only location statement is the agency address "Erbil - Masif Road", i.e., the Erbil–Pirmam (Masif Salahaddin) corridor that forms part of Erbil's north-eastern urban belt. No source gives the position along the road, nearby landmarks or distances. Because the Masif Road corridor extends from the city towards Pirmam, the project is treated as inside Erbil's urban belt pending confirmation of its exact position. Map position (low confidence, from agency map pins): 36.267336, 44.09574. Google Maps: https://www.google.com/maps?q=36.267336,44.09574
@@ -306,7 +306,20 @@ Second verification pass 2026-11-07: queries “"Firdaws City" OR "Ferdaws City"
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready houses for monthly rent ($700–800) and for sale ($240,000–360,000)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ferdaws-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.267336,44.09574",
  "publish_recommendation": "review"
 }

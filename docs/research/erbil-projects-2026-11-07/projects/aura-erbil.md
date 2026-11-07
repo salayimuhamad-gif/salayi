@@ -30,7 +30,7 @@ Project ID: aura-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 269 flats (planned) | Wikipedia | https://en.wikipedia.org/wiki/Aura_Erbil |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 269 | plans to offer '269 luxury flats' (Wikipedia) | https://en.wikipedia.org/wiki/Aura_Erbil |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 16 buildings incl. three office towers and a five-star hotel (2013 report); architect's page: 12 residential buildings | 2013 report and SOMA page seen as search summaries only; the figures are consistent (12 residential + 3 office towers + hotel = 16) but the total is single-source | https://www.businessnews.com.lb/cms/Story/StoryDetails/2987/~/images/bar.jpg ; https://soma.us/aura |
 | Floors per building | Not verified | Not stated | — |
@@ -258,7 +258,20 @@ Second verification pass 2026-11-07: queries “"Aura Erbil" Zardman units compl
  "figure_notes": [],
  "land_area_dunams": 80.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 269,
+   "text": "plans to offer '269 luxury flats' (Wikipedia)",
+   "source_url": "https://en.wikipedia.org/wiki/Aura_Erbil"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

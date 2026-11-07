@@ -29,7 +29,7 @@ Project ID: italian-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed (minor): 1,561 (Bagh-y Shaqlawa) vs 1,563 (Hajisalam) | Two primary sites differ by 2 | https://baghyshaqlawa.net/en/projects/italian-city-2 ; https://hajisalam.com/en/italian-city-2/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Sources differ: Baghy Shaqlawa 'It Consists Of 1561 Houses'; Haji Salam 'Project Type: House', 'Number Of Unit: 1563' | — | https://baghyshaqlawa.net/en/projects/italian-city-2 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (house compound) | Unit counts given instead | https://baghyshaqlawa.net/en/projects/italian-city-2 |
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house 200 m2, 4 bed - homele rental listing (per month) | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2 |
 | Ready house 240 m2, 4 bed - homele rental listing (per month) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele: ready houses for rent ('$600 Monthly' to '$2,000 Monthly') and for sale ('$230,000 Negotiable', '$345,000 sale') (https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2)
 
 ### Location and surroundings
 Italian City 2 lies on Erbil's 120 m road at the Erbil–Shaqlawa road. Map position (low confidence, from agency map pins): 36.241466, 44.05029. Google Maps: https://www.google.com/maps?q=36.241466,44.05029
@@ -406,7 +406,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Sources differ: Baghy Shaqlawa 'It Consists Of 1561 Houses'; Haji Salam 'Project Type: House', 'Number Of Unit: 1563'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-2"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele: ready houses for rent ('$600 Monthly' to '$2,000 Monthly') and for sale ('$230,000 Negotiable', '$345,000 sale')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.241466,44.05029",
  "publish_recommendation": "ready"
 }

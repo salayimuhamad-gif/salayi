@@ -46,7 +46,7 @@ Project ID: gulan-park-wtc | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | apartment | 133 | 133 | 133 | 2 | 3 bathrooms; Ready apartment for rent (homele listing) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower |
 | office | 128 | 128 | 128 | — | 2 bathrooms; Ready high-floor office for rent (homele listing) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for offices 128, 192, 255, 278, 306 and 499 m² and apartments 195, 200, 233, 250 and 303 m²; duplex 584 m² 'No Blueprints'. homele project page has a 'Floor Plans' section (https://paya-realestate.com/en/projects/gulan-tower-297)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 133 m2, 2 bed, ready - homele rental listing (per month) | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower |
 | Office 128 m2, high floor, ready - homele rental listing (per month) | 1,800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele: ready apartment 133 m² for rent '$800 Monthly' and office 128 m² '$1,800 Monthly'; homele project page (Gulan Park-WTC Erbil) lists 3-bed apartments at $360,750 (195 m²) and $370,000 (200 m²) (https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower)
 
 ### Location and surroundings
 Gulan Park – WTC Erbil stands on Gulan Street (the 40 m road) at the Ankawa junction in Erbil. Map position (high confidence, from agency map pins): 36.212682, 43.992212. Google Maps: https://www.google.com/maps?q=36.212682,43.992212
@@ -488,7 +488,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 100.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for offices 128, 192, 255, 278, 306 and 499 m² and apartments 195, 200, 233, 250 and 303 m²; duplex 584 m² 'No Blueprints'. homele project page has a 'Floor Plans' section",
+   "source_url": "https://paya-realestate.com/en/projects/gulan-tower-297"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele: ready apartment 133 m² for rent '$800 Monthly' and office 128 m² '$1,800 Monthly'; homele project page (Gulan Park-WTC Erbil) lists 3-bed apartments at $360,750 (195 m²) and $370,000 (200 m²)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.212682,43.992212",
  "publish_recommendation": "ready"
 }

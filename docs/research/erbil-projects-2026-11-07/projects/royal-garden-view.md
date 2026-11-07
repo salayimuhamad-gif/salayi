@@ -45,7 +45,7 @@ Project ID: royal-garden-view | Tier: 1 | In Erbil city: Yes | Last researched: 
 | villa | 250 | 250 | 250 | 4 | 5 bathrooms; Paya 'House 250 m2' $210,000 | agency_project_page | https://paya-realestate.com/en/projects/royal-garden-view-424 |
 | villa | 200, 250, 270, 320 | 200 | 320 | 4 | Off-plan houses (2 listing pages; first read); 250/270/320 m2 listings show $30,000-$41,250 (price basis not stated) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/royal-garden |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 3 listed house types (200, 210 and 250 m²) (https://paya-realestate.com/en/projects/royal-garden-view-424)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -351,7 +351,20 @@ Second verification pass 2026-11-07: queries “"Royal Garden View" Erbil”; �
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 3 listed house types (200, 210 and 250 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/royal-garden-view-424"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.151044,43.955494",
  "publish_recommendation": "review"
 }

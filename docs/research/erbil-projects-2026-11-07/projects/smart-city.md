@@ -64,7 +64,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan house 275 m2, 4 bed / 4 bath, instalment listing '(Down payment)' (homele listing) | 175,800 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/smart-city |
 | Off-plan house 330 m2, 4 bed / 5 bath (homele listing) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/smart-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele off-plan listings labelled 'Installment' and 'Second payment' (https://homele.com/properties/for-sale-and-rent/erbil/smart-city)
 
 ### Location and surroundings
 Homele lists 'Smart City' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -283,7 +283,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele off-plan listings labelled 'Installment' and 'Second payment'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/smart-city"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

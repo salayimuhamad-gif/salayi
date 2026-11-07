@@ -30,11 +30,11 @@ Project ID: wavey-avenue | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,008 | Miran stats and text (one source) | https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,008 | Total of 1,008 residential units (Miran description and project statistics) | https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 towers (Miran text: 3 buildings with 4 blocks) | Paya, Baghy, Miran stats | https://paya-realestate.com/en/projects/wavey-avenue-103 ; https://baghyshaqlawa.net/en/projects/wavey-avenue ; https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2 |
 | Floors per building | Disputed: 21 (Miran stats), G+18 (Miran text), 16 (Baghy) | Three different figures | https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2 ; https://baghyshaqlawa.net/en/projects/wavey-avenue |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 41% of green areas (baghyshaqlawa.net) | — | https://baghyshaqlawa.net/en/projects/wavey-avenue |
 | Development phases | None reported | — | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 2 bed 108 m2 - monthly rent | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/wavey-avenue |
 | 2 bed 116 m2 furnished - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/wavey-avenue |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); resale and rental listings (Miran: 2 for sale, 72 for rent from USD 250/month; homele sale and monthly rent listings) (https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2)
 
 ### Location and surroundings
 Wavey Avenue is on Erbil's 100 m road on the former site of Ashti Hall, next to the Empire project (Paya), adjacent to the Toyota showroom (Miran) and opposite Sarbasty (Baghy Shaqlawa). Map position (medium confidence, from agency map pins): 36.196782, 43.964124. Google Maps: https://www.google.com/maps?q=36.196782,43.964124
@@ -536,7 +536,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 3.9,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1008,
+   "text": "Total of 1,008 residential units (Miran description and project statistics)",
+   "source_url": "https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "41% of green areas (baghyshaqlawa.net)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/wavey-avenue"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); resale and rental listings (Miran: 2 for sale, 72 for rent from USD 250/month; homele sale and monthly rent listings)",
+   "source_url": "https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.196782,43.964124",
  "publish_recommendation": "ready"
 }

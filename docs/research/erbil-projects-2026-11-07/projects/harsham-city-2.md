@@ -29,7 +29,7 @@ Project ID: harsham-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 550 | Haji Salam only | https://hajisalam.com/en/harsham-city-2/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 550 | Haji Salam: 'Project Type: House', 'Number Of Unit: 550' | https://hajisalam.com/en/harsham-city-2/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
@@ -242,7 +242,20 @@ Second verification pass 2026-11-07: queries “"Harsham City" Erbil Bahrka road
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 550,
+   "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 550'",
+   "source_url": "https://hajisalam.com/en/harsham-city-2/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

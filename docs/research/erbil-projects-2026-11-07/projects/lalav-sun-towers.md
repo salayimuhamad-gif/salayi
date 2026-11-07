@@ -30,7 +30,7 @@ Project ID: lalav-sun-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 1,188 (Paya) vs 1,254 (Miran) | Sources disagree | https://paya-realestate.com/en/projects/lalav-sun-towers-223 ; https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ: Paya '6 buildings containing 1188 Apartments'; Miran stats 'Units 1,254' | — | https://paya-realestate.com/en/projects/lalav-sun-towers-223 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-sun-towers-223 ; https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn |
 | Floors per building | Disputed: 18 (Paya) vs 20 (Miran) | Sources disagree | https://paya-realestate.com/en/projects/lalav-sun-towers-223 ; https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn |
@@ -43,7 +43,7 @@ Project ID: lalav-sun-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | apartment | 75, 84, 90 | 75 | 90 | 1 | 1 bathrooms; 1+1 (Miran unit-type table); 75 and 90 m2 also advertised on homele | agency_project_page | https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn |
 | apartment | 105, 116 | 105 | 116 | 2 | 2+1 (Miran unit-type table); homele listings show 1-2 bathrooms | agency_project_page | https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table has a 'Floor plan' column for 1+1 75, 84 and 90 m² and 2+1 105 and 116 m² (https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 2-bedroom apartment 105 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-sun-towers |
 | 2-bedroom apartment 116 m2 - homele rent listing (per month) | 300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-sun-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); rent listings ('$275' per month on Miran; '$250'–'$500 Monthly' on homele) and sale listings (https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn)
 
 ### Location and surroundings
 Lalav Sun Towers is on the Erbil–Bahrka road (Paya, Miran), described by Baghy as the 'new Bahirka two-side road'. Miran lists available views as 'Street View'. Map position (medium confidence, from agency map pins): 36.267307, 44.014457. Google Maps: https://www.google.com/maps?q=36.267307,44.014457
@@ -397,7 +397,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ: Paya '6 buildings containing 1188 Apartments'; Miran stats 'Units 1,254'",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-sun-towers-223"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table has a 'Floor plan' column for 1+1 75, 84 and 90 m² and 2+1 105 and 116 m²",
+   "source_url": "https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); rent listings ('$275' per month on Miran; '$250'–'$500 Monthly' on homele) and sale listings",
+   "source_url": "https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.267307,44.014457",
  "publish_recommendation": "ready"
 }

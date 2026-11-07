@@ -30,7 +30,7 @@ Project ID: siraj-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 800 | Miran only | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 800 | Project statistics: Buildings 4, Floors 31, Units 800 | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 | Miran only | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
 | Floors per building | 31 | Miran only | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 209 m2, 3 bed - off-plan instalment listing (Miran; same on homele) | 184,000 | USD | developer | accessed 2026-11-07 | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
 | Apartment 253 m2, 4 bed - off-plan instalment listing (Miran; homele 254 m2 same price) | 224,000 | USD | developer | accessed 2026-11-07 | https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (price per meter $850); homele listings labelled 'Installment' and 'Long Term Installment' (https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz)
 
 ### Location and surroundings
 Near Ankawa in north-west Erbil, in the area Miran labels 'Kuran Ankawa', with access to Erbil International Airport (Miran).
@@ -451,7 +451,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 800,
+   "text": "Project statistics: Buildings 4, Floors 31, Units 800",
+   "source_url": "https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (price per meter $850); homele listings labelled 'Installment' and 'Long Term Installment'",
+   "source_url": "https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

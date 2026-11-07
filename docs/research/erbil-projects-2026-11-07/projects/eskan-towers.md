@@ -30,7 +30,7 @@ Project ID: eskan-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified (Bagh-y: 9 apartments per typical floor) | No total stated | https://baghyshaqlawa.net/en/projects/eskan-tower |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Baghy: 6 towers of 26 floors, 'each typical floor consists of 9 apartments' (total not stated) | — | https://baghyshaqlawa.net/en/projects/eskan-tower |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 7 (Paya) vs 6 (Bagh-y) | Conflict | https://paya-realestate.com/en/projects/eskan-towers-162 ; https://baghyshaqlawa.net/en/projects/eskan-tower |
 | Floors per building | Disputed: 30 incl. 3 garage floors (Paya) vs 26 (Bagh-y) | Conflict | https://paya-realestate.com/en/projects/eskan-towers-162 ; https://baghyshaqlawa.net/en/projects/eskan-tower |
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1BR 84 m2 furnished - monthly rent (homele listing) | 325 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eskan-towers |
 | 2BR 105 m2 - monthly rent (homele listing) | 425 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eskan-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready apartments for sale ($44,500–45,000) and monthly rent ($320–350) (https://homele.com/properties/for-sale-and-rent/erbil/eskan-towers)
 
 ### Location and surroundings
 Eskan Towers stands on 60 Meter Street in the Eskan (Iskan) area of central Erbil (Paya; Bagh-y: 'center of the city on 60 m road'). Bagh-y notes it is very close to Iskan Street, a popular strip with food stores, cafeterias and a shopping mall. Bagh-y's New Eskan branch serves the area. Map position (medium confidence, from agency map pins): 36.179312, 44.024869. Google Maps: https://www.google.com/maps?q=36.179312,44.024869
@@ -526,7 +526,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Baghy: 6 towers of 26 floors, 'each typical floor consists of 9 apartments' (total not stated)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/eskan-tower"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready apartments for sale ($44,500–45,000) and monthly rent ($320–350)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/eskan-towers"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.179312,44.024869",
  "publish_recommendation": "ready"
 }

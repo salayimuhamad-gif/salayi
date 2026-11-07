@@ -31,7 +31,7 @@ Project ID: empire-business-towers | Tier: 1 | In Erbil city: Yes | Last researc
 | Total housing units | Not applicable (offices); total office count not stated | Commercial project | — |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | T1: 9 floors of 4 offices, 8 floors of 2 offices, 6 floors of 1 office; T2–T5: each 911 m² floor subdivided into 7 offices (5 x 123 m², 2 x 148 m²); total not stated | — | https://baghyshaqlawa.net/en/projects/empire-world |
 | Towers / apartment buildings | 5 towers (T1–T5) + 6 Business Complex buildings | 5 towers: Bagh-y + Hajisalam + Roya (search summary); 6 complex buildings: Bagh-y + Roya (search summary, about 25 m high each) | https://baghyshaqlawa.net/en/projects/empire-world ; https://hajisalam.com/en/empire-world/ ; https://roya-iq.com/empire-world |
 | Floors per building | T1: 27; T2–T5: 23 each; Business Complex: 6 | Bagh-y + Hajisalam agree; Roya page (search summary) also gives 27 and 23; Wikipedia gives 33 for T1 | https://baghyshaqlawa.net/en/projects/empire-world ; https://hajisalam.com/en/empire-world/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://roya-iq.com/empire-world |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Office 148 m2 - monthly rent (homele listing) | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers |
 | Empire Business Complex - furnished beauty centre 160 m2, asking price (negotiable) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-business-complex |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready offices for monthly rent (123–148 m², $500–850/month) and for sale (148 m², $125,000 negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers)
 
 ### Location and surroundings
 The five towers stand in the centre of the Empire World site in Erbil, with T2–T5 arranged in a circle around T1 (Bagh-y Shaqlawa, Hajisalam). The Empire Business Complex sits on both sides of the main gate at Empire World's north entrance. No street address are given in the sources.
@@ -487,7 +487,24 @@ Second verification pass 2026-11-07: queries “"Empire Business Towers" Erbil d
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": null,
+   "text": "T1: 9 floors of 4 offices, 8 floors of 2 offices, 6 floors of 1 office; T2–T5: each 911 m² floor subdivided into 7 offices (5 x 123 m², 2 x 148 m²); total not stated",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready offices for monthly rent (123–148 m², $500–850/month) and for sale (148 m², $125,000 negotiable)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

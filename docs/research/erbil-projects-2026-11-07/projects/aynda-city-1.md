@@ -29,7 +29,7 @@ Project ID: aynda-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 476 | 'Number Of Unit: 476', Project Type: House (hajisalam) | https://hajisalam.com/en/aynda-city1/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | — | — |
@@ -58,7 +58,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Ready house 224 m2, 4 bed / 3 bath - listing asking price (negotiable) | 160,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listing: ready house for sale, $160,000 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1)
 
 ### Location and surroundings
 Homele lists 'Aynda City 1' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -202,7 +202,24 @@ Second verification pass 2026-11-07: queries “"Aynda City" OR "Ayenda City" Er
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 476,
+   "text": "'Number Of Unit: 476', Project Type: House (hajisalam)",
+   "source_url": "https://hajisalam.com/en/aynda-city1/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listing: ready house for sale, $160,000 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

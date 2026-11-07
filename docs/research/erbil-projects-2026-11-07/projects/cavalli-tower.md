@@ -30,7 +30,7 @@ Project ID: cavalli-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 745 | Paya and Miran agree | https://paya-realestate.com/en/projects/cavalli-tower-260 ; https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 745 | 'Cavalli tower contains 745 residential apartments' (Paya); 'Units 745' (miranestate) | https://paya-realestate.com/en/projects/cavalli-tower-260 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 1 tower (Paya) vs 2 buildings (Miran) | Sources disagree | https://paya-realestate.com/en/projects/cavalli-tower-260 ; https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 |
 | Floors per building | Disputed: 47 (Miran), 48 (Paya, 149 m), 50 (Baghy) | Three different figures | https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 ; https://paya-realestate.com/en/projects/cavalli-tower-260 ; https://baghyshaqlawa.net/en/projects/cavalli-tower |
@@ -46,7 +46,7 @@ Project ID: cavalli-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 235, 238 | 235 | 238 | 4 | 4 bathrooms; 4+1. 235 m2 on Miran (and homele rent listing, 3 bath). | agency_project_page | https://paya-realestate.com/en/projects/cavalli-tower-260 ; https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 |
 | apartment | 59, 99, 108, 172, 235 | 59 | 235 | — | Ready units advertised for sale and rent (homele first page; Miran 27 published units). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/cavalli-tower ; https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 8 apartment types (1-bed 99 m² to 4-bed 238 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/cavalli-tower-260)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Studio 59 m2 - monthly rent (Miran listings USD 350-500) | 350 | USD | rent | accessed 2026-11-07 | https://miranestate.com/projects/cmjfjpd4d003zmw0fun0xp9q1 |
 | 4 bed 235 m2 - monthly rent | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cavalli-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** baghyshaqlawa payment method: '%20 Advance payment, %28 After structure completion, %28 Delivered, %25 The remained amount with 36 months'; miranestate: payment 'Cash'; miranestate and Homele listings: apartments for rent (e.g. $350–$1,100 monthly) and for sale (https://baghyshaqlawa.net/en/projects/cavalli-tower)
 
 ### Location and surroundings
 Cavalli Tower stands on Gulan Street (40 Meter Street) in central Erbil (Paya, Baghy). Miran lists views over Gulan Mall, downtown, a park and the main street, which places it in the Gulan Street commercial corridor. No source gives a cross-street. Map position (medium confidence, from agency map pins): 36.206351, 43.985105. Google Maps: https://www.google.com/maps?q=36.206351,43.985105
@@ -515,7 +515,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 1.9,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 745,
+   "text": "'Cavalli tower contains 745 residential apartments' (Paya); 'Units 745' (miranestate)",
+   "source_url": "https://paya-realestate.com/en/projects/cavalli-tower-260"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 8 apartment types (1-bed 99 m² to 4-bed 238 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/cavalli-tower-260"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "baghyshaqlawa payment method: '%20 Advance payment, %28 After structure completion, %28 Delivered, %25 The remained amount with 36 months'; miranestate: payment 'Cash'; miranestate and Homele listings: apartments for rent (e.g. $350–$1,100 monthly) and for sale",
+   "source_url": "https://baghyshaqlawa.net/en/projects/cavalli-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.206351,43.985105",
  "publish_recommendation": "ready"
 }

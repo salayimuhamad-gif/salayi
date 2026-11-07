@@ -29,8 +29,8 @@ Project ID: kurdistan-city | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 772 | 408 houses/villas + 364 apartments, both figures stated by Baghy and Haji Salam; the total is their sum | https://baghyshaqlawa.net/en/projects/kurdistan-city ; https://hajisalam.com/en/kurdistan-city/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 408 | Haji Salam: 'Number Of Units house - villa 408 / apartment 364'; Baghy Shaqlawa: 'It Consists Of 408 And 364 Apartments' | https://hajisalam.com/en/kurdistan-city/ |
+| Apartments | 364 | Haji Salam: 'apartment 364'; Baghy Shaqlawa: '408 And 364 Apartments' | https://hajisalam.com/en/kurdistan-city/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
 | Floors per building | Apartment buildings 7 floors; houses and villas 2 floors | Haji Salam floors; Baghy confirms two-storey houses | https://hajisalam.com/en/kurdistan-city/ ; https://baghyshaqlawa.net/en/projects/kurdistan-city |
@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 
 ### Prices and payment information (dated evidence, not official price lists)
 Prices: Not verified.
-- **Maintenance or service charges:** Not verified
+- **Maintenance or service charges:** Baghy Shaqlawa (300 m² house type): 'Service Fees per Month 60,000 ID' (https://baghyshaqlawa.net/en/projects/kurdistan-city)
 - **Purchasing or rental arrangements:** Not verified
 
 ### Location and surroundings
@@ -345,7 +345,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 408,
+   "text": "Haji Salam: 'Number Of Units house - villa 408 / apartment 364'; Baghy Shaqlawa: 'It Consists Of 408 And 364 Apartments'",
+   "source_url": "https://hajisalam.com/en/kurdistan-city/"
+  },
+  "apartments": {
+   "value": 364,
+   "text": "Haji Salam: 'apartment 364'; Baghy Shaqlawa: '408 And 364 Apartments'",
+   "source_url": "https://hajisalam.com/en/kurdistan-city/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": {
+   "value": 60000,
+   "text": "Baghy Shaqlawa (300 m² house type): 'Service Fees per Month 60,000 ID'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/kurdistan-city"
+  },
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.293981,44.059918",
  "publish_recommendation": "ready"
 }

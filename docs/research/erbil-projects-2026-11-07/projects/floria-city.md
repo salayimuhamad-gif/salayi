@@ -29,8 +29,8 @@ Project ID: floria-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified; more than 2,000 per Kurdistan 24 | Single secondary source | https://www.kurdistan24.net/en/story/386100 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 100 | Haji Salam ('Florya City', address Kasnazan Road): 'villa 100 - apartment 5800' | https://hajisalam.com/en/flory-city/ |
+| Apartments | Haji Salam: apartment 5800; Kurdistan 24 (search result, not opened): more than 2,000 residential units incl. apartments and villas; Roya snippet: Papatya phase 2,154 apartments | — | https://hajisalam.com/en/flory-city/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified (named towers: Rose Garden, Nergiz, SK; Marjan Plaza) | No total stated | — |
 | Floors per building | SK Tower 29 storeys; others not stated (MEED: Nergis Plaza 20-storey tower) | Single sources | https://paya-realestate.com/en/projects/sk-tower-290 ; https://www.meed.com/floria-city-in-erbil/ |
@@ -49,7 +49,7 @@ Project ID: floria-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | other | 61, 63, 85, 95 | 61 | 95 | — | Commercial properties (type unspecified) | agency_project_page | https://baghyshaqlawa.net/en/projects/floria-city |
 | apartment | 82, 83, 146, 176, 220 | 82 | 220 | — | Advertised units: ready 1BR 82–83 m2, 3BR 176 m2; off-plan 5BR 220 m2; SK Towers off-plan 2BR 146 m2 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/floria-city ; https://homele.com/properties/for-sale-and-rent/erbil/sk-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for Apart Villa (12 units), Nergiz Tower (4), Rose Garden Tower (5) and SK Tower (6) (https://paya-realestate.com/en/projects/apart-villa-291)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -72,7 +72,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | SK Tower 2BR 135.9 m2 - Paya project-page price (~USD 690/m2) | 93,771 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/sk-tower-290 |
 | Ready 1BR 82 m2 - homele market listing asking price | 52,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/floria-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: instalment sale ('Ready Apartment in Installment', 176 m², $112,500), a '(Down payment)' labelled listing, off-plan and ready units for sale, and monthly rent (176 m², $550) (https://homele.com/properties/for-sale-and-rent/erbil/floria-city)
 
 ### Location and surroundings
 Floria City lies along Koya Road on Erbil's south-eastern side (Paya: 'located along the Koya Road in Erbil'; Bagh-y: 'Erbil - Koya Road'; Bagh-y operates a Floria City branch). Paya describes the sub-projects as having access to schools, shops and green spaces. Neither source states the distance from the 120m/150m ring roads; Koya Road leads towards Kasnazan, which is within the study scope. Map position (low confidence, from agency map pins): 36.201832, 44.106989. Google Maps: https://www.google.com/maps?q=36.201832,44.106989
@@ -636,7 +636,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 100,
+   "text": "Haji Salam ('Florya City', address Kasnazan Road): 'villa 100 - apartment 5800'",
+   "source_url": "https://hajisalam.com/en/flory-city/"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Haji Salam: apartment 5800; Kurdistan 24 (search result, not opened): more than 2,000 residential units incl. apartments and villas; Roya snippet: Papatya phase 2,154 apartments",
+   "source_url": "https://hajisalam.com/en/flory-city/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for Apart Villa (12 units), Nergiz Tower (4), Rose Garden Tower (5) and SK Tower (6)",
+   "source_url": "https://paya-realestate.com/en/projects/apart-villa-291"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: instalment sale ('Ready Apartment in Installment', 176 m², $112,500), a '(Down payment)' labelled listing, off-plan and ready units for sale, and monthly rent (176 m², $550)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/floria-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.201832,44.106989",
  "publish_recommendation": "ready"
 }

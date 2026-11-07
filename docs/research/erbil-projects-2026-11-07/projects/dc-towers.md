@@ -30,11 +30,11 @@ Project ID: dc-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,680 apartments | Miran only | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,680 | 10 residential towers, each rising 21 floors, offering a total of 1,680 apartment units (Miran stats: Units 1,680) | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 10 residential towers (C1–C6, D1–D4) | Paya, Miran, Homele agree | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
 | Floors per building | 21 floors (incl. 1–2 commercial floors; 5 parking floors per tower per Homele) | 21 from Miran only; floor composition from Homele | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e ; https://homele.com/projects/dc-towers-408 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Green spaces comprise 60% of the project area (project spans 47,500 m²) (Paya; Miran also states 60%) | — | https://paya-realestate.com/en/projects/dc-towers-372 |
 | Development phases | None reported | No phases stated | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: dc-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | apartment | 145 | 145 | 145 | 2 | 2 bathrooms; 2+1. Paya, Miran and Homele listings agree. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 | apartment | 188, 191 | 188 | 191 | 3 | 3 bathrooms; 3+1. 188 m2 on Paya and Homele (project page + listings); 191 m2 on Miran. Same price (141,940 USD) on all, so likely the same unit type. | agency_project_page | https://paya-realestate.com/en/projects/dc-towers-372 ; https://homele.com/projects/dc-towers-408 ; https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Floor plans/blueprints published for 1+1 88 m², 2+1 131 and 145 m², 3+1 188 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans') (https://paya-realestate.com/en/projects/dc-towers-372)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Price per m2 (Miran) | 760 | USD | developer | Miran page updated 2026-08-20 | https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e |
 | Down payment 13% on 88 m2 unit (plan: 13% booking; 10% at 6, 12, 18 months; 17% at handover after 24 months; 40% monthly over 60 months) | 8,809 | USD | developer | 2026-08-10 (Homele posted date) | https://homele.com/projects/dc-towers-408 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'. Homele plan (88 m², total $67,760): 13% down payment; 10% after 6, 12 and 18 months; 17% at key handover (after 24 months); remaining 40% in monthly installments for 60 months (https://homele.com/projects/dc-towers-408)
 
 ### Location and surroundings
 DC Towers stands on the 120-metre street in the New Erbil (Hawler Nwe) district, next to the Barzani Charity Foundation (Homele project page). Homele and Miran add that the towers rise along the New Erbil Corniche. Paya describes the area as close to international schools, hospitals and malls without naming them; no distances are given or estimated. Map position (medium confidence, from agency map pins): 36.223219, 44.069144. Google Maps: https://www.google.com/maps?q=36.223219,44.069144
@@ -405,7 +405,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 19.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1680,
+   "text": "10 residential towers, each rising 21 floors, offering a total of 1,680 apartment units (Miran stats: Units 1,680)",
+   "source_url": "https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Green spaces comprise 60% of the project area (project spans 47,500 m²) (Paya; Miran also states 60%)",
+   "source_url": "https://paya-realestate.com/en/projects/dc-towers-372"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Floor plans/blueprints published for 1+1 88 m², 2+1 131 and 145 m², 3+1 188 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans')",
+   "source_url": "https://paya-realestate.com/en/projects/dc-towers-372"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: 'Cash Installment Payment Plans'. Homele plan (88 m², total $67,760): 13% down payment; 10% after 6, 12 and 18 months; 17% at key handover (after 24 months); remaining 40% in monthly installments for 60 months",
+   "source_url": "https://homele.com/projects/dc-towers-408"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.223219,44.069144",
  "publish_recommendation": "ready"
 }

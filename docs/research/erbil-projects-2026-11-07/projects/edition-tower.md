@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan corner shop 83 m2 - monthly rent (homele listing; 63 m2 shop USD 2,200) | 2,490 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/edition-tower |
 | Off-plan shop 300 m2 - monthly rent (homele listing; 205 m2 ground-floor shop USD 5,000) | 6,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/edition-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: off-plan shops for monthly rent (32–300 m², $540–6,000/month) and ready apartments for monthly rent (110–194 m², $550–800/month) (https://homele.com/properties/for-sale-and-rent/erbil/edition-tower)
 
 ### Location and surroundings
 Both sources place Edition Tower in Erbil (homele area page; Roya card 'Erbil'). No street, ring-road position or landmark are published.
@@ -376,7 +376,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: off-plan shops for monthly rent (32–300 m², $540–6,000/month) and ready apartments for monthly rent (110–194 m², $550–800/month)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/edition-tower"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

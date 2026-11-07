@@ -34,7 +34,7 @@ Project ID: salam-residences | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 towers | Paya only | https://paya-realestate.com/en/projects/salam-residences-310 |
 | Floors per building | 32 (+4 basement levels) | Paya only | https://paya-realestate.com/en/projects/salam-residences-310 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | A large landscaped central courtyard with over 56% greenery coverage | — | https://paya-realestate.com/en/projects/salam-residences-310 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: salam-residences | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | apartment | 157.58, 178, 179, 184.7 | 157.58 | 184.7 | 3 | 3 bathrooms; 3+1 units on instalment plans | agency_project_page | https://paya-realestate.com/en/projects/salam-residences-310 |
 | apartment | 93, 96, 141, 184 | 93 | 184 | — | homele off-plan instalment listings (1-3 beds), sizes rounded; first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/salam-residence |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 18 listed apartments (93.18-184.7 m²) (https://paya-realestate.com/en/projects/salam-residences-310)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 184.7 m2, 3 bed - off-plan instalment price (down USD 36,000, handover USD 31,000, monthly USD 1,400) | 179,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/salam-residences-310 |
 | Apartment 178-179 m2, 3 bed - off-plan instalment price, highest listed (down USD 40,000, handover USD 37,000, monthly USD 1,400) | 189,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/salam-residences-310 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Instalment plan per unit: down payment, amount on handover and monthly installment (e.g. 184.7 m² at $179,000: down payment $36,000, on handover $31,000, monthly installment $1,400); homele listings labelled 'Installment' and 'Long Term Installment' (https://paya-realestate.com/en/projects/salam-residences-310)
 
 ### Location and surroundings
 No street address published. Map position (low confidence, from agency map pins): 36.216791, 43.990494. Google Maps: https://www.google.com/maps?q=36.216791,43.990494
@@ -410,7 +410,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "A large landscaped central courtyard with over 56% greenery coverage",
+   "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 18 listed apartments (93.18-184.7 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Instalment plan per unit: down payment, amount on handover and monthly installment (e.g. 184.7 m² at $179,000: down payment $36,000, on handover $31,000, monthly installment $1,400); homele listings labelled 'Installment' and 'Long Term Installment'",
+   "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.216791,43.990494",
  "publish_recommendation": "ready"
 }

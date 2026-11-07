@@ -195,7 +195,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 4 unit types (studio 47 m², 1-bed 94 m², 2-bed 143 m² and 144 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/101-complex-343"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listing: off-plan studio 47 m² for sale at $42,300, tagged 'Installment'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/101-complex"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -277,7 +294,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.151071,44.019006",
   "publish_recommendation": "review"
  },
@@ -395,7 +421,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 2 office unit types (105 m² and 2000 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/ab-center-277"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1903055,43.9749203",
   "publish_recommendation": "review"
  },
@@ -582,7 +621,32 @@
   "figure_notes": [],
   "land_area_dunams": 115.7,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 421,
+    "text": "'consists of 421 villa units' / 'a total of 421 houses and villas' (Paya); '421 villa units' (miranestate)",
+    "source_url": "https://paya-realestate.com/en/projects/address-erbil-295"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 86793,
+    "text": "green area of the project is 86,793 m², 30% of the total area (Paya; same on miranestate)",
+    "source_url": "https://paya-realestate.com/en/projects/address-erbil-295"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type A 240 m² – 2, Type B 300 m² – 2, Type C 450 m² – 3, Type D 1335 m² – 3",
+    "source_url": "https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: 'Cash' (miranestate)",
+    "source_url": "https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.264622,43.99391",
   "publish_recommendation": "ready"
  },
@@ -681,7 +745,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listing: ready one-floor house for sale, $93,000 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/alan-city"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -1011,7 +1088,32 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1240,
+    "text": "'offering approximately 1,240 apartments' (miranestate description; project statistics 'Units 1,240')",
+    "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "'65% green spaces and landscaped areas' (miranestate)",
+    "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 4 apartment types (1-bed 100.65 m² and 110 m², 2-bed 167.35 m², 3-bed 267.2 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/alaska-towers-262"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 35% down payment, 30% at key handover, 35% monthly payment over 72 months; price per meter $790. Homele listings: off-plan apartments for sale",
+    "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.183348,43.946552",
   "publish_recommendation": "ready"
  },
@@ -1383,7 +1485,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings ('4 Tower'): ready apartments for rent ($700, $750, $900 Monthly) and for sale (prices 'Negotiable')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/4-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.238649,44.010108",
   "publish_recommendation": "ready"
  },
@@ -1522,7 +1637,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: furnished apartments for rent at $750 Monthly",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ara-tower"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -1666,7 +1794,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready showrooms for rent ($1,900, $4,500, $5,000 Monthly) and one for sale ($750,000 'Negotiable')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aram-commercial-city"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -1979,7 +2120,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 1124,
+    "text": "'a collection of 1,124 distinctive villas' (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/aram-garden-374"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 5 house types (253, 286, 360, 460, 700 m²), each with 'View Blueprint'; miranestate 'Floor plan' column: Types A–B 2, Types C–E 3",
+    "source_url": "https://paya-realestate.com/en/projects/aram-garden-374"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "miranestate: payment 'Cash'; Homele listings: off-plan houses for sale tagged 'Installment' (e.g. 'Long Term Installment', 'House in Installment')",
+    "source_url": "https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.257407,44.047359",
   "publish_recommendation": "ready"
  },
@@ -2363,7 +2525,28 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 700,
+    "text": "Paya: 5 residential towers 'offering approximately 700 luxurious units, including apartments and penthouses'; miranestate description: 'over 700 luxury apartments and penthouses' (miranestate statistics give 'Units 900' for 7 buildings incl. 2 business towers)",
+    "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 12 unit types (1+1 to 4+1 apartments and offices), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate). Plan (Paya, miranestate): 20% down payment, 20% at structure/tower completion, 20% at plastering/indoor finishing, 20% at key handover, remaining 20% in monthly instalments over 24 months; price per meter $980 (miranestate). Homele listings tagged 'Installment', 'Off Plan'",
+    "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.230009,44.011402",
   "publish_recommendation": "ready"
  },
@@ -2688,7 +2871,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 700,
+    "text": "'comprises approximately 700 villas' in sizes 240, 300, 375, 500 and 540 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/aram-village-157"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 27000,
+    "text": "'about 27,000 square meters, is dedicated to green spaces and open sports areas' (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/aram-village-157"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready houses for sale (some 'Negotiable') and for rent ($850, $900, $950 Monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aram-village"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.244737,44.037278",
   "publish_recommendation": "ready"
  },
@@ -3188,7 +3392,28 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Paya: 'contains 900 villas'; Homele project page (homele.com/projects/aram-village2-383): 'consists of 908 two-floor villa'",
+    "source_url": "https://paya-realestate.com/en/projects/aram-village-2-266"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 5 house types (242, 276, 345, 617, 1100 m²), each with 'View Blueprint'; Homele project page has a 'Unit Details & Floor Plans' section (Type A 1100 m², Type B 550 m², ...)",
+    "source_url": "https://paya-realestate.com/en/projects/aram-village-2-266"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele project page: 'Cash Payment'; Homele listings: houses for sale (some off-plan, some 'Negotiable') and for rent ($1,500 Monthly)",
+    "source_url": "https://homele.com/projects/aram-village2-383"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.247552,44.043387",
   "publish_recommendation": "ready"
  },
@@ -3511,7 +3736,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "miranestate project statistics: 'Units 1,390'; miranestate description: 'offering around 2,390 apartments'",
+    "source_url": "https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 18% down payment, 22% at tower completion, 25% at key handover, 35% monthly payment over 60 months; price per meter $830. Homele listings: 'Apartment in Cash', a 'Down payment' offer, units for sale and for rent ($1,400 Monthly)",
+    "source_url": "https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.253582,44.077763",
   "publish_recommendation": "ready"
  },
@@ -3743,7 +3985,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 3 house types (230, 275, 394 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/asco-village-327"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, then four further 20% payments each 'After 6 Months'; price per meter $1,100. Homele listings: 'House in Installment', 'Down payment' offer",
+    "source_url": "https://miranestate.com/projects/cmna99p6p00mvmx0flx78sfip"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.25617763,44.07726377",
   "publish_recommendation": "ready"
  },
@@ -3973,7 +4232,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 1545,
+    "text": "'Number Of Unit: 1545', Project Type: House (hajisalam)",
+    "source_url": "https://hajisalam.com/en/ashty-city-1/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready houses for sale, prices 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -4222,7 +4498,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "hajisalam: 'Number Of Unit: 345 House 890 - Villa'; baghyshaqlawa (text block headed 'Global City'): 'The project consists of 1700 residential units with different types of Villa's'",
+    "source_url": "https://hajisalam.com/en/ashty-city-2/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.213258,44.122411",
   "publish_recommendation": "ready"
  },
@@ -4340,7 +4629,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready units for sale ($230,000; $170,000 'Negotiable')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ashti-village"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -4513,7 +4815,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listing: residential plot (200 m²) for sale, $152,500 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/asuda-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.108702,44.024204",
   "publish_recommendation": "review"
  },
@@ -4652,7 +4967,20 @@
   "figure_notes": [],
   "land_area_dunams": 80.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 269,
+    "text": "plans to offer '269 luxury flats' (Wikipedia)",
+    "source_url": "https://en.wikipedia.org/wiki/Aura_Erbil"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -4951,7 +5279,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": null,
+    "text": "Paya and miranestate description: 'three nine-story office buildings with more than 250 office spaces' plus ground-floor shops, cafés and restaurants; miranestate statistics: 'Units 252'",
+    "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "miranestate 'Unit Types' table lists floor layouts (Ground Floor, First Floor, Floors 2nd/5th/8th, 3rd/6th, 4th/7th, 9th Floor) with 'Floor plan' entries (2 each)",
+    "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: 'Cash' (miranestate); price per meter $850. Homele listings: off-plan offices for sale",
+    "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.233042,44.011093",
   "publish_recommendation": "ready"
  },
@@ -5042,7 +5391,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 476,
+    "text": "'Number Of Unit: 476', Project Type: House (hajisalam)",
+    "source_url": "https://hajisalam.com/en/aynda-city1/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listing: ready house for sale, $160,000 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-1"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -5156,7 +5522,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 489,
+    "text": "'Number Of Unit: 489', Project Type: House (hajisalam)",
+    "source_url": "https://hajisalam.com/en/aynda-city-2/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready houses for sale incl. 'House in Cash', prices 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -5253,7 +5636,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.293864,44.117997",
   "publish_recommendation": "review"
  },
@@ -5301,7 +5693,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 285,
+    "text": "'Number Of Unit: 285', Project Type: House (hajisalam)",
+    "source_url": "https://hajisalam.com/en/bajgir-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "hold"
  },
@@ -5677,7 +6082,28 @@
   ],
   "land_area_dunams": 2.8,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 506,
+    "text": "two 31-story residential towers 'that includes 506 residential units' (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 9 apartment types (studio 55 m² to 3-bed 237 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: 'Apartment in Cash' for sale, a studio for sale tagged 'Installment', apartments for rent ($350, $450 Monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.203145,44.000022",
   "publish_recommendation": "ready"
  },
@@ -5780,7 +6206,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready houses for rent ($1,100 and $1,500 Monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -6076,7 +6515,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 386,
+    "text": "'This exclusive development consists of 386 modern villas' (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/beverly-hills-298"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type A 270 m² – 2, Type B 320 m² – 3, Type C 485 m² – 3, Type D 650 m² – 3, Type E 1050 m² – 3",
+    "source_url": "https://miranestate.com/projects/cmo475drg06two30fg34o7mgz"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% at key handover; price per meter $1,500. Homele listings: off-plan villas for sale, tagged 'Installment' or offered with down payment (e.g. 'Villa with %20 Downpayment')",
+    "source_url": "https://miranestate.com/projects/cmo475drg06two30fg34o7mgz"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.214071,43.966152",
   "publish_recommendation": "ready"
  },
@@ -6284,7 +6744,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type 1 231 m², Type 2 300 m², Type 3 370 m², Type 4 500 m² – 2 each",
+    "source_url": "https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% monthly payment; price per meter $790. Homele listings: off-plan houses for sale",
+    "source_url": "https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -6643,7 +7120,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 13 apartment types (studio 65 m² to 5-bed 318 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/candle-residence-176"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: off-plan units for sale, prices 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/candle-residence"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.188816,43.97441",
   "publish_recommendation": "ready"
  },
@@ -7031,7 +7525,28 @@
   "figure_notes": [],
   "land_area_dunams": 1.9,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 745,
+    "text": "'Cavalli tower contains 745 residential apartments' (Paya); 'Units 745' (miranestate)",
+    "source_url": "https://paya-realestate.com/en/projects/cavalli-tower-260"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists 8 apartment types (1-bed 99 m² to 4-bed 238 m²), each with 'View Blueprint'",
+    "source_url": "https://paya-realestate.com/en/projects/cavalli-tower-260"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "baghyshaqlawa payment method: '%20 Advance payment, %28 After structure completion, %28 Delivered, %25 The remained amount with 36 months'; miranestate: payment 'Cash'; miranestate and Homele listings: apartments for rent (e.g. $350–$1,100 monthly) and for sale",
+    "source_url": "https://baghyshaqlawa.net/en/projects/cavalli-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.206351,43.985105",
   "publish_recommendation": "ready"
  },
@@ -7429,7 +7944,28 @@
   "figure_notes": [],
   "land_area_dunams": 1.3,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": null,
+    "text": "Ground & first floors: premium showroom spaces; floors 2–5: 'Each floor offers 12 professional office units' (project total not stated)",
+    "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Floor plans published on homele project page ('Unit Details & Floor Plans', 12 items, e.g. 90 m², 98 m² offices)",
+    "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment plan (office 89.84 m², total $84,899): 50% at signing of the contract, 25% within 90 days of signing, 25% on handover of the key",
+    "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.213047,43.977273",
   "publish_recommendation": "review"
  },
@@ -7661,7 +8197,24 @@
   "figure_notes": [],
   "land_area_dunams": 16.4,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 2052,
+    "text": "The project includes 10 residential towers and contains 2,052 apartments",
+    "source_url": "https://paya-realestate.com/en/projects/central-park-178"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for apartments of 64, 94, 100 and 156 m² (1+1, 2+1, 3+1)",
+    "source_url": "https://paya-realestate.com/en/projects/central-park-178"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1655977,44.0210725",
   "publish_recommendation": "review"
  },
@@ -7980,7 +8533,28 @@
   "figure_notes": [],
   "land_area_dunams": 2.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 172,
+    "text": "172 Residential units (one tower of housing units plus two floors of business offices)",
+    "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 1600,
+    "text": "1600 Square meters from garden & green space",
+    "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 14 units: studios 47.8–55.1 m², 1+1 86–102.5 m², 2+1 107–125 m²",
+    "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.206172,43.961078",
   "publish_recommendation": "review"
  },
@@ -8313,7 +8887,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1404,
+    "text": "Baghy: 'The project Consist of 1404 appartments from 14 Buildings in which 8 of them are finished'. Paya gives only 16 buildings x 23 floors x 4 apartments per floor (no total)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/cihan-city"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele market listings: ready apartments for monthly rent (38–205 m², $200–700/month) and for sale (e.g. 168 m² $110,000, 205 m² $130,000, negotiable)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/cihan-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.137046,44.014998",
   "publish_recommendation": "ready"
  },
@@ -8433,7 +9024,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Haji Salam: 'Number Of Unit: 500' for Project Type 'House - Villa - Apartment' (not split by type); Rudaw news (search summary in profile, page not opened): 427 villas",
+    "source_url": "https://hajisalam.com/en/dashty-bahasht/"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Haji Salam: 500 units in total across house/villa/apartment (not split); Rudaw news (search summary in profile, page not opened): 1,122 apartments",
+    "source_url": "https://hajisalam.com/en/dashty-bahasht/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -8680,7 +9288,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for house 200 m² and house 240 m²",
+    "source_url": "https://paya-realestate.com/en/projects/davos-city-256"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Installments: First–Fifth Payment = 20% each (Paya); homele listings for off-plan and ready houses include '(Down payment)' labels",
+    "source_url": "https://paya-realestate.com/en/projects/davos-city-256"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.286995,44.023759",
   "publish_recommendation": "ready"
  },
@@ -8962,7 +9587,32 @@
   "figure_notes": [],
   "land_area_dunams": 19.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1680,
+    "text": "10 residential towers, each rising 21 floors, offering a total of 1,680 apartment units (Miran stats: Units 1,680)",
+    "source_url": "https://miranestate.com/projects/cmrm351ag00nlln0fzg05351e"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Green spaces comprise 60% of the project area (project spans 47,500 m²) (Paya; Miran also states 60%)",
+    "source_url": "https://paya-realestate.com/en/projects/dc-towers-372"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Floor plans/blueprints published for 1+1 88 m², 2+1 131 and 145 m², 3+1 188 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans')",
+    "source_url": "https://paya-realestate.com/en/projects/dc-towers-372"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: 'Cash Installment Payment Plans'. Homele plan (88 m², total $67,760): 13% down payment; 10% after 6, 12 and 18 months; 17% at key handover (after 24 months); remaining 40% in monthly installments for 60 months",
+    "source_url": "https://homele.com/projects/dc-towers-408"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.223219,44.069144",
   "publish_recommendation": "ready"
  },
@@ -9326,7 +9976,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 282,
+    "text": "Residential project consisting of 282 villas (240, 300, 500, 1000 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for houses 264 m² (labelled 'Villa 240 meter square'), 300, 500 and 1000 m²",
+    "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Installments: contract 20%, finishing structure 20%, finishing interior 20%, finishing outside 20%, finishing doors and windows 15%, receiving keys 10%; cash payment takes 8% discount on total price",
+    "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -9638,7 +10309,28 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 256,
+    "text": "Gated community consists of approximately 256 villas with two main unit types (200 m² & 250 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "About 14% of its total land area dedicated to green spaces",
+    "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for house 200 m² and house 250 m²",
+    "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1611718,43.9174803",
   "publish_recommendation": "ready"
  },
@@ -9832,7 +10524,20 @@
   "figure_notes": [],
   "land_area_dunams": 216.4,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "276 apartments reported at the 2013 launch (web-search summary of launch reports in profile; page not fetched, unconfirmed)",
+    "source_url": "https://www.thenationalnews.com/business/emaar-aims-to-create-45000-jobs-in-iraqs-kurdish-region-1.327476"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -10127,7 +10832,24 @@
   ],
   "land_area_dunams": 400.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Baghy and b-arrow: '1200 separate housing units of different sizes, from 250m2 to 900m2'; Haji Salam: 'Number Of Unit: 1204' (Villa - House)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/dream-city"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele market listings: houses, a shop, office space and a commercial building for monthly rent (e.g. 250 m² house $1,200–2,300/month) and a house for sale (450 m², $1,000,000 negotiable)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/dream-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.20567,43.976855",
   "publish_recommendation": "ready"
  },
@@ -10238,7 +10960,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Off-plan 4-bed houses (200–220 m², $180,000–210,000) listed for sale on homele, labelled '(Down payment)' per profile",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/eden-park"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -10490,7 +11225,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: off-plan shops for monthly rent (32–300 m², $540–6,000/month) and ready apartments for monthly rent (110–194 m², $550–800/month)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/edition-tower"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -10838,7 +11586,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": null,
+    "text": "T1: 9 floors of 4 offices, 8 floors of 2 offices, 6 floors of 1 office; T2–T5: each 911 m² floor subdivided into 7 offices (5 x 123 m², 2 x 148 m²); total not stated",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready offices for monthly rent (123–148 m², $500–850/month) and for sale (148 m², $125,000 negotiable)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/empire-business-towers"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -11232,7 +11997,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready 1-bed apartments for monthly rent (91–110 m², $400–650/month)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.201114,43.965876",
   "publish_recommendation": "ready"
  },
@@ -11612,7 +12390,28 @@
   ],
   "land_area_dunams": 93.6,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1806,
+    "text": "Seven towers; 12 apartments per floor except P6 with 14; 'Totaling 1806 luxury apartments' (Miran stats: Units 1,806)",
+    "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table with a 'Floor plan' column for 14 types (studio 48–54 m², 1+1 94–97 m², 2+1 126–129 m², 3+1 178 m²); no '—' shown",
+    "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); ready units listed for monthly rent and resale (homele, e.g. 97 m² $600/month; 96 m² $90,000 negotiable)",
+    "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.198395,43.9645091",
   "publish_recommendation": "ready"
  },
@@ -11970,7 +12769,32 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 300,
+    "text": "Royal Villas: 'the 300 villas ... span a plot area of 565,000m2' (Haji Salam also lists 300 units)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Royal Apartments: 'Total apartments: 804' in 32 towers (Baghy) vs 'Units 320' in 32 buildings (Miran)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table shows '—' in the Floor plan column for 3+1 175, 273 and 350 m²",
+    "source_url": "https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele listings: 3-bed apartments for sale and monthly rent, villas for sale",
+    "source_url": "https://miranestate.com/projects/cmm7rpu460028ql0f6auqm8x1"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -12428,7 +13252,28 @@
   "figure_notes": [],
   "land_area_dunams": 67.4,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Paya: 720 apartments (40 one-bed, 600 two-bed, 80 four-bed) in four buildings; Miran: 702 apartments (40 one-bed, 600 two-bed, 62 four-bed)",
+    "source_url": "https://paya-realestate.com/en/projects/empire-square-towers-173"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 9 units 113–188 m² (1, 2 and 4 bed)",
+    "source_url": "https://paya-realestate.com/en/projects/empire-square-towers-173"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele listings: ready 2-bed apartments for sale ($132,000–150,000) and monthly rent ($600)",
+    "source_url": "https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2037639,43.9674921",
   "publish_recommendation": "ready"
  },
@@ -13041,7 +13886,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Miran: 'A total of 3,856 apartments' over 30 buildings (stats box: Units 3,865); Baghy (Empire World page): 'A total of 2,008 apartments' over 26 buildings",
+    "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table with a 'Floor plan' column for 23 types (63–407 m²); '—' shown for 2+1 194 m²",
+    "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); ready units listed for monthly rent (Miran $450–500; homele $475–700) and sale (homele 63–86 m², $70,000–92,500)",
+    "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2011705,43.9693437",
   "publish_recommendation": "ready"
  },
@@ -13592,7 +14458,28 @@
   ],
   "land_area_dunams": 300.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 300,
+    "text": "Royal Villas: 300 villas (plot area 565,000 m²)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Royal Apartments: 'Total apartments: 804'; Residential Wings: 'A total of 2,008 apartments' (no project-wide total stated)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "commercial_units": {
+    "value": null,
+    "text": "Empire Business Towers: T1 9 floors x 4 offices, 8 floors x 2 offices, 6 floors x 1 office; T2–T5 each floor 7 offices; total not stated",
+    "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.199026,43.970393",
   "publish_recommendation": "ready"
  },
@@ -14012,7 +14899,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints/floor plans published for 17 unit types 52–211 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans', 17 items)",
+    "source_url": "https://paya-realestate.com/en/projects/english-tower-163"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: 40% down payment, remaining 60% in monthly installments over 48 months ($1,070/m²). Homele (King Insaat sales center, studio $53,560): 20% down payment, 20% on completion of structure, 30% on exterior finishing, then $446 monthly for 36 months",
+    "source_url": "https://paya-realestate.com/en/projects/english-tower-163"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.193123,43.967479",
   "publish_recommendation": "ready"
  },
@@ -14375,7 +15279,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "410 villas (Miran; Baghy); 420 villas (Wikipedia); Haji Salam unit field reads '120 Villa 406- Apartment'",
+    "source_url": "https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Baghy: 3 buildings of 11 floors with 4 apartments (150 m²) per floor, total not stated; Haji Salam unit field reads '120 Villa 406- Apartment'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/english-village"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele listings: ready houses for monthly rent ($1,300–1,400) and for sale ($500,000)",
+    "source_url": "https://miranestate.com/projects/cmnq1ohc309ucmx0f7du79yq2"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.192702,43.971569",
   "publish_recommendation": "ready"
  },
@@ -14731,7 +15656,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists office unit types (54–156 m²) with 'View Blueprint'; one type (114 m²) marked 'No Blueprints'",
+    "source_url": "https://paya-realestate.com/en/projects/erbil-baz-tower-283"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1807004,43.9618505",
   "publish_recommendation": "review"
  },
@@ -14961,7 +15899,28 @@
   "figure_notes": [],
   "land_area_dunams": 25.1,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 68,
+    "text": "68 housing units with two different types (Paya); 68 high-end housing units in villa configurations Type A, B1, B2 (Miran)",
+    "source_url": "https://paya-realestate.com/en/projects/erbil-garden-286"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'No Blueprints' for the 455 m² house; Miran unit-type table shows '3' in the Floor plan column for Villa Types B1 455 m², B2 525 m², A 708 m²",
+    "source_url": "https://paya-realestate.com/en/projects/erbil-garden-286"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran)",
+    "source_url": "https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2188027,44.0406309",
   "publish_recommendation": "ready"
  },
@@ -15297,7 +16256,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 7 apartment units 88–168 m²",
+    "source_url": "https://paya-realestate.com/en/projects/one-tower-280"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready apartments for monthly rent (85–130 m², $400–750) and for sale (85–93 m², $68,500–69,100 negotiable)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.174711,44.006884",
   "publish_recommendation": "ready"
  },
@@ -15698,7 +16674,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Baghy: 6 towers of 26 floors, 'each typical floor consists of 9 apartments' (total not stated)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/eskan-tower"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready apartments for sale ($44,500–45,000) and monthly rent ($320–350)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/eskan-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.179312,44.024869",
   "publish_recommendation": "ready"
  },
@@ -15942,7 +16935,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": 84,
+    "text": "13-story landmark offering 84 premium commercial offices",
+    "source_url": "https://paya-realestate.com/en/projects/ezma-businsstower-272"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 8 office units 114–432 m²",
+    "source_url": "https://paya-realestate.com/en/projects/ezma-businsstower-272"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2104288,43.97833999",
   "publish_recommendation": "ready"
  },
@@ -16123,7 +17133,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 116,
+    "text": "Number Of Unit: 'house 116 - apartment 156'",
+    "source_url": "https://hajisalam.com/en/family-land/"
+   },
+   "apartments": {
+    "value": 156,
+    "text": "Number Of Unit: 'house 116 - apartment 156' (apartments 13 floors)",
+    "source_url": "https://hajisalam.com/en/family-land/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.315083,44.154823",
   "publish_recommendation": "review"
  },
@@ -16311,7 +17338,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready houses for monthly rent ($700–800) and for sale ($240,000–360,000)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ferdaws-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.267336,44.09574",
   "publish_recommendation": "review"
  },
@@ -16787,7 +17827,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 14 units: studios 50–72 m², 1-bed 77–104 m², 2-bed 97–147 m²",
+    "source_url": "https://paya-realestate.com/en/projects/florence-tower-156"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2201269,44.0089174",
   "publish_recommendation": "ready"
  },
@@ -17284,7 +18337,32 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 100,
+    "text": "Haji Salam ('Florya City', address Kasnazan Road): 'villa 100 - apartment 5800'",
+    "source_url": "https://hajisalam.com/en/flory-city/"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Haji Salam: apartment 5800; Kurdistan 24 (search result, not opened): more than 2,000 residential units incl. apartments and villas; Roya snippet: Papatya phase 2,154 apartments",
+    "source_url": "https://hajisalam.com/en/flory-city/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for Apart Villa (12 units), Nergiz Tower (4), Rose Garden Tower (5) and SK Tower (6)",
+    "source_url": "https://paya-realestate.com/en/projects/apart-villa-291"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: instalment sale ('Ready Apartment in Installment', 176 m², $112,500), a '(Down payment)' labelled listing, off-plan and ready units for sale, and monthly rent (176 m², $550)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/floria-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.201832,44.106989",
   "publish_recommendation": "ready"
  },
@@ -17356,7 +18434,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.204486,44.117569",
   "publish_recommendation": "review"
  },
@@ -17655,7 +18742,28 @@
   ],
   "land_area_dunams": 6.1,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 9000,
+    "text": "9,000 square meter of landscaped garden; green area comprises 60% of the total area; 70% open area (15,270 m² development)",
+    "source_url": "https://paya-realestate.com/en/projects/four-season-park-215"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints published ('View Blueprint') for 7 units 58–171 m²",
+    "source_url": "https://paya-realestate.com/en/projects/four-season-park-215"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: 'Ready Apartment in Installment' (89 m², $58,000); off-plan and ready units for sale",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/four-season-park"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.245319,44.063926",
   "publish_recommendation": "ready"
  },
@@ -17876,7 +18984,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: houses, a plot and an off-plan structure for sale (negotiable); 2-bed apartment for monthly rent ($550)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/future-city"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -18222,7 +19343,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 2391,
+    "text": "Haji Salam: Project Type 'House-Villa'; 'Number Of Unit: 2391'",
+    "source_url": "https://hajisalam.com/en/ganjan-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.291408,44.041212",
   "publish_recommendation": "ready"
  },
@@ -18417,7 +19551,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready apartments for rent ('$400 Monthly', '$600 Monthly') and for sale ('$89,000 sale', '$105,000 sale', '$117,000 sale')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.288085,44.043963",
   "publish_recommendation": "review"
  },
@@ -18749,7 +19896,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 1350,
+    "text": "Paya: 'includes 1,350 unique villas'",
+    "source_url": "https://paya-realestate.com/en/projects/global-city-97"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.212639,44.131862",
   "publish_recommendation": "ready"
  },
@@ -18835,7 +19995,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.28853,44.090876",
   "publish_recommendation": "review"
  },
@@ -19046,7 +20215,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: blueprint offered ('View Blueprint') for House 220 m², 4 beds, 3 baths",
+    "source_url": "https://paya-realestate.com/en/projects/greece-city-320"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings tagged 'Installment' / 'Off Plan', e.g. 'Off Plan House in Installment', 'Long Term Installment' (villas 220–240 m² for sale)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/greece-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.297019,44.040291",
   "publish_recommendation": "review"
  },
@@ -19540,7 +20726,24 @@
   "figure_notes": [],
   "land_area_dunams": 44.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for all 9 listed units – studios 52.9 and 64.35 m², 1-bed 84, 86.6 and 89.67 m², 2-bed 138, 143, 151.25 and 162 m²",
+    "source_url": "https://paya-realestate.com/en/projects/green-world-towers-281"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: 'flexible payment plan with up to 10 years of installments, starting with a 20% down payment'; homele: ready apartments for rent ('$300 Monthly' to '$600 Monthly')",
+    "source_url": "https://paya-realestate.com/en/projects/green-world-towers-281"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.211805,43.970275",
   "publish_recommendation": "ready"
  },
@@ -19644,7 +20847,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -19995,7 +21207,24 @@
   ],
   "land_area_dunams": 100.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for offices 128, 192, 255, 278, 306 and 499 m² and apartments 195, 200, 233, 250 and 303 m²; duplex 584 m² 'No Blueprints'. homele project page has a 'Floor Plans' section",
+    "source_url": "https://paya-realestate.com/en/projects/gulan-tower-297"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele: ready apartment 133 m² for rent '$800 Monthly' and office 128 m² '$1,800 Monthly'; homele project page (Gulan Park-WTC Erbil) lists 3-bed apartments at $360,750 (195 m²) and $370,000 (200 m²)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/gulan-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.212682,43.992212",
   "publish_recommendation": "ready"
  },
@@ -20086,7 +21315,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.195614,44.061462",
   "publish_recommendation": "review"
  },
@@ -20318,7 +21556,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Sources differ: Baghy Shaqlawa 'They Are 600 houses and each of them 200 meter or 300 meter'; Haji Salam (Harsham 1) 'Project Type: House', 'Number Of Unit: 500'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/harsham-city-1"
+   },
+   "apartments": {
+    "value": 150,
+    "text": "Baghy Shaqlawa: 'The project consists of 600 houses and 150 apartments'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/harsham-city-1"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele area 'Harsham City' (phase number not given): ready 200 m² houses for rent ('$400 Monthly', '$600 Monthly')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/harsham-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.260447,43.99495",
   "publish_recommendation": "ready"
  },
@@ -20446,7 +21705,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 550,
+    "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 550'",
+    "source_url": "https://hajisalam.com/en/harsham-city-2/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -20537,7 +21809,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 500,
+    "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 500'",
+    "source_url": "https://hajisalam.com/en/harsham-city-3/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -20643,7 +21928,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -20743,7 +22037,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 588,
+    "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 588'",
+    "source_url": "https://hajisalam.com/en/hiran-city-1/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -20793,7 +22100,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 504,
+    "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 504'",
+    "source_url": "https://hajisalam.com/en/hiran-city-2/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -21058,7 +22378,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Haji Salam: Project Type 'House-Villa'; field reads 'Number Of Unit: 400 House 200 - Villa' (Area House 200 m, Villa 450 m); split between houses and villas not unambiguous, no total given",
+    "source_url": "https://hajisalam.com/en/hiwa-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.203426,44.094436",
   "publish_recommendation": "ready"
  },
@@ -21486,7 +22819,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Baghy Shaqlawa: Houses Type A 212 (320 m), Type B 160 (240 m), Type C 39 (140 m), Type D 196 (200 m), Private Houses 17 (600 m); no total stated. Haji Salam: 'Number Of Unit: 740' for the whole villa/office/house project",
+    "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-1"
+   },
+   "apartments": null,
+   "commercial_units": {
+    "value": null,
+    "text": "Baghy Shaqlawa: 'Office Type A: They Are 45 office and each of them 113 meter'; 'Office Type B: They Are 36 office and each of them 260 meter'; no total stated",
+    "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-1"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele: ready houses and offices for rent (e.g. '$1,100 Monthly', '$1,400 Monthly', '$4,000 Monthly') and for sale ('$250,000 Negotiable')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.188236,43.969943",
   "publish_recommendation": "ready"
  },
@@ -21768,7 +23122,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Sources differ: Baghy Shaqlawa 'It Consists Of 1561 Houses'; Haji Salam 'Project Type: House', 'Number Of Unit: 1563'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-2"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele: ready houses for rent ('$600 Monthly' to '$2,000 Monthly') and for sale ('$230,000 Negotiable', '$345,000 sale')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/italian-village-2"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.241466,44.05029",
   "publish_recommendation": "ready"
  },
@@ -21926,7 +23297,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": 1000,
+    "text": "Haji Salam: 'Project Type: Office', 'Number Of Unit: 1000'",
+    "source_url": "https://hajisalam.com/en/justice-tower/"
+   },
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -22029,7 +23413,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 201,
+    "text": "Haji Salam: Project Type 'House- Apartment'; 'Number Of Unit: house 201 - buildings 7'",
+    "source_url": "https://hajisalam.com/en/kamarany-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -22264,7 +23661,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 315,
+    "text": "Haji Salam: 'Project Type: House Number Of Units 315'",
+    "source_url": "https://hajisalam.com/en/kany-almany/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: blueprint offered ('View Blueprint') for House 306 m², 4 beds, 3 baths",
+    "source_url": "https://paya-realestate.com/en/projects/kani-almany-282"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.262024,43.986609",
   "publish_recommendation": "ready"
  },
@@ -22657,7 +24071,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for all 15 listed apartments, 59–170 m² (studio, 1-, 2- and 3-bedroom)",
+    "source_url": "https://paya-realestate.com/en/projects/kany-kasa-project-217"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: 'Price = 675$ / meter Square. Installments: First Payment = 15%, Structure = 18%, Recieve = 22%, Remain wil pay monthly = 45%'; homele: ready apartments for rent ('$400 Monthly', '$500 Monthly') and for sale",
+    "source_url": "https://paya-realestate.com/en/projects/kany-kasa-project-217"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2775954,44.0169265",
   "publish_recommendation": "ready"
  },
@@ -22810,7 +24241,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 150,
+    "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 150'",
+    "source_url": "https://hajisalam.com/en/kavar-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -23039,7 +24483,28 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 408,
+    "text": "Haji Salam: 'Number Of Units house - villa 408 / apartment 364'; Baghy Shaqlawa: 'It Consists Of 408 And 364 Apartments'",
+    "source_url": "https://hajisalam.com/en/kurdistan-city/"
+   },
+   "apartments": {
+    "value": 364,
+    "text": "Haji Salam: 'apartment 364'; Baghy Shaqlawa: '408 And 364 Apartments'",
+    "source_url": "https://hajisalam.com/en/kurdistan-city/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": {
+    "value": 60000,
+    "text": "Baghy Shaqlawa (300 m² house type): 'Service Fees per Month 60,000 ID'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/kurdistan-city"
+   },
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.293981,44.059918",
   "publish_recommendation": "ready"
  },
@@ -23534,7 +24999,28 @@
   "figure_notes": [],
   "land_area_dunams": 4.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ: Paya '5 buildings ... containing 1135 apartments'; Miran stats 'Units 1,155' and text 'over 1,100 residential units'; b-arrow 'a total of 1,100 residential apartments'",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-airport-view-226"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table has a 'Floor plan' column for Studio 42–44 m², 1+1 75–80 m², 2+1 97–149 m² and 3+1 150–152 m² (shown as '—' for 2+1 97, 113, 118 and 123 m²)",
+    "source_url": "https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; units listed for sale (e.g. studio 43 m² $31,000) and for rent (studios '$200/Month'); homele: ready furnished apartments for rent ('$300 Monthly' to '$550 Monthly')",
+    "source_url": "https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.213706,43.960223",
   "publish_recommendation": "ready"
  },
@@ -23872,7 +25358,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ: Baghy Shaqlawa '1680 apartments divided on 24 buildings' (Block A 1008 two-bedroom, Block B 480 one-bedroom, Block C 192 three-bed); b-arrow '23 buildings that include 1795 apartment units'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/lalav-city"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: 'payment 50% paid 50% will pay with recieving key (monthly payment)'; homele: 'Ready Apartment in Cash' and ready apartments for rent ('$450 Monthly', '$500 Monthly')",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-city-221"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2906409,44.0217115",
   "publish_recommendation": "ready"
  },
@@ -24138,7 +25641,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1795,
+    "text": "Miran: stats 'Units 1,795'; description 'approximately 1,795 apartments'",
+    "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table has a 'Floor plan' column for 1+1 104 m², 2+1 135 and 145 m², 3+1 155, 167, 186, 194 and 198 m²",
+    "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; homele: 2+1 135 m² for sale ('$73,000 sale'), 3-bed 198 m² and 50 m² restaurant space for rent ('$500 Monthly')",
+    "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.218701,44.064995",
   "publish_recommendation": "ready"
  },
@@ -24311,7 +25835,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Paya: 'Nova Towers consist of 6 buildings containing 1056 units, ground floor for each building is commercial' (units not split between apartments and commercial)",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-nova-towers-222"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 5218,
+    "text": "Paya: 'Nova Towers provides you and your family with 5,218 m2 of green space'",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-nova-towers-222"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2838833,44.0158702",
   "publish_recommendation": "review"
  },
@@ -24678,7 +26219,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ (both Miran): stats 'Units 2,574'; description 'It offers 2,730 residential units'",
+    "source_url": "https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table has a 'Floor plan' column for 1+1 78–80 m², 2+1 120–122 m², 3+1 165 m² and 4+1 239, 288, 295 and 321 m²",
+    "source_url": "https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: 'first payment of 17%, followed by 15% upon completion of the structure, 18% upon receiving the unit, and the remaining balance paid through monthly installments'; Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); units also listed for rent ('$350'–'$600 Monthly')",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-sky-view-219"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.181253,43.970565",
   "publish_recommendation": "ready"
  },
@@ -24952,7 +26514,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ: Paya '6 buildings containing 1188 Apartments'; Miran stats 'Units 1,254'",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-sun-towers-223"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-type table has a 'Floor plan' column for 1+1 75, 84 and 90 m² and 2+1 105 and 116 m²",
+    "source_url": "https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); rent listings ('$275' per month on Miran; '$250'–'$500 Monthly' on homele) and sale listings",
+    "source_url": "https://miranestate.com/projects/cmkfgmqpu0001nq0fi6nvrkvn"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.267307,44.014457",
   "publish_recommendation": "ready"
  },
@@ -25134,7 +26717,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 564,
+    "text": "Paya: 'consisting of two buildings and 564 housing units'",
+    "source_url": "https://paya-realestate.com/en/projects/lalav-twin-towers-220"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1653254,44.0179707",
   "publish_recommendation": "ready"
  },
@@ -25215,7 +26811,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.216607,44.064268",
   "publish_recommendation": "review"
  },
@@ -25433,7 +27038,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "A grand national entrance park measuring 100m x 600m is built at the gates (Miran)",
+    "source_url": "https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for the listed House 275 m², 4 beds / 4 baths",
+    "source_url": "https://paya-realestate.com/en/projects/lavender-city-371"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: 'Cash Installment Payment Plans'; payment plan at $720/m: 20% down payment, 16% villa structure, 16% after 5 months, 16% after 5 months, 20% key handover, 12% monthly over 60 months; homele lists off-plan houses for sale in installment",
+    "source_url": "https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.3010182,44.06251419",
   "publish_recommendation": "ready"
  },
@@ -25854,7 +27480,24 @@
   "figure_notes": [],
   "land_area_dunams": 3.1,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for all 10 listed apartments (88–190 m², 1–3 beds)",
+    "source_url": "https://paya-realestate.com/en/projects/lavender-skyline-towers-384"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: 'Cash Installment Payment Plans'; plan: 15% down payment, 20% tower completion, 20% key receipt, 45% monthly over 5 years; homele lists off-plan apartments for sale",
+    "source_url": "https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.129246,44.024083",
   "publish_recommendation": "ready"
  },
@@ -26175,7 +27818,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Paya: 'The project consists of 1150 housing units'; Haji Salam: 'Number Of Unit 1152' (House) (https://hajisalam.com/en/lawan-city/)",
+    "source_url": "https://paya-realestate.com/en/projects/lawan-city-115"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready houses for sale, prices negotiable",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/lawan-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.18821403,44.12359018",
   "publish_recommendation": "ready"
  },
@@ -26693,7 +28353,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Baghy: 'Zone H (Villas) Villa Type A : 48 villas'; Haji Salam: 'house 140' (https://hajisalam.com/en/lebanese/)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/lebanese-village"
+   },
+   "apartments": {
+    "value": 3340,
+    "text": "Haji Salam: 'house 140 - apartment 3340' (Baghy gives 3400 residential units between villas and apartments)",
+    "source_url": "https://hajisalam.com/en/lebanese/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready apartments for rent ($200–$400 monthly) and installment sale of ready furnished 56 m² apartments",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/lebanese-village"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.25972,44.012861",
   "publish_recommendation": "ready"
  },
@@ -27076,7 +28757,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Paya: 'The two towers contain 400 apartments, and the base contains 97 apartments with shops and a market' (no single total stated)",
+    "source_url": "https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready apartments for sale and for rent ($350–$600 monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/life-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.180041,43.949789",
   "publish_recommendation": "ready"
  },
@@ -27372,7 +29070,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 25,
+    "text": "Miran: horizontal section featuring 25 two-story modern villas (210 m²)",
+    "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+   },
+   "apartments": {
+    "value": 869,
+    "text": "Miran: vertical residential towers comprising 869 apartments (0+1 studio, 1+1, 2+1, 3+1); the page's statistics box separately shows 'Units 33'",
+    "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: 'Cash Installment Payment Plans'; $625/m; plan: 20% down payment, 24% tower completion, 27% key receipt, 29% monthly payment; homele lists off-plan units for sale in installment ('Long Term Installment')",
+    "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -27510,7 +29229,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: 450 m² villas for sale (one Off Plan, one Ready), prices negotiable",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/light-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.314025,44.033777",
   "publish_recommendation": "review"
  },
@@ -27943,7 +29675,24 @@
   "figure_notes": [],
   "land_area_dunams": 2.9,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for all 14 listed apartments (118–340 m², 1+1, 3+1, 4+1); homele project page has a 'Unit Details & Floor Plans' section (https://homele.com/projects/london-towers-365)",
+    "source_url": "https://paya-realestate.com/en/projects/london-towers-254"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya installments: first payment 25%, structure 25%, finishing 25%, receive keys 25%; homele payment plans per building (A & C, C floors 3-17, B1, B2): 25% contract signing, 25% structure completion, 25% apartment completion, 25% key handover; Miran: 'Cash Installment Payment Plans', $990/m",
+    "source_url": "https://paya-realestate.com/en/projects/london-towers-254"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.20372,43.983032",
   "publish_recommendation": "ready"
  },
@@ -28226,7 +29975,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Baghy payment method: advance payment 18%, after structure completion 22%, delivered 30%, remaining amount divided into 36 months; homele lists off-plan apartments for sale ('Apartment in Cash')",
+    "source_url": "https://baghyshaqlawa.net/en/projects/majidi-view"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.204262,44.092099",
   "publish_recommendation": "ready"
  },
@@ -28324,7 +30086,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.267608,44.082291",
   "publish_recommendation": "review"
  },
@@ -28625,7 +30396,28 @@
   "figure_notes": [],
   "land_area_dunams": 19.2,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Approximately 48,000 m² land; 22% for buildings while 78% is dedicated to green areas and shared facilities (Paya; Miran: 78% to green spaces and public facilities)",
+    "source_url": "https://paya-realestate.com/en/projects/manhattan-towers-322"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for all 5 listed apartments (101.26–213.13 m², 1–3 beds)",
+    "source_url": "https://paya-realestate.com/en/projects/manhattan-towers-322"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: 'Cash Installment Payment Plans'; $730/m; plan: 18% down payment, 17% first payment, 20% second payment, 45% monthly over 72 months; homele lists off-plan apartments for sale in installment ('Long Term Installment')",
+    "source_url": "https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2172129,44.0631386",
   "publish_recommendation": "ready"
  },
@@ -28748,7 +30540,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 140,
+    "text": "Haji Salam: Project Type Villa; Number Of Unit 140",
+    "source_url": "https://hajisalam.com/en/marina-1/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Haji Salam related listings dated '6 years ago': a villa and a house for sale, price on call",
+    "source_url": "https://hajisalam.com/en/marina-1/"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -28851,7 +30660,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 140,
+    "text": "Haji Salam: Project Type Villa; Number Of Unit 140",
+    "source_url": "https://hajisalam.com/en/marina-2/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Haji Salam related listing dated '6 years ago': house for rent, price on call",
+    "source_url": "https://hajisalam.com/en/marina-2/"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -28940,7 +30766,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 148,
+    "text": "Haji Salam: Project Type Villa; Number Of Unit 148",
+    "source_url": "https://hajisalam.com/en/marina-3/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -29277,7 +31116,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Vast green areas, landscapes and gardens make up more than one-third of the total land area (hilly site exceeding one million m²)",
+    "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for all 15 listed houses (240, 320 and 600 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: payment plan in four equal stages – on contract signing, on completion of the external structure, after interior finishing, and on key handover; homele lists ready houses for sale (negotiable) and for rent ($1,000 monthly) and off-plan/structure houses for sale",
+    "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.239133,44.068067",
   "publish_recommendation": "ready"
  },
@@ -29484,7 +31344,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; 320 m² houses/villas listed for sale",
+    "source_url": "https://miranestate.com/projects/cmnr6e2m00aujmx0fipovlon5"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -29690,7 +31563,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; homele lists ready and off-plan houses for sale (mostly negotiable)",
+    "source_url": "https://miranestate.com/projects/cmo06pkyf04mto30f9wwbab1g"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.248758,44.055948",
   "publish_recommendation": "ready"
  },
@@ -29946,7 +31832,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 382,
+    "text": "Paya: 'The project comprises 382 villas, available in three distinct designs (A, B, and C)'",
+    "source_url": "https://paya-realestate.com/en/projects/mass-village-268"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for the 3 listed 320 m² houses (4 beds / 4 baths)",
+    "source_url": "https://paya-realestate.com/en/projects/mass-village-268"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; villas listed for sale and for rent ($1,000 and $1,300); homele lists ready houses for sale and for rent ($1,100–$1,600 monthly)",
+    "source_url": "https://miranestate.com/projects/cmnr5xs660ar4mx0fdosv5t0l"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.229119,44.064284",
   "publish_recommendation": "ready"
  },
@@ -30056,7 +31963,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 600,
+    "text": "Haji Salam: Project Type Apartment; Number Of Unit 600",
+    "source_url": "https://hajisalam.com/en/mem-u-zin/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -30186,7 +32106,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 1426,
+    "text": "Haji Salam 'Minara Village 1&2': Project Type House; Number Of Unit 1426",
+    "source_url": "https://hajisalam.com/en/minara-village/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listing ('Minara City 1'): one ready house for sale",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/minara-city-1"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.185015,44.063368",
   "publish_recommendation": "review"
  },
@@ -30413,7 +32350,24 @@
   "figure_notes": [],
   "land_area_dunams": 4.2,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 592,
+    "text": "Roya listing (seen only as a web-search summary, page not fetched): four 20-storey residential towers, 592 units",
+    "source_url": "https://roya-iq.com/?p=9094"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready apartments for sale (some negotiable, one 'Installment'); a 115 m² beauty salon for rent at $500 monthly",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mini-slava"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.219239,44.064827",
   "publish_recommendation": "review"
  },
@@ -30593,7 +32547,28 @@
   "figure_notes": [],
   "land_area_dunams": 58.3,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 271,
+    "text": "Paya: 'It consists of a total of 271 houses and villas of various sizes (200, 240, and 300 square meters)'",
+    "source_url": "https://paya-realestate.com/en/projects/mirage-city-296"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 44662,
+    "text": "Paya: green area of 44,662 square meters, covering 30% of the total area (total 145,728.522 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/mirage-city-296"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: off-plan houses for sale (one negotiable)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mirage-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.26465,43.99396",
   "publish_recommendation": "ready"
  },
@@ -30929,7 +32904,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; apartments listed for sale and for rent ($450–$650/month); homele lists ready apartments for sale (negotiable) and for rent, and a 76 m² shop for rent at $1,800 monthly",
+    "source_url": "https://miranestate.com/projects/cmnq0oz4b09ncmx0fi0l46gl4"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.20491,43.983547",
   "publish_recommendation": "ready"
  },
@@ -31172,7 +33160,28 @@
   ],
   "land_area_dunams": 70.3,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 309,
+    "text": "Paya: 'it will feature 309 villas available in 240 m² and 300 m² layouts'; Baghy: 'It consists of 309 villas'",
+    "source_url": "https://paya-realestate.com/en/projects/mountain-view-287"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for the listed House 300 m², 6 beds / 5 baths",
+    "source_url": "https://paya-realestate.com/en/projects/mountain-view-287"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya: flexible payment plan tied to construction milestones; Baghy payment method: advance payment, after structure completion, after completion of the water and electricity system, after completion of the exterior design, on delivery (no percentages); homele lists ready houses for sale ('House in Cash') and a corner house for rent at $1,100 monthly",
+    "source_url": "https://baghyshaqlawa.net/en/projects/mountain-view"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.225333,44.076901",
   "publish_recommendation": "ready"
  },
@@ -31565,7 +33574,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": {
+    "value": 100,
+    "text": "Baghy: single-bedroom (1+1) apartments – 'Service Fee (100$)' (period not stated)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+   },
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; homele lists ready apartments for rent ($400–$850 monthly) and for sale (negotiable)",
+    "source_url": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.215992,44.002593",
   "publish_recommendation": "ready"
  },
@@ -31885,7 +33911,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Miran project statistics per named group (no combined total stated): MRF 2 Tower – Buildings 2, Units 160; MRF 4 Tower – Buildings 4, Units 320 (https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd); MRF 5 Towers – Buildings 5, Units 400 (https://miranestate.com/projects/cmnpwtu69096pmx0fkr0257nw); all 3+1 165 m² apartments",
+    "source_url": "https://miranestate.com/projects/cmnpw79v1093smx0f9qas8t9z"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; apartments listed for rent ($450–$600); homele lists ready apartments mostly for rent ($400–$650 monthly) and some for sale",
+    "source_url": "https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.194881,43.966536",
   "publish_recommendation": "ready"
  },
@@ -32017,7 +34060,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": {
+    "value": 50,
+    "text": "Baghy: 'Cost Of Services (50$) Per Month' – electricity fees are not included in the service (stated under the 130 m² apartment)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/nawroz-city"
+   },
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Baghy: 'These Apartments Are Only For RENT'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/nawroz-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.181373,44.068956",
   "publish_recommendation": "review"
  },
@@ -32326,7 +34386,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 700,
+    "text": "Baghy: 14 buildings, 4 apartments per storey; 'there will be (700) luxury flats constructed with tunnel formwork system'",
+    "source_url": "https://baghyshaqlawa.net/en/projects/naz-city"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready apartments for sale (some negotiable) and for rent ($600–$650 monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.210352,43.987364",
   "publish_recommendation": "ready"
  },
@@ -32603,7 +34680,24 @@
   "figure_notes": [],
   "land_area_dunams": 306.5,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Roya (web-search summary, page not fetched): 648 houses (https://roya-iq.com/new-azadi); Building.co.uk (web-search summary, page not fetched): a 1,565-home New Azadi development – 810 two-bed, 700 four-bed, 55 five-bed houses",
+    "source_url": "https://www.building.co.uk/news/developer-at-cityscape-seeks-partners-for-iraq-schemes/3150284.article"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: ready houses for sale (mostly negotiable) and for rent ($1,300–$1,400 monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/new-azadi-atconz"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.247912,44.016465",
   "publish_recommendation": "ready"
  },
@@ -32742,7 +34836,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings: off-plan showrooms (152–200 m²) for sale at $200,000–$300,000 (prices labelled '(Down payment)'); one ready house negotiable",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -32912,7 +35019,24 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1088,
+    "text": "Baghy: 'consist of 1088 apartments with an area of 150 m2'; 16 buildings, 17 floors, 4 apartments per floor",
+    "source_url": "https://baghyshaqlawa.net/en/projects/new-eskan"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listing: one ready furnished apartment for rent at $350 monthly",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/new-eskan"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.176875,44.022216",
   "publish_recommendation": "ready"
  },
@@ -33164,7 +35288,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 151,
+    "text": "Miran: 'a premium residential community of 151 exclusive villas'",
+    "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 40441,
+    "text": "Miran: 151 villas 'set within 40,441 m² of lush green space'",
+    "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran: payment 'Cash'; homele lists ready villas for sale (mostly negotiable) and one off-plan corner house",
+    "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2408384,44.0576064",
   "publish_recommendation": "ready"
  },
@@ -33400,7 +35545,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya shows 'View Blueprint' for the 2 listed apartments (81 m² 1 bed; 117 m² 2 beds)",
+    "source_url": "https://paya-realestate.com/en/projects/nobel-towers-150"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya lists apartments with sale prices ($62,800 and $102,375); homele lists one ready apartment for rent at $300 monthly",
+    "source_url": "https://paya-realestate.com/en/projects/nobel-towers-150"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2537662,43.9999248",
   "publish_recommendation": "ready"
  },
@@ -33660,7 +35822,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 450,
+    "text": "Haji Salam: 'house 450 - Apartment 465'",
+    "source_url": "https://hajisalam.com/en/noble-city/"
+   },
+   "apartments": {
+    "value": 465,
+    "text": "Haji Salam: 'house 450 - Apartment 465'",
+    "source_url": "https://hajisalam.com/en/noble-city/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele lists one ready furnished house for sale; Baghy related listings show houses for sale and an 83 m² apartment for rent",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/nobel-city"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -33903,7 +36086,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "About 40% of the project area is allocated for greenery and gardens",
+    "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 5 listed apartment types (90, 96, 135, 140, 210 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Installments: first payment 17%, structure 23%, receive 25%, the rest 35% in monthly installments",
+    "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.207774,43.963793",
   "publish_recommendation": "ready"
  },
@@ -34220,7 +36424,32 @@
   ],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 459,
+    "text": "459 villas in total: 200 m² (99 units), 250 m² (278 units), 320 m² (66 units), 600 m² (16 units)",
+    "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Over 30% of the project area is dedicated to green space, including a 10-dunum central park",
+    "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for each of 17 listed houses (200, 250, 320 m²); Miran: unit-types table with a floor-plan column for Types A-D (200-600 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/oakland-422"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran payment: Cash; homele listings labelled 'Down payment', 'Installment' and 'Long Term Installment'",
+    "source_url": "https://miranestate.com/projects/cmole6ene03lrp90f2lzn14nz"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.257375,44.103577",
   "publish_recommendation": "ready"
  },
@@ -34468,7 +36697,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 18000,
+    "text": "3 gardens with an area of 18 000 sqm",
+    "source_url": "https://paya-realestate.com/en/projects/olive-garden-373"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for 3 house types (200, 250, 320 m²); Miran: unit-types table with a floor-plan column (200 m², 250 m² A/B, 320 m² A/B)",
+    "source_url": "https://paya-realestate.com/en/projects/olive-garden-373"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans; plan: 20% down payment, five 10% payments (1/03/2026-1/07/2027), 10% at key receipt (1/11/2027), 20% monthly over 30 months",
+    "source_url": "https://miranestate.com/projects/cmnu9pj5o0d50mx0ftmpo5vbg"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.298784,44.055124",
   "publish_recommendation": "ready"
  },
@@ -34582,7 +36832,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 780,
+    "text": "Project Type: House; Number Of Unit: 780",
+    "source_url": "https://hajisalam.com/en/ozal/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -34728,7 +36991,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -35008,7 +37280,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 297,
+    "text": "Project Type: House; Number Of Unit: 297",
+    "source_url": "https://hajisalam.com/en/pank-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for the 1 listed house type (300 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/pank-village-292"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.26089,43.98983",
   "publish_recommendation": "ready"
  },
@@ -35473,7 +37762,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ: miranestate.com 'Units 816' (https://miranestate.com/projects/cmo49t04y0766o30feosnb32i); hajisalam.com 'Number Of Unit: 960', Project Type Apartment (https://hajisalam.com/en/park-view/)",
+    "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-types table lists 2+1 135/149 m², 3+1 183 m², 4+1 246 m², 5+1 310 m² with '—' in the floor-plan column for every type",
+    "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran payment: Cash; homele listings include monthly rentals ($700-$4,000 Monthly) and sales",
+    "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.208994,43.983425",
   "publish_recommendation": "ready"
  },
@@ -35764,7 +38074,24 @@
   "figure_notes": [],
   "land_area_dunams": 2.6,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "The project consists of two towers, and each tower consists of 14 floors and includes 102 apartments (stated per tower)",
+    "source_url": "https://paya-realestate.com/en/projects/parosh-twin-towers-167"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 9 listed apartments (80-172 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/parosh-twin-towers-167"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.204765,44.114938",
   "publish_recommendation": "ready"
  },
@@ -35981,7 +38308,20 @@
   "figure_notes": [],
   "land_area_dunams": 680.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 300000,
+    "text": "300,000 M2 open and green space",
+    "source_url": "https://baghyshaqlawa.net/en/projects/pavilion"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.223704,43.980216",
   "publish_recommendation": "ready"
  },
@@ -36324,7 +38664,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($250-$350 Monthly) and sales labelled 'in Cash', 'in Installment' and 'Down payment'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/peshang-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.282622,44.082791",
   "publish_recommendation": "ready"
  },
@@ -36665,7 +39018,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 7 listed units (offices 118 and 143 m²; apartments 85-138 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/phoenix-tower-261"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment method: 50% down payment, remaining 50% in monthly installments",
+    "source_url": "https://paya-realestate.com/en/projects/phoenix-tower-261"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.199212,43.98406",
   "publish_recommendation": "ready"
  },
@@ -36784,7 +39154,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.20481,44.120751",
   "publish_recommendation": "review"
  },
@@ -37195,7 +39574,28 @@
   ],
   "land_area_dunams": 58.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 124,
+    "text": "A collection of 124 luxury villas in various sizes ranging from 240 to 505 square meters",
+    "source_url": "https://paya-realestate.com/en/projects/qaiwan-mirador-279"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Miran unit-types table with a 'Floor plan' column lists 59 types (Studio to Villa, 63-500 m²)",
+    "source_url": "https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans; plan: 18% down payment, 22% at tower completion, 25% at key receipt, 35% monthly over 60 months (price per meter $800); Miran also lists a studio for rent ($300)",
+    "source_url": "https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.25109,44.07495",
   "publish_recommendation": "ready"
  },
@@ -37513,7 +39913,32 @@
   ],
   "land_area_dunams": 24.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 4000,
+    "text": "About 4000 residential units in total (homele project page); Paya: 'nearly 4,000 modern units'",
+    "source_url": "https://homele.com/projects/quartier-francias-411"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "60% of the project will be turned into greenery",
+    "source_url": "https://homele.com/projects/quartier-francias-411"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for each of 6 listed apartment types (90-280 m²); homele project page has a 'Unit Details & Floor Plans' section",
+    "source_url": "https://paya-realestate.com/en/projects/quartier-français-316"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment plan (90 m² example): $71,100 total; 10% down payment $7,100; $250 monthly for 36 months; $15,600 at key handover; $350 monthly for 7 years; $1,000 yearly for 10 years; listings also labelled 'in Installment'",
+    "source_url": "https://homele.com/projects/quartier-francias-411"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.268606,44.017648",
   "publish_recommendation": "ready"
  },
@@ -37849,7 +40274,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 12 listed apartments (77-240 m², 1+1 to 4+1)",
+    "source_url": "https://paya-realestate.com/en/projects/queen-tower-255"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($400-$800 Monthly) and sales",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/queen-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.2139,43.990932",
   "publish_recommendation": "ready"
  },
@@ -38235,7 +40677,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 2976,
+    "text": "Project statistics: Buildings 10, Floors 31, Units 2,976",
+    "source_url": "https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of 13 listed apartments (70-225 m²); text says 'Please see the apartment plans'; Miran unit-types table has a 'Floor plan' column",
+    "source_url": "https://paya-realestate.com/en/projects/rami-towers-151"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran payment: Cash (price per meter $750); Miran lists units for sale and for rent ($350-$450); homele listings include monthly rentals ($450-$1,200 Monthly) and sales",
+    "source_url": "https://miranestate.com/projects/cmjfimvhu0029mw0fn2w79k94"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.190818,43.968466",
   "publish_recommendation": "ready"
  },
@@ -38392,7 +40855,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($350-$500 Monthly) and a sale labelled 'Apartment in Installment'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -38665,7 +41141,24 @@
   "figure_notes": [],
   "land_area_dunams": 184.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Built on an area of 460,000 square meters, with open and green spaces accounting for 79% of the total area",
+    "source_url": "https://paya-realestate.com/en/projects/remas-city-263"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 2 listed house types (500 and 688 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/remas-city-263"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.283417,44.10646",
   "publish_recommendation": "ready"
  },
@@ -38810,7 +41303,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.148103,44.019843",
   "publish_recommendation": "review"
  },
@@ -39052,7 +41554,28 @@
   "figure_notes": [],
   "land_area_dunams": 3.2,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 600,
+    "text": "Two buildings; the rest of the floors include 600 apartments of different sizes",
+    "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 5000,
+    "text": "Built on an area of 8000 square meters, which includes 5000 square meters of green spaces",
+    "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 3 listed apartments (79, 85.5 and 127.5 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.1482821,44.0187248",
   "publish_recommendation": "ready"
  },
@@ -39275,7 +41798,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for each of 3 listed houses (253 m²); Miran unit-types table with a 'Floor plan' column (Type A 253 m², Type B 330 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/rona-village-410"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans; plan: 10% down payment, six 10% payments 'after 3 month' each, 10% at structure completion, 10% at handover, 10% in monthly installments for 12 months (price per meter $570); homele listings labelled 'Installment' and 'Long Term Installment'",
+    "source_url": "https://miranestate.com/projects/cmsbhjir000wjpi0f2wcivo5u"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.3055075,44.0436465",
   "publish_recommendation": "ready"
  },
@@ -39374,7 +41914,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.205164,44.123055",
   "publish_recommendation": "review"
  },
@@ -39731,7 +42280,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "Sources differ: baghyshaqlawa.net 'The Total Apartments is 1180' (five towers) (https://baghyshaqlawa.net/en/projects/roya-towers); hajisalam.com 'Number Of Unit: 1230', Project Type Apartment (https://hajisalam.com/en/roy-tower/)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/roya-towers"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($350-$700 Monthly) and sales",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/roya-tower"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.191922,43.968033",
   "publish_recommendation": "ready"
  },
@@ -39962,7 +42528,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 3 listed house types (200, 210 and 250 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/royal-garden-view-424"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.151044,43.955494",
   "publish_recommendation": "review"
  },
@@ -40180,7 +42759,32 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1640,
+    "text": "Six towers with 32 residential floors and 1640 units",
+    "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "40% devoted to greenery",
+    "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 4 listed apartments (88-210 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($350-$550 Monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.21909,44.003512",
   "publish_recommendation": "ready"
  },
@@ -40254,7 +42858,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.260826,44.088285",
   "publish_recommendation": "review"
  },
@@ -40545,7 +43158,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "A large landscaped central courtyard with over 56% greenery coverage",
+    "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "'View Blueprint' published for each of the 18 listed apartments (93.18-184.7 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Instalment plan per unit: down payment, amount on handover and monthly installment (e.g. 184.7 m² at $179,000: down payment $36,000, on handover $31,000, monthly installment $1,400); homele listings labelled 'Installment' and 'Long Term Installment'",
+    "source_url": "https://paya-realestate.com/en/projects/salam-residences-310"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.216791,43.990494",
   "publish_recommendation": "ready"
  },
@@ -40729,7 +43363,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings: monthly rentals ($300-$500 Monthly) and a sale",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/saloor-tower"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -40830,7 +43477,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 132,
+    "text": "Number Of Unit: 132 Villa (house area 200 m)",
+    "source_url": "https://hajisalam.com/en/sari-blind/"
+   },
+   "apartments": {
+    "value": 370,
+    "text": "Number Of Unit: 370 Apartment (apartment area 107 m)",
+    "source_url": "https://hajisalam.com/en/sari-blind/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -40937,7 +43601,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Project Type: House- Apartment; Number Of Unit: 696 (combined, not split between houses (200 m) and apartments (160 m))",
+    "source_url": "https://hajisalam.com/en/shahan-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -41025,7 +43702,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -41353,7 +44039,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 800,
+    "text": "Project statistics: Buildings 4, Floors 31, Units 800",
+    "source_url": "https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash, Installment, Payment Plans (price per meter $850); homele listings labelled 'Installment' and 'Long Term Installment'",
+    "source_url": "https://miranestate.com/projects/cmk85ou0f01dsqn0fwnw8bitz"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -41781,7 +44484,32 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1860,
+    "text": "Project statistics: Buildings 5, Floors 33, Units 1,860",
+    "source_url": "https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Large green spaces: one in the front with an area of 4,500 square meters and another in the background with an area of 9,500 square meters",
+    "source_url": "https://paya-realestate.com/en/projects/sky-towers-152"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for each of 9 listed apartments (89-180 m²); Miran unit-types table has a 'Floor plan' column (1+1 to 4+1, 89-259 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/sky-towers-152"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Miran payment: Cash; homele listings include monthly rentals ($400-$900 Monthly) and sales",
+    "source_url": "https://miranestate.com/projects/cmnucnj5g0d6amx0fi8dg482u"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.224536,44.009508",
   "publish_recommendation": "ready"
  },
@@ -42142,7 +44870,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Slava Square (villa project within Slava City): 'View Blueprint' for the 1 listed house (250 m²)",
+    "source_url": "https://paya-realestate.com/en/projects/slava-square-309"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele listings are mainly sales; the Slava City 2 page also lists a house for rent ($800 Monthly)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.272094,44.089713",
   "publish_recommendation": "ready"
  },
@@ -42308,7 +45053,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele off-plan listings labelled 'Installment' and 'Second payment'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/smart-city"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -42638,7 +45396,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 15000,
+    "text": "15,000 m² central park, plus 80-110 m² of private outdoor greenery for each villa (Miran)",
+    "source_url": "https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for the 320 m² and 500 m² house units (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/spanish-village-165"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele market listings show houses for sale and for monthly rent (USD 1,000-1,500/month)",
+    "source_url": "https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.279824,44.069417",
   "publish_recommendation": "ready"
  },
@@ -42873,7 +45652,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": 15000,
+    "text": "15,000 m² central park; approx. 110 m² outdoor space per villa for private greenery and parking (Miran)",
+    "source_url": "https://miranestate.com/projects/cmnyplqes023so30frta9f67u"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele market listings show houses for sale (negotiable) and for monthly rent (USD 1,100-1,200/month)",
+    "source_url": "https://miranestate.com/projects/cmnyplqes023so30frta9f67u"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -42961,7 +45757,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -43389,7 +46194,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "602 apartments (Paya, baghyshaqlawa.net, b-arrow.com; Miran: Units 602) vs 'Number Of Units 608' (hajisalam.com)",
+    "source_url": "https://paya-realestate.com/en/projects/star-towers-90"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); resale and rental listings (Miran: 7 for sale, 43 for rent from USD 300/month; homele rentals USD 350-600/month)",
+    "source_url": "https://miranestate.com/projects/cmjfqi91u005amw0fiemcbchd"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -43870,7 +46692,32 @@
   ],
   "land_area_dunams": 21.2,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1600,
+    "text": "'around 1,600 residential units, ranging from studios (0+1) to spacious 4+1 apartments' (Paya); 'Units 1,600' (miranestate); '1600 units consisting of 1 + 1, 2 + 1, 3 + 1 and 4 + 1' (b-arrow)",
+    "source_url": "https://paya-realestate.com/en/projects/the-boulevard-158"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 10000,
+    "text": "'10,000 square meters of green space' (b-arrow); the same page also mentions 'The 10,000-square-foot park'",
+    "source_url": "https://b-arrow.com/w/index.php/en/246/the_boulivard_in_erbil"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya lists apartment and duplex types (69.5–363.6 m²) with 'View Blueprint'; one type (158 m²) marked 'No Blueprints'",
+    "source_url": "https://paya-realestate.com/en/projects/the-boulevard-158"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: 'Cash' (miranestate); miranestate and Homele listings: apartments for rent (e.g. $400, $750, $900, $1,500 monthly) and for sale ('Apartment in Cash', prices 'Negotiable')",
+    "source_url": "https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.213556,43.991397",
   "publish_recommendation": "ready"
  },
@@ -43963,7 +46810,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment method: 18% advance payment, 20% after structure completion, 22% on delivery, remaining 40% over 5 years (baghyshaqlawa.net)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/true-star"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.283192,44.014454",
   "publish_recommendation": "review"
  },
@@ -44481,7 +47341,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "1,243 apartments & penthouses (Paya; Miran stats Units 1,243; homele project page '(1243) Residential units') vs 1,220 apartments (Miran description)",
+    "source_url": "https://paya-realestate.com/en/projects/tulip-towers-259"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 14 apartment units, 95-255 m² (Paya); homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section",
+    "source_url": "https://paya-realestate.com/en/projects/tulip-towers-259"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Cash, Installment, Payment Plans (Miran): 25% down payment, 25% at building completion, 25% at key handover, 25% monthly payment; price per meter $1,050. homele payment plan: 25% down payment, 20% after 4 months, 25% after 4 months, 15% after 6 months, 15% after 6 months; Miran sale listings 'in installments'",
+    "source_url": "https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.200802,43.981425",
   "publish_recommendation": "ready"
  },
@@ -44824,7 +47705,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 22 apartment units, 83.9-186.4 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/unique-towers-275"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele off-plan sale listings; one listing fragment reads 'Down + Second payment)'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/unique-towers"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.243794,44.066959",
   "publish_recommendation": "review"
  },
@@ -45187,7 +48085,32 @@
   "figure_notes": [],
   "land_area_dunams": 6.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "600 residential units (Paya) vs Units 546 (Miran project statistics)",
+    "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Total project area 15,000 m², of which 6,000 m² (40%) for the towers and 60% of the project consists of greenery and other services (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 10 apartment units, 104-227 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Cash, Installment, Payment Plans (Miran); plan steps listed: With Contract 25%, Tower Completion 20%, Apartment Completion 15%, Key Recievement 15%, Down Payment 25% / 36 Months; price per meter $755. homele listings tagged 'Installment'",
+    "source_url": "https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.209912,43.959933",
   "publish_recommendation": "ready"
  },
@@ -45311,7 +48234,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.299251,44.028976",
   "publish_recommendation": "review"
  },
@@ -45785,7 +48717,28 @@
   "figure_notes": [],
   "land_area_dunams": 5.2,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1088,
+    "text": "Units 1,088 (Miran project statistics)",
+    "source_url": "https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (e.g. 114 m² 1-bed Y/Z tower, 118 m² 1-bed X tower)",
+    "source_url": "https://homele.com/projects/veloria-towers-409"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Cash, Installment, Payment Plans (Miran): 25% down payment, 10% after 6 months, 15% at structure completion, 10% after 6 months, 20% on completion, 20% installments over 24 months; price per meter $1,050. homele lists the same plan per tower (X Quarter, Y House, Z House), with 20% at key handover and 20% monthly installments for 24 months",
+    "source_url": "https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.216731,43.993221",
   "publish_recommendation": "ready"
  },
@@ -45873,7 +48826,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 58,
+    "text": "Project type Villa; Number Of Unit 58 (hajisalam.com)",
+    "source_url": "https://hajisalam.com/en/vital-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -45952,7 +48918,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Commercial units for purchase; buying a unit offers a guaranteed lease contract (baghyshaqlawa.net, sole agent)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/voyage-mall"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.277939,44.016054",
   "publish_recommendation": "review"
  },
@@ -46362,7 +49341,28 @@
   "figure_notes": [],
   "land_area_dunams": 3.9,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 1008,
+    "text": "Total of 1,008 residential units (Miran description and project statistics)",
+    "source_url": "https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "41% of green areas (baghyshaqlawa.net)",
+    "source_url": "https://baghyshaqlawa.net/en/projects/wavey-avenue"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); resale and rental listings (Miran: 2 for sale, 72 for rent from USD 250/month; homele sale and monthly rent listings)",
+    "source_url": "https://miranestate.com/projects/cmjil8q81004gle0fzpry8hf2"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.196782,43.964124",
   "publish_recommendation": "ready"
  },
@@ -46616,7 +49616,32 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": {
+    "value": null,
+    "text": "21 offices (100-640 m²) and 9 commercial shops (70-400 m²) (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+   },
+   "green_space": null,
+   "maintenance_charges": {
+    "value": 1,
+    "text": "'Only $1 for service' (offices priced at $6 to $8 per metre) (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+   },
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 24 office and commercial units, 70-1,500 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "'This Project Is Only For Rent'; offices at $6 to $8 per metre (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/west-park-complex-265"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.188068,43.969141",
   "publish_recommendation": "review"
  },
@@ -46936,7 +49961,28 @@
   "figure_notes": [],
   "land_area_dunams": 3.1,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 576,
+    "text": "Units 576 (Miran project statistics)",
+    "source_url": "https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 2000,
+    "text": "Spacious green areas of 2,000 square meters (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/white-towers-164"
+   },
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele market listings show apartments for sale and for monthly rent (USD 225-400/month)",
+    "source_url": "https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.209281,43.958524",
   "publish_recommendation": "ready"
  },
@@ -47299,7 +50345,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 371,
+    "text": "371 residential units (Miran description and project statistics)",
+    "source_url": "https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 10 units, studio 60 m² to 230 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/wow-tower-293"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment: Cash (Miran); homele market listings show apartments for sale (negotiable) and for monthly rent (USD 450-850/month)",
+    "source_url": "https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.172493,43.962047",
   "publish_recommendation": "ready"
  },
@@ -47421,7 +50488,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.285467,44.114716",
   "publish_recommendation": "review"
  },
@@ -47617,7 +50693,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele off-plan listings offered 'in Cash' and in installments ('Installment', 'Long Term Installment')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -47772,7 +50861,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -48092,7 +51190,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 129,
+    "text": "Olive City phase: 129 residential units (houses of 328 m²) (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for a 300 m² house (Olive City) and a 250 m² house (Olive City 2) (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Olive City payments method: First, Second, Third and Fourth Payment of $30,000 each (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.134663,44.067892",
   "publish_recommendation": "ready"
  },
@@ -48281,7 +51400,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.297326,44.041255",
   "publish_recommendation": "ready"
  },
@@ -48418,7 +51546,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.138633,44.028042",
   "publish_recommendation": "ready"
  },
@@ -48683,7 +51820,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": 800,
+    "text": "Apartment project, Number Of Units 800 (hajisalam.com 'Zanyari Tower'; floors listed as 25-49)",
+    "source_url": "https://hajisalam.com/en/zanyari-tower/"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.174717,44.010722",
   "publish_recommendation": "ready"
  },
@@ -48915,7 +52065,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.285784,44.091212",
   "publish_recommendation": "ready"
  },
@@ -49061,7 +52220,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -49278,7 +52446,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 456,
+    "text": "Project type House; Number Of Unit 456 (hajisalam.com)",
+    "source_url": "https://hajisalam.com/en/zilan-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.196476,44.094018",
   "publish_recommendation": "review"
  },
@@ -49501,7 +52682,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele market listings show houses and apartments for sale and for monthly rent (USD 450-650/month)",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/zin-city"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.25239,44.062743",
   "publish_recommendation": "ready"
  },
@@ -49708,7 +52902,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 398,
+    "text": "'Number Of Unit: 398', Project Type: Villa (hajisalam)",
+    "source_url": "https://hajisalam.com/en/american-village/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele listings: ready villas/houses for sale, prices 'Negotiable'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/american-village"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.314579,44.160955",
   "publish_recommendation": "ready"
  },
@@ -49788,7 +52999,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.264731,44.088541",
   "publish_recommendation": "review"
  },
@@ -49906,7 +53126,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 50,
+    "text": "Haji Salam: 'Number Of Unit: 50' (Project Type: Villa; area 1000 m; 2 floors; address Kasnazan Road)",
+    "source_url": "https://hajisalam.com/en/dubai-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.206496,44.112794",
   "publish_recommendation": "review"
  },
@@ -50386,7 +53619,32 @@
   "figure_notes": [],
   "land_area_dunams": 500.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Sources differ: Haji Salam 'Project Type: Villa', 'Number Of Unit: 250'; homele (Green Land Project Sales Center): third phase Green Hills 'has 120 villas', fourth phase Erbil Height 'consists of 120 villas' (phases 1–2 'all sold', no count)",
+    "source_url": "https://hajisalam.com/en/green-land/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": {
+    "value": null,
+    "text": "Paya (Green Hills page): '75% of the villas are green'",
+    "source_url": "https://paya-realestate.com/en/projects/green-hills-267"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for Erbil Heights house 1000 m², 5 beds; homele project page has a 'Floor Plans' section ('Unit Details & Floor Plans: Erbil Heights (phase 4)'); Paya Green Hills page: 'No Blueprints'",
+    "source_url": "https://paya-realestate.com/en/projects/green-land-264"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Paya (Erbil Heights): 'Payment will be done by installment': 25% on signing the contract, remainder in 7 instalments every 3 months, last instalment 5%. Paya (Green Hills): villa prices 'vary according to their location'",
+    "source_url": "https://paya-realestate.com/en/projects/green-land-264"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.312415,44.16918",
   "publish_recommendation": "ready"
  },
@@ -50525,7 +53783,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 5000,
+    "text": "Haji Salam (Kory Village): 'Project Type: House', 'Number Of Unit: 5000'",
+    "source_url": "https://hajisalam.com/en/kory-village/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele: ready 200 m² houses for sale ('$81,500 sale', '$85,000 sale') and for rent ('$303 Monthly')",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/kori-village"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -50871,7 +54146,28 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Paya: '464 standalone houses and 55 larger villas'; Haji Salam field reads 'Number Of Unit: 200 House 519 - Apartment'",
+    "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+   },
+   "apartments": {
+    "value": null,
+    "text": "Paya: 'five 10-floor apartment buildings offering around 200 modern units'; Haji Salam field reads '200 House 519 - Apartment'",
+    "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Paya: 'View Blueprint' for all 5 listed units – apartment 135 m², houses 190 m² (3 and 4 beds) and 200 m² (2 and 4 beds)",
+    "source_url": "https://paya-realestate.com/en/projects/lana-city-294"
+   },
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.220751,44.145889",
   "publish_recommendation": "ready"
  },
@@ -50952,7 +54248,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 224,
+    "text": "Haji Salam: Project Type House; Number Of Unit 224",
+    "source_url": "https://hajisalam.com/en/bahirka-new/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -51169,7 +54478,16 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.214394,44.114083",
   "publish_recommendation": "review"
  },
@@ -51568,7 +54886,36 @@
   ],
   "land_area_dunams": 144.0,
   "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": 643,
+    "text": "'643 Villas have two types: A and B' (Homele project page)",
+    "source_url": "https://homele.com/projects/the-atlantic-185"
+   },
+   "apartments": {
+    "value": null,
+    "text": "'28 buildings of 8-floor ... generally each building consists of 32 apartments' (Homele project page); no project total stated",
+    "source_url": "https://homele.com/projects/the-atlantic-185"
+   },
+   "commercial_units": null,
+   "green_space": {
+    "value": 60000,
+    "text": "'60,000 sqm of the project is greenery' (Homele project page)",
+    "source_url": "https://homele.com/projects/the-atlantic-185"
+   },
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Homele project page has a 'Unit Details & Floor Plans' section (1, 2 and 3 bedrooms)",
+    "source_url": "https://homele.com/projects/the-atlantic-185"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Homele project page payment plans: apartments e.g. $42,000 after discount – $6,000 down payment, $6,500 at structure completion, $6,000 at interior whitewash, $6,000 at key handover, $350 monthly for 50 months; villas $149,000 – $30,000 at contract signing, $30,000 at structure completion, $29,000 at key handover, $60,000 remaining at $1,200 monthly for 50 months; villas for rent $450–$500 monthly; special offers for doctors, engineers, lawyers and university lecturers. Homele listings tagged 'Installment'",
+    "source_url": "https://homele.com/projects/the-atlantic-185"
+   }
+  },
   "google_maps_url": "https://www.google.com/maps?q=36.216158,44.150676",
   "publish_recommendation": "ready"
  },
@@ -51852,7 +55199,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": {
+    "value": null,
+    "text": "Blueprints listed ('View Blueprint') for 6 units, studio 44.92 m² to 163.42 m² (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/var-park-153"
+   },
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "homele off-plan listing tagged 'Installment': 'Long Term Installment'",
+    "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/var-park"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "ready"
  },
@@ -51945,7 +55309,20 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": {
+    "value": null,
+    "text": "Number Of Unit 70 for a 'House- Apartment' project; split between houses and apartments not stated (hajisalam.com)",
+    "source_url": "https://hajisalam.com/en/warin-city/"
+   },
+   "apartments": null,
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": null
+  },
   "google_maps_url": null,
   "publish_recommendation": "review"
  },
@@ -52064,7 +55441,24 @@
   "figure_notes": [],
   "land_area_dunams": null,
   "land_area_dunams_basis": null,
-  "scale_details": {},
+  "scale_details": {
+   "plots_or_parcels": null,
+   "villas_houses": null,
+   "apartments": {
+    "value": null,
+    "text": "No total stated: 4 towers (A-D), each 15 floors with 2 apartments per floor (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/vip-class-201"
+   },
+   "commercial_units": null,
+   "green_space": null,
+   "maintenance_charges": null,
+   "floor_plans": null,
+   "purchase_rental_arrangements": {
+    "value": null,
+    "text": "Payment in installments: 20% ($12,500) with contract 1/5/2022; 20% ($12,500) at 70% completion 1/9/2022; 20% ($12,500) at 90% completion 1/12/2022; 20% ($12,500) on receiving keys 1/3/2023; remainder paid monthly $300; apartments with tapu (Paya)",
+    "source_url": "https://paya-realestate.com/en/projects/vip-class-201"
+   }
+  },
   "google_maps_url": null,
   "publish_recommendation": "hold"
  }

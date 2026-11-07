@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Payment plan: 18% advance, 20% after structure completion, 22% on delivery, 40% over 5 years (no prices given) | — | USD | developer | accessed 2026-11-07 (page undated) | https://baghyshaqlawa.net/en/projects/true-star |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment method: 18% advance payment, 20% after structure completion, 22% on delivery, remaining 40% over 5 years (baghyshaqlawa.net) (https://baghyshaqlawa.net/en/projects/true-star)
 
 ### Location and surroundings
  Map position (low confidence, from agency map pins): 36.283192, 44.014454. Google Maps: https://www.google.com/maps?q=36.283192,44.014454
@@ -200,7 +200,20 @@ Second verification pass 2026-11-07: queries “"True Star" Erbil project Bahrka
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment method: 18% advance payment, 20% after structure completion, 22% on delivery, remaining 40% over 5 years (baghyshaqlawa.net)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/true-star"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.283192,44.014454",
  "publish_recommendation": "review"
 }

@@ -30,7 +30,7 @@ Project ID: downtown-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 276 apartments reported at launch (unconfirmed) | Web-search summary of 2013 launch reports only | https://www.thenationalnews.com/business/emaar-aims-to-create-45000-jobs-in-iraqs-kurdish-region-1.327476 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 276 apartments reported at the 2013 launch (web-search summary of launch reports in profile; page not fetched, unconfirmed) | — | https://www.thenationalnews.com/business/emaar-aims-to-create-45000-jobs-in-iraqs-kurdish-region-1.327476 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Twin towers plus other buildings (total not stated) | Wikipedia and 2013 launch reports both mention twin towers | https://en.wikipedia.org/wiki/Downtown_Erbil ; https://www.khaleejtimes.com/markets/3b-downtown-erbil-unveiled |
 | Floors per building | Not verified | Not stated | — |
@@ -319,7 +319,20 @@ Second verification pass 2026-11-07: queries “Emaar "Downtown Erbil" construct
  "figure_notes": [],
  "land_area_dunams": 216.4,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "276 apartments reported at the 2013 launch (web-search summary of launch reports in profile; page not fetched, unconfirmed)",
+   "source_url": "https://www.thenationalnews.com/business/emaar-aims-to-create-45000-jobs-in-iraqs-kurdish-region-1.327476"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

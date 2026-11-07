@@ -43,7 +43,7 @@ Project ID: davos-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | house | 200 | 200 | 200 | 4 | 5 bathrooms; Paya unit list: house 200 m2, 4 beds, 5 baths. Homele listings for 200 m2 show 4 beds / 4 baths. | agency_project_page | https://paya-realestate.com/en/projects/davos-city-256 ; https://homele.com/properties/for-sale-and-rent/erbil/davos-city |
 | house | 240 | 240 | 240 | 4 | 5 bathrooms; Paya unit list: house 240 m2, 4 beds, 5 baths. Homele listings for 240 m2 show 4 beds / 3-4 baths, both off-plan and ready. | agency_project_page | https://paya-realestate.com/en/projects/davos-city-256 ; https://homele.com/properties/for-sale-and-rent/erbil/davos-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for house 200 m² and house 240 m² (https://paya-realestate.com/en/projects/davos-city-256)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 200 m2, 4 bed / 4 bath, off-plan - asking price | 204,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/davos-city |
 | House 200 m2, 4 bed / 4 bath, off-plan - asking price labelled '(Down payment)' | 200,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/davos-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Installments: First–Fifth Payment = 20% each (Paya); homele listings for off-plan and ready houses include '(Down payment)' labels (https://paya-realestate.com/en/projects/davos-city-256)
 
 ### Location and surroundings
 Davos City is on Erbil's 150-metre ring road (Paya: 'on the 150m ring street'; Baghy: 'Erbil - 150m Highway'), described by Baghy as away from the congested city centre. Neither source names the sector of the ring road or nearby landmarks, and no distances are estimated here. Map position (medium confidence, from agency map pins): 36.286995, 44.023759. Google Maps: https://www.google.com/maps?q=36.286995,44.023759
@@ -372,7 +372,24 @@ Second verification pass 2026-11-07: queries “"Davos City" Erbil villas”; �
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for house 200 m² and house 240 m²",
+   "source_url": "https://paya-realestate.com/en/projects/davos-city-256"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Installments: First–Fifth Payment = 20% each (Paya); homele listings for off-plan and ready houses include '(Down payment)' labels",
+   "source_url": "https://paya-realestate.com/en/projects/davos-city-256"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.286995,44.023759",
  "publish_recommendation": "ready"
 }

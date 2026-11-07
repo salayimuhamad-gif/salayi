@@ -30,7 +30,7 @@ Project ID: lalav-city-view | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,795 | Miran stats only; same figure b-arrow gives for Lalav City | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,795 | Miran: stats 'Units 1,795'; description 'approximately 1,795 apartments' | https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 5 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
 | Floors per building | 24 | Paya and Miran agree | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
@@ -45,7 +45,7 @@ Project ID: lalav-city-view | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | apartment | 155, 167, 186, 194, 198 | 155 | 198 | 3 | 3 bathrooms; 3+1: three bedrooms, reception, kitchen, three bathrooms; some with store room, one or two balconies | agency_project_page | https://paya-realestate.com/en/projects/lalav-city-view-114 ; https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3 |
 | shop | 50 | 50 | 50 | — | Ground-floor restaurant space advertised for rent on homele | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table has a 'Floor plan' column for 1+1 104 m², 2+1 135 and 145 m², 3+1 155, 167, 186, 194 and 198 m² (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 3-bedroom apartment 198 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
 | Restaurant space 50 m2 - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city-view |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele: 2+1 135 m² for sale ('$73,000 sale'), 3-bed 198 m² and 50 m² restaurant space for rent ('$500 Monthly') (https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3)
 
 ### Location and surroundings
 Lalav City View stands on Erbil's 120 Meter Street close to Hawler Nwe / New Erbil (Paya, Baghy). Miran notes the ring-road position gives access to Erbil International Airport and the city centre. Map position (medium confidence, from agency map pins): 36.218701, 44.064995. Google Maps: https://www.google.com/maps?q=36.218701,44.064995
@@ -382,7 +382,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1795,
+   "text": "Miran: stats 'Units 1,795'; description 'approximately 1,795 apartments'",
+   "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table has a 'Floor plan' column for 1+1 104 m², 2+1 135 and 145 m², 3+1 155, 167, 186, 194 and 198 m²",
+   "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; homele: 2+1 135 m² for sale ('$73,000 sale'), 3-bed 198 m² and 50 m² restaurant space for rent ('$500 Monthly')",
+   "source_url": "https://miranestate.com/projects/cmkfh8mot0018nq0f185q93r3"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.218701,44.064995",
  "publish_recommendation": "ready"
 }

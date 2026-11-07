@@ -34,7 +34,7 @@ Project ID: mass-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No villa count published | — |
 | Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Vast green areas, landscapes and gardens make up more than one-third of the total land area (hilly site exceeding one million m²) | — | https://paya-realestate.com/en/projects/mass-city-168 |
 | Development phases | Mass Diamond; Mass Palace; Mass Jumeira (Jumairah) | Paya text; Baghy zone labels | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -47,7 +47,7 @@ Project ID: mass-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | house | 240, 300, 320, 350, 600 | 240 | 600 | — | homele market listings (ready and off-plan/structure); 300 and 350 m² not in Paya list | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
 | other | Not verified | — | — | — | Commercial spaces / commercial property (no sizes) | agency_project_page | https://paya-realestate.com/en/projects/mass-city-168 ; https://baghyshaqlawa.net/en/projects/mass-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for all 15 listed houses (240, 320 and 600 m²) (https://paya-realestate.com/en/projects/mass-city-168)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 320 m2, 4 beds, ready - market listing for sale | 360,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
 | House 240 m2, 4 beds, furnished - monthly rent | 1,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: payment plan in four equal stages – on contract signing, on completion of the external structure, after interior finishing, and on key handover; homele lists ready houses for sale (negotiable) and for rent ($1,000 monthly) and off-plan/structure houses for sale (https://paya-realestate.com/en/projects/mass-city-168)
 
 ### Location and surroundings
 On the 120 m ring road along Masif (Salahaddin/Pirmam) Road in Erbil, on a hilly site (Paya, Baghy). Map position (medium confidence, from agency map pins): 36.239133, 44.068067. Google Maps: https://www.google.com/maps?q=36.239133,44.068067
@@ -465,7 +465,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Vast green areas, landscapes and gardens make up more than one-third of the total land area (hilly site exceeding one million m²)",
+   "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for all 15 listed houses (240, 320 and 600 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: payment plan in four equal stages – on contract signing, on completion of the external structure, after interior finishing, and on key handover; homele lists ready houses for sale (negotiable) and for rent ($1,000 monthly) and off-plan/structure houses for sale",
+   "source_url": "https://paya-realestate.com/en/projects/mass-city-168"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.239133,44.068067",
  "publish_recommendation": "ready"
 }

@@ -44,7 +44,7 @@ Project ID: rona-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | villa | 330 | 330 | 330 | 4 | 5 bathrooms; 2 floors; Type B (Miran only) | agency_project_page | https://miranestate.com/projects/cmsbhjir000wjpi0f2wcivo5u |
 | villa | 253 | 253 | 253 | 4 | Off-plan instalment houses, 3-4 baths, $144,000-$164,000 (5 listing pages; first read) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rona-village |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for each of 3 listed houses (253 m²); Miran unit-types table with a 'Floor plan' column (Type A 253 m², Type B 330 m²) (https://paya-realestate.com/en/projects/rona-village-410)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 253 m2 - Paya project-page price (highest) | 154,000 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/rona-village-410 |
 | Off-plan house 253 m2, long-term instalment - homele listing | 164,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rona-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans; plan: 10% down payment, six 10% payments 'after 3 month' each, 10% at structure completion, 10% at handover, 10% in monthly installments for 12 months (price per meter $570); homele listings labelled 'Installment' and 'Long Term Installment' (https://miranestate.com/projects/cmsbhjir000wjpi0f2wcivo5u)
 
 ### Location and surroundings
 Rona Village sits on the edge of Erbil's Green Belt (Paya, Miran); Miran tags its listings '150m Road' and describes it as minutes from Erbil International Airport. The 150m ring-road belt is within the study scope. It is a different project from Rona Tower on Kirkuk Street. Map position (low confidence, from agency map pins): 36.3055075, 44.0436465. Google Maps: https://www.google.com/maps?q=36.3055075,44.0436465
@@ -338,7 +338,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for each of 3 listed houses (253 m²); Miran unit-types table with a 'Floor plan' column (Type A 253 m², Type B 330 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/rona-village-410"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans; plan: 10% down payment, six 10% payments 'after 3 month' each, 10% at structure completion, 10% at handover, 10% in monthly installments for 12 months (price per meter $570); homele listings labelled 'Installment' and 'Long Term Installment'",
+   "source_url": "https://miranestate.com/projects/cmsbhjir000wjpi0f2wcivo5u"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.3055075,44.0436465",
  "publish_recommendation": "ready"
 }

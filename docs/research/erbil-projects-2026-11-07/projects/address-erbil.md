@@ -29,12 +29,12 @@ Project ID: address-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total project land area (dunams) | 115.7 | converted from 289,310 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/address-erbil-295 ; https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62 |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 421 villas | Paya and Miran | https://paya-realestate.com/en/projects/address-erbil-295 ; https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 421 | 'consists of 421 villa units' / 'a total of 421 houses and villas' (Paya); '421 villa units' (miranestate) | https://paya-realestate.com/en/projects/address-erbil-295 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (villa compound); villa count below | — |
 | Floors per building | 2 floors (240, 300 m²); 3 floors (450, 1,335 m²) | Miran unit table only | https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 86,793 | green area of the project is 86,793 m², 30% of the total area (Paya; same on miranestate) | https://paya-realestate.com/en/projects/address-erbil-295 |
 | Development phases | Not verified | None mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: address-erbil | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | villa | 450 | 450 | 450 | — | 3 floors; Type C | agency_project_page | https://paya-realestate.com/en/projects/address-erbil-295 ; https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62 |
 | villa | 1,335 | 1,335 | 1,335 | — | 3 floors; Type D | agency_project_page | https://paya-realestate.com/en/projects/address-erbil-295 ; https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** miranestate 'Unit Types' table with a 'Floor plan' column: Type A 240 m² – 2, Type B 300 m² – 2, Type C 450 m² – 3, Type D 1335 m² – 3 (https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 ### Prices and payment information (dated evidence, not official price lists)
 Prices: Not verified.
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: 'Cash' (miranestate) (https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62)
 
 ### Location and surroundings
 North of Erbil city near the old Bahrka road, in the Gird Jutyar area (Paya); Miran files it under the Bahrka Road neighbourhood. Paya's structured data places it at 36.264622, 43.99391, about 8 km north of the citadel, on the Bahrka-road approach within the study scope. Map position (low confidence, from agency map pins): 36.264622, 43.99391. Google Maps: https://www.google.com/maps?q=36.264622,43.99391
@@ -299,7 +299,32 @@ Second verification pass 2026-11-07: queries “"Address Erbil" project develope
  "figure_notes": [],
  "land_area_dunams": 115.7,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 421,
+   "text": "'consists of 421 villa units' / 'a total of 421 houses and villas' (Paya); '421 villa units' (miranestate)",
+   "source_url": "https://paya-realestate.com/en/projects/address-erbil-295"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 86793,
+   "text": "green area of the project is 86,793 m², 30% of the total area (Paya; same on miranestate)",
+   "source_url": "https://paya-realestate.com/en/projects/address-erbil-295"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type A 240 m² – 2, Type B 300 m² – 2, Type C 450 m² – 3, Type D 1335 m² – 3",
+   "source_url": "https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: 'Cash' (miranestate)",
+   "source_url": "https://miranestate.com/projects/cmoa1ut930dbro30ffih1qw62"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.264622,43.99391",
  "publish_recommendation": "ready"
 }

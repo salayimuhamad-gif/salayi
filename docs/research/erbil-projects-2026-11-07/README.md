@@ -9,7 +9,7 @@ profile per discovered project, an Excel workbook, a one-file HTML report and a 
 | `Andaz_Erbil_Projects_2026-11-07.xlsx` | Excel workbook: Summary, Projects, Descriptions, Unit Types, Unit Sizes, Facilities, Prices, Sources, Data Sheet, Conflicts, Verification |
 | `Andaz_Erbil_Projects_2026-11-07.html` | One-file report with every profile, readable in any browser, with a searchable index |
 | `INDEX.md` | Table of every profile with Kurdish/Arabic names, developer, category, status, confidence and city-scope flag |
-| `projects/<project-id>.md` | Full profile per project: Parts A–H (data sheet, unit types & sizes, facilities, prices, location, trilingual descriptions, research log, verification report) |
+| `projects/<project-id>.md` | Full profile per project in the brief's format: PART A data sheet (with land area in m² and dunams and development scale), PART B property types and area options (with min/max and floor plans), PART C facilities (with prices, payment terms, maintenance charges, location), PART D Sorani/Arabic/English descriptions, PART E sources and research log (outcome on every primary site, access dates, additional sources, search log), PART F verification report, PART G import-ready JSON |
 | `andaz_erbil_projects.json` | One JSON array; one object per project (Part G schema) — import-ready for the Andaz Projects module |
 | `RESEARCH_LOG.md` | Site-by-site discovery log, coverage statistics, dedup/scope decisions and known limitations |
 | `canonical_projects.json` | The canonical identity map used to merge duplicate names across the five primary sites |
@@ -41,7 +41,7 @@ profile per discovered project, an Excel workbook, a one-file HTML report and a 
 7. **Second verification pass.** The 92 weakest Tier 1 profiles (unverified, low confidence, or no developer) were
    re-checked with up to two web searches each in English, Arabic or Sorani (181 searches). New independent evidence
    (news, government notices, architecture databases, humanitarian maps, other agencies) was added with its source and
-   reliability; every re-checked profile carries a `second_pass` record, shown in Part H of its report.
+   reliability; every re-checked profile carries a `second_pass` record, shown in PART E and PART F of its report.
 8. **QA.** Every file was checked for required keys, enum values, numeric types, source URLs, Sorani-specific letters in
    `description_ku`, Arabic script leaking into `description_en`, and description length. Figures calculated from
    stated values (for example 28 buildings × 32 flats + 643 villas) and approximations stated by a source are labelled in
@@ -54,6 +54,14 @@ profile per discovered project, an Excel workbook, a one-file HTML report and a 
   "Chiwa Tower", Shaqlawa, was excluded at discovery).
 * Pure commercial projects found on the project directories (CBC, Avenue Square, AB Center, Ezma Business Tower,
   Voyage Mall, FM Plaza) are included and categorised `commercial`.
+
+## Scale details added from the evidence
+`scale_details` in the JSON (and the "Land area and development scale" table in each report) holds plots/parcels,
+villa/house, apartment and commercial-unit counts, green space, maintenance charges, floor-plan availability and
+purchase/rental arrangements. Each value is copied from a source that states it explicitly, with its URL; nothing is
+calculated. Where sources disagree the value is empty and both figures are given. `land_area_dunams` is the stated
+dunam figure, or the m² area converted at 1 Iraqi dunam = 2,500 m² (`land_area_dunams_basis` says which).
+`google_maps_url` opens the map pin for projects that have coordinates.
 
 ## Publication flag
 Every record carries `publish_recommendation`:

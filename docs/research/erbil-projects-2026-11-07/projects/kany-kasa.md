@@ -47,7 +47,7 @@ Project ID: kany-kasa | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | apartment | 140, 155, 170 | 140 | 170 | 3 | 3 bathrooms; 3-bedroom | agency_project_page | https://paya-realestate.com/en/projects/kany-kasa-project-217 |
 | apartment | 80, 82, 111, 115, 125, 130, 164 | 80 | 164 | — | Sizes advertised on homele (first page), incl. 111 m2 2-bed and 164 m2 3+1 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/kany-kasa |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for all 15 listed apartments, 59–170 m² (studio, 1-, 2- and 3-bedroom) (https://paya-realestate.com/en/projects/kany-kasa-project-217)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 3+1 apartment 164 m2 - homele sale listing (ready) | 73,800 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kany-kasa |
 | 2-bedroom 125 m2, furnished - homele rent listing (per month) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kany-kasa |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: 'Price = 675$ / meter Square. Installments: First Payment = 15%, Structure = 18%, Recieve = 22%, Remain wil pay monthly = 45%'; homele: ready apartments for rent ('$400 Monthly', '$500 Monthly') and for sale (https://paya-realestate.com/en/projects/kany-kasa-project-217)
 
 ### Location and surroundings
 Kany Kasa lies between Erbil's 120m and 150m ring streets on the Bahrka road (Paya). No closer address are published. Map position (low confidence, from agency map pins): 36.2775954, 44.0169265. Google Maps: https://www.google.com/maps?q=36.2775954,44.0169265
@@ -520,7 +520,24 @@ Second verification pass 2026-11-07: queries “"Kany Kasa" OR "Kani Kasa" Erbil
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for all 15 listed apartments, 59–170 m² (studio, 1-, 2- and 3-bedroom)",
+   "source_url": "https://paya-realestate.com/en/projects/kany-kasa-project-217"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: 'Price = 675$ / meter Square. Installments: First Payment = 15%, Structure = 18%, Recieve = 22%, Remain wil pay monthly = 45%'; homele: ready apartments for rent ('$400 Monthly', '$500 Monthly') and for sale",
+   "source_url": "https://paya-realestate.com/en/projects/kany-kasa-project-217"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2775954,44.0169265",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: zaiton-plus-city | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Olive City phase: 129 units; whole project not verified | Paya Olive City text only | https://paya-realestate.com/en/projects/olive-city-204 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 129 | Olive City phase: 129 residential units (houses of 328 m²) (Paya) | https://paya-realestate.com/en/projects/olive-city-204 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No house count for the whole project | — |
@@ -45,7 +45,7 @@ Project ID: zaiton-plus-city | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | house | 250 | 250 | 250 | 5 | 4 bathrooms; Olive City 2 unit table | agency_project_page | https://paya-realestate.com/en/projects/olive-city-2-276 |
 | house | 300, 375, 425 | 300 | 425 | — | Ready houses in 'Zaiton Plus City' (300 m2, 4 bed) and 'Zaiton Plus VIP' (300/375/425 m2, 6 bed/6 bath); one off-plan 300 m2 6-bed house in 'Olive City' | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-plus-city ; https://homele.com/properties/for-sale-and-rent/erbil/zaiton-plus-vip ; https://homele.com/properties/for-sale-and-rent/erbil/olive-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for a 300 m² house (Olive City) and a 250 m² house (Olive City 2) (Paya) (https://paya-realestate.com/en/projects/olive-city-204)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Zaiton Plus VIP ready house 375 m2, 6 bed / 6 bath - listing asking price (negotiable) | 238,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-plus-vip |
 | Zaiton Plus VIP ready villa 425 m2, 6 bed / 6 bath - listing asking price (negotiable) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zaiton-plus-vip |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Olive City payments method: First, Second, Third and Fourth Payment of $30,000 each (Paya) (https://paya-realestate.com/en/projects/olive-city-204)
 
 ### Location and surroundings
 On 120 m Street in Erbil, next to / within the Zaiton (Zaytoon) City area (Paya Olive City text; Baghy address). Map position (low confidence, from agency map pins): 36.134663, 44.067892. Google Maps: https://www.google.com/maps?q=36.134663,44.067892
@@ -448,7 +448,28 @@ Second verification pass 2026-11-07: queries “"Zaiton Plus" OR "Zaytoon Plus" 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 129,
+   "text": "Olive City phase: 129 residential units (houses of 328 m²) (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for a 300 m² house (Olive City) and a 250 m² house (Olive City 2) (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Olive City payments method: First, Second, Third and Fourth Payment of $30,000 each (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/olive-city-204"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.134663,44.067892",
  "publish_recommendation": "ready"
 }

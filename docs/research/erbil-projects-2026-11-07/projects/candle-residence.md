@@ -48,7 +48,7 @@ Project ID: candle-residence | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | apartment | 65, 148 | 65 | 148 | — | Off-plan listings: 148 m2 2 bed / 2 bath; 65 m2 studio (card title mentions 83 m2, 1 bed). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
 | shop | Not verified | — | — | — | Two commercial floors per building; no unit sizes published. | agency_project_page | https://paya-realestate.com/en/projects/candle-residence-176 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 13 apartment types (studio 65 m² to 5-bed 318 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/candle-residence-176)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan 2 bed 148 m2 - listing asking price (negotiable) | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
 | Off-plan studio 65 m2 - listing asking price, 'new price' (negotiable) | 53,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/candle-residence |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: off-plan units for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/candle-residence)
 
 ### Location and surroundings
 Candle Residence is in Erbil's Golden Square, between Italian Village 1 and the English Village, opposite Sami Abdulrahman Park and next to the Rotana Hotel (Paya). Map position (low confidence, from agency map pins): 36.188816, 43.97441. Google Maps: https://www.google.com/maps?q=36.188816,43.97441
@@ -482,7 +482,24 @@ Second verification pass 2026-11-07: queries “"Candle Residence" Erbil towers�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 13 apartment types (studio 65 m² to 5-bed 318 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/candle-residence-176"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: off-plan units for sale, prices 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/candle-residence"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.188816,43.97441",
  "publish_recommendation": "ready"
 }

@@ -30,7 +30,7 @@ Project ID: roya-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 1,180 (Baghy) vs 1,230 (Hajisalam) | Two sources disagree | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ: baghyshaqlawa.net 'The Total Apartments is 1180' (five towers) (https://baghyshaqlawa.net/en/projects/roya-towers); hajisalam.com 'Number Of Unit: 1230', Project Type Apartment (https://hajisalam.com/en/roy-tower/) | — | https://baghyshaqlawa.net/en/projects/roya-towers |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 5 | Baghy only | https://baghyshaqlawa.net/en/projects/roya-towers |
 | Floors per building | 29 | Baghy 29 + 3 parking floors; Hajisalam 32 total | https://baghyshaqlawa.net/en/projects/roya-towers ; https://hajisalam.com/en/roy-tower/ |
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 220 m2, 3 bed / 3 bath - homele rent per month | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
 | Ready external-view apartment 200 m2, 3 bed / 2 bath - homele rent per month | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/roya-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$700 Monthly) and sales (https://homele.com/properties/for-sale-and-rent/erbil/roya-tower)
 
 ### Location and surroundings
 Roya Towers stands in Erbil's 'golden square' near Gulan Street (40m) and the 100m ring road, about 5 minutes from Erbil International Airport and close to Sami Abdulrahman Park, the Saad Abdullah Palace conference centre and the Divan and Rotana hotels (Baghy); Hajisalam places it between the English Village and Italian City 1. Map position (low confidence, from agency map pins): 36.191922, 43.968033. Google Maps: https://www.google.com/maps?q=36.191922,43.968033
@@ -481,7 +481,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ: baghyshaqlawa.net 'The Total Apartments is 1180' (five towers) (https://baghyshaqlawa.net/en/projects/roya-towers); hajisalam.com 'Number Of Unit: 1230', Project Type Apartment (https://hajisalam.com/en/roy-tower/)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/roya-towers"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings: monthly rentals ($350-$700 Monthly) and sales",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/roya-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.191922,43.968033",
  "publish_recommendation": "ready"
 }

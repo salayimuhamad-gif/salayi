@@ -29,7 +29,7 @@ Project ID: mountain-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total project land area (dunams) | 70.3 | converted from 175,750 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 309 | Paya and Baghy agree | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 309 | Paya: 'it will feature 309 villas available in 240 m² and 300 m² layouts'; Baghy: 'It consists of 309 villas' | https://paya-realestate.com/en/projects/mountain-view-287 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 309 | 309 villas (Paya, Baghy) | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
@@ -44,7 +44,7 @@ Project ID: mountain-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | villa | 300 | 300 | 300 | 6 | 5 bathrooms; Paya unit list: House 300 m2, 6 beds, 5 baths; homele listings show 4 bed / 4 bath and 6 bed / 6 bath variants | agency_project_page | https://paya-realestate.com/en/projects/mountain-view-287 ; https://baghyshaqlawa.net/en/projects/mountain-view |
 | house | 240, 300 | 240 | 300 | 4 | 4 bathrooms; Ready houses for sale and rent; some corner and furnished units | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for the listed House 300 m², 6 beds / 5 baths (https://paya-realestate.com/en/projects/mountain-view-287)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready corner house 300 m2, 4 bed / 4 bath - homele sale listing | 360,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
 | Ready corner house 300 m2, 4 bed / 4 bath - homele rent per month | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mountain-view |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: flexible payment plan tied to construction milestones; Baghy payment method: advance payment, after structure completion, after completion of the water and electricity system, after completion of the exterior design, on delivery (no percentages); homele lists ready houses for sale ('House in Cash') and a corner house for rent at $1,100 monthly (https://baghyshaqlawa.net/en/projects/mountain-view)
 
 ### Location and surroundings
 Mountain View is in the Hawleri Nwe (New Erbil) district of Erbil (Paya, Baghy); Baghy serves it from its Mini Slava branch. No street address are published. Map position (medium confidence, from agency map pins): 36.225333, 44.076901. Google Maps: https://www.google.com/maps?q=36.225333,44.076901
@@ -361,7 +361,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 70.3,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 309,
+   "text": "Paya: 'it will feature 309 villas available in 240 m² and 300 m² layouts'; Baghy: 'It consists of 309 villas'",
+   "source_url": "https://paya-realestate.com/en/projects/mountain-view-287"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for the listed House 300 m², 6 beds / 5 baths",
+   "source_url": "https://paya-realestate.com/en/projects/mountain-view-287"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: flexible payment plan tied to construction milestones; Baghy payment method: advance payment, after structure completion, after completion of the water and electricity system, after completion of the exterior design, on delivery (no percentages); homele lists ready houses for sale ('House in Cash') and a corner house for rent at $1,100 monthly",
+   "source_url": "https://baghyshaqlawa.net/en/projects/mountain-view"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.225333,44.076901",
  "publish_recommendation": "ready"
 }

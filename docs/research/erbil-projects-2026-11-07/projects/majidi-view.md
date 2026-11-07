@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 3+1 167 m2 - off-plan market listing | 113,500 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
 | Apartment 182 m2, 3 beds - off-plan market listing (cash) | 123,700 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/majdi-view |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Baghy payment method: advance payment 18%, after structure completion 22%, delivered 30%, remaining amount divided into 36 months; homele lists off-plan apartments for sale ('Apartment in Cash') (https://baghyshaqlawa.net/en/projects/majidi-view)
 
 ### Location and surroundings
 On Koya Road in Erbil, next to Hiwa City, between the 120 m and 150 m ring roads (Baghy). Map position (low confidence, from agency map pins): 36.204262, 44.092099. Google Maps: https://www.google.com/maps?q=36.204262,44.092099
@@ -407,7 +407,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Baghy payment method: advance payment 18%, after structure completion 22%, delivered 30%, remaining amount divided into 36 months; homele lists off-plan apartments for sale ('Apartment in Cash')",
+   "source_url": "https://baghyshaqlawa.net/en/projects/majidi-view"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.204262,44.092099",
  "publish_recommendation": "ready"
 }

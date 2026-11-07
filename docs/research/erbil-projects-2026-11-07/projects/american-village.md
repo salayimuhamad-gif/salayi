@@ -29,7 +29,7 @@ Project ID: american-village | Tier: 1 | In Erbil city: Edge (urban fringe) | La
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 398 villas | Haji Salam only | https://hajisalam.com/en/american-village/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 398 | 'Number Of Unit: 398', Project Type: Villa (hajisalam) | https://hajisalam.com/en/american-village/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (villa compound) | — |
@@ -61,7 +61,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready villa 490 m², 7 bed / 8 bath – Homele listing | 650,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
 | Ready villa 1,350 m², 5 bed / 5 bath – Homele listing | 390,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/american-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready villas/houses for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/american-village)
 
 ### Location and surroundings
 On the Erbil–Shaqlawa road north-east of Erbil (Paya, Baghy, Haji Salam). Paya's structured data places the compound at 36.3144475, 44.1606133, about 19 km north-east of the citadel and outside the 150 m ring road, on the Shaqlawa (Pirmam/Massif) road approach. Map position (medium confidence, from agency map pins): 36.314579, 44.160955. Google Maps: https://www.google.com/maps?q=36.314579,44.160955
@@ -321,7 +321,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 398,
+   "text": "'Number Of Unit: 398', Project Type: Villa (hajisalam)",
+   "source_url": "https://hajisalam.com/en/american-village/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready villas/houses for sale, prices 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/american-village"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.314579,44.160955",
  "publish_recommendation": "ready"
 }

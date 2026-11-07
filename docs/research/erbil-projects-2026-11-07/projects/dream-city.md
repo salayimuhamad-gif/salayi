@@ -29,7 +29,7 @@ Project ID: dream-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Total project land area (dunams) | 400.0 | converted from 1,000,000 m² at 1 Iraqi dunam = 2,500 m² | https://baghyshaqlawa.net/en/projects/dream-city ; https://b-arrow.com/w/index.php/en/216/dream_city_erbil |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,204 (Haji Salam); ~1,200 (Baghy) | Two sources consistent | https://hajisalam.com/en/dream-city/ ; https://baghyshaqlawa.net/en/projects/dream-city |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Baghy and b-arrow: '1200 separate housing units of different sizes, from 250m2 to 900m2'; Haji Salam: 'Number Of Unit: 1204' (Villa - House) | — | https://baghyshaqlawa.net/en/projects/dream-city |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (villa community); not stated | No building count | — |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Shop 100 m2 - monthly rent | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dream-city |
 | Office space 250 m2 - monthly rent | 1,300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/dream-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele market listings: houses, a shop, office space and a commercial building for monthly rent (e.g. 250 m² house $1,200–2,300/month) and a house for sale (450 m², $1,000,000 negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/dream-city)
 
 ### Location and surroundings
 Dream City lies on Erbil's 100-metre street, about 2 km north-west of the city centre and about five minutes by car from Erbil International Airport (Baghy; b-arrow). Haji Salam places it between the 100-metre road and the 40-metre road near the airport. Distances are as stated by the sources; none are estimated here. Map position (low confidence, from agency map pins): 36.20567, 43.976855. Google Maps: https://www.google.com/maps?q=36.20567,43.976855
@@ -419,7 +419,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 400.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Baghy and b-arrow: '1200 separate housing units of different sizes, from 250m2 to 900m2'; Haji Salam: 'Number Of Unit: 1204' (Villa - House)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/dream-city"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele market listings: houses, a shop, office space and a commercial building for monthly rent (e.g. 250 m² house $1,200–2,300/month) and a house for sale (450 m², $1,000,000 negotiable)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/dream-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.20567,43.976855",
  "publish_recommendation": "ready"
 }

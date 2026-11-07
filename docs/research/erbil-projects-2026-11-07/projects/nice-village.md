@@ -29,12 +29,12 @@ Project ID: nice-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 151 | Miran only | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 151 | Miran: 'a premium residential community of 151 exclusive villas' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 151 | 151 villas (Miran only) | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
 | Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 40,441 | Miran: 151 villas 'set within 40,441 m² of lush green space' | https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey |
 | Development phases | None named; neighbourhoods of 7 villas | Paya description | https://paya-realestate.com/en/projects/nice-village-278 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready corner villa 650 m2, 5 bed / 5 bath - homele sale listing (negotiable) | 750,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
 | Off-plan corner villa 500 m2, 6 bed / 4 bath - homele sale listing (negotiable) | 500,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/nice-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele lists ready villas for sale (mostly negotiable) and one off-plan corner house (https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey)
 
 ### Location and surroundings
 Nice Village is on Pirmam Road north of Erbil, about 1 km outside the 120m ring road, roughly 7 km from the city centre and 13 km from Erbil International Airport (Miran; Paya confirms Pirmam road). It sits on the Pirmam approach within the study scope. Map position (low confidence, from agency map pins): 36.2408384, 44.0576064. Google Maps: https://www.google.com/maps?q=36.2408384,44.0576064
@@ -371,7 +371,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 151,
+   "text": "Miran: 'a premium residential community of 151 exclusive villas'",
+   "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 40441,
+   "text": "Miran: 151 villas 'set within 40,441 m² of lush green space'",
+   "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; homele lists ready villas for sale (mostly negotiable) and one off-plan corner house",
+   "source_url": "https://miranestate.com/projects/cmnu36ndx0c1amx0f3tvq1zey"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2408384,44.0576064",
  "publish_recommendation": "ready"
 }

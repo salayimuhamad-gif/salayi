@@ -29,7 +29,7 @@ Project ID: aram-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,124 villas | Paya only | https://paya-realestate.com/en/projects/aram-garden-374 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 1,124 | 'a collection of 1,124 distinctive villas' (Paya) | https://paya-realestate.com/en/projects/aram-garden-374 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (villa compound) | — |
@@ -46,7 +46,7 @@ Project ID: aram-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | villa | 460 | 460 | 460 | 6 | 6 bathrooms; 3 floors; Type D | agency_project_page | https://paya-realestate.com/en/projects/aram-garden-374 ; https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7 |
 | villa | 700 | 700 | 700 | 6 | 6 bathrooms; 3 floors; Type E | agency_project_page | https://paya-realestate.com/en/projects/aram-garden-374 ; https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 5 house types (253, 286, 360, 460, 700 m²), each with 'View Blueprint'; miranestate 'Floor plan' column: Types A–B 2, Types C–E 3 (https://paya-realestate.com/en/projects/aram-garden-374)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa 524 m², 5 bed – Homele off-plan instalment listing (advertised) | 740,000 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-garden |
 | Villa 253 m², 4 bed – Homele off-plan listing, negotiable (advertised) | 272,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-garden |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** miranestate: payment 'Cash'; Homele listings: off-plan houses for sale tagged 'Installment' (e.g. 'Long Term Installment', 'House in Installment') (https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7)
 
 ### Location and surroundings
 Diamond Zone, north-east Erbil (Miran). Paya's structured data places the project at 36.257407, 44.047359, about 8 km north-north-east of the citadel, between the Bahrka and Pirmam road approaches. Map position (low confidence, from agency map pins): 36.257407, 44.047359. Google Maps: https://www.google.com/maps?q=36.257407,44.047359
@@ -435,7 +435,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 1124,
+   "text": "'a collection of 1,124 distinctive villas' (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/aram-garden-374"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 5 house types (253, 286, 360, 460, 700 m²), each with 'View Blueprint'; miranestate 'Floor plan' column: Types A–B 2, Types C–E 3",
+   "source_url": "https://paya-realestate.com/en/projects/aram-garden-374"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "miranestate: payment 'Cash'; Homele listings: off-plan houses for sale tagged 'Installment' (e.g. 'Long Term Installment', 'House in Installment')",
+   "source_url": "https://miranestate.com/projects/cmo9xb3km0ct6o30fidupagf7"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.257407,44.047359",
  "publish_recommendation": "ready"
 }

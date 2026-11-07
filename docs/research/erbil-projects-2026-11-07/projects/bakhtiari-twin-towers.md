@@ -30,7 +30,7 @@ Project ID: bakhtiari-twin-towers | Tier: 1 | In Erbil city: Yes | Last research
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 506 apartments, all with balconies | Low — single agency source | https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 506 | two 31-story residential towers 'that includes 506 residential units' (Paya) | https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 2 residential towers | Medium — Paya text; project name "Twin Towers" used by all sites | — |
 | Floors per building | 31 residential storeys per tower; plus 4 parking floors (whether the parking floors are included in the 31 is not stated) | Low — single agency source | https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216 |
@@ -45,7 +45,7 @@ Project ID: bakhtiari-twin-towers | Tier: 1 | In Erbil city: Yes | Last research
 | apartment | 111, 113, 115, 116, 188 | 111 | 188 | 2 | 2 bathrooms; Homele listings show 116 m2 and 117 m2 two-bedroom units (1-2 bathrooms). | agency_project_page | https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216 ; https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers |
 | apartment | 237 | 237 | 237 | 3 | 3 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 9 apartment types (studio 55 m² to 3-bed 237 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -73,7 +73,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1BR 78 m2 monthly rent - market listing | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers |
 | 2BR 117 m2 monthly rent - market listing | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: 'Apartment in Cash' for sale, a studio for sale tagged 'Installment', apartments for rent ($350, $450 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers)
 
 ### Location and surroundings
 The project is in Erbil city, in the Bakhtiari (Bakhtyari) neighbourhood: Baghy Shaqlawa gives the address as "Erbil - Bakhtyari" and serves it from its "Bakhtyari Branch Erbil"; Paya describes the site as being in the area "also known as the golden zone". No source names the street or gives distances to landmarks. Services listed inside the project itself (ground-floor hypermarket, pharmacy, barbershop per Paya) are the only "nearby services" evidenced. Map position (medium confidence, from agency map pins): 36.203145, 44.000022. Google Maps: https://www.google.com/maps?q=36.203145,44.000022
@@ -514,7 +514,28 @@ Second verification pass 2026-11-07: queries “"Bakhtiari Twin Towers" Erbil”
  ],
  "land_area_dunams": 2.8,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 506,
+   "text": "two 31-story residential towers 'that includes 506 residential units' (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 9 apartment types (studio 55 m² to 3-bed 237 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/bakhtiari-twin-towers-216"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: 'Apartment in Cash' for sale, a studio for sale tagged 'Installment', apartments for rent ($350, $450 Monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/bakhtyary-twin-towers"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.203145,44.000022",
  "publish_recommendation": "ready"
 }

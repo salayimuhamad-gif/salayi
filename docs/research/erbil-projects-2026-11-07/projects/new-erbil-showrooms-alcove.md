@@ -62,7 +62,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan corner showroom 200 m2, down-payment listing (homele market listing) | 300,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove |
 | Ready two-floor house 125 m2, 3 bed / 2 bath - asking price, negotiable (homele listing under same area) | 87,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: off-plan showrooms (152–200 m²) for sale at $200,000–$300,000 (prices labelled '(Down payment)'); one ready house negotiable (https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove)
 
 ### Location and surroundings
 The homele area name places the showrooms in New Erbil (Hawler Nwê), within the study scope. No street or landmark are published.
@@ -255,7 +255,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: off-plan showrooms (152–200 m²) for sale at $200,000–$300,000 (prices labelled '(Down payment)'); one ready house negotiable",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/new-erbil-showrooms-by-alcove"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

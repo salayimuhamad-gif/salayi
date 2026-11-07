@@ -30,7 +30,7 @@ Project ID: central-park | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 2,052 apartments | Low/Medium – single source | https://paya-realestate.com/en/projects/central-park-178 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 2,052 | The project includes 10 residential towers and contains 2,052 apartments | https://paya-realestate.com/en/projects/central-park-178 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 10 residential towers | Low/Medium – single source | https://paya-realestate.com/en/projects/central-park-178 |
 | Floors per building | Not verified | — | — |
@@ -44,7 +44,7 @@ Project ID: central-park | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | apartment | 94, 100 | 94 | 100 | 2 | 2 bathrooms; 2+1 (94-100 m2): two bedrooms, reception room, kitchen, two bathrooms, balcony | agency_project_page | https://paya-realestate.com/en/projects/central-park-178 |
 | apartment | 156 | 156 | 156 | 3 | 3 bathrooms; 3+1: three bedrooms, reception room, kitchen, three bathrooms, balcony | agency_project_page | https://paya-realestate.com/en/projects/central-park-178 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for apartments of 64, 94, 100 and 156 m² (1+1, 2+1, 3+1) (https://paya-realestate.com/en/projects/central-park-178)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -350,7 +350,24 @@ Second verification pass 2026-11-07: queries “"Central Park" Erbil Gulan Stree
  "figure_notes": [],
  "land_area_dunams": 16.4,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 2052,
+   "text": "The project includes 10 residential towers and contains 2,052 apartments",
+   "source_url": "https://paya-realestate.com/en/projects/central-park-178"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for apartments of 64, 94, 100 and 156 m² (1+1, 2+1, 3+1)",
+   "source_url": "https://paya-realestate.com/en/projects/central-park-178"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.1655977,44.0210725",
  "publish_recommendation": "review"
 }

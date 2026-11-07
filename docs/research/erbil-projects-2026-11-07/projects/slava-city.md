@@ -49,7 +49,7 @@ Project ID: slava-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | house | 250, 300, 400, 500 | 250 | 500 | — | homele 'Slava City 2' listings: 250 m2 one-floor (2 beds), 300-500 m2 (4-5 beds) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2 |
 | apartment | 121 | 121 | 121 | 2 | 2 bathrooms; Single homele listing labelled Slava City; no source describes apartments in Slava City (possibly Mini Slava) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/slava-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Slava Square (villa project within Slava City): 'View Blueprint' for the 1 listed house (250 m²) (https://paya-realestate.com/en/projects/slava-square-309)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -72,7 +72,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Slava City 2 one-floor house 250 m2, 2 bed - market listing (range USD 145,000-160,000) | 145,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2 |
 | Slava City 2 house 400 m2, 5 bed - monthly rent | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings are mainly sales; the Slava City 2 page also lists a house for rent ($800 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2)
 
 ### Location and surroundings
 On Masif (Pirmam) Road in north-east Erbil (Paya, Baghy); Slava Square pin ~0.5 km west of the main pin. Map position (low confidence, from agency map pins): 36.272094, 44.089713. Google Maps: https://www.google.com/maps?q=36.272094,44.089713
@@ -492,7 +492,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Slava Square (villa project within Slava City): 'View Blueprint' for the 1 listed house (250 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/slava-square-309"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings are mainly sales; the Slava City 2 page also lists a house for rent ($800 Monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/slava-city-2"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.272094,44.089713",
  "publish_recommendation": "ready"
 }

@@ -29,8 +29,8 @@ Project ID: life-towers-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 894 (869 apartments + 25 villas); stats box says 33 | Single source with internal conflict | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 25 | Miran: horizontal section featuring 25 two-story modern villas (210 m²) | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
+| Apartments | 869 | Miran: vertical residential towers comprising 869 apartments (0+1 studio, 1+1, 2+1, 3+1); the page's statistics box separately shows 'Units 33' | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 3 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 | Floors per building | 27 | Miran stats only | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Published price per m2 ('Price Per Meter') | 625 | USD | developer | Miran page updated 2026-09-06; accessed 2026-11-07 | https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08 |
 | Apartment 3+1 195 m2 - off-plan market listing (instalment) | 121,800 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/life-towers-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; $625/m; plan: 20% down payment, 24% tower completion, 27% key receipt, 29% monthly payment; homele lists off-plan units for sale in installment ('Long Term Installment') (https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08)
 
 ### Location and surroundings
 32 Park neighbourhood of Erbil, directly on the 120 m ring road, near Erbil International Airport and Sami Abdulrahman Park; same area as Life Towers (King and Queen).
@@ -419,7 +419,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 25,
+   "text": "Miran: horizontal section featuring 25 two-story modern villas (210 m²)",
+   "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+  },
+  "apartments": {
+   "value": 869,
+   "text": "Miran: vertical residential towers comprising 869 apartments (0+1 studio, 1+1, 2+1, 3+1); the page's statistics box separately shows 'Units 33'",
+   "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: 'Cash Installment Payment Plans'; $625/m; plan: 20% down payment, 24% tower completion, 27% key receipt, 29% monthly payment; homele lists off-plan units for sale in installment ('Long Term Installment')",
+   "source_url": "https://miranestate.com/projects/cmtpsjgjw09l6r20f80mytb08"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

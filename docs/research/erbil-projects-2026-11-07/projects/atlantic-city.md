@@ -29,12 +29,12 @@ Project ID: atlantic-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last 
 | Total project land area (dunams) | 144.0 | converted from 360,000 m² at 1 Iraqi dunam = 2,500 m² | https://homele.com/projects/the-atlantic-185 |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,539 (computed: 28 buildings x 32 apartments = 896, plus 643 villas) | Arithmetic from homele figures; no stated total | https://homele.com/projects/the-atlantic-185 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 643 | '643 Villas have two types: A and B' (Homele project page) | https://homele.com/projects/the-atlantic-185 |
+| Apartments | '28 buildings of 8-floor ... generally each building consists of 32 apartments' (Homele project page); no project total stated | — | https://homele.com/projects/the-atlantic-185 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 28 apartment buildings + 643 villas | Single agency project page | https://homele.com/projects/the-atlantic-185 |
 | Floors per building | 8 (all residential) | Single agency project page | https://homele.com/projects/the-atlantic-185 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 60,000 | '60,000 sqm of the project is greenery' (Homele project page) | https://homele.com/projects/the-atlantic-185 |
 | Development phases | No named phases; numbered apartment buildings (e.g. 22, 23, 27) and villa blocks (e.g. Block K) | Building/block numbers only | https://homele.com/projects/the-atlantic-185 ; https://paya-realestate.com/en/projects/the-atlantic-city-224 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -47,7 +47,7 @@ Project ID: atlantic-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last 
 | villa | 200 | 200 | 200 | 4 | 3 bathrooms; Villa Type B. Paya: total area 200 m2, building area 188 m2 (text also says '2 1/2 bath'). Baghy: total 188 m2, building 200 m2. Homele Block K Type B villas: 200 m2 (middle and corner). | agency_project_page | https://paya-realestate.com/en/projects/the-atlantic-city-224 ; https://baghyshaqlawa.net/en/projects/atlantic ; https://homele.com/projects/the-atlantic-185 |
 | apartment | 65, 71, 105 | 65 | 105 | — | 1 bathrooms; Off-plan listings: 65 m2 1 bed, 71 m2 1 bed, 105 m2 2 bed (homele area page, 10 result pages). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/atlantic-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Homele project page has a 'Unit Details & Floor Plans' section (1, 2 and 3 bedrooms) (https://homele.com/projects/the-atlantic-185)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan apartment 65 m2, 1 bed - listing asking price | 43,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/atlantic-city |
 | Off-plan apartment 105 m2, 2 bed - listing asking price | 65,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/atlantic-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele project page payment plans: apartments e.g. $42,000 after discount – $6,000 down payment, $6,500 at structure completion, $6,000 at interior whitewash, $6,000 at key handover, $350 monthly for 50 months; villas $149,000 – $30,000 at contract signing, $30,000 at structure completion, $29,000 at key handover, $60,000 remaining at $1,200 monthly for 50 months; villas for rent $450–$500 monthly; special offers for doctors, engineers, lawyers and university lecturers. Homele listings tagged 'Installment' (https://homele.com/projects/the-atlantic-185)
 
 ### Location and surroundings
 The Atlantic lies on the Kasnazan road on Erbil's eastern edge, near the Majdi (Majidi) Land amusement park (homele). Baghy gives the address as 'Erbil - Koya Road'. Homele files it under the 'Atlantic City' area of Erbil. Map position (high confidence, from agency map pins): 36.216158, 44.150676. Google Maps: https://www.google.com/maps?q=36.216158,44.150676
@@ -527,7 +527,36 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 144.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 643,
+   "text": "'643 Villas have two types: A and B' (Homele project page)",
+   "source_url": "https://homele.com/projects/the-atlantic-185"
+  },
+  "apartments": {
+   "value": null,
+   "text": "'28 buildings of 8-floor ... generally each building consists of 32 apartments' (Homele project page); no project total stated",
+   "source_url": "https://homele.com/projects/the-atlantic-185"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 60000,
+   "text": "'60,000 sqm of the project is greenery' (Homele project page)",
+   "source_url": "https://homele.com/projects/the-atlantic-185"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Homele project page has a 'Unit Details & Floor Plans' section (1, 2 and 3 bedrooms)",
+   "source_url": "https://homele.com/projects/the-atlantic-185"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele project page payment plans: apartments e.g. $42,000 after discount – $6,000 down payment, $6,500 at structure completion, $6,000 at interior whitewash, $6,000 at key handover, $350 monthly for 50 months; villas $149,000 – $30,000 at contract signing, $30,000 at structure completion, $29,000 at key handover, $60,000 remaining at $1,200 monthly for 50 months; villas for rent $450–$500 monthly; special offers for doctors, engineers, lawyers and university lecturers. Homele listings tagged 'Installment'",
+   "source_url": "https://homele.com/projects/the-atlantic-185"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.216158,44.150676",
  "publish_recommendation": "ready"
 }

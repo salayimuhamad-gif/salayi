@@ -34,7 +34,7 @@ Project ID: four-season-park | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source | — |
 | Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 9,000 | 9,000 square meter of landscaped garden; green area comprises 60% of the total area; 70% open area (15,270 m² development) | https://paya-realestate.com/en/projects/four-season-park-215 |
 | Development phases | Not verified | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -46,7 +46,7 @@ Project ID: four-season-park | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | apartment | 171 | 171 | 171 | 3 | 3 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/four-season-park-215 |
 | apartment | 89, 125 | 89 | 125 | — | Advertised 1BR 89 m2 (off-plan and 'ready' instalment) and 2BR 125 m2 ('ready') | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 7 units 58–171 m² (https://paya-realestate.com/en/projects/four-season-park-215)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1BR 89 m2 off-plan - homele listing asking price (labelled down-payment/instalment offer) | 66,649 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
 | 2BR 125 m2 'ready' - homele listing asking price (labelled down-payment offer) | 92,800 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/four-season-park |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: 'Ready Apartment in Installment' (89 m², $58,000); off-plan and ready units for sale (https://homele.com/properties/for-sale-and-rent/erbil/four-season-park)
 
 ### Location and surroundings
 Four Season Park is on the main Erbil–Pirmam (Masif Salahaddin) road, with access to the 120m and 150m ring roads, next to the Hiror restaurant and near Zin City (Paya). Bagh-y Shaqlawa gives 'Erbil – Masif Road (Pirmam)'. This places it within the ring-road belt on Erbil's north-eastern side. Map position (medium confidence, from agency map pins): 36.245319, 44.063926. Google Maps: https://www.google.com/maps?q=36.245319,44.063926
@@ -420,7 +420,28 @@ Second verification pass 2026-11-07: queries “"Four Season Park" Erbil Pirmam 
  ],
  "land_area_dunams": 6.1,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 9000,
+   "text": "9,000 square meter of landscaped garden; green area comprises 60% of the total area; 70% open area (15,270 m² development)",
+   "source_url": "https://paya-realestate.com/en/projects/four-season-park-215"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 7 units 58–171 m²",
+   "source_url": "https://paya-realestate.com/en/projects/four-season-park-215"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: 'Ready Apartment in Installment' (89 m², $58,000); off-plan and ready units for sale",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/four-season-park"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.245319,44.063926",
  "publish_recommendation": "ready"
 }

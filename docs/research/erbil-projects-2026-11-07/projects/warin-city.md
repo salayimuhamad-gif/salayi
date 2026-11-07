@@ -29,7 +29,7 @@ Project ID: warin-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last res
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 70 | Haji Salam only | https://hajisalam.com/en/warin-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Number Of Unit 70 for a 'House- Apartment' project; split between houses and apartments not stated (hajisalam.com) | — | https://hajisalam.com/en/warin-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
@@ -203,7 +203,20 @@ Second verification pass 2026-11-07: queries “"Warin City" Erbil”; “"وا�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Number Of Unit 70 for a 'House- Apartment' project; split between houses and apartments not stated (hajisalam.com)",
+   "source_url": "https://hajisalam.com/en/warin-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

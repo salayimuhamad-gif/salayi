@@ -46,7 +46,7 @@ Project ID: green-world-towers | Tier: 1 | In Erbil city: Yes | Last researched:
 | apartment | 50, 100, 130 | 50 | 130 | — | Individual Paya listings (studio 50 m², 1BHK 100 m², 2BHK 130 m²), status UnderConstruction | market_listing | https://www.paya-realestate.com/en/apartment-sale-50-m-green-world-towers-erbil/ysw9xii/prd ; https://www.paya-realestate.com/en/apartment-sale-100-m-green-world-towers-erbil/ivwycic/prd ; https://www.paya-realestate.com/en/apartment-sale-130-m-green-world-towers-erbil/9vpq3va/prd |
 | apartment | 51, 64, 68, 84, 95, 142, 162 | 51 | 162 | — | Ready rental listings (studio to 2-bed) on Homele area page | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for all 9 listed units – studios 52.9 and 64.35 m², 1-bed 84, 86.6 and 89.67 m², 2-bed 138, 143, 151.25 and 162 m² (https://paya-realestate.com/en/projects/green-world-towers-281)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -77,7 +77,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Rent, 142 m² 2-bed (monthly) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
 | Rent, 162 m² 2-bed (monthly, range 500–600) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-world |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: 'flexible payment plan with up to 10 years of installments, starting with a 20% down payment'; homele: ready apartments for rent ('$300 Monthly' to '$600 Monthly') (https://paya-realestate.com/en/projects/green-world-towers-281)
 
 ### Location and surroundings
 Green World Towers is in Erbil's south-western "Golden Zone", between the 100m and 120m ring roads (Paya) and addressed to the 100m Street by Baghy Shaqlawa. Paya places it near Erbil International Airport, Dream City, the UN offices and Empire World; a market rental ad independently describes the towers as "opposite the Empire building". Baghy Shaqlawa's nearest branch is its White Tower branch in Erbil. No verified distances or exact street address are available. Map position (medium confidence, from agency map pins): 36.211805, 43.970275. Google Maps: https://www.google.com/maps?q=36.211805,43.970275
@@ -642,7 +642,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 44.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for all 9 listed units – studios 52.9 and 64.35 m², 1-bed 84, 86.6 and 89.67 m², 2-bed 138, 143, 151.25 and 162 m²",
+   "source_url": "https://paya-realestate.com/en/projects/green-world-towers-281"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: 'flexible payment plan with up to 10 years of installments, starting with a 20% down payment'; homele: ready apartments for rent ('$300 Monthly' to '$600 Monthly')",
+   "source_url": "https://paya-realestate.com/en/projects/green-world-towers-281"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.211805,43.970275",
  "publish_recommendation": "ready"
 }

@@ -30,7 +30,7 @@ Project ID: aram-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | ~700 | Paya and Miran texts; Miran stats say 900 (see conflicts) | https://paya-realestate.com/en/projects/aram-towers-392 ; https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 700 | Paya: 5 residential towers 'offering approximately 700 luxurious units, including apartments and penthouses'; miranestate description: 'over 700 luxury apartments and penthouses' (miranestate statistics give 'Units 900' for 7 buildings incl. 2 business towers) | https://paya-realestate.com/en/projects/aram-towers-392 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 7 (5 residential + 2 business) | Paya text and Miran stats/text | https://paya-realestate.com/en/projects/aram-towers-392 ; https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
 | Floors per building | 30 residential; 18 business | Paya and Miran | https://paya-realestate.com/en/projects/aram-towers-392 ; https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
@@ -47,7 +47,7 @@ Project ID: aram-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 344 | 344 | 344 | 4 | 4 bathrooms; 4+1 penthouse-size units, Tower A and Tower B | agency_project_page | https://paya-realestate.com/en/projects/aram-towers-392 ; https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
 | office | 99.92, 108, 108.94, 143.53, 198.94, 259 | 99.92 | 259 | — | Business towers; Paya sizes, Miran 99/108/143/198/259 m² | agency_project_page | https://paya-realestate.com/en/projects/aram-towers-392 ; https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 12 unit types (1+1 to 4+1 apartments and offices), each with 'View Blueprint' (https://paya-realestate.com/en/projects/aram-towers-392)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Price per m² (plan: 20% down, 20% structure, 20% finishing, 20% handover, 20% over 24 months) | 980 | USD | developer | page updated 2026-08-22 | https://miranestate.com/projects/cmk3q0zwl009gqn0fdmfe077n |
 | 2+1 apartment 234 m² – Homele off-plan instalment listing (advertised) | 222,443 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate). Plan (Paya, miranestate): 20% down payment, 20% at structure/tower completion, 20% at plastering/indoor finishing, 20% at key handover, remaining 20% in monthly instalments over 24 months; price per meter $980 (miranestate). Homele listings tagged 'Installment', 'Off Plan' (https://paya-realestate.com/en/projects/aram-towers-392)
 
 ### Location and surroundings
 Ankawa area of northern Erbil, with views over the 100 m street (Miran). Paya's structured data places the project at 36.230009, 44.011402, about 4 km north of the citadel, near the 100 m ring road and the Bahrka road corridor. Map position (low confidence, from agency map pins): 36.230009, 44.011402. Google Maps: https://www.google.com/maps?q=36.230009,44.011402
@@ -503,7 +503,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 700,
+   "text": "Paya: 5 residential towers 'offering approximately 700 luxurious units, including apartments and penthouses'; miranestate description: 'over 700 luxury apartments and penthouses' (miranestate statistics give 'Units 900' for 7 buildings incl. 2 business towers)",
+   "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 12 unit types (1+1 to 4+1 apartments and offices), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate). Plan (Paya, miranestate): 20% down payment, 20% at structure/tower completion, 20% at plastering/indoor finishing, 20% at key handover, remaining 20% in monthly instalments over 24 months; price per meter $980 (miranestate). Homele listings tagged 'Installment', 'Off Plan'",
+   "source_url": "https://paya-realestate.com/en/projects/aram-towers-392"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.230009,44.011402",
  "publish_recommendation": "ready"
 }

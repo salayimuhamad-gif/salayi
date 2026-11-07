@@ -56,7 +56,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 ### Prices and payment information (dated evidence, not official price lists)
 Prices: Not verified.
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Commercial units for purchase; buying a unit offers a guaranteed lease contract (baghyshaqlawa.net, sole agent) (https://baghyshaqlawa.net/en/projects/voyage-mall)
 
 ### Location and surroundings
 Baghy Shaqlawa gives the address 'Erbil - Bahrka Road', on the Bahrka road approach north of central Erbil, inside the brief's scope; no landmark or distance are published. Map position (low confidence, from agency map pins): 36.277939, 44.016054. Google Maps: https://www.google.com/maps?q=36.277939,44.016054
@@ -189,7 +189,20 @@ Second verification pass 2026-11-07: queries “"Voyage Mall" Erbil”; “فو�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Commercial units for purchase; buying a unit offers a guaranteed lease contract (baghyshaqlawa.net, sole agent)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/voyage-mall"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.277939,44.016054",
  "publish_recommendation": "review"
 }

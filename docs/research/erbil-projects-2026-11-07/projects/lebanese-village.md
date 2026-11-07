@@ -29,8 +29,8 @@ Project ID: lebanese-village | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 3,400 (Baghy) vs 140 houses + 3,340 apartments (Haji Salam) | Sources disagree | https://baghyshaqlawa.net/en/projects/lebanese-village ; https://hajisalam.com/en/lebanese/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | Baghy: 'Zone H (Villas) Villa Type A : 48 villas'; Haji Salam: 'house 140' (https://hajisalam.com/en/lebanese/) | — | https://baghyshaqlawa.net/en/projects/lebanese-village |
+| Apartments | 3,340 | Haji Salam: 'house 140 - apartment 3340' (Baghy gives 3400 residential units between villas and apartments) | https://hajisalam.com/en/lebanese/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not stated as a total: Baghy lists buildings per zone (e.g. Zone C 6, Zone D 7, Zone E 8 + a G+24 tower); BusinessNews summary gives 55 residential buildings + 140 villas | Baghy zone list may double-count Zones B and E; no stated total | https://baghyshaqlawa.net/en/projects/lebanese-village ; https://businessnews.com.lb/cms/Story/StoryDetails/1667/Mega-Lebanese-development-in-Erbil |
 | Floors per building | Varies: G+6 to G+12 apartment buildings, G+24 tower, G+8/G+10-12 offices; houses 2 floors | Baghy zone list; Haji Salam 12 (apartments) and 2 (houses) | https://baghyshaqlawa.net/en/projects/lebanese-village ; https://hajisalam.com/en/lebanese/ |
@@ -75,7 +75,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished apartment 50 m2, 1 bed / 1 bath - homele rent per month | 325 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lebanese-village |
 | Ready furnished apartment 56 m2, 1 bed / 1 bath, instalment sale - homele listing | 48,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lebanese-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready apartments for rent ($200–$400 monthly) and installment sale of ready furnished 56 m² apartments (https://homele.com/properties/for-sale-and-rent/erbil/lebanese-village)
 
 ### Location and surroundings
 The Lebanese Village is on the new Bahrka road near Ankawa, about a 10-minute drive from Erbil International Airport (Baghy; Haji Salam: New Bahirka Road). Nobel Towers stands opposite it on the Ankawa - New Bahirka road. Map position (low confidence, from agency map pins): 36.25972, 44.012861. Google Maps: https://www.google.com/maps?q=36.25972,44.012861
@@ -659,7 +659,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Baghy: 'Zone H (Villas) Villa Type A : 48 villas'; Haji Salam: 'house 140' (https://hajisalam.com/en/lebanese/)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/lebanese-village"
+  },
+  "apartments": {
+   "value": 3340,
+   "text": "Haji Salam: 'house 140 - apartment 3340' (Baghy gives 3400 residential units between villas and apartments)",
+   "source_url": "https://hajisalam.com/en/lebanese/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready apartments for rent ($200–$400 monthly) and installment sale of ready furnished 56 m² apartments",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/lebanese-village"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.25972,44.012861",
  "publish_recommendation": "ready"
 }

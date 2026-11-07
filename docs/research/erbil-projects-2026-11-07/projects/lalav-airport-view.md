@@ -30,7 +30,7 @@ Project ID: lalav-airport-view | Tier: 1 | In Erbil city: Yes | Last researched:
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 1,135 (Paya) vs 1,155 (Miran stats); 'over 1,100' (Miran text), 1,100 (b-arrow) | Sources disagree | https://paya-realestate.com/en/projects/lalav-airport-view-226 ; https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3 ; https://b-arrow.com/w/index.php/en/214/lalav_airport_view |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ: Paya '5 buildings ... containing 1135 apartments'; Miran stats 'Units 1,155' and text 'over 1,100 residential units'; b-arrow 'a total of 1,100 residential apartments' | — | https://paya-realestate.com/en/projects/lalav-airport-view-226 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 5 | Paya, Miran and b-arrow agree | https://paya-realestate.com/en/projects/lalav-airport-view-226 ; https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3 ; https://b-arrow.com/w/index.php/en/214/lalav_airport_view |
 | Floors per building | 20 | Paya, b-arrow and Miran description say 20; Miran stats say 21 | https://paya-realestate.com/en/projects/lalav-airport-view-226 ; https://b-arrow.com/w/index.php/en/214/lalav_airport_view ; https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3 |
@@ -47,7 +47,7 @@ Project ID: lalav-airport-view | Tier: 1 | In Erbil city: Yes | Last researched:
 | apartment | 95, 107, 162 | 95 | 162 | — | Additional sizes listed only by b-arrow (95, 107 m2 as 2-bed; 162 m2 as 3-bed) | agency_project_page | https://b-arrow.com/w/index.php/en/214/lalav_airport_view |
 | apartment | 45, 90, 95, 96, 115, 151, 170 | 45 | 170 | — | Sizes advertised in homele listings (first page); prove only that the size was advertised | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lalav-airport-view |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table has a 'Floor plan' column for Studio 42–44 m², 1+1 75–80 m², 2+1 97–149 m² and 3+1 150–152 m² (shown as '—' for 2+1 97, 113, 118 and 123 m²) (https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1-bedroom apartment 80 m2, furnished - homele rent listing (per month) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-airport-view |
 | 2+1 apartment 125 m2 - homele rent listing (per month) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-airport-view |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; units listed for sale (e.g. studio 43 m² $31,000) and for rent (studios '$200/Month'); homele: ready furnished apartments for rent ('$300 Monthly' to '$550 Monthly') (https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3)
 
 ### Location and surroundings
 Lalav Airport View stands on Erbil's 120 Meter Road directly opposite Erbil International Airport (Paya, Baghy, b-arrow, Miran). Miran describes quick access to the city's business areas via the 120m ring road. No neighbourhood name are given by any source. Map position (medium confidence, from agency map pins): 36.213706, 43.960223. Google Maps: https://www.google.com/maps?q=36.213706,43.960223
@@ -626,7 +626,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 4.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ: Paya '5 buildings ... containing 1135 apartments'; Miran stats 'Units 1,155' and text 'over 1,100 residential units'; b-arrow 'a total of 1,100 residential apartments'",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-airport-view-226"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table has a 'Floor plan' column for Studio 42–44 m², 1+1 75–80 m², 2+1 97–149 m² and 3+1 150–152 m² (shown as '—' for 2+1 97, 113, 118 and 123 m²)",
+   "source_url": "https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; units listed for sale (e.g. studio 43 m² $31,000) and for rent (studios '$200/Month'); homele: ready furnished apartments for rent ('$300 Monthly' to '$550 Monthly')",
+   "source_url": "https://miranestate.com/projects/cmjsic75v006dr20fquaeknn3"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.213706,43.960223",
  "publish_recommendation": "ready"
 }

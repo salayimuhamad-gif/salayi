@@ -45,7 +45,7 @@ Project ID: erbil-one-tower | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | office | Not verified | — | — | — | Office spaces and retail outlets mentioned in Paya text; no sizes | agency_project_page | https://paya-realestate.com/en/projects/one-tower-280 |
 | apartment | 85, 93, 126, 130 | 85 | 130 | — | 'Ready' listings: 85 and 93 m2 1+1 for sale; 85, 126, 130 m2 for rent | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 7 apartment units 88–168 m² (https://paya-realestate.com/en/projects/one-tower-280)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 85 m2, 1 bed - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
 | Ready furnished apartment 126 m2, 2 bed - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready apartments for monthly rent (85–130 m², $400–750) and for sale (85–93 m², $68,500–69,100 negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower)
 
 ### Location and surroundings
 On 60 m Street in Erbil, beside the Zanyari Tower according to Baghy. Map position (medium confidence, from agency map pins): 36.174711, 44.006884. Google Maps: https://www.google.com/maps?q=36.174711,44.006884
@@ -463,7 +463,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 7 apartment units 88–168 m²",
+   "source_url": "https://paya-realestate.com/en/projects/one-tower-280"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready apartments for monthly rent (85–130 m², $400–750) and for sale (85–93 m², $68,500–69,100 negotiable)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/erbil-one-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.174711,44.006884",
  "publish_recommendation": "ready"
 }

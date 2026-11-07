@@ -30,7 +30,7 @@ Project ID: veloria-towers | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,088 | Miran stats only | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,088 | Units 1,088 (Miran project statistics) | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 3 towers (X, Y, Z) | Miran stats and homele | https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag ; https://homele.com/projects/veloria-towers-409 |
 | Floors per building | X: G-31st; Y/Z: G, UG, 1st-36th; 4 basements (Miran: 40) | homele breakdown; Miran stat differs | https://homele.com/projects/veloria-towers-409 ; https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag |
@@ -48,7 +48,7 @@ Project ID: veloria-towers | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | shop | Not verified | — | — | — | Commercial spaces G-5th (X) and G + upper ground (Y, Z) | agency_project_page | https://homele.com/projects/veloria-towers-409 |
 | apartment | 109, 114, 118, 164, 169, 218, 223, 525, 617 | 109 | 617 | — | Off-plan instalment listings; 525 and 617 m2 3-bed units not on any unit-type list | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (e.g. 114 m² 1-bed Y/Z tower, 118 m² 1-bed X tower) (https://homele.com/projects/veloria-towers-409)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 3 bed 223 m2 - off-plan instalment listing | 245,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
 | 3 bed 525 m2 'luxurious tower apartment' - off-plan instalment listing | 840,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/veloria-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Cash, Installment, Payment Plans (Miran): 25% down payment, 10% after 6 months, 15% at structure completion, 10% after 6 months, 20% on completion, 20% installments over 24 months; price per meter $1,050. homele lists the same plan per tower (X Quarter, Y House, Z House), with 20% at key handover and 20% monthly installments for 24 months (https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag)
 
 ### Location and surroundings
 Veloria Towers stands on Ankawa Street in Erbil (homele, Shahan sales-centre listing); Miran tags its listing 'Kuran Ankawa' and names Erbil International Airport, the Erbil Citadel, Pepula Park and Kuran Park as nearby landmarks. Map position (low confidence, from agency map pins): 36.216731, 43.993221. Google Maps: https://www.google.com/maps?q=36.216731,43.993221
@@ -608,7 +608,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 5.2,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1088,
+   "text": "Units 1,088 (Miran project statistics)",
+   "source_url": "https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (e.g. 114 m² 1-bed Y/Z tower, 118 m² 1-bed X tower)",
+   "source_url": "https://homele.com/projects/veloria-towers-409"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Cash, Installment, Payment Plans (Miran): 25% down payment, 10% after 6 months, 15% at structure completion, 10% after 6 months, 20% on completion, 20% installments over 24 months; price per meter $1,050. homele lists the same plan per tower (X Quarter, Y House, Z House), with 20% at key handover and 20% monthly installments for 24 months",
+   "source_url": "https://miranestate.com/projects/cmsx73gf401y0r20fnlbnqzag"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.216731,43.993221",
  "publish_recommendation": "ready"
 }

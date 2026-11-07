@@ -29,8 +29,8 @@ Project ID: harsham-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 600 houses + 150 apartments (Baghy) vs 500 (Haji Salam) | Sources disagree | https://baghyshaqlawa.net/en/projects/harsham-city-1 ; https://hajisalam.com/en/harsham-1/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | Sources differ: Baghy Shaqlawa 'They Are 600 houses and each of them 200 meter or 300 meter'; Haji Salam (Harsham 1) 'Project Type: House', 'Number Of Unit: 500' | — | https://baghyshaqlawa.net/en/projects/harsham-city-1 |
+| Apartments | 150 | Baghy Shaqlawa: 'The project consists of 600 houses and 150 apartments' | https://baghyshaqlawa.net/en/projects/harsham-city-1 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
 | Floors per building | 1 floor (houses, Haji Salam) | Haji Salam only; apartment floors not stated | https://hajisalam.com/en/harsham-1/ |
@@ -62,7 +62,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house 200 m2, 2 bed / 1 bath - homele rent per month ('Harsham City' area) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city |
 | Ready house 200 m2 opposite garden, 2 bed / 1 bath - homele rent per month ('Harsham City' area) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/harsham-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele area 'Harsham City' (phase number not given): ready 200 m² houses for rent ('$400 Monthly', '$600 Monthly') (https://homele.com/properties/for-sale-and-rent/erbil/harsham-city)
 
 ### Location and surroundings
 Harsham City 1 is on the old Erbil-Bahrka road on the Ankawa side of Erbil (Baghy: 'Erbil - Ankawa'; Haji Salam: 'Bahirka old Road'). Pank City lies opposite it on the same road. Map position (low confidence, from agency map pins): 36.260447, 43.99495. Google Maps: https://www.google.com/maps?q=36.260447,43.99495
@@ -351,7 +351,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Sources differ: Baghy Shaqlawa 'They Are 600 houses and each of them 200 meter or 300 meter'; Haji Salam (Harsham 1) 'Project Type: House', 'Number Of Unit: 500'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/harsham-city-1"
+  },
+  "apartments": {
+   "value": 150,
+   "text": "Baghy Shaqlawa: 'The project consists of 600 houses and 150 apartments'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/harsham-city-1"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele area 'Harsham City' (phase number not given): ready 200 m² houses for rent ('$400 Monthly', '$600 Monthly')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/harsham-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.260447,43.99495",
  "publish_recommendation": "ready"
 }

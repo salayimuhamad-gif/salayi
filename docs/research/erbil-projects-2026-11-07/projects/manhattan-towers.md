@@ -34,7 +34,7 @@ Project ID: manhattan-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 9 | Paya and Miran agree | https://paya-realestate.com/en/projects/manhattan-towers-322 ; https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm |
 | Floors per building | 26 (incl. parking and commercial floors; 22 residential) | Paya and Miran agree | https://paya-realestate.com/en/projects/manhattan-towers-322 ; https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Approximately 48,000 m² land; 22% for buildings while 78% is dedicated to green areas and shared facilities (Paya; Miran: 78% to green spaces and public facilities) | — | https://paya-realestate.com/en/projects/manhattan-towers-322 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -46,7 +46,7 @@ Project ID: manhattan-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2
 | apartment | 148, 157 | 148 | 157 | 2 | Sizes only seen in homele off-plan listings | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/manhattan-towers |
 | shop | Not verified | — | — | — | Commercial floors in each tower (no sizes) | agency_project_page | https://paya-realestate.com/en/projects/manhattan-towers-322 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for all 5 listed apartments (101.26–213.13 m², 1–3 beds) (https://paya-realestate.com/en/projects/manhattan-towers-322)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 157 m2, 2 beds - off-plan market listing | 112,100 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/manhattan-towers |
 | Apartment 3+1 213 m2 - off-plan market listing (Miran listing card) | 155,500 | USD | developer | accessed 2026-11-07 | https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; $730/m; plan: 18% down payment, 17% first payment, 20% second payment, 45% monthly over 72 months; homele lists off-plan apartments for sale in installment ('Long Term Installment') (https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm)
 
 ### Location and surroundings
 On the 120 m ring road in Erbil (Paya, Miran); Miran listing cards label units 'Safeen'. No exact address published. Map position (low confidence, from agency map pins): 36.2172129, 44.0631386. Google Maps: https://www.google.com/maps?q=36.2172129,44.0631386
@@ -425,7 +425,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 19.2,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Approximately 48,000 m² land; 22% for buildings while 78% is dedicated to green areas and shared facilities (Paya; Miran: 78% to green spaces and public facilities)",
+   "source_url": "https://paya-realestate.com/en/projects/manhattan-towers-322"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for all 5 listed apartments (101.26–213.13 m², 1–3 beds)",
+   "source_url": "https://paya-realestate.com/en/projects/manhattan-towers-322"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: 'Cash Installment Payment Plans'; $730/m; plan: 18% down payment, 17% first payment, 20% second payment, 45% monthly over 72 months; homele lists off-plan apartments for sale in installment ('Long Term Installment')",
+   "source_url": "https://miranestate.com/projects/cmp2k8tfv01t8qv0fx0onwnsm"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2172129,44.0631386",
  "publish_recommendation": "ready"
 }

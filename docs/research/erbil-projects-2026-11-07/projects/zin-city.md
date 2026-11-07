@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house 250 m2, 5 bed, 4 bath - rent per month | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zin-city |
 | Ready large house 1,000 m2, 7 bed, 10 bath - negotiable | 700,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zin-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings show houses and apartments for sale and for monthly rent (USD 450-650/month) (https://homele.com/properties/for-sale-and-rent/erbil/zin-city)
 
 ### Location and surroundings
 Zin City lies on the Erbil–Massif (Pirmam) road in north-eastern Erbil (Baghy Shaqlawa). Paya describes Four Season Park on the Erbil–Pirmam road, next to the Hiror restaurant, as 'nearby Zin city' with access to the 120m and 150m ring roads. Map position (low confidence, from agency map pins): 36.25239, 44.062743. Google Maps: https://www.google.com/maps?q=36.25239,44.062743
@@ -341,7 +341,20 @@ Second verification pass 2026-11-07: queries “"Zin City" Erbil Pirmam road”;
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings show houses and apartments for sale and for monthly rent (USD 450-650/month)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/zin-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.25239,44.062743",
  "publish_recommendation": "ready"
 }

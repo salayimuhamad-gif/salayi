@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 1 bed 104 m2 - monthly rent | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond |
 | Apartment 1 bed 110 m2 - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready 1-bed apartments for monthly rent (91–110 m², $400–650/month) (https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond)
 
 ### Location and surroundings
 Empire Diamond Towers stands on the 100-metre road on the western side of the Empire World development, about 1 km from Erbil International Airport and about 2 km from the centre of Erbil, according to Paya (the same wording appears on Paya's Empire Pearl page). Distances are as stated and are not re-estimated here. Map position (low confidence, from agency map pins): 36.201114, 43.965876. Google Maps: https://www.google.com/maps?q=36.201114,43.965876
@@ -520,7 +520,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready 1-bed apartments for monthly rent (91–110 m², $400–650/month)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/empire-diamond"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.201114,43.965876",
  "publish_recommendation": "ready"
 }

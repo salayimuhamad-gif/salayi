@@ -29,7 +29,7 @@ Project ID: hiran-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 504 | Haji Salam: 'Project Type: House', 'Number Of Unit: 504' | https://hajisalam.com/en/hiran-city-2/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source states it | — |
@@ -152,7 +152,20 @@ Second verification pass 2026-11-07: queries “"Hiran City 2" OR "Hiran 2" Erbi
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 504,
+   "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 504'",
+   "source_url": "https://hajisalam.com/en/hiran-city-2/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

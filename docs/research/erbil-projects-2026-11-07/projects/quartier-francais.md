@@ -30,11 +30,11 @@ Project ID: quartier-francais | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Plots or parcels | Not verified | — | — |
 | Total housing units | About 4,000 | Paya 'nearly 4,000'; homele 'about 4000' | https://paya-realestate.com/en/projects/quartier-français-316 ; https://homele.com/projects/quartier-francias-411 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 4,000 | About 4000 residential units in total (homele project page); Paya: 'nearly 4,000 modern units' | https://homele.com/projects/quartier-francias-411 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 11 | Paya and homele agree | https://paya-realestate.com/en/projects/quartier-français-316 ; https://homele.com/projects/quartier-francias-411 |
 | Floors per building | 36 | homele: 3 basement + 2 commercial + 31 residential | https://homele.com/projects/quartier-francias-411 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 60% of the project will be turned into greenery | — | https://homele.com/projects/quartier-francias-411 |
 | Development phases | None numbered; tower codes A1-D2 | homele lists 9 codes | https://homele.com/projects/quartier-francias-411 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -47,7 +47,7 @@ Project ID: quartier-francais | Tier: 1 | In Erbil city: Yes | Last researched: 
 | apartment | 90, 98, 140, 158, 185, 280 | 90 | 280 | — | Off-plan instalment listings (3 listing pages; first page read) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/quarter-franchise |
 | shop | Not verified | — | — | — | Two commercial floors per tower; homele type 'Commercial Floor' | agency_project_page | https://homele.com/projects/quartier-francias-411 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for each of 6 listed apartment types (90-280 m²); homele project page has a 'Unit Details & Floor Plans' section (https://paya-realestate.com/en/projects/quartier-français-316)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 90 m2 plan: 10% down payment (then $250/month x 36, $15,600 at handover, $350/month x 7 years, $1,000/year x 10 years) | 7,100 | USD | developer | posted 2026-09-26 | https://homele.com/projects/quartier-francias-411 |
 | Off-plan 90 m2, 1 bed, long-term instalment - homele listing | 70,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/quarter-franchise |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment plan (90 m² example): $71,100 total; 10% down payment $7,100; $250 monthly for 36 months; $15,600 at key handover; $350 monthly for 7 years; $1,000 yearly for 10 years; listings also labelled 'in Installment' (https://homele.com/projects/quartier-francias-411)
 
 ### Location and surroundings
 Quartier Français is on the Bahrka (Baharka) Road near the Azadi Nwe (New Azadi) neighbourhood of Erbil (Paya; homele project page). The Bahrka road approach is within the study scope. Map position (medium confidence, from agency map pins): 36.268606, 44.017648. Google Maps: https://www.google.com/maps?q=36.268606,44.017648
@@ -439,7 +439,32 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 24.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 4000,
+   "text": "About 4000 residential units in total (homele project page); Paya: 'nearly 4,000 modern units'",
+   "source_url": "https://homele.com/projects/quartier-francias-411"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "60% of the project will be turned into greenery",
+   "source_url": "https://homele.com/projects/quartier-francias-411"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for each of 6 listed apartment types (90-280 m²); homele project page has a 'Unit Details & Floor Plans' section",
+   "source_url": "https://paya-realestate.com/en/projects/quartier-français-316"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment plan (90 m² example): $71,100 total; 10% down payment $7,100; $250 monthly for 36 months; $15,600 at key handover; $350 monthly for 7 years; $1,000 yearly for 10 years; listings also labelled 'in Installment'",
+   "source_url": "https://homele.com/projects/quartier-francias-411"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.268606,44.017648",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: beverly-hills | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 386 | 'This exclusive development consists of 386 modern villas' (Paya) | https://paya-realestate.com/en/projects/beverly-hills-298 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 386 villas | Paya only | https://paya-realestate.com/en/projects/beverly-hills-298 |
@@ -44,7 +44,7 @@ Project ID: beverly-hills | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | villa | 308 | 308 | 308 | 4 | 2 bathrooms; 'Type (308m)' on Miran unit-type table; one listing at USD 550,000. | agency_project_page | https://miranestate.com/projects/cmo475drg06two30fg34o7mgz |
 | villa | 270, 307, 320, 485, 640, 685, 1,089 | 270 | 1,089 | — | Off-plan listings: 270 m2 4 bed; 307 and 320 m2 5 bed; 485 m2 5 bed; 640, 685, 1089 m2 6 bed (homele, 4 result pages). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** miranestate 'Unit Types' table with a 'Floor plan' column: Type A 270 m² – 2, Type B 320 m² – 3, Type C 485 m² – 3, Type D 650 m² – 3, Type E 1050 m² – 3 (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan villa 640 m2, 6 bed - listing asking price | 1,156,662 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
 | Off-plan villa 1089 m2, 6 bed - listing asking price | 2,141,419 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beverly-hills |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% at key handover; price per meter $1,500. Homele listings: off-plan villas for sale, tagged 'Installment' or offered with down payment (e.g. 'Villa with %20 Downpayment') (https://miranestate.com/projects/cmo475drg06two30fg34o7mgz)
 
 ### Location and surroundings
 Beverly Hills is in Erbil's Golden Square area on the 120-metre ring road, directly opposite Erbil International Airport (Paya). Miran's sale listing is labelled 'Golden Zone'. No source gives a cross-street. Map position (low confidence, from agency map pins): 36.214071, 43.966152. Google Maps: https://www.google.com/maps?q=36.214071,43.966152
@@ -415,7 +415,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 386,
+   "text": "'This exclusive development consists of 386 modern villas' (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/beverly-hills-298"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type A 270 m² – 2, Type B 320 m² – 3, Type C 485 m² – 3, Type D 650 m² – 3, Type E 1050 m² – 3",
+   "source_url": "https://miranestate.com/projects/cmo475drg06two30fg34o7mgz"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% at key handover; price per meter $1,500. Homele listings: off-plan villas for sale, tagged 'Installment' or offered with down payment (e.g. 'Villa with %20 Downpayment')",
+   "source_url": "https://miranestate.com/projects/cmo475drg06two30fg34o7mgz"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.214071,43.966152",
  "publish_recommendation": "ready"
 }

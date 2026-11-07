@@ -58,8 +58,8 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Item | Value | Currency | Type | Date | Source |
 |---|---|---|---|---|---|
 | Monthly service charge paid by tenants (electricity excluded) - not the rent itself | 50 | USD | developer | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/nawroz-city |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Maintenance or service charges:** Baghy: 'Cost Of Services (50$) Per Month' – electricity fees are not included in the service (stated under the 130 m² apartment) (https://baghyshaqlawa.net/en/projects/nawroz-city)
+- **Purchasing or rental arrangements:** Baghy: 'These Apartments Are Only For RENT' (https://baghyshaqlawa.net/en/projects/nawroz-city)
 
 ### Location and surroundings
 Nawroz City is on Erbil's 120m ring road directly behind Majidi Mall on Koya Road, on the eastern side of the city (Baghy). Map position (low confidence, from agency map pins): 36.181373, 44.068956. Google Maps: https://www.google.com/maps?q=36.181373,44.068956
@@ -244,7 +244,24 @@ Second verification pass 2026-11-07: queries “"Nawroz City" Erbil BC Group apa
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": {
+   "value": 50,
+   "text": "Baghy: 'Cost Of Services (50$) Per Month' – electricity fees are not included in the service (stated under the 130 m² apartment)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/nawroz-city"
+  },
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Baghy: 'These Apartments Are Only For RENT'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/nawroz-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.181373,44.068956",
  "publish_recommendation": "review"
 }

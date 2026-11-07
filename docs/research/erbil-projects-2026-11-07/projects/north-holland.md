@@ -34,7 +34,7 @@ Project ID: north-holland | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 towers | Paya only | https://paya-realestate.com/en/projects/north-holland-project-257 |
 | Floors per building | 20 | Paya only | https://paya-realestate.com/en/projects/north-holland-project-257 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | About 40% of the project area is allocated for greenery and gardens | — | https://paya-realestate.com/en/projects/north-holland-project-257 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: north-holland | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 210 | 210 | 210 | 3 | 3 bathrooms; Paya unit table; all five Paya prices equal USD 790 per m2 (calculated) | agency_project_page | https://paya-realestate.com/en/projects/north-holland-project-257 |
 | apartment | 140 | 140 | 140 | 2 | 2 bathrooms; Two off-plan listings (corner / external view), labelled down payment | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/north-holand |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 5 listed apartment types (90, 96, 135, 140, 210 m²) (https://paya-realestate.com/en/projects/north-holland-project-257)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan corner apartment 140 m2, 2 bed - listing asking price (down-payment label) | 100,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/north-holand |
 | Off-plan external-view apartment 140 m2, 2 bed - listing asking price (down-payment label) | 110,600 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/north-holand |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Installments: first payment 17%, structure 23%, receive 25%, the rest 35% in monthly installments (https://paya-realestate.com/en/projects/north-holland-project-257)
 
 ### Location and surroundings
 On Mosul Road in Erbil, opposite Dream City (Baghy address). Map position (medium confidence, from agency map pins): 36.207774, 43.963793. Google Maps: https://www.google.com/maps?q=36.207774,43.963793
@@ -361,7 +361,28 @@ Second verification pass 2026-11-07: queries “"North Holland" Erbil towers Mos
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "About 40% of the project area is allocated for greenery and gardens",
+   "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 5 listed apartment types (90, 96, 135, 140, 210 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Installments: first payment 17%, structure 23%, receive 25%, the rest 35% in monthly installments",
+   "source_url": "https://paya-realestate.com/en/projects/north-holland-project-257"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.207774,43.963793",
  "publish_recommendation": "ready"
 }

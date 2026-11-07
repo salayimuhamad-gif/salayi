@@ -30,11 +30,11 @@ Project ID: centro-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 172 | Single source | https://paya-realestate.com/en/projects/centro-tower-274 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 172 | 172 Residential units (one tower of housing units plus two floors of business offices) | https://paya-realestate.com/en/projects/centro-tower-274 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 1 tower | Single source, explicit | https://paya-realestate.com/en/projects/centro-tower-274 |
 | Floors per building | Not verified (two office floors; underground parking) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 1,600 | 1600 Square meters from garden & green space | https://paya-realestate.com/en/projects/centro-tower-274 |
 | Development phases | None reported (single tower) | — | https://paya-realestate.com/en/projects/centro-tower-274 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -46,7 +46,7 @@ Project ID: centro-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | apartment | 55, 85, 107 | 55 | 107 | — | Ready units for sale: 55 m2 studio, 85 m2 1 bed / 1 bath, 107 m2 2 bed / 1 bath. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/centro-tower |
 | office | Not verified | — | — | — | 2 floors; Two floors of business offices; no unit sizes published. | agency_project_page | https://paya-realestate.com/en/projects/centro-tower-274 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 14 units: studios 47.8–55.1 m², 1+1 86–102.5 m², 2+1 107–125 m² (https://paya-realestate.com/en/projects/centro-tower-274)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -444,7 +444,28 @@ Second verification pass 2026-11-07: queries “"Centro Tower" Erbil”; “"س�
  "figure_notes": [],
  "land_area_dunams": 2.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 172,
+   "text": "172 Residential units (one tower of housing units plus two floors of business offices)",
+   "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 1600,
+   "text": "1600 Square meters from garden & green space",
+   "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 14 units: studios 47.8–55.1 m², 1+1 86–102.5 m², 2+1 107–125 m²",
+   "source_url": "https://paya-realestate.com/en/projects/centro-tower-274"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.206172,43.961078",
  "publish_recommendation": "review"
 }

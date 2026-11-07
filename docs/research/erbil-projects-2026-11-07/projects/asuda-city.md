@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Residential plot 200 m² (negotiable) | 152,500 | USD | resale | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asuda-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listing: residential plot (200 m²) for sale, $152,500 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city)
 
 ### Location and surroundings
 The agency project page gives the address as "Erbil – Kirkuk Road" (https://baghyshaqlawa.net/en/projects/asuda-city), i.e. the southern corridor of Erbil toward Kirkuk, which is within the Andaz city scope. Homele lists Asuda City as an area of Erbil (https://homele.com/properties/for-sale-and-rent/erbil/asuda-city). Erbil Governorate treats Asuda City as a neighbourhood receiving public street-paving and sewage works from the governorate development budget (2023). The agency names its "Cihan City Branch Erbil" as the nearest branch, which suggests proximity to Cihan City, but no distance is given. No verified landmarks or distances are available. Map position (low confidence, from agency map pins): 36.108702, 44.024204. Google Maps: https://www.google.com/maps?q=36.108702,44.024204
@@ -297,7 +297,20 @@ Second verification pass 2026-11-07: queries “"Asuda City" Erbil”; “"Asuda
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listing: residential plot (200 m²) for sale, $152,500 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/asuda-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.108702,44.024204",
  "publish_recommendation": "review"
 }

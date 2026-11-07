@@ -29,8 +29,8 @@ Project ID: noble-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 450 houses + 465 apartments (no total stated) | Haji Salam only | https://hajisalam.com/en/noble-city/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 450 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
+| Apartments | 465 | Haji Salam: 'house 450 - Apartment 465' | https://hajisalam.com/en/noble-city/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Number of apartment buildings not stated (Nobel Towers' 2 towers are a separate entry) | — |
 | Floors per building | 1 (houses); apartment buildings not stated | Haji Salam only | https://hajisalam.com/en/noble-city/ |
@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 200 m2, 2 bed - sale listing | 140,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
 | House 200 m2, 2 bed - sale listing | 160,000 | USD | resale | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/noble-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele lists one ready furnished house for sale; Baghy related listings show houses for sale and an 83 m² apartment for rent (https://homele.com/properties/for-sale-and-rent/erbil/nobel-city)
 
 ### Location and surroundings
 Haji Salam places Noble City on the old Bahirka road, the area north of Ankawa; Paya files the neighbouring Nobel Towers (Ankawa - New Bahirka Road, opposite the Lebanese Village) under the 'Nobel City' area. The map pin published for this project was not used because it contradicts the stated location.
@@ -381,7 +381,28 @@ Second verification pass 2026-11-07: queries “"Noble City" OR "Nobel City" Erb
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 450,
+   "text": "Haji Salam: 'house 450 - Apartment 465'",
+   "source_url": "https://hajisalam.com/en/noble-city/"
+  },
+  "apartments": {
+   "value": 465,
+   "text": "Haji Salam: 'house 450 - Apartment 465'",
+   "source_url": "https://hajisalam.com/en/noble-city/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele lists one ready furnished house for sale; Baghy related listings show houses for sale and an 83 m² apartment for rent",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/nobel-city"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

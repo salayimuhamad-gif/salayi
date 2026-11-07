@@ -47,7 +47,7 @@ Project ID: english-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 193 | 193 | 193 | 4 | 3 bathrooms; 4+1 | agency_project_page | https://paya-realestate.com/en/projects/english-tower-163 ; https://homele.com/projects/english-tower-166 |
 | apartment | 83, 87, 101, 111, 125, 126, 186, 193 | 83 | 193 | — | Off-plan units advertised (1–4 bedrooms), mostly instalment offers | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/english-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints/floor plans published for 17 unit types 52–211 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans', 17 items) (https://paya-realestate.com/en/projects/english-tower-163)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 3BR 211 m2 - homele project page (top of range 53,560–217,330) | 217,330 | USD | developer | page posted 2025-01-21; accessed 2026-11-07 | https://homele.com/projects/english-tower-166 |
 | 1BR 83 m2 off-plan - homele market listing asking price (negotiable) | 48,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/english-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: 40% down payment, remaining 60% in monthly installments over 48 months ($1,070/m²). Homele (King Insaat sales center, studio $53,560): 20% down payment, 20% on completion of structure, 30% on exterior finishing, then $446 monthly for 36 months (https://paya-realestate.com/en/projects/english-tower-163)
 
 ### Location and surroundings
 English Tower is inside English Village in Erbil's so-called Golden Zone (Paya; Bagh-y: 'Inside English Village'; served by Bagh-y's English Village branch). English Village itself lies between the 40m and 100m streets near Sami Abdulrahman Park (see English Village profile). Homele's map tab lists nearby restaurants, schools, malls, transport, gym, hospital and mosque, without distances. Map position (high confidence, from agency map pins): 36.193123, 43.967479. Google Maps: https://www.google.com/maps?q=36.193123,43.967479
@@ -547,7 +547,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints/floor plans published for 17 unit types 52–211 m² (Paya 'View Blueprint'; homele 'Unit Details & Floor Plans', 17 items)",
+   "source_url": "https://paya-realestate.com/en/projects/english-tower-163"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: 40% down payment, remaining 60% in monthly installments over 48 months ($1,070/m²). Homele (King Insaat sales center, studio $53,560): 20% down payment, 20% on completion of structure, 30% on exterior finishing, then $446 monthly for 36 months",
+   "source_url": "https://paya-realestate.com/en/projects/english-tower-163"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.193123,43.967479",
  "publish_recommendation": "ready"
 }

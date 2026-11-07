@@ -29,7 +29,7 @@ Project ID: harsham-city-3 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 500 | Haji Salam only | https://hajisalam.com/en/harsham-city-3/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 500 | Haji Salam: 'Project Type: House', 'Number Of Unit: 500' | https://hajisalam.com/en/harsham-city-3/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
@@ -202,7 +202,20 @@ Second verification pass 2026-11-07: queries “"Harsham 3" OR "Harsham City 3" 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 500,
+   "text": "Haji Salam: 'Project Type: House', 'Number Of Unit: 500'",
+   "source_url": "https://hajisalam.com/en/harsham-city-3/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

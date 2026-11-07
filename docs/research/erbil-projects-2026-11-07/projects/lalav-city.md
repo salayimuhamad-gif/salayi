@@ -30,7 +30,7 @@ Project ID: lalav-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,680 | Baghy breakdown 1,008 + 480 + 192; b-arrow says 1,795 | https://baghyshaqlawa.net/en/projects/lalav-city ; https://b-arrow.com/w/index.php/en/255/lalav_city |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ: Baghy Shaqlawa '1680 apartments divided on 24 buildings' (Block A 1008 two-bedroom, Block B 480 one-bedroom, Block C 192 three-bed); b-arrow '23 buildings that include 1795 apartment units' | — | https://baghyshaqlawa.net/en/projects/lalav-city |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 23 | Paya, b-arrow, Baghy block breakdown; Baghy headline says 24 | https://paya-realestate.com/en/projects/lalav-city-221 ; https://b-arrow.com/w/index.php/en/255/lalav_city ; https://baghyshaqlawa.net/en/projects/lalav-city |
 | Floors per building | 12 | Paya and Baghy agree | https://paya-realestate.com/en/projects/lalav-city-221 ; https://baghyshaqlawa.net/en/projects/lalav-city |
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 3-bedroom apartment 175 m2, furnished - homele sale listing | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city |
 | 2-bedroom apartment 125 m2, furnished - homele rent listing (per month) | 450 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: 'payment 50% paid 50% will pay with recieving key (monthly payment)'; homele: 'Ready Apartment in Cash' and ready apartments for rent ('$450 Monthly', '$500 Monthly') (https://paya-realestate.com/en/projects/lalav-city-221)
 
 ### Location and surroundings
 Lalav City is on Erbil's 150 Meter Road next to Ganjan City (Baghy), on the Bahrka road side of the city (Paya mentions Bahirka road; b-arrow '150m Street'). Paya's text refers to '120m'; the 150m placement is supported by two sources. Map position (low confidence, from agency map pins): 36.2906409, 44.0217115. Google Maps: https://www.google.com/maps?q=36.2906409,44.0217115
@@ -468,7 +468,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ: Baghy Shaqlawa '1680 apartments divided on 24 buildings' (Block A 1008 two-bedroom, Block B 480 one-bedroom, Block C 192 three-bed); b-arrow '23 buildings that include 1795 apartment units'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/lalav-city"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: 'payment 50% paid 50% will pay with recieving key (monthly payment)'; homele: 'Ready Apartment in Cash' and ready apartments for rent ('$450 Monthly', '$500 Monthly')",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-city-221"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2906409,44.0217115",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: aram-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | ≈900–908 villas (disputed with 662, see above) | — | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Paya: 'contains 900 villas'; Homele project page (homele.com/projects/aram-village2-383): 'consists of 908 two-floor villa' | — | https://paya-realestate.com/en/projects/aram-village-2-266 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | ≈900 villas: paya "contains 900 villas"; homele project page "908 two-floor villa"; roya snippet "662 villas with 7 different types" (planned) | two primary sites agree on ~900; roya 662 may be an earlier planning figure or refer to another phase | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://homele.com/projects/aram-village2-383 ; https://roya-iq.com/?p=9082 |
@@ -46,7 +46,7 @@ Project ID: aram-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | villa | 242, 276, 345, 617, 1,100 | 242 | 1,100 | — | paya unit table: 242 m² 4 bed/4 bath; 276 m² 4/4; 345 m² 5/5; 617 m² 5/6; 1100 m² 5/6 (bedroom count for 1100 m² conflicts with homele Type A = 6) | agency_project_page | https://paya-realestate.com/en/projects/aram-village-2-266 |
 | house | 242, 276, 345, 550, 1,100 | 242 | 1,100 | — | 2 floors; Listings: 242 m² 4/3 ready; 276 m² 4/4 ready; 345 m² 5/4–5/5 ready; 550 m² 5–6 bed off-plan; 1100 m² 6/6 ready and off-plan | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 5 house types (242, 276, 345, 617, 1100 m²), each with 'View Blueprint'; Homele project page has a 'Unit Details & Floor Plans' section (Type A 1100 m², Type B 550 m², ...) (https://paya-realestate.com/en/projects/aram-village-2-266)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -76,7 +76,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1100 m² off-plan structure opposite garden 6/6 (negotiable) | 1,200,000 | USD | resale | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
 | 345 m² two-floor house 5/4, monthly rent | 1,500 | USD | rent | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-village-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele project page: 'Cash Payment'; Homele listings: houses for sale (some off-plan, some 'Negotiable') and for rent ($1,500 Monthly) (https://homele.com/projects/aram-village2-383)
 
 ### Location and surroundings
 Aram Village 2 is in the north-western urban belt of Erbil city, on the 120 m ring road directly behind Aram Village 1 (paya; homele project page; baghyshaqlawa address "Erbil – 120m Street"). The paya page places it "on 120M-150M" and on "several public streets leading to Erbil International Airport", and claims 5 minutes to the 120 m and 150 m highways, 8 km to the city centre and 12 km to the airport; these distances are agency statements and were not independently verified. The homele project page lists nearby categories (restaurants, schools, shopping malls, transportation, gym, hospital, mosque) but names no specific landmarks. Map position (high confidence, from agency map pins): 36.247552, 44.043387. Google Maps: https://www.google.com/maps?q=36.247552,44.043387
@@ -659,7 +659,28 @@ Second verification pass 2026-11-07: queries “"Aram Village 2" Erbil”; “"A
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Paya: 'contains 900 villas'; Homele project page (homele.com/projects/aram-village2-383): 'consists of 908 two-floor villa'",
+   "source_url": "https://paya-realestate.com/en/projects/aram-village-2-266"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 5 house types (242, 276, 345, 617, 1100 m²), each with 'View Blueprint'; Homele project page has a 'Unit Details & Floor Plans' section (Type A 1100 m², Type B 550 m², ...)",
+   "source_url": "https://paya-realestate.com/en/projects/aram-village-2-266"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele project page: 'Cash Payment'; Homele listings: houses for sale (some off-plan, some 'Negotiable') and for rent ($1,500 Monthly)",
+   "source_url": "https://homele.com/projects/aram-village2-383"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.247552,44.043387",
  "publish_recommendation": "ready"
 }

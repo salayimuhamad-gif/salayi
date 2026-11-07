@@ -29,7 +29,7 @@ Project ID: kamarani-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 201 houses + apartments (count not stated) | Haji Salam | https://hajisalam.com/en/kamarany-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 201 | Haji Salam: Project Type 'House- Apartment'; 'Number Of Unit: house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 7 apartment buildings (plus 201 houses) | Haji Salam 'house 201 - buildings 7' | https://hajisalam.com/en/kamarany-city/ |
@@ -213,7 +213,20 @@ Second verification pass 2026-11-07: queries “"Kamarany City" OR "Kamarani Cit
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 201,
+   "text": "Haji Salam: Project Type 'House- Apartment'; 'Number Of Unit: house 201 - buildings 7'",
+   "source_url": "https://hajisalam.com/en/kamarany-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

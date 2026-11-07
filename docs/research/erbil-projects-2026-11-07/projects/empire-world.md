@@ -29,9 +29,9 @@ Project ID: empire-world | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | 300.0 | converted from 750,000 m² at 1 Iraqi dunam = 2,500 m² | https://www.iraq-businessnews.com/2014/04/15/empire-world-on-track-for-2017-completion/ ; https://marcopolis.net/?p=1943 |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified as a total; see sub-project entries | Only sub-project counts given | https://baghyshaqlawa.net/en/projects/empire-world |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Villas / houses | 300 | Royal Villas: 300 villas (plot area 565,000 m²) | https://baghyshaqlawa.net/en/projects/empire-world |
+| Apartments | Royal Apartments: 'Total apartments: 804'; Residential Wings: 'A total of 2,008 apartments' (no project-wide total stated) | — | https://baghyshaqlawa.net/en/projects/empire-world |
+| Commercial units | Empire Business Towers: T1 9 floors x 4 offices, 8 floors x 2 offices, 6 floors x 1 office; T2–T5 each floor 7 offices; total not stated | — | https://baghyshaqlawa.net/en/projects/empire-world |
 | Towers / apartment buildings | Not verified as a total (news summary: 88 towers + 300 villas planned, 2014) | No current total on primary sites | https://marcopolis.net/?p=1943 |
 | Floors per building | Varies: villas 2; Royal Apartments 10–12 (Haji 9–11); Wings 9–27 (Miran 9–31); Business Towers 23–27; Business Complex 6; West Diamond 25 | Sub-project figures from Baghy/Haji/Miran | https://baghyshaqlawa.net/en/projects/empire-world ; https://hajisalam.com/en/empire-world/ |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -681,7 +681,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 300.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 300,
+   "text": "Royal Villas: 300 villas (plot area 565,000 m²)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Royal Apartments: 'Total apartments: 804'; Residential Wings: 'A total of 2,008 apartments' (no project-wide total stated)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "commercial_units": {
+   "value": null,
+   "text": "Empire Business Towers: T1 9 floors x 4 offices, 8 floors x 2 offices, 6 floors x 1 office; T2–T5 each floor 7 offices; total not stated",
+   "source_url": "https://baghyshaqlawa.net/en/projects/empire-world"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.199026,43.970393",
  "publish_recommendation": "ready"
 }

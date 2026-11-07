@@ -30,7 +30,7 @@ Project ID: lalav-sky-view | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 2,574 (Miran stats) vs 2,730 (Miran text) | Single site with two figures | https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ (both Miran): stats 'Units 2,574'; description 'It offers 2,730 residential units' | — | https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 | Paya (6 towers) and Miran (6 buildings/blocks) agree | https://paya-realestate.com/en/projects/lalav-sky-view-219 ; https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
 | Floors per building | Disputed: up to 40 (Paya) vs 42 (Miran) | Sources disagree | https://paya-realestate.com/en/projects/lalav-sky-view-219 ; https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
@@ -46,7 +46,7 @@ Project ID: lalav-sky-view | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | apartment | 239, 288, 295, 321 | 239 | 321 | 4 | 4+1; listed only in Miran unit-type table | agency_project_page | https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
 | shop | 129 | 129 | 129 | — | Ground-floor shop advertised for sale on homele | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lalav-sky-view |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table has a 'Floor plan' column for 1+1 78–80 m², 2+1 120–122 m², 3+1 165 m² and 4+1 239, 288, 295 and 321 m² (https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ground-floor shop 129 m2 - homele sale listing | 341,850 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lalav-sky-view |
 | 1+1 apartment 80 m2 - rent listing (per month), Miran and homele | 350 | USD | rent | accessed 2026-11-07 | https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya: 'first payment of 17%, followed by 15% upon completion of the structure, 18% upon receiving the unit, and the remaining balance paid through monthly installments'; Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); units also listed for rent ('$350'–'$600 Monthly') (https://paya-realestate.com/en/projects/lalav-sky-view-219)
 
 ### Location and surroundings
 Lalav Sky View is in central Erbil on Mosul Street (Paya), opposite Sami Abdulrahman Park (Baghy). Paya prices some 1+1 units by 'Raparin view' and others by 'garden view'. Map position (medium confidence, from agency map pins): 36.181253, 43.970565. Google Maps: https://www.google.com/maps?q=36.181253,43.970565
@@ -497,7 +497,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ (both Miran): stats 'Units 2,574'; description 'It offers 2,730 residential units'",
+   "source_url": "https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table has a 'Floor plan' column for 1+1 78–80 m², 2+1 120–122 m², 3+1 165 m² and 4+1 239, 288, 295 and 321 m²",
+   "source_url": "https://miranestate.com/projects/cmjo64ifr0039r20fd9bq5mqe"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya: 'first payment of 17%, followed by 15% upon completion of the structure, 18% upon receiving the unit, and the remaining balance paid through monthly installments'; Miran: payment 'Cash Installment Payment Plans' (Down Payment 17%, Tower Completion 15%, Key Recievement 18%, Monthly Payment 50%); units also listed for rent ('$350'–'$600 Monthly')",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-sky-view-219"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.181253,43.970565",
  "publish_recommendation": "ready"
 }

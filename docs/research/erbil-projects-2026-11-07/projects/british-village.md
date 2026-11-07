@@ -43,7 +43,7 @@ Project ID: british-village | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | villa | 231, 300, 370, 500 | 231 | 500 | — | Types 1-4 (231/300/370/500 m2), 2 floor-plan variants each; whether plot or built area is not stated. Listed 231 and 300 m2 villas are 4 bed / 5 bath. | agency_project_page | https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae |
 | villa | 231, 300, 370 | 231 | 370 | 4 | 4 bathrooms; Off-plan house listings (homele, 6 result pages; first page only). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** miranestate 'Unit Types' table with a 'Floor plan' column: Type 1 231 m², Type 2 300 m², Type 3 370 m², Type 4 500 m² – 2 each (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan house 300 m2, 4 bed - listing asking price (negotiable) | 248,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
 | Off-plan house 370 m2 opposite garden, 4 bed - listing asking price | 292,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/british-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% monthly payment; price per meter $790. Homele listings: off-plan houses for sale (https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae)
 
 ### Location and surroundings
 Miran places British Village on the 60 Meter Road (Peshmarga) with direct access from the 150 Meter ring road, between Spanish Village and Ganjan City, on Erbil's ring-road belt. Its listings are labelled '150m Road'.
@@ -324,7 +324,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "miranestate 'Unit Types' table with a 'Floor plan' column: Type 1 231 m², Type 2 300 m², Type 3 370 m², Type 4 500 m² – 2 each",
+   "source_url": "https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 20% down payment, 20% first payment, 20% second payment, 20% third payment, 20% monthly payment; price per meter $790. Homele listings: off-plan houses for sale",
+   "source_url": "https://miranestate.com/projects/cmosknzds08fxpp0fzhh2wuae"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

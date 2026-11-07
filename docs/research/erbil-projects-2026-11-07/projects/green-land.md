@@ -29,12 +29,12 @@ Project ID: green-land | Tier: 1 | In Erbil city: Edge (urban fringe) | Last res
 | Total project land area (dunams) | 500.0 | converted from 1,250,000 m² at 1 Iraqi dunam = 2,500 m² | https://homele.com/projects/green-land-331 |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 250 (Hajisalam) vs 120 + 120 villas in phases 3-4 (homele) | Phases 1-2 and apartment counts not given | https://hajisalam.com/en/green-land/ ; https://homele.com/projects/green-land-331 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Sources differ: Haji Salam 'Project Type: Villa', 'Number Of Unit: 250'; homele (Green Land Project Sales Center): third phase Green Hills 'has 120 villas', fourth phase Erbil Height 'consists of 120 villas' (phases 1–2 'all sold', no count) | — | https://hajisalam.com/en/green-land/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 3 apartment buildings, plus villa phases | homele sales-centre overview only | https://homele.com/projects/green-land-331 |
 | Floors per building | 12 (apartment buildings); villas 2 floors (Hajisalam) / 3 floors in Green Hills (Paya) | homele; Hajisalam; Paya | https://homele.com/projects/green-land-331 ; https://hajisalam.com/en/green-land/ ; https://paya-realestate.com/en/projects/green-hills-267 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Paya (Green Hills page): '75% of the villas are green' | — | https://paya-realestate.com/en/projects/green-hills-267 |
 | Development phases | Apartment buildings; villa phases 1-2 (sold); phase 3 Green Hills (120 villas); phase 4 Erbil Heights (120 villas) | homele overview; phase names confirmed by Paya | https://homele.com/projects/green-land-331 ; https://paya-realestate.com/en/projects/green-hills-267 ; https://paya-realestate.com/en/projects/green-land-264 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -48,7 +48,7 @@ Project ID: green-land | Tier: 1 | In Erbil city: Edge (urban fringe) | Last res
 | villa | 1,000, 1,050 | 1,000 | 1,050 | 4 | Two villas for sale on Hajisalam (posted '6 years ago') | market_listing | https://hajisalam.com/en/green-land/ |
 | other | 3,000 | 3,000 | 3,000 | — | 'Castle No 112 P3' on 3,000 m2 land, build year 2024 (Roya listing, seen via web search) | market_listing | https://roya-iq.com/?p=10625 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for Erbil Heights house 1000 m², 5 beds; homele project page has a 'Floor Plans' section ('Unit Details & Floor Plans: Erbil Heights (phase 4)'); Paya Green Hills page: 'No Blueprints' (https://paya-realestate.com/en/projects/green-land-264)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished house 420 m2, 4 bed - homele market listing (negotiable) | 240,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/green-land |
 | 'Castle No 112 P3', 3,000 m2 land, built 2024 - Roya listing (seen via web search) | 1,500,000 | USD | resale | accessed 2026-11-07 | https://roya-iq.com/?p=10625 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Paya (Erbil Heights): 'Payment will be done by installment': 25% on signing the contract, remainder in 7 instalments every 3 months, last instalment 5%. Paya (Green Hills): villa prices 'vary according to their location' (https://paya-realestate.com/en/projects/green-land-264)
 
 ### Location and surroundings
 Green Land lies on the Erbil–Pirmam (Massif/Shaqlawa) road opposite Khanzad Hotel, with Green Hills behind American Village, on high ground at Erbil's urban fringe. Map position (medium confidence, from agency map pins): 36.312415, 44.16918. Google Maps: https://www.google.com/maps?q=36.312415,44.16918
@@ -637,7 +637,32 @@ Second verification pass 2026-11-07: queries “"Green Land" Erbil villas Pirmam
  "figure_notes": [],
  "land_area_dunams": 500.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Sources differ: Haji Salam 'Project Type: Villa', 'Number Of Unit: 250'; homele (Green Land Project Sales Center): third phase Green Hills 'has 120 villas', fourth phase Erbil Height 'consists of 120 villas' (phases 1–2 'all sold', no count)",
+   "source_url": "https://hajisalam.com/en/green-land/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Paya (Green Hills page): '75% of the villas are green'",
+   "source_url": "https://paya-realestate.com/en/projects/green-hills-267"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for Erbil Heights house 1000 m², 5 beds; homele project page has a 'Floor Plans' section ('Unit Details & Floor Plans: Erbil Heights (phase 4)'); Paya Green Hills page: 'No Blueprints'",
+   "source_url": "https://paya-realestate.com/en/projects/green-land-264"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Paya (Erbil Heights): 'Payment will be done by installment': 25% on signing the contract, remainder in 7 instalments every 3 months, last instalment 5%. Paya (Green Hills): villa prices 'vary according to their location'",
+   "source_url": "https://paya-realestate.com/en/projects/green-land-264"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.312415,44.16918",
  "publish_recommendation": "ready"
 }

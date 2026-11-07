@@ -60,7 +60,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan residence 200 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 185,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
 | Off-plan home 220 m2, 4 bed / 4 bath, down-payment listing (homele market listing) | 210,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/eden-park |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Off-plan 4-bed houses (200–220 m², $180,000–210,000) listed for sale on homele, labelled '(Down payment)' per profile (https://homele.com/properties/for-sale-and-rent/erbil/eden-park)
 
 ### Location and surroundings
 Homele lists 'Eden Park' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -224,7 +224,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Off-plan 4-bed houses (200–220 m², $180,000–210,000) listed for sale on homele, labelled '(Down payment)' per profile",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/eden-park"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

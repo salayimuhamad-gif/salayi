@@ -30,7 +30,7 @@ Project ID: lalav-twin-towers | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 564 | Paya only | https://paya-realestate.com/en/projects/lalav-twin-towers-220 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 564 | Paya: 'consisting of two buildings and 564 housing units' | https://paya-realestate.com/en/projects/lalav-twin-towers-220 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 2 | Paya ('two buildings'); project name | https://paya-realestate.com/en/projects/lalav-twin-towers-220 |
 | Floors per building | Not verified | No source states it | — |
@@ -294,7 +294,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 564,
+   "text": "Paya: 'consisting of two buildings and 564 housing units'",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-twin-towers-220"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.1653254,44.0179707",
  "publish_recommendation": "ready"
 }

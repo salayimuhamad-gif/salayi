@@ -44,7 +44,7 @@ Project ID: 101-complex | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 94 | 94 | 94 | 1 | 1 bathrooms; 1-bedroom; Paya list price US$77,080 | agency_project_page | https://paya-realestate.com/en/projects/101-complex-343 |
 | apartment | 143, 144 | 143 | 144 | 2 | 2 bathrooms; 2-bedroom; Paya list prices US$114,400 / US$115,200 | agency_project_page | https://paya-realestate.com/en/projects/101-complex-343 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 4 unit types (studio 47 m², 1-bed 94 m², 2-bed 143 m² and 144 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/101-complex-343)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -64,7 +64,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 2-bedroom 144 m² – list price | 115,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/101-complex-343 |
 | Studio 47 m² – Homele listing (advertised, off-plan, instalment) | 42,300 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/101-complex |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listing: off-plan studio 47 m² for sale at $42,300, tagged 'Installment' (https://homele.com/properties/for-sale-and-rent/erbil/101-complex)
 
 ### Location and surroundings
 Erbil. One web search returned no page describing the project's location.
@@ -318,7 +318,24 @@ Second verification pass 2026-11-07: queries “"101 Complex" Erbil”; “"101 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 4 unit types (studio 47 m², 1-bed 94 m², 2-bed 143 m² and 144 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/101-complex-343"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listing: off-plan studio 47 m² for sale at $42,300, tagged 'Installment'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/101-complex"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

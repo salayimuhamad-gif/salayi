@@ -30,7 +30,7 @@ Project ID: vip-class | Tier: 2 | In Erbil city: No | Last researched: 2026-11-0
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified (2 apartments per floor stated) | No total stated | https://paya-realestate.com/en/projects/vip-class-201 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | No total stated: 4 towers (A-D), each 15 floors with 2 apartments per floor (Paya) | — | https://paya-realestate.com/en/projects/vip-class-201 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 towers (A-D) | Paya only | https://paya-realestate.com/en/projects/vip-class-201 |
 | Floors per building | 15 | Paya only | https://paya-realestate.com/en/projects/vip-class-201 |
@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Instalment 1 of 4: 20% with contract (1/5/2022) | 12,500 | USD | developer | 2022-05-01 | https://paya-realestate.com/en/projects/vip-class-201 |
 | Remaining balance paid monthly after key handover | 300 | USD | developer | from 2023-03-01 | https://paya-realestate.com/en/projects/vip-class-201 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment in installments: 20% ($12,500) with contract 1/5/2022; 20% ($12,500) at 70% completion 1/9/2022; 20% ($12,500) at 90% completion 1/12/2022; 20% ($12,500) on receiving keys 1/3/2023; remainder paid monthly $300; apartments with tapu (Paya) (https://paya-realestate.com/en/projects/vip-class-201)
 
 ### Location and surroundings
 Paya states the project is located in Shaqlawa, a separate town in Erbil Governorate, not in Erbil city; no street or landmark are given.
@@ -231,7 +231,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "No total stated: 4 towers (A-D), each 15 floors with 2 apartments per floor (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/vip-class-201"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment in installments: 20% ($12,500) with contract 1/5/2022; 20% ($12,500) at 70% completion 1/9/2022; 20% ($12,500) at 90% completion 1/12/2022; 20% ($12,500) on receiving keys 1/3/2023; remainder paid monthly $300; apartments with tapu (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/vip-class-201"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "hold"
 }

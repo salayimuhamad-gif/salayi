@@ -34,7 +34,7 @@ Project ID: lavender-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Number of villas not stated | — |
 | Floors per building | 2 | Miran: ground floor + first floor; unit table shows 2 for both types | https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | A grand national entrance park measuring 100m x 600m is built at the gates (Miran) | — | https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036 |
 | Development phases | None identified | No phases mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -44,7 +44,7 @@ Project ID: lavender-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | villa | 315 | 315 | 315 | — | 2 floors; Type B: 225 m2 plot + 90 m2 garden; more open layout with laundry room | agency_project_page | https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036 |
 | villa | 255, 275 | 255 | 275 | 4 | Off-plan instalment houses advertised on homele (3-4 bathrooms); one 255 m2 listing is titled '270 m2' | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/lavender-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for the listed House 275 m², 4 beds / 4 baths (https://paya-realestate.com/en/projects/lavender-city-371)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa 275 m2 opposite garden, off-plan instalment - homele listing | 168,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lavender-city |
 | Villa 275 m2 with marble facade, off-plan - homele listing | 199,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lavender-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; payment plan at $720/m: 20% down payment, 16% villa structure, 16% after 5 months, 16% after 5 months, 20% key handover, 12% monthly over 60 months; homele lists off-plan houses for sale in installment (https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036)
 
 ### Location and surroundings
 Lavender City lies in Erbil's official Green Belt zone just outside the 150m highway, on the street that connects Baharka Road to the Peshmerga Hospital (Miran); Rudaw (search snippet) places it on the 150m street beside the green belt in northern Erbil. It is distinct from Lavender Skyline Towers on the Erbil–Kirkuk road. Map position (low confidence, from agency map pins): 36.3010182, 44.06251419. Google Maps: https://www.google.com/maps?q=36.3010182,44.06251419
@@ -336,7 +336,28 @@ Second verification pass 2026-11-07: queries “"Lavender City" Erbil villas dev
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "A grand national entrance park measuring 100m x 600m is built at the gates (Miran)",
+   "source_url": "https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for the listed House 275 m², 4 beds / 4 baths",
+   "source_url": "https://paya-realestate.com/en/projects/lavender-city-371"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: 'Cash Installment Payment Plans'; payment plan at $720/m: 20% down payment, 16% villa structure, 16% after 5 months, 16% after 5 months, 20% key handover, 12% monthly over 60 months; homele lists off-plan houses for sale in installment",
+   "source_url": "https://miranestate.com/projects/cmq4vxxxu07kwl40fjlwfw036"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.3010182,44.06251419",
  "publish_recommendation": "ready"
 }

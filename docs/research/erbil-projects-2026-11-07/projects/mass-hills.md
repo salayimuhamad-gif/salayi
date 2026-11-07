@@ -64,7 +64,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Corner house 340 m2, off-plan - market listing, negotiable | 400,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-hills |
 | House 400 m2, 4 beds, ready - market listing | 350,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-hills |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele lists ready and off-plan houses for sale (mostly negotiable) (https://miranestate.com/projects/cmo06pkyf04mto30f9wwbab1g)
 
 ### Location and surroundings
 On the Pirmam (Masif) Road out of Erbil (Baghy); exact distance from the 150 m ring road not stated. Map position (low confidence, from agency map pins): 36.248758, 44.055948. Google Maps: https://www.google.com/maps?q=36.248758,44.055948
@@ -325,7 +325,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; homele lists ready and off-plan houses for sale (mostly negotiable)",
+   "source_url": "https://miranestate.com/projects/cmo06pkyf04mto30f9wwbab1g"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.248758,44.055948",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: lawan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 1,150 (Paya) vs 1,152 (Haji Salam) | Two sources nearly agree | https://paya-realestate.com/en/projects/lawan-city-115 ; https://hajisalam.com/en/lawan-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Paya: 'The project consists of 1150 housing units'; Haji Salam: 'Number Of Unit 1152' (House) (https://hajisalam.com/en/lawan-city/) | — | https://paya-realestate.com/en/projects/lawan-city-115 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated (house project) | — |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house 200 m2, 1 bed / 2 bath - homele sale listing (negotiable) | 72,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lawan-city |
 | Ready furnished house 200 m2, 2 bed / 2 bath - homele sale listing (negotiable) | 92,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lawan-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready houses for sale, prices negotiable (https://homele.com/properties/for-sale-and-rent/erbil/lawan-city)
 
 ### Location and surroundings
 Lawan City is on Kasnazan Road in Erbil, near Mazer Hospital (Paya; Haji Salam also gives Kasnazan Road). Haji Salam places the neighbouring Hiran City 1 on 'Kasnazan Road lawan 2 side'. Map position (low confidence, from agency map pins): 36.18821403, 44.12359018. Google Maps: https://www.google.com/maps?q=36.18821403,44.12359018
@@ -444,7 +444,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Paya: 'The project consists of 1150 housing units'; Haji Salam: 'Number Of Unit 1152' (House) (https://hajisalam.com/en/lawan-city/)",
+   "source_url": "https://paya-realestate.com/en/projects/lawan-city-115"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready houses for sale, prices negotiable",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/lawan-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.18821403,44.12359018",
  "publish_recommendation": "ready"
 }

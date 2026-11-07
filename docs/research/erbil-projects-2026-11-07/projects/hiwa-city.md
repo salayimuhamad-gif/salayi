@@ -29,7 +29,7 @@ Project ID: hiwa-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | No source states it | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Haji Salam: Project Type 'House-Villa'; field reads 'Number Of Unit: 400 House 200 - Villa' (Area House 200 m, Villa 450 m); split between houses and villas not unambiguous, no total given | — | https://hajisalam.com/en/hiwa-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source states it | — |
@@ -390,7 +390,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Haji Salam: Project Type 'House-Villa'; field reads 'Number Of Unit: 400 House 200 - Villa' (Area House 200 m, Villa 450 m); split between houses and villas not unambiguous, no total given",
+   "source_url": "https://hajisalam.com/en/hiwa-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.203426,44.094436",
  "publish_recommendation": "ready"
 }

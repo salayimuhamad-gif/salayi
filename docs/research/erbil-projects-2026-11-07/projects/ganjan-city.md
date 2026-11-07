@@ -29,7 +29,7 @@ Project ID: ganjan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 2,391 | Haji Salam only | https://hajisalam.com/en/ganjan-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 2,391 | Haji Salam: Project Type 'House-Villa'; 'Number Of Unit: 2391' | https://hajisalam.com/en/ganjan-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (house/villa compound) | — |
@@ -480,7 +480,20 @@ Second verification pass 2026-11-07: queries “"Ganjan City" Erbil developer”
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 2391,
+   "text": "Haji Salam: Project Type 'House-Villa'; 'Number Of Unit: 2391'",
+   "source_url": "https://hajisalam.com/en/ganjan-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.291408,44.041212",
  "publish_recommendation": "ready"
 }

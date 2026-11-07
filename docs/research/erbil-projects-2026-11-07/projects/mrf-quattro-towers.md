@@ -67,8 +67,8 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished apartment 123 m2, 2 bed / 2 bath - homele rent per month | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
 | Ready apartment 210 m2, 3 bed / 3 bath - homele rent per month | 800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
 | Ready furnished apartment 209 m2, 3 bed / 3 bath - homele rent per month | 850 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-quattro-towers |
-- **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Maintenance or service charges:** Baghy: single-bedroom (1+1) apartments – 'Service Fee (100$)' (period not stated) (https://baghyshaqlawa.net/en/projects/quattro-towers)
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; homele lists ready apartments for rent ($400–$850 monthly) and for sale (negotiable) (https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc)
 
 ### Location and surroundings
 MRF Quattro Towers stands on Gulan Street (the 40m ring road) opposite Sofi Mall (Hajisalam), about 2 km from Erbil's centre, roughly 5 minutes from Erbil International Airport and near Bakhtiyari street (Baghy). Map position (low confidence, from agency map pins): 36.215992, 44.002593. Google Maps: https://www.google.com/maps?q=36.215992,44.002593
@@ -524,7 +524,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": {
+   "value": 100,
+   "text": "Baghy: single-bedroom (1+1) apartments – 'Service Fee (100$)' (period not stated)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/quattro-towers"
+  },
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; homele lists ready apartments for rent ($400–$850 monthly) and for sale (negotiable)",
+   "source_url": "https://miranestate.com/projects/cmnymdezk01sho30f8ev3pdpc"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.215992,44.002593",
  "publish_recommendation": "ready"
 }

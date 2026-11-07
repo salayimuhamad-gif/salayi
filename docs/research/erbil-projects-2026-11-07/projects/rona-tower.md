@@ -30,11 +30,11 @@ Project ID: rona-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 600 | Paya text only | https://paya-realestate.com/en/projects/rona-tower-160 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 600 | Two buildings; the rest of the floors include 600 apartments of different sizes | https://paya-realestate.com/en/projects/rona-tower-160 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 2 | Paya two buildings; Baghy two towers | https://paya-realestate.com/en/projects/rona-tower-160 ; https://baghyshaqlawa.net/en/projects/rona-towers |
 | Floors per building | 30 | Baghy rona-towers page only | https://baghyshaqlawa.net/en/projects/rona-towers |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 5,000 | Built on an area of 8000 square meters, which includes 5000 square meters of green spaces | https://paya-realestate.com/en/projects/rona-tower-160 |
 | Development phases | None identified | No phases mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: rona-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | apartment | 79, 127 | 79 | 127 | — | Ready furnished apartments for sale | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/rona-towers |
 | shop | Not verified | — | — | — | Ground floor shops (Paya text) | agency_project_page | https://paya-realestate.com/en/projects/rona-tower-160 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 3 listed apartments (79, 85.5 and 127.5 m²) (https://paya-realestate.com/en/projects/rona-tower-160)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -356,7 +356,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 3.2,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 600,
+   "text": "Two buildings; the rest of the floors include 600 apartments of different sizes",
+   "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 5000,
+   "text": "Built on an area of 8000 square meters, which includes 5000 square meters of green spaces",
+   "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 3 listed apartments (79, 85.5 and 127.5 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/rona-tower-160"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.1482821,44.0187248",
  "publish_recommendation": "ready"
 }

@@ -47,7 +47,7 @@ Project ID: var-park | Tier: 1 | In Erbil city: Edge (urban fringe) | Last resea
 | apartment | 129 | 129 | 129 | 2 | 2 bathrooms; Off-plan, long-term instalments | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
 | shop | 94, 189 | 94 | 189 | — | 94 m2 shop listed 'Ready'; 189 m2 restaurant unit off-plan | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 6 units, studio 44.92 m² to 163.42 m² (Paya) (https://paya-realestate.com/en/projects/var-park-153)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Shop 94 m2 'Ready' - market listing | 290,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
 | Restaurant unit 189 m2 off-plan - market listing | 495,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/var-park |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele off-plan listing tagged 'Installment': 'Long Term Installment' (https://homele.com/properties/for-sale-and-rent/erbil/var-park)
 
 ### Location and surroundings
 Var Park is on Masyaf (Massif/Pirmam) Road near Shaways, north-east of central Erbil (Paya); Baghy Shaqlawa places it on Pirmam Road behind Future City. Paya gives travel times of about 20 minutes to the Erbil Citadel and 18 minutes to Erbil International Airport. Published map pins for this project disagree, so no position is given.
@@ -407,7 +407,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 6 units, studio 44.92 m² to 163.42 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/var-park-153"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele off-plan listing tagged 'Installment': 'Long Term Installment'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/var-park"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

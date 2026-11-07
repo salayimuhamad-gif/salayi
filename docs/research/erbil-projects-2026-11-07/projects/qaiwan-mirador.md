@@ -29,7 +29,7 @@ Project ID: qaiwan-mirador | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | 58.0 | converted from 145,000 m² at 1 Iraqi dunam = 2,500 m² | https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,496 | Miran project statistics only | https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 124 | A collection of 124 luxury villas in various sizes ranging from 240 to 505 square meters | https://paya-realestate.com/en/projects/qaiwan-mirador-279 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 9 towers (8 x 29 floors + 1 VIP x 40 floors) plus 124 villas; Miran stats say 10 | Three descriptions vs Miran statistic | https://paya-realestate.com/en/projects/qaiwan-mirador-279 ; https://baghyshaqlawa.net/en/projects/qaiwan-mirador ; https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l |
@@ -49,7 +49,7 @@ Project ID: qaiwan-mirador | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | duplex | 184, 203, 230, 264, 402 | 184 | 402 | — | Duplex types | agency_project_page | https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l |
 | villa | 240, 300, 400, 500 | 240 | 500 | — | Miran villa types; Paya: 124 villas of 240-505 m2 | agency_project_page | https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l ; https://paya-realestate.com/en/projects/qaiwan-mirador-279 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-types table with a 'Floor plan' column lists 59 types (Studio to Villa, 63-500 m²) (https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan price range, high end (Roya listing card) | 620,000 | USD | developer | accessed 2026-11-07 | https://roya-iq.com/projects/qaiwanmirador |
 | Studio 63 m2 rent per month (Miran rental listing) | 300 | USD | rent | accessed 2026-11-07 | https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans; plan: 18% down payment, 22% at tower completion, 25% at key receipt, 35% monthly over 60 months (price per meter $800); Miran also lists a studio for rent ($300) (https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l)
 
 ### Location and surroundings
 Qaiwan Mirador lies on the main Masif-Salahaddin (Pirmam) Road in Erbil, directly opposite Grand Majidi Mall (Paya, Miran, Baghy). The Pirmam/Masif road corridor is within the study scope. Map position (medium confidence, from agency map pins): 36.25109, 44.07495. Google Maps: https://www.google.com/maps?q=36.25109,44.07495
@@ -533,7 +533,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 58.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 124,
+   "text": "A collection of 124 luxury villas in various sizes ranging from 240 to 505 square meters",
+   "source_url": "https://paya-realestate.com/en/projects/qaiwan-mirador-279"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-types table with a 'Floor plan' column lists 59 types (Studio to Villa, 63-500 m²)",
+   "source_url": "https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans; plan: 18% down payment, 22% at tower completion, 25% at key receipt, 35% monthly over 60 months (price per meter $800); Miran also lists a studio for rent ($300)",
+   "source_url": "https://miranestate.com/projects/cmkb6auqz0001mj0fmwp4qc1l"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.25109,44.07495",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: pank-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 297 houses | Haji Salam only | https://hajisalam.com/en/pank-city/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 297 | Project Type: House; Number Of Unit: 297 | https://hajisalam.com/en/pank-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (house compound) | No apartment buildings mentioned | — |
@@ -45,7 +45,7 @@ Project ID: pank-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | house | 300, 306 | 300 | 306 | 4 | 2 bathrooms; 'Ready' sale listings (homele) and sale listings (Baghy) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/pank-village ; https://baghyshaqlawa.net/en/projects/pank-city |
 | house | 300, 301, 306 | 300 | 306 | 5 | Three sale listings dated '6 years ago' (c.2020), price on call | market_listing | https://hajisalam.com/en/pank-city/ |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for the 1 listed house type (300 m²) (https://paya-realestate.com/en/projects/pank-village-292)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -398,7 +398,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 297,
+   "text": "Project Type: House; Number Of Unit: 297",
+   "source_url": "https://hajisalam.com/en/pank-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for the 1 listed house type (300 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/pank-village-292"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.26089,43.98983",
  "publish_recommendation": "ready"
 }

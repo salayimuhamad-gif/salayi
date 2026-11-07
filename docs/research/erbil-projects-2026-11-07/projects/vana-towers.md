@@ -30,11 +30,11 @@ Project ID: vana-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 600 (Paya) vs 546 (Miran) | Low — two agency pages conflict; no developer figure | — |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 600 residential units (Paya) vs Units 546 (Miran project statistics) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 towers | High — Paya ("six towers") and Miran ("Buildings 6") agree | — |
 | Floors per building | Disputed: Paya = 15 residential floors + 1 commercial floor + 2 garage floors (18 levels); Miran = "Floors 14" | Low — conflict; Miran figure may count residential floors only | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Total project area 15,000 m², of which 6,000 m² (40%) for the towers and 60% of the project consists of greenery and other services (Paya) | — | https://paya-realestate.com/en/projects/vana-towers-301 |
 | Development phases | None reported (single phase) | Medium — no source mentions phases | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: vana-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 212 | 212 | 212 | 3 | 3 bathrooms; 3+1 | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
 | apartment | 227 | 227 | 227 | 4 | 3 bathrooms; 4+1 | agency_project_page | https://paya-realestate.com/en/projects/vana-towers-301 ; https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 10 apartment units, 104-227 m² (Paya) (https://paya-realestate.com/en/projects/vana-towers-301)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Miran listing: 4+1 227 m² | 167,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
 | Payment plan: 25% with contract, 20% tower completion, 15% apartment completion, 15% key receipt, remainder over 36 months (as published by Miran) | — | — | developer | accessed 2026-11-07 | https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Cash, Installment, Payment Plans (Miran); plan steps listed: With Contract 25%, Tower Completion 20%, Apartment Completion 15%, Key Recievement 15%, Down Payment 25% / 36 Months; price per meter $755. homele listings tagged 'Installment' (https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle)
 
 ### Location and surroundings
 Vana Towers is in Erbil city on the 120 Metre (ring) Road, near Rashkin Road, according to the Paya project page. Miran Estate listings tag the location as "Golden Zone" and its view tags mention 100 Metre Street, downtown and park views, which is consistent with a site in the belt between the 100 m and 120 m roads, but no source gives a precise address or landmark distances. No nearby services are documented beyond the on-site facilities listed in Part C. Map position (low confidence, from agency map pins): 36.209912, 43.959933. Google Maps: https://www.google.com/maps?q=36.209912,43.959933
@@ -502,7 +502,32 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 6.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "600 residential units (Paya) vs Units 546 (Miran project statistics)",
+   "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Total project area 15,000 m², of which 6,000 m² (40%) for the towers and 60% of the project consists of greenery and other services (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 10 apartment units, 104-227 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/vana-towers-301"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Cash, Installment, Payment Plans (Miran); plan steps listed: With Contract 25%, Tower Completion 20%, Apartment Completion 15%, Key Recievement 15%, Down Payment 25% / 36 Months; price per meter $755. homele listings tagged 'Installment'",
+   "source_url": "https://miranestate.com/projects/cmiymrm1g0007qa01bg35wmle"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.209912,43.959933",
  "publish_recommendation": "ready"
 }

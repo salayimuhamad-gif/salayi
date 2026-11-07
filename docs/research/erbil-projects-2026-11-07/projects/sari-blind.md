@@ -29,8 +29,8 @@ Project ID: sari-blind | Tier: 2 | In Erbil city: Yes | Last researched: 2026-11
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 132 houses and 370 apartments | Haji only; field text '132 Villa 370- Apartment' read as two counts | https://hajisalam.com/en/sari-blind/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 132 | Number Of Unit: 132 Villa (house area 200 m) | https://hajisalam.com/en/sari-blind/ |
+| Apartments | 370 | Number Of Unit: 370 Apartment (apartment area 107 m) | https://hajisalam.com/en/sari-blind/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source | — |
 | Floors per building | Houses 1; apartment buildings 3 | Haji only | https://hajisalam.com/en/sari-blind/ |
@@ -209,7 +209,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 132,
+   "text": "Number Of Unit: 132 Villa (house area 200 m)",
+   "source_url": "https://hajisalam.com/en/sari-blind/"
+  },
+  "apartments": {
+   "value": 370,
+   "text": "Number Of Unit: 370 Apartment (apartment area 107 m)",
+   "source_url": "https://hajisalam.com/en/sari-blind/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

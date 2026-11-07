@@ -29,8 +29,8 @@ Project ID: family-land | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 272 (116 houses + 156 apartments) | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | 116 | Number Of Unit: 'house 116 - apartment 156' | https://hajisalam.com/en/family-land/ |
+| Apartments | 156 | Number Of Unit: 'house 116 - apartment 156' (apartments 13 floors) | https://hajisalam.com/en/family-land/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source | — |
 | Floors per building | Apartments 13; houses 1–2 | Single source (Hajisalam) | https://hajisalam.com/en/family-land/ |
@@ -291,7 +291,24 @@ Second verification pass 2026-11-07: queries “"Family Land" Erbil houses apart
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 116,
+   "text": "Number Of Unit: 'house 116 - apartment 156'",
+   "source_url": "https://hajisalam.com/en/family-land/"
+  },
+  "apartments": {
+   "value": 156,
+   "text": "Number Of Unit: 'house 116 - apartment 156' (apartments 13 floors)",
+   "source_url": "https://hajisalam.com/en/family-land/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.315083,44.154823",
  "publish_recommendation": "review"
 }

@@ -29,12 +29,12 @@ Project ID: aram-village-1 | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | ≈700 villas (same as above) | — | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 700 | 'comprises approximately 700 villas' in sizes 240, 300, 375, 500 and 540 m² (Paya) | https://paya-realestate.com/en/projects/aram-village-157 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Approximately 700 villas (agency figure) | single source; roya snippet for the Aram project gives 662 villas / 7 types but it is unclear whether that refers to AV1, AV2 or the combined "Aram Villages" (see Part H) | https://paya-realestate.com/en/projects/aram-village-157 ; https://roya-iq.com/?p=9082 |
 | Floors per building | Not verified (listings describe houses; no floor count stated for AV1) | — | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 27,000 | 'about 27,000 square meters, is dedicated to green spaces and open sports areas' (Paya) | https://paya-realestate.com/en/projects/aram-village-157 |
 | Development phases | Aram Village 1 (this project); Aram Village 2 (separate project behind it, 120 m road); Aram Garden (later villa project presented as successor to AV2). Aram Towers and Aram Commercial City are unrelated building types sharing the "Aram" brand name only | High for AV2 relation; Medium for Aram Garden | https://paya-realestate.com/en/projects/aram-village-2-266 ; https://paya-realestate.com/en/projects/aram-garden-374 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 240 m² house, 4 bed / 4 bath, monthly rent | 950 | USD | rent | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-village |
 | 240 m² house, 5 bed / 4 bath, monthly rent | 1,000 | USD | rent | 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aram-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready houses for sale (some 'Negotiable') and for rent ($850, $900, $950 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/aram-village)
 
 ### Location and surroundings
 Aram Village 1 lies in the north-western urban belt of Erbil city on the 120 m ring road, near Italian Village 2 (paya). Aram Village 2 was built directly behind it, and the Aram Village 2 pages describe the location as between the 120 m and 150 m ring roads on roads leading towards Erbil International Airport (paya AV2 page; homele AV2 project page). No source in h, a street address or verified distances for Aram Village 1 itself; the only distance statements (5 min to 120 m/150 m roads, 8 km to centre, 12 km to airport) are agency claims made for Aram Village 2 or not for this project. Map position (medium confidence, from agency map pins): 36.244737, 44.037278. Google Maps: https://www.google.com/maps?q=36.244737,44.037278
@@ -461,7 +461,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 700,
+   "text": "'comprises approximately 700 villas' in sizes 240, 300, 375, 500 and 540 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/aram-village-157"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 27000,
+   "text": "'about 27,000 square meters, is dedicated to green spaces and open sports areas' (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/aram-village-157"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready houses for sale (some 'Negotiable') and for rent ($850, $900, $950 Monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aram-village"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.244737,44.037278",
  "publish_recommendation": "ready"
 }

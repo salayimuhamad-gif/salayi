@@ -47,7 +47,7 @@ Project ID: unique-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 84, 131, 147, 183 | 84 | 183 | — | Off-plan sale listings (homele first page) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 | penthouse | Not verified | — | — | 4 | Four-bedroom penthouses with rooftop terraces (Roya listing, search summary, page not opened) | market_listing | https://roya-iq.com/?p=9741 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 22 apartment units, 83.9-186.4 m² (Paya) (https://paya-realestate.com/en/projects/unique-towers-275)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 2 bed 147 m2 - off-plan market listing | 122,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 | 3 bed 183 m2 - off-plan market listing (down payment) | 152,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/unique-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele off-plan sale listings; one listing fragment reads 'Down + Second payment)' (https://homele.com/properties/for-sale-and-rent/erbil/unique-towers)
 
 ### Location and surroundings
 Paya places Unique Towers in the 'Diamond Zone' of Erbil, in an area surrounded by commercial, educational and residential projects; no street, landmark or distance is given. A Roya listing also gives a 'diamond' location and places it on the Shaqlawa road (search summary; page not opened). Map position (low confidence, from agency map pins): 36.243794, 44.066959. Google Maps: https://www.google.com/maps?q=36.243794,44.066959
@@ -472,7 +472,24 @@ Second verification pass 2026-11-07: queries “"Unique Towers" Erbil Shaqlawa r
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 22 apartment units, 83.9-186.4 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/unique-towers-275"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele off-plan sale listings; one listing fragment reads 'Down + Second payment)'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/unique-towers"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.243794,44.066959",
  "publish_recommendation": "review"
 }

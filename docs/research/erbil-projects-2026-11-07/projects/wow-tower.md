@@ -30,7 +30,7 @@ Project ID: wow-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 371 | Miran stats and text (one source) | https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 371 | 371 residential units (Miran description and project statistics) | https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 3 (Miran stats) | Single explicit count; Paya implies one complex | https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr |
 | Floors per building | Disputed: 16 (Paya) vs 15 + 2 basements (Miran) | — | https://paya-realestate.com/en/projects/wow-tower-293 ; https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr |
@@ -46,7 +46,7 @@ Project ID: wow-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | apartment | 200, 230 | 200 | 230 | 3 | 3 bathrooms; 3+1 | agency_project_page | https://paya-realestate.com/en/projects/wow-tower-293 ; https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr |
 | apartment | 90, 100, 135, 170, 180 | 90 | 180 | — | Ready units for sale and rent | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/wow-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 10 units, studio 60 m² to 230 m² (Paya) (https://paya-realestate.com/en/projects/wow-tower-293)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Furnished 1 bed 100 m2 - monthly rent | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/wow-tower |
 | 170 m2 (listed 3 bed) - monthly rent | 900 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/wow-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele market listings show apartments for sale (negotiable) and for monthly rent (USD 450-850/month) (https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr)
 
 ### Location and surroundings
 Wow Tower is on Erbil's 100 m road near the Lebanese French University (Paya, Baghy Shaqlawa); the university campus lies off the 100m Road south of the Mosul Road crossing (unirank). Miran lists views of 100M Street. Map position (medium confidence, from agency map pins): 36.172493, 43.962047. Google Maps: https://www.google.com/maps?q=36.172493,43.962047
@@ -491,7 +491,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 371,
+   "text": "371 residential units (Miran description and project statistics)",
+   "source_url": "https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 10 units, studio 60 m² to 230 m² (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/wow-tower-293"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele market listings show apartments for sale (negotiable) and for monthly rent (USD 450-850/month)",
+   "source_url": "https://miranestate.com/projects/cmmq7jxi8009oql0f9dvtrfmr"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.172493,43.962047",
  "publish_recommendation": "ready"
 }

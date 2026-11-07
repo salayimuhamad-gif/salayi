@@ -29,12 +29,12 @@ Project ID: mirage-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | 58.3 | converted from 145,729 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/mirage-city-296 |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 271 | Paya description | https://paya-realestate.com/en/projects/mirage-city-296 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 271 | Paya: 'It consists of a total of 271 houses and villas of various sizes (200, 240, and 300 square meters)' | https://paya-realestate.com/en/projects/mirage-city-296 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 271 | 271 houses and villas (Paya) | https://paya-realestate.com/en/projects/mirage-city-296 |
 | Floors per building | Not verified | Not stated | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 44,662 | Paya: green area of 44,662 square meters, covering 30% of the total area (total 145,728.522 m²) | https://paya-realestate.com/en/projects/mirage-city-296 |
 | Development phases | None identified | No phases mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -61,7 +61,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan house 200 m2 opposite garden, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 175,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
 | Off-plan house 250 m2, 4 bed / 3 bath (tagged 'Down payment') - homele listing | 180,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mirage-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: off-plan houses for sale (one negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/mirage-city)
 
 ### Location and surroundings
 Mirage City lies in the northeast of Erbil city near the 150m Street ring road (Paya). No street address or landmark are published. Map position (low confidence, from agency map pins): 36.26465, 43.99396. Google Maps: https://www.google.com/maps?q=36.26465,43.99396
@@ -294,7 +294,28 @@ Second verification pass 2026-11-07: queries “"Mirage City" Erbil villas”; �
  "figure_notes": [],
  "land_area_dunams": 58.3,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 271,
+   "text": "Paya: 'It consists of a total of 271 houses and villas of various sizes (200, 240, and 300 square meters)'",
+   "source_url": "https://paya-realestate.com/en/projects/mirage-city-296"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 44662,
+   "text": "Paya: green area of 44,662 square meters, covering 30% of the total area (total 145,728.522 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/mirage-city-296"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: off-plan houses for sale (one negotiable)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mirage-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.26465,43.99396",
  "publish_recommendation": "ready"
 }

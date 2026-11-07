@@ -30,11 +30,11 @@ Project ID: lalav-nova-towers | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,056 | Paya only ('1056 units') | https://paya-realestate.com/en/projects/lalav-nova-towers-222 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Paya: 'Nova Towers consist of 6 buildings containing 1056 units, ground floor for each building is commercial' (units not split between apartments and commercial) | — | https://paya-realestate.com/en/projects/lalav-nova-towers-222 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 | Paya only | https://paya-realestate.com/en/projects/lalav-nova-towers-222 |
 | Floors per building | Not verified | Not stated; a homele listing mentions a 20th-floor unit | https://homele.com/properties/for-sale-and-rent/erbil/lalav-nova-towers |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 5,218 | Paya: 'Nova Towers provides you and your family with 5,218 m2 of green space' | https://paya-realestate.com/en/projects/lalav-nova-towers-222 |
 | Development phases | None identified | No phases mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -289,7 +289,24 @@ Second verification pass 2026-11-07: queries “"Lalav Nova" Erbil towers”; �
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Paya: 'Nova Towers consist of 6 buildings containing 1056 units, ground floor for each building is commercial' (units not split between apartments and commercial)",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-nova-towers-222"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 5218,
+   "text": "Paya: 'Nova Towers provides you and your family with 5,218 m2 of green space'",
+   "source_url": "https://paya-realestate.com/en/projects/lalav-nova-towers-222"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2838833,44.0158702",
  "publish_recommendation": "review"
 }

@@ -30,7 +30,7 @@ Project ID: naz-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 700 apartments | Baghy text; consistent with its 7 x 11 + 7 x 14 storeys x 4 flats layout | https://baghyshaqlawa.net/en/projects/naz-city |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 700 | Baghy: 14 buildings, 4 apartments per storey; 'there will be (700) luxury flats constructed with tunnel formwork system' | https://baghyshaqlawa.net/en/projects/naz-city |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 14 | Baghy text only | https://baghyshaqlawa.net/en/projects/naz-city |
 | Floors per building | 11 (7 buildings) and 14 (7 buildings) | Baghy text only | https://baghyshaqlawa.net/en/projects/naz-city |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 230 m2, 4 bed / 3 bath - monthly rent | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments |
 | Apartment 230 m2, 4 bed - monthly rent | 750 | USD | rent | accessed 2026-11-07 | https://baghyshaqlawa.net/en/projects/naz-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready apartments for sale (some negotiable) and for rent ($600–$650 monthly) (https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments)
 
 ### Location and surroundings
 On Gulan Road in Erbil (Baghy). Map position (low confidence, from agency map pins): 36.210352, 43.987364. Google Maps: https://www.google.com/maps?q=36.210352,43.987364
@@ -438,7 +438,24 @@ Second verification pass 2026-11-07: queries “"Naz City" Erbil Gulan apartment
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 700,
+   "text": "Baghy: 14 buildings, 4 apartments per storey; 'there will be (700) luxury flats constructed with tunnel formwork system'",
+   "source_url": "https://baghyshaqlawa.net/en/projects/naz-city"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready apartments for sale (some negotiable) and for rent ($600–$650 monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/naz-cityzakaria-apartments"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.210352,43.987364",
  "publish_recommendation": "ready"
 }

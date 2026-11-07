@@ -47,7 +47,7 @@ Project ID: lavender-skyline-towers | Tier: 1 | In Erbil city: Yes | Last resear
 | apartment | 118, 127, 128, 147, 148, 155 | 118 | 155 | 2 | 2+1 unit-type table on Miran | agency_project_page | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
 | apartment | 168, 180, 190 | 168 | 190 | 3 | 3+1 unit-type table on Miran | agency_project_page | https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for all 10 listed apartments (88–190 m², 1–3 beds) (https://paya-realestate.com/en/projects/lavender-skyline-towers-384)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 190 m2, 3 beds - project-page price list | 129,200 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/lavender-skyline-towers-384 |
 | Apartment 88 m2, 1 bed - off-plan market listing (down-payment label) | 59,840 | USD | developer | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/lavendar-skyline-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: 'Cash Installment Payment Plans'; plan: 15% down payment, 20% tower completion, 20% key receipt, 45% monthly over 5 years; homele lists off-plan apartments for sale (https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1)
 
 ### Location and surroundings
 On the Erbil–Kirkuk Road in Erbil; homele's project page (search snippet) places it near the 120 m ring road. No exact address published. Map position (low confidence, from agency map pins): 36.129246, 44.024083. Google Maps: https://www.google.com/maps?q=36.129246,44.024083
@@ -552,7 +552,24 @@ Second verification pass 2026-11-07: queries “"Lavender Skyline" Erbil Kirkuk 
  "figure_notes": [],
  "land_area_dunams": 3.1,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for all 10 listed apartments (88–190 m², 1–3 beds)",
+   "source_url": "https://paya-realestate.com/en/projects/lavender-skyline-towers-384"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: 'Cash Installment Payment Plans'; plan: 15% down payment, 20% tower completion, 20% key receipt, 45% monthly over 5 years; homele lists off-plan apartments for sale",
+   "source_url": "https://miranestate.com/projects/cmo42dmxx06iao30fbsyp7cz1"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.129246,44.024083",
  "publish_recommendation": "ready"
 }

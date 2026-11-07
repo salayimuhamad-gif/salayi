@@ -29,7 +29,7 @@ Project ID: korean-village | Tier: 1 | In Erbil city: Edge (urban fringe) | Last
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 5,000 | Haji Salam only | https://hajisalam.com/en/kory-village/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 5,000 | Haji Salam (Kory Village): 'Project Type: House', 'Number Of Unit: 5000' | https://hajisalam.com/en/kory-village/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable / not stated | — |
@@ -61,7 +61,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 200 m2, 2 bed - homele sale listing | 81,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
 | House 200 m2, 2 bed - homele rent listing (per month) | 303 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/kori-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele: ready 200 m² houses for sale ('$81,500 sale', '$85,000 sale') and for rent ('$303 Monthly') (https://homele.com/properties/for-sale-and-rent/erbil/kori-village)
 
 ### Location and surroundings
 Haji Salam places Kory Village on the Shaqlawa road out of Erbil; homele lists 'Korean Village' as an Erbil area. Neither source gives the distance from the city or a map position.
@@ -253,7 +253,24 @@ Second verification pass 2026-11-07: queries “"Korean Village" Erbil Shaqlawa 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 5000,
+   "text": "Haji Salam (Kory Village): 'Project Type: House', 'Number Of Unit: 5000'",
+   "source_url": "https://hajisalam.com/en/kory-village/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele: ready 200 m² houses for sale ('$81,500 sale', '$85,000 sale') and for rent ('$303 Monthly')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/kori-village"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

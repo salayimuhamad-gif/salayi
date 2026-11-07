@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished apartment 215 m2 - homele rent per month | 2,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mnw-towers |
 | Ready shop 76 m2 - homele rent per month | 1,800 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mnw-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; apartments listed for sale and for rent ($450–$650/month); homele lists ready apartments for sale (negotiable) and for rent, and a 76 m² shop for rent at $1,800 monthly (https://miranestate.com/projects/cmnq0oz4b09ncmx0fi0l46gl4)
 
 ### Location and surroundings
 MNW Towers stands on Erbil's 40m Street (Gulan Street) in the Waziran neighbourhood, opposite Dream City and the Park View project (Paya, Miran) and beside Star Towers (Baghy); the street runs on to Sami Abdulrahman Park. Map position (medium confidence, from agency map pins): 36.20491, 43.983547. Google Maps: https://www.google.com/maps?q=36.20491,43.983547
@@ -460,7 +460,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; apartments listed for sale and for rent ($450–$650/month); homele lists ready apartments for sale (negotiable) and for rent, and a 76 m² shop for rent at $1,800 monthly",
+   "source_url": "https://miranestate.com/projects/cmnq0oz4b09ncmx0fi0l46gl4"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.20491,43.983547",
  "publish_recommendation": "ready"
 }

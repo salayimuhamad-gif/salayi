@@ -30,7 +30,7 @@ Project ID: empire-square-towers | Tier: 1 | In Erbil city: Yes | Last researche
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 720 (Paya) vs 702 (Miran) | Differ only in 4-bed count (80 vs 62) | https://paya-realestate.com/en/projects/empire-square-towers-173 ; https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Paya: 720 apartments (40 one-bed, 600 two-bed, 80 four-bed) in four buildings; Miran: 702 apartments (40 one-bed, 600 two-bed, 62 four-bed) | — | https://paya-realestate.com/en/projects/empire-square-towers-173 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 residential buildings (plus commercial buildings) | Paya and Miran agree | https://paya-realestate.com/en/projects/empire-square-towers-173 ; https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq |
 | Floors per building | 21 | Miran only | https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq |
@@ -46,7 +46,7 @@ Project ID: empire-square-towers | Tier: 1 | In Erbil city: Yes | Last researche
 | apartment | 113, 123, 141, 148, 150, 177, 184, 188 | 113 | 188 | — | Sizes in Paya's 9-unit price list (1, 2 and 4 bed); several do not match the sizes in Paya's own description. | agency_project_page | https://paya-realestate.com/en/projects/empire-square-towers-173 |
 | apartment | 140, 141, 146, 148, 150, 151 | 140 | 151 | 2 | 2 bathrooms; Sizes advertised in Homele listings (sale and rent), all 2-bed. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/empire-square |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 9 units 113–188 m² (1, 2 and 4 bed) (https://paya-realestate.com/en/projects/empire-square-towers-173)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 146 m2, 2 bed - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-square |
 | Apartment 150 m2, 2 bed - monthly rent | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-square |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele listings: ready 2-bed apartments for sale ($132,000–150,000) and monthly rent ($600) (https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq)
 
 ### Location and surroundings
 Empire Square Towers stands in the north-west section of the Empire World development in western Erbil (Paya; Miran). Miran lists views of 100M Street, the city and the street. Empire World lies along the 100-metre road near Erbil International Airport (see empire-world entry). Map position (low confidence, from agency map pins): 36.2037639, 43.9674921. Google Maps: https://www.google.com/maps?q=36.2037639,43.9674921
@@ -583,7 +583,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 67.4,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Paya: 720 apartments (40 one-bed, 600 two-bed, 80 four-bed) in four buildings; Miran: 702 apartments (40 one-bed, 600 two-bed, 62 four-bed)",
+   "source_url": "https://paya-realestate.com/en/projects/empire-square-towers-173"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 9 units 113–188 m² (1, 2 and 4 bed)",
+   "source_url": "https://paya-realestate.com/en/projects/empire-square-towers-173"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele listings: ready 2-bed apartments for sale ($132,000–150,000) and monthly rent ($600)",
+   "source_url": "https://miranestate.com/projects/cmk5czlfg013tqn0ffnuqh9yq"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2037639,43.9674921",
  "publish_recommendation": "ready"
 }

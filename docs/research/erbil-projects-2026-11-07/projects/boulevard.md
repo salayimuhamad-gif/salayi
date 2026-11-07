@@ -30,11 +30,11 @@ Project ID: boulevard | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | About 1,600 | Paya, Miran and b-arrow agree | https://paya-realestate.com/en/projects/the-boulevard-158 ; https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe ; https://b-arrow.com/w/index.php/en/246/the_boulivard_in_erbil |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,600 | 'around 1,600 residential units, ranging from studios (0+1) to spacious 4+1 apartments' (Paya); 'Units 1,600' (miranestate); '1600 units consisting of 1 + 1, 2 + 1, 3 + 1 and 4 + 1' (b-arrow) | https://paya-realestate.com/en/projects/the-boulevard-158 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 10 residential towers | Paya and Miran agree | https://paya-realestate.com/en/projects/the-boulevard-158 ; https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe |
 | Floors per building | 20 | Miran stats only | https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 10,000 | '10,000 square meters of green space' (b-arrow); the same page also mentions 'The 10,000-square-foot park' | https://b-arrow.com/w/index.php/en/246/the_boulivard_in_erbil |
 | Development phases | None reported (b-arrow mentions 'family towers' and 'youth towers' as tower types, not phases) | — | https://b-arrow.com/w/index.php/en/246/the_boulivard_in_erbil |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -48,7 +48,7 @@ Project ID: boulevard | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | duplex | 235.18, 256.55, 363.6 | 235.18 | 363.6 | 3 | 3 bathrooms; Paya lists these as duplex; Miran lists 256 and 363 m2 as 3+1. | agency_project_page | https://paya-realestate.com/en/projects/the-boulevard-158 ; https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe |
 | apartment | 72, 86, 97, 298 | 72 | 298 | — | Ready units advertised for sale/rent (homele first page; Miran rent listings 72/97/168 m2). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/boulevard ; https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists apartment and duplex types (69.5–363.6 m²) with 'View Blueprint'; one type (158 m²) marked 'No Blueprints' (https://paya-realestate.com/en/projects/the-boulevard-158)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Studio 72 m2 - monthly rent (Miran listings; homele USD 500) | 400 | USD | rent | accessed 2026-11-07 | https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe |
 | Apartment 298 m2 - monthly rent | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/boulevard |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: 'Cash' (miranestate); miranestate and Homele listings: apartments for rent (e.g. $400, $750, $900, $1,500 monthly) and for sale ('Apartment in Cash', prices 'Negotiable') (https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe)
 
 ### Location and surroundings
 The Boulevard stands on 40 Meter Street (Gulan Street) in central Erbil, opposite Gulan Tower and the Abu Shahab village (Paya, Miran, Baghy, b-arrow). b-arrow mentions two-lane roads on all four sides of the project. Miran's rent listings carry the label 'Kuran Ankawa'. Map position (medium confidence, from agency map pins): 36.213556, 43.991397. Google Maps: https://www.google.com/maps?q=36.213556,43.991397
@@ -609,7 +609,32 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 21.2,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1600,
+   "text": "'around 1,600 residential units, ranging from studios (0+1) to spacious 4+1 apartments' (Paya); 'Units 1,600' (miranestate); '1600 units consisting of 1 + 1, 2 + 1, 3 + 1 and 4 + 1' (b-arrow)",
+   "source_url": "https://paya-realestate.com/en/projects/the-boulevard-158"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 10000,
+   "text": "'10,000 square meters of green space' (b-arrow); the same page also mentions 'The 10,000-square-foot park'",
+   "source_url": "https://b-arrow.com/w/index.php/en/246/the_boulivard_in_erbil"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists apartment and duplex types (69.5–363.6 m²) with 'View Blueprint'; one type (158 m²) marked 'No Blueprints'",
+   "source_url": "https://paya-realestate.com/en/projects/the-boulevard-158"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: 'Cash' (miranestate); miranestate and Homele listings: apartments for rent (e.g. $400, $750, $900, $1,500 monthly) and for sale ('Apartment in Cash', prices 'Negotiable')",
+   "source_url": "https://miranestate.com/projects/cmna3h5cd00e7mx0fvx5pktoe"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.213556,43.991397",
  "publish_recommendation": "ready"
 }

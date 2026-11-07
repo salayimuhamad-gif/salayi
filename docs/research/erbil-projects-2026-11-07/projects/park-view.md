@@ -30,7 +30,7 @@ Project ID: park-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 816 (Miran) vs 960 (Haji Salam) | Two sources disagree | https://miranestate.com/projects/cmo49t04y0766o30feosnb32i ; https://hajisalam.com/en/park-view/ |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Sources differ: miranestate.com 'Units 816' (https://miranestate.com/projects/cmo49t04y0766o30feosnb32i); hajisalam.com 'Number Of Unit: 960', Project Type Apartment (https://hajisalam.com/en/park-view/) | — | https://miranestate.com/projects/cmo49t04y0766o30feosnb32i |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 12 (11 circular + 1 rectangular 'Dream') | Paya, Baghy, Miran agree | https://paya-realestate.com/en/projects/park-view-269 ; https://baghyshaqlawa.net/en/projects/park-view ; https://miranestate.com/projects/cmo49t04y0766o30feosnb32i |
 | Floors per building | 17 (A1-A2, B1-B6) / 18 (C1-C3, Dream) | Paya and Baghy type details; Miran 18, Haji Salam 19 | https://paya-realestate.com/en/projects/park-view-269 ; https://baghyshaqlawa.net/en/projects/park-view |
@@ -49,7 +49,7 @@ Project ID: park-view | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | apartment | 124, 131, 185 | 124 | 185 | — | Additional sizes in Haji Salam size list only | agency_project_page | https://hajisalam.com/en/park-view/ |
 | apartment | 131, 149, 183, 246, 310, 482 | 131 | 482 | — | 'Ready' sale and rental listings | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/park-view |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-types table lists 2+1 135/149 m², 3+1 183 m², 4+1 246 m², 5+1 310 m² with '—' in the floor-plan column for every type (https://miranestate.com/projects/cmo49t04y0766o30feosnb32i)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -72,7 +72,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 246 m2, 4 bed / 3 bath - monthly rent (other 246 m2 listing: USD 1,000) | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/park-view |
 | Ready furnished apartment 482 m2, 6 bed / 5 bath - monthly rent | 4,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/park-view |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran payment: Cash; homele listings include monthly rentals ($700-$4,000 Monthly) and sales (https://miranestate.com/projects/cmo49t04y0766o30feosnb32i)
 
 ### Location and surroundings
 On Airport Road in Erbil, opposite Dream City and about two minutes from Erbil International Airport; Miran places it in the 'Golden Zone' with access to Sami Abdulrahman Park. Map position (medium confidence, from agency map pins): 36.208994, 43.983425. Google Maps: https://www.google.com/maps?q=36.208994,43.983425
@@ -598,7 +598,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Sources differ: miranestate.com 'Units 816' (https://miranestate.com/projects/cmo49t04y0766o30feosnb32i); hajisalam.com 'Number Of Unit: 960', Project Type Apartment (https://hajisalam.com/en/park-view/)",
+   "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-types table lists 2+1 135/149 m², 3+1 183 m², 4+1 246 m², 5+1 310 m² with '—' in the floor-plan column for every type",
+   "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran payment: Cash; homele listings include monthly rentals ($700-$4,000 Monthly) and sales",
+   "source_url": "https://miranestate.com/projects/cmo49t04y0766o30feosnb32i"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.208994,43.983425",
  "publish_recommendation": "ready"
 }

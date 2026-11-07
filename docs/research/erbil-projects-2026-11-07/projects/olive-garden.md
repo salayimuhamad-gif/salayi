@@ -34,7 +34,7 @@ Project ID: olive-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No house count | — |
 | Floors per building | 2 (ground and first floor) | Miran text | https://miranestate.com/projects/cmnu9pj5o0d50mx0ftmpo5vbg |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 18,000 | 3 gardens with an area of 18 000 sqm | https://paya-realestate.com/en/projects/olive-garden-373 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -45,7 +45,7 @@ Project ID: olive-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | house | 320 | 320 | 320 | 5 | 6 bathrooms; 2 floors; Types A and B; 5 rooms, two kitchens, 6 bathrooms, 160 m2 garden (Paya, Miran) | agency_project_page | https://paya-realestate.com/en/projects/olive-garden-373 ; https://miranestate.com/projects/cmnu9pj5o0d50mx0ftmpo5vbg |
 | house | 200, 250, 320, 450 | 200 | 450 | — | Off-plan homele listings (10 result pages); one listing shows size 450 m2 while its title says 200 m2 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/olive-garden-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'View Blueprint' for 3 house types (200, 250, 320 m²); Miran: unit-types table with a floor-plan column (200 m², 250 m² A/B, 320 m² A/B) (https://paya-realestate.com/en/projects/olive-garden-373)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan house 250 m2, 4 bed / 4 bath - listing asking price (no down-payment label) | 240,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/olive-garden-city |
 | Off-plan house 250 m2, 4 bed / 4 bath - listing asking price (down-payment label; title says 320 m2) | 250,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/olive-garden-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans; plan: 20% down payment, five 10% payments (1/03/2026-1/07/2027), 10% at key receipt (1/11/2027), 20% monthly over 30 months (https://miranestate.com/projects/cmnu9pj5o0d50mx0ftmpo5vbg)
 
 ### Location and surroundings
 Erbil, between the 150 m Road and the green belt (Paya; Miran 'near 150 Meter Road'). Map position (low confidence, from agency map pins): 36.298784, 44.055124. Google Maps: https://www.google.com/maps?q=36.298784,44.055124
@@ -365,7 +365,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 18000,
+   "text": "3 gardens with an area of 18 000 sqm",
+   "source_url": "https://paya-realestate.com/en/projects/olive-garden-373"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'View Blueprint' for 3 house types (200, 250, 320 m²); Miran: unit-types table with a floor-plan column (200 m², 250 m² A/B, 320 m² A/B)",
+   "source_url": "https://paya-realestate.com/en/projects/olive-garden-373"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans; plan: 20% down payment, five 10% payments (1/03/2026-1/07/2027), 10% at key receipt (1/11/2027), 20% monthly over 30 months",
+   "source_url": "https://miranestate.com/projects/cmnu9pj5o0d50mx0ftmpo5vbg"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.298784,44.055124",
  "publish_recommendation": "ready"
 }

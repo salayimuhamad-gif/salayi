@@ -48,7 +48,7 @@ Project ID: queen-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 84, 88, 115, 135, 156, 175 | 84 | 175 | — | Ready units for sale and rent; 175 m2 listed as 3 bed; 84 m2 not in Paya table | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/queen-tower |
 | shop | Not verified | — | — | — | Two ground floors form the commercial section | agency_project_page | https://paya-realestate.com/en/projects/queen-tower-255 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 12 listed apartments (77-240 m², 1+1 to 4+1) (https://paya-realestate.com/en/projects/queen-tower-255)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -71,7 +71,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready 1-bed 88 m2, long-term instalment - homele listing | 90,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/queen-tower |
 | Furnished 1-bed 88 m2 rent per month - homele listing (other 88 m2 rents $400-$600) | 550 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/queen-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings: monthly rentals ($400-$800 Monthly) and sales (https://homele.com/properties/for-sale-and-rent/erbil/queen-tower)
 
 ### Location and surroundings
 Queen Tower is on Naznaz Street (Daniel Qassab Street) close to Gulan Street in central Erbil, opposite the Boulevard project and behind Naz Apartments (Paya); Baghy gives 'Gulan Street'. It is a different project from 'Life Towers (King and Queen)' at 32 Park. Map position (medium confidence, from agency map pins): 36.2139, 43.990932. Google Maps: https://www.google.com/maps?q=36.2139,43.990932
@@ -459,7 +459,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 12 listed apartments (77-240 m², 1+1 to 4+1)",
+   "source_url": "https://paya-realestate.com/en/projects/queen-tower-255"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings: monthly rentals ($400-$800 Monthly) and sales",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/queen-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2139,43.990932",
  "publish_recommendation": "ready"
 }

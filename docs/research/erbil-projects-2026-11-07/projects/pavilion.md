@@ -34,7 +34,7 @@ Project ID: pavilion | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No apartment-building count | — |
 | Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 300,000 | 300,000 M2 open and green space | https://baghyshaqlawa.net/en/projects/pavilion |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -338,7 +338,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 680.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 300000,
+   "text": "300,000 M2 open and green space",
+   "source_url": "https://baghyshaqlawa.net/en/projects/pavilion"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.223704,43.980216",
  "publish_recommendation": "ready"
 }

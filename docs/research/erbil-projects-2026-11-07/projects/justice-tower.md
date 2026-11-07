@@ -31,7 +31,7 @@ Project ID: justice-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total housing units | None residential; 1,000 office units | Hajisalam only | https://hajisalam.com/en/justice-tower/ |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | 1,000 | Haji Salam: 'Project Type: Office', 'Number Of Unit: 1000' | https://hajisalam.com/en/justice-tower/ |
 | Towers / apartment buildings | 1 tower | All sources describe a single tower | https://hajisalam.com/en/justice-tower/ ; https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq |
 | Floors per building | 40 (Hajisalam: 35) | round-city.com and Wikipedia list 40; Hajisalam 35 | https://round-city.com/erbils-justice-tower-an-ironic-landmark/ ; https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Iraq ; https://hajisalam.com/en/justice-tower/ |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -273,7 +273,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": 1000,
+   "text": "Haji Salam: 'Project Type: Office', 'Number Of Unit: 1000'",
+   "source_url": "https://hajisalam.com/en/justice-tower/"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

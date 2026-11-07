@@ -30,7 +30,7 @@ Project ID: empire-wings | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 2,008 (Baghy) vs 3,856/3,865 (Miran) | Sources disagree; Miran inconsistent internally | https://baghyshaqlawa.net/en/projects/empire-world ; https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Miran: 'A total of 3,856 apartments' over 30 buildings (stats box: Units 3,865); Baghy (Empire World page): 'A total of 2,008 apartments' over 26 buildings | — | https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 26 (Baghy, Haji) vs 30 (Miran) | Possibly before/after the W12–W15 section; unconfirmed | https://baghyshaqlawa.net/en/projects/empire-world ; https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8 |
 | Floors per building | From 9 floors rising to 27 (Baghy, Haji) or 31 (Miran) | Agree on 9-floor start; maximum disputed | https://baghyshaqlawa.net/en/projects/empire-world ; https://hajisalam.com/en/empire-world/ ; https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8 |
@@ -47,7 +47,7 @@ Project ID: empire-wings | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | duplex | 377, 383, 406, 407, 412 | 377 | 412 | 4 | 2 floors; Baghy: 24 duplexes 377-383 m2 (Type 1) and 8 duplexes 406-412 m2 (Type 2). Miran: duplex 407 m2. | agency_project_page | https://baghyshaqlawa.net/en/projects/empire-world ; https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8 |
 | apartment | 63, 80, 81, 84, 86, 94, 125, 168 | 63 | 168 | — | Sizes advertised in Homele listings (sale and rent). | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/empire-wings |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table with a 'Floor plan' column for 23 types (63–407 m²); '—' shown for 2+1 194 m² (https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 2 bed 125 m2 - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-wings |
 | Apartment 2 bed 168 m2 - monthly rent | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-wings |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); ready units listed for monthly rent (Miran $450–500; homele $475–700) and sale (homele 63–86 m², $70,000–92,500) (https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8)
 
 ### Location and surroundings
 Empire Wings occupies the west and east sides of the Empire World development in western Erbil (Baghy, Haji Salam, Miran). Miran lists views of 100M Street, downtown, park and city from the apartments. Empire World itself lies along the 100-metre road near Erbil International Airport (see empire-world entry). Map position (low confidence, from agency map pins): 36.2011705, 43.9693437. Google Maps: https://www.google.com/maps?q=36.2011705,43.9693437
@@ -741,7 +741,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Miran: 'A total of 3,856 apartments' over 30 buildings (stats box: Units 3,865); Baghy (Empire World page): 'A total of 2,008 apartments' over 26 buildings",
+   "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table with a 'Floor plan' column for 23 types (63–407 m²); '—' shown for 2+1 194 m²",
+   "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); ready units listed for monthly rent (Miran $450–500; homele $475–700) and sale (homele 63–86 m², $70,000–92,500)",
+   "source_url": "https://miranestate.com/projects/cmk42kbhn00auqn0f1vnle2t8"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2011705,43.9693437",
  "publish_recommendation": "ready"
 }

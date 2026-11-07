@@ -31,7 +31,7 @@ Project ID: ezma-business-tower | Tier: 1 | In Erbil city: Yes | Last researched
 | Total housing units | 0 residential; 84 commercial offices | 84 offices stated by Paya and ZKTeco, but ZKTeco text mirrors the same marketing copy (not fully independent) | — |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | 84 | 13-story landmark offering 84 premium commercial offices | https://paya-realestate.com/en/projects/ezma-businsstower-272 |
 | Towers / apartment buildings | 1 tower | "13-story landmark" single building | — |
 | Floors per building | 13 | two sources, same wording | — |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -42,7 +42,7 @@ Project ID: ezma-business-tower | Tier: 1 | In Erbil city: Yes | Last researched
 |---|---|---|---|---|---|---|---|
 | office | 114, 128, 160, 168, 231, 237, 432 | 114 | 432 | — | 84 commercial offices in total; Paya lists 8 units (two of 231 m²) as open-plan ('Studio' layout). Building has a conference hall. | agency_project_page | https://paya-realestate.com/en/projects/ezma-businsstower-272 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 8 office units 114–432 m² (https://paya-realestate.com/en/projects/ezma-businsstower-272)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -375,7 +375,24 @@ Second verification pass 2026-11-07: queries “"EZMA Business Tower" Erbil”; 
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": 84,
+   "text": "13-story landmark offering 84 premium commercial offices",
+   "source_url": "https://paya-realestate.com/en/projects/ezma-businsstower-272"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 8 office units 114–432 m²",
+   "source_url": "https://paya-realestate.com/en/projects/ezma-businsstower-272"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2104288,43.97833999",
  "publish_recommendation": "ready"
 }

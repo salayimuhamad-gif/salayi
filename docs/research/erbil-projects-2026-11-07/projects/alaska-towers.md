@@ -30,11 +30,11 @@ Project ID: alaska-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Plots or parcels | Not verified | — | — |
 | Total housing units | ~1,240 apartments | Miran stats and text only | https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,240 | 'offering approximately 1,240 apartments' (miranestate description; project statistics 'Units 1,240') | https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 8 | Paya text and Miran stats | https://paya-realestate.com/en/projects/alaska-towers-262 ; https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 | Floors per building | 23 (2 parking + 1 commercial + 20 residential) | Paya and Miran | https://paya-realestate.com/en/projects/alaska-towers-262 ; https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | '65% green spaces and landscaped areas' (miranestate) | — | https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 | Development phases | Not verified | None mentioned | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -46,7 +46,7 @@ Project ID: alaska-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | apartment | 266 | 266 | 266 | 4 | 4+1 listed by Miran only | agency_project_page | https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 | other | Not verified | — | — | — | One commercial floor per tower (commercial units) | agency_project_page | https://paya-realestate.com/en/projects/alaska-towers-262 ; https://miranestate.com/projects/cmlf809n60003p10fm2nkusby |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya lists 4 apartment types (1-bed 100.65 m² and 110 m², 2-bed 167.35 m², 3-bed 267.2 m²), each with 'View Blueprint' (https://paya-realestate.com/en/projects/alaska-towers-262)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1-bed 106 m² – Homele off-plan listing (advertised) | 63,300 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/alaska-towers |
 | 2-bed 166 m² – Homele off-plan listing (advertised) | 99,600 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/alaska-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 35% down payment, 30% at key handover, 35% monthly payment over 72 months; price per meter $790. Homele listings: off-plan apartments for sale (https://miranestate.com/projects/cmlf809n60003p10fm2nkusby)
 
 ### Location and surroundings
 On the 120 m ring road in the 32 Park area of western Erbil; Paya also calls the area the 'new Golden Zone'. Paya's structured data places the project at 36.183348, 43.946552, about 6 km west of the citadel. Map position (low confidence, from agency map pins): 36.183348, 43.946552. Google Maps: https://www.google.com/maps?q=36.183348,43.946552
@@ -450,7 +450,32 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1240,
+   "text": "'offering approximately 1,240 apartments' (miranestate description; project statistics 'Units 1,240')",
+   "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "'65% green spaces and landscaped areas' (miranestate)",
+   "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya lists 4 apartment types (1-bed 100.65 m² and 110 m², 2-bed 167.35 m², 3-bed 267.2 m²), each with 'View Blueprint'",
+   "source_url": "https://paya-realestate.com/en/projects/alaska-towers-262"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 35% down payment, 30% at key handover, 35% monthly payment over 72 months; price per meter $790. Homele listings: off-plan apartments for sale",
+   "source_url": "https://miranestate.com/projects/cmlf809n60003p10fm2nkusby"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.183348,43.946552",
  "publish_recommendation": "ready"
 }

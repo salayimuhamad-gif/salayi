@@ -29,7 +29,7 @@ Project ID: aynda-city-2 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | — | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 489 | 'Number Of Unit: 489', Project Type: House (hajisalam) | https://hajisalam.com/en/aynda-city-2/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | — | — |
@@ -61,7 +61,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready 'VIP' house 216 m2, 4 bed / 5 bath - listing asking price (negotiable) | 150,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
 | Ready modern house 216 m2, 5 bed / 4 bath - listing asking price (negotiable) | 155,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready houses for sale incl. 'House in Cash', prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2)
 
 ### Location and surroundings
 Homele lists 'Aynda City 2' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -229,7 +229,24 @@ Second verification pass 2026-11-07: queries “"Aynda City" OR "Ayenda City" Er
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 489,
+   "text": "'Number Of Unit: 489', Project Type: House (hajisalam)",
+   "source_url": "https://hajisalam.com/en/aynda-city-2/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready houses for sale incl. 'House in Cash', prices 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/aynda-city-2"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

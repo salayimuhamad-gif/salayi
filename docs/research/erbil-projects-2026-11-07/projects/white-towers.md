@@ -30,11 +30,11 @@ Project ID: white-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 576 | Miran only | https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 576 | Units 576 (Miran project statistics) | https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 2 (Paya) vs 4 (Miran) | Two sources disagree | https://paya-realestate.com/en/projects/white-towers-164 ; https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c |
 | Floors per building | 17 | Miran only | https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 2,000 | Spacious green areas of 2,000 square meters (Paya) | https://paya-realestate.com/en/projects/white-towers-164 |
 | Development phases | None reported | — | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 1 bed 88 m2 furnished - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/white-towers |
 | 2 bed 138 m2 furnished - monthly rent | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/white-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele market listings show apartments for sale and for monthly rent (USD 225-400/month) (https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c)
 
 ### Location and surroundings
 White Towers is in Erbil's 'Golden Square' between 100 Street and 120 Street, opposite Erbil International Airport (Paya); Baghy Shaqlawa gives 'Erbil-120M highway' and Miran places it near Empire World. Map position (medium confidence, from agency map pins): 36.209281, 43.958524. Google Maps: https://www.google.com/maps?q=36.209281,43.958524
@@ -443,7 +443,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 3.1,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 576,
+   "text": "Units 576 (Miran project statistics)",
+   "source_url": "https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": 2000,
+   "text": "Spacious green areas of 2,000 square meters (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/white-towers-164"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele market listings show apartments for sale and for monthly rent (USD 225-400/month)",
+   "source_url": "https://miranestate.com/projects/cmnynfg0s01wyo30fhyfdht0c"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.209281,43.958524",
  "publish_recommendation": "ready"
 }

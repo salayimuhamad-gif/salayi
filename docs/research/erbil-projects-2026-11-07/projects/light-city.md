@@ -60,7 +60,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa 450 m2, 5 beds, tagged Off Plan ('quick sale') - market listing, negotiable | 170,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
 | House 450 m2, 5 beds, tagged Ready ('VIP house', 'new price') - market listing, negotiable | 380,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/light-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: 450 m² villas for sale (one Off Plan, one Ready), prices negotiable (https://homele.com/properties/for-sale-and-rent/erbil/light-city)
 
 ### Location and surroundings
 On the Bahrka Road in Erbil, behind Gulan City (Baghy). No further address published. Map position (low confidence, from agency map pins): 36.314025, 44.033777. Google Maps: https://www.google.com/maps?q=36.314025,44.033777
@@ -253,7 +253,20 @@ Second verification pass 2026-11-07: queries “"Light City" Erbil Bahrka road G
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: 450 m² villas for sale (one Off Plan, one Ready), prices negotiable",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/light-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.314025,44.033777",
  "publish_recommendation": "review"
 }

@@ -30,7 +30,7 @@ Project ID: parosh-twin-towers | Tier: 1 | In Erbil city: Yes | Last researched:
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified (Paya: each tower 'includes 102 apartments'; no total given) | Wording could mean 102 per tower or in total | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | The project consists of two towers, and each tower consists of 14 floors and includes 102 apartments (stated per tower) | — | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 2 towers | Paya text; name 'Twin Towers' | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
 | Floors per building | 14 | Paya text only | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
@@ -45,7 +45,7 @@ Project ID: parosh-twin-towers | Tier: 1 | In Erbil city: Yes | Last researched:
 | apartment | 162, 172 | 162 | 172 | 3 | 3 bathrooms; Paya unit table | agency_project_page | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
 | office | Not verified | — | — | — | Commercial centre (offices) mentioned in Paya text; no sizes | agency_project_page | https://paya-realestate.com/en/projects/parosh-twin-towers-167 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 9 listed apartments (80-172 m²) (https://paya-realestate.com/en/projects/parosh-twin-towers-167)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -412,7 +412,24 @@ Second verification pass 2026-11-07: queries “"Parosh" Twin Towers Erbil Kasna
  "figure_notes": [],
  "land_area_dunams": 2.6,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "The project consists of two towers, and each tower consists of 14 floors and includes 102 apartments (stated per tower)",
+   "source_url": "https://paya-realestate.com/en/projects/parosh-twin-towers-167"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 9 listed apartments (80-172 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/parosh-twin-towers-167"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.204765,44.114938",
  "publish_recommendation": "ready"
 }

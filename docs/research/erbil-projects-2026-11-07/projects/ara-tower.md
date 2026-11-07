@@ -60,7 +60,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished apartment 155 m2, 2 bed, 2 bath - rent per month | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ara-tower |
 | Apartment 150 m2, 3 bed, 1 bath 'English Village (Ara Tower)' - rent per month (Baghy card) | 700 | USD | rent | accessed 2026-11-07 (listing date not shown) | https://baghyshaqlawa.net/en/projects/english-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: furnished apartments for rent at $750 Monthly (https://homele.com/properties/for-sale-and-rent/erbil/ara-tower)
 
 ### Location and surroundings
 Ara Tower is inside the English Village compound on the 40m Road in western Erbil, per a Baghy Shaqlawa listing titled 'English Village (Ara Tower)'.
@@ -249,7 +249,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: furnished apartments for rent at $750 Monthly",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ara-tower"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

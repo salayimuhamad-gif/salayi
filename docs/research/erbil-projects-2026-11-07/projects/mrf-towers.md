@@ -30,7 +30,7 @@ Project ID: mrf-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 880 | Sum of Miran group stats (160 + 320 + 400); consistent with Baghy 11 towers x 20 floors x 4 flats | https://miranestate.com/projects/cmnpw79v1093smx0f9qas8t9z ; https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd ; https://miranestate.com/projects/cmnpwtu69096pmx0fkr0257nw ; https://baghyshaqlawa.net/en/projects/mrf-towers |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Miran project statistics per named group (no combined total stated): MRF 2 Tower – Buildings 2, Units 160; MRF 4 Tower – Buildings 4, Units 320 (https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd); MRF 5 Towers – Buildings 5, Units 400 (https://miranestate.com/projects/cmnpwtu69096pmx0fkr0257nw); all 3+1 165 m² apartments | — | https://miranestate.com/projects/cmnpw79v1093smx0f9qas8t9z |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 11 | Baghy and Hajisalam '11 towers'; Miran 2 + 4 + 5 | https://baghyshaqlawa.net/en/projects/mrf-towers ; https://hajisalam.com/en/mrf-tower/ ; https://miranestate.com/projects/cmnpwtu69096pmx0fkr0257nw |
 | Floors per building | 20 | Baghy, Hajisalam, Miran agree | https://baghyshaqlawa.net/en/projects/mrf-towers ; https://hajisalam.com/en/mrf-tower/ ; https://miranestate.com/projects/cmnpw79v1093smx0f9qas8t9z |
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | MRF 4 Towers apartment 165 m2, 3 bed - homele rent per month (lowest on page) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-4-towers |
 | MRF 4 Towers apartment 173 m2, 3 bed - homele rent per month | 650 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mrf-4-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; apartments listed for rent ($450–$600); homele lists ready apartments mostly for rent ($400–$650 monthly) and some for sale (https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd)
 
 ### Location and surroundings
 The 11 MRF towers stand in Erbil's 'Golden Zone' between the 40m (Gulan) and 100m ring roads, between the Empire World complex and the English Village (Baghy, Hajisalam, Miran); MRF 4 towers overlook the 100M Street (Miran). Map position (low confidence, from agency map pins): 36.194881, 43.966536. Google Maps: https://www.google.com/maps?q=36.194881,43.966536
@@ -446,7 +446,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Miran project statistics per named group (no combined total stated): MRF 2 Tower – Buildings 2, Units 160; MRF 4 Tower – Buildings 4, Units 320 (https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd); MRF 5 Towers – Buildings 5, Units 400 (https://miranestate.com/projects/cmnpwtu69096pmx0fkr0257nw); all 3+1 165 m² apartments",
+   "source_url": "https://miranestate.com/projects/cmnpw79v1093smx0f9qas8t9z"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; apartments listed for rent ($450–$600); homele lists ready apartments mostly for rent ($400–$650 monthly) and some for sale",
+   "source_url": "https://miranestate.com/projects/cmnpws7zi095ymx0fh2mm6hqd"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.194881,43.966536",
  "publish_recommendation": "ready"
 }

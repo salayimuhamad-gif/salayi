@@ -29,7 +29,7 @@ Project ID: kani-almany-village | Tier: 1 | In Erbil city: Yes | Last researched
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 315 | Haji Salam only (houses) | https://hajisalam.com/en/kany-almany/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 315 | Haji Salam: 'Project Type: House Number Of Units 315' | https://hajisalam.com/en/kany-almany/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
@@ -45,7 +45,7 @@ Project ID: kani-almany-village | Tier: 1 | In Erbil city: Yes | Last researched
 | apartment | Not verified | — | — | — | Paya description mentions 'contemporary apartment buildings'; no count or sizes | agency_project_page | https://paya-realestate.com/en/projects/kani-almany-282 |
 | house | 306 | 306 | 306 | — | homele: house tagged 'Off Plan' 4 bed / 5 bath (USD 165,000) and ready furnished house 5 bed / 4 bath (USD 220,000) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/kanealmany |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: blueprint offered ('View Blueprint') for House 306 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/kani-almany-282)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -356,7 +356,24 @@ Second verification pass 2026-11-07: queries “"Kani Almany" OR "German Village
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 315,
+   "text": "Haji Salam: 'Project Type: House Number Of Units 315'",
+   "source_url": "https://hajisalam.com/en/kany-almany/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: blueprint offered ('View Blueprint') for House 306 m², 4 beds, 3 baths",
+   "source_url": "https://paya-realestate.com/en/projects/kani-almany-282"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.262024,43.986609",
  "publish_recommendation": "ready"
 }

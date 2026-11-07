@@ -29,8 +29,8 @@ Project ID: dashty-bahasht | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 500 units (Haji Salam) vs 427 villas + 1,122 apartments = 1,549 units (Rudaw, search summary) | Two sources disagree; typed field left null | https://hajisalam.com/en/dashty-bahasht/ ; https://rudaw.net/sorani/kurdistan/010120263 |
-| Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Villas / houses | Haji Salam: 'Number Of Unit: 500' for Project Type 'House - Villa - Apartment' (not split by type); Rudaw news (search summary in profile, page not opened): 427 villas | — | https://hajisalam.com/en/dashty-bahasht/ |
+| Apartments | Haji Salam: 500 units in total across house/villa/apartment (not split); Rudaw news (search summary in profile, page not opened): 1,122 apartments | — | https://hajisalam.com/en/dashty-bahasht/ |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not stated | — |
 | Floors per building | 2-3 floors per unit | Haji Salam 'Num. of floors 2-3' | https://hajisalam.com/en/dashty-bahasht/ |
@@ -235,7 +235,24 @@ Second verification pass 2026-11-07: queries “"Dashty Bahasht" OR "Dashti Baha
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Haji Salam: 'Number Of Unit: 500' for Project Type 'House - Villa - Apartment' (not split by type); Rudaw news (search summary in profile, page not opened): 427 villas",
+   "source_url": "https://hajisalam.com/en/dashty-bahasht/"
+  },
+  "apartments": {
+   "value": null,
+   "text": "Haji Salam: 500 units in total across house/villa/apartment (not split); Rudaw news (search summary in profile, page not opened): 1,122 apartments",
+   "source_url": "https://hajisalam.com/en/dashty-bahasht/"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

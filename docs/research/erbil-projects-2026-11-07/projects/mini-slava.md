@@ -30,7 +30,7 @@ Project ID: mini-slava | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 592 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 592 | Roya listing (seen only as a web-search summary, page not fetched): four 20-storey residential towers, 592 units | https://roya-iq.com/?p=9094 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
 | Floors per building | 20 | Roya listing via search summary | https://roya-iq.com/?p=9094 |
@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready furnished apartment 155 m2, 2 bed / 2 bath - homele listing (negotiable) | 117,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
 | Ready commercial unit (beauty salon) 115 m2 - homele rent per month | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mini-slava |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready apartments for sale (some negotiable, one 'Installment'); a 115 m² beauty salon for rent at $500 monthly (https://homele.com/properties/for-sale-and-rent/erbil/mini-slava)
 
 ### Location and surroundings
 Mini Slava is on Erbil's 120m Street ring road (Baghy Shaqlawa); a Roya International listing places it on the 120 Street near Family Mall. Baghy uses it as a branch location ('Mini Slava Erbil'). It is distinct from Slava City by the same developer. Map position (low confidence, from agency map pins): 36.219239, 44.064827. Google Maps: https://www.google.com/maps?q=36.219239,44.064827
@@ -348,7 +348,24 @@ Second verification pass 2026-11-07: queries “"Mini Slava" Erbil Slava Group t
  "figure_notes": [],
  "land_area_dunams": 4.2,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 592,
+   "text": "Roya listing (seen only as a web-search summary, page not fetched): four 20-storey residential towers, 592 units",
+   "source_url": "https://roya-iq.com/?p=9094"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready apartments for sale (some negotiable, one 'Installment'); a 115 m² beauty salon for rent at $500 monthly",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/mini-slava"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.219239,44.064827",
  "publish_recommendation": "review"
 }

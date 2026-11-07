@@ -31,7 +31,7 @@ Project ID: cbc-china-business-center | Tier: 1 | In Erbil city: Yes | Last rese
 | Total housing units | None (commercial project). Offices: 12 office units per floor on floors 2–5 (total not stated) | single source | https://homele.com/projects/cbc-china-business-center-402 |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | Ground & first floors: premium showroom spaces; floors 2–5: 'Each floor offers 12 professional office units' (project total not stated) | — | https://homele.com/projects/cbc-china-business-center-402 |
 | Towers / apartment buildings | 1 building ("CBC building consists of…") | single source | https://homele.com/projects/cbc-china-business-center-402 |
 | Floors per building | Ground + first floor (showrooms) + floors 2–5 (offices) = 6 described levels; basements/parking levels not stated | derived directly from the floor-use description, single source | https://homele.com/projects/cbc-china-business-center-402 |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -43,7 +43,7 @@ Project ID: cbc-china-business-center | Tier: 1 | In Erbil city: Yes | Last rese
 | office | 89.84, 98.38, 101.86, 135.83, 138.93, 188.98, 224.46, 238.54, 240.01, 265.85, 273.24, 360.68 | 89.84 | 360.68 | — | 1 bathrooms; Executive offices on floors 2-5; 12 office units per floor; unified modern design. Bathrooms=1 per individual listings. | agency_project_page | https://homele.com/projects/cbc-china-business-center-402 |
 | shop | Not verified | — | — | — | Showroom spaces on ground and first floors for international and local brands; sizes not published. | agency_project_page | https://homele.com/projects/cbc-china-business-center-402 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Floor plans published on homele project page ('Unit Details & Floor Plans', 12 items, e.g. 90 m², 98 m² offices) (https://homele.com/projects/cbc-china-business-center-402)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Office 240 m2 (sale listing) | 201,608 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cbc-chine-business-center |
 | Office 266 m2 (sale listing) | 195,400 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cbc-chine-business-center |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment plan (office 89.84 m², total $84,899): 50% at signing of the contract, 25% within 90 days of signing, 25% on handover of the key (https://homele.com/projects/cbc-china-business-center-402)
 
 ### Location and surroundings
 The project page places CBC in Erbil on Naznaz Street (Gulan Road), between the Dream City residential compound and the Boulevard project. Gulan Road is one of Erbil's main arterial roads. The homele map widget lists nearby-category tabs (restaurants, schools, shopping malls, transportation, gym, hospital, mosque) but gives no named landmarks or distances. No independent source describing the location was found. Map position (low confidence, from agency map pins): 36.213047, 43.977273. Google Maps: https://www.google.com/maps?q=36.213047,43.977273
@@ -525,7 +525,28 @@ Second verification pass 2026-11-07: queries “"China Business Center" Erbil CB
  "figure_notes": [],
  "land_area_dunams": 1.3,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": null,
+   "text": "Ground & first floors: premium showroom spaces; floors 2–5: 'Each floor offers 12 professional office units' (project total not stated)",
+   "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Floor plans published on homele project page ('Unit Details & Floor Plans', 12 items, e.g. 90 m², 98 m² offices)",
+   "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment plan (office 89.84 m², total $84,899): 50% at signing of the contract, 25% within 90 days of signing, 25% on handover of the key",
+   "source_url": "https://homele.com/projects/cbc-china-business-center-402"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.213047,43.977273",
  "publish_recommendation": "review"
 }

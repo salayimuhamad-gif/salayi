@@ -30,7 +30,7 @@ Project ID: empire-pearl-towers | Tier: 1 | In Erbil city: Yes | Last researched
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,806 apartments | Miran states it; matches Paya's per-floor figures (7 x 21 x 12 + 21 x 2 = 1,806) | https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa ; https://paya-realestate.com/en/projects/empire-pearl-towers-170 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,806 | Seven towers; 12 apartments per floor except P6 with 14; 'Totaling 1806 luxury apartments' (Miran stats: Units 1,806) | https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 7 towers | Paya and Miran agree | https://paya-realestate.com/en/projects/empire-pearl-towers-170 ; https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa |
 | Floors per building | 23 (21 residential + 2 commercial) | Paya and Miran text agree | https://paya-realestate.com/en/projects/empire-pearl-towers-170 ; https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa |
@@ -46,7 +46,7 @@ Project ID: empire-pearl-towers | Tier: 1 | In Erbil city: Yes | Last researched
 | apartment | 178 | 178 | 178 | 3 | 3 bathrooms; 3+1 178 m2 (Paya, Miran); Homele listing shows 3 baths. | agency_project_page | https://paya-realestate.com/en/projects/empire-pearl-towers-170 ; https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa |
 | apartment | 46, 50, 55, 94, 96, 97, 178 | 46 | 178 | — | Sizes advertised in Homele listings (11 listing pages; first page captured). 46 and 50 m2 studios do not match the stated studio sizes exactly. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/empire-pearl-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Miran unit-type table with a 'Floor plan' column for 14 types (studio 48–54 m², 1+1 94–97 m², 2+1 126–129 m², 3+1 178 m²); no '—' shown (https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Studio 50 m2 - monthly rent | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-pearl-towers |
 | Apartment 46 m2 - monthly rent | 300 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/empire-pearl-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); ready units listed for monthly rent and resale (homele, e.g. 97 m² $600/month; 96 m² $90,000 negotiable) (https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa)
 
 ### Location and surroundings
 Empire Pearl Towers stands on the 100-metre road on the western side of the Empire World development, about 1 km from Erbil International Airport and about 2 km from the centre of Erbil, according to Paya. Miran lists views of 100M Street, the city and the street. Distances are as stated by Paya and are not re-estimated here. Map position (low confidence, from agency map pins): 36.198395, 43.9645091. Google Maps: https://www.google.com/maps?q=36.198395,43.9645091
@@ -501,7 +501,28 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": 93.6,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1806,
+   "text": "Seven towers; 12 apartments per floor except P6 with 14; 'Totaling 1806 luxury apartments' (Miran stats: Units 1,806)",
+   "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Miran unit-type table with a 'Floor plan' column for 14 types (studio 48–54 m², 1+1 94–97 m², 2+1 126–129 m², 3+1 178 m²); no '—' shown",
+   "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); ready units listed for monthly rent and resale (homele, e.g. 97 m² $600/month; 96 m² $90,000 negotiable)",
+   "source_url": "https://miranestate.com/projects/cmk5e91bg017rqn0f43w5uuaa"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.198395,43.9645091",
  "publish_recommendation": "ready"
 }

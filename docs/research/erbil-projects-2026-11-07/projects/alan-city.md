@@ -58,7 +58,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Ready one-floor house 200 m2, 2 bed, 2 bath - negotiable | 93,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/alan-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listing: ready one-floor house for sale, $93,000 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/alan-city)
 
 ### Location and surroundings
 homele lists Alan City as an area of Erbil city; no source gives its road or district.
@@ -209,7 +209,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listing: ready one-floor house for sale, $93,000 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/alan-city"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

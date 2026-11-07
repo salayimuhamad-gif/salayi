@@ -29,7 +29,7 @@ Project ID: dubai-city | Tier: 1 | In Erbil city: Edge (urban fringe) | Last res
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Not verified | No source | — |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 50 | Haji Salam: 'Number Of Unit: 50' (Project Type: Villa; area 1000 m; 2 floors; address Kasnazan Road) | https://hajisalam.com/en/dubai-city/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No source | — |
@@ -230,7 +230,20 @@ Second verification pass 2026-11-07: queries “"Dubai City" Erbil Koya road vil
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 50,
+   "text": "Haji Salam: 'Number Of Unit: 50' (Project Type: Villa; area 1000 m; 2 floors; address Kasnazan Road)",
+   "source_url": "https://hajisalam.com/en/dubai-city/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.206496,44.112794",
  "publish_recommendation": "review"
 }

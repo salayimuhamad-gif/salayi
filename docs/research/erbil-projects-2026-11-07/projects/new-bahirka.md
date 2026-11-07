@@ -29,7 +29,7 @@ Project ID: new-bahirka | Tier: 1 | In Erbil city: Edge (urban fringe) | Last re
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 224 houses | Haji Salam only | https://hajisalam.com/en/bahirka-new/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 224 | Haji Salam: Project Type House; Number Of Unit 224 | https://hajisalam.com/en/bahirka-new/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (house compound) | No apartment buildings mentioned | — |
@@ -191,7 +191,20 @@ Second verification pass 2026-11-07: queries “"New Bahirka" Erbil houses proje
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 224,
+   "text": "Haji Salam: Project Type House; Number Of Unit 224",
+   "source_url": "https://hajisalam.com/en/bahirka-new/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

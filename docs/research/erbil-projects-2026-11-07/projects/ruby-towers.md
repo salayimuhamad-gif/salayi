@@ -30,11 +30,11 @@ Project ID: ruby-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,640 | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,640 | Six towers with 32 residential floors and 1640 units | https://paya-realestate.com/en/projects/ruby-towers-258 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 6 towers | Paya only | https://paya-realestate.com/en/projects/ruby-towers-258 |
 | Floors per building | 32 residential floors (+2 commercial floors, +4 basements) | Paya only; text does not say whether 32 is per tower | https://paya-realestate.com/en/projects/ruby-towers-258 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 40% devoted to greenery | — | https://paya-realestate.com/en/projects/ruby-towers-258 |
 | Development phases | None stated | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -43,7 +43,7 @@ Project ID: ruby-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | apartment | 88, 93, 127, 210 | 88 | 210 | — | 88 and 93 m2: 1 bed/1 bath; 127 m2: 2 bed/2 bath; 210 m2: 3 bed/3 bath (Paya unit table) | agency_project_page | https://paya-realestate.com/en/projects/ruby-towers-258 |
 | apartment | 88, 93, 127 | 88 | 127 | — | homele rental listings (1-2 beds), first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 4 listed apartments (88-210 m²) (https://paya-realestate.com/en/projects/ruby-towers-258)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 127 m2, 2 bed - monthly rent (market listings USD 450-550) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
 | Apartment 127 m2, 2 bed, furnished - monthly rent (market listing) | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$550 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers)
 
 ### Location and surroundings
 On the 40 m Road in central-west Erbil, opposite the Quattro towers and beside the Presidency of the Kurdistan Region (Paya, Baghy). Map position (medium confidence, from agency map pins): 36.21909, 44.003512. Google Maps: https://www.google.com/maps?q=36.21909,44.003512
@@ -337,7 +337,32 @@ Second verification pass 2026-11-07: queries “"Ruby Towers" Erbil”; “رو�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1640,
+   "text": "Six towers with 32 residential floors and 1640 units",
+   "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+  },
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "40% devoted to greenery",
+   "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 4 listed apartments (88-210 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/ruby-towers-258"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings: monthly rentals ($350-$550 Monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ruby-towers"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.21909,44.003512",
  "publish_recommendation": "ready"
 }

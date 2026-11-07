@@ -29,9 +29,9 @@ Project ID: italian-village-1 | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 740 total units (Hajisalam) vs 624 houses + 81 offices = 705 (Bagh-y Shaqlawa type counts) | Two primary sites disagree | https://hajisalam.com/en/italian-city1/ ; https://baghyshaqlawa.net/en/projects/italian-city-1 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | Baghy Shaqlawa: Houses Type A 212 (320 m), Type B 160 (240 m), Type C 39 (140 m), Type D 196 (200 m), Private Houses 17 (600 m); no total stated. Haji Salam: 'Number Of Unit: 740' for the whole villa/office/house project | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | Baghy Shaqlawa: 'Office Type A: They Are 45 office and each of them 113 meter'; 'Office Type B: They Are 36 office and each of them 260 meter'; no total stated | — | https://baghyshaqlawa.net/en/projects/italian-city-1 |
 | Towers / apartment buildings | Not applicable (house compound) | Unit counts given instead of building counts | https://baghyshaqlawa.net/en/projects/italian-city-1 |
 | Floors per building | 2 | Hajisalam | https://hajisalam.com/en/italian-city1/ |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -72,7 +72,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready office 220 m2 - homele rental listing (per month) | 1,400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
 | Ready house 200 m2, 4 bed - homele rental listing (per month) | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele: ready houses and offices for rent (e.g. '$1,100 Monthly', '$1,400 Monthly', '$4,000 Monthly') and for sale ('$250,000 Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1)
 
 ### Location and surroundings
 Italian City 1 lies between Erbil's 100 m and 40 m roads, beside Sami Abdulrahman Park. Map position (low confidence, from agency map pins): 36.188236, 43.969943. Google Maps: https://www.google.com/maps?q=36.188236,43.969943
@@ -572,7 +572,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": null,
+   "text": "Baghy Shaqlawa: Houses Type A 212 (320 m), Type B 160 (240 m), Type C 39 (140 m), Type D 196 (200 m), Private Houses 17 (600 m); no total stated. Haji Salam: 'Number Of Unit: 740' for the whole villa/office/house project",
+   "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-1"
+  },
+  "apartments": null,
+  "commercial_units": {
+   "value": null,
+   "text": "Baghy Shaqlawa: 'Office Type A: They Are 45 office and each of them 113 meter'; 'Office Type B: They Are 36 office and each of them 260 meter'; no total stated",
+   "source_url": "https://baghyshaqlawa.net/en/projects/italian-city-1"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele: ready houses and offices for rent (e.g. '$1,100 Monthly', '$1,400 Monthly', '$4,000 Monthly') and for sale ('$250,000 Negotiable')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/italian-village-1"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.188236,43.969943",
  "publish_recommendation": "ready"
 }

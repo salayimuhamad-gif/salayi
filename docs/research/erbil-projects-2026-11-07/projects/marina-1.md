@@ -29,7 +29,7 @@ Project ID: marina-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-0
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 140 villas | Haji Salam only; identical to the Marina 2 figure | https://hajisalam.com/en/marina-1/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 140 | Haji Salam: Project Type Villa; Number Of Unit 140 | https://hajisalam.com/en/marina-1/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable (villa compound) | No apartment buildings mentioned | — |
@@ -58,7 +58,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 ### Prices and payment information (dated evidence, not official price lists)
 Prices: Not verified.
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Haji Salam related listings dated '6 years ago': a villa and a house for sale, price on call (https://hajisalam.com/en/marina-1/)
 
 ### Location and surroundings
 Haji Salam gives the address as Kasnazan Road, Erbil. No landmark or plot position are published.
@@ -236,7 +236,24 @@ Second verification pass 2026-11-07: queries “"Marina" villas Erbil Kasnazan r
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 140,
+   "text": "Haji Salam: Project Type Villa; Number Of Unit 140",
+   "source_url": "https://hajisalam.com/en/marina-1/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Haji Salam related listings dated '6 years ago': a villa and a house for sale, price on call",
+   "source_url": "https://hajisalam.com/en/marina-1/"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

@@ -34,7 +34,7 @@ Project ID: spanish-village-2 | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No villa count stated | — |
 | Floors per building | Not verified | No source | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 15,000 | 15,000 m² central park; approx. 110 m² outdoor space per villa for private greenery and parking (Miran) | https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
 | Development phases | Separate project from Spanish Village (1) | Separate Miran pages, different developers | https://miranestate.com/projects/cmnyplqes023so30frta9f67u ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 384 m2, 4 bed, opposite garden - monthly rent | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
 | House 400 m2, 4 bed - monthly rent | 1,200 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village-2 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele market listings show houses for sale (negotiable) and for monthly rent (USD 1,100-1,200/month) (https://miranestate.com/projects/cmnyplqes023so30frta9f67u)
 
 ### Location and surroundings
 On the 150 m ring road in Erbil, about 20 minutes from the airport (Miran); exact position relative to Spanish Village not published.
@@ -356,7 +356,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 15000,
+   "text": "15,000 m² central park; approx. 110 m² outdoor space per villa for private greenery and parking (Miran)",
+   "source_url": "https://miranestate.com/projects/cmnyplqes023so30frta9f67u"
+  },
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele market listings show houses for sale (negotiable) and for monthly rent (USD 1,100-1,200/month)",
+   "source_url": "https://miranestate.com/projects/cmnyplqes023so30frta9f67u"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

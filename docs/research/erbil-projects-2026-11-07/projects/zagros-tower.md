@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan apartment 165 m2, 2 bed / 2 bath, long-term instalment '(Down payment)' (homele listing) | 109,764 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower |
 | Off-plan apartment 290 m2, 3 bed / 2 bath, cash, negotiable (homele listing) | 145,543 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele off-plan listings offered 'in Cash' and in installments ('Installment', 'Long Term Installment') (https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower)
 
 ### Location and surroundings
 Homele lists 'Zagros Towers' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -315,7 +315,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele off-plan listings offered 'in Cash' and in installments ('Installment', 'Long Term Installment')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/zagros-tower"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

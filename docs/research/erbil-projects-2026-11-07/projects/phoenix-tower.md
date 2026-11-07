@@ -46,7 +46,7 @@ Project ID: phoenix-tower | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | office | 85, 87, 90, 100, 106, 117, 118, 137, 138, 143, 178, 208 | 85 | 208 | — | Baghy describes a corporate-office building: 'one bedroom' offices 85-137 m2, 'two bedrooms' offices 138-208 m2 | agency_project_page | https://baghyshaqlawa.net/en/projects/phoenix-tower |
 | office | 87 | 87 | 87 | — | 1 bathrooms; 'Ready Sleek Office on High Floor', 1 bath, $73,500 negotiable | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/phoenix-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 7 listed units (offices 118 and 143 m²; apartments 85-138 m²) (https://paya-realestate.com/en/projects/phoenix-tower-261)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Office 143 m2 - Paya project-page price | 157,300 | USD | developer | accessed 2026-11-07 | https://paya-realestate.com/en/projects/phoenix-tower-261 |
 | Ready office 87 m2, high floor, negotiable - homele listing | 73,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/phoenix-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment method: 50% down payment, remaining 50% in monthly installments (https://paya-realestate.com/en/projects/phoenix-tower-261)
 
 ### Location and surroundings
 Phoenix Tower stands in central Erbil opposite Sami Abdulrahman Park (Paya says it overlooks the park; Baghy gives 'Opposite of Sami Abdurahman Park'). No street address are published. Map position (medium confidence, from agency map pins): 36.199212, 43.98406. Google Maps: https://www.google.com/maps?q=36.199212,43.98406
@@ -466,7 +466,24 @@ Second verification pass 2026-11-07: queries “"Phoenix Tower" Erbil Sami Abdul
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 7 listed units (offices 118 and 143 m²; apartments 85-138 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/phoenix-tower-261"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment method: 50% down payment, remaining 50% in monthly installments",
+   "source_url": "https://paya-realestate.com/en/projects/phoenix-tower-261"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.199212,43.98406",
  "publish_recommendation": "ready"
 }

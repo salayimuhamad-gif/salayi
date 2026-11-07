@@ -29,7 +29,7 @@ Project ID: mass-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 382 | Paya only | https://paya-realestate.com/en/projects/mass-village-268 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 382 | Paya: 'The project comprises 382 villas, available in three distinct designs (A, B, and C)' | https://paya-realestate.com/en/projects/mass-village-268 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 382 villas | Paya only | https://paya-realestate.com/en/projects/mass-village-268 |
@@ -43,7 +43,7 @@ Project ID: mass-village | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | villa | 320 | 320 | 320 | 4 | 4 bathrooms; 2 floors; 320 m² plots, designs Type A, B, C; ground + first floor; Paya lists 4 bed/4 bath, Miran listings 4 bed/6 bath | agency_project_page | https://paya-realestate.com/en/projects/mass-village-268 ; https://miranestate.com/projects/cmnr5xs660ar4mx0fdosv5t0l |
 | villa | 315, 320, 368 | 315 | 368 | — | homele market listings (4–5 beds); 315 and 368 m² not matching the 320 m² plot type | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/mass-village |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya shows 'View Blueprint' for the 3 listed 320 m² houses (4 beds / 4 baths) (https://paya-realestate.com/en/projects/mass-village-268)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Corner house 320 m2, 4 beds - monthly rent | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/mass-village |
 | Villa 320 m2 (Type A), 4 beds - monthly rent (Miran) | 1,300 | USD | rent | Miran page updated 2026-08-23; accessed 2026-11-07 | https://miranestate.com/projects/cmnr5xs660ar4mx0fdosv5t0l |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; villas listed for sale and for rent ($1,000 and $1,300); homele lists ready houses for sale and for rent ($1,100–$1,600 monthly) (https://miranestate.com/projects/cmnr5xs660ar4mx0fdosv5t0l)
 
 ### Location and surroundings
 Between the 120 m ring road and Masif Salahaddin (Pirmam) Road in Erbil (Paya, Baghy), in the same area as Mass City. Map position (medium confidence, from agency map pins): 36.229119, 44.064284. Google Maps: https://www.google.com/maps?q=36.229119,44.064284
@@ -378,7 +378,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 382,
+   "text": "Paya: 'The project comprises 382 villas, available in three distinct designs (A, B, and C)'",
+   "source_url": "https://paya-realestate.com/en/projects/mass-village-268"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya shows 'View Blueprint' for the 3 listed 320 m² houses (4 beds / 4 baths)",
+   "source_url": "https://paya-realestate.com/en/projects/mass-village-268"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; villas listed for sale and for rent ($1,000 and $1,300); homele lists ready houses for sale and for rent ($1,100–$1,600 monthly)",
+   "source_url": "https://miranestate.com/projects/cmnr5xs660ar4mx0fdosv5t0l"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.229119,44.064284",
  "publish_recommendation": "ready"
 }

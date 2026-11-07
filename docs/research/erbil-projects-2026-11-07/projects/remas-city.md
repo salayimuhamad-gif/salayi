@@ -34,7 +34,7 @@ Project ID: remas-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Villa count disputed (410 vs 141 in Roya snippets) | — |
 | Floors per building | Not verified | No source states it | — |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | Built on an area of 460,000 square meters, with open and green spaces accounting for 79% of the total area | — | https://paya-realestate.com/en/projects/remas-city-263 |
 | Development phases | None numbered; 'Remas Towers' apartments listed separately on homele | Relation unconfirmed | https://homele.com/properties/for-sale-and-rent/erbil/remas-towers |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -43,7 +43,7 @@ Project ID: remas-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | villa | 500, 688 | 500 | 688 | 4 | 5 bathrooms; Paya lists 'House' 500 m2 and 688 m2, 4 beds / 5 baths | agency_project_page | https://paya-realestate.com/en/projects/remas-city-263 |
 | villa | 500, 587, 671, 688 | 500 | 688 | — | Ready houses for sale on homele, 4-6 beds, 3-6 baths | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/remas-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** 'View Blueprint' published for each of the 2 listed house types (500 and 688 m²) (https://paya-realestate.com/en/projects/remas-city-263)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -396,7 +396,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 184.0,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "Built on an area of 460,000 square meters, with open and green spaces accounting for 79% of the total area",
+   "source_url": "https://paya-realestate.com/en/projects/remas-city-263"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "'View Blueprint' published for each of the 2 listed house types (500 and 688 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/remas-city-263"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.283417,44.10646",
  "publish_recommendation": "ready"
 }

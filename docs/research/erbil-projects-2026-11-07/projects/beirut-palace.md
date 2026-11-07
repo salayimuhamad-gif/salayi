@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house 300 m2, 4 bed / 4 bath - monthly rent (homele market listing) | 1,100 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace |
 | Ready house 500 m2, 5 bed / 5 bath - monthly rent (homele market listing) | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready houses for rent ($1,100 and $1,500 Monthly) (https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace)
 
 ### Location and surroundings
 Homele lists 'Beirut Palace' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -215,7 +215,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready houses for rent ($1,100 and $1,500 Monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/beirut-palace"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

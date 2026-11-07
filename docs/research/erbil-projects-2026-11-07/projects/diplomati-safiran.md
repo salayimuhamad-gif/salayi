@@ -29,7 +29,7 @@ Project ID: diplomati-safiran | Tier: 1 | In Erbil city: Yes | Last researched: 
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 282 villas | Medium — single agency source (Paya project page; repeated on Paya's "manage" mirror, same origin) | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://manage.paya-realestate.com/en/diplomati-safiran-for-sale-in-diplomati-safiran--erbil/4ck998a/pjd |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 282 | Residential project consisting of 282 villas (240, 300, 500, 1000 m²) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | No apartment buildings (villa-only project) | Medium — single source (Paya text) | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
@@ -45,7 +45,7 @@ Project ID: diplomati-safiran | Tier: 1 | In Erbil city: Yes | Last researched: 
 | villa | 500 | 500 | 500 | 5 | 6 bathrooms; Paya: 5 beds / 6 baths; Homele listings: 5 beds / 5 baths | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 ; https://homele.com/properties/for-sale-and-rent/erbil/diplomati-safiran |
 | villa | 1,000 | 1,000 | 1,000 | 6 | 7 bathrooms; Paya only | agency_project_page | https://paya-realestate.com/en/projects/diplomati-safiran-253 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for houses 264 m² (labelled 'Villa 240 meter square'), 300, 500 and 1000 m² (https://paya-realestate.com/en/projects/diplomati-safiran-253)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -70,7 +70,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 240 m² house, resale (search snippet) | 247,500 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/modern-house-63864 |
 | 500 m² 5-bed house, resale, negotiable (listing dated 2026 per snippet) | 690,000 | USD | resale | 2026 (accessed 2026-11-07) | https://homele.com/properties/modern-5-br-house-for-sale-82584 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Installments: contract 20%, finishing structure 20%, finishing interior 20%, finishing outside 20%, finishing doors and windows 15%, receiving keys 10%; cash payment takes 8% discount on total price (https://paya-realestate.com/en/projects/diplomati-safiran-253)
 
 ### Location and surroundings
 Diplomati Safiran lies in north-east Erbil on the Shorsh / Pirmam (Massif) Road corridor. Paya places it in the Shorsh neighbourhood next to Dar Al-Ziyafa and states that it sits between the 100-metre and 120-metre ring roads; Baghy Shaqlawa gives the address simply as "Pirmam Road", and a Homele listing describes it as "Massif Road, Pirmam Street". Baghy Shaqlawa's nearest branch is its Italian City 2 branch, which is consistent with the Pirmam Road area. No distances to landmarks, schools or shopping are given by any source and none are estimated here. Published map pins for this project disagree, so no position is given.
@@ -504,7 +504,28 @@ Second verification pass 2026-11-07: queries “"Diplomati Safiran" OR "Diplomat
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 282,
+   "text": "Residential project consisting of 282 villas (240, 300, 500, 1000 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for houses 264 m² (labelled 'Villa 240 meter square'), 300, 500 and 1000 m²",
+   "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Installments: contract 20%, finishing structure 20%, finishing interior 20%, finishing outside 20%, finishing doors and windows 15%, receiving keys 10%; cash payment takes 8% discount on total price",
+   "source_url": "https://paya-realestate.com/en/projects/diplomati-safiran-253"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

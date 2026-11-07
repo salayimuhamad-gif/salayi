@@ -30,7 +30,7 @@ Project ID: asco-international-city | Tier: 1 | In Erbil city: Yes | Last resear
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Disputed: 1,390 vs ~2,390 | Two different figures on the same Miran page | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | miranestate project statistics: 'Units 1,390'; miranestate description: 'offering around 2,390 apartments' | — | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 5 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
 | Floors per building | 18 | Miran stats only | https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq |
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready 3-bed 191 m² – Homele sale listing | 120,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
 | Ready penthouse 320 m², 3 bed – Homele rent, per month | 1,400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/asco-international-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash, Installment, Payment Plans (miranestate); plan: 18% down payment, 22% at tower completion, 25% at key handover, 35% monthly payment over 60 months; price per meter $830. Homele listings: 'Apartment in Cash', a 'Down payment' offer, units for sale and for rent ($1,400 Monthly) (https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq)
 
 ### Location and surroundings
 Diamond Zone on the Massif–Pirmam road, opposite Grand Majidi Mall, north-east Erbil (Miran); Baghy gives 'Erbil – Pirmam Road'. Map position (low confidence, from agency map pins): 36.253582, 44.077763. Google Maps: https://www.google.com/maps?q=36.253582,44.077763
@@ -445,7 +445,24 @@ Second verification pass 2026-11-07: queries “"ASCO International City" Erbil�
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "miranestate project statistics: 'Units 1,390'; miranestate description: 'offering around 2,390 apartments'",
+   "source_url": "https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash, Installment, Payment Plans (miranestate); plan: 18% down payment, 22% at tower completion, 25% at key handover, 35% monthly payment over 60 months; price per meter $830. Homele listings: 'Apartment in Cash', a 'Down payment' offer, units for sale and for rent ($1,400 Monthly)",
+   "source_url": "https://miranestate.com/projects/cmkb8ohti00dxmj0f7k9dn3hq"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.253582,44.077763",
  "publish_recommendation": "ready"
 }

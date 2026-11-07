@@ -31,7 +31,7 @@ Project ID: avenue-square | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | Total housing units | None (commercial); 252 office units | Miran 252; Paya 'more than 250 office spaces' | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 ; https://paya-realestate.com/en/projects/avenue-square-380 |
 | Villas / houses | Not verified | — | — |
 | Apartments | Not verified | — | — |
-| Commercial units | Not verified | — | — |
+| Commercial units | Paya and miranestate description: 'three nine-story office buildings with more than 250 office spaces' plus ground-floor shops, cafés and restaurants; miranestate statistics: 'Units 252' | — | https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
 | Towers / apartment buildings | 3 office buildings | Paya text and Miran stats agree | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
 | Floors per building | 9 | Paya 'nine-story' and Miran 9 floors | https://paya-realestate.com/en/projects/avenue-square-380 ; https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1 |
 | Green space, parks, landscaped area | Not verified | — | — |
@@ -45,7 +45,7 @@ Project ID: avenue-square | Tier: 1 | In Erbil city: Yes | Last researched: 2026
 | office | 93, 96, 97, 118, 123, 134, 156, 161, 169 | 93 | 169 | — | Off-plan office listings (homele area page, 3 result pages; first page only). 93 m2 listing shows 1 bathroom. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
 | shop | Not verified | — | — | — | Shops, cafés and restaurants on the ground floor; sizes not published. | agency_project_page | https://paya-realestate.com/en/projects/avenue-square-380 |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** miranestate 'Unit Types' table lists floor layouts (Ground Floor, First Floor, Floors 2nd/5th/8th, 3rd/6th, 4th/7th, 9th Floor) with 'Floor plan' entries (2 each) (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -68,7 +68,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Off-plan office 161 m2 - listing asking price | 144,900 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
 | Off-plan office 169 m2 - listing asking price | 152,100 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/avenue-square |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: 'Cash' (miranestate); price per meter $850. Homele listings: off-plan offices for sale (https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1)
 
 ### Location and surroundings
 Avenue Square is part of Alcove's Erbil Avenue masterplan (Paya, Miran). Miran's sale listings for the project carry the location label 'Bahrka Road', which places it on the Bahrka road approach in northern Erbil. No source names a cross-street or landmark. Map position (low confidence, from agency map pins): 36.233042, 44.011093. Google Maps: https://www.google.com/maps?q=36.233042,44.011093
@@ -419,7 +419,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": {
+   "value": null,
+   "text": "Paya and miranestate description: 'three nine-story office buildings with more than 250 office spaces' plus ground-floor shops, cafés and restaurants; miranestate statistics: 'Units 252'",
+   "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+  },
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "miranestate 'Unit Types' table lists floor layouts (Ground Floor, First Floor, Floors 2nd/5th/8th, 3rd/6th, 4th/7th, 9th Floor) with 'Floor plan' entries (2 each)",
+   "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: 'Cash' (miranestate); price per meter $850. Homele listings: off-plan offices for sale",
+   "source_url": "https://miranestate.com/projects/cmracxidf04u9pi0f854ckfg1"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.233042,44.011093",
  "publish_recommendation": "ready"
 }

@@ -29,7 +29,7 @@ Project ID: erbil-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | 25.1 | converted from 62,702 m² at 1 Iraqi dunam = 2,500 m² | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 68 | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 68 | 68 housing units with two different types (Paya); 68 high-end housing units in villa configurations Type A, B1, B2 (Miran) | https://paya-realestate.com/en/projects/erbil-garden-286 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 68 villas | Paya + Miran agree | https://paya-realestate.com/en/projects/erbil-garden-286 ; https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
@@ -43,7 +43,7 @@ Project ID: erbil-garden | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | villa | 455, 525, 708 | 455 | 708 | — | Villa Type B1 455 m2, Type B2 525 m2, Type A 708 m2 (Miran; Miran's table shows '3' in the floor-plan column). Paya: 'two different types'; 455 m2 house with 5 bed / 5 bath. | agency_project_page | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://paya-realestate.com/en/projects/erbil-garden-286 |
 | villa | 455, 525, 708 | 455 | 708 | 6 | Advertised 6-bedroom villas (Miran listings: 7 bathrooms; homele 455 m2: 5 bathrooms) | market_listing | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk ; https://homele.com/properties/for-sale-and-rent/erbil/erbil-garden |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: 'No Blueprints' for the 455 m² house; Miran unit-type table shows '3' in the Floor plan column for Villa Types B1 455 m², B2 525 m², A 708 m² (https://paya-realestate.com/en/projects/erbil-garden-286)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa Type B2 525 m2 6BR - Miran listing asking price | 1,500,000 | USD | resale | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
 | Villa Type A 708 m2 6BR - Miran listing asking price | 1,800,000 | USD | resale | page updated Aug 20, 2026; accessed 2026-11-07 | https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran) (https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk)
 
 ### Location and surroundings
 Erbil Garden is on the 100m Road right next to Pirmam Road, described by both Paya and Miran as in the middle/heart of the city. This places it inside the 100m ring-road belt at the start of the north-eastern Pirmam road. Map position (low confidence, from agency map pins): 36.2188027, 44.0406309. Google Maps: https://www.google.com/maps?q=36.2188027,44.0406309
@@ -346,7 +346,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": 25.1,
  "land_area_dunams_basis": "converted at 1 Iraqi dunam = 2,500 m²",
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 68,
+   "text": "68 housing units with two different types (Paya); 68 high-end housing units in villa configurations Type A, B1, B2 (Miran)",
+   "source_url": "https://paya-realestate.com/en/projects/erbil-garden-286"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: 'No Blueprints' for the 455 m² house; Miran unit-type table shows '3' in the Floor plan column for Villa Types B1 455 m², B2 525 m², A 708 m²",
+   "source_url": "https://paya-realestate.com/en/projects/erbil-garden-286"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran)",
+   "source_url": "https://miranestate.com/projects/cmrgfk6350bi9pi0fti7gjuqk"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2188027,44.0406309",
  "publish_recommendation": "ready"
 }

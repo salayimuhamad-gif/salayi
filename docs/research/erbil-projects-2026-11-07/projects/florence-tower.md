@@ -45,7 +45,7 @@ Project ID: florence-tower | Tier: 1 | In Erbil city: Yes | Last researched: 202
 | apartment | 97, 98, 120, 122, 139, 147 | 97 | 147 | 2 | 2 bathrooms | agency_project_page | https://paya-realestate.com/en/projects/florence-tower-156 |
 | apartment | 72, 80, 104, 122, 139 | 72 | 139 | — | Market listings: 72 m² studio, 80 and 104 m² 1-bed, 122 and 139 m² 2-bed; mostly Ready, one 122 m² Off Plan | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/florence-tower |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for 14 units: studios 50–72 m², 1-bed 77–104 m², 2-bed 97–147 m² (https://paya-realestate.com/en/projects/florence-tower-156)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -626,7 +626,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for 14 units: studios 50–72 m², 1-bed 77–104 m², 2-bed 97–147 m²",
+   "source_url": "https://paya-realestate.com/en/projects/florence-tower-156"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.2201269,44.0089174",
  "publish_recommendation": "ready"
 }

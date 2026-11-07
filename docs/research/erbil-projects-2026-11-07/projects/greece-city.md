@@ -43,7 +43,7 @@ Project ID: greece-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | villa | 220 | 220 | 220 | 4 | 3 bathrooms; Paya unit 'House 220 m2', 4 beds, 3 baths, $157,000; project described as villa-only | agency_project_page | https://paya-realestate.com/en/projects/greece-city-320 |
 | villa | 220, 240 | 220 | 240 | 4 | 4 bathrooms; 7 off-plan instalment listings on homele first page (220 m2 x3, 240 m2 x4); one title says '3 Beds 3 Baths' while fields show 4/4 | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Paya: blueprint offered ('View Blueprint') for House 220 m², 4 beds, 3 baths (https://paya-realestate.com/en/projects/greece-city-320)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -66,7 +66,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Villa 220 m2, 4 bed - homele market listing, off-plan with instalments (area label '(Down payment) Greece City') | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
 | Villa 220 m2 - homele market listing, off-plan with instalments (area label '(Down payment) Greece City'); long-term instalment | 159,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/greece-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings tagged 'Installment' / 'Off Plan', e.g. 'Off Plan House in Installment', 'Long Term Installment' (villas 220–240 m² for sale) (https://homele.com/properties/for-sale-and-rent/erbil/greece-city)
 
 ### Location and surroundings
 Greece City is in Erbil, but no source names its street or district. Map position (low confidence, from agency map pins): 36.297019, 44.040291. Google Maps: https://www.google.com/maps?q=36.297019,44.040291
@@ -331,7 +331,24 @@ Second verification pass 2026-11-07: queries “"Greece City" Erbil villas proje
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Paya: blueprint offered ('View Blueprint') for House 220 m², 4 beds, 3 baths",
+   "source_url": "https://paya-realestate.com/en/projects/greece-city-320"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings tagged 'Installment' / 'Off Plan', e.g. 'Off Plan House in Installment', 'Long Term Installment' (villas 220–240 m² for sale)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/greece-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.297019,44.040291",
  "publish_recommendation": "review"
 }

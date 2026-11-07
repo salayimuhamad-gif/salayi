@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 320 m2, 4 beds - market listing (Miran) | 410,000 | USD | resale | Miran page updated 2026-05-02; accessed 2026-11-07 | https://miranestate.com/projects/cmnr6e2m00aujmx0fipovlon5 |
 | Villa 320 m2 (Type A), 5 beds - market listing (Miran) | 410,000 | USD | resale | Miran page updated 2026-05-02; accessed 2026-11-07 | https://miranestate.com/projects/cmnr6e2m00aujmx0fipovlon5 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Miran: payment 'Cash'; 320 m² houses/villas listed for sale (https://miranestate.com/projects/cmnr6e2m00aujmx0fipovlon5)
 
 ### Location and surroundings
 Within Mass City on the 120 m ring road along Masif Road, Erbil (location taken from the parent Mass City pages on Paya and Baghy).
@@ -323,7 +323,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Miran: payment 'Cash'; 320 m² houses/villas listed for sale",
+   "source_url": "https://miranestate.com/projects/cmnr6e2m00aujmx0fipovlon5"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }

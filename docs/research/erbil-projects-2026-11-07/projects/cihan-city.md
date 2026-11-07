@@ -30,7 +30,7 @@ Project ID: cihan-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,404 apartments | Baghy only; Paya gives no total | https://baghyshaqlawa.net/en/projects/cihan-city |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,404 | Baghy: 'The project Consist of 1404 appartments from 14 Buildings in which 8 of them are finished'. Paya gives only 16 buildings x 23 floors x 4 apartments per floor (no total) | https://baghyshaqlawa.net/en/projects/cihan-city |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Disputed: 16 (Paya) vs 14 (Baghy) | Two agency pages disagree | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
 | Floors per building | Disputed: 23 (Paya) vs 16–23 (Baghy) | Agree only on 23-floor maximum | https://paya-realestate.com/en/projects/cihan-city-93 ; https://baghyshaqlawa.net/en/projects/cihan-city |
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 130 m2, 2 bed, furnished - monthly rent (other 130 m2 listing: 500) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
 | Studio 38 m2 - monthly rent | 200 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/cihan-city |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele market listings: ready apartments for monthly rent (38–205 m², $200–700/month) and for sale (e.g. 168 m² $110,000, 205 m² $130,000, negotiable) (https://homele.com/properties/for-sale-and-rent/erbil/cihan-city)
 
 ### Location and surroundings
 Cihan City lies on Erbil's 120-metre ring street at its junction with the road to Kirkuk (Paya: '120 meters street and on the road to Kirkuk'; Baghy: 'Erbil-Kirkuk Road -120m'). No neighbourhood name, nearby landmarks or distances are given by the sources, and none are estimated here. Map position (medium confidence, from agency map pins): 36.137046, 44.014998. Google Maps: https://www.google.com/maps?q=36.137046,44.014998
@@ -457,7 +457,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1404,
+   "text": "Baghy: 'The project Consist of 1404 appartments from 14 Buildings in which 8 of them are finished'. Paya gives only 16 buildings x 23 floors x 4 apartments per floor (no total)",
+   "source_url": "https://baghyshaqlawa.net/en/projects/cihan-city"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele market listings: ready apartments for monthly rent (38–205 m², $200–700/month) and for sale (e.g. 168 m² $110,000, 205 m² $130,000, negotiable)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/cihan-city"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.137046,44.014998",
  "publish_recommendation": "ready"
 }

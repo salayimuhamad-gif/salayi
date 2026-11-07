@@ -30,7 +30,7 @@ Project ID: tulip-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,243 (Miran text: 1,220) | Paya, Miran stats, homele agree; Miran text differs | https://paya-realestate.com/en/projects/tulip-towers-259 ; https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f ; https://homele.com/projects/tulip-towers-388 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,243 apartments & penthouses (Paya; Miran stats Units 1,243; homele project page '(1243) Residential units') vs 1,220 apartments (Miran description) | — | https://paya-realestate.com/en/projects/tulip-towers-259 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 4 towers | Miran stats + text, homele | https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f ; https://homele.com/projects/tulip-towers-388 |
 | Floors per building | 44 incl. 4 basements (homele 42; Miran text 40) | Paya + Miran stats agree; others differ | https://paya-realestate.com/en/projects/tulip-towers-259 ; https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f ; https://homele.com/projects/tulip-towers-388 |
@@ -49,7 +49,7 @@ Project ID: tulip-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | apartment | 95, 104, 105, 113, 155, 159, 230, 237, 240, 244 | 95 | 244 | — | Off-plan units advertised on homele (first page) and Miran (95/104/155/240) | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/tulip-towers ; https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f |
 | shop | Not verified | — | — | — | 2 floors; Commercial units on ground and first floor; total 24,295.23 m2 (Paya) vs 22,900 m2 (Miran) | agency_project_page | https://paya-realestate.com/en/projects/tulip-towers-259 ; https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for 14 apartment units, 95-255 m² (Paya); homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section (https://paya-realestate.com/en/projects/tulip-towers-259)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -72,7 +72,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 4 bed 240 m2 - off-plan market listing, instalments | 263,000 | USD | resale | accessed 2026-11-07 | https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f |
 | 4 bed 244 m2 - off-plan market listing | 256,631 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/tulip-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Cash, Installment, Payment Plans (Miran): 25% down payment, 25% at building completion, 25% at key handover, 25% monthly payment; price per meter $1,050. homele payment plan: 25% down payment, 20% after 4 months, 25% after 4 months, 15% after 6 months, 15% after 6 months; Miran sale listings 'in installments' (https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f)
 
 ### Location and surroundings
 Tulip Towers stands in Erbil's 'Golden Zone' next to Sami Abdulrahman Park on Gulan Street, opposite Dream City (homele); Baghy Shaqlawa gives 'Opposite of Sami Abdurahman Park'. Miran's listings tag the area 'Waziran' and its view list names 100M Street and the Erbil Citadel. Map position (medium confidence, from agency map pins): 36.200802, 43.981425. Google Maps: https://www.google.com/maps?q=36.200802,43.981425
@@ -655,7 +655,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "1,243 apartments & penthouses (Paya; Miran stats Units 1,243; homele project page '(1243) Residential units') vs 1,220 apartments (Miran description)",
+   "source_url": "https://paya-realestate.com/en/projects/tulip-towers-259"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for 14 apartment units, 95-255 m² (Paya); homele project page has a 'Floor Plans' / 'Unit Details & Floor Plans' section",
+   "source_url": "https://paya-realestate.com/en/projects/tulip-towers-259"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Cash, Installment, Payment Plans (Miran): 25% down payment, 25% at building completion, 25% at key handover, 25% monthly payment; price per meter $1,050. homele payment plan: 25% down payment, 20% after 4 months, 25% after 4 months, 15% after 6 months, 15% after 6 months; Miran sale listings 'in installments'",
+   "source_url": "https://miranestate.com/projects/cmk2hs63d004oqn0fp45to11f"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.200802,43.981425",
  "publish_recommendation": "ready"
 }

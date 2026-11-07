@@ -30,7 +30,7 @@ Project ID: life-towers | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 497 (400 in towers + 97 in podium) | Sum of two figures stated by Paya | https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171 |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | Paya: 'The two towers contain 400 apartments, and the base contains 97 apartments with shops and a market' (no single total stated) | — | https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171 |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 2 towers (King, Queen) on a podium | Paya only | https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171 |
 | Floors per building | 24 (basement, 3 podium floors, 21 upper floors) | Paya; breakdown ambiguous | https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171 |
@@ -69,7 +69,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Apartment 116 m2, 2 beds, furnished - monthly rent | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/life-towers |
 | Apartment 189 m2, 3 beds - monthly rent | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/life-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready apartments for sale and for rent ($350–$600 monthly) (https://homele.com/properties/for-sale-and-rent/erbil/life-towers)
 
 ### Location and surroundings
 32 Park area of Erbil, opposite Italian Village 1 on the street linking the 100 m and 120 m ring roads, near Erbil International Airport and Sami Abdulrahman Park (Paya). Baghy lists the address as 'Sarbasty'. Map position (medium confidence, from agency map pins): 36.180041, 43.949789. Google Maps: https://www.google.com/maps?q=36.180041,43.949789
@@ -509,7 +509,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": null,
+   "text": "Paya: 'The two towers contain 400 apartments, and the base contains 97 apartments with shops and a market' (no single total stated)",
+   "source_url": "https://paya-realestate.com/en/projects/life-towers-(king-and-queen)-171"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready apartments for sale and for rent ($350–$600 monthly)",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/life-towers"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.180041,43.949789",
  "publish_recommendation": "ready"
 }

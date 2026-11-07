@@ -34,7 +34,7 @@ Project ID: spanish-village | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | No villa count stated | — |
 | Floors per building | 2 (villas) | Paya text | https://paya-realestate.com/en/projects/spanish-village-165 |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | 15,000 | 15,000 m² central park, plus 80-110 m² of private outdoor greenery for each villa (Miran) | https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
 | Development phases | Single project; Spanish Village 2 (Chukar Group) is separate | Miran separate pages | https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 ; https://miranestate.com/projects/cmnyplqes023so30frta9f67u |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -44,7 +44,7 @@ Project ID: spanish-village | Tier: 1 | In Erbil city: Yes | Last researched: 20
 | villa | 500, 610 | 500 | 610 | — | 6 bathrooms; 2 floors; 500 m2 built on 610 m2 (110 m2 garden and garage); 2 receptions, 2 kitchens, dressing, dining, 5 balconies, 2 gardens (Paya text); bedrooms 5 (Paya text) vs 4 (Paya unit table, Miran); Paya table 5 bath; Miran type C 500 | agency_project_page | https://paya-realestate.com/en/projects/spanish-village-165 ; https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7 |
 | villa | 320, 420, 430 | 320 | 430 | 4 | homele sale and rent listings (houses), first page only | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints listed ('View Blueprint') for the 320 m² and 500 m² house units (Paya) (https://paya-realestate.com/en/projects/spanish-village-165)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -67,7 +67,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | House 430 m2, 4 bed - monthly rent | 1,000 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village |
 | VIP house 430 m2, 4 bed - monthly rent | 1,500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/spanish-village |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Payment: Cash (Miran); homele market listings show houses for sale and for monthly rent (USD 1,000-1,500/month) (https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7)
 
 ### Location and surroundings
 On the 150 m outer ring road in north-east Erbil, next to Ganjan City and British Village (Paya, Baghy, Miran); about 20 minutes' drive from the airport (Miran). Map position (medium confidence, from agency map pins): 36.279824, 44.069417. Google Maps: https://www.google.com/maps?q=36.279824,44.069417
@@ -460,7 +460,28 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": 15000,
+   "text": "15,000 m² central park, plus 80-110 m² of private outdoor greenery for each villa (Miran)",
+   "source_url": "https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints listed ('View Blueprint') for the 320 m² and 500 m² house units (Paya)",
+   "source_url": "https://paya-realestate.com/en/projects/spanish-village-165"
+  },
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Payment: Cash (Miran); homele market listings show houses for sale and for monthly rent (USD 1,000-1,500/month)",
+   "source_url": "https://miranestate.com/projects/cmnyozeuu022vo30f37tdzhx7"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.279824,44.069417",
  "publish_recommendation": "ready"
 }

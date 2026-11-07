@@ -29,12 +29,12 @@ Project ID: diyari-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | Approximately 256 villas | Single agency source (Paya) | https://paya-realestate.com/en/projects/diyari-city-273 |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 256 | Gated community consists of approximately 256 villas with two main unit types (200 m² & 250 m²) | https://paya-realestate.com/en/projects/diyari-city-273 |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not applicable to the villa community; 'Diyari Towers' apartments advertised separately - unverified link | No apartment buildings described by Paya | https://homele.com/properties/for-sale-and-rent/erbil/diyari-towers |
 | Floors per building | 2 floors for a 200 m² house | One Homele listing titled 'Two-Story House' | https://homele.com/properties/for-sale-and-rent/erbil/diyari-city |
-| Green space, parks, landscaped area | Not verified | — | — |
+| Green space, parks, landscaped area | About 14% of its total land area dedicated to green spaces | — | https://paya-realestate.com/en/projects/diyari-city-273 |
 | Development phases | None reported | No source | — |
 
 ## PART B — PROPERTY TYPES & AREA OPTIONS
@@ -44,7 +44,7 @@ Project ID: diyari-city | Tier: 1 | In Erbil city: Yes | Last researched: 2026-1
 | house | 250 | 250 | 250 | 5 | 4 bathrooms; Paya and one Homele listing agree on 5 beds / 4 baths. | agency_project_page | https://paya-realestate.com/en/projects/diyari-city-273 ; https://homele.com/properties/for-sale-and-rent/erbil/diyari-city |
 | apartment | 85, 161, 180 | 85 | 180 | — | 'Diyari Towers' off-plan instalment apartments (1/2/3 bed, 1/2/3 bath). Link to Diyari City not verified. | market_listing | https://homele.com/properties/for-sale-and-rent/erbil/diyari-towers |
 
-**Layouts and floor plans:** Not verified
+**Layouts and floor plans:** Blueprints published ('View Blueprint') for house 200 m² and house 250 m² (https://paya-realestate.com/en/projects/diyari-city-273)
 
 _Evidence types: official = developer or sales-centre page; agency_project_page = the project's page on a property portal; market_listing = an individual advertised unit (proves only that this size was advertised, not the full range)._
 
@@ -445,7 +445,28 @@ Second verification pass 2026-11-07: queries “"Diyari City" Erbil”; “"دی
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 256,
+   "text": "Gated community consists of approximately 256 villas with two main unit types (200 m² & 250 m²)",
+   "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": {
+   "value": null,
+   "text": "About 14% of its total land area dedicated to green spaces",
+   "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+  },
+  "maintenance_charges": null,
+  "floor_plans": {
+   "value": null,
+   "text": "Blueprints published ('View Blueprint') for house 200 m² and house 250 m²",
+   "source_url": "https://paya-realestate.com/en/projects/diyari-city-273"
+  },
+  "purchase_rental_arrangements": null
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.1611718,43.9174803",
  "publish_recommendation": "ready"
 }

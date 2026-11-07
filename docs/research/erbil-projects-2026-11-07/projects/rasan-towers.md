@@ -64,7 +64,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 110 m2, 1 bed / 1 bath - monthly rent (homele listing) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
 | Ready apartment 150 m2 (3+1) - monthly rent (homele listing) | 500 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele listings: monthly rentals ($350-$500 Monthly) and a sale labelled 'Apartment in Installment' (https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers)
 
 ### Location and surroundings
 Homele lists 'Rasan Towers' as an area of Erbil. No source gives a street, ring-road position or landmark for it.
@@ -273,7 +273,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele listings: monthly rentals ($350-$500 Monthly) and a sale labelled 'Apartment in Installment'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/rasan-towers"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "review"
 }

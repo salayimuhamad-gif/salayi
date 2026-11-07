@@ -30,7 +30,7 @@ Project ID: new-eskan | Tier: 1 | In Erbil city: Yes | Last researched: 2026-11-
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,088 | Baghy only (= 16 x 17 x 4) | https://baghyshaqlawa.net/en/projects/new-eskan |
 | Villas / houses | Not verified | — | — |
-| Apartments | Not verified | — | — |
+| Apartments | 1,088 | Baghy: 'consist of 1088 apartments with an area of 150 m2'; 16 buildings, 17 floors, 4 apartments per floor | https://baghyshaqlawa.net/en/projects/new-eskan |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | 16 | Baghy only | https://baghyshaqlawa.net/en/projects/new-eskan |
 | Floors per building | 17 | Baghy only; ground floor parking | https://baghyshaqlawa.net/en/projects/new-eskan |
@@ -59,7 +59,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 |---|---|---|---|---|---|
 | Ready furnished apartment 70 m2, 1 bed / 1 bath - homele rent per month | 350 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/new-eskan |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listing: one ready furnished apartment for rent at $350 monthly (https://homele.com/properties/for-sale-and-rent/erbil/new-eskan)
 
 ### Location and surroundings
 New Eskan is in the Eskan neighbourhood on Erbil's 60m ring road, in the central part of the city near the commercial Eskan road (Baghy). Map position (low confidence, from agency map pins): 36.176875, 44.022216. Google Maps: https://www.google.com/maps?q=36.176875,44.022216
@@ -282,7 +282,24 @@ First-pass research only (at most one web search for this project).
  ],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": {
+   "value": 1088,
+   "text": "Baghy: 'consist of 1088 apartments with an area of 150 m2'; 16 buildings, 17 floors, 4 apartments per floor",
+   "source_url": "https://baghyshaqlawa.net/en/projects/new-eskan"
+  },
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listing: one ready furnished apartment for rent at $350 monthly",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/new-eskan"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.176875,44.022216",
  "publish_recommendation": "ready"
 }

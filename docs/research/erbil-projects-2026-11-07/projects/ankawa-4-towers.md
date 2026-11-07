@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready apartment 247 m², 4 bed – Homele rent, per month | 750 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/4-tower |
 | Ready apartment 247 m², 4 bed – Homele rent, per month | 700 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/4-tower |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings ('4 Tower'): ready apartments for rent ($700, $750, $900 Monthly) and for sale (prices 'Negotiable') (https://homele.com/properties/for-sale-and-rent/erbil/4-tower)
 
 ### Location and surroundings
 Ankawa (Ainkawa), north-west of Erbil city centre per Paya's text. Paya's structured data places the towers at 36.2382554, 44.0094021, about 5 km north of the citadel at the eastern edge of Ankawa, next to the Bahrka road corridor, which matches Baghy Shaqlawa's 'Bahrka Road' address for 'Four Towers'. Map position (medium confidence, from agency map pins): 36.238649, 44.010108. Google Maps: https://www.google.com/maps?q=36.238649,44.010108
@@ -490,7 +490,20 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings ('4 Tower'): ready apartments for rent ($700, $750, $900 Monthly) and for sale (prices 'Negotiable')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/4-tower"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.238649,44.010108",
  "publish_recommendation": "ready"
 }

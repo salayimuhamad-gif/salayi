@@ -63,7 +63,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | 2BR 118 m2 - monthly rent (homele listing) | 400 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life |
 | 3BR 206 m2 - monthly rent (homele listing) | 600 | USD | rent | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** homele market listings: ready apartments for rent ('$400 Monthly', '$600 Monthly') and for sale ('$89,000 sale', '$105,000 sale', '$117,000 sale') (https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life)
 
 ### Location and surroundings
 Bagh-y Shaqlawa gives the address as 'Erbil – 150m Street' and handles the project through its Ganjan City branch, which suggests it lies near Ganjan City on the 150m ring road. No cross-streets are stated. Map position (low confidence, from agency map pins): 36.288085, 44.043963. Google Maps: https://www.google.com/maps?q=36.288085,44.043963
@@ -316,7 +316,20 @@ Second verification pass 2026-11-07: queries “"Ganjan Life" Erbil apartments 1
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": null,
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "homele market listings: ready apartments for rent ('$400 Monthly', '$600 Monthly') and for sale ('$89,000 sale', '$105,000 sale', '$117,000 sale')",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ganjan-life"
+  }
+ },
  "google_maps_url": "https://www.google.com/maps?q=36.288085,44.043963",
  "publish_recommendation": "review"
 }

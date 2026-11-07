@@ -29,7 +29,7 @@ Project ID: ashti-city-1 | Tier: 1 | In Erbil city: Yes | Last researched: 2026-
 | Total project land area (dunams) | Not verified | — | — |
 | Plots or parcels | Not verified | — | — |
 | Total housing units | 1,545 houses | Haji Salam only | https://hajisalam.com/en/ashty-city-1/ |
-| Villas / houses | Not verified | — | — |
+| Villas / houses | 1,545 | 'Number Of Unit: 1545', Project Type: House (hajisalam) | https://hajisalam.com/en/ashty-city-1/ |
 | Apartments | Not verified | — | — |
 | Commercial units | Not verified | — | — |
 | Towers / apartment buildings | Not verified | Not applicable (house compound) | — |
@@ -65,7 +65,7 @@ _Evidence types: official = developer or sales-centre page; agency_project_page 
 | Ready house opposite garden 183 m², 4 bed – Homele (negotiable) | 155,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1 |
 | Ready family home 250 m², 5 bed – Homele (negotiable) | 165,000 | USD | resale | accessed 2026-11-07 | https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1 |
 - **Maintenance or service charges:** Not verified
-- **Purchasing or rental arrangements:** Not verified
+- **Purchasing or rental arrangements:** Homele listings: ready houses for sale, prices 'Negotiable' (https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1)
 
 ### Location and surroundings
 On Kasnazan Road, Erbil (Haji Salam, which adds 'lawan 2 side'). Ashti City 2 lies on the same road behind the Blue Sport Center. No distances are published.
@@ -349,7 +349,24 @@ First-pass research only (at most one web search for this project).
  "figure_notes": [],
  "land_area_dunams": null,
  "land_area_dunams_basis": null,
- "scale_details": {},
+ "scale_details": {
+  "plots_or_parcels": null,
+  "villas_houses": {
+   "value": 1545,
+   "text": "'Number Of Unit: 1545', Project Type: House (hajisalam)",
+   "source_url": "https://hajisalam.com/en/ashty-city-1/"
+  },
+  "apartments": null,
+  "commercial_units": null,
+  "green_space": null,
+  "maintenance_charges": null,
+  "floor_plans": null,
+  "purchase_rental_arrangements": {
+   "value": null,
+   "text": "Homele listings: ready houses for sale, prices 'Negotiable'",
+   "source_url": "https://homele.com/properties/for-sale-and-rent/erbil/ashti-city-1"
+  }
+ },
  "google_maps_url": null,
  "publish_recommendation": "ready"
 }
